@@ -30,6 +30,28 @@ export const origin = (() => {
   return PUBLIC_API_ORIGIN
 })()
 
+export const sleep: [number, number] | undefined = (() => {
+  const sleep = import.meta.env.DEV_SLEEP
+
+  if (!sleep || typeof window === 'undefined')
+    return
+
+  const hostname = new URL(origin).hostname
+
+  if (hostname !== 'localhost' && !isLocalIP(hostname))
+    return
+
+  const match = sleep.match(/^(?<min>\d+)-(?<max>\d+)$/)
+
+  if (!match || !match.groups)
+    throw new Error(`Invalid sleep value: ${sleep}`)
+
+  const min = Number.parseInt(match.groups.min)
+  const max = Number.parseInt(match.groups.max)
+
+  return [min, max]
+})()
+
 function isLocalIP(hostname: string) {
   return hostname.startsWith('192.168') || hostname.startsWith('172.16') || hostname.startsWith('10.')
 }

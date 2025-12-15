@@ -10,7 +10,7 @@ export default [
       '.svelte-kit',
       'src/lib/components/ui',
       '**/*.min.js',
-      'src/lib/intl/*',
+      'src/**/intl/**/*',
       ...neostandard.resolveIgnoresFromGitignore(),
     ],
     ts: true,
