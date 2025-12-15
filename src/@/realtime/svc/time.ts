@@ -1,11 +1,11 @@
-import { events } from '@toa.io/origin'
 import { writable } from 'svelte/store'
+import { origin } from '@/net'
 
 // initially use client time
 export const time = writable<number>(Date.now())
 
-events.on('response', (response) => {
-  const date = response.response.headers.get('date')
+origin.events.on('response', ({ headers }) => {
+  const date = headers.get('date')
 
   if (date === null) return
 

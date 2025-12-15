@@ -1,12 +1,17 @@
-import { Resource } from '@toa.io/origin'
+import { origin, type RequestOptions } from '@/net'
 import type { Echo } from './Echo'
 
-const echo = new Resource<Echo>('/accounts/echo/', { credentials: 'include' })
+const echo = origin.resource<Echo>('/accounts/echo/')
 
 async function get(authorization?: string): Promise<Echo | Error> {
-  const options = authorization ? { headers: { authorization } } : undefined
+  const options: RequestOptions = { method: 'GET' }
 
-  return echo.get.value(undefined, options)
+  if (authorization) {
+    options.headers = { authorization }
+    options.credentials = 'include'
+  }
+
+  return echo.json('.', options)
 }
 
 export { get }

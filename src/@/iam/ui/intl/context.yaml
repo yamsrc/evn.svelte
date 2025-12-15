@@ -1,0 +1,24 @@
+context: Mount 'iam' context
+inputs:
+  auth:
+    refresh:
+      description:
+        input: |-
+          !js
+                  (name) => `${name ? name + ", for" : "For"} security reasons, your credentials have expired. Please log&nbsp;in again to&nbsp;continue.`
+        context: Preserve html tags where appropriate
+      title:
+        input: Welcome back
+    signout:
+      input: Sign out
+    login:
+      input: Login
+    signin:
+      input: Sign In
+    inApp:
+      title:
+        input: Insecure Context
+      description:
+        input: For your security, we have opened the app in your browser.
+      continue:
+        input: Continue

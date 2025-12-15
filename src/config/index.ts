@@ -34,8 +34,8 @@ function isLocalIP(hostname: string) {
   return hostname.startsWith('192.168') || hostname.startsWith('172.16') || hostname.startsWith('10.')
 }
 
-export const GOOGLE_CLIENT_ID = 'REPLACE_ME'
-export const APPLE_CLIENT_ID = 'REPLACE_ME'
+export const GOOGLE_CLIENT_ID = '105318496428-724qi60cql3vlpduf7h145s9962rjffl.apps.googleusercontent.com'
+export const APPLE_CLIENT_ID = 'com.evnapp.id'
 
 const MAJOR_VERSION = '1'
 

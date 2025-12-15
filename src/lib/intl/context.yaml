@@ -1,0 +1,10 @@
+context: Internationalization project
+inputs:
+  locale:
+    input: locale
+    context: BCP 47 language tag, should not be translated, always use the target language code
+  native:
+    input: native
+    context: native name of the language in that language, should not be translated
+mounts:
+  iam: ../../@/iam/ui/intl

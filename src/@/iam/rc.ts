@@ -1,12 +1,16 @@
-import { authenticate, events } from '@toa.io/origin'
+import { origin } from '@/net'
 import { hello } from './svc/hello'
 import { challenge } from './svc/store'
 import { sync } from './svc/sync'
 
 function rc() {
-  events.on('challenge', (value) => challenge.set(value))
-  events.on(401, () => challenge.set(null))
-  challenge.subscribe(authenticate)
+  origin.events.on('challenge', (value) => challenge.set(value))
+
+  origin.events.on('error', (error) => {
+    if (error.code === 401) challenge.set(null)
+  })
+
+  challenge.subscribe((challenge) => origin.authenticate(challenge))
 
   void hello()
   void sync()

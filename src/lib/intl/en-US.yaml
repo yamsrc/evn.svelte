@@ -1,0 +1,10 @@
+# English dictionary
+# The 'native' key contains the language name in its own language
+native: English
+locale: en-US
+
+# Add your translations here
+# Example:
+# hello: "Hello"
+# greeting:
+#   welcome: "Welcome to our app"

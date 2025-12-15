@@ -1,13 +1,13 @@
-import { Resource } from '@toa.io/origin'
+import { origin } from '@/net'
 
-const otp = new Resource('/accounts/otp/')
+const otp = origin.resource('/accounts/otp/')
 
 interface Post {
   email: string
 }
 
 async function post(body: Post): Promise<void | Error> {
-  return await otp.post.none(undefined, { body })
+  return await otp.json({ body })
 }
 
 export { post }

@@ -1,13 +1,13 @@
-import { Resource, type Options, type Failure } from '@toa.io/origin'
+import { origin, type RequestOptions } from '@/net'
 import type { Message } from './Message'
 
-const streams = new Resource<Message>('/presence/')
+const streams = origin.resource<Message>('/presence/')
 
-async function post<T extends Message = Message>(
+async function post(
   id: string,
-  options?: Options,
-): Promise<AsyncGenerator<T, void, undefined> | Failure> {
-  return await streams.post.multipart<T>([id], { credentials: 'include', ...options })
+  options?: RequestOptions,
+): Promise<AsyncGenerator<Message, void, undefined> | Error> {
+  return await streams.multipart<Message>(id, { credentials: 'include', ...options })
 }
 
 export { post }

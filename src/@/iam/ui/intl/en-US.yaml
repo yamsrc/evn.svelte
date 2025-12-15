@@ -1,0 +1,39 @@
+auth:
+  welcomeBack: Welcome back
+  signupTitle: One-tap sign-up
+  passwordTitle: Hop in with password
+  passwordDescription: Create an account or sign in
+  passkey: Passkeys
+  email: Email
+  alreadyHaveAccount: Already have an account?
+  betterSecurity: Better security
+  passkeysNotSupported: Passkeys not supported
+  passkeysWarning: Your browser does not respect your privacy and security.
+  learnMore: Learn more
+  passwordBlank: >-
+    Leave password blank <nobr>to receive</nobr> <nobr>a one-time</nobr>
+    passcode.
+  otpInstructions: Enter the code sent to your email. It expires in 5 minutes.
+  holdToLogout: Hold to logout
+  continueWith: |
+    !js
+    (provider) => {
+      return `Continue with ${provider}`
+    }
+  passkeysDescription: Passkeys are safer than passwords, easier to use, and can’t be stolen.
+  yourName: Your name
+  password: Password
+  refresh:
+    description: >-
+      !js
+
+      (name) => `${name ? name + ", for" : "For"} security reasons, your
+      credentials have expired. Please log&nbsp;in again to&nbsp;continue.`
+    title: Welcome back
+  signout: Sign out
+  login: Log In
+  signin: Sign In
+  inApp:
+    title: Insecure Context
+    description: For your security, we have opened the app in your browser.
+    continue: Continue

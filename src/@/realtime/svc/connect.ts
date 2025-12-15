@@ -1,4 +1,4 @@
-import { events, type Events } from './events'
+import { events } from './events'
 import * as net from './net'
 import { reset } from './reset'
 import { status } from './status'
@@ -61,7 +61,7 @@ function disconnect() {
 
 function emit(message: net.Message) {
   if (typeof message === 'string') events.emit('heartbeat')
-  else events.emit(message.event as keyof Events, message.data as Events[keyof Events])
+  else events.emit(message.event, message.data)
 }
 
 export { connect, disconnect }
