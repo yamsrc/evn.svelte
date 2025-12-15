@@ -1,0 +1,49 @@
+<script lang="ts">
+  import { ArrowRight } from '@lucide/svelte'
+  import { Loader } from '$com/loader'
+  import { autofocus, onsubmit } from '$lib/tools'
+  import { Button } from '$ui/button'
+  import { Input } from '$ui/input'
+  import { passkeys } from '@/iam'
+
+  const { disabled }: { disabled?: boolean } = $props()
+
+  let value = $state('')
+  let busy = $state(false)
+
+  async function submit() {
+    const name = value.trim()
+
+    if (name.length === 0) return
+
+    busy = true
+
+    await passkeys.create(name)
+
+    busy = false
+  }
+</script>
+
+<form onsubmit={onsubmit(submit)}>
+  <fieldset class="space-y-1" {disabled}>
+    <div class="flex items-center gap-2">
+      <Input
+        bind:value
+        class="placeholder:text-sm"
+        id="name"
+        type="text"
+        placeholder="Your name"
+        autocomplete="given-name"
+        required
+        {autofocus}
+      />
+      <Button size="icon" type="submit">
+        {#if busy}
+          <Loader />
+        {:else}
+          <ArrowRight />
+        {/if}
+      </Button>
+    </div>
+  </fieldset>
+</form>

@@ -1,0 +1,6 @@
+if find node_modules -maxdepth 2 -type l -exec test -d {} \; -print 2>/dev/null | grep -q .; then
+  echo "Unlink packages (npm unlink) before committing."
+  exit 1
+fi
+
+npm run lint

@@ -1,0 +1,13 @@
+{
+	auto_https off
+}
+
+https://:15173 {
+	tls .certs/cert.pem .certs/key.pem
+	reverse_proxy localhost:5173
+}
+
+https://:18000 {
+	tls .certs/cert.pem .certs/key.pem
+	reverse_proxy localhost:8000
+}
