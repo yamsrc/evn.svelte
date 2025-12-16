@@ -45,7 +45,7 @@
 		"svas": "^1.0.0",
 		"svelte": "^5.46.0",
 		"svelte-check": "^4.3.4",
-		"svintl": "^1.7.5",
+		"svintl": "1.7.5",
 		"tailwind-merge": "^3.4.0",
 		"tailwind-variants": "^3.2.2",
 		"tailwindcss": "^4.1.18",
