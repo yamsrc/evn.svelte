@@ -1,0 +1,37 @@
+auth:
+  welcomeBack: お帰りなさい
+  signupTitle: ワンタップ登録
+  passwordTitle: パスワードでログイン
+  passwordDescription: アカウントを作成するか、サインインしてください
+  passkey: パスキー
+  email: メール
+  alreadyHaveAccount: すでにアカウントをお持ちですか？
+  betterSecurity: より高いセキュリティ
+  passkeysNotSupported: パスキーはサポートされていません
+  passkeysWarning: ご利用のブラウザはプライバシーとセキュリティを十分に守っていません。
+  learnMore: 詳細はこちら
+  passwordBlank: パスワードを空欄のままにすると、<nobr>ワンタイム</nobr><nobr>パスコードが送信されます。</nobr>
+  otpInstructions: メールに送信されたコードを入力してください。有効期限は5分です。
+  holdToLogout: 長押しでログアウト
+  continueWith: |
+    !js
+    (provider) => {
+      return `${provider}で続行`
+    }
+  passkeysDescription: パスキーはパスワードより安全で使いやすく、盗まれることもありません。
+  yourName: あなたの名前
+  password: パスワード
+  refresh:
+    description: >-
+      !js
+
+      (name) => `${name ? name + "、セキュリティ上の理由により" :
+      "セキュリティ上の理由により"}、資格情報の有効期限が切れました。続行するには再度ログインしてください。`
+    title: お帰りなさい
+  signout: サインアウト
+  login: ログイン
+  signin: サインイン
+  inApp:
+    title: 安全でないコンテキスト
+    description: 安全のため、アプリをブラウザで開きました。
+    continue: 続行

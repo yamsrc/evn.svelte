@@ -1,0 +1,44 @@
+auth:
+  welcomeBack: Добро пожаловать обратно
+  signupTitle: Регистрация одним касанием
+  passwordTitle: Войдите с паролем
+  passwordDescription: Создать аккаунт или войти
+  passkey: Ключи
+  email: Почта
+  alreadyHaveAccount: Уже есть аккаунт?
+  betterSecurity: Лучшая безопасность
+  passkeysNotSupported: Ключи доступа не поддерживаются
+  passkeysWarning: Ваш браузер не уважает вашу конфиденциальность и безопасность.
+  learnMore: Узнать больше
+  passwordBlank: >-
+    Оставьте поле пароля пустым, <nobr>чтобы получить</nobr> <nobr>одноразовый
+    код доступа</nobr>.
+  otpInstructions: >-
+    Введите код, отправленный на вашу электронную почту. Он истекает через 5
+    минут.
+  holdToLogout: Удерживайте для выхода
+  continueWith: |
+    !js
+    (provider) => {
+      return `Продолжить с ${provider}`
+    }
+  passkeysDescription: >-
+    Ключи доступа безопаснее паролей, проще в использовании и их невозможно
+    украсть.
+  yourName: Ваше имя
+  password: Пароль
+  refresh:
+    description: >-
+      !js
+
+      (name) => `${name ? name + ", по" : "По"} соображениям безопасности срок
+      действия ваших учетных данных истёк. Пожалуйста, выполните повторный вход,
+      чтобы продолжить.`
+    title: С возвращением
+  signout: Выйти
+  login: Войти
+  signin: Войти
+  inApp:
+    title: Небезопасный контекст
+    description: Для вашей безопасности мы открыли приложение в вашем браузере.
+    continue: Продолжить

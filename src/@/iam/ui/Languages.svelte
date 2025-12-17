@@ -60,8 +60,8 @@
       <span
         class={cn(
           'inline-block min-w-8',
-          // option.value === 'ja-JP' && 'min-w-12',
-          // option.value === 'ko-KR' && 'min-w-12',
+          option.value === 'ja-JP' && 'min-w-12',
+          option.value === 'ko-KR' && 'min-w-12',
         )}
       >
         {option.label}

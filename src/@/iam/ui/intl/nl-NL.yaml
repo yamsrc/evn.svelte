@@ -1,0 +1,43 @@
+auth:
+  welcomeBack: Welkom terug
+  signupTitle: Aanmelden met één tik
+  passwordTitle: Inloggen met wachtwoord
+  passwordDescription: Maak een account aan of log in
+  passkey: Sleutels
+  email: E-mail
+  alreadyHaveAccount: Heb je al een account?
+  betterSecurity: Betere beveiliging
+  passkeysNotSupported: Passkeys worden niet ondersteund
+  passkeysWarning: Je browser respecteert je privacy en veiligheid niet.
+  learnMore: Meer informatie
+  passwordBlank: >-
+    Laat het wachtwoordveld leeg <nobr>om een</nobr> <nobr>eenmalige code</nobr>
+    te ontvangen.
+  otpInstructions: >-
+    Voer de code in die naar je e-mail is gestuurd. Deze verloopt over 5
+    minuten.
+  holdToLogout: Houd vast om uit te loggen
+  continueWith: |
+    !js
+    (provider) => {
+      return `Doorgaan met ${provider}`
+    }
+  passkeysDescription: >-
+    Passkeys zijn veiliger dan wachtwoorden, makkelijker te gebruiken en kunnen
+    niet gestolen worden.
+  yourName: Je naam
+  password: Wachtwoord
+  refresh:
+    description: >-
+      !js
+
+      (name) => `${name ? name + ", om" : "Om"} veiligheidsredenen zijn je
+      inloggegevens verlopen. Log&nbsp;opnieuw in om&nbsp;door te gaan.`
+    title: Welkom terug
+  signout: Afmelden
+  login: Inloggen
+  signin: Inloggen
+  inApp:
+    title: Onveilige context
+    description: Voor jouw veiligheid hebben we de app in je browser geopend.
+    continue: Doorgaan

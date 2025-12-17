@@ -2,14 +2,112 @@
 
 /** @type {Record<import('./types').Locale, import('./types').Dictionary>} */
 export const dictionaries = {
+  "ar-SA": {
+    "native": "العربية",
+    "locale": "ar-SA",
+    "actions": {
+      "continue": "متابعة"
+    }
+  },
+  "de-DE": {
+    "native": "Deutsch",
+    "locale": "de-DE",
+    "actions": {
+      "continue": "Weiter"
+    }
+  },
   "en-US": {
     "native": "English",
     "locale": "en-US",
     "actions": {
       "continue": "Continue"
     }
+  },
+  "es-ES": {
+    "native": "Español",
+    "locale": "es-ES",
+    "actions": {
+      "continue": "Continuar"
+    }
+  },
+  "fr-FR": {
+    "native": "Français",
+    "locale": "fr-FR",
+    "actions": {
+      "continue": "Continuer"
+    }
+  },
+  "hi-IN": {
+    "native": "हिन्दी",
+    "locale": "hi-IN",
+    "actions": {
+      "continue": "जारी रखें"
+    }
+  },
+  "it-IT": {
+    "native": "Italiano",
+    "locale": "it-IT",
+    "actions": {
+      "continue": "Continua"
+    }
+  },
+  "ja-JP": {
+    "native": "日本語",
+    "locale": "ja-JP",
+    "actions": {
+      "continue": "続ける"
+    }
+  },
+  "ko-KR": {
+    "native": "한국어",
+    "locale": "ko-KR",
+    "actions": {
+      "continue": "계속"
+    }
+  },
+  "nl-NL": {
+    "native": "Nederlands",
+    "locale": "nl-NL",
+    "actions": {
+      "continue": "Doorgaan"
+    }
+  },
+  "ru-RU": {
+    "native": "Русский",
+    "locale": "ru-RU",
+    "actions": {
+      "continue": "Продолжить"
+    }
+  },
+  "sw-TZ": {
+    "native": "Kiswahili",
+    "locale": "sw-TZ",
+    "actions": {
+      "continue": "Endelea"
+    }
+  },
+  "tr-TR": {
+    "native": "Türkçe",
+    "locale": "tr-TR",
+    "actions": {
+      "continue": "Devam Et"
+    }
+  },
+  "uk-UA": {
+    "native": "Українська",
+    "locale": "uk-UA",
+    "actions": {
+      "continue": "Продовжити"
+    }
+  },
+  "zh-CN": {
+    "native": "中文",
+    "locale": "zh-CN",
+    "actions": {
+      "continue": "继续"
+    }
   }
 };
 
 /** @type {import('./types').Locale[]} */
-export const locales = ["en-US"];
+export const locales = ["ar-SA","de-DE","en-US","es-ES","fr-FR","hi-IN","it-IT","ja-JP","ko-KR","nl-NL","ru-RU","sw-TZ","tr-TR","uk-UA","zh-CN"];

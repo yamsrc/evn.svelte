@@ -1,0 +1,40 @@
+auth:
+  welcomeBack: Karibu tena
+  signupTitle: Jisajili kwa bonyeza moja
+  passwordTitle: Ingia kwa nenosiri
+  passwordDescription: Unda akaunti au ingia
+  passkey: Funguo
+  email: Barua
+  alreadyHaveAccount: Tayari una akaunti?
+  betterSecurity: Usalama bora
+  passkeysNotSupported: Funguo za kupita hazitumiki
+  passkeysWarning: Kivinjari chako hakiheshimu faragha na usalama wako.
+  learnMore: Jifunze zaidi
+  passwordBlank: >-
+    Acha nenosiri wazi <nobr>kupokea</nobr> <nobr>msimbo wa matumizi
+    moja</nobr>.
+  otpInstructions: Weka msimbo uliotumwa kwenye barua pepe yako. Unamalizika baada ya dakika 5.
+  holdToLogout: Shikilia ili utoke
+  continueWith: |
+    !js
+    (provider) => {
+      return `Endelea na ${provider}`
+    }
+  passkeysDescription: Passkey ni salama zaidi kuliko nywila, rahisi kutumia, na haziwezi kuibiwa.
+  yourName: Jina lako
+  password: Nenosiri
+  refresh:
+    description: >-
+      !js
+
+      (name) => `${name ? name + ", kwa" : "Kwa"} sababu za kiusalama, taarifa
+      zako za kuingia zimeisha muda wake. Tafadhali ingia tena
+      ili&nbsp;kuendelea.`
+    title: Karibu tena
+  signout: Ondoka
+  login: Ingia
+  signin: Ingia
+  inApp:
+    title: Muktadha usio salama
+    description: Kwa usalama wako, tumeifungua programu kwenye kivinjari chako.
+    continue: Endelea

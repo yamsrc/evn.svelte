@@ -1,0 +1,42 @@
+auth:
+  welcomeBack: Willkommen zurück
+  signupTitle: Ein-Tap-Anmeldung
+  passwordTitle: Mit Passwort einsteigen
+  passwordDescription: Konto erstellen oder anmelden
+  passkey: Passkeys
+  email: E-Mail
+  alreadyHaveAccount: Haben Sie bereits ein Konto?
+  betterSecurity: Bessere Sicherheit
+  passkeysNotSupported: Passkeys nicht unterstützt
+  passkeysWarning: Ihr Browser respektiert Ihre Privatsphäre und Sicherheit nicht.
+  learnMore: Mehr erfahren
+  passwordBlank: >-
+    Lassen Sie das Passwort leer, <nobr>um</nobr> <nobr>einen Einmal-Code</nobr>
+    zu erhalten.
+  otpInstructions: Geben Sie den an Ihre E-Mail gesendeten Code ein. Er läuft in 5 Minuten ab.
+  holdToLogout: Halten Sie gedrückt, um sich abzumelden
+  continueWith: |
+    !js
+    (provider) => {
+      return `Fortfahren mit ${provider}`
+    }
+  passkeysDescription: >-
+    Passkeys sind sicherer als Passwörter, einfacher zu verwenden und können
+    nicht gestohlen werden.
+  yourName: Ihr Name
+  password: Passwort
+  refresh:
+    description: >-
+      !js
+
+      (name) => `${name ? name + ", aus" : "Aus"} Sicherheitsgründen sind Ihre
+      Anmeldedaten abgelaufen. Bitte melden Sie sich erneut an, um
+      fortzufahren.`
+    title: Willkommen zurück
+  signout: Abmelden
+  login: Anmelden
+  signin: Anmelden
+  inApp:
+    title: Unsicherer Kontext
+    description: Zu deiner Sicherheit haben wir die App in deinem Browser geöffnet.
+    continue: Weiter
