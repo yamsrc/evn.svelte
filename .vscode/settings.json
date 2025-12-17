@@ -2,11 +2,7 @@
   "files.associations": {
     "*.css": "tailwindcss"
   },
-  "eslint.validate": [
-    "javascript",
-    "typescript",
-    "svelte"
-  ],
+  "eslint.validate": ["javascript", "typescript", "svelte"],
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
@@ -14,5 +10,17 @@
   "[svelte]": {
     "editor.defaultFormatter": "svelte.svelte-vscode"
   },
-  "html.autoClosingTags": false
+  "html.autoClosingTags": false,
+  "workbench.colorCustomizations": {
+    "sash.hoverBorder": "#f57634",
+    "statusBar.background": "#ea580c",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#f57634",
+    "statusBarItem.remoteBackground": "#ea580c",
+    "statusBarItem.remoteForeground": "#e7e7e7"
+  },
+  "peacock.color": "#EA580C",
+  "peacock.affectActivityBar": false,
+  "peacock.affectStatusBar": true,
+  "peacock.affectTitleBar": false
 }
