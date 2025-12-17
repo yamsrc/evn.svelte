@@ -13,7 +13,7 @@
   }: Props = $props()
 </script>
 
-<div class="-mx-4" {dir}>
+<div {dir}>
   <div
     {@attach infinity({ enabled: infinite, align, scroll })}
     {onscroll}
