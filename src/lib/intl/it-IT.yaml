@@ -2,3 +2,8 @@ native: Italiano
 locale: it-IT
 actions:
   continue: Continua
+nav:
+  home: Home
+  friends: Amici
+  evns: Saldo
+  profile: Io

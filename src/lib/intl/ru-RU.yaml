@@ -2,3 +2,8 @@ native: Русский
 locale: ru-RU
 actions:
   continue: Продолжить
+nav:
+  home: Главная
+  friends: Друзья
+  evns: Расчёты
+  profile: Я

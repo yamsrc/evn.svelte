@@ -2,3 +2,8 @@ native: English
 locale: en-US
 actions:
   continue: Continue
+nav:
+  home: Home
+  friends: Friends
+  evns: Evns
+  profile: Me

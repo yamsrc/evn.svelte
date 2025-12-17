@@ -7,6 +7,12 @@ export const dictionaries = {
     "locale": "ar-SA",
     "actions": {
       "continue": "متابعة"
+    },
+    "nav": {
+      "home": "الرئيسية",
+      "friends": "الأصدقاء",
+      "evns": "تسوية",
+      "profile": "أنا"
     }
   },
   "de-DE": {
@@ -14,6 +20,12 @@ export const dictionaries = {
     "locale": "de-DE",
     "actions": {
       "continue": "Weiter"
+    },
+    "nav": {
+      "home": "Startseite",
+      "friends": "Freunde",
+      "evns": "Ausgleich",
+      "profile": "Ich"
     }
   },
   "en-US": {
@@ -21,6 +33,12 @@ export const dictionaries = {
     "locale": "en-US",
     "actions": {
       "continue": "Continue"
+    },
+    "nav": {
+      "home": "Home",
+      "friends": "Friends",
+      "evns": "Evns",
+      "profile": "Me"
     }
   },
   "es-ES": {
@@ -28,6 +46,12 @@ export const dictionaries = {
     "locale": "es-ES",
     "actions": {
       "continue": "Continuar"
+    },
+    "nav": {
+      "home": "Inicio",
+      "friends": "Amigos",
+      "evns": "Ajustes",
+      "profile": "Yo"
     }
   },
   "fr-FR": {
@@ -35,6 +59,12 @@ export const dictionaries = {
     "locale": "fr-FR",
     "actions": {
       "continue": "Continuer"
+    },
+    "nav": {
+      "home": "Accueil",
+      "friends": "Amis",
+      "evns": "Règlements",
+      "profile": "Moi"
     }
   },
   "hi-IN": {
@@ -42,6 +72,12 @@ export const dictionaries = {
     "locale": "hi-IN",
     "actions": {
       "continue": "जारी रखें"
+    },
+    "nav": {
+      "home": "मुख्य पृष्ठ",
+      "friends": "मित्र",
+      "evns": "सेटलमेंट",
+      "profile": "मैं"
     }
   },
   "it-IT": {
@@ -49,6 +85,12 @@ export const dictionaries = {
     "locale": "it-IT",
     "actions": {
       "continue": "Continua"
+    },
+    "nav": {
+      "home": "Home",
+      "friends": "Amici",
+      "evns": "Saldo",
+      "profile": "Io"
     }
   },
   "ja-JP": {
@@ -56,6 +98,12 @@ export const dictionaries = {
     "locale": "ja-JP",
     "actions": {
       "continue": "続ける"
+    },
+    "nav": {
+      "home": "ホーム",
+      "friends": "友だち",
+      "evns": "清算",
+      "profile": "私"
     }
   },
   "ko-KR": {
@@ -63,6 +111,12 @@ export const dictionaries = {
     "locale": "ko-KR",
     "actions": {
       "continue": "계속"
+    },
+    "nav": {
+      "home": "홈",
+      "friends": "친구",
+      "evns": "정산",
+      "profile": "나"
     }
   },
   "nl-NL": {
@@ -70,6 +124,12 @@ export const dictionaries = {
     "locale": "nl-NL",
     "actions": {
       "continue": "Doorgaan"
+    },
+    "nav": {
+      "home": "Home",
+      "friends": "Vrienden",
+      "evns": "Afrekening",
+      "profile": "Ik"
     }
   },
   "ru-RU": {
@@ -77,6 +137,12 @@ export const dictionaries = {
     "locale": "ru-RU",
     "actions": {
       "continue": "Продолжить"
+    },
+    "nav": {
+      "home": "Главная",
+      "friends": "Друзья",
+      "evns": "Расчёты",
+      "profile": "Я"
     }
   },
   "sw-TZ": {
@@ -84,6 +150,12 @@ export const dictionaries = {
     "locale": "sw-TZ",
     "actions": {
       "continue": "Endelea"
+    },
+    "nav": {
+      "home": "Mwanzo",
+      "friends": "Marafiki",
+      "evns": "Marejesho",
+      "profile": "Mimi"
     }
   },
   "tr-TR": {
@@ -91,6 +163,12 @@ export const dictionaries = {
     "locale": "tr-TR",
     "actions": {
       "continue": "Devam Et"
+    },
+    "nav": {
+      "home": "Ana Sayfa",
+      "friends": "Arkadaşlar",
+      "evns": "Hesaplaşma",
+      "profile": "Ben"
     }
   },
   "uk-UA": {
@@ -98,6 +176,12 @@ export const dictionaries = {
     "locale": "uk-UA",
     "actions": {
       "continue": "Продовжити"
+    },
+    "nav": {
+      "home": "Головна",
+      "friends": "Друзі",
+      "evns": "Розрахунок",
+      "profile": "Я"
     }
   },
   "zh-CN": {
@@ -105,6 +189,12 @@ export const dictionaries = {
     "locale": "zh-CN",
     "actions": {
       "continue": "继续"
+    },
+    "nav": {
+      "home": "首页",
+      "friends": "朋友",
+      "evns": "结算",
+      "profile": "我"
     }
   }
 };

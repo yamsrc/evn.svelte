@@ -2,3 +2,8 @@ native: 한국어
 locale: ko-KR
 actions:
   continue: 계속
+nav:
+  home: 홈
+  friends: 친구
+  evns: 정산
+  profile: 나

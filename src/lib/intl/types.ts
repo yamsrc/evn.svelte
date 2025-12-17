@@ -12,4 +12,10 @@ export type Dictionary = {
       actions: {
         continue: string
       }
+      nav: {
+        home: string
+        friends: string
+        evns: string
+        profile: string
+      }
     }

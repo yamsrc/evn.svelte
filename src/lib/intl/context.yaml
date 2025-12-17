@@ -9,5 +9,15 @@ inputs:
   actions:
     continue:
       input: Continue
+  nav:
+    home:
+      input: Home
+    friends:
+      input: Friends
+    evns:
+      input: Evns
+      context: Use Evns for english. In other languages use short word with meaning settle up debts after spliting recipt
+    profile:
+      input: Me
 mounts:
   iam: ../../@/iam/ui/intl

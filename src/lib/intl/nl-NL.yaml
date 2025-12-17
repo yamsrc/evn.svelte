@@ -2,3 +2,8 @@ native: Nederlands
 locale: nl-NL
 actions:
   continue: Doorgaan
+nav:
+  home: Home
+  friends: Vrienden
+  evns: Afrekening
+  profile: Ik

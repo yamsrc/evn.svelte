@@ -2,3 +2,8 @@ native: 中文
 locale: zh-CN
 actions:
   continue: 继续
+nav:
+  home: 首页
+  friends: 朋友
+  evns: 结算
+  profile: 我

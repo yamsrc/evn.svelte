@@ -2,3 +2,8 @@ native: हिन्दी
 locale: hi-IN
 actions:
   continue: जारी रखें
+nav:
+  home: मुख्य पृष्ठ
+  friends: मित्र
+  evns: सेटलमेंट
+  profile: मैं

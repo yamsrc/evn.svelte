@@ -2,3 +2,8 @@ native: Türkçe
 locale: tr-TR
 actions:
   continue: Devam Et
+nav:
+  home: Ana Sayfa
+  friends: Arkadaşlar
+  evns: Hesaplaşma
+  profile: Ben

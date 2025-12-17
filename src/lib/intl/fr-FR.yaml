@@ -2,3 +2,8 @@ native: Français
 locale: fr-FR
 actions:
   continue: Continuer
+nav:
+  home: Accueil
+  friends: Amis
+  evns: Règlements
+  profile: Moi

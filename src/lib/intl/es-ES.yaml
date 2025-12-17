@@ -2,3 +2,8 @@ native: Español
 locale: es-ES
 actions:
   continue: Continuar
+nav:
+  home: Inicio
+  friends: Amigos
+  evns: Ajustes
+  profile: Yo

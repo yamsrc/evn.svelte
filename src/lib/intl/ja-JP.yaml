@@ -2,3 +2,8 @@ native: 日本語
 locale: ja-JP
 actions:
   continue: 続ける
+nav:
+  home: ホーム
+  friends: 友だち
+  evns: 清算
+  profile: 私

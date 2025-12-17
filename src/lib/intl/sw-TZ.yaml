@@ -2,3 +2,8 @@ native: Kiswahili
 locale: sw-TZ
 actions:
   continue: Endelea
+nav:
+  home: Mwanzo
+  friends: Marafiki
+  evns: Marejesho
+  profile: Mimi

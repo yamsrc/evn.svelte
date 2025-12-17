@@ -2,3 +2,8 @@ native: العربية
 locale: ar-SA
 actions:
   continue: متابعة
+nav:
+  home: الرئيسية
+  friends: الأصدقاء
+  evns: تسوية
+  profile: أنا

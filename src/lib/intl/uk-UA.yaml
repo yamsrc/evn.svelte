@@ -2,3 +2,8 @@ native: Українська
 locale: uk-UA
 actions:
   continue: Продовжити
+nav:
+  home: Головна
+  friends: Друзі
+  evns: Розрахунок
+  profile: Я
