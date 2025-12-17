@@ -1,7 +1,5 @@
-export interface Echo {
-  id: string
-  roles: string[]
+import type { Account } from '@/account'
 
-  name?: string
-  language?: string
+export interface Echo extends Account {
+  roles: string[]
 }

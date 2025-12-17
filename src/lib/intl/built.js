@@ -6,7 +6,8 @@ export const dictionaries = {
     "native": "العربية",
     "locale": "ar-SA",
     "actions": {
-      "continue": "متابعة"
+      "continue": "متابعة",
+      "holdToLogout": "اضغط مطولًا لتسجيل الخروج"
     },
     "nav": {
       "home": "الرئيسية",
@@ -16,13 +17,25 @@ export const dictionaries = {
     },
     "terms": "الشروط والأحكام",
     "privacy": "سياسة الخصوصية",
-    "madeBy": "من صنع"
+    "madeBy": "من صنع",
+    "profile": {
+      "title": "ملفي الشخصي",
+      "language": {
+        "title": "اللغة",
+        "description": "هذا لا يؤثر على التعرف على الشيك. على أي حال، نحن نفهم معظم اللغات هناك."
+      }
+    },
+    "form": {
+      "enterName": "أدخل الاسم"
+    },
+    "copyright": "© Seed.me، 2024-2025"
   },
   "de-DE": {
     "native": "Deutsch",
     "locale": "de-DE",
     "actions": {
-      "continue": "Weiter"
+      "continue": "Weiter",
+      "holdToLogout": "Zum Abmelden gedrückt halten"
     },
     "nav": {
       "home": "Startseite",
@@ -32,13 +45,25 @@ export const dictionaries = {
     },
     "terms": "Allgemeine Geschäftsbedingungen",
     "privacy": "Datenschutzerklärung",
-    "madeBy": "Erstellt von"
+    "madeBy": "Erstellt von",
+    "profile": {
+      "title": "Mein Profil",
+      "language": {
+        "title": "Sprache",
+        "description": "Das beeinflusst die Scheck-Erkennung nicht. Wir verstehen dort ohnehin die meisten Sprachen."
+      }
+    },
+    "form": {
+      "enterName": "Name eingeben"
+    },
+    "copyright": "© Seed.me, 2024–2025"
   },
   "en-US": {
     "native": "English",
     "locale": "en-US",
     "actions": {
-      "continue": "Continue"
+      "continue": "Continue",
+      "holdToLogout": "Hold to log out"
     },
     "nav": {
       "home": "Home",
@@ -48,13 +73,25 @@ export const dictionaries = {
     },
     "terms": "Terms & Conditions",
     "privacy": "Privacy Policy",
-    "madeBy": "Made by"
+    "madeBy": "Made by",
+    "profile": {
+      "title": "My Profile",
+      "language": {
+        "title": "Language",
+        "description": "This does not affect cheque recognition. We understand most languages there anyway."
+      }
+    },
+    "form": {
+      "enterName": "Enter name"
+    },
+    "copyright": "© Seed.me, 2024-2025"
   },
   "es-ES": {
     "native": "Español",
     "locale": "es-ES",
     "actions": {
-      "continue": "Continuar"
+      "continue": "Continuar",
+      "holdToLogout": "Mantén pulsado para cerrar sesión"
     },
     "nav": {
       "home": "Inicio",
@@ -64,13 +101,25 @@ export const dictionaries = {
     },
     "terms": "Términos y condiciones",
     "privacy": "Política de privacidad",
-    "madeBy": "Hecho por"
+    "madeBy": "Hecho por",
+    "profile": {
+      "title": "Mi perfil",
+      "language": {
+        "title": "Idioma",
+        "description": "Esto no afecta al reconocimiento de cheques. De todas formas, entendemos la mayoría de los idiomas allí."
+      }
+    },
+    "form": {
+      "enterName": "Introduce el nombre"
+    },
+    "copyright": "© Seed.me, 2024-2025"
   },
   "fr-FR": {
     "native": "Français",
     "locale": "fr-FR",
     "actions": {
-      "continue": "Continuer"
+      "continue": "Continuer",
+      "holdToLogout": "Maintenez pour vous déconnecter"
     },
     "nav": {
       "home": "Accueil",
@@ -80,13 +129,25 @@ export const dictionaries = {
     },
     "terms": "Conditions générales",
     "privacy": "Politique de confidentialité",
-    "madeBy": "Créé par"
+    "madeBy": "Créé par",
+    "profile": {
+      "title": "Mon profil",
+      "language": {
+        "title": "Langue",
+        "description": "Cela n’affecte pas la reconnaissance des chèques. Nous comprenons de toute façon la plupart des langues là-bas."
+      }
+    },
+    "form": {
+      "enterName": "Saisissez le nom"
+    },
+    "copyright": "© Seed.me, 2024-2025"
   },
   "hi-IN": {
     "native": "हिन्दी",
     "locale": "hi-IN",
     "actions": {
-      "continue": "जारी रखें"
+      "continue": "जारी रखें",
+      "holdToLogout": "लॉगआउट के लिए दबाए रखें"
     },
     "nav": {
       "home": "मुख्य पृष्ठ",
@@ -96,13 +157,25 @@ export const dictionaries = {
     },
     "terms": "नियम और शर्तें",
     "privacy": "गोपनीयता नीति",
-    "madeBy": "द्वारा निर्मित"
+    "madeBy": "द्वारा निर्मित",
+    "profile": {
+      "title": "मेरा प्रोफ़ाइल",
+      "language": {
+        "title": "भाषा",
+        "description": "यह चेक की पहचान को प्रभावित नहीं करता है। वैसे भी, हम वहां अधिकांश भाषाओं को समझते हैं।"
+      }
+    },
+    "form": {
+      "enterName": "नाम दर्ज करें"
+    },
+    "copyright": "© Seed.me, 2024-2025"
   },
   "it-IT": {
     "native": "Italiano",
     "locale": "it-IT",
     "actions": {
-      "continue": "Continua"
+      "continue": "Continua",
+      "holdToLogout": "Tieni premuto per uscire"
     },
     "nav": {
       "home": "Home",
@@ -112,13 +185,25 @@ export const dictionaries = {
     },
     "terms": "Termini e condizioni",
     "privacy": "Informativa sulla privacy",
-    "madeBy": "Realizzato da"
+    "madeBy": "Realizzato da",
+    "profile": {
+      "title": "Il mio profilo",
+      "language": {
+        "title": "Lingua",
+        "description": "Questo non influisce sul riconoscimento dell'assegno. Comunque, lì capiamo la maggior parte delle lingue."
+      }
+    },
+    "form": {
+      "enterName": "Inserisci il nome"
+    },
+    "copyright": "© Seed.me, 2024-2025"
   },
   "ja-JP": {
     "native": "日本語",
     "locale": "ja-JP",
     "actions": {
-      "continue": "続ける"
+      "continue": "続ける",
+      "holdToLogout": "長押ししてログアウト"
     },
     "nav": {
       "home": "ホーム",
@@ -128,13 +213,25 @@ export const dictionaries = {
     },
     "terms": "利用規約",
     "privacy": "プライバシーポリシー",
-    "madeBy": "作成者"
+    "madeBy": "作成者",
+    "profile": {
+      "title": "マイプロフィール",
+      "language": {
+        "title": "言語",
+        "description": "これは小切手の認識には影響しません。そもそも、私たちはほとんどの言語を理解しています。"
+      }
+    },
+    "form": {
+      "enterName": "名前を入力してください"
+    },
+    "copyright": "© Seed.me, 2024年～2025年"
   },
   "ko-KR": {
     "native": "한국어",
     "locale": "ko-KR",
     "actions": {
-      "continue": "계속"
+      "continue": "계속",
+      "holdToLogout": "길게 눌러 로그아웃"
     },
     "nav": {
       "home": "홈",
@@ -144,13 +241,25 @@ export const dictionaries = {
     },
     "terms": "이용 약관",
     "privacy": "개인정보 처리방침",
-    "madeBy": "제작자"
+    "madeBy": "제작자",
+    "profile": {
+      "title": "내 프로필",
+      "language": {
+        "title": "언어",
+        "description": "이는 수표 인식에 영향을 주지 않습니다. 어차피 저희는 대부분의 언어를 이해합니다."
+      }
+    },
+    "form": {
+      "enterName": "이름을 입력하세요"
+    },
+    "copyright": "© Seed.me, 2024-2025"
   },
   "nl-NL": {
     "native": "Nederlands",
     "locale": "nl-NL",
     "actions": {
-      "continue": "Doorgaan"
+      "continue": "Doorgaan",
+      "holdToLogout": "Ingedrukt houden om uit te loggen"
     },
     "nav": {
       "home": "Home",
@@ -160,13 +269,25 @@ export const dictionaries = {
     },
     "terms": "Algemene voorwaarden",
     "privacy": "Privacybeleid",
-    "madeBy": "Gemaakt door"
+    "madeBy": "Gemaakt door",
+    "profile": {
+      "title": "Mijn profiel",
+      "language": {
+        "title": "Taal",
+        "description": "Dit heeft geen invloed op de chequedetectie. We begrijpen daar toch de meeste talen."
+      }
+    },
+    "form": {
+      "enterName": "Naam invoeren"
+    },
+    "copyright": "© Seed.me, 2024-2025"
   },
   "ru-RU": {
     "native": "Русский",
     "locale": "ru-RU",
     "actions": {
-      "continue": "Продолжить"
+      "continue": "Продолжить",
+      "holdToLogout": "Удерживайте для выхода"
     },
     "nav": {
       "home": "Главная",
@@ -176,13 +297,25 @@ export const dictionaries = {
     },
     "terms": "Условия и положения",
     "privacy": "Политика конфиденциальности",
-    "madeBy": "Сделано"
+    "madeBy": "Сделано",
+    "profile": {
+      "title": "Мой профиль",
+      "language": {
+        "title": "Язык",
+        "description": "Это не влияет на распознавание чеков. Мы и так понимаем там большинство языков."
+      }
+    },
+    "form": {
+      "enterName": "Введите имя"
+    },
+    "copyright": "© Seed.me, 2024–2025"
   },
   "sw-TZ": {
     "native": "Kiswahili",
     "locale": "sw-TZ",
     "actions": {
-      "continue": "Endelea"
+      "continue": "Endelea",
+      "holdToLogout": "Shikilia ili utoke"
     },
     "nav": {
       "home": "Mwanzo",
@@ -192,13 +325,25 @@ export const dictionaries = {
     },
     "terms": "Sheria na Masharti",
     "privacy": "Sera ya Faragha",
-    "madeBy": "Imetengenezwa na"
+    "madeBy": "Imetengenezwa na",
+    "profile": {
+      "title": "Wasifu wangu",
+      "language": {
+        "title": "Lugha",
+        "description": "Hili haiathiri utambuzi wa hundi. Hata hivyo, tunaelewa lugha nyingi hapo."
+      }
+    },
+    "form": {
+      "enterName": "Weka jina"
+    },
+    "copyright": "© Seed.me, 2024-2025"
   },
   "tr-TR": {
     "native": "Türkçe",
     "locale": "tr-TR",
     "actions": {
-      "continue": "Devam Et"
+      "continue": "Devam Et",
+      "holdToLogout": "Çıkış yapmak için basılı tutun"
     },
     "nav": {
       "home": "Ana Sayfa",
@@ -208,13 +353,25 @@ export const dictionaries = {
     },
     "terms": "Şartlar ve Koşullar",
     "privacy": "Gizlilik Politikası",
-    "madeBy": "Tarafından yapıldı"
+    "madeBy": "Tarafından yapıldı",
+    "profile": {
+      "title": "Profilim",
+      "language": {
+        "title": "Dil",
+        "description": "Bu, çek tanımayı etkilemez. Zaten oradaki dillerin çoğunu anlıyoruz."
+      }
+    },
+    "form": {
+      "enterName": "İsim girin"
+    },
+    "copyright": "© Seed.me, 2024-2025"
   },
   "uk-UA": {
     "native": "Українська",
     "locale": "uk-UA",
     "actions": {
-      "continue": "Продовжити"
+      "continue": "Продовжити",
+      "holdToLogout": "Утримуйте, щоб вийти"
     },
     "nav": {
       "home": "Головна",
@@ -224,13 +381,25 @@ export const dictionaries = {
     },
     "terms": "Умови та положення",
     "privacy": "Політика конфіденційності",
-    "madeBy": "Створено"
+    "madeBy": "Створено",
+    "profile": {
+      "title": "Мій профіль",
+      "language": {
+        "title": "Мова",
+        "description": "Це не впливає на розпізнавання чеків. Ми й так розуміємо там більшість мов."
+      }
+    },
+    "form": {
+      "enterName": "Введіть ім’я"
+    },
+    "copyright": "© Seed.me, 2024–2025"
   },
   "zh-CN": {
     "native": "中文",
     "locale": "zh-CN",
     "actions": {
-      "continue": "继续"
+      "continue": "继续",
+      "holdToLogout": "按住退出登录"
     },
     "nav": {
       "home": "首页",
@@ -240,7 +409,18 @@ export const dictionaries = {
     },
     "terms": "条款与条件",
     "privacy": "隐私政策",
-    "madeBy": "由...制作"
+    "madeBy": "由...制作",
+    "profile": {
+      "title": "我的个人资料",
+      "language": {
+        "title": "语言",
+        "description": "这不会影响支票识别。反正我们在那里大多数语言都能理解。"
+      }
+    },
+    "form": {
+      "enterName": "输入姓名"
+    },
+    "copyright": "© Seed.me，2024-2025"
   }
 };
 

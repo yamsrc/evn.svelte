@@ -169,6 +169,11 @@
   p {
     @apply leading-relaxed text-pretty;
   }
+
+  input {
+    /* changing font possibly breaks this vertical alignment adjustment */
+    @apply pt-[calc(var(--spacing)*1-0.2em)];
+  }
 }
 
 @layer transitions {

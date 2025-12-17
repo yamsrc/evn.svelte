@@ -1,0 +1,27 @@
+<script lang="ts">
+  import { origin } from '$config'
+  import type { Props } from './Pircure'
+
+  let {
+    ref = $bindable(),
+    id,
+    path = '/pictures/assets/',
+    alt,
+    width,
+    height,
+    variant,
+    format = 'webp',
+    class: classes,
+    style,
+  }: Props = $props()
+</script>
+
+<img
+  bind:this={ref}
+  src={`${origin}${path}${id}.${variant}.${format}`}
+  alt={alt ?? id}
+  {width}
+  {height}
+  class={classes}
+  {style}
+/>

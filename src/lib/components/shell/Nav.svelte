@@ -55,7 +55,7 @@
               class="flex flex-col items-center gap-1 z-10 relative font-bold"
               style={`view-transition-name: shell-nav-${i}`}
             >
-              <section.Icon class="size-6" />
+              <section.Icon class="size-6" color="var(--muted-foreground)" />
               {section.label}
             </div>
           </Button>

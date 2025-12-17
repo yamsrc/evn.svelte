@@ -2,6 +2,7 @@ native: Deutsch
 locale: de-DE
 actions:
   continue: Weiter
+  holdToLogout: Zum Abmelden gedrückt halten
 nav:
   home: Startseite
   friends: Freunde
@@ -10,3 +11,13 @@ nav:
 terms: Allgemeine Geschäftsbedingungen
 privacy: Datenschutzerklärung
 madeBy: Erstellt von
+profile:
+  title: Mein Profil
+  language:
+    title: Sprache
+    description: >-
+      Das beeinflusst die Scheck-Erkennung nicht. Wir verstehen dort ohnehin die
+      meisten Sprachen.
+form:
+  enterName: Name eingeben
+copyright: © Seed.me, 2024–2025

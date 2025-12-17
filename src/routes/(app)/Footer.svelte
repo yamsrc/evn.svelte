@@ -3,7 +3,7 @@
   import SeedMe from './seedme.svg'
 </script>
 
-<footer class="flex flex-col gap-3 p-4">
+<footer class="flex flex-col gap-3 p-5">
   <div class="flex justify-center gap-2">
     {$dict.madeBy}
     <img src={SeedMe} alt="seed.me" class="h-6" />

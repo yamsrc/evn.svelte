@@ -2,6 +2,7 @@ native: English
 locale: en-US
 actions:
   continue: Continue
+  holdToLogout: Hold to log out
 nav:
   home: Home
   friends: Friends
@@ -10,3 +11,13 @@ nav:
 terms: Terms & Conditions
 privacy: Privacy Policy
 madeBy: Made by
+profile:
+  title: My Profile
+  language:
+    title: Language
+    description: >-
+      This does not affect cheque recognition. We understand most languages
+      there anyway.
+form:
+  enterName: Enter name
+copyright: © Seed.me, 2024-2025

@@ -2,6 +2,7 @@ native: Kiswahili
 locale: sw-TZ
 actions:
   continue: Endelea
+  holdToLogout: Shikilia ili utoke
 nav:
   home: Mwanzo
   friends: Marafiki
@@ -10,3 +11,11 @@ nav:
 terms: Sheria na Masharti
 privacy: Sera ya Faragha
 madeBy: Imetengenezwa na
+profile:
+  title: Wasifu wangu
+  language:
+    title: Lugha
+    description: Hili haiathiri utambuzi wa hundi. Hata hivyo, tunaelewa lugha nyingi hapo.
+form:
+  enterName: Weka jina
+copyright: © Seed.me, 2024-2025

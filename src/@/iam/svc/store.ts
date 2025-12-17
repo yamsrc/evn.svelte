@@ -3,7 +3,7 @@ import { derived, writable } from 'svelte/store'
 import type { Echo } from './net'
 import type { IDP } from './oidc'
 
-const account = value<Account>({
+const account = value<Echo>({
   persist: 'auth:account',
 })
 
@@ -22,15 +22,14 @@ const authenticated = derived([challenge, account],
 const processing = writable(false)
 const greeting = writable(false)
 
-function iam(value: Account) {
+function iam(value: Echo) {
   if (account.extract()?.id !== value.id)
     account.set(null) // clear bound stores
 
   account.set(value)
 }
 
-type Account = Echo
 type Method = 'passkey' | 'password' | IDP
 
 export { account, challenge, method, authenticated, processing, greeting, iam }
-export type { Account, Method }
+export type { Method }

@@ -11,6 +11,7 @@ export type Dictionary = {
       locale: string
       actions: {
         continue: string
+        holdToLogout: string
       }
       nav: {
         home: string
@@ -21,4 +22,15 @@ export type Dictionary = {
       terms: string
       privacy: string
       madeBy: string
+      profile: {
+        title: string
+        language: {
+          title: string
+          description: string
+        }
+      }
+      form: {
+        enterName: string
+      }
+      copyright: string
     }

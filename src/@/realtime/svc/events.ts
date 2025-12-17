@@ -1,6 +1,7 @@
 import mitt from 'mitt'
+import type { Events as AccountEvents } from '@/account/svc/net'
 
-export type Events = Record<string, unknown> // add domain events here
+export type Events = AccountEvents // add domain events here
 
 export const events = mitt<Events & { heartbeat: undefined }>()
 

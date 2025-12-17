@@ -2,6 +2,7 @@ native: 日本語
 locale: ja-JP
 actions:
   continue: 続ける
+  holdToLogout: 長押ししてログアウト
 nav:
   home: ホーム
   friends: 友だち
@@ -10,3 +11,11 @@ nav:
 terms: 利用規約
 privacy: プライバシーポリシー
 madeBy: 作成者
+profile:
+  title: マイプロフィール
+  language:
+    title: 言語
+    description: これは小切手の認識には影響しません。そもそも、私たちはほとんどの言語を理解しています。
+form:
+  enterName: 名前を入力してください
+copyright: © Seed.me, 2024年～2025年

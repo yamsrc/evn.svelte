@@ -20,6 +20,7 @@
   let pressed = $state(false)
   let shown = $state(false)
   let hiding = $state<ReturnType<typeof setTimeout> | null>(null)
+  // svelte-ignore state_referenced_locally
   let countdown = $state<Readable<number>>(readable(duration))
 
   const progress = $derived(Math.round((1 - $countdown! / duration) * 100))

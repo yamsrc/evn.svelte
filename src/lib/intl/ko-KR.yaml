@@ -2,6 +2,7 @@ native: 한국어
 locale: ko-KR
 actions:
   continue: 계속
+  holdToLogout: 길게 눌러 로그아웃
 nav:
   home: 홈
   friends: 친구
@@ -10,3 +11,11 @@ nav:
 terms: 이용 약관
 privacy: 개인정보 처리방침
 madeBy: 제작자
+profile:
+  title: 내 프로필
+  language:
+    title: 언어
+    description: 이는 수표 인식에 영향을 주지 않습니다. 어차피 저희는 대부분의 언어를 이해합니다.
+form:
+  enterName: 이름을 입력하세요
+copyright: © Seed.me, 2024-2025

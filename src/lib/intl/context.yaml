@@ -9,6 +9,8 @@ inputs:
   actions:
     continue:
       input: Continue
+    holdToLogout:
+      input: Hold to logout
   nav:
     home:
       input: Home
@@ -25,5 +27,18 @@ inputs:
     input: Privacy Policy
   madeBy:
     input: Made by
+  profile:
+    title:
+      input: My profile
+    language:
+      title:
+        input: Language
+      description:
+        input: "Does not affect the cheque recognition. We\_understand most languages there anyway."
+  form:
+    enterName:
+      input: Enter name
+  copyright:
+    input: © Seed.me, 2024-2025
 mounts:
   iam: ../../@/iam/ui/intl
