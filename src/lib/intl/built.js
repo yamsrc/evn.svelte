@@ -13,7 +13,10 @@ export const dictionaries = {
       "friends": "الأصدقاء",
       "evns": "تسوية",
       "profile": "أنا"
-    }
+    },
+    "terms": "الشروط والأحكام",
+    "privacy": "سياسة الخصوصية",
+    "madeBy": "من صنع"
   },
   "de-DE": {
     "native": "Deutsch",
@@ -26,7 +29,10 @@ export const dictionaries = {
       "friends": "Freunde",
       "evns": "Ausgleich",
       "profile": "Ich"
-    }
+    },
+    "terms": "Allgemeine Geschäftsbedingungen",
+    "privacy": "Datenschutzerklärung",
+    "madeBy": "Erstellt von"
   },
   "en-US": {
     "native": "English",
@@ -39,7 +45,10 @@ export const dictionaries = {
       "friends": "Friends",
       "evns": "Evns",
       "profile": "Me"
-    }
+    },
+    "terms": "Terms & Conditions",
+    "privacy": "Privacy Policy",
+    "madeBy": "Made by"
   },
   "es-ES": {
     "native": "Español",
@@ -52,7 +61,10 @@ export const dictionaries = {
       "friends": "Amigos",
       "evns": "Ajustes",
       "profile": "Yo"
-    }
+    },
+    "terms": "Términos y condiciones",
+    "privacy": "Política de privacidad",
+    "madeBy": "Hecho por"
   },
   "fr-FR": {
     "native": "Français",
@@ -65,7 +77,10 @@ export const dictionaries = {
       "friends": "Amis",
       "evns": "Règlements",
       "profile": "Moi"
-    }
+    },
+    "terms": "Conditions générales",
+    "privacy": "Politique de confidentialité",
+    "madeBy": "Créé par"
   },
   "hi-IN": {
     "native": "हिन्दी",
@@ -78,7 +93,10 @@ export const dictionaries = {
       "friends": "मित्र",
       "evns": "सेटलमेंट",
       "profile": "मैं"
-    }
+    },
+    "terms": "नियम और शर्तें",
+    "privacy": "गोपनीयता नीति",
+    "madeBy": "द्वारा निर्मित"
   },
   "it-IT": {
     "native": "Italiano",
@@ -91,7 +109,10 @@ export const dictionaries = {
       "friends": "Amici",
       "evns": "Saldo",
       "profile": "Io"
-    }
+    },
+    "terms": "Termini e condizioni",
+    "privacy": "Informativa sulla privacy",
+    "madeBy": "Realizzato da"
   },
   "ja-JP": {
     "native": "日本語",
@@ -104,7 +125,10 @@ export const dictionaries = {
       "friends": "友だち",
       "evns": "清算",
       "profile": "私"
-    }
+    },
+    "terms": "利用規約",
+    "privacy": "プライバシーポリシー",
+    "madeBy": "作成者"
   },
   "ko-KR": {
     "native": "한국어",
@@ -117,7 +141,10 @@ export const dictionaries = {
       "friends": "친구",
       "evns": "정산",
       "profile": "나"
-    }
+    },
+    "terms": "이용 약관",
+    "privacy": "개인정보 처리방침",
+    "madeBy": "제작자"
   },
   "nl-NL": {
     "native": "Nederlands",
@@ -130,7 +157,10 @@ export const dictionaries = {
       "friends": "Vrienden",
       "evns": "Afrekening",
       "profile": "Ik"
-    }
+    },
+    "terms": "Algemene voorwaarden",
+    "privacy": "Privacybeleid",
+    "madeBy": "Gemaakt door"
   },
   "ru-RU": {
     "native": "Русский",
@@ -143,7 +173,10 @@ export const dictionaries = {
       "friends": "Друзья",
       "evns": "Расчёты",
       "profile": "Я"
-    }
+    },
+    "terms": "Условия и положения",
+    "privacy": "Политика конфиденциальности",
+    "madeBy": "Сделано"
   },
   "sw-TZ": {
     "native": "Kiswahili",
@@ -156,7 +189,10 @@ export const dictionaries = {
       "friends": "Marafiki",
       "evns": "Marejesho",
       "profile": "Mimi"
-    }
+    },
+    "terms": "Sheria na Masharti",
+    "privacy": "Sera ya Faragha",
+    "madeBy": "Imetengenezwa na"
   },
   "tr-TR": {
     "native": "Türkçe",
@@ -169,7 +205,10 @@ export const dictionaries = {
       "friends": "Arkadaşlar",
       "evns": "Hesaplaşma",
       "profile": "Ben"
-    }
+    },
+    "terms": "Şartlar ve Koşullar",
+    "privacy": "Gizlilik Politikası",
+    "madeBy": "Tarafından yapıldı"
   },
   "uk-UA": {
     "native": "Українська",
@@ -182,7 +221,10 @@ export const dictionaries = {
       "friends": "Друзі",
       "evns": "Розрахунок",
       "profile": "Я"
-    }
+    },
+    "terms": "Умови та положення",
+    "privacy": "Політика конфіденційності",
+    "madeBy": "Створено"
   },
   "zh-CN": {
     "native": "中文",
@@ -195,7 +237,10 @@ export const dictionaries = {
       "friends": "朋友",
       "evns": "结算",
       "profile": "我"
-    }
+    },
+    "terms": "条款与条件",
+    "privacy": "隐私政策",
+    "madeBy": "由...制作"
   }
 };
 

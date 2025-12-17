@@ -19,5 +19,11 @@ inputs:
       context: Use Evns for english. In other languages use short word with meaning settle up debts after spliting recipt
     profile:
       input: Me
+  terms:
+    input: Terms & Conditions
+  privacy:
+    input: Privacy Policy
+  madeBy:
+    input: Made by
 mounts:
   iam: ../../@/iam/ui/intl

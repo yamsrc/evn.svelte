@@ -18,4 +18,7 @@ export type Dictionary = {
         evns: string
         profile: string
       }
+      terms: string
+      privacy: string
+      madeBy: string
     }
