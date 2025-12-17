@@ -1,6 +1,14 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-@import "tw-animate-css";
+@import 'tw-animate-css';
+
+@font-face {
+  font-family: 'Golos UI VF';
+  src: url('/fonts/golos-ui_vf.woff2') format('woff2'),
+    url('/fonts/golos-ui_vf.woff') format('woff');
+  font-weight: 100 200 300 400 500 600 700 800 900;
+  font-style: normal;
+}
 
 @custom-variant dark (&:is(.dark *));
 
@@ -117,6 +125,7 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: 'Golos UI VF', sans-serif;
   }
 }
 @custom-variant standalone {

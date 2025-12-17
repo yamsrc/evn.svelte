@@ -52,7 +52,7 @@
               style={active ? 'view-transition-name: shell-nav-active;' : ''}
             ></div>
             <div
-              class="flex flex-col items-center gap-1 z-10 relative"
+              class="flex flex-col items-center gap-1 z-10 relative font-bold"
               style={`view-transition-name: shell-nav-${i}`}
             >
               <section.Icon class="size-6" />
