@@ -4,7 +4,10 @@
 export const dictionaries = {
   "en-US": {
     "native": "English",
-    "locale": "en-US"
+    "locale": "en-US",
+    "actions": {
+      "continue": "Continue"
+    }
   }
 };
 

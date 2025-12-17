@@ -106,6 +106,7 @@ export default [
           order: 'asc',
         },
       }],
+      'import-x/no-duplicates': 'off', // stupid shit doesn't work
       'no-warning-comments': ['error', {
         terms: ['todo', 'fixme'],
         location: 'anywhere',

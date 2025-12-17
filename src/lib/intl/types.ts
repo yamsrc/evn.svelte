@@ -9,4 +9,7 @@ export type Locale = 'en-US'
 export type Dictionary = {
       native: string
       locale: string
+      actions: {
+        continue: string
+      }
     }

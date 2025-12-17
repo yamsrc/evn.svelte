@@ -6,5 +6,8 @@ inputs:
   native:
     input: native
     context: native name of the language in that language, should not be translated
+  actions:
+    continue:
+      input: Continue
 mounts:
   iam: ../../@/iam/ui/intl

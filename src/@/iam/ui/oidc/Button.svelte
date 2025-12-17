@@ -1,21 +1,25 @@
 <script lang="ts">
   import { Loader } from '$com/loader'
   import { Button } from '$ui/button'
-  import { apple, oidc, type IDP } from '@/iam'
+  import { apple, google, oidc, type IDP } from '@/iam'
   import { icons } from './icons'
   import type { Snippet } from 'svelte'
 
   const { idp, children }: { idp: IDP; children?: Snippet } = $props()
+
   const Icon = $derived(icons[idp])
 
-  let disabled = $state(false)
+  async function onclick(event: MouseEvent) {
+    const button = event.currentTarget as HTMLButtonElement
 
-  async function onclick() {
-    disabled = true
+    button.disabled = true
 
     if (idp === 'apple') {
       await apple()
-      disabled = false
+      button.disabled = false
+    } else if (idp === 'google') {
+      await google()
+      button.disabled = false
     } else oidc(idp)
   }
 </script>
@@ -24,14 +28,10 @@
   variant="outline"
   size={children ? 'default' : 'icon'}
   {onclick}
-  {disabled}
   data-idp="google"
-  class="backdrop-blur bg-card/50"
+  class="disabled:[&_.x-icon]:hidden [&_.x-loader]:hidden disabled:[&_.x-loader]:block"
 >
-  {#if disabled}
-    <Loader />
-  {:else}
-    <Icon />
-  {/if}
+  <Icon class="x-icon" />
+  <Loader class="x-loader" />
   {@render children?.()}
 </Button>
