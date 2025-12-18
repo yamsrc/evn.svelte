@@ -1,13 +1,9 @@
 <script lang="ts">
   import { cn } from '$lib/utils'
   import { Picture } from '@/media/ui'
-  import type { Account } from '@/account'
+  import type { Props } from './Picture'
 
-  const {
-    account,
-    size = 400,
-    class: classes,
-  }: { account: Account; size?: number; class?: string } = $props()
+  const { account, size = 400, class: classes }: Props = $props()
 </script>
 
 {#if account?.picture}
