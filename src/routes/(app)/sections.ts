@@ -9,7 +9,7 @@ export const sections = (dict: Dictionary): Section[] => [
     Icon: LayoutGrid,
   },
   {
-    href: '/frients/',
+    href: '/friends/',
     label: dict.nav.friends,
     Icon: Users,
   },
