@@ -38,7 +38,7 @@
         required
         {autofocus}
       />
-      <Button size="icon" type="submit">
+      <Button size="icon" type="submit" class="size-12">
         {#if busy}
           <Loader />
         {:else}

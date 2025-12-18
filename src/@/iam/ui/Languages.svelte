@@ -53,7 +53,7 @@
       onclick={(e) => click(e, option.value)}
       class={cn(
         'snap-center px-2 py-1 text-muted-foreground transition-all',
-        $locale === option.value && 'pointer-events-none text-foreground',
+        $locale === option.value && 'pointer-events-none text-foreground bg-muted rounded-md',
       )}
       data-value={option.value}
     >

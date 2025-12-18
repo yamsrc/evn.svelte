@@ -8,7 +8,7 @@
   const { sections, position = 'start', class: classes }: Props = $props()
   const action = $derived($actions.at(-1) ?? null)
 
-  const rounded = 'rounded-md'
+  const rounded = 'rounded-xl'
 </script>
 
 <div class="h-20 sm:h-24"></div>
@@ -23,14 +23,14 @@
 >
   <div
     class={cn(
-      'flex items-center gap-2 pt-0 p-2 sm:pb-6 standalone:px-6 standalone:pb-0',
+      'flex items-center gap-2 p-5 pt-0 sm:pb-6 standalone:px-6 standalone:pb-0',
       position === 'center' ? 'justify-center' : 'justify-between',
       position === 'start' ? 'flex-row' : 'flex-row-reverse',
     )}
   >
     <ul
       class={cn(
-        'bg-background/50 backdrop-blur-xs border overflow-hidden flex pointer-events-auto sm:ml-4',
+        'bg-muted backdrop-blur-xs border overflow-hidden flex pointer-events-auto sm:ml-4 h-16',
         rounded,
       )}
       style="view-transition-name: shell-nav;"
@@ -42,20 +42,20 @@
             href={exact(section.href, page.url.pathname) ? null : href(section.href)}
             variant="ghost"
             class={cn(
-              'relative flex flex-col h-auto w-20 p-2 gap-1 text-xs transition-colors duration-300 hover:bg-accent/25 overflow-hidden',
+              'relative flex flex-col h-full w-17 p-2 gap-1 text-xs transition-colors duration-300 hover:bg-accent/25 overflow-hidden',
               rounded,
               active && 'text-accent-foreground',
             )}
           >
             <div
-              class={cn('absolute inset-0 bg-accent/50 z-0 m-1', rounded, active || 'hidden')}
+              class={cn('absolute inset-0 bg-background z-0 m-1', rounded, active || 'hidden')}
               style={active ? 'view-transition-name: shell-nav-active;' : ''}
             ></div>
             <div
               class="flex flex-col items-center gap-1 z-10 relative font-bold"
               style={`view-transition-name: shell-nav-${i}`}
             >
-              <section.Icon class="size-6" color="var(--muted-foreground)" />
+              <section.Icon class="size-5" color="var(--muted-foreground)" />
               {section.label}
             </div>
           </Button>

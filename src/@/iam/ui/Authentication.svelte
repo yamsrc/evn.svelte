@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { AtSign, Fingerprint } from '@lucide/svelte'
+  import { AtSign, FingerprintPattern } from '@lucide/svelte'
   import { onMount } from 'svelte'
   import { cn } from '$lib/utils'
   import * as Tabs from '$ui/tabs'
@@ -28,9 +28,15 @@
 
 <Tabs.Root bind:value class={cn('w-full', classes)} {onValueChange} bind:ref={tabsRef}>
   <div class="flex justify-between gap-2">
-    <Tabs.List class="bg-background/25">
-      <Tabs.Trigger value="passkey"><Fingerprint /> {$dict.auth.passkey}</Tabs.Trigger>
-      <Tabs.Trigger value="password"><AtSign /> {$dict.auth.email}</Tabs.Trigger>
+    <Tabs.List>
+      <Tabs.Trigger value="passkey">
+        <FingerprintPattern color="var(--muted-foreground)" />
+        {$dict.auth.passkey}
+      </Tabs.Trigger>
+      <Tabs.Trigger value="password">
+        <AtSign color="var(--muted-foreground)" />
+        {$dict.auth.email}
+      </Tabs.Trigger>
     </Tabs.List>
     <OIDC />
   </div>

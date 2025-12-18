@@ -15,7 +15,9 @@
 <Screen class="flex-1 flex flex-col justify-between">
   <Authenticated>
     {#snippet screen({ authentication })}
-      <Languages />
+      <div class="pt-2">
+        <Languages />
+      </div>
       <Section class="flex-1 flex flex-col items-center max-w-sm mx-auto">
         <div class="py-[10vh]">
           <img src={Logo} alt="seed.me" class="h-10 mx-auto" />

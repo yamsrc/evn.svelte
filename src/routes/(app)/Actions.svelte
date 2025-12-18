@@ -5,7 +5,7 @@
 </script>
 
 <Actions>
-  <Button size="icon">
-    <Plus />
+  <Button size="icon" class="size-12">
+    <Plus class="size-5" />
   </Button>
 </Actions>
