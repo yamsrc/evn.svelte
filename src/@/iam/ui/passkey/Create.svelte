@@ -42,7 +42,7 @@
         {#if busy}
           <Loader />
         {:else}
-          <ArrowRight />
+          <ArrowRight class="size-5" />
         {/if}
       </Button>
     </div>
