@@ -5,7 +5,7 @@
   let {
     ref = $bindable(),
     id,
-    path = '/pictures/assets/',
+    path = '/pictures/',
     alt,
     width,
     height,

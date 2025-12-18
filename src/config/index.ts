@@ -1,6 +1,8 @@
 import { dev, version as ver } from '$app/environment'
 import { PUBLIC_API_ORIGIN } from '$env/static/public'
 
+export * from './assets'
+
 export const DefaultLocale = 'en-US'
 
 // change this

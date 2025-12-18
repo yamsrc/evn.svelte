@@ -1,5 +1,7 @@
 import { value } from 'svas'
 import { derived, writable } from 'svelte/store'
+import { assets } from '$config'
+import { set } from '@/account'
 import type { Echo } from './net'
 import type { IDP } from './oidc'
 
@@ -27,9 +29,13 @@ function iam(value: Echo) {
     account.set(null) // clear bound stores
 
   account.set(value)
+
+  if (!value.picture)
+    set({ picture: assets[Math.floor(Math.random() * assets.length)] })
 }
 
+type Account = Echo
 type Method = 'passkey' | 'password' | IDP
 
 export { account, challenge, method, authenticated, processing, greeting, iam }
-export type { Method }
+export type { Account, Method }
