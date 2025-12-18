@@ -35,7 +35,7 @@ export const origin = (() => {
 })()
 
 export const sleep: [number, number] | undefined = (() => {
-  const sleep = import.meta.env.DEV_SLEEP
+  const sleep = import.meta.env.VITE_DEV_SLEEP
 
   if (!sleep || typeof window === 'undefined')
     return
