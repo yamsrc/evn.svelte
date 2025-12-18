@@ -2,7 +2,7 @@ export interface Account {
   id: string
   name?: string
   picture?: string
-  language?: string
+  locale?: string
   _created: number
   _version: number
 }

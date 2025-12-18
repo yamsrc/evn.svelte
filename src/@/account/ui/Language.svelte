@@ -6,8 +6,8 @@
 
   let value = $derived($selected ?? undefined)
 
-  async function change(language: string) {
-    await set({ language })
+  async function change(locale: string) {
+    await set({ locale })
   }
 </script>
 

@@ -24,10 +24,10 @@ const selected = value<Locale | undefined>({
 })
 
 const locale = derived([account, selected], ([$account, $selected]) => {
-  if ($selected && $account?.language === undefined) return resolveLocale($selected)
+  if ($selected && $account?.locale === undefined) return resolveLocale($selected)
 
-  if ($account?.language !== undefined && supported($account?.language))
-    return resolveLocale($account.language)
+  if ($account?.locale !== undefined && supported($account?.locale))
+    return resolveLocale($account.locale)
   else
     return preferred() ?? DefaultLocale
 })
