@@ -30,7 +30,7 @@
   >
     <ul
       class={cn(
-        'bg-muted backdrop-blur-xs border overflow-hidden flex pointer-events-auto sm:ml-4 h-16',
+        'bg-muted backdrop-blur-xs border overflow-hidden flex pointer-events-auto sm:ml-4 h-17',
         rounded,
       )}
       style="view-transition-name: shell-nav;"
@@ -42,7 +42,7 @@
             href={exact(section.href, page.url.pathname) ? null : href(section.href)}
             variant="ghost"
             class={cn(
-              'relative flex flex-col h-full w-17 p-2 gap-1 text-sm transition-colors duration-300 hover:bg-accent/25 overflow-hidden',
+              'relative flex flex-col h-full w-18 p-2 gap-1 text-sm transition-colors duration-300 hover:bg-accent/25 overflow-hidden',
               rounded,
               active && 'text-accent-foreground',
             )}
