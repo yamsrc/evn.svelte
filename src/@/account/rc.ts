@@ -17,10 +17,7 @@ function subscribe() {
 }
 
 function rc() {
-  account.subscribe((account) => {
-    if (account === null && unsubscribe === null)
-      subscribe()
-  })
+  subscribe()
 }
 
 export { rc }
