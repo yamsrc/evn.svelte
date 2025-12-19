@@ -1,0 +1,21 @@
+native: 中文
+locale: zh-CN
+actions:
+  continue: 继续
+  holdToLogout: 按住退出登录
+nav:
+  home: 首页
+  friends: 朋友
+  evns: 结算
+  profile: 我
+terms: 条款与条件
+privacy: 隐私政策
+madeBy: 由...制作
+profile:
+  title: 我的个人资料
+  language:
+    title: 语言
+    description: 这不会影响支票识别。反正我们在那里大多数语言都能理解。
+form:
+  enterName: 输入姓名
+copyright: © Seed.me，2024-2025

@@ -2,6 +2,78 @@
 
 /** @type {Record<import('./types').Locale, import('./types').Dictionary>} */
 export const dictionaries = {
+  "ar-SA": {
+    "auth": {
+      "welcomeBack": "مرحباً بعودتك",
+      "signupTitle": "تسجيل بنقرة واحدة",
+      "passwordTitle": "الدخول بكلمة المرور",
+      "passwordDescription": "إنشاء حساب أو تسجيل الدخول",
+      "passkey": "مفاتيح المرور",
+      "email": "البريد",
+      "alreadyHaveAccount": "هل لديك حساب بالفعل؟",
+      "betterSecurity": "أمان أفضل",
+      "passkeysNotSupported": "مفاتيح المرور غير مدعومة",
+      "passkeysWarning": "متصفحك لا يحترم خصوصيتك وأمانك.",
+      "learnMore": "اعرف المزيد",
+      "passwordBlank": "اترك كلمة المرور فارغة <nobr>لتلقي</nobr> <nobr>رمز مرور لمرة واحدة</nobr>.",
+      "otpInstructions": "أدخل الرمز المرسل إلى بريدك الإلكتروني. ينتهي خلال 5 دقائق.",
+      "holdToLogout": "اضغط مطولاً لتسجيل الخروج",
+      "continueWith": (provider) => {
+  return `متابعة مع ${provider}`
+},
+      "passkeysDescription": "مفاتيح المرور أكثر أمانًا من كلمات المرور، وأسهل في الاستخدام، ولا يمكن سرقتها.",
+      "yourName": "اسمك",
+      "password": "كلمة المرور",
+      "refresh": {
+        "description": (name) => `${name ? name + "، لأسباب" : "لأسباب"} أمنية، انتهت صلاحية بيانات اعتمادك. الرجاء تسجيل الدخول مرة أخرى للمتابعة.`,
+        "title": "مرحبًا بعودتك"
+      },
+      "signout": "تسجيل الخروج",
+      "login": "تسجيل الدخول",
+      "signin": "تسجيل الدخول",
+      "inApp": {
+        "title": "سياق غير آمن",
+        "description": "من أجل أمانك، قمنا بفتح التطبيق في متصفحك.",
+        "continue": "متابعة"
+      }
+    }
+  },
+  "de-DE": {
+    "auth": {
+      "welcomeBack": "Willkommen zurück",
+      "signupTitle": "Ein-Tap-Anmeldung",
+      "passwordTitle": "Mit Passwort einsteigen",
+      "passwordDescription": "Konto erstellen oder anmelden",
+      "passkey": "Passkeys",
+      "email": "E-Mail",
+      "alreadyHaveAccount": "Haben Sie bereits ein Konto?",
+      "betterSecurity": "Bessere Sicherheit",
+      "passkeysNotSupported": "Passkeys nicht unterstützt",
+      "passkeysWarning": "Ihr Browser respektiert Ihre Privatsphäre und Sicherheit nicht.",
+      "learnMore": "Mehr erfahren",
+      "passwordBlank": "Lassen Sie das Passwort leer, <nobr>um</nobr> <nobr>einen Einmal-Code</nobr> zu erhalten.",
+      "otpInstructions": "Geben Sie den an Ihre E-Mail gesendeten Code ein. Er läuft in 5 Minuten ab.",
+      "holdToLogout": "Halten Sie gedrückt, um sich abzumelden",
+      "continueWith": (provider) => {
+  return `Fortfahren mit ${provider}`
+},
+      "passkeysDescription": "Passkeys sind sicherer als Passwörter, einfacher zu verwenden und können nicht gestohlen werden.",
+      "yourName": "Ihr Name",
+      "password": "Passwort",
+      "refresh": {
+        "description": (name) => `${name ? name + ", aus" : "Aus"} Sicherheitsgründen sind Ihre Anmeldedaten abgelaufen. Bitte melden Sie sich erneut an, um fortzufahren.`,
+        "title": "Willkommen zurück"
+      },
+      "signout": "Abmelden",
+      "login": "Anmelden",
+      "signin": "Anmelden",
+      "inApp": {
+        "title": "Unsicherer Kontext",
+        "description": "Zu deiner Sicherheit haben wir die App in deinem Browser geöffnet.",
+        "continue": "Weiter"
+      }
+    }
+  },
   "en-US": {
     "auth": {
       "welcomeBack": "Welcome back",
@@ -37,8 +109,440 @@ export const dictionaries = {
         "continue": "Continue"
       }
     }
+  },
+  "es-ES": {
+    "auth": {
+      "welcomeBack": "Bienvenido de vuelta",
+      "signupTitle": "Registro de un toque",
+      "passwordTitle": "Entra con contraseña",
+      "passwordDescription": "Crear una cuenta o iniciar sesión",
+      "passkey": "Llaves",
+      "email": "Correo",
+      "alreadyHaveAccount": "¿Ya tienes una cuenta?",
+      "betterSecurity": "Mejor seguridad",
+      "passkeysNotSupported": "Llaves de acceso no soportadas",
+      "passkeysWarning": "Tu navegador no respeta tu privacidad y seguridad.",
+      "learnMore": "Saber más",
+      "passwordBlank": "Deja la contraseña en blanco <nobr>para recibir</nobr> <nobr>un código de acceso de un solo uso</nobr>.",
+      "otpInstructions": "Ingresa el código enviado a tu correo electrónico. Expira en 5 minutos.",
+      "holdToLogout": "Mantén presionado para cerrar sesión",
+      "continueWith": (provider) => {
+  return `Continuar con ${provider}`
+},
+      "passkeysDescription": "Las claves de acceso son más seguras que las contraseñas, más fáciles de usar y no pueden ser robadas.",
+      "yourName": "Tu nombre",
+      "password": "Contraseña",
+      "refresh": {
+        "description": (name) => `${name ? name + ", por" : "Por"} motivos de seguridad, tus credenciales han caducado. Por favor, vuelve a&nbsp;iniciar sesión para&nbsp;continuar.`,
+        "title": "Bienvenido de nuevo"
+      },
+      "signout": "Cerrar sesión",
+      "login": "Iniciar sesión",
+      "signin": "Iniciar sesión",
+      "inApp": {
+        "title": "Contexto no seguro",
+        "description": "Por tu seguridad, hemos abierto la aplicación en tu navegador.",
+        "continue": "Continuar"
+      }
+    }
+  },
+  "fr-FR": {
+    "auth": {
+      "welcomeBack": "Bon retour",
+      "signupTitle": "Inscription en un clic",
+      "passwordTitle": "Connectez-vous avec un mot de passe",
+      "passwordDescription": "Créer un compte ou se connecter",
+      "passkey": "Clés",
+      "email": "Email",
+      "alreadyHaveAccount": "Vous avez déjà un compte ?",
+      "betterSecurity": "Meilleure sécurité",
+      "passkeysNotSupported": "Clés d'accès non supportées",
+      "passkeysWarning": "Votre navigateur ne respecte pas votre vie privée et votre sécurité.",
+      "learnMore": "En savoir plus",
+      "passwordBlank": "Laissez le mot de passe vide <nobr>pour recevoir</nobr> <nobr>un code d'accès à usage unique</nobr>.",
+      "otpInstructions": "Entrez le code envoyé à votre email. Il expire dans 5 minutes.",
+      "holdToLogout": "Maintenez pour vous déconnecter",
+      "continueWith": (provider) => {
+  return `Continuer avec ${provider}`
+},
+      "passkeysDescription": "Les clés d'accès sont plus sûres que les mots de passe, plus faciles à utiliser et ne peuvent pas être volées.",
+      "yourName": "Votre nom",
+      "password": "Mot de passe",
+      "refresh": {
+        "description": (name) => `${name ? name + ", pour des" : "Pour des"} raisons de sécurité, vos identifiants ont expiré. Veuillez vous reconnecter pour continuer.`,
+        "title": "Bon retour"
+      },
+      "signout": "Se déconnecter",
+      "login": "Se connecter",
+      "signin": "Se connecter",
+      "inApp": {
+        "title": "Contexte non sécurisé",
+        "description": "Pour votre sécurité, nous avons ouvert l’application dans votre navigateur.",
+        "continue": "Continuer"
+      }
+    }
+  },
+  "hi-IN": {
+    "auth": {
+      "welcomeBack": "फिर से स्वागत है",
+      "signupTitle": "एक टैप में साइन-अप",
+      "passwordTitle": "पासवर्ड के साथ प्रवेश करें",
+      "passwordDescription": "खाता बनाएं या साइन इन करें",
+      "passkey": "पासकी",
+      "email": "ईमेल",
+      "alreadyHaveAccount": "क्या आपके पास पहले से खाता है?",
+      "betterSecurity": "बेहतर सुरक्षा",
+      "passkeysNotSupported": "पासकी समर्थित नहीं हैं",
+      "passkeysWarning": "आपका ब्राउज़र आपकी गोपनीयता और सुरक्षा का सम्मान नहीं करता।",
+      "learnMore": "और जानें",
+      "passwordBlank": "पासवर्ड खाली छोड़ें <nobr>ताकि आपको</nobr> <nobr>एक बार का</nobr> पासकोड मिल सके।",
+      "otpInstructions": "अपने ईमेल पर भेजा गया कोड दर्ज करें। यह 5 मिनट में समाप्त हो जाएगा।",
+      "holdToLogout": "लॉगआउट करने के लिए दबाकर रखें",
+      "continueWith": (provider) => {
+  return `"${provider}" के साथ जारी रखें`
+},
+      "passkeysDescription": "पासकी पासवर्ड से अधिक सुरक्षित, उपयोग में आसान हैं, और चुराई नहीं जा सकतीं।",
+      "yourName": "आपका नाम",
+      "password": "पासवर्ड",
+      "refresh": {
+        "description": (name) => `${name ? name + " के लिए" : "सुरक्षा कारणों से"} आपके क्रेडेंशियल्स की वैधता समाप्त हो गई है। जारी रखने के लिए कृपया फिर से लॉग&nbsp;इन करें।`,
+        "title": "वापसी पर स्वागत है"
+      },
+      "signout": "साइन आउट करें",
+      "login": "लॉग इन करें",
+      "signin": "साइन इन करें",
+      "inApp": {
+        "title": "असुरक्षित संदर्भ",
+        "description": "आपकी सुरक्षा के लिए, हमने आपके ब्राउज़र में ऐप खोला है।",
+        "continue": "जारी रखें"
+      }
+    }
+  },
+  "it-IT": {
+    "auth": {
+      "welcomeBack": "Bentornato",
+      "signupTitle": "Registrazione con un tocco",
+      "passwordTitle": "Entra con password",
+      "passwordDescription": "Crea un account o accedi",
+      "passkey": "Chiavi",
+      "email": "Email",
+      "alreadyHaveAccount": "Hai già un account?",
+      "betterSecurity": "Sicurezza migliore",
+      "passkeysNotSupported": "Chiavi di accesso non supportate",
+      "passkeysWarning": "Il tuo browser non rispetta la tua privacy e sicurezza.",
+      "learnMore": "Scopri di più",
+      "passwordBlank": "Lascia la password vuota <nobr>per ricevere</nobr> <nobr>un codice monouso</nobr>.",
+      "otpInstructions": "Inserisci il codice inviato alla tua email. Scade in 5 minuti.",
+      "holdToLogout": "Tieni premuto per disconnetterti",
+      "continueWith": (provider) => {
+  return `Continua con ${provider}`
+},
+      "passkeysDescription": "Le passkey sono più sicure delle password, più facili da usare e non possono essere rubate.",
+      "yourName": "Il tuo nome",
+      "password": "Password",
+      "refresh": {
+        "description": (name) => `${name ? name + ", per" : "Per"} motivi di sicurezza, le tue credenziali sono scadute. Effettua di&nbsp;nuovo il login per&nbsp;continuare.`,
+        "title": "Bentornato"
+      },
+      "signout": "Esci",
+      "login": "Accedi",
+      "signin": "Accedi",
+      "inApp": {
+        "title": "Contesto non sicuro",
+        "description": "Per la tua sicurezza, abbiamo aperto l’app nel tuo browser.",
+        "continue": "Continua"
+      }
+    }
+  },
+  "ja-JP": {
+    "auth": {
+      "welcomeBack": "お帰りなさい",
+      "signupTitle": "ワンタップ登録",
+      "passwordTitle": "パスワードでログイン",
+      "passwordDescription": "アカウントを作成するか、サインインしてください",
+      "passkey": "パスキー",
+      "email": "メール",
+      "alreadyHaveAccount": "すでにアカウントをお持ちですか？",
+      "betterSecurity": "より高いセキュリティ",
+      "passkeysNotSupported": "パスキーはサポートされていません",
+      "passkeysWarning": "ご利用のブラウザはプライバシーとセキュリティを十分に守っていません。",
+      "learnMore": "詳細はこちら",
+      "passwordBlank": "パスワードを空欄のままにすると、<nobr>ワンタイム</nobr><nobr>パスコードが送信されます。</nobr>",
+      "otpInstructions": "メールに送信されたコードを入力してください。有効期限は5分です。",
+      "holdToLogout": "長押しでログアウト",
+      "continueWith": (provider) => {
+  return `${provider}で続行`
+},
+      "passkeysDescription": "パスキーはパスワードより安全で使いやすく、盗まれることもありません。",
+      "yourName": "あなたの名前",
+      "password": "パスワード",
+      "refresh": {
+        "description": (name) => `${name ? name + "、セキュリティ上の理由により" : "セキュリティ上の理由により"}、資格情報の有効期限が切れました。続行するには再度ログインしてください。`,
+        "title": "お帰りなさい"
+      },
+      "signout": "サインアウト",
+      "login": "ログイン",
+      "signin": "サインイン",
+      "inApp": {
+        "title": "安全でないコンテキスト",
+        "description": "安全のため、アプリをブラウザで開きました。",
+        "continue": "続行"
+      }
+    }
+  },
+  "ko-KR": {
+    "auth": {
+      "welcomeBack": "다시 오신 것을 환영합니다",
+      "signupTitle": "원탭 회원가입",
+      "passwordTitle": "비밀번호로 로그인",
+      "passwordDescription": "계정을 만들거나 로그인하세요",
+      "passkey": "패스키",
+      "email": "이메일",
+      "alreadyHaveAccount": "이미 계정이 있으신가요?",
+      "betterSecurity": "더 나은 보안",
+      "passkeysNotSupported": "패스키가 지원되지 않습니다",
+      "passkeysWarning": "사용 중인 브라우저는 개인정보 보호와 보안을 준수하지 않습니다.",
+      "learnMore": "자세히 알아보기",
+      "passwordBlank": "비밀번호를 비워두면 <nobr>일회용</nobr> <nobr>인증 코드가</nobr> 전송됩니다.",
+      "otpInstructions": "이메일로 전송된 코드를 입력하세요. 5분 후 만료됩니다.",
+      "holdToLogout": "길게 눌러 로그아웃",
+      "continueWith": (provider) => {
+  return `${provider}로 계속하기`
+},
+      "passkeysDescription": "패스키는 비밀번호보다 더 안전하고 사용하기 쉬우며, 도난당할 수 없습니다.",
+      "yourName": "이름",
+      "password": "비밀번호",
+      "refresh": {
+        "description": (name) => `${name ? name + "님, 보안상의 이유로" : "보안상의 이유로"} 인증 정보가 만료되었습니다. 계속하려면 다시 로그인해 주세요.`,
+        "title": "다시 오신 것을 환영합니다"
+      },
+      "signout": "로그아웃",
+      "login": "로그인",
+      "signin": "로그인",
+      "inApp": {
+        "title": "보안되지 않은 환경",
+        "description": "보안을 위해 앱을 브라우저에서 열었습니다.",
+        "continue": "계속"
+      }
+    }
+  },
+  "nl-NL": {
+    "auth": {
+      "welcomeBack": "Welkom terug",
+      "signupTitle": "Aanmelden met één tik",
+      "passwordTitle": "Inloggen met wachtwoord",
+      "passwordDescription": "Maak een account aan of log in",
+      "passkey": "Sleutels",
+      "email": "E-mail",
+      "alreadyHaveAccount": "Heb je al een account?",
+      "betterSecurity": "Betere beveiliging",
+      "passkeysNotSupported": "Passkeys worden niet ondersteund",
+      "passkeysWarning": "Je browser respecteert je privacy en veiligheid niet.",
+      "learnMore": "Meer informatie",
+      "passwordBlank": "Laat het wachtwoordveld leeg <nobr>om een</nobr> <nobr>eenmalige code</nobr> te ontvangen.",
+      "otpInstructions": "Voer de code in die naar je e-mail is gestuurd. Deze verloopt over 5 minuten.",
+      "holdToLogout": "Houd vast om uit te loggen",
+      "continueWith": (provider) => {
+  return `Doorgaan met ${provider}`
+},
+      "passkeysDescription": "Passkeys zijn veiliger dan wachtwoorden, makkelijker te gebruiken en kunnen niet gestolen worden.",
+      "yourName": "Je naam",
+      "password": "Wachtwoord",
+      "refresh": {
+        "description": (name) => `${name ? name + ", om" : "Om"} veiligheidsredenen zijn je inloggegevens verlopen. Log&nbsp;opnieuw in om&nbsp;door te gaan.`,
+        "title": "Welkom terug"
+      },
+      "signout": "Afmelden",
+      "login": "Inloggen",
+      "signin": "Inloggen",
+      "inApp": {
+        "title": "Onveilige context",
+        "description": "Voor jouw veiligheid hebben we de app in je browser geopend.",
+        "continue": "Doorgaan"
+      }
+    }
+  },
+  "ru-RU": {
+    "auth": {
+      "welcomeBack": "Добро пожаловать обратно",
+      "signupTitle": "Регистрация одним касанием",
+      "passwordTitle": "Войдите с паролем",
+      "passwordDescription": "Создать аккаунт или войти",
+      "passkey": "Ключи",
+      "email": "Почта",
+      "alreadyHaveAccount": "Уже есть аккаунт?",
+      "betterSecurity": "Лучшая безопасность",
+      "passkeysNotSupported": "Ключи доступа не поддерживаются",
+      "passkeysWarning": "Ваш браузер не уважает вашу конфиденциальность и безопасность.",
+      "learnMore": "Узнать больше",
+      "passwordBlank": "Оставьте поле пароля пустым, <nobr>чтобы получить</nobr> <nobr>одноразовый код доступа</nobr>.",
+      "otpInstructions": "Введите код, отправленный на вашу электронную почту. Он истекает через 5 минут.",
+      "holdToLogout": "Удерживайте для выхода",
+      "continueWith": (provider) => {
+  return `Продолжить с ${provider}`
+},
+      "passkeysDescription": "Ключи доступа безопаснее паролей, проще в использовании и их невозможно украсть.",
+      "yourName": "Ваше имя",
+      "password": "Пароль",
+      "refresh": {
+        "description": (name) => `${name ? name + ", по" : "По"} соображениям безопасности срок действия ваших учетных данных истёк. Пожалуйста, выполните повторный вход, чтобы продолжить.`,
+        "title": "С возвращением"
+      },
+      "signout": "Выйти",
+      "login": "Войти",
+      "signin": "Войти",
+      "inApp": {
+        "title": "Небезопасный контекст",
+        "description": "Для вашей безопасности мы открыли приложение в вашем браузере.",
+        "continue": "Продолжить"
+      }
+    }
+  },
+  "sw-TZ": {
+    "auth": {
+      "welcomeBack": "Karibu tena",
+      "signupTitle": "Jisajili kwa bonyeza moja",
+      "passwordTitle": "Ingia kwa nenosiri",
+      "passwordDescription": "Unda akaunti au ingia",
+      "passkey": "Funguo",
+      "email": "Barua",
+      "alreadyHaveAccount": "Tayari una akaunti?",
+      "betterSecurity": "Usalama bora",
+      "passkeysNotSupported": "Funguo za kupita hazitumiki",
+      "passkeysWarning": "Kivinjari chako hakiheshimu faragha na usalama wako.",
+      "learnMore": "Jifunze zaidi",
+      "passwordBlank": "Acha nenosiri wazi <nobr>kupokea</nobr> <nobr>msimbo wa matumizi moja</nobr>.",
+      "otpInstructions": "Weka msimbo uliotumwa kwenye barua pepe yako. Unamalizika baada ya dakika 5.",
+      "holdToLogout": "Shikilia ili utoke",
+      "continueWith": (provider) => {
+  return `Endelea na ${provider}`
+},
+      "passkeysDescription": "Passkey ni salama zaidi kuliko nywila, rahisi kutumia, na haziwezi kuibiwa.",
+      "yourName": "Jina lako",
+      "password": "Nenosiri",
+      "refresh": {
+        "description": (name) => `${name ? name + ", kwa" : "Kwa"} sababu za kiusalama, taarifa zako za kuingia zimeisha muda wake. Tafadhali ingia tena ili&nbsp;kuendelea.`,
+        "title": "Karibu tena"
+      },
+      "signout": "Ondoka",
+      "login": "Ingia",
+      "signin": "Ingia",
+      "inApp": {
+        "title": "Muktadha usio salama",
+        "description": "Kwa usalama wako, tumeifungua programu kwenye kivinjari chako.",
+        "continue": "Endelea"
+      }
+    }
+  },
+  "tr-TR": {
+    "auth": {
+      "welcomeBack": "Tekrar hoş geldiniz",
+      "signupTitle": "Tek dokunuşla kayıt",
+      "passwordTitle": "Şifre ile giriş yap",
+      "passwordDescription": "Hesap oluşturun veya giriş yapın",
+      "passkey": "Anahtar",
+      "email": "E-posta",
+      "alreadyHaveAccount": "Zaten bir hesabınız var mı?",
+      "betterSecurity": "Daha iyi güvenlik",
+      "passkeysNotSupported": "Geçiş anahtarları desteklenmiyor",
+      "passkeysWarning": "Tarayıcınız gizliliğinize ve güvenliğinize saygı göstermiyor.",
+      "learnMore": "Daha fazla bilgi edinin",
+      "passwordBlank": "Tek seferlik bir şifre almak için <nobr>şifreyi boş</nobr> <nobr>bırakın.</nobr>",
+      "otpInstructions": "E-postanıza gönderilen kodu girin. 5 dakika içinde süresi dolacak.",
+      "holdToLogout": "Çıkış yapmak için basılı tutun",
+      "continueWith": (provider) => {
+  return `${provider} ile devam et`
+},
+      "passkeysDescription": "Geçiş anahtarları şifrelerden daha güvenlidir, kullanımı daha kolaydır ve çalınamaz.",
+      "yourName": "Adınız",
+      "password": "Şifre",
+      "refresh": {
+        "description": (name) => `${name ? name + ", güvenlik nedeniyle" : "Güvenlik nedeniyle"} giriş bilgilerinizin süresi doldu. Devam etmek için lütfen tekrar giriş yapın.`,
+        "title": "Tekrar hoş geldiniz"
+      },
+      "signout": "Oturumu kapat",
+      "login": "Giriş Yap",
+      "signin": "Giriş Yap",
+      "inApp": {
+        "title": "Güvensiz bağlam",
+        "description": "Güvenliğiniz için uygulamayı tarayıcınızda açtık.",
+        "continue": "Devam et"
+      }
+    }
+  },
+  "uk-UA": {
+    "auth": {
+      "welcomeBack": "З поверненням",
+      "signupTitle": "Реєстрація в один дотик",
+      "passwordTitle": "Увійти за допомогою пароля",
+      "passwordDescription": "Створіть акаунт або увійдіть",
+      "passkey": "Ключі",
+      "email": "Пошта",
+      "alreadyHaveAccount": "Вже маєте обліковий запис?",
+      "betterSecurity": "Кращий захист",
+      "passkeysNotSupported": "Ключі доступу не підтримуються",
+      "passkeysWarning": "Ваш браузер не дбає про вашу приватність і безпеку.",
+      "learnMore": "Дізнатися більше",
+      "passwordBlank": "Залиште поле пароля порожнім <nobr>щоб отримати</nobr> <nobr>одноразовий</nobr> код доступу.",
+      "otpInstructions": "Введіть код, надісланий на вашу електронну пошту. Термін дії — 5 хвилин.",
+      "holdToLogout": "Утримуйте для виходу",
+      "continueWith": (provider) => {
+  return `Продовжити з ${provider}`
+},
+      "passkeysDescription": "Ключі доступу безпечніші за паролі, простіші у використанні та їх неможливо вкрасти.",
+      "yourName": "Ваше ім'я",
+      "password": "Пароль",
+      "refresh": {
+        "description": (name) => `${name ? name + ", з міркувань" : "З міркувань"} безпеки термін дії ваших облікових даних закінчився. Будь ласка, увійдіть знову, щоб продовжити.`,
+        "title": "Ласкаво просимо назад"
+      },
+      "signout": "Вийти",
+      "login": "Увійти",
+      "signin": "Увійти",
+      "inApp": {
+        "title": "Небезпечний контекст",
+        "description": "Задля вашої безпеки ми відкрили додаток у вашому браузері.",
+        "continue": "Продовжити"
+      }
+    }
+  },
+  "zh-CN": {
+    "auth": {
+      "welcomeBack": "欢迎回来",
+      "signupTitle": "一键注册",
+      "passwordTitle": "使用密码登录",
+      "passwordDescription": "创建账户或登录",
+      "passkey": "密钥",
+      "email": "邮箱",
+      "alreadyHaveAccount": "已经有账号？",
+      "betterSecurity": "更好的安全性",
+      "passkeysNotSupported": "不支持通行密钥",
+      "passkeysWarning": "您的浏览器未能保护您的隐私和安全。",
+      "learnMore": "了解更多",
+      "passwordBlank": "将密码留空 <nobr>以接收</nobr> <nobr>一次性</nobr>验证码。",
+      "otpInstructions": "请输入发送到您邮箱的验证码。验证码5分钟内有效。",
+      "holdToLogout": "长按以登出",
+      "continueWith": (provider) => {
+  return `使用${provider}继续`
+},
+      "passkeysDescription": "通行密钥比密码更安全、更易用，而且无法被盗取。",
+      "yourName": "你的名字",
+      "password": "密码",
+      "refresh": {
+        "description": (name) => `${name ? name + (name.endsWith("，") ? "出于安全原因，" : "，出于安全原因，") : "出于安全原因，"}您的凭据已过期。请重新登录以便继续。`,
+        "title": "欢迎回来"
+      },
+      "signout": "退出登录",
+      "login": "登录",
+      "signin": "登录",
+      "inApp": {
+        "title": "不安全的环境",
+        "description": "为了您的安全，我们已在浏览器中打开了应用。",
+        "continue": "继续"
+      }
+    }
   }
 };
 
 /** @type {import('./types').Locale[]} */
-export const locales = ["en-US"];
+export const locales = ["ar-SA","de-DE","en-US","es-ES","fr-FR","hi-IN","it-IT","ja-JP","ko-KR","nl-NL","ru-RU","sw-TZ","tr-TR","uk-UA","zh-CN"];

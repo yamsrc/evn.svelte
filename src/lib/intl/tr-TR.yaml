@@ -1,0 +1,21 @@
+native: Türkçe
+locale: tr-TR
+actions:
+  continue: Devam Et
+  holdToLogout: Çıkış yapmak için basılı tutun
+nav:
+  home: Ana Sayfa
+  friends: Arkadaşlar
+  evns: Hesaplaşma
+  profile: Ben
+terms: Şartlar ve Koşullar
+privacy: Gizlilik Politikası
+madeBy: Tarafından yapıldı
+profile:
+  title: Profilim
+  language:
+    title: Dil
+    description: Bu, çek tanımayı etkilemez. Zaten oradaki dillerin çoğunu anlıyoruz.
+form:
+  enterName: İsim girin
+copyright: © Seed.me, 2024-2025

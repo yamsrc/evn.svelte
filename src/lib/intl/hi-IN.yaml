@@ -1,0 +1,23 @@
+native: हिन्दी
+locale: hi-IN
+actions:
+  continue: जारी रखें
+  holdToLogout: लॉगआउट के लिए दबाए रखें
+nav:
+  home: मुख्य पृष्ठ
+  friends: मित्र
+  evns: सेटलमेंट
+  profile: मैं
+terms: नियम और शर्तें
+privacy: गोपनीयता नीति
+madeBy: द्वारा निर्मित
+profile:
+  title: मेरा प्रोफ़ाइल
+  language:
+    title: भाषा
+    description: >-
+      यह चेक की पहचान को प्रभावित नहीं करता है। वैसे भी, हम वहां अधिकांश भाषाओं
+      को समझते हैं।
+form:
+  enterName: नाम दर्ज करें
+copyright: © Seed.me, 2024-2025

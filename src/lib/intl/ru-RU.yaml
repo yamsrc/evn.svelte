@@ -1,0 +1,23 @@
+native: Русский
+locale: ru-RU
+actions:
+  continue: Продолжить
+  holdToLogout: Удерживайте для выхода
+nav:
+  home: Главная
+  friends: Друзья
+  evns: Расчёты
+  profile: Я
+terms: Условия и положения
+privacy: Политика конфиденциальности
+madeBy: Сделано
+profile:
+  title: Мой профиль
+  language:
+    title: Язык
+    description: >-
+      Это не влияет на распознавание чеков. Мы и так понимаем там большинство
+      языков.
+form:
+  enterName: Введите имя
+copyright: © Seed.me, 2024–2025

@@ -3,6 +3,7 @@
   import { cn } from '$lib/utils'
   import { Input } from '$ui/input'
   import * as InputOTP from '$ui/input-otp'
+  import { dict } from '@/iam/ui/intl'
   import type { Props } from './Password'
 
   let {
@@ -26,7 +27,7 @@
       type="password"
       minlength={6}
       autocomplete="current-password"
-      placeholder="Password"
+      placeholder={$dict.auth.password}
       class="placeholder:text-sm"
     />
   {:else}

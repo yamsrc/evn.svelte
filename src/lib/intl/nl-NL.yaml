@@ -1,0 +1,23 @@
+native: Nederlands
+locale: nl-NL
+actions:
+  continue: Doorgaan
+  holdToLogout: Ingedrukt houden om uit te loggen
+nav:
+  home: Home
+  friends: Vrienden
+  evns: Afrekening
+  profile: Ik
+terms: Algemene voorwaarden
+privacy: Privacybeleid
+madeBy: Gemaakt door
+profile:
+  title: Mijn profiel
+  language:
+    title: Taal
+    description: >-
+      Dit heeft geen invloed op de chequedetectie. We begrijpen daar toch de
+      meeste talen.
+form:
+  enterName: Naam invoeren
+copyright: © Seed.me, 2024-2025

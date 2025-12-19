@@ -1,6 +1,7 @@
 <script lang="ts">
   import { Fingerprint } from '@lucide/svelte'
   import { Loader } from '$com/loader'
+  import { dict } from '$lib/intl'
   import { Button } from '$ui/button'
   import { passkeys } from '@/iam'
   import type { AccountLike } from '../AccountLike'
@@ -24,5 +25,5 @@
 >
   <Fingerprint class="size-5 x-icon" />
   <Loader class="x-loader" />
-  Continue
+  {$dict.actions.continue}
 </Button>

@@ -6,6 +6,7 @@
   import { authenticated, greeting, account, method } from '@/iam'
   import Authentication from './Authentication.svelte'
   import InApp from './InApp.svelte'
+  import Languages from './Languages.svelte'
   import Refresh from './Refresh.svelte'
   import type { Props } from './Authenticated'
 
@@ -31,7 +32,8 @@
 {:else if screen}
   {@render screen({ authentication })}
 {:else}
-  <div class="flex items-center justify-center pt-[15vh] px-4 max-w-sm mx-auto">
+  <Languages />
+  <div class="flex items-center justify-center pt-[14vh] px-4 max-w-sm mx-auto">
     {@render authentication()}
   </div>
 {/if}

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { dict } from '@/iam/ui/intl'
   import Button from './Button.svelte'
   import type { IDP } from '@/iam'
 
@@ -10,4 +11,6 @@
   }
 </script>
 
-<Button {idp}>Continue with {names[idp]}</Button>
+<Button {idp}>
+  {$dict.auth.continueWith(names[idp])}
+</Button>

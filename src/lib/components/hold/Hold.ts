@@ -3,5 +3,6 @@ import type { ButtonProps } from '$ui/button'
 export interface Props extends ButtonProps {
   duration?: number
   label?: string
-  align?: 'center' | 'left' | 'right'
+  position?: 'center' | 'left' | 'right' | 'top' | 'bottom'
+  align?: 'center' | 'left' | 'right' | 'top' | 'bottom'
 }

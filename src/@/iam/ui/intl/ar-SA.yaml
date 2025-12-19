@@ -1,0 +1,39 @@
+auth:
+  welcomeBack: مرحباً بعودتك
+  signupTitle: تسجيل بنقرة واحدة
+  passwordTitle: الدخول بكلمة المرور
+  passwordDescription: إنشاء حساب أو تسجيل الدخول
+  passkey: مفاتيح المرور
+  email: البريد
+  alreadyHaveAccount: هل لديك حساب بالفعل؟
+  betterSecurity: أمان أفضل
+  passkeysNotSupported: مفاتيح المرور غير مدعومة
+  passkeysWarning: متصفحك لا يحترم خصوصيتك وأمانك.
+  learnMore: اعرف المزيد
+  passwordBlank: اترك كلمة المرور فارغة <nobr>لتلقي</nobr> <nobr>رمز مرور لمرة واحدة</nobr>.
+  otpInstructions: أدخل الرمز المرسل إلى بريدك الإلكتروني. ينتهي خلال 5 دقائق.
+  holdToLogout: اضغط مطولاً لتسجيل الخروج
+  continueWith: |
+    !js
+    (provider) => {
+      return `متابعة مع ${provider}`
+    }
+  passkeysDescription: >-
+    مفاتيح المرور أكثر أمانًا من كلمات المرور، وأسهل في الاستخدام، ولا يمكن
+    سرقتها.
+  yourName: اسمك
+  password: كلمة المرور
+  refresh:
+    description: >-
+      !js
+
+      (name) => `${name ? name + "، لأسباب" : "لأسباب"} أمنية، انتهت صلاحية
+      بيانات اعتمادك. الرجاء تسجيل الدخول مرة أخرى للمتابعة.`
+    title: مرحبًا بعودتك
+  signout: تسجيل الخروج
+  login: تسجيل الدخول
+  signin: تسجيل الدخول
+  inApp:
+    title: سياق غير آمن
+    description: من أجل أمانك، قمنا بفتح التطبيق في متصفحك.
+    continue: متابعة

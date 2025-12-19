@@ -1,0 +1,23 @@
+native: Français
+locale: fr-FR
+actions:
+  continue: Continuer
+  holdToLogout: Maintenez pour vous déconnecter
+nav:
+  home: Accueil
+  friends: Amis
+  evns: Règlements
+  profile: Moi
+terms: Conditions générales
+privacy: Politique de confidentialité
+madeBy: Créé par
+profile:
+  title: Mon profil
+  language:
+    title: Langue
+    description: >-
+      Cela n’affecte pas la reconnaissance des chèques. Nous comprenons de toute
+      façon la plupart des langues là-bas.
+form:
+  enterName: Saisissez le nom
+copyright: © Seed.me, 2024-2025

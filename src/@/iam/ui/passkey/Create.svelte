@@ -5,6 +5,7 @@
   import { Button } from '$ui/button'
   import { Input } from '$ui/input'
   import { passkeys } from '@/iam'
+  import { dict } from '@/iam/ui/intl'
 
   const { disabled }: { disabled?: boolean } = $props()
 
@@ -32,12 +33,12 @@
         class="placeholder:text-sm"
         id="name"
         type="text"
-        placeholder="Your name"
+        placeholder={$dict.auth.yourName}
         autocomplete="given-name"
         required
         {autofocus}
       />
-      <Button size="icon" type="submit">
+      <Button size="icon" type="submit" class="size-12">
         {#if busy}
           <Loader />
         {:else}

@@ -1,0 +1,40 @@
+auth:
+  welcomeBack: फिर से स्वागत है
+  signupTitle: एक टैप में साइन-अप
+  passwordTitle: पासवर्ड के साथ प्रवेश करें
+  passwordDescription: खाता बनाएं या साइन इन करें
+  passkey: पासकी
+  email: ईमेल
+  alreadyHaveAccount: क्या आपके पास पहले से खाता है?
+  betterSecurity: बेहतर सुरक्षा
+  passkeysNotSupported: पासकी समर्थित नहीं हैं
+  passkeysWarning: आपका ब्राउज़र आपकी गोपनीयता और सुरक्षा का सम्मान नहीं करता।
+  learnMore: और जानें
+  passwordBlank: >-
+    पासवर्ड खाली छोड़ें <nobr>ताकि आपको</nobr> <nobr>एक बार का</nobr> पासकोड मिल
+    सके।
+  otpInstructions: अपने ईमेल पर भेजा गया कोड दर्ज करें। यह 5 मिनट में समाप्त हो जाएगा।
+  holdToLogout: लॉगआउट करने के लिए दबाकर रखें
+  continueWith: |
+    !js
+    (provider) => {
+      return `"${provider}" के साथ जारी रखें`
+    }
+  passkeysDescription: पासकी पासवर्ड से अधिक सुरक्षित, उपयोग में आसान हैं, और चुराई नहीं जा सकतीं।
+  yourName: आपका नाम
+  password: पासवर्ड
+  refresh:
+    description: >-
+      !js
+
+      (name) => `${name ? name + " के लिए" : "सुरक्षा कारणों से"} आपके
+      क्रेडेंशियल्स की वैधता समाप्त हो गई है। जारी रखने के लिए कृपया फिर से
+      लॉग&nbsp;इन करें।`
+    title: वापसी पर स्वागत है
+  signout: साइन आउट करें
+  login: लॉग इन करें
+  signin: साइन इन करें
+  inApp:
+    title: असुरक्षित संदर्भ
+    description: आपकी सुरक्षा के लिए, हमने आपके ब्राउज़र में ऐप खोला है।
+    continue: जारी रखें

@@ -1,13 +1,14 @@
 import type { Icon } from '@lucide/svelte'
-import type { Snippet } from 'svelte'
 
 export interface Props {
   sections: Section[]
+  position?: 'start' | 'center' | 'end'
+  class?: string
 }
 
 export interface Section {
   href: string | string[]
-  label: Snippet
+  label: string
   Icon: typeof Icon
 }
 

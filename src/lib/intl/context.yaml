@@ -6,5 +6,39 @@ inputs:
   native:
     input: native
     context: native name of the language in that language, should not be translated
+  actions:
+    continue:
+      input: Continue
+    holdToLogout:
+      input: Hold to logout
+  nav:
+    home:
+      input: Home
+    friends:
+      input: Friends
+    evns:
+      input: Evns
+      context: Use Evns for english. In other languages use short word with meaning settle up debts after spliting recipt
+    profile:
+      input: Me
+  terms:
+    input: Terms & Conditions
+  privacy:
+    input: Privacy Policy
+  madeBy:
+    input: Made by
+  profile:
+    title:
+      input: My profile
+    language:
+      title:
+        input: Language
+      description:
+        input: "Does not affect the cheque recognition. We\_understand most languages there anyway."
+  form:
+    enterName:
+      input: Enter name
+  copyright:
+    input: © Seed.me, 2024-2025
 mounts:
   iam: ../../@/iam/ui/intl

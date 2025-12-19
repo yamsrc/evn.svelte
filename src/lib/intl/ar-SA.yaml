@@ -1,0 +1,21 @@
+native: العربية
+locale: ar-SA
+actions:
+  continue: متابعة
+  holdToLogout: اضغط مطولًا لتسجيل الخروج
+nav:
+  home: الرئيسية
+  friends: الأصدقاء
+  evns: تسوية
+  profile: أنا
+terms: الشروط والأحكام
+privacy: سياسة الخصوصية
+madeBy: من صنع
+profile:
+  title: ملفي الشخصي
+  language:
+    title: اللغة
+    description: هذا لا يؤثر على التعرف على الشيك. على أي حال، نحن نفهم معظم اللغات هناك.
+form:
+  enterName: أدخل الاسم
+copyright: © Seed.me، 2024-2025

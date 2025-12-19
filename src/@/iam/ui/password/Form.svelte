@@ -5,6 +5,7 @@
   import { Button } from '$ui/button'
   import { Input } from '$ui/input'
   import * as iam from '@/iam'
+  import { dict } from '@/iam/ui/intl'
   import Password from './Password.svelte'
 
   let busy = $state(false)
@@ -93,7 +94,7 @@
       required
       disabled={mode === 'otp' ? true : undefined}
       {autofocus}
-      placeholder="Email"
+      placeholder={$dict.auth.email}
       class="placeholder:text-sm"
     />
     <div class="space-y-1">
@@ -105,14 +106,15 @@
           {:else}
             <ArrowRight />
           {/if}
-          <span class="sr-only">Login</span>
+          <span class="sr-only">{$dict.auth.login}</span>
         </Button>
       </div>
       <div class="text-sm text-muted-foreground">
         {#if mode === 'password'}
-          Leave password blank <nobr>to receive</nobr> <nobr>a one-time</nobr> passcode.
+          <!-- eslint-disable-next-line svelte/no-at-html-tags -->
+          {@html $dict.auth.passwordBlank}
         {:else}
-          Enter the code sent to your email. <nobr>It expires</nobr> <nobr>in 5 minutes.</nobr>
+          {$dict.auth.otpInstructions}
         {/if}
       </div>
     </div>

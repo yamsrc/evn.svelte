@@ -1,0 +1,23 @@
+native: Español
+locale: es-ES
+actions:
+  continue: Continuar
+  holdToLogout: Mantén pulsado para cerrar sesión
+nav:
+  home: Inicio
+  friends: Amigos
+  evns: Ajustes
+  profile: Yo
+terms: Términos y condiciones
+privacy: Política de privacidad
+madeBy: Hecho por
+profile:
+  title: Mi perfil
+  language:
+    title: Idioma
+    description: >-
+      Esto no afecta al reconocimiento de cheques. De todas formas, entendemos
+      la mayoría de los idiomas allí.
+form:
+  enterName: Introduce el nombre
+copyright: © Seed.me, 2024-2025

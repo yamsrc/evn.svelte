@@ -1,0 +1,37 @@
+auth:
+  welcomeBack: 欢迎回来
+  signupTitle: 一键注册
+  passwordTitle: 使用密码登录
+  passwordDescription: 创建账户或登录
+  passkey: 密钥
+  email: 邮箱
+  alreadyHaveAccount: 已经有账号？
+  betterSecurity: 更好的安全性
+  passkeysNotSupported: 不支持通行密钥
+  passkeysWarning: 您的浏览器未能保护您的隐私和安全。
+  learnMore: 了解更多
+  passwordBlank: 将密码留空 <nobr>以接收</nobr> <nobr>一次性</nobr>验证码。
+  otpInstructions: 请输入发送到您邮箱的验证码。验证码5分钟内有效。
+  holdToLogout: 长按以登出
+  continueWith: |
+    !js
+    (provider) => {
+      return `使用${provider}继续`
+    }
+  passkeysDescription: 通行密钥比密码更安全、更易用，而且无法被盗取。
+  yourName: 你的名字
+  password: 密码
+  refresh:
+    description: >-
+      !js
+
+      (name) => `${name ? name + (name.endsWith("，") ? "出于安全原因，" : "，出于安全原因，") :
+      "出于安全原因，"}您的凭据已过期。请重新登录以便继续。`
+    title: 欢迎回来
+  signout: 退出登录
+  login: 登录
+  signin: 登录
+  inApp:
+    title: 不安全的环境
+    description: 为了您的安全，我们已在浏览器中打开了应用。
+    continue: 继续

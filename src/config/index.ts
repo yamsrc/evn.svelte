@@ -1,6 +1,10 @@
 import { dev, version as ver } from '$app/environment'
 import { PUBLIC_API_ORIGIN } from '$env/static/public'
 
+export * from './assets'
+
+export const DefaultLocale = 'en-US'
+
 // change this
 export const meta = {
   title: 'Hello world',
@@ -31,7 +35,7 @@ export const origin = (() => {
 })()
 
 export const sleep: [number, number] | undefined = (() => {
-  const sleep = import.meta.env.DEV_SLEEP
+  const sleep = import.meta.env.VITE_DEV_SLEEP
 
   if (!sleep || typeof window === 'undefined')
     return

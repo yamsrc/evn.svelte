@@ -1,0 +1,23 @@
+native: Українська
+locale: uk-UA
+actions:
+  continue: Продовжити
+  holdToLogout: Утримуйте, щоб вийти
+nav:
+  home: Головна
+  friends: Друзі
+  evns: Розрахунок
+  profile: Я
+terms: Умови та положення
+privacy: Політика конфіденційності
+madeBy: Створено
+profile:
+  title: Мій профіль
+  language:
+    title: Мова
+    description: >-
+      Це не впливає на розпізнавання чеків. Ми й так розуміємо там більшість
+      мов.
+form:
+  enterName: Введіть ім’я
+copyright: © Seed.me, 2024–2025

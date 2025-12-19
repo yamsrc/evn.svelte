@@ -1,0 +1,43 @@
+auth:
+  welcomeBack: Bon retour
+  signupTitle: Inscription en un clic
+  passwordTitle: Connectez-vous avec un mot de passe
+  passwordDescription: Créer un compte ou se connecter
+  passkey: Clés
+  email: Email
+  alreadyHaveAccount: Vous avez déjà un compte ?
+  betterSecurity: Meilleure sécurité
+  passkeysNotSupported: Clés d'accès non supportées
+  passkeysWarning: Votre navigateur ne respecte pas votre vie privée et votre sécurité.
+  learnMore: En savoir plus
+  passwordBlank: >-
+    Laissez le mot de passe vide <nobr>pour recevoir</nobr> <nobr>un code
+    d'accès à usage unique</nobr>.
+  otpInstructions: Entrez le code envoyé à votre email. Il expire dans 5 minutes.
+  holdToLogout: Maintenez pour vous déconnecter
+  continueWith: |
+    !js
+    (provider) => {
+      return `Continuer avec ${provider}`
+    }
+  passkeysDescription: >-
+    Les clés d'accès sont plus sûres que les mots de passe, plus faciles à
+    utiliser et ne peuvent pas être volées.
+  yourName: Votre nom
+  password: Mot de passe
+  refresh:
+    description: >-
+      !js
+
+      (name) => `${name ? name + ", pour des" : "Pour des"} raisons de sécurité,
+      vos identifiants ont expiré. Veuillez vous reconnecter pour continuer.`
+    title: Bon retour
+  signout: Se déconnecter
+  login: Se connecter
+  signin: Se connecter
+  inApp:
+    title: Contexte non sécurisé
+    description: >-
+      Pour votre sécurité, nous avons ouvert l’application dans votre
+      navigateur.
+    continue: Continuer
