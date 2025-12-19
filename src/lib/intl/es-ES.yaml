@@ -3,6 +3,7 @@ locale: es-ES
 actions:
   continue: Continuar
   holdToLogout: Mantén pulsado para cerrar sesión
+  signout: Cerrar sesión
 nav:
   home: Inicio
   friends: Amigos

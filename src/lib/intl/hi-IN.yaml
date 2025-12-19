@@ -3,6 +3,7 @@ locale: hi-IN
 actions:
   continue: जारी रखें
   holdToLogout: लॉगआउट के लिए दबाए रखें
+  signout: साइन आउट करें
 nav:
   home: मुख्य पृष्ठ
   friends: मित्र

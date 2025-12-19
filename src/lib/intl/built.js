@@ -7,7 +7,8 @@ export const dictionaries = {
     "locale": "ar-SA",
     "actions": {
       "continue": "متابعة",
-      "holdToLogout": "اضغط مطولًا لتسجيل الخروج"
+      "holdToLogout": "اضغط مطولًا لتسجيل الخروج",
+      "signout": "تسجيل الخروج"
     },
     "nav": {
       "home": "الرئيسية",
@@ -41,7 +42,8 @@ export const dictionaries = {
     "locale": "de-DE",
     "actions": {
       "continue": "Weiter",
-      "holdToLogout": "Zum Abmelden gedrückt halten"
+      "holdToLogout": "Zum Abmelden gedrückt halten",
+      "signout": "Abmelden"
     },
     "nav": {
       "home": "Startseite",
@@ -75,7 +77,8 @@ export const dictionaries = {
     "locale": "en-US",
     "actions": {
       "continue": "Continue",
-      "holdToLogout": "Hold to log out"
+      "holdToLogout": "Hold to log out",
+      "signout": "Sign out"
     },
     "nav": {
       "home": "Home",
@@ -109,7 +112,8 @@ export const dictionaries = {
     "locale": "es-ES",
     "actions": {
       "continue": "Continuar",
-      "holdToLogout": "Mantén pulsado para cerrar sesión"
+      "holdToLogout": "Mantén pulsado para cerrar sesión",
+      "signout": "Cerrar sesión"
     },
     "nav": {
       "home": "Inicio",
@@ -143,7 +147,8 @@ export const dictionaries = {
     "locale": "fr-FR",
     "actions": {
       "continue": "Continuer",
-      "holdToLogout": "Maintenez pour vous déconnecter"
+      "holdToLogout": "Maintenez pour vous déconnecter",
+      "signout": "Se déconnecter"
     },
     "nav": {
       "home": "Accueil",
@@ -177,7 +182,8 @@ export const dictionaries = {
     "locale": "hi-IN",
     "actions": {
       "continue": "जारी रखें",
-      "holdToLogout": "लॉगआउट के लिए दबाए रखें"
+      "holdToLogout": "लॉगआउट के लिए दबाए रखें",
+      "signout": "साइन आउट करें"
     },
     "nav": {
       "home": "मुख्य पृष्ठ",
@@ -211,7 +217,8 @@ export const dictionaries = {
     "locale": "it-IT",
     "actions": {
       "continue": "Continua",
-      "holdToLogout": "Tieni premuto per uscire"
+      "holdToLogout": "Tieni premuto per uscire",
+      "signout": "Esci"
     },
     "nav": {
       "home": "Home",
@@ -245,7 +252,8 @@ export const dictionaries = {
     "locale": "ja-JP",
     "actions": {
       "continue": "続ける",
-      "holdToLogout": "長押ししてログアウト"
+      "holdToLogout": "長押ししてログアウト",
+      "signout": "サインアウト"
     },
     "nav": {
       "home": "ホーム",
@@ -279,7 +287,8 @@ export const dictionaries = {
     "locale": "ko-KR",
     "actions": {
       "continue": "계속",
-      "holdToLogout": "길게 눌러 로그아웃"
+      "holdToLogout": "길게 눌러 로그아웃",
+      "signout": "로그아웃"
     },
     "nav": {
       "home": "홈",
@@ -313,7 +322,8 @@ export const dictionaries = {
     "locale": "nl-NL",
     "actions": {
       "continue": "Doorgaan",
-      "holdToLogout": "Ingedrukt houden om uit te loggen"
+      "holdToLogout": "Ingedrukt houden om uit te loggen",
+      "signout": "Afmelden"
     },
     "nav": {
       "home": "Home",
@@ -347,7 +357,8 @@ export const dictionaries = {
     "locale": "ru-RU",
     "actions": {
       "continue": "Продолжить",
-      "holdToLogout": "Удерживайте для выхода"
+      "holdToLogout": "Удерживайте для выхода",
+      "signout": "Выйти"
     },
     "nav": {
       "home": "Главная",
@@ -381,7 +392,8 @@ export const dictionaries = {
     "locale": "sw-TZ",
     "actions": {
       "continue": "Endelea",
-      "holdToLogout": "Shikilia ili utoke"
+      "holdToLogout": "Shikilia ili utoke",
+      "signout": "Ondoka"
     },
     "nav": {
       "home": "Mwanzo",
@@ -415,7 +427,8 @@ export const dictionaries = {
     "locale": "tr-TR",
     "actions": {
       "continue": "Devam Et",
-      "holdToLogout": "Çıkış yapmak için basılı tutun"
+      "holdToLogout": "Çıkış yapmak için basılı tutun",
+      "signout": "Oturumu kapat"
     },
     "nav": {
       "home": "Ana Sayfa",
@@ -449,7 +462,8 @@ export const dictionaries = {
     "locale": "uk-UA",
     "actions": {
       "continue": "Продовжити",
-      "holdToLogout": "Утримуйте, щоб вийти"
+      "holdToLogout": "Утримуйте, щоб вийти",
+      "signout": "Вийти"
     },
     "nav": {
       "home": "Головна",
@@ -483,7 +497,8 @@ export const dictionaries = {
     "locale": "zh-CN",
     "actions": {
       "continue": "继续",
-      "holdToLogout": "按住退出登录"
+      "holdToLogout": "按住退出登录",
+      "signout": "退出登录"
     },
     "nav": {
       "home": "首页",

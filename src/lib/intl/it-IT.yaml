@@ -3,6 +3,7 @@ locale: it-IT
 actions:
   continue: Continua
   holdToLogout: Tieni premuto per uscire
+  signout: Esci
 nav:
   home: Home
   friends: Amici

@@ -3,6 +3,7 @@ locale: ru-RU
 actions:
   continue: Продолжить
   holdToLogout: Удерживайте для выхода
+  signout: Выйти
 nav:
   home: Главная
   friends: Друзья

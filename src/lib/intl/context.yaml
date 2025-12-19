@@ -11,6 +11,8 @@ inputs:
       input: Continue
     holdToLogout:
       input: Hold to logout
+    signout:
+      input: Sign out
   nav:
     home:
       input: Home

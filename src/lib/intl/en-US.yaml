@@ -3,6 +3,7 @@ locale: en-US
 actions:
   continue: Continue
   holdToLogout: Hold to log out
+  signout: Sign out
 nav:
   home: Home
   friends: Friends

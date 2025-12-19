@@ -3,6 +3,7 @@ locale: ar-SA
 actions:
   continue: متابعة
   holdToLogout: اضغط مطولًا لتسجيل الخروج
+  signout: تسجيل الخروج
 nav:
   home: الرئيسية
   friends: الأصدقاء

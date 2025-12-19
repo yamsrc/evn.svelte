@@ -3,6 +3,7 @@ locale: uk-UA
 actions:
   continue: Продовжити
   holdToLogout: Утримуйте, щоб вийти
+  signout: Вийти
 nav:
   home: Головна
   friends: Друзі

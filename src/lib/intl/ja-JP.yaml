@@ -3,6 +3,7 @@ locale: ja-JP
 actions:
   continue: 続ける
   holdToLogout: 長押ししてログアウト
+  signout: サインアウト
 nav:
   home: ホーム
   friends: 友だち

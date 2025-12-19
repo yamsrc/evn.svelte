@@ -3,6 +3,7 @@ locale: zh-CN
 actions:
   continue: 继续
   holdToLogout: 按住退出登录
+  signout: 退出登录
 nav:
   home: 首页
   friends: 朋友

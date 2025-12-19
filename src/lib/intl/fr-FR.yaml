@@ -3,6 +3,7 @@ locale: fr-FR
 actions:
   continue: Continuer
   holdToLogout: Maintenez pour vous déconnecter
+  signout: Se déconnecter
 nav:
   home: Accueil
   friends: Amis

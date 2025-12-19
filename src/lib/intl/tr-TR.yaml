@@ -3,6 +3,7 @@ locale: tr-TR
 actions:
   continue: Devam Et
   holdToLogout: Çıkış yapmak için basılı tutun
+  signout: Oturumu kapat
 nav:
   home: Ana Sayfa
   friends: Arkadaşlar

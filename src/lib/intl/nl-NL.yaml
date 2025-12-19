@@ -3,6 +3,7 @@ locale: nl-NL
 actions:
   continue: Doorgaan
   holdToLogout: Ingedrukt houden om uit te loggen
+  signout: Afmelden
 nav:
   home: Home
   friends: Vrienden

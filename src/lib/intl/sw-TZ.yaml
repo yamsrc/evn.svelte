@@ -3,6 +3,7 @@ locale: sw-TZ
 actions:
   continue: Endelea
   holdToLogout: Shikilia ili utoke
+  signout: Ondoka
 nav:
   home: Mwanzo
   friends: Marafiki

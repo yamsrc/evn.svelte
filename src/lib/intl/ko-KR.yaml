@@ -3,6 +3,7 @@ locale: ko-KR
 actions:
   continue: 계속
   holdToLogout: 길게 눌러 로그아웃
+  signout: 로그아웃
 nav:
   home: 홈
   friends: 친구

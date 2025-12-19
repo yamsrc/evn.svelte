@@ -3,6 +3,7 @@ locale: de-DE
 actions:
   continue: Weiter
   holdToLogout: Zum Abmelden gedrückt halten
+  signout: Abmelden
 nav:
   home: Startseite
   friends: Freunde
