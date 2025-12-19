@@ -21,3 +21,7 @@ profile:
 form:
   enterName: Naam invoeren
 copyright: © Seed.me, 2024-2025
+onboarding:
+  name:
+    title: Persoonlijk tintje
+    description: Je naam zoals die getoond zal worden

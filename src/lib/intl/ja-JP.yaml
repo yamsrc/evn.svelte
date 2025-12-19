@@ -19,3 +19,7 @@ profile:
 form:
   enterName: 名前を入力してください
 copyright: © Seed.me, 2024年～2025年
+onboarding:
+  name:
+    title: パーソナルタッチ
+    description: 表示されるあなたの名前

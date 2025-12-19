@@ -28,7 +28,13 @@ export const dictionaries = {
     "form": {
       "enterName": "أدخل الاسم"
     },
-    "copyright": "© Seed.me، 2024-2025"
+    "copyright": "© Seed.me، 2024-2025",
+    "onboarding": {
+      "name": {
+        "title": "لمسة شخصية",
+        "description": "اسمك كما سيظهر"
+      }
+    }
   },
   "de-DE": {
     "native": "Deutsch",
@@ -56,7 +62,13 @@ export const dictionaries = {
     "form": {
       "enterName": "Name eingeben"
     },
-    "copyright": "© Seed.me, 2024–2025"
+    "copyright": "© Seed.me, 2024–2025",
+    "onboarding": {
+      "name": {
+        "title": "Persönliche Note",
+        "description": "Ihr Name, wie er angezeigt wird"
+      }
+    }
   },
   "en-US": {
     "native": "English",
@@ -84,7 +96,13 @@ export const dictionaries = {
     "form": {
       "enterName": "Enter name"
     },
-    "copyright": "© Seed.me, 2024-2025"
+    "copyright": "© Seed.me, 2024-2025",
+    "onboarding": {
+      "name": {
+        "title": "Personal Touch",
+        "description": "Your name as it will appear"
+      }
+    }
   },
   "es-ES": {
     "native": "Español",
@@ -112,7 +130,13 @@ export const dictionaries = {
     "form": {
       "enterName": "Introduce el nombre"
     },
-    "copyright": "© Seed.me, 2024-2025"
+    "copyright": "© Seed.me, 2024-2025",
+    "onboarding": {
+      "name": {
+        "title": "Toque personal",
+        "description": "Tu nombre tal como se verá"
+      }
+    }
   },
   "fr-FR": {
     "native": "Français",
@@ -140,7 +164,13 @@ export const dictionaries = {
     "form": {
       "enterName": "Saisissez le nom"
     },
-    "copyright": "© Seed.me, 2024-2025"
+    "copyright": "© Seed.me, 2024-2025",
+    "onboarding": {
+      "name": {
+        "title": "Touche personnelle",
+        "description": "Votre nom tel qu'il sera affiché"
+      }
+    }
   },
   "hi-IN": {
     "native": "हिन्दी",
@@ -168,7 +198,13 @@ export const dictionaries = {
     "form": {
       "enterName": "नाम दर्ज करें"
     },
-    "copyright": "© Seed.me, 2024-2025"
+    "copyright": "© Seed.me, 2024-2025",
+    "onboarding": {
+      "name": {
+        "title": "व्यक्तिगत स्पर्श",
+        "description": "आपका नाम जैसा दिखाई देगा"
+      }
+    }
   },
   "it-IT": {
     "native": "Italiano",
@@ -196,7 +232,13 @@ export const dictionaries = {
     "form": {
       "enterName": "Inserisci il nome"
     },
-    "copyright": "© Seed.me, 2024-2025"
+    "copyright": "© Seed.me, 2024-2025",
+    "onboarding": {
+      "name": {
+        "title": "Tocco personale",
+        "description": "Il tuo nome come verrà visualizzato"
+      }
+    }
   },
   "ja-JP": {
     "native": "日本語",
@@ -224,7 +266,13 @@ export const dictionaries = {
     "form": {
       "enterName": "名前を入力してください"
     },
-    "copyright": "© Seed.me, 2024年～2025年"
+    "copyright": "© Seed.me, 2024年～2025年",
+    "onboarding": {
+      "name": {
+        "title": "パーソナルタッチ",
+        "description": "表示されるあなたの名前"
+      }
+    }
   },
   "ko-KR": {
     "native": "한국어",
@@ -252,7 +300,13 @@ export const dictionaries = {
     "form": {
       "enterName": "이름을 입력하세요"
     },
-    "copyright": "© Seed.me, 2024-2025"
+    "copyright": "© Seed.me, 2024-2025",
+    "onboarding": {
+      "name": {
+        "title": "개인적인 터치",
+        "description": "표시될 이름"
+      }
+    }
   },
   "nl-NL": {
     "native": "Nederlands",
@@ -280,7 +334,13 @@ export const dictionaries = {
     "form": {
       "enterName": "Naam invoeren"
     },
-    "copyright": "© Seed.me, 2024-2025"
+    "copyright": "© Seed.me, 2024-2025",
+    "onboarding": {
+      "name": {
+        "title": "Persoonlijk tintje",
+        "description": "Je naam zoals die getoond zal worden"
+      }
+    }
   },
   "ru-RU": {
     "native": "Русский",
@@ -308,7 +368,13 @@ export const dictionaries = {
     "form": {
       "enterName": "Введите имя"
     },
-    "copyright": "© Seed.me, 2024–2025"
+    "copyright": "© Seed.me, 2024–2025",
+    "onboarding": {
+      "name": {
+        "title": "Личный штрих",
+        "description": "Ваше имя, как оно будет отображаться"
+      }
+    }
   },
   "sw-TZ": {
     "native": "Kiswahili",
@@ -336,7 +402,13 @@ export const dictionaries = {
     "form": {
       "enterName": "Weka jina"
     },
-    "copyright": "© Seed.me, 2024-2025"
+    "copyright": "© Seed.me, 2024-2025",
+    "onboarding": {
+      "name": {
+        "title": "Mguso wa kibinafsi",
+        "description": "Jina lako litakavyoonekana"
+      }
+    }
   },
   "tr-TR": {
     "native": "Türkçe",
@@ -364,7 +436,13 @@ export const dictionaries = {
     "form": {
       "enterName": "İsim girin"
     },
-    "copyright": "© Seed.me, 2024-2025"
+    "copyright": "© Seed.me, 2024-2025",
+    "onboarding": {
+      "name": {
+        "title": "Kişisel dokunuş",
+        "description": "Adınızın görüneceği şekliyle"
+      }
+    }
   },
   "uk-UA": {
     "native": "Українська",
@@ -392,7 +470,13 @@ export const dictionaries = {
     "form": {
       "enterName": "Введіть ім’я"
     },
-    "copyright": "© Seed.me, 2024–2025"
+    "copyright": "© Seed.me, 2024–2025",
+    "onboarding": {
+      "name": {
+        "title": "Особистий штрих",
+        "description": "Ваше ім’я, як воно буде відображатися"
+      }
+    }
   },
   "zh-CN": {
     "native": "中文",
@@ -420,7 +504,13 @@ export const dictionaries = {
     "form": {
       "enterName": "输入姓名"
     },
-    "copyright": "© Seed.me，2024-2025"
+    "copyright": "© Seed.me，2024-2025",
+    "onboarding": {
+      "name": {
+        "title": "个性化体验",
+        "description": "您的姓名将被显示为"
+      }
+    }
   }
 };
 

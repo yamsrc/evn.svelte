@@ -19,3 +19,7 @@ profile:
 form:
   enterName: İsim girin
 copyright: © Seed.me, 2024-2025
+onboarding:
+  name:
+    title: Kişisel dokunuş
+    description: Adınızın görüneceği şekliyle

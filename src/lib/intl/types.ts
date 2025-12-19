@@ -33,4 +33,10 @@ export type Dictionary = {
         enterName: string
       }
       copyright: string
+      onboarding: {
+        name: {
+          title: string
+          description: string
+        }
+      }
     }

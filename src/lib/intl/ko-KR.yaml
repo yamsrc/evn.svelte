@@ -19,3 +19,7 @@ profile:
 form:
   enterName: 이름을 입력하세요
 copyright: © Seed.me, 2024-2025
+onboarding:
+  name:
+    title: 개인적인 터치
+    description: 표시될 이름

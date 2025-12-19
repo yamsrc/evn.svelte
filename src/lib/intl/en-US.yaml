@@ -21,3 +21,7 @@ profile:
 form:
   enterName: Enter name
 copyright: © Seed.me, 2024-2025
+onboarding:
+  name:
+    title: Personal Touch
+    description: Your name as it will appear

@@ -19,3 +19,7 @@ profile:
 form:
   enterName: أدخل الاسم
 copyright: © Seed.me، 2024-2025
+onboarding:
+  name:
+    title: لمسة شخصية
+    description: اسمك كما سيظهر

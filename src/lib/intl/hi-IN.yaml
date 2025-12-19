@@ -21,3 +21,7 @@ profile:
 form:
   enterName: नाम दर्ज करें
 copyright: © Seed.me, 2024-2025
+onboarding:
+  name:
+    title: व्यक्तिगत स्पर्श
+    description: आपका नाम जैसा दिखाई देगा
