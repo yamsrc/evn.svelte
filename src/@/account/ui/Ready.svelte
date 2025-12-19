@@ -1,3 +1,7 @@
+<script module lang="ts">
+  let filled = false
+</script>
+
 <script lang="ts">
   import { LogOut } from '@lucide/svelte'
   import { Section } from '$com/section'
@@ -14,8 +18,6 @@
   import type { Props } from './Ready'
 
   const { children }: Props = $props()
-
-  let filled = $state(false)
 
   $effect(() => {
     if (filled || !$account) return
