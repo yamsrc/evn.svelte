@@ -2,7 +2,7 @@
   import { Section } from '$com/section'
   import { Nav, Screen } from '$com/shell'
   import { dict } from '$lib/intl'
-  import { Ready } from '@/account/ui'
+  import { Named } from '@/account/ui'
   import { Authenticated } from '@/iam/ui'
   import Languages from '@/iam/ui/Languages.svelte'
   import Actions from './Actions.svelte'
@@ -27,10 +27,10 @@
       </Section>
       <Footer />
     {/snippet}
-    <Ready>
+    <Named>
       {@render children()}
       <Nav position="start" sections={sections($dict)} />
       <Actions />
-    </Ready>
+    </Named>
   </Authenticated>
 </Screen>
