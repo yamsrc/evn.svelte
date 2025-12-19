@@ -3,10 +3,11 @@
   import { Section } from '$com/section'
   import { assets } from '$config'
   import { dict, locale } from '$lib/intl'
+  import { deterministic } from '$lib/tools'
   import { Button } from '$ui/button'
   import * as Card from '$ui/card'
   import { set } from '@/account'
-  import { Picture } from '@/account/ui'
+  import { Avatar } from '@/account/ui'
   import { account } from '@/iam'
   import { logout } from '@/iam'
   import Name from './onboarding/Name.svelte'
@@ -17,15 +18,15 @@
   let filled = $state(false)
 
   $effect(() => {
-    if (filled) return
+    if (filled || !$account) return
 
     filled = true
 
     const updates: { locale?: string; picture?: string } = {}
 
-    if (!$account?.locale) updates.locale = $locale
+    if (!$account.locale) updates.locale = $locale
 
-    if (!$account?.picture) updates.picture = assets[Math.floor(Math.random() * assets.length)]
+    if (!$account.picture) updates.picture = assets[deterministic($account.id, assets.length)]
 
     if (Object.keys(updates).length > 0) set(updates)
   })
@@ -35,14 +36,11 @@
 
 {#if ready}
   {@render children()}
-{:else if $account && !$account?.name}
+{:else if $account && !$account.name}
   <Section class="flex-1 flex flex-col justify-center space-y-4">
     <Card.Root class="w-full max-w-sm mx-auto">
       <Card.Header class="flex flex-1 flex-col items-start justify-center gap-2 relative">
-        <Picture
-          account={$account}
-          class="size-10 absolute top-0 right-6 border border-border rounded-full"
-        />
+        <Avatar class="size-10 absolute top-0 right-6 border border-border rounded-full" />
         <Card.Title>{$dict.onboarding.name.title}</Card.Title>
         <Card.Description>{$dict.onboarding.name.description}</Card.Description>
       </Card.Header>
