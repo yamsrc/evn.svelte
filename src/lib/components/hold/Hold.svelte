@@ -7,6 +7,7 @@
   import type { Props } from './Hold'
 
   const {
+    name = 'hold',
     duration = 800,
     label,
     variant = 'ghost',
@@ -77,7 +78,7 @@
     oncontextmenu={swallow}
     onpointerup={cancel}
     onpointerleave={cancel}
-    style="anchor-name: --hold;"
+    style={`anchor-name: --${name};`}
   >
     {@render children?.()}
   </Button>
@@ -95,7 +96,7 @@
       },
       shown && 'translate-x-0 translate-y-0 opacity-100 scale-100',
     )}
-    style={`position-anchor: --hold; position-area: ${position} ${align};`}
+    style={`position-anchor: --${name}; position-area: ${position} ${align};`}
   >
     <div class="text-xs text-muted-foreground">{label}</div>
     <Progress
