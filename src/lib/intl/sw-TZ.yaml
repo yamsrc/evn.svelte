@@ -3,6 +3,7 @@ locale: sw-TZ
 actions:
   continue: Endelea
   holdToLogout: Shikilia ili utoke
+  signout: Ondoka
 nav:
   home: Mwanzo
   friends: Marafiki
@@ -19,3 +20,7 @@ profile:
 form:
   enterName: Weka jina
 copyright: © Seed.me, 2024-2025
+onboarding:
+  name:
+    title: Mguso wa kibinafsi
+    description: Jina lako litakavyoonekana

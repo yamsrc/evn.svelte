@@ -3,6 +3,7 @@ locale: fr-FR
 actions:
   continue: Continuer
   holdToLogout: Maintenez pour vous déconnecter
+  signout: Se déconnecter
 nav:
   home: Accueil
   friends: Amis
@@ -21,3 +22,7 @@ profile:
 form:
   enterName: Saisissez le nom
 copyright: © Seed.me, 2024-2025
+onboarding:
+  name:
+    title: Touche personnelle
+    description: Votre nom tel qu'il sera affiché

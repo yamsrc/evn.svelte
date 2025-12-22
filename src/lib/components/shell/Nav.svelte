@@ -48,11 +48,14 @@
             )}
           >
             <div
-              class={cn('absolute inset-0 bg-background z-0 m-1', rounded, active || 'hidden')}
+              class={cn(
+                'absolute inset-0 bg-background z-0 m-1 rounded-[calc(var(--radius)+2px)]',
+                active || 'hidden',
+              )}
               style={active ? 'view-transition-name: shell-nav-active;' : ''}
             ></div>
             <div
-              class="flex flex-col items-center gap-1 z-10 relative font-bold"
+              class="flex flex-col items-center gap-0.5 z-10 relative font-bold"
               style={`view-transition-name: shell-nav-${i}`}
             >
               <section.Icon class="size-5" color="var(--muted-foreground)" />

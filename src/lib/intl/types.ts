@@ -12,6 +12,7 @@ export type Dictionary = {
       actions: {
         continue: string
         holdToLogout: string
+        signout: string
       }
       nav: {
         home: string
@@ -33,4 +34,10 @@ export type Dictionary = {
         enterName: string
       }
       copyright: string
+      onboarding: {
+        name: {
+          title: string
+          description: string
+        }
+      }
     }

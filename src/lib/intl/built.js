@@ -7,7 +7,8 @@ export const dictionaries = {
     "locale": "ar-SA",
     "actions": {
       "continue": "متابعة",
-      "holdToLogout": "اضغط مطولًا لتسجيل الخروج"
+      "holdToLogout": "اضغط مطولًا لتسجيل الخروج",
+      "signout": "تسجيل الخروج"
     },
     "nav": {
       "home": "الرئيسية",
@@ -28,14 +29,21 @@ export const dictionaries = {
     "form": {
       "enterName": "أدخل الاسم"
     },
-    "copyright": "© Seed.me، 2024-2025"
+    "copyright": "© Seed.me، 2024-2025",
+    "onboarding": {
+      "name": {
+        "title": "لمسة شخصية",
+        "description": "اسمك كما سيظهر"
+      }
+    }
   },
   "de-DE": {
     "native": "Deutsch",
     "locale": "de-DE",
     "actions": {
       "continue": "Weiter",
-      "holdToLogout": "Zum Abmelden gedrückt halten"
+      "holdToLogout": "Zum Abmelden gedrückt halten",
+      "signout": "Abmelden"
     },
     "nav": {
       "home": "Startseite",
@@ -56,14 +64,21 @@ export const dictionaries = {
     "form": {
       "enterName": "Name eingeben"
     },
-    "copyright": "© Seed.me, 2024–2025"
+    "copyright": "© Seed.me, 2024–2025",
+    "onboarding": {
+      "name": {
+        "title": "Persönliche Note",
+        "description": "Ihr Name, wie er angezeigt wird"
+      }
+    }
   },
   "en-US": {
     "native": "English",
     "locale": "en-US",
     "actions": {
       "continue": "Continue",
-      "holdToLogout": "Hold to log out"
+      "holdToLogout": "Hold to log out",
+      "signout": "Sign out"
     },
     "nav": {
       "home": "Home",
@@ -84,14 +99,21 @@ export const dictionaries = {
     "form": {
       "enterName": "Enter name"
     },
-    "copyright": "© Seed.me, 2024-2025"
+    "copyright": "© Seed.me, 2024-2025",
+    "onboarding": {
+      "name": {
+        "title": "Personal Touch",
+        "description": "Your name as it will appear"
+      }
+    }
   },
   "es-ES": {
     "native": "Español",
     "locale": "es-ES",
     "actions": {
       "continue": "Continuar",
-      "holdToLogout": "Mantén pulsado para cerrar sesión"
+      "holdToLogout": "Mantén pulsado para cerrar sesión",
+      "signout": "Cerrar sesión"
     },
     "nav": {
       "home": "Inicio",
@@ -112,14 +134,21 @@ export const dictionaries = {
     "form": {
       "enterName": "Introduce el nombre"
     },
-    "copyright": "© Seed.me, 2024-2025"
+    "copyright": "© Seed.me, 2024-2025",
+    "onboarding": {
+      "name": {
+        "title": "Toque personal",
+        "description": "Tu nombre tal como se verá"
+      }
+    }
   },
   "fr-FR": {
     "native": "Français",
     "locale": "fr-FR",
     "actions": {
       "continue": "Continuer",
-      "holdToLogout": "Maintenez pour vous déconnecter"
+      "holdToLogout": "Maintenez pour vous déconnecter",
+      "signout": "Se déconnecter"
     },
     "nav": {
       "home": "Accueil",
@@ -140,14 +169,21 @@ export const dictionaries = {
     "form": {
       "enterName": "Saisissez le nom"
     },
-    "copyright": "© Seed.me, 2024-2025"
+    "copyright": "© Seed.me, 2024-2025",
+    "onboarding": {
+      "name": {
+        "title": "Touche personnelle",
+        "description": "Votre nom tel qu'il sera affiché"
+      }
+    }
   },
   "hi-IN": {
     "native": "हिन्दी",
     "locale": "hi-IN",
     "actions": {
       "continue": "जारी रखें",
-      "holdToLogout": "लॉगआउट के लिए दबाए रखें"
+      "holdToLogout": "लॉगआउट के लिए दबाए रखें",
+      "signout": "साइन आउट करें"
     },
     "nav": {
       "home": "मुख्य पृष्ठ",
@@ -168,14 +204,21 @@ export const dictionaries = {
     "form": {
       "enterName": "नाम दर्ज करें"
     },
-    "copyright": "© Seed.me, 2024-2025"
+    "copyright": "© Seed.me, 2024-2025",
+    "onboarding": {
+      "name": {
+        "title": "व्यक्तिगत स्पर्श",
+        "description": "आपका नाम जैसा दिखाई देगा"
+      }
+    }
   },
   "it-IT": {
     "native": "Italiano",
     "locale": "it-IT",
     "actions": {
       "continue": "Continua",
-      "holdToLogout": "Tieni premuto per uscire"
+      "holdToLogout": "Tieni premuto per uscire",
+      "signout": "Esci"
     },
     "nav": {
       "home": "Home",
@@ -196,14 +239,21 @@ export const dictionaries = {
     "form": {
       "enterName": "Inserisci il nome"
     },
-    "copyright": "© Seed.me, 2024-2025"
+    "copyright": "© Seed.me, 2024-2025",
+    "onboarding": {
+      "name": {
+        "title": "Tocco personale",
+        "description": "Il tuo nome come verrà visualizzato"
+      }
+    }
   },
   "ja-JP": {
     "native": "日本語",
     "locale": "ja-JP",
     "actions": {
       "continue": "続ける",
-      "holdToLogout": "長押ししてログアウト"
+      "holdToLogout": "長押ししてログアウト",
+      "signout": "サインアウト"
     },
     "nav": {
       "home": "ホーム",
@@ -224,14 +274,21 @@ export const dictionaries = {
     "form": {
       "enterName": "名前を入力してください"
     },
-    "copyright": "© Seed.me, 2024年～2025年"
+    "copyright": "© Seed.me, 2024年～2025年",
+    "onboarding": {
+      "name": {
+        "title": "パーソナルタッチ",
+        "description": "表示されるあなたの名前"
+      }
+    }
   },
   "ko-KR": {
     "native": "한국어",
     "locale": "ko-KR",
     "actions": {
       "continue": "계속",
-      "holdToLogout": "길게 눌러 로그아웃"
+      "holdToLogout": "길게 눌러 로그아웃",
+      "signout": "로그아웃"
     },
     "nav": {
       "home": "홈",
@@ -252,14 +309,21 @@ export const dictionaries = {
     "form": {
       "enterName": "이름을 입력하세요"
     },
-    "copyright": "© Seed.me, 2024-2025"
+    "copyright": "© Seed.me, 2024-2025",
+    "onboarding": {
+      "name": {
+        "title": "개인적인 터치",
+        "description": "표시될 이름"
+      }
+    }
   },
   "nl-NL": {
     "native": "Nederlands",
     "locale": "nl-NL",
     "actions": {
       "continue": "Doorgaan",
-      "holdToLogout": "Ingedrukt houden om uit te loggen"
+      "holdToLogout": "Ingedrukt houden om uit te loggen",
+      "signout": "Afmelden"
     },
     "nav": {
       "home": "Home",
@@ -280,14 +344,21 @@ export const dictionaries = {
     "form": {
       "enterName": "Naam invoeren"
     },
-    "copyright": "© Seed.me, 2024-2025"
+    "copyright": "© Seed.me, 2024-2025",
+    "onboarding": {
+      "name": {
+        "title": "Persoonlijk tintje",
+        "description": "Je naam zoals die getoond zal worden"
+      }
+    }
   },
   "ru-RU": {
     "native": "Русский",
     "locale": "ru-RU",
     "actions": {
       "continue": "Продолжить",
-      "holdToLogout": "Удерживайте для выхода"
+      "holdToLogout": "Удерживайте для выхода",
+      "signout": "Выйти"
     },
     "nav": {
       "home": "Главная",
@@ -308,14 +379,21 @@ export const dictionaries = {
     "form": {
       "enterName": "Введите имя"
     },
-    "copyright": "© Seed.me, 2024–2025"
+    "copyright": "© Seed.me, 2024–2025",
+    "onboarding": {
+      "name": {
+        "title": "Личный штрих",
+        "description": "Ваше имя, как оно будет отображаться"
+      }
+    }
   },
   "sw-TZ": {
     "native": "Kiswahili",
     "locale": "sw-TZ",
     "actions": {
       "continue": "Endelea",
-      "holdToLogout": "Shikilia ili utoke"
+      "holdToLogout": "Shikilia ili utoke",
+      "signout": "Ondoka"
     },
     "nav": {
       "home": "Mwanzo",
@@ -336,14 +414,21 @@ export const dictionaries = {
     "form": {
       "enterName": "Weka jina"
     },
-    "copyright": "© Seed.me, 2024-2025"
+    "copyright": "© Seed.me, 2024-2025",
+    "onboarding": {
+      "name": {
+        "title": "Mguso wa kibinafsi",
+        "description": "Jina lako litakavyoonekana"
+      }
+    }
   },
   "tr-TR": {
     "native": "Türkçe",
     "locale": "tr-TR",
     "actions": {
       "continue": "Devam Et",
-      "holdToLogout": "Çıkış yapmak için basılı tutun"
+      "holdToLogout": "Çıkış yapmak için basılı tutun",
+      "signout": "Oturumu kapat"
     },
     "nav": {
       "home": "Ana Sayfa",
@@ -364,14 +449,21 @@ export const dictionaries = {
     "form": {
       "enterName": "İsim girin"
     },
-    "copyright": "© Seed.me, 2024-2025"
+    "copyright": "© Seed.me, 2024-2025",
+    "onboarding": {
+      "name": {
+        "title": "Kişisel dokunuş",
+        "description": "Adınızın görüneceği şekliyle"
+      }
+    }
   },
   "uk-UA": {
     "native": "Українська",
     "locale": "uk-UA",
     "actions": {
       "continue": "Продовжити",
-      "holdToLogout": "Утримуйте, щоб вийти"
+      "holdToLogout": "Утримуйте, щоб вийти",
+      "signout": "Вийти"
     },
     "nav": {
       "home": "Головна",
@@ -392,14 +484,21 @@ export const dictionaries = {
     "form": {
       "enterName": "Введіть ім’я"
     },
-    "copyright": "© Seed.me, 2024–2025"
+    "copyright": "© Seed.me, 2024–2025",
+    "onboarding": {
+      "name": {
+        "title": "Особистий штрих",
+        "description": "Ваше ім’я, як воно буде відображатися"
+      }
+    }
   },
   "zh-CN": {
     "native": "中文",
     "locale": "zh-CN",
     "actions": {
       "continue": "继续",
-      "holdToLogout": "按住退出登录"
+      "holdToLogout": "按住退出登录",
+      "signout": "退出登录"
     },
     "nav": {
       "home": "首页",
@@ -420,7 +519,13 @@ export const dictionaries = {
     "form": {
       "enterName": "输入姓名"
     },
-    "copyright": "© Seed.me，2024-2025"
+    "copyright": "© Seed.me，2024-2025",
+    "onboarding": {
+      "name": {
+        "title": "个性化体验",
+        "description": "您的姓名将被显示为"
+      }
+    }
   }
 };
 

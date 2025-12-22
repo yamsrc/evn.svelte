@@ -3,6 +3,7 @@ locale: en-US
 actions:
   continue: Continue
   holdToLogout: Hold to log out
+  signout: Sign out
 nav:
   home: Home
   friends: Friends
@@ -21,3 +22,7 @@ profile:
 form:
   enterName: Enter name
 copyright: © Seed.me, 2024-2025
+onboarding:
+  name:
+    title: Personal Touch
+    description: Your name as it will appear

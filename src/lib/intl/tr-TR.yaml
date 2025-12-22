@@ -3,6 +3,7 @@ locale: tr-TR
 actions:
   continue: Devam Et
   holdToLogout: Çıkış yapmak için basılı tutun
+  signout: Oturumu kapat
 nav:
   home: Ana Sayfa
   friends: Arkadaşlar
@@ -19,3 +20,7 @@ profile:
 form:
   enterName: İsim girin
 copyright: © Seed.me, 2024-2025
+onboarding:
+  name:
+    title: Kişisel dokunuş
+    description: Adınızın görüneceği şekliyle

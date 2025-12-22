@@ -9,5 +9,5 @@ export const assets = [
   '0dd9f1eabc49f68a349427f5d818f61f', // avatars.7.png
   '280bbde52fc61f88e3f6558494663666', // avatars.8.png
   'f267c66731d799a9720be3a572b4681b', // avatars.9.png
-  '66a8159f14a0816dbe2ef4f40792dc1d', // avatars.10.png
+  'aebfc5599550852cdbda1f0d998e42a8', // avatars.10.png
 ] as const

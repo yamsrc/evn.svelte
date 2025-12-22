@@ -3,6 +3,7 @@ locale: zh-CN
 actions:
   continue: 继续
   holdToLogout: 按住退出登录
+  signout: 退出登录
 nav:
   home: 首页
   friends: 朋友
@@ -19,3 +20,7 @@ profile:
 form:
   enterName: 输入姓名
 copyright: © Seed.me，2024-2025
+onboarding:
+  name:
+    title: 个性化体验
+    description: 您的姓名将被显示为

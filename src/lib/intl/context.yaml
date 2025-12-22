@@ -11,6 +11,8 @@ inputs:
       input: Continue
     holdToLogout:
       input: Hold to logout
+    signout:
+      input: Sign out
   nav:
     home:
       input: Home
@@ -40,5 +42,12 @@ inputs:
       input: Enter name
   copyright:
     input: © Seed.me, 2024-2025
+  onboarding:
+    name:
+      title:
+        input: Personal touch
+        context: Title of form requesting personal info
+      description:
+        input: Your name as it will be seen
 mounts:
   iam: ../../@/iam/ui/intl

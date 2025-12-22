@@ -3,6 +3,7 @@ locale: ko-KR
 actions:
   continue: 계속
   holdToLogout: 길게 눌러 로그아웃
+  signout: 로그아웃
 nav:
   home: 홈
   friends: 친구
@@ -19,3 +20,7 @@ profile:
 form:
   enterName: 이름을 입력하세요
 copyright: © Seed.me, 2024-2025
+onboarding:
+  name:
+    title: 개인적인 터치
+    description: 표시될 이름

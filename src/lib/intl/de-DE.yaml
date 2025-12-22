@@ -3,6 +3,7 @@ locale: de-DE
 actions:
   continue: Weiter
   holdToLogout: Zum Abmelden gedrückt halten
+  signout: Abmelden
 nav:
   home: Startseite
   friends: Freunde
@@ -21,3 +22,7 @@ profile:
 form:
   enterName: Name eingeben
 copyright: © Seed.me, 2024–2025
+onboarding:
+  name:
+    title: Persönliche Note
+    description: Ihr Name, wie er angezeigt wird

@@ -100,11 +100,11 @@
     <div class="space-y-1">
       <div class="flex items-center gap-2">
         <Password bind:ref={passwordRef} bind:password bind:otp bind:error {mode} />
-        <Button size="icon" type="submit">
+        <Button size="icon" type="submit" class="size-12">
           {#if busy}
             <Loader />
           {:else}
-            <ArrowRight />
+            <ArrowRight class="size-5" />
           {/if}
           <span class="sr-only">{$dict.auth.login}</span>
         </Button>

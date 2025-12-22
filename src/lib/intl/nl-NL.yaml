@@ -3,6 +3,7 @@ locale: nl-NL
 actions:
   continue: Doorgaan
   holdToLogout: Ingedrukt houden om uit te loggen
+  signout: Afmelden
 nav:
   home: Home
   friends: Vrienden
@@ -21,3 +22,7 @@ profile:
 form:
   enterName: Naam invoeren
 copyright: © Seed.me, 2024-2025
+onboarding:
+  name:
+    title: Persoonlijk tintje
+    description: Je naam zoals die getoond zal worden

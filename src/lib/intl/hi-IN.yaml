@@ -3,6 +3,7 @@ locale: hi-IN
 actions:
   continue: जारी रखें
   holdToLogout: लॉगआउट के लिए दबाए रखें
+  signout: साइन आउट करें
 nav:
   home: मुख्य पृष्ठ
   friends: मित्र
@@ -21,3 +22,7 @@ profile:
 form:
   enterName: नाम दर्ज करें
 copyright: © Seed.me, 2024-2025
+onboarding:
+  name:
+    title: व्यक्तिगत स्पर्श
+    description: आपका नाम जैसा दिखाई देगा

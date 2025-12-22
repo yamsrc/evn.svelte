@@ -3,6 +3,7 @@ locale: uk-UA
 actions:
   continue: Продовжити
   holdToLogout: Утримуйте, щоб вийти
+  signout: Вийти
 nav:
   home: Головна
   friends: Друзі
@@ -21,3 +22,7 @@ profile:
 form:
   enterName: Введіть ім’я
 copyright: © Seed.me, 2024–2025
+onboarding:
+  name:
+    title: Особистий штрих
+    description: Ваше ім’я, як воно буде відображатися
