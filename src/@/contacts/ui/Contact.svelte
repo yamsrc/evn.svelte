@@ -2,6 +2,7 @@
   import { Coins } from '@lucide/svelte'
   import { Async } from 'svas'
   import { dict } from '$lib/intl'
+  import { currency } from '$lib/tools'
   import * as Item from '$ui/item'
   import { accounts } from '@/account'
   import { Picture } from '@/account/ui'
@@ -28,7 +29,7 @@
               {/if}
             </div>
             <div class="text-base font-bold">
-              {Math.abs(contact.balance)}
+              {currency(Math.abs(contact.balance))}
             </div>
             <div>
               <Coins
