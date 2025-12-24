@@ -51,6 +51,11 @@ export type Dictionary = {
             qr: string
           }
         }
+        all: string
+        contact: {
+          owesYou: string
+          youOwe: string
+        }
       }
       join: {
         app: {

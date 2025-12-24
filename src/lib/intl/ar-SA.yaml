@@ -33,6 +33,10 @@ contacts:
     invite:
       share: دعوة الأصدقاء
       qr: دعوة عبر رمز الاستجابة السريعة
+  all: جميع الأصدقاء
+  contact:
+    owesYou: مدين لك
+    youOwe: أنت مدين
 join:
   app:
     description: الطريقة الذكية لمتابعة من يدين لمن، مع الأصدقاء.

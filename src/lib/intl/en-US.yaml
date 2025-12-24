@@ -35,6 +35,10 @@ contacts:
     invite:
       share: Invite friends
       qr: Invite by QR code
+  all: All friends
+  contact:
+    owesYou: Owes you
+    youOwe: You owe
 join:
   app:
     description: The smart way to track who owes whom, together with friends.

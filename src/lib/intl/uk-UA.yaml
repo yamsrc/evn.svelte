@@ -35,6 +35,10 @@ contacts:
     invite:
       share: Запросити друзів
       qr: Запросити за QR-кодом
+  all: Усі друзі
+  contact:
+    owesYou: Винен тобі
+    youOwe: Ви винні
 join:
   app:
     description: Розумний спосіб відстежувати, хто кому винен, разом із друзями.

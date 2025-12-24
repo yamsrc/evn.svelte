@@ -46,6 +46,11 @@ export const dictionaries = {
           "share": "دعوة الأصدقاء",
           "qr": "دعوة عبر رمز الاستجابة السريعة"
         }
+      },
+      "all": "جميع الأصدقاء",
+      "contact": {
+        "owesYou": "مدين لك",
+        "youOwe": "أنت مدين"
       }
     },
     "join": {
@@ -102,6 +107,11 @@ export const dictionaries = {
           "share": "Freunde einladen",
           "qr": "Per QR-Code einladen"
         }
+      },
+      "all": "Alle Freunde",
+      "contact": {
+        "owesYou": "Schuldet dir",
+        "youOwe": "Du schuldest"
       }
     },
     "join": {
@@ -158,6 +168,11 @@ export const dictionaries = {
           "share": "Invite friends",
           "qr": "Invite by QR code"
         }
+      },
+      "all": "All friends",
+      "contact": {
+        "owesYou": "Owes you",
+        "youOwe": "You owe"
       }
     },
     "join": {
@@ -214,6 +229,11 @@ export const dictionaries = {
           "share": "Invitar a amigos",
           "qr": "Invitar por código QR"
         }
+      },
+      "all": "Todos los amigos",
+      "contact": {
+        "owesYou": "Te debe",
+        "youOwe": "Debes"
       }
     },
     "join": {
@@ -270,6 +290,11 @@ export const dictionaries = {
           "share": "Inviter des amis",
           "qr": "Inviter par QR code"
         }
+      },
+      "all": "Tous les amis",
+      "contact": {
+        "owesYou": "Te doit",
+        "youOwe": "Vous devez"
       }
     },
     "join": {
@@ -326,6 +351,11 @@ export const dictionaries = {
           "share": "दोस्तों को आमंत्रित करें",
           "qr": "QR कोड से आमंत्रित करें"
         }
+      },
+      "all": "सभी मित्र",
+      "contact": {
+        "owesYou": "आपका कर्ज़दार है",
+        "youOwe": "आपको देना है"
       }
     },
     "join": {
@@ -382,6 +412,11 @@ export const dictionaries = {
           "share": "Invita amici",
           "qr": "Invita tramite codice QR"
         }
+      },
+      "all": "Tutti gli amici",
+      "contact": {
+        "owesYou": "Ti deve",
+        "youOwe": "Devi"
       }
     },
     "join": {
@@ -438,6 +473,11 @@ export const dictionaries = {
           "share": "友達を招待する",
           "qr": "QRコードで招待"
         }
+      },
+      "all": "すべての友達",
+      "contact": {
+        "owesYou": "あなたに借りがある",
+        "youOwe": "あなたが支払うべきです"
       }
     },
     "join": {
@@ -494,6 +534,11 @@ export const dictionaries = {
           "share": "친구 초대하기",
           "qr": "QR 코드로 초대"
         }
+      },
+      "all": "모든 친구",
+      "contact": {
+        "owesYou": "당신에게 빚졌어요",
+        "youOwe": "당신이 빚졌습니다"
       }
     },
     "join": {
@@ -550,6 +595,11 @@ export const dictionaries = {
           "share": "Vrienden uitnodigen",
           "qr": "Uitnodigen via QR-code"
         }
+      },
+      "all": "Alle vrienden",
+      "contact": {
+        "owesYou": "Is jou iets verschuldigd",
+        "youOwe": "Je bent verschuldigd"
       }
     },
     "join": {
@@ -606,6 +656,11 @@ export const dictionaries = {
           "share": "Пригласить друзей",
           "qr": "Пригласить по QR-коду"
         }
+      },
+      "all": "Все друзья",
+      "contact": {
+        "owesYou": "Должен тебе",
+        "youOwe": "Вы должны"
       }
     },
     "join": {
@@ -662,6 +717,11 @@ export const dictionaries = {
           "share": "Alika marafiki",
           "qr": "Alika kwa kutumia msimbo wa QR"
         }
+      },
+      "all": "Marafiki wote",
+      "contact": {
+        "owesYou": "Ana deni lako",
+        "youOwe": "Unadaiwa"
       }
     },
     "join": {
@@ -718,6 +778,11 @@ export const dictionaries = {
           "share": "Arkadaşlarını davet et",
           "qr": "QR kod ile davet et"
         }
+      },
+      "all": "Tüm arkadaşlar",
+      "contact": {
+        "owesYou": "Sana borçlu",
+        "youOwe": "Borçlusun"
       }
     },
     "join": {
@@ -774,6 +839,11 @@ export const dictionaries = {
           "share": "Запросити друзів",
           "qr": "Запросити за QR-кодом"
         }
+      },
+      "all": "Усі друзі",
+      "contact": {
+        "owesYou": "Винен тобі",
+        "youOwe": "Ви винні"
       }
     },
     "join": {
@@ -830,6 +900,11 @@ export const dictionaries = {
           "share": "邀请朋友",
           "qr": "通过二维码邀请"
         }
+      },
+      "all": "所有好友",
+      "contact": {
+        "owesYou": "欠你的",
+        "youOwe": "你欠"
       }
     },
     "join": {

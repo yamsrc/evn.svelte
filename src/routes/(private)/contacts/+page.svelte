@@ -6,6 +6,7 @@
   import { Button } from '$ui/button'
   import { contacts } from '@/contacts'
   import { Invite } from '@/contacts/ui'
+  import { Contacts } from '@/contacts/ui'
   import { account } from '@/iam'
 </script>
 
@@ -26,6 +27,8 @@
   {#snippet awaited(contacts)}
     {#if contacts.length === 0 && $account}
       <Invite id={$account.id} />
+    {:else}
+      <Contacts title={$dict.contacts.all} {contacts} />
     {/if}
   {/snippet}
 </Async>

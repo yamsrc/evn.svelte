@@ -33,6 +33,10 @@ contacts:
     invite:
       share: Arkadaşlarını davet et
       qr: QR kod ile davet et
+  all: Tüm arkadaşlar
+  contact:
+    owesYou: Sana borçlu
+    youOwe: Borçlusun
 join:
   app:
     description: >-

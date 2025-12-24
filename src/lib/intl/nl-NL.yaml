@@ -35,6 +35,10 @@ contacts:
     invite:
       share: Vrienden uitnodigen
       qr: Uitnodigen via QR-code
+  all: Alle vrienden
+  contact:
+    owesYou: Is jou iets verschuldigd
+    youOwe: Je bent verschuldigd
 join:
   app:
     description: >-

@@ -33,6 +33,10 @@ contacts:
     invite:
       share: Alika marafiki
       qr: Alika kwa kutumia msimbo wa QR
+  all: Marafiki wote
+  contact:
+    owesYou: Ana deni lako
+    youOwe: Unadaiwa
 join:
   app:
     description: Njia bora ya kufuatilia nani anamdai nani, ukiwa na marafiki zako.

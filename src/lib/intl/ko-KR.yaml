@@ -33,6 +33,10 @@ contacts:
     invite:
       share: 친구 초대하기
       qr: QR 코드로 초대
+  all: 모든 친구
+  contact:
+    owesYou: 당신에게 빚졌어요
+    youOwe: 당신이 빚졌습니다
 join:
   app:
     description: 친구들과 함께 누가 누구에게 얼마를 빚졌는지 스마트하게 추적하는 방법.

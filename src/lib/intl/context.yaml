@@ -64,6 +64,13 @@ inputs:
           input: Invite friends
         qr:
           input: Invite by QR code
+    all:
+      input: All friends
+    contact:
+      owesYou:
+        input: Owes you
+      youOwe:
+        input: You owe
   join:
     app:
       description:

@@ -35,6 +35,10 @@ contacts:
     invite:
       share: Invitar a amigos
       qr: Invitar por código QR
+  all: Todos los amigos
+  contact:
+    owesYou: Te debe
+    youOwe: Debes
 join:
   app:
     description: >-

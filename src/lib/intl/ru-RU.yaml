@@ -35,6 +35,10 @@ contacts:
     invite:
       share: Пригласить друзей
       qr: Пригласить по QR-коду
+  all: Все друзья
+  contact:
+    owesYou: Должен тебе
+    youOwe: Вы должны
 join:
   app:
     description: Умный способ отслеживать, кто кому должен, вместе с друзьями.

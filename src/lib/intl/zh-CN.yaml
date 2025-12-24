@@ -33,6 +33,10 @@ contacts:
     invite:
       share: 邀请朋友
       qr: 通过二维码邀请
+  all: 所有好友
+  contact:
+    owesYou: 欠你的
+    youOwe: 你欠
 join:
   app:
     description: 和朋友们一起智能记录谁欠谁。
