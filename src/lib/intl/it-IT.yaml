@@ -6,9 +6,9 @@ actions:
   signout: Esci
 nav:
   home: Home
-  friends: Amici
   evns: Saldo
   profile: Io
+  contacts: Amici
 terms: Termini e condizioni
 privacy: Informativa sulla privacy
 madeBy: Realizzato da
@@ -26,3 +26,11 @@ onboarding:
   name:
     title: Tocco personale
     description: Il tuo nome come verrà visualizzato
+contacts:
+  title: Amici
+  empty:
+    title: È solitario qui
+    description: Aggiungi amici manualmente o invita persone
+    invite:
+      share: Invita amici
+      qr: Invita tramite codice QR

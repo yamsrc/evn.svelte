@@ -6,9 +6,9 @@ actions:
   signout: Afmelden
 nav:
   home: Home
-  friends: Vrienden
   evns: Afrekening
   profile: Ik
+  contacts: Vrienden
 terms: Algemene voorwaarden
 privacy: Privacybeleid
 madeBy: Gemaakt door
@@ -26,3 +26,11 @@ onboarding:
   name:
     title: Persoonlijk tintje
     description: Je naam zoals die getoond zal worden
+contacts:
+  title: Vrienden
+  empty:
+    title: Het is hier verlaten
+    description: Voeg vrienden handmatig toe of nodig mensen uit
+    invite:
+      share: Vrienden uitnodigen
+      qr: Uitnodigen via QR-code

@@ -9,8 +9,8 @@ export const sections = (dict: Dictionary): Section[] => [
     Icon: LayoutGrid,
   },
   {
-    href: '/friends/',
-    label: dict.nav.friends,
+    href: '/contacts/',
+    label: dict.nav.contacts,
     Icon: Users,
   },
   {

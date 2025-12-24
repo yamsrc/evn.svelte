@@ -6,9 +6,9 @@ actions:
   signout: Ondoka
 nav:
   home: Mwanzo
-  friends: Marafiki
   evns: Marejesho
   profile: Mimi
+  contacts: Marafiki
 terms: Sheria na Masharti
 privacy: Sera ya Faragha
 madeBy: Imetengenezwa na
@@ -24,3 +24,11 @@ onboarding:
   name:
     title: Mguso wa kibinafsi
     description: Jina lako litakavyoonekana
+contacts:
+  title: Marafiki
+  empty:
+    title: Hapa ni upweke
+    description: Ongeza marafiki mwenyewe au alika watu
+    invite:
+      share: Alika marafiki
+      qr: Alika kwa kutumia msimbo wa QR

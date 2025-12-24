@@ -6,9 +6,9 @@ actions:
   signout: Cerrar sesión
 nav:
   home: Inicio
-  friends: Amigos
   evns: Ajustes
   profile: Yo
+  contacts: Amigos
 terms: Términos y condiciones
 privacy: Política de privacidad
 madeBy: Hecho por
@@ -26,3 +26,11 @@ onboarding:
   name:
     title: Toque personal
     description: Tu nombre tal como se verá
+contacts:
+  title: Amigos
+  empty:
+    title: Aquí está solitario
+    description: Añade amigos manualmente o invita a personas
+    invite:
+      share: Invitar a amigos
+      qr: Invitar por código QR

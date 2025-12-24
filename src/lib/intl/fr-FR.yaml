@@ -6,9 +6,9 @@ actions:
   signout: Se déconnecter
 nav:
   home: Accueil
-  friends: Amis
   evns: Règlements
   profile: Moi
+  contacts: Amis
 terms: Conditions générales
 privacy: Politique de confidentialité
 madeBy: Créé par
@@ -26,3 +26,11 @@ onboarding:
   name:
     title: Touche personnelle
     description: Votre nom tel qu'il sera affiché
+contacts:
+  title: Amis
+  empty:
+    title: C'est désert ici
+    description: Ajoutez des amis manuellement ou invitez des personnes
+    invite:
+      share: Inviter des amis
+      qr: Inviter par QR code

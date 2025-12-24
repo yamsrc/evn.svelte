@@ -6,9 +6,9 @@ actions:
   signout: 退出登录
 nav:
   home: 首页
-  friends: 朋友
   evns: 结算
   profile: 我
+  contacts: 朋友
 terms: 条款与条件
 privacy: 隐私政策
 madeBy: 由...制作
@@ -24,3 +24,11 @@ onboarding:
   name:
     title: 个性化体验
     description: 您的姓名将被显示为
+contacts:
+  title: 朋友
+  empty:
+    title: 这里很孤独
+    description: 手动添加好友或邀请他人
+    invite:
+      share: 邀请朋友
+      qr: 通过二维码邀请

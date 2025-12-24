@@ -16,13 +16,13 @@ inputs:
   nav:
     home:
       input: Home
-    friends:
-      input: Friends
     evns:
       input: Evns
       context: Use Evns for english. In other languages use short word with meaning settle up debts after spliting recipt
     profile:
       input: Me
+    contacts:
+      input: Friends
   terms:
     input: Terms & Conditions
   privacy:
@@ -49,5 +49,18 @@ inputs:
         context: Title of form requesting personal info
       description:
         input: Your name as it will be seen
+  contacts:
+    title:
+      input: Friends
+    empty:
+      title:
+        input: It's lonely here
+      description:
+        input: Add friends manually or invite people
+      invite:
+        share:
+          input: Invite friends
+        qr:
+          input: Invite by QR code
 mounts:
   iam: ../../@/iam/ui/intl

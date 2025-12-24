@@ -6,9 +6,9 @@ actions:
   signout: साइन आउट करें
 nav:
   home: मुख्य पृष्ठ
-  friends: मित्र
   evns: सेटलमेंट
   profile: मैं
+  contacts: मित्र
 terms: नियम और शर्तें
 privacy: गोपनीयता नीति
 madeBy: द्वारा निर्मित
@@ -26,3 +26,11 @@ onboarding:
   name:
     title: व्यक्तिगत स्पर्श
     description: आपका नाम जैसा दिखाई देगा
+contacts:
+  title: दोस्त
+  empty:
+    title: यहाँ अकेलापन है
+    description: दोस्तों को मैन्युअली जोड़ें या लोगों को आमंत्रित करें
+    invite:
+      share: दोस्तों को आमंत्रित करें
+      qr: QR कोड से आमंत्रित करें

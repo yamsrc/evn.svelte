@@ -6,9 +6,9 @@ actions:
   signout: Выйти
 nav:
   home: Главная
-  friends: Друзья
   evns: Расчёты
   profile: Я
+  contacts: Друзья
 terms: Условия и положения
 privacy: Политика конфиденциальности
 madeBy: Сделано
@@ -26,3 +26,11 @@ onboarding:
   name:
     title: Личный штрих
     description: Ваше имя, как оно будет отображаться
+contacts:
+  title: Друзья
+  empty:
+    title: Здесь одиноко
+    description: Добавьте друзей вручную или пригласите людей
+    invite:
+      share: Пригласить друзей
+      qr: Пригласить по QR-коду

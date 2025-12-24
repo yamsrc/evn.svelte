@@ -6,9 +6,9 @@ actions:
   signout: Sign out
 nav:
   home: Home
-  friends: Friends
   evns: Evns
   profile: Me
+  contacts: Friends
 terms: Terms & Conditions
 privacy: Privacy Policy
 madeBy: Made by
@@ -26,3 +26,11 @@ onboarding:
   name:
     title: Personal Touch
     description: Your name as it will appear
+contacts:
+  title: Friends
+  empty:
+    title: It's lonely here
+    description: Add friends manually or invite people
+    invite:
+      share: Invite friends
+      qr: Invite by QR code

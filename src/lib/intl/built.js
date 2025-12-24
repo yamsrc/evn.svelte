@@ -12,9 +12,9 @@ export const dictionaries = {
     },
     "nav": {
       "home": "الرئيسية",
-      "friends": "الأصدقاء",
       "evns": "تسوية",
-      "profile": "أنا"
+      "profile": "أنا",
+      "contacts": "الأصدقاء"
     },
     "terms": "الشروط والأحكام",
     "privacy": "سياسة الخصوصية",
@@ -35,6 +35,17 @@ export const dictionaries = {
         "title": "لمسة شخصية",
         "description": "اسمك كما سيظهر"
       }
+    },
+    "contacts": {
+      "title": "الأصدقاء",
+      "empty": {
+        "title": "المكان هنا موحش",
+        "description": "أضِف الأصدقاء يدويًا أو ادعُ الأشخاص",
+        "invite": {
+          "share": "دعوة الأصدقاء",
+          "qr": "دعوة عبر رمز الاستجابة السريعة"
+        }
+      }
     }
   },
   "de-DE": {
@@ -47,9 +58,9 @@ export const dictionaries = {
     },
     "nav": {
       "home": "Startseite",
-      "friends": "Freunde",
       "evns": "Ausgleich",
-      "profile": "Ich"
+      "profile": "Ich",
+      "contacts": "Freunde"
     },
     "terms": "Allgemeine Geschäftsbedingungen",
     "privacy": "Datenschutzerklärung",
@@ -70,6 +81,17 @@ export const dictionaries = {
         "title": "Persönliche Note",
         "description": "Ihr Name, wie er angezeigt wird"
       }
+    },
+    "contacts": {
+      "title": "Freunde",
+      "empty": {
+        "title": "Hier ist es einsam",
+        "description": "Freunde manuell hinzufügen oder Personen einladen",
+        "invite": {
+          "share": "Freunde einladen",
+          "qr": "Per QR-Code einladen"
+        }
+      }
     }
   },
   "en-US": {
@@ -82,9 +104,9 @@ export const dictionaries = {
     },
     "nav": {
       "home": "Home",
-      "friends": "Friends",
       "evns": "Evns",
-      "profile": "Me"
+      "profile": "Me",
+      "contacts": "Friends"
     },
     "terms": "Terms & Conditions",
     "privacy": "Privacy Policy",
@@ -105,6 +127,17 @@ export const dictionaries = {
         "title": "Personal Touch",
         "description": "Your name as it will appear"
       }
+    },
+    "contacts": {
+      "title": "Friends",
+      "empty": {
+        "title": "It's lonely here",
+        "description": "Add friends manually or invite people",
+        "invite": {
+          "share": "Invite friends",
+          "qr": "Invite by QR code"
+        }
+      }
     }
   },
   "es-ES": {
@@ -117,9 +150,9 @@ export const dictionaries = {
     },
     "nav": {
       "home": "Inicio",
-      "friends": "Amigos",
       "evns": "Ajustes",
-      "profile": "Yo"
+      "profile": "Yo",
+      "contacts": "Amigos"
     },
     "terms": "Términos y condiciones",
     "privacy": "Política de privacidad",
@@ -140,6 +173,17 @@ export const dictionaries = {
         "title": "Toque personal",
         "description": "Tu nombre tal como se verá"
       }
+    },
+    "contacts": {
+      "title": "Amigos",
+      "empty": {
+        "title": "Aquí está solitario",
+        "description": "Añade amigos manualmente o invita a personas",
+        "invite": {
+          "share": "Invitar a amigos",
+          "qr": "Invitar por código QR"
+        }
+      }
     }
   },
   "fr-FR": {
@@ -152,9 +196,9 @@ export const dictionaries = {
     },
     "nav": {
       "home": "Accueil",
-      "friends": "Amis",
       "evns": "Règlements",
-      "profile": "Moi"
+      "profile": "Moi",
+      "contacts": "Amis"
     },
     "terms": "Conditions générales",
     "privacy": "Politique de confidentialité",
@@ -175,6 +219,17 @@ export const dictionaries = {
         "title": "Touche personnelle",
         "description": "Votre nom tel qu'il sera affiché"
       }
+    },
+    "contacts": {
+      "title": "Amis",
+      "empty": {
+        "title": "C'est désert ici",
+        "description": "Ajoutez des amis manuellement ou invitez des personnes",
+        "invite": {
+          "share": "Inviter des amis",
+          "qr": "Inviter par QR code"
+        }
+      }
     }
   },
   "hi-IN": {
@@ -187,9 +242,9 @@ export const dictionaries = {
     },
     "nav": {
       "home": "मुख्य पृष्ठ",
-      "friends": "मित्र",
       "evns": "सेटलमेंट",
-      "profile": "मैं"
+      "profile": "मैं",
+      "contacts": "मित्र"
     },
     "terms": "नियम और शर्तें",
     "privacy": "गोपनीयता नीति",
@@ -210,6 +265,17 @@ export const dictionaries = {
         "title": "व्यक्तिगत स्पर्श",
         "description": "आपका नाम जैसा दिखाई देगा"
       }
+    },
+    "contacts": {
+      "title": "दोस्त",
+      "empty": {
+        "title": "यहाँ अकेलापन है",
+        "description": "दोस्तों को मैन्युअली जोड़ें या लोगों को आमंत्रित करें",
+        "invite": {
+          "share": "दोस्तों को आमंत्रित करें",
+          "qr": "QR कोड से आमंत्रित करें"
+        }
+      }
     }
   },
   "it-IT": {
@@ -222,9 +288,9 @@ export const dictionaries = {
     },
     "nav": {
       "home": "Home",
-      "friends": "Amici",
       "evns": "Saldo",
-      "profile": "Io"
+      "profile": "Io",
+      "contacts": "Amici"
     },
     "terms": "Termini e condizioni",
     "privacy": "Informativa sulla privacy",
@@ -245,6 +311,17 @@ export const dictionaries = {
         "title": "Tocco personale",
         "description": "Il tuo nome come verrà visualizzato"
       }
+    },
+    "contacts": {
+      "title": "Amici",
+      "empty": {
+        "title": "È solitario qui",
+        "description": "Aggiungi amici manualmente o invita persone",
+        "invite": {
+          "share": "Invita amici",
+          "qr": "Invita tramite codice QR"
+        }
+      }
     }
   },
   "ja-JP": {
@@ -257,9 +334,9 @@ export const dictionaries = {
     },
     "nav": {
       "home": "ホーム",
-      "friends": "友だち",
       "evns": "清算",
-      "profile": "私"
+      "profile": "私",
+      "contacts": "友だち"
     },
     "terms": "利用規約",
     "privacy": "プライバシーポリシー",
@@ -280,6 +357,17 @@ export const dictionaries = {
         "title": "パーソナルタッチ",
         "description": "表示されるあなたの名前"
       }
+    },
+    "contacts": {
+      "title": "友達",
+      "empty": {
+        "title": "ここは寂しいです",
+        "description": "友達を手動で追加するか、招待する",
+        "invite": {
+          "share": "友達を招待する",
+          "qr": "QRコードで招待"
+        }
+      }
     }
   },
   "ko-KR": {
@@ -292,9 +380,9 @@ export const dictionaries = {
     },
     "nav": {
       "home": "홈",
-      "friends": "친구",
       "evns": "정산",
-      "profile": "나"
+      "profile": "나",
+      "contacts": "친구"
     },
     "terms": "이용 약관",
     "privacy": "개인정보 처리방침",
@@ -315,6 +403,17 @@ export const dictionaries = {
         "title": "개인적인 터치",
         "description": "표시될 이름"
       }
+    },
+    "contacts": {
+      "title": "친구",
+      "empty": {
+        "title": "여기는 외로워요",
+        "description": "친구를 직접 추가하거나 사람들을 초대하세요",
+        "invite": {
+          "share": "친구 초대하기",
+          "qr": "QR 코드로 초대"
+        }
+      }
     }
   },
   "nl-NL": {
@@ -327,9 +426,9 @@ export const dictionaries = {
     },
     "nav": {
       "home": "Home",
-      "friends": "Vrienden",
       "evns": "Afrekening",
-      "profile": "Ik"
+      "profile": "Ik",
+      "contacts": "Vrienden"
     },
     "terms": "Algemene voorwaarden",
     "privacy": "Privacybeleid",
@@ -350,6 +449,17 @@ export const dictionaries = {
         "title": "Persoonlijk tintje",
         "description": "Je naam zoals die getoond zal worden"
       }
+    },
+    "contacts": {
+      "title": "Vrienden",
+      "empty": {
+        "title": "Het is hier verlaten",
+        "description": "Voeg vrienden handmatig toe of nodig mensen uit",
+        "invite": {
+          "share": "Vrienden uitnodigen",
+          "qr": "Uitnodigen via QR-code"
+        }
+      }
     }
   },
   "ru-RU": {
@@ -362,9 +472,9 @@ export const dictionaries = {
     },
     "nav": {
       "home": "Главная",
-      "friends": "Друзья",
       "evns": "Расчёты",
-      "profile": "Я"
+      "profile": "Я",
+      "contacts": "Друзья"
     },
     "terms": "Условия и положения",
     "privacy": "Политика конфиденциальности",
@@ -385,6 +495,17 @@ export const dictionaries = {
         "title": "Личный штрих",
         "description": "Ваше имя, как оно будет отображаться"
       }
+    },
+    "contacts": {
+      "title": "Друзья",
+      "empty": {
+        "title": "Здесь одиноко",
+        "description": "Добавьте друзей вручную или пригласите людей",
+        "invite": {
+          "share": "Пригласить друзей",
+          "qr": "Пригласить по QR-коду"
+        }
+      }
     }
   },
   "sw-TZ": {
@@ -397,9 +518,9 @@ export const dictionaries = {
     },
     "nav": {
       "home": "Mwanzo",
-      "friends": "Marafiki",
       "evns": "Marejesho",
-      "profile": "Mimi"
+      "profile": "Mimi",
+      "contacts": "Marafiki"
     },
     "terms": "Sheria na Masharti",
     "privacy": "Sera ya Faragha",
@@ -420,6 +541,17 @@ export const dictionaries = {
         "title": "Mguso wa kibinafsi",
         "description": "Jina lako litakavyoonekana"
       }
+    },
+    "contacts": {
+      "title": "Marafiki",
+      "empty": {
+        "title": "Hapa ni upweke",
+        "description": "Ongeza marafiki mwenyewe au alika watu",
+        "invite": {
+          "share": "Alika marafiki",
+          "qr": "Alika kwa kutumia msimbo wa QR"
+        }
+      }
     }
   },
   "tr-TR": {
@@ -432,9 +564,9 @@ export const dictionaries = {
     },
     "nav": {
       "home": "Ana Sayfa",
-      "friends": "Arkadaşlar",
       "evns": "Hesaplaşma",
-      "profile": "Ben"
+      "profile": "Ben",
+      "contacts": "Arkadaşlar"
     },
     "terms": "Şartlar ve Koşullar",
     "privacy": "Gizlilik Politikası",
@@ -455,6 +587,17 @@ export const dictionaries = {
         "title": "Kişisel dokunuş",
         "description": "Adınızın görüneceği şekliyle"
       }
+    },
+    "contacts": {
+      "title": "Arkadaşlar",
+      "empty": {
+        "title": "Burası yalnız",
+        "description": "Arkadaşları manuel olarak ekleyin veya kişileri davet edin",
+        "invite": {
+          "share": "Arkadaşlarını davet et",
+          "qr": "QR kod ile davet et"
+        }
+      }
     }
   },
   "uk-UA": {
@@ -467,9 +610,9 @@ export const dictionaries = {
     },
     "nav": {
       "home": "Головна",
-      "friends": "Друзі",
       "evns": "Розрахунок",
-      "profile": "Я"
+      "profile": "Я",
+      "contacts": "Друзі"
     },
     "terms": "Умови та положення",
     "privacy": "Політика конфіденційності",
@@ -490,6 +633,17 @@ export const dictionaries = {
         "title": "Особистий штрих",
         "description": "Ваше ім’я, як воно буде відображатися"
       }
+    },
+    "contacts": {
+      "title": "Друзі",
+      "empty": {
+        "title": "Тут самотньо",
+        "description": "Додайте друзів вручну або запросіть людей",
+        "invite": {
+          "share": "Запросити друзів",
+          "qr": "Запросити за QR-кодом"
+        }
+      }
     }
   },
   "zh-CN": {
@@ -502,9 +656,9 @@ export const dictionaries = {
     },
     "nav": {
       "home": "首页",
-      "friends": "朋友",
       "evns": "结算",
-      "profile": "我"
+      "profile": "我",
+      "contacts": "朋友"
     },
     "terms": "条款与条件",
     "privacy": "隐私政策",
@@ -524,6 +678,17 @@ export const dictionaries = {
       "name": {
         "title": "个性化体验",
         "description": "您的姓名将被显示为"
+      }
+    },
+    "contacts": {
+      "title": "朋友",
+      "empty": {
+        "title": "这里很孤独",
+        "description": "手动添加好友或邀请他人",
+        "invite": {
+          "share": "邀请朋友",
+          "qr": "通过二维码邀请"
+        }
       }
     }
   }

@@ -6,9 +6,9 @@ actions:
   signout: サインアウト
 nav:
   home: ホーム
-  friends: 友だち
   evns: 清算
   profile: 私
+  contacts: 友だち
 terms: 利用規約
 privacy: プライバシーポリシー
 madeBy: 作成者
@@ -24,3 +24,11 @@ onboarding:
   name:
     title: パーソナルタッチ
     description: 表示されるあなたの名前
+contacts:
+  title: 友達
+  empty:
+    title: ここは寂しいです
+    description: 友達を手動で追加するか、招待する
+    invite:
+      share: 友達を招待する
+      qr: QRコードで招待

@@ -6,9 +6,9 @@ actions:
   signout: Вийти
 nav:
   home: Головна
-  friends: Друзі
   evns: Розрахунок
   profile: Я
+  contacts: Друзі
 terms: Умови та положення
 privacy: Політика конфіденційності
 madeBy: Створено
@@ -26,3 +26,11 @@ onboarding:
   name:
     title: Особистий штрих
     description: Ваше ім’я, як воно буде відображатися
+contacts:
+  title: Друзі
+  empty:
+    title: Тут самотньо
+    description: Додайте друзів вручну або запросіть людей
+    invite:
+      share: Запросити друзів
+      qr: Запросити за QR-кодом

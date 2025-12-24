@@ -6,9 +6,9 @@ actions:
   signout: Oturumu kapat
 nav:
   home: Ana Sayfa
-  friends: Arkadaşlar
   evns: Hesaplaşma
   profile: Ben
+  contacts: Arkadaşlar
 terms: Şartlar ve Koşullar
 privacy: Gizlilik Politikası
 madeBy: Tarafından yapıldı
@@ -24,3 +24,11 @@ onboarding:
   name:
     title: Kişisel dokunuş
     description: Adınızın görüneceği şekliyle
+contacts:
+  title: Arkadaşlar
+  empty:
+    title: Burası yalnız
+    description: Arkadaşları manuel olarak ekleyin veya kişileri davet edin
+    invite:
+      share: Arkadaşlarını davet et
+      qr: QR kod ile davet et

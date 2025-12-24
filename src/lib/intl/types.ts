@@ -16,9 +16,9 @@ export type Dictionary = {
       }
       nav: {
         home: string
-        friends: string
         evns: string
         profile: string
+        contacts: string
       }
       terms: string
       privacy: string
@@ -38,6 +38,17 @@ export type Dictionary = {
         name: {
           title: string
           description: string
+        }
+      }
+      contacts: {
+        title: string
+        empty: {
+          title: string
+          description: string
+          invite: {
+            share: string
+            qr: string
+          }
         }
       }
     }
