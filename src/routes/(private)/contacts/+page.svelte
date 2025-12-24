@@ -5,7 +5,6 @@
   import { QR } from '$com/qr'
   import { Section } from '$com/section'
   import { Share } from '$com/share'
-  import { origin } from '$config'
   import { dict } from '$lib/intl'
   import { Button } from '$ui/button'
   import { contacts } from '@/contacts'
@@ -14,7 +13,7 @@
   const invitation = $derived(
     ok($account)
       ? {
-          url: `${origin}/join/${$account.id}/`,
+          url: `${window.location.origin}/join/${$account.id}/`,
         }
       : undefined,
   )
