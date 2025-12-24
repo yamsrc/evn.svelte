@@ -6,7 +6,7 @@ import { get } from './get'
 import type { Contact } from './Contact'
 import type * as net from './net'
 
-const internal = collection<net.Contact>({
+export const internal = collection<net.Contact>({
   get,
   persist: 'contacts:contacts',
   bind: account,

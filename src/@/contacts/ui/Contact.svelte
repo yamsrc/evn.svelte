@@ -7,6 +7,7 @@
   import { currency } from '$lib/tools'
   import { accounts } from '@/account'
   import { Picture } from '@/account/ui'
+  import * as contacts from '@/contacts'
   import type { Action } from '$com/panel/Panel'
   import type { Props } from './Contact'
 
@@ -26,7 +27,7 @@
     {
       id: 'delete',
       class: 'bg-foreground hover:bg-foreground/80',
-      onclick: () => {},
+      onclick: () => contacts.del(contact),
     },
   ]
 </script>
