@@ -1,4 +1,4 @@
-import { events } from './events'
+import { events, type Message } from './events'
 import * as net from './net'
 import { reset } from './reset'
 import { status } from './status'
@@ -33,7 +33,7 @@ async function consume(id: string): Promise<void> {
 
   const signal = controller.signal
   const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone
-  const generator = await net.post(id, { signal, body: { timezone } })
+  const generator = await net.post<Message>(id, { signal, body: { timezone } })
 
   if (generator instanceof Error) {
     status('disconnected')
@@ -59,7 +59,7 @@ function disconnect() {
   reset()
 }
 
-function emit(message: net.Message) {
+function emit(message: Message) {
   if (typeof message === 'string') events.emit('heartbeat')
   else events.emit(message.event, message.data)
 }

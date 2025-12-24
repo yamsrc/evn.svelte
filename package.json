@@ -29,7 +29,7 @@
 		"@sveltejs/kit": "^2.49.2",
 		"@sveltejs/vite-plugin-svelte": "^6.2.1",
 		"@tailwindcss/vite": "^4.1.18",
-		"@toa.io/origin": "^1.13.0",
+		"@toa.io/origin": "^1.14.0",
 		"@types/google.accounts": "^0.0.18",
 		"@types/node": "^24",
 		"@vercel/analytics": "^1.6.1",
