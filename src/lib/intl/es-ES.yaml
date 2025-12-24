@@ -4,6 +4,7 @@ actions:
   continue: Continuar
   holdToLogout: Mantén pulsado para cerrar sesión
   signout: Cerrar sesión
+  close: Cerrar
 nav:
   home: Inicio
   evns: Ajustes

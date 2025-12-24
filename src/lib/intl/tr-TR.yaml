@@ -4,6 +4,7 @@ actions:
   continue: Devam Et
   holdToLogout: Çıkış yapmak için basılı tutun
   signout: Oturumu kapat
+  close: Kapat
 nav:
   home: Ana Sayfa
   evns: Hesaplaşma

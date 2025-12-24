@@ -4,6 +4,7 @@ actions:
   continue: Продолжить
   holdToLogout: Удерживайте для выхода
   signout: Выйти
+  close: Закрыть
 nav:
   home: Главная
   evns: Расчёты

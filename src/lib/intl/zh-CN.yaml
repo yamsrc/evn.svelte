@@ -4,6 +4,7 @@ actions:
   continue: 继续
   holdToLogout: 按住退出登录
   signout: 退出登录
+  close: 关闭
 nav:
   home: 首页
   evns: 结算

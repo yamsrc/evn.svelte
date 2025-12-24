@@ -4,6 +4,7 @@ actions:
   continue: Doorgaan
   holdToLogout: Ingedrukt houden om uit te loggen
   signout: Afmelden
+  close: Sluiten
 nav:
   home: Home
   evns: Afrekening

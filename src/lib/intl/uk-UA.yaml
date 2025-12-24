@@ -4,6 +4,7 @@ actions:
   continue: Продовжити
   holdToLogout: Утримуйте, щоб вийти
   signout: Вийти
+  close: Закрити
 nav:
   home: Головна
   evns: Розрахунок

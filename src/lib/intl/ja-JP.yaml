@@ -4,6 +4,7 @@ actions:
   continue: 続ける
   holdToLogout: 長押ししてログアウト
   signout: サインアウト
+  close: 閉じる
 nav:
   home: ホーム
   evns: 清算

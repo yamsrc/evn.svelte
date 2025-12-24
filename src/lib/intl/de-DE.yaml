@@ -4,6 +4,7 @@ actions:
   continue: Weiter
   holdToLogout: Zum Abmelden gedrückt halten
   signout: Abmelden
+  close: Schließen
 nav:
   home: Startseite
   evns: Ausgleich

@@ -1,7 +1,8 @@
 <script lang="ts">
-  import { ArrowUpDown, QrCode } from '@lucide/svelte'
+  import { ArrowUpDown } from '@lucide/svelte'
   import { Async } from 'svas'
   import { ok } from 'svas'
+  import { QR } from '$com/qr'
   import { Section } from '$com/section'
   import { Share } from '$com/share'
   import { origin } from '$config'
@@ -45,10 +46,13 @@
           data={invitation}
           label={$dict.contacts.empty.invite.share}
         />
-        <Button variant="secondary" size="lg" class="w-full">
-          <QrCode />
-          {$dict.contacts.empty.invite.qr}
-        </Button>
+        <QR
+          variant="secondary"
+          size="lg"
+          class="w-full"
+          data={invitation.url}
+          label={$dict.contacts.empty.invite.qr}
+        />
       </Section>
     {/if}
   {/snippet}

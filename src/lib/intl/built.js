@@ -8,7 +8,8 @@ export const dictionaries = {
     "actions": {
       "continue": "متابعة",
       "holdToLogout": "اضغط مطولًا لتسجيل الخروج",
-      "signout": "تسجيل الخروج"
+      "signout": "تسجيل الخروج",
+      "close": "إغلاق"
     },
     "nav": {
       "home": "الرئيسية",
@@ -54,7 +55,8 @@ export const dictionaries = {
     "actions": {
       "continue": "Weiter",
       "holdToLogout": "Zum Abmelden gedrückt halten",
-      "signout": "Abmelden"
+      "signout": "Abmelden",
+      "close": "Schließen"
     },
     "nav": {
       "home": "Startseite",
@@ -100,7 +102,8 @@ export const dictionaries = {
     "actions": {
       "continue": "Continue",
       "holdToLogout": "Hold to log out",
-      "signout": "Sign out"
+      "signout": "Sign out",
+      "close": "Close"
     },
     "nav": {
       "home": "Home",
@@ -146,7 +149,8 @@ export const dictionaries = {
     "actions": {
       "continue": "Continuar",
       "holdToLogout": "Mantén pulsado para cerrar sesión",
-      "signout": "Cerrar sesión"
+      "signout": "Cerrar sesión",
+      "close": "Cerrar"
     },
     "nav": {
       "home": "Inicio",
@@ -192,7 +196,8 @@ export const dictionaries = {
     "actions": {
       "continue": "Continuer",
       "holdToLogout": "Maintenez pour vous déconnecter",
-      "signout": "Se déconnecter"
+      "signout": "Se déconnecter",
+      "close": "Fermer"
     },
     "nav": {
       "home": "Accueil",
@@ -238,7 +243,8 @@ export const dictionaries = {
     "actions": {
       "continue": "जारी रखें",
       "holdToLogout": "लॉगआउट के लिए दबाए रखें",
-      "signout": "साइन आउट करें"
+      "signout": "साइन आउट करें",
+      "close": "बंद करें"
     },
     "nav": {
       "home": "मुख्य पृष्ठ",
@@ -284,7 +290,8 @@ export const dictionaries = {
     "actions": {
       "continue": "Continua",
       "holdToLogout": "Tieni premuto per uscire",
-      "signout": "Esci"
+      "signout": "Esci",
+      "close": "Chiudi"
     },
     "nav": {
       "home": "Home",
@@ -330,7 +337,8 @@ export const dictionaries = {
     "actions": {
       "continue": "続ける",
       "holdToLogout": "長押ししてログアウト",
-      "signout": "サインアウト"
+      "signout": "サインアウト",
+      "close": "閉じる"
     },
     "nav": {
       "home": "ホーム",
@@ -376,7 +384,8 @@ export const dictionaries = {
     "actions": {
       "continue": "계속",
       "holdToLogout": "길게 눌러 로그아웃",
-      "signout": "로그아웃"
+      "signout": "로그아웃",
+      "close": "닫기"
     },
     "nav": {
       "home": "홈",
@@ -422,7 +431,8 @@ export const dictionaries = {
     "actions": {
       "continue": "Doorgaan",
       "holdToLogout": "Ingedrukt houden om uit te loggen",
-      "signout": "Afmelden"
+      "signout": "Afmelden",
+      "close": "Sluiten"
     },
     "nav": {
       "home": "Home",
@@ -468,7 +478,8 @@ export const dictionaries = {
     "actions": {
       "continue": "Продолжить",
       "holdToLogout": "Удерживайте для выхода",
-      "signout": "Выйти"
+      "signout": "Выйти",
+      "close": "Закрыть"
     },
     "nav": {
       "home": "Главная",
@@ -514,7 +525,8 @@ export const dictionaries = {
     "actions": {
       "continue": "Endelea",
       "holdToLogout": "Shikilia ili utoke",
-      "signout": "Ondoka"
+      "signout": "Ondoka",
+      "close": "Funga"
     },
     "nav": {
       "home": "Mwanzo",
@@ -560,7 +572,8 @@ export const dictionaries = {
     "actions": {
       "continue": "Devam Et",
       "holdToLogout": "Çıkış yapmak için basılı tutun",
-      "signout": "Oturumu kapat"
+      "signout": "Oturumu kapat",
+      "close": "Kapat"
     },
     "nav": {
       "home": "Ana Sayfa",
@@ -606,7 +619,8 @@ export const dictionaries = {
     "actions": {
       "continue": "Продовжити",
       "holdToLogout": "Утримуйте, щоб вийти",
-      "signout": "Вийти"
+      "signout": "Вийти",
+      "close": "Закрити"
     },
     "nav": {
       "home": "Головна",
@@ -652,7 +666,8 @@ export const dictionaries = {
     "actions": {
       "continue": "继续",
       "holdToLogout": "按住退出登录",
-      "signout": "退出登录"
+      "signout": "退出登录",
+      "close": "关闭"
     },
     "nav": {
       "home": "首页",

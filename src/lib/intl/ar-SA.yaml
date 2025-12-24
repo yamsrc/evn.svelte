@@ -4,6 +4,7 @@ actions:
   continue: متابعة
   holdToLogout: اضغط مطولًا لتسجيل الخروج
   signout: تسجيل الخروج
+  close: إغلاق
 nav:
   home: الرئيسية
   evns: تسوية

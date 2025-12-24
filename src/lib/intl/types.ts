@@ -13,6 +13,7 @@ export type Dictionary = {
         continue: string
         holdToLogout: string
         signout: string
+        close: string
       }
       nav: {
         home: string

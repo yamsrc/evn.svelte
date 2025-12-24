@@ -4,6 +4,7 @@ actions:
   continue: Continue
   holdToLogout: Hold to log out
   signout: Sign out
+  close: Close
 nav:
   home: Home
   evns: Evns

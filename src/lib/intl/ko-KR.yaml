@@ -4,6 +4,7 @@ actions:
   continue: 계속
   holdToLogout: 길게 눌러 로그아웃
   signout: 로그아웃
+  close: 닫기
 nav:
   home: 홈
   evns: 정산

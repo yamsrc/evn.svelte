@@ -4,6 +4,7 @@ actions:
   continue: Continua
   holdToLogout: Tieni premuto per uscire
   signout: Esci
+  close: Chiudi
 nav:
   home: Home
   evns: Saldo

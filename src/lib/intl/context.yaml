@@ -13,6 +13,8 @@ inputs:
       input: Hold to logout
     signout:
       input: Sign out
+    close:
+      input: Close
   nav:
     home:
       input: Home

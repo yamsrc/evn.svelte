@@ -4,6 +4,7 @@ actions:
   continue: Continuer
   holdToLogout: Maintenez pour vous déconnecter
   signout: Se déconnecter
+  close: Fermer
 nav:
   home: Accueil
   evns: Règlements
