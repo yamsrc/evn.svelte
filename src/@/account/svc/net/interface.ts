@@ -1,18 +1,18 @@
 import { origin } from '@/net'
 import type { Account } from './Account'
 
-const accounts = origin.resource<Account>('/accounts/', { credentials: 'include' })
+const accounts = origin.resource<Account>('/accounts/')
 
-type Editable = Pick<Account, 'name' | 'picture' | 'locale'>
+export type Editable = Pick<Account, 'name' | 'picture' | 'locale'>
 
-async function put(id: string, body: Editable): Promise<Account | Error> {
-  return accounts.json(id, { method: 'PUT', body })
+export async function get(id: string): Promise<Account | Error> {
+  return accounts.json(id)
 }
 
-async function patch(id: string, body: Editable): Promise<Account | Error> {
-  return accounts.json(id, { method: 'PATCH', body })
+export async function put(id: string, body: Editable): Promise<Account | Error> {
+  return accounts.json(id, { method: 'PUT', body, credentials: 'include' })
 }
 
-export { patch, put }
-
-export type { Editable }
+export async function patch(id: string, body: Editable): Promise<Account | Error> {
+  return accounts.json(id, { method: 'PATCH', body, credentials: 'include' })
+}

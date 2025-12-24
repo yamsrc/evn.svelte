@@ -33,3 +33,11 @@ contacts:
     invite:
       share: 友達を招待する
       qr: QRコードで招待
+join:
+  app:
+    description: 友だちと一緒に「誰が誰にいくら借りているか」をスマートに管理。
+  inviter:
+    description: |-
+      !js
+      (name) => `${name} から招待されました。登録またはログインするだけで、準備完了です`
+  accept: Evn を使い始める

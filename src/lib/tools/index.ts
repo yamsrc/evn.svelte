@@ -1,5 +1,6 @@
 export { onsubmit } from './onsubmit'
 export { assert } from './assert'
+export { okay } from './okay'
 export { shake } from './shake'
 export { transit, mount, navigate } from './svt'
 export { fragment, query, inAppPopOut } from './location'

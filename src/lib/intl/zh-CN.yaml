@@ -33,3 +33,11 @@ contacts:
     invite:
       share: 邀请朋友
       qr: 通过二维码邀请
+join:
+  app:
+    description: 和朋友们一起智能记录谁欠谁。
+  inviter:
+    description: |-
+      !js
+      (name) => `您已被${name}邀请。只需注册或登录，您就可以开始了`
+  accept: 开始使用 Evn

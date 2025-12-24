@@ -52,4 +52,13 @@ export type Dictionary = {
           }
         }
       }
+      join: {
+        app: {
+          description: string
+        }
+        inviter: {
+          description: (value: any) => string
+        }
+        accept: string
+      }
     }

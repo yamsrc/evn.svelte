@@ -64,5 +64,15 @@ inputs:
           input: Invite friends
         qr:
           input: Invite by QR code
+  join:
+    app:
+      description:
+        input: The smart way to track who owes whom, together with&nbsp;friends.
+        context: Preserve html tags
+    inviter:
+      description:
+        input: js! (name) => You have been invited by . Just register or log in, and you are all set
+    accept:
+      input: Start Using Evn
 mounts:
   iam: ../../@/iam/ui/intl

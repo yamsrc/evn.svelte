@@ -35,3 +35,13 @@ contacts:
     invite:
       share: Invite friends
       qr: Invite by QR code
+join:
+  app:
+    description: The smart way to track who owes whom, together with friends.
+  inviter:
+    description: >-
+      !js
+
+      (name) => `You have been invited by ${name}. Just register or log in, and
+      you’re all set`
+  accept: Start Using Evn

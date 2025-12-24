@@ -47,6 +47,15 @@ export const dictionaries = {
           "qr": "دعوة عبر رمز الاستجابة السريعة"
         }
       }
+    },
+    "join": {
+      "app": {
+        "description": "الطريقة الذكية لمتابعة من يدين لمن، مع الأصدقاء."
+      },
+      "inviter": {
+        "description": (name) => `لقد تمّت دعوتك من قِبل ${name}. فقط سجّل أو قم بتسجيل الدخول، وستكون جاهزًا للبدء`
+      },
+      "accept": "ابدأ استخدام Evn"
     }
   },
   "de-DE": {
@@ -94,6 +103,15 @@ export const dictionaries = {
           "qr": "Per QR-Code einladen"
         }
       }
+    },
+    "join": {
+      "app": {
+        "description": "Die clevere Art, gemeinsam mit Freunden den Überblick zu behalten, wer wem etwas schuldet."
+      },
+      "inviter": {
+        "description": (name) => `${name} hat dich eingeladen. Registriere dich einfach oder melde dich an, und schon kann es losgehen`
+      },
+      "accept": "Jetzt mit Evn starten"
     }
   },
   "en-US": {
@@ -141,6 +159,15 @@ export const dictionaries = {
           "qr": "Invite by QR code"
         }
       }
+    },
+    "join": {
+      "app": {
+        "description": "The smart way to track who owes whom, together with friends."
+      },
+      "inviter": {
+        "description": (name) => `You have been invited by ${name}. Just register or log in, and you’re all set`
+      },
+      "accept": "Start Using Evn"
     }
   },
   "es-ES": {
@@ -188,6 +215,15 @@ export const dictionaries = {
           "qr": "Invitar por código QR"
         }
       }
+    },
+    "join": {
+      "app": {
+        "description": "La forma inteligente de llevar el control de quién le debe a quién, junto con tus amigos."
+      },
+      "inviter": {
+        "description": (name) => `Has sido invitado por ${name}. Solo regístrate o inicia sesión, y ya está todo listo`
+      },
+      "accept": "Comienza a usar Evn"
     }
   },
   "fr-FR": {
@@ -235,6 +271,15 @@ export const dictionaries = {
           "qr": "Inviter par QR code"
         }
       }
+    },
+    "join": {
+      "app": {
+        "description": "La façon intelligente de suivre qui doit quoi à qui, avec vos amis."
+      },
+      "inviter": {
+        "description": (name) => `Vous avez été invité(e) par ${name}. Inscrivez-vous ou connectez-vous, et tout est prêt`
+      },
+      "accept": "Commencer à utiliser Evn"
     }
   },
   "hi-IN": {
@@ -282,6 +327,15 @@ export const dictionaries = {
           "qr": "QR कोड से आमंत्रित करें"
         }
       }
+    },
+    "join": {
+      "app": {
+        "description": "दोस्तों के साथ मिलकर, कौन किसका कितना बकाया है, इसका स्मार्ट तरीका।"
+      },
+      "inviter": {
+        "description": (name) => `${name} ने आपको आमंत्रित किया है। बस रजिस्टर करें या लॉग इन करें, और आप तैयार हैं`
+      },
+      "accept": "Evn का उपयोग शुरू करें"
     }
   },
   "it-IT": {
@@ -329,6 +383,15 @@ export const dictionaries = {
           "qr": "Invita tramite codice QR"
         }
       }
+    },
+    "join": {
+      "app": {
+        "description": "Il modo intelligente per tenere traccia di chi deve cosa a chi, insieme agli amici."
+      },
+      "inviter": {
+        "description": (name) => `Sei stato invitato da ${name}. Basta registrarsi o accedere, e sei pronto`
+      },
+      "accept": "Inizia a usare Evn"
     }
   },
   "ja-JP": {
@@ -376,6 +439,15 @@ export const dictionaries = {
           "qr": "QRコードで招待"
         }
       }
+    },
+    "join": {
+      "app": {
+        "description": "友だちと一緒に「誰が誰にいくら借りているか」をスマートに管理。"
+      },
+      "inviter": {
+        "description": (name) => `${name} から招待されました。登録またはログインするだけで、準備完了です`
+      },
+      "accept": "Evn を使い始める"
     }
   },
   "ko-KR": {
@@ -423,6 +495,15 @@ export const dictionaries = {
           "qr": "QR 코드로 초대"
         }
       }
+    },
+    "join": {
+      "app": {
+        "description": "친구들과 함께 누가 누구에게 얼마를 빚졌는지 스마트하게 추적하는 방법."
+      },
+      "inviter": {
+        "description": (name) => `${name}님이 초대했습니다. 회원가입 또는 로그인만 하면 바로 시작할 수 있습니다`
+      },
+      "accept": "Evn 시작하기"
     }
   },
   "nl-NL": {
@@ -470,6 +551,15 @@ export const dictionaries = {
           "qr": "Uitnodigen via QR-code"
         }
       }
+    },
+    "join": {
+      "app": {
+        "description": "De slimme manier om samen met vrienden bij te houden wie wat aan wie verschuldigd is."
+      },
+      "inviter": {
+        "description": (name) => `Je bent uitgenodigd door ${name}. Registreer je of log in, en je bent klaar om te beginnen`
+      },
+      "accept": "Evn gebruiken starten"
     }
   },
   "ru-RU": {
@@ -517,6 +607,15 @@ export const dictionaries = {
           "qr": "Пригласить по QR-коду"
         }
       }
+    },
+    "join": {
+      "app": {
+        "description": "Умный способ отслеживать, кто кому должен, вместе с друзьями."
+      },
+      "inviter": {
+        "description": (name) => `Вас пригласил(а) ${name}. Просто зарегистрируйтесь или войдите, и вы готовы начать`
+      },
+      "accept": "Начать использовать Evn"
     }
   },
   "sw-TZ": {
@@ -564,6 +663,15 @@ export const dictionaries = {
           "qr": "Alika kwa kutumia msimbo wa QR"
         }
       }
+    },
+    "join": {
+      "app": {
+        "description": "Njia bora ya kufuatilia nani anamdai nani, ukiwa na marafiki zako."
+      },
+      "inviter": {
+        "description": (name) => `${name} amekualika. Jisajili au ingia, na uko tayari kuanza`
+      },
+      "accept": "Anza kutumia Evn"
     }
   },
   "tr-TR": {
@@ -611,6 +719,15 @@ export const dictionaries = {
           "qr": "QR kod ile davet et"
         }
       }
+    },
+    "join": {
+      "app": {
+        "description": "Kimin kime borcu olduğunu arkadaşlarınla birlikte akıllıca takip etmenin yolu."
+      },
+      "inviter": {
+        "description": (name) => `${name} tarafından davet edildiniz. Sadece kaydolun veya giriş yapın, ve hazırsınız`
+      },
+      "accept": "Evn'i kullanmaya başla"
     }
   },
   "uk-UA": {
@@ -658,6 +775,15 @@ export const dictionaries = {
           "qr": "Запросити за QR-кодом"
         }
       }
+    },
+    "join": {
+      "app": {
+        "description": "Розумний спосіб відстежувати, хто кому винен, разом із друзями."
+      },
+      "inviter": {
+        "description": (name) => `Вас запросив(ла) ${name}. Просто зареєструйтеся або увійдіть, і все готово`
+      },
+      "accept": "Почати користуватися Evn"
     }
   },
   "zh-CN": {
@@ -705,6 +831,15 @@ export const dictionaries = {
           "qr": "通过二维码邀请"
         }
       }
+    },
+    "join": {
+      "app": {
+        "description": "和朋友们一起智能记录谁欠谁。"
+      },
+      "inviter": {
+        "description": (name) => `您已被${name}邀请。只需注册或登录，您就可以开始了`
+      },
+      "accept": "开始使用 Evn"
     }
   }
 };

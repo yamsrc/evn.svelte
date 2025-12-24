@@ -33,3 +33,15 @@ contacts:
     invite:
       share: Arkadaşlarını davet et
       qr: QR kod ile davet et
+join:
+  app:
+    description: >-
+      Kimin kime borcu olduğunu arkadaşlarınla birlikte akıllıca takip etmenin
+      yolu.
+  inviter:
+    description: >-
+      !js
+
+      (name) => `${name} tarafından davet edildiniz. Sadece kaydolun veya giriş
+      yapın, ve hazırsınız`
+  accept: Evn'i kullanmaya başla

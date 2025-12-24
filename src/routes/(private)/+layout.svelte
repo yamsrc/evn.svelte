@@ -3,11 +3,10 @@
   import { Nav, Screen } from '$com/shell'
   import { dict } from '$lib/intl'
   import { Named } from '@/account/ui'
+  import { Footer } from '@/app'
   import { Authenticated } from '@/iam/ui'
-  import Languages from '@/iam/ui/Languages.svelte'
+  import { Languages } from '@/iam/ui'
   import Actions from './Actions.svelte'
-  import Footer from './Footer.svelte'
-  import Logo from './logo.svg'
   import { sections } from './sections'
 
   const { children } = $props()
@@ -21,7 +20,7 @@
       </div>
       <Section class="flex-1 flex flex-col items-center max-w-sm mx-auto">
         <div class="py-[10vh]">
-          <img src={Logo} alt="seed.me" class="h-10 mx-auto" />
+          <img src="/logo.svg" alt="seed.me" class="h-10 mx-auto" />
         </div>
         {@render authentication()}
       </Section>

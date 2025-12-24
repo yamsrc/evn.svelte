@@ -33,3 +33,11 @@ contacts:
     invite:
       share: 친구 초대하기
       qr: QR 코드로 초대
+join:
+  app:
+    description: 친구들과 함께 누가 누구에게 얼마를 빚졌는지 스마트하게 추적하는 방법.
+  inviter:
+    description: |-
+      !js
+      (name) => `${name}님이 초대했습니다. 회원가입 또는 로그인만 하면 바로 시작할 수 있습니다`
+  accept: Evn 시작하기

@@ -35,3 +35,15 @@ contacts:
     invite:
       share: Invita amici
       qr: Invita tramite codice QR
+join:
+  app:
+    description: >-
+      Il modo intelligente per tenere traccia di chi deve cosa a chi, insieme
+      agli amici.
+  inviter:
+    description: >-
+      !js
+
+      (name) => `Sei stato invitato da ${name}. Basta registrarsi o accedere, e
+      sei pronto`
+  accept: Inizia a usare Evn
