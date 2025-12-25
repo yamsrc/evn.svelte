@@ -3,7 +3,7 @@
   import { Async } from 'svas'
   import { Section } from '$com/section'
   import { dict } from '$lib/intl'
-  import { Button } from '$ui/button'
+  import { Header } from '@/app/ui'
   import { contacts } from '@/contacts'
   import { Invite } from '@/contacts/ui'
   import { Contacts } from '@/contacts/ui'
@@ -11,17 +11,13 @@
 </script>
 
 <Section class="flex flex-col gap-6 pt-2">
-  <header class="flex justify-between items-center relative">
-    <h1>{$dict.contacts.title}</h1>
-    <Button
-      size="icon"
-      variant="secondary"
-      class="size-12 bg-accent/50 border border-border"
-      disabled
-    >
-      <ArrowUpDown class="size-5" />
-    </Button>
-  </header>
+  <Header.Root title={$dict.contacts.title}>
+    {#snippet actions()}
+      <Header.Button disabled>
+        <ArrowUpDown />
+      </Header.Button>
+    {/snippet}
+  </Header.Root>
 </Section>
 <Async store={contacts} class="flex-1 flex flex-col">
   {#snippet awaited(contacts)}

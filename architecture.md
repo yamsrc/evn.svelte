@@ -37,3 +37,47 @@ src/@/{domain}/
 - Components import domain services via `@/{domain}` alias
 - **`index.ts`**: Exports reusable UI components
 - Transient UI state is managed in `ui.ts` file
+
+### App Domain
+
+Some UI components are intended to be reused across multiple screens within this application, but their implementation is still application-bound (e.g., depends on app routing, app stores, domain models, product rules, or app-specific copy/branding). These components should live in the dedicated `app` domain.
+
+## Shared Components
+
+Shared components are app-agnostic UI building blocks. Everything in `src/lib/components/` must be reusable across different apps without modification.
+
+A component belongs here only if its implementation is not bound to the current application, meaning it:
+ • does not depend on app-specific routes, screens, or domain concepts
+ • does not import from domains
+ • does not embed product copy, branding, or business rules
+ • exposes configuration via props / slots / events, rather than hardcoding behavior
+
+```plaintext
+src/lib/components/
+├── section/
+│   ├── index.ts
+│   ├── Section.svelte
+│   └── Section.ts
+└── shell/
+    ├── index.ts
+    ├── Nav.svelte
+    ├── Nav.ts
+    ├── Screen.svelte
+    └── Screen.ts
+```
+
+## Svelte Components
+
+### EntityLike props
+
+Components that accept entities should declare an EntityLike interface in their props, including only the properties they require. This improves component reusability and reduces coupling.
+
+Example:
+
+```ts
+type AccountLike = Pick<Account, 'name' | 'picture'>
+
+export interface Props {
+  account: AccountLike
+}
+```
