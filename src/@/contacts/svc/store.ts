@@ -10,7 +10,7 @@ import type * as net from './net'
 
 export const internal = collection<net.Contact>({
   get,
-  persist: 'contacts:contacts',
+  persist: 'contacts',
   bind: account,
   stale: true,
 })
