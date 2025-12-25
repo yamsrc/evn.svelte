@@ -4,11 +4,12 @@ actions:
   continue: 계속
   holdToLogout: 길게 눌러 로그아웃
   signout: 로그아웃
+  close: 닫기
 nav:
   home: 홈
-  friends: 친구
   evns: 정산
   profile: 나
+  contacts: 친구
 terms: 이용 약관
 privacy: 개인정보 처리방침
 madeBy: 제작자
@@ -24,3 +25,23 @@ onboarding:
   name:
     title: 개인적인 터치
     description: 표시될 이름
+contacts:
+  title: 친구
+  empty:
+    title: 여기는 외로워요
+    description: 친구를 직접 추가하거나 사람들을 초대하세요
+    invite:
+      share: 친구 초대하기
+      qr: QR 코드로 초대
+  all: 모든 친구
+  contact:
+    owesYou: 당신에게 빚졌어요
+    youOwe: 당신이 빚졌습니다
+join:
+  app:
+    description: 친구들과 함께 누가 누구에게 얼마를 빚졌는지 스마트하게 추적하는 방법.
+  inviter:
+    description: |-
+      !js
+      (name) => `${name}님이 초대했습니다. 회원가입 또는 로그인만 하면 바로 시작할 수 있습니다`
+  accept: Evn 시작하기

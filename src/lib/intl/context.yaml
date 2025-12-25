@@ -13,16 +13,18 @@ inputs:
       input: Hold to logout
     signout:
       input: Sign out
+    close:
+      input: Close
   nav:
     home:
       input: Home
-    friends:
-      input: Friends
     evns:
       input: Evns
       context: Use Evns for english. In other languages use short word with meaning settle up debts after spliting recipt
     profile:
       input: Me
+    contacts:
+      input: Friends
   terms:
     input: Terms & Conditions
   privacy:
@@ -49,5 +51,35 @@ inputs:
         context: Title of form requesting personal info
       description:
         input: Your name as it will be seen
+  contacts:
+    title:
+      input: Friends
+    empty:
+      title:
+        input: It's lonely here
+      description:
+        input: Add friends manually or invite people
+      invite:
+        share:
+          input: Invite friends
+        qr:
+          input: Invite by QR code
+    all:
+      input: All friends
+    contact:
+      owesYou:
+        input: Owes you
+      youOwe:
+        input: You owe
+  join:
+    app:
+      description:
+        input: The smart way to track who owes whom, together with&nbsp;friends.
+        context: Preserve html tags
+    inviter:
+      description:
+        input: js! (name) => You have been invited by . Just register or log in, and you are all set
+    accept:
+      input: Start Using Evn
 mounts:
   iam: ../../@/iam/ui/intl

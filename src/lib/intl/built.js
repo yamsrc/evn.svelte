@@ -8,13 +8,14 @@ export const dictionaries = {
     "actions": {
       "continue": "متابعة",
       "holdToLogout": "اضغط مطولًا لتسجيل الخروج",
-      "signout": "تسجيل الخروج"
+      "signout": "تسجيل الخروج",
+      "close": "إغلاق"
     },
     "nav": {
       "home": "الرئيسية",
-      "friends": "الأصدقاء",
       "evns": "تسوية",
-      "profile": "أنا"
+      "profile": "أنا",
+      "contacts": "الأصدقاء"
     },
     "terms": "الشروط والأحكام",
     "privacy": "سياسة الخصوصية",
@@ -35,6 +36,31 @@ export const dictionaries = {
         "title": "لمسة شخصية",
         "description": "اسمك كما سيظهر"
       }
+    },
+    "contacts": {
+      "title": "الأصدقاء",
+      "empty": {
+        "title": "المكان هنا موحش",
+        "description": "أضِف الأصدقاء يدويًا أو ادعُ الأشخاص",
+        "invite": {
+          "share": "دعوة الأصدقاء",
+          "qr": "دعوة عبر رمز الاستجابة السريعة"
+        }
+      },
+      "all": "جميع الأصدقاء",
+      "contact": {
+        "owesYou": "مدين لك",
+        "youOwe": "أنت مدين"
+      }
+    },
+    "join": {
+      "app": {
+        "description": "الطريقة الذكية لمتابعة من يدين لمن، مع الأصدقاء."
+      },
+      "inviter": {
+        "description": (name) => `لقد تمّت دعوتك من قِبل ${name}. فقط سجّل أو قم بتسجيل الدخول، وستكون جاهزًا للبدء`
+      },
+      "accept": "ابدأ استخدام Evn"
     }
   },
   "de-DE": {
@@ -43,13 +69,14 @@ export const dictionaries = {
     "actions": {
       "continue": "Weiter",
       "holdToLogout": "Zum Abmelden gedrückt halten",
-      "signout": "Abmelden"
+      "signout": "Abmelden",
+      "close": "Schließen"
     },
     "nav": {
       "home": "Startseite",
-      "friends": "Freunde",
       "evns": "Ausgleich",
-      "profile": "Ich"
+      "profile": "Ich",
+      "contacts": "Freunde"
     },
     "terms": "Allgemeine Geschäftsbedingungen",
     "privacy": "Datenschutzerklärung",
@@ -70,6 +97,31 @@ export const dictionaries = {
         "title": "Persönliche Note",
         "description": "Ihr Name, wie er angezeigt wird"
       }
+    },
+    "contacts": {
+      "title": "Freunde",
+      "empty": {
+        "title": "Hier ist es einsam",
+        "description": "Freunde manuell hinzufügen oder Personen einladen",
+        "invite": {
+          "share": "Freunde einladen",
+          "qr": "Per QR-Code einladen"
+        }
+      },
+      "all": "Alle Freunde",
+      "contact": {
+        "owesYou": "Schuldet dir",
+        "youOwe": "Du schuldest"
+      }
+    },
+    "join": {
+      "app": {
+        "description": "Die clevere Art, gemeinsam mit Freunden den Überblick zu behalten, wer wem etwas schuldet."
+      },
+      "inviter": {
+        "description": (name) => `${name} hat dich eingeladen. Registriere dich einfach oder melde dich an, und schon kann es losgehen`
+      },
+      "accept": "Jetzt mit Evn starten"
     }
   },
   "en-US": {
@@ -78,13 +130,14 @@ export const dictionaries = {
     "actions": {
       "continue": "Continue",
       "holdToLogout": "Hold to log out",
-      "signout": "Sign out"
+      "signout": "Sign out",
+      "close": "Close"
     },
     "nav": {
       "home": "Home",
-      "friends": "Friends",
       "evns": "Evns",
-      "profile": "Me"
+      "profile": "Me",
+      "contacts": "Friends"
     },
     "terms": "Terms & Conditions",
     "privacy": "Privacy Policy",
@@ -105,6 +158,31 @@ export const dictionaries = {
         "title": "Personal Touch",
         "description": "Your name as it will appear"
       }
+    },
+    "contacts": {
+      "title": "Friends",
+      "empty": {
+        "title": "It's lonely here",
+        "description": "Add friends manually or invite people",
+        "invite": {
+          "share": "Invite friends",
+          "qr": "Invite by QR code"
+        }
+      },
+      "all": "All friends",
+      "contact": {
+        "owesYou": "Owes you",
+        "youOwe": "You owe"
+      }
+    },
+    "join": {
+      "app": {
+        "description": "The smart way to track who owes whom, together with friends."
+      },
+      "inviter": {
+        "description": (name) => `You have been invited by ${name}. Just register or log in, and you’re all set`
+      },
+      "accept": "Start Using Evn"
     }
   },
   "es-ES": {
@@ -113,13 +191,14 @@ export const dictionaries = {
     "actions": {
       "continue": "Continuar",
       "holdToLogout": "Mantén pulsado para cerrar sesión",
-      "signout": "Cerrar sesión"
+      "signout": "Cerrar sesión",
+      "close": "Cerrar"
     },
     "nav": {
       "home": "Inicio",
-      "friends": "Amigos",
       "evns": "Ajustes",
-      "profile": "Yo"
+      "profile": "Yo",
+      "contacts": "Amigos"
     },
     "terms": "Términos y condiciones",
     "privacy": "Política de privacidad",
@@ -140,6 +219,31 @@ export const dictionaries = {
         "title": "Toque personal",
         "description": "Tu nombre tal como se verá"
       }
+    },
+    "contacts": {
+      "title": "Amigos",
+      "empty": {
+        "title": "Aquí está solitario",
+        "description": "Añade amigos manualmente o invita a personas",
+        "invite": {
+          "share": "Invitar a amigos",
+          "qr": "Invitar por código QR"
+        }
+      },
+      "all": "Todos los amigos",
+      "contact": {
+        "owesYou": "Te debe",
+        "youOwe": "Debes"
+      }
+    },
+    "join": {
+      "app": {
+        "description": "La forma inteligente de llevar el control de quién le debe a quién, junto con tus amigos."
+      },
+      "inviter": {
+        "description": (name) => `Has sido invitado por ${name}. Solo regístrate o inicia sesión, y ya está todo listo`
+      },
+      "accept": "Comienza a usar Evn"
     }
   },
   "fr-FR": {
@@ -148,13 +252,14 @@ export const dictionaries = {
     "actions": {
       "continue": "Continuer",
       "holdToLogout": "Maintenez pour vous déconnecter",
-      "signout": "Se déconnecter"
+      "signout": "Se déconnecter",
+      "close": "Fermer"
     },
     "nav": {
       "home": "Accueil",
-      "friends": "Amis",
       "evns": "Règlements",
-      "profile": "Moi"
+      "profile": "Moi",
+      "contacts": "Amis"
     },
     "terms": "Conditions générales",
     "privacy": "Politique de confidentialité",
@@ -175,6 +280,31 @@ export const dictionaries = {
         "title": "Touche personnelle",
         "description": "Votre nom tel qu'il sera affiché"
       }
+    },
+    "contacts": {
+      "title": "Amis",
+      "empty": {
+        "title": "C'est désert ici",
+        "description": "Ajoutez des amis manuellement ou invitez des personnes",
+        "invite": {
+          "share": "Inviter des amis",
+          "qr": "Inviter par QR code"
+        }
+      },
+      "all": "Tous les amis",
+      "contact": {
+        "owesYou": "Te doit",
+        "youOwe": "Vous devez"
+      }
+    },
+    "join": {
+      "app": {
+        "description": "La façon intelligente de suivre qui doit quoi à qui, avec vos amis."
+      },
+      "inviter": {
+        "description": (name) => `Vous avez été invité(e) par ${name}. Inscrivez-vous ou connectez-vous, et tout est prêt`
+      },
+      "accept": "Commencer à utiliser Evn"
     }
   },
   "hi-IN": {
@@ -183,13 +313,14 @@ export const dictionaries = {
     "actions": {
       "continue": "जारी रखें",
       "holdToLogout": "लॉगआउट के लिए दबाए रखें",
-      "signout": "साइन आउट करें"
+      "signout": "साइन आउट करें",
+      "close": "बंद करें"
     },
     "nav": {
       "home": "मुख्य पृष्ठ",
-      "friends": "मित्र",
       "evns": "सेटलमेंट",
-      "profile": "मैं"
+      "profile": "मैं",
+      "contacts": "मित्र"
     },
     "terms": "नियम और शर्तें",
     "privacy": "गोपनीयता नीति",
@@ -210,6 +341,31 @@ export const dictionaries = {
         "title": "व्यक्तिगत स्पर्श",
         "description": "आपका नाम जैसा दिखाई देगा"
       }
+    },
+    "contacts": {
+      "title": "दोस्त",
+      "empty": {
+        "title": "यहाँ अकेलापन है",
+        "description": "दोस्तों को मैन्युअली जोड़ें या लोगों को आमंत्रित करें",
+        "invite": {
+          "share": "दोस्तों को आमंत्रित करें",
+          "qr": "QR कोड से आमंत्रित करें"
+        }
+      },
+      "all": "सभी मित्र",
+      "contact": {
+        "owesYou": "आपका कर्ज़दार है",
+        "youOwe": "आपको देना है"
+      }
+    },
+    "join": {
+      "app": {
+        "description": "दोस्तों के साथ मिलकर, कौन किसका कितना बकाया है, इसका स्मार्ट तरीका।"
+      },
+      "inviter": {
+        "description": (name) => `${name} ने आपको आमंत्रित किया है। बस रजिस्टर करें या लॉग इन करें, और आप तैयार हैं`
+      },
+      "accept": "Evn का उपयोग शुरू करें"
     }
   },
   "it-IT": {
@@ -218,13 +374,14 @@ export const dictionaries = {
     "actions": {
       "continue": "Continua",
       "holdToLogout": "Tieni premuto per uscire",
-      "signout": "Esci"
+      "signout": "Esci",
+      "close": "Chiudi"
     },
     "nav": {
       "home": "Home",
-      "friends": "Amici",
       "evns": "Saldo",
-      "profile": "Io"
+      "profile": "Io",
+      "contacts": "Amici"
     },
     "terms": "Termini e condizioni",
     "privacy": "Informativa sulla privacy",
@@ -245,6 +402,31 @@ export const dictionaries = {
         "title": "Tocco personale",
         "description": "Il tuo nome come verrà visualizzato"
       }
+    },
+    "contacts": {
+      "title": "Amici",
+      "empty": {
+        "title": "È solitario qui",
+        "description": "Aggiungi amici manualmente o invita persone",
+        "invite": {
+          "share": "Invita amici",
+          "qr": "Invita tramite codice QR"
+        }
+      },
+      "all": "Tutti gli amici",
+      "contact": {
+        "owesYou": "Ti deve",
+        "youOwe": "Devi"
+      }
+    },
+    "join": {
+      "app": {
+        "description": "Il modo intelligente per tenere traccia di chi deve cosa a chi, insieme agli amici."
+      },
+      "inviter": {
+        "description": (name) => `Sei stato invitato da ${name}. Basta registrarsi o accedere, e sei pronto`
+      },
+      "accept": "Inizia a usare Evn"
     }
   },
   "ja-JP": {
@@ -253,13 +435,14 @@ export const dictionaries = {
     "actions": {
       "continue": "続ける",
       "holdToLogout": "長押ししてログアウト",
-      "signout": "サインアウト"
+      "signout": "サインアウト",
+      "close": "閉じる"
     },
     "nav": {
       "home": "ホーム",
-      "friends": "友だち",
       "evns": "清算",
-      "profile": "私"
+      "profile": "私",
+      "contacts": "友だち"
     },
     "terms": "利用規約",
     "privacy": "プライバシーポリシー",
@@ -280,6 +463,31 @@ export const dictionaries = {
         "title": "パーソナルタッチ",
         "description": "表示されるあなたの名前"
       }
+    },
+    "contacts": {
+      "title": "友達",
+      "empty": {
+        "title": "ここは寂しいです",
+        "description": "友達を手動で追加するか、招待する",
+        "invite": {
+          "share": "友達を招待する",
+          "qr": "QRコードで招待"
+        }
+      },
+      "all": "すべての友達",
+      "contact": {
+        "owesYou": "あなたに借りがある",
+        "youOwe": "あなたが支払うべきです"
+      }
+    },
+    "join": {
+      "app": {
+        "description": "友だちと一緒に「誰が誰にいくら借りているか」をスマートに管理。"
+      },
+      "inviter": {
+        "description": (name) => `${name} から招待されました。登録またはログインするだけで、準備完了です`
+      },
+      "accept": "Evn を使い始める"
     }
   },
   "ko-KR": {
@@ -288,13 +496,14 @@ export const dictionaries = {
     "actions": {
       "continue": "계속",
       "holdToLogout": "길게 눌러 로그아웃",
-      "signout": "로그아웃"
+      "signout": "로그아웃",
+      "close": "닫기"
     },
     "nav": {
       "home": "홈",
-      "friends": "친구",
       "evns": "정산",
-      "profile": "나"
+      "profile": "나",
+      "contacts": "친구"
     },
     "terms": "이용 약관",
     "privacy": "개인정보 처리방침",
@@ -315,6 +524,31 @@ export const dictionaries = {
         "title": "개인적인 터치",
         "description": "표시될 이름"
       }
+    },
+    "contacts": {
+      "title": "친구",
+      "empty": {
+        "title": "여기는 외로워요",
+        "description": "친구를 직접 추가하거나 사람들을 초대하세요",
+        "invite": {
+          "share": "친구 초대하기",
+          "qr": "QR 코드로 초대"
+        }
+      },
+      "all": "모든 친구",
+      "contact": {
+        "owesYou": "당신에게 빚졌어요",
+        "youOwe": "당신이 빚졌습니다"
+      }
+    },
+    "join": {
+      "app": {
+        "description": "친구들과 함께 누가 누구에게 얼마를 빚졌는지 스마트하게 추적하는 방법."
+      },
+      "inviter": {
+        "description": (name) => `${name}님이 초대했습니다. 회원가입 또는 로그인만 하면 바로 시작할 수 있습니다`
+      },
+      "accept": "Evn 시작하기"
     }
   },
   "nl-NL": {
@@ -323,13 +557,14 @@ export const dictionaries = {
     "actions": {
       "continue": "Doorgaan",
       "holdToLogout": "Ingedrukt houden om uit te loggen",
-      "signout": "Afmelden"
+      "signout": "Afmelden",
+      "close": "Sluiten"
     },
     "nav": {
       "home": "Home",
-      "friends": "Vrienden",
       "evns": "Afrekening",
-      "profile": "Ik"
+      "profile": "Ik",
+      "contacts": "Vrienden"
     },
     "terms": "Algemene voorwaarden",
     "privacy": "Privacybeleid",
@@ -350,6 +585,31 @@ export const dictionaries = {
         "title": "Persoonlijk tintje",
         "description": "Je naam zoals die getoond zal worden"
       }
+    },
+    "contacts": {
+      "title": "Vrienden",
+      "empty": {
+        "title": "Het is hier verlaten",
+        "description": "Voeg vrienden handmatig toe of nodig mensen uit",
+        "invite": {
+          "share": "Vrienden uitnodigen",
+          "qr": "Uitnodigen via QR-code"
+        }
+      },
+      "all": "Alle vrienden",
+      "contact": {
+        "owesYou": "Is jou iets verschuldigd",
+        "youOwe": "Je bent verschuldigd"
+      }
+    },
+    "join": {
+      "app": {
+        "description": "De slimme manier om samen met vrienden bij te houden wie wat aan wie verschuldigd is."
+      },
+      "inviter": {
+        "description": (name) => `Je bent uitgenodigd door ${name}. Registreer je of log in, en je bent klaar om te beginnen`
+      },
+      "accept": "Evn gebruiken starten"
     }
   },
   "ru-RU": {
@@ -358,13 +618,14 @@ export const dictionaries = {
     "actions": {
       "continue": "Продолжить",
       "holdToLogout": "Удерживайте для выхода",
-      "signout": "Выйти"
+      "signout": "Выйти",
+      "close": "Закрыть"
     },
     "nav": {
       "home": "Главная",
-      "friends": "Друзья",
       "evns": "Расчёты",
-      "profile": "Я"
+      "profile": "Я",
+      "contacts": "Друзья"
     },
     "terms": "Условия и положения",
     "privacy": "Политика конфиденциальности",
@@ -385,6 +646,31 @@ export const dictionaries = {
         "title": "Личный штрих",
         "description": "Ваше имя, как оно будет отображаться"
       }
+    },
+    "contacts": {
+      "title": "Друзья",
+      "empty": {
+        "title": "Здесь одиноко",
+        "description": "Добавьте друзей вручную или пригласите людей",
+        "invite": {
+          "share": "Пригласить друзей",
+          "qr": "Пригласить по QR-коду"
+        }
+      },
+      "all": "Все друзья",
+      "contact": {
+        "owesYou": "Должен тебе",
+        "youOwe": "Вы должны"
+      }
+    },
+    "join": {
+      "app": {
+        "description": "Умный способ отслеживать, кто кому должен, вместе с друзьями."
+      },
+      "inviter": {
+        "description": (name) => `Вас пригласил(а) ${name}. Просто зарегистрируйтесь или войдите, и вы готовы начать`
+      },
+      "accept": "Начать использовать Evn"
     }
   },
   "sw-TZ": {
@@ -393,13 +679,14 @@ export const dictionaries = {
     "actions": {
       "continue": "Endelea",
       "holdToLogout": "Shikilia ili utoke",
-      "signout": "Ondoka"
+      "signout": "Ondoka",
+      "close": "Funga"
     },
     "nav": {
       "home": "Mwanzo",
-      "friends": "Marafiki",
       "evns": "Marejesho",
-      "profile": "Mimi"
+      "profile": "Mimi",
+      "contacts": "Marafiki"
     },
     "terms": "Sheria na Masharti",
     "privacy": "Sera ya Faragha",
@@ -420,6 +707,31 @@ export const dictionaries = {
         "title": "Mguso wa kibinafsi",
         "description": "Jina lako litakavyoonekana"
       }
+    },
+    "contacts": {
+      "title": "Marafiki",
+      "empty": {
+        "title": "Hapa ni upweke",
+        "description": "Ongeza marafiki mwenyewe au alika watu",
+        "invite": {
+          "share": "Alika marafiki",
+          "qr": "Alika kwa kutumia msimbo wa QR"
+        }
+      },
+      "all": "Marafiki wote",
+      "contact": {
+        "owesYou": "Ana deni lako",
+        "youOwe": "Unadaiwa"
+      }
+    },
+    "join": {
+      "app": {
+        "description": "Njia bora ya kufuatilia nani anamdai nani, ukiwa na marafiki zako."
+      },
+      "inviter": {
+        "description": (name) => `${name} amekualika. Jisajili au ingia, na uko tayari kuanza`
+      },
+      "accept": "Anza kutumia Evn"
     }
   },
   "tr-TR": {
@@ -428,13 +740,14 @@ export const dictionaries = {
     "actions": {
       "continue": "Devam Et",
       "holdToLogout": "Çıkış yapmak için basılı tutun",
-      "signout": "Oturumu kapat"
+      "signout": "Oturumu kapat",
+      "close": "Kapat"
     },
     "nav": {
       "home": "Ana Sayfa",
-      "friends": "Arkadaşlar",
       "evns": "Hesaplaşma",
-      "profile": "Ben"
+      "profile": "Ben",
+      "contacts": "Arkadaşlar"
     },
     "terms": "Şartlar ve Koşullar",
     "privacy": "Gizlilik Politikası",
@@ -455,6 +768,31 @@ export const dictionaries = {
         "title": "Kişisel dokunuş",
         "description": "Adınızın görüneceği şekliyle"
       }
+    },
+    "contacts": {
+      "title": "Arkadaşlar",
+      "empty": {
+        "title": "Burası yalnız",
+        "description": "Arkadaşları manuel olarak ekleyin veya kişileri davet edin",
+        "invite": {
+          "share": "Arkadaşlarını davet et",
+          "qr": "QR kod ile davet et"
+        }
+      },
+      "all": "Tüm arkadaşlar",
+      "contact": {
+        "owesYou": "Sana borçlu",
+        "youOwe": "Borçlusun"
+      }
+    },
+    "join": {
+      "app": {
+        "description": "Kimin kime borcu olduğunu arkadaşlarınla birlikte akıllıca takip etmenin yolu."
+      },
+      "inviter": {
+        "description": (name) => `${name} tarafından davet edildiniz. Sadece kaydolun veya giriş yapın, ve hazırsınız`
+      },
+      "accept": "Evn'i kullanmaya başla"
     }
   },
   "uk-UA": {
@@ -463,13 +801,14 @@ export const dictionaries = {
     "actions": {
       "continue": "Продовжити",
       "holdToLogout": "Утримуйте, щоб вийти",
-      "signout": "Вийти"
+      "signout": "Вийти",
+      "close": "Закрити"
     },
     "nav": {
       "home": "Головна",
-      "friends": "Друзі",
       "evns": "Розрахунок",
-      "profile": "Я"
+      "profile": "Я",
+      "contacts": "Друзі"
     },
     "terms": "Умови та положення",
     "privacy": "Політика конфіденційності",
@@ -490,6 +829,31 @@ export const dictionaries = {
         "title": "Особистий штрих",
         "description": "Ваше ім’я, як воно буде відображатися"
       }
+    },
+    "contacts": {
+      "title": "Друзі",
+      "empty": {
+        "title": "Тут самотньо",
+        "description": "Додайте друзів вручну або запросіть людей",
+        "invite": {
+          "share": "Запросити друзів",
+          "qr": "Запросити за QR-кодом"
+        }
+      },
+      "all": "Усі друзі",
+      "contact": {
+        "owesYou": "Винен тобі",
+        "youOwe": "Ви винні"
+      }
+    },
+    "join": {
+      "app": {
+        "description": "Розумний спосіб відстежувати, хто кому винен, разом із друзями."
+      },
+      "inviter": {
+        "description": (name) => `Вас запросив(ла) ${name}. Просто зареєструйтеся або увійдіть, і все готово`
+      },
+      "accept": "Почати користуватися Evn"
     }
   },
   "zh-CN": {
@@ -498,13 +862,14 @@ export const dictionaries = {
     "actions": {
       "continue": "继续",
       "holdToLogout": "按住退出登录",
-      "signout": "退出登录"
+      "signout": "退出登录",
+      "close": "关闭"
     },
     "nav": {
       "home": "首页",
-      "friends": "朋友",
       "evns": "结算",
-      "profile": "我"
+      "profile": "我",
+      "contacts": "朋友"
     },
     "terms": "条款与条件",
     "privacy": "隐私政策",
@@ -525,6 +890,31 @@ export const dictionaries = {
         "title": "个性化体验",
         "description": "您的姓名将被显示为"
       }
+    },
+    "contacts": {
+      "title": "朋友",
+      "empty": {
+        "title": "这里很孤独",
+        "description": "手动添加好友或邀请他人",
+        "invite": {
+          "share": "邀请朋友",
+          "qr": "通过二维码邀请"
+        }
+      },
+      "all": "所有好友",
+      "contact": {
+        "owesYou": "欠你的",
+        "youOwe": "你欠"
+      }
+    },
+    "join": {
+      "app": {
+        "description": "和朋友们一起智能记录谁欠谁。"
+      },
+      "inviter": {
+        "description": (name) => `您已被${name}邀请。只需注册或登录，您就可以开始了`
+      },
+      "accept": "开始使用 Evn"
     }
   }
 };

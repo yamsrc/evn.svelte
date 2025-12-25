@@ -4,11 +4,12 @@ actions:
   continue: Продовжити
   holdToLogout: Утримуйте, щоб вийти
   signout: Вийти
+  close: Закрити
 nav:
   home: Головна
-  friends: Друзі
   evns: Розрахунок
   profile: Я
+  contacts: Друзі
 terms: Умови та положення
 privacy: Політика конфіденційності
 madeBy: Створено
@@ -26,3 +27,25 @@ onboarding:
   name:
     title: Особистий штрих
     description: Ваше ім’я, як воно буде відображатися
+contacts:
+  title: Друзі
+  empty:
+    title: Тут самотньо
+    description: Додайте друзів вручну або запросіть людей
+    invite:
+      share: Запросити друзів
+      qr: Запросити за QR-кодом
+  all: Усі друзі
+  contact:
+    owesYou: Винен тобі
+    youOwe: Ви винні
+join:
+  app:
+    description: Розумний спосіб відстежувати, хто кому винен, разом із друзями.
+  inviter:
+    description: >-
+      !js
+
+      (name) => `Вас запросив(ла) ${name}. Просто зареєструйтеся або увійдіть, і
+      все готово`
+  accept: Почати користуватися Evn

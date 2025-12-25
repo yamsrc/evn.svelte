@@ -4,11 +4,12 @@ actions:
   continue: متابعة
   holdToLogout: اضغط مطولًا لتسجيل الخروج
   signout: تسجيل الخروج
+  close: إغلاق
 nav:
   home: الرئيسية
-  friends: الأصدقاء
   evns: تسوية
   profile: أنا
+  contacts: الأصدقاء
 terms: الشروط والأحكام
 privacy: سياسة الخصوصية
 madeBy: من صنع
@@ -24,3 +25,25 @@ onboarding:
   name:
     title: لمسة شخصية
     description: اسمك كما سيظهر
+contacts:
+  title: الأصدقاء
+  empty:
+    title: المكان هنا موحش
+    description: أضِف الأصدقاء يدويًا أو ادعُ الأشخاص
+    invite:
+      share: دعوة الأصدقاء
+      qr: دعوة عبر رمز الاستجابة السريعة
+  all: جميع الأصدقاء
+  contact:
+    owesYou: مدين لك
+    youOwe: أنت مدين
+join:
+  app:
+    description: الطريقة الذكية لمتابعة من يدين لمن، مع الأصدقاء.
+  inviter:
+    description: >-
+      !js
+
+      (name) => `لقد تمّت دعوتك من قِبل ${name}. فقط سجّل أو قم بتسجيل الدخول،
+      وستكون جاهزًا للبدء`
+  accept: ابدأ استخدام Evn

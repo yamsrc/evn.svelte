@@ -4,11 +4,12 @@ actions:
   continue: Doorgaan
   holdToLogout: Ingedrukt houden om uit te loggen
   signout: Afmelden
+  close: Sluiten
 nav:
   home: Home
-  friends: Vrienden
   evns: Afrekening
   profile: Ik
+  contacts: Vrienden
 terms: Algemene voorwaarden
 privacy: Privacybeleid
 madeBy: Gemaakt door
@@ -26,3 +27,27 @@ onboarding:
   name:
     title: Persoonlijk tintje
     description: Je naam zoals die getoond zal worden
+contacts:
+  title: Vrienden
+  empty:
+    title: Het is hier verlaten
+    description: Voeg vrienden handmatig toe of nodig mensen uit
+    invite:
+      share: Vrienden uitnodigen
+      qr: Uitnodigen via QR-code
+  all: Alle vrienden
+  contact:
+    owesYou: Is jou iets verschuldigd
+    youOwe: Je bent verschuldigd
+join:
+  app:
+    description: >-
+      De slimme manier om samen met vrienden bij te houden wie wat aan wie
+      verschuldigd is.
+  inviter:
+    description: >-
+      !js
+
+      (name) => `Je bent uitgenodigd door ${name}. Registreer je of log in, en
+      je bent klaar om te beginnen`
+  accept: Evn gebruiken starten

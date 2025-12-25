@@ -4,11 +4,12 @@ actions:
   continue: Continue
   holdToLogout: Hold to log out
   signout: Sign out
+  close: Close
 nav:
   home: Home
-  friends: Friends
   evns: Evns
   profile: Me
+  contacts: Friends
 terms: Terms & Conditions
 privacy: Privacy Policy
 madeBy: Made by
@@ -26,3 +27,25 @@ onboarding:
   name:
     title: Personal Touch
     description: Your name as it will appear
+contacts:
+  title: Friends
+  empty:
+    title: It's lonely here
+    description: Add friends manually or invite people
+    invite:
+      share: Invite friends
+      qr: Invite by QR code
+  all: All friends
+  contact:
+    owesYou: Owes you
+    youOwe: You owe
+join:
+  app:
+    description: The smart way to track who owes whom, together with friends.
+  inviter:
+    description: >-
+      !js
+
+      (name) => `You have been invited by ${name}. Just register or log in, and
+      you’re all set`
+  accept: Start Using Evn

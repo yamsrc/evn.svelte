@@ -8,6 +8,7 @@
   const { account, class: classes }: { account: Account; class?: string } = $props()
 
   let ref = $state<HTMLInputElement | null>(null)
+  // svelte-ignore state_referenced_locally
   let value = $state(account.name)
   let busy = $state(false)
 

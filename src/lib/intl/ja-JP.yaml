@@ -4,11 +4,12 @@ actions:
   continue: 続ける
   holdToLogout: 長押ししてログアウト
   signout: サインアウト
+  close: 閉じる
 nav:
   home: ホーム
-  friends: 友だち
   evns: 清算
   profile: 私
+  contacts: 友だち
 terms: 利用規約
 privacy: プライバシーポリシー
 madeBy: 作成者
@@ -24,3 +25,23 @@ onboarding:
   name:
     title: パーソナルタッチ
     description: 表示されるあなたの名前
+contacts:
+  title: 友達
+  empty:
+    title: ここは寂しいです
+    description: 友達を手動で追加するか、招待する
+    invite:
+      share: 友達を招待する
+      qr: QRコードで招待
+  all: すべての友達
+  contact:
+    owesYou: あなたに借りがある
+    youOwe: あなたが支払うべきです
+join:
+  app:
+    description: 友だちと一緒に「誰が誰にいくら借りているか」をスマートに管理。
+  inviter:
+    description: |-
+      !js
+      (name) => `${name} から招待されました。登録またはログインするだけで、準備完了です`
+  accept: Evn を使い始める

@@ -13,12 +13,13 @@ export type Dictionary = {
         continue: string
         holdToLogout: string
         signout: string
+        close: string
       }
       nav: {
         home: string
-        friends: string
         evns: string
         profile: string
+        contacts: string
       }
       terms: string
       privacy: string
@@ -39,5 +40,30 @@ export type Dictionary = {
           title: string
           description: string
         }
+      }
+      contacts: {
+        title: string
+        empty: {
+          title: string
+          description: string
+          invite: {
+            share: string
+            qr: string
+          }
+        }
+        all: string
+        contact: {
+          owesYou: string
+          youOwe: string
+        }
+      }
+      join: {
+        app: {
+          description: string
+        }
+        inviter: {
+          description: (value: any) => string
+        }
+        accept: string
       }
     }

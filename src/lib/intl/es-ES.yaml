@@ -4,11 +4,12 @@ actions:
   continue: Continuar
   holdToLogout: Mantén pulsado para cerrar sesión
   signout: Cerrar sesión
+  close: Cerrar
 nav:
   home: Inicio
-  friends: Amigos
   evns: Ajustes
   profile: Yo
+  contacts: Amigos
 terms: Términos y condiciones
 privacy: Política de privacidad
 madeBy: Hecho por
@@ -26,3 +27,27 @@ onboarding:
   name:
     title: Toque personal
     description: Tu nombre tal como se verá
+contacts:
+  title: Amigos
+  empty:
+    title: Aquí está solitario
+    description: Añade amigos manualmente o invita a personas
+    invite:
+      share: Invitar a amigos
+      qr: Invitar por código QR
+  all: Todos los amigos
+  contact:
+    owesYou: Te debe
+    youOwe: Debes
+join:
+  app:
+    description: >-
+      La forma inteligente de llevar el control de quién le debe a quién, junto
+      con tus amigos.
+  inviter:
+    description: >-
+      !js
+
+      (name) => `Has sido invitado por ${name}. Solo regístrate o inicia sesión,
+      y ya está todo listo`
+  accept: Comienza a usar Evn

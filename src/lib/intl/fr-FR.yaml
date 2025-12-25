@@ -4,11 +4,12 @@ actions:
   continue: Continuer
   holdToLogout: Maintenez pour vous déconnecter
   signout: Se déconnecter
+  close: Fermer
 nav:
   home: Accueil
-  friends: Amis
   evns: Règlements
   profile: Moi
+  contacts: Amis
 terms: Conditions générales
 privacy: Politique de confidentialité
 madeBy: Créé par
@@ -26,3 +27,25 @@ onboarding:
   name:
     title: Touche personnelle
     description: Votre nom tel qu'il sera affiché
+contacts:
+  title: Amis
+  empty:
+    title: C'est désert ici
+    description: Ajoutez des amis manuellement ou invitez des personnes
+    invite:
+      share: Inviter des amis
+      qr: Inviter par QR code
+  all: Tous les amis
+  contact:
+    owesYou: Te doit
+    youOwe: Vous devez
+join:
+  app:
+    description: La façon intelligente de suivre qui doit quoi à qui, avec vos amis.
+  inviter:
+    description: >-
+      !js
+
+      (name) => `Vous avez été invité(e) par ${name}. Inscrivez-vous ou
+      connectez-vous, et tout est prêt`
+  accept: Commencer à utiliser Evn

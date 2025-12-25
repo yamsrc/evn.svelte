@@ -1,6 +1,5 @@
 <script lang="ts">
   import { goto } from '$app/navigation'
-  import { resolve } from '$app/paths'
   import { cn } from '$lib/utils'
   import { Button } from '$ui/button'
   import type { Props, Action } from './Panel'
@@ -26,7 +25,7 @@
       behavior: 'smooth',
     })
 
-    return href === undefined ? onclick?.(e) : goto(resolve(href))
+    return href === undefined ? onclick?.(e) : goto(href)
   }
 </script>
 
@@ -43,7 +42,7 @@
         {variant}
         {...props}
       >
-        <div class="flex items-center gap-2">
+        <div class="flex items-center gap-2 w-full">
           {#if icon}
             {@render icon()}
           {/if}
@@ -63,7 +62,7 @@
             onclick={(e) => click(e, { href, onclick })}
             class={cn(
               'flex flex-col items-center justify-center gap-1',
-              actions.length === 1 ? 'w-20' : 'w-16',
+              actions.length === 1 ? 'w-20' : 'w-12',
               classes,
             )}
           >

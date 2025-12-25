@@ -4,11 +4,12 @@ actions:
   continue: Devam Et
   holdToLogout: Çıkış yapmak için basılı tutun
   signout: Oturumu kapat
+  close: Kapat
 nav:
   home: Ana Sayfa
-  friends: Arkadaşlar
   evns: Hesaplaşma
   profile: Ben
+  contacts: Arkadaşlar
 terms: Şartlar ve Koşullar
 privacy: Gizlilik Politikası
 madeBy: Tarafından yapıldı
@@ -24,3 +25,27 @@ onboarding:
   name:
     title: Kişisel dokunuş
     description: Adınızın görüneceği şekliyle
+contacts:
+  title: Arkadaşlar
+  empty:
+    title: Burası yalnız
+    description: Arkadaşları manuel olarak ekleyin veya kişileri davet edin
+    invite:
+      share: Arkadaşlarını davet et
+      qr: QR kod ile davet et
+  all: Tüm arkadaşlar
+  contact:
+    owesYou: Sana borçlu
+    youOwe: Borçlusun
+join:
+  app:
+    description: >-
+      Kimin kime borcu olduğunu arkadaşlarınla birlikte akıllıca takip etmenin
+      yolu.
+  inviter:
+    description: >-
+      !js
+
+      (name) => `${name} tarafından davet edildiniz. Sadece kaydolun veya giriş
+      yapın, ve hazırsınız`
+  accept: Evn'i kullanmaya başla

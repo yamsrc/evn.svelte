@@ -1,4 +1,4 @@
-import { events, type Message } from './events'
+import { events, type Events, type Message } from './events'
 import * as net from './net'
 import { reset } from './reset'
 import { status } from './status'
@@ -61,7 +61,7 @@ function disconnect() {
 
 function emit(message: Message) {
   if (typeof message === 'string') events.emit('heartbeat')
-  else events.emit(message.event, message.data)
+  else events.emit(message.event as keyof Events, message.data as Events[keyof Events])
 }
 
 export { connect, disconnect }

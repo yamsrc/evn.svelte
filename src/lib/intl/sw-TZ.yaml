@@ -4,11 +4,12 @@ actions:
   continue: Endelea
   holdToLogout: Shikilia ili utoke
   signout: Ondoka
+  close: Funga
 nav:
   home: Mwanzo
-  friends: Marafiki
   evns: Marejesho
   profile: Mimi
+  contacts: Marafiki
 terms: Sheria na Masharti
 privacy: Sera ya Faragha
 madeBy: Imetengenezwa na
@@ -24,3 +25,23 @@ onboarding:
   name:
     title: Mguso wa kibinafsi
     description: Jina lako litakavyoonekana
+contacts:
+  title: Marafiki
+  empty:
+    title: Hapa ni upweke
+    description: Ongeza marafiki mwenyewe au alika watu
+    invite:
+      share: Alika marafiki
+      qr: Alika kwa kutumia msimbo wa QR
+  all: Marafiki wote
+  contact:
+    owesYou: Ana deni lako
+    youOwe: Unadaiwa
+join:
+  app:
+    description: Njia bora ya kufuatilia nani anamdai nani, ukiwa na marafiki zako.
+  inviter:
+    description: |-
+      !js
+      (name) => `${name} amekualika. Jisajili au ingia, na uko tayari kuanza`
+  accept: Anza kutumia Evn

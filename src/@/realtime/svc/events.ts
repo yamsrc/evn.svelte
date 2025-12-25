@@ -1,7 +1,8 @@
 import mitt from 'mitt'
 import type { Events as AccountEvents } from '@/account/svc/net'
+import type { Events as ContactsEvents } from '@/contacts/svc/net'
 
-export type Events = AccountEvents // add domain events here
+export type Events = AccountEvents & ContactsEvents // add domain events here
 
 export type Message = {
   [E in keyof Events]: {

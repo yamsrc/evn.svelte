@@ -4,11 +4,12 @@ actions:
   continue: Continua
   holdToLogout: Tieni premuto per uscire
   signout: Esci
+  close: Chiudi
 nav:
   home: Home
-  friends: Amici
   evns: Saldo
   profile: Io
+  contacts: Amici
 terms: Termini e condizioni
 privacy: Informativa sulla privacy
 madeBy: Realizzato da
@@ -26,3 +27,27 @@ onboarding:
   name:
     title: Tocco personale
     description: Il tuo nome come verrà visualizzato
+contacts:
+  title: Amici
+  empty:
+    title: È solitario qui
+    description: Aggiungi amici manualmente o invita persone
+    invite:
+      share: Invita amici
+      qr: Invita tramite codice QR
+  all: Tutti gli amici
+  contact:
+    owesYou: Ti deve
+    youOwe: Devi
+join:
+  app:
+    description: >-
+      Il modo intelligente per tenere traccia di chi deve cosa a chi, insieme
+      agli amici.
+  inviter:
+    description: >-
+      !js
+
+      (name) => `Sei stato invitato da ${name}. Basta registrarsi o accedere, e
+      sei pronto`
+  accept: Inizia a usare Evn

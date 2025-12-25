@@ -4,11 +4,12 @@ actions:
   continue: Weiter
   holdToLogout: Zum Abmelden gedrückt halten
   signout: Abmelden
+  close: Schließen
 nav:
   home: Startseite
-  friends: Freunde
   evns: Ausgleich
   profile: Ich
+  contacts: Freunde
 terms: Allgemeine Geschäftsbedingungen
 privacy: Datenschutzerklärung
 madeBy: Erstellt von
@@ -26,3 +27,27 @@ onboarding:
   name:
     title: Persönliche Note
     description: Ihr Name, wie er angezeigt wird
+contacts:
+  title: Freunde
+  empty:
+    title: Hier ist es einsam
+    description: Freunde manuell hinzufügen oder Personen einladen
+    invite:
+      share: Freunde einladen
+      qr: Per QR-Code einladen
+  all: Alle Freunde
+  contact:
+    owesYou: Schuldet dir
+    youOwe: Du schuldest
+join:
+  app:
+    description: >-
+      Die clevere Art, gemeinsam mit Freunden den Überblick zu behalten, wer wem
+      etwas schuldet.
+  inviter:
+    description: >-
+      !js
+
+      (name) => `${name} hat dich eingeladen. Registriere dich einfach oder
+      melde dich an, und schon kann es losgehen`
+  accept: Jetzt mit Evn starten
