@@ -1,12 +1,10 @@
 <script lang="ts">
-  import { Coins } from '@lucide/svelte'
   import { Async } from 'svas'
   import { Panel } from '$com/panel'
-  import { dict } from '$lib/intl'
-  import { currency } from '$lib/tools'
   import { cn } from '$lib/utils'
   import { accounts } from '@/account'
   import { Picture } from '@/account/ui'
+  import { Balance } from '@/app/ui'
   import type { Props } from './Item'
 
   let {
@@ -50,21 +48,7 @@
         </div>
       {/snippet}
       {#snippet right()}
-        <div class="flex items-center flex-end gap-2">
-          <div class="text-muted-foreground text-sm">
-            {#if balance > 0}
-              {$dict.contacts.contact.owesYou}
-            {:else}
-              {$dict.contacts.contact.youOwe}
-            {/if}
-          </div>
-          <div class="text-base font-bold">
-            {currency(Math.abs(balance))}
-          </div>
-          <div>
-            <Coins size={16} color={balance > 0 ? 'var(--constructive)' : 'var(--destructive)'} />
-          </div>
-        </div>
+        <Balance {balance} />
       {/snippet}
     </Panel>
   {/snippet}

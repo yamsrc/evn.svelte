@@ -17,6 +17,6 @@
     <h2>{title}</h2>
   {/if}
   {#each groups as group (group.id)}
-    <Group {group} {selectable} onselect={select} />
+    <Group {group} {selectable} onselect={select} balance={0} />
   {/each}
 </Section>

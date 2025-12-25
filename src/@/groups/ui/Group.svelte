@@ -6,10 +6,11 @@
   import { cn } from '$lib/utils'
   import { accounts } from '@/account'
   import { Picture } from '@/account/ui'
+  import { Balance } from '@/app/ui'
   import { account } from '@/iam'
   import type { Props } from './Group'
 
-  const { group, selectable = false, onselect }: Props = $props()
+  const { group, balance, selectable = false, onselect }: Props = $props()
 
   const members = $derived(group.identities.filter((identity) => identity !== $account?.id))
 
@@ -51,6 +52,6 @@
     </div>
   {/snippet}
   {#snippet right()}
-    <!-- TODO: add balance -->
+    <Balance {balance} />
   {/snippet}
 </Panel>
