@@ -18,7 +18,7 @@
   async function accept() {
     accepted = true
 
-    await contacts.add(id)
+    await contacts.add({ with: id })
 
     goto('/')
   }
