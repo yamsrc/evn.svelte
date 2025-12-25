@@ -25,7 +25,9 @@ profile:
   title: Mi perfil
   language:
     title: Idioma
-    description: Esto no afecta al reconocimiento de cheques. De todas formas, entendemos la mayoría de los idiomas allí.
+    description: >-
+      Esto no afecta al reconocimiento de cheques. De todas formas, entendemos
+      la mayoría de los idiomas allí.
 form:
   enterName: Introduce el nombre
 copyright: © Seed.me, 2024-2025
@@ -47,9 +49,15 @@ contacts:
     youOwe: Debes
 join:
   app:
-    description: La forma inteligente de llevar el control de quién le debe a quién, junto con tus amigos.
+    description: >-
+      La forma inteligente de llevar el control de quién le debe a quién, junto
+      con tus amigos.
   inviter:
-    description: |-
+    description: >-
       !js
-      (name) => `Has sido invitado por ${name}. Solo regístrate o inicia sesión, y ya está todo listo`
+
+      (name) => `Has sido invitado por ${name}. Solo regístrate o inicia sesión,
+      y ya está todo listo`
   accept: Comienza a usar Evn
+groups:
+  leave: Mantén pulsado para disolver el grupo

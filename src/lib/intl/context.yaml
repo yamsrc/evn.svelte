@@ -95,5 +95,8 @@ inputs:
         input: js! (name) => You have been invited by . Just register or log in, and you are all set
     accept:
       input: Start Using Evn
+  groups:
+    leave:
+      input: Hold to disband group
 mounts:
   iam: ../../@/iam/ui/intl

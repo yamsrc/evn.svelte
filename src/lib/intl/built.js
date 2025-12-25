@@ -71,6 +71,9 @@ export const dictionaries = {
         "description": (name) => `لقد تمّت دعوتك من قِبل ${name}. فقط سجّل أو قم بتسجيل الدخول، وستكون جاهزًا للبدء`
       },
       "accept": "ابدأ استخدام Evn"
+    },
+    "groups": {
+      "leave": "اضغط مع الاستمرار لتفكيك المجموعة"
     }
   },
   "de-DE": {
@@ -142,6 +145,9 @@ export const dictionaries = {
         "description": (name) => `${name} hat dich eingeladen. Registriere dich einfach oder melde dich an, und schon kann es losgehen`
       },
       "accept": "Jetzt mit Evn starten"
+    },
+    "groups": {
+      "leave": "Zum Auflösen der Gruppe gedrückt halten"
     }
   },
   "en-US": {
@@ -213,6 +219,9 @@ export const dictionaries = {
         "description": (name) => `You have been invited by ${name}. Just register or log in, and you’re all set`
       },
       "accept": "Start Using Evn"
+    },
+    "groups": {
+      "leave": "Hold to disband group"
     }
   },
   "es-ES": {
@@ -284,6 +293,9 @@ export const dictionaries = {
         "description": (name) => `Has sido invitado por ${name}. Solo regístrate o inicia sesión, y ya está todo listo`
       },
       "accept": "Comienza a usar Evn"
+    },
+    "groups": {
+      "leave": "Mantén pulsado para disolver el grupo"
     }
   },
   "fr-FR": {
@@ -355,6 +367,9 @@ export const dictionaries = {
         "description": (name) => `Vous avez été invité(e) par ${name}. Inscrivez-vous ou connectez-vous, et tout est prêt`
       },
       "accept": "Commencer à utiliser Evn"
+    },
+    "groups": {
+      "leave": "Maintenir pour dissoudre le groupe"
     }
   },
   "hi-IN": {
@@ -426,6 +441,9 @@ export const dictionaries = {
         "description": (name) => `${name} ने आपको आमंत्रित किया है। बस रजिस्टर करें या लॉग इन करें, और आप तैयार हैं`
       },
       "accept": "Evn का उपयोग शुरू करें"
+    },
+    "groups": {
+      "leave": "ग्रुप को भंग करने के लिए दबाकर रखें"
     }
   },
   "it-IT": {
@@ -497,6 +515,9 @@ export const dictionaries = {
         "description": (name) => `Sei stato invitato da ${name}. Basta registrarsi o accedere, e sei pronto`
       },
       "accept": "Inizia a usare Evn"
+    },
+    "groups": {
+      "leave": "Tieni premuto per sciogliere il gruppo"
     }
   },
   "ja-JP": {
@@ -568,6 +589,9 @@ export const dictionaries = {
         "description": (name) => `${name} から招待されました。登録またはログインするだけで、準備完了です`
       },
       "accept": "Evn を使い始める"
+    },
+    "groups": {
+      "leave": "長押しでグループを解散"
     }
   },
   "ko-KR": {
@@ -639,6 +663,9 @@ export const dictionaries = {
         "description": (name) => `${name}님이 초대했습니다. 회원가입 또는 로그인만 하면 바로 시작할 수 있습니다`
       },
       "accept": "Evn 시작하기"
+    },
+    "groups": {
+      "leave": "길게 눌러 그룹 해산"
     }
   },
   "nl-NL": {
@@ -710,6 +737,9 @@ export const dictionaries = {
         "description": (name) => `Je bent uitgenodigd door ${name}. Registreer je of log in, en je bent klaar om te beginnen`
       },
       "accept": "Evn gebruiken starten"
+    },
+    "groups": {
+      "leave": "Houd vast om groep te ontbinden"
     }
   },
   "ru-RU": {
@@ -781,6 +811,9 @@ export const dictionaries = {
         "description": (name) => `Вас пригласил(а) ${name}. Просто зарегистрируйтесь или войдите, и вы готовы начать`
       },
       "accept": "Начать использовать Evn"
+    },
+    "groups": {
+      "leave": "Удерживайте для распуска группы"
     }
   },
   "sw-TZ": {
@@ -852,6 +885,9 @@ export const dictionaries = {
         "description": (name) => `${name} amekualika. Jisajili au ingia, na uko tayari kuanza`
       },
       "accept": "Anza kutumia Evn"
+    },
+    "groups": {
+      "leave": "Shikilia kuvunja kundi"
     }
   },
   "tr-TR": {
@@ -923,6 +959,9 @@ export const dictionaries = {
         "description": (name) => `${name} tarafından davet edildiniz. Sadece kaydolun veya giriş yapın, ve hazırsınız`
       },
       "accept": "Evn'i kullanmaya başla"
+    },
+    "groups": {
+      "leave": "Grubu dağıtmak için basılı tut"
     }
   },
   "uk-UA": {
@@ -994,6 +1033,9 @@ export const dictionaries = {
         "description": (name) => `Вас запросив(ла) ${name}. Просто зареєструйтеся або увійдіть, і все готово`
       },
       "accept": "Почати користуватися Evn"
+    },
+    "groups": {
+      "leave": "Утримуйте, щоб розпустити групу"
     }
   },
   "zh-CN": {
@@ -1065,6 +1107,9 @@ export const dictionaries = {
         "description": (name) => `您已被${name}邀请。只需注册或登录，您就可以开始了`
       },
       "accept": "开始使用 Evn"
+    },
+    "groups": {
+      "leave": "按住以解散群组"
     }
   }
 };

@@ -47,7 +47,7 @@ export const actions = (dict: Dictionary): ActionGroup[] => ([
       {
         name: dict.actions.contacts.group,
         icon: Users,
-        onSelect: () => goto('/groups/new/'),
+        onSelect: () => goto('/contacts/groups/'),
       },
     ],
   },

@@ -25,7 +25,9 @@ profile:
   title: Mein Profil
   language:
     title: Sprache
-    description: Das beeinflusst die Scheck-Erkennung nicht. Wir verstehen dort ohnehin die meisten Sprachen.
+    description: >-
+      Das beeinflusst die Scheck-Erkennung nicht. Wir verstehen dort ohnehin die
+      meisten Sprachen.
 form:
   enterName: Name eingeben
 copyright: © Seed.me, 2024–2025
@@ -47,9 +49,15 @@ contacts:
     youOwe: Du schuldest
 join:
   app:
-    description: Die clevere Art, gemeinsam mit Freunden den Überblick zu behalten, wer wem etwas schuldet.
+    description: >-
+      Die clevere Art, gemeinsam mit Freunden den Überblick zu behalten, wer wem
+      etwas schuldet.
   inviter:
-    description: |-
+    description: >-
       !js
-      (name) => `${name} hat dich eingeladen. Registriere dich einfach oder melde dich an, und schon kann es losgehen`
+
+      (name) => `${name} hat dich eingeladen. Registriere dich einfach oder
+      melde dich an, und schon kann es losgehen`
   accept: Jetzt mit Evn starten
+groups:
+  leave: Zum Auflösen der Gruppe gedrückt halten

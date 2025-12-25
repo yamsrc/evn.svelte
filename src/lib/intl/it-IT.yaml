@@ -25,7 +25,9 @@ profile:
   title: Il mio profilo
   language:
     title: Lingua
-    description: Questo non influisce sul riconoscimento dell'assegno. Comunque, lì capiamo la maggior parte delle lingue.
+    description: >-
+      Questo non influisce sul riconoscimento dell'assegno. Comunque, lì capiamo
+      la maggior parte delle lingue.
 form:
   enterName: Inserisci il nome
 copyright: © Seed.me, 2024-2025
@@ -47,9 +49,15 @@ contacts:
     youOwe: Devi
 join:
   app:
-    description: Il modo intelligente per tenere traccia di chi deve cosa a chi, insieme agli amici.
+    description: >-
+      Il modo intelligente per tenere traccia di chi deve cosa a chi, insieme
+      agli amici.
   inviter:
-    description: |-
+    description: >-
       !js
-      (name) => `Sei stato invitato da ${name}. Basta registrarsi o accedere, e sei pronto`
+
+      (name) => `Sei stato invitato da ${name}. Basta registrarsi o accedere, e
+      sei pronto`
   accept: Inizia a usare Evn
+groups:
+  leave: Tieni premuto per sciogliere il gruppo

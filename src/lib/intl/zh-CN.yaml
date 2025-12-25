@@ -53,3 +53,5 @@ join:
       !js
       (name) => `您已被${name}邀请。只需注册或登录，您就可以开始了`
   accept: 开始使用 Evn
+groups:
+  leave: 按住以解散群组

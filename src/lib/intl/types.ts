@@ -76,4 +76,7 @@ export type Dictionary = {
         }
         accept: string
       }
+      groups: {
+        leave: string
+      }
     }

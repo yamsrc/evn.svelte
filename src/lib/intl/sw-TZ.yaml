@@ -53,3 +53,5 @@ join:
       !js
       (name) => `${name} amekualika. Jisajili au ingia, na uko tayari kuanza`
   accept: Anza kutumia Evn
+groups:
+  leave: Shikilia kuvunja kundi
