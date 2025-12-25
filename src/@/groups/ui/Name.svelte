@@ -15,4 +15,4 @@
   }
 </script>
 
-<Input value={name} onsubmit={submit} class={cn('text-center', classes)} />
+<Input value={name} onsubmit={submit} class={cn('w-full max-w-sm text-3xl text-center', classes)} />

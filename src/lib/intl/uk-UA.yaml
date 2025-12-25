@@ -13,6 +13,8 @@ actions:
     group: Група
     title: Друзі
     contact: Друг
+  addSelected: Додати вибране
+  invite: Запросити
 nav:
   home: Головна
   evns: Розрахунок
@@ -59,3 +61,10 @@ join:
   accept: Почати користуватися Evn
 groups:
   leave: Утримуйте, щоб розпустити групу
+  name:
+    description: Усі учасники групи побачать це ім’я
+  members:
+    title: Учасники
+    addMembers: Додати учасників
+    addMember: Додати учасника
+  title: Групи

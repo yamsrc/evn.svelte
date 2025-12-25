@@ -24,6 +24,8 @@ export type Dictionary = {
           title: string
           contact: string
         }
+        addSelected: string
+        invite: string
       }
       nav: {
         home: string
@@ -78,5 +80,14 @@ export type Dictionary = {
       }
       groups: {
         leave: string
+        name: {
+          description: string
+        }
+        members: {
+          title: string
+          addMembers: string
+          addMember: string
+        }
+        title: string
       }
     }

@@ -13,6 +13,10 @@ export async function post(identity: string, body: Editable): Promise<Group | Er
   return groups.json(identity, { method: 'POST', body })
 }
 
+export async function add(identity: string, group: string, identities: string[]): Promise<Group | Error> {
+  return groups.json(`${identity}/${group}`, { method: 'POST', body: { identities } })
+}
+
 export async function patch(identity: string, group: string, body: Editable): Promise<Group | Error> {
   return groups.json(`${identity}/${group}`, { method: 'PATCH', body })
 }

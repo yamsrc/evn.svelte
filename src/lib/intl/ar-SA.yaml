@@ -13,6 +13,8 @@ actions:
     group: مجموعة
     title: أصدقاء
     contact: صديق
+  addSelected: إضافة المحدد
+  invite: دعوة
 nav:
   home: الرئيسية
   evns: تسوية
@@ -57,3 +59,10 @@ join:
   accept: ابدأ استخدام Evn
 groups:
   leave: اضغط مع الاستمرار لتفكيك المجموعة
+  name:
+    description: سيرى جميع أعضاء المجموعة هذا الاسم
+  members:
+    title: الأعضاء
+    addMembers: إضافة أعضاء
+    addMember: إضافة عضو
+  title: المجموعات

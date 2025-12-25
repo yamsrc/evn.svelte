@@ -13,6 +13,8 @@ actions:
     group: Group
     title: Friends
     contact: Friend
+  addSelected: Add selected
+  invite: Invite
 nav:
   home: Home
   evns: Evns
@@ -59,3 +61,10 @@ join:
   accept: Start Using Evn
 groups:
   leave: Hold to disband group
+  name:
+    description: All group members will see this name
+  members:
+    title: Members
+    addMembers: Add members
+    addMember: Add member
+  title: Groups

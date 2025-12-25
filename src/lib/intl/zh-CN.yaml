@@ -13,6 +13,8 @@ actions:
     group: 群组
     title: 朋友
     contact: 朋友
+  addSelected: 添加已选项
+  invite: 邀请
 nav:
   home: 首页
   evns: 结算
@@ -55,3 +57,10 @@ join:
   accept: 开始使用 Evn
 groups:
   leave: 按住以解散群组
+  name:
+    description: 所有群组成员都能看到这个名称
+  members:
+    title: 成员
+    addMembers: 添加成员
+    addMember: 添加成员
+  title: 群组

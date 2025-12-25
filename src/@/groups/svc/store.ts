@@ -5,7 +5,7 @@ import type { Group } from './net'
 
 export const groups = collection<Group>({
   get,
-  persist: 'groups',
+  persist: 'groups:groups',
   bind: account,
   stale: true,
   values: values<Group>(),

@@ -13,6 +13,8 @@ actions:
     group: Groep
     title: Vrienden
     contact: Vriend
+  addSelected: Geselecteerde toevoegen
+  invite: Uitnodigen
 nav:
   home: Home
   evns: Afrekening
@@ -61,3 +63,10 @@ join:
   accept: Evn gebruiken starten
 groups:
   leave: Houd vast om groep te ontbinden
+  name:
+    description: Alle groepsleden kunnen deze naam zien
+  members:
+    title: Leden
+    addMembers: Leden toevoegen
+    addMember: Lid toevoegen
+  title: Groepen

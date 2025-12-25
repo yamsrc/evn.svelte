@@ -29,6 +29,10 @@ inputs:
         input: Friends
       contact:
         input: Friend
+    addSelected:
+      input: Add selected
+    invite:
+      input: Invite
   nav:
     home:
       input: Home
@@ -98,5 +102,17 @@ inputs:
   groups:
     leave:
       input: Hold to disband group
+    name:
+      description:
+        input: All group members will see this name
+    members:
+      title:
+        input: Members
+      addMembers:
+        input: Add members
+      addMember:
+        input: Add member
+    title:
+      input: Groups
 mounts:
   iam: ../../@/iam/ui/intl

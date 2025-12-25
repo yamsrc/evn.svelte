@@ -34,7 +34,7 @@
   }
 </script>
 
-<form onsubmit={onsubmit(submit)}>
+<form onsubmit={onsubmit(submit)} class="w-full flex items-center justify-center">
   <Input
     bind:ref
     bind:value

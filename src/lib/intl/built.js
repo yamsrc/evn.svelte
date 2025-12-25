@@ -19,7 +19,9 @@ export const dictionaries = {
         "group": "مجموعة",
         "title": "أصدقاء",
         "contact": "صديق"
-      }
+      },
+      "addSelected": "إضافة المحدد",
+      "invite": "دعوة"
     },
     "nav": {
       "home": "الرئيسية",
@@ -73,7 +75,16 @@ export const dictionaries = {
       "accept": "ابدأ استخدام Evn"
     },
     "groups": {
-      "leave": "اضغط مع الاستمرار لتفكيك المجموعة"
+      "leave": "اضغط مع الاستمرار لتفكيك المجموعة",
+      "name": {
+        "description": "سيرى جميع أعضاء المجموعة هذا الاسم"
+      },
+      "members": {
+        "title": "الأعضاء",
+        "addMembers": "إضافة أعضاء",
+        "addMember": "إضافة عضو"
+      },
+      "title": "المجموعات"
     }
   },
   "de-DE": {
@@ -93,7 +104,9 @@ export const dictionaries = {
         "group": "Gruppe",
         "title": "Freunde",
         "contact": "Freund"
-      }
+      },
+      "addSelected": "Ausgewählte hinzufügen",
+      "invite": "Einladen"
     },
     "nav": {
       "home": "Startseite",
@@ -147,7 +160,16 @@ export const dictionaries = {
       "accept": "Jetzt mit Evn starten"
     },
     "groups": {
-      "leave": "Zum Auflösen der Gruppe gedrückt halten"
+      "leave": "Zum Auflösen der Gruppe gedrückt halten",
+      "name": {
+        "description": "Alle Gruppenmitglieder sehen diesen Namen"
+      },
+      "members": {
+        "title": "Mitglieder",
+        "addMembers": "Mitglieder hinzufügen",
+        "addMember": "Mitglied hinzufügen"
+      },
+      "title": "Gruppen"
     }
   },
   "en-US": {
@@ -167,7 +189,9 @@ export const dictionaries = {
         "group": "Group",
         "title": "Friends",
         "contact": "Friend"
-      }
+      },
+      "addSelected": "Add selected",
+      "invite": "Invite"
     },
     "nav": {
       "home": "Home",
@@ -221,7 +245,16 @@ export const dictionaries = {
       "accept": "Start Using Evn"
     },
     "groups": {
-      "leave": "Hold to disband group"
+      "leave": "Hold to disband group",
+      "name": {
+        "description": "All group members will see this name"
+      },
+      "members": {
+        "title": "Members",
+        "addMembers": "Add members",
+        "addMember": "Add member"
+      },
+      "title": "Groups"
     }
   },
   "es-ES": {
@@ -241,7 +274,9 @@ export const dictionaries = {
         "group": "Grupo",
         "title": "Amigos",
         "contact": "Amigo"
-      }
+      },
+      "addSelected": "Agregar seleccionado(s)",
+      "invite": "Invitar"
     },
     "nav": {
       "home": "Inicio",
@@ -295,7 +330,16 @@ export const dictionaries = {
       "accept": "Comienza a usar Evn"
     },
     "groups": {
-      "leave": "Mantén pulsado para disolver el grupo"
+      "leave": "Mantén pulsado para disolver el grupo",
+      "name": {
+        "description": "Todos los miembros del grupo verán este nombre"
+      },
+      "members": {
+        "title": "Miembros",
+        "addMembers": "Agregar miembros",
+        "addMember": "Añadir miembro"
+      },
+      "title": "Grupos"
     }
   },
   "fr-FR": {
@@ -315,7 +359,9 @@ export const dictionaries = {
         "group": "Groupe",
         "title": "Amis",
         "contact": "Ami"
-      }
+      },
+      "addSelected": "Ajouter la sélection",
+      "invite": "Inviter"
     },
     "nav": {
       "home": "Accueil",
@@ -369,7 +415,16 @@ export const dictionaries = {
       "accept": "Commencer à utiliser Evn"
     },
     "groups": {
-      "leave": "Maintenir pour dissoudre le groupe"
+      "leave": "Maintenir pour dissoudre le groupe",
+      "name": {
+        "description": "Tous les membres du groupe verront ce nom"
+      },
+      "members": {
+        "title": "Membres",
+        "addMembers": "Ajouter des membres",
+        "addMember": "Ajouter un membre"
+      },
+      "title": "Groupes"
     }
   },
   "hi-IN": {
@@ -389,7 +444,9 @@ export const dictionaries = {
         "group": "समूह",
         "title": "मित्र",
         "contact": "मित्र"
-      }
+      },
+      "addSelected": "चयनित जोड़ें",
+      "invite": "आमंत्रित करें"
     },
     "nav": {
       "home": "मुख्य पृष्ठ",
@@ -443,7 +500,16 @@ export const dictionaries = {
       "accept": "Evn का उपयोग शुरू करें"
     },
     "groups": {
-      "leave": "ग्रुप को भंग करने के लिए दबाकर रखें"
+      "leave": "ग्रुप को भंग करने के लिए दबाकर रखें",
+      "name": {
+        "description": "सभी समूह सदस्य यह नाम देखेंगे"
+      },
+      "members": {
+        "title": "सदस्य",
+        "addMembers": "सदस्य जोड़ें",
+        "addMember": "सदस्य जोड़ें"
+      },
+      "title": "समूह"
     }
   },
   "it-IT": {
@@ -463,7 +529,9 @@ export const dictionaries = {
         "group": "Gruppo",
         "title": "Amici",
         "contact": "Amico"
-      }
+      },
+      "addSelected": "Aggiungi selezionati",
+      "invite": "Invita"
     },
     "nav": {
       "home": "Home",
@@ -517,7 +585,16 @@ export const dictionaries = {
       "accept": "Inizia a usare Evn"
     },
     "groups": {
-      "leave": "Tieni premuto per sciogliere il gruppo"
+      "leave": "Tieni premuto per sciogliere il gruppo",
+      "name": {
+        "description": "Tutti i membri del gruppo vedranno questo nome"
+      },
+      "members": {
+        "title": "Membri",
+        "addMembers": "Aggiungi membri",
+        "addMember": "Aggiungi membro"
+      },
+      "title": "Gruppi"
     }
   },
   "ja-JP": {
@@ -537,7 +614,9 @@ export const dictionaries = {
         "group": "グループ",
         "title": "友達",
         "contact": "友達"
-      }
+      },
+      "addSelected": "選択したものを追加",
+      "invite": "招待"
     },
     "nav": {
       "home": "ホーム",
@@ -591,7 +670,16 @@ export const dictionaries = {
       "accept": "Evn を使い始める"
     },
     "groups": {
-      "leave": "長押しでグループを解散"
+      "leave": "長押しでグループを解散",
+      "name": {
+        "description": "すべてのグループメンバーがこの名前を表示します"
+      },
+      "members": {
+        "title": "メンバー",
+        "addMembers": "メンバーを追加",
+        "addMember": "メンバーを追加"
+      },
+      "title": "グループ"
     }
   },
   "ko-KR": {
@@ -611,7 +699,9 @@ export const dictionaries = {
         "group": "그룹",
         "title": "친구",
         "contact": "친구"
-      }
+      },
+      "addSelected": "선택 항목 추가",
+      "invite": "초대"
     },
     "nav": {
       "home": "홈",
@@ -665,7 +755,16 @@ export const dictionaries = {
       "accept": "Evn 시작하기"
     },
     "groups": {
-      "leave": "길게 눌러 그룹 해산"
+      "leave": "길게 눌러 그룹 해산",
+      "name": {
+        "description": "모든 그룹 구성원이 이 이름을 볼 수 있습니다"
+      },
+      "members": {
+        "title": "회원",
+        "addMembers": "구성원 추가",
+        "addMember": "구성원 추가"
+      },
+      "title": "그룹"
     }
   },
   "nl-NL": {
@@ -685,7 +784,9 @@ export const dictionaries = {
         "group": "Groep",
         "title": "Vrienden",
         "contact": "Vriend"
-      }
+      },
+      "addSelected": "Geselecteerde toevoegen",
+      "invite": "Uitnodigen"
     },
     "nav": {
       "home": "Home",
@@ -739,7 +840,16 @@ export const dictionaries = {
       "accept": "Evn gebruiken starten"
     },
     "groups": {
-      "leave": "Houd vast om groep te ontbinden"
+      "leave": "Houd vast om groep te ontbinden",
+      "name": {
+        "description": "Alle groepsleden kunnen deze naam zien"
+      },
+      "members": {
+        "title": "Leden",
+        "addMembers": "Leden toevoegen",
+        "addMember": "Lid toevoegen"
+      },
+      "title": "Groepen"
     }
   },
   "ru-RU": {
@@ -759,7 +869,9 @@ export const dictionaries = {
         "group": "Группа",
         "title": "Друзья",
         "contact": "Друг"
-      }
+      },
+      "addSelected": "Добавить выбранные",
+      "invite": "Пригласить"
     },
     "nav": {
       "home": "Главная",
@@ -813,7 +925,16 @@ export const dictionaries = {
       "accept": "Начать использовать Evn"
     },
     "groups": {
-      "leave": "Удерживайте для распуска группы"
+      "leave": "Удерживайте для распуска группы",
+      "name": {
+        "description": "Все участники группы увидят это имя"
+      },
+      "members": {
+        "title": "Участники",
+        "addMembers": "Добавить участников",
+        "addMember": "Добавить участника"
+      },
+      "title": "Группы"
     }
   },
   "sw-TZ": {
@@ -833,7 +954,9 @@ export const dictionaries = {
         "group": "Kikundi",
         "title": "Marafiki",
         "contact": "Rafiki"
-      }
+      },
+      "addSelected": "Ongeza zilizochaguliwa",
+      "invite": "Alika"
     },
     "nav": {
       "home": "Mwanzo",
@@ -887,7 +1010,16 @@ export const dictionaries = {
       "accept": "Anza kutumia Evn"
     },
     "groups": {
-      "leave": "Shikilia kuvunja kundi"
+      "leave": "Shikilia kuvunja kundi",
+      "name": {
+        "description": "Wanachama wote wa kundi wataona jina hili"
+      },
+      "members": {
+        "title": "Wanachama",
+        "addMembers": "Ongeza wanachama",
+        "addMember": "Ongeza mwanachama"
+      },
+      "title": "Makundi"
     }
   },
   "tr-TR": {
@@ -907,7 +1039,9 @@ export const dictionaries = {
         "group": "Grup",
         "title": "Arkadaşlar",
         "contact": "Arkadaş"
-      }
+      },
+      "addSelected": "Seçileni ekle",
+      "invite": "Davet et"
     },
     "nav": {
       "home": "Ana Sayfa",
@@ -961,7 +1095,16 @@ export const dictionaries = {
       "accept": "Evn'i kullanmaya başla"
     },
     "groups": {
-      "leave": "Grubu dağıtmak için basılı tut"
+      "leave": "Grubu dağıtmak için basılı tut",
+      "name": {
+        "description": "Tüm grup üyeleri bu ismi görecek"
+      },
+      "members": {
+        "title": "Üyeler",
+        "addMembers": "Üyeleri ekle",
+        "addMember": "Üye ekle"
+      },
+      "title": "Gruplar"
     }
   },
   "uk-UA": {
@@ -981,7 +1124,9 @@ export const dictionaries = {
         "group": "Група",
         "title": "Друзі",
         "contact": "Друг"
-      }
+      },
+      "addSelected": "Додати вибране",
+      "invite": "Запросити"
     },
     "nav": {
       "home": "Головна",
@@ -1035,7 +1180,16 @@ export const dictionaries = {
       "accept": "Почати користуватися Evn"
     },
     "groups": {
-      "leave": "Утримуйте, щоб розпустити групу"
+      "leave": "Утримуйте, щоб розпустити групу",
+      "name": {
+        "description": "Усі учасники групи побачать це ім’я"
+      },
+      "members": {
+        "title": "Учасники",
+        "addMembers": "Додати учасників",
+        "addMember": "Додати учасника"
+      },
+      "title": "Групи"
     }
   },
   "zh-CN": {
@@ -1055,7 +1209,9 @@ export const dictionaries = {
         "group": "群组",
         "title": "朋友",
         "contact": "朋友"
-      }
+      },
+      "addSelected": "添加已选项",
+      "invite": "邀请"
     },
     "nav": {
       "home": "首页",
@@ -1109,7 +1265,16 @@ export const dictionaries = {
       "accept": "开始使用 Evn"
     },
     "groups": {
-      "leave": "按住以解散群组"
+      "leave": "按住以解散群组",
+      "name": {
+        "description": "所有群组成员都能看到这个名称"
+      },
+      "members": {
+        "title": "成员",
+        "addMembers": "添加成员",
+        "addMember": "添加成员"
+      },
+      "title": "群组"
     }
   }
 };

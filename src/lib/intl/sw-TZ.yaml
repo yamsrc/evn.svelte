@@ -13,6 +13,8 @@ actions:
     group: Kikundi
     title: Marafiki
     contact: Rafiki
+  addSelected: Ongeza zilizochaguliwa
+  invite: Alika
 nav:
   home: Mwanzo
   evns: Marejesho
@@ -55,3 +57,10 @@ join:
   accept: Anza kutumia Evn
 groups:
   leave: Shikilia kuvunja kundi
+  name:
+    description: Wanachama wote wa kundi wataona jina hili
+  members:
+    title: Wanachama
+    addMembers: Ongeza wanachama
+    addMember: Ongeza mwanachama
+  title: Makundi

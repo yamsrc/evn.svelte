@@ -3,7 +3,12 @@
   import Contact from './Contact.svelte'
   import type { Props } from './Contacts'
 
-  const { contacts, title }: Props = $props()
+  let { contacts, title, actionable, selectable, selection = $bindable([]) }: Props = $props()
+
+  function select(id: string, selected: boolean) {
+    if (selected) selection.push(id)
+    else selection = selection.filter((i) => i !== id)
+  }
 </script>
 
 <Section class="flex flex-col gap-1">
@@ -11,6 +16,7 @@
     <h2>{title}</h2>
   {/if}
   {#each contacts as contact (contact.id)}
-    <Contact {contact} />
+    {@const selected = selection.includes(contact.id)}
+    <Contact {contact} {actionable} {selectable} {selected} onselect={select} />
   {/each}
 </Section>

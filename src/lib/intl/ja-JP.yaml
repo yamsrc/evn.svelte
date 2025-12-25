@@ -13,6 +13,8 @@ actions:
     group: グループ
     title: 友達
     contact: 友達
+  addSelected: 選択したものを追加
+  invite: 招待
 nav:
   home: ホーム
   evns: 清算
@@ -55,3 +57,10 @@ join:
   accept: Evn を使い始める
 groups:
   leave: 長押しでグループを解散
+  name:
+    description: すべてのグループメンバーがこの名前を表示します
+  members:
+    title: メンバー
+    addMembers: メンバーを追加
+    addMember: メンバーを追加
+  title: グループ

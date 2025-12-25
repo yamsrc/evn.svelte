@@ -13,6 +13,8 @@ actions:
     group: Gruppe
     title: Freunde
     contact: Freund
+  addSelected: Ausgewählte hinzufügen
+  invite: Einladen
 nav:
   home: Startseite
   evns: Ausgleich
@@ -61,3 +63,10 @@ join:
   accept: Jetzt mit Evn starten
 groups:
   leave: Zum Auflösen der Gruppe gedrückt halten
+  name:
+    description: Alle Gruppenmitglieder sehen diesen Namen
+  members:
+    title: Mitglieder
+    addMembers: Mitglieder hinzufügen
+    addMember: Mitglied hinzufügen
+  title: Gruppen

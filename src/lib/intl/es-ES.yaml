@@ -13,6 +13,8 @@ actions:
     group: Grupo
     title: Amigos
     contact: Amigo
+  addSelected: Agregar seleccionado(s)
+  invite: Invitar
 nav:
   home: Inicio
   evns: Ajustes
@@ -61,3 +63,10 @@ join:
   accept: Comienza a usar Evn
 groups:
   leave: Mantén pulsado para disolver el grupo
+  name:
+    description: Todos los miembros del grupo verán este nombre
+  members:
+    title: Miembros
+    addMembers: Agregar miembros
+    addMember: Añadir miembro
+  title: Grupos

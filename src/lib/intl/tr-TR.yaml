@@ -13,6 +13,8 @@ actions:
     group: Grup
     title: Arkadaşlar
     contact: Arkadaş
+  addSelected: Seçileni ekle
+  invite: Davet et
 nav:
   home: Ana Sayfa
   evns: Hesaplaşma
@@ -59,3 +61,10 @@ join:
   accept: Evn'i kullanmaya başla
 groups:
   leave: Grubu dağıtmak için basılı tut
+  name:
+    description: Tüm grup üyeleri bu ismi görecek
+  members:
+    title: Üyeler
+    addMembers: Üyeleri ekle
+    addMember: Üye ekle
+  title: Gruplar
