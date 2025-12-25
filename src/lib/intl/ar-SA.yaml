@@ -5,6 +5,14 @@ actions:
   holdToLogout: اضغط مطولًا لتسجيل الخروج
   signout: تسجيل الخروج
   close: إغلاق
+  cheques:
+    title: شيكات
+    scan: مسح الشيك
+    input: إدخال يدوي
+  contacts:
+    group: مجموعة
+    title: أصدقاء
+    contact: صديق
 nav:
   home: الرئيسية
   evns: تسوية
@@ -41,9 +49,7 @@ join:
   app:
     description: الطريقة الذكية لمتابعة من يدين لمن، مع الأصدقاء.
   inviter:
-    description: >-
+    description: |-
       !js
-
-      (name) => `لقد تمّت دعوتك من قِبل ${name}. فقط سجّل أو قم بتسجيل الدخول،
-      وستكون جاهزًا للبدء`
+      (name) => `لقد تمّت دعوتك من قِبل ${name}. فقط سجّل أو قم بتسجيل الدخول، وستكون جاهزًا للبدء`
   accept: ابدأ استخدام Evn

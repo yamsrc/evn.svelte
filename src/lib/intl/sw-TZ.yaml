@@ -5,6 +5,14 @@ actions:
   holdToLogout: Shikilia ili utoke
   signout: Ondoka
   close: Funga
+  cheques:
+    title: Hundi
+    scan: Changanua hundi
+    input: Ingiza mwenyewe
+  contacts:
+    group: Kikundi
+    title: Marafiki
+    contact: Rafiki
 nav:
   home: Mwanzo
   evns: Marejesho

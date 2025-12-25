@@ -5,6 +5,14 @@ actions:
   holdToLogout: 長押ししてログアウト
   signout: サインアウト
   close: 閉じる
+  cheques:
+    title: 小切手
+    scan: 小切手をスキャン
+    input: 手動で入力
+  contacts:
+    group: グループ
+    title: 友達
+    contact: 友達
 nav:
   home: ホーム
   evns: 清算

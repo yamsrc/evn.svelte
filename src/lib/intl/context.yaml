@@ -15,6 +15,20 @@ inputs:
       input: Sign out
     close:
       input: Close
+    cheques:
+      title:
+        input: Cheques
+      scan:
+        input: Scan cheque
+      input:
+        input: Input manually
+    contacts:
+      group:
+        input: Group
+      title:
+        input: Friends
+      contact:
+        input: Friend
   nav:
     home:
       input: Home
