@@ -1,6 +1,7 @@
 <script lang="ts">
   import { Plus } from '@lucide/svelte'
   import { Actions } from '$com/shell'
+  import { dict } from '$lib/intl'
   import { cn } from '$lib/utils'
   import { buttonVariants } from '$ui/button'
   import * as DropdownMenu from '$ui/dropdown-menu'
