@@ -31,8 +31,6 @@ inputs:
         input: Friend
     addSelected:
       input: Add selected
-    invite:
-      input: Invite
   nav:
     home:
       input: Home
@@ -114,5 +112,12 @@ inputs:
         input: Add member
     title:
       input: Groups
+  invite:
+    share:
+      input: Share
+    qr:
+      input: Show QR code
+    invite:
+      input: Invite
 mounts:
   iam: ../../@/iam/ui/intl

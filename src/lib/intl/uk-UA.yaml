@@ -14,7 +14,6 @@ actions:
     title: Друзі
     contact: Друг
   addSelected: Додати вибране
-  invite: Запросити
 nav:
   home: Головна
   evns: Розрахунок
@@ -68,3 +67,7 @@ groups:
     addMembers: Додати учасників
     addMember: Додати учасника
   title: Групи
+invite:
+  share: Поділитися
+  qr: Показати QR-код
+  invite: Запросити

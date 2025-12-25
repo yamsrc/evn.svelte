@@ -14,7 +14,6 @@ actions:
     title: أصدقاء
     contact: صديق
   addSelected: إضافة المحدد
-  invite: دعوة
 nav:
   home: الرئيسية
   evns: تسوية
@@ -66,3 +65,7 @@ groups:
     addMembers: إضافة أعضاء
     addMember: إضافة عضو
   title: المجموعات
+invite:
+  share: مشاركة
+  qr: عرض رمز الاستجابة السريعة
+  invite: دعوة

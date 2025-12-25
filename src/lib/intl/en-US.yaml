@@ -14,7 +14,6 @@ actions:
     title: Friends
     contact: Friend
   addSelected: Add selected
-  invite: Invite
 nav:
   home: Home
   evns: Evns
@@ -68,3 +67,7 @@ groups:
     addMembers: Add members
     addMember: Add member
   title: Groups
+invite:
+  share: Share
+  qr: Show QR code
+  invite: Invite

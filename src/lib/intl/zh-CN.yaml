@@ -14,7 +14,6 @@ actions:
     title: 朋友
     contact: 朋友
   addSelected: 添加已选项
-  invite: 邀请
 nav:
   home: 首页
   evns: 结算
@@ -64,3 +63,7 @@ groups:
     addMembers: 添加成员
     addMember: 添加成员
   title: 群组
+invite:
+  share: 分享
+  qr: 显示二维码
+  invite: 邀请

@@ -14,7 +14,6 @@ actions:
     title: मित्र
     contact: मित्र
   addSelected: चयनित जोड़ें
-  invite: आमंत्रित करें
 nav:
   home: मुख्य पृष्ठ
   evns: सेटलमेंट
@@ -68,3 +67,7 @@ groups:
     addMembers: सदस्य जोड़ें
     addMember: सदस्य जोड़ें
   title: समूह
+invite:
+  share: साझा करें
+  qr: QR कोड दिखाएँ
+  invite: आमंत्रित करें

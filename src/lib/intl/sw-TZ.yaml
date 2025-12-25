@@ -14,7 +14,6 @@ actions:
     title: Marafiki
     contact: Rafiki
   addSelected: Ongeza zilizochaguliwa
-  invite: Alika
 nav:
   home: Mwanzo
   evns: Marejesho
@@ -64,3 +63,7 @@ groups:
     addMembers: Ongeza wanachama
     addMember: Ongeza mwanachama
   title: Makundi
+invite:
+  share: Shiriki
+  qr: Onyesha msimbo wa QR
+  invite: Alika

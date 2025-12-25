@@ -25,7 +25,6 @@ export type Dictionary = {
           contact: string
         }
         addSelected: string
-        invite: string
       }
       nav: {
         home: string
@@ -89,5 +88,10 @@ export type Dictionary = {
           addMember: string
         }
         title: string
+      }
+      invite: {
+        share: string
+        qr: string
+        invite: string
       }
     }

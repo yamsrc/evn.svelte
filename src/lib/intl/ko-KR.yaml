@@ -14,7 +14,6 @@ actions:
     title: 친구
     contact: 친구
   addSelected: 선택 항목 추가
-  invite: 초대
 nav:
   home: 홈
   evns: 정산
@@ -64,3 +63,7 @@ groups:
     addMembers: 구성원 추가
     addMember: 구성원 추가
   title: 그룹
+invite:
+  share: 공유
+  qr: QR 코드 표시
+  invite: 초대

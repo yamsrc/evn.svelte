@@ -14,7 +14,6 @@ actions:
     title: Vrienden
     contact: Vriend
   addSelected: Geselecteerde toevoegen
-  invite: Uitnodigen
 nav:
   home: Home
   evns: Afrekening
@@ -70,3 +69,7 @@ groups:
     addMembers: Leden toevoegen
     addMember: Lid toevoegen
   title: Groepen
+invite:
+  share: Delen
+  qr: QR-code tonen
+  invite: Uitnodigen

@@ -14,7 +14,6 @@ actions:
     title: Freunde
     contact: Freund
   addSelected: Ausgewählte hinzufügen
-  invite: Einladen
 nav:
   home: Startseite
   evns: Ausgleich
@@ -70,3 +69,7 @@ groups:
     addMembers: Mitglieder hinzufügen
     addMember: Mitglied hinzufügen
   title: Gruppen
+invite:
+  share: Teilen
+  qr: QR-Code anzeigen
+  invite: Einladen

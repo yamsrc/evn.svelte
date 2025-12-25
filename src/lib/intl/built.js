@@ -20,8 +20,7 @@ export const dictionaries = {
         "title": "أصدقاء",
         "contact": "صديق"
       },
-      "addSelected": "إضافة المحدد",
-      "invite": "دعوة"
+      "addSelected": "إضافة المحدد"
     },
     "nav": {
       "home": "الرئيسية",
@@ -85,6 +84,11 @@ export const dictionaries = {
         "addMember": "إضافة عضو"
       },
       "title": "المجموعات"
+    },
+    "invite": {
+      "share": "مشاركة",
+      "qr": "عرض رمز الاستجابة السريعة",
+      "invite": "دعوة"
     }
   },
   "de-DE": {
@@ -105,8 +109,7 @@ export const dictionaries = {
         "title": "Freunde",
         "contact": "Freund"
       },
-      "addSelected": "Ausgewählte hinzufügen",
-      "invite": "Einladen"
+      "addSelected": "Ausgewählte hinzufügen"
     },
     "nav": {
       "home": "Startseite",
@@ -170,6 +173,11 @@ export const dictionaries = {
         "addMember": "Mitglied hinzufügen"
       },
       "title": "Gruppen"
+    },
+    "invite": {
+      "share": "Teilen",
+      "qr": "QR-Code anzeigen",
+      "invite": "Einladen"
     }
   },
   "en-US": {
@@ -190,8 +198,7 @@ export const dictionaries = {
         "title": "Friends",
         "contact": "Friend"
       },
-      "addSelected": "Add selected",
-      "invite": "Invite"
+      "addSelected": "Add selected"
     },
     "nav": {
       "home": "Home",
@@ -255,6 +262,11 @@ export const dictionaries = {
         "addMember": "Add member"
       },
       "title": "Groups"
+    },
+    "invite": {
+      "share": "Share",
+      "qr": "Show QR code",
+      "invite": "Invite"
     }
   },
   "es-ES": {
@@ -275,8 +287,7 @@ export const dictionaries = {
         "title": "Amigos",
         "contact": "Amigo"
       },
-      "addSelected": "Agregar seleccionado(s)",
-      "invite": "Invitar"
+      "addSelected": "Agregar seleccionado(s)"
     },
     "nav": {
       "home": "Inicio",
@@ -340,6 +351,11 @@ export const dictionaries = {
         "addMember": "Añadir miembro"
       },
       "title": "Grupos"
+    },
+    "invite": {
+      "share": "Compartir",
+      "qr": "Mostrar código QR",
+      "invite": "Invitar"
     }
   },
   "fr-FR": {
@@ -360,8 +376,7 @@ export const dictionaries = {
         "title": "Amis",
         "contact": "Ami"
       },
-      "addSelected": "Ajouter la sélection",
-      "invite": "Inviter"
+      "addSelected": "Ajouter la sélection"
     },
     "nav": {
       "home": "Accueil",
@@ -425,6 +440,11 @@ export const dictionaries = {
         "addMember": "Ajouter un membre"
       },
       "title": "Groupes"
+    },
+    "invite": {
+      "share": "Partager",
+      "qr": "Afficher le code QR",
+      "invite": "Inviter"
     }
   },
   "hi-IN": {
@@ -445,8 +465,7 @@ export const dictionaries = {
         "title": "मित्र",
         "contact": "मित्र"
       },
-      "addSelected": "चयनित जोड़ें",
-      "invite": "आमंत्रित करें"
+      "addSelected": "चयनित जोड़ें"
     },
     "nav": {
       "home": "मुख्य पृष्ठ",
@@ -510,6 +529,11 @@ export const dictionaries = {
         "addMember": "सदस्य जोड़ें"
       },
       "title": "समूह"
+    },
+    "invite": {
+      "share": "साझा करें",
+      "qr": "QR कोड दिखाएँ",
+      "invite": "आमंत्रित करें"
     }
   },
   "it-IT": {
@@ -530,8 +554,7 @@ export const dictionaries = {
         "title": "Amici",
         "contact": "Amico"
       },
-      "addSelected": "Aggiungi selezionati",
-      "invite": "Invita"
+      "addSelected": "Aggiungi selezionati"
     },
     "nav": {
       "home": "Home",
@@ -595,6 +618,11 @@ export const dictionaries = {
         "addMember": "Aggiungi membro"
       },
       "title": "Gruppi"
+    },
+    "invite": {
+      "share": "Condividi",
+      "qr": "Mostra codice QR",
+      "invite": "Invita"
     }
   },
   "ja-JP": {
@@ -615,8 +643,7 @@ export const dictionaries = {
         "title": "友達",
         "contact": "友達"
       },
-      "addSelected": "選択したものを追加",
-      "invite": "招待"
+      "addSelected": "選択したものを追加"
     },
     "nav": {
       "home": "ホーム",
@@ -680,6 +707,11 @@ export const dictionaries = {
         "addMember": "メンバーを追加"
       },
       "title": "グループ"
+    },
+    "invite": {
+      "share": "共有",
+      "qr": "QRコードを表示",
+      "invite": "招待"
     }
   },
   "ko-KR": {
@@ -700,8 +732,7 @@ export const dictionaries = {
         "title": "친구",
         "contact": "친구"
       },
-      "addSelected": "선택 항목 추가",
-      "invite": "초대"
+      "addSelected": "선택 항목 추가"
     },
     "nav": {
       "home": "홈",
@@ -765,6 +796,11 @@ export const dictionaries = {
         "addMember": "구성원 추가"
       },
       "title": "그룹"
+    },
+    "invite": {
+      "share": "공유",
+      "qr": "QR 코드 표시",
+      "invite": "초대"
     }
   },
   "nl-NL": {
@@ -785,8 +821,7 @@ export const dictionaries = {
         "title": "Vrienden",
         "contact": "Vriend"
       },
-      "addSelected": "Geselecteerde toevoegen",
-      "invite": "Uitnodigen"
+      "addSelected": "Geselecteerde toevoegen"
     },
     "nav": {
       "home": "Home",
@@ -850,6 +885,11 @@ export const dictionaries = {
         "addMember": "Lid toevoegen"
       },
       "title": "Groepen"
+    },
+    "invite": {
+      "share": "Delen",
+      "qr": "QR-code tonen",
+      "invite": "Uitnodigen"
     }
   },
   "ru-RU": {
@@ -870,8 +910,7 @@ export const dictionaries = {
         "title": "Друзья",
         "contact": "Друг"
       },
-      "addSelected": "Добавить выбранные",
-      "invite": "Пригласить"
+      "addSelected": "Добавить выбранные"
     },
     "nav": {
       "home": "Главная",
@@ -935,6 +974,11 @@ export const dictionaries = {
         "addMember": "Добавить участника"
       },
       "title": "Группы"
+    },
+    "invite": {
+      "share": "Поделиться",
+      "qr": "Показать QR-код",
+      "invite": "Пригласить"
     }
   },
   "sw-TZ": {
@@ -955,8 +999,7 @@ export const dictionaries = {
         "title": "Marafiki",
         "contact": "Rafiki"
       },
-      "addSelected": "Ongeza zilizochaguliwa",
-      "invite": "Alika"
+      "addSelected": "Ongeza zilizochaguliwa"
     },
     "nav": {
       "home": "Mwanzo",
@@ -1020,6 +1063,11 @@ export const dictionaries = {
         "addMember": "Ongeza mwanachama"
       },
       "title": "Makundi"
+    },
+    "invite": {
+      "share": "Shiriki",
+      "qr": "Onyesha msimbo wa QR",
+      "invite": "Alika"
     }
   },
   "tr-TR": {
@@ -1040,8 +1088,7 @@ export const dictionaries = {
         "title": "Arkadaşlar",
         "contact": "Arkadaş"
       },
-      "addSelected": "Seçileni ekle",
-      "invite": "Davet et"
+      "addSelected": "Seçileni ekle"
     },
     "nav": {
       "home": "Ana Sayfa",
@@ -1105,6 +1152,11 @@ export const dictionaries = {
         "addMember": "Üye ekle"
       },
       "title": "Gruplar"
+    },
+    "invite": {
+      "share": "Paylaş",
+      "qr": "QR kodunu göster",
+      "invite": "Davet et"
     }
   },
   "uk-UA": {
@@ -1125,8 +1177,7 @@ export const dictionaries = {
         "title": "Друзі",
         "contact": "Друг"
       },
-      "addSelected": "Додати вибране",
-      "invite": "Запросити"
+      "addSelected": "Додати вибране"
     },
     "nav": {
       "home": "Головна",
@@ -1190,6 +1241,11 @@ export const dictionaries = {
         "addMember": "Додати учасника"
       },
       "title": "Групи"
+    },
+    "invite": {
+      "share": "Поділитися",
+      "qr": "Показати QR-код",
+      "invite": "Запросити"
     }
   },
   "zh-CN": {
@@ -1210,8 +1266,7 @@ export const dictionaries = {
         "title": "朋友",
         "contact": "朋友"
       },
-      "addSelected": "添加已选项",
-      "invite": "邀请"
+      "addSelected": "添加已选项"
     },
     "nav": {
       "home": "首页",
@@ -1275,6 +1330,11 @@ export const dictionaries = {
         "addMember": "添加成员"
       },
       "title": "群组"
+    },
+    "invite": {
+      "share": "分享",
+      "qr": "显示二维码",
+      "invite": "邀请"
     }
   }
 };

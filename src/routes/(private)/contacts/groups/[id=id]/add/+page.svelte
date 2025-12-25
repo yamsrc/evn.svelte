@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { Share2 } from '@lucide/svelte'
   import { Async } from 'svas'
   import { goto } from '$app/navigation'
   import { page } from '$app/state'
@@ -10,6 +9,7 @@
   import { contacts } from '@/contacts'
   import { Contacts } from '@/contacts/ui'
   import { groups, add } from '@/groups'
+  import Invite from './Invite.svelte'
 
   const id = page.params.id as string
   let selection = $state<string[]>([])
@@ -46,14 +46,13 @@
       {@const list = $contacts.filter((c) => !group.identities.includes(c.identity))}
       <Contacts contacts={list} title={$dict.contacts.all} selectable bind:selection />
       <Section class="flex gap-2 w-full items-center justify-stretch">
-        <Button class="flex-1" disabled={selection.length === 0 || busy} onclick={addMembers}
-          >{$dict.actions.addSelected}</Button
+        <Button
+          class="flex-1"
+          disabled={selection.length === 0 || busy}
+          onclick={addMembers}
+          size="lg">{$dict.actions.addSelected}</Button
         >
-        <!-- TODO: implement invite dropdown -->
-        <Button class="flex-1" variant="secondary">
-          <Share2 size={16} />
-          {$dict.actions.invite}
-        </Button>
+        <Invite {id} />
       </Section>
     {/if}
   {/snippet}

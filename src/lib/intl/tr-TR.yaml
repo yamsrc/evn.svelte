@@ -14,7 +14,6 @@ actions:
     title: Arkadaşlar
     contact: Arkadaş
   addSelected: Seçileni ekle
-  invite: Davet et
 nav:
   home: Ana Sayfa
   evns: Hesaplaşma
@@ -68,3 +67,7 @@ groups:
     addMembers: Üyeleri ekle
     addMember: Üye ekle
   title: Gruplar
+invite:
+  share: Paylaş
+  qr: QR kodunu göster
+  invite: Davet et
