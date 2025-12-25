@@ -9,7 +9,17 @@ export const dictionaries = {
       "continue": "متابعة",
       "holdToLogout": "اضغط مطولًا لتسجيل الخروج",
       "signout": "تسجيل الخروج",
-      "close": "إغلاق"
+      "close": "إغلاق",
+      "cheques": {
+        "title": "شيكات",
+        "scan": "مسح الشيك",
+        "input": "إدخال يدوي"
+      },
+      "contacts": {
+        "group": "مجموعة",
+        "title": "أصدقاء",
+        "contact": "صديق"
+      }
     },
     "nav": {
       "home": "الرئيسية",
@@ -70,7 +80,17 @@ export const dictionaries = {
       "continue": "Weiter",
       "holdToLogout": "Zum Abmelden gedrückt halten",
       "signout": "Abmelden",
-      "close": "Schließen"
+      "close": "Schließen",
+      "cheques": {
+        "title": "Schecks",
+        "scan": "Scheck scannen",
+        "input": "Manuell eingeben"
+      },
+      "contacts": {
+        "group": "Gruppe",
+        "title": "Freunde",
+        "contact": "Freund"
+      }
     },
     "nav": {
       "home": "Startseite",
@@ -131,7 +151,17 @@ export const dictionaries = {
       "continue": "Continue",
       "holdToLogout": "Hold to log out",
       "signout": "Sign out",
-      "close": "Close"
+      "close": "Close",
+      "cheques": {
+        "title": "Checks",
+        "scan": "Scan cheque",
+        "input": "Enter manually"
+      },
+      "contacts": {
+        "group": "Group",
+        "title": "Friends",
+        "contact": "Friend"
+      }
     },
     "nav": {
       "home": "Home",
@@ -192,7 +222,17 @@ export const dictionaries = {
       "continue": "Continuar",
       "holdToLogout": "Mantén pulsado para cerrar sesión",
       "signout": "Cerrar sesión",
-      "close": "Cerrar"
+      "close": "Cerrar",
+      "cheques": {
+        "title": "Cheques",
+        "scan": "Escanear cheque",
+        "input": "Introducir manualmente"
+      },
+      "contacts": {
+        "group": "Grupo",
+        "title": "Amigos",
+        "contact": "Amigo"
+      }
     },
     "nav": {
       "home": "Inicio",
@@ -253,7 +293,17 @@ export const dictionaries = {
       "continue": "Continuer",
       "holdToLogout": "Maintenez pour vous déconnecter",
       "signout": "Se déconnecter",
-      "close": "Fermer"
+      "close": "Fermer",
+      "cheques": {
+        "title": "Chèques",
+        "scan": "Scanner le chèque",
+        "input": "Saisir manuellement"
+      },
+      "contacts": {
+        "group": "Groupe",
+        "title": "Amis",
+        "contact": "Ami"
+      }
     },
     "nav": {
       "home": "Accueil",
@@ -314,7 +364,17 @@ export const dictionaries = {
       "continue": "जारी रखें",
       "holdToLogout": "लॉगआउट के लिए दबाए रखें",
       "signout": "साइन आउट करें",
-      "close": "बंद करें"
+      "close": "बंद करें",
+      "cheques": {
+        "title": "चेक",
+        "scan": "चेक स्कैन करें",
+        "input": "मैन्युअल रूप से दर्ज करें"
+      },
+      "contacts": {
+        "group": "समूह",
+        "title": "मित्र",
+        "contact": "मित्र"
+      }
     },
     "nav": {
       "home": "मुख्य पृष्ठ",
@@ -375,7 +435,17 @@ export const dictionaries = {
       "continue": "Continua",
       "holdToLogout": "Tieni premuto per uscire",
       "signout": "Esci",
-      "close": "Chiudi"
+      "close": "Chiudi",
+      "cheques": {
+        "title": "Assegni",
+        "scan": "Scansiona assegno",
+        "input": "Inserisci manualmente"
+      },
+      "contacts": {
+        "group": "Gruppo",
+        "title": "Amici",
+        "contact": "Amico"
+      }
     },
     "nav": {
       "home": "Home",
@@ -436,7 +506,17 @@ export const dictionaries = {
       "continue": "続ける",
       "holdToLogout": "長押ししてログアウト",
       "signout": "サインアウト",
-      "close": "閉じる"
+      "close": "閉じる",
+      "cheques": {
+        "title": "小切手",
+        "scan": "小切手をスキャン",
+        "input": "手動で入力"
+      },
+      "contacts": {
+        "group": "グループ",
+        "title": "友達",
+        "contact": "友達"
+      }
     },
     "nav": {
       "home": "ホーム",
@@ -497,7 +577,17 @@ export const dictionaries = {
       "continue": "계속",
       "holdToLogout": "길게 눌러 로그아웃",
       "signout": "로그아웃",
-      "close": "닫기"
+      "close": "닫기",
+      "cheques": {
+        "title": "수표",
+        "scan": "수표 스캔",
+        "input": "수동 입력"
+      },
+      "contacts": {
+        "group": "그룹",
+        "title": "친구",
+        "contact": "친구"
+      }
     },
     "nav": {
       "home": "홈",
@@ -558,7 +648,17 @@ export const dictionaries = {
       "continue": "Doorgaan",
       "holdToLogout": "Ingedrukt houden om uit te loggen",
       "signout": "Afmelden",
-      "close": "Sluiten"
+      "close": "Sluiten",
+      "cheques": {
+        "title": "Cheques",
+        "scan": "Cheque scannen",
+        "input": "Handmatig invoeren"
+      },
+      "contacts": {
+        "group": "Groep",
+        "title": "Vrienden",
+        "contact": "Vriend"
+      }
     },
     "nav": {
       "home": "Home",
@@ -619,7 +719,17 @@ export const dictionaries = {
       "continue": "Продолжить",
       "holdToLogout": "Удерживайте для выхода",
       "signout": "Выйти",
-      "close": "Закрыть"
+      "close": "Закрыть",
+      "cheques": {
+        "title": "Чеки",
+        "scan": "Сканировать чек",
+        "input": "Ввести вручную"
+      },
+      "contacts": {
+        "group": "Группа",
+        "title": "Друзья",
+        "contact": "Друг"
+      }
     },
     "nav": {
       "home": "Главная",
@@ -680,7 +790,17 @@ export const dictionaries = {
       "continue": "Endelea",
       "holdToLogout": "Shikilia ili utoke",
       "signout": "Ondoka",
-      "close": "Funga"
+      "close": "Funga",
+      "cheques": {
+        "title": "Hundi",
+        "scan": "Changanua hundi",
+        "input": "Ingiza mwenyewe"
+      },
+      "contacts": {
+        "group": "Kikundi",
+        "title": "Marafiki",
+        "contact": "Rafiki"
+      }
     },
     "nav": {
       "home": "Mwanzo",
@@ -741,7 +861,17 @@ export const dictionaries = {
       "continue": "Devam Et",
       "holdToLogout": "Çıkış yapmak için basılı tutun",
       "signout": "Oturumu kapat",
-      "close": "Kapat"
+      "close": "Kapat",
+      "cheques": {
+        "title": "Çekler",
+        "scan": "Çeki tara",
+        "input": "Manuel gir"
+      },
+      "contacts": {
+        "group": "Grup",
+        "title": "Arkadaşlar",
+        "contact": "Arkadaş"
+      }
     },
     "nav": {
       "home": "Ana Sayfa",
@@ -802,7 +932,17 @@ export const dictionaries = {
       "continue": "Продовжити",
       "holdToLogout": "Утримуйте, щоб вийти",
       "signout": "Вийти",
-      "close": "Закрити"
+      "close": "Закрити",
+      "cheques": {
+        "title": "Чеки",
+        "scan": "Сканувати чек",
+        "input": "Ввести вручну"
+      },
+      "contacts": {
+        "group": "Група",
+        "title": "Друзі",
+        "contact": "Друг"
+      }
     },
     "nav": {
       "home": "Головна",
@@ -863,7 +1003,17 @@ export const dictionaries = {
       "continue": "继续",
       "holdToLogout": "按住退出登录",
       "signout": "退出登录",
-      "close": "关闭"
+      "close": "关闭",
+      "cheques": {
+        "title": "支票",
+        "scan": "扫描支票",
+        "input": "手动输入"
+      },
+      "contacts": {
+        "group": "群组",
+        "title": "朋友",
+        "contact": "朋友"
+      }
     },
     "nav": {
       "home": "首页",

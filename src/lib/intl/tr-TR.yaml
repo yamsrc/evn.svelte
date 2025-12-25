@@ -5,6 +5,14 @@ actions:
   holdToLogout: Çıkış yapmak için basılı tutun
   signout: Oturumu kapat
   close: Kapat
+  cheques:
+    title: Çekler
+    scan: Çeki tara
+    input: Manuel gir
+  contacts:
+    group: Grup
+    title: Arkadaşlar
+    contact: Arkadaş
 nav:
   home: Ana Sayfa
   evns: Hesaplaşma
@@ -39,13 +47,9 @@ contacts:
     youOwe: Borçlusun
 join:
   app:
-    description: >-
-      Kimin kime borcu olduğunu arkadaşlarınla birlikte akıllıca takip etmenin
-      yolu.
+    description: Kimin kime borcu olduğunu arkadaşlarınla birlikte akıllıca takip etmenin yolu.
   inviter:
-    description: >-
+    description: |-
       !js
-
-      (name) => `${name} tarafından davet edildiniz. Sadece kaydolun veya giriş
-      yapın, ve hazırsınız`
+      (name) => `${name} tarafından davet edildiniz. Sadece kaydolun veya giriş yapın, ve hazırsınız`
   accept: Evn'i kullanmaya başla

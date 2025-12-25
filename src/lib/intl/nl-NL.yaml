@@ -5,6 +5,14 @@ actions:
   holdToLogout: Ingedrukt houden om uit te loggen
   signout: Afmelden
   close: Sluiten
+  cheques:
+    title: Cheques
+    scan: Cheque scannen
+    input: Handmatig invoeren
+  contacts:
+    group: Groep
+    title: Vrienden
+    contact: Vriend
 nav:
   home: Home
   evns: Afrekening
@@ -17,9 +25,7 @@ profile:
   title: Mijn profiel
   language:
     title: Taal
-    description: >-
-      Dit heeft geen invloed op de chequedetectie. We begrijpen daar toch de
-      meeste talen.
+    description: Dit heeft geen invloed op de chequedetectie. We begrijpen daar toch de meeste talen.
 form:
   enterName: Naam invoeren
 copyright: © Seed.me, 2024-2025
@@ -41,13 +47,9 @@ contacts:
     youOwe: Je bent verschuldigd
 join:
   app:
-    description: >-
-      De slimme manier om samen met vrienden bij te houden wie wat aan wie
-      verschuldigd is.
+    description: De slimme manier om samen met vrienden bij te houden wie wat aan wie verschuldigd is.
   inviter:
-    description: >-
+    description: |-
       !js
-
-      (name) => `Je bent uitgenodigd door ${name}. Registreer je of log in, en
-      je bent klaar om te beginnen`
+      (name) => `Je bent uitgenodigd door ${name}. Registreer je of log in, en je bent klaar om te beginnen`
   accept: Evn gebruiken starten

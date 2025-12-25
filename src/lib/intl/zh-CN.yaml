@@ -5,6 +5,14 @@ actions:
   holdToLogout: 按住退出登录
   signout: 退出登录
   close: 关闭
+  cheques:
+    title: 支票
+    scan: 扫描支票
+    input: 手动输入
+  contacts:
+    group: 群组
+    title: 朋友
+    contact: 朋友
 nav:
   home: 首页
   evns: 结算

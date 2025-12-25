@@ -14,6 +14,16 @@ export type Dictionary = {
         holdToLogout: string
         signout: string
         close: string
+        cheques: {
+          title: string
+          scan: string
+          input: string
+        }
+        contacts: {
+          group: string
+          title: string
+          contact: string
+        }
       }
       nav: {
         home: string
