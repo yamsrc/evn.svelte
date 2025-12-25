@@ -1,8 +1,10 @@
-import { collection } from 'svas'
+import { collection, sync } from 'svas'
 import { derived } from 'svelte/store'
 import { type Readable } from 'svelte/store'
 import { account } from '@/iam'
+import { events } from '@/realtime'
 import { get } from './get'
+
 import type { Contact } from './Contact'
 import type * as net from './net'
 
@@ -12,6 +14,8 @@ export const internal = collection<net.Contact>({
   bind: account,
   stale: true,
 })
+
+events.on('default.contacts.sync', (contact) => sync(contact, internal))
 
 export const contacts: Readable<Contact[]> = derived([internal, account], ([$internal, $account]) => {
   if ($internal instanceof Error || $internal === null) return []
