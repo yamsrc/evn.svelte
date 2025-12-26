@@ -10,8 +10,12 @@
   function onselect(identity: string, selected: boolean) {
     if (!selection) return
 
-    if (selected) selection.add(contacts.find((c) => c.identity === identity)?.id ?? '')
-    else selection.delete(contacts.find((c) => c.identity === identity)?.id ?? '')
+    const contact = contacts.find((c) => c.identity === identity)
+
+    if (!contact) return
+
+    if (selected) selection.add(contact.id)
+    else selection.delete(contact.id)
   }
 </script>
 
