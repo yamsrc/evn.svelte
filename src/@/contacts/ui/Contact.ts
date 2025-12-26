@@ -1,12 +1,7 @@
-import type { Account } from '@/account'
-import type { Contact } from '@/contacts'
-
-export interface ContactWithAccount extends Pick<Contact, 'id' | 'balance' | 'identity'> {
-  account: Account
-}
+import type { Contact } from '@/contacts/svc'
 
 export interface Props {
-  contact: ContactWithAccount
+  contact: Contact
   selected?: boolean
   actionable?: boolean
   onselect?: (id: string, selected: boolean) => void

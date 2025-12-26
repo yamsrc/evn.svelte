@@ -1,6 +1,6 @@
 import { search } from '$lib/tools'
-import type { ContactWithAccount } from '@/contacts/ui'
+import type { Contact } from '@/contacts/svc'
 
-export function filter(contacts: ContactWithAccount[], query?: string): ContactWithAccount[] {
+export function filter(contacts: Contact[], query?: string): Contact[] {
   return search(contacts, query, (contact) => contact.account.name)
 }

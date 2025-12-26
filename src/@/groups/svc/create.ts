@@ -10,7 +10,7 @@ export async function create(properties: net.Editable): Promise<net.Group | Erro
 
   if (group instanceof Error) return group
 
-  sync(group, internal)
+  sync(internal, group)
 
   return group
 }

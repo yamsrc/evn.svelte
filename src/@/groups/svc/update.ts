@@ -11,7 +11,7 @@ export async function update(id: string, body: net.Editable): Promise<net.Group 
 
   if (group instanceof Error) return group
 
-  sync(group, internal)
+  sync(internal, group)
 
   return group
 }

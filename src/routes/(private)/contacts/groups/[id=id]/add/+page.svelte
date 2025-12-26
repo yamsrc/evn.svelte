@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Async, ok, ensure } from 'svas'
+  import { Async } from 'svas'
   import { SvelteSet } from 'svelte/reactivity'
   import { goto } from '$app/navigation'
   import { page } from '$app/state'
@@ -8,9 +8,8 @@
   import { dict } from '$lib/intl'
   import { Button } from '$ui/button'
   import { Input } from '$ui/input'
-  import { accounts } from '@/account'
-  import { contacts as contactsStore } from '@/contacts'
-  import { Contacts, type ContactWithAccount } from '@/contacts/ui'
+  import { contacts } from '@/contacts'
+  import { Contacts } from '@/contacts/ui'
   import { groups, add } from '@/groups'
   import Invite from './Invite.svelte'
 
@@ -20,16 +19,6 @@
   // svelte-ignore non_reactive_update
   let selection = new SvelteSet<string>()
   let busy = $state(false)
-
-  const contacts: ContactWithAccount[] = $derived.by(() => {
-    if (!ok(contactsStore)) return []
-
-    return $contactsStore.map((contact) => {
-      const account = accounts.get(contact.identity)
-
-      return { ...contact, account: ensure(account) }
-    })
-  })
 
   async function addMembers() {
     busy = true
@@ -43,8 +32,10 @@
     goto(`/contacts/groups/${id}`)
   }
 
-  const filteredContacts: ContactWithAccount[] = $derived.by(() =>
-    contacts.filter((contact) => contact.account.name?.toLowerCase().includes(query.toLowerCase())),
+  const filteredContacts = $derived(
+    $contacts.filter((contact) =>
+      contact.account.name?.toLowerCase().includes(query.toLowerCase()),
+    ),
   )
 </script>
 
