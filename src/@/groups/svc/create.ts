@@ -1,7 +1,7 @@
 import { having, sync } from 'svas'
 import { account } from '@/iam'
 import * as net from './net'
-import { groups } from './store'
+import { internal } from './store'
 
 export async function create(properties: net.Editable): Promise<net.Group | Error> {
   const me = await having(account)
@@ -10,7 +10,7 @@ export async function create(properties: net.Editable): Promise<net.Group | Erro
 
   if (group instanceof Error) return group
 
-  sync(groups, group)
+  sync(group, internal)
 
   return group
 }
