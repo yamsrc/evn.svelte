@@ -1,4 +1,5 @@
 import { collection, sync } from 'svas'
+import { values } from 'svas'
 import { derived } from 'svelte/store'
 import { type Readable } from 'svelte/store'
 import { account } from '@/iam'
@@ -13,6 +14,7 @@ export const internal = collection<net.Contact>({
   persist: 'contacts:contacts',
   bind: account,
   stale: true,
+  values: values<net.Contact>(),
 })
 
 events.on('default.contacts.sync', (contact) => sync(contact, internal))
