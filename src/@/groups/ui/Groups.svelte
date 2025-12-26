@@ -6,8 +6,9 @@
   import * as Collapsible from '$ui/collapsible'
   import Group from './Group.svelte'
   import type { Props } from './Groups'
+  import type { Group as GroupType } from '@/groups'
 
-  let { groups, title, selection = $bindable() }: Props = $props()
+  let { groups, title, selection = $bindable(), filter }: Props = $props()
 
   let open = $state(true)
 
@@ -18,6 +19,12 @@
 
     if (selected) selection.add(id)
     else selection.delete(id)
+  }
+
+  function search(group: GroupType): boolean {
+    if (!filter) return true
+
+    return group.name.toLowerCase().includes(filter.toLowerCase())
   }
 </script>
 
@@ -38,7 +45,7 @@
       </div>
     {/if}
     <Collapsible.Content class="flex flex-col gap-1.5">
-      {#each groups as group (group.id)}
+      {#each groups.filter(search) as group (group.id)}
         {@const selected = selection?.has(group.id)}
         {@const selectedProps = selectable ? { selected, onselect } : undefined}
         <Group {group} {...selectedProps} />
