@@ -41,6 +41,7 @@ contacts:
     invite:
       share: 친구 초대하기
       qr: QR 코드로 초대
+      manual: 수동으로 추가
   all: 모든 친구
   contact:
     owesYou: 당신에게 빚졌어요
@@ -53,3 +54,5 @@ join:
       !js
       (name) => `${name}님이 초대했습니다. 회원가입 또는 로그인만 하면 바로 시작할 수 있습니다`
   accept: Evn 시작하기
+etc:
+  or: 또는

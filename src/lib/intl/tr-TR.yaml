@@ -41,15 +41,22 @@ contacts:
     invite:
       share: Arkadaşlarını davet et
       qr: QR kod ile davet et
+      manual: Manuel ekle
   all: Tüm arkadaşlar
   contact:
     owesYou: Sana borçlu
     youOwe: Borçlusun
 join:
   app:
-    description: Kimin kime borcu olduğunu arkadaşlarınla birlikte akıllıca takip etmenin yolu.
+    description: >-
+      Kimin kime borcu olduğunu arkadaşlarınla birlikte akıllıca takip etmenin
+      yolu.
   inviter:
-    description: |-
+    description: >-
       !js
-      (name) => `${name} tarafından davet edildiniz. Sadece kaydolun veya giriş yapın, ve hazırsınız`
+
+      (name) => `${name} tarafından davet edildiniz. Sadece kaydolun veya giriş
+      yapın, ve hazırsınız`
   accept: Evn'i kullanmaya başla
+etc:
+  or: veya

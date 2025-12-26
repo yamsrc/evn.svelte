@@ -78,6 +78,9 @@ inputs:
           input: Invite friends
         qr:
           input: Invite by QR code
+        manual:
+          input: Add manually
+          context: button label, that leads to the screen to add new contact manually
     all:
       input: All friends
     contact:
@@ -95,5 +98,8 @@ inputs:
         input: js! (name) => You have been invited by . Just register or log in, and you are all set
     accept:
       input: Start Using Evn
+  etc:
+    or:
+      input: or
 mounts:
   iam: ../../@/iam/ui/intl

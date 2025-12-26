@@ -41,6 +41,7 @@ contacts:
     invite:
       share: 友達を招待する
       qr: QRコードで招待
+      manual: 手動で追加
   all: すべての友達
   contact:
     owesYou: あなたに借りがある
@@ -53,3 +54,5 @@ join:
       !js
       (name) => `${name} から招待されました。登録またはログインするだけで、準備完了です`
   accept: Evn を使い始める
+etc:
+  or: または

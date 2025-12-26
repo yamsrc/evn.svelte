@@ -41,6 +41,7 @@ contacts:
     invite:
       share: 邀请朋友
       qr: 通过二维码邀请
+      manual: 手动添加
   all: 所有好友
   contact:
     owesYou: 欠你的
@@ -53,3 +54,5 @@ join:
       !js
       (name) => `您已被${name}邀请。只需注册或登录，您就可以开始了`
   accept: 开始使用 Evn
+etc:
+  or: 或

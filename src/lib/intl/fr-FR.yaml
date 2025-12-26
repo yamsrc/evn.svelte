@@ -25,7 +25,9 @@ profile:
   title: Mon profil
   language:
     title: Langue
-    description: Cela n’affecte pas la reconnaissance des chèques. Nous comprenons de toute façon la plupart des langues là-bas.
+    description: >-
+      Cela n’affecte pas la reconnaissance des chèques. Nous comprenons de toute
+      façon la plupart des langues là-bas.
 form:
   enterName: Saisissez le nom
 copyright: © Seed.me, 2024-2025
@@ -41,6 +43,7 @@ contacts:
     invite:
       share: Inviter des amis
       qr: Inviter par QR code
+      manual: Ajouter manuellement
   all: Tous les amis
   contact:
     owesYou: Te doit
@@ -49,7 +52,11 @@ join:
   app:
     description: La façon intelligente de suivre qui doit quoi à qui, avec vos amis.
   inviter:
-    description: |-
+    description: >-
       !js
-      (name) => `Vous avez été invité(e) par ${name}. Inscrivez-vous ou connectez-vous, et tout est prêt`
+
+      (name) => `Vous avez été invité(e) par ${name}. Inscrivez-vous ou
+      connectez-vous, et tout est prêt`
   accept: Commencer à utiliser Evn
+etc:
+  or: ou

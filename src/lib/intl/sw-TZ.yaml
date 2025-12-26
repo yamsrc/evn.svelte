@@ -41,6 +41,7 @@ contacts:
     invite:
       share: Alika marafiki
       qr: Alika kwa kutumia msimbo wa QR
+      manual: Ongeza kwa mkono
   all: Marafiki wote
   contact:
     owesYou: Ana deni lako
@@ -53,3 +54,5 @@ join:
       !js
       (name) => `${name} amekualika. Jisajili au ingia, na uko tayari kuanza`
   accept: Anza kutumia Evn
+etc:
+  or: au

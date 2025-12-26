@@ -54,7 +54,8 @@ export const dictionaries = {
         "description": "أضِف الأصدقاء يدويًا أو ادعُ الأشخاص",
         "invite": {
           "share": "دعوة الأصدقاء",
-          "qr": "دعوة عبر رمز الاستجابة السريعة"
+          "qr": "دعوة عبر رمز الاستجابة السريعة",
+          "manual": "إضافة يدويًا"
         }
       },
       "all": "جميع الأصدقاء",
@@ -71,6 +72,9 @@ export const dictionaries = {
         "description": (name) => `لقد تمّت دعوتك من قِبل ${name}. فقط سجّل أو قم بتسجيل الدخول، وستكون جاهزًا للبدء`
       },
       "accept": "ابدأ استخدام Evn"
+    },
+    "etc": {
+      "or": "أو"
     }
   },
   "de-DE": {
@@ -125,7 +129,8 @@ export const dictionaries = {
         "description": "Freunde manuell hinzufügen oder Personen einladen",
         "invite": {
           "share": "Freunde einladen",
-          "qr": "Per QR-Code einladen"
+          "qr": "Per QR-Code einladen",
+          "manual": "Manuell hinzufügen"
         }
       },
       "all": "Alle Freunde",
@@ -142,6 +147,9 @@ export const dictionaries = {
         "description": (name) => `${name} hat dich eingeladen. Registriere dich einfach oder melde dich an, und schon kann es losgehen`
       },
       "accept": "Jetzt mit Evn starten"
+    },
+    "etc": {
+      "or": "oder"
     }
   },
   "en-US": {
@@ -196,7 +204,8 @@ export const dictionaries = {
         "description": "Add friends manually or invite people",
         "invite": {
           "share": "Invite friends",
-          "qr": "Invite by QR code"
+          "qr": "Invite by QR code",
+          "manual": "Add manually"
         }
       },
       "all": "All friends",
@@ -213,6 +222,9 @@ export const dictionaries = {
         "description": (name) => `You have been invited by ${name}. Just register or log in, and you’re all set`
       },
       "accept": "Start Using Evn"
+    },
+    "etc": {
+      "or": "or"
     }
   },
   "es-ES": {
@@ -267,7 +279,8 @@ export const dictionaries = {
         "description": "Añade amigos manualmente o invita a personas",
         "invite": {
           "share": "Invitar a amigos",
-          "qr": "Invitar por código QR"
+          "qr": "Invitar por código QR",
+          "manual": "Agregar manualmente"
         }
       },
       "all": "Todos los amigos",
@@ -284,6 +297,9 @@ export const dictionaries = {
         "description": (name) => `Has sido invitado por ${name}. Solo regístrate o inicia sesión, y ya está todo listo`
       },
       "accept": "Comienza a usar Evn"
+    },
+    "etc": {
+      "or": "o"
     }
   },
   "fr-FR": {
@@ -338,7 +354,8 @@ export const dictionaries = {
         "description": "Ajoutez des amis manuellement ou invitez des personnes",
         "invite": {
           "share": "Inviter des amis",
-          "qr": "Inviter par QR code"
+          "qr": "Inviter par QR code",
+          "manual": "Ajouter manuellement"
         }
       },
       "all": "Tous les amis",
@@ -355,6 +372,9 @@ export const dictionaries = {
         "description": (name) => `Vous avez été invité(e) par ${name}. Inscrivez-vous ou connectez-vous, et tout est prêt`
       },
       "accept": "Commencer à utiliser Evn"
+    },
+    "etc": {
+      "or": "ou"
     }
   },
   "hi-IN": {
@@ -409,7 +429,8 @@ export const dictionaries = {
         "description": "दोस्तों को मैन्युअली जोड़ें या लोगों को आमंत्रित करें",
         "invite": {
           "share": "दोस्तों को आमंत्रित करें",
-          "qr": "QR कोड से आमंत्रित करें"
+          "qr": "QR कोड से आमंत्रित करें",
+          "manual": "मैन्युअल रूप से जोड़ें"
         }
       },
       "all": "सभी मित्र",
@@ -426,6 +447,9 @@ export const dictionaries = {
         "description": (name) => `${name} ने आपको आमंत्रित किया है। बस रजिस्टर करें या लॉग इन करें, और आप तैयार हैं`
       },
       "accept": "Evn का उपयोग शुरू करें"
+    },
+    "etc": {
+      "or": "या"
     }
   },
   "it-IT": {
@@ -480,7 +504,8 @@ export const dictionaries = {
         "description": "Aggiungi amici manualmente o invita persone",
         "invite": {
           "share": "Invita amici",
-          "qr": "Invita tramite codice QR"
+          "qr": "Invita tramite codice QR",
+          "manual": "Aggiungi manualmente"
         }
       },
       "all": "Tutti gli amici",
@@ -497,6 +522,9 @@ export const dictionaries = {
         "description": (name) => `Sei stato invitato da ${name}. Basta registrarsi o accedere, e sei pronto`
       },
       "accept": "Inizia a usare Evn"
+    },
+    "etc": {
+      "or": "o"
     }
   },
   "ja-JP": {
@@ -551,7 +579,8 @@ export const dictionaries = {
         "description": "友達を手動で追加するか、招待する",
         "invite": {
           "share": "友達を招待する",
-          "qr": "QRコードで招待"
+          "qr": "QRコードで招待",
+          "manual": "手動で追加"
         }
       },
       "all": "すべての友達",
@@ -568,6 +597,9 @@ export const dictionaries = {
         "description": (name) => `${name} から招待されました。登録またはログインするだけで、準備完了です`
       },
       "accept": "Evn を使い始める"
+    },
+    "etc": {
+      "or": "または"
     }
   },
   "ko-KR": {
@@ -622,7 +654,8 @@ export const dictionaries = {
         "description": "친구를 직접 추가하거나 사람들을 초대하세요",
         "invite": {
           "share": "친구 초대하기",
-          "qr": "QR 코드로 초대"
+          "qr": "QR 코드로 초대",
+          "manual": "수동으로 추가"
         }
       },
       "all": "모든 친구",
@@ -639,6 +672,9 @@ export const dictionaries = {
         "description": (name) => `${name}님이 초대했습니다. 회원가입 또는 로그인만 하면 바로 시작할 수 있습니다`
       },
       "accept": "Evn 시작하기"
+    },
+    "etc": {
+      "or": "또는"
     }
   },
   "nl-NL": {
@@ -693,7 +729,8 @@ export const dictionaries = {
         "description": "Voeg vrienden handmatig toe of nodig mensen uit",
         "invite": {
           "share": "Vrienden uitnodigen",
-          "qr": "Uitnodigen via QR-code"
+          "qr": "Uitnodigen via QR-code",
+          "manual": "Handmatig toevoegen"
         }
       },
       "all": "Alle vrienden",
@@ -710,6 +747,9 @@ export const dictionaries = {
         "description": (name) => `Je bent uitgenodigd door ${name}. Registreer je of log in, en je bent klaar om te beginnen`
       },
       "accept": "Evn gebruiken starten"
+    },
+    "etc": {
+      "or": "of"
     }
   },
   "ru-RU": {
@@ -764,7 +804,8 @@ export const dictionaries = {
         "description": "Добавьте друзей вручную или пригласите людей",
         "invite": {
           "share": "Пригласить друзей",
-          "qr": "Пригласить по QR-коду"
+          "qr": "Пригласить по QR-коду",
+          "manual": "Добавить вручную"
         }
       },
       "all": "Все друзья",
@@ -781,6 +822,9 @@ export const dictionaries = {
         "description": (name) => `Вас пригласил(а) ${name}. Просто зарегистрируйтесь или войдите, и вы готовы начать`
       },
       "accept": "Начать использовать Evn"
+    },
+    "etc": {
+      "or": "или"
     }
   },
   "sw-TZ": {
@@ -835,7 +879,8 @@ export const dictionaries = {
         "description": "Ongeza marafiki mwenyewe au alika watu",
         "invite": {
           "share": "Alika marafiki",
-          "qr": "Alika kwa kutumia msimbo wa QR"
+          "qr": "Alika kwa kutumia msimbo wa QR",
+          "manual": "Ongeza kwa mkono"
         }
       },
       "all": "Marafiki wote",
@@ -852,6 +897,9 @@ export const dictionaries = {
         "description": (name) => `${name} amekualika. Jisajili au ingia, na uko tayari kuanza`
       },
       "accept": "Anza kutumia Evn"
+    },
+    "etc": {
+      "or": "au"
     }
   },
   "tr-TR": {
@@ -906,7 +954,8 @@ export const dictionaries = {
         "description": "Arkadaşları manuel olarak ekleyin veya kişileri davet edin",
         "invite": {
           "share": "Arkadaşlarını davet et",
-          "qr": "QR kod ile davet et"
+          "qr": "QR kod ile davet et",
+          "manual": "Manuel ekle"
         }
       },
       "all": "Tüm arkadaşlar",
@@ -923,6 +972,9 @@ export const dictionaries = {
         "description": (name) => `${name} tarafından davet edildiniz. Sadece kaydolun veya giriş yapın, ve hazırsınız`
       },
       "accept": "Evn'i kullanmaya başla"
+    },
+    "etc": {
+      "or": "veya"
     }
   },
   "uk-UA": {
@@ -977,7 +1029,8 @@ export const dictionaries = {
         "description": "Додайте друзів вручну або запросіть людей",
         "invite": {
           "share": "Запросити друзів",
-          "qr": "Запросити за QR-кодом"
+          "qr": "Запросити за QR-кодом",
+          "manual": "Додати вручну"
         }
       },
       "all": "Усі друзі",
@@ -994,6 +1047,9 @@ export const dictionaries = {
         "description": (name) => `Вас запросив(ла) ${name}. Просто зареєструйтеся або увійдіть, і все готово`
       },
       "accept": "Почати користуватися Evn"
+    },
+    "etc": {
+      "or": "або"
     }
   },
   "zh-CN": {
@@ -1048,7 +1104,8 @@ export const dictionaries = {
         "description": "手动添加好友或邀请他人",
         "invite": {
           "share": "邀请朋友",
-          "qr": "通过二维码邀请"
+          "qr": "通过二维码邀请",
+          "manual": "手动添加"
         }
       },
       "all": "所有好友",
@@ -1065,6 +1122,9 @@ export const dictionaries = {
         "description": (name) => `您已被${name}邀请。只需注册或登录，您就可以开始了`
       },
       "accept": "开始使用 Evn"
+    },
+    "etc": {
+      "or": "或"
     }
   }
 };

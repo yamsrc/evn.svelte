@@ -59,6 +59,7 @@ export type Dictionary = {
           invite: {
             share: string
             qr: string
+            manual: string
           }
         }
         all: string
@@ -75,5 +76,8 @@ export type Dictionary = {
           description: (value: any) => string
         }
         accept: string
+      }
+      etc: {
+        or: string
       }
     }
