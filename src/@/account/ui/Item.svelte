@@ -7,18 +7,10 @@
   import { Balance } from '@/app/ui'
   import type { Props } from './Item'
 
-  let {
-    id,
-    balance,
-    selected = $bindable(false),
-    selectable = false,
-    onselect,
-    action,
-    actions,
-  }: Props = $props()
+  let { id, balance, selected = $bindable(), onselect, action, actions }: Props = $props()
 
   function onclick(event: MouseEvent) {
-    if (selectable && onselect) {
+    if (selected !== undefined && onselect) {
       event.preventDefault()
       selected = !selected
       onselect(id, selected)
@@ -32,12 +24,7 @@
 
 <Async store={accounts.get(id)}>
   {#snippet awaited(account)}
-    <Panel
-      selected={selectable && selected}
-      class={cn('bg-card border border-border h-14')}
-      {onclick}
-      {...panelProps}
-    >
+    <Panel {selected} class={cn('bg-card border border-border h-14')} {onclick} {...panelProps}>
       {#snippet icon()}
         <Picture {account} class="size-8" />
       {/snippet}

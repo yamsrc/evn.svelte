@@ -6,6 +6,6 @@ export interface GroupWithBalance extends Pick<Group, 'id' | 'name' | 'identitie
 
 export interface Props {
   group: GroupWithBalance
-  selectable?: boolean
-  onselect?: (group: GroupWithBalance, selected: boolean) => void
+  selected?: boolean
+  onselect?: (id: string, selected: boolean) => void
 }

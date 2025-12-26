@@ -8,13 +8,7 @@
   import type { Action } from '$com/panel'
   import type { Props } from './Contact'
 
-  const {
-    contact,
-    selected = false,
-    actionable = false,
-    selectable = false,
-    onselect,
-  }: Props = $props()
+  const { contact, selected = $bindable(), actionable = false, onselect }: Props = $props()
 
   let confirmDelete = $state(false)
 
@@ -47,7 +41,6 @@
 <Item
   id={contact.identity}
   balance={contact.balance}
-  {selectable}
   {selected}
   {onselect}
   actions={actionable ? actions : []}

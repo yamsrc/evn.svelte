@@ -7,6 +7,5 @@ export interface Props {
   selected?: boolean
   actions?: Action[]
   action?: Snippet<[string]>
-  selectable?: boolean
   onselect?: (id: string, selected: boolean) => void
 }

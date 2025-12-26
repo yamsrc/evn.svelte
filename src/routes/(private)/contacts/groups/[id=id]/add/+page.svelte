@@ -12,13 +12,13 @@
   import Invite from './Invite.svelte'
 
   const id = page.params.id as string
-  let selection = $state<string[]>([])
+  let selection = $state(new Set<string>())
   let busy = $state(false)
 
   async function addMembers() {
     busy = true
 
-    const res = await add(id, selection)
+    const res = await add(id, Array.from(selection))
 
     busy = false
 
@@ -44,11 +44,11 @@
       <!-- TODO: add favorites -->
 
       {@const list = $contacts.filter((c) => !group.identities.includes(c.identity))}
-      <Contacts contacts={list} title={$dict.contacts.all} selectable bind:selection />
+      <Contacts contacts={list} title={$dict.contacts.all} bind:selection />
       <Section class="flex gap-2 w-full items-center justify-stretch">
         <Button
           class="flex-1"
-          disabled={selection.length === 0 || busy}
+          disabled={selection.size === 0 || busy}
           onclick={addMembers}
           size="lg">{$dict.actions.addSelected}</Button
         >

@@ -10,25 +10,20 @@
   import { account } from '@/iam'
   import type { Props } from './Group'
 
-  const { group, selectable = false, onselect }: Props = $props()
+  let { group, selected = $bindable(), onselect }: Props = $props()
 
   const members = $derived(group.identities.filter((identity) => identity !== $account?.id))
 
-  let selected = $state(false)
-
   function onclick(event: MouseEvent) {
-    if (selectable && onselect) {
+    if (onselect) {
       event.preventDefault()
       selected = !selected
-      onselect(group, selected)
+      onselect(group.id, selected)
     } else goto(`/contacts/groups/${group.id}`)
   }
 </script>
 
-<Panel
-  class={cn('bg-card border border-border h-20', { 'bg-accent': selectable && selected })}
-  {onclick}
->
+<Panel {selected} class={cn('bg-card border border-border h-20')} {onclick}>
   {#snippet left()}
     <div class="flex flex-col items-start gap-1">
       <div class="flex items-center gap-2">

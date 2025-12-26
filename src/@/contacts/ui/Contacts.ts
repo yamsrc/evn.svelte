@@ -6,6 +6,5 @@ export interface Props {
   contacts: ContactLike[]
   title?: string
   actionable?: boolean
-  selectable?: boolean
-  selection?: string[]
+  selection?: Set<string>
 }
