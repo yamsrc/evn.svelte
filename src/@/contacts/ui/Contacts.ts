@@ -6,5 +6,5 @@ export interface Props {
   title?: string
   actionable?: boolean
   selection?: SvelteSet<string>
-  filter?: string
+  search?: string
 }
