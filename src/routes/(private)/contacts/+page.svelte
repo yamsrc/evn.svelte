@@ -1,15 +1,28 @@
 <script lang="ts">
   import { ArrowUpDown } from '@lucide/svelte'
-  import { Async } from 'svas'
+  import { ok } from 'svas'
   import { Section } from '$com/section'
   import { dict } from '$lib/intl'
   import { Button } from '$ui/button'
-  import { contacts } from '@/contacts'
+  import { contacts as contactsStore } from '@/contacts'
   import { Invite } from '@/contacts/ui'
   import { Contacts } from '@/contacts/ui'
-  import { groups } from '@/groups'
+  import { groups as groupsStore } from '@/groups'
   import { Groups } from '@/groups/ui'
   import { account } from '@/iam'
+  import type { GroupWithBalance } from '@/groups/ui'
+
+  const contacts = $derived(ok($contactsStore) ? $contactsStore : [])
+  const rawGroups = $derived(ok($groupsStore) ? $groupsStore : [])
+
+  const groups: GroupWithBalance[] = $derived.by(() => {
+    return rawGroups.map((group) => ({
+      ...group,
+      balance: group.identities
+        .map((id) => contacts.find(({ identity }) => identity === id)?.balance ?? 0)
+        .reduce((acc, balance) => acc + balance, 0),
+    }))
+  })
 </script>
 
 <Section class="flex flex-col gap-6 pt-2">
@@ -25,19 +38,15 @@
     </Button>
   </header>
 </Section>
-<Async store={groups}>
-  {#snippet awaited(groups)}
-    {#if groups.length > 0}
-      <Groups title={$dict.groups.title} {groups} />
-    {/if}
-  {/snippet}
-</Async>
-<Async store={contacts} class="flex-1 flex flex-col">
-  {#snippet awaited(contacts)}
-    {#if contacts.length === 0 && $account}
-      <Invite id={$account.id} />
-    {:else}
-      <Contacts title={$dict.contacts.all} {contacts} actionable />
-    {/if}
-  {/snippet}
-</Async>
+
+{#if groups.length > 0}
+  <Groups title={$dict.groups.title} {groups} />
+{/if}
+
+<div class="flex-1 flex flex-col">
+  {#if contacts.length === 0 && $account}
+    <Invite id={$account.id} />
+  {:else}
+    <Contacts title={$dict.contacts.all} {contacts} actionable />
+  {/if}
+</div>

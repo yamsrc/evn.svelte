@@ -1,10 +1,8 @@
-import type { Group } from '@/groups'
-
-export type GroupLike = Pick<Group, 'id' | 'name' | 'identities'>
+import type { GroupWithBalance } from './Group'
 
 export interface Props {
-  groups: GroupLike[]
+  groups: GroupWithBalance[]
   title?: string
   selectable?: boolean
-  selection?: GroupLike[]
+  selection?: GroupWithBalance[]
 }

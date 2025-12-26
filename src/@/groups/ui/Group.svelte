@@ -10,7 +10,7 @@
   import { account } from '@/iam'
   import type { Props } from './Group'
 
-  const { group, balance, selectable = false, onselect }: Props = $props()
+  const { group, selectable = false, onselect }: Props = $props()
 
   const members = $derived(group.identities.filter((identity) => identity !== $account?.id))
 
@@ -52,6 +52,6 @@
     </div>
   {/snippet}
   {#snippet right()}
-    <Balance {balance} />
+    <Balance balance={group.balance} />
   {/snippet}
 </Panel>
