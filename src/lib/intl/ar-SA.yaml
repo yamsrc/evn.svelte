@@ -15,6 +15,7 @@ actions:
     contact: صديق
   addSelected: إضافة المحدد
   cancel: إلغاء
+  search: بحث
 nav:
   home: الرئيسية
   evns: تسوية

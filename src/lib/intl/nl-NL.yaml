@@ -15,6 +15,7 @@ actions:
     contact: Vriend
   addSelected: Geselecteerde toevoegen
   cancel: Annuleren
+  search: Zoeken
 nav:
   home: Home
   evns: Afrekening

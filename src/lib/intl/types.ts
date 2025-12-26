@@ -26,6 +26,7 @@ export type Dictionary = {
         }
         addSelected: string
         cancel: string
+        search: string
       }
       nav: {
         home: string

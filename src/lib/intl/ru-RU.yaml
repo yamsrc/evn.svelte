@@ -15,6 +15,7 @@ actions:
     contact: Друг
   addSelected: Добавить выбранные
   cancel: Отмена
+  search: Поиск
 nav:
   home: Главная
   evns: Расчёты

@@ -1,6 +1,6 @@
 <script lang="ts">
   import { LogOut, Plus } from '@lucide/svelte'
-  import { ok } from 'svas'
+  import { ok, ensure } from 'svas'
   import { goto } from '$app/navigation'
   import { page } from '$app/state'
   import { Hold } from '$com/hold'
@@ -10,12 +10,13 @@
   import { currency } from '$lib/tools'
   import { Button } from '$ui/button'
   import { Separator } from '$ui/separator'
+  import { accounts } from '@/account'
   import { Item } from '@/account/ui'
   import { contacts as contactsStore } from '@/contacts'
   import { groups, del } from '@/groups'
   import { Name } from '@/groups/ui'
   import { account } from '@/iam'
-  import type { Contact } from '@/contacts'
+  import type { ContactWithAccount } from '@/contacts/ui'
   import type { Group } from '@/groups'
 
   type BalanceSummary = {
@@ -43,7 +44,15 @@
     ok($groups) ? $groups.find((group) => group.id === id) : undefined,
   )
 
-  const contacts: Contact[] = $derived(ok($contactsStore) ? $contactsStore : [])
+  const contacts: ContactWithAccount[] = $derived.by(() => {
+    if (!ok(contactsStore)) return []
+
+    return $contactsStore.map((contact) => {
+      const account = accounts.get(contact.identity)
+
+      return { ...contact, account: ensure(account) }
+    })
+  })
   const members: string[] = $derived(group?.identities.filter((id) => id !== $account?.id) ?? [])
 
   const balance: BalanceSummary = $derived.by(() => {
@@ -97,7 +106,9 @@
   {:else}
     {#each members as identity (identity)}
       {@const contact = contacts.find((contact) => contact.identity === identity)}
-      <Item id={identity} balance={contact?.balance ?? 0} />
+      {#if contact}
+        <Item account={contact.account} balance={contact.balance} />
+      {/if}
     {/each}
   {/if}
   <Button size="lg" class="w-full" href={`/contacts/groups/${id}/add`} disabled={!group}>

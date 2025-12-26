@@ -15,6 +15,7 @@ actions:
     contact: Rafiki
   addSelected: Ongeza zilizochaguliwa
   cancel: Ghairi
+  search: Tafuta
 nav:
   home: Mwanzo
   evns: Marejesho

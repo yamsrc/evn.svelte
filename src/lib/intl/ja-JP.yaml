@@ -15,6 +15,7 @@ actions:
     contact: 友達
   addSelected: 選択したものを追加
   cancel: キャンセル
+  search: 検索
 nav:
   home: ホーム
   evns: 清算

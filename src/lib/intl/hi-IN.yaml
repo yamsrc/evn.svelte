@@ -15,6 +15,7 @@ actions:
     contact: मित्र
   addSelected: चयनित जोड़ें
   cancel: रद्द करें
+  search: खोजें
 nav:
   home: मुख्य पृष्ठ
   evns: सेटलमेंट

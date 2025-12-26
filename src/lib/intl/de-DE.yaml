@@ -15,6 +15,7 @@ actions:
     contact: Freund
   addSelected: Ausgewählte hinzufügen
   cancel: Abbrechen
+  search: Suchen
 nav:
   home: Startseite
   evns: Ausgleich

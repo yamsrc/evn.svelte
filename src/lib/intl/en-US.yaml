@@ -15,6 +15,7 @@ actions:
     contact: Friend
   addSelected: Add selected
   cancel: Cancel
+  search: Search
 nav:
   home: Home
   evns: Evns

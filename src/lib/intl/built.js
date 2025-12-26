@@ -21,7 +21,8 @@ export const dictionaries = {
         "contact": "صديق"
       },
       "addSelected": "إضافة المحدد",
-      "cancel": "إلغاء"
+      "cancel": "إلغاء",
+      "search": "بحث"
     },
     "nav": {
       "home": "الرئيسية",
@@ -124,7 +125,8 @@ export const dictionaries = {
         "contact": "Freund"
       },
       "addSelected": "Ausgewählte hinzufügen",
-      "cancel": "Abbrechen"
+      "cancel": "Abbrechen",
+      "search": "Suchen"
     },
     "nav": {
       "home": "Startseite",
@@ -227,7 +229,8 @@ export const dictionaries = {
         "contact": "Friend"
       },
       "addSelected": "Add selected",
-      "cancel": "Cancel"
+      "cancel": "Cancel",
+      "search": "Search"
     },
     "nav": {
       "home": "Home",
@@ -330,7 +333,8 @@ export const dictionaries = {
         "contact": "Amigo"
       },
       "addSelected": "Agregar seleccionado(s)",
-      "cancel": "Cancelar"
+      "cancel": "Cancelar",
+      "search": "Buscar"
     },
     "nav": {
       "home": "Inicio",
@@ -433,7 +437,8 @@ export const dictionaries = {
         "contact": "Ami"
       },
       "addSelected": "Ajouter la sélection",
-      "cancel": "Annuler"
+      "cancel": "Annuler",
+      "search": "Rechercher"
     },
     "nav": {
       "home": "Accueil",
@@ -536,7 +541,8 @@ export const dictionaries = {
         "contact": "मित्र"
       },
       "addSelected": "चयनित जोड़ें",
-      "cancel": "रद्द करें"
+      "cancel": "रद्द करें",
+      "search": "खोजें"
     },
     "nav": {
       "home": "मुख्य पृष्ठ",
@@ -639,7 +645,8 @@ export const dictionaries = {
         "contact": "Amico"
       },
       "addSelected": "Aggiungi selezionati",
-      "cancel": "Annulla"
+      "cancel": "Annulla",
+      "search": "Cerca"
     },
     "nav": {
       "home": "Home",
@@ -742,7 +749,8 @@ export const dictionaries = {
         "contact": "友達"
       },
       "addSelected": "選択したものを追加",
-      "cancel": "キャンセル"
+      "cancel": "キャンセル",
+      "search": "検索"
     },
     "nav": {
       "home": "ホーム",
@@ -845,7 +853,8 @@ export const dictionaries = {
         "contact": "친구"
       },
       "addSelected": "선택 항목 추가",
-      "cancel": "취소"
+      "cancel": "취소",
+      "search": "검색"
     },
     "nav": {
       "home": "홈",
@@ -948,7 +957,8 @@ export const dictionaries = {
         "contact": "Vriend"
       },
       "addSelected": "Geselecteerde toevoegen",
-      "cancel": "Annuleren"
+      "cancel": "Annuleren",
+      "search": "Zoeken"
     },
     "nav": {
       "home": "Home",
@@ -1051,7 +1061,8 @@ export const dictionaries = {
         "contact": "Друг"
       },
       "addSelected": "Добавить выбранные",
-      "cancel": "Отмена"
+      "cancel": "Отмена",
+      "search": "Поиск"
     },
     "nav": {
       "home": "Главная",
@@ -1154,7 +1165,8 @@ export const dictionaries = {
         "contact": "Rafiki"
       },
       "addSelected": "Ongeza zilizochaguliwa",
-      "cancel": "Ghairi"
+      "cancel": "Ghairi",
+      "search": "Tafuta"
     },
     "nav": {
       "home": "Mwanzo",
@@ -1257,7 +1269,8 @@ export const dictionaries = {
         "contact": "Arkadaş"
       },
       "addSelected": "Seçileni ekle",
-      "cancel": "İptal"
+      "cancel": "İptal",
+      "search": "Ara"
     },
     "nav": {
       "home": "Ana Sayfa",
@@ -1360,7 +1373,8 @@ export const dictionaries = {
         "contact": "Друг"
       },
       "addSelected": "Додати вибране",
-      "cancel": "Скасувати"
+      "cancel": "Скасувати",
+      "search": "Пошук"
     },
     "nav": {
       "home": "Головна",
@@ -1463,7 +1477,8 @@ export const dictionaries = {
         "contact": "朋友"
       },
       "addSelected": "添加已选项",
-      "cancel": "取消"
+      "cancel": "取消",
+      "search": "搜索"
     },
     "nav": {
       "home": "首页",

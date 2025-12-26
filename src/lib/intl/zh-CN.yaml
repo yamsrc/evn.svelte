@@ -15,6 +15,7 @@ actions:
     contact: 朋友
   addSelected: 添加已选项
   cancel: 取消
+  search: 搜索
 nav:
   home: 首页
   evns: 结算

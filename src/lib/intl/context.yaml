@@ -33,6 +33,8 @@ inputs:
       input: Add selected
     cancel:
       input: Cancel
+    search:
+      input: Search
   nav:
     home:
       input: Home

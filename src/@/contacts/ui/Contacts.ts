@@ -1,9 +1,7 @@
-import type { Contact } from '@/contacts'
-
-export type ContactLike = Pick<Contact, 'id' | 'balance' | 'identity'>
+import type { ContactWithAccount } from './Contact'
 
 export interface Props {
-  contacts: ContactLike[]
+  contacts: ContactWithAccount[]
   title?: string
   actionable?: boolean
   selection?: Set<string>

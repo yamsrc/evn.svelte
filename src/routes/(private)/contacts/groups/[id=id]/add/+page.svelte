@@ -1,19 +1,33 @@
 <script lang="ts">
-  import { Async } from 'svas'
+  import { Async, ok, ensure } from 'svas'
   import { goto } from '$app/navigation'
   import { page } from '$app/state'
   import Section from '$com/section/Section.svelte'
   import { Back } from '$lib/components/history'
   import { dict } from '$lib/intl'
   import { Button } from '$ui/button'
-  import { contacts } from '@/contacts'
-  import { Contacts } from '@/contacts/ui'
+  import { Input } from '$ui/input'
+  import { accounts } from '@/account'
+  import { contacts as contactsStore } from '@/contacts'
+  import { Contacts, type ContactWithAccount } from '@/contacts/ui'
   import { groups, add } from '@/groups'
   import Invite from './Invite.svelte'
+
+  let query = $state('')
 
   const id = page.params.id as string
   let selection = $state(new Set<string>())
   let busy = $state(false)
+
+  const contacts: ContactWithAccount[] = $derived.by(() => {
+    if (!ok(contactsStore)) return []
+
+    return $contactsStore.map((contact) => {
+      const account = accounts.get(contact.identity)
+
+      return { ...contact, account: ensure(account) }
+    })
+  })
 
   async function addMembers() {
     busy = true
@@ -26,6 +40,10 @@
 
     goto(`/contacts/groups/${id}`)
   }
+
+  const filteredContacts: ContactWithAccount[] = $derived.by(() =>
+    contacts.filter((contact) => contact.account.name?.toLowerCase().includes(query.toLowerCase())),
+  )
 </script>
 
 <Async store={groups}>
@@ -38,14 +56,15 @@
         </header>
       </Section>
       <Section>
-        <!-- TODO: add search -->
         <h1>{$dict.groups.members.addMembers}</h1>
+        <Input type="text" placeholder={$dict.actions.search} bind:value={query} />
       </Section>
       <!-- TODO: add favorites -->
 
-      {@const list = $contacts.filter((c) => !group.identities.includes(c.identity))}
+      {@const list = filteredContacts.filter((c) => !group.identities.includes(c.identity))}
       <Contacts contacts={list} title={$dict.contacts.all} bind:selection />
       <Section class="flex gap-2 w-full items-center justify-stretch">
+        {selection.size}
         <Button
           class="flex-1"
           disabled={selection.size === 0 || busy}

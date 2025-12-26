@@ -39,7 +39,7 @@
 </script>
 
 <Item
-  id={contact.identity}
+  account={contact.account}
   balance={contact.balance}
   {selected}
   {onselect}

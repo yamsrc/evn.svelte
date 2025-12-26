@@ -15,6 +15,7 @@ actions:
     contact: Amico
   addSelected: Aggiungi selezionati
   cancel: Annulla
+  search: Cerca
 nav:
   home: Home
   evns: Saldo

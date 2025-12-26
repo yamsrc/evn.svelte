@@ -15,6 +15,7 @@ actions:
     contact: Ami
   addSelected: Ajouter la sélection
   cancel: Annuler
+  search: Rechercher
 nav:
   home: Accueil
   evns: Règlements

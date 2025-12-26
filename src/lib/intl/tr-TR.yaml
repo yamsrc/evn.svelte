@@ -15,6 +15,7 @@ actions:
     contact: Arkadaş
   addSelected: Seçileni ekle
   cancel: İptal
+  search: Ara
 nav:
   home: Ana Sayfa
   evns: Hesaplaşma

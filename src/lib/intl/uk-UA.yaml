@@ -15,6 +15,7 @@ actions:
     contact: Друг
   addSelected: Додати вибране
   cancel: Скасувати
+  search: Пошук
 nav:
   home: Головна
   evns: Розрахунок

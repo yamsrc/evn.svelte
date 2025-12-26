@@ -15,6 +15,7 @@ actions:
     contact: Amigo
   addSelected: Agregar seleccionado(s)
   cancel: Cancelar
+  search: Buscar
 nav:
   home: Inicio
   evns: Ajustes

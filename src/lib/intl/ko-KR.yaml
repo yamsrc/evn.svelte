@@ -15,6 +15,7 @@ actions:
     contact: 친구
   addSelected: 선택 항목 추가
   cancel: 취소
+  search: 검색
 nav:
   home: 홈
   evns: 정산

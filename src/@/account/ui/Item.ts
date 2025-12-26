@@ -1,8 +1,9 @@
 import type { Action } from '$com/panel'
+import type { Account } from '@/account'
 import type { Snippet } from 'svelte'
 
 export interface Props {
-  id: string
+  account: Account
   balance: number
   selected?: boolean
   actions?: Action[]
