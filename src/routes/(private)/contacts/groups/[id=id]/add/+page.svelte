@@ -13,7 +13,7 @@
   import { groups, add } from '@/groups'
   import Invite from './Invite.svelte'
 
-  let query = $state('')
+  let search = $state('')
 
   const id = page.params.id as string
   // svelte-ignore non_reactive_update
@@ -31,12 +31,6 @@
 
     goto(`/contacts/groups/${id}`)
   }
-
-  const filteredContacts = $derived(
-    $contacts.filter((contact) =>
-      contact.account.name?.toLowerCase().includes(query.toLowerCase()),
-    ),
-  )
 </script>
 
 <Async store={groups} class="flex flex-col gap-5">
@@ -50,12 +44,12 @@
       </Section>
       <Section>
         <h1>{$dict.groups.members.addMembers}</h1>
-        <Input type="text" placeholder={$dict.actions.search} bind:value={query} />
+        <Input type="text" placeholder={$dict.actions.search} bind:value={search} />
       </Section>
       <!-- TODO: add favorites -->
 
-      {@const list = filteredContacts.filter((c) => !group.identities.includes(c.identity))}
-      <Contacts contacts={list} title={$dict.contacts.all} bind:selection />
+      {@const list = $contacts.filter((c) => !group.identities.includes(c.identity))}
+      <Contacts contacts={list} title={$dict.contacts.all} bind:selection {search} />
       <Section class="flex gap-2 w-full items-center justify-stretch">
         <Button
           class="flex-1"
