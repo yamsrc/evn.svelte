@@ -27,14 +27,6 @@
       }
     })
   })
-
-  const filteredContacts: ContactWithAccount[] = $derived.by(() =>
-    contacts.filter((contact) => contact.account.name?.toLowerCase().includes(query.toLowerCase())),
-  )
-
-  const filteredGroups = $derived.by(() =>
-    $groups.filter((group) => group.name.toLowerCase().includes(query.toLowerCase())),
-  )
 </script>
 
 <Section class="flex flex-col gap-6">
@@ -56,13 +48,13 @@
 </Section>
 
 {#if $groups.length > 0}
-  <Groups title={$dict.groups.title} groups={filteredGroups} />
+  <Groups title={$dict.groups.title} groups={$groups} filter={query} />
 {/if}
 
 <div class="flex-1 flex flex-col">
   {#if contacts.length === 0 && $account}
     <Invite id={$account.id} />
   {:else}
-    <Contacts title={$dict.contacts.all} contacts={filteredContacts} actionable />
+    <Contacts title={$dict.contacts.all} {contacts} filter={query} actionable />
   {/if}
 </div>
