@@ -47,8 +47,8 @@ The Linked Entities Pattern is used to create rich domain models by composing da
 A linked entity extends a network model (from `net/`) with references to related entities from other domains:
 
 ```typescript
-// Network model (raw API data)
-interface Contact {
+// Network model (raw API data) - defined in svc/net/Contact.ts
+export interface Contact {
   id: string
   identities: [string, string]
   balance: number
@@ -56,8 +56,8 @@ interface Contact {
   _version: number
 }
 
-// Linked entity (enriched domain model)
-interface Contact extends net.Contact {
+// Linked entity (enriched domain model) - defined in svc/Contact.ts
+export interface Contact extends net.Contact {
   identity: string      // Derived field
   account: Account      // Linked entity from @/account domain
 }
@@ -73,17 +73,21 @@ The mapping function transforms network entities into linked entities by:
 3. Combining them into a rich domain model
 
 ```typescript
+import { awaited, having } from 'svas'
+import { accounts } from '@/account'
+import { account } from '@/iam'
+
 export async function map(entry: net.Contact): Promise<Contact | Error> {
-  const me = await having(account)
+  const me = await having(account)  // Wait for current user's account
   const identity = me.id === entry.identities[0] ? entry.identities[1] : entry.identities[0]
-  const they = await awaited(accounts.get(identity))
+  const they = await awaited(accounts.get(identity))  // Fetch linked Account entity
   
   if (they instanceof Error) return they
   
   return {
     ...entry,
     identity,
-    account: they,  // Linked Account entity
+    account: they,  // Linked Account entity from @/account domain
   }
 }
 ```
