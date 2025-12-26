@@ -14,6 +14,7 @@ actions:
     title: मित्र
     contact: मित्र
   addSelected: चयनित जोड़ें
+  cancel: रद्द करें
 nav:
   home: मुख्य पृष्ठ
   evns: सेटलमेंट
@@ -48,6 +49,11 @@ contacts:
   contact:
     owesYou: आपका कर्ज़दार है
     youOwe: आपको देना है
+  delete:
+    confirm:
+      title: व्यक्ति हटाएँ
+      description: इस व्यक्ति के साथ आपका बैलेंस खो जाएगा
+      confirm: हटाएँ
 join:
   app:
     description: दोस्तों के साथ मिलकर, कौन किसका कितना बकाया है, इसका स्मार्ट तरीका।

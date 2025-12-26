@@ -14,6 +14,7 @@ actions:
     title: Arkadaşlar
     contact: Arkadaş
   addSelected: Seçileni ekle
+  cancel: İptal
 nav:
   home: Ana Sayfa
   evns: Hesaplaşma
@@ -46,6 +47,11 @@ contacts:
   contact:
     owesYou: Sana borçlu
     youOwe: Borçlusun
+  delete:
+    confirm:
+      title: Kişiyi sil
+      description: Bu kişiyle olan bakiyeniz kaybolacak
+      confirm: Sil
 join:
   app:
     description: >-

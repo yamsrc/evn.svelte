@@ -14,6 +14,7 @@ actions:
     title: Amici
     contact: Amico
   addSelected: Aggiungi selezionati
+  cancel: Annulla
 nav:
   home: Home
   evns: Saldo
@@ -48,6 +49,11 @@ contacts:
   contact:
     owesYou: Ti deve
     youOwe: Devi
+  delete:
+    confirm:
+      title: Elimina persona
+      description: Il tuo saldo con questa persona andrà perso
+      confirm: Elimina
 join:
   app:
     description: >-

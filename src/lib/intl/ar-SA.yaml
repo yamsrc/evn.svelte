@@ -14,6 +14,7 @@ actions:
     title: أصدقاء
     contact: صديق
   addSelected: إضافة المحدد
+  cancel: إلغاء
 nav:
   home: الرئيسية
   evns: تسوية
@@ -46,6 +47,11 @@ contacts:
   contact:
     owesYou: مدين لك
     youOwe: أنت مدين
+  delete:
+    confirm:
+      title: حذف الشخص
+      description: سيتم فقدان رصيدك مع هذا الشخص
+      confirm: حذف
 join:
   app:
     description: الطريقة الذكية لمتابعة من يدين لمن، مع الأصدقاء.

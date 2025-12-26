@@ -20,7 +20,8 @@ export const dictionaries = {
         "title": "أصدقاء",
         "contact": "صديق"
       },
-      "addSelected": "إضافة المحدد"
+      "addSelected": "إضافة المحدد",
+      "cancel": "إلغاء"
     },
     "nav": {
       "home": "الرئيسية",
@@ -62,6 +63,13 @@ export const dictionaries = {
       "contact": {
         "owesYou": "مدين لك",
         "youOwe": "أنت مدين"
+      },
+      "delete": {
+        "confirm": {
+          "title": "حذف الشخص",
+          "description": "سيتم فقدان رصيدك مع هذا الشخص",
+          "confirm": "حذف"
+        }
       }
     },
     "join": {
@@ -115,7 +123,8 @@ export const dictionaries = {
         "title": "Freunde",
         "contact": "Freund"
       },
-      "addSelected": "Ausgewählte hinzufügen"
+      "addSelected": "Ausgewählte hinzufügen",
+      "cancel": "Abbrechen"
     },
     "nav": {
       "home": "Startseite",
@@ -157,6 +166,13 @@ export const dictionaries = {
       "contact": {
         "owesYou": "Schuldet dir",
         "youOwe": "Du schuldest"
+      },
+      "delete": {
+        "confirm": {
+          "title": "Person löschen",
+          "description": "Ihr Guthaben mit dieser Person wird verloren gehen",
+          "confirm": "Löschen"
+        }
       }
     },
     "join": {
@@ -210,7 +226,8 @@ export const dictionaries = {
         "title": "Friends",
         "contact": "Friend"
       },
-      "addSelected": "Add selected"
+      "addSelected": "Add selected",
+      "cancel": "Cancel"
     },
     "nav": {
       "home": "Home",
@@ -252,6 +269,13 @@ export const dictionaries = {
       "contact": {
         "owesYou": "Owes you",
         "youOwe": "You owe"
+      },
+      "delete": {
+        "confirm": {
+          "title": "Delete person",
+          "description": "Your balance with this person will be lost",
+          "confirm": "Delete"
+        }
       }
     },
     "join": {
@@ -305,7 +329,8 @@ export const dictionaries = {
         "title": "Amigos",
         "contact": "Amigo"
       },
-      "addSelected": "Agregar seleccionado(s)"
+      "addSelected": "Agregar seleccionado(s)",
+      "cancel": "Cancelar"
     },
     "nav": {
       "home": "Inicio",
@@ -347,6 +372,13 @@ export const dictionaries = {
       "contact": {
         "owesYou": "Te debe",
         "youOwe": "Debes"
+      },
+      "delete": {
+        "confirm": {
+          "title": "Eliminar persona",
+          "description": "Tu saldo con esta persona se perderá",
+          "confirm": "Eliminar"
+        }
       }
     },
     "join": {
@@ -400,7 +432,8 @@ export const dictionaries = {
         "title": "Amis",
         "contact": "Ami"
       },
-      "addSelected": "Ajouter la sélection"
+      "addSelected": "Ajouter la sélection",
+      "cancel": "Annuler"
     },
     "nav": {
       "home": "Accueil",
@@ -442,6 +475,13 @@ export const dictionaries = {
       "contact": {
         "owesYou": "Te doit",
         "youOwe": "Vous devez"
+      },
+      "delete": {
+        "confirm": {
+          "title": "Supprimer la personne",
+          "description": "Votre solde avec cette personne sera perdu",
+          "confirm": "Supprimer"
+        }
       }
     },
     "join": {
@@ -495,7 +535,8 @@ export const dictionaries = {
         "title": "मित्र",
         "contact": "मित्र"
       },
-      "addSelected": "चयनित जोड़ें"
+      "addSelected": "चयनित जोड़ें",
+      "cancel": "रद्द करें"
     },
     "nav": {
       "home": "मुख्य पृष्ठ",
@@ -537,6 +578,13 @@ export const dictionaries = {
       "contact": {
         "owesYou": "आपका कर्ज़दार है",
         "youOwe": "आपको देना है"
+      },
+      "delete": {
+        "confirm": {
+          "title": "व्यक्ति हटाएँ",
+          "description": "इस व्यक्ति के साथ आपका बैलेंस खो जाएगा",
+          "confirm": "हटाएँ"
+        }
       }
     },
     "join": {
@@ -590,7 +638,8 @@ export const dictionaries = {
         "title": "Amici",
         "contact": "Amico"
       },
-      "addSelected": "Aggiungi selezionati"
+      "addSelected": "Aggiungi selezionati",
+      "cancel": "Annulla"
     },
     "nav": {
       "home": "Home",
@@ -632,6 +681,13 @@ export const dictionaries = {
       "contact": {
         "owesYou": "Ti deve",
         "youOwe": "Devi"
+      },
+      "delete": {
+        "confirm": {
+          "title": "Elimina persona",
+          "description": "Il tuo saldo con questa persona andrà perso",
+          "confirm": "Elimina"
+        }
       }
     },
     "join": {
@@ -685,7 +741,8 @@ export const dictionaries = {
         "title": "友達",
         "contact": "友達"
       },
-      "addSelected": "選択したものを追加"
+      "addSelected": "選択したものを追加",
+      "cancel": "キャンセル"
     },
     "nav": {
       "home": "ホーム",
@@ -727,6 +784,13 @@ export const dictionaries = {
       "contact": {
         "owesYou": "あなたに借りがある",
         "youOwe": "あなたが支払うべきです"
+      },
+      "delete": {
+        "confirm": {
+          "title": "人物を削除",
+          "description": "この相手との残高が失われます",
+          "confirm": "削除"
+        }
       }
     },
     "join": {
@@ -780,7 +844,8 @@ export const dictionaries = {
         "title": "친구",
         "contact": "친구"
       },
-      "addSelected": "선택 항목 추가"
+      "addSelected": "선택 항목 추가",
+      "cancel": "취소"
     },
     "nav": {
       "home": "홈",
@@ -822,6 +887,13 @@ export const dictionaries = {
       "contact": {
         "owesYou": "당신에게 빚졌어요",
         "youOwe": "당신이 빚졌습니다"
+      },
+      "delete": {
+        "confirm": {
+          "title": "사람 삭제",
+          "description": "이 사람과의 잔액이 사라집니다",
+          "confirm": "삭제"
+        }
       }
     },
     "join": {
@@ -875,7 +947,8 @@ export const dictionaries = {
         "title": "Vrienden",
         "contact": "Vriend"
       },
-      "addSelected": "Geselecteerde toevoegen"
+      "addSelected": "Geselecteerde toevoegen",
+      "cancel": "Annuleren"
     },
     "nav": {
       "home": "Home",
@@ -917,6 +990,13 @@ export const dictionaries = {
       "contact": {
         "owesYou": "Is jou iets verschuldigd",
         "youOwe": "Je bent verschuldigd"
+      },
+      "delete": {
+        "confirm": {
+          "title": "Persoon verwijderen",
+          "description": "Je saldo met deze persoon zal verloren gaan",
+          "confirm": "Verwijderen"
+        }
       }
     },
     "join": {
@@ -970,7 +1050,8 @@ export const dictionaries = {
         "title": "Друзья",
         "contact": "Друг"
       },
-      "addSelected": "Добавить выбранные"
+      "addSelected": "Добавить выбранные",
+      "cancel": "Отмена"
     },
     "nav": {
       "home": "Главная",
@@ -1012,6 +1093,13 @@ export const dictionaries = {
       "contact": {
         "owesYou": "Должен тебе",
         "youOwe": "Вы должны"
+      },
+      "delete": {
+        "confirm": {
+          "title": "Удалить человека",
+          "description": "Ваш баланс с этим человеком будет потерян",
+          "confirm": "Удалить"
+        }
       }
     },
     "join": {
@@ -1065,7 +1153,8 @@ export const dictionaries = {
         "title": "Marafiki",
         "contact": "Rafiki"
       },
-      "addSelected": "Ongeza zilizochaguliwa"
+      "addSelected": "Ongeza zilizochaguliwa",
+      "cancel": "Ghairi"
     },
     "nav": {
       "home": "Mwanzo",
@@ -1107,6 +1196,13 @@ export const dictionaries = {
       "contact": {
         "owesYou": "Ana deni lako",
         "youOwe": "Unadaiwa"
+      },
+      "delete": {
+        "confirm": {
+          "title": "Futa mtu",
+          "description": "Salio lako na mtu huyu litapotea",
+          "confirm": "Futa"
+        }
       }
     },
     "join": {
@@ -1160,7 +1256,8 @@ export const dictionaries = {
         "title": "Arkadaşlar",
         "contact": "Arkadaş"
       },
-      "addSelected": "Seçileni ekle"
+      "addSelected": "Seçileni ekle",
+      "cancel": "İptal"
     },
     "nav": {
       "home": "Ana Sayfa",
@@ -1202,6 +1299,13 @@ export const dictionaries = {
       "contact": {
         "owesYou": "Sana borçlu",
         "youOwe": "Borçlusun"
+      },
+      "delete": {
+        "confirm": {
+          "title": "Kişiyi sil",
+          "description": "Bu kişiyle olan bakiyeniz kaybolacak",
+          "confirm": "Sil"
+        }
       }
     },
     "join": {
@@ -1255,7 +1359,8 @@ export const dictionaries = {
         "title": "Друзі",
         "contact": "Друг"
       },
-      "addSelected": "Додати вибране"
+      "addSelected": "Додати вибране",
+      "cancel": "Скасувати"
     },
     "nav": {
       "home": "Головна",
@@ -1297,6 +1402,13 @@ export const dictionaries = {
       "contact": {
         "owesYou": "Винен тобі",
         "youOwe": "Ви винні"
+      },
+      "delete": {
+        "confirm": {
+          "title": "Видалити людину",
+          "description": "Ваш баланс із цією особою буде втрачено",
+          "confirm": "Видалити"
+        }
       }
     },
     "join": {
@@ -1350,7 +1462,8 @@ export const dictionaries = {
         "title": "朋友",
         "contact": "朋友"
       },
-      "addSelected": "添加已选项"
+      "addSelected": "添加已选项",
+      "cancel": "取消"
     },
     "nav": {
       "home": "首页",
@@ -1392,6 +1505,13 @@ export const dictionaries = {
       "contact": {
         "owesYou": "欠你的",
         "youOwe": "你欠"
+      },
+      "delete": {
+        "confirm": {
+          "title": "删除人员",
+          "description": "您与此人的余额将会丢失",
+          "confirm": "删除"
+        }
       }
     },
     "join": {

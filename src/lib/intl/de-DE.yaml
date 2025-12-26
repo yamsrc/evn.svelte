@@ -14,6 +14,7 @@ actions:
     title: Freunde
     contact: Freund
   addSelected: Ausgewählte hinzufügen
+  cancel: Abbrechen
 nav:
   home: Startseite
   evns: Ausgleich
@@ -48,6 +49,11 @@ contacts:
   contact:
     owesYou: Schuldet dir
     youOwe: Du schuldest
+  delete:
+    confirm:
+      title: Person löschen
+      description: Ihr Guthaben mit dieser Person wird verloren gehen
+      confirm: Löschen
 join:
   app:
     description: >-

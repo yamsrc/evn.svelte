@@ -14,6 +14,7 @@ actions:
     title: Marafiki
     contact: Rafiki
   addSelected: Ongeza zilizochaguliwa
+  cancel: Ghairi
 nav:
   home: Mwanzo
   evns: Marejesho
@@ -46,6 +47,11 @@ contacts:
   contact:
     owesYou: Ana deni lako
     youOwe: Unadaiwa
+  delete:
+    confirm:
+      title: Futa mtu
+      description: Salio lako na mtu huyu litapotea
+      confirm: Futa
 join:
   app:
     description: Njia bora ya kufuatilia nani anamdai nani, ukiwa na marafiki zako.

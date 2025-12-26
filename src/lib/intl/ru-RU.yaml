@@ -14,6 +14,7 @@ actions:
     title: Друзья
     contact: Друг
   addSelected: Добавить выбранные
+  cancel: Отмена
 nav:
   home: Главная
   evns: Расчёты
@@ -48,6 +49,11 @@ contacts:
   contact:
     owesYou: Должен тебе
     youOwe: Вы должны
+  delete:
+    confirm:
+      title: Удалить человека
+      description: Ваш баланс с этим человеком будет потерян
+      confirm: Удалить
 join:
   app:
     description: Умный способ отслеживать, кто кому должен, вместе с друзьями.

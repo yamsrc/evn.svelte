@@ -1,7 +1,9 @@
 <script lang="ts">
   import { Star, Trash2 } from '@lucide/svelte'
   import { Pencil } from '@lucide/svelte'
+  import { dict } from '$lib/intl'
   import { Item } from '@/account/ui'
+  import { Confirm } from '@/app/ui'
   import * as contacts from '@/contacts'
   import type { Action } from '$com/panel'
   import type { Props } from './Contact'
@@ -13,6 +15,13 @@
     selectable = false,
     onselect,
   }: Props = $props()
+
+  let confirmDelete = $state(false)
+
+  function deleteContact() {
+    contacts.del(contact)
+    confirmDelete = false
+  }
 
   const actions: Action[] = [
     {
@@ -28,7 +37,9 @@
     {
       id: 'delete',
       class: 'bg-foreground hover:bg-foreground/80',
-      onclick: () => contacts.del(contact),
+      onclick: () => {
+        confirmDelete = true
+      },
     },
   ]
 </script>
@@ -51,3 +62,15 @@
     {/if}
   {/snippet}
 </Item>
+
+<Confirm
+  title={$dict.contacts.delete.confirm.title}
+  description={$dict.contacts.delete.confirm.description}
+  bind:open={confirmDelete}
+  onconfirm={deleteContact}
+>
+  {#snippet confirm()}
+    <Trash2 />
+    {$dict.contacts.delete.confirm.confirm}
+  {/snippet}
+</Confirm>

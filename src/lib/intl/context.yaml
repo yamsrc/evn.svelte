@@ -31,6 +31,8 @@ inputs:
         input: Friend
     addSelected:
       input: Add selected
+    cancel:
+      input: Cancel
   nav:
     home:
       input: Home
@@ -87,6 +89,14 @@ inputs:
         input: Owes you
       youOwe:
         input: You owe
+    delete:
+      confirm:
+        title:
+          input: Delete person
+        description:
+          input: Your balance with this person will be lost
+        confirm:
+          input: Delete
   join:
     app:
       description:

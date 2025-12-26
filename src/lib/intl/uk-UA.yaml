@@ -14,6 +14,7 @@ actions:
     title: Друзі
     contact: Друг
   addSelected: Додати вибране
+  cancel: Скасувати
 nav:
   home: Головна
   evns: Розрахунок
@@ -48,6 +49,11 @@ contacts:
   contact:
     owesYou: Винен тобі
     youOwe: Ви винні
+  delete:
+    confirm:
+      title: Видалити людину
+      description: Ваш баланс із цією особою буде втрачено
+      confirm: Видалити
 join:
   app:
     description: Розумний спосіб відстежувати, хто кому винен, разом із друзями.

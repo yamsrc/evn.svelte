@@ -14,6 +14,7 @@ actions:
     title: Amis
     contact: Ami
   addSelected: Ajouter la sélection
+  cancel: Annuler
 nav:
   home: Accueil
   evns: Règlements
@@ -48,6 +49,11 @@ contacts:
   contact:
     owesYou: Te doit
     youOwe: Vous devez
+  delete:
+    confirm:
+      title: Supprimer la personne
+      description: Votre solde avec cette personne sera perdu
+      confirm: Supprimer
 join:
   app:
     description: La façon intelligente de suivre qui doit quoi à qui, avec vos amis.

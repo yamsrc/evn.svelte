@@ -14,6 +14,7 @@ actions:
     title: 朋友
     contact: 朋友
   addSelected: 添加已选项
+  cancel: 取消
 nav:
   home: 首页
   evns: 结算
@@ -46,6 +47,11 @@ contacts:
   contact:
     owesYou: 欠你的
     youOwe: 你欠
+  delete:
+    confirm:
+      title: 删除人员
+      description: 您与此人的余额将会丢失
+      confirm: 删除
 join:
   app:
     description: 和朋友们一起智能记录谁欠谁。

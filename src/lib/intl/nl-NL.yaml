@@ -14,6 +14,7 @@ actions:
     title: Vrienden
     contact: Vriend
   addSelected: Geselecteerde toevoegen
+  cancel: Annuleren
 nav:
   home: Home
   evns: Afrekening
@@ -48,6 +49,11 @@ contacts:
   contact:
     owesYou: Is jou iets verschuldigd
     youOwe: Je bent verschuldigd
+  delete:
+    confirm:
+      title: Persoon verwijderen
+      description: Je saldo met deze persoon zal verloren gaan
+      confirm: Verwijderen
 join:
   app:
     description: >-

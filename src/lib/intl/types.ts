@@ -25,6 +25,7 @@ export type Dictionary = {
           contact: string
         }
         addSelected: string
+        cancel: string
       }
       nav: {
         home: string
@@ -66,6 +67,13 @@ export type Dictionary = {
         contact: {
           owesYou: string
           youOwe: string
+        }
+        delete: {
+          confirm: {
+            title: string
+            description: string
+            confirm: string
+          }
         }
       }
       join: {
