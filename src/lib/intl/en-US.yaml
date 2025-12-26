@@ -73,6 +73,7 @@ groups:
     title: Members
     addMembers: Add members
     addMember: Add member
+    empty: Nobody here yet. Add some members to start using this group.
   title: Groups
   summary:
     balance:

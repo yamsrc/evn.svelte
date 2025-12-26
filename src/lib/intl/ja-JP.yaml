@@ -69,6 +69,7 @@ groups:
     title: メンバー
     addMembers: メンバーを追加
     addMember: メンバーを追加
+    empty: まだ誰もいません。このグループを使い始めるにはメンバーを追加してください。
   title: グループ
   summary:
     balance:

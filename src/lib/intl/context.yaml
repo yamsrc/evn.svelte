@@ -122,6 +122,8 @@ inputs:
         input: Add members
       addMember:
         input: Add member
+      empty:
+        input: Nobody here yet. Add some members to start using this group.
     title:
       input: Groups
     summary:

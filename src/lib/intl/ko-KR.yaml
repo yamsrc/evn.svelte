@@ -69,6 +69,7 @@ groups:
     title: 회원
     addMembers: 구성원 추가
     addMember: 구성원 추가
+    empty: 아직 아무도 없습니다. 그룹을 사용하려면 멤버를 추가하세요.
   title: 그룹
   summary:
     balance:

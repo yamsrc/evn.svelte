@@ -90,7 +90,8 @@ export const dictionaries = {
       "members": {
         "title": "الأعضاء",
         "addMembers": "إضافة أعضاء",
-        "addMember": "إضافة عضو"
+        "addMember": "إضافة عضو",
+        "empty": "لا يوجد أحد هنا بعد. أضف بعض الأعضاء للبدء في استخدام هذه المجموعة."
       },
       "title": "المجموعات",
       "summary": {
@@ -194,7 +195,8 @@ export const dictionaries = {
       "members": {
         "title": "Mitglieder",
         "addMembers": "Mitglieder hinzufügen",
-        "addMember": "Mitglied hinzufügen"
+        "addMember": "Mitglied hinzufügen",
+        "empty": "Hier ist noch niemand. Füge einige Mitglieder hinzu, um mit dieser Gruppe zu starten."
       },
       "title": "Gruppen",
       "summary": {
@@ -298,7 +300,8 @@ export const dictionaries = {
       "members": {
         "title": "Members",
         "addMembers": "Add members",
-        "addMember": "Add member"
+        "addMember": "Add member",
+        "empty": "Nobody here yet. Add some members to start using this group."
       },
       "title": "Groups",
       "summary": {
@@ -402,7 +405,8 @@ export const dictionaries = {
       "members": {
         "title": "Miembros",
         "addMembers": "Agregar miembros",
-        "addMember": "Añadir miembro"
+        "addMember": "Añadir miembro",
+        "empty": "Todavía no hay nadie aquí. Agrega algunos miembros para empezar a usar este grupo."
       },
       "title": "Grupos",
       "summary": {
@@ -506,7 +510,8 @@ export const dictionaries = {
       "members": {
         "title": "Membres",
         "addMembers": "Ajouter des membres",
-        "addMember": "Ajouter un membre"
+        "addMember": "Ajouter un membre",
+        "empty": "Personne ici pour l'instant. Ajoutez des membres pour commencer à utiliser ce groupe."
       },
       "title": "Groupes",
       "summary": {
@@ -610,7 +615,8 @@ export const dictionaries = {
       "members": {
         "title": "सदस्य",
         "addMembers": "सदस्य जोड़ें",
-        "addMember": "सदस्य जोड़ें"
+        "addMember": "सदस्य जोड़ें",
+        "empty": "यहाँ अभी कोई नहीं है। इस समूह का उपयोग शुरू करने के लिए कुछ सदस्य जोड़ें।"
       },
       "title": "समूह",
       "summary": {
@@ -714,7 +720,8 @@ export const dictionaries = {
       "members": {
         "title": "Membri",
         "addMembers": "Aggiungi membri",
-        "addMember": "Aggiungi membro"
+        "addMember": "Aggiungi membro",
+        "empty": "Non c’è ancora nessuno qui. Aggiungi dei membri per iniziare a usare questo gruppo."
       },
       "title": "Gruppi",
       "summary": {
@@ -818,7 +825,8 @@ export const dictionaries = {
       "members": {
         "title": "メンバー",
         "addMembers": "メンバーを追加",
-        "addMember": "メンバーを追加"
+        "addMember": "メンバーを追加",
+        "empty": "まだ誰もいません。このグループを使い始めるにはメンバーを追加してください。"
       },
       "title": "グループ",
       "summary": {
@@ -922,7 +930,8 @@ export const dictionaries = {
       "members": {
         "title": "회원",
         "addMembers": "구성원 추가",
-        "addMember": "구성원 추가"
+        "addMember": "구성원 추가",
+        "empty": "아직 아무도 없습니다. 그룹을 사용하려면 멤버를 추가하세요."
       },
       "title": "그룹",
       "summary": {
@@ -1026,7 +1035,8 @@ export const dictionaries = {
       "members": {
         "title": "Leden",
         "addMembers": "Leden toevoegen",
-        "addMember": "Lid toevoegen"
+        "addMember": "Lid toevoegen",
+        "empty": "Er is hier nog niemand. Voeg leden toe om deze groep te gebruiken."
       },
       "title": "Groepen",
       "summary": {
@@ -1130,7 +1140,8 @@ export const dictionaries = {
       "members": {
         "title": "Участники",
         "addMembers": "Добавить участников",
-        "addMember": "Добавить участника"
+        "addMember": "Добавить участника",
+        "empty": "Здесь пока никого нет. Добавьте участников, чтобы начать пользоваться этой группой."
       },
       "title": "Группы",
       "summary": {
@@ -1234,7 +1245,8 @@ export const dictionaries = {
       "members": {
         "title": "Wanachama",
         "addMembers": "Ongeza wanachama",
-        "addMember": "Ongeza mwanachama"
+        "addMember": "Ongeza mwanachama",
+        "empty": "Hakuna mtu hapa bado. Ongeza baadhi ya wanachama ili kuanza kutumia kundi hili."
       },
       "title": "Makundi",
       "summary": {
@@ -1338,7 +1350,8 @@ export const dictionaries = {
       "members": {
         "title": "Üyeler",
         "addMembers": "Üyeleri ekle",
-        "addMember": "Üye ekle"
+        "addMember": "Üye ekle",
+        "empty": "Burada henüz kimse yok. Bu grubu kullanmaya başlamak için birkaç üye ekle."
       },
       "title": "Gruplar",
       "summary": {
@@ -1442,7 +1455,8 @@ export const dictionaries = {
       "members": {
         "title": "Учасники",
         "addMembers": "Додати учасників",
-        "addMember": "Додати учасника"
+        "addMember": "Додати учасника",
+        "empty": "Тут ще нікого немає. Додайте учасників, щоб почати користуватися цією групою."
       },
       "title": "Групи",
       "summary": {
@@ -1546,7 +1560,8 @@ export const dictionaries = {
       "members": {
         "title": "成员",
         "addMembers": "添加成员",
-        "addMember": "添加成员"
+        "addMember": "添加成员",
+        "empty": "这里还没有人。添加一些成员以开始使用这个群组。"
       },
       "title": "群组",
       "summary": {

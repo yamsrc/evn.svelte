@@ -73,6 +73,7 @@ groups:
     title: Üyeler
     addMembers: Üyeleri ekle
     addMember: Üye ekle
+    empty: Burada henüz kimse yok. Bu grubu kullanmaya başlamak için birkaç üye ekle.
   title: Gruplar
   summary:
     balance:

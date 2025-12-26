@@ -101,7 +101,7 @@
   <h2>{$dict.groups.members.title}</h2>
   {#if !members?.length}
     <p class="text-muted-foreground">
-      Nobody here yet. Add some members to start using this group.
+      {$dict.groups.members.empty}
     </p>
   {:else}
     {#each members as identity (identity)}

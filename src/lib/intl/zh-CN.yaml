@@ -69,6 +69,7 @@ groups:
     title: 成员
     addMembers: 添加成员
     addMember: 添加成员
+    empty: 这里还没有人。添加一些成员以开始使用这个群组。
   title: 群组
   summary:
     balance:

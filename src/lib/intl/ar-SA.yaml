@@ -71,6 +71,7 @@ groups:
     title: الأعضاء
     addMembers: إضافة أعضاء
     addMember: إضافة عضو
+    empty: لا يوجد أحد هنا بعد. أضف بعض الأعضاء للبدء في استخدام هذه المجموعة.
   title: المجموعات
   summary:
     balance:

@@ -73,6 +73,7 @@ groups:
     title: सदस्य
     addMembers: सदस्य जोड़ें
     addMember: सदस्य जोड़ें
+    empty: यहाँ अभी कोई नहीं है। इस समूह का उपयोग शुरू करने के लिए कुछ सदस्य जोड़ें।
   title: समूह
   summary:
     balance:

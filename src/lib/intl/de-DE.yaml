@@ -75,6 +75,9 @@ groups:
     title: Mitglieder
     addMembers: Mitglieder hinzufügen
     addMember: Mitglied hinzufügen
+    empty: >-
+      Hier ist noch niemand. Füge einige Mitglieder hinzu, um mit dieser Gruppe
+      zu starten.
   title: Gruppen
   summary:
     balance:

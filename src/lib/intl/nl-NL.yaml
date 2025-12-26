@@ -75,6 +75,7 @@ groups:
     title: Leden
     addMembers: Leden toevoegen
     addMember: Lid toevoegen
+    empty: Er is hier nog niemand. Voeg leden toe om deze groep te gebruiken.
   title: Groepen
   summary:
     balance:
