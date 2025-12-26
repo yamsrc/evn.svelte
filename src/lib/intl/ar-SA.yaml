@@ -65,6 +65,14 @@ groups:
     addMembers: إضافة أعضاء
     addMember: إضافة عضو
   title: المجموعات
+  summary:
+    balance:
+      from: |-
+        !js
+        (amount) => `أعضاء هذه المجموعة مدينون لك بـ${amount}`
+      to: |-
+        !js
+        (amount) => `أنت مدين لهم بـ${amount}`
 invite:
   share: مشاركة
   qr: عرض رمز الاستجابة السريعة

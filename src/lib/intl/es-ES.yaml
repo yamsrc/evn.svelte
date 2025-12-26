@@ -69,6 +69,14 @@ groups:
     addMembers: Agregar miembros
     addMember: Añadir miembro
   title: Grupos
+  summary:
+    balance:
+      from: |-
+        !js
+        (amount) => `Los miembros de este grupo te deben ${amount}`
+      to: |-
+        !js
+        (amount) => `Les debes ${amount}`
 invite:
   share: Compartir
   qr: Mostrar código QR

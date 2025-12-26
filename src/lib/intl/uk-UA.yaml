@@ -67,6 +67,14 @@ groups:
     addMembers: Додати учасників
     addMember: Додати учасника
   title: Групи
+  summary:
+    balance:
+      from: |-
+        !js
+        (amount) => `Члени цієї групи винні вам ${amount}`
+      to: |-
+        !js
+        (amount) => `Ви винні їм ${amount}`
 invite:
   share: Поділитися
   qr: Показати QR-код

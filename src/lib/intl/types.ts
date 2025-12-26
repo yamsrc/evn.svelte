@@ -88,6 +88,12 @@ export type Dictionary = {
           addMember: string
         }
         title: string
+        summary: {
+          balance: {
+            from: (value: any) => string
+            to: (value: any) => string
+          }
+        }
       }
       invite: {
         share: string

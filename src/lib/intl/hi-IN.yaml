@@ -67,6 +67,14 @@ groups:
     addMembers: सदस्य जोड़ें
     addMember: सदस्य जोड़ें
   title: समूह
+  summary:
+    balance:
+      from: |-
+        !js
+        (amount) => `इस समूह के सदस्य आपको ${amount} का भुगतान करते हैं`
+      to: |-
+        !js
+        (amount) => `आप उन्हें ${amount} के ऋणी हैं`
 invite:
   share: साझा करें
   qr: QR कोड दिखाएँ

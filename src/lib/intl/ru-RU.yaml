@@ -67,6 +67,14 @@ groups:
     addMembers: Добавить участников
     addMember: Добавить участника
   title: Группы
+  summary:
+    balance:
+      from: |-
+        !js
+        (amount) => `Участники этой группы должны вам ${amount}`
+      to: |-
+        !js
+        (amount) => `Вы должны им ${amount}`
 invite:
   share: Поделиться
   qr: Показать QR-код

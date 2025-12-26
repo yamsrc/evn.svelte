@@ -63,6 +63,14 @@ groups:
     addMembers: 구성원 추가
     addMember: 구성원 추가
   title: 그룹
+  summary:
+    balance:
+      from: |-
+        !js
+        (amount) => `이 그룹의 구성원들이 당신에게 ${amount}을(를) 빚지고 있습니다`
+      to: |-
+        !js
+        (amount) => `당신은 그들에게 ${amount}을(를) 빚지고 있습니다`
 invite:
   share: 공유
   qr: QR 코드 표시

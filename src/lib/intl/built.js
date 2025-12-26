@@ -83,7 +83,13 @@ export const dictionaries = {
         "addMembers": "إضافة أعضاء",
         "addMember": "إضافة عضو"
       },
-      "title": "المجموعات"
+      "title": "المجموعات",
+      "summary": {
+        "balance": {
+          "from": (amount) => `أعضاء هذه المجموعة مدينون لك بـ${amount}`,
+          "to": (amount) => `أنت مدين لهم بـ${amount}`
+        }
+      }
     },
     "invite": {
       "share": "مشاركة",
@@ -172,7 +178,13 @@ export const dictionaries = {
         "addMembers": "Mitglieder hinzufügen",
         "addMember": "Mitglied hinzufügen"
       },
-      "title": "Gruppen"
+      "title": "Gruppen",
+      "summary": {
+        "balance": {
+          "from": (amount) => `Mitglieder dieser Gruppe schulden dir ${amount}`,
+          "to": (amount) => `Sie schulden ihnen ${amount}`
+        }
+      }
     },
     "invite": {
       "share": "Teilen",
@@ -261,7 +273,13 @@ export const dictionaries = {
         "addMembers": "Add members",
         "addMember": "Add member"
       },
-      "title": "Groups"
+      "title": "Groups",
+      "summary": {
+        "balance": {
+          "from": (amount) => `Members of this group owe you ${amount}`,
+          "to": (amount) => `You owe them ${amount}`
+        }
+      }
     },
     "invite": {
       "share": "Share",
@@ -350,7 +368,13 @@ export const dictionaries = {
         "addMembers": "Agregar miembros",
         "addMember": "Añadir miembro"
       },
-      "title": "Grupos"
+      "title": "Grupos",
+      "summary": {
+        "balance": {
+          "from": (amount) => `Los miembros de este grupo te deben ${amount}`,
+          "to": (amount) => `Les debes ${amount}`
+        }
+      }
     },
     "invite": {
       "share": "Compartir",
@@ -439,7 +463,13 @@ export const dictionaries = {
         "addMembers": "Ajouter des membres",
         "addMember": "Ajouter un membre"
       },
-      "title": "Groupes"
+      "title": "Groupes",
+      "summary": {
+        "balance": {
+          "from": (amount) => `Les membres de ce groupe te doivent ${amount}`,
+          "to": (amount) => `Vous leur devez ${amount}`
+        }
+      }
     },
     "invite": {
       "share": "Partager",
@@ -528,7 +558,13 @@ export const dictionaries = {
         "addMembers": "सदस्य जोड़ें",
         "addMember": "सदस्य जोड़ें"
       },
-      "title": "समूह"
+      "title": "समूह",
+      "summary": {
+        "balance": {
+          "from": (amount) => `इस समूह के सदस्य आपको ${amount} का भुगतान करते हैं`,
+          "to": (amount) => `आप उन्हें ${amount} के ऋणी हैं`
+        }
+      }
     },
     "invite": {
       "share": "साझा करें",
@@ -617,7 +653,13 @@ export const dictionaries = {
         "addMembers": "Aggiungi membri",
         "addMember": "Aggiungi membro"
       },
-      "title": "Gruppi"
+      "title": "Gruppi",
+      "summary": {
+        "balance": {
+          "from": (amount) => `I membri di questo gruppo ti devono ${amount}`,
+          "to": (amount) => `Devi loro ${amount}`
+        }
+      }
     },
     "invite": {
       "share": "Condividi",
@@ -706,7 +748,13 @@ export const dictionaries = {
         "addMembers": "メンバーを追加",
         "addMember": "メンバーを追加"
       },
-      "title": "グループ"
+      "title": "グループ",
+      "summary": {
+        "balance": {
+          "from": (amount) => `このグループのメンバーはあなたに${amount}の支払いがあります`,
+          "to": (amount) => `あなたは彼らに${amount}を借りています`
+        }
+      }
     },
     "invite": {
       "share": "共有",
@@ -795,7 +843,13 @@ export const dictionaries = {
         "addMembers": "구성원 추가",
         "addMember": "구성원 추가"
       },
-      "title": "그룹"
+      "title": "그룹",
+      "summary": {
+        "balance": {
+          "from": (amount) => `이 그룹의 구성원들이 당신에게 ${amount}을(를) 빚지고 있습니다`,
+          "to": (amount) => `당신은 그들에게 ${amount}을(를) 빚지고 있습니다`
+        }
+      }
     },
     "invite": {
       "share": "공유",
@@ -884,7 +938,13 @@ export const dictionaries = {
         "addMembers": "Leden toevoegen",
         "addMember": "Lid toevoegen"
       },
-      "title": "Groepen"
+      "title": "Groepen",
+      "summary": {
+        "balance": {
+          "from": (amount) => `Leden van deze groep zijn je ${amount} verschuldigd`,
+          "to": (amount) => `Je bent hen ${amount} verschuldigd`
+        }
+      }
     },
     "invite": {
       "share": "Delen",
@@ -973,7 +1033,13 @@ export const dictionaries = {
         "addMembers": "Добавить участников",
         "addMember": "Добавить участника"
       },
-      "title": "Группы"
+      "title": "Группы",
+      "summary": {
+        "balance": {
+          "from": (amount) => `Участники этой группы должны вам ${amount}`,
+          "to": (amount) => `Вы должны им ${amount}`
+        }
+      }
     },
     "invite": {
       "share": "Поделиться",
@@ -1062,7 +1128,13 @@ export const dictionaries = {
         "addMembers": "Ongeza wanachama",
         "addMember": "Ongeza mwanachama"
       },
-      "title": "Makundi"
+      "title": "Makundi",
+      "summary": {
+        "balance": {
+          "from": (amount) => `Wanachama wa kundi hili wanakudai ${amount}`,
+          "to": (amount) => `Unawadaiwa ${amount}`
+        }
+      }
     },
     "invite": {
       "share": "Shiriki",
@@ -1151,7 +1223,13 @@ export const dictionaries = {
         "addMembers": "Üyeleri ekle",
         "addMember": "Üye ekle"
       },
-      "title": "Gruplar"
+      "title": "Gruplar",
+      "summary": {
+        "balance": {
+          "from": (amount) => `Bu grubun üyeleri sana ${amount} borçlu`,
+          "to": (amount) => `Onlara ${amount} borçlusunuz`
+        }
+      }
     },
     "invite": {
       "share": "Paylaş",
@@ -1240,7 +1318,13 @@ export const dictionaries = {
         "addMembers": "Додати учасників",
         "addMember": "Додати учасника"
       },
-      "title": "Групи"
+      "title": "Групи",
+      "summary": {
+        "balance": {
+          "from": (amount) => `Члени цієї групи винні вам ${amount}`,
+          "to": (amount) => `Ви винні їм ${amount}`
+        }
+      }
     },
     "invite": {
       "share": "Поділитися",
@@ -1329,7 +1413,13 @@ export const dictionaries = {
         "addMembers": "添加成员",
         "addMember": "添加成员"
       },
-      "title": "群组"
+      "title": "群组",
+      "summary": {
+        "balance": {
+          "from": (amount) => `该群组成员欠你${amount}`,
+          "to": (amount) => `你欠他们${amount}`
+        }
+      }
     },
     "invite": {
       "share": "分享",

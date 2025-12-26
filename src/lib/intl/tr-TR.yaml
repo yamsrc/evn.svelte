@@ -67,6 +67,14 @@ groups:
     addMembers: Üyeleri ekle
     addMember: Üye ekle
   title: Gruplar
+  summary:
+    balance:
+      from: |-
+        !js
+        (amount) => `Bu grubun üyeleri sana ${amount} borçlu`
+      to: |-
+        !js
+        (amount) => `Onlara ${amount} borçlusunuz`
 invite:
   share: Paylaş
   qr: QR kodunu göster

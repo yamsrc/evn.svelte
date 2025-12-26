@@ -63,6 +63,14 @@ groups:
     addMembers: メンバーを追加
     addMember: メンバーを追加
   title: グループ
+  summary:
+    balance:
+      from: |-
+        !js
+        (amount) => `このグループのメンバーはあなたに${amount}の支払いがあります`
+      to: |-
+        !js
+        (amount) => `あなたは彼らに${amount}を借りています`
 invite:
   share: 共有
   qr: QRコードを表示

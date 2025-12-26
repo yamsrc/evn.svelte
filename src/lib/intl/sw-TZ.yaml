@@ -63,6 +63,14 @@ groups:
     addMembers: Ongeza wanachama
     addMember: Ongeza mwanachama
   title: Makundi
+  summary:
+    balance:
+      from: |-
+        !js
+        (amount) => `Wanachama wa kundi hili wanakudai ${amount}`
+      to: |-
+        !js
+        (amount) => `Unawadaiwa ${amount}`
 invite:
   share: Shiriki
   qr: Onyesha msimbo wa QR

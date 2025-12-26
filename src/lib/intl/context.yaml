@@ -112,6 +112,12 @@ inputs:
         input: Add member
     title:
       input: Groups
+    summary:
+      balance:
+        from:
+          input: "!js (amount) => Members of this group owe  to you"
+        to:
+          input: "!js (amount) => You owe  to them"
   invite:
     share:
       input: Share

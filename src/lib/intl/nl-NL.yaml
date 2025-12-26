@@ -69,6 +69,14 @@ groups:
     addMembers: Leden toevoegen
     addMember: Lid toevoegen
   title: Groepen
+  summary:
+    balance:
+      from: |-
+        !js
+        (amount) => `Leden van deze groep zijn je ${amount} verschuldigd`
+      to: |-
+        !js
+        (amount) => `Je bent hen ${amount} verschuldigd`
 invite:
   share: Delen
   qr: QR-code tonen
