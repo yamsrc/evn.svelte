@@ -1,7 +1,7 @@
 import { having } from 'svas'
 import { account } from '@/iam'
 import * as net from './net'
-import { groups } from './store'
+import { internal } from './store'
 
 export async function del(id: string): Promise<void | Error> {
   const me = await having(account)
@@ -10,7 +10,7 @@ export async function del(id: string): Promise<void | Error> {
 
   if (res instanceof Error) return res
 
-  groups.delete(id)
+  internal.delete(id)
 
   return res
 }

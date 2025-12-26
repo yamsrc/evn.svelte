@@ -9,10 +9,9 @@
   import { contacts as contactsStore } from '@/contacts'
   import { Invite, type ContactWithAccount } from '@/contacts/ui'
   import { Contacts } from '@/contacts/ui'
-  import { groups as groupsStore } from '@/groups'
+  import { groups } from '@/groups'
   import { Groups } from '@/groups/ui'
   import { account } from '@/iam'
-  import type { GroupWithBalance } from '@/groups/ui'
 
   let query = $state('')
 
@@ -29,23 +28,12 @@
     })
   })
 
-  const rawGroups = $derived(ok($groupsStore) ? $groupsStore : [])
-
-  const groups: GroupWithBalance[] = $derived.by(() => {
-    return rawGroups.map((group) => ({
-      ...group,
-      balance: group.identities
-        .map((id) => contacts.find(({ identity }) => identity === id)?.balance ?? 0)
-        .reduce((acc, balance) => acc + balance, 0),
-    }))
-  })
-
   const filteredContacts: ContactWithAccount[] = $derived.by(() =>
     contacts.filter((contact) => contact.account.name?.toLowerCase().includes(query.toLowerCase())),
   )
 
-  const filteredGroups: GroupWithBalance[] = $derived.by(() =>
-    groups.filter((group) => group.name.toLowerCase().includes(query.toLowerCase())),
+  const filteredGroups = $derived.by(() =>
+    $groups.filter((group) => group.name.toLowerCase().includes(query.toLowerCase())),
   )
 </script>
 
@@ -67,7 +55,7 @@
   <Input type="text" placeholder={$dict.actions.search} bind:value={query} />
 </Section>
 
-{#if groups.length > 0}
+{#if $groups.length > 0}
   <Groups title={$dict.groups.title} groups={filteredGroups} />
 {/if}
 
