@@ -1,5 +1,6 @@
 <script lang="ts">
   import { Async, ok, ensure } from 'svas'
+  import { SvelteSet } from 'svelte/reactivity'
   import { goto } from '$app/navigation'
   import { page } from '$app/state'
   import Section from '$com/section/Section.svelte'
@@ -16,7 +17,8 @@
   let query = $state('')
 
   const id = page.params.id as string
-  let selection = $state(new Set<string>())
+  // svelte-ignore non_reactive_update
+  let selection = new SvelteSet<string>()
   let busy = $state(false)
 
   const contacts: ContactWithAccount[] = $derived.by(() => {
@@ -64,7 +66,6 @@
       {@const list = filteredContacts.filter((c) => !group.identities.includes(c.identity))}
       <Contacts contacts={list} title={$dict.contacts.all} bind:selection />
       <Section class="flex gap-2 w-full items-center justify-stretch">
-        {selection.size}
         <Button
           class="flex-1"
           disabled={selection.size === 0 || busy}

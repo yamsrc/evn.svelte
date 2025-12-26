@@ -7,11 +7,11 @@
 
   const selectable = $derived(!!selection)
 
-  function onselect(id: string, selected: boolean) {
+  function onselect(identity: string, selected: boolean) {
     if (!selection) return
 
-    if (selected) selection.add(id)
-    else selection.delete(id)
+    if (selected) selection.add(contacts.find((c) => c.identity === identity)?.id ?? '')
+    else selection.delete(contacts.find((c) => c.identity === identity)?.id ?? '')
   }
 </script>
 
@@ -19,7 +19,7 @@
   {#if title}
     <h2>{title}</h2>
   {/if}
-  {#each contacts as contact (contact.id)}
+  {#each contacts as contact (contact.identity)}
     {@const selected = selection?.has(contact.id)}
     {@const selectedProps = selectable ? { selected, onselect } : undefined}
     <Contact {contact} {actionable} {...selectedProps} />
