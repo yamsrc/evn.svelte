@@ -48,7 +48,7 @@
   )
 </script>
 
-<Async store={groups}>
+<Async store={groups} class="flex flex-col gap-5">
   {#snippet awaited(groups)}
     {@const group = groups.find((g) => g.id === id)}
     {#if group}

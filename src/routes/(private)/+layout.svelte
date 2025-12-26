@@ -15,9 +15,7 @@
 <Screen class="flex-1 flex flex-col justify-between">
   <Authenticated>
     {#snippet screen({ authentication })}
-      <div class="pt-2">
-        <Languages />
-      </div>
+      <Languages />
       <Section class="flex-1 flex flex-col items-center max-w-sm mx-auto">
         <div class="py-[10vh]">
           <img src="/logo.svg" alt="seed.me" class="h-10 mx-auto" />
@@ -28,7 +26,7 @@
     {/snippet}
     <Named>
       {@render children()}
-      <Nav position="start" sections={sections($dict)} />
+      <Nav position="start" sections={sections($dict)} class="z-1000" />
       <Actions />
     </Named>
   </Authenticated>

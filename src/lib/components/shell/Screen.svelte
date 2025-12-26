@@ -15,7 +15,7 @@
     classes,
   )}
 >
-  <div class="flex-1 flex flex-col">
+  <div class="flex-1 flex flex-col space-y-5 pt-2">
     {@render children()}
   </div>
 </div>

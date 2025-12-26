@@ -49,7 +49,7 @@
   )
 </script>
 
-<Section class="flex flex-col gap-6 pt-2">
+<Section class="flex flex-col gap-6">
   <header class="flex justify-between items-center relative">
     <h1>{$dict.contacts.title}</h1>
     <Button
