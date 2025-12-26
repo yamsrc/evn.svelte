@@ -13,7 +13,7 @@
   import { Groups } from '@/groups/ui'
   import { account } from '@/iam'
 
-  let query = $state('')
+  let search = $state('')
 
   const contacts: ContactWithAccount[] = $derived.by(() => {
     if (!ok(contactsStore)) return []
@@ -44,17 +44,17 @@
 </Section>
 
 <Section>
-  <Input type="text" placeholder={$dict.actions.search} bind:value={query} />
+  <Input type="text" placeholder={$dict.actions.search} bind:value={search} />
 </Section>
 
 {#if $groups.length > 0}
-  <Groups title={$dict.groups.title} groups={$groups} filter={query} />
+  <Groups title={$dict.groups.title} groups={$groups} {search} />
 {/if}
 
 <div class="flex-1 flex flex-col">
   {#if contacts.length === 0 && $account}
     <Invite id={$account.id} />
   {:else}
-    <Contacts title={$dict.contacts.all} {contacts} filter={query} actionable />
+    <Contacts title={$dict.contacts.all} {contacts} {search} actionable />
   {/if}
 </div>
