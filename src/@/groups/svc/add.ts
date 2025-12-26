@@ -11,7 +11,7 @@ export async function add(id: string, identities: string[]): Promise<net.Group |
 
   if (res instanceof Error) return res
 
-  sync(res, groups)
+  sync(groups, res)
 
   return res
 }
