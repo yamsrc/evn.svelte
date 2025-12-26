@@ -7,6 +7,7 @@ export type Props = {
   right?: Snippet
   icon?: Snippet
   collapsed?: boolean
+  selected?: boolean
 
   /** Height classname, required for the panel to be smoothly collapsible */
   h?: string

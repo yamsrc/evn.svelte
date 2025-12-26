@@ -12,7 +12,7 @@
   }
 </script>
 
-<Section class="flex flex-col gap-1">
+<Section class="flex flex-col gap-1.5">
   {#if title}
     <h2>{title}</h2>
   {/if}

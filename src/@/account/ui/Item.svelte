@@ -33,7 +33,8 @@
 <Async store={accounts.get(id)}>
   {#snippet awaited(account)}
     <Panel
-      class={cn('bg-card border border-border h-14', { 'bg-accent': selectable && selected })}
+      selected={selectable && selected}
+      class={cn('bg-card border border-border h-14')}
       {onclick}
       {...panelProps}
     >
