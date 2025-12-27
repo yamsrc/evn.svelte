@@ -50,15 +50,11 @@ A linked entity extends a network model (from `net/`) with references to related
 // Network model (raw API data) - defined in svc/net/Contact.ts
 export interface Contact {
   id: string
-  identities: [string, string]
-  balance: number
-  _created: number
-  _version: number
+  identity: string
 }
 
 // Linked entity (enriched domain model) - defined in svc/Contact.ts
 export interface Contact extends net.Contact {
-  identity: string      // Derived field
   account: Account      // Linked entity from @/account domain
 }
 ```
@@ -73,21 +69,17 @@ The mapping function transforms network entities into linked entities by:
 3. Combining them into a rich domain model
 
 ```typescript
-import { awaited, having } from 'svas'
+import { awaited } from 'svas'
 import { accounts } from '@/account'
-import { account } from '@/iam'
 
 export async function map(entry: net.Contact): Promise<Contact | Error> {
-  const me = await having(account)  // Wait for current user's account
-  const identity = me.id === entry.identities[0] ? entry.identities[1] : entry.identities[0]
-  const they = await awaited(accounts.get(identity))  // Fetch linked Account entity
+  const account = await awaited(accounts.get(entry.identity))  // Fetch linked Account entity
   
-  if (they instanceof Error) return they
+  if (account instanceof Error) return account
   
   return {
     ...entry,
-    identity,
-    account: they,  // Linked Account entity from @/account domain
+    account,  // Linked Account entity from @/account domain
   }
 }
 ```
@@ -97,13 +89,7 @@ export async function map(entry: net.Contact): Promise<Contact | Error> {
 The domain store uses the mapping function to transform network data into linked entities:
 
 ```typescript
-export const internal = collection<Contact>({
-  get,
-  persist: 'contacts:contacts',
-  bind: account,
-  stale: true,
-  values: values<Contact>(),
-})
+export const internal = collection<Contact>({ get })
 
 events.on('default.contacts.sync', async (entry: net.Contact) => {
   const contact = await map(entry)  // Transform to linked entity
@@ -119,11 +105,3 @@ events.on('default.contacts.sync', async (entry: net.Contact) => {
 - **Type Safety**: TypeScript ensures proper composition of linked entities
 - **Reusability**: Linked entities can reference shared domain models (e.g., `Account`)
 - **Maintainability**: Changes to related domains are automatically reflected through references
-
-### Usage Guidelines
-
-- Use linked entities when a domain model needs data from other domains
-- Keep network models (`net/`) as pure API representations
-- Implement mapping in a dedicated `map.ts` file
-- Handle errors gracefully when fetching linked entities
-- Consider caching strategies for frequently accessed linked entities
