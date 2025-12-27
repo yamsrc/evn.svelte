@@ -1,0 +1,13 @@
+title: Comentarios
+description: >-
+  ¡Nos encantaría saber tu opinión! Comparte tus ideas, comentarios y
+  sugerencias.
+send: Enviar
+form:
+  email:
+    description: >-
+      Opcionalmente, puedes dejar tu correo electrónico para recibir una
+      respuesta.
+    placeholder: Tu correo electrónico
+  message:
+    placeholder: Escribe tu mensaje

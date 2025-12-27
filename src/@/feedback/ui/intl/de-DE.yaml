@@ -1,0 +1,11 @@
+title: Feedback
+description: >-
+  Wir freuen uns auf Ihr Feedback! Teilen Sie uns gerne Ihre Gedanken,
+  Rückmeldungen und Vorschläge mit.
+send: Absenden
+form:
+  email:
+    description: Optional kannst du deine E-Mail angeben, um eine Rückmeldung zu erhalten.
+    placeholder: Ihre E-Mail-Adresse
+  message:
+    placeholder: Nachricht eingeben

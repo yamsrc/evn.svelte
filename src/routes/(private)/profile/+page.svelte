@@ -5,6 +5,7 @@
   import { Section } from '$com/section'
   import { dict } from '$lib/intl'
   import { Picture, Name, Language } from '@/account/ui'
+  import { Feedback } from '@/feedback/ui'
   import { logout } from '@/iam'
   import { account } from '@/iam'
 
@@ -40,6 +41,10 @@
       <p class="text-muted-foreground">{$dict.profile.language.description}</p>
       <Language />
     </div>
+  </Section>
+
+  <Section>
+    <Feedback />
   </Section>
 
   <Section>

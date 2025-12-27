@@ -1,0 +1,9 @@
+title: 反馈
+description: 我们非常期待收到您的反馈！欢迎分享您的想法、意见和建议。
+send: 发送
+form:
+  email:
+    description: 如需回复，可选择填写您的邮箱。
+    placeholder: 你的邮箱
+  message:
+    placeholder: 请输入您的消息

@@ -1,0 +1,11 @@
+title: Feedback
+description: >-
+  We would love to hear from you! Please share your thoughts, feedback, and
+  suggestions.
+send: Send
+form:
+  email:
+    description: Optionally, you can provide your email to get a response.
+    placeholder: Your email
+  message:
+    placeholder: Type your message

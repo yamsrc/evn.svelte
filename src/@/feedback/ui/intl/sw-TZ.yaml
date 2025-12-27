@@ -1,0 +1,11 @@
+title: Maoni
+description: >-
+  Tunapenda kusikia kutoka kwako! Tafadhali shiriki mawazo, maoni na mapendekezo
+  yako.
+send: Tuma
+form:
+  email:
+    description: Kwa hiari, unaweza kutoa barua pepe yako upate majibu.
+    placeholder: Barua pepe yako
+  message:
+    placeholder: Andika ujumbe wako

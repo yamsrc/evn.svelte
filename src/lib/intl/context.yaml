@@ -141,3 +141,4 @@ inputs:
       input: Invite
 mounts:
   iam: ../../@/iam/ui/intl
+  feedback: ../../@/feedback/ui/intl
