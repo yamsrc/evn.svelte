@@ -27,7 +27,7 @@
 </script>
 
 {#if open}
-  <Card.Root class="bg-muted" bind:ref={card}>
+  <Card.Root class="bg-muted pt-4" bind:ref={card}>
     <Card.Header>
       <Card.Title class="flex justify-center">
         <h2>
