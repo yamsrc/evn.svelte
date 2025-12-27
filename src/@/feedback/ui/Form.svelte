@@ -6,6 +6,7 @@
   import { Input } from '$ui/input'
   import { Spinner } from '$ui/spinner'
   import { Textarea } from '$ui/textarea'
+  import { send } from '@/feedback'
   import { dict } from './intl'
   import type { Props } from './Form'
 
@@ -23,28 +24,33 @@
   const email = $derived(input.email.trim())
   const valid = $derived(message.length > 0)
 
-  async function send() {
+  async function submit() {
     if (!valid) return
 
     busy = true
 
-    console.log(message, email)
-    await new Promise((resolve) => setTimeout(resolve, 1000))
+    const error = await send(message, email || undefined)
 
     busy = false
 
-    // success
+    if (error instanceof Error) {
+      console.error('Failed to send feedback:', error)
+
+      return
+    }
+
     form?.reset()
     onsend?.()
   }
 </script>
 
-<form bind:this={form} class="space-y-4" onsubmit={onsubmit(send)}>
+<form bind:this={form} class="space-y-4" onsubmit={onsubmit(submit)}>
   <Field.Field>
     <Textarea
       bind:value={input.message}
       required
       minlength={1}
+      maxlength={1000}
       placeholder={$dict.form.message.placeholder}
       class="min-h-32"
     />
