@@ -13,6 +13,9 @@ actions:
     group: Group
     title: Friends
     contact: Friend
+  addSelected: Add selected
+  cancel: Cancel
+  search: Search
 nav:
   home: Home
   evns: Evns
@@ -25,7 +28,9 @@ profile:
   title: My Profile
   language:
     title: Language
-    description: This does not affect cheque recognition. We understand most languages there anyway.
+    description: >-
+      This does not affect cheque recognition. We understand most languages
+      there anyway.
 form:
   enterName: Enter name
 copyright: © Seed.me, 2024-2025
@@ -45,11 +50,40 @@ contacts:
   contact:
     owesYou: Owes you
     youOwe: You owe
+  delete:
+    confirm:
+      title: Delete person
+      description: Your balance with this person will be lost
+      confirm: Delete
 join:
   app:
     description: The smart way to track who owes whom, together with friends.
   inviter:
-    description: |-
+    description: >-
       !js
-      (name) => `You have been invited by ${name}. Just register or log in, and you’re all set`
+
+      (name) => `You have been invited by ${name}. Just register or log in, and
+      you’re all set`
   accept: Start Using Evn
+groups:
+  leave: Hold to disband group
+  name:
+    description: All group members will see this name
+  members:
+    title: Members
+    addMembers: Add members
+    addMember: Add member
+    empty: Nobody here yet. Add some members to start using this group.
+  title: Groups
+  summary:
+    balance:
+      from: |-
+        !js
+        (amount) => `Members of this group owe you ${amount}`
+      to: |-
+        !js
+        (amount) => `You owe them ${amount}`
+invite:
+  share: Share
+  qr: Show QR code
+  invite: Invite

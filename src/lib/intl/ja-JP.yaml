@@ -13,6 +13,9 @@ actions:
     group: グループ
     title: 友達
     contact: 友達
+  addSelected: 選択したものを追加
+  cancel: キャンセル
+  search: 検索
 nav:
   home: ホーム
   evns: 清算
@@ -45,6 +48,11 @@ contacts:
   contact:
     owesYou: あなたに借りがある
     youOwe: あなたが支払うべきです
+  delete:
+    confirm:
+      title: 人物を削除
+      description: この相手との残高が失われます
+      confirm: 削除
 join:
   app:
     description: 友だちと一緒に「誰が誰にいくら借りているか」をスマートに管理。
@@ -53,3 +61,25 @@ join:
       !js
       (name) => `${name} から招待されました。登録またはログインするだけで、準備完了です`
   accept: Evn を使い始める
+groups:
+  leave: 長押しでグループを解散
+  name:
+    description: すべてのグループメンバーがこの名前を表示します
+  members:
+    title: メンバー
+    addMembers: メンバーを追加
+    addMember: メンバーを追加
+    empty: まだ誰もいません。このグループを使い始めるにはメンバーを追加してください。
+  title: グループ
+  summary:
+    balance:
+      from: |-
+        !js
+        (amount) => `このグループのメンバーはあなたに${amount}の支払いがあります`
+      to: |-
+        !js
+        (amount) => `あなたは彼らに${amount}を借りています`
+invite:
+  share: 共有
+  qr: QRコードを表示
+  invite: 招待

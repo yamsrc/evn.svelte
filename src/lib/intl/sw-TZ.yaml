@@ -13,6 +13,9 @@ actions:
     group: Kikundi
     title: Marafiki
     contact: Rafiki
+  addSelected: Ongeza zilizochaguliwa
+  cancel: Ghairi
+  search: Tafuta
 nav:
   home: Mwanzo
   evns: Marejesho
@@ -45,6 +48,11 @@ contacts:
   contact:
     owesYou: Ana deni lako
     youOwe: Unadaiwa
+  delete:
+    confirm:
+      title: Futa mtu
+      description: Salio lako na mtu huyu litapotea
+      confirm: Futa
 join:
   app:
     description: Njia bora ya kufuatilia nani anamdai nani, ukiwa na marafiki zako.
@@ -53,3 +61,27 @@ join:
       !js
       (name) => `${name} amekualika. Jisajili au ingia, na uko tayari kuanza`
   accept: Anza kutumia Evn
+groups:
+  leave: Shikilia kuvunja kundi
+  name:
+    description: Wanachama wote wa kundi wataona jina hili
+  members:
+    title: Wanachama
+    addMembers: Ongeza wanachama
+    addMember: Ongeza mwanachama
+    empty: >-
+      Hakuna mtu hapa bado. Ongeza baadhi ya wanachama ili kuanza kutumia kundi
+      hili.
+  title: Makundi
+  summary:
+    balance:
+      from: |-
+        !js
+        (amount) => `Wanachama wa kundi hili wanakudai ${amount}`
+      to: |-
+        !js
+        (amount) => `Unawadaiwa ${amount}`
+invite:
+  share: Shiriki
+  qr: Onyesha msimbo wa QR
+  invite: Alika

@@ -13,6 +13,9 @@ actions:
     group: 그룹
     title: 친구
     contact: 친구
+  addSelected: 선택 항목 추가
+  cancel: 취소
+  search: 검색
 nav:
   home: 홈
   evns: 정산
@@ -45,6 +48,11 @@ contacts:
   contact:
     owesYou: 당신에게 빚졌어요
     youOwe: 당신이 빚졌습니다
+  delete:
+    confirm:
+      title: 사람 삭제
+      description: 이 사람과의 잔액이 사라집니다
+      confirm: 삭제
 join:
   app:
     description: 친구들과 함께 누가 누구에게 얼마를 빚졌는지 스마트하게 추적하는 방법.
@@ -53,3 +61,25 @@ join:
       !js
       (name) => `${name}님이 초대했습니다. 회원가입 또는 로그인만 하면 바로 시작할 수 있습니다`
   accept: Evn 시작하기
+groups:
+  leave: 길게 눌러 그룹 해산
+  name:
+    description: 모든 그룹 구성원이 이 이름을 볼 수 있습니다
+  members:
+    title: 회원
+    addMembers: 구성원 추가
+    addMember: 구성원 추가
+    empty: 아직 아무도 없습니다. 그룹을 사용하려면 멤버를 추가하세요.
+  title: 그룹
+  summary:
+    balance:
+      from: |-
+        !js
+        (amount) => `이 그룹의 구성원들이 당신에게 ${amount}을(를) 빚지고 있습니다`
+      to: |-
+        !js
+        (amount) => `당신은 그들에게 ${amount}을(를) 빚지고 있습니다`
+invite:
+  share: 공유
+  qr: QR 코드 표시
+  invite: 초대

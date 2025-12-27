@@ -13,6 +13,9 @@ actions:
     group: Grupo
     title: Amigos
     contact: Amigo
+  addSelected: Agregar seleccionado(s)
+  cancel: Cancelar
+  search: Buscar
 nav:
   home: Inicio
   evns: Ajustes
@@ -25,7 +28,9 @@ profile:
   title: Mi perfil
   language:
     title: Idioma
-    description: Esto no afecta al reconocimiento de cheques. De todas formas, entendemos la mayoría de los idiomas allí.
+    description: >-
+      Esto no afecta al reconocimiento de cheques. De todas formas, entendemos
+      la mayoría de los idiomas allí.
 form:
   enterName: Introduce el nombre
 copyright: © Seed.me, 2024-2025
@@ -45,11 +50,44 @@ contacts:
   contact:
     owesYou: Te debe
     youOwe: Debes
+  delete:
+    confirm:
+      title: Eliminar persona
+      description: Tu saldo con esta persona se perderá
+      confirm: Eliminar
 join:
   app:
-    description: La forma inteligente de llevar el control de quién le debe a quién, junto con tus amigos.
+    description: >-
+      La forma inteligente de llevar el control de quién le debe a quién, junto
+      con tus amigos.
   inviter:
-    description: |-
+    description: >-
       !js
-      (name) => `Has sido invitado por ${name}. Solo regístrate o inicia sesión, y ya está todo listo`
+
+      (name) => `Has sido invitado por ${name}. Solo regístrate o inicia sesión,
+      y ya está todo listo`
   accept: Comienza a usar Evn
+groups:
+  leave: Mantén pulsado para disolver el grupo
+  name:
+    description: Todos los miembros del grupo verán este nombre
+  members:
+    title: Miembros
+    addMembers: Agregar miembros
+    addMember: Añadir miembro
+    empty: >-
+      Todavía no hay nadie aquí. Agrega algunos miembros para empezar a usar
+      este grupo.
+  title: Grupos
+  summary:
+    balance:
+      from: |-
+        !js
+        (amount) => `Los miembros de este grupo te deben ${amount}`
+      to: |-
+        !js
+        (amount) => `Les debes ${amount}`
+invite:
+  share: Compartir
+  qr: Mostrar código QR
+  invite: Invitar

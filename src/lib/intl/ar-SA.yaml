@@ -13,6 +13,9 @@ actions:
     group: مجموعة
     title: أصدقاء
     contact: صديق
+  addSelected: إضافة المحدد
+  cancel: إلغاء
+  search: بحث
 nav:
   home: الرئيسية
   evns: تسوية
@@ -45,11 +48,40 @@ contacts:
   contact:
     owesYou: مدين لك
     youOwe: أنت مدين
+  delete:
+    confirm:
+      title: حذف الشخص
+      description: سيتم فقدان رصيدك مع هذا الشخص
+      confirm: حذف
 join:
   app:
     description: الطريقة الذكية لمتابعة من يدين لمن، مع الأصدقاء.
   inviter:
-    description: |-
+    description: >-
       !js
-      (name) => `لقد تمّت دعوتك من قِبل ${name}. فقط سجّل أو قم بتسجيل الدخول، وستكون جاهزًا للبدء`
+
+      (name) => `لقد تمّت دعوتك من قِبل ${name}. فقط سجّل أو قم بتسجيل الدخول،
+      وستكون جاهزًا للبدء`
   accept: ابدأ استخدام Evn
+groups:
+  leave: اضغط مع الاستمرار لتفكيك المجموعة
+  name:
+    description: سيرى جميع أعضاء المجموعة هذا الاسم
+  members:
+    title: الأعضاء
+    addMembers: إضافة أعضاء
+    addMember: إضافة عضو
+    empty: لا يوجد أحد هنا بعد. أضف بعض الأعضاء للبدء في استخدام هذه المجموعة.
+  title: المجموعات
+  summary:
+    balance:
+      from: |-
+        !js
+        (amount) => `أعضاء هذه المجموعة مدينون لك بـ${amount}`
+      to: |-
+        !js
+        (amount) => `أنت مدين لهم بـ${amount}`
+invite:
+  share: مشاركة
+  qr: عرض رمز الاستجابة السريعة
+  invite: دعوة

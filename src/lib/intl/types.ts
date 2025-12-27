@@ -24,6 +24,9 @@ export type Dictionary = {
           title: string
           contact: string
         }
+        addSelected: string
+        cancel: string
+        search: string
       }
       nav: {
         home: string
@@ -66,6 +69,13 @@ export type Dictionary = {
           owesYou: string
           youOwe: string
         }
+        delete: {
+          confirm: {
+            title: string
+            description: string
+            confirm: string
+          }
+        }
       }
       join: {
         app: {
@@ -75,5 +85,29 @@ export type Dictionary = {
           description: (value: any) => string
         }
         accept: string
+      }
+      groups: {
+        leave: string
+        name: {
+          description: string
+        }
+        members: {
+          title: string
+          addMembers: string
+          addMember: string
+          empty: string
+        }
+        title: string
+        summary: {
+          balance: {
+            from: (value: any) => string
+            to: (value: any) => string
+          }
+        }
+      }
+      invite: {
+        share: string
+        qr: string
+        invite: string
       }
     }

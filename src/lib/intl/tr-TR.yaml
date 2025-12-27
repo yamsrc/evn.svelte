@@ -13,6 +13,9 @@ actions:
     group: Grup
     title: Arkadaşlar
     contact: Arkadaş
+  addSelected: Seçileni ekle
+  cancel: İptal
+  search: Ara
 nav:
   home: Ana Sayfa
   evns: Hesaplaşma
@@ -45,11 +48,42 @@ contacts:
   contact:
     owesYou: Sana borçlu
     youOwe: Borçlusun
+  delete:
+    confirm:
+      title: Kişiyi sil
+      description: Bu kişiyle olan bakiyeniz kaybolacak
+      confirm: Sil
 join:
   app:
-    description: Kimin kime borcu olduğunu arkadaşlarınla birlikte akıllıca takip etmenin yolu.
+    description: >-
+      Kimin kime borcu olduğunu arkadaşlarınla birlikte akıllıca takip etmenin
+      yolu.
   inviter:
-    description: |-
+    description: >-
       !js
-      (name) => `${name} tarafından davet edildiniz. Sadece kaydolun veya giriş yapın, ve hazırsınız`
+
+      (name) => `${name} tarafından davet edildiniz. Sadece kaydolun veya giriş
+      yapın, ve hazırsınız`
   accept: Evn'i kullanmaya başla
+groups:
+  leave: Grubu dağıtmak için basılı tut
+  name:
+    description: Tüm grup üyeleri bu ismi görecek
+  members:
+    title: Üyeler
+    addMembers: Üyeleri ekle
+    addMember: Üye ekle
+    empty: Burada henüz kimse yok. Bu grubu kullanmaya başlamak için birkaç üye ekle.
+  title: Gruplar
+  summary:
+    balance:
+      from: |-
+        !js
+        (amount) => `Bu grubun üyeleri sana ${amount} borçlu`
+      to: |-
+        !js
+        (amount) => `Onlara ${amount} borçlusunuz`
+invite:
+  share: Paylaş
+  qr: QR kodunu göster
+  invite: Davet et

@@ -29,6 +29,12 @@ inputs:
         input: Friends
       contact:
         input: Friend
+    addSelected:
+      input: Add selected
+    cancel:
+      input: Cancel
+    search:
+      input: Search
   nav:
     home:
       input: Home
@@ -85,6 +91,14 @@ inputs:
         input: Owes you
       youOwe:
         input: You owe
+    delete:
+      confirm:
+        title:
+          input: Delete person
+        description:
+          input: Your balance with this person will be lost
+        confirm:
+          input: Delete
   join:
     app:
       description:
@@ -95,5 +109,35 @@ inputs:
         input: js! (name) => You have been invited by . Just register or log in, and you are all set
     accept:
       input: Start Using Evn
+  groups:
+    leave:
+      input: Hold to disband group
+    name:
+      description:
+        input: All group members will see this name
+    members:
+      title:
+        input: Members
+      addMembers:
+        input: Add members
+      addMember:
+        input: Add member
+      empty:
+        input: Nobody here yet. Add some members to start using this group.
+    title:
+      input: Groups
+    summary:
+      balance:
+        from:
+          input: "!js (amount) => Members of this group owe  to you"
+        to:
+          input: "!js (amount) => You owe  to them"
+  invite:
+    share:
+      input: Share
+    qr:
+      input: Show QR code
+    invite:
+      input: Invite
 mounts:
   iam: ../../@/iam/ui/intl

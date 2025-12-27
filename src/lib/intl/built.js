@@ -19,7 +19,10 @@ export const dictionaries = {
         "group": "مجموعة",
         "title": "أصدقاء",
         "contact": "صديق"
-      }
+      },
+      "addSelected": "إضافة المحدد",
+      "cancel": "إلغاء",
+      "search": "بحث"
     },
     "nav": {
       "home": "الرئيسية",
@@ -61,6 +64,13 @@ export const dictionaries = {
       "contact": {
         "owesYou": "مدين لك",
         "youOwe": "أنت مدين"
+      },
+      "delete": {
+        "confirm": {
+          "title": "حذف الشخص",
+          "description": "سيتم فقدان رصيدك مع هذا الشخص",
+          "confirm": "حذف"
+        }
       }
     },
     "join": {
@@ -71,6 +81,30 @@ export const dictionaries = {
         "description": (name) => `لقد تمّت دعوتك من قِبل ${name}. فقط سجّل أو قم بتسجيل الدخول، وستكون جاهزًا للبدء`
       },
       "accept": "ابدأ استخدام Evn"
+    },
+    "groups": {
+      "leave": "اضغط مع الاستمرار لتفكيك المجموعة",
+      "name": {
+        "description": "سيرى جميع أعضاء المجموعة هذا الاسم"
+      },
+      "members": {
+        "title": "الأعضاء",
+        "addMembers": "إضافة أعضاء",
+        "addMember": "إضافة عضو",
+        "empty": "لا يوجد أحد هنا بعد. أضف بعض الأعضاء للبدء في استخدام هذه المجموعة."
+      },
+      "title": "المجموعات",
+      "summary": {
+        "balance": {
+          "from": (amount) => `أعضاء هذه المجموعة مدينون لك بـ${amount}`,
+          "to": (amount) => `أنت مدين لهم بـ${amount}`
+        }
+      }
+    },
+    "invite": {
+      "share": "مشاركة",
+      "qr": "عرض رمز الاستجابة السريعة",
+      "invite": "دعوة"
     }
   },
   "de-DE": {
@@ -90,7 +124,10 @@ export const dictionaries = {
         "group": "Gruppe",
         "title": "Freunde",
         "contact": "Freund"
-      }
+      },
+      "addSelected": "Ausgewählte hinzufügen",
+      "cancel": "Abbrechen",
+      "search": "Suchen"
     },
     "nav": {
       "home": "Startseite",
@@ -132,6 +169,13 @@ export const dictionaries = {
       "contact": {
         "owesYou": "Schuldet dir",
         "youOwe": "Du schuldest"
+      },
+      "delete": {
+        "confirm": {
+          "title": "Person löschen",
+          "description": "Ihr Guthaben mit dieser Person wird verloren gehen",
+          "confirm": "Löschen"
+        }
       }
     },
     "join": {
@@ -142,6 +186,30 @@ export const dictionaries = {
         "description": (name) => `${name} hat dich eingeladen. Registriere dich einfach oder melde dich an, und schon kann es losgehen`
       },
       "accept": "Jetzt mit Evn starten"
+    },
+    "groups": {
+      "leave": "Zum Auflösen der Gruppe gedrückt halten",
+      "name": {
+        "description": "Alle Gruppenmitglieder sehen diesen Namen"
+      },
+      "members": {
+        "title": "Mitglieder",
+        "addMembers": "Mitglieder hinzufügen",
+        "addMember": "Mitglied hinzufügen",
+        "empty": "Hier ist noch niemand. Füge einige Mitglieder hinzu, um mit dieser Gruppe zu starten."
+      },
+      "title": "Gruppen",
+      "summary": {
+        "balance": {
+          "from": (amount) => `Mitglieder dieser Gruppe schulden dir ${amount}`,
+          "to": (amount) => `Sie schulden ihnen ${amount}`
+        }
+      }
+    },
+    "invite": {
+      "share": "Teilen",
+      "qr": "QR-Code anzeigen",
+      "invite": "Einladen"
     }
   },
   "en-US": {
@@ -161,7 +229,10 @@ export const dictionaries = {
         "group": "Group",
         "title": "Friends",
         "contact": "Friend"
-      }
+      },
+      "addSelected": "Add selected",
+      "cancel": "Cancel",
+      "search": "Search"
     },
     "nav": {
       "home": "Home",
@@ -203,6 +274,13 @@ export const dictionaries = {
       "contact": {
         "owesYou": "Owes you",
         "youOwe": "You owe"
+      },
+      "delete": {
+        "confirm": {
+          "title": "Delete person",
+          "description": "Your balance with this person will be lost",
+          "confirm": "Delete"
+        }
       }
     },
     "join": {
@@ -213,6 +291,30 @@ export const dictionaries = {
         "description": (name) => `You have been invited by ${name}. Just register or log in, and you’re all set`
       },
       "accept": "Start Using Evn"
+    },
+    "groups": {
+      "leave": "Hold to disband group",
+      "name": {
+        "description": "All group members will see this name"
+      },
+      "members": {
+        "title": "Members",
+        "addMembers": "Add members",
+        "addMember": "Add member",
+        "empty": "Nobody here yet. Add some members to start using this group."
+      },
+      "title": "Groups",
+      "summary": {
+        "balance": {
+          "from": (amount) => `Members of this group owe you ${amount}`,
+          "to": (amount) => `You owe them ${amount}`
+        }
+      }
+    },
+    "invite": {
+      "share": "Share",
+      "qr": "Show QR code",
+      "invite": "Invite"
     }
   },
   "es-ES": {
@@ -232,7 +334,10 @@ export const dictionaries = {
         "group": "Grupo",
         "title": "Amigos",
         "contact": "Amigo"
-      }
+      },
+      "addSelected": "Agregar seleccionado(s)",
+      "cancel": "Cancelar",
+      "search": "Buscar"
     },
     "nav": {
       "home": "Inicio",
@@ -274,6 +379,13 @@ export const dictionaries = {
       "contact": {
         "owesYou": "Te debe",
         "youOwe": "Debes"
+      },
+      "delete": {
+        "confirm": {
+          "title": "Eliminar persona",
+          "description": "Tu saldo con esta persona se perderá",
+          "confirm": "Eliminar"
+        }
       }
     },
     "join": {
@@ -284,6 +396,30 @@ export const dictionaries = {
         "description": (name) => `Has sido invitado por ${name}. Solo regístrate o inicia sesión, y ya está todo listo`
       },
       "accept": "Comienza a usar Evn"
+    },
+    "groups": {
+      "leave": "Mantén pulsado para disolver el grupo",
+      "name": {
+        "description": "Todos los miembros del grupo verán este nombre"
+      },
+      "members": {
+        "title": "Miembros",
+        "addMembers": "Agregar miembros",
+        "addMember": "Añadir miembro",
+        "empty": "Todavía no hay nadie aquí. Agrega algunos miembros para empezar a usar este grupo."
+      },
+      "title": "Grupos",
+      "summary": {
+        "balance": {
+          "from": (amount) => `Los miembros de este grupo te deben ${amount}`,
+          "to": (amount) => `Les debes ${amount}`
+        }
+      }
+    },
+    "invite": {
+      "share": "Compartir",
+      "qr": "Mostrar código QR",
+      "invite": "Invitar"
     }
   },
   "fr-FR": {
@@ -303,7 +439,10 @@ export const dictionaries = {
         "group": "Groupe",
         "title": "Amis",
         "contact": "Ami"
-      }
+      },
+      "addSelected": "Ajouter la sélection",
+      "cancel": "Annuler",
+      "search": "Rechercher"
     },
     "nav": {
       "home": "Accueil",
@@ -345,6 +484,13 @@ export const dictionaries = {
       "contact": {
         "owesYou": "Te doit",
         "youOwe": "Vous devez"
+      },
+      "delete": {
+        "confirm": {
+          "title": "Supprimer la personne",
+          "description": "Votre solde avec cette personne sera perdu",
+          "confirm": "Supprimer"
+        }
       }
     },
     "join": {
@@ -355,6 +501,30 @@ export const dictionaries = {
         "description": (name) => `Vous avez été invité(e) par ${name}. Inscrivez-vous ou connectez-vous, et tout est prêt`
       },
       "accept": "Commencer à utiliser Evn"
+    },
+    "groups": {
+      "leave": "Maintenir pour dissoudre le groupe",
+      "name": {
+        "description": "Tous les membres du groupe verront ce nom"
+      },
+      "members": {
+        "title": "Membres",
+        "addMembers": "Ajouter des membres",
+        "addMember": "Ajouter un membre",
+        "empty": "Personne ici pour l'instant. Ajoutez des membres pour commencer à utiliser ce groupe."
+      },
+      "title": "Groupes",
+      "summary": {
+        "balance": {
+          "from": (amount) => `Les membres de ce groupe te doivent ${amount}`,
+          "to": (amount) => `Vous leur devez ${amount}`
+        }
+      }
+    },
+    "invite": {
+      "share": "Partager",
+      "qr": "Afficher le code QR",
+      "invite": "Inviter"
     }
   },
   "hi-IN": {
@@ -374,7 +544,10 @@ export const dictionaries = {
         "group": "समूह",
         "title": "मित्र",
         "contact": "मित्र"
-      }
+      },
+      "addSelected": "चयनित जोड़ें",
+      "cancel": "रद्द करें",
+      "search": "खोजें"
     },
     "nav": {
       "home": "मुख्य पृष्ठ",
@@ -416,6 +589,13 @@ export const dictionaries = {
       "contact": {
         "owesYou": "आपका कर्ज़दार है",
         "youOwe": "आपको देना है"
+      },
+      "delete": {
+        "confirm": {
+          "title": "व्यक्ति हटाएँ",
+          "description": "इस व्यक्ति के साथ आपका बैलेंस खो जाएगा",
+          "confirm": "हटाएँ"
+        }
       }
     },
     "join": {
@@ -426,6 +606,30 @@ export const dictionaries = {
         "description": (name) => `${name} ने आपको आमंत्रित किया है। बस रजिस्टर करें या लॉग इन करें, और आप तैयार हैं`
       },
       "accept": "Evn का उपयोग शुरू करें"
+    },
+    "groups": {
+      "leave": "ग्रुप को भंग करने के लिए दबाकर रखें",
+      "name": {
+        "description": "सभी समूह सदस्य यह नाम देखेंगे"
+      },
+      "members": {
+        "title": "सदस्य",
+        "addMembers": "सदस्य जोड़ें",
+        "addMember": "सदस्य जोड़ें",
+        "empty": "यहाँ अभी कोई नहीं है। इस समूह का उपयोग शुरू करने के लिए कुछ सदस्य जोड़ें।"
+      },
+      "title": "समूह",
+      "summary": {
+        "balance": {
+          "from": (amount) => `इस समूह के सदस्य आपको ${amount} का भुगतान करते हैं`,
+          "to": (amount) => `आप उन्हें ${amount} के ऋणी हैं`
+        }
+      }
+    },
+    "invite": {
+      "share": "साझा करें",
+      "qr": "QR कोड दिखाएँ",
+      "invite": "आमंत्रित करें"
     }
   },
   "it-IT": {
@@ -445,7 +649,10 @@ export const dictionaries = {
         "group": "Gruppo",
         "title": "Amici",
         "contact": "Amico"
-      }
+      },
+      "addSelected": "Aggiungi selezionati",
+      "cancel": "Annulla",
+      "search": "Cerca"
     },
     "nav": {
       "home": "Home",
@@ -487,6 +694,13 @@ export const dictionaries = {
       "contact": {
         "owesYou": "Ti deve",
         "youOwe": "Devi"
+      },
+      "delete": {
+        "confirm": {
+          "title": "Elimina persona",
+          "description": "Il tuo saldo con questa persona andrà perso",
+          "confirm": "Elimina"
+        }
       }
     },
     "join": {
@@ -497,6 +711,30 @@ export const dictionaries = {
         "description": (name) => `Sei stato invitato da ${name}. Basta registrarsi o accedere, e sei pronto`
       },
       "accept": "Inizia a usare Evn"
+    },
+    "groups": {
+      "leave": "Tieni premuto per sciogliere il gruppo",
+      "name": {
+        "description": "Tutti i membri del gruppo vedranno questo nome"
+      },
+      "members": {
+        "title": "Membri",
+        "addMembers": "Aggiungi membri",
+        "addMember": "Aggiungi membro",
+        "empty": "Non c’è ancora nessuno qui. Aggiungi dei membri per iniziare a usare questo gruppo."
+      },
+      "title": "Gruppi",
+      "summary": {
+        "balance": {
+          "from": (amount) => `I membri di questo gruppo ti devono ${amount}`,
+          "to": (amount) => `Devi loro ${amount}`
+        }
+      }
+    },
+    "invite": {
+      "share": "Condividi",
+      "qr": "Mostra codice QR",
+      "invite": "Invita"
     }
   },
   "ja-JP": {
@@ -516,7 +754,10 @@ export const dictionaries = {
         "group": "グループ",
         "title": "友達",
         "contact": "友達"
-      }
+      },
+      "addSelected": "選択したものを追加",
+      "cancel": "キャンセル",
+      "search": "検索"
     },
     "nav": {
       "home": "ホーム",
@@ -558,6 +799,13 @@ export const dictionaries = {
       "contact": {
         "owesYou": "あなたに借りがある",
         "youOwe": "あなたが支払うべきです"
+      },
+      "delete": {
+        "confirm": {
+          "title": "人物を削除",
+          "description": "この相手との残高が失われます",
+          "confirm": "削除"
+        }
       }
     },
     "join": {
@@ -568,6 +816,30 @@ export const dictionaries = {
         "description": (name) => `${name} から招待されました。登録またはログインするだけで、準備完了です`
       },
       "accept": "Evn を使い始める"
+    },
+    "groups": {
+      "leave": "長押しでグループを解散",
+      "name": {
+        "description": "すべてのグループメンバーがこの名前を表示します"
+      },
+      "members": {
+        "title": "メンバー",
+        "addMembers": "メンバーを追加",
+        "addMember": "メンバーを追加",
+        "empty": "まだ誰もいません。このグループを使い始めるにはメンバーを追加してください。"
+      },
+      "title": "グループ",
+      "summary": {
+        "balance": {
+          "from": (amount) => `このグループのメンバーはあなたに${amount}の支払いがあります`,
+          "to": (amount) => `あなたは彼らに${amount}を借りています`
+        }
+      }
+    },
+    "invite": {
+      "share": "共有",
+      "qr": "QRコードを表示",
+      "invite": "招待"
     }
   },
   "ko-KR": {
@@ -587,7 +859,10 @@ export const dictionaries = {
         "group": "그룹",
         "title": "친구",
         "contact": "친구"
-      }
+      },
+      "addSelected": "선택 항목 추가",
+      "cancel": "취소",
+      "search": "검색"
     },
     "nav": {
       "home": "홈",
@@ -629,6 +904,13 @@ export const dictionaries = {
       "contact": {
         "owesYou": "당신에게 빚졌어요",
         "youOwe": "당신이 빚졌습니다"
+      },
+      "delete": {
+        "confirm": {
+          "title": "사람 삭제",
+          "description": "이 사람과의 잔액이 사라집니다",
+          "confirm": "삭제"
+        }
       }
     },
     "join": {
@@ -639,6 +921,30 @@ export const dictionaries = {
         "description": (name) => `${name}님이 초대했습니다. 회원가입 또는 로그인만 하면 바로 시작할 수 있습니다`
       },
       "accept": "Evn 시작하기"
+    },
+    "groups": {
+      "leave": "길게 눌러 그룹 해산",
+      "name": {
+        "description": "모든 그룹 구성원이 이 이름을 볼 수 있습니다"
+      },
+      "members": {
+        "title": "회원",
+        "addMembers": "구성원 추가",
+        "addMember": "구성원 추가",
+        "empty": "아직 아무도 없습니다. 그룹을 사용하려면 멤버를 추가하세요."
+      },
+      "title": "그룹",
+      "summary": {
+        "balance": {
+          "from": (amount) => `이 그룹의 구성원들이 당신에게 ${amount}을(를) 빚지고 있습니다`,
+          "to": (amount) => `당신은 그들에게 ${amount}을(를) 빚지고 있습니다`
+        }
+      }
+    },
+    "invite": {
+      "share": "공유",
+      "qr": "QR 코드 표시",
+      "invite": "초대"
     }
   },
   "nl-NL": {
@@ -658,7 +964,10 @@ export const dictionaries = {
         "group": "Groep",
         "title": "Vrienden",
         "contact": "Vriend"
-      }
+      },
+      "addSelected": "Geselecteerde toevoegen",
+      "cancel": "Annuleren",
+      "search": "Zoeken"
     },
     "nav": {
       "home": "Home",
@@ -700,6 +1009,13 @@ export const dictionaries = {
       "contact": {
         "owesYou": "Is jou iets verschuldigd",
         "youOwe": "Je bent verschuldigd"
+      },
+      "delete": {
+        "confirm": {
+          "title": "Persoon verwijderen",
+          "description": "Je saldo met deze persoon zal verloren gaan",
+          "confirm": "Verwijderen"
+        }
       }
     },
     "join": {
@@ -710,6 +1026,30 @@ export const dictionaries = {
         "description": (name) => `Je bent uitgenodigd door ${name}. Registreer je of log in, en je bent klaar om te beginnen`
       },
       "accept": "Evn gebruiken starten"
+    },
+    "groups": {
+      "leave": "Houd vast om groep te ontbinden",
+      "name": {
+        "description": "Alle groepsleden kunnen deze naam zien"
+      },
+      "members": {
+        "title": "Leden",
+        "addMembers": "Leden toevoegen",
+        "addMember": "Lid toevoegen",
+        "empty": "Er is hier nog niemand. Voeg leden toe om deze groep te gebruiken."
+      },
+      "title": "Groepen",
+      "summary": {
+        "balance": {
+          "from": (amount) => `Leden van deze groep zijn je ${amount} verschuldigd`,
+          "to": (amount) => `Je bent hen ${amount} verschuldigd`
+        }
+      }
+    },
+    "invite": {
+      "share": "Delen",
+      "qr": "QR-code tonen",
+      "invite": "Uitnodigen"
     }
   },
   "ru-RU": {
@@ -729,7 +1069,10 @@ export const dictionaries = {
         "group": "Группа",
         "title": "Друзья",
         "contact": "Друг"
-      }
+      },
+      "addSelected": "Добавить выбранные",
+      "cancel": "Отмена",
+      "search": "Поиск"
     },
     "nav": {
       "home": "Главная",
@@ -771,6 +1114,13 @@ export const dictionaries = {
       "contact": {
         "owesYou": "Должен тебе",
         "youOwe": "Вы должны"
+      },
+      "delete": {
+        "confirm": {
+          "title": "Удалить человека",
+          "description": "Ваш баланс с этим человеком будет потерян",
+          "confirm": "Удалить"
+        }
       }
     },
     "join": {
@@ -781,6 +1131,30 @@ export const dictionaries = {
         "description": (name) => `Вас пригласил(а) ${name}. Просто зарегистрируйтесь или войдите, и вы готовы начать`
       },
       "accept": "Начать использовать Evn"
+    },
+    "groups": {
+      "leave": "Удерживайте для распуска группы",
+      "name": {
+        "description": "Все участники группы увидят это имя"
+      },
+      "members": {
+        "title": "Участники",
+        "addMembers": "Добавить участников",
+        "addMember": "Добавить участника",
+        "empty": "Здесь пока никого нет. Добавьте участников, чтобы начать пользоваться этой группой."
+      },
+      "title": "Группы",
+      "summary": {
+        "balance": {
+          "from": (amount) => `Участники этой группы должны вам ${amount}`,
+          "to": (amount) => `Вы должны им ${amount}`
+        }
+      }
+    },
+    "invite": {
+      "share": "Поделиться",
+      "qr": "Показать QR-код",
+      "invite": "Пригласить"
     }
   },
   "sw-TZ": {
@@ -800,7 +1174,10 @@ export const dictionaries = {
         "group": "Kikundi",
         "title": "Marafiki",
         "contact": "Rafiki"
-      }
+      },
+      "addSelected": "Ongeza zilizochaguliwa",
+      "cancel": "Ghairi",
+      "search": "Tafuta"
     },
     "nav": {
       "home": "Mwanzo",
@@ -842,6 +1219,13 @@ export const dictionaries = {
       "contact": {
         "owesYou": "Ana deni lako",
         "youOwe": "Unadaiwa"
+      },
+      "delete": {
+        "confirm": {
+          "title": "Futa mtu",
+          "description": "Salio lako na mtu huyu litapotea",
+          "confirm": "Futa"
+        }
       }
     },
     "join": {
@@ -852,6 +1236,30 @@ export const dictionaries = {
         "description": (name) => `${name} amekualika. Jisajili au ingia, na uko tayari kuanza`
       },
       "accept": "Anza kutumia Evn"
+    },
+    "groups": {
+      "leave": "Shikilia kuvunja kundi",
+      "name": {
+        "description": "Wanachama wote wa kundi wataona jina hili"
+      },
+      "members": {
+        "title": "Wanachama",
+        "addMembers": "Ongeza wanachama",
+        "addMember": "Ongeza mwanachama",
+        "empty": "Hakuna mtu hapa bado. Ongeza baadhi ya wanachama ili kuanza kutumia kundi hili."
+      },
+      "title": "Makundi",
+      "summary": {
+        "balance": {
+          "from": (amount) => `Wanachama wa kundi hili wanakudai ${amount}`,
+          "to": (amount) => `Unawadaiwa ${amount}`
+        }
+      }
+    },
+    "invite": {
+      "share": "Shiriki",
+      "qr": "Onyesha msimbo wa QR",
+      "invite": "Alika"
     }
   },
   "tr-TR": {
@@ -871,7 +1279,10 @@ export const dictionaries = {
         "group": "Grup",
         "title": "Arkadaşlar",
         "contact": "Arkadaş"
-      }
+      },
+      "addSelected": "Seçileni ekle",
+      "cancel": "İptal",
+      "search": "Ara"
     },
     "nav": {
       "home": "Ana Sayfa",
@@ -913,6 +1324,13 @@ export const dictionaries = {
       "contact": {
         "owesYou": "Sana borçlu",
         "youOwe": "Borçlusun"
+      },
+      "delete": {
+        "confirm": {
+          "title": "Kişiyi sil",
+          "description": "Bu kişiyle olan bakiyeniz kaybolacak",
+          "confirm": "Sil"
+        }
       }
     },
     "join": {
@@ -923,6 +1341,30 @@ export const dictionaries = {
         "description": (name) => `${name} tarafından davet edildiniz. Sadece kaydolun veya giriş yapın, ve hazırsınız`
       },
       "accept": "Evn'i kullanmaya başla"
+    },
+    "groups": {
+      "leave": "Grubu dağıtmak için basılı tut",
+      "name": {
+        "description": "Tüm grup üyeleri bu ismi görecek"
+      },
+      "members": {
+        "title": "Üyeler",
+        "addMembers": "Üyeleri ekle",
+        "addMember": "Üye ekle",
+        "empty": "Burada henüz kimse yok. Bu grubu kullanmaya başlamak için birkaç üye ekle."
+      },
+      "title": "Gruplar",
+      "summary": {
+        "balance": {
+          "from": (amount) => `Bu grubun üyeleri sana ${amount} borçlu`,
+          "to": (amount) => `Onlara ${amount} borçlusunuz`
+        }
+      }
+    },
+    "invite": {
+      "share": "Paylaş",
+      "qr": "QR kodunu göster",
+      "invite": "Davet et"
     }
   },
   "uk-UA": {
@@ -942,7 +1384,10 @@ export const dictionaries = {
         "group": "Група",
         "title": "Друзі",
         "contact": "Друг"
-      }
+      },
+      "addSelected": "Додати вибране",
+      "cancel": "Скасувати",
+      "search": "Пошук"
     },
     "nav": {
       "home": "Головна",
@@ -984,6 +1429,13 @@ export const dictionaries = {
       "contact": {
         "owesYou": "Винен тобі",
         "youOwe": "Ви винні"
+      },
+      "delete": {
+        "confirm": {
+          "title": "Видалити людину",
+          "description": "Ваш баланс із цією особою буде втрачено",
+          "confirm": "Видалити"
+        }
       }
     },
     "join": {
@@ -994,6 +1446,30 @@ export const dictionaries = {
         "description": (name) => `Вас запросив(ла) ${name}. Просто зареєструйтеся або увійдіть, і все готово`
       },
       "accept": "Почати користуватися Evn"
+    },
+    "groups": {
+      "leave": "Утримуйте, щоб розпустити групу",
+      "name": {
+        "description": "Усі учасники групи побачать це ім’я"
+      },
+      "members": {
+        "title": "Учасники",
+        "addMembers": "Додати учасників",
+        "addMember": "Додати учасника",
+        "empty": "Тут ще нікого немає. Додайте учасників, щоб почати користуватися цією групою."
+      },
+      "title": "Групи",
+      "summary": {
+        "balance": {
+          "from": (amount) => `Члени цієї групи винні вам ${amount}`,
+          "to": (amount) => `Ви винні їм ${amount}`
+        }
+      }
+    },
+    "invite": {
+      "share": "Поділитися",
+      "qr": "Показати QR-код",
+      "invite": "Запросити"
     }
   },
   "zh-CN": {
@@ -1013,7 +1489,10 @@ export const dictionaries = {
         "group": "群组",
         "title": "朋友",
         "contact": "朋友"
-      }
+      },
+      "addSelected": "添加已选项",
+      "cancel": "取消",
+      "search": "搜索"
     },
     "nav": {
       "home": "首页",
@@ -1055,6 +1534,13 @@ export const dictionaries = {
       "contact": {
         "owesYou": "欠你的",
         "youOwe": "你欠"
+      },
+      "delete": {
+        "confirm": {
+          "title": "删除人员",
+          "description": "您与此人的余额将会丢失",
+          "confirm": "删除"
+        }
       }
     },
     "join": {
@@ -1065,6 +1551,30 @@ export const dictionaries = {
         "description": (name) => `您已被${name}邀请。只需注册或登录，您就可以开始了`
       },
       "accept": "开始使用 Evn"
+    },
+    "groups": {
+      "leave": "按住以解散群组",
+      "name": {
+        "description": "所有群组成员都能看到这个名称"
+      },
+      "members": {
+        "title": "成员",
+        "addMembers": "添加成员",
+        "addMember": "添加成员",
+        "empty": "这里还没有人。添加一些成员以开始使用这个群组。"
+      },
+      "title": "群组",
+      "summary": {
+        "balance": {
+          "from": (amount) => `该群组成员欠你${amount}`,
+          "to": (amount) => `你欠他们${amount}`
+        }
+      }
+    },
+    "invite": {
+      "share": "分享",
+      "qr": "显示二维码",
+      "invite": "邀请"
     }
   }
 };

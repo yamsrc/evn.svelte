@@ -13,6 +13,9 @@ actions:
     group: समूह
     title: मित्र
     contact: मित्र
+  addSelected: चयनित जोड़ें
+  cancel: रद्द करें
+  search: खोजें
 nav:
   home: मुख्य पृष्ठ
   evns: सेटलमेंट
@@ -25,7 +28,9 @@ profile:
   title: मेरा प्रोफ़ाइल
   language:
     title: भाषा
-    description: यह चेक की पहचान को प्रभावित नहीं करता है। वैसे भी, हम वहां अधिकांश भाषाओं को समझते हैं।
+    description: >-
+      यह चेक की पहचान को प्रभावित नहीं करता है। वैसे भी, हम वहां अधिकांश भाषाओं
+      को समझते हैं।
 form:
   enterName: नाम दर्ज करें
 copyright: © Seed.me, 2024-2025
@@ -45,11 +50,40 @@ contacts:
   contact:
     owesYou: आपका कर्ज़दार है
     youOwe: आपको देना है
+  delete:
+    confirm:
+      title: व्यक्ति हटाएँ
+      description: इस व्यक्ति के साथ आपका बैलेंस खो जाएगा
+      confirm: हटाएँ
 join:
   app:
     description: दोस्तों के साथ मिलकर, कौन किसका कितना बकाया है, इसका स्मार्ट तरीका।
   inviter:
-    description: |-
+    description: >-
       !js
-      (name) => `${name} ने आपको आमंत्रित किया है। बस रजिस्टर करें या लॉग इन करें, और आप तैयार हैं`
+
+      (name) => `${name} ने आपको आमंत्रित किया है। बस रजिस्टर करें या लॉग इन
+      करें, और आप तैयार हैं`
   accept: Evn का उपयोग शुरू करें
+groups:
+  leave: ग्रुप को भंग करने के लिए दबाकर रखें
+  name:
+    description: सभी समूह सदस्य यह नाम देखेंगे
+  members:
+    title: सदस्य
+    addMembers: सदस्य जोड़ें
+    addMember: सदस्य जोड़ें
+    empty: यहाँ अभी कोई नहीं है। इस समूह का उपयोग शुरू करने के लिए कुछ सदस्य जोड़ें।
+  title: समूह
+  summary:
+    balance:
+      from: |-
+        !js
+        (amount) => `इस समूह के सदस्य आपको ${amount} का भुगतान करते हैं`
+      to: |-
+        !js
+        (amount) => `आप उन्हें ${amount} के ऋणी हैं`
+invite:
+  share: साझा करें
+  qr: QR कोड दिखाएँ
+  invite: आमंत्रित करें

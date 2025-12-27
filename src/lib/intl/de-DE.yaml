@@ -13,6 +13,9 @@ actions:
     group: Gruppe
     title: Freunde
     contact: Freund
+  addSelected: Ausgewählte hinzufügen
+  cancel: Abbrechen
+  search: Suchen
 nav:
   home: Startseite
   evns: Ausgleich
@@ -25,7 +28,9 @@ profile:
   title: Mein Profil
   language:
     title: Sprache
-    description: Das beeinflusst die Scheck-Erkennung nicht. Wir verstehen dort ohnehin die meisten Sprachen.
+    description: >-
+      Das beeinflusst die Scheck-Erkennung nicht. Wir verstehen dort ohnehin die
+      meisten Sprachen.
 form:
   enterName: Name eingeben
 copyright: © Seed.me, 2024–2025
@@ -45,11 +50,44 @@ contacts:
   contact:
     owesYou: Schuldet dir
     youOwe: Du schuldest
+  delete:
+    confirm:
+      title: Person löschen
+      description: Ihr Guthaben mit dieser Person wird verloren gehen
+      confirm: Löschen
 join:
   app:
-    description: Die clevere Art, gemeinsam mit Freunden den Überblick zu behalten, wer wem etwas schuldet.
+    description: >-
+      Die clevere Art, gemeinsam mit Freunden den Überblick zu behalten, wer wem
+      etwas schuldet.
   inviter:
-    description: |-
+    description: >-
       !js
-      (name) => `${name} hat dich eingeladen. Registriere dich einfach oder melde dich an, und schon kann es losgehen`
+
+      (name) => `${name} hat dich eingeladen. Registriere dich einfach oder
+      melde dich an, und schon kann es losgehen`
   accept: Jetzt mit Evn starten
+groups:
+  leave: Zum Auflösen der Gruppe gedrückt halten
+  name:
+    description: Alle Gruppenmitglieder sehen diesen Namen
+  members:
+    title: Mitglieder
+    addMembers: Mitglieder hinzufügen
+    addMember: Mitglied hinzufügen
+    empty: >-
+      Hier ist noch niemand. Füge einige Mitglieder hinzu, um mit dieser Gruppe
+      zu starten.
+  title: Gruppen
+  summary:
+    balance:
+      from: |-
+        !js
+        (amount) => `Mitglieder dieser Gruppe schulden dir ${amount}`
+      to: |-
+        !js
+        (amount) => `Sie schulden ihnen ${amount}`
+invite:
+  share: Teilen
+  qr: QR-Code anzeigen
+  invite: Einladen

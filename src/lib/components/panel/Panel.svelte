@@ -6,6 +6,7 @@
 
   const {
     collapsed,
+    selected,
     h,
     left,
     right,
@@ -31,14 +32,17 @@
 
 <div
   class={cn(
-    'relative overflow-hidden rounded-md transition-all duration-200 ease-in-out',
+    'relative overflow-hidden rounded-lg transition-all duration-200 ease-in-out',
     collapsed ? 'h-0' : h,
+    selected && 'outline-muted-foreground/50 outline-2',
   )}
 >
   <div bind:this={container} class="flex w-full overflow-x-auto snap-x snap-mandatory no-scrollbar">
     <div class="min-w-full shrink-0 snap-start z-10">
       <Button
-        class={cn('w-full justify-between gap-2', h || 'h-auto', classes)}
+        class={cn('w-full justify-between gap-2', h || 'h-auto', classes, {
+          'bg-accent': selected,
+        })}
         {variant}
         {...props}
       >

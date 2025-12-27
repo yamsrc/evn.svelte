@@ -13,6 +13,9 @@ actions:
     group: Група
     title: Друзі
     contact: Друг
+  addSelected: Додати вибране
+  cancel: Скасувати
+  search: Пошук
 nav:
   home: Головна
   evns: Розрахунок
@@ -25,7 +28,9 @@ profile:
   title: Мій профіль
   language:
     title: Мова
-    description: Це не впливає на розпізнавання чеків. Ми й так розуміємо там більшість мов.
+    description: >-
+      Це не впливає на розпізнавання чеків. Ми й так розуміємо там більшість
+      мов.
 form:
   enterName: Введіть ім’я
 copyright: © Seed.me, 2024–2025
@@ -45,11 +50,42 @@ contacts:
   contact:
     owesYou: Винен тобі
     youOwe: Ви винні
+  delete:
+    confirm:
+      title: Видалити людину
+      description: Ваш баланс із цією особою буде втрачено
+      confirm: Видалити
 join:
   app:
     description: Розумний спосіб відстежувати, хто кому винен, разом із друзями.
   inviter:
-    description: |-
+    description: >-
       !js
-      (name) => `Вас запросив(ла) ${name}. Просто зареєструйтеся або увійдіть, і все готово`
+
+      (name) => `Вас запросив(ла) ${name}. Просто зареєструйтеся або увійдіть, і
+      все готово`
   accept: Почати користуватися Evn
+groups:
+  leave: Утримуйте, щоб розпустити групу
+  name:
+    description: Усі учасники групи побачать це ім’я
+  members:
+    title: Учасники
+    addMembers: Додати учасників
+    addMember: Додати учасника
+    empty: >-
+      Тут ще нікого немає. Додайте учасників, щоб почати користуватися цією
+      групою.
+  title: Групи
+  summary:
+    balance:
+      from: |-
+        !js
+        (amount) => `Члени цієї групи винні вам ${amount}`
+      to: |-
+        !js
+        (amount) => `Ви винні їм ${amount}`
+invite:
+  share: Поділитися
+  qr: Показати QR-код
+  invite: Запросити

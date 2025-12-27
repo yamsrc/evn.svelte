@@ -13,9 +13,7 @@
 <Screen class="flex-1 flex flex-col justify-between">
   <Authenticated>
     {#snippet screen({ authentication })}
-      <div class="pt-2">
-        <Languages />
-      </div>
+      <Languages />
       <Invitation {id}>
         {@render authentication()}
       </Invitation>
