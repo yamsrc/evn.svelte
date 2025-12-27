@@ -64,6 +64,7 @@ export interface Contact extends net.Contact {
 **Mapping Function (`map.ts`)**:
 
 The mapping function transforms network entities into linked entities by:
+
 1. Extracting relevant data from the network model
 2. Fetching related entities from other domains
 3. Combining them into a rich domain model
@@ -75,7 +76,8 @@ import { accounts } from '@/account'
 export async function map(entry: net.Contact): Promise<Contact | Error> {
   const account = await awaited(accounts.get(entry.identity))  // Fetch linked Account entity
   
-  if (account instanceof Error) return account
+  if (account instanceof Error) 
+    return account
   
   return {
     ...entry,
@@ -92,8 +94,11 @@ The domain store uses the mapping function to transform network data into linked
 export const internal = collection<Contact>({ get })
 
 events.on('default.contacts.sync', async (entry: net.Contact) => {
-  const contact = await map(entry)  // Transform to linked entity
-  if (contact instanceof Error) return
+  const contact = await map(entry)
+
+  if (contact instanceof Error) 
+    return
+
   sync(internal, contact)
 })
 ```
@@ -102,6 +107,5 @@ events.on('default.contacts.sync', async (entry: net.Contact) => {
 
 - **Separation of Concerns**: Network models (`net/`) remain clean API representations
 - **Rich Domain Models**: Application logic works with complete, meaningful entities
-- **Type Safety**: TypeScript ensures proper composition of linked entities
 - **Reusability**: Linked entities can reference shared domain models (e.g., `Account`)
 - **Maintainability**: Changes to related domains are automatically reflected through references
