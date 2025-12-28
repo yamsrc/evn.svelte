@@ -1,0 +1,11 @@
+title: Feedback
+description: >-
+  Ci farebbe molto piacere sentire la tua opinione! Condividi i tuoi pensieri,
+  feedback e suggerimenti.
+send: Invia
+form:
+  email:
+    description: Puoi inserire la tua email, se vuoi ricevere una risposta.
+    placeholder: La tua email
+  message:
+    placeholder: Scrivi il tuo messaggio
