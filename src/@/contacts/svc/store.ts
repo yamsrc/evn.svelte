@@ -8,7 +8,7 @@ import { get } from './get'
 import { map } from './map'
 import type { Contact } from './Contact'
 
-const internal = collection({
+export const internal = collection({
   get,
   persist: 'contacts:contacts',
   bind: account,
