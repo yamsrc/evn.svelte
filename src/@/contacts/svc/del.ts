@@ -1,7 +1,7 @@
 import { having } from 'svas'
 import { account } from '@/iam'
 import * as net from './net'
-import { internal } from './store'
+import { contacts } from './store'
 import type { Contact } from './Contact'
 
 export async function del(contact: Contact): Promise<void | Error> {
@@ -11,7 +11,7 @@ export async function del(contact: Contact): Promise<void | Error> {
 
   if (res instanceof Error) return res
 
-  internal.delete(contact.id)
+  contacts.delete(contact.id)
 
   return res
 }
