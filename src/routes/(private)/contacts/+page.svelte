@@ -1,5 +1,6 @@
 <script lang="ts">
   import { ArrowUpDown } from '@lucide/svelte'
+  import { Async } from 'svas'
   import { Section } from '$com/section'
   import { dict } from '$lib/intl'
   import { Button } from '$ui/button'
@@ -36,10 +37,12 @@
   <Groups title={$dict.groups.title} groups={$groups} {search} />
 {/if}
 
-<div class="flex-1 flex flex-col">
-  {#if $contacts.length === 0 && $account}
-    <Invite id={$account.id} />
-  {:else}
-    <Contacts title={$dict.contacts.all} contacts={$contacts} {search} actionable />
-  {/if}
-</div>
+<Async store={contacts} class="flex-1 flex flex-col">
+  {#snippet awaited(contacts)}
+    {#if contacts.length === 0 && $account}
+      <Invite id={$account.id} />
+    {:else}
+      <Contacts title={$dict.contacts.all} {contacts} {search} actionable />
+    {/if}
+  {/snippet}
+</Async>
