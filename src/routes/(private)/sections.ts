@@ -19,7 +19,7 @@ export const sections = (dict: Dictionary): Section[] => [
     Icon: Ticket,
   },
   {
-    href: '/profile/',
+    href: '/me/',
     label: dict.nav.profile,
     Icon: User,
   },
