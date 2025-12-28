@@ -14,7 +14,5 @@ export function map(entry: net.Contact, me: string): Contact {
     account: accounts.extract(identity),
   }
 
-  accounts.get(identity).subscribe((account) => (contact.account = account))
-
   return contact
 }
