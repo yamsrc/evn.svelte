@@ -1,6 +1,7 @@
 <script lang="ts">
   import { Star, Trash2 } from '@lucide/svelte'
   import { Pencil } from '@lucide/svelte'
+  import { ok } from 'svas'
   import { dict } from '$lib/intl'
   import { Item } from '@/account/ui'
   import { Confirm } from '@/app/ui'
@@ -38,23 +39,25 @@
   ]
 </script>
 
-<Item
-  account={contact.account}
-  balance={contact.balance}
-  {selected}
-  {onselect}
-  actions={actionable ? actions : []}
->
-  {#snippet action(id)}
-    {#if id === 'favorite'}
-      <Star size={16} class="text-background" />
-    {:else if id === 'edit'}
-      <Pencil size={16} class="text-background" />
-    {:else if id === 'delete'}
-      <Trash2 size={16} class="text-background" />
-    {/if}
-  {/snippet}
-</Item>
+{#if ok(contact.account)}
+  <Item
+    account={contact.account}
+    balance={contact.balance}
+    {selected}
+    {onselect}
+    actions={actionable ? actions : []}
+  >
+    {#snippet action(id)}
+      {#if id === 'favorite'}
+        <Star size={16} class="text-background" />
+      {:else if id === 'edit'}
+        <Pencil size={16} class="text-background" />
+      {:else if id === 'delete'}
+        <Trash2 size={16} class="text-background" />
+      {/if}
+    {/snippet}
+  </Item>
+{/if}
 
 <Confirm
   title={$dict.contacts.delete.confirm.title}

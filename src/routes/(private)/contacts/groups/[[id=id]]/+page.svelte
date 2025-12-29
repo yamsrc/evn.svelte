@@ -1,6 +1,6 @@
 <script lang="ts">
   import { LogOut, Plus } from '@lucide/svelte'
-  import { ok } from 'svas'
+  import { Async, ok } from 'svas'
   import { goto } from '$app/navigation'
   import { page } from '$app/state'
   import { Hold } from '$com/hold'
@@ -45,7 +45,7 @@
   const members: string[] = $derived(group?.identities.filter((id) => id !== $account?.id) ?? [])
 
   const balance: BalanceSummary = $derived.by(() => {
-    if (!$contacts || !group) return { from: 0, to: 0 }
+    if (!ok($contacts) || !group) return { from: 0, to: 0 }
 
     const balances = members.map(
       (id) => $contacts.find(({ identity }) => identity === id)?.balance ?? 0,
@@ -87,22 +87,26 @@
 </Section>
 
 <Section class="flex flex-col gap-2">
-  <h2>{$dict.groups.members.title}</h2>
-  {#if !members?.length}
-    <p class="text-muted-foreground">
-      {$dict.groups.members.empty}
-    </p>
-  {:else}
-    {#each members as identity (identity)}
-      {@const contact = $contacts.find((contact) => contact.identity === identity)}
-      {#if contact}
-        <Item account={contact.account} balance={contact.balance} />
+  <Async store={contacts}>
+    {#snippet awaited(contacts)}
+      <h2>{$dict.groups.members.title}</h2>
+      {#if !members?.length}
+        <p class="text-muted-foreground">
+          {$dict.groups.members.empty}
+        </p>
+      {:else}
+        {#each members as identity (identity)}
+          {@const contact = contacts.find((contact) => contact.identity === identity)}
+          {#if contact?.account && ok(contact.account)}
+            <Item account={contact.account} balance={contact.balance} />
+          {/if}
+        {/each}
       {/if}
-    {/each}
-  {/if}
-  <Button size="lg" class="w-full" href={`/contacts/groups/${id}/add`} disabled={!group}>
-    <Plus />
-    {$dict.groups.members.addMember}
-  </Button>
+      <Button size="lg" class="w-full" href={`/contacts/groups/${id}/add`} disabled={!group}>
+        <Plus />
+        {$dict.groups.members.addMember}
+      </Button>
+    {/snippet}
+  </Async>
 </Section>
 <!-- TODO: add history -->

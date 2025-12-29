@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Async } from 'svas'
+  import { Async, combined } from 'svas'
   import { SvelteSet } from 'svelte/reactivity'
   import { goto } from '$app/navigation'
   import { page } from '$app/state'
@@ -33,8 +33,8 @@
   }
 </script>
 
-<Async store={groups} class="flex flex-col gap-5">
-  {#snippet awaited(groups)}
+<Async store={combined(groups, contacts)} class="flex flex-col gap-5">
+  {#snippet awaited([groups, contacts])}
     {@const group = groups.find((g) => g.id === id)}
     {#if group}
       <Section>
@@ -48,7 +48,7 @@
       </Section>
       <!-- TODO: add favorites -->
 
-      {@const list = $contacts.filter((c) => !group.identities.includes(c.identity))}
+      {@const list = contacts.filter((c) => !group.identities.includes(c.identity))}
       <Contacts contacts={list} title={$dict.contacts.all} bind:selection {search} />
       <Section class="flex gap-2 w-full items-center justify-stretch">
         <Button
