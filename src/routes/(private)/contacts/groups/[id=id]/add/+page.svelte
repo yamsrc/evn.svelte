@@ -16,7 +16,7 @@
 
   let search = $state('')
 
-  const id = page.params.id as string
+  const id = $derived(page.params.id as string)
   // svelte-ignore non_reactive_update
   let selection = new SvelteSet<string>()
   let busy = $state(false)
