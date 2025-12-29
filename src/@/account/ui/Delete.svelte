@@ -44,7 +44,7 @@
       </AlertDialog.Description>
     </AlertDialog.Header>
     <AlertDialog.Footer>
-      <fieldset class="mt-8 flex gap-2">
+      <fieldset class="mt-8 flex gap-2" disabled={busy}>
         <AlertDialog.Cancel
           class={cn(buttonVariants({ variant: 'secondary', size: 'lg' }), 'w-1/2')}
         >
