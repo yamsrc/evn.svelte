@@ -15,6 +15,7 @@
     position = 'left',
     align = 'center',
     onclick,
+    containerClass,
     ...props
   }: Props = $props()
 
@@ -70,7 +71,7 @@
   }
 </script>
 
-<div>
+<div class={containerClass}>
   <Button
     {variant}
     {...props}

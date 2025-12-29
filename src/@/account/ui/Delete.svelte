@@ -2,56 +2,75 @@
   import { Hold } from '$com/hold'
   import { dict } from '$lib/intl'
   import { cn } from '$lib/utils'
+  import * as AlertDialog from '$ui/alert-dialog'
   import { buttonVariants } from '$ui/button'
-  import * as Dialog from '$ui/dialog'
+  import { Spinner } from '$ui/spinner'
   import { terminate } from '@/account'
   import type { Props } from './Delete'
 
   const { ondelete, class: classes }: Props = $props()
 
+  let open = $state(false)
+  let busy = $state(false)
+
   async function del() {
+    busy = true
+
     const err = await terminate()
+
+    busy = false
 
     if (err instanceof Error) return
 
+    open = false
     ondelete?.()
   }
 </script>
 
-<Dialog.Root>
-  <Dialog.Trigger class={cn(buttonVariants({ variant: 'ghost' }), classes)}>
+<AlertDialog.Root bind:open>
+  <AlertDialog.Trigger class={cn(buttonVariants({ variant: 'ghost' }), classes)}>
     {$dict.account.delete.button}
-  </Dialog.Trigger>
-  <Dialog.Content>
-    <Dialog.Header>
-      <Dialog.Title>
+  </AlertDialog.Trigger>
+  <AlertDialog.Content>
+    <AlertDialog.Header>
+      <AlertDialog.Title>
         {$dict.account.delete.title}
-      </Dialog.Title>
-      <Dialog.Description class="text-balance">
+      </AlertDialog.Title>
+      <AlertDialog.Description class="text-balance">
         <!-- eslint-disable-next-line svelte/no-at-html-tags -->
         {@html $dict.account.delete.description}
-      </Dialog.Description>
-      <Dialog.Description class="text-balance">
+      </AlertDialog.Description>
+      <AlertDialog.Description class="text-balance">
         <!-- eslint-disable-next-line svelte/no-at-html-tags -->
         {@html $dict.account.delete.sorry}
-      </Dialog.Description>
-    </Dialog.Header>
-    <Dialog.Footer class="mt-8 flex-row justify-stretch">
-      <Dialog.Close class={cn(buttonVariants({ variant: 'secondary', size: 'lg' }), 'flex-1')}>
-        {$dict.actions.cancel}
-      </Dialog.Close>
-      <Hold
-        variant="destructive"
-        size="lg"
-        label={$dict.account.delete.hold}
-        duration={5_000}
-        position="top"
-        align="center"
-        onclick={del}
-        class="flex-1 select-none"
-      >
-        {$dict.account.delete.button}
-      </Hold>
-    </Dialog.Footer>
-  </Dialog.Content>
-</Dialog.Root>
+      </AlertDialog.Description>
+    </AlertDialog.Header>
+    <AlertDialog.Footer>
+      <fieldset class="mt-8 flex gap-2">
+        <AlertDialog.Cancel
+          class={cn(buttonVariants({ variant: 'secondary', size: 'lg' }), 'w-1/2')}
+        >
+          {$dict.actions.cancel}
+        </AlertDialog.Cancel>
+
+        <Hold
+          variant="destructive"
+          size="lg"
+          class="w-full"
+          containerClass="w-1/2"
+          label={$dict.account.delete.hold}
+          duration={5_000}
+          position="top"
+          align="center"
+          onclick={del}
+        >
+          {#if busy}
+            <Spinner />
+          {:else}
+            {$dict.account.delete.button}
+          {/if}
+        </Hold>
+      </fieldset>
+    </AlertDialog.Footer>
+  </AlertDialog.Content>
+</AlertDialog.Root>
