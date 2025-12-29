@@ -1,5 +1,5 @@
-export type { Account } from './net'
-export { set } from './set'
 export { get } from './get'
 export { terminate } from './terminate'
 export { accounts } from './store'
+export { update } from './update'
+export type { Account } from './Account'

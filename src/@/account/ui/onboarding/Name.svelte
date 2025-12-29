@@ -5,7 +5,7 @@
   import { cn } from '$lib/utils'
   import { Button } from '$ui/button'
   import { Input } from '$ui/input'
-  import { set, type Account } from '@/account'
+  import { update, type Account } from '@/iam'
 
   const { account, class: classes }: { account: Account; class?: string } = $props()
 
@@ -20,7 +20,7 @@
     if (!name) return
 
     busy = true
-    await set({ name })
+    await update({ name })
     busy = false
   }
 

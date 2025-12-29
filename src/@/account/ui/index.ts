@@ -1,7 +1,7 @@
 export { default as Picture } from './Picture.svelte'
-export { default as Name } from './Name.svelte'
 export { default as Language } from './Language.svelte'
 export { default as Named } from './Named.svelte'
 export { default as Avatar } from './Avatar.svelte'
 export { default as Item } from './Item.svelte'
 export { default as Delete } from './Delete.svelte'
+export { default as Cosmetics } from './Cosmetics.svelte'

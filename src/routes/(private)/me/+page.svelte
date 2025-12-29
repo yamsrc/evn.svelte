@@ -3,10 +3,11 @@
   import { goto } from '$app/navigation'
   import { Hold } from '$com/hold'
   import { Section } from '$com/section'
+  import { Separator } from '$com/separator'
   import { version } from '$config'
   import { dict } from '$lib/intl'
-  import { Picture, Name, Language } from '@/account/ui'
-  import { Delete } from '@/account/ui'
+  import { Language } from '@/account/ui'
+  import { Cosmetics, Delete } from '@/account/ui'
   import { Header } from '@/app/ui'
   import { Feedback } from '@/feedback/ui'
   import { logout } from '@/iam'
@@ -36,12 +37,17 @@
       </Header.Actions>
     </Header.Root>
   </Section>
-  <Section class="flex flex-col gap-6">
+
+  <!-- <Section class="flex flex-col gap-6">
     <Picture account={$account} size={150} class="mx-auto" />
     <Name account={$account} class="mx-auto w-3xs text-3xl font-bold" />
+  </Section> -->
+
+  <Section>
+    <Cosmetics account={$account} />
   </Section>
 
-  <div class="w-full border-b border-border mt-5"></div>
+  <Separator class="mt-5" />
 
   <Section class="flex flex-col gap-6 flex-1">
     <div class="flex flex-col gap-2">
@@ -56,7 +62,7 @@
   </Section>
 
   <Section>
-    <div class="w-full border-b border-border mb-5"></div>
+    <Separator class="mb-4" />
     <footer class="text-muted-foreground text-sm">
       <p>
         &copy; <a href="https://seed.me" target="_blank">seed.me</a>, 2025–{new Date(

@@ -3,32 +3,32 @@
   import { onsubmit } from '$lib/tools'
   import { cn } from '$lib/utils'
   import { Input } from '$ui/input'
-  import { set, type Account } from '@/account'
+  import type { Props } from './Name'
 
-  const { account, class: classes }: { account: Account; class?: string } = $props()
+  let { name = $bindable(''), busy = $bindable(false), onchange, class: classes }: Props = $props()
+
+  let value = $derived(name)
+  const blank = name === ''
 
   let ref = $state<HTMLInputElement | null>(null)
-  // svelte-ignore state_referenced_locally
-  let value = $state(account.name)
-  let busy = $state(false)
 
-  async function submit() {
-    const name = value?.trim()
+  function submit() {
+    const normalized = value.trim()
 
-    if (!name) return
+    if (normalized === '') return reset()
 
-    busy = true
-    await set({ name })
-    busy = false
+    if (normalized === name) return
+
+    name = normalized
+    onchange?.(normalized)
   }
 
   function reset() {
-    value = account.name
+    value = name
   }
 
   function onblur() {
-    if (!value) reset()
-    else if (!busy && value !== account.name) submit()
+    if (!busy) submit()
   }
 </script>
 
@@ -40,10 +40,10 @@
     type="text"
     autocomplete="given-name"
     placeholder={$dict.form.enterName}
-    class={cn('text-center', classes)}
+    class={cn('text-center text-3xl font-bold', classes)}
     required
     disabled={busy}
-    {onblur}
+    onblur={blank ? undefined : onblur}
   />
   <button type="submit" class="sr-only">Submit</button>
 </form>

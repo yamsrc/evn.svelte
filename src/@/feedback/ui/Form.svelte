@@ -48,6 +48,7 @@
   <Field.Field>
     <Textarea
       bind:value={input.message}
+      autofocus
       required
       minlength={1}
       maxlength={1000}
