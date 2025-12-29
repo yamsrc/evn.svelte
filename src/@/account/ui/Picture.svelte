@@ -10,10 +10,9 @@
   <Picture
     id={account.picture}
     alt={account.name}
-    variant="400x400!"
+    variant="300x300!"
     width={size}
     height={size}
     class={cn('rounded-full', classes)}
-    style={`view-transition-name: account-picture-${account.id};`}
   />
 {/if}

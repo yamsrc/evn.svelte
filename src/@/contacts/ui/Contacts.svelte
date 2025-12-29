@@ -1,9 +1,10 @@
 <script lang="ts">
   import Section from '$com/section/Section.svelte'
+  import { filter } from '@/contacts'
   import Contact from './Contact.svelte'
   import type { Props } from './Contacts'
 
-  let { contacts, title, actionable, selection = $bindable() }: Props = $props()
+  let { contacts, title, actionable, selection = $bindable(), search }: Props = $props()
 
   const selectable = $derived(!!selection)
 
@@ -14,8 +15,8 @@
 
     if (!contact) return
 
-    if (selected) selection.add(contact.id)
-    else selection.delete(contact.id)
+    if (selected) selection.add(identity)
+    else selection.delete(identity)
   }
 </script>
 
@@ -23,8 +24,8 @@
   {#if title}
     <h2>{title}</h2>
   {/if}
-  {#each contacts as contact (contact.identity)}
-    {@const selected = selection?.has(contact.id)}
+  {#each filter(contacts, search) as contact (contact.identity)}
+    {@const selected = selection?.has(contact.identity)}
     {@const selectedProps = selectable ? { selected, onselect } : undefined}
     <Contact {contact} {actionable} {...selectedProps} />
   {/each}

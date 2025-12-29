@@ -46,6 +46,7 @@ contacts:
     invite:
       share: दोस्तों को आमंत्रित करें
       qr: QR कोड से आमंत्रित करें
+      manual: मैन्युअल रूप से जोड़ें
   all: सभी मित्र
   contact:
     owesYou: आपका कर्ज़दार है
@@ -87,6 +88,8 @@ invite:
   share: साझा करें
   qr: QR कोड दिखाएँ
   invite: आमंत्रित करें
+etc:
+  or: या
 account:
   delete:
     button: खाता हटाएँ

@@ -4,10 +4,11 @@
   import { cn } from '$lib/utils'
   import { buttonVariants } from '$ui/button'
   import * as Collapsible from '$ui/collapsible'
+  import { filter } from '@/groups'
   import Group from './Group.svelte'
   import type { Props } from './Groups'
 
-  let { groups, title, selection = $bindable() }: Props = $props()
+  let { groups, title, selection = $bindable(), search }: Props = $props()
 
   let open = $state(true)
 
@@ -38,7 +39,7 @@
       </div>
     {/if}
     <Collapsible.Content class="flex flex-col gap-1.5">
-      {#each groups as group (group.id)}
+      {#each filter(groups, search) as group (group.id)}
         {@const selected = selection?.has(group.id)}
         {@const selectedProps = selectable ? { selected, onselect } : undefined}
         <Group {group} {...selectedProps} />

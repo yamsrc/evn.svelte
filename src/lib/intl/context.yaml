@@ -84,6 +84,9 @@ inputs:
           input: Invite friends
         qr:
           input: Invite by QR code
+        manual:
+          input: Add manually
+          context: button label, that leads to the screen to add new contact manually
     all:
       input: All friends
     contact:
@@ -129,9 +132,9 @@ inputs:
     summary:
       balance:
         from:
-          input: "!js (amount) => Members of this group owe  to you"
+          input: "!js (amount) => Members of this group owe you ${amount}"
         to:
-          input: "!js (amount) => You owe  to them"
+          input: "!js (amount) => You owe them ${amount}"
   invite:
     share:
       input: Share
@@ -139,6 +142,9 @@ inputs:
       input: Show QR code
     invite:
       input: Invite
+  etc:
+    or:
+      input: or
   account:
     delete:
       button:

@@ -44,6 +44,7 @@ contacts:
     invite:
       share: 친구 초대하기
       qr: QR 코드로 초대
+      manual: 수동으로 추가
   all: 모든 친구
   contact:
     owesYou: 당신에게 빚졌어요
@@ -83,6 +84,8 @@ invite:
   share: 공유
   qr: QR 코드 표시
   invite: 초대
+etc:
+  or: 또는
 account:
   delete:
     button: 계정 삭제

@@ -1,22 +1,21 @@
 <script lang="ts">
   import { LogOut, Plus } from '@lucide/svelte'
-  import { ok, ensure } from 'svas'
+  import { Async, ok } from 'svas'
   import { goto } from '$app/navigation'
   import { page } from '$app/state'
   import { Hold } from '$com/hold'
-  import Section from '$com/section/Section.svelte'
+  import { Section } from '$com/section'
   import { Back } from '$lib/components/history'
   import { dict } from '$lib/intl'
   import { currency } from '$lib/tools'
   import { Button } from '$ui/button'
   import { Separator } from '$ui/separator'
-  import { accounts } from '@/account'
   import { Item } from '@/account/ui'
-  import { contacts as contactsStore } from '@/contacts'
+  import { Header } from '@/app/ui'
+  import { contacts } from '@/contacts'
   import { groups, del } from '@/groups'
   import { Name } from '@/groups/ui'
   import { account } from '@/iam'
-  import type { ContactWithAccount } from '@/contacts/ui'
   import type { Group } from '@/groups'
 
   type BalanceSummary = {
@@ -44,22 +43,13 @@
     ok($groups) ? $groups.find((group) => group.id === id) : undefined,
   )
 
-  const contacts: ContactWithAccount[] = $derived.by(() => {
-    if (!ok(contactsStore)) return []
-
-    return $contactsStore.map((contact) => {
-      const account = accounts.get(contact.identity)
-
-      return { ...contact, account: ensure(account) }
-    })
-  })
   const members: string[] = $derived(group?.identities.filter((id) => id !== $account?.id) ?? [])
 
   const balance: BalanceSummary = $derived.by(() => {
-    if (!contacts || !group) return { from: 0, to: 0 }
+    if (!ok($contacts) || !group) return { from: 0, to: 0 }
 
     const balances = members.map(
-      (id) => contacts.find(({ identity }) => identity === id)?.balance ?? 0,
+      (id) => $contacts.find(({ identity }) => identity === id)?.balance ?? 0,
     )
 
     const from = calc(balances.filter((balance) => balance > 0))
@@ -69,20 +59,22 @@
   })
 </script>
 
-<Section class="flex flex-col gap-6">
-  <header class="flex justify-between items-center relative">
+<Section>
+  <Header.Root>
     <Back href="/contacts/">{$dict.contacts.title}</Back>
-    <Hold
-      onclick={leave}
-      variant="ghost"
-      class="size-12 bg-accent/50 border border-border"
-      position="left"
-      label={$dict.groups.leave}
-      disabled={!group}
-    >
-      <LogOut class="size-5" />
-    </Hold>
-  </header>
+    <Header.Actions>
+      <Hold
+        onclick={leave}
+        variant="ghost"
+        class="size-12 bg-accent/50 border border-border"
+        position="left"
+        label={$dict.groups.leave}
+        disabled={!group}
+      >
+        <LogOut class="size-5" />
+      </Hold>
+    </Header.Actions>
+  </Header.Root>
 </Section>
 
 <Section class="flex flex-col gap-2 items-center">
@@ -97,23 +89,27 @@
   <div>{$dict.groups.summary.balance.to(currency(balance.to))}</div>
 </Section>
 
-<Section class="flex flex-col gap-2">
-  <h2>{$dict.groups.members.title}</h2>
-  {#if !members?.length}
-    <p class="text-muted-foreground">
-      {$dict.groups.members.empty}
-    </p>
-  {:else}
-    {#each members as identity (identity)}
-      {@const contact = contacts.find((contact) => contact.identity === identity)}
-      {#if contact}
-        <Item account={contact.account} balance={contact.balance} />
+<Async store={contacts}>
+  {#snippet awaited(contacts)}
+    <Section class="flex flex-col gap-2">
+      <h2>{$dict.groups.members.title}</h2>
+      {#if !members?.length}
+        <p class="text-muted-foreground">
+          {$dict.groups.members.empty}
+        </p>
+      {:else}
+        {#each members as identity (identity)}
+          {@const contact = contacts.find((contact) => contact.identity === identity)}
+          {#if contact?.account && ok(contact.account)}
+            <Item account={contact.account} balance={contact.balance} />
+          {/if}
+        {/each}
       {/if}
-    {/each}
-  {/if}
-  <Button size="lg" class="w-full" href={`/contacts/groups/${id}/add`} disabled={!group}>
-    <Plus />
-    {$dict.groups.members.addMember}
-  </Button>
-</Section>
+      <Button size="lg" class="w-full" href={`/contacts/groups/${id}/add`} disabled={!group}>
+        <Plus />
+        {$dict.groups.members.addMember}
+      </Button>
+    </Section>
+  {/snippet}
+</Async>
 <!-- TODO: add history -->

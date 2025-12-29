@@ -1,14 +1,17 @@
-import { having } from 'svas'
+import { having, sync } from 'svas'
 import { account } from '@/iam'
 import * as net from './net'
-import type { Contact } from './net'
+import { internal } from './store'
 
-export async function add(contact: string): Promise<Contact | Error> {
+export async function add(body: net.Post): Promise<net.Contact | Error> {
   const me = await having(account)
 
-  const res = await net.post(me.id, contact)
+  const res = await net.post(me.id, body)
 
-  if (res instanceof Error) return res
+  if (res instanceof Error)
+    return res
+
+  sync(internal, res)
 
   return res
 }

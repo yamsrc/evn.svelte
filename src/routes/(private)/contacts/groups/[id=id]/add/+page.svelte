@@ -1,35 +1,25 @@
 <script lang="ts">
-  import { Async, ok, ensure } from 'svas'
+  import { Async, combined } from 'svas'
   import { SvelteSet } from 'svelte/reactivity'
   import { goto } from '$app/navigation'
   import { page } from '$app/state'
-  import Section from '$com/section/Section.svelte'
-  import { Back } from '$lib/components/history'
+  import { Back } from '$com/history'
+  import { Section } from '$com/section'
   import { dict } from '$lib/intl'
   import { Button } from '$ui/button'
   import { Input } from '$ui/input'
-  import { accounts } from '@/account'
-  import { contacts as contactsStore } from '@/contacts'
-  import { Contacts, type ContactWithAccount } from '@/contacts/ui'
+  import { Header } from '@/app/ui'
+  import { contacts } from '@/contacts'
+  import { Contacts } from '@/contacts/ui'
   import { groups, add } from '@/groups'
   import Invite from './Invite.svelte'
 
-  let query = $state('')
+  let search = $state('')
 
-  const id = page.params.id as string
+  const id = $derived(page.params.id as string)
   // svelte-ignore non_reactive_update
   let selection = new SvelteSet<string>()
   let busy = $state(false)
-
-  const contacts: ContactWithAccount[] = $derived.by(() => {
-    if (!ok(contactsStore)) return []
-
-    return $contactsStore.map((contact) => {
-      const account = accounts.get(contact.identity)
-
-      return { ...contact, account: ensure(account) }
-    })
-  })
 
   async function addMembers() {
     busy = true
@@ -42,29 +32,25 @@
 
     goto(`/contacts/groups/${id}`)
   }
-
-  const filteredContacts: ContactWithAccount[] = $derived.by(() =>
-    contacts.filter((contact) => contact.account.name?.toLowerCase().includes(query.toLowerCase())),
-  )
 </script>
 
-<Async store={groups} class="flex flex-col gap-5">
-  {#snippet awaited(groups)}
+<Async store={combined(groups, contacts)} class="flex flex-col gap-5">
+  {#snippet awaited([groups, contacts])}
     {@const group = groups.find((g) => g.id === id)}
     {#if group}
       <Section>
-        <header>
+        <Header.Root>
           <Back href={`/contacts/groups/${group.id}`}>{group.name}</Back>
-        </header>
+        </Header.Root>
       </Section>
       <Section>
         <h1>{$dict.groups.members.addMembers}</h1>
-        <Input type="text" placeholder={$dict.actions.search} bind:value={query} />
+        <Input type="text" placeholder={$dict.actions.search} bind:value={search} />
       </Section>
       <!-- TODO: add favorites -->
 
-      {@const list = filteredContacts.filter((c) => !group.identities.includes(c.identity))}
-      <Contacts contacts={list} title={$dict.contacts.all} bind:selection />
+      {@const list = contacts.filter((c) => !group.identities.includes(c.identity))}
+      <Contacts contacts={list} title={$dict.contacts.all} bind:selection {search} />
       <Section class="flex gap-2 w-full items-center justify-stretch">
         <Button
           class="flex-1"

@@ -1,7 +1,8 @@
-import type { GroupWithBalance } from './Group'
+import type { Group } from '@/groups'
 
 export interface Props {
-  groups: GroupWithBalance[]
+  groups: Group[]
   title?: string
   selection?: Set<string>
+  search?: string
 }

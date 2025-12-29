@@ -38,6 +38,50 @@ src/@/{domain}/
 - **`index.ts`**: Exports reusable UI components
 - Transient UI state is managed in `ui.ts` file
 
+### App Domain
+
+Some UI components are intended to be reused across multiple screens within this application, but their implementation is still application-bound (e.g., depends on app routing, app stores, domain models, product rules, or app-specific copy/branding). These components should live in the dedicated `app` domain.
+
+## Shared Components
+
+Shared components are app-agnostic UI building blocks. Everything in `src/lib/components/` must be reusable across different apps without modification.
+
+A component belongs here only if its implementation is not bound to the current application, meaning it:
+• does not depend on app-specific routes, screens, or domain concepts
+• does not import from domains
+• does not embed product copy, branding, or business rules
+• exposes configuration via props / slots / events, rather than hardcoding behavior
+
+```plaintext
+src/lib/components/
+├── section/
+│   ├── index.ts
+│   ├── Section.svelte
+│   └── Section.ts
+└── shell/
+    ├── index.ts
+    ├── Nav.svelte
+    ├── Nav.ts
+    ├── Screen.svelte
+    └── Screen.ts
+```
+
+## Svelte Components
+
+### EntityLike props
+
+Components that accept entities should declare an EntityLike interface in their props, including only the properties they require. This improves component reusability and reduces coupling.
+
+Example:
+
+```ts
+type AccountLike = Pick<Account, 'name' | 'picture'>
+
+export interface Props {
+  account: AccountLike
+}
+```
+
 ## Linked Entities Pattern
 
 The Linked Entities Pattern is used to create rich domain models by composing data from multiple domains. This pattern enhances network-defined entities with related domain data, creating a more complete representation for application use.
@@ -55,7 +99,7 @@ export interface Contact {
 
 // Linked entity (enriched domain model) - defined in svc/Contact.ts
 export interface Contact extends net.Contact {
-  account: Account      // Linked entity from @/account domain
+  account: Account // Linked entity from @/account domain
 }
 ```
 
@@ -74,14 +118,13 @@ import { awaited } from 'svas'
 import { accounts } from '@/account'
 
 export async function map(entry: net.Contact): Promise<Contact | Error> {
-  const account = await awaited(accounts.get(entry.identity))  // Fetch linked Account entity
-  
-  if (account instanceof Error) 
-    return account
-  
+  const account = await awaited(accounts.get(entry.identity)) // Fetch linked Account entity
+
+  if (account instanceof Error) return account
+
   return {
     ...entry,
-    account,  // Linked Account entity from @/account domain
+    account, // Linked Account entity from @/account domain
   }
 }
 ```
@@ -96,8 +139,7 @@ export const internal = collection<Contact>({ get })
 events.on('default.contacts.sync', async (entry: net.Contact) => {
   const contact = await map(entry)
 
-  if (contact instanceof Error) 
-    return
+  if (contact instanceof Error) return
 
   sync(internal, contact)
 })

@@ -44,6 +44,7 @@ contacts:
     invite:
       share: 邀请朋友
       qr: 通过二维码邀请
+      manual: 手动添加
   all: 所有好友
   contact:
     owesYou: 欠你的
@@ -83,6 +84,8 @@ invite:
   share: 分享
   qr: 显示二维码
   invite: 邀请
+etc:
+  or: 或
 account:
   delete:
     button: 删除账户

@@ -57,7 +57,8 @@ export const dictionaries = {
         "description": "أضِف الأصدقاء يدويًا أو ادعُ الأشخاص",
         "invite": {
           "share": "دعوة الأصدقاء",
-          "qr": "دعوة عبر رمز الاستجابة السريعة"
+          "qr": "دعوة عبر رمز الاستجابة السريعة",
+          "manual": "إضافة يدويًا"
         }
       },
       "all": "جميع الأصدقاء",
@@ -105,6 +106,9 @@ export const dictionaries = {
       "share": "مشاركة",
       "qr": "عرض رمز الاستجابة السريعة",
       "invite": "دعوة"
+    },
+    "etc": {
+      "or": "أو"
     },
     "account": {
       "delete": {
@@ -171,7 +175,8 @@ export const dictionaries = {
         "description": "Freunde manuell hinzufügen oder Personen einladen",
         "invite": {
           "share": "Freunde einladen",
-          "qr": "Per QR-Code einladen"
+          "qr": "Per QR-Code einladen",
+          "manual": "Manuell hinzufügen"
         }
       },
       "all": "Alle Freunde",
@@ -211,7 +216,7 @@ export const dictionaries = {
       "summary": {
         "balance": {
           "from": (amount) => `Mitglieder dieser Gruppe schulden dir ${amount}`,
-          "to": (amount) => `Sie schulden ihnen ${amount}`
+          "to": (amount) => `Du schuldest ihnen ${amount}`
         }
       }
     },
@@ -219,6 +224,9 @@ export const dictionaries = {
       "share": "Teilen",
       "qr": "QR-Code anzeigen",
       "invite": "Einladen"
+    },
+    "etc": {
+      "or": "oder"
     },
     "account": {
       "delete": {
@@ -285,7 +293,8 @@ export const dictionaries = {
         "description": "Add friends manually or invite people",
         "invite": {
           "share": "Invite friends",
-          "qr": "Invite by QR code"
+          "qr": "Invite by QR code",
+          "manual": "Add manually"
         }
       },
       "all": "All friends",
@@ -333,6 +342,9 @@ export const dictionaries = {
       "share": "Share",
       "qr": "Show QR code",
       "invite": "Invite"
+    },
+    "etc": {
+      "or": "or"
     },
     "account": {
       "delete": {
@@ -399,7 +411,8 @@ export const dictionaries = {
         "description": "Añade amigos manualmente o invita a personas",
         "invite": {
           "share": "Invitar a amigos",
-          "qr": "Invitar por código QR"
+          "qr": "Invitar por código QR",
+          "manual": "Agregar manualmente"
         }
       },
       "all": "Todos los amigos",
@@ -447,6 +460,9 @@ export const dictionaries = {
       "share": "Compartir",
       "qr": "Mostrar código QR",
       "invite": "Invitar"
+    },
+    "etc": {
+      "or": "o"
     },
     "account": {
       "delete": {
@@ -513,7 +529,8 @@ export const dictionaries = {
         "description": "Ajoutez des amis manuellement ou invitez des personnes",
         "invite": {
           "share": "Inviter des amis",
-          "qr": "Inviter par QR code"
+          "qr": "Inviter par QR code",
+          "manual": "Ajouter manuellement"
         }
       },
       "all": "Tous les amis",
@@ -561,6 +578,9 @@ export const dictionaries = {
       "share": "Partager",
       "qr": "Afficher le code QR",
       "invite": "Inviter"
+    },
+    "etc": {
+      "or": "ou"
     },
     "account": {
       "delete": {
@@ -627,7 +647,8 @@ export const dictionaries = {
         "description": "दोस्तों को मैन्युअली जोड़ें या लोगों को आमंत्रित करें",
         "invite": {
           "share": "दोस्तों को आमंत्रित करें",
-          "qr": "QR कोड से आमंत्रित करें"
+          "qr": "QR कोड से आमंत्रित करें",
+          "manual": "मैन्युअल रूप से जोड़ें"
         }
       },
       "all": "सभी मित्र",
@@ -675,6 +696,9 @@ export const dictionaries = {
       "share": "साझा करें",
       "qr": "QR कोड दिखाएँ",
       "invite": "आमंत्रित करें"
+    },
+    "etc": {
+      "or": "या"
     },
     "account": {
       "delete": {
@@ -741,7 +765,8 @@ export const dictionaries = {
         "description": "Aggiungi amici manualmente o invita persone",
         "invite": {
           "share": "Invita amici",
-          "qr": "Invita tramite codice QR"
+          "qr": "Invita tramite codice QR",
+          "manual": "Aggiungi manualmente"
         }
       },
       "all": "Tutti gli amici",
@@ -789,6 +814,9 @@ export const dictionaries = {
       "share": "Condividi",
       "qr": "Mostra codice QR",
       "invite": "Invita"
+    },
+    "etc": {
+      "or": "o"
     },
     "account": {
       "delete": {
@@ -855,7 +883,8 @@ export const dictionaries = {
         "description": "友達を手動で追加するか、招待する",
         "invite": {
           "share": "友達を招待する",
-          "qr": "QRコードで招待"
+          "qr": "QRコードで招待",
+          "manual": "手動で追加"
         }
       },
       "all": "すべての友達",
@@ -903,6 +932,9 @@ export const dictionaries = {
       "share": "共有",
       "qr": "QRコードを表示",
       "invite": "招待"
+    },
+    "etc": {
+      "or": "または"
     },
     "account": {
       "delete": {
@@ -969,7 +1001,8 @@ export const dictionaries = {
         "description": "친구를 직접 추가하거나 사람들을 초대하세요",
         "invite": {
           "share": "친구 초대하기",
-          "qr": "QR 코드로 초대"
+          "qr": "QR 코드로 초대",
+          "manual": "수동으로 추가"
         }
       },
       "all": "모든 친구",
@@ -1017,6 +1050,9 @@ export const dictionaries = {
       "share": "공유",
       "qr": "QR 코드 표시",
       "invite": "초대"
+    },
+    "etc": {
+      "or": "또는"
     },
     "account": {
       "delete": {
@@ -1083,7 +1119,8 @@ export const dictionaries = {
         "description": "Voeg vrienden handmatig toe of nodig mensen uit",
         "invite": {
           "share": "Vrienden uitnodigen",
-          "qr": "Uitnodigen via QR-code"
+          "qr": "Uitnodigen via QR-code",
+          "manual": "Handmatig toevoegen"
         }
       },
       "all": "Alle vrienden",
@@ -1131,6 +1168,9 @@ export const dictionaries = {
       "share": "Delen",
       "qr": "QR-code tonen",
       "invite": "Uitnodigen"
+    },
+    "etc": {
+      "or": "of"
     },
     "account": {
       "delete": {
@@ -1197,7 +1237,8 @@ export const dictionaries = {
         "description": "Добавьте друзей вручную или пригласите людей",
         "invite": {
           "share": "Пригласить друзей",
-          "qr": "Пригласить по QR-коду"
+          "qr": "Пригласить по QR-коду",
+          "manual": "Добавить вручную"
         }
       },
       "all": "Все друзья",
@@ -1245,6 +1286,9 @@ export const dictionaries = {
       "share": "Поделиться",
       "qr": "Показать QR-код",
       "invite": "Пригласить"
+    },
+    "etc": {
+      "or": "или"
     },
     "account": {
       "delete": {
@@ -1311,7 +1355,8 @@ export const dictionaries = {
         "description": "Ongeza marafiki mwenyewe au alika watu",
         "invite": {
           "share": "Alika marafiki",
-          "qr": "Alika kwa kutumia msimbo wa QR"
+          "qr": "Alika kwa kutumia msimbo wa QR",
+          "manual": "Ongeza kwa mkono"
         }
       },
       "all": "Marafiki wote",
@@ -1359,6 +1404,9 @@ export const dictionaries = {
       "share": "Shiriki",
       "qr": "Onyesha msimbo wa QR",
       "invite": "Alika"
+    },
+    "etc": {
+      "or": "au"
     },
     "account": {
       "delete": {
@@ -1425,7 +1473,8 @@ export const dictionaries = {
         "description": "Arkadaşları manuel olarak ekleyin veya kişileri davet edin",
         "invite": {
           "share": "Arkadaşlarını davet et",
-          "qr": "QR kod ile davet et"
+          "qr": "QR kod ile davet et",
+          "manual": "Manuel ekle"
         }
       },
       "all": "Tüm arkadaşlar",
@@ -1473,6 +1522,9 @@ export const dictionaries = {
       "share": "Paylaş",
       "qr": "QR kodunu göster",
       "invite": "Davet et"
+    },
+    "etc": {
+      "or": "veya"
     },
     "account": {
       "delete": {
@@ -1539,7 +1591,8 @@ export const dictionaries = {
         "description": "Додайте друзів вручну або запросіть людей",
         "invite": {
           "share": "Запросити друзів",
-          "qr": "Запросити за QR-кодом"
+          "qr": "Запросити за QR-кодом",
+          "manual": "Додати вручну"
         }
       },
       "all": "Усі друзі",
@@ -1587,6 +1640,9 @@ export const dictionaries = {
       "share": "Поділитися",
       "qr": "Показати QR-код",
       "invite": "Запросити"
+    },
+    "etc": {
+      "or": "або"
     },
     "account": {
       "delete": {
@@ -1653,7 +1709,8 @@ export const dictionaries = {
         "description": "手动添加好友或邀请他人",
         "invite": {
           "share": "邀请朋友",
-          "qr": "通过二维码邀请"
+          "qr": "通过二维码邀请",
+          "manual": "手动添加"
         }
       },
       "all": "所有好友",
@@ -1701,6 +1758,9 @@ export const dictionaries = {
       "share": "分享",
       "qr": "显示二维码",
       "invite": "邀请"
+    },
+    "etc": {
+      "or": "或"
     },
     "account": {
       "delete": {

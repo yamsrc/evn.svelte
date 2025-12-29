@@ -46,6 +46,7 @@ contacts:
     invite:
       share: Запросити друзів
       qr: Запросити за QR-кодом
+      manual: Додати вручну
   all: Усі друзі
   contact:
     owesYou: Винен тобі
@@ -89,6 +90,8 @@ invite:
   share: Поділитися
   qr: Показати QR-код
   invite: Запросити
+etc:
+  or: або
 account:
   delete:
     button: Видалити обліковий запис

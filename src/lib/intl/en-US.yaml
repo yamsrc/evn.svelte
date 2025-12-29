@@ -46,6 +46,7 @@ contacts:
     invite:
       share: Invite friends
       qr: Invite by QR code
+      manual: Add manually
   all: All friends
   contact:
     owesYou: Owes you
@@ -87,6 +88,8 @@ invite:
   share: Share
   qr: Show QR code
   invite: Invite
+etc:
+  or: or
 account:
   delete:
     button: Delete account

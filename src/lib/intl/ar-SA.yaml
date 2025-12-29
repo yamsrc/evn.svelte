@@ -44,6 +44,7 @@ contacts:
     invite:
       share: دعوة الأصدقاء
       qr: دعوة عبر رمز الاستجابة السريعة
+      manual: إضافة يدويًا
   all: جميع الأصدقاء
   contact:
     owesYou: مدين لك
@@ -85,6 +86,8 @@ invite:
   share: مشاركة
   qr: عرض رمز الاستجابة السريعة
   invite: دعوة
+etc:
+  or: أو
 account:
   delete:
     button: حذف الحساب

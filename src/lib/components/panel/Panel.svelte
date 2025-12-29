@@ -41,7 +41,7 @@
     <div class="min-w-full shrink-0 snap-start z-10">
       <Button
         class={cn('w-full justify-between gap-2', h || 'h-auto', classes, {
-          'bg-accent': selected,
+          'bg-accent dark:bg-accent': selected,
         })}
         {variant}
         {...props}

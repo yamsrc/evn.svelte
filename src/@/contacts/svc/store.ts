@@ -1,39 +1,48 @@
-import { collection, sync } from 'svas'
+import { collection, ok, sync, type Maybe } from 'svas'
 import { values } from 'svas'
 import { derived } from 'svelte/store'
-import { type Readable } from 'svelte/store'
+import { accounts } from '@/account'
 import { account } from '@/iam'
 import { events } from '@/realtime'
 import { get } from './get'
 import { map } from './map'
 import type { Contact } from './Contact'
-import type * as net from './net'
 
-export const internal = collection<Contact>({
+export const internal = collection({
   get,
-  persist: 'contacts:contacts',
+  persist: 'contacts',
   bind: account,
   stale: true,
   values: values<Contact>(),
 })
 
-events.on('default.contacts.sync', async (entry: net.Contact) => {
-  const contact = await map(entry)
+events.on('default.contacts.sync', (contact) => sync(internal, contact))
 
-  if (contact instanceof Error)
-    return
+export const contacts = derived<[typeof internal, typeof account], Maybe<Contact[]>>([internal, account], ([$contacts, $account], set, update) => {
+  if (!ok($contacts))
+    return set($contacts)
 
-  sync(internal, contact)
-})
+  if (!ok($account))
+    return set($account)
 
-export const contacts: Readable<Contact[]> = derived([internal, account], ([$internal, $account]) => {
-  if ($internal instanceof Error || $internal === null) return []
+  const values = $contacts.map((contact) => map(contact, $account.id))
 
-  return $internal.map((contact): Contact => {
-    const i = contact.identities
-    const identity = $account?.id === i[0] ? i[1] : i[0]
-    const balance = $account?.id === i[0] ? -contact.balance : contact.balance
+  set(values)
 
-    return { ...contact, balance, identity }
-  })
+  const unsubs = values.map((contact) =>
+    accounts.get(contact.identity).subscribe((account) => update((values) => {
+      if (!ok(values) || !ok(account))
+        return values
+
+      const i = values.findIndex((value) => value.identity === account.id)
+
+      if (i < 0 || !values[i])
+        return values
+
+      values[i] = { ...values[i], account }
+
+      return values
+    })))
+
+  return () => unsubs.forEach((unsub) => unsub())
 })

@@ -44,6 +44,7 @@ contacts:
     invite:
       share: 友達を招待する
       qr: QRコードで招待
+      manual: 手動で追加
   all: すべての友達
   contact:
     owesYou: あなたに借りがある
@@ -83,6 +84,8 @@ invite:
   share: 共有
   qr: QRコードを表示
   invite: 招待
+etc:
+  or: または
 account:
   delete:
     button: アカウントを削除

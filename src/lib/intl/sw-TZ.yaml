@@ -44,6 +44,7 @@ contacts:
     invite:
       share: Alika marafiki
       qr: Alika kwa kutumia msimbo wa QR
+      manual: Ongeza kwa mkono
   all: Marafiki wote
   contact:
     owesYou: Ana deni lako
@@ -85,6 +86,8 @@ invite:
   share: Shiriki
   qr: Onyesha msimbo wa QR
   invite: Alika
+etc:
+  or: au
 account:
   delete:
     button: Futa akaunti

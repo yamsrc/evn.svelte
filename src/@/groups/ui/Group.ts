@@ -1,11 +1,7 @@
 import type { Group } from '@/groups'
 
-export interface GroupWithBalance extends Pick<Group, 'id' | 'name' | 'identities'> {
-  balance: number
-}
-
 export interface Props {
-  group: GroupWithBalance
+  group: Group
   selected?: boolean
   onselect?: (id: string, selected: boolean) => void
 }

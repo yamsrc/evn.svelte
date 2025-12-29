@@ -46,6 +46,7 @@ contacts:
     invite:
       share: Freunde einladen
       qr: Per QR-Code einladen
+      manual: Manuell hinzufügen
   all: Alle Freunde
   contact:
     owesYou: Schuldet dir
@@ -86,11 +87,13 @@ groups:
         (amount) => `Mitglieder dieser Gruppe schulden dir ${amount}`
       to: |-
         !js
-        (amount) => `Sie schulden ihnen ${amount}`
+        (amount) => `Du schuldest ihnen ${amount}`
 invite:
   share: Teilen
   qr: QR-Code anzeigen
   invite: Einladen
+etc:
+  or: oder
 account:
   delete:
     button: Konto löschen
