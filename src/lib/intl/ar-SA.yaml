@@ -21,8 +21,8 @@ nav:
   evns: تسوية
   profile: أنا
   contacts: الأصدقاء
-terms: الشروط والأحكام
-privacy: سياسة الخصوصية
+terms: Terms & conditions
+privacy: Privacy policy
 madeBy: من صنع
 profile:
   title: ملفي الشخصي
@@ -31,7 +31,7 @@ profile:
     description: هذا لا يؤثر على التعرف على الشيك. على أي حال، نحن نفهم معظم اللغات هناك.
 form:
   enterName: أدخل الاسم
-copyright: © Seed.me، 2024-2025
+copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
 onboarding:
   name:
     title: لمسة شخصية
@@ -88,3 +88,12 @@ invite:
   invite: دعوة
 etc:
   or: أو
+account:
+  delete:
+    button: حذف الحساب
+    title: حذف الحساب
+    description: >-
+      سنقوم بحذف حسابك وجميع المعلومات المرتبطة به بشكل نهائي. لا يمكن التراجع
+      عن هذا الإجراء.
+    sorry: نأسف جدًا لرؤيتك تغادر.
+    hold: اضغط مع الاستمرار للتأكيد

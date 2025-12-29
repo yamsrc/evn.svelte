@@ -21,8 +21,8 @@ nav:
   evns: Расчёты
   profile: Я
   contacts: Друзья
-terms: Условия и положения
-privacy: Политика конфиденциальности
+terms: Terms & conditions
+privacy: Privacy policy
 madeBy: Сделано
 profile:
   title: Мой профиль
@@ -33,7 +33,7 @@ profile:
       языков.
 form:
   enterName: Введите имя
-copyright: © Seed.me, 2024–2025
+copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
 onboarding:
   name:
     title: Личный штрих
@@ -92,3 +92,12 @@ invite:
   invite: Пригласить
 etc:
   or: или
+account:
+  delete:
+    button: Удалить аккаунт
+    title: Удалить аккаунт
+    description: >-
+      Мы навсегда удалим ваш аккаунт и всю связанную с ним информацию. Это
+      действие нельзя отменить.
+    sorry: Нам очень жаль, что вы уходите.
+    hold: Удерживайте для подтверждения

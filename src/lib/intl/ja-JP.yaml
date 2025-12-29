@@ -21,8 +21,8 @@ nav:
   evns: 清算
   profile: 私
   contacts: 友だち
-terms: 利用規約
-privacy: プライバシーポリシー
+terms: Terms & conditions
+privacy: Privacy policy
 madeBy: 作成者
 profile:
   title: マイプロフィール
@@ -31,7 +31,7 @@ profile:
     description: これは小切手の認識には影響しません。そもそも、私たちはほとんどの言語を理解しています。
 form:
   enterName: 名前を入力してください
-copyright: © Seed.me, 2024年～2025年
+copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
 onboarding:
   name:
     title: パーソナルタッチ
@@ -86,3 +86,10 @@ invite:
   invite: 招待
 etc:
   or: または
+account:
+  delete:
+    button: アカウントを削除
+    title: アカウントを削除
+    description: あなたのアカウントおよび関連するすべての情報を完全に削除します。この操作は元に戻せません。
+    sorry: ご利用いただけなくなることを大変残念に思います。
+    hold: 押し続けて確定

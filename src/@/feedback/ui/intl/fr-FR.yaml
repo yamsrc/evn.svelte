@@ -1,0 +1,11 @@
+title: Retour
+description: >-
+  Nous serions ravis d’avoir votre avis ! Partagez vos pensées, retours et
+  suggestions.
+send: Envoyer
+form:
+  email:
+    description: Vous pouvez saisir votre e-mail pour obtenir une réponse (optionnel).
+    placeholder: Votre e-mail
+  message:
+    placeholder: Saisissez votre message

@@ -145,5 +145,18 @@ inputs:
   etc:
     or:
       input: or
+  account:
+    delete:
+      button:
+        input: Delete account
+      title:
+        input: Delete account
+      description:
+        input: "We will permanently delete your account and all associated information. This action cannot be\_undone."
+      sorry:
+        input: We're very sorry to see you go.
+      hold:
+        input: Hold to confirm
 mounts:
   iam: ../../@/iam/ui/intl
+  feedback: ../../@/feedback/ui/intl

@@ -21,8 +21,8 @@ nav:
   evns: Règlements
   profile: Moi
   contacts: Amis
-terms: Conditions générales
-privacy: Politique de confidentialité
+terms: Terms & conditions
+privacy: Privacy policy
 madeBy: Créé par
 profile:
   title: Mon profil
@@ -33,7 +33,7 @@ profile:
       façon la plupart des langues là-bas.
 form:
   enterName: Saisissez le nom
-copyright: © Seed.me, 2024-2025
+copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
 onboarding:
   name:
     title: Touche personnelle
@@ -92,3 +92,12 @@ invite:
   invite: Inviter
 etc:
   or: ou
+account:
+  delete:
+    button: Supprimer le compte
+    title: Supprimer le compte
+    description: >-
+      Nous supprimerons définitivement votre compte ainsi que toutes les
+      informations associées. Cette action est irréversible.
+    sorry: Nous sommes vraiment désolés de vous voir partir.
+    hold: Maintenir pour confirmer

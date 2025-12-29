@@ -1,0 +1,11 @@
+title: Geri Bildirim
+description: >-
+  Sizden haber almak isteriz! Lütfen düşüncelerinizi, geri bildirimlerinizi ve
+  önerilerinizi bizimle paylaşın.
+send: Gönder
+form:
+  email:
+    description: İsterseniz yanıt almak için e-posta adresinizi girebilirsiniz.
+    placeholder: E-posta adresiniz
+  message:
+    placeholder: Mesajınızı yazın

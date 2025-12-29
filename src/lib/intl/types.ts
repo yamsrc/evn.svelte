@@ -47,7 +47,7 @@ export type Dictionary = {
       form: {
         enterName: string
       }
-      copyright: string
+      copyright: (value: any) => string
       onboarding: {
         name: {
           title: string
@@ -113,5 +113,14 @@ export type Dictionary = {
       }
       etc: {
         or: string
+      }
+      account: {
+        delete: {
+          button: string
+          title: string
+          description: string
+          sorry: string
+          hold: string
+        }
       }
     }

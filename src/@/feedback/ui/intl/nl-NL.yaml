@@ -1,0 +1,9 @@
+title: Feedback
+description: We horen graag van je! Deel je gedachten, feedback en suggesties met ons.
+send: Verzenden
+form:
+  email:
+    description: Je kunt optioneel je e-mailadres invullen om een reactie te ontvangen.
+    placeholder: Je e-mailadres
+  message:
+    placeholder: Typ je bericht

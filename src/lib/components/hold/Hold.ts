@@ -6,4 +6,5 @@ export interface Props extends ButtonProps {
   label?: string
   position?: 'center' | 'left' | 'right' | 'top' | 'bottom'
   align?: 'center' | 'left' | 'right' | 'top' | 'bottom'
+  containerClass?: string
 }

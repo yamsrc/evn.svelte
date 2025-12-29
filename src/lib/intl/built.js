@@ -30,8 +30,8 @@ export const dictionaries = {
       "profile": "أنا",
       "contacts": "الأصدقاء"
     },
-    "terms": "الشروط والأحكام",
-    "privacy": "سياسة الخصوصية",
+    "terms": "Terms & conditions",
+    "privacy": "Privacy policy",
     "madeBy": "من صنع",
     "profile": {
       "title": "ملفي الشخصي",
@@ -43,7 +43,7 @@ export const dictionaries = {
     "form": {
       "enterName": "أدخل الاسم"
     },
-    "copyright": "© Seed.me، 2024-2025",
+    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
     "onboarding": {
       "name": {
         "title": "لمسة شخصية",
@@ -109,6 +109,15 @@ export const dictionaries = {
     },
     "etc": {
       "or": "أو"
+    },
+    "account": {
+      "delete": {
+        "button": "حذف الحساب",
+        "title": "حذف الحساب",
+        "description": "سنقوم بحذف حسابك وجميع المعلومات المرتبطة به بشكل نهائي. لا يمكن التراجع عن هذا الإجراء.",
+        "sorry": "نأسف جدًا لرؤيتك تغادر.",
+        "hold": "اضغط مع الاستمرار للتأكيد"
+      }
     }
   },
   "de-DE": {
@@ -139,8 +148,8 @@ export const dictionaries = {
       "profile": "Ich",
       "contacts": "Freunde"
     },
-    "terms": "Allgemeine Geschäftsbedingungen",
-    "privacy": "Datenschutzerklärung",
+    "terms": "Terms & conditions",
+    "privacy": "Privacy policy",
     "madeBy": "Erstellt von",
     "profile": {
       "title": "Mein Profil",
@@ -152,7 +161,7 @@ export const dictionaries = {
     "form": {
       "enterName": "Name eingeben"
     },
-    "copyright": "© Seed.me, 2024–2025",
+    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
     "onboarding": {
       "name": {
         "title": "Persönliche Note",
@@ -218,6 +227,15 @@ export const dictionaries = {
     },
     "etc": {
       "or": "oder"
+    },
+    "account": {
+      "delete": {
+        "button": "Konto löschen",
+        "title": "Konto löschen",
+        "description": "Wir werden Ihr Konto und alle zugehörigen Informationen dauerhaft löschen. Diese Aktion kann nicht rückgängig gemacht werden.",
+        "sorry": "Es tut uns sehr leid, zu sehen, dass Sie gehen.",
+        "hold": "Zum Bestätigen halten"
+      }
     }
   },
   "en-US": {
@@ -248,8 +266,8 @@ export const dictionaries = {
       "profile": "Me",
       "contacts": "Friends"
     },
-    "terms": "Terms & Conditions",
-    "privacy": "Privacy Policy",
+    "terms": "Terms & conditions",
+    "privacy": "Privacy policy",
     "madeBy": "Made by",
     "profile": {
       "title": "My Profile",
@@ -261,7 +279,7 @@ export const dictionaries = {
     "form": {
       "enterName": "Enter name"
     },
-    "copyright": "© Seed.me, 2024-2025",
+    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
     "onboarding": {
       "name": {
         "title": "Personal Touch",
@@ -327,6 +345,15 @@ export const dictionaries = {
     },
     "etc": {
       "or": "or"
+    },
+    "account": {
+      "delete": {
+        "button": "Delete account",
+        "title": "Delete account",
+        "description": "We will permanently delete your account and all associated information. This action cannot be undone.",
+        "sorry": "We're very sorry to see you go.",
+        "hold": "Hold to confirm"
+      }
     }
   },
   "es-ES": {
@@ -357,8 +384,8 @@ export const dictionaries = {
       "profile": "Yo",
       "contacts": "Amigos"
     },
-    "terms": "Términos y condiciones",
-    "privacy": "Política de privacidad",
+    "terms": "Terms & conditions",
+    "privacy": "Privacy policy",
     "madeBy": "Hecho por",
     "profile": {
       "title": "Mi perfil",
@@ -370,7 +397,7 @@ export const dictionaries = {
     "form": {
       "enterName": "Introduce el nombre"
     },
-    "copyright": "© Seed.me, 2024-2025",
+    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
     "onboarding": {
       "name": {
         "title": "Toque personal",
@@ -436,6 +463,15 @@ export const dictionaries = {
     },
     "etc": {
       "or": "o"
+    },
+    "account": {
+      "delete": {
+        "button": "Eliminar cuenta",
+        "title": "Eliminar cuenta",
+        "description": "Eliminaremos permanentemente tu cuenta y toda la información asociada. Esta acción no se puede deshacer.",
+        "sorry": "Lamentamos mucho que te vayas.",
+        "hold": "Mantén pulsado para confirmar"
+      }
     }
   },
   "fr-FR": {
@@ -466,8 +502,8 @@ export const dictionaries = {
       "profile": "Moi",
       "contacts": "Amis"
     },
-    "terms": "Conditions générales",
-    "privacy": "Politique de confidentialité",
+    "terms": "Terms & conditions",
+    "privacy": "Privacy policy",
     "madeBy": "Créé par",
     "profile": {
       "title": "Mon profil",
@@ -479,7 +515,7 @@ export const dictionaries = {
     "form": {
       "enterName": "Saisissez le nom"
     },
-    "copyright": "© Seed.me, 2024-2025",
+    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
     "onboarding": {
       "name": {
         "title": "Touche personnelle",
@@ -545,6 +581,15 @@ export const dictionaries = {
     },
     "etc": {
       "or": "ou"
+    },
+    "account": {
+      "delete": {
+        "button": "Supprimer le compte",
+        "title": "Supprimer le compte",
+        "description": "Nous supprimerons définitivement votre compte ainsi que toutes les informations associées. Cette action est irréversible.",
+        "sorry": "Nous sommes vraiment désolés de vous voir partir.",
+        "hold": "Maintenir pour confirmer"
+      }
     }
   },
   "hi-IN": {
@@ -575,8 +620,8 @@ export const dictionaries = {
       "profile": "मैं",
       "contacts": "मित्र"
     },
-    "terms": "नियम और शर्तें",
-    "privacy": "गोपनीयता नीति",
+    "terms": "Terms & conditions",
+    "privacy": "Privacy policy",
     "madeBy": "द्वारा निर्मित",
     "profile": {
       "title": "मेरा प्रोफ़ाइल",
@@ -588,7 +633,7 @@ export const dictionaries = {
     "form": {
       "enterName": "नाम दर्ज करें"
     },
-    "copyright": "© Seed.me, 2024-2025",
+    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
     "onboarding": {
       "name": {
         "title": "व्यक्तिगत स्पर्श",
@@ -654,6 +699,15 @@ export const dictionaries = {
     },
     "etc": {
       "or": "या"
+    },
+    "account": {
+      "delete": {
+        "button": "खाता हटाएँ",
+        "title": "खाता हटाएं",
+        "description": "हम आपके खाते और उससे जुड़ी सभी जानकारी को स्थायी रूप से हटा देंगे। इस कार्रवाई को वापस नहीं लिया जा सकता।",
+        "sorry": "हमें आपको जाते हुए देखकर बहुत दुख हुआ।",
+        "hold": "पुष्टि करने के लिए दबाए रखें"
+      }
     }
   },
   "it-IT": {
@@ -684,8 +738,8 @@ export const dictionaries = {
       "profile": "Io",
       "contacts": "Amici"
     },
-    "terms": "Termini e condizioni",
-    "privacy": "Informativa sulla privacy",
+    "terms": "Terms & conditions",
+    "privacy": "Privacy policy",
     "madeBy": "Realizzato da",
     "profile": {
       "title": "Il mio profilo",
@@ -697,7 +751,7 @@ export const dictionaries = {
     "form": {
       "enterName": "Inserisci il nome"
     },
-    "copyright": "© Seed.me, 2024-2025",
+    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
     "onboarding": {
       "name": {
         "title": "Tocco personale",
@@ -763,6 +817,15 @@ export const dictionaries = {
     },
     "etc": {
       "or": "o"
+    },
+    "account": {
+      "delete": {
+        "button": "Elimina account",
+        "title": "Elimina account",
+        "description": "Elimineremo definitivamente il tuo account e tutte le informazioni associate. Questa azione non può essere annullata.",
+        "sorry": "Ci dispiace molto vederti andare via.",
+        "hold": "Tieni premuto per confermare"
+      }
     }
   },
   "ja-JP": {
@@ -793,8 +856,8 @@ export const dictionaries = {
       "profile": "私",
       "contacts": "友だち"
     },
-    "terms": "利用規約",
-    "privacy": "プライバシーポリシー",
+    "terms": "Terms & conditions",
+    "privacy": "Privacy policy",
     "madeBy": "作成者",
     "profile": {
       "title": "マイプロフィール",
@@ -806,7 +869,7 @@ export const dictionaries = {
     "form": {
       "enterName": "名前を入力してください"
     },
-    "copyright": "© Seed.me, 2024年～2025年",
+    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
     "onboarding": {
       "name": {
         "title": "パーソナルタッチ",
@@ -872,6 +935,15 @@ export const dictionaries = {
     },
     "etc": {
       "or": "または"
+    },
+    "account": {
+      "delete": {
+        "button": "アカウントを削除",
+        "title": "アカウントを削除",
+        "description": "あなたのアカウントおよび関連するすべての情報を完全に削除します。この操作は元に戻せません。",
+        "sorry": "ご利用いただけなくなることを大変残念に思います。",
+        "hold": "押し続けて確定"
+      }
     }
   },
   "ko-KR": {
@@ -902,8 +974,8 @@ export const dictionaries = {
       "profile": "나",
       "contacts": "친구"
     },
-    "terms": "이용 약관",
-    "privacy": "개인정보 처리방침",
+    "terms": "Terms & conditions",
+    "privacy": "Privacy policy",
     "madeBy": "제작자",
     "profile": {
       "title": "내 프로필",
@@ -915,7 +987,7 @@ export const dictionaries = {
     "form": {
       "enterName": "이름을 입력하세요"
     },
-    "copyright": "© Seed.me, 2024-2025",
+    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
     "onboarding": {
       "name": {
         "title": "개인적인 터치",
@@ -981,6 +1053,15 @@ export const dictionaries = {
     },
     "etc": {
       "or": "또는"
+    },
+    "account": {
+      "delete": {
+        "button": "계정 삭제",
+        "title": "계정 삭제",
+        "description": "계정과 모든 관련 정보를 영구적으로 삭제합니다. 이 작업은 취소할 수 없습니다.",
+        "sorry": "떠나신다니 정말 아쉽습니다.",
+        "hold": "길게 눌러서 확인"
+      }
     }
   },
   "nl-NL": {
@@ -1011,8 +1092,8 @@ export const dictionaries = {
       "profile": "Ik",
       "contacts": "Vrienden"
     },
-    "terms": "Algemene voorwaarden",
-    "privacy": "Privacybeleid",
+    "terms": "Terms & conditions",
+    "privacy": "Privacy policy",
     "madeBy": "Gemaakt door",
     "profile": {
       "title": "Mijn profiel",
@@ -1024,7 +1105,7 @@ export const dictionaries = {
     "form": {
       "enterName": "Naam invoeren"
     },
-    "copyright": "© Seed.me, 2024-2025",
+    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
     "onboarding": {
       "name": {
         "title": "Persoonlijk tintje",
@@ -1090,6 +1171,15 @@ export const dictionaries = {
     },
     "etc": {
       "or": "of"
+    },
+    "account": {
+      "delete": {
+        "button": "Account verwijderen",
+        "title": "Account verwijderen",
+        "description": "We verwijderen je account en alle bijbehorende informatie permanent. Deze actie kan niet ongedaan worden gemaakt.",
+        "sorry": "Het spijt ons zeer om je te zien gaan.",
+        "hold": "Houd vast om te bevestigen"
+      }
     }
   },
   "ru-RU": {
@@ -1120,8 +1210,8 @@ export const dictionaries = {
       "profile": "Я",
       "contacts": "Друзья"
     },
-    "terms": "Условия и положения",
-    "privacy": "Политика конфиденциальности",
+    "terms": "Terms & conditions",
+    "privacy": "Privacy policy",
     "madeBy": "Сделано",
     "profile": {
       "title": "Мой профиль",
@@ -1133,7 +1223,7 @@ export const dictionaries = {
     "form": {
       "enterName": "Введите имя"
     },
-    "copyright": "© Seed.me, 2024–2025",
+    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
     "onboarding": {
       "name": {
         "title": "Личный штрих",
@@ -1199,6 +1289,15 @@ export const dictionaries = {
     },
     "etc": {
       "or": "или"
+    },
+    "account": {
+      "delete": {
+        "button": "Удалить аккаунт",
+        "title": "Удалить аккаунт",
+        "description": "Мы навсегда удалим ваш аккаунт и всю связанную с ним информацию. Это действие нельзя отменить.",
+        "sorry": "Нам очень жаль, что вы уходите.",
+        "hold": "Удерживайте для подтверждения"
+      }
     }
   },
   "sw-TZ": {
@@ -1229,8 +1328,8 @@ export const dictionaries = {
       "profile": "Mimi",
       "contacts": "Marafiki"
     },
-    "terms": "Sheria na Masharti",
-    "privacy": "Sera ya Faragha",
+    "terms": "Terms & conditions",
+    "privacy": "Privacy policy",
     "madeBy": "Imetengenezwa na",
     "profile": {
       "title": "Wasifu wangu",
@@ -1242,7 +1341,7 @@ export const dictionaries = {
     "form": {
       "enterName": "Weka jina"
     },
-    "copyright": "© Seed.me, 2024-2025",
+    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
     "onboarding": {
       "name": {
         "title": "Mguso wa kibinafsi",
@@ -1308,6 +1407,15 @@ export const dictionaries = {
     },
     "etc": {
       "or": "au"
+    },
+    "account": {
+      "delete": {
+        "button": "Futa akaunti",
+        "title": "Futa akaunti",
+        "description": "Tutafuta akaunti yako na taarifa zote zinazohusiana nayo kabisa. Hatua hii haiwezi kutenduliwa.",
+        "sorry": "Tunaomba radhi sana kukuona ukiondoka.",
+        "hold": "Shikilia kuthibitisha"
+      }
     }
   },
   "tr-TR": {
@@ -1338,8 +1446,8 @@ export const dictionaries = {
       "profile": "Ben",
       "contacts": "Arkadaşlar"
     },
-    "terms": "Şartlar ve Koşullar",
-    "privacy": "Gizlilik Politikası",
+    "terms": "Terms & conditions",
+    "privacy": "Privacy policy",
     "madeBy": "Tarafından yapıldı",
     "profile": {
       "title": "Profilim",
@@ -1351,7 +1459,7 @@ export const dictionaries = {
     "form": {
       "enterName": "İsim girin"
     },
-    "copyright": "© Seed.me, 2024-2025",
+    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
     "onboarding": {
       "name": {
         "title": "Kişisel dokunuş",
@@ -1417,6 +1525,15 @@ export const dictionaries = {
     },
     "etc": {
       "or": "veya"
+    },
+    "account": {
+      "delete": {
+        "button": "Hesabı sil",
+        "title": "Hesabı sil",
+        "description": "Hesabınızı ve tüm bağlantılı bilgileri kalıcı olarak sileceğiz. Bu işlem geri alınamaz.",
+        "sorry": "Gitmene çok üzüldük.",
+        "hold": "Onaylamak için basılı tutun"
+      }
     }
   },
   "uk-UA": {
@@ -1447,8 +1564,8 @@ export const dictionaries = {
       "profile": "Я",
       "contacts": "Друзі"
     },
-    "terms": "Умови та положення",
-    "privacy": "Політика конфіденційності",
+    "terms": "Terms & conditions",
+    "privacy": "Privacy policy",
     "madeBy": "Створено",
     "profile": {
       "title": "Мій профіль",
@@ -1460,7 +1577,7 @@ export const dictionaries = {
     "form": {
       "enterName": "Введіть ім’я"
     },
-    "copyright": "© Seed.me, 2024–2025",
+    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
     "onboarding": {
       "name": {
         "title": "Особистий штрих",
@@ -1526,6 +1643,15 @@ export const dictionaries = {
     },
     "etc": {
       "or": "або"
+    },
+    "account": {
+      "delete": {
+        "button": "Видалити обліковий запис",
+        "title": "Видалити обліковий запис",
+        "description": "Ми назавжди видалимо ваш обліковий запис і всю пов'язану інформацію. Цю дію не можна скасувати.",
+        "sorry": "Нам дуже шкода, що ви йдете.",
+        "hold": "Утримуйте для підтвердження"
+      }
     }
   },
   "zh-CN": {
@@ -1556,7 +1682,7 @@ export const dictionaries = {
       "profile": "我",
       "contacts": "朋友"
     },
-    "terms": "条款与条件",
+    "terms": "Terms & conditions",
     "privacy": "隐私政策",
     "madeBy": "由...制作",
     "profile": {
@@ -1569,7 +1695,7 @@ export const dictionaries = {
     "form": {
       "enterName": "输入姓名"
     },
-    "copyright": "© Seed.me，2024-2025",
+    "copyright": (timestamp) => `© seed.me，2025–${new Date(timestamp).getFullYear()}`,
     "onboarding": {
       "name": {
         "title": "个性化体验",
@@ -1635,6 +1761,15 @@ export const dictionaries = {
     },
     "etc": {
       "or": "或"
+    },
+    "account": {
+      "delete": {
+        "button": "删除账户",
+        "title": "删除账户",
+        "description": "我们将永久删除您的账户及所有关联信息。此操作无法撤销。",
+        "sorry": "很遗憾看到您离开。",
+        "hold": "按住以确认"
+      }
     }
   }
 };
