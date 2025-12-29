@@ -1,17 +1,15 @@
 <script lang="ts">
-  import { locale, selected } from '$lib/intl'
+  import { locale } from '$lib/intl'
   import { Select, SelectTrigger, SelectContent, SelectItem } from '$ui/select'
   import { set } from '@/account'
   import { options } from './Language'
-
-  let value = $derived($selected ?? undefined)
 
   async function change(locale: string) {
     await set({ locale })
   }
 </script>
 
-<Select type="single" bind:value onValueChange={change}>
+<Select type="single" value={$locale} onValueChange={change}>
   {@const selected = options.find((option) => option.value === $locale)}
   <SelectTrigger class="w-full">{selected?.label}</SelectTrigger>
   <SelectContent>
