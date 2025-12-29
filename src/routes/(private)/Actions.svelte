@@ -33,7 +33,7 @@
           </DropdownMenu.GroupHeading>
           {#each group.items as item (item.name)}
             <DropdownMenu.Item onSelect={item.onSelect}>
-              <item.icon size={16} />
+              <item.icon size={16} class="text-foreground" />
               {item.name}
             </DropdownMenu.Item>
           {/each}

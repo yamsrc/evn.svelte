@@ -41,7 +41,11 @@
         <Contacts title={$dict.contacts.all} {contacts} {search} actionable />
       {/if}
     {:else if $account}
-      <Invite id={$account.id} />
+      <Section class="m-auto flex flex-col items-center justify-center gap-2">
+        <h2>{$dict.contacts.empty.title}</h2>
+        <p>{$dict.contacts.empty.description}</p>
+        <Invite id={$account.id} />
+      </Section>
     {/if}
   {/snippet}
 </Async>

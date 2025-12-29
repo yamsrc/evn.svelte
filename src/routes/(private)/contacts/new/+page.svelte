@@ -1,5 +1,11 @@
 <script lang="ts">
   import { Section } from '$com/section'
+  import { Invite } from '@/contacts/ui'
+  import { account } from '@/iam'
 </script>
 
-<Section class="flex flex-col gap-6 pt-2">test</Section>
+{#if $account}
+  <Section class="m-auto">
+    <Invite id={$account.id} />
+  </Section>
+{/if}
