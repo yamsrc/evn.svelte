@@ -46,9 +46,9 @@ inputs:
     contacts:
       input: Friends
   terms:
-    input: Terms & Conditions
+    input: Terms & conditions
   privacy:
-    input: Privacy Policy
+    input: Privacy policy
   madeBy:
     input: Made by
   profile:

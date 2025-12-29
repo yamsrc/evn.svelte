@@ -57,12 +57,18 @@
 
   <Section>
     <div class="w-full border-b border-border mb-5"></div>
-    <footer class="text-muted-foreground text-sm flex flex-col gap-2 items-center">
-      <p>{$dict.copyright($time)}</p>
-      <a href="/terms/">{$dict.terms}</a>
-      <a href="/privacy/">{$dict.privacy}</a>
-      <Delete class="inline-block p-0 font-normal h-auto" />
-      <span>v{version}</span>
+    <footer class="text-muted-foreground text-sm">
+      <p>
+        &copy; <a href="https://seed.me" target="_blank">seed.me</a>, 2025–{new Date(
+          $time,
+        ).getFullYear()}
+      </p>
+      <div>
+        <a href="/terms/">{$dict.terms}</a>,
+        <a href="/privacy/">{$dict.privacy}</a>,
+        <Delete class="inline-block p-0 font-normal h-auto" />
+      </div>
+      <p>v{version}</p>
     </footer>
   </Section>
 {/if}

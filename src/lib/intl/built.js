@@ -30,8 +30,8 @@ export const dictionaries = {
       "profile": "أنا",
       "contacts": "الأصدقاء"
     },
-    "terms": "Terms & conditions",
-    "privacy": "Privacy policy",
+    "terms": "الشروط والأحكام",
+    "privacy": "سياسة الخصوصية",
     "madeBy": "من صنع",
     "profile": {
       "title": "ملفي الشخصي",
@@ -148,8 +148,8 @@ export const dictionaries = {
       "profile": "Ich",
       "contacts": "Freunde"
     },
-    "terms": "Terms & conditions",
-    "privacy": "Privacy policy",
+    "terms": "Allgemeine Geschäftsbedingungen",
+    "privacy": "Datenschutzrichtlinie",
     "madeBy": "Erstellt von",
     "profile": {
       "title": "Mein Profil",
@@ -266,8 +266,8 @@ export const dictionaries = {
       "profile": "Me",
       "contacts": "Friends"
     },
-    "terms": "Terms & conditions",
-    "privacy": "Privacy policy",
+    "terms": "Terms & Conditions",
+    "privacy": "Privacy Policy",
     "madeBy": "Made by",
     "profile": {
       "title": "My Profile",
@@ -384,8 +384,8 @@ export const dictionaries = {
       "profile": "Yo",
       "contacts": "Amigos"
     },
-    "terms": "Terms & conditions",
-    "privacy": "Privacy policy",
+    "terms": "Términos y condiciones",
+    "privacy": "Política de privacidad",
     "madeBy": "Hecho por",
     "profile": {
       "title": "Mi perfil",
@@ -502,8 +502,8 @@ export const dictionaries = {
       "profile": "Moi",
       "contacts": "Amis"
     },
-    "terms": "Terms & conditions",
-    "privacy": "Privacy policy",
+    "terms": "Conditions générales",
+    "privacy": "Politique de confidentialité",
     "madeBy": "Créé par",
     "profile": {
       "title": "Mon profil",
@@ -620,8 +620,8 @@ export const dictionaries = {
       "profile": "मैं",
       "contacts": "मित्र"
     },
-    "terms": "Terms & conditions",
-    "privacy": "Privacy policy",
+    "terms": "नियम व शर्तें",
+    "privacy": "गोपनीयता नीति",
     "madeBy": "द्वारा निर्मित",
     "profile": {
       "title": "मेरा प्रोफ़ाइल",
@@ -738,8 +738,8 @@ export const dictionaries = {
       "profile": "Io",
       "contacts": "Amici"
     },
-    "terms": "Terms & conditions",
-    "privacy": "Privacy policy",
+    "terms": "Termini e condizioni",
+    "privacy": "Informativa sulla privacy",
     "madeBy": "Realizzato da",
     "profile": {
       "title": "Il mio profilo",
@@ -856,8 +856,8 @@ export const dictionaries = {
       "profile": "私",
       "contacts": "友だち"
     },
-    "terms": "Terms & conditions",
-    "privacy": "Privacy policy",
+    "terms": "利用規約",
+    "privacy": "プライバシーポリシー",
     "madeBy": "作成者",
     "profile": {
       "title": "マイプロフィール",
@@ -974,8 +974,8 @@ export const dictionaries = {
       "profile": "나",
       "contacts": "친구"
     },
-    "terms": "Terms & conditions",
-    "privacy": "Privacy policy",
+    "terms": "이용 약관",
+    "privacy": "개인정보처리방침",
     "madeBy": "제작자",
     "profile": {
       "title": "내 프로필",
@@ -1092,8 +1092,8 @@ export const dictionaries = {
       "profile": "Ik",
       "contacts": "Vrienden"
     },
-    "terms": "Terms & conditions",
-    "privacy": "Privacy policy",
+    "terms": "Algemene voorwaarden",
+    "privacy": "Privacybeleid",
     "madeBy": "Gemaakt door",
     "profile": {
       "title": "Mijn profiel",
@@ -1210,8 +1210,8 @@ export const dictionaries = {
       "profile": "Я",
       "contacts": "Друзья"
     },
-    "terms": "Terms & conditions",
-    "privacy": "Privacy policy",
+    "terms": "Условия и положения",
+    "privacy": "Политика конфиденциальности",
     "madeBy": "Сделано",
     "profile": {
       "title": "Мой профиль",
@@ -1328,8 +1328,8 @@ export const dictionaries = {
       "profile": "Mimi",
       "contacts": "Marafiki"
     },
-    "terms": "Terms & conditions",
-    "privacy": "Privacy policy",
+    "terms": "Vigezo na masharti",
+    "privacy": "Sera ya Faragha",
     "madeBy": "Imetengenezwa na",
     "profile": {
       "title": "Wasifu wangu",
@@ -1446,8 +1446,8 @@ export const dictionaries = {
       "profile": "Ben",
       "contacts": "Arkadaşlar"
     },
-    "terms": "Terms & conditions",
-    "privacy": "Privacy policy",
+    "terms": "Şartlar ve koşullar",
+    "privacy": "Gizlilik Politikası",
     "madeBy": "Tarafından yapıldı",
     "profile": {
       "title": "Profilim",
@@ -1564,8 +1564,8 @@ export const dictionaries = {
       "profile": "Я",
       "contacts": "Друзі"
     },
-    "terms": "Terms & conditions",
-    "privacy": "Privacy policy",
+    "terms": "Умови та положення",
+    "privacy": "Політика конфіденційності",
     "madeBy": "Створено",
     "profile": {
       "title": "Мій профіль",
@@ -1682,7 +1682,7 @@ export const dictionaries = {
       "profile": "我",
       "contacts": "朋友"
     },
-    "terms": "Terms & conditions",
+    "terms": "条款和条件",
     "privacy": "隐私政策",
     "madeBy": "由...制作",
     "profile": {
