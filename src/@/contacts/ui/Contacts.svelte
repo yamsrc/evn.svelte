@@ -25,7 +25,7 @@
     <h2>{title}</h2>
   {/if}
   {#each filter(contacts, search) as contact (contact.identity)}
-    {@const selected = selection?.has(contact.id)}
+    {@const selected = selection?.has(contact.identity)}
     {@const selectedProps = selectable ? { selected, onselect } : undefined}
     <Contact {contact} {actionable} {...selectedProps} />
   {/each}
