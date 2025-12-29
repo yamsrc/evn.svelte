@@ -3,6 +3,7 @@
   import { goto } from '$app/navigation'
   import { Hold } from '$com/hold'
   import { Section } from '$com/section'
+  import { version } from '$config'
   import { dict } from '$lib/intl'
   import { Picture, Name, Language } from '@/account/ui'
   import { Delete } from '@/account/ui'
@@ -61,6 +62,7 @@
       <a href="/terms/">{$dict.terms}</a>
       <a href="/privacy/">{$dict.privacy}</a>
       <Delete class="inline-block p-0 font-normal h-auto" />
+      <span>v{version}</span>
     </footer>
   </Section>
 {/if}
