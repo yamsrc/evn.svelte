@@ -87,3 +87,12 @@ invite:
   share: Paylaş
   qr: QR kodunu göster
   invite: Davet et
+account:
+  delete:
+    button: Hesabı sil
+    title: Hesabı sil
+    description: >-
+      Hesabınızı ve tüm bağlantılı bilgileri kalıcı olarak sileceğiz. Bu işlem
+      geri alınamaz.
+    sorry: Gitmene çok üzüldük.
+    hold: Onaylamak için basılı tutun

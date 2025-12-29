@@ -83,3 +83,10 @@ invite:
   share: 공유
   qr: QR 코드 표시
   invite: 초대
+account:
+  delete:
+    button: 계정 삭제
+    title: 계정 삭제
+    description: 계정과 모든 관련 정보를 영구적으로 삭제합니다. 이 작업은 취소할 수 없습니다.
+    sorry: 떠나신다니 정말 아쉽습니다.
+    hold: 길게 눌러서 확인
