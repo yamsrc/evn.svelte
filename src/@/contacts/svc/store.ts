@@ -36,6 +36,9 @@ export const contacts = derived<[typeof internal, typeof account], Maybe<Contact
 
       const i = values.findIndex((value) => value.identity === account.id)
 
+      if (i < 0 || !values[i])
+        return values
+
       values[i] = { ...values[i], account }
 
       return values
