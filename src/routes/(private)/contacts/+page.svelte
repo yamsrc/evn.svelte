@@ -26,20 +26,22 @@
   </Header.Root>
 </Section>
 
-<Section>
-  <Input type="text" placeholder={$dict.actions.search} bind:value={search} />
-</Section>
-
-{#if $groups.length > 0}
-  <Groups title={$dict.groups.title} groups={$groups} {search} />
-{/if}
-
-<Async store={contacts} class="flex-1 flex flex-col">
+<Async store={contacts} class="flex-1 flex flex-col space-y-5">
   {#snippet awaited(contacts)}
-    {#if contacts.length === 0 && $account}
+    {#if $groups.length || contacts.length}
+      <Section>
+        <Input type="text" placeholder={$dict.actions.search} bind:value={search} />
+      </Section>
+
+      {#if $groups.length}
+        <Groups title={$dict.groups.title} groups={$groups} {search} />
+      {/if}
+
+      {#if contacts.length}
+        <Contacts title={$dict.contacts.all} {contacts} {search} actionable />
+      {/if}
+    {:else if $account}
       <Invite id={$account.id} />
-    {:else}
-      <Contacts title={$dict.contacts.all} {contacts} {search} actionable />
     {/if}
   {/snippet}
 </Async>
