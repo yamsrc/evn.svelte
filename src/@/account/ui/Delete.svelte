@@ -36,18 +36,19 @@
         {@html $dict.account.delete.sorry}
       </Dialog.Description>
     </Dialog.Header>
-    <Dialog.Footer class="mt-8">
-      <Dialog.Close class={buttonVariants({ variant: 'outline' })}>
+    <Dialog.Footer class="mt-8 flex-row justify-stretch">
+      <Dialog.Close class={cn(buttonVariants({ variant: 'secondary', size: 'lg' }), 'flex-1')}>
         {$dict.actions.cancel}
       </Dialog.Close>
       <Hold
         variant="destructive"
+        size="lg"
         label={$dict.account.delete.hold}
         duration={5_000}
         position="top"
         align="center"
         onclick={del}
-        class="w-full sm:w-auto"
+        class="flex-1 select-none"
       >
         {$dict.account.delete.button}
       </Hold>
