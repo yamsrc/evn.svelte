@@ -11,7 +11,7 @@
 <AlertDialog.Root {open}>
   <AlertDialog.Portal>
     <AlertDialog.Overlay />
-    <AlertDialog.Content class="max-w-2xs">
+    <AlertDialog.Content class="max-w-xs">
       <AlertDialog.Title class="text-center">{title}</AlertDialog.Title>
       <AlertDialog.Description class="text-center">
         <p>{description}</p>
