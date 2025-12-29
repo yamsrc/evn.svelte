@@ -10,7 +10,7 @@ import type { Contact } from './Contact'
 
 export const internal = collection({
   get,
-  persist: 'contacts:contacts',
+  persist: 'contacts',
   bind: account,
   stale: true,
   values: values<Contact>(),

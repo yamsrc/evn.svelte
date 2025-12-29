@@ -15,8 +15,8 @@
 
     if (!contact) return
 
-    if (selected) selection.add(contact.id)
-    else selection.delete(contact.id)
+    if (selected) selection.add(identity)
+    else selection.delete(identity)
   }
 </script>
 
