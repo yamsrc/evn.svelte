@@ -21,8 +21,8 @@ nav:
   evns: Saldo
   profile: Io
   contacts: Amici
-terms: Termini e condizioni
-privacy: Informativa sulla privacy
+terms: Terms & conditions
+privacy: Privacy policy
 madeBy: Realizzato da
 profile:
   title: Il mio profilo
@@ -33,7 +33,7 @@ profile:
       la maggior parte delle lingue.
 form:
   enterName: Inserisci il nome
-copyright: © Seed.me, 2024-2025
+copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
 onboarding:
   name:
     title: Tocco personale

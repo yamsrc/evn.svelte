@@ -21,8 +21,8 @@ nav:
   evns: Afrekening
   profile: Ik
   contacts: Vrienden
-terms: Algemene voorwaarden
-privacy: Privacybeleid
+terms: Terms & conditions
+privacy: Privacy policy
 madeBy: Gemaakt door
 profile:
   title: Mijn profiel
@@ -33,7 +33,7 @@ profile:
       meeste talen.
 form:
   enterName: Naam invoeren
-copyright: © Seed.me, 2024-2025
+copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
 onboarding:
   name:
     title: Persoonlijk tintje

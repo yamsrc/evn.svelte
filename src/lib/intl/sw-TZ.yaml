@@ -21,8 +21,8 @@ nav:
   evns: Marejesho
   profile: Mimi
   contacts: Marafiki
-terms: Sheria na Masharti
-privacy: Sera ya Faragha
+terms: Terms & conditions
+privacy: Privacy policy
 madeBy: Imetengenezwa na
 profile:
   title: Wasifu wangu
@@ -31,7 +31,7 @@ profile:
     description: Hili haiathiri utambuzi wa hundi. Hata hivyo, tunaelewa lugha nyingi hapo.
 form:
   enterName: Weka jina
-copyright: © Seed.me, 2024-2025
+copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
 onboarding:
   name:
     title: Mguso wa kibinafsi

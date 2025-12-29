@@ -21,7 +21,7 @@ nav:
   evns: 结算
   profile: 我
   contacts: 朋友
-terms: 条款与条件
+terms: Terms & conditions
 privacy: 隐私政策
 madeBy: 由...制作
 profile:
@@ -31,7 +31,7 @@ profile:
     description: 这不会影响支票识别。反正我们在那里大多数语言都能理解。
 form:
   enterName: 输入姓名
-copyright: © Seed.me，2024-2025
+copyright: "!js (timestamp) => `© seed.me，2025–${new Date(timestamp).getFullYear()}`"
 onboarding:
   name:
     title: 个性化体验

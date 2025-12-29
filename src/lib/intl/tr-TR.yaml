@@ -21,8 +21,8 @@ nav:
   evns: Hesaplaşma
   profile: Ben
   contacts: Arkadaşlar
-terms: Şartlar ve Koşullar
-privacy: Gizlilik Politikası
+terms: Terms & conditions
+privacy: Privacy policy
 madeBy: Tarafından yapıldı
 profile:
   title: Profilim
@@ -31,7 +31,7 @@ profile:
     description: Bu, çek tanımayı etkilemez. Zaten oradaki dillerin çoğunu anlıyoruz.
 form:
   enterName: İsim girin
-copyright: © Seed.me, 2024-2025
+copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
 onboarding:
   name:
     title: Kişisel dokunuş

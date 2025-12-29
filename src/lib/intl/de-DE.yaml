@@ -21,8 +21,8 @@ nav:
   evns: Ausgleich
   profile: Ich
   contacts: Freunde
-terms: Allgemeine Geschäftsbedingungen
-privacy: Datenschutzerklärung
+terms: Terms & conditions
+privacy: Privacy policy
 madeBy: Erstellt von
 profile:
   title: Mein Profil
@@ -33,7 +33,7 @@ profile:
       meisten Sprachen.
 form:
   enterName: Name eingeben
-copyright: © Seed.me, 2024–2025
+copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
 onboarding:
   name:
     title: Persönliche Note

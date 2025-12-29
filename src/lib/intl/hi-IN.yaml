@@ -21,8 +21,8 @@ nav:
   evns: सेटलमेंट
   profile: मैं
   contacts: मित्र
-terms: नियम और शर्तें
-privacy: गोपनीयता नीति
+terms: Terms & conditions
+privacy: Privacy policy
 madeBy: द्वारा निर्मित
 profile:
   title: मेरा प्रोफ़ाइल
@@ -33,7 +33,7 @@ profile:
       को समझते हैं।
 form:
   enterName: नाम दर्ज करें
-copyright: © Seed.me, 2024-2025
+copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
 onboarding:
   name:
     title: व्यक्तिगत स्पर्श

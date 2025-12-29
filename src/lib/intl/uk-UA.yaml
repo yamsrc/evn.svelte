@@ -21,8 +21,8 @@ nav:
   evns: Розрахунок
   profile: Я
   contacts: Друзі
-terms: Умови та положення
-privacy: Політика конфіденційності
+terms: Terms & conditions
+privacy: Privacy policy
 madeBy: Створено
 profile:
   title: Мій профіль
@@ -33,7 +33,7 @@ profile:
       мов.
 form:
   enterName: Введіть ім’я
-copyright: © Seed.me, 2024–2025
+copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
 onboarding:
   name:
     title: Особистий штрих

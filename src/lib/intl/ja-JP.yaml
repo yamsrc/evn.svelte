@@ -21,8 +21,8 @@ nav:
   evns: 清算
   profile: 私
   contacts: 友だち
-terms: 利用規約
-privacy: プライバシーポリシー
+terms: Terms & conditions
+privacy: Privacy policy
 madeBy: 作成者
 profile:
   title: マイプロフィール
@@ -31,7 +31,7 @@ profile:
     description: これは小切手の認識には影響しません。そもそも、私たちはほとんどの言語を理解しています。
 form:
   enterName: 名前を入力してください
-copyright: © Seed.me, 2024年～2025年
+copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
 onboarding:
   name:
     title: パーソナルタッチ

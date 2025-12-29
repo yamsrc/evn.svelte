@@ -30,8 +30,8 @@ export const dictionaries = {
       "profile": "أنا",
       "contacts": "الأصدقاء"
     },
-    "terms": "الشروط والأحكام",
-    "privacy": "سياسة الخصوصية",
+    "terms": "Terms & conditions",
+    "privacy": "Privacy policy",
     "madeBy": "من صنع",
     "profile": {
       "title": "ملفي الشخصي",
@@ -43,7 +43,7 @@ export const dictionaries = {
     "form": {
       "enterName": "أدخل الاسم"
     },
-    "copyright": "© Seed.me، 2024-2025",
+    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
     "onboarding": {
       "name": {
         "title": "لمسة شخصية",
@@ -144,8 +144,8 @@ export const dictionaries = {
       "profile": "Ich",
       "contacts": "Freunde"
     },
-    "terms": "Allgemeine Geschäftsbedingungen",
-    "privacy": "Datenschutzerklärung",
+    "terms": "Terms & conditions",
+    "privacy": "Privacy policy",
     "madeBy": "Erstellt von",
     "profile": {
       "title": "Mein Profil",
@@ -157,7 +157,7 @@ export const dictionaries = {
     "form": {
       "enterName": "Name eingeben"
     },
-    "copyright": "© Seed.me, 2024–2025",
+    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
     "onboarding": {
       "name": {
         "title": "Persönliche Note",
@@ -258,8 +258,8 @@ export const dictionaries = {
       "profile": "Me",
       "contacts": "Friends"
     },
-    "terms": "Terms & Conditions",
-    "privacy": "Privacy Policy",
+    "terms": "Terms & conditions",
+    "privacy": "Privacy policy",
     "madeBy": "Made by",
     "profile": {
       "title": "My Profile",
@@ -271,7 +271,7 @@ export const dictionaries = {
     "form": {
       "enterName": "Enter name"
     },
-    "copyright": "© Seed.me, 2024-2025",
+    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
     "onboarding": {
       "name": {
         "title": "Personal Touch",
@@ -372,8 +372,8 @@ export const dictionaries = {
       "profile": "Yo",
       "contacts": "Amigos"
     },
-    "terms": "Términos y condiciones",
-    "privacy": "Política de privacidad",
+    "terms": "Terms & conditions",
+    "privacy": "Privacy policy",
     "madeBy": "Hecho por",
     "profile": {
       "title": "Mi perfil",
@@ -385,7 +385,7 @@ export const dictionaries = {
     "form": {
       "enterName": "Introduce el nombre"
     },
-    "copyright": "© Seed.me, 2024-2025",
+    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
     "onboarding": {
       "name": {
         "title": "Toque personal",
@@ -486,8 +486,8 @@ export const dictionaries = {
       "profile": "Moi",
       "contacts": "Amis"
     },
-    "terms": "Conditions générales",
-    "privacy": "Politique de confidentialité",
+    "terms": "Terms & conditions",
+    "privacy": "Privacy policy",
     "madeBy": "Créé par",
     "profile": {
       "title": "Mon profil",
@@ -499,7 +499,7 @@ export const dictionaries = {
     "form": {
       "enterName": "Saisissez le nom"
     },
-    "copyright": "© Seed.me, 2024-2025",
+    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
     "onboarding": {
       "name": {
         "title": "Touche personnelle",
@@ -600,8 +600,8 @@ export const dictionaries = {
       "profile": "मैं",
       "contacts": "मित्र"
     },
-    "terms": "नियम और शर्तें",
-    "privacy": "गोपनीयता नीति",
+    "terms": "Terms & conditions",
+    "privacy": "Privacy policy",
     "madeBy": "द्वारा निर्मित",
     "profile": {
       "title": "मेरा प्रोफ़ाइल",
@@ -613,7 +613,7 @@ export const dictionaries = {
     "form": {
       "enterName": "नाम दर्ज करें"
     },
-    "copyright": "© Seed.me, 2024-2025",
+    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
     "onboarding": {
       "name": {
         "title": "व्यक्तिगत स्पर्श",
@@ -714,8 +714,8 @@ export const dictionaries = {
       "profile": "Io",
       "contacts": "Amici"
     },
-    "terms": "Termini e condizioni",
-    "privacy": "Informativa sulla privacy",
+    "terms": "Terms & conditions",
+    "privacy": "Privacy policy",
     "madeBy": "Realizzato da",
     "profile": {
       "title": "Il mio profilo",
@@ -727,7 +727,7 @@ export const dictionaries = {
     "form": {
       "enterName": "Inserisci il nome"
     },
-    "copyright": "© Seed.me, 2024-2025",
+    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
     "onboarding": {
       "name": {
         "title": "Tocco personale",
@@ -828,8 +828,8 @@ export const dictionaries = {
       "profile": "私",
       "contacts": "友だち"
     },
-    "terms": "利用規約",
-    "privacy": "プライバシーポリシー",
+    "terms": "Terms & conditions",
+    "privacy": "Privacy policy",
     "madeBy": "作成者",
     "profile": {
       "title": "マイプロフィール",
@@ -841,7 +841,7 @@ export const dictionaries = {
     "form": {
       "enterName": "名前を入力してください"
     },
-    "copyright": "© Seed.me, 2024年～2025年",
+    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
     "onboarding": {
       "name": {
         "title": "パーソナルタッチ",
@@ -942,8 +942,8 @@ export const dictionaries = {
       "profile": "나",
       "contacts": "친구"
     },
-    "terms": "이용 약관",
-    "privacy": "개인정보 처리방침",
+    "terms": "Terms & conditions",
+    "privacy": "Privacy policy",
     "madeBy": "제작자",
     "profile": {
       "title": "내 프로필",
@@ -955,7 +955,7 @@ export const dictionaries = {
     "form": {
       "enterName": "이름을 입력하세요"
     },
-    "copyright": "© Seed.me, 2024-2025",
+    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
     "onboarding": {
       "name": {
         "title": "개인적인 터치",
@@ -1056,8 +1056,8 @@ export const dictionaries = {
       "profile": "Ik",
       "contacts": "Vrienden"
     },
-    "terms": "Algemene voorwaarden",
-    "privacy": "Privacybeleid",
+    "terms": "Terms & conditions",
+    "privacy": "Privacy policy",
     "madeBy": "Gemaakt door",
     "profile": {
       "title": "Mijn profiel",
@@ -1069,7 +1069,7 @@ export const dictionaries = {
     "form": {
       "enterName": "Naam invoeren"
     },
-    "copyright": "© Seed.me, 2024-2025",
+    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
     "onboarding": {
       "name": {
         "title": "Persoonlijk tintje",
@@ -1170,8 +1170,8 @@ export const dictionaries = {
       "profile": "Я",
       "contacts": "Друзья"
     },
-    "terms": "Условия и положения",
-    "privacy": "Политика конфиденциальности",
+    "terms": "Terms & conditions",
+    "privacy": "Privacy policy",
     "madeBy": "Сделано",
     "profile": {
       "title": "Мой профиль",
@@ -1183,7 +1183,7 @@ export const dictionaries = {
     "form": {
       "enterName": "Введите имя"
     },
-    "copyright": "© Seed.me, 2024–2025",
+    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
     "onboarding": {
       "name": {
         "title": "Личный штрих",
@@ -1284,8 +1284,8 @@ export const dictionaries = {
       "profile": "Mimi",
       "contacts": "Marafiki"
     },
-    "terms": "Sheria na Masharti",
-    "privacy": "Sera ya Faragha",
+    "terms": "Terms & conditions",
+    "privacy": "Privacy policy",
     "madeBy": "Imetengenezwa na",
     "profile": {
       "title": "Wasifu wangu",
@@ -1297,7 +1297,7 @@ export const dictionaries = {
     "form": {
       "enterName": "Weka jina"
     },
-    "copyright": "© Seed.me, 2024-2025",
+    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
     "onboarding": {
       "name": {
         "title": "Mguso wa kibinafsi",
@@ -1398,8 +1398,8 @@ export const dictionaries = {
       "profile": "Ben",
       "contacts": "Arkadaşlar"
     },
-    "terms": "Şartlar ve Koşullar",
-    "privacy": "Gizlilik Politikası",
+    "terms": "Terms & conditions",
+    "privacy": "Privacy policy",
     "madeBy": "Tarafından yapıldı",
     "profile": {
       "title": "Profilim",
@@ -1411,7 +1411,7 @@ export const dictionaries = {
     "form": {
       "enterName": "İsim girin"
     },
-    "copyright": "© Seed.me, 2024-2025",
+    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
     "onboarding": {
       "name": {
         "title": "Kişisel dokunuş",
@@ -1512,8 +1512,8 @@ export const dictionaries = {
       "profile": "Я",
       "contacts": "Друзі"
     },
-    "terms": "Умови та положення",
-    "privacy": "Політика конфіденційності",
+    "terms": "Terms & conditions",
+    "privacy": "Privacy policy",
     "madeBy": "Створено",
     "profile": {
       "title": "Мій профіль",
@@ -1525,7 +1525,7 @@ export const dictionaries = {
     "form": {
       "enterName": "Введіть ім’я"
     },
-    "copyright": "© Seed.me, 2024–2025",
+    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
     "onboarding": {
       "name": {
         "title": "Особистий штрих",
@@ -1626,7 +1626,7 @@ export const dictionaries = {
       "profile": "我",
       "contacts": "朋友"
     },
-    "terms": "条款与条件",
+    "terms": "Terms & conditions",
     "privacy": "隐私政策",
     "madeBy": "由...制作",
     "profile": {
@@ -1639,7 +1639,7 @@ export const dictionaries = {
     "form": {
       "enterName": "输入姓名"
     },
-    "copyright": "© Seed.me，2024-2025",
+    "copyright": (timestamp) => `© seed.me，2025–${new Date(timestamp).getFullYear()}`,
     "onboarding": {
       "name": {
         "title": "个性化体验",

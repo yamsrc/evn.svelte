@@ -9,6 +9,7 @@
   import { Feedback } from '@/feedback/ui'
   import { logout } from '@/iam'
   import { account } from '@/iam'
+  import { time } from '@/realtime'
 
   async function getout() {
     logout()
@@ -50,14 +51,11 @@
 
   <Section>
     <div class="w-full border-b border-border mb-5"></div>
-    <footer class="flex flex-col text-muted-foreground text-sm">
-      {$dict.copyright}
-      <div class="flex gap-2">
-        <a href="/terms/">{$dict.terms}</a>
-        &bull;
-        <a href="/privacy/">{$dict.privacy}</a>
-      </div>
-      <Delete class="inline-block p-0 mr-auto font-normal" />
+    <footer class="text-muted-foreground text-sm flex flex-col gap-2 items-center">
+      <p>{$dict.copyright($time)}</p>
+      <a href="/terms/">{$dict.terms}</a>
+      <a href="/privacy/">{$dict.privacy}</a>
+      <Delete class="inline-block p-0 font-normal h-auto" />
     </footer>
   </Section>
 {/if}
