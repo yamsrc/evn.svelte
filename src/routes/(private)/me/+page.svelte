@@ -17,8 +17,9 @@
 
 {#if $account}
   <Section>
-    <Header.Root title={$dict.profile.title}>
-      {#snippet actions()}
+    <Header.Root>
+      <Header.Title>{$dict.profile.title}</Header.Title>
+      <Header.Actions>
         <Hold
           onclick={getout}
           variant="ghost"
@@ -28,7 +29,7 @@
         >
           <LogOut class="size-5" />
         </Hold>
-      {/snippet}
+      </Header.Actions>
     </Header.Root>
   </Section>
   <Section class="flex flex-col gap-6">

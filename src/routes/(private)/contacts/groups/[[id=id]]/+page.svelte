@@ -62,7 +62,7 @@
 <Section>
   <Header.Root>
     <Back href="/contacts/">{$dict.contacts.title}</Back>
-    {#snippet actions()}
+    <Header.Actions>
       <Hold
         onclick={leave}
         variant="ghost"
@@ -73,7 +73,7 @@
       >
         <LogOut class="size-5" />
       </Hold>
-    {/snippet}
+    </Header.Actions>
   </Header.Root>
 </Section>
 

@@ -16,12 +16,13 @@
 </script>
 
 <Section>
-  <Header.Root title={$dict.contacts.title}>
-    {#snippet actions()}
+  <Header.Root>
+    <Header.Title>{$dict.contacts.title}</Header.Title>
+    <Header.Actions>
       <Header.Button disabled>
         <ArrowUpDown />
       </Header.Button>
-    {/snippet}
+    </Header.Actions>
   </Header.Root>
 </Section>
 
