@@ -216,7 +216,7 @@ export const dictionaries = {
       "summary": {
         "balance": {
           "from": (amount) => `Mitglieder dieser Gruppe schulden dir ${amount}`,
-          "to": (amount) => `Sie schulden ihnen ${amount}`
+          "to": (amount) => `Du schuldest ihnen ${amount}`
         }
       }
     },

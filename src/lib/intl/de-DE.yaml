@@ -87,7 +87,7 @@ groups:
         (amount) => `Mitglieder dieser Gruppe schulden dir ${amount}`
       to: |-
         !js
-        (amount) => `Sie schulden ihnen ${amount}`
+        (amount) => `Du schuldest ihnen ${amount}`
 invite:
   share: Teilen
   qr: QR-Code anzeigen
