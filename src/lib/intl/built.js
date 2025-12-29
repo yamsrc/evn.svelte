@@ -225,7 +225,7 @@ export const dictionaries = {
         "button": "Konto löschen",
         "title": "Konto löschen",
         "description": "Wir werden Ihr Konto und alle zugehörigen Informationen dauerhaft löschen. Diese Aktion kann nicht rückgängig gemacht werden.",
-        "sorry": "Es tut uns sehr leid, dass Sie gehen.",
+        "sorry": "Es tut uns sehr leid, zu sehen, dass Sie gehen.",
         "hold": "Zum Bestätigen halten"
       }
     }
