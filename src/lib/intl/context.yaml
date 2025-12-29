@@ -132,9 +132,9 @@ inputs:
     summary:
       balance:
         from:
-          input: "!js (amount) => Members of this group owe  to you"
+          input: "!js (amount) => Members of this group owe you ${amount}"
         to:
-          input: "!js (amount) => You owe  to them"
+          input: "!js (amount) => You owe them ${amount}"
   invite:
     share:
       input: Share
