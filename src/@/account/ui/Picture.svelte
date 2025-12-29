@@ -14,6 +14,5 @@
     width={size}
     height={size}
     class={cn('rounded-full', classes)}
-    style={`view-transition-name: account-picture-${account.id};`}
   />
 {/if}
