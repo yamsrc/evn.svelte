@@ -1,4 +1,4 @@
-import { accounts } from '@/account'
+import { accounts } from '@/accounts'
 import type { Contact } from './Contact'
 import type * as net from './net'
 

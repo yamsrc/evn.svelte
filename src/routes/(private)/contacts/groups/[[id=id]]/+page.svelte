@@ -10,7 +10,7 @@
   import { currency } from '$lib/tools'
   import { Button } from '$ui/button'
   import { Separator } from '$ui/separator'
-  import { Item } from '@/account/ui'
+  import { Item } from '@/accounts/ui'
   import { Header } from '@/app/ui'
   import { contacts } from '@/contacts'
   import { groups, del } from '@/groups'

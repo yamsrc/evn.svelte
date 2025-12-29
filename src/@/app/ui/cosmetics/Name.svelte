@@ -5,7 +5,13 @@
   import { Input } from '$ui/input'
   import type { Props } from './Name'
 
-  let { name = $bindable(''), busy = $bindable(false), onchange, class: classes }: Props = $props()
+  let {
+    name = $bindable(''),
+    busy = $bindable(false),
+    autocomplete,
+    onchange,
+    class: classes,
+  }: Props = $props()
 
   let value = $derived(name)
   const blank = name === ''
@@ -38,7 +44,7 @@
     bind:value
     name="name"
     type="text"
-    autocomplete="given-name"
+    {autocomplete}
     placeholder={$dict.form.enterName}
     class={cn('text-center text-3xl font-bold', classes)}
     required

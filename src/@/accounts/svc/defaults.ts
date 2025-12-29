@@ -2,7 +2,7 @@ import { get } from 'svelte/store'
 import { assets } from '$config'
 import { locale } from '$lib/intl'
 import { deterministic } from '$lib/tools'
-import { update, type Account } from '@/account'
+import { update, type Account } from '@/accounts'
 
 function defaults(account: Account) {
   const updates: { locale?: string; picture?: string } = {}

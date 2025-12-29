@@ -1,5 +1,5 @@
 import type { Group } from './net'
-import type { Account } from '@/account'
+import type { Account } from '@/accounts'
 import type { Contact } from '@/contacts'
 
 export function balance(group: Group, contacts: Contact[], account: Account): number {

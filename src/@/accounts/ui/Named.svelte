@@ -4,7 +4,7 @@
   import { dict } from '$lib/intl'
   import { Button } from '$ui/button'
   import * as Card from '$ui/card'
-  import { Avatar } from '@/account/ui'
+  import { Avatar } from '@/accounts/ui'
   import { account } from '@/iam'
   import { logout } from '@/iam'
   import Name from './onboarding/Name.svelte'

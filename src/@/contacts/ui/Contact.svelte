@@ -3,7 +3,7 @@
   import { Pencil } from '@lucide/svelte'
   import { ok } from 'svas'
   import { dict } from '$lib/intl'
-  import { Item } from '@/account/ui'
+  import { Item } from '@/accounts/ui'
   import { Confirm } from '@/app/ui'
   import * as contacts from '@/contacts'
   import type { Action } from '$com/panel'

@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Panel } from '$com/panel'
   import { cn } from '$lib/utils'
-  import { Picture } from '@/account/ui'
+  import { Picture } from '@/accounts/ui'
   import { Balance } from '@/app/ui'
   import type { Props } from './Item'
 

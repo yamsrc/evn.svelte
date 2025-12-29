@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { update } from '@/account'
+  import { update } from '@/accounts'
   import { Cosmetics, type Value } from '@/app/ui'
   import type { Props } from './Cosmetics'
 

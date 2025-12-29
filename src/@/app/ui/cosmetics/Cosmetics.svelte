@@ -3,7 +3,7 @@
   import Picture from './Picture.svelte'
   import type { Props } from './Cosmetics'
 
-  const { value, onchange }: Props = $props()
+  const { value, autocomplete, onchange }: Props = $props()
   const blank = $derived(value === undefined)
 
   let name = $derived(value?.name ?? '')
@@ -27,7 +27,7 @@
 
 <div class="space-y-6">
   <Picture bind:id={picture} onchange={onPictureChange} />
-  <Name bind:name bind:busy onchange={onNameChange} class="mx-auto w-3/4" />
+  <Name bind:name bind:busy onchange={onNameChange} class="mx-auto w-3/4" {autocomplete} />
   {#if blank}
     create button
   {/if}

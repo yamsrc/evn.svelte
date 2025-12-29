@@ -1,7 +1,7 @@
 import { collection, ok, sync, type Maybe } from 'svas'
 import { values } from 'svas'
 import { derived } from 'svelte/store'
-import { accounts } from '@/account'
+import { accounts } from '@/accounts'
 import { account } from '@/iam'
 import { events } from '@/realtime'
 import { get } from './get'
