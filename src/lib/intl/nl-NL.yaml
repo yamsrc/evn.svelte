@@ -89,3 +89,12 @@ invite:
   share: Delen
   qr: QR-code tonen
   invite: Uitnodigen
+account:
+  delete:
+    button: Account verwijderen
+    title: Account verwijderen
+    description: >-
+      We verwijderen je account en alle bijbehorende informatie permanent. Deze
+      actie kan niet ongedaan worden gemaakt.
+    sorry: Het spijt ons zeer om je te zien gaan.
+    hold: Houd vast om te bevestigen

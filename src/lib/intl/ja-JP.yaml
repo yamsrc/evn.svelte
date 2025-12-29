@@ -83,3 +83,10 @@ invite:
   share: 共有
   qr: QRコードを表示
   invite: 招待
+account:
+  delete:
+    button: アカウントを削除
+    title: アカウントを削除
+    description: あなたのアカウントおよび関連するすべての情報を完全に削除します。この操作は元に戻せません。
+    sorry: ご利用いただけなくなることを大変残念に思います。
+    hold: 押し続けて確定

@@ -91,3 +91,12 @@ invite:
   share: Condividi
   qr: Mostra codice QR
   invite: Invita
+account:
+  delete:
+    button: Elimina account
+    title: Elimina account
+    description: >-
+      Elimineremo definitivamente il tuo account e tutte le informazioni
+      associate. Questa azione non può essere annullata.
+    sorry: Ci dispiace molto vederti andare via.
+    hold: Tieni premuto per confermare

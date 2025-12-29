@@ -87,3 +87,12 @@ invite:
   share: Share
   qr: Show QR code
   invite: Invite
+account:
+  delete:
+    button: Delete account
+    title: Delete account
+    description: >-
+      We will permanently delete your account and all associated information.
+      This action cannot be undone.
+    sorry: We're very sorry to see you go.
+    hold: Hold to confirm

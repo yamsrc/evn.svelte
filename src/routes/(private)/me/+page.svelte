@@ -5,6 +5,7 @@
   import { Section } from '$com/section'
   import { dict } from '$lib/intl'
   import { Picture, Name, Language } from '@/account/ui'
+  import { Delete } from '@/account/ui'
   import { Feedback } from '@/feedback/ui'
   import { logout } from '@/iam'
   import { account } from '@/iam'
@@ -49,13 +50,14 @@
 
   <Section>
     <div class="w-full border-b border-border mb-5"></div>
-    <footer class="flex flex-col gap-2 text-muted-foreground text-sm">
+    <footer class="flex flex-col text-muted-foreground text-sm">
       {$dict.copyright}
       <div class="flex gap-2">
         <a href="/terms/">{$dict.terms}</a>
         &bull;
         <a href="/privacy/">{$dict.privacy}</a>
       </div>
+      <Delete class="inline-block p-0 mr-auto font-normal" />
     </footer>
   </Section>
 {/if}

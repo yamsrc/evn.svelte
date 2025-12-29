@@ -110,4 +110,13 @@ export type Dictionary = {
         qr: string
         invite: string
       }
+      account: {
+        delete: {
+          button: string
+          title: string
+          description: string
+          sorry: string
+          hold: string
+        }
+      }
     }

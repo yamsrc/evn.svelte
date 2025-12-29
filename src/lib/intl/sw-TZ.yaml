@@ -85,3 +85,12 @@ invite:
   share: Shiriki
   qr: Onyesha msimbo wa QR
   invite: Alika
+account:
+  delete:
+    button: Futa akaunti
+    title: Futa akaunti
+    description: >-
+      Tutafuta akaunti yako na taarifa zote zinazohusiana nayo kabisa. Hatua hii
+      haiwezi kutenduliwa.
+    sorry: Tunaomba radhi sana kukuona ukiondoka.
+    hold: Shikilia kuthibitisha

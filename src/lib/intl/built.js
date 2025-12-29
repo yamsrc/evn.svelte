@@ -105,6 +105,15 @@ export const dictionaries = {
       "share": "مشاركة",
       "qr": "عرض رمز الاستجابة السريعة",
       "invite": "دعوة"
+    },
+    "account": {
+      "delete": {
+        "button": "حذف الحساب",
+        "title": "حذف الحساب",
+        "description": "سنقوم بحذف حسابك وجميع المعلومات المرتبطة به بشكل نهائي. لا يمكن التراجع عن هذا الإجراء.",
+        "sorry": "نأسف جدًا لرؤيتك تغادر.",
+        "hold": "اضغط مع الاستمرار للتأكيد"
+      }
     }
   },
   "de-DE": {
@@ -210,6 +219,15 @@ export const dictionaries = {
       "share": "Teilen",
       "qr": "QR-Code anzeigen",
       "invite": "Einladen"
+    },
+    "account": {
+      "delete": {
+        "button": "Konto löschen",
+        "title": "Konto löschen",
+        "description": "Wir werden Ihr Konto und alle zugehörigen Informationen dauerhaft löschen. Diese Aktion kann nicht rückgängig gemacht werden.",
+        "sorry": "Es tut uns sehr leid, dass Sie gehen.",
+        "hold": "Zum Bestätigen halten"
+      }
     }
   },
   "en-US": {
@@ -315,6 +333,15 @@ export const dictionaries = {
       "share": "Share",
       "qr": "Show QR code",
       "invite": "Invite"
+    },
+    "account": {
+      "delete": {
+        "button": "Delete account",
+        "title": "Delete account",
+        "description": "We will permanently delete your account and all associated information. This action cannot be undone.",
+        "sorry": "We're very sorry to see you go.",
+        "hold": "Hold to confirm"
+      }
     }
   },
   "es-ES": {
@@ -420,6 +447,15 @@ export const dictionaries = {
       "share": "Compartir",
       "qr": "Mostrar código QR",
       "invite": "Invitar"
+    },
+    "account": {
+      "delete": {
+        "button": "Eliminar cuenta",
+        "title": "Eliminar cuenta",
+        "description": "Eliminaremos permanentemente tu cuenta y toda la información asociada. Esta acción no se puede deshacer.",
+        "sorry": "Lamentamos mucho que te vayas.",
+        "hold": "Mantén pulsado para confirmar"
+      }
     }
   },
   "fr-FR": {
@@ -525,6 +561,15 @@ export const dictionaries = {
       "share": "Partager",
       "qr": "Afficher le code QR",
       "invite": "Inviter"
+    },
+    "account": {
+      "delete": {
+        "button": "Supprimer le compte",
+        "title": "Supprimer le compte",
+        "description": "Nous supprimerons définitivement votre compte ainsi que toutes les informations associées. Cette action est irréversible.",
+        "sorry": "Nous sommes vraiment désolés de vous voir partir.",
+        "hold": "Maintenir pour confirmer"
+      }
     }
   },
   "hi-IN": {
@@ -630,6 +675,15 @@ export const dictionaries = {
       "share": "साझा करें",
       "qr": "QR कोड दिखाएँ",
       "invite": "आमंत्रित करें"
+    },
+    "account": {
+      "delete": {
+        "button": "खाता हटाएँ",
+        "title": "खाता हटाएं",
+        "description": "हम आपके खाते और उससे जुड़ी सभी जानकारी को स्थायी रूप से हटा देंगे। इस कार्रवाई को वापस नहीं लिया जा सकता।",
+        "sorry": "हमें आपको जाते हुए देखकर बहुत दुख हुआ।",
+        "hold": "पुष्टि करने के लिए दबाए रखें"
+      }
     }
   },
   "it-IT": {
@@ -735,6 +789,15 @@ export const dictionaries = {
       "share": "Condividi",
       "qr": "Mostra codice QR",
       "invite": "Invita"
+    },
+    "account": {
+      "delete": {
+        "button": "Elimina account",
+        "title": "Elimina account",
+        "description": "Elimineremo definitivamente il tuo account e tutte le informazioni associate. Questa azione non può essere annullata.",
+        "sorry": "Ci dispiace molto vederti andare via.",
+        "hold": "Tieni premuto per confermare"
+      }
     }
   },
   "ja-JP": {
@@ -840,6 +903,15 @@ export const dictionaries = {
       "share": "共有",
       "qr": "QRコードを表示",
       "invite": "招待"
+    },
+    "account": {
+      "delete": {
+        "button": "アカウントを削除",
+        "title": "アカウントを削除",
+        "description": "あなたのアカウントおよび関連するすべての情報を完全に削除します。この操作は元に戻せません。",
+        "sorry": "ご利用いただけなくなることを大変残念に思います。",
+        "hold": "押し続けて確定"
+      }
     }
   },
   "ko-KR": {
@@ -945,6 +1017,15 @@ export const dictionaries = {
       "share": "공유",
       "qr": "QR 코드 표시",
       "invite": "초대"
+    },
+    "account": {
+      "delete": {
+        "button": "계정 삭제",
+        "title": "계정 삭제",
+        "description": "계정과 모든 관련 정보를 영구적으로 삭제합니다. 이 작업은 취소할 수 없습니다.",
+        "sorry": "떠나신다니 정말 아쉽습니다.",
+        "hold": "길게 눌러서 확인"
+      }
     }
   },
   "nl-NL": {
@@ -1050,6 +1131,15 @@ export const dictionaries = {
       "share": "Delen",
       "qr": "QR-code tonen",
       "invite": "Uitnodigen"
+    },
+    "account": {
+      "delete": {
+        "button": "Account verwijderen",
+        "title": "Account verwijderen",
+        "description": "We verwijderen je account en alle bijbehorende informatie permanent. Deze actie kan niet ongedaan worden gemaakt.",
+        "sorry": "Het spijt ons zeer om je te zien gaan.",
+        "hold": "Houd vast om te bevestigen"
+      }
     }
   },
   "ru-RU": {
@@ -1155,6 +1245,15 @@ export const dictionaries = {
       "share": "Поделиться",
       "qr": "Показать QR-код",
       "invite": "Пригласить"
+    },
+    "account": {
+      "delete": {
+        "button": "Удалить аккаунт",
+        "title": "Удалить аккаунт",
+        "description": "Мы навсегда удалим ваш аккаунт и всю связанную с ним информацию. Это действие нельзя отменить.",
+        "sorry": "Нам очень жаль, что вы уходите.",
+        "hold": "Удерживайте для подтверждения"
+      }
     }
   },
   "sw-TZ": {
@@ -1260,6 +1359,15 @@ export const dictionaries = {
       "share": "Shiriki",
       "qr": "Onyesha msimbo wa QR",
       "invite": "Alika"
+    },
+    "account": {
+      "delete": {
+        "button": "Futa akaunti",
+        "title": "Futa akaunti",
+        "description": "Tutafuta akaunti yako na taarifa zote zinazohusiana nayo kabisa. Hatua hii haiwezi kutenduliwa.",
+        "sorry": "Tunaomba radhi sana kukuona ukiondoka.",
+        "hold": "Shikilia kuthibitisha"
+      }
     }
   },
   "tr-TR": {
@@ -1365,6 +1473,15 @@ export const dictionaries = {
       "share": "Paylaş",
       "qr": "QR kodunu göster",
       "invite": "Davet et"
+    },
+    "account": {
+      "delete": {
+        "button": "Hesabı sil",
+        "title": "Hesabı sil",
+        "description": "Hesabınızı ve tüm bağlantılı bilgileri kalıcı olarak sileceğiz. Bu işlem geri alınamaz.",
+        "sorry": "Gitmene çok üzüldük.",
+        "hold": "Onaylamak için basılı tutun"
+      }
     }
   },
   "uk-UA": {
@@ -1470,6 +1587,15 @@ export const dictionaries = {
       "share": "Поділитися",
       "qr": "Показати QR-код",
       "invite": "Запросити"
+    },
+    "account": {
+      "delete": {
+        "button": "Видалити обліковий запис",
+        "title": "Видалити обліковий запис",
+        "description": "Ми назавжди видалимо ваш обліковий запис і всю пов'язану інформацію. Цю дію не можна скасувати.",
+        "sorry": "Нам дуже шкода, що ви йдете.",
+        "hold": "Утримуйте для підтвердження"
+      }
     }
   },
   "zh-CN": {
@@ -1575,6 +1701,15 @@ export const dictionaries = {
       "share": "分享",
       "qr": "显示二维码",
       "invite": "邀请"
+    },
+    "account": {
+      "delete": {
+        "button": "删除账户",
+        "title": "删除账户",
+        "description": "我们将永久删除您的账户及所有关联信息。此操作无法撤销。",
+        "sorry": "很遗憾看到您离开。",
+        "hold": "按住以确认"
+      }
     }
   }
 };

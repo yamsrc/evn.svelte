@@ -83,3 +83,10 @@ invite:
   share: 分享
   qr: 显示二维码
   invite: 邀请
+account:
+  delete:
+    button: 删除账户
+    title: 删除账户
+    description: 我们将永久删除您的账户及所有关联信息。此操作无法撤销。
+    sorry: 很遗憾看到您离开。
+    hold: 按住以确认

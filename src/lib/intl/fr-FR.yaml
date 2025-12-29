@@ -89,3 +89,12 @@ invite:
   share: Partager
   qr: Afficher le code QR
   invite: Inviter
+account:
+  delete:
+    button: Supprimer le compte
+    title: Supprimer le compte
+    description: >-
+      Nous supprimerons définitivement votre compte ainsi que toutes les
+      informations associées. Cette action est irréversible.
+    sorry: Nous sommes vraiment désolés de vous voir partir.
+    hold: Maintenir pour confirmer
