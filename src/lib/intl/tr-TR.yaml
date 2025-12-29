@@ -44,6 +44,7 @@ contacts:
     invite:
       share: Arkadaşlarını davet et
       qr: QR kod ile davet et
+      manual: Manuel ekle
   all: Tüm arkadaşlar
   contact:
     owesYou: Sana borçlu
@@ -87,3 +88,5 @@ invite:
   share: Paylaş
   qr: QR kodunu göster
   invite: Davet et
+etc:
+  or: veya

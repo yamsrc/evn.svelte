@@ -3,8 +3,8 @@
   import { Async } from 'svas'
   import { Section } from '$com/section'
   import { dict } from '$lib/intl'
-  import { Button } from '$ui/button'
   import { Input } from '$ui/input'
+  import { Header } from '@/app/ui'
   import { contacts } from '@/contacts'
   import { Invite } from '@/contacts/ui'
   import { Contacts } from '@/contacts/ui'
@@ -15,18 +15,14 @@
   let search = $state('')
 </script>
 
-<Section class="flex flex-col gap-6">
-  <header class="flex justify-between items-center relative">
-    <h1>{$dict.contacts.title}</h1>
-    <Button
-      size="icon"
-      variant="secondary"
-      class="size-12 bg-accent/50 border border-border"
-      disabled
-    >
-      <ArrowUpDown class="size-5" />
-    </Button>
-  </header>
+<Section class="flex flex-col gap-6 pt-2">
+  <Header.Root title={$dict.contacts.title}>
+    {#snippet actions()}
+      <Header.Button disabled>
+        <ArrowUpDown />
+      </Header.Button>
+    {/snippet}
+  </Header.Root>
 </Section>
 
 <Section>

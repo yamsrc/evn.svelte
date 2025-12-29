@@ -7,8 +7,10 @@ export async function get(identity: string): Promise<Contact[] | Error> {
   return contacts.json(identity)
 }
 
-export async function post(identity: string, contact: string): Promise<Contact | Error> {
-  return contacts.json(identity, { method: 'POST', body: { with: contact } })
+export type Post = { with: string } | { name: string, picture: string }
+
+export async function post(identity: string, body: Post): Promise<Contact | Error> {
+  return contacts.json(identity, { method: 'POST', body })
 }
 
 export async function del(identity: string, contact: string): Promise<void | Error> {

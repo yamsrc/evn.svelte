@@ -46,6 +46,7 @@ contacts:
     invite:
       share: Vrienden uitnodigen
       qr: Uitnodigen via QR-code
+      manual: Handmatig toevoegen
   all: Alle vrienden
   contact:
     owesYou: Is jou iets verschuldigd
@@ -89,3 +90,5 @@ invite:
   share: Delen
   qr: QR-code tonen
   invite: Uitnodigen
+etc:
+  or: of

@@ -46,6 +46,7 @@ contacts:
     invite:
       share: Freunde einladen
       qr: Per QR-Code einladen
+      manual: Manuell hinzufügen
   all: Alle Freunde
   contact:
     owesYou: Schuldet dir
@@ -91,3 +92,5 @@ invite:
   share: Teilen
   qr: QR-Code anzeigen
   invite: Einladen
+etc:
+  or: oder

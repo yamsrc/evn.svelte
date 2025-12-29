@@ -84,6 +84,9 @@ inputs:
           input: Invite friends
         qr:
           input: Invite by QR code
+        manual:
+          input: Add manually
+          context: button label, that leads to the screen to add new contact manually
     all:
       input: All friends
     contact:
@@ -139,5 +142,8 @@ inputs:
       input: Show QR code
     invite:
       input: Invite
+  etc:
+    or:
+      input: or
 mounts:
   iam: ../../@/iam/ui/intl

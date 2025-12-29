@@ -46,6 +46,7 @@ contacts:
     invite:
       share: Invita amici
       qr: Invita tramite codice QR
+      manual: Aggiungi manualmente
   all: Tutti gli amici
   contact:
     owesYou: Ti deve
@@ -91,3 +92,5 @@ invite:
   share: Condividi
   qr: Mostra codice QR
   invite: Invita
+etc:
+  or: o

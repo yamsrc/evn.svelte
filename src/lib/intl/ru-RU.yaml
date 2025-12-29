@@ -46,6 +46,7 @@ contacts:
     invite:
       share: Пригласить друзей
       qr: Пригласить по QR-коду
+      manual: Добавить вручную
   all: Все друзья
   contact:
     owesYou: Должен тебе
@@ -89,3 +90,5 @@ invite:
   share: Поделиться
   qr: Показать QR-код
   invite: Пригласить
+etc:
+  or: или
