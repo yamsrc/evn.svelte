@@ -3,11 +3,12 @@
   import { SvelteSet } from 'svelte/reactivity'
   import { goto } from '$app/navigation'
   import { page } from '$app/state'
-  import Section from '$com/section/Section.svelte'
-  import { Back } from '$lib/components/history'
+  import { Back } from '$com/history'
+  import { Section } from '$com/section'
   import { dict } from '$lib/intl'
   import { Button } from '$ui/button'
   import { Input } from '$ui/input'
+  import { Header } from '@/app/ui'
   import { contacts } from '@/contacts'
   import { Contacts } from '@/contacts/ui'
   import { groups, add } from '@/groups'
@@ -38,9 +39,9 @@
     {@const group = groups.find((g) => g.id === id)}
     {#if group}
       <Section>
-        <header>
+        <Header.Root>
           <Back href={`/contacts/groups/${group.id}`}>{group.name}</Back>
-        </header>
+        </Header.Root>
       </Section>
       <Section>
         <h1>{$dict.groups.members.addMembers}</h1>

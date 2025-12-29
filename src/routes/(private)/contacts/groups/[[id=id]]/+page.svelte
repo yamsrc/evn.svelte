@@ -4,13 +4,14 @@
   import { goto } from '$app/navigation'
   import { page } from '$app/state'
   import { Hold } from '$com/hold'
-  import Section from '$com/section/Section.svelte'
+  import { Section } from '$com/section'
   import { Back } from '$lib/components/history'
   import { dict } from '$lib/intl'
   import { currency } from '$lib/tools'
   import { Button } from '$ui/button'
   import { Separator } from '$ui/separator'
   import { Item } from '@/account/ui'
+  import { Header } from '@/app/ui'
   import { contacts } from '@/contacts'
   import { groups, del } from '@/groups'
   import { Name } from '@/groups/ui'
@@ -58,20 +59,22 @@
   })
 </script>
 
-<Section class="flex flex-col gap-6">
-  <header class="flex justify-between items-center relative">
+<Section>
+  <Header.Root>
     <Back href="/contacts/">{$dict.contacts.title}</Back>
-    <Hold
-      onclick={leave}
-      variant="ghost"
-      class="size-12 bg-accent/50 border border-border"
-      position="left"
-      label={$dict.groups.leave}
-      disabled={!group}
-    >
-      <LogOut class="size-5" />
-    </Hold>
-  </header>
+    {#snippet actions()}
+      <Hold
+        onclick={leave}
+        variant="ghost"
+        class="size-12 bg-accent/50 border border-border"
+        position="left"
+        label={$dict.groups.leave}
+        disabled={!group}
+      >
+        <LogOut class="size-5" />
+      </Hold>
+    {/snippet}
+  </Header.Root>
 </Section>
 
 <Section class="flex flex-col gap-2 items-center">
@@ -86,9 +89,9 @@
   <div>{$dict.groups.summary.balance.to(currency(balance.to))}</div>
 </Section>
 
-<Section class="flex flex-col gap-2">
-  <Async store={contacts}>
-    {#snippet awaited(contacts)}
+<Async store={contacts}>
+  {#snippet awaited(contacts)}
+    <Section class="flex flex-col gap-2">
       <h2>{$dict.groups.members.title}</h2>
       {#if !members?.length}
         <p class="text-muted-foreground">
@@ -106,7 +109,7 @@
         <Plus />
         {$dict.groups.members.addMember}
       </Button>
-    {/snippet}
-  </Async>
-</Section>
+    </Section>
+  {/snippet}
+</Async>
 <!-- TODO: add history -->

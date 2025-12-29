@@ -1,7 +1,8 @@
 import type { Snippet } from 'svelte'
 
 export interface Props {
-  title: string
+  title?: string
   actions?: Snippet
+  children?: Snippet
   class?: string
 }

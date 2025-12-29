@@ -5,6 +5,7 @@
   import { Section } from '$com/section'
   import { dict } from '$lib/intl'
   import { Picture, Name, Language } from '@/account/ui'
+  import { Header } from '@/app/ui'
   import { logout } from '@/iam'
   import { account } from '@/iam'
 
@@ -15,19 +16,22 @@
 </script>
 
 {#if $account}
+  <Section>
+    <Header.Root title={$dict.profile.title}>
+      {#snippet actions()}
+        <Hold
+          onclick={getout}
+          variant="ghost"
+          class="size-12 bg-accent/50 border border-border"
+          position="left"
+          label={$dict.actions.holdToLogout}
+        >
+          <LogOut class="size-5" />
+        </Hold>
+      {/snippet}
+    </Header.Root>
+  </Section>
   <Section class="flex flex-col gap-6">
-    <header class="flex justify-between items-center relative">
-      <h1>{$dict.profile.title}</h1>
-      <Hold
-        onclick={getout}
-        variant="ghost"
-        class="size-12 bg-accent/50 border border-border"
-        position="left"
-        label={$dict.actions.holdToLogout}
-      >
-        <LogOut class="size-5" />
-      </Hold>
-    </header>
     <Picture account={$account} size={150} class="mx-auto" />
     <Name account={$account} class="mx-auto w-3xs text-3xl font-bold" />
   </Section>

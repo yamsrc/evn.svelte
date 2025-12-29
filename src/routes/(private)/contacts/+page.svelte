@@ -15,7 +15,7 @@
   let search = $state('')
 </script>
 
-<Section class="flex flex-col gap-6 pt-2">
+<Section>
   <Header.Root title={$dict.contacts.title}>
     {#snippet actions()}
       <Header.Button disabled>
