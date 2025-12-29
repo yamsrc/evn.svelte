@@ -36,13 +36,11 @@
       <AlertDialog.Title>
         {$dict.account.delete.title}
       </AlertDialog.Title>
-      <AlertDialog.Description class="text-balance">
-        <!-- eslint-disable-next-line svelte/no-at-html-tags -->
-        {@html $dict.account.delete.description}
+      <AlertDialog.Description>
+        <p>{$dict.account.delete.description}</p>
       </AlertDialog.Description>
-      <AlertDialog.Description class="text-balance">
-        <!-- eslint-disable-next-line svelte/no-at-html-tags -->
-        {@html $dict.account.delete.sorry}
+      <AlertDialog.Description>
+        <p>{$dict.account.delete.sorry}</p>
       </AlertDialog.Description>
     </AlertDialog.Header>
     <AlertDialog.Footer>
