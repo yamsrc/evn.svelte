@@ -23,7 +23,7 @@
       {$dict.contacts.contact.youOwe}
     {/if}
   </div>
-  <div class="text-base font-bold">
+  <div class="font-bold">
     {currency(Math.abs(balance))}
   </div>
   <div>

@@ -3,7 +3,7 @@
   import { Nav, Screen } from '$com/shell'
   import { dict } from '$lib/intl'
   import { Named } from '@/accounts/ui'
-  import { Footer } from '@/app'
+  import { Footer } from '@/app/ui'
   import { Authenticated } from '@/iam/ui'
   import { Languages } from '@/iam/ui'
   import Actions from './Actions.svelte'
