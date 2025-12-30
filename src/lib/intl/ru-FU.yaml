@@ -35,7 +35,7 @@ form:
 copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
 onboarding:
   name:
-    title: Твой штрих
+    title: Твоё погоняло
     description: Как тебя будут кликать в приложухе
 contacts:
   title: Кореша
@@ -48,8 +48,8 @@ contacts:
       manual: Добавить вручную
   all: Все кореша
   contact:
-    owesYou: Этот хер тебе торчит
-    youOwe: Ты этому херу торчишь
+    owesYou: Этот тип тебе торчит
+    youOwe: Ты этому типу торчишь
   delete:
     confirm:
       title: Выпилить кореша
@@ -81,10 +81,10 @@ groups:
     balance:
       from: |-
         !js
-        (amount) => `Эти пидоры тебе должны ${amount}`
+        (amount) => `Эти хуи тебе должны ${amount}`
       to: |-
         !js
-        (amount) => `Ты этим пидорам должен ${amount}`
+        (amount) => `Ты этим хуям должен ${amount}`
 invite:
   share: Расшарить нахуй
   qr: Показать QR

@@ -1266,7 +1266,7 @@ export const dictionaries = {
     "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
     "onboarding": {
       "name": {
-        "title": "Твой штрих",
+        "title": "Твоё погоняло",
         "description": "Как тебя будут кликать в приложухе"
       }
     },
@@ -1283,8 +1283,8 @@ export const dictionaries = {
       },
       "all": "Все кореша",
       "contact": {
-        "owesYou": "Этот хер тебе торчит",
-        "youOwe": "Ты этому херу торчишь"
+        "owesYou": "Этот тип тебе торчит",
+        "youOwe": "Ты этому типу торчишь"
       },
       "delete": {
         "confirm": {
@@ -1320,8 +1320,8 @@ export const dictionaries = {
       "title": "Бригады",
       "summary": {
         "balance": {
-          "from": (amount) => `Эти пидоры тебе должны ${amount}`,
-          "to": (amount) => `Ты этим пидорам должен ${amount}`
+          "from": (amount) => `Эти хуи тебе должны ${amount}`,
+          "to": (amount) => `Ты этим хуям должен ${amount}`
         }
       }
     },
