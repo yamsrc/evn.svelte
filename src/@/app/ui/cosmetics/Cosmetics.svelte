@@ -1,22 +1,16 @@
 <script lang="ts">
+  import { cn } from '$lib/utils'
   import { Button } from '$ui/button'
   import { pickpic } from '@/accounts'
   import Name from './Name.svelte'
   import Picture from './Picture.svelte'
   import type { Props, Value } from './Cosmetics'
 
-  const {
-    value,
-    picture: pictureEnabled = false,
-    label,
-    note,
-    autocomplete,
-    onchange,
-  }: Props = $props()
+  const { value, label, note, class: classes, autocomplete, onchange }: Props = $props()
   const blank = $derived(label !== undefined)
 
   let name = $derived(value?.name ?? '')
-  let picture = $derived(pictureEnabled ? (value?.picture ?? pickpic()) : undefined)
+  let picture = $derived(value?.picture ?? pickpic())
   let busy = $state(false)
 
   function onNameChange() {
@@ -43,10 +37,10 @@
   }
 </script>
 
-<div class="space-y-6">
-  {#if picture}
+<div class={cn('space-y-6', classes)}>
+  <div class="flex justify-center" data-slot="picture">
     <Picture bind:id={picture} onchange={onPictureChange} />
-  {/if}
+  </div>
   <div class="space-y-2">
     <Name bind:value={name} bind:busy onchange={onNameChange} {autocomplete} />
     {#if note}

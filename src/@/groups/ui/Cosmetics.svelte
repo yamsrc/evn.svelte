@@ -11,4 +11,4 @@
   }
 </script>
 
-<Cosmetics value={{ name }} picture={false} note={$dict.groups.name.description} {onchange} />
+<Cosmetics value={{ name }} note={$dict.groups.name.description} {onchange} />

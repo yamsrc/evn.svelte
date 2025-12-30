@@ -17,4 +17,4 @@
   }
 </script>
 
-<Cosmetics label={$dict.contacts.add.label} picture={true} {onchange} />
+<Cosmetics label={$dict.contacts.add.label} {onchange} />

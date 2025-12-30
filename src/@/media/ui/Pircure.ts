@@ -1,3 +1,5 @@
+import type { HTMLImgAttributes } from 'svelte/elements'
+
 export interface Props {
   ref?: HTMLImageElement
   id: string
@@ -9,4 +11,5 @@ export interface Props {
   alt?: string
   class?: string
   style?: string
+  loading?: HTMLImgAttributes['loading']
 }

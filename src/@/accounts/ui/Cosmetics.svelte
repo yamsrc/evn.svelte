@@ -10,4 +10,4 @@
   }
 </script>
 
-<Cosmetics value={account} picture={true} {onchange} />
+<Cosmetics value={account} {onchange} />

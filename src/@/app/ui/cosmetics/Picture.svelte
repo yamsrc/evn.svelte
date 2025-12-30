@@ -10,6 +10,12 @@
   })()
 </script>
 
-<div class="flex justify-center">
-  <Picture {id} alt={id} variant="300x300!" width={150} height={150} class="rounded-full" />
-</div>
+<Picture
+  {id}
+  alt={id}
+  variant="300x300!"
+  width={150}
+  height={150}
+  class="rounded-full"
+  loading="lazy"
+/>

@@ -14,7 +14,7 @@
 </script>
 
 <Cosmetics
-  picture={false}
+  class="**:data-[slot=picture]:hidden"
   label={$dict.groups.create}
   note={$dict.groups.name.description}
   {onchange}
