@@ -21,8 +21,8 @@ nav:
   evns: सेटलमेंट
   profile: मैं
   contacts: मित्र
-terms: Terms & conditions
-privacy: Privacy policy
+terms: नियम व शर्तें
+privacy: गोपनीयता नीति
 madeBy: द्वारा निर्मित
 profile:
   title: मेरा प्रोफ़ाइल
@@ -53,9 +53,11 @@ contacts:
     youOwe: आपको देना है
   delete:
     confirm:
-      title: व्यक्ति हटाएँ
+      title: संपर्क हटाएं
       description: इस व्यक्ति के साथ आपका बैलेंस खो जाएगा
       confirm: हटाएँ
+  add:
+    label: संपर्क जोड़ें
 join:
   app:
     description: दोस्तों के साथ मिलकर, कौन किसका कितना बकाया है, इसका स्मार्ट तरीका।

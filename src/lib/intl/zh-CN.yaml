@@ -21,7 +21,7 @@ nav:
   evns: 结算
   profile: 我
   contacts: 朋友
-terms: Terms & conditions
+terms: 条款和条件
 privacy: 隐私政策
 madeBy: 由...制作
 profile:
@@ -51,9 +51,11 @@ contacts:
     youOwe: 你欠
   delete:
     confirm:
-      title: 删除人员
+      title: 删除联系人
       description: 您与此人的余额将会丢失
       confirm: 删除
+  add:
+    label: 添加联系人
 join:
   app:
     description: 和朋友们一起智能记录谁欠谁。

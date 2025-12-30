@@ -2,7 +2,7 @@
   import { Scrollable } from '$com/scrollable'
   import { locale, selected, type Locale } from '$lib/intl'
   import { cn } from '$lib/utils'
-  import { options } from '@/account/ui/Language'
+  import { options } from '@/accounts/ui/Language'
 
   let scrolling = false
 

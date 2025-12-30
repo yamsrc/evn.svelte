@@ -21,8 +21,8 @@ nav:
   evns: Hesaplaşma
   profile: Ben
   contacts: Arkadaşlar
-terms: Terms & conditions
-privacy: Privacy policy
+terms: Şartlar ve koşullar
+privacy: Gizlilik Politikası
 madeBy: Tarafından yapıldı
 profile:
   title: Profilim
@@ -54,6 +54,8 @@ contacts:
       title: Kişiyi sil
       description: Bu kişiyle olan bakiyeniz kaybolacak
       confirm: Sil
+  add:
+    label: Kişi ekle
 join:
   app:
     description: >-

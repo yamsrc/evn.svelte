@@ -21,8 +21,8 @@ nav:
   evns: Règlements
   profile: Moi
   contacts: Amis
-terms: Terms & conditions
-privacy: Privacy policy
+terms: Conditions générales
+privacy: Politique de confidentialité
 madeBy: Créé par
 profile:
   title: Mon profil
@@ -53,9 +53,11 @@ contacts:
     youOwe: Vous devez
   delete:
     confirm:
-      title: Supprimer la personne
+      title: Supprimer le contact
       description: Votre solde avec cette personne sera perdu
       confirm: Supprimer
+  add:
+    label: Ajouter un contact
 join:
   app:
     description: La façon intelligente de suivre qui doit quoi à qui, avec vos amis.

@@ -21,8 +21,8 @@ nav:
   evns: Розрахунок
   profile: Я
   contacts: Друзі
-terms: Terms & conditions
-privacy: Privacy policy
+terms: Умови та положення
+privacy: Політика конфіденційності
 madeBy: Створено
 profile:
   title: Мій профіль
@@ -53,9 +53,11 @@ contacts:
     youOwe: Ви винні
   delete:
     confirm:
-      title: Видалити людину
+      title: Видалити контакт
       description: Ваш баланс із цією особою буде втрачено
       confirm: Видалити
+  add:
+    label: Додати контакт
 join:
   app:
     description: Розумний спосіб відстежувати, хто кому винен, разом із друзями.

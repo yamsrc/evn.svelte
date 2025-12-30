@@ -25,7 +25,7 @@
 
 {#if browser && $authenticated}
   {@render children()}
-{:else if $greeting}
+{:else if $greeting || !browser}
   <div class="flex items-center justify-center h-screen">
     <Loader />
   </div>

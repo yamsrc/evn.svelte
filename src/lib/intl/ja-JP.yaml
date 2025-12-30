@@ -21,8 +21,8 @@ nav:
   evns: 清算
   profile: 私
   contacts: 友だち
-terms: Terms & conditions
-privacy: Privacy policy
+terms: 利用規約
+privacy: プライバシーポリシー
 madeBy: 作成者
 profile:
   title: マイプロフィール
@@ -51,9 +51,11 @@ contacts:
     youOwe: あなたが支払うべきです
   delete:
     confirm:
-      title: 人物を削除
+      title: 連絡先を削除
       description: この相手との残高が失われます
       confirm: 削除
+  add:
+    label: 連絡先を追加
 join:
   app:
     description: 友だちと一緒に「誰が誰にいくら借りているか」をスマートに管理。

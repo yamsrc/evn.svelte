@@ -1,12 +1,9 @@
 <script lang="ts">
-  import { LogOut } from '@lucide/svelte'
   import { Section } from '$com/section'
   import { dict } from '$lib/intl'
-  import { Button } from '$ui/button'
   import * as Card from '$ui/card'
-  import { Avatar } from '@/account/ui'
+  import { Avatar } from '@/accounts/ui'
   import { account } from '@/iam'
-  import { logout } from '@/iam'
   import Name from './onboarding/Name.svelte'
   import type { Props } from './Named'
 
@@ -28,10 +25,6 @@
           <Name account={$account} />
         </Card.Content>
       </Card.Root>
-      <Button onclick={logout} class="mx-auto">
-        <LogOut />
-        {$dict.actions.signout}
-      </Button>
     </Section>
   {/if}
 {/if}

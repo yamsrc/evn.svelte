@@ -2,7 +2,7 @@
   import { Section } from '$com/section'
   import { Nav, Screen } from '$com/shell'
   import { dict } from '$lib/intl'
-  import { Named } from '@/account/ui'
+  import { Named } from '@/accounts/ui'
   import { Footer } from '@/app'
   import { Authenticated } from '@/iam/ui'
   import { Languages } from '@/iam/ui'

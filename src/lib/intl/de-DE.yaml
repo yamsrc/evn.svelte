@@ -21,8 +21,8 @@ nav:
   evns: Ausgleich
   profile: Ich
   contacts: Freunde
-terms: Terms & conditions
-privacy: Privacy policy
+terms: Allgemeine Geschäftsbedingungen
+privacy: Datenschutzrichtlinie
 madeBy: Erstellt von
 profile:
   title: Mein Profil
@@ -53,9 +53,11 @@ contacts:
     youOwe: Du schuldest
   delete:
     confirm:
-      title: Person löschen
+      title: Kontakt löschen
       description: Ihr Guthaben mit dieser Person wird verloren gehen
       confirm: Löschen
+  add:
+    label: Kontakt hinzufügen
 join:
   app:
     description: >-

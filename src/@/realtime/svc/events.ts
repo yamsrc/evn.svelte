@@ -1,5 +1,5 @@
 import mitt from 'mitt'
-import type { Events as AccountEvents } from '@/account/svc/net'
+import type { Events as AccountEvents } from '@/accounts/svc/net'
 import type { Events as ContactsEvents } from '@/contacts/svc/net'
 import type { Events as GroupsEvents } from '@/groups/svc/net'
 

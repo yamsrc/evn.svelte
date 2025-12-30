@@ -4,8 +4,8 @@
   import { Section } from '$com/section'
   import { dict } from '$lib/intl'
   import { Button } from '$ui/button'
-  import { accounts } from '@/account'
-  import { Picture } from '@/account/ui'
+  import { accounts } from '@/accounts'
+  import { Picture } from '@/accounts/ui'
   import * as contacts from '@/contacts'
   import type { Props } from './Invitation'
 

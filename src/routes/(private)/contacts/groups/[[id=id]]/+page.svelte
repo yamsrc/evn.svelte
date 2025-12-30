@@ -10,7 +10,7 @@
   import { currency } from '$lib/tools'
   import { Button } from '$ui/button'
   import { Separator } from '$ui/separator'
-  import { Item } from '@/account/ui'
+  import { Panel } from '@/accounts/ui'
   import { Header } from '@/app/ui'
   import { contacts } from '@/contacts'
   import { groups, del } from '@/groups'
@@ -101,7 +101,7 @@
         {#each members as identity (identity)}
           {@const contact = contacts.find((contact) => contact.identity === identity)}
           {#if contact?.account && ok(contact.account)}
-            <Item account={contact.account} balance={contact.balance} />
+            <Panel account={contact.account} balance={contact.balance} />
           {/if}
         {/each}
       {/if}

@@ -7,8 +7,8 @@ export const DefaultLocale = 'en-US'
 
 // change this
 export const meta = {
-  title: 'Hello world',
-  description: 'Freshly baked',
+  title: 'evn',
+  description: 'Split wiser',
 } as const
 
 export const navigation = {

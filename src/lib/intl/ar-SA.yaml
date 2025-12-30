@@ -21,8 +21,8 @@ nav:
   evns: تسوية
   profile: أنا
   contacts: الأصدقاء
-terms: Terms & conditions
-privacy: Privacy policy
+terms: الشروط والأحكام
+privacy: سياسة الخصوصية
 madeBy: من صنع
 profile:
   title: ملفي الشخصي
@@ -51,9 +51,11 @@ contacts:
     youOwe: أنت مدين
   delete:
     confirm:
-      title: حذف الشخص
+      title: حذف جهة الاتصال
       description: سيتم فقدان رصيدك مع هذا الشخص
       confirm: حذف
+  add:
+    label: إضافة جهة اتصال
 join:
   app:
     description: الطريقة الذكية لمتابعة من يدين لمن، مع الأصدقاء.

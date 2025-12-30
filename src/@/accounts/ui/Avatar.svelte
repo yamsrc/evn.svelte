@@ -1,7 +1,7 @@
 <script lang="ts">
   import { assets } from '$config'
   import { deterministic } from '$lib/tools'
-  import { Picture } from '@/account/ui'
+  import { Picture } from '@/accounts/ui'
   import { account } from '@/iam'
   import type { Props } from './Avatar'
 
