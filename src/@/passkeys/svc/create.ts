@@ -1,8 +1,8 @@
 import * as credentials from './credentials'
 import * as origin from './net'
 
-export async function create(name: string, id?: string): Promise<Output | Error> {
-  const options = await origin.challenges.post('creation', id)
+export async function create(name: string, identity?: string): Promise<Output | Error> {
+  const options = await origin.challenges.post('creation', identity)
 
   if (options instanceof Error)
     return options
@@ -13,7 +13,7 @@ export async function create(name: string, id?: string): Promise<Output | Error>
     return credential
 
   if (credential === null)
-    throw new Error('No credential created')
+    throw new Error('No credential is created')
 
   return {
     key: toCreationResponse(credential, name),
@@ -32,7 +32,8 @@ function toCreationResponse(
   const publicKey = response.getPublicKey()
   const clientExtensionResults = credential.getClientExtensionResults()
 
-  if (publicKey === null) throw new Error('No public key created')
+  if (publicKey === null)
+    throw new Error('No public key is created')
 
   return {
     id: credential.id,
