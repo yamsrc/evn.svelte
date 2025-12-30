@@ -2,9 +2,9 @@
   import { QrCode } from '@lucide/svelte'
   import QRCodeStyling from 'qr-code-styling'
   import { browser } from '$app/environment'
-  import { dict } from '$lib/intl'
   import * as AlertDialog from '$ui/alert-dialog'
   import { Button } from '$ui/button'
+  import Logo from './logo.png'
   import type { Props } from './QR'
 
   const { label, disabled, data, ...props }: Props = $props()
@@ -20,44 +20,40 @@
     qrCode = new QRCodeStyling({
       type: 'svg',
       shape: 'square',
-      width: 300,
-      height: 300,
+      width: 500,
+      height: 500,
       data,
-      margin: 0,
+      margin: 10,
       qrOptions: {
         typeNumber: 0,
         mode: 'Byte',
         errorCorrectionLevel: 'Q',
       },
-      image: '/icons/512.png',
+      image: Logo,
       imageOptions: {
         saveAsBlob: true,
         hideBackgroundDots: true,
         imageSize: 0.4,
-        margin: 10,
+        margin: 0,
       },
       dotsOptions: {
         type: 'extra-rounded',
-        color: '#5f271a',
+        color: '#2E231A',
       },
       backgroundOptions: {
-        color: '#f6e8d9',
+        color: '#EDE0D4',
       },
       cornersSquareOptions: {
         type: 'extra-rounded',
-        color: '#a43322',
+        color: '#EA580C',
       },
       cornersDotOptions: {
-        color: '#a43322',
+        type: 'rounded',
       },
     })
 
     qrCode.append(qrContainer)
     qrCreated = true
-  }
-
-  function copy() {
-    navigator.clipboard?.writeText(data)
   }
 
   $effect(() => {
@@ -80,12 +76,12 @@
 </Button>
 
 <AlertDialog.Root bind:open>
-  <AlertDialog.Content class="max-w-sm bg-[#f6e8d9]">
-    <div class="flex justify-center">
-      <div bind:this={qrContainer}></div>
+  <AlertDialog.Content
+    class="max-w-sm max-h-sm bg-transparent border-none"
+    interactOutsideBehavior="close"
+  >
+    <div class="flex justify-center size-full">
+      <div bind:this={qrContainer} class="[&>svg]:size-full"></div>
     </div>
-    <AlertDialog.Footer>
-      <AlertDialog.Cancel onclick={copy}>{$dict.actions.close}</AlertDialog.Cancel>
-    </AlertDialog.Footer>
   </AlertDialog.Content>
 </AlertDialog.Root>
