@@ -82,6 +82,7 @@ groups:
       to: |-
         !js
         (amount) => `あなたは彼らに${amount}を借りています`
+  create: グループを作成
 invite:
   share: 共有
   qr: QRコードを表示

@@ -88,6 +88,7 @@ groups:
       to: |-
         !js
         (amount) => `Vous leur devez ${amount}`
+  create: Créer un groupe
 invite:
   share: Partager
   qr: Afficher le code QR

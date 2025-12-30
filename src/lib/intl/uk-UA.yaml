@@ -88,6 +88,7 @@ groups:
       to: |-
         !js
         (amount) => `Ви винні їм ${amount}`
+  create: Створити групу
 invite:
   share: Поділитися
   qr: Показати QR-код

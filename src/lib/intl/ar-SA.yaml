@@ -84,6 +84,7 @@ groups:
       to: |-
         !js
         (amount) => `أنت مدين لهم بـ${amount}`
+  create: إنشاء مجموعة
 invite:
   share: مشاركة
   qr: عرض رمز الاستجابة السريعة

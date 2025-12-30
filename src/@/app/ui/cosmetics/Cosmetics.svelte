@@ -1,11 +1,12 @@
 <script lang="ts">
+  import { cn } from '$lib/utils'
   import { Button } from '$ui/button'
   import { pickpic } from '@/accounts'
   import Name from './Name.svelte'
   import Picture from './Picture.svelte'
-  import type { Props } from './Cosmetics'
+  import type { Props, Value } from './Cosmetics'
 
-  const { value, label, autocomplete, onchange }: Props = $props()
+  const { value, label, note, class: classes, autocomplete, onchange }: Props = $props()
   const blank = $derived(label !== undefined)
 
   let name = $derived(value?.name ?? '')
@@ -22,22 +23,32 @@
 
   async function changed() {
     busy = true
-    await onchange?.({ name, picture })
+
+    const value: Value = { name, picture }
+
+    await onchange?.(value)
     busy = false
   }
 
   function onclick() {
-    if (busy || name === '') return
+    if (busy || name.trim() === '') return
 
     changed()
   }
 </script>
 
-<div class="space-y-6">
-  <Picture bind:id={picture} onchange={onPictureChange} />
-  <Name bind:value={name} bind:busy onchange={onNameChange} class="mx-auto w-3/4" {autocomplete} />
+<div class={cn('space-y-6', classes)}>
+  <div class="flex justify-center" data-slot="picture">
+    <Picture bind:id={picture} onchange={onPictureChange} />
+  </div>
+  <div class="space-y-2">
+    <Name bind:value={name} bind:busy onchange={onNameChange} {autocomplete} />
+    {#if note}
+      <p class="text-muted-foreground text-sm text-center">{note}</p>
+    {/if}
+  </div>
   {#if blank}
-    <Button size="lg" class="w-full" disabled={busy} {onclick}>
+    <Button size="lg" class="w-full" disabled={busy || !name.trim()} {onclick}>
       {label}
     </Button>
   {/if}

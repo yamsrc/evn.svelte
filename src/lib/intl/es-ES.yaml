@@ -90,6 +90,7 @@ groups:
       to: |-
         !js
         (amount) => `Les debes ${amount}`
+  create: Crear grupo
 invite:
   share: Compartir
   qr: Mostrar código QR

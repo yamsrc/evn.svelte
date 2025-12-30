@@ -86,6 +86,7 @@ groups:
       to: |-
         !js
         (amount) => `You owe them ${amount}`
+  create: Create group
 invite:
   share: Share
   qr: Show QR code

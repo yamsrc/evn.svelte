@@ -13,6 +13,7 @@
     format = 'webp',
     class: classes,
     style,
+    loading,
   }: Props = $props()
 </script>
 
@@ -24,4 +25,5 @@
   {height}
   class={classes}
   {style}
+  {loading}
 />

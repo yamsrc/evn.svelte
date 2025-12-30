@@ -14,7 +14,7 @@
   import { Header } from '@/app/ui'
   import { contacts } from '@/contacts'
   import { groups, del } from '@/groups'
-  import { Name } from '@/groups/ui'
+  import { Cosmetics, Create } from '@/groups/ui'
   import { account } from '@/iam'
   import type { Group } from '@/groups'
 
@@ -24,10 +24,6 @@
   }
 
   const id = $derived(page.params.id)
-
-  function created(id: string) {
-    goto(`/contacts/groups/${id}`)
-  }
 
   async function leave() {
     if (!id) return
@@ -77,39 +73,44 @@
   </Header.Root>
 </Section>
 
-<Section class="flex flex-col gap-2 items-center">
-  <Name id={group?.id} name={group?.name} oncreated={created} />
-  <p class="text-muted-foreground text-sm">{$dict.groups.name.description}</p>
-</Section>
+{#if group}
+  <Section class="flex flex-col gap-2 items-center">
+    <Cosmetics id={group.id} name={group.name} />
+  </Section>
 
-<Separator />
+  <Separator />
 
-<Section class="text-center">
-  <div>{$dict.groups.summary.balance.from(currency(balance.from))}</div>
-  <div>{$dict.groups.summary.balance.to(currency(balance.to))}</div>
-</Section>
+  <Section class="text-center">
+    <div>{$dict.groups.summary.balance.from(currency(balance.from))}</div>
+    <div>{$dict.groups.summary.balance.to(currency(balance.to))}</div>
+  </Section>
 
-<Async store={contacts}>
-  {#snippet awaited(contacts)}
-    <Section class="flex flex-col gap-2">
-      <h2>{$dict.groups.members.title}</h2>
-      {#if !members?.length}
-        <p class="text-muted-foreground">
-          {$dict.groups.members.empty}
-        </p>
-      {:else}
-        {#each members as identity (identity)}
-          {@const contact = contacts.find((contact) => contact.identity === identity)}
-          {#if contact?.account && ok(contact.account)}
-            <Panel account={contact.account} balance={contact.balance} />
-          {/if}
-        {/each}
-      {/if}
-      <Button size="lg" class="w-full" href={`/contacts/groups/${id}/add`} disabled={!group}>
-        <Plus />
-        {$dict.groups.members.addMember}
-      </Button>
-    </Section>
-  {/snippet}
-</Async>
-<!-- TODO: add history -->
+  <Async store={contacts}>
+    {#snippet awaited(contacts)}
+      <Section class="flex flex-col gap-2">
+        <h2>{$dict.groups.members.title}</h2>
+        {#if !members?.length}
+          <p class="text-muted-foreground">
+            {$dict.groups.members.empty}
+          </p>
+        {:else}
+          {#each members as identity (identity)}
+            {@const contact = contacts.find((contact) => contact.identity === identity)}
+            {#if contact?.account && ok(contact.account)}
+              <Panel account={contact.account} balance={contact.balance} />
+            {/if}
+          {/each}
+        {/if}
+        <Button size="lg" class="w-full" href={`/contacts/groups/${id}/add`} disabled={!group}>
+          <Plus />
+          {$dict.groups.members.addMember}
+        </Button>
+      </Section>
+    {/snippet}
+  </Async>
+  <!-- TODO: add history -->
+{:else}
+  <Section class="flex flex-col gap-2 items-center">
+    <Create />
+  </Section>
+{/if}

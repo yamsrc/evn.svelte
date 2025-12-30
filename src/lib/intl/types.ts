@@ -108,6 +108,7 @@ export type Dictionary = {
             to: (value: any) => string
           }
         }
+        create: string
       }
       invite: {
         share: string

@@ -82,6 +82,7 @@ groups:
       to: |-
         !js
         (amount) => `당신은 그들에게 ${amount}을(를) 빚지고 있습니다`
+  create: 그룹 만들기
 invite:
   share: 공유
   qr: QR 코드 표시
