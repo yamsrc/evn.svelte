@@ -79,6 +79,7 @@ export type Dictionary = {
         }
         add: {
           label: string
+          description: string
         }
       }
       join: {

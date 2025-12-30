@@ -152,7 +152,7 @@ export const dictionaries = {
         "placeholder": "Твоё мыло, лол"
       },
       "message": {
-        "placeholder": "Ну давай, вываливай эту хуйню сюда"
+        "placeholder": "Пиши свой высер"
       }
     }
   },

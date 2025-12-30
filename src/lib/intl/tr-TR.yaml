@@ -56,6 +56,10 @@ contacts:
       confirm: Sil
   add:
     label: Kişi ekle
+    description: >-
+      Başka bir kişi adına, onun adını girerek bir kişi oluşturabilirsiniz. Daha
+      sonra onunla paylaşabileceğiniz bir bağlantı oluşturabilir, böylece giriş
+      bilgilerini kendisi ayarlayıp hesabın sahibi olabilir.
 join:
   app:
     description: >-

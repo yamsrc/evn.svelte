@@ -56,6 +56,7 @@ contacts:
       confirm: 删除
   add:
     label: 添加联系人
+    description: 您可以通过输入他人的姓名代为创建联系人。之后，您可以生成一个链接发送给对方，让他们自行设置登录信息并接管账户。
 join:
   app:
     description: 和朋友们一起智能记录谁欠谁。

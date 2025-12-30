@@ -105,6 +105,8 @@ inputs:
     add:
       label:
         input: Add contact
+      description:
+        input: You can create a contact on behalf of another person by entering their name. Later, you’ll be able to generate a link to share with them so they can set up their sign-in details and take ownership of the account.
   join:
     app:
       description:

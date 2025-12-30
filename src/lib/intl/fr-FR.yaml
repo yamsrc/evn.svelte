@@ -58,6 +58,11 @@ contacts:
       confirm: Supprimer
   add:
     label: Ajouter un contact
+    description: >-
+      Vous pouvez créer un contact au nom d’une autre personne en entrant son
+      nom. Par la suite, vous pourrez générer un lien à partager avec elle afin
+      qu’elle puisse configurer ses informations de connexion et prendre la
+      possession du compte.
 join:
   app:
     description: La façon intelligente de suivre qui doit quoi à qui, avec vos amis.

@@ -74,7 +74,8 @@ export const dictionaries = {
         }
       },
       "add": {
-        "label": "إضافة جهة اتصال"
+        "label": "إضافة جهة اتصال",
+        "description": "يمكنك إنشاء جهة اتصال نيابةً عن شخص آخر بإدخال اسمه. لاحقًا، ستتمكن من إنشاء رابط لمشاركته معه حتى يتمكن من إعداد تفاصيل تسجيل الدخول الخاصة به وتولي ملكية الحساب."
       }
     },
     "join": {
@@ -196,7 +197,8 @@ export const dictionaries = {
         }
       },
       "add": {
-        "label": "Kontakt hinzufügen"
+        "label": "Kontakt hinzufügen",
+        "description": "Sie können einen Kontakt im Namen einer anderen Person anlegen, indem Sie ihren Namen eingeben. Später können Sie einen Link erstellen, den Sie mit ihr teilen, damit sie ihre Anmeldedaten selbst festlegen und das Konto übernehmen kann."
       }
     },
     "join": {
@@ -318,7 +320,8 @@ export const dictionaries = {
         }
       },
       "add": {
-        "label": "Add contact"
+        "label": "Add contact",
+        "description": "You can create a contact on behalf of another person by entering their name. Later, you’ll be able to generate a link to share with them so they can set up their sign-in details and take ownership of the account."
       }
     },
     "join": {
@@ -440,7 +443,8 @@ export const dictionaries = {
         }
       },
       "add": {
-        "label": "Agregar contacto"
+        "label": "Agregar contacto",
+        "description": "Puedes crear un contacto en nombre de otra persona introduciendo su nombre. Más adelante, podrás generar un enlace para compartir con esa persona, de modo que pueda configurar sus datos de inicio de sesión y tomar el control de la cuenta."
       }
     },
     "join": {
@@ -562,7 +566,8 @@ export const dictionaries = {
         }
       },
       "add": {
-        "label": "Ajouter un contact"
+        "label": "Ajouter un contact",
+        "description": "Vous pouvez créer un contact au nom d’une autre personne en entrant son nom. Par la suite, vous pourrez générer un lien à partager avec elle afin qu’elle puisse configurer ses informations de connexion et prendre la possession du compte."
       }
     },
     "join": {
@@ -684,7 +689,8 @@ export const dictionaries = {
         }
       },
       "add": {
-        "label": "संपर्क जोड़ें"
+        "label": "संपर्क जोड़ें",
+        "description": "आप किसी अन्य व्यक्ति के नाम दर्ज करके उनकी ओर से संपर्क बना सकते हैं। बाद में, आप उनके साथ साझा करने के लिए एक लिंक जेनरेट कर सकेंगे, ताकि वे अपने साइन-इन विवरण सेट कर सकें और खाते की जिम्मेदारी ले सकें।"
       }
     },
     "join": {
@@ -806,7 +812,8 @@ export const dictionaries = {
         }
       },
       "add": {
-        "label": "Aggiungi contatto"
+        "label": "Aggiungi contatto",
+        "description": "Puoi creare un contatto per conto di un’altra persona inserendo il suo nome. In seguito sarai in grado di generare un link da condividere con lei, così potrà impostare i propri dati di accesso e prendere possesso dell’account."
       }
     },
     "join": {
@@ -928,7 +935,8 @@ export const dictionaries = {
         }
       },
       "add": {
-        "label": "連絡先を追加"
+        "label": "連絡先を追加",
+        "description": "別の人の名前を入力して、その人の代わりに連絡先を作成できます。後で、その人と共有できるリンクを生成して、サインイン情報を設定し、アカウントを引き継いでもらうことができます。"
       }
     },
     "join": {
@@ -1050,7 +1058,8 @@ export const dictionaries = {
         }
       },
       "add": {
-        "label": "연락처 추가"
+        "label": "연락처 추가",
+        "description": "다른 사람의 이름을 입력하여 그 사람을 대신해 연락처를 생성할 수 있습니다. 이후 링크를 생성해 공유하면, 그 사람이 직접 로그인 정보를 설정하고 계정 소유권을 가질 수 있습니다."
       }
     },
     "join": {
@@ -1172,7 +1181,8 @@ export const dictionaries = {
         }
       },
       "add": {
-        "label": "Contact toevoegen"
+        "label": "Contact toevoegen",
+        "description": "Je kunt namens iemand anders een contactpersoon aanmaken door hun naam in te voeren. Later kun je een link genereren om met hen te delen, zodat ze hun inloggegevens kunnen instellen en het account kunnen overnemen."
       }
     },
     "join": {
@@ -1261,7 +1271,7 @@ export const dictionaries = {
       }
     },
     "form": {
-      "enterName": "Впиши своё погоняло"
+      "enterName": "Впиши погоняло"
     },
     "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
     "onboarding": {
@@ -1277,8 +1287,8 @@ export const dictionaries = {
         "description": "Подтяни корешей вручную или зазови этих оболтусов",
         "invite": {
           "share": "Позвать корешей",
-          "qr": "Позвать по QR-хуеру",
-          "manual": "Добавить вручную"
+          "qr": "Позвать по QR-хуете",
+          "manual": "Вбить руками"
         }
       },
       "all": "Все кореша",
@@ -1294,7 +1304,8 @@ export const dictionaries = {
         }
       },
       "add": {
-        "label": "Подтянуть кореша"
+        "label": "Подтянуть кореша",
+        "description": "Вы можете создать контакт от имени другого человека, введя его имя. Позже вы сможете сгенерировать ссылку, чтобы поделиться ею, и человек сможет сам настроить данные для входа и получить доступ к аккаунту."
       }
     },
     "join": {
@@ -1415,7 +1426,8 @@ export const dictionaries = {
         }
       },
       "add": {
-        "label": "Добавить контакт"
+        "label": "Добавить контакт",
+        "description": "Вы можете создать контакт от имени другого человека, введя его имя. Позже вы сможете сгенерировать ссылку для передачи ему, чтобы он мог самостоятельно настроить данные входа и получить владение аккаунтом."
       }
     },
     "join": {
@@ -1537,7 +1549,8 @@ export const dictionaries = {
         }
       },
       "add": {
-        "label": "Ongeza mawasiliano"
+        "label": "Ongeza mawasiliano",
+        "description": "Unaweza kuunda anwani kwa niaba ya mtu mwingine kwa kuingiza jina lake. Baadaye, utaweza kutengeneza kiungo cha kugawana naye ili aweze kuweka maelezo yake ya kuingia na kuchukua umiliki wa akaunti."
       }
     },
     "join": {
@@ -1659,7 +1672,8 @@ export const dictionaries = {
         }
       },
       "add": {
-        "label": "Kişi ekle"
+        "label": "Kişi ekle",
+        "description": "Başka bir kişi adına, onun adını girerek bir kişi oluşturabilirsiniz. Daha sonra onunla paylaşabileceğiniz bir bağlantı oluşturabilir, böylece giriş bilgilerini kendisi ayarlayıp hesabın sahibi olabilir."
       }
     },
     "join": {
@@ -1781,7 +1795,8 @@ export const dictionaries = {
         }
       },
       "add": {
-        "label": "Додати контакт"
+        "label": "Додати контакт",
+        "description": "Ви можете створити контакт від імені іншої людини, ввівши її ім’я. Пізніше ви зможете згенерувати посилання для неї, щоб вона могла налаштувати свої дані для входу й отримати контроль над обліковим записом."
       }
     },
     "join": {
@@ -1903,7 +1918,8 @@ export const dictionaries = {
         }
       },
       "add": {
-        "label": "添加联系人"
+        "label": "添加联系人",
+        "description": "您可以通过输入他人的姓名代为创建联系人。之后，您可以生成一个链接发送给对方，让他们自行设置登录信息并接管账户。"
       }
     },
     "join": {

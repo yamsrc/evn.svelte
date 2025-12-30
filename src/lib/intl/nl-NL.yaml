@@ -58,6 +58,10 @@ contacts:
       confirm: Verwijderen
   add:
     label: Contact toevoegen
+    description: >-
+      Je kunt namens iemand anders een contactpersoon aanmaken door hun naam in
+      te voeren. Later kun je een link genereren om met hen te delen, zodat ze
+      hun inloggegevens kunnen instellen en het account kunnen overnemen.
 join:
   app:
     description: >-
