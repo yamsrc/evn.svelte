@@ -37,11 +37,6 @@
     </Header.Root>
   </Section>
 
-  <!-- <Section class="flex flex-col gap-6">
-    <Picture account={$account} size={150} class="mx-auto" />
-    <Name account={$account} class="mx-auto w-3xs text-3xl font-bold" />
-  </Section> -->
-
   <Section>
     <Cosmetics account={$account} />
   </Section>

@@ -2,8 +2,9 @@ import type { HTMLInputAttributes } from 'svelte/elements'
 
 export interface Props {
   value?: Value
-  onchange?: (value: Value) => void | Promise<void>
+  label?: string
   autocomplete?: HTMLInputAttributes['autocomplete']
+  onchange?: (value: Value) => void | Promise<void>
 }
 
 export interface Value {

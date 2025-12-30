@@ -1,20 +1,20 @@
 <script lang="ts">
   import { dict } from '$lib/intl'
-  import { onsubmit } from '$lib/tools'
+  import { onsubmit as handleSubmit } from '$lib/tools'
   import { cn } from '$lib/utils'
   import { Input } from '$ui/input'
   import type { Props } from './Name'
 
   let {
-    name = $bindable(''),
+    value = $bindable(''),
     busy = $bindable(false),
-    autocomplete,
+    autocomplete = 'off',
     onchange,
     class: classes,
   }: Props = $props()
 
-  let value = $derived(name)
-  const blank = name === ''
+  const original = value
+  const blank = value === ''
 
   let ref = $state<HTMLInputElement | null>(null)
 
@@ -23,14 +23,14 @@
 
     if (normalized === '') return reset()
 
-    if (normalized === name) return
+    if (normalized === original) return
 
-    name = normalized
+    value = normalized
     onchange?.(normalized)
   }
 
   function reset() {
-    value = name
+    value = original
   }
 
   function onblur() {
@@ -38,7 +38,7 @@
   }
 </script>
 
-<form onsubmit={onsubmit(submit)}>
+<form onsubmit={handleSubmit(submit)}>
   <Input
     bind:ref
     bind:value
