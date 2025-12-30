@@ -8,8 +8,6 @@
   const { id, name, class: classes }: Props = $props()
 
   async function onsubmit(value: string): Promise<string | undefined> {
-    if (!id) return value
-
     const res = await update(id, { name: value })
 
     if (res instanceof Error) return value
