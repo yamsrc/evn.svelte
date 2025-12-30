@@ -14,7 +14,7 @@
   import { Header } from '@/app/ui'
   import { contacts } from '@/contacts'
   import { groups, del } from '@/groups'
-  import { Name, Create } from '@/groups/ui'
+  import { Cosmetics, Create } from '@/groups/ui'
   import { account } from '@/iam'
   import type { Group } from '@/groups'
 
@@ -24,10 +24,6 @@
   }
 
   const id = $derived(page.params.id)
-
-  function created(id: string) {
-    goto(`/contacts/groups/${id}`)
-  }
 
   async function leave() {
     if (!id) return
@@ -79,7 +75,7 @@
 
 {#if group}
   <Section class="flex flex-col gap-2 items-center">
-    <Name id={group.id} name={group.name} />
+    <Cosmetics id={group.id} name={group.name} />
   </Section>
 
   <Separator />
@@ -115,6 +111,6 @@
   <!-- TODO: add history -->
 {:else}
   <Section class="flex flex-col gap-2 items-center">
-    <Create oncreated={created} />
+    <Create />
   </Section>
 {/if}

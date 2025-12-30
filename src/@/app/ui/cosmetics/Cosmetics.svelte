@@ -3,13 +3,20 @@
   import { pickpic } from '@/accounts'
   import Name from './Name.svelte'
   import Picture from './Picture.svelte'
-  import type { Props } from './Cosmetics'
+  import type { Props, Value } from './Cosmetics'
 
-  const { value, label, autocomplete, onchange }: Props = $props()
+  const {
+    value,
+    picture: pictureEnabled = false,
+    label,
+    note,
+    autocomplete,
+    onchange,
+  }: Props = $props()
   const blank = $derived(label !== undefined)
 
   let name = $derived(value?.name ?? '')
-  let picture = $derived(value?.picture ?? pickpic())
+  let picture = $derived(pictureEnabled ? (value?.picture ?? pickpic()) : undefined)
   let busy = $state(false)
 
   function onNameChange() {
@@ -22,7 +29,10 @@
 
   async function changed() {
     busy = true
-    await onchange?.({ name, picture })
+
+    const value: Value = { name, picture }
+
+    await onchange?.(value)
     busy = false
   }
 
@@ -34,10 +44,17 @@
 </script>
 
 <div class="space-y-6">
-  <Picture bind:id={picture} onchange={onPictureChange} />
-  <Name bind:value={name} bind:busy onchange={onNameChange} class="mx-auto w-3/4" {autocomplete} />
+  {#if picture}
+    <Picture bind:id={picture} onchange={onPictureChange} />
+  {/if}
+  <div class="space-y-2">
+    <Name bind:value={name} bind:busy onchange={onNameChange} {autocomplete} />
+    {#if note}
+      <p class="text-muted-foreground text-sm text-center">{note}</p>
+    {/if}
+  </div>
   {#if blank}
-    <Button size="lg" class="w-full" disabled={busy} {onclick}>
+    <Button size="lg" class="w-full" disabled={busy || !name.trim()} {onclick}>
       {label}
     </Button>
   {/if}

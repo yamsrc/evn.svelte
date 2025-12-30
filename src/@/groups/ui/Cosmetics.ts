@@ -1,5 +1,4 @@
 export interface Props {
   id: string
-  name?: string
-  class?: string
+  name: string
 }
