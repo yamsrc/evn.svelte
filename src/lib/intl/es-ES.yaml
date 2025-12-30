@@ -59,10 +59,8 @@ contacts:
   add:
     label: Agregar contacto
     description: >-
-      Puedes crear un contacto en nombre de otra persona introduciendo su
-      nombre. Más adelante, podrás generar un enlace para compartir con esa
-      persona, de modo que pueda configurar sus datos de inicio de sesión y
-      tomar el control de la cuenta.
+      Más adelante podrás transferir esta cuenta al propietario para que
+      configure sus datos de acceso y tome el control de la cuenta.
 join:
   app:
     description: >-

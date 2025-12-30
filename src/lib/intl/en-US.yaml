@@ -59,9 +59,8 @@ contacts:
   add:
     label: Add contact
     description: >-
-      You can create a contact on behalf of another person by entering their
-      name. Later, you’ll be able to generate a link to share with them so they
-      can set up their sign-in details and take ownership of the account.
+      Later, you'll be able to transfer this account to the owner so they can
+      set up their sign-in details and take ownership.
 join:
   app:
     description: The smart way to track who owes whom, together with friends.

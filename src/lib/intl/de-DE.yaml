@@ -59,10 +59,8 @@ contacts:
   add:
     label: Kontakt hinzufügen
     description: >-
-      Sie können einen Kontakt im Namen einer anderen Person anlegen, indem Sie
-      ihren Namen eingeben. Später können Sie einen Link erstellen, den Sie mit
-      ihr teilen, damit sie ihre Anmeldedaten selbst festlegen und das Konto
-      übernehmen kann.
+      Später kannst du dieses Konto an den Eigentümer übertragen, damit er seine
+      Anmeldedaten einrichten und die Inhaberschaft übernehmen kann.
 join:
   app:
     description: >-

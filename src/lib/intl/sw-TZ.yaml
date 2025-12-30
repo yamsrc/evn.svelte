@@ -57,9 +57,8 @@ contacts:
   add:
     label: Ongeza mawasiliano
     description: >-
-      Unaweza kuunda anwani kwa niaba ya mtu mwingine kwa kuingiza jina lake.
-      Baadaye, utaweza kutengeneza kiungo cha kugawana naye ili aweze kuweka
-      maelezo yake ya kuingia na kuchukua umiliki wa akaunti.
+      Baadaye utaweza kuhamisha akaunti hii kwa mmiliki ili aweze kuweka taarifa
+      zake za kuingia na kuchukua umiliki wa akaunti.
 join:
   app:
     description: Njia bora ya kufuatilia nani anamdai nani, ukiwa na marafiki zako.
