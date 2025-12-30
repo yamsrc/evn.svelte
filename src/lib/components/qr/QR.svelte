@@ -2,6 +2,7 @@
   import { QrCode } from '@lucide/svelte'
   import QRCodeStyling from 'qr-code-styling'
   import { browser } from '$app/environment'
+  import { dict } from '$lib/intl'
   import * as AlertDialog from '$ui/alert-dialog'
   import { Button } from '$ui/button'
   import Logo from './logo.png'
@@ -77,8 +78,13 @@
 
 <AlertDialog.Root bind:open>
   <AlertDialog.Content class="max-w-sm bg-transparent border-none" interactOutsideBehavior="close">
-    <div class="flex justify-center size-full">
+    <div class="flex justify-center size-full rounded-lg overflow-hidden">
       <div bind:this={qrContainer} class="[&>svg]:size-full"></div>
     </div>
+    <AlertDialog.Footer>
+      <Button variant="secondary" size="lg" onclick={() => (open = false)}>
+        {$dict.actions.close}
+      </Button>
+    </AlertDialog.Footer>
   </AlertDialog.Content>
 </AlertDialog.Root>
