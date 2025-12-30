@@ -82,6 +82,7 @@ groups:
       to: |-
         !js
         (amount) => `你欠他们${amount}`
+  create: 创建群组
 invite:
   share: 分享
   qr: 显示二维码

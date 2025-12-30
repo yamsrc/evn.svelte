@@ -103,7 +103,8 @@ export const dictionaries = {
           "from": (amount) => `أعضاء هذه المجموعة مدينون لك بـ${amount}`,
           "to": (amount) => `أنت مدين لهم بـ${amount}`
         }
-      }
+      },
+      "create": "إنشاء مجموعة"
     },
     "invite": {
       "share": "مشاركة",
@@ -224,7 +225,8 @@ export const dictionaries = {
           "from": (amount) => `Mitglieder dieser Gruppe schulden dir ${amount}`,
           "to": (amount) => `Du schuldest ihnen ${amount}`
         }
-      }
+      },
+      "create": "Gruppe erstellen"
     },
     "invite": {
       "share": "Teilen",
@@ -345,7 +347,8 @@ export const dictionaries = {
           "from": (amount) => `Members of this group owe you ${amount}`,
           "to": (amount) => `You owe them ${amount}`
         }
-      }
+      },
+      "create": "Create group"
     },
     "invite": {
       "share": "Share",
@@ -466,7 +469,8 @@ export const dictionaries = {
           "from": (amount) => `Los miembros de este grupo te deben ${amount}`,
           "to": (amount) => `Les debes ${amount}`
         }
-      }
+      },
+      "create": "Crear grupo"
     },
     "invite": {
       "share": "Compartir",
@@ -587,7 +591,8 @@ export const dictionaries = {
           "from": (amount) => `Les membres de ce groupe te doivent ${amount}`,
           "to": (amount) => `Vous leur devez ${amount}`
         }
-      }
+      },
+      "create": "Créer un groupe"
     },
     "invite": {
       "share": "Partager",
@@ -708,7 +713,8 @@ export const dictionaries = {
           "from": (amount) => `इस समूह के सदस्य आपको ${amount} का भुगतान करते हैं`,
           "to": (amount) => `आप उन्हें ${amount} के ऋणी हैं`
         }
-      }
+      },
+      "create": "समूह बनाएँ"
     },
     "invite": {
       "share": "साझा करें",
@@ -829,7 +835,8 @@ export const dictionaries = {
           "from": (amount) => `I membri di questo gruppo ti devono ${amount}`,
           "to": (amount) => `Devi loro ${amount}`
         }
-      }
+      },
+      "create": "Crea gruppo"
     },
     "invite": {
       "share": "Condividi",
@@ -950,7 +957,8 @@ export const dictionaries = {
           "from": (amount) => `このグループのメンバーはあなたに${amount}の支払いがあります`,
           "to": (amount) => `あなたは彼らに${amount}を借りています`
         }
-      }
+      },
+      "create": "グループを作成"
     },
     "invite": {
       "share": "共有",
@@ -1071,7 +1079,8 @@ export const dictionaries = {
           "from": (amount) => `이 그룹의 구성원들이 당신에게 ${amount}을(를) 빚지고 있습니다`,
           "to": (amount) => `당신은 그들에게 ${amount}을(를) 빚지고 있습니다`
         }
-      }
+      },
+      "create": "그룹 만들기"
     },
     "invite": {
       "share": "공유",
@@ -1192,7 +1201,8 @@ export const dictionaries = {
           "from": (amount) => `Leden van deze groep zijn je ${amount} verschuldigd`,
           "to": (amount) => `Je bent hen ${amount} verschuldigd`
         }
-      }
+      },
+      "create": "Groep aanmaken"
     },
     "invite": {
       "share": "Delen",
@@ -1313,7 +1323,8 @@ export const dictionaries = {
           "from": (amount) => `Участники этой группы должны вам ${amount}`,
           "to": (amount) => `Вы должны им ${amount}`
         }
-      }
+      },
+      "create": "Создать группу"
     },
     "invite": {
       "share": "Поделиться",
@@ -1434,7 +1445,8 @@ export const dictionaries = {
           "from": (amount) => `Wanachama wa kundi hili wanakudai ${amount}`,
           "to": (amount) => `Unawadaiwa ${amount}`
         }
-      }
+      },
+      "create": "Unda kundi"
     },
     "invite": {
       "share": "Shiriki",
@@ -1555,7 +1567,8 @@ export const dictionaries = {
           "from": (amount) => `Bu grubun üyeleri sana ${amount} borçlu`,
           "to": (amount) => `Onlara ${amount} borçlusunuz`
         }
-      }
+      },
+      "create": "Grup oluştur"
     },
     "invite": {
       "share": "Paylaş",
@@ -1676,7 +1689,8 @@ export const dictionaries = {
           "from": (amount) => `Члени цієї групи винні вам ${amount}`,
           "to": (amount) => `Ви винні їм ${amount}`
         }
-      }
+      },
+      "create": "Створити групу"
     },
     "invite": {
       "share": "Поділитися",
@@ -1797,7 +1811,8 @@ export const dictionaries = {
           "from": (amount) => `该群组成员欠你${amount}`,
           "to": (amount) => `你欠他们${amount}`
         }
-      }
+      },
+      "create": "创建群组"
     },
     "invite": {
       "share": "分享",

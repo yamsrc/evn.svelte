@@ -1,18 +1,22 @@
 <script lang="ts">
   import { Input } from '$com/input'
+  import { dict } from '$lib/intl'
   import { cn } from '$lib/utils'
-  import { create, update } from '@/groups'
+  import { update } from '@/groups'
   import type { Props } from './Name'
 
-  const { id, name, class: classes, oncreated }: Props = $props()
+  const { id, name, class: classes }: Props = $props()
 
-  async function submit(name: string): Promise<string | undefined> {
-    const res = id === undefined ? await create({ name }) : await update(id, { name })
+  async function onsubmit(value: string): Promise<string | undefined> {
+    if (!id) return value
 
-    if (res instanceof Error) return name
+    const res = await update(id, { name: value })
 
-    if (res !== undefined && id === undefined) oncreated?.(res.id)
+    if (res instanceof Error) return value
+
+    return res?.name
   }
 </script>
 
-<Input value={name} onsubmit={submit} class={cn('w-full max-w-sm text-3xl text-center', classes)} />
+<Input value={name} {onsubmit} class={cn('w-full max-w-sm text-3xl text-center', classes)} />
+<p class="text-muted-foreground text-sm">{$dict.groups.name.description}</p>

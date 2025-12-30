@@ -88,6 +88,7 @@ groups:
       to: |-
         !js
         (amount) => `Je bent hen ${amount} verschuldigd`
+  create: Groep aanmaken
 invite:
   share: Delen
   qr: QR-code tonen

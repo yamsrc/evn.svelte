@@ -84,6 +84,7 @@ groups:
       to: |-
         !js
         (amount) => `Unawadaiwa ${amount}`
+  create: Unda kundi
 invite:
   share: Shiriki
   qr: Onyesha msimbo wa QR

@@ -86,6 +86,7 @@ groups:
       to: |-
         !js
         (amount) => `Onlara ${amount} borçlusunuz`
+  create: Grup oluştur
 invite:
   share: Paylaş
   qr: QR kodunu göster

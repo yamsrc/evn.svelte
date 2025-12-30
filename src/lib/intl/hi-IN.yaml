@@ -86,6 +86,7 @@ groups:
       to: |-
         !js
         (amount) => `आप उन्हें ${amount} के ऋणी हैं`
+  create: समूह बनाएँ
 invite:
   share: साझा करें
   qr: QR कोड दिखाएँ

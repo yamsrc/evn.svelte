@@ -138,6 +138,8 @@ inputs:
           input: "!js (amount) => Members of this group owe you ${amount}"
         to:
           input: "!js (amount) => You owe them ${amount}"
+    create:
+      input: Create group
   invite:
     share:
       input: Share
