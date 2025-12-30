@@ -1,5 +1,6 @@
 <script lang="ts">
   import { goto } from '$app/navigation'
+  import { dict } from '$lib/intl'
   import { Cosmetics, type Value } from '@/app/ui'
   import { add } from '@/contacts'
 
@@ -12,4 +13,4 @@
   }
 </script>
 
-<Cosmetics label="Add friend" {onchange} />
+<Cosmetics label={$dict.contacts.add.label} {onchange} />

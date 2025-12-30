@@ -72,6 +72,9 @@ export const dictionaries = {
           "description": "سيتم فقدان رصيدك مع هذا الشخص",
           "confirm": "حذف"
         }
+      },
+      "add": {
+        "label": "إضافة جهة اتصال"
       }
     },
     "join": {
@@ -190,6 +193,9 @@ export const dictionaries = {
           "description": "Ihr Guthaben mit dieser Person wird verloren gehen",
           "confirm": "Löschen"
         }
+      },
+      "add": {
+        "label": "Kontakt hinzufügen"
       }
     },
     "join": {
@@ -308,6 +314,9 @@ export const dictionaries = {
           "description": "Your balance with this person will be lost",
           "confirm": "Delete"
         }
+      },
+      "add": {
+        "label": "Add contact"
       }
     },
     "join": {
@@ -426,6 +435,9 @@ export const dictionaries = {
           "description": "Tu saldo con esta persona se perderá",
           "confirm": "Eliminar"
         }
+      },
+      "add": {
+        "label": "Agregar contacto"
       }
     },
     "join": {
@@ -544,6 +556,9 @@ export const dictionaries = {
           "description": "Votre solde avec cette personne sera perdu",
           "confirm": "Supprimer"
         }
+      },
+      "add": {
+        "label": "Ajouter un contact"
       }
     },
     "join": {
@@ -662,6 +677,9 @@ export const dictionaries = {
           "description": "इस व्यक्ति के साथ आपका बैलेंस खो जाएगा",
           "confirm": "हटाएँ"
         }
+      },
+      "add": {
+        "label": "संपर्क जोड़ें"
       }
     },
     "join": {
@@ -780,6 +798,9 @@ export const dictionaries = {
           "description": "Il tuo saldo con questa persona andrà perso",
           "confirm": "Elimina"
         }
+      },
+      "add": {
+        "label": "Aggiungi contatto"
       }
     },
     "join": {
@@ -898,6 +919,9 @@ export const dictionaries = {
           "description": "この相手との残高が失われます",
           "confirm": "削除"
         }
+      },
+      "add": {
+        "label": "連絡先を追加"
       }
     },
     "join": {
@@ -1016,6 +1040,9 @@ export const dictionaries = {
           "description": "이 사람과의 잔액이 사라집니다",
           "confirm": "삭제"
         }
+      },
+      "add": {
+        "label": "연락처 추가"
       }
     },
     "join": {
@@ -1134,6 +1161,9 @@ export const dictionaries = {
           "description": "Je saldo met deze persoon zal verloren gaan",
           "confirm": "Verwijderen"
         }
+      },
+      "add": {
+        "label": "Contact toevoegen"
       }
     },
     "join": {
@@ -1252,6 +1282,9 @@ export const dictionaries = {
           "description": "Ваш баланс с этим человеком будет потерян",
           "confirm": "Удалить"
         }
+      },
+      "add": {
+        "label": "Добавить контакт"
       }
     },
     "join": {
@@ -1370,6 +1403,9 @@ export const dictionaries = {
           "description": "Salio lako na mtu huyu litapotea",
           "confirm": "Futa"
         }
+      },
+      "add": {
+        "label": "Ongeza mawasiliano"
       }
     },
     "join": {
@@ -1488,6 +1524,9 @@ export const dictionaries = {
           "description": "Bu kişiyle olan bakiyeniz kaybolacak",
           "confirm": "Sil"
         }
+      },
+      "add": {
+        "label": "Kişi ekle"
       }
     },
     "join": {
@@ -1606,6 +1645,9 @@ export const dictionaries = {
           "description": "Ваш баланс із цією особою буде втрачено",
           "confirm": "Видалити"
         }
+      },
+      "add": {
+        "label": "Додати контакт"
       }
     },
     "join": {
@@ -1724,6 +1766,9 @@ export const dictionaries = {
           "description": "您与此人的余额将会丢失",
           "confirm": "删除"
         }
+      },
+      "add": {
+        "label": "添加联系人"
       }
     },
     "join": {

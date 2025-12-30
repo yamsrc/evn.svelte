@@ -54,6 +54,8 @@ contacts:
       title: Futa mawasiliano
       description: Salio lako na mtu huyu litapotea
       confirm: Futa
+  add:
+    label: Ongeza mawasiliano
 join:
   app:
     description: Njia bora ya kufuatilia nani anamdai nani, ukiwa na marafiki zako.

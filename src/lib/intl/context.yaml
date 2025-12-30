@@ -102,6 +102,9 @@ inputs:
           input: Your balance with this person will be lost
         confirm:
           input: Delete
+    add:
+      label:
+        input: Add contact
   join:
     app:
       description:

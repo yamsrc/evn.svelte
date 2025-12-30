@@ -56,6 +56,8 @@ contacts:
       title: Contact verwijderen
       description: Je saldo met deze persoon zal verloren gaan
       confirm: Verwijderen
+  add:
+    label: Contact toevoegen
 join:
   app:
     description: >-

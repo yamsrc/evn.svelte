@@ -54,6 +54,8 @@ contacts:
       title: 連絡先を削除
       description: この相手との残高が失われます
       confirm: 削除
+  add:
+    label: 連絡先を追加
 join:
   app:
     description: 友だちと一緒に「誰が誰にいくら借りているか」をスマートに管理。

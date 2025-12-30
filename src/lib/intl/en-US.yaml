@@ -56,6 +56,8 @@ contacts:
       title: Delete contact
       description: Your balance with this person will be lost
       confirm: Delete
+  add:
+    label: Add contact
 join:
   app:
     description: The smart way to track who owes whom, together with friends.

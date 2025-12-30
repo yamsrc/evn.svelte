@@ -54,6 +54,8 @@ contacts:
       title: Kişiyi sil
       description: Bu kişiyle olan bakiyeniz kaybolacak
       confirm: Sil
+  add:
+    label: Kişi ekle
 join:
   app:
     description: >-

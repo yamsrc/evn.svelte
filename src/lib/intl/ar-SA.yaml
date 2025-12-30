@@ -54,6 +54,8 @@ contacts:
       title: حذف جهة الاتصال
       description: سيتم فقدان رصيدك مع هذا الشخص
       confirm: حذف
+  add:
+    label: إضافة جهة اتصال
 join:
   app:
     description: الطريقة الذكية لمتابعة من يدين لمن، مع الأصدقاء.

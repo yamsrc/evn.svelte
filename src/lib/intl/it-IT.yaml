@@ -56,6 +56,8 @@ contacts:
       title: Elimina contatto
       description: Il tuo saldo con questa persona andrà perso
       confirm: Elimina
+  add:
+    label: Aggiungi contatto
 join:
   app:
     description: >-

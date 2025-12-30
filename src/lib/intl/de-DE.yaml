@@ -56,6 +56,8 @@ contacts:
       title: Kontakt löschen
       description: Ihr Guthaben mit dieser Person wird verloren gehen
       confirm: Löschen
+  add:
+    label: Kontakt hinzufügen
 join:
   app:
     description: >-

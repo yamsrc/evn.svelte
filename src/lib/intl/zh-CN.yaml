@@ -54,6 +54,8 @@ contacts:
       title: 删除联系人
       description: 您与此人的余额将会丢失
       confirm: 删除
+  add:
+    label: 添加联系人
 join:
   app:
     description: 和朋友们一起智能记录谁欠谁。
