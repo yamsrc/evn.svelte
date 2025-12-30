@@ -72,7 +72,7 @@ join:
       you’re all set`
   accept: Start Using Evn
 groups:
-  leave: Hold to disband group
+  leave: Hold to leave
   name:
     description: All group members will see this name
     placeholder: Enter name
@@ -90,6 +90,7 @@ groups:
       to: |-
         !js
         (amount) => `You owe them ${amount}`
+      even: No one owes anyone anything
   create: Create group
 invite:
   share: Share

@@ -66,7 +66,7 @@ join:
       (name) => `${name} から招待されました。登録またはログインするだけで、準備完了です`
   accept: Evn を使い始める
 groups:
-  leave: 長押しでグループを解散
+  leave: 長押しして退出
   name:
     description: すべてのグループメンバーがこの名前を表示します
     placeholder: 名前を入力
@@ -84,6 +84,7 @@ groups:
       to: |-
         !js
         (amount) => `あなたは彼らに${amount}を借りています`
+      even: 誰も誰にも借りはない
   create: グループを作成
 invite:
   share: 共有

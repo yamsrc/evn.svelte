@@ -70,7 +70,7 @@ join:
       وستكون جاهزًا للبدء`
   accept: ابدأ استخدام Evn
 groups:
-  leave: اضغط مع الاستمرار لتفكيك المجموعة
+  leave: اضغط مع الاستمرار للمغادرة
   name:
     description: سيرى جميع أعضاء المجموعة هذا الاسم
     placeholder: أدخل الاسم
@@ -88,6 +88,7 @@ groups:
       to: |-
         !js
         (amount) => `أنت مدين لهم بـ${amount}`
+      even: لا أحد مدين لأحد بشيء
   create: إنشاء مجموعة
 invite:
   share: مشاركة

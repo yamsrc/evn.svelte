@@ -82,8 +82,13 @@
 
   {#if accounts.length > 0}
     <Section class="text-center">
-      <div>{$dict.groups.summary.balance.from(currency(balance.from))}</div>
-      <div>{$dict.groups.summary.balance.to(currency(balance.to))}</div>
+      {#if balance.from === 0 && balance.to === 0}
+        <div>{$dict.groups.summary.balance.even}</div>
+      {:else if balance.from > 0}
+        <div>{$dict.groups.summary.balance.from(currency(balance.from))}</div>
+      {:else if balance.to > 0}
+        <div>{$dict.groups.summary.balance.to(currency(balance.to))}</div>
+      {/if}
     </Section>
   {/if}
 

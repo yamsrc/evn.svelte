@@ -74,7 +74,7 @@ join:
       je bent klaar om te beginnen`
   accept: Evn gebruiken starten
 groups:
-  leave: Houd vast om groep te ontbinden
+  leave: Vasthouden om te verlaten
   name:
     description: Alle groepsleden kunnen deze naam zien
     placeholder: Naam invoeren
@@ -92,6 +92,7 @@ groups:
       to: |-
         !js
         (amount) => `Je bent hen ${amount} verschuldigd`
+      even: Niemand is iemand iets verschuldigd
   create: Groep aanmaken
 invite:
   share: Delen

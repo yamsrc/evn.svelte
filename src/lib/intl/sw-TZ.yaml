@@ -68,7 +68,7 @@ join:
       (name) => `${name} amekualika. Jisajili au ingia, na uko tayari kuanza`
   accept: Anza kutumia Evn
 groups:
-  leave: Shikilia kuvunja kundi
+  leave: Shikilia kuondoka
   name:
     description: Wanachama wote wa kundi wataona jina hili
     placeholder: Weka jina
@@ -88,6 +88,7 @@ groups:
       to: |-
         !js
         (amount) => `Unawadaiwa ${amount}`
+      even: Hakuna anayemdai mwingine chochote
   create: Unda kundi
 invite:
   share: Shiriki

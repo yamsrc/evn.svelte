@@ -70,7 +70,7 @@ join:
       погнали`
   accept: Вкатиться в Evn нахуй
 groups:
-  leave: Зажми, чтобы разъебать бригаду
+  leave: Зажми чтобы съебать
   name:
     placeholder: Пиши название
     description: Это название видят все уёбки
@@ -88,6 +88,7 @@ groups:
       to: |-
         !js
         (amount) => `Ты этим хуям должен ${amount}`
+      even: Все ровно
   create: Сколотить бригаду
 invite:
   share: Расшарить нахуй

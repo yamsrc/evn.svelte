@@ -88,7 +88,7 @@ export const dictionaries = {
       "accept": "ابدأ استخدام Evn"
     },
     "groups": {
-      "leave": "اضغط مع الاستمرار لتفكيك المجموعة",
+      "leave": "اضغط مع الاستمرار للمغادرة",
       "name": {
         "description": "سيرى جميع أعضاء المجموعة هذا الاسم",
         "placeholder": "أدخل الاسم"
@@ -103,7 +103,8 @@ export const dictionaries = {
       "summary": {
         "balance": {
           "from": (amount) => `أعضاء هذه المجموعة مدينون لك بـ${amount}`,
-          "to": (amount) => `أنت مدين لهم بـ${amount}`
+          "to": (amount) => `أنت مدين لهم بـ${amount}`,
+          "even": "لا أحد مدين لأحد بشيء"
         }
       },
       "create": "إنشاء مجموعة"
@@ -212,7 +213,7 @@ export const dictionaries = {
       "accept": "Jetzt mit Evn starten"
     },
     "groups": {
-      "leave": "Zum Auflösen der Gruppe gedrückt halten",
+      "leave": "Gedrückt halten zum Verlassen",
       "name": {
         "description": "Alle Gruppenmitglieder sehen diesen Namen",
         "placeholder": "Name eingeben"
@@ -227,7 +228,8 @@ export const dictionaries = {
       "summary": {
         "balance": {
           "from": (amount) => `Mitglieder dieser Gruppe schulden dir ${amount}`,
-          "to": (amount) => `Du schuldest ihnen ${amount}`
+          "to": (amount) => `Du schuldest ihnen ${amount}`,
+          "even": "Niemand schuldet jemandem etwas"
         }
       },
       "create": "Gruppe erstellen"
@@ -336,7 +338,7 @@ export const dictionaries = {
       "accept": "Start Using Evn"
     },
     "groups": {
-      "leave": "Hold to disband group",
+      "leave": "Hold to leave",
       "name": {
         "description": "All group members will see this name",
         "placeholder": "Enter name"
@@ -351,7 +353,8 @@ export const dictionaries = {
       "summary": {
         "balance": {
           "from": (amount) => `Members of this group owe you ${amount}`,
-          "to": (amount) => `You owe them ${amount}`
+          "to": (amount) => `You owe them ${amount}`,
+          "even": "No one owes anyone anything"
         }
       },
       "create": "Create group"
@@ -460,7 +463,7 @@ export const dictionaries = {
       "accept": "Comienza a usar Evn"
     },
     "groups": {
-      "leave": "Mantén pulsado para disolver el grupo",
+      "leave": "Mantén pulsado para salir",
       "name": {
         "description": "Todos los miembros del grupo verán este nombre",
         "placeholder": "Introduce el nombre"
@@ -475,7 +478,8 @@ export const dictionaries = {
       "summary": {
         "balance": {
           "from": (amount) => `Los miembros de este grupo te deben ${amount}`,
-          "to": (amount) => `Les debes ${amount}`
+          "to": (amount) => `Les debes ${amount}`,
+          "even": "Nadie le debe nada a nadie"
         }
       },
       "create": "Crear grupo"
@@ -584,7 +588,7 @@ export const dictionaries = {
       "accept": "Commencer à utiliser Evn"
     },
     "groups": {
-      "leave": "Maintenir pour dissoudre le groupe",
+      "leave": "Maintenez appuyé pour quitter",
       "name": {
         "description": "Tous les membres du groupe verront ce nom",
         "placeholder": "Saisir le nom"
@@ -599,7 +603,8 @@ export const dictionaries = {
       "summary": {
         "balance": {
           "from": (amount) => `Les membres de ce groupe te doivent ${amount}`,
-          "to": (amount) => `Vous leur devez ${amount}`
+          "to": (amount) => `Vous leur devez ${amount}`,
+          "even": "Personne ne doit rien à personne"
         }
       },
       "create": "Créer un groupe"
@@ -708,7 +713,7 @@ export const dictionaries = {
       "accept": "Evn का उपयोग शुरू करें"
     },
     "groups": {
-      "leave": "ग्रुप को भंग करने के लिए दबाकर रखें",
+      "leave": "छोड़ने के लिए दबाए रखें",
       "name": {
         "description": "सभी समूह सदस्य यह नाम देखेंगे",
         "placeholder": "नाम दर्ज करें"
@@ -723,7 +728,8 @@ export const dictionaries = {
       "summary": {
         "balance": {
           "from": (amount) => `इस समूह के सदस्य आपको ${amount} का भुगतान करते हैं`,
-          "to": (amount) => `आप उन्हें ${amount} के ऋणी हैं`
+          "to": (amount) => `आप उन्हें ${amount} के ऋणी हैं`,
+          "even": "कोई किसी का कोई कर्ज़दार नहीं है"
         }
       },
       "create": "समूह बनाएँ"
@@ -832,7 +838,7 @@ export const dictionaries = {
       "accept": "Inizia a usare Evn"
     },
     "groups": {
-      "leave": "Tieni premuto per sciogliere il gruppo",
+      "leave": "Tieni premuto per uscire",
       "name": {
         "description": "Tutti i membri del gruppo vedranno questo nome",
         "placeholder": "Inserisci nome"
@@ -847,7 +853,8 @@ export const dictionaries = {
       "summary": {
         "balance": {
           "from": (amount) => `I membri di questo gruppo ti devono ${amount}`,
-          "to": (amount) => `Devi loro ${amount}`
+          "to": (amount) => `Devi loro ${amount}`,
+          "even": "Nessuno deve niente a nessuno"
         }
       },
       "create": "Crea gruppo"
@@ -956,7 +963,7 @@ export const dictionaries = {
       "accept": "Evn を使い始める"
     },
     "groups": {
-      "leave": "長押しでグループを解散",
+      "leave": "長押しして退出",
       "name": {
         "description": "すべてのグループメンバーがこの名前を表示します",
         "placeholder": "名前を入力"
@@ -971,7 +978,8 @@ export const dictionaries = {
       "summary": {
         "balance": {
           "from": (amount) => `このグループのメンバーはあなたに${amount}の支払いがあります`,
-          "to": (amount) => `あなたは彼らに${amount}を借りています`
+          "to": (amount) => `あなたは彼らに${amount}を借りています`,
+          "even": "誰も誰にも借りはない"
         }
       },
       "create": "グループを作成"
@@ -1080,7 +1088,7 @@ export const dictionaries = {
       "accept": "Evn 시작하기"
     },
     "groups": {
-      "leave": "길게 눌러 그룹 해산",
+      "leave": "길게 눌러서 나가기",
       "name": {
         "description": "모든 그룹 구성원이 이 이름을 볼 수 있습니다",
         "placeholder": "이름 입력"
@@ -1095,7 +1103,8 @@ export const dictionaries = {
       "summary": {
         "balance": {
           "from": (amount) => `이 그룹의 구성원들이 당신에게 ${amount}을(를) 빚지고 있습니다`,
-          "to": (amount) => `당신은 그들에게 ${amount}을(를) 빚지고 있습니다`
+          "to": (amount) => `당신은 그들에게 ${amount}을(를) 빚지고 있습니다`,
+          "even": "아무도 누구에게도 빚지지 않았다"
         }
       },
       "create": "그룹 만들기"
@@ -1204,7 +1213,7 @@ export const dictionaries = {
       "accept": "Evn gebruiken starten"
     },
     "groups": {
-      "leave": "Houd vast om groep te ontbinden",
+      "leave": "Vasthouden om te verlaten",
       "name": {
         "description": "Alle groepsleden kunnen deze naam zien",
         "placeholder": "Naam invoeren"
@@ -1219,7 +1228,8 @@ export const dictionaries = {
       "summary": {
         "balance": {
           "from": (amount) => `Leden van deze groep zijn je ${amount} verschuldigd`,
-          "to": (amount) => `Je bent hen ${amount} verschuldigd`
+          "to": (amount) => `Je bent hen ${amount} verschuldigd`,
+          "even": "Niemand is iemand iets verschuldigd"
         }
       },
       "create": "Groep aanmaken"
@@ -1328,7 +1338,7 @@ export const dictionaries = {
       "accept": "Вкатиться в Evn нахуй"
     },
     "groups": {
-      "leave": "Зажми, чтобы разъебать бригаду",
+      "leave": "Зажми чтобы съебать",
       "name": {
         "placeholder": "Пиши название",
         "description": "Это название видят все уёбки"
@@ -1343,7 +1353,8 @@ export const dictionaries = {
       "summary": {
         "balance": {
           "from": (amount) => `Эти хуи тебе должны ${amount}`,
-          "to": (amount) => `Ты этим хуям должен ${amount}`
+          "to": (amount) => `Ты этим хуям должен ${amount}`,
+          "even": "Все ровно"
         }
       },
       "create": "Сколотить бригаду"
@@ -1452,7 +1463,7 @@ export const dictionaries = {
       "accept": "Начать использовать Evn"
     },
     "groups": {
-      "leave": "Удерживайте для распуска группы",
+      "leave": "Удерживайте, чтобы выйти",
       "name": {
         "description": "Все участники группы увидят это имя",
         "placeholder": "Введите имя"
@@ -1467,7 +1478,8 @@ export const dictionaries = {
       "summary": {
         "balance": {
           "from": (amount) => `Участники этой группы должны вам ${amount}`,
-          "to": (amount) => `Вы должны им ${amount}`
+          "to": (amount) => `Вы должны им ${amount}`,
+          "even": "Никто никому не должен"
         }
       },
       "create": "Создать группу"
@@ -1576,7 +1588,7 @@ export const dictionaries = {
       "accept": "Anza kutumia Evn"
     },
     "groups": {
-      "leave": "Shikilia kuvunja kundi",
+      "leave": "Shikilia kuondoka",
       "name": {
         "description": "Wanachama wote wa kundi wataona jina hili",
         "placeholder": "Weka jina"
@@ -1591,7 +1603,8 @@ export const dictionaries = {
       "summary": {
         "balance": {
           "from": (amount) => `Wanachama wa kundi hili wanakudai ${amount}`,
-          "to": (amount) => `Unawadaiwa ${amount}`
+          "to": (amount) => `Unawadaiwa ${amount}`,
+          "even": "Hakuna anayemdai mwingine chochote"
         }
       },
       "create": "Unda kundi"
@@ -1700,7 +1713,7 @@ export const dictionaries = {
       "accept": "Evn'i kullanmaya başla"
     },
     "groups": {
-      "leave": "Grubu dağıtmak için basılı tut",
+      "leave": "Ayrılmak için basılı tut",
       "name": {
         "description": "Tüm grup üyeleri bu ismi görecek",
         "placeholder": "Ad girin"
@@ -1715,7 +1728,8 @@ export const dictionaries = {
       "summary": {
         "balance": {
           "from": (amount) => `Bu grubun üyeleri sana ${amount} borçlu`,
-          "to": (amount) => `Onlara ${amount} borçlusunuz`
+          "to": (amount) => `Onlara ${amount} borçlusunuz`,
+          "even": "Kimse kimseye borçlu değil"
         }
       },
       "create": "Grup oluştur"
@@ -1824,7 +1838,7 @@ export const dictionaries = {
       "accept": "Почати користуватися Evn"
     },
     "groups": {
-      "leave": "Утримуйте, щоб розпустити групу",
+      "leave": "Утримуйте, щоб вийти",
       "name": {
         "description": "Усі учасники групи побачать це ім’я",
         "placeholder": "Введіть ім’я"
@@ -1839,7 +1853,8 @@ export const dictionaries = {
       "summary": {
         "balance": {
           "from": (amount) => `Члени цієї групи винні вам ${amount}`,
-          "to": (amount) => `Ви винні їм ${amount}`
+          "to": (amount) => `Ви винні їм ${amount}`,
+          "even": "Ніхто нікому нічого не винен"
         }
       },
       "create": "Створити групу"
@@ -1948,7 +1963,7 @@ export const dictionaries = {
       "accept": "开始使用 Evn"
     },
     "groups": {
-      "leave": "按住以解散群组",
+      "leave": "长按退出",
       "name": {
         "description": "所有群组成员都能看到这个名称",
         "placeholder": "输入名称"
@@ -1963,7 +1978,8 @@ export const dictionaries = {
       "summary": {
         "balance": {
           "from": (amount) => `该群组成员欠你${amount}`,
-          "to": (amount) => `你欠他们${amount}`
+          "to": (amount) => `你欠他们${amount}`,
+          "even": "没有人欠任何人任何东西"
         }
       },
       "create": "创建群组"

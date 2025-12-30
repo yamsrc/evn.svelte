@@ -66,7 +66,7 @@ join:
       (name) => `您已被${name}邀请。只需注册或登录，您就可以开始了`
   accept: 开始使用 Evn
 groups:
-  leave: 按住以解散群组
+  leave: 长按退出
   name:
     description: 所有群组成员都能看到这个名称
     placeholder: 输入名称
@@ -84,6 +84,7 @@ groups:
       to: |-
         !js
         (amount) => `你欠他们${amount}`
+      even: 没有人欠任何人任何东西
   create: 创建群组
 invite:
   share: 分享

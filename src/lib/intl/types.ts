@@ -108,6 +108,7 @@ export type Dictionary = {
           balance: {
             from: (value: any) => string
             to: (value: any) => string
+            even: string
           }
         }
         create: string

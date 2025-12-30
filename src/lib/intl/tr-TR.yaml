@@ -72,7 +72,7 @@ join:
       yapın, ve hazırsınız`
   accept: Evn'i kullanmaya başla
 groups:
-  leave: Grubu dağıtmak için basılı tut
+  leave: Ayrılmak için basılı tut
   name:
     description: Tüm grup üyeleri bu ismi görecek
     placeholder: Ad girin
@@ -90,6 +90,7 @@ groups:
       to: |-
         !js
         (amount) => `Onlara ${amount} borçlusunuz`
+      even: Kimse kimseye borçlu değil
   create: Grup oluştur
 invite:
   share: Paylaş

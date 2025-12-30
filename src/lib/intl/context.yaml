@@ -119,7 +119,8 @@ inputs:
       input: Start Using Evn
   groups:
     leave:
-      input: Hold to disband group
+      input: Hold to leave
+      context: button tooltip (to leave the group)
     name:
       description:
         input: All group members will see this name
@@ -143,6 +144,8 @@ inputs:
           input: "!js (amount) => Members of this group owe you ${amount}"
         to:
           input: "!js (amount) => You owe them ${amount}"
+        even:
+          input: Никто никому не должен
     create:
       input: Create group
   invite:

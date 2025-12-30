@@ -74,7 +74,7 @@ join:
       y ya está todo listo`
   accept: Comienza a usar Evn
 groups:
-  leave: Mantén pulsado para disolver el grupo
+  leave: Mantén pulsado para salir
   name:
     description: Todos los miembros del grupo verán este nombre
     placeholder: Introduce el nombre
@@ -94,6 +94,7 @@ groups:
       to: |-
         !js
         (amount) => `Les debes ${amount}`
+      even: Nadie le debe nada a nadie
   create: Crear grupo
 invite:
   share: Compartir

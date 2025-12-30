@@ -7,6 +7,7 @@
 
   const { group }: Props = $props()
   const value = $derived(group ? { name: group.name } : undefined)
+  const note = $derived(group ? undefined : $dict.groups.name.description)
   const label = $derived(group ? undefined : $dict.groups.create)
 
   async function onchange(value: Value) {
@@ -26,7 +27,7 @@
 <Cosmetics
   {value}
   placeholder={$dict.groups.name.placeholder}
-  note={$dict.groups.name.description}
+  {note}
   {label}
   {onchange}
   class="**:data-[slot=picture]:hidden"
