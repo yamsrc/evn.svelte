@@ -53,7 +53,7 @@ contacts:
     youOwe: Je bent verschuldigd
   delete:
     confirm:
-      title: Persoon verwijderen
+      title: Contact verwijderen
       description: Je saldo met deze persoon zal verloren gaan
       confirm: Verwijderen
 join:

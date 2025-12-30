@@ -51,7 +51,7 @@ contacts:
     youOwe: あなたが支払うべきです
   delete:
     confirm:
-      title: 人物を削除
+      title: 連絡先を削除
       description: この相手との残高が失われます
       confirm: 削除
 join:

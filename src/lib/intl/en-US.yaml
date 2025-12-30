@@ -53,7 +53,7 @@ contacts:
     youOwe: You owe
   delete:
     confirm:
-      title: Delete person
+      title: Delete contact
       description: Your balance with this person will be lost
       confirm: Delete
 join:

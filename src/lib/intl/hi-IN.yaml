@@ -53,7 +53,7 @@ contacts:
     youOwe: आपको देना है
   delete:
     confirm:
-      title: व्यक्ति हटाएँ
+      title: संपर्क हटाएं
       description: इस व्यक्ति के साथ आपका बैलेंस खो जाएगा
       confirm: हटाएँ
 join:

@@ -97,7 +97,7 @@ inputs:
     delete:
       confirm:
         title:
-          input: Delete person
+          input: Delete contact
         description:
           input: Your balance with this person will be lost
         confirm:

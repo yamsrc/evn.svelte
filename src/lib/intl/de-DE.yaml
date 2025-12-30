@@ -53,7 +53,7 @@ contacts:
     youOwe: Du schuldest
   delete:
     confirm:
-      title: Person löschen
+      title: Kontakt löschen
       description: Ihr Guthaben mit dieser Person wird verloren gehen
       confirm: Löschen
 join:

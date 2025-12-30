@@ -68,7 +68,7 @@ export const dictionaries = {
       },
       "delete": {
         "confirm": {
-          "title": "حذف الشخص",
+          "title": "حذف جهة الاتصال",
           "description": "سيتم فقدان رصيدك مع هذا الشخص",
           "confirm": "حذف"
         }
@@ -186,7 +186,7 @@ export const dictionaries = {
       },
       "delete": {
         "confirm": {
-          "title": "Person löschen",
+          "title": "Kontakt löschen",
           "description": "Ihr Guthaben mit dieser Person wird verloren gehen",
           "confirm": "Löschen"
         }
@@ -304,7 +304,7 @@ export const dictionaries = {
       },
       "delete": {
         "confirm": {
-          "title": "Delete person",
+          "title": "Delete contact",
           "description": "Your balance with this person will be lost",
           "confirm": "Delete"
         }
@@ -422,7 +422,7 @@ export const dictionaries = {
       },
       "delete": {
         "confirm": {
-          "title": "Eliminar persona",
+          "title": "Eliminar contacto",
           "description": "Tu saldo con esta persona se perderá",
           "confirm": "Eliminar"
         }
@@ -540,7 +540,7 @@ export const dictionaries = {
       },
       "delete": {
         "confirm": {
-          "title": "Supprimer la personne",
+          "title": "Supprimer le contact",
           "description": "Votre solde avec cette personne sera perdu",
           "confirm": "Supprimer"
         }
@@ -658,7 +658,7 @@ export const dictionaries = {
       },
       "delete": {
         "confirm": {
-          "title": "व्यक्ति हटाएँ",
+          "title": "संपर्क हटाएं",
           "description": "इस व्यक्ति के साथ आपका बैलेंस खो जाएगा",
           "confirm": "हटाएँ"
         }
@@ -776,7 +776,7 @@ export const dictionaries = {
       },
       "delete": {
         "confirm": {
-          "title": "Elimina persona",
+          "title": "Elimina contatto",
           "description": "Il tuo saldo con questa persona andrà perso",
           "confirm": "Elimina"
         }
@@ -894,7 +894,7 @@ export const dictionaries = {
       },
       "delete": {
         "confirm": {
-          "title": "人物を削除",
+          "title": "連絡先を削除",
           "description": "この相手との残高が失われます",
           "confirm": "削除"
         }
@@ -1012,7 +1012,7 @@ export const dictionaries = {
       },
       "delete": {
         "confirm": {
-          "title": "사람 삭제",
+          "title": "연락처 삭제",
           "description": "이 사람과의 잔액이 사라집니다",
           "confirm": "삭제"
         }
@@ -1130,7 +1130,7 @@ export const dictionaries = {
       },
       "delete": {
         "confirm": {
-          "title": "Persoon verwijderen",
+          "title": "Contact verwijderen",
           "description": "Je saldo met deze persoon zal verloren gaan",
           "confirm": "Verwijderen"
         }
@@ -1248,7 +1248,7 @@ export const dictionaries = {
       },
       "delete": {
         "confirm": {
-          "title": "Удалить человека",
+          "title": "Удалить контакт",
           "description": "Ваш баланс с этим человеком будет потерян",
           "confirm": "Удалить"
         }
@@ -1366,7 +1366,7 @@ export const dictionaries = {
       },
       "delete": {
         "confirm": {
-          "title": "Futa mtu",
+          "title": "Futa mawasiliano",
           "description": "Salio lako na mtu huyu litapotea",
           "confirm": "Futa"
         }
@@ -1602,7 +1602,7 @@ export const dictionaries = {
       },
       "delete": {
         "confirm": {
-          "title": "Видалити людину",
+          "title": "Видалити контакт",
           "description": "Ваш баланс із цією особою буде втрачено",
           "confirm": "Видалити"
         }
@@ -1720,7 +1720,7 @@ export const dictionaries = {
       },
       "delete": {
         "confirm": {
-          "title": "删除人员",
+          "title": "删除联系人",
           "description": "您与此人的余额将会丢失",
           "confirm": "删除"
         }

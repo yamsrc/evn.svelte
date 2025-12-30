@@ -53,7 +53,7 @@ contacts:
     youOwe: Вы должны
   delete:
     confirm:
-      title: Удалить человека
+      title: Удалить контакт
       description: Ваш баланс с этим человеком будет потерян
       confirm: Удалить
 join:

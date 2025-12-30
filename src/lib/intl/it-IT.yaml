@@ -53,7 +53,7 @@ contacts:
     youOwe: Devi
   delete:
     confirm:
-      title: Elimina persona
+      title: Elimina contatto
       description: Il tuo saldo con questa persona andrà perso
       confirm: Elimina
 join:

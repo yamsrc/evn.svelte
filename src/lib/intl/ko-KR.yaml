@@ -51,7 +51,7 @@ contacts:
     youOwe: 당신이 빚졌습니다
   delete:
     confirm:
-      title: 사람 삭제
+      title: 연락처 삭제
       description: 이 사람과의 잔액이 사라집니다
       confirm: 삭제
 join:

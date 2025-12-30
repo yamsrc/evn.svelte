@@ -51,7 +51,7 @@ contacts:
     youOwe: أنت مدين
   delete:
     confirm:
-      title: حذف الشخص
+      title: حذف جهة الاتصال
       description: سيتم فقدان رصيدك مع هذا الشخص
       confirm: حذف
 join:
