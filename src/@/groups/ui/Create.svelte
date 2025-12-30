@@ -17,5 +17,6 @@
   class="**:data-[slot=picture]:hidden"
   label={$dict.groups.create}
   note={$dict.groups.name.description}
+  placeholder={$dict.groups.name.placeholder}
   {onchange}
 />

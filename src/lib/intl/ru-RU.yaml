@@ -75,6 +75,7 @@ groups:
   leave: Удерживайте для распуска группы
   name:
     description: Все участники группы увидят это имя
+    placeholder: Введите имя
   members:
     title: Участники
     addMembers: Добавить участников

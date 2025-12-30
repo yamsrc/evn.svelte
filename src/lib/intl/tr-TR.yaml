@@ -75,6 +75,7 @@ groups:
   leave: Grubu dağıtmak için basılı tut
   name:
     description: Tüm grup üyeleri bu ismi görecek
+    placeholder: Ad girin
   members:
     title: Üyeler
     addMembers: Üyeleri ekle

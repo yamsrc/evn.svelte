@@ -90,7 +90,8 @@ export const dictionaries = {
     "groups": {
       "leave": "اضغط مع الاستمرار لتفكيك المجموعة",
       "name": {
-        "description": "سيرى جميع أعضاء المجموعة هذا الاسم"
+        "description": "سيرى جميع أعضاء المجموعة هذا الاسم",
+        "placeholder": "أدخل الاسم"
       },
       "members": {
         "title": "الأعضاء",
@@ -213,7 +214,8 @@ export const dictionaries = {
     "groups": {
       "leave": "Zum Auflösen der Gruppe gedrückt halten",
       "name": {
-        "description": "Alle Gruppenmitglieder sehen diesen Namen"
+        "description": "Alle Gruppenmitglieder sehen diesen Namen",
+        "placeholder": "Name eingeben"
       },
       "members": {
         "title": "Mitglieder",
@@ -336,7 +338,8 @@ export const dictionaries = {
     "groups": {
       "leave": "Hold to disband group",
       "name": {
-        "description": "All group members will see this name"
+        "description": "All group members will see this name",
+        "placeholder": "Enter name"
       },
       "members": {
         "title": "Members",
@@ -459,7 +462,8 @@ export const dictionaries = {
     "groups": {
       "leave": "Mantén pulsado para disolver el grupo",
       "name": {
-        "description": "Todos los miembros del grupo verán este nombre"
+        "description": "Todos los miembros del grupo verán este nombre",
+        "placeholder": "Introduce el nombre"
       },
       "members": {
         "title": "Miembros",
@@ -582,7 +586,8 @@ export const dictionaries = {
     "groups": {
       "leave": "Maintenir pour dissoudre le groupe",
       "name": {
-        "description": "Tous les membres du groupe verront ce nom"
+        "description": "Tous les membres du groupe verront ce nom",
+        "placeholder": "Saisir le nom"
       },
       "members": {
         "title": "Membres",
@@ -705,7 +710,8 @@ export const dictionaries = {
     "groups": {
       "leave": "ग्रुप को भंग करने के लिए दबाकर रखें",
       "name": {
-        "description": "सभी समूह सदस्य यह नाम देखेंगे"
+        "description": "सभी समूह सदस्य यह नाम देखेंगे",
+        "placeholder": "नाम दर्ज करें"
       },
       "members": {
         "title": "सदस्य",
@@ -828,7 +834,8 @@ export const dictionaries = {
     "groups": {
       "leave": "Tieni premuto per sciogliere il gruppo",
       "name": {
-        "description": "Tutti i membri del gruppo vedranno questo nome"
+        "description": "Tutti i membri del gruppo vedranno questo nome",
+        "placeholder": "Inserisci nome"
       },
       "members": {
         "title": "Membri",
@@ -951,7 +958,8 @@ export const dictionaries = {
     "groups": {
       "leave": "長押しでグループを解散",
       "name": {
-        "description": "すべてのグループメンバーがこの名前を表示します"
+        "description": "すべてのグループメンバーがこの名前を表示します",
+        "placeholder": "名前を入力"
       },
       "members": {
         "title": "メンバー",
@@ -1074,7 +1082,8 @@ export const dictionaries = {
     "groups": {
       "leave": "길게 눌러 그룹 해산",
       "name": {
-        "description": "모든 그룹 구성원이 이 이름을 볼 수 있습니다"
+        "description": "모든 그룹 구성원이 이 이름을 볼 수 있습니다",
+        "placeholder": "이름 입력"
       },
       "members": {
         "title": "회원",
@@ -1197,7 +1206,8 @@ export const dictionaries = {
     "groups": {
       "leave": "Houd vast om groep te ontbinden",
       "name": {
-        "description": "Alle groepsleden kunnen deze naam zien"
+        "description": "Alle groepsleden kunnen deze naam zien",
+        "placeholder": "Naam invoeren"
       },
       "members": {
         "title": "Leden",
@@ -1242,7 +1252,7 @@ export const dictionaries = {
       "close": "Прикрыть лавочку",
       "cheques": {
         "title": "Ебаные чеки",
-        "scan": "Просканить эту хуйню",
+        "scan": "Просканить",
         "input": "Вбить руками"
       },
       "contacts": {
@@ -1320,7 +1330,8 @@ export const dictionaries = {
     "groups": {
       "leave": "Зажми, чтобы разъебать бригаду",
       "name": {
-        "description": "Это название увидят все эти уёбки"
+        "placeholder": "Пиши название",
+        "description": "Это название видят все уёбки"
       },
       "members": {
         "title": "Состав",
@@ -1334,7 +1345,8 @@ export const dictionaries = {
           "from": (amount) => `Эти хуи тебе должны ${amount}`,
           "to": (amount) => `Ты этим хуям должен ${amount}`
         }
-      }
+      },
+      "create": "Сколотить бригаду"
     },
     "invite": {
       "share": "Расшарить нахуй",
@@ -1442,7 +1454,8 @@ export const dictionaries = {
     "groups": {
       "leave": "Удерживайте для распуска группы",
       "name": {
-        "description": "Все участники группы увидят это имя"
+        "description": "Все участники группы увидят это имя",
+        "placeholder": "Введите имя"
       },
       "members": {
         "title": "Участники",
@@ -1565,7 +1578,8 @@ export const dictionaries = {
     "groups": {
       "leave": "Shikilia kuvunja kundi",
       "name": {
-        "description": "Wanachama wote wa kundi wataona jina hili"
+        "description": "Wanachama wote wa kundi wataona jina hili",
+        "placeholder": "Weka jina"
       },
       "members": {
         "title": "Wanachama",
@@ -1688,7 +1702,8 @@ export const dictionaries = {
     "groups": {
       "leave": "Grubu dağıtmak için basılı tut",
       "name": {
-        "description": "Tüm grup üyeleri bu ismi görecek"
+        "description": "Tüm grup üyeleri bu ismi görecek",
+        "placeholder": "Ad girin"
       },
       "members": {
         "title": "Üyeler",
@@ -1811,7 +1826,8 @@ export const dictionaries = {
     "groups": {
       "leave": "Утримуйте, щоб розпустити групу",
       "name": {
-        "description": "Усі учасники групи побачать це ім’я"
+        "description": "Усі учасники групи побачать це ім’я",
+        "placeholder": "Введіть ім’я"
       },
       "members": {
         "title": "Учасники",
@@ -1934,7 +1950,8 @@ export const dictionaries = {
     "groups": {
       "leave": "按住以解散群组",
       "name": {
-        "description": "所有群组成员都能看到这个名称"
+        "description": "所有群组成员都能看到这个名称",
+        "placeholder": "输入名称"
       },
       "members": {
         "title": "成员",

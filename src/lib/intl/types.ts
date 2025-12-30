@@ -95,6 +95,7 @@ export type Dictionary = {
         leave: string
         name: {
           description: string
+          placeholder: string
         }
         members: {
           title: string

@@ -77,6 +77,7 @@ groups:
   leave: Houd vast om groep te ontbinden
   name:
     description: Alle groepsleden kunnen deze naam zien
+    placeholder: Naam invoeren
   members:
     title: Leden
     addMembers: Leden toevoegen

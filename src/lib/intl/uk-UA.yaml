@@ -75,6 +75,7 @@ groups:
   leave: Утримуйте, щоб розпустити групу
   name:
     description: Усі учасники групи побачать це ім’я
+    placeholder: Введіть ім’я
   members:
     title: Учасники
     addMembers: Додати учасників

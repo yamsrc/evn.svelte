@@ -71,6 +71,7 @@ groups:
   leave: Shikilia kuvunja kundi
   name:
     description: Wanachama wote wa kundi wataona jina hili
+    placeholder: Weka jina
   members:
     title: Wanachama
     addMembers: Ongeza wanachama

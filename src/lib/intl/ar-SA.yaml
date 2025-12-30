@@ -73,6 +73,7 @@ groups:
   leave: اضغط مع الاستمرار لتفكيك المجموعة
   name:
     description: سيرى جميع أعضاء المجموعة هذا الاسم
+    placeholder: أدخل الاسم
   members:
     title: الأعضاء
     addMembers: إضافة أعضاء

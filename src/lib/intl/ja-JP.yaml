@@ -69,6 +69,7 @@ groups:
   leave: 長押しでグループを解散
   name:
     description: すべてのグループメンバーがこの名前を表示します
+    placeholder: 名前を入力
   members:
     title: メンバー
     addMembers: メンバーを追加

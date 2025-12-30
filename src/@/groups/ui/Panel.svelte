@@ -8,7 +8,7 @@
   import { Picture } from '@/accounts/ui'
   import { Balance } from '@/app/ui'
   import { account } from '@/iam'
-  import type { Props } from './Group'
+  import type { Props } from './Panel'
 
   let { group, selected = $bindable(), onselect }: Props = $props()
 

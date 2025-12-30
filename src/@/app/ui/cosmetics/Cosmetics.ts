@@ -2,6 +2,7 @@ import type { HTMLInputAttributes } from 'svelte/elements'
 
 export interface Props {
   value?: Value
+  placeholder?: string
   label?: string
   note?: string
   class?: string

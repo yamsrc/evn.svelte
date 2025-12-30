@@ -123,6 +123,9 @@ inputs:
     name:
       description:
         input: All group members will see this name
+      placeholder:
+        input: Enter name
+        context: input placeholder for a group name
     members:
       title:
         input: Members

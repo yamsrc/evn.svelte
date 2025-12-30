@@ -75,6 +75,7 @@ groups:
   leave: Hold to disband group
   name:
     description: All group members will see this name
+    placeholder: Enter name
   members:
     title: Members
     addMembers: Add members

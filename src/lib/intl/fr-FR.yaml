@@ -75,6 +75,7 @@ groups:
   leave: Maintenir pour dissoudre le groupe
   name:
     description: Tous les membres du groupe verront ce nom
+    placeholder: Saisir le nom
   members:
     title: Membres
     addMembers: Ajouter des membres

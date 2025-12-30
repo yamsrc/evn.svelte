@@ -77,6 +77,7 @@ groups:
   leave: Mantén pulsado para disolver el grupo
   name:
     description: Todos los miembros del grupo verán este nombre
+    placeholder: Introduce el nombre
   members:
     title: Miembros
     addMembers: Agregar miembros

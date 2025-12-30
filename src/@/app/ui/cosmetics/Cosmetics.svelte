@@ -6,7 +6,15 @@
   import Picture from './Picture.svelte'
   import type { Props, Value } from './Cosmetics'
 
-  const { value, label, note, class: classes, autocomplete, onchange }: Props = $props()
+  const {
+    value,
+    placeholder,
+    label,
+    note,
+    class: classes,
+    autocomplete,
+    onchange,
+  }: Props = $props()
   const blank = $derived(label !== undefined)
 
   let name = $derived(value?.name ?? '')
@@ -42,7 +50,7 @@
     <Picture bind:id={picture} onchange={onPictureChange} />
   </div>
   <div class="space-y-2">
-    <Name bind:value={name} bind:busy onchange={onNameChange} {autocomplete} />
+    <Name bind:value={name} bind:busy onchange={onNameChange} {autocomplete} {placeholder} />
     {#if note}
       <p class="text-muted-foreground text-sm text-center">{note}</p>
     {/if}

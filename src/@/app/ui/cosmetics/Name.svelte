@@ -9,6 +9,7 @@
     value = $bindable(''),
     busy = $bindable(false),
     autocomplete = 'off',
+    placeholder = $dict.form.enterName,
     onchange,
     class: classes,
   }: Props = $props()
@@ -45,7 +46,7 @@
     name="name"
     type="text"
     {autocomplete}
-    placeholder={$dict.form.enterName}
+    {placeholder}
     class={cn('text-center text-3xl font-bold', classes)}
     required
     disabled={busy}

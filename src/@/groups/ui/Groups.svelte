@@ -5,7 +5,7 @@
   import { buttonVariants } from '$ui/button'
   import * as Collapsible from '$ui/collapsible'
   import { filter } from '@/groups'
-  import Group from './Group.svelte'
+  import Group from './Panel.svelte'
   import type { Props } from './Groups'
 
   let { groups, title, selection = $bindable(), search }: Props = $props()

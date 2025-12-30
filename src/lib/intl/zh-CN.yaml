@@ -69,6 +69,7 @@ groups:
   leave: 按住以解散群组
   name:
     description: 所有群组成员都能看到这个名称
+    placeholder: 输入名称
   members:
     title: 成员
     addMembers: 添加成员
