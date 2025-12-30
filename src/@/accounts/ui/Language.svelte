@@ -1,11 +1,11 @@
 <script lang="ts">
   import { locale } from '$lib/intl'
   import { Select, SelectTrigger, SelectContent, SelectItem } from '$ui/select'
-  import { update } from '@/iam'
+  import { set } from '@/iam'
   import { options } from './Language'
 
-  async function change(locale: string) {
-    await update({ locale })
+  function change(locale: string) {
+    set({ locale })
   }
 </script>
 
