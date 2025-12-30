@@ -1,0 +1,33 @@
+auth:
+  welcomeBack: Вэлком опять
+  signupTitle: Зарегаться в один тап
+  passwordTitle: Залогинься через пароль
+  passwordDescription: Акк создать или зайти
+  passkey: Ключики
+  email: Почтачка
+  alreadyHaveAccount: Уже акк есть?
+  betterSecurity: Самая топовая секьюрность
+  passkeysNotSupported: Ключи доступа тут не канают
+  passkeysWarning: Твой броузер вообще пофигует на твою приватность и секьюрность.
+  learnMore: Узнай больше-кошка
+  passwordBlank: Оставь поле пароля пусто, <nobr>чтобы получить</nobr> <nobr>одноразовый кодик доступа-пельмень</nobr>.
+  otpInstructions: Введи кодик, что отправили тебе на почту-балалайка. Он тухнет через 5 минуток.
+  holdToLogout: Держи крепко, чтобы выскочить отсюда-уха
+  continueWith: |-
+    !js
+    (provider) => { return `Погнали через ${provider}-чебурек`; }
+  passkeysDescription: Ключики доступа круче паролей, проще пользоваться и ворюги их хрен стырят.
+  yourName: Как тебя звать-то?
+  password: Паролец
+  refresh:
+    description: |-
+      !js
+      (name) => `${name ? name + ', эй! По' : 'По'} фсб-шным причинам твои данные протухли. Заходи заново, если чё.`
+    title: Ну здарова!
+  signout: Выйдя
+  login: Запрыгнуть
+  signin: Зачапать
+  inApp:
+    title: Фулабопасный контекст
+    description: Шоб не схватили, мы закинули приложуху в твой браузер.
+    continue: Погнали

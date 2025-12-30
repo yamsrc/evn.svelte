@@ -17,6 +17,7 @@ const options: Option<Locale>[] = [
   { value: 'sw-TZ', label: 'Swahili' },
   { value: 'tr-TR', label: 'Türkçe' },
   { value: 'uk-UA', label: 'Українська' },
+  { value: 'ru-FU', label: 'Русскей' },
 ] as const
 
 export { options }

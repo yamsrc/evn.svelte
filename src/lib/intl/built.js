@@ -1222,6 +1222,127 @@ export const dictionaries = {
       }
     }
   },
+  "ru-FU": {
+    "native": "Русскей",
+    "locale": "ru-RU",
+    "actions": {
+      "continue": "Погнали дальше",
+      "holdToLogout": "Зажми и съеби",
+      "signout": "Съебаться",
+      "close": "Закрыть нахуй",
+      "cheques": {
+        "title": "Ебаные чеки",
+        "scan": "Сканить эту хуйню",
+        "input": "Вбить вручную"
+      },
+      "contacts": {
+        "group": "Тусовка",
+        "title": "Кореша",
+        "contact": "Кореш"
+      },
+      "addSelected": "Закинуть выбранное",
+      "cancel": "Похуй",
+      "search": "Рыскать"
+    },
+    "nav": {
+      "home": "Хата",
+      "evns": "Разборки",
+      "profile": "Я, блять",
+      "contacts": "Кореша"
+    },
+    "terms": "Условия и прочая херня",
+    "privacy": "Политика, хуй пойми какая",
+    "madeBy": "Слеплено какими-то типами",
+    "profile": {
+      "title": "Мой ебучий профиль",
+      "language": {
+        "title": "Язык",
+        "description": "На распознавание чеков это дерьмо не влияет. Мы и так шарим почти за всё."
+      }
+    },
+    "form": {
+      "enterName": "Впиши своё погоняло"
+    },
+    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
+    "onboarding": {
+      "name": {
+        "title": "Твой штрих",
+        "description": "Как тебя будут обзывать в приложухе"
+      }
+    },
+    "contacts": {
+      "title": "Кореша",
+      "empty": {
+        "title": "Пиздец как пусто",
+        "description": "Добавь корешей руками или зазови этих долбоёбов",
+        "invite": {
+          "share": "Позвать корешей",
+          "qr": "Позвать по QR-хуеру",
+          "manual": "Добавить вручную"
+        }
+      },
+      "all": "Все кореша",
+      "contact": {
+        "owesYou": "Этот хер тебе должен",
+        "youOwe": "Ты этому херу должен"
+      },
+      "delete": {
+        "confirm": {
+          "title": "Выпилить кореша",
+          "description": "Все расчёты с этим типом пойдут нахуй",
+          "confirm": "Выпилить к хуям"
+        }
+      },
+      "add": {
+        "label": "Добавить кореша"
+      }
+    },
+    "join": {
+      "app": {
+        "description": "Норм тема — считать, кто кому, блять, торчит, вместе с корешами."
+      },
+      "inviter": {
+        "description": (name) => `Тебя, сука, зазвал(а) ${name}. Просто залогинься или зарегайся — и поехали`
+      },
+      "accept": "Вкатиться в Evn нахуй"
+    },
+    "groups": {
+      "leave": "Зажми, чтобы разъебать тусу",
+      "name": {
+        "description": "Это название увидят все эти ебланы"
+      },
+      "members": {
+        "title": "Эти типы",
+        "addMembers": "Добавить народ",
+        "addMember": "Добавить чела",
+        "empty": "Тут пока нихуя нет. Закинь людей — и можно мутить движ."
+      },
+      "title": "Тусовки",
+      "summary": {
+        "balance": {
+          "from": (amount) => `Эти пидоры тебе должны ${amount}`,
+          "to": (amount) => `Ты этим пидорам должен ${amount}`
+        }
+      }
+    },
+    "invite": {
+      "share": "Расшарить нахуй",
+      "qr": "Показать QR",
+      "invite": "Позвать"
+    },
+    "etc": {
+      "or": "или, блять"
+    },
+    "account": {
+      "delete": {
+        "button": "Убить аккаунт",
+        "title": "Убить аккаунт",
+        "description": "Мы нахуй сотрём твой аккаунт и всё связанное дерьмо. Отмены не будет.",
+        "sorry": "Ну сорян, что ты сваливаешь.",
+        "hold": "Зажми и подтверди, сука"
+      }
+    }
+  },
   "ru-RU": {
     "native": "Русский",
     "locale": "ru-RU",
@@ -1835,4 +1956,4 @@ export const dictionaries = {
 };
 
 /** @type {import('./types').Locale[]} */
-export const locales = ["ar-SA","de-DE","en-US","es-ES","fr-FR","hi-IN","it-IT","ja-JP","ko-KR","nl-NL","ru-RU","sw-TZ","tr-TR","uk-UA","zh-CN"];
+export const locales = ["ar-SA","de-DE","en-US","es-ES","fr-FR","hi-IN","it-IT","ja-JP","ko-KR","nl-NL","ru-FU","ru-RU","sw-TZ","tr-TR","uk-UA","zh-CN"];

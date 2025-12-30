@@ -362,39 +362,73 @@ export const dictionaries = {
       }
     }
   },
+  "ru-FU": {
+    "auth": {
+      "welcomeBack": "Вэлком опять",
+      "signupTitle": "Зарегаться в один тап",
+      "passwordTitle": "Залогинься через пароль",
+      "passwordDescription": "Акк создать или зайти",
+      "passkey": "Ключики",
+      "email": "Почтачка",
+      "alreadyHaveAccount": "Уже акк есть?",
+      "betterSecurity": "Самая топовая секьюрность",
+      "passkeysNotSupported": "Ключи доступа тут не канают",
+      "passkeysWarning": "Твой броузер вообще пофигует на твою приватность и секьюрность.",
+      "learnMore": "Узнай больше-кошка",
+      "passwordBlank": "Оставь поле пароля пусто, <nobr>чтобы получить</nobr> <nobr>одноразовый кодик доступа-пельмень</nobr>.",
+      "otpInstructions": "Введи кодик, что отправили тебе на почту-балалайка. Он тухнет через 5 минуток.",
+      "holdToLogout": "Держи крепко, чтобы выскочить отсюда-уха",
+      "continueWith": (provider) => { return `Погнали через ${provider}-чебурек`; },
+      "passkeysDescription": "Ключики доступа круче паролей, проще пользоваться и ворюги их хрен стырят.",
+      "yourName": "Как тебя звать-то?",
+      "password": "Паролец",
+      "refresh": {
+        "description": (name) => `${name ? name + ', эй! По' : 'По'} фсб-шным причинам твои данные протухли. Заходи заново, если чё.`,
+        "title": "Ну здарова!"
+      },
+      "signout": "Выйдя",
+      "login": "Запрыгнуть",
+      "signin": "Зачапать",
+      "inApp": {
+        "title": "Фулабопасный контекст",
+        "description": "Шоб не схватили, мы закинули приложуху в твой браузер.",
+        "continue": "Погнали"
+      }
+    }
+  },
   "ru-RU": {
     "auth": {
-      "welcomeBack": "Добро пожаловать обратно",
-      "signupTitle": "Регистрация одним касанием",
-      "passwordTitle": "Войдите с паролем",
-      "passwordDescription": "Создать аккаунт или войти",
-      "passkey": "Ключи",
-      "email": "Почта",
-      "alreadyHaveAccount": "Уже есть аккаунт?",
-      "betterSecurity": "Лучшая безопасность",
-      "passkeysNotSupported": "Ключи доступа не поддерживаются",
-      "passkeysWarning": "Ваш браузер не уважает вашу конфиденциальность и безопасность.",
-      "learnMore": "Узнать больше",
-      "passwordBlank": "Оставьте поле пароля пустым, <nobr>чтобы получить</nobr> <nobr>одноразовый код доступа</nobr>.",
-      "otpInstructions": "Введите код, отправленный на вашу электронную почту. Он истекает через 5 минут.",
-      "holdToLogout": "Удерживайте для выхода",
+      "welcomeBack": "О, ты снова тут, епта",
+      "signupTitle": "Регистрация в один тык",
+      "passwordTitle": "Заходи по паролю",
+      "passwordDescription": "Зарегаться или ввалиться",
+      "passkey": "Ключи, блять",
+      "email": "Мыло",
+      "alreadyHaveAccount": "Уже есть акк, хули?",
+      "betterSecurity": "Защита покруче",
+      "passkeysNotSupported": "Ключи нихуя не поддерживаются",
+      "passkeysWarning": "Твой браузер кладёт хуй на твою приватность и безопасность.",
+      "learnMore": "Чё за хуйня?",
+      "passwordBlank": "Оставь пароль пустым, <nobr>чтоб получить</nobr> <nobr>одноразовый код, сука</nobr>.",
+      "otpInstructions": "Вбей код, который мы закинули тебе на мыло. Через 5 минут он сдохнет.",
+      "holdToLogout": "Зажми и съеби",
       "continueWith": (provider) => {
-  return `Продолжить с ${provider}`
+  return `Продолжить с ${provider}, нахуй`
 },
-      "passkeysDescription": "Ключи доступа безопаснее паролей, проще в использовании и их невозможно украсть.",
-      "yourName": "Ваше имя",
-      "password": "Пароль",
+      "passkeysDescription": "Ключи охуеннее паролей: безопаснее, проще и их хрен украдёшь.",
+      "yourName": "Твоё погоняло",
+      "password": "Пароль, блять",
       "refresh": {
-        "description": (name) => `${name ? name + ", по" : "По"} соображениям безопасности срок действия ваших учетных данных истёк. Пожалуйста, выполните повторный вход, чтобы продолжить.`,
-        "title": "С возвращением"
+        "description": (name) => `${name ? name + ", по" : "По"} соображениям безопасности твоя сессия, сука, протухла. Залогинься ещё раз, если хочешь продолжить.`,
+        "title": "Ну здарова опять"
       },
-      "signout": "Выйти",
-      "login": "Войти",
-      "signin": "Войти",
+      "signout": "Съебаться",
+      "login": "Ввалиться",
+      "signin": "Ввалиться",
       "inApp": {
-        "title": "Небезопасный контекст",
-        "description": "Для вашей безопасности мы открыли приложение в вашем браузере.",
-        "continue": "Продолжить"
+        "title": "Опасная хуйня",
+        "description": "Ради твоей же безопасности мы открыли это дерьмо в браузере.",
+        "continue": "Погнали дальше"
       }
     }
   },
@@ -545,4 +579,4 @@ export const dictionaries = {
 };
 
 /** @type {import('./types').Locale[]} */
-export const locales = ["ar-SA","de-DE","en-US","es-ES","fr-FR","hi-IN","it-IT","ja-JP","ko-KR","nl-NL","ru-RU","sw-TZ","tr-TR","uk-UA","zh-CN"];
+export const locales = ["ar-SA","de-DE","en-US","es-ES","fr-FR","hi-IN","it-IT","ja-JP","ko-KR","nl-NL","ru-FU","ru-RU","sw-TZ","tr-TR","uk-UA","zh-CN"];

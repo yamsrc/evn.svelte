@@ -142,6 +142,20 @@ export const dictionaries = {
       }
     }
   },
+  "ru-FU": {
+    "title": "Фидбек",
+    "description": "Нам реально важно знать, что вы думаете! Закиньте сюда свои мысли, фидбеки или какие-нибудь идеи.",
+    "send": "Закинуть",
+    "form": {
+      "email": {
+        "description": "Можешь вписать свой e-mail, если хочешь получить ответ (не обязалово).",
+        "placeholder": "Твой e-mail"
+      },
+      "message": {
+        "placeholder": "Чё хочешь написать?"
+      }
+    }
+  },
   "ru-RU": {
     "title": "Отзыв",
     "description": "Нам важно ваше мнение! Пожалуйста, поделитесь своими мыслями, отзывами и предложениями.",
@@ -215,4 +229,4 @@ export const dictionaries = {
 };
 
 /** @type {import('./types').Locale[]} */
-export const locales = ["ar-SA","de-DE","en-US","es-ES","fr-FR","hi-IN","it-IT","ja-JP","ko-KR","nl-NL","ru-RU","sw-TZ","tr-TR","uk-UA","zh-CN"];
+export const locales = ["ar-SA","de-DE","en-US","es-ES","fr-FR","hi-IN","it-IT","ja-JP","ko-KR","nl-NL","ru-FU","ru-RU","sw-TZ","tr-TR","uk-UA","zh-CN"];
