@@ -38,21 +38,26 @@
   )}
 >
   <div bind:this={container} class="flex w-full overflow-x-auto snap-x snap-mandatory no-scrollbar">
-    <div class="min-w-full shrink-0 snap-start z-10">
+    <div class="w-full shrink-0 snap-start z-10">
       <Button
-        class={cn('w-full justify-between gap-2 text-base', h || 'h-auto', classes, {
-          'bg-accent dark:bg-accent': selected,
-        })}
+        class={cn(
+          'w-full max-w-full flex items-center justify-between gap-2 text-base',
+          h || 'h-auto',
+          classes,
+          {
+            'bg-accent dark:bg-accent': selected,
+          },
+        )}
         {variant}
         {...props}
       >
-        <div class="flex items-center gap-2 w-full">
+        <div class="flex items-center justify-start gap-2 shrink overflow-hidden">
           {#if icon}
-            {@render icon()}
+            <div class="shrink-0">
+              {@render icon()}
+            </div>
           {/if}
-          <div>
-            {@render left()}
-          </div>
+          {@render left()}
         </div>
         <div>
           {@render right?.()}

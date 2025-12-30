@@ -36,10 +36,8 @@
     <Picture {account} class="size-8" />
   {/snippet}
   {#snippet left()}
-    <div class="w-full flex items-center gap-2">
-      <div class="flex justify-between items-center">
-        <div>{account.name}</div>
-      </div>
+    <div class="overflow-hidden text-ellipsis whitespace-nowrap min-w-0">
+      {account.name}
     </div>
   {/snippet}
   {#snippet right()}
