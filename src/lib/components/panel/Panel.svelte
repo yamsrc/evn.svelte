@@ -40,7 +40,7 @@
   <div bind:this={container} class="flex w-full overflow-x-auto snap-x snap-mandatory no-scrollbar">
     <div class="min-w-full shrink-0 snap-start z-10">
       <Button
-        class={cn('w-full justify-between gap-2', h || 'h-auto', classes, {
+        class={cn('w-full justify-between gap-2 text-base', h || 'h-auto', classes, {
           'bg-accent dark:bg-accent': selected,
         })}
         {variant}
