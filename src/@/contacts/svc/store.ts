@@ -18,14 +18,14 @@ export const internal = collection({
 
 events.on('default.contacts.sync', (contact) => sync(internal, contact))
 
-export const contacts = derived<[typeof internal, typeof account], Maybe<Contact[]>>([internal, account], ([$contacts, $account], set, update) => {
+export const contacts = derived<[typeof internal, typeof account], Maybe<Contact[]>>([internal, account], ([$contacts, $me], set, update) => {
   if (!ok($contacts))
     return set($contacts)
 
-  if (!ok($account))
-    return set($account)
+  if (!ok($me))
+    return set($me)
 
-  const values = $contacts.map((contact) => map(contact, $account.id))
+  const values = $contacts.map((contact) => map(contact, $me.id))
 
   set(values)
 
@@ -39,7 +39,9 @@ export const contacts = derived<[typeof internal, typeof account], Maybe<Contact
       if (i < 0 || !values[i])
         return values
 
-      values[i] = { ...values[i], account }
+      const managed = account.overlord === $me.id
+
+      values[i] = { ...values[i], account, managed }
 
       return values
     })))

@@ -5,4 +5,5 @@ import type { Maybe } from 'svas'
 export interface Contact extends net.Contact {
   identity: string
   account: Maybe<Account>
+  managed: boolean
 }

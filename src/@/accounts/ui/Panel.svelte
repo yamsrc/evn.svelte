@@ -3,9 +3,17 @@
   import { cn } from '$lib/utils'
   import { Picture } from '@/accounts/ui'
   import { Balance } from '@/app/ui'
-  import type { Props } from './Item'
+  import type { Props } from './Panel'
 
-  let { account, balance, selected = $bindable(), onselect, action, actions }: Props = $props()
+  let {
+    account,
+    balance,
+    selected = $bindable(),
+    onselect,
+    action,
+    actions,
+    class: classes,
+  }: Props = $props()
 
   function onclick(event: MouseEvent) {
     if (selected !== undefined && onselect) {
@@ -15,12 +23,15 @@
     }
   }
 
-  const panelProps = $derived(
-    actions && action ? { actions, action } : ({} as { actions?: never; action?: never }),
-  )
+  const actionProps = $derived(action && actions ? { action, actions } : {})
 </script>
 
-<Panel {selected} class={cn('bg-card border border-border h-14')} {onclick} {...panelProps}>
+<Panel
+  {selected}
+  class={cn('bg-card border border-border h-14', classes)}
+  {onclick}
+  {...actionProps}
+>
   {#snippet icon()}
     <Picture {account} class="size-8" />
   {/snippet}

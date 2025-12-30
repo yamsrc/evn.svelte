@@ -3,7 +3,8 @@
   import { Pencil } from '@lucide/svelte'
   import { ok } from 'svas'
   import { dict } from '$lib/intl'
-  import { Item } from '@/accounts/ui'
+  import { cn } from '$lib/utils'
+  import { Panel } from '@/accounts/ui'
   import { Confirm } from '@/app/ui'
   import * as contacts from '@/contacts'
   import type { Action } from '$com/panel'
@@ -18,34 +19,34 @@
     confirmDelete = false
   }
 
-  const actions: Action[] = [
-    {
-      id: 'favorite',
-      class: 'bg-foreground hover:bg-foreground/80',
-      onclick: () => {},
+  const fav: Action = $derived({
+    id: 'favorite',
+    onclick: () => {},
+  })
+
+  const edit: Action = $derived({
+    id: 'edit',
+    href: `/contacts/${contact.id}/`,
+  })
+
+  const del: Action = $derived({
+    id: 'delete',
+    onclick: () => {
+      confirmDelete = true
     },
-    {
-      id: 'edit',
-      class: 'bg-foreground hover:bg-foreground/80',
-      onclick: () => {},
-    },
-    {
-      id: 'delete',
-      class: 'bg-foreground hover:bg-foreground/80',
-      onclick: () => {
-        confirmDelete = true
-      },
-    },
-  ]
+  })
+
+  const actions = $derived(contact.managed ? [fav, edit, del] : [fav, del])
 </script>
 
 {#if ok(contact.account)}
-  <Item
+  <Panel
     account={contact.account}
     balance={contact.balance}
     {selected}
     {onselect}
     actions={actionable ? actions : []}
+    class={cn('font-normal', contact.managed && 'text-muted-foreground')}
   >
     {#snippet action(id)}
       {#if id === 'favorite'}
@@ -53,10 +54,10 @@
       {:else if id === 'edit'}
         <Pencil size={16} class="text-background" />
       {:else if id === 'delete'}
-        <Trash2 size={16} class="text-background" />
+        <Trash2 size={16} class="text-destructive" />
       {/if}
     {/snippet}
-  </Item>
+  </Panel>
 {/if}
 
 <Confirm

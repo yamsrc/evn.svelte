@@ -3,6 +3,7 @@ export interface Account {
   name: string
   picture: string
   locale?: string
+  overlord?: string | null
   _created: number
   _version: number
 }
