@@ -76,10 +76,7 @@
 </Button>
 
 <AlertDialog.Root bind:open>
-  <AlertDialog.Content
-    class="max-w-sm max-h-sm bg-transparent border-none"
-    interactOutsideBehavior="close"
-  >
+  <AlertDialog.Content class="max-w-sm bg-transparent border-none" interactOutsideBehavior="close">
     <div class="flex justify-center size-full">
       <div bind:this={qrContainer} class="[&>svg]:size-full"></div>
     </div>
