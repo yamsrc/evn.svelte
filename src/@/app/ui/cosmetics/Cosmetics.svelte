@@ -31,7 +31,7 @@
   }
 
   function onclick() {
-    if (busy || name === '') return
+    if (busy || name.trim() === '') return
 
     changed()
   }
