@@ -2,7 +2,7 @@
   import { page } from '$app/state'
   import { Loader } from '$com/loader'
   import { Screen } from '$com/shell'
-  import { Footer } from '@/app'
+  import { Footer } from '@/app/ui'
   import { Authenticated } from '@/iam/ui'
   import { Languages } from '@/iam/ui'
   import Invitation from './Invitation.svelte'
