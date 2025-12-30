@@ -30,8 +30,8 @@ export const dictionaries = {
       "profile": "أنا",
       "contacts": "الأصدقاء"
     },
-    "terms": "Terms & conditions",
-    "privacy": "Privacy policy",
+    "terms": "الشروط والأحكام",
+    "privacy": "سياسة الخصوصية",
     "madeBy": "من صنع",
     "profile": {
       "title": "ملفي الشخصي",
@@ -68,10 +68,13 @@ export const dictionaries = {
       },
       "delete": {
         "confirm": {
-          "title": "حذف الشخص",
+          "title": "حذف جهة الاتصال",
           "description": "سيتم فقدان رصيدك مع هذا الشخص",
           "confirm": "حذف"
         }
+      },
+      "add": {
+        "label": "إضافة جهة اتصال"
       }
     },
     "join": {
@@ -148,8 +151,8 @@ export const dictionaries = {
       "profile": "Ich",
       "contacts": "Freunde"
     },
-    "terms": "Terms & conditions",
-    "privacy": "Privacy policy",
+    "terms": "Allgemeine Geschäftsbedingungen",
+    "privacy": "Datenschutzrichtlinie",
     "madeBy": "Erstellt von",
     "profile": {
       "title": "Mein Profil",
@@ -186,10 +189,13 @@ export const dictionaries = {
       },
       "delete": {
         "confirm": {
-          "title": "Person löschen",
+          "title": "Kontakt löschen",
           "description": "Ihr Guthaben mit dieser Person wird verloren gehen",
           "confirm": "Löschen"
         }
+      },
+      "add": {
+        "label": "Kontakt hinzufügen"
       }
     },
     "join": {
@@ -266,8 +272,8 @@ export const dictionaries = {
       "profile": "Me",
       "contacts": "Friends"
     },
-    "terms": "Terms & conditions",
-    "privacy": "Privacy policy",
+    "terms": "Terms & Conditions",
+    "privacy": "Privacy Policy",
     "madeBy": "Made by",
     "profile": {
       "title": "My Profile",
@@ -304,10 +310,13 @@ export const dictionaries = {
       },
       "delete": {
         "confirm": {
-          "title": "Delete person",
+          "title": "Delete contact",
           "description": "Your balance with this person will be lost",
           "confirm": "Delete"
         }
+      },
+      "add": {
+        "label": "Add contact"
       }
     },
     "join": {
@@ -384,8 +393,8 @@ export const dictionaries = {
       "profile": "Yo",
       "contacts": "Amigos"
     },
-    "terms": "Terms & conditions",
-    "privacy": "Privacy policy",
+    "terms": "Términos y condiciones",
+    "privacy": "Política de privacidad",
     "madeBy": "Hecho por",
     "profile": {
       "title": "Mi perfil",
@@ -422,10 +431,13 @@ export const dictionaries = {
       },
       "delete": {
         "confirm": {
-          "title": "Eliminar persona",
+          "title": "Eliminar contacto",
           "description": "Tu saldo con esta persona se perderá",
           "confirm": "Eliminar"
         }
+      },
+      "add": {
+        "label": "Agregar contacto"
       }
     },
     "join": {
@@ -502,8 +514,8 @@ export const dictionaries = {
       "profile": "Moi",
       "contacts": "Amis"
     },
-    "terms": "Terms & conditions",
-    "privacy": "Privacy policy",
+    "terms": "Conditions générales",
+    "privacy": "Politique de confidentialité",
     "madeBy": "Créé par",
     "profile": {
       "title": "Mon profil",
@@ -540,10 +552,13 @@ export const dictionaries = {
       },
       "delete": {
         "confirm": {
-          "title": "Supprimer la personne",
+          "title": "Supprimer le contact",
           "description": "Votre solde avec cette personne sera perdu",
           "confirm": "Supprimer"
         }
+      },
+      "add": {
+        "label": "Ajouter un contact"
       }
     },
     "join": {
@@ -620,8 +635,8 @@ export const dictionaries = {
       "profile": "मैं",
       "contacts": "मित्र"
     },
-    "terms": "Terms & conditions",
-    "privacy": "Privacy policy",
+    "terms": "नियम व शर्तें",
+    "privacy": "गोपनीयता नीति",
     "madeBy": "द्वारा निर्मित",
     "profile": {
       "title": "मेरा प्रोफ़ाइल",
@@ -658,10 +673,13 @@ export const dictionaries = {
       },
       "delete": {
         "confirm": {
-          "title": "व्यक्ति हटाएँ",
+          "title": "संपर्क हटाएं",
           "description": "इस व्यक्ति के साथ आपका बैलेंस खो जाएगा",
           "confirm": "हटाएँ"
         }
+      },
+      "add": {
+        "label": "संपर्क जोड़ें"
       }
     },
     "join": {
@@ -738,8 +756,8 @@ export const dictionaries = {
       "profile": "Io",
       "contacts": "Amici"
     },
-    "terms": "Terms & conditions",
-    "privacy": "Privacy policy",
+    "terms": "Termini e condizioni",
+    "privacy": "Informativa sulla privacy",
     "madeBy": "Realizzato da",
     "profile": {
       "title": "Il mio profilo",
@@ -776,10 +794,13 @@ export const dictionaries = {
       },
       "delete": {
         "confirm": {
-          "title": "Elimina persona",
+          "title": "Elimina contatto",
           "description": "Il tuo saldo con questa persona andrà perso",
           "confirm": "Elimina"
         }
+      },
+      "add": {
+        "label": "Aggiungi contatto"
       }
     },
     "join": {
@@ -856,8 +877,8 @@ export const dictionaries = {
       "profile": "私",
       "contacts": "友だち"
     },
-    "terms": "Terms & conditions",
-    "privacy": "Privacy policy",
+    "terms": "利用規約",
+    "privacy": "プライバシーポリシー",
     "madeBy": "作成者",
     "profile": {
       "title": "マイプロフィール",
@@ -894,10 +915,13 @@ export const dictionaries = {
       },
       "delete": {
         "confirm": {
-          "title": "人物を削除",
+          "title": "連絡先を削除",
           "description": "この相手との残高が失われます",
           "confirm": "削除"
         }
+      },
+      "add": {
+        "label": "連絡先を追加"
       }
     },
     "join": {
@@ -974,8 +998,8 @@ export const dictionaries = {
       "profile": "나",
       "contacts": "친구"
     },
-    "terms": "Terms & conditions",
-    "privacy": "Privacy policy",
+    "terms": "이용 약관",
+    "privacy": "개인정보처리방침",
     "madeBy": "제작자",
     "profile": {
       "title": "내 프로필",
@@ -1012,10 +1036,13 @@ export const dictionaries = {
       },
       "delete": {
         "confirm": {
-          "title": "사람 삭제",
+          "title": "연락처 삭제",
           "description": "이 사람과의 잔액이 사라집니다",
           "confirm": "삭제"
         }
+      },
+      "add": {
+        "label": "연락처 추가"
       }
     },
     "join": {
@@ -1092,8 +1119,8 @@ export const dictionaries = {
       "profile": "Ik",
       "contacts": "Vrienden"
     },
-    "terms": "Terms & conditions",
-    "privacy": "Privacy policy",
+    "terms": "Algemene voorwaarden",
+    "privacy": "Privacybeleid",
     "madeBy": "Gemaakt door",
     "profile": {
       "title": "Mijn profiel",
@@ -1130,10 +1157,13 @@ export const dictionaries = {
       },
       "delete": {
         "confirm": {
-          "title": "Persoon verwijderen",
+          "title": "Contact verwijderen",
           "description": "Je saldo met deze persoon zal verloren gaan",
           "confirm": "Verwijderen"
         }
+      },
+      "add": {
+        "label": "Contact toevoegen"
       }
     },
     "join": {
@@ -1210,8 +1240,8 @@ export const dictionaries = {
       "profile": "Я",
       "contacts": "Друзья"
     },
-    "terms": "Terms & conditions",
-    "privacy": "Privacy policy",
+    "terms": "Условия и положения",
+    "privacy": "Политика конфиденциальности",
     "madeBy": "Сделано",
     "profile": {
       "title": "Мой профиль",
@@ -1248,10 +1278,13 @@ export const dictionaries = {
       },
       "delete": {
         "confirm": {
-          "title": "Удалить человека",
+          "title": "Удалить контакт",
           "description": "Ваш баланс с этим человеком будет потерян",
           "confirm": "Удалить"
         }
+      },
+      "add": {
+        "label": "Добавить контакт"
       }
     },
     "join": {
@@ -1328,8 +1361,8 @@ export const dictionaries = {
       "profile": "Mimi",
       "contacts": "Marafiki"
     },
-    "terms": "Terms & conditions",
-    "privacy": "Privacy policy",
+    "terms": "Vigezo na masharti",
+    "privacy": "Sera ya Faragha",
     "madeBy": "Imetengenezwa na",
     "profile": {
       "title": "Wasifu wangu",
@@ -1366,10 +1399,13 @@ export const dictionaries = {
       },
       "delete": {
         "confirm": {
-          "title": "Futa mtu",
+          "title": "Futa mawasiliano",
           "description": "Salio lako na mtu huyu litapotea",
           "confirm": "Futa"
         }
+      },
+      "add": {
+        "label": "Ongeza mawasiliano"
       }
     },
     "join": {
@@ -1446,8 +1482,8 @@ export const dictionaries = {
       "profile": "Ben",
       "contacts": "Arkadaşlar"
     },
-    "terms": "Terms & conditions",
-    "privacy": "Privacy policy",
+    "terms": "Şartlar ve koşullar",
+    "privacy": "Gizlilik Politikası",
     "madeBy": "Tarafından yapıldı",
     "profile": {
       "title": "Profilim",
@@ -1488,6 +1524,9 @@ export const dictionaries = {
           "description": "Bu kişiyle olan bakiyeniz kaybolacak",
           "confirm": "Sil"
         }
+      },
+      "add": {
+        "label": "Kişi ekle"
       }
     },
     "join": {
@@ -1564,8 +1603,8 @@ export const dictionaries = {
       "profile": "Я",
       "contacts": "Друзі"
     },
-    "terms": "Terms & conditions",
-    "privacy": "Privacy policy",
+    "terms": "Умови та положення",
+    "privacy": "Політика конфіденційності",
     "madeBy": "Створено",
     "profile": {
       "title": "Мій профіль",
@@ -1602,10 +1641,13 @@ export const dictionaries = {
       },
       "delete": {
         "confirm": {
-          "title": "Видалити людину",
+          "title": "Видалити контакт",
           "description": "Ваш баланс із цією особою буде втрачено",
           "confirm": "Видалити"
         }
+      },
+      "add": {
+        "label": "Додати контакт"
       }
     },
     "join": {
@@ -1682,7 +1724,7 @@ export const dictionaries = {
       "profile": "我",
       "contacts": "朋友"
     },
-    "terms": "Terms & conditions",
+    "terms": "条款和条件",
     "privacy": "隐私政策",
     "madeBy": "由...制作",
     "profile": {
@@ -1720,10 +1762,13 @@ export const dictionaries = {
       },
       "delete": {
         "confirm": {
-          "title": "删除人员",
+          "title": "删除联系人",
           "description": "您与此人的余额将会丢失",
           "confirm": "删除"
         }
+      },
+      "add": {
+        "label": "添加联系人"
       }
     },
     "join": {

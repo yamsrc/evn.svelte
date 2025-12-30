@@ -77,6 +77,9 @@ export type Dictionary = {
             confirm: string
           }
         }
+        add: {
+          label: string
+        }
       }
       join: {
         app: {

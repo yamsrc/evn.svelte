@@ -21,8 +21,8 @@ nav:
   evns: Расчёты
   profile: Я
   contacts: Друзья
-terms: Terms & conditions
-privacy: Privacy policy
+terms: Условия и положения
+privacy: Политика конфиденциальности
 madeBy: Сделано
 profile:
   title: Мой профиль
@@ -53,9 +53,11 @@ contacts:
     youOwe: Вы должны
   delete:
     confirm:
-      title: Удалить человека
+      title: Удалить контакт
       description: Ваш баланс с этим человеком будет потерян
       confirm: Удалить
+  add:
+    label: Добавить контакт
 join:
   app:
     description: Умный способ отслеживать, кто кому должен, вместе с друзьями.

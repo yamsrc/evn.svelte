@@ -21,8 +21,8 @@ nav:
   evns: Evns
   profile: Me
   contacts: Friends
-terms: Terms & conditions
-privacy: Privacy policy
+terms: Terms & Conditions
+privacy: Privacy Policy
 madeBy: Made by
 profile:
   title: My Profile
@@ -53,9 +53,11 @@ contacts:
     youOwe: You owe
   delete:
     confirm:
-      title: Delete person
+      title: Delete contact
       description: Your balance with this person will be lost
       confirm: Delete
+  add:
+    label: Add contact
 join:
   app:
     description: The smart way to track who owes whom, together with friends.

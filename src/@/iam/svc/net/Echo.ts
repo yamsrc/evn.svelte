@@ -1,4 +1,4 @@
-import type { Account } from '@/account'
+import type { Account } from '@/accounts'
 
 export interface Echo extends Account {
   roles: string[]

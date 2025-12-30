@@ -115,7 +115,7 @@ The mapping function transforms network entities into linked entities by:
 
 ```typescript
 import { awaited } from 'svas'
-import { accounts } from '@/account'
+import { accounts } from '@/accounts'
 
 export async function map(entry: net.Contact): Promise<Contact | Error> {
   const account = await awaited(accounts.get(entry.identity)) // Fetch linked Account entity

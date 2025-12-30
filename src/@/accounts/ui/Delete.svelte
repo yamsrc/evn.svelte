@@ -5,7 +5,7 @@
   import * as AlertDialog from '$ui/alert-dialog'
   import { buttonVariants } from '$ui/button'
   import { Spinner } from '$ui/spinner'
-  import { terminate } from '@/account'
+  import { terminate } from '@/accounts'
   import type { Props } from './Delete'
 
   const { ondelete, class: classes }: Props = $props()

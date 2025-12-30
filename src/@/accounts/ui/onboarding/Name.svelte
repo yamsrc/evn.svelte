@@ -5,13 +5,12 @@
   import { cn } from '$lib/utils'
   import { Button } from '$ui/button'
   import { Input } from '$ui/input'
-  import { set, type Account } from '@/account'
+  import { update, type Account } from '@/accounts'
 
   const { account, class: classes }: { account: Account; class?: string } = $props()
 
   let ref = $state<HTMLInputElement | null>(null)
-  // svelte-ignore state_referenced_locally
-  let value = $state(account.name)
+  let value = $derived(account.name)
   let busy = $state(false)
 
   async function submit() {
@@ -20,7 +19,7 @@
     if (!name) return
 
     busy = true
-    await set({ name })
+    await update(account.id, { name })
     busy = false
   }
 

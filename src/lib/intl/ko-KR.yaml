@@ -21,8 +21,8 @@ nav:
   evns: 정산
   profile: 나
   contacts: 친구
-terms: Terms & conditions
-privacy: Privacy policy
+terms: 이용 약관
+privacy: 개인정보처리방침
 madeBy: 제작자
 profile:
   title: 내 프로필
@@ -51,9 +51,11 @@ contacts:
     youOwe: 당신이 빚졌습니다
   delete:
     confirm:
-      title: 사람 삭제
+      title: 연락처 삭제
       description: 이 사람과의 잔액이 사라집니다
       confirm: 삭제
+  add:
+    label: 연락처 추가
 join:
   app:
     description: 친구들과 함께 누가 누구에게 얼마를 빚졌는지 스마트하게 추적하는 방법.

@@ -21,8 +21,8 @@ nav:
   evns: Saldo
   profile: Io
   contacts: Amici
-terms: Terms & conditions
-privacy: Privacy policy
+terms: Termini e condizioni
+privacy: Informativa sulla privacy
 madeBy: Realizzato da
 profile:
   title: Il mio profilo
@@ -53,9 +53,11 @@ contacts:
     youOwe: Devi
   delete:
     confirm:
-      title: Elimina persona
+      title: Elimina contatto
       description: Il tuo saldo con questa persona andrà perso
       confirm: Elimina
+  add:
+    label: Aggiungi contatto
 join:
   app:
     description: >-

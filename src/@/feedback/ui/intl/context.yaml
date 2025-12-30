@@ -2,7 +2,6 @@ context: Mount 'feedback' context
 inputs:
   title:
     input: Feedback
-    context: form title
   description:
     input: We would love to hear from you! Please share your thoughts, feedback, and suggestions.
     context: feedback form description

@@ -65,13 +65,13 @@
       </Button>
     </div>
     {#if actions}
-      <div class="flex shrink-0 snap-end text-xs [&_svg]:size-4 -ml-1 z-0">
+      <div class="flex shrink-0 snap-end text-xs [&_svg]:size-4 -ml-1 z-0 bg-foreground">
         {#each actions as { id, class: classes, href, onclick } (id)}
           <button
             onclick={(e) => click(e, { href, onclick })}
             class={cn(
-              'flex flex-col items-center justify-center gap-1',
-              actions.length === 1 ? 'w-20' : 'w-12',
+              'flex flex-col items-center justify-center gap-1 hover:cursor-pointer hover:bg-muted-foreground/20',
+              actions.length === 1 ? 'w-24' : 'w-16',
               classes,
             )}
           >
