@@ -59,6 +59,11 @@ contacts:
     description: >-
       Baadaye utaweza kuhamisha akaunti hii kwa mmiliki ili aweze kuweka taarifa
       zake za kuingia na kuchukua umiliki wa akaunti.
+  share:
+    invite:
+      link: Alika kwenye evn
+      qr: Onyesha msimbo wa QR
+      description: Mwaliko utatamatika baada ya dakika 5
 join:
   app:
     description: Njia bora ya kufuatilia nani anamdai nani, ukiwa na marafiki zako.
@@ -105,3 +110,4 @@ account:
       haiwezi kutenduliwa.
     sorry: Tunaomba radhi sana kukuona ukiondoka.
     hold: Shikilia kuthibitisha
+    link: Futa akaunti

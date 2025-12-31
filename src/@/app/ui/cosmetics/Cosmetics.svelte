@@ -9,13 +9,15 @@
   const {
     value,
     placeholder,
+    editable = true,
     label,
     note,
     class: classes,
     autocomplete,
     onchange,
   }: Props = $props()
-  const blank = $derived(label !== undefined)
+
+  const blank = $derived(editable && label !== undefined)
 
   let name = $derived(value?.name ?? '')
   let picture = $derived(value?.picture ?? pickpic())
@@ -50,9 +52,13 @@
     <Picture bind:id={picture} onchange={onPictureChange} />
   </div>
   <div class="space-y-2">
-    <Name bind:value={name} bind:busy onchange={onNameChange} {autocomplete} {placeholder} />
-    {#if note}
-      <p class="text-muted-foreground text-sm text-center">{note}</p>
+    {#if editable}
+      <Name bind:value={name} bind:busy onchange={onNameChange} {autocomplete} {placeholder} />
+      {#if note}
+        <p class="text-muted-foreground text-sm text-center">{note}</p>
+      {/if}
+    {:else}
+      <p class="text-center text-3xl font-bold">{name}</p>
     {/if}
   </div>
   {#if blank}

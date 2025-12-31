@@ -61,6 +61,11 @@ contacts:
     description: >-
       Successivamente, potrai trasferire questo account al proprietario, così
       potrà impostare i dettagli di accesso e prenderne possesso.
+  share:
+    invite:
+      link: Invita su evn
+      qr: Mostra codice QR
+      description: L'invito scadrà tra 5 minuti
 join:
   app:
     description: >-
@@ -111,3 +116,4 @@ account:
       associate. Questa azione non può essere annullata.
     sorry: Ci dispiace molto vederti andare via.
     hold: Tieni premuto per confermare
+    link: Elimina account

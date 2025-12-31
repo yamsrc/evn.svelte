@@ -81,6 +81,13 @@ export type Dictionary = {
           label: string
           description: string
         }
+        share: {
+          invite: {
+            link: string
+            qr: string
+            description: string
+          }
+        }
       }
       join: {
         app: {
@@ -128,6 +135,7 @@ export type Dictionary = {
           description: string
           sorry: string
           hold: string
+          link: string
         }
       }
     }

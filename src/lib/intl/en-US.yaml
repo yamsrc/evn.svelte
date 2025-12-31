@@ -61,6 +61,11 @@ contacts:
     description: >-
       Later, you'll be able to transfer this account to the owner so they can
       set up their sign-in details and take ownership.
+  share:
+    invite:
+      link: Invite to evn
+      qr: Show QR code
+      description: The invitation will expire in 5 minutes
 join:
   app:
     description: The smart way to track who owes whom, together with friends.
@@ -107,3 +112,4 @@ account:
       This action cannot be undone.
     sorry: We're very sorry to see you go.
     hold: Hold to confirm
+    link: Delete account

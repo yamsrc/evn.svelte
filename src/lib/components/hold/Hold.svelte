@@ -15,6 +15,7 @@
     position = 'left',
     align = 'center',
     onclick,
+    class: classes,
     containerClass,
     ...props
   }: Props = $props()
@@ -75,6 +76,7 @@
   <Button
     {variant}
     {...props}
+    class={cn('select-none', classes)}
     {onpointerdown}
     oncontextmenu={swallow}
     onpointerup={cancel}

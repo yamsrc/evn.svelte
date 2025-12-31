@@ -8,7 +8,7 @@
   import { Confirm } from '@/app/ui'
   import * as contacts from '@/contacts'
   import type { Action } from '$com/panel'
-  import type { Props } from './Contact'
+  import type { Props } from './Panel'
 
   const { contact, selected = $bindable(), actionable = false, onselect }: Props = $props()
 
@@ -24,11 +24,6 @@
     onclick: () => {},
   })
 
-  const edit: Action = $derived({
-    id: 'edit',
-    href: `/contacts/${contact.id}/`,
-  })
-
   const del: Action = $derived({
     id: 'delete',
     onclick: () => {
@@ -36,11 +31,12 @@
     },
   })
 
-  const actions = $derived(contact.managed ? [fav, edit, del] : [fav, del])
+  const actions = $derived([fav, del])
 </script>
 
 {#if ok(contact.account)}
   <Panel
+    href={`/contacts/${contact.id}/`}
     account={contact.account}
     balance={contact.balance}
     {selected}

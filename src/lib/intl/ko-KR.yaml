@@ -57,6 +57,11 @@ contacts:
   add:
     label: 연락처 추가
     description: 나중에 이 계정을 소유자에게 이전하여, 소유자가 로그인 정보를 설정하고 계정의 소유권을 가질 수 있습니다.
+  share:
+    invite:
+      link: evn에 초대
+      qr: QR 코드 표시
+      description: 초대는 5분 후에 만료됩니다
 join:
   app:
     description: 친구들과 함께 누가 누구에게 얼마를 빚졌는지 스마트하게 추적하는 방법.
@@ -99,3 +104,4 @@ account:
     description: 계정과 모든 관련 정보를 영구적으로 삭제합니다. 이 작업은 취소할 수 없습니다.
     sorry: 떠나신다니 정말 아쉽습니다.
     hold: 길게 눌러서 확인
+    link: 계정 삭제

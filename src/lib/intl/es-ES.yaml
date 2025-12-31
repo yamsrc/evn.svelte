@@ -61,6 +61,11 @@ contacts:
     description: >-
       Más adelante podrás transferir esta cuenta al propietario para que
       configure sus datos de acceso y tome el control de la cuenta.
+  share:
+    invite:
+      link: Invitar a evn
+      qr: Mostrar código QR
+      description: La invitación caducará en 5 minutos
 join:
   app:
     description: >-
@@ -111,3 +116,4 @@ account:
       Esta acción no se puede deshacer.
     sorry: Lamentamos mucho que te vayas.
     hold: Mantén pulsado para confirmar
+    link: Eliminar cuenta

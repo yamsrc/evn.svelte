@@ -61,6 +61,11 @@ contacts:
     description: >-
       Plus tard, vous pourrez transférer ce compte au propriétaire afin qu'il
       puisse définir ses informations de connexion et en prendre possession.
+  share:
+    invite:
+      link: Inviter sur evn
+      qr: Afficher le code QR
+      description: L'invitation expirera dans 5 minutes
 join:
   app:
     description: La façon intelligente de suivre qui doit quoi à qui, avec vos amis.
@@ -109,3 +114,4 @@ account:
       informations associées. Cette action est irréversible.
     sorry: Nous sommes vraiment désolés de vous voir partir.
     hold: Maintenir pour confirmer
+    link: Supprimer le compte

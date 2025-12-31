@@ -107,6 +107,16 @@ inputs:
         input: Add contact
       description:
         input: Later, you’ll be able to transfer this account to the owner, so they can set up their sign-in details and take ownership of it.
+    share:
+      invite:
+        link:
+          input: Invite to evn
+          context: button label (evn is the name of the app)
+        qr:
+          input: Show QR code
+          context: button label
+        description:
+          input: Приглашение истечет через 5 минут
   join:
     app:
       description:
@@ -170,6 +180,9 @@ inputs:
         input: We're very sorry to see you go.
       hold:
         input: Hold to confirm
+      link:
+        input: Delete account
+        context: link text
 mounts:
   iam: ../../@/iam/ui/intl
   feedback: ../../@/feedback/ui/intl

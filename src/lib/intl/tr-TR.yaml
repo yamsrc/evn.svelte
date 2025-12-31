@@ -59,6 +59,11 @@ contacts:
     description: >-
       Daha sonra bu hesabı sahibine aktarabileceksin, böylece giriş bilgilerini
       ayarlayıp hesabın sahibi olabilir.
+  share:
+    invite:
+      link: evn’e davet et
+      qr: QR kodunu göster
+      description: Davet 5 dakika içinde sona erecek
 join:
   app:
     description: >-
@@ -107,3 +112,4 @@ account:
       geri alınamaz.
     sorry: Gitmene çok üzüldük.
     hold: Onaylamak için basılı tutun
+    link: Hesabı sil

@@ -12,6 +12,7 @@
     onselect,
     action,
     actions,
+    href,
     class: classes,
   }: Props = $props()
 
@@ -27,6 +28,7 @@
 </script>
 
 <Panel
+  {href}
   {selected}
   class={cn('bg-card border border-border h-14', classes)}
   {onclick}

@@ -1,7 +1,7 @@
 <script lang="ts">
   import Section from '$com/section/Section.svelte'
   import { filter } from '@/contacts'
-  import Contact from './Contact.svelte'
+  import Contact from './Panel.svelte'
   import type { Props } from './Contacts'
 
   let { contacts, title, actionable, selection = $bindable(), search }: Props = $props()

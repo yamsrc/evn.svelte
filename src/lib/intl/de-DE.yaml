@@ -61,6 +61,11 @@ contacts:
     description: >-
       Später kannst du dieses Konto an den Eigentümer übertragen, damit er seine
       Anmeldedaten einrichten und die Inhaberschaft übernehmen kann.
+  share:
+    invite:
+      link: Zu evn einladen
+      qr: QR-Code anzeigen
+      description: Die Einladung läuft in 5 Minuten ab
 join:
   app:
     description: >-
@@ -111,3 +116,4 @@ account:
       Diese Aktion kann nicht rückgängig gemacht werden.
     sorry: Es tut uns sehr leid, zu sehen, dass Sie gehen.
     hold: Zum Bestätigen halten
+    link: Konto löschen

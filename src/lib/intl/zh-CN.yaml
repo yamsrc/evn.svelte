@@ -57,6 +57,11 @@ contacts:
   add:
     label: 添加联系人
     description: 稍后，您可以将此账户转移给所有者，让其设置登录信息并接管账户。
+  share:
+    invite:
+      link: 邀请加入 evn
+      qr: 显示二维码
+      description: 邀请将在5分钟后失效
 join:
   app:
     description: 和朋友们一起智能记录谁欠谁。
@@ -99,3 +104,4 @@ account:
     description: 我们将永久删除您的账户及所有关联信息。此操作无法撤销。
     sorry: 很遗憾看到您离开。
     hold: 按住以确认
+    link: 删除账户

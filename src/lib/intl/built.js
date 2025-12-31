@@ -76,6 +76,13 @@ export const dictionaries = {
       "add": {
         "label": "إضافة جهة اتصال",
         "description": "لاحقًا، ستتمكن من نقل هذا الحساب إلى المالك حتى يتمكن من إعداد بيانات تسجيل الدخول الخاصة به وتولي ملكيته."
+      },
+      "share": {
+        "invite": {
+          "link": "دعوة إلى evn",
+          "qr": "عرض رمز الاستجابة السريعة",
+          "description": "ستنتهي صلاحية الدعوة خلال 5 دقائق"
+        }
       }
     },
     "join": {
@@ -123,7 +130,8 @@ export const dictionaries = {
         "title": "حذف الحساب",
         "description": "سنقوم بحذف حسابك وجميع المعلومات المرتبطة به بشكل نهائي. لا يمكن التراجع عن هذا الإجراء.",
         "sorry": "نأسف جدًا لرؤيتك تغادر.",
-        "hold": "اضغط مع الاستمرار للتأكيد"
+        "hold": "اضغط مع الاستمرار للتأكيد",
+        "link": "حذف الحساب"
       }
     }
   },
@@ -201,6 +209,13 @@ export const dictionaries = {
       "add": {
         "label": "Kontakt hinzufügen",
         "description": "Später kannst du dieses Konto an den Eigentümer übertragen, damit er seine Anmeldedaten einrichten und die Inhaberschaft übernehmen kann."
+      },
+      "share": {
+        "invite": {
+          "link": "Zu evn einladen",
+          "qr": "QR-Code anzeigen",
+          "description": "Die Einladung läuft in 5 Minuten ab"
+        }
       }
     },
     "join": {
@@ -248,7 +263,8 @@ export const dictionaries = {
         "title": "Konto löschen",
         "description": "Wir werden Ihr Konto und alle zugehörigen Informationen dauerhaft löschen. Diese Aktion kann nicht rückgängig gemacht werden.",
         "sorry": "Es tut uns sehr leid, zu sehen, dass Sie gehen.",
-        "hold": "Zum Bestätigen halten"
+        "hold": "Zum Bestätigen halten",
+        "link": "Konto löschen"
       }
     }
   },
@@ -326,6 +342,13 @@ export const dictionaries = {
       "add": {
         "label": "Add contact",
         "description": "Later, you'll be able to transfer this account to the owner so they can set up their sign-in details and take ownership."
+      },
+      "share": {
+        "invite": {
+          "link": "Invite to evn",
+          "qr": "Show QR code",
+          "description": "The invitation will expire in 5 minutes"
+        }
       }
     },
     "join": {
@@ -373,7 +396,8 @@ export const dictionaries = {
         "title": "Delete account",
         "description": "We will permanently delete your account and all associated information. This action cannot be undone.",
         "sorry": "We're very sorry to see you go.",
-        "hold": "Hold to confirm"
+        "hold": "Hold to confirm",
+        "link": "Delete account"
       }
     }
   },
@@ -451,6 +475,13 @@ export const dictionaries = {
       "add": {
         "label": "Agregar contacto",
         "description": "Más adelante podrás transferir esta cuenta al propietario para que configure sus datos de acceso y tome el control de la cuenta."
+      },
+      "share": {
+        "invite": {
+          "link": "Invitar a evn",
+          "qr": "Mostrar código QR",
+          "description": "La invitación caducará en 5 minutos"
+        }
       }
     },
     "join": {
@@ -498,7 +529,8 @@ export const dictionaries = {
         "title": "Eliminar cuenta",
         "description": "Eliminaremos permanentemente tu cuenta y toda la información asociada. Esta acción no se puede deshacer.",
         "sorry": "Lamentamos mucho que te vayas.",
-        "hold": "Mantén pulsado para confirmar"
+        "hold": "Mantén pulsado para confirmar",
+        "link": "Eliminar cuenta"
       }
     }
   },
@@ -576,6 +608,13 @@ export const dictionaries = {
       "add": {
         "label": "Ajouter un contact",
         "description": "Plus tard, vous pourrez transférer ce compte au propriétaire afin qu'il puisse définir ses informations de connexion et en prendre possession."
+      },
+      "share": {
+        "invite": {
+          "link": "Inviter sur evn",
+          "qr": "Afficher le code QR",
+          "description": "L'invitation expirera dans 5 minutes"
+        }
       }
     },
     "join": {
@@ -623,7 +662,8 @@ export const dictionaries = {
         "title": "Supprimer le compte",
         "description": "Nous supprimerons définitivement votre compte ainsi que toutes les informations associées. Cette action est irréversible.",
         "sorry": "Nous sommes vraiment désolés de vous voir partir.",
-        "hold": "Maintenir pour confirmer"
+        "hold": "Maintenir pour confirmer",
+        "link": "Supprimer le compte"
       }
     }
   },
@@ -701,6 +741,13 @@ export const dictionaries = {
       "add": {
         "label": "संपर्क जोड़ें",
         "description": "बाद में, आप इस खाते को मालिक को ट्रांसफ़र कर सकेंगे, ताकि वे अपनी साइन-इन जानकारी सेट कर सकें और खाते के स्वामी बन सकें।"
+      },
+      "share": {
+        "invite": {
+          "link": "evn पर आमंत्रित करें",
+          "qr": "QR कोड दिखाएं",
+          "description": "निमंत्रण 5 मिनट में समाप्त हो जाएगा"
+        }
       }
     },
     "join": {
@@ -748,7 +795,8 @@ export const dictionaries = {
         "title": "खाता हटाएं",
         "description": "हम आपके खाते और उससे जुड़ी सभी जानकारी को स्थायी रूप से हटा देंगे। इस कार्रवाई को वापस नहीं लिया जा सकता।",
         "sorry": "हमें आपको जाते हुए देखकर बहुत दुख हुआ।",
-        "hold": "पुष्टि करने के लिए दबाए रखें"
+        "hold": "पुष्टि करने के लिए दबाए रखें",
+        "link": "खाता हटाएं"
       }
     }
   },
@@ -826,6 +874,13 @@ export const dictionaries = {
       "add": {
         "label": "Aggiungi contatto",
         "description": "Successivamente, potrai trasferire questo account al proprietario, così potrà impostare i dettagli di accesso e prenderne possesso."
+      },
+      "share": {
+        "invite": {
+          "link": "Invita su evn",
+          "qr": "Mostra codice QR",
+          "description": "L'invito scadrà tra 5 minuti"
+        }
       }
     },
     "join": {
@@ -873,7 +928,8 @@ export const dictionaries = {
         "title": "Elimina account",
         "description": "Elimineremo definitivamente il tuo account e tutte le informazioni associate. Questa azione non può essere annullata.",
         "sorry": "Ci dispiace molto vederti andare via.",
-        "hold": "Tieni premuto per confermare"
+        "hold": "Tieni premuto per confermare",
+        "link": "Elimina account"
       }
     }
   },
@@ -951,6 +1007,13 @@ export const dictionaries = {
       "add": {
         "label": "連絡先を追加",
         "description": "後でこのアカウントを所有者に譲渡できるようになり、所有者がサインイン情報を設定して引き継ぐことができます。"
+      },
+      "share": {
+        "invite": {
+          "link": "evnに招待",
+          "qr": "QRコードを表示",
+          "description": "招待は5分後に期限切れになります"
+        }
       }
     },
     "join": {
@@ -998,7 +1061,8 @@ export const dictionaries = {
         "title": "アカウントを削除",
         "description": "あなたのアカウントおよび関連するすべての情報を完全に削除します。この操作は元に戻せません。",
         "sorry": "ご利用いただけなくなることを大変残念に思います。",
-        "hold": "押し続けて確定"
+        "hold": "押し続けて確定",
+        "link": "アカウントを削除"
       }
     }
   },
@@ -1076,6 +1140,13 @@ export const dictionaries = {
       "add": {
         "label": "연락처 추가",
         "description": "나중에 이 계정을 소유자에게 이전하여, 소유자가 로그인 정보를 설정하고 계정의 소유권을 가질 수 있습니다."
+      },
+      "share": {
+        "invite": {
+          "link": "evn에 초대",
+          "qr": "QR 코드 표시",
+          "description": "초대는 5분 후에 만료됩니다"
+        }
       }
     },
     "join": {
@@ -1123,7 +1194,8 @@ export const dictionaries = {
         "title": "계정 삭제",
         "description": "계정과 모든 관련 정보를 영구적으로 삭제합니다. 이 작업은 취소할 수 없습니다.",
         "sorry": "떠나신다니 정말 아쉽습니다.",
-        "hold": "길게 눌러서 확인"
+        "hold": "길게 눌러서 확인",
+        "link": "계정 삭제"
       }
     }
   },
@@ -1201,6 +1273,13 @@ export const dictionaries = {
       "add": {
         "label": "Contact toevoegen",
         "description": "Later kun je dit account overdragen aan de eigenaar, zodat die zijn of haar inloggegevens kan instellen en het account kan overnemen."
+      },
+      "share": {
+        "invite": {
+          "link": "Uitnodigen voor evn",
+          "qr": "QR-code tonen",
+          "description": "De uitnodiging verloopt over 5 minuten"
+        }
       }
     },
     "join": {
@@ -1248,7 +1327,8 @@ export const dictionaries = {
         "title": "Account verwijderen",
         "description": "We verwijderen je account en alle bijbehorende informatie permanent. Deze actie kan niet ongedaan worden gemaakt.",
         "sorry": "Het spijt ons zeer om je te zien gaan.",
-        "hold": "Houd vast om te bevestigen"
+        "hold": "Houd vast om te bevestigen",
+        "link": "Account verwijderen"
       }
     }
   },
@@ -1271,8 +1351,8 @@ export const dictionaries = {
         "contact": "Кореш"
       },
       "addSelected": "Закинуть выбранное",
-      "cancel": "Похуй",
-      "search": "Шнырять"
+      "cancel": "Забить хуй",
+      "search": "Рыскать"
     },
     "nav": {
       "home": "Хата",
@@ -1326,6 +1406,13 @@ export const dictionaries = {
       "add": {
         "label": "Готово, блять",
         "description": "Потом просто скинешь этот акк нужному типу — пусть сам ебётся с логином и забирает всё под себя."
+      },
+      "share": {
+        "invite": {
+          "link": "Зазвать в evn",
+          "qr": "Светануть QR",
+          "description": "Протухнет нахуй через 5 минут"
+        }
       }
     },
     "join": {
@@ -1335,7 +1422,7 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `Тебя, сука, зазвал ${name}. Вкатывайся или логинься — и погнали`
       },
-      "accept": "Вкатиться в Evn нахуй"
+      "accept": "Вкатиться в evn нахуй"
     },
     "groups": {
       "leave": "Зажми чтобы съебать",
@@ -1369,11 +1456,12 @@ export const dictionaries = {
     },
     "account": {
       "delete": {
-        "button": "Свалить нахуй",
         "title": "Убить аккаунт",
-        "description": "Мы нахуй сотрём твой аккаунт и всю связанную хуйню. Обратки не будет.",
-        "sorry": "Сорян, что ты сваливаешь.",
-        "hold": "Зажми и подтверди, сука"
+        "description": "Мы нахуй сотрём твой аккаунт и всю твою поебень. Обратки не будет.",
+        "sorry": "Пошёл нахуй.",
+        "button": "Пойти нахуй",
+        "hold": "Держи бля",
+        "link": "Заебало"
       }
     }
   },
@@ -1451,6 +1539,13 @@ export const dictionaries = {
       "add": {
         "label": "Добавить контакт",
         "description": "Позже вы сможете передать этот аккаунт владельцу, чтобы он мог настроить данные для входа и стать его обладателем."
+      },
+      "share": {
+        "invite": {
+          "link": "Пригласить в evn",
+          "qr": "Показать QR-код",
+          "description": "Приглашение истечет через 5 минут"
+        }
       }
     },
     "join": {
@@ -1498,7 +1593,8 @@ export const dictionaries = {
         "title": "Удалить аккаунт",
         "description": "Мы навсегда удалим ваш аккаунт и всю связанную с ним информацию. Это действие нельзя отменить.",
         "sorry": "Нам очень жаль, что вы уходите.",
-        "hold": "Удерживайте для подтверждения"
+        "hold": "Удерживайте для подтверждения",
+        "link": "Удалить аккаунт"
       }
     }
   },
@@ -1576,6 +1672,13 @@ export const dictionaries = {
       "add": {
         "label": "Ongeza mawasiliano",
         "description": "Baadaye utaweza kuhamisha akaunti hii kwa mmiliki ili aweze kuweka taarifa zake za kuingia na kuchukua umiliki wa akaunti."
+      },
+      "share": {
+        "invite": {
+          "link": "Alika kwenye evn",
+          "qr": "Onyesha msimbo wa QR",
+          "description": "Mwaliko utatamatika baada ya dakika 5"
+        }
       }
     },
     "join": {
@@ -1623,7 +1726,8 @@ export const dictionaries = {
         "title": "Futa akaunti",
         "description": "Tutafuta akaunti yako na taarifa zote zinazohusiana nayo kabisa. Hatua hii haiwezi kutenduliwa.",
         "sorry": "Tunaomba radhi sana kukuona ukiondoka.",
-        "hold": "Shikilia kuthibitisha"
+        "hold": "Shikilia kuthibitisha",
+        "link": "Futa akaunti"
       }
     }
   },
@@ -1701,6 +1805,13 @@ export const dictionaries = {
       "add": {
         "label": "Kişi ekle",
         "description": "Daha sonra bu hesabı sahibine aktarabileceksin, böylece giriş bilgilerini ayarlayıp hesabın sahibi olabilir."
+      },
+      "share": {
+        "invite": {
+          "link": "evn’e davet et",
+          "qr": "QR kodunu göster",
+          "description": "Davet 5 dakika içinde sona erecek"
+        }
       }
     },
     "join": {
@@ -1748,7 +1859,8 @@ export const dictionaries = {
         "title": "Hesabı sil",
         "description": "Hesabınızı ve tüm bağlantılı bilgileri kalıcı olarak sileceğiz. Bu işlem geri alınamaz.",
         "sorry": "Gitmene çok üzüldük.",
-        "hold": "Onaylamak için basılı tutun"
+        "hold": "Onaylamak için basılı tutun",
+        "link": "Hesabı sil"
       }
     }
   },
@@ -1826,6 +1938,13 @@ export const dictionaries = {
       "add": {
         "label": "Додати контакт",
         "description": "Пізніше ви зможете передати цей акаунт власнику, щоб він міг налаштувати дані для входу і стати власником облікового запису."
+      },
+      "share": {
+        "invite": {
+          "link": "Запросити до evn",
+          "qr": "Показати QR-код",
+          "description": "Запрошення втратить чинність через 5 хвилин"
+        }
       }
     },
     "join": {
@@ -1873,7 +1992,8 @@ export const dictionaries = {
         "title": "Видалити обліковий запис",
         "description": "Ми назавжди видалимо ваш обліковий запис і всю пов'язану інформацію. Цю дію не можна скасувати.",
         "sorry": "Нам дуже шкода, що ви йдете.",
-        "hold": "Утримуйте для підтвердження"
+        "hold": "Утримуйте для підтвердження",
+        "link": "Видалити акаунт"
       }
     }
   },
@@ -1951,6 +2071,13 @@ export const dictionaries = {
       "add": {
         "label": "添加联系人",
         "description": "稍后，您可以将此账户转移给所有者，让其设置登录信息并接管账户。"
+      },
+      "share": {
+        "invite": {
+          "link": "邀请加入 evn",
+          "qr": "显示二维码",
+          "description": "邀请将在5分钟后失效"
+        }
       }
     },
     "join": {
@@ -1998,7 +2125,8 @@ export const dictionaries = {
         "title": "删除账户",
         "description": "我们将永久删除您的账户及所有关联信息。此操作无法撤销。",
         "sorry": "很遗憾看到您离开。",
-        "hold": "按住以确认"
+        "hold": "按住以确认",
+        "link": "删除账户"
       }
     }
   }

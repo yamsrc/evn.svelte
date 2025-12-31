@@ -3,11 +3,11 @@
   import { Cosmetics, type Value } from '@/app/ui'
   import type { Props } from './Cosmetics'
 
-  const { account }: Props = $props()
+  const { account, ...rest }: Props = $props()
 
   async function onchange(value: Value) {
     await update(account.id, { name: value.name, picture: value.picture })
   }
 </script>
 
-<Cosmetics value={account} {onchange} />
+<Cosmetics value={account} {onchange} {...rest} />

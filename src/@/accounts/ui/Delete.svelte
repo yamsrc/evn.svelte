@@ -29,9 +29,9 @@
 
 <AlertDialog.Root bind:open>
   <AlertDialog.Trigger class={cn(buttonVariants({ variant: 'ghost' }), classes)}>
-    {$dict.account.delete.button}
+    {$dict.account.delete.link}
   </AlertDialog.Trigger>
-  <AlertDialog.Content>
+  <AlertDialog.Content class="border border-destructive">
     <AlertDialog.Header>
       <AlertDialog.Title>
         {$dict.account.delete.title}
