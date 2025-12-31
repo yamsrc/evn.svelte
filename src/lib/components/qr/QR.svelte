@@ -1,85 +1,57 @@
 <script lang="ts">
   import { QrCode } from '@lucide/svelte'
-  import QRCodeStyling from 'qr-code-styling'
-  import { browser } from '$app/environment'
+  import { tick } from 'svelte'
   import { dict } from '$lib/intl'
+  import { cn } from '$lib/utils'
   import * as AlertDialog from '$ui/alert-dialog'
-  import { Button } from '$ui/button'
-  import Logo from './logo.png'
-  import type { Props } from './QR'
+  import { Button, buttonVariants } from '$ui/button'
+  import Spinner from '$ui/spinner/spinner.svelte'
+  import { createQR, type Props } from './QR'
 
-  const { label, disabled, data, ...props }: Props = $props()
+  const { label, disabled, text, class: classes, ...props }: Props = $props()
 
   let open = $state(false)
-  let qrCode: QRCodeStyling | null = $state(null)
-  let qrContainer: HTMLDivElement | null = $state(null)
-  let qrCreated = $state(false)
+  let busy = $state(false)
+  let container: HTMLDivElement | null = $state(null)
 
-  function createQRCode() {
-    if (!browser || !qrContainer || qrCreated) return
+  async function onclick(e: MouseEvent) {
+    e.preventDefault()
+    e.stopPropagation()
 
-    qrCode = new QRCodeStyling({
-      type: 'svg',
-      shape: 'square',
-      width: 500,
-      height: 500,
-      data,
-      margin: 10,
-      qrOptions: {
-        typeNumber: 0,
-        mode: 'Byte',
-        errorCorrectionLevel: 'Q',
-      },
-      image: Logo,
-      imageOptions: {
-        saveAsBlob: true,
-        hideBackgroundDots: true,
-        imageSize: 0.4,
-        margin: 0,
-      },
-      dotsOptions: {
-        type: 'extra-rounded',
-        color: '#2E231A',
-      },
-      backgroundOptions: {
-        color: '#EDE0D4',
-      },
-      cornersSquareOptions: {
-        type: 'extra-rounded',
-        color: '#EA580C',
-      },
-      cornersDotOptions: {
-        type: 'rounded',
-      },
-    })
+    busy = true
 
-    qrCode.append(qrContainer)
-    qrCreated = true
+    const qr = await createQR(text)
+
+    busy = false
+
+    if (qr === null) return
+
+    open = true
+
+    await tick() // bind container
+
+    if (!container) throw new Error('Container not bound')
+
+    qr.append(container)
   }
-
-  $effect(() => {
-    if (!open) {
-      qrCreated = false
-      qrCode = null
-
-      return
-    }
-
-    if (!qrContainer || qrCreated) return
-
-    createQRCode()
-  })
 </script>
 
-<Button {...props} {disabled} onclick={() => (open = true)}>
-  <QrCode />
-  {#if label !== null}{label}{/if}
-</Button>
-
 <AlertDialog.Root bind:open>
+  <AlertDialog.Trigger
+    class={cn(buttonVariants(props), classes)}
+    disabled={busy || disabled}
+    {onclick}
+  >
+    {#if busy}
+      <Spinner />
+    {:else}
+      <QrCode />
+    {/if}
+    {#if label !== null}{label}{/if}
+  </AlertDialog.Trigger>
   <AlertDialog.Content class="max-w-sm bg-transparent border-none" interactOutsideBehavior="close">
-    <div class="flex justify-center size-full rounded-lg overflow-hidden">
-      <div bind:this={qrContainer} class="[&>svg]:size-full"></div>
+    <div class="flex justify-center size-full aspect-square bg-red-200 rounded-lg overflow-hidden">
+      <div bind:this={container} class="[&>svg]:size-full"></div>
     </div>
     <AlertDialog.Footer>
       <Button variant="secondary" size="lg" onclick={() => (open = false)}>

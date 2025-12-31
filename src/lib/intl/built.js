@@ -1339,7 +1339,7 @@ export const dictionaries = {
       "continue": "Погнали дальше",
       "holdToLogout": "Зажми и съеби",
       "signout": "Съебаться",
-      "close": "Прикрыть лавочку",
+      "close": "Закрыть к хуям",
       "cheques": {
         "title": "Ебаные чеки",
         "scan": "Просканить",

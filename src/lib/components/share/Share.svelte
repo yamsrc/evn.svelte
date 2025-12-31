@@ -7,9 +7,10 @@
   import type { Props, Retriever } from './Share'
 
   const {
+    children,
     data,
-    label = 'Share',
-    variant = 'outline',
+    label,
+    variant,
     disabled,
     onshare,
     class: classes,
@@ -22,6 +23,8 @@
 
   async function onclick() {
     const share = typeof data === 'function' ? await get(data) : data
+
+    if (share === null) return
 
     await navigator.share(share)
     onshare?.()
@@ -45,10 +48,14 @@
   disabled={unavailable || waiting || disabled}
   {...rest}
 >
-  {#if waiting}
-    <Loader />
+  {#if children}
+    {@render children?.()}
   {:else}
-    <Share2 />
+    {#if waiting}
+      <Loader />
+    {:else}
+      <Share2 />
+    {/if}
+    {#if label !== null}{label}{/if}
   {/if}
-  {#if label !== null}{label}{/if}
 </Button>

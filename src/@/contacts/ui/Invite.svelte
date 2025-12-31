@@ -22,7 +22,7 @@
     data={invitation}
     label={$dict.contacts.empty.invite.share}
   />
-  <QR variant="secondary" {...rest} data={invitation.url} label={$dict.contacts.empty.invite.qr} />
+  <QR variant="secondary" {...rest} text={invitation.url} label={$dict.contacts.empty.invite.qr} />
   <Separator class="p-2 font-bold">{$dict.etc.or}</Separator>
   <Button href="/contacts/new/managed/" {...rest}>
     <UserPlus2 />

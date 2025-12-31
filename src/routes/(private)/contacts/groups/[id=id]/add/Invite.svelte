@@ -37,7 +37,7 @@
           variant="ghost"
           size="lg"
           class="w-auto justify-start focus-visible:ring-0 focus-visible:border-none"
-          data={invitation.url}
+          text={invitation.url}
           label={$dict.invite.qr}
         />
       {/snippet}
