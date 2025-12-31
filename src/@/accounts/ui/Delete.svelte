@@ -28,7 +28,7 @@
 </script>
 
 <AlertDialog.Root bind:open>
-  <AlertDialog.Trigger class={cn(buttonVariants({ variant: 'ghost' }), classes)}>
+  <AlertDialog.Trigger class={cn(buttonVariants({ variant: 'ghost', size: 'sm' }), classes)}>
     {$dict.account.delete.link}
   </AlertDialog.Trigger>
   <AlertDialog.Content class="border border-destructive">

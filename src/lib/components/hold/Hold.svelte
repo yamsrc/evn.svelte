@@ -32,7 +32,9 @@
     if ($countdown === 0) click()
   })
 
-  function onpointerdown(e: PointerEvent) {
+  function onpointerdown() {
+    if (pressed) return
+
     pressed = true
     shown = true
     countdown = timeout(duration, 60)
@@ -77,6 +79,8 @@
     {variant}
     {...props}
     class={cn('select-none', classes)}
+    onkeydown={onpointerdown}
+    onkeyup={cancel}
     {onpointerdown}
     oncontextmenu={swallow}
     onpointerup={cancel}

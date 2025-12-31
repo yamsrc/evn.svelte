@@ -63,11 +63,11 @@
           $time,
         ).getFullYear()}
       </p>
-      <div>
+      <p class="[&_a]:text-muted-foreground">
         <a href="/terms/">{$dict.terms}</a>,
         <a href="/privacy/">{$dict.privacy}</a>,
-        <Delete class="inline-block p-0 font-normal h-auto" />
-      </div>
+        <Delete class="p-0 underline underline-offset-3 font-normal" />
+      </p>
       <p>v{version}</p>
     </footer>
   </Section>

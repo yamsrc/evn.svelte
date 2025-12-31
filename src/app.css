@@ -208,7 +208,11 @@
   }
 
   p a {
-    @apply text-primary underline;
+    @apply text-primary underline underline-offset-3;
+  }
+
+  button:active {
+    scale: 0.98;
   }
 
   /* Hide scrollbar */

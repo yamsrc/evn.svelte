@@ -1409,7 +1409,7 @@ export const dictionaries = {
       },
       "share": {
         "invite": {
-          "link": "Зазвать в evn",
+          "link": "Подтянуть в evn",
           "qr": "Светануть QR",
           "description": "Протухнет нахуй через 5 минут"
         }
@@ -1428,7 +1428,7 @@ export const dictionaries = {
       "leave": "Зажми чтобы съебать",
       "name": {
         "placeholder": "Пиши название",
-        "description": "Это название видят все уёбки"
+        "description": "Это название увидят все уёбки"
       },
       "members": {
         "title": "Состав",

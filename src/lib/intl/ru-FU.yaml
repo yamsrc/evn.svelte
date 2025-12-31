@@ -61,7 +61,7 @@ contacts:
       забирает всё под себя.
   share:
     invite:
-      link: Зазвать в evn
+      link: Подтянуть в evn
       qr: Светануть QR
       description: Протухнет нахуй через 5 минут
 join:
@@ -78,7 +78,7 @@ groups:
   leave: Зажми чтобы съебать
   name:
     placeholder: Пиши название
-    description: Это название видят все уёбки
+    description: Это название увидят все уёбки
   members:
     title: Состав
     addMembers: Подтянуть народ
