@@ -1,5 +1,5 @@
 import { values } from 'svas'
-import { account } from '@/iam'
+import { account } from '@/iam/svc/store'
 import { type Account } from './Account'
 import { get } from './get'
 
