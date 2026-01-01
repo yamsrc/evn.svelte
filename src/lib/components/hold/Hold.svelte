@@ -32,7 +32,16 @@
     if ($countdown === 0) click()
   })
 
-  function onpointerdown() {
+  function onpointerdown(e: PointerEvent) {
+    if (e.altKey) click(true)
+    else press()
+  }
+
+  function onkeydown(e: KeyboardEvent) {
+    if (e.key === ' ') press()
+  }
+
+  function press() {
     if (pressed) return
 
     pressed = true
@@ -56,8 +65,8 @@
     countdown = readable(duration)
   }
 
-  function click() {
-    if (!pressed) return
+  function click(instant = false) {
+    if (!pressed && !instant) return
 
     onclick?.(null as any)
     pressed = false
@@ -79,12 +88,12 @@
     {variant}
     {...props}
     class={cn('select-none', classes)}
-    onkeydown={onpointerdown}
-    onkeyup={cancel}
     {onpointerdown}
+    {onkeydown}
     oncontextmenu={swallow}
     onpointerup={cancel}
     onpointerleave={cancel}
+    onkeyup={cancel}
     style={`anchor-name: --${name};`}
   >
     {@render children?.()}
