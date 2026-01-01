@@ -4,17 +4,9 @@
   import { cn } from '$lib/utils'
   import { Button } from '$ui/button'
   import { Spinner } from '$ui/spinner'
-  import type { Props } from './Clipboard'
+  import type { Props, Retriever } from './Clipboard'
 
-  const {
-    text,
-    labeled,
-    variant = 'outline',
-    disabled,
-    oncopy,
-    class: classes,
-    ...rest
-  }: Props = $props()
+  const { text, label, disabled, oncopy, class: classes, ...rest }: Props = $props()
 
   let copied = $state(false)
   let waiting = $state(false)
@@ -29,6 +21,8 @@
     if (typeof ClipboardItem === 'undefined') {
       const value = typeof text === 'function' ? await text() : text
 
+      if (value === null) return
+
       await navigator.clipboard!.writeText(value)
     } else {
       const item = clipboard(text)
@@ -42,35 +36,26 @@
     setTimeout(() => (copied = false), 2000)
   }
 
-  function clipboard(text: string | (() => Promise<string>)) {
+  function clipboard(text: Retriever) {
     return typeof text === 'function'
-      ? resolve(text)
+      ? resolve(text as () => Promise<string | null>)
       : new ClipboardItem({ 'text/plain': new Blob([text], { type: 'text/plain' }) })
   }
 
-  function resolve(text: () => Promise<string>) {
+  function resolve(text: () => Promise<string | null>) {
     return new ClipboardItem({
-      'text/plain': text().then((value) => new Blob([value], { type: 'text/plain' })),
+      'text/plain': text().then((value) => new Blob([value ?? ''], { type: 'text/plain' })),
     })
   }
 </script>
 
-<Button
-  class={cn(classes)}
-  {variant}
-  {onclick}
-  disabled={unavailable || waiting || disabled}
-  {...rest}
->
+<Button class={cn(classes)} {onclick} disabled={disabled || unavailable || waiting} {...rest}>
   {#if copied}
     <Check class="text-green-400" />
-    {#if labeled}Copied!{/if}
+  {:else if waiting}
+    <Spinner />
   {:else}
-    {#if waiting}
-      <Spinner />
-    {:else}
-      <Copy />
-    {/if}
-    {#if labeled}Copy{/if}
+    <Copy />
   {/if}
+  {#if label !== null}{label}{/if}
 </Button>

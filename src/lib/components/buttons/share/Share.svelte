@@ -1,26 +1,17 @@
 <script lang="ts">
   import { Share2 } from '@lucide/svelte'
   import { browser } from '$app/environment'
+  import { Clipboard } from '$com/buttons'
   import { Loader } from '$com/loader'
   import { cn } from '$lib/utils'
   import { Button } from '$ui/button'
   import type { Props, Retriever } from './Share'
 
-  const {
-    id,
-    children,
-    data,
-    label,
-    variant,
-    disabled,
-    onshare,
-    class: classes,
-    ...rest
-  }: Props = $props()
+  const { children, data, label, disabled, onshare, class: classes, ...rest }: Props = $props()
 
   let waiting = $state(false)
 
-  const unavailable = browser && !navigator.share
+  const supported = !browser || navigator.share !== undefined
 
   async function onclick() {
     const share = typeof data === 'function' ? await get(data) : data
@@ -40,24 +31,29 @@
 
     return value
   }
+
+  async function text() {
+    const share = typeof data === 'function' ? await get(data) : data
+
+    if (share === null) return null
+
+    return share.url ?? null
+  }
 </script>
 
-<Button
-  {id}
-  class={cn(classes)}
-  {variant}
-  {onclick}
-  disabled={unavailable || waiting || disabled}
-  {...rest}
->
-  {#if children}
-    {@render children?.()}
-  {:else}
-    {#if waiting}
-      <Loader />
+{#if supported}
+  <Button class={cn(classes)} {onclick} disabled={waiting || disabled} {...rest}>
+    {#if children}
+      {@render children?.()}
     {:else}
-      <Share2 />
+      {#if waiting}
+        <Loader />
+      {:else}
+        <Share2 />
+      {/if}
+      {#if label !== undefined}{label}{/if}
     {/if}
-    {#if label !== null}{label}{/if}
-  {/if}
-</Button>
+  </Button>
+{:else}
+  <Clipboard {text} {label} {disabled} class={classes} oncopy={onshare} {...rest as any} />
+{/if}

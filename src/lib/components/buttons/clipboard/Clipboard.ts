@@ -1,7 +1,9 @@
 import type { ButtonProps } from '$ui/button'
 
 export interface Props extends ButtonProps {
-  text: string | (() => Promise<string>)
-  labeled?: boolean
+  text: Retriever
+  label?: string
   oncopy?: () => void
 }
+
+export type Retriever = () => Promise<string | null> | string | null
