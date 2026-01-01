@@ -29,6 +29,7 @@
       autocomplete="current-password"
       placeholder={$dict.auth.password}
       class="placeholder:text-sm"
+      data-marker="password-input"
     />
   {:else}
     <InputOTP.Root bind:value={otp} maxlength={6} pattern={REGEXP_ONLY_DIGITS} required>

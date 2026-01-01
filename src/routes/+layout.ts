@@ -5,10 +5,11 @@ import { rc as iam } from '@/iam/rc'
 import { rc as realtime } from '@/realtime/rc'
 
 if (browser) {
-  injectAnalytics({
-    mode: dev ? 'development' : 'production',
-    debug: false,
-  })
+  if (!dev)
+    injectAnalytics({
+      mode: 'production',
+      debug: false,
+    })
 
   iam()
   account()

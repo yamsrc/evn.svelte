@@ -29,11 +29,11 @@
 <Tabs.Root bind:value class={cn('w-full', classes)} {onValueChange} bind:ref={tabsRef}>
   <div class="flex justify-between gap-2">
     <Tabs.List>
-      <Tabs.Trigger value="passkey">
+      <Tabs.Trigger value="passkey" data-marker="passkey-tab">
         <FingerprintPattern color="var(--muted-foreground)" />
         {$dict.auth.passkey}
       </Tabs.Trigger>
-      <Tabs.Trigger value="password">
+      <Tabs.Trigger value="password" data-marker="email-tab">
         <AtSign color="var(--muted-foreground)" />
         {$dict.auth.email}
       </Tabs.Trigger>

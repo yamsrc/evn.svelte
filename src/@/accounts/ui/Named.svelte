@@ -22,7 +22,7 @@
           <Card.Description>{$dict.onboarding.name.description}</Card.Description>
         </Card.Header>
         <Card.Content>
-          <Name account={$account} />
+          <Name account={$account} autofocus />
         </Card.Content>
       </Card.Root>
     </Section>

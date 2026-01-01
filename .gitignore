@@ -27,3 +27,4 @@ vite.config.ts.timestamp-*
 .certs
 *.code-workspace
 **/*.temp.*
+.features-gen

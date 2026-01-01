@@ -1,6 +1,13 @@
 import { defineConfig } from '@playwright/test'
+import { defineBddConfig } from 'playwright-bdd'
+
+const testDir = defineBddConfig({
+  features: './features/**/*.feature',
+  steps: './features/steps/**/*.ts',
+})
 
 export default defineConfig({
-  webServer: { command: 'npm run build && npm run preview', port: 4173 },
-  testDir: 'e2e',
+  testDir,
+  use: { baseURL: process.env.APP_URL || 'http://localhost:5173' },
+  expect: { timeout: 3_000 },
 })
