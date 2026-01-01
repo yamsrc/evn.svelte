@@ -14,7 +14,7 @@ Then('the page is loaded', async ({ page }) => {
 When('I tap {string}', async ({ page }, marker) => {
   const element = page.locator(`[data-marker="${marker}"]`)
 
-  await expect(element).toBeVisible()
+  await element.scrollIntoViewIfNeeded()
   await element.click()
 })
 

@@ -3,10 +3,6 @@ import { createBdd } from 'playwright-bdd'
 
 const { When } = createBdd()
 
-When('I tap {string} key', async ({ page }, key) => {
-  await page.keyboard.press(key)
-})
-
 When('I type {string}', async ({ page }, text) => {
   await page.keyboard.type(text)
 })
