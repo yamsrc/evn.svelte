@@ -1,7 +1,7 @@
 <script lang="ts">
   import { ensure, ok } from 'svas'
+  import { Share } from '$com/buttons'
   import { QR } from '$com/qr'
-  import { Share } from '$com/share'
   import { dict } from '$lib/intl'
   import { createCode } from '@/accounts'
   import { account } from '@/iam'

@@ -1,7 +1,7 @@
 <script lang="ts">
   import { LogOut } from '@lucide/svelte'
   import { goto } from '$app/navigation'
-  import { Hold } from '$com/hold'
+  import { Hold } from '$com/buttons'
   import { Section } from '$com/section'
   import { Separator } from '$com/separator'
   import { version } from '$config'

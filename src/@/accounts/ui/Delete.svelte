@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Hold } from '$com/hold'
+  import { Hold } from '$com/buttons'
   import { dict } from '$lib/intl'
   import { cn } from '$lib/utils'
   import * as AlertDialog from '$ui/alert-dialog'

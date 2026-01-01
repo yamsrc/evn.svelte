@@ -4,9 +4,9 @@
 
 <script lang="ts">
   import { UserPlus2 } from '@lucide/svelte'
+  import { Share } from '$com/buttons'
   import { QR } from '$com/qr'
   import { Separator } from '$com/separator'
-  import { Share } from '$com/share'
   import { dict } from '$lib/intl'
   import { Button } from '$ui/button'
   import type { Props } from './Invite'

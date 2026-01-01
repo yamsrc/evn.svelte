@@ -3,7 +3,7 @@
   import { Async, ok } from 'svas'
   import { goto } from '$app/navigation'
   import { page } from '$app/state'
-  import { Hold } from '$com/hold'
+  import { Hold } from '$com/buttons'
   import { Section } from '$com/section'
   import { Separator } from '$com/separator'
   import { Back } from '$lib/components/history'
