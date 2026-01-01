@@ -87,6 +87,7 @@
 <form onsubmit={onsubmit(submit)}>
   <fieldset class="space-y-2">
     <Input
+      id="iam-username-input"
       bind:value={username}
       name="username"
       type="email"
@@ -96,7 +97,6 @@
       {autofocus}
       placeholder={$dict.auth.email}
       class="placeholder:text-sm"
-      id="username-input"
     />
     <div class="space-y-1">
       <div class="flex items-center gap-2">

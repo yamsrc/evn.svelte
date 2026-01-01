@@ -37,6 +37,7 @@ src/@/{domain}/
 - Components import domain services via `@/{domain}` alias
 - **`index.ts`**: Exports reusable UI components
 - Transient UI state is managed in `ui.ts` file
+- Active elements must have an `id` attribute that follows the pattern `{domain-or-route}-{element}-{kind}` (e.g. `iam-email-tab`, `accounts-name-input`, `me-logout-button`)
 
 ### App Domain
 

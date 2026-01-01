@@ -38,6 +38,7 @@
 
 <form onsubmit={onsubmit(submit)} class="flex items-center gap-2">
   <Input
+    id="accounts-name-input"
     bind:ref
     bind:value
     name="name"
@@ -49,7 +50,6 @@
     required
     disabled={busy}
     {onblur}
-    id="name-input"
   />
   <Button size="icon" type="submit" class="size-12" disabled={busy}>
     <ArrowRight class="size-5" />

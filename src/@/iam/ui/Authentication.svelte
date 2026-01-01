@@ -33,7 +33,7 @@
         <FingerprintPattern color="var(--muted-foreground)" />
         {$dict.auth.passkey}
       </Tabs.Trigger>
-      <Tabs.Trigger value="password" id="email-tab">
+      <Tabs.Trigger value="password" id="iam-email-tab">
         <AtSign color="var(--muted-foreground)" />
         {$dict.auth.email}
       </Tabs.Trigger>

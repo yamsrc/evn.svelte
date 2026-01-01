@@ -6,14 +6,14 @@ const { Given, Then } = createBdd()
 
 Given('new account', async ({ page }) => {
   await page.goto('/')
-  await page.locator('#email-tab').click()
-  await expect(page.locator('#username-input')).toBeFocused()
+  await page.locator('#iam-email-tab').click()
+  await expect(page.locator('#iam-username-input')).toBeFocused()
   await page.keyboard.type(faker.internet.email())
   await page.keyboard.press('Tab')
   await page.keyboard.type(faker.internet.password())
   await page.keyboard.press('Enter')
 
-  const nameInput = page.locator('#name-input')
+  const nameInput = page.locator('#accounts-name-input')
 
   await expect(nameInput).toBeFocused()
   await page.keyboard.type(faker.person.firstName())

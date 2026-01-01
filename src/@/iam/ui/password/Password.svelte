@@ -22,6 +22,7 @@
 <div bind:this={ref} class={cn('w-full flex items-center', error && 'shake')}>
   {#if mode === 'password'}
     <Input
+      id="iam-password-input"
       bind:value={password}
       name="password"
       type="password"
@@ -29,7 +30,6 @@
       autocomplete="current-password"
       placeholder={$dict.auth.password}
       class="placeholder:text-sm"
-      id="password-input"
     />
   {:else}
     <InputOTP.Root bind:value={otp} maxlength={6} pattern={REGEXP_ONLY_DIGITS} required>

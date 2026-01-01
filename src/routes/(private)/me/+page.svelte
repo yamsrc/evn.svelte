@@ -25,12 +25,12 @@
       <Header.Title>{$dict.profile.title}</Header.Title>
       <Header.Actions>
         <Hold
+          id="me-logout-button"
           onclick={getout}
           variant="ghost"
           class="size-12 bg-accent/50 border border-border"
           position="left"
           label={$dict.actions.holdToLogout}
-          id="logout-button"
         >
           <LogOut class="size-5" />
         </Hold>
