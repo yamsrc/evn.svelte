@@ -51,7 +51,7 @@
 
 <Button class={cn(classes)} {onclick} disabled={disabled || unavailable || waiting} {...rest}>
   {#if copied}
-    <Check class="text-green-400" />
+    <Check class="text-constructive" />
   {:else if waiting}
     <Spinner />
   {:else}

@@ -4,10 +4,12 @@ export const windows = browser && navigator.userAgent.toLowerCase().includes('wi
 
 export const apple = browser
   ? /mac ?os|ios|ipad ?os/i.test((navigator as any).userAgentData?.platform ?? '') ||
-    /(Mac|iPhone|iPad|iPod)/.test(navigator.userAgent)
+  /(Mac|iPhone|iPad|iPod)/.test(navigator.userAgent)
   : false
 
 export const android = browser ? /android/i.test(navigator.userAgent) : false
+
+export const ios = browser ? /(iPhone|iPad|iPod)/.test(navigator.userAgent) : false
 
 export const safari = browser ? /^((?!chrome|android).)*safari/i.test(navigator.userAgent) : false
 
