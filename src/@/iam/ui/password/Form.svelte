@@ -96,7 +96,7 @@
       {autofocus}
       placeholder={$dict.auth.email}
       class="placeholder:text-sm"
-      data-marker="username-input"
+      id="username-input"
     />
     <div class="space-y-1">
       <div class="flex items-center gap-2">

@@ -11,15 +11,15 @@ Then('the page is loaded', async ({ page }) => {
   await expect(page).toHaveURL(/.+/)
 })
 
-When('I tap {string}', async ({ page }, marker) => {
-  const element = page.locator(`[data-marker="${marker}"]`)
+When('I tap {string}', async ({ page }, id) => {
+  const element = page.locator(`#${id}`)
 
   await expect(element).toBeVisible()
   await element.click()
 })
 
-When('I hold {string} for {int}s', async ({ page }, marker, duration) => {
-  const element = page.locator(`[data-marker="${marker}"]`)
+When('I hold {string} for {int}s', async ({ page }, id, duration) => {
+  const element = page.locator(`#${id}`)
 
   await expect(element).toBeVisible()
   await element.hover()
@@ -28,8 +28,8 @@ When('I hold {string} for {int}s', async ({ page }, marker, duration) => {
   await page.mouse.up()
 })
 
-Then('{string} is focused', async ({ page }, marker) => {
-  const element = page.locator(`[data-marker="${marker}"]`)
+Then('{string} is focused', async ({ page }, id) => {
+  const element = page.locator(`#${id}`)
 
   await expect(element).toBeVisible()
   await expect(element).toBeFocused()

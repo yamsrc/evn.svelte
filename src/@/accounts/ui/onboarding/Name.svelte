@@ -49,7 +49,7 @@
     required
     disabled={busy}
     {onblur}
-    data-marker="name-input"
+    id="name-input"
   />
   <Button size="icon" type="submit" class="size-12" disabled={busy}>
     <ArrowRight class="size-5" />

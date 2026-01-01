@@ -46,7 +46,7 @@
               rounded,
               active && 'text-accent-foreground',
             )}
-            data-marker={`nav-${section.id}`}
+            id={`nav-${section.id}`}
           >
             <div
               class={cn(
