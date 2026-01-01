@@ -28,6 +28,12 @@ When('I hold {string} for {int}s', async ({ page }, id, duration) => {
   await page.mouse.up()
 })
 
+Then('{string} is visible', async ({ page }, id) => {
+  const element = page.locator(`#${id}`)
+
+  await expect(element).toBeVisible()
+})
+
 Then('{string} is focused', async ({ page }, id) => {
   const element = page.locator(`#${id}`)
 

@@ -14,6 +14,7 @@
     note,
     class: classes,
     autocomplete,
+    autofocus,
     onchange,
   }: Props = $props()
 
@@ -53,7 +54,14 @@
   </div>
   <div class="space-y-2">
     {#if editable}
-      <Name bind:value={name} bind:busy onchange={onNameChange} {autocomplete} {placeholder} />
+      <Name
+        bind:value={name}
+        bind:busy
+        onchange={onNameChange}
+        {autocomplete}
+        {placeholder}
+        {autofocus}
+      />
       {#if note}
         <p class="text-muted-foreground text-sm text-center">{note}</p>
       {/if}
@@ -62,7 +70,13 @@
     {/if}
   </div>
   {#if blank}
-    <Button size="lg" class="w-full" disabled={busy || !name.trim()} {onclick}>
+    <Button
+      id="app-cosmetics-submit-button"
+      size="lg"
+      class="w-full"
+      disabled={busy || !name.trim()}
+      {onclick}
+    >
       {label}
     </Button>
   {/if}

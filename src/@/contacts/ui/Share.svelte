@@ -38,7 +38,13 @@
 
 {#if contact.account && ok(contact.account)}
   <div class="flex flex-col gap-2">
-    <Share size="lg" {disabled} data={share} label={$dict.contacts.share.invite.link} />
+    <Share
+      id="contacts-share-button"
+      size="lg"
+      {disabled}
+      data={share}
+      label={$dict.contacts.share.invite.link}
+    />
     <QR size="lg" variant="secondary" text={getUrl} label={$dict.contacts.share.invite.qr} />
     <p class="text-sm text-muted-foreground text-center">
       {$dict.contacts.share.invite.description}

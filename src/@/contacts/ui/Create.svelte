@@ -17,4 +17,9 @@
   }
 </script>
 
-<Cosmetics label={$dict.contacts.add.label} note={$dict.contacts.add.description} {onchange} />
+<Cosmetics
+  label={$dict.contacts.add.label}
+  note={$dict.contacts.add.description}
+  {onchange}
+  autofocus
+/>

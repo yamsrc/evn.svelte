@@ -1,6 +1,7 @@
 import type { ButtonProps } from '$ui/button'
 
 export interface Props extends ButtonProps {
+  id?: string
   data: ShareData | Retriever
   label?: string | null
   onshare?: () => void

@@ -5,6 +5,7 @@ export interface Props {
   busy: boolean
   placeholder?: string
   autocomplete?: HTMLInputAttributes['autocomplete']
+  autofocus?: HTMLInputAttributes['autofocus']
   class?: string
   onchange?: (value: string) => void
 }

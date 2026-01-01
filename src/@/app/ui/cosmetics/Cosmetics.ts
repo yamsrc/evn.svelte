@@ -8,6 +8,7 @@ export interface Props {
   note?: string
   class?: string
   autocomplete?: HTMLInputAttributes['autocomplete']
+  autofocus?: HTMLInputAttributes['autofocus']
   onchange?: (value: Value) => void | Promise<void>
 }
 

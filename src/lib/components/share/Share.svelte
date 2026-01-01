@@ -7,6 +7,7 @@
   import type { Props, Retriever } from './Share'
 
   const {
+    id,
     children,
     data,
     label,
@@ -42,6 +43,7 @@
 </script>
 
 <Button
+  {id}
   class={cn(classes)}
   {variant}
   {onclick}
