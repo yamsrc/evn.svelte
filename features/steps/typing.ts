@@ -12,7 +12,7 @@ When('I press {string}', async ({ page }, key) => {
 })
 
 When('I type random email', async ({ page }) => {
-  await page.keyboard.type(faker.internet.email())
+  await page.keyboard.type(faker.internet.email({ provider: 'dev.null' }))
 })
 
 When('I type random password', async ({ page }) => {

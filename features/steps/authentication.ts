@@ -1,8 +1,9 @@
 import { faker } from '@faker-js/faker'
 import { expect } from '@playwright/test'
 import { createBdd } from 'playwright-bdd'
+import type { Page } from '@playwright/test'
 
-const { Given, Then } = createBdd()
+const { Given, When, Then } = createBdd()
 
 Given('new account', async ({ page }) => {
   await page.goto('/')
@@ -12,28 +13,36 @@ Given('new account', async ({ page }) => {
   await page.keyboard.press('Tab')
   await page.keyboard.type(faker.internet.password())
   await page.keyboard.press('Enter')
-
-  const nameInput = page.locator('#accounts-name-input')
-
-  await expect(nameInput).toBeFocused()
+  await expect(page.locator('#accounts-name-input')).toBeFocused()
   await page.keyboard.type(faker.person.firstName())
   await page.keyboard.press('Enter')
+  await isAuthenticated(page)
+})
 
-  await expect(async () => {
-    const challenge = await page.evaluate(() => localStorage.getItem('auth:challenge'))
+When('I log out', async ({ page }) => {
+  await page.locator('#nav-me-button').click()
+  await page.locator('#me-logout-button').click({ modifiers: ['Alt'] })
 
-    expect(challenge).not.toBeNull()
-  }).toPass()
+  await isNotAuthenticated(page)
 })
 
 Then('I am authenticated', async ({ page }) => {
-  const challenge = await page.evaluate(() => localStorage.getItem('auth:challenge'))
-
-  expect(challenge).not.toBeNull()
+  await isAuthenticated(page)
 })
 
 Then('I am not authenticated', async ({ page }) => {
-  const challenge = await page.evaluate(() => localStorage.getItem('auth:challenge'))
-
-  expect(challenge).toBeNull()
+  await isNotAuthenticated(page)
 })
+
+async function isAuthenticated(page: Page, tobe: boolean = true) {
+  await expect(async () => {
+    const challenge = await page.evaluate(() => localStorage.getItem('auth:challenge'))
+
+    if (tobe) expect(challenge).not.toBeNull()
+    else expect(challenge).toBeNull()
+  }).toPass()
+}
+
+async function isNotAuthenticated(page: Page) {
+  await isAuthenticated(page, false)
+}

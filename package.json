@@ -11,8 +11,6 @@
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "eslint .",
-		"test:e2e": "playwright test",
-		"test": "npm run test:e2e",
 		"features": "npx bddgen && npx playwright test",
 		"features:production": "APP_URL=https://evnapp.com npm run features",
 		"format": "eslint . --fix",
