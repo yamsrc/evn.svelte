@@ -30,6 +30,7 @@
           class="size-12 bg-accent/50 border border-border"
           position="left"
           label={$dict.actions.holdToLogout}
+          data-marker="logout-button"
         >
           <LogOut class="size-5" />
         </Hold>

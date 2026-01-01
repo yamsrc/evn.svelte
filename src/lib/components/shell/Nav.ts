@@ -7,6 +7,7 @@ export interface Props {
 }
 
 export interface Section {
+  id: string
   href: string | string[]
   label: string
   Icon: typeof Icon

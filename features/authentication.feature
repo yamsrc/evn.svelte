@@ -13,3 +13,10 @@ Feature: Authentication
     And I type random name
     And I press 'Enter'
     Then I am authenticated
+
+  Scenario: Logout
+    Given new account
+    Then I am authenticated
+    When I tap 'nav-me'
+    And I hold 'logout-button' for 1s
+    Then I am not authenticated
