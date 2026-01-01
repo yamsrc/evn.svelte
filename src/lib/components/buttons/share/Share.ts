@@ -8,5 +8,3 @@ export interface Props extends ButtonProps {
 }
 
 export type Retriever = () => ShareData | null | Promise<ShareData | null>
-
-export { default as Share } from './Share.svelte'

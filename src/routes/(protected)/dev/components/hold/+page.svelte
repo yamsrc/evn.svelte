@@ -1,6 +1,6 @@
 <script lang="ts">
   import { LogOut } from '@lucide/svelte'
-  import { Hold } from '$com/hold'
+  import { Hold } from '$com/buttons/hold'
   import { dict } from '$lib/intl'
 
   // prettier-ignore
