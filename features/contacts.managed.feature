@@ -8,5 +8,5 @@ Feature: Managed contacts
     Then 'app-cosmetics-name-input' is focused
     When I type random name
     And I press 'Enter'
-    Then 'contacts-share-button' is visible
-    # TODO: Add steps to share the contact
+    And I tap 'contacts-share-button'
+    
