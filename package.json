@@ -60,7 +60,8 @@
 		"vite": "^7.3.0"
 	},
 	"bin": {
-		"shad": "tools/shad.js"
+		"shad": "tools/shad.js",
+		"feat": "tools/feat.js"
 	},
 	"dependencies": {
 		"qr-code-styling": "^1.9.2"
