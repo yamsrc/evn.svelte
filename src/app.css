@@ -27,6 +27,7 @@
   --accent-foreground: oklch(0.2662 0.0232 60.8564);
   --destructive: oklch(0.5771 0.2152 27.325);
   --destructive-foreground: oklch(0.7106 0.1661 22.2162);
+  --constructive: oklch(0.6637 0.161 150.99);
   --border: oklch(0.9138 0.0216 65.3013);
   --input: oklch(0.9925 0.0051 67.7654);
   --ring: oklch(0.759 0.0439 61.2561);
@@ -157,6 +158,7 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --color-constructive: var(--constructive);
 
   --font-sans: var(--font-sans);
   --font-mono: var(--font-mono);
