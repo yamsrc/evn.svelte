@@ -1,7 +1,5 @@
 import { faker } from '@faker-js/faker'
-import { createBdd } from 'playwright-bdd'
-
-const { When } = createBdd()
+import { When } from './fixtures'
 
 When('I type {string}', async ({ page }, text) => {
   await page.keyboard.type(text)
@@ -19,6 +17,8 @@ When('I type random password', async ({ page }) => {
   await page.keyboard.type(faker.internet.password())
 })
 
-When('I type random name', async ({ page }) => {
-  await page.keyboard.type(faker.person.firstName())
+When('I type random name', async ({ page, ctx }) => {
+  ctx.name = faker.person.firstName()
+
+  await page.keyboard.type(ctx.name)
 })

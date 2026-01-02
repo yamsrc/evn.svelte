@@ -1,7 +1,5 @@
 import { expect } from '@playwright/test'
-import { createBdd } from 'playwright-bdd'
-
-const { Given, When, Then } = createBdd()
+import { Given, Then } from './fixtures'
 
 Given('path {string}', async ({ page }, path) => {
   await page.goto(path)
@@ -9,34 +7,4 @@ Given('path {string}', async ({ page }, path) => {
 
 Then('the page is loaded', async ({ page }) => {
   await expect(page).toHaveURL(/.+/)
-})
-
-When('I tap {string}', async ({ page }, id) => {
-  const element = page.locator(`#${id}`)
-
-  await expect(element).toBeVisible()
-  await element.click()
-})
-
-When('I hold {string} for {int}s', async ({ page }, id, duration) => {
-  const element = page.locator(`#${id}`)
-
-  await expect(element).toBeVisible()
-  await element.hover()
-  await page.mouse.down()
-  await page.waitForTimeout(duration * 1000)
-  await page.mouse.up()
-})
-
-Then('{string} is visible', async ({ page }, id) => {
-  const element = page.locator(`#${id}`)
-
-  await expect(element).toBeVisible()
-})
-
-Then('{string} is focused', async ({ page }, id) => {
-  const element = page.locator(`#${id}`)
-
-  await expect(element).toBeVisible()
-  await expect(element).toBeFocused()
 })

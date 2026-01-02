@@ -1,6 +1,6 @@
 Feature: Managed contacts
 
-  Scenario: Share managed contact
+  Scenario: Create managed contact
     Given new account
     When I tap 'nav-actions-button'
     And I tap 'nav-actions-contacts-new-button'
@@ -8,5 +8,7 @@ Feature: Managed contacts
     Then 'app-cosmetics-name-input' is focused
     When I type random name
     And I press 'Enter'
-    And I tap 'contacts-share-button'
+    Then 'contacts-share-button' is visible
+    When I tap 'nav-contacts-button'
+    Then some of 'contacts-panel' contains that name
     

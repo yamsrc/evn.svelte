@@ -1,9 +1,7 @@
 import { faker } from '@faker-js/faker'
 import { expect } from '@playwright/test'
-import { createBdd } from 'playwright-bdd'
+import { Given, When, Then } from './fixtures'
 import type { Page } from '@playwright/test'
-
-const { Given, When, Then } = createBdd()
 
 Given('new account', async ({ page }) => {
   await page.goto('/')
