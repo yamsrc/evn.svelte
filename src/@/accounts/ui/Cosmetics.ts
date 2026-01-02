@@ -5,4 +5,5 @@ type AccountLike = Pick<Account, 'id' | 'name' | 'picture'>
 
 export interface Props extends Omit<CosmeticsProps, 'value' | 'onchange'> {
   account: AccountLike
+  managed?: boolean
 }

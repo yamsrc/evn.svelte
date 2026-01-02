@@ -25,7 +25,7 @@
       {@const contact = contacts.find((contact) => contact.id === id)}
       {#if contact?.account && ok(contact.account)}
         <div class="flex flex-col gap-4">
-          <Cosmetics account={contact.account} editable={contact.managed} />
+          <Cosmetics account={contact.account} editable={contact.managed} managed />
           {#if contact.managed}
             <Share {contact} />
           {/if}
