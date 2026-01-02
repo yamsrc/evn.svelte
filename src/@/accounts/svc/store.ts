@@ -9,3 +9,8 @@ export const accounts = values<Account>({
   stale: true,
   bind: account,
 })
+
+account.subscribe((value) => {
+  if (value !== null)
+    accounts.set(value.id, value)
+})

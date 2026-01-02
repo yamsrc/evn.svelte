@@ -1,6 +1,7 @@
 import { ensure } from 'svas'
 import * as iam from '@/iam'
 import * as net from './net'
+import { accounts } from './store'
 
 export async function update(id: string, properties: net.Editable, managed?: boolean): Promise<void | Error> {
   const me = ensure(iam.account)
@@ -11,4 +12,6 @@ export async function update(id: string, properties: net.Editable, managed?: boo
 
   if (me.id === id)
     iam.update(res)
+  else
+    accounts.set(res.id, res)
 }
