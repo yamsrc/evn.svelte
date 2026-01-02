@@ -4,8 +4,13 @@ import { When, Then } from './fixtures'
 When('I tap {string}', async ({ page }, id) => {
   const element = page.locator(`#${id}`)
 
-  await expect(element).toBeVisible()
   await element.click()
+})
+
+When('I double tap {string}', async ({ page }, id) => {
+  const element = page.locator(`#${id}`)
+
+  await element.dblclick()
 })
 
 When('I hold {string} for {int}s', async ({ page }, id, duration) => {
@@ -29,6 +34,16 @@ Then('{string} is focused', async ({ page }, id) => {
 
   await expect(element).toBeVisible()
   await expect(element).toBeFocused()
+})
+
+Then('{string} is not disabled', async ({ page }, id) => {
+  const element = page.locator(`#${id}`)
+
+  await expect(element).not.toBeDisabled()
+})
+
+Then('input {string} contains that name', async ({ page, ctx }, id) => {
+  await expect(page.locator(`#${id}`)).toHaveValue(ctx.name)
 })
 
 Then('some of {string} contains that {string}', async ({ page }, classname, text) => {

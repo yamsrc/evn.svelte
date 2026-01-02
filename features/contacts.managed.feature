@@ -12,3 +12,12 @@ Feature: Managed contacts
     When I tap 'nav-contacts-button'
     Then some of 'contacts-panel' contains that name
     
+  Scenario: Update managed contact
+    Given new account
+    And new managed contact
+    When I double tap 'app-cosmetics-name-input'
+    And I press 'Backspace'
+    And I type random name
+    And I press 'Enter'
+    Then 'app-cosmetics-name-input' is not disabled
+    And input 'app-cosmetics-name-input' contains that name
