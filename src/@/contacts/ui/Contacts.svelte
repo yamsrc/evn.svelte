@@ -1,7 +1,7 @@
 <script lang="ts">
   import Section from '$com/section/Section.svelte'
   import { filter } from '@/contacts'
-  import Contact from './Panel.svelte'
+  import Panel from './Panel.svelte'
   import type { Props } from './Contacts'
 
   let { contacts, title, actionable, selection = $bindable(), search }: Props = $props()
@@ -27,6 +27,6 @@
   {#each filter(contacts, search) as contact (contact.identity)}
     {@const selected = selection?.has(contact.identity)}
     {@const selectedProps = selectable ? { selected, onselect } : undefined}
-    <Contact {contact} {actionable} {...selectedProps} />
+    <Panel {contact} {actionable} {...selectedProps} />
   {/each}
 </Section>
