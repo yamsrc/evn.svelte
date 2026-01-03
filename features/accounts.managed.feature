@@ -1,6 +1,6 @@
-Feature: Managed contacts
+Feature: Managed accounts
 
-  Scenario: Create managed contact
+  Scenario: Create managed account
     Given new account
     When I tap 'nav-actions-button'
     And I tap 'nav-actions-contacts-new-button'
@@ -12,7 +12,7 @@ Feature: Managed contacts
     When I tap 'nav-contacts-button'
     Then some of 'contacts-panel' contains that name
     
-  Scenario: Update managed contact
+  Scenario: Update managed account
     Given new account
     And new managed contact
     When I double tap 'app-cosmetics-name-input'
@@ -21,3 +21,12 @@ Feature: Managed contacts
     And I press 'Enter'
     Then 'app-cosmetics-name-input' is not disabled
     And input 'app-cosmetics-name-input' contains that name
+
+  Scenario: Capture managed account
+    Given new account
+    And new managed contact
+    When I tap 'contacts-share-button'
+    Then my clipboard is not empty
+    When I clear the session
+    And I open link from the clipboard
+    And 'join-accounts-accept-button' is visible

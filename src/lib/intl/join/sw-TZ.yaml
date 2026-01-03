@@ -1,0 +1,11 @@
+account:
+  title: Uhamisho wa akaunti
+  description: Mtu fulani ameunda akaunti hii na anaikukabidhi kwako.
+  accept: Kubali akaunti
+  content: >-
+    Ili kumiliki, utahitaji kuweka maelezo yako ya kuingia. Hii haitaunda
+    akaunti mpya — itakuwezesha tu kufikia na kudhibiti hii.
+  content0: Ili kuchukua umiliki, utahitaji kuweka maelezo yako ya kuingia.
+  content1: Hii haitaunda akaunti mpya — itakuwezesha tu kupata na kudhibiti hii.
+actions:
+  discard: Tupa mbali

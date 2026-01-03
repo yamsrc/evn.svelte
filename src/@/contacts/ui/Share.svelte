@@ -1,28 +1,25 @@
 <script lang="ts">
-  import { ensure, ok } from 'svas'
+  import { ok } from 'svas'
   import { Share } from '$com/buttons'
   import { QR } from '$com/qr'
   import { dict } from '$lib/intl'
   import { createCode } from '@/accounts'
-  import { account } from '@/iam'
   import type { Props } from './Share'
 
   const { contact }: Props = $props()
 
   let disabled = $state(false)
 
-  async function share() {
-    const url = await getUrl()
+  async function data() {
+    const url = await text()
 
     if (url === null) return null
 
     return { url }
   }
 
-  async function getUrl() {
-    if (!contact.account || !ok(contact.account)) return null
-
-    const me = ensure(account)
+  async function text() {
+    if (!ok(contact.account)) return null
 
     disabled = true
 
@@ -32,20 +29,20 @@
 
     if (code instanceof Error) return null
 
-    return `${window.location.origin}/join/capture/${me.id}/?code=${code}`
+    return `${window.location.origin}/join/accounts/${contact.account.id}/?code=${code}`
   }
 </script>
 
-{#if contact.account && ok(contact.account)}
+{#if ok(contact.account)}
   <div class="flex flex-col gap-2">
     <Share
       id="contacts-share-button"
       size="lg"
-      {disabled}
-      data={share}
       label={$dict.contacts.share.invite.link}
+      {data}
+      {disabled}
     />
-    <QR size="lg" variant="secondary" text={getUrl} label={$dict.contacts.share.invite.qr} />
+    <QR size="lg" variant="secondary" {text} label={$dict.contacts.share.invite.qr} />
     <p class="text-sm text-muted-foreground text-center">
       {$dict.contacts.share.invite.description}
     </p>

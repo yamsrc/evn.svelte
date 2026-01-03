@@ -1,0 +1,14 @@
+account:
+  title: Accountoverdracht
+  description: Iemand heeft dit account aangemaakt en draagt het nu aan jou over.
+  accept: Account accepteren
+  content: >-
+    Om eigenaar te worden, moet je je inloggegevens instellen. Dit maakt geen
+    nieuw account aan — het zorgt er alleen voor dat je toegang krijgt tot en
+    dit account kunt beheren.
+  content0: Om eigenaar te worden, moet je je inloggegevens instellen.
+  content1: >-
+    Dit maakt geen nieuw account aan — het geeft je alleen toegang tot en beheer
+    over dit account.
+actions:
+  discard: Afwijzen

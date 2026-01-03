@@ -1,0 +1,14 @@
+account:
+  title: Kontenübertrag
+  description: Jemand hat dieses Konto erstellt und überträgt es nun an dich.
+  accept: Konto akzeptieren
+  content: >-
+    Um die Inhaberschaft zu übernehmen, müssen Sie Ihre Zugangsdaten festlegen.
+    Es wird kein neues Konto erstellt – Sie können dadurch einfach auf dieses
+    Konto zugreifen und es verwalten.
+  content0: Um die Inhaberschaft zu übernehmen, richte bitte deine Anmeldedaten ein.
+  content1: >-
+    Dadurch wird kein neues Konto erstellt – du bekommst lediglich Zugriff auf
+    dieses und kannst es verwalten.
+actions:
+  discard: Ablehnen

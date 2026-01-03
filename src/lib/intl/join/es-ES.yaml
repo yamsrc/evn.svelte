@@ -1,0 +1,15 @@
+account:
+  title: Transferencia de cuenta
+  description: Alguien ha creado esta cuenta y te la está transfiriendo.
+  accept: Aceptar cuenta
+  content: >-
+    Para tomar el control, tendrás que configurar tus datos de acceso. Esto no
+    creará una cuenta nueva; simplemente te permitirá acceder y gestionar esta.
+  content0: >-
+    Para asumir la propiedad, tendrás que configurar tus datos de inicio de
+    sesión.
+  content1: >-
+    Esto no creará una nueva cuenta; simplemente te permitirá acceder y
+    gestionar esta.
+actions:
+  discard: Descartar

@@ -1,0 +1,9 @@
+account:
+  title: 账户转移
+  description: 有人创建了此账户，并正在将其转交给您。
+  accept: 接受账户
+  content: 要获得所有权，您需要设置您的登录信息。这不会创建新账户——只会让您访问并管理此账户。
+  content0: 要取得所有权，您需要设置您的登录信息。
+  content1: 这不会创建新账户——只会让你访问并管理此账户。
+actions:
+  discard: 丢弃

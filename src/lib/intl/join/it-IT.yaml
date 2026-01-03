@@ -1,0 +1,14 @@
+account:
+  title: Trasferimento account
+  description: Qualcuno ha creato questo account e lo sta trasferendo a te.
+  accept: Accetta account
+  content: >-
+    Per assumere la proprietà, dovrai impostare i tuoi dati di accesso. Questo
+    non creerà un nuovo account — ti permetterà semplicemente di accedere e
+    gestire questo.
+  content0: Per assumere la proprietà, devi configurare i tuoi dati di accesso.
+  content1: >-
+    Questo non creerà un nuovo account — ti permetterà semplicemente di accedere
+    e gestire questo.
+actions:
+  discard: Rifiuta

@@ -9,6 +9,7 @@ const testDir = defineBddConfig({
 export default defineConfig({
   testDir,
   use: {
+    permissions: ['clipboard-read', 'clipboard-write'],
     baseURL: process.env.BASE_URL ?? 'http://localhost:5173',
   },
   expect: { timeout: 3_000 },

@@ -186,3 +186,4 @@ inputs:
 mounts:
   iam: ../../@/iam/ui/intl
   feedback: ../../@/feedback/ui/intl
+  join: join

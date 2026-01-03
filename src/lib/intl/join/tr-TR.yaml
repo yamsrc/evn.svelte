@@ -1,0 +1,11 @@
+account:
+  title: Hesap transferi
+  description: Birisi bu hesabı oluşturdu ve şimdi onu sana devrediyor.
+  accept: Hesabı kabul et
+  content: >-
+    Sahiplik almak için giriş bilgilerinizi ayarlamanız gerekir. Bu, yeni bir
+    hesap oluşturmaz — sadece bu hesaba erişmenizi ve yönetmenizi sağlar.
+  content0: Sahipliği almak için oturum açma bilgilerinizi oluşturmanız gerekir.
+  content1: Bu yeni bir hesap oluşturmaz — sadece bu hesaba erişip yönetmeni sağlar.
+actions:
+  discard: Reddet

@@ -1,0 +1,16 @@
+account:
+  title: Transfert de compte
+  description: Quelqu’un a créé ce compte et est en train de vous le transférer.
+  accept: Accepter le compte
+  content: >-
+    Pour devenir propriétaire, vous devrez configurer vos informations de
+    connexion. Cela ne créera pas un nouveau compte — cela vous permettra
+    simplement d'accéder à celui-ci et de le gérer.
+  content0: >-
+    Pour devenir propriétaire, vous devez configurer vos informations de
+    connexion.
+  content1: >-
+    Cela ne créera pas un nouveau compte — cela vous permettra simplement
+    d'accéder à celui-ci et de le gérer.
+actions:
+  discard: Ignorer

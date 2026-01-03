@@ -1,5 +1,5 @@
 import { origin } from '@/net'
-import { hello } from './svc/hello'
+// import { hello } from './svc/hello'
 import { challenge } from './svc/store'
 import { sync } from './svc/sync'
 
@@ -12,7 +12,7 @@ function rc() {
 
   challenge.subscribe((challenge) => origin.authenticate(challenge))
 
-  void hello()
+  // void hello()
   void sync()
 }
 
