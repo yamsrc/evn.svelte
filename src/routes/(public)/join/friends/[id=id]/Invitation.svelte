@@ -1,11 +1,11 @@
 <script lang="ts">
   import { Async } from 'svas'
   import { goto } from '$app/navigation'
-  import { Section } from '$com/section'
   import { dict } from '$lib/intl'
   import { Button } from '$ui/button'
   import { accounts } from '@/accounts'
   import { Picture } from '@/accounts/ui'
+  import { Section } from '@/app/ui'
   import * as contacts from '@/contacts'
   import type { Props } from './Invitation'
 

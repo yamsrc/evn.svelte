@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { Section } from '$com/section'
   import { Named } from '@/accounts/ui'
+  import { Section } from '@/app/ui'
   import { Footer } from '@/app/ui'
   import { Authenticated } from '@/iam/ui'
   import { Languages } from '@/iam/ui'

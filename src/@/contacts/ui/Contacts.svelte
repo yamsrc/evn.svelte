@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Section from '$com/section/Section.svelte'
+  import { Section } from '@/app/ui'
   import { filter } from '@/contacts'
   import Panel from './Panel.svelte'
   import type { Props } from './Contacts'

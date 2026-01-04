@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { Section } from '$com/section'
   import { dict } from '$lib/intl'
   import * as Card from '$ui/card'
   import { Avatar } from '@/accounts/ui'
+  import { Section } from '@/app/ui'
   import { account } from '@/iam'
   import Name from './onboarding/Name.svelte'
   import type { Props } from './Named'

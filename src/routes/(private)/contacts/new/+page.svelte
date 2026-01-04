@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Section } from '$com/section'
+  import { Section } from '@/app/ui'
   import { Invite } from '@/contacts/ui'
   import { account } from '@/iam'
 </script>
