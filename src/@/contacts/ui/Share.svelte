@@ -3,7 +3,7 @@
   import { Share } from '$com/buttons'
   import { QR } from '$com/qr'
   import { dict } from '$lib/intl'
-  import { createCode } from '@/accounts'
+  import { codes } from '@/accounts'
   import type { Props } from './Share'
 
   const { contact }: Props = $props()
@@ -23,7 +23,7 @@
 
     disabled = true
 
-    const code = await createCode(contact.account.id)
+    const code = await codes.create(contact.account.id)
 
     disabled = false
 

@@ -11,11 +11,21 @@ export type Dictionary = {
         title: string
         description: string
         accept: string
-        content: string
         content0: string
         content1: string
+        conflict: {
+          content0: (value: any) => string
+          content1: string
+        }
+        switch: string
+        expired: {
+          content: string
+          description: string
+          title: string
+        }
       }
       actions: {
         discard: string
+        close: string
       }
     }

@@ -7,12 +7,22 @@ export const dictionaries = {
       "title": "نقل الحساب",
       "description": "قام شخص ما بإنشاء هذا الحساب وينقله إليك الآن.",
       "accept": "قبول الحساب",
-      "content": "لتُصبح المالك، ستحتاج إلى إعداد تفاصيل تسجيل الدخول الخاصة بك. لن يؤدي ذلك إلى إنشاء حساب جديد — بل سيتيح لك فقط الوصول إلى هذا الحساب وإدارته.",
-      "content0": "لتتمكن من امتلاك الحساب، ستحتاج إلى إعداد تفاصيل تسجيل الدخول الخاصة بك.",
-      "content1": "هذا لن ينشئ حسابًا جديدًا — بل سيسمح لك فقط بالوصول إلى هذا الحساب وإدارته."
+      "content0": "لتولي ملكية الحساب، قم بإعداد تفاصيل تسجيل الدخول الخاصة بك. لن يؤدي هذا إلى إنشاء حساب جديد — بل يمنحك فقط الوصول إلى هذا الحساب.",
+      "content1": "هذا لن ينشئ حسابًا جديدًا — بل سيسمح لك فقط بالوصول إلى هذا الحساب وإدارته.",
+      "conflict": {
+        "content0": (name) => `${name}، لقبول هذا الحساب، سيتم تسجيل خروجك من حسابك الحالي وستحتاج إلى إعداد تفاصيل تسجيل دخول جديدة.`,
+        "content1": "لن يؤدي هذا إلى دمج الحسابات — بل ستنتقل إلى الحساب الجديد."
+      },
+      "switch": "تبديل الحساب",
+      "expired": {
+        "content": "اطلب من المُرسِل إنشاء رابط جديد.",
+        "description": "انتهت صلاحية طلب التحويل هذا.",
+        "title": "انتهت صلاحية النقل"
+      }
     },
     "actions": {
-      "discard": "تجاهل"
+      "discard": "تجاهل",
+      "close": "إغلاق"
     }
   },
   "de-DE": {
@@ -20,12 +30,22 @@ export const dictionaries = {
       "title": "Kontenübertrag",
       "description": "Jemand hat dieses Konto erstellt und überträgt es nun an dich.",
       "accept": "Konto akzeptieren",
-      "content": "Um die Inhaberschaft zu übernehmen, müssen Sie Ihre Zugangsdaten festlegen. Es wird kein neues Konto erstellt – Sie können dadurch einfach auf dieses Konto zugreifen und es verwalten.",
-      "content0": "Um die Inhaberschaft zu übernehmen, richte bitte deine Anmeldedaten ein.",
-      "content1": "Dadurch wird kein neues Konto erstellt – du bekommst lediglich Zugriff auf dieses und kannst es verwalten."
+      "content0": "Um die Inhaberschaft zu übernehmen, richte bitte deine Anmeldedaten ein. Dadurch wird kein neues Konto erstellt – du erhältst nur Zugriff auf dieses Konto.",
+      "content1": "Dadurch wird kein neues Konto erstellt – du bekommst lediglich Zugriff auf dieses und kannst es verwalten.",
+      "conflict": {
+        "content0": (name) => `${name}, um dieses Konto zu akzeptieren, wirst du von deinem aktuellen Konto abgemeldet und musst neue Anmeldedaten festlegen.`,
+        "content1": "Dadurch werden die Konten nicht zusammengeführt – du wechselst einfach zum neuen Konto."
+      },
+      "switch": "Konto wechseln",
+      "expired": {
+        "content": "Bitte den Absender, einen neuen Link zu erstellen.",
+        "description": "Diese Überweisungsanfrage ist abgelaufen.",
+        "title": "Übertragung abgelaufen"
+      }
     },
     "actions": {
-      "discard": "Ablehnen"
+      "discard": "Ablehnen",
+      "close": "Schließen"
     }
   },
   "en-US": {
@@ -33,12 +53,22 @@ export const dictionaries = {
       "title": "Account Transfer",
       "description": "Someone has created this account and is transferring it to you.",
       "accept": "Accept account",
-      "content": "To take ownership, you’ll need to set up your sign-in details. This won’t create a new account — it will simply let you access and manage this one.",
-      "content0": "To take ownership, you’ll need to set up your sign-in details.",
-      "content1": "This won’t create a new account — it will simply let you access and manage this one."
+      "content0": "To take ownership, set up your sign-in details. This won’t create a new account — it just gives you access to this one.",
+      "content1": "This won’t create a new account — it will simply let you access and manage this one.",
+      "conflict": {
+        "content0": (name) => `${name}, to accept this account, you’ll be signed out of your current one and set up new sign-in details.`,
+        "content1": "This won’t merge accounts — you’ll switch to the new one."
+      },
+      "switch": "Switch account",
+      "expired": {
+        "content": "Ask the sender to generate a new link.",
+        "description": "This transfer request has expired.",
+        "title": "Transfer Expired"
+      }
     },
     "actions": {
-      "discard": "Discard"
+      "discard": "Discard",
+      "close": "Close"
     }
   },
   "es-ES": {
@@ -46,12 +76,22 @@ export const dictionaries = {
       "title": "Transferencia de cuenta",
       "description": "Alguien ha creado esta cuenta y te la está transfiriendo.",
       "accept": "Aceptar cuenta",
-      "content": "Para tomar el control, tendrás que configurar tus datos de acceso. Esto no creará una cuenta nueva; simplemente te permitirá acceder y gestionar esta.",
-      "content0": "Para asumir la propiedad, tendrás que configurar tus datos de inicio de sesión.",
-      "content1": "Esto no creará una nueva cuenta; simplemente te permitirá acceder y gestionar esta."
+      "content0": "Para tomar posesión, configura tus datos de inicio de sesión. Esto no creará una cuenta nueva, solo te da acceso a esta.",
+      "content1": "Esto no creará una nueva cuenta; simplemente te permitirá acceder y gestionar esta.",
+      "conflict": {
+        "content0": (name) => `${name}, para aceptar esta cuenta, cerrarás sesión en la actual y se configurarán nuevos datos de acceso.`,
+        "content1": "Esto no fusionará las cuentas; solo cambiarás a la nueva."
+      },
+      "switch": "Cambiar de cuenta",
+      "expired": {
+        "content": "Pide al remitente que genere un nuevo enlace.",
+        "description": "Esta solicitud de transferencia ha caducado.",
+        "title": "Transferencia caducada"
+      }
     },
     "actions": {
-      "discard": "Descartar"
+      "discard": "Descartar",
+      "close": "Cerrar"
     }
   },
   "fr-FR": {
@@ -59,12 +99,22 @@ export const dictionaries = {
       "title": "Transfert de compte",
       "description": "Quelqu’un a créé ce compte et est en train de vous le transférer.",
       "accept": "Accepter le compte",
-      "content": "Pour devenir propriétaire, vous devrez configurer vos informations de connexion. Cela ne créera pas un nouveau compte — cela vous permettra simplement d'accéder à celui-ci et de le gérer.",
-      "content0": "Pour devenir propriétaire, vous devez configurer vos informations de connexion.",
-      "content1": "Cela ne créera pas un nouveau compte — cela vous permettra simplement d'accéder à celui-ci et de le gérer."
+      "content0": "Pour prendre la main, configurez vos identifiants de connexion. Cela ne créera pas un nouveau compte — cela vous donnera simplement accès à celui-ci.",
+      "content1": "Cela ne créera pas un nouveau compte — cela vous permettra simplement d'accéder à celui-ci et de le gérer.",
+      "conflict": {
+        "content0": (name) => `${name}, pour accepter ce compte, vous serez déconnecté de votre compte actuel et devrez définir de nouvelles informations de connexion.`,
+        "content1": "Cela ne fusionnera pas les comptes — vous passerez simplement au nouveau."
+      },
+      "switch": "Changer de compte",
+      "expired": {
+        "content": "Demandez à l'expéditeur de générer un nouveau lien.",
+        "description": "Cette demande de transfert a expiré.",
+        "title": "Transfert expiré"
+      }
     },
     "actions": {
-      "discard": "Ignorer"
+      "discard": "Ignorer",
+      "close": "Fermer"
     }
   },
   "hi-IN": {
@@ -72,12 +122,22 @@ export const dictionaries = {
       "title": "खाता स्थानांतरण",
       "description": "किसी ने यह खाता बनाया है और इसे आपके नाम स्थानांतरित कर रहा है।",
       "accept": "खाता स्वीकार करें",
-      "content": "स्वामित्व लेने के लिए, आपको अपनी साइन-इन जानकारी सेटअप करनी होगी। इससे नया खाता नहीं बनेगा — यह केवल आपको इसी खाते तक पहुंचने और इसे प्रबंधित करने देगा।",
-      "content0": "स्वामित्व लेने के लिए, आपको अपनी साइन-इन जानकारी सेट अप करनी होगी।",
-      "content1": "इससे नया खाता नहीं बनेगा — यह सिर्फ आपको इस खाते तक पहुँचने और इसे प्रबंधित करने देगा।"
+      "content0": "अधिकार प्राप्त करने के लिए, अपने साइन-इन विवरण सेट करें। इससे नया खाता नहीं बनेगा — यह सिर्फ आपको इसी खाते तक पहुँच देगा।",
+      "content1": "इससे नया खाता नहीं बनेगा — यह सिर्फ आपको इस खाते तक पहुँचने और इसे प्रबंधित करने देगा।",
+      "conflict": {
+        "content0": (name) => `${name}, इस खाते को स्वीकार करने के लिए, आपको अपने वर्तमान खाते से साइन आउट किया जाएगा और नए साइन-इन विवरण सेट करने होंगे।`,
+        "content1": "इससे खाते मर्ज नहीं होंगे — आप नए खाते पर स्विच करेंगे।"
+      },
+      "switch": "खाता बदलें",
+      "expired": {
+        "content": "प्रेषक से नया लिंक बनाने के लिए कहें।",
+        "description": "इस ट्रांसफ़र अनुरोध की अवधि समाप्त हो गई है।",
+        "title": "स्थानांतरण की अवधि समाप्त"
+      }
     },
     "actions": {
-      "discard": "अस्वीकार करें"
+      "discard": "अस्वीकार करें",
+      "close": "बंद करें"
     }
   },
   "it-IT": {
@@ -85,12 +145,22 @@ export const dictionaries = {
       "title": "Trasferimento account",
       "description": "Qualcuno ha creato questo account e lo sta trasferendo a te.",
       "accept": "Accetta account",
-      "content": "Per assumere la proprietà, dovrai impostare i tuoi dati di accesso. Questo non creerà un nuovo account — ti permetterà semplicemente di accedere e gestire questo.",
-      "content0": "Per assumere la proprietà, devi configurare i tuoi dati di accesso.",
-      "content1": "Questo non creerà un nuovo account — ti permetterà semplicemente di accedere e gestire questo."
+      "content0": "Per assumere la proprietà, imposta i tuoi dettagli di accesso. Questo non creerà un nuovo account — ti darà solo accesso a questo.",
+      "content1": "Questo non creerà un nuovo account — ti permetterà semplicemente di accedere e gestire questo.",
+      "conflict": {
+        "content0": (name) => `${name}, per accettare questo account, verrai disconnesso dal tuo attuale e dovrai impostare nuove credenziali di accesso.`,
+        "content1": "Questo non unirà gli account: passerai semplicemente a quello nuovo."
+      },
+      "switch": "Cambia account",
+      "expired": {
+        "content": "Chiedi al mittente di generare un nuovo link.",
+        "description": "Questa richiesta di trasferimento è scaduta.",
+        "title": "Trasferimento scaduto"
+      }
     },
     "actions": {
-      "discard": "Rifiuta"
+      "discard": "Rifiuta",
+      "close": "Chiudi"
     }
   },
   "ja-JP": {
@@ -98,12 +168,22 @@ export const dictionaries = {
       "title": "アカウントの移行",
       "description": "誰かがこのアカウントを作成し、あなたに譲渡しています。",
       "accept": "アカウントを承認",
-      "content": "所有者になるには、サインイン情報を設定する必要があります。新しいアカウントは作成されません — このアカウントにアクセスして管理できるようになります。",
-      "content0": "権限を取得するには、サインイン情報の設定が必要です。",
-      "content1": "新しいアカウントは作成されません。このアカウントにアクセスして管理できるようになるだけです。"
+      "content0": "所有権を取得するには、サインイン情報を設定してください。新しいアカウントは作成されません — このアカウントにアクセスできるようになるだけです。",
+      "content1": "新しいアカウントは作成されません。このアカウントにアクセスして管理できるようになるだけです。",
+      "conflict": {
+        "content0": (name) => `${name}、このアカウントを承認するには、現在のアカウントからサインアウトし、新しいサインイン情報を設定する必要があります。`,
+        "content1": "これでアカウントが統合されることはありません。新しいアカウントに切り替わります。"
+      },
+      "switch": "アカウントを切り替える",
+      "expired": {
+        "content": "送信者に新しいリンクを生成するよう依頼してください。",
+        "description": "この送金リクエストの有効期限が切れました。",
+        "title": "転送の有効期限が切れました"
+      }
     },
     "actions": {
-      "discard": "破棄"
+      "discard": "破棄",
+      "close": "閉じる"
     }
   },
   "ko-KR": {
@@ -111,12 +191,22 @@ export const dictionaries = {
       "title": "계정 이전",
       "description": "누군가 이 계정을 만들었으며 지금 당신에게 이전하고 있습니다.",
       "accept": "계정 승인",
-      "content": "소유권을 갖기 위해 로그인 정보를 설정해야 합니다. 새로운 계정이 생성되는 것은 아니며, 이 계정에 접근하고 관리할 수 있게 됩니다.",
-      "content0": "소유권을 갖기 위해서는 로그인 정보를 설정해야 합니다.",
-      "content1": "새 계정을 만들지는 않습니다. 이 계정에 접근하고 관리할 수 있게 해줍니다."
+      "content0": "소유권을 가져오려면 로그인 정보를 설정하세요. 이것은 새 계정을 만드는 것이 아니라, 이 계정에 대한 접근 권한만 부여합니다.",
+      "content1": "새 계정을 만들지는 않습니다. 이 계정에 접근하고 관리할 수 있게 해줍니다.",
+      "conflict": {
+        "content0": (name) => `${name}님, 이 계정을 승인하려면 현재 계정에서 로그아웃하고 새로운 로그인 정보를 설정해야 합니다.`,
+        "content1": "계정이 병합되지 않습니다 — 새 계정으로 전환됩니다."
+      },
+      "switch": "계정 전환",
+      "expired": {
+        "content": "보내는 사람에게 새 링크를 생성해 달라고 요청하세요.",
+        "description": "이체 요청이 만료되었습니다.",
+        "title": "전송 만료됨"
+      }
     },
     "actions": {
-      "discard": "버리기"
+      "discard": "버리기",
+      "close": "닫기"
     }
   },
   "nl-NL": {
@@ -124,25 +214,45 @@ export const dictionaries = {
       "title": "Accountoverdracht",
       "description": "Iemand heeft dit account aangemaakt en draagt het nu aan jou over.",
       "accept": "Account accepteren",
-      "content": "Om eigenaar te worden, moet je je inloggegevens instellen. Dit maakt geen nieuw account aan — het zorgt er alleen voor dat je toegang krijgt tot en dit account kunt beheren.",
-      "content0": "Om eigenaar te worden, moet je je inloggegevens instellen.",
-      "content1": "Dit maakt geen nieuw account aan — het geeft je alleen toegang tot en beheer over dit account."
+      "content0": "Om eigenaar te worden, stel je je inloggegevens in. Er wordt geen nieuw account aangemaakt — je krijgt alleen toegang tot dit account.",
+      "content1": "Dit maakt geen nieuw account aan — het geeft je alleen toegang tot en beheer over dit account.",
+      "conflict": {
+        "content0": (name) => `${name}, om dit account te accepteren, word je afgemeld van je huidige account en stel je nieuwe inloggegevens in.`,
+        "content1": "Dit voegt de accounts niet samen — je schakelt over naar het nieuwe account."
+      },
+      "switch": "Van account wisselen",
+      "expired": {
+        "content": "Vraag de afzender om een nieuwe link te genereren.",
+        "description": "Dit verzoek tot overboeking is verlopen.",
+        "title": "Overdracht verlopen"
+      }
     },
     "actions": {
-      "discard": "Afwijzen"
+      "discard": "Afwijzen",
+      "close": "Sluiten"
     }
   },
   "ru-FU": {
     "account": {
-      "title": "Перевод аккаунта",
-      "description": "Кто-то создал этот аккаунт и передаёт его вам.",
-      "accept": "Принять аккаунт",
-      "content": "Чтобы взять на себя право владения, вам нужно будет настроить данные для входа. Это не создаст новую учётную запись — вы просто получите доступ к этой и сможете её управлять.",
-      "content0": "Чтобы получить доступ, нужно настроить свои данные для входа.",
-      "content1": "Это не создаст новую учётную запись — просто позволит вам получить доступ к этой и управлять ею."
+      "title": "Подгон аккаунта",
+      "description": "Кто-то заебенил этот аккаунт и теперь скидывает его тебе.",
+      "accept": "Забрать аккаунт",
+      "content0": "Забираешь аккаунт — заебениваешь вход. Без новых регистраций и лишней ебалы.",
+      "content1": "Новый аккаунт не заводится — ты просто вваливаешься в этот и начинаешь им рулить.",
+      "conflict": {
+        "content0": (name) => `${name}, чтобы забрать этот аккаунт, тебе придётся вывалиться из текущего и заебенить новые данные для входа.`,
+        "content1": "Аккаунты не склеятся — просто перепрыгнешь на новый."
+      },
+      "switch": "Переобуться",
+      "expired": {
+        "content": "Попросите отправителя создать новую ссылку.",
+        "description": "Запрос на передачу благополучно сдох.",
+        "title": "Время передачи истекло"
+      }
     },
     "actions": {
-      "discard": "Отклонить"
+      "discard": "Забить хуй",
+      "close": "Закрыть"
     }
   },
   "ru-RU": {
@@ -150,12 +260,22 @@ export const dictionaries = {
       "title": "Перевод аккаунта",
       "description": "Кто-то создал этот аккаунт и передаёт его вам.",
       "accept": "Принять аккаунт",
-      "content": "Чтобы получить права владельца, вам нужно настроить данные для входа. Это не создаст новую учетную запись — вы просто сможете получить доступ к этой и управлять ею.",
-      "content0": "Чтобы получить право владения, необходимо настроить данные для входа.",
-      "content1": "Это не создаст новую учетную запись — просто даст вам доступ к этой и позволит управлять ею."
+      "content0": "Чтобы получить право владения, настройте свои данные для входа. Это не создаст новую учетную запись — вы просто получите доступ к этой.",
+      "content1": "Это не создаст новую учетную запись — просто даст вам доступ к этой и позволит управлять ею.",
+      "conflict": {
+        "content0": (name) => `${name}, чтобы принять этот аккаунт, вам потребуется выйти из текущего и настроить новые данные для входа.`,
+        "content1": "Это не объединит аккаунты — вы просто перейдёте на новый."
+      },
+      "switch": "Сменить аккаунт",
+      "expired": {
+        "content": "Попросите отправителя сгенерировать новую ссылку.",
+        "description": "Срок действия этого запроса на перевод истёк.",
+        "title": "Время передачи истекло"
+      }
     },
     "actions": {
-      "discard": "Отклонить"
+      "discard": "Отклонить",
+      "close": "Закрыть"
     }
   },
   "sw-TZ": {
@@ -163,12 +283,22 @@ export const dictionaries = {
       "title": "Uhamisho wa akaunti",
       "description": "Mtu fulani ameunda akaunti hii na anaikukabidhi kwako.",
       "accept": "Kubali akaunti",
-      "content": "Ili kumiliki, utahitaji kuweka maelezo yako ya kuingia. Hii haitaunda akaunti mpya — itakuwezesha tu kufikia na kudhibiti hii.",
-      "content0": "Ili kuchukua umiliki, utahitaji kuweka maelezo yako ya kuingia.",
-      "content1": "Hii haitaunda akaunti mpya — itakuwezesha tu kupata na kudhibiti hii."
+      "content0": "Ili kuwa mmiliki, weka taarifa zako za kuingia. Hii haitaunda akaunti mpya — itakupa tu ufikiaji wa hii.",
+      "content1": "Hii haitaunda akaunti mpya — itakuwezesha tu kupata na kudhibiti hii.",
+      "conflict": {
+        "content0": (name) => `${name}, ili kukubali akaunti hii, utatolewa kwenye akaunti yako ya sasa na kuweka maelezo mapya ya kuingia.`,
+        "content1": "Hili haitaunganisha akaunti — utahama kwenda mpya."
+      },
+      "switch": "Badilisha akaunti",
+      "expired": {
+        "content": "Muombe mtoa taarifa atengeneze kiungo kipya.",
+        "description": "Ombi hili la uhamisho limekwisha muda wake.",
+        "title": "Uhamisho umeisha muda wake"
+      }
     },
     "actions": {
-      "discard": "Tupa mbali"
+      "discard": "Tupa mbali",
+      "close": "Funga"
     }
   },
   "tr-TR": {
@@ -176,12 +306,22 @@ export const dictionaries = {
       "title": "Hesap transferi",
       "description": "Birisi bu hesabı oluşturdu ve şimdi onu sana devrediyor.",
       "accept": "Hesabı kabul et",
-      "content": "Sahiplik almak için giriş bilgilerinizi ayarlamanız gerekir. Bu, yeni bir hesap oluşturmaz — sadece bu hesaba erişmenizi ve yönetmenizi sağlar.",
-      "content0": "Sahipliği almak için oturum açma bilgilerinizi oluşturmanız gerekir.",
-      "content1": "Bu yeni bir hesap oluşturmaz — sadece bu hesaba erişip yönetmeni sağlar."
+      "content0": "Sahipliği almak için oturum açma bilgilerini ayarla. Bu, yeni bir hesap oluşturmaz — sadece bu hesaba erişmeni sağlar.",
+      "content1": "Bu yeni bir hesap oluşturmaz — sadece bu hesaba erişip yönetmeni sağlar.",
+      "conflict": {
+        "content0": (name) => `${name}, bu hesabı kabul etmek için mevcut hesabınızdan çıkış yapacak ve yeni oturum açma bilgileri ayarlayacaksınız.`,
+        "content1": "Bu hesapları birleştirmez — yeni hesabına geçiş yapacaksın."
+      },
+      "switch": "Hesabı değiştir",
+      "expired": {
+        "content": "Gönderen kişiden yeni bir bağlantı oluşturmasını isteyin.",
+        "description": "Bu transfer isteğinin süresi doldu.",
+        "title": "Aktarım süresi doldu"
+      }
     },
     "actions": {
-      "discard": "Reddet"
+      "discard": "Reddet",
+      "close": "Kapat"
     }
   },
   "uk-UA": {
@@ -189,12 +329,22 @@ export const dictionaries = {
       "title": "Передача облікового запису",
       "description": "Хтось створив цей обліковий запис і передає його вам.",
       "accept": "Прийняти обліковий запис",
-      "content": "Щоб стати власником, потрібно налаштувати свої дані для входу. Це не створить нового облікового запису — ви просто зможете отримати доступ до цього та керувати ним.",
-      "content0": "Щоб отримати права власника, потрібно налаштувати свої дані для входу.",
-      "content1": "Це не створить новий обліковий запис — просто дозволить вам отримати доступ до цього та керувати ним."
+      "content0": "Щоб отримати право володіння, налаштуйте свої дані для входу. Це не створить новий обліковий запис — ви просто отримаєте доступ до цього.",
+      "content1": "Це не створить новий обліковий запис — просто дозволить вам отримати доступ до цього та керувати ним.",
+      "conflict": {
+        "content0": (name) => `${name}, щоб прийняти цей обліковий запис, вам потрібно вийти з поточного та налаштувати нові дані для входу.`,
+        "content1": "Це не об'єднає облікові записи — ви просто перейдете до нового."
+      },
+      "switch": "Змінити обліковий запис",
+      "expired": {
+        "content": "Попросіть відправника створити нове посилання.",
+        "description": "Термін дії цього запиту на переказ минув.",
+        "title": "Термін передачі минув"
+      }
     },
     "actions": {
-      "discard": "Відхилити"
+      "discard": "Відхилити",
+      "close": "Закрити"
     }
   },
   "zh-CN": {
@@ -202,12 +352,22 @@ export const dictionaries = {
       "title": "账户转移",
       "description": "有人创建了此账户，并正在将其转交给您。",
       "accept": "接受账户",
-      "content": "要获得所有权，您需要设置您的登录信息。这不会创建新账户——只会让您访问并管理此账户。",
-      "content0": "要取得所有权，您需要设置您的登录信息。",
-      "content1": "这不会创建新账户——只会让你访问并管理此账户。"
+      "content0": "要获取所有权，请设置您的登录信息。这不会创建新账户，只会让您访问此账户。",
+      "content1": "这不会创建新账户——只会让你访问并管理此账户。",
+      "conflict": {
+        "content0": (name) => `${name}，接受此账户后，您将退出当前账户并设置新的登录信息。`,
+        "content1": "这不会合并账户—你将切换到新账户。"
+      },
+      "switch": "切换账号",
+      "expired": {
+        "content": "请让发送方生成一个新链接。",
+        "description": "该转账请求已过期。",
+        "title": "转移已过期"
+      }
     },
     "actions": {
-      "discard": "丢弃"
+      "discard": "丢弃",
+      "close": "关闭"
     }
   }
 };

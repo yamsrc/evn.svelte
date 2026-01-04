@@ -2,15 +2,26 @@ account:
   title: Transfert de compte
   description: Quelqu’un a créé ce compte et est en train de vous le transférer.
   accept: Accepter le compte
-  content: >-
-    Pour devenir propriétaire, vous devrez configurer vos informations de
-    connexion. Cela ne créera pas un nouveau compte — cela vous permettra
-    simplement d'accéder à celui-ci et de le gérer.
   content0: >-
-    Pour devenir propriétaire, vous devez configurer vos informations de
-    connexion.
+    Pour prendre la main, configurez vos identifiants de connexion. Cela ne
+    créera pas un nouveau compte — cela vous donnera simplement accès à
+    celui-ci.
   content1: >-
     Cela ne créera pas un nouveau compte — cela vous permettra simplement
     d'accéder à celui-ci et de le gérer.
+  conflict:
+    content0: >-
+      !js
+
+      (name) => `${name}, pour accepter ce compte, vous serez déconnecté de
+      votre compte actuel et devrez définir de nouvelles informations de
+      connexion.`
+    content1: Cela ne fusionnera pas les comptes — vous passerez simplement au nouveau.
+  switch: Changer de compte
+  expired:
+    content: Demandez à l'expéditeur de générer un nouveau lien.
+    description: Cette demande de transfert a expiré.
+    title: Transfert expiré
 actions:
   discard: Ignorer
+  close: Fermer

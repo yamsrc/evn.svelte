@@ -2,14 +2,24 @@ account:
   title: Transferencia de cuenta
   description: Alguien ha creado esta cuenta y te la está transfiriendo.
   accept: Aceptar cuenta
-  content: >-
-    Para tomar el control, tendrás que configurar tus datos de acceso. Esto no
-    creará una cuenta nueva; simplemente te permitirá acceder y gestionar esta.
   content0: >-
-    Para asumir la propiedad, tendrás que configurar tus datos de inicio de
-    sesión.
+    Para tomar posesión, configura tus datos de inicio de sesión. Esto no creará
+    una cuenta nueva, solo te da acceso a esta.
   content1: >-
     Esto no creará una nueva cuenta; simplemente te permitirá acceder y
     gestionar esta.
+  conflict:
+    content0: >-
+      !js
+
+      (name) => `${name}, para aceptar esta cuenta, cerrarás sesión en la actual
+      y se configurarán nuevos datos de acceso.`
+    content1: Esto no fusionará las cuentas; solo cambiarás a la nueva.
+  switch: Cambiar de cuenta
+  expired:
+    content: Pide al remitente que genere un nuevo enlace.
+    description: Esta solicitud de transferencia ha caducado.
+    title: Transferencia caducada
 actions:
   discard: Descartar
+  close: Cerrar

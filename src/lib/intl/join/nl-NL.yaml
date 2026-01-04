@@ -2,13 +2,26 @@ account:
   title: Accountoverdracht
   description: Iemand heeft dit account aangemaakt en draagt het nu aan jou over.
   accept: Account accepteren
-  content: >-
-    Om eigenaar te worden, moet je je inloggegevens instellen. Dit maakt geen
-    nieuw account aan — het zorgt er alleen voor dat je toegang krijgt tot en
-    dit account kunt beheren.
-  content0: Om eigenaar te worden, moet je je inloggegevens instellen.
+  content0: >-
+    Om eigenaar te worden, stel je je inloggegevens in. Er wordt geen nieuw
+    account aangemaakt — je krijgt alleen toegang tot dit account.
   content1: >-
     Dit maakt geen nieuw account aan — het geeft je alleen toegang tot en beheer
     over dit account.
+  conflict:
+    content0: >-
+      !js
+
+      (name) => `${name}, om dit account te accepteren, word je afgemeld van je
+      huidige account en stel je nieuwe inloggegevens in.`
+    content1: >-
+      Dit voegt de accounts niet samen — je schakelt over naar het nieuwe
+      account.
+  switch: Van account wisselen
+  expired:
+    content: Vraag de afzender om een nieuwe link te genereren.
+    description: Dit verzoek tot overboeking is verlopen.
+    title: Overdracht verlopen
 actions:
   discard: Afwijzen
+  close: Sluiten
