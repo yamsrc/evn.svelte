@@ -3,23 +3,23 @@
   import { Loader } from '$com/loader'
   import { inApp } from '$lib/tools'
   import { cn } from '$lib/utils'
-  import { authenticated, greeting, account, method } from '@/iam'
+  import { authenticated, greeting, account as iam, method } from '@/iam'
   import Authentication from './Authentication.svelte'
   import InApp from './InApp.svelte'
   import Languages from './Languages.svelte'
   import Refresh from './Refresh.svelte'
   import type { Props } from './Authenticated'
 
-  const { children, screen }: Props = $props()
+  const { children, screen, account }: Props = $props()
 </script>
 
 {#snippet authentication()}
-  {#if $account}
-    <Refresh account={$account} method={$method} />
+  {#if $iam}
+    <Refresh account={$iam} method={$method} />
   {:else if inApp}
     <InApp />
   {:else}
-    <Authentication class={cn('scale-0 transition-transform', browser && 'scale-100')} />
+    <Authentication class={cn('scale-0 transition-transform', browser && 'scale-100')} {account} />
   {/if}
 {/snippet}
 

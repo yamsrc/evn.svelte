@@ -8,8 +8,9 @@
   import { Authentication as OIDC } from './oidc'
   import { Authentication as Passkey } from './passkey'
   import { Authentication as Password } from './password'
+  import type { Props } from './Authentication'
 
-  const { class: classes }: { class?: string } = $props()
+  const { class: classes, account }: Props = $props()
 
   let tabsRef = $state<HTMLDivElement | null>(null)
 
@@ -41,7 +42,7 @@
     <OIDC />
   </div>
   <Tabs.Content value="passkey">
-    <Passkey />
+    <Passkey {account} />
   </Tabs.Content>
   <Tabs.Content value="password">
     <Password />

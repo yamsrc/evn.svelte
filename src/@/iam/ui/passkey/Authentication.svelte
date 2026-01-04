@@ -8,8 +8,10 @@
   import { supported } from '@/passkeys'
   import Create from './Create.svelte'
   import Login from './Login.svelte'
+  import type { Props } from './Authentication'
 
-  const { class: classes }: { class?: string } = $props()
+  const { class: classes, account }: Props = $props()
+
   const href = apple
     ? 'https://support.apple.com/en-us/102195'
     : 'https://support.google.com/accounts/answer/13548313'
@@ -31,7 +33,7 @@
         <Card.Title>{$dict.auth.signupTitle}</Card.Title>
       </Card.Header>
       <Card.Content>
-        <Create />
+        <Create {account} />
       </Card.Content>
     {/if}
     <Card.Footer>
@@ -56,7 +58,7 @@
     </Card.Footer>
   </Card.Root>
 
-  {#if supported}
+  {#if supported && !account}
     <Login />
   {/if}
 </div>

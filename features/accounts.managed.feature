@@ -29,4 +29,6 @@ Feature: Managed accounts
     Then my clipboard is not empty
     When I clear the session
     And I open link from the clipboard
-    And 'join-accounts-accept-button' is visible
+    Then 'join-accounts-accept-button' is visible
+    When I tap 'join-accounts-accept-button'
+    Then 'iam-passkey-login-button' is not visible

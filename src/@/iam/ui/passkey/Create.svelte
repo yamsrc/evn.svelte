@@ -6,10 +6,11 @@
   import { Input } from '$ui/input'
   import { passkeys } from '@/iam'
   import { dict } from '@/iam/ui/intl'
+  import type { Props } from './Create'
 
-  const { disabled }: { disabled?: boolean } = $props()
+  const { account, disabled }: Props = $props()
 
-  let value = $state('')
+  let value = $derived(account?.name ?? '')
   let busy = $state(false)
 
   async function submit() {

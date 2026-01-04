@@ -24,9 +24,11 @@ When('I hold {string} for {int}s', async ({ page }, id, duration) => {
 })
 
 Then('{string} is visible', async ({ page }, id) => {
-  const element = page.locator(`#${id}`)
+  await expect(page.locator(`#${id}`)).toBeVisible()
+})
 
-  await expect(element).toBeVisible()
+Then('{string} is not visible', async ({ page }, id) => {
+  await expect(page.locator(`#${id}`)).not.toBeVisible()
 })
 
 Then('{string} is focused', async ({ page }, id) => {
