@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Nav } from '$com/shell'
   import { dict } from '$lib/intl'
-  import { Screen } from '@/app/ui'
+  import { Screen, Authenticated } from '@/app/ui'
   import Actions from './Actions.svelte'
   import { sections } from './sections'
 
@@ -9,7 +9,9 @@
 </script>
 
 <Screen>
-  {@render children()}
-  <Nav position="start" sections={sections($dict)} class="z-1000" />
-  <Actions />
+  <Authenticated>
+    {@render children()}
+    <Nav position="start" sections={sections($dict)} class="z-1000" />
+    <Actions />
+  </Authenticated>
 </Screen>
