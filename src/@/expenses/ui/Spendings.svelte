@@ -54,6 +54,7 @@
         {@render spendingItem($account, participants[$account.id])}
       {/if}
       {#each otherIds as id (id)}
+        <Separator />
         <Async store={accounts.get(id)}>
           {#snippet awaited(account)}
             {@render spendingItem(account, participants[id])}
