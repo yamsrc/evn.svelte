@@ -3,18 +3,18 @@
   import { Async, ok } from 'svas'
   import { goto } from '$app/navigation'
   import { page } from '$app/state'
-  import { Hold } from '$com/hold'
-  import { Section } from '$com/section'
+  import { Hold } from '$com/buttons'
   import { Separator } from '$com/separator'
   import { Back } from '$lib/components/history'
   import { dict } from '$lib/intl'
   import { currency } from '$lib/tools'
   import { Button } from '$ui/button'
   import { Panel } from '@/accounts/ui'
+  import { Section } from '@/app/ui'
   import { Header } from '@/app/ui'
   import { contacts } from '@/contacts'
   import { groups, del } from '@/groups'
-  import { Cosmetics, Create } from '@/groups/ui'
+  import { Cosmetics } from '@/groups/ui'
   import { account } from '@/iam'
   import type { Group } from '@/groups'
 
@@ -39,12 +39,12 @@
     ok($groups) ? $groups.find((group) => group.id === id) : undefined,
   )
 
-  const members: string[] = $derived(group?.identities.filter((id) => id !== $account?.id) ?? [])
+  const accounts: string[] = $derived(group?.identities.filter((id) => id !== $account?.id) ?? [])
 
   const balance: BalanceSummary = $derived.by(() => {
     if (!ok($contacts) || !group) return { from: 0, to: 0 }
 
-    const balances = members.map(
+    const balances = accounts.map(
       (id) => $contacts.find(({ identity }) => identity === id)?.balance ?? 0,
     )
 
@@ -75,26 +75,33 @@
 
 {#if group}
   <Section class="flex flex-col gap-2 items-center">
-    <Cosmetics id={group.id} name={group.name} />
+    <Cosmetics {group} />
   </Section>
 
   <Separator />
 
-  <Section class="text-center">
-    <div>{$dict.groups.summary.balance.from(currency(balance.from))}</div>
-    <div>{$dict.groups.summary.balance.to(currency(balance.to))}</div>
-  </Section>
+  {#if accounts.length > 0}
+    <Section class="text-center">
+      {#if balance.from === 0 && balance.to === 0}
+        <div>{$dict.groups.summary.balance.even}</div>
+      {:else if balance.from > 0}
+        <div>{$dict.groups.summary.balance.from(currency(balance.from))}</div>
+      {:else if balance.to > 0}
+        <div>{$dict.groups.summary.balance.to(currency(balance.to))}</div>
+      {/if}
+    </Section>
+  {/if}
 
   <Async store={contacts}>
     {#snippet awaited(contacts)}
       <Section class="flex flex-col gap-2">
         <h2>{$dict.groups.members.title}</h2>
-        {#if !members?.length}
+        {#if !accounts?.length}
           <p class="text-muted-foreground">
             {$dict.groups.members.empty}
           </p>
         {:else}
-          {#each members as identity (identity)}
+          {#each accounts as identity (identity)}
             {@const contact = contacts.find((contact) => contact.identity === identity)}
             {#if contact?.account && ok(contact.account)}
               <Panel account={contact.account} balance={contact.balance} />
@@ -111,6 +118,6 @@
   <!-- TODO: add history -->
 {:else}
   <Section class="flex flex-col gap-2 items-center">
-    <Create />
+    <Cosmetics />
   </Section>
 {/if}

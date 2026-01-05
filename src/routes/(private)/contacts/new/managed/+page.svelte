@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Back } from '$com/history'
-  import { Section } from '$com/section'
   import { dict } from '$lib/intl'
+  import { Section } from '@/app/ui'
   import { Header } from '@/app/ui'
   import { Create } from '@/contacts/ui'
 </script>

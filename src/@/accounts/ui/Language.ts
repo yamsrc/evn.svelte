@@ -1,7 +1,7 @@
 import type { Option } from '$com/radio'
 import type { Locale } from '$lib/intl'
 
-const options: Option<Locale>[] = [
+export const options = [
   { value: 'en-US', label: 'English' },
   { value: 'ar-SA', label: 'العربية' },
   { value: 'zh-CN', label: '中文' },
@@ -17,6 +17,8 @@ const options: Option<Locale>[] = [
   { value: 'sw-TZ', label: 'Swahili' },
   { value: 'tr-TR', label: 'Türkçe' },
   { value: 'uk-UA', label: 'Українська' },
-] as const
+] as const satisfies Option<Locale>[]
 
-export { options }
+export const hidden = [
+  { value: 'ru-FU', label: 'Русскей' },
+] satisfies Option<Locale>[]

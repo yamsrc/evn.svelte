@@ -22,6 +22,7 @@
 <div bind:this={ref} class={cn('w-full flex items-center', error && 'shake')}>
   {#if mode === 'password'}
     <Input
+      id="iam-password-input"
       bind:value={password}
       name="password"
       type="password"

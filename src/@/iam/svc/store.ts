@@ -1,8 +1,5 @@
 import { value } from 'svas'
 import { derived, writable } from 'svelte/store'
-import { browser } from '$app/environment'
-import { events } from '@/realtime'
-import { update } from './update'
 import type { Echo } from './net'
 import type { IDP } from './oidc'
 
@@ -31,12 +28,6 @@ function iam(value: Echo) {
 
   account.set(value)
 }
-
-if (browser)
-  events.on('default.accounts.sync', (value) => {
-    if (account.extract()?.id === value.id)
-      update(value)
-  })
 
 type Account = Echo
 type Method = 'passkey' | 'password' | IDP

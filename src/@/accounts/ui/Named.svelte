@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { Section } from '$com/section'
   import { dict } from '$lib/intl'
   import * as Card from '$ui/card'
   import { Avatar } from '@/accounts/ui'
+  import { Section } from '@/app/ui'
   import { account } from '@/iam'
   import Name from './onboarding/Name.svelte'
   import type { Props } from './Named'
@@ -22,7 +22,7 @@
           <Card.Description>{$dict.onboarding.name.description}</Card.Description>
         </Card.Header>
         <Card.Content>
-          <Name account={$account} />
+          <Name account={$account} autofocus class="text-left" />
         </Card.Content>
       </Card.Root>
     </Section>

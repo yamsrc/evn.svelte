@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Hold } from '$com/hold'
+  import { Hold } from '$com/buttons'
   import { dict } from '$lib/intl'
   import { cn } from '$lib/utils'
   import * as AlertDialog from '$ui/alert-dialog'
@@ -28,10 +28,10 @@
 </script>
 
 <AlertDialog.Root bind:open>
-  <AlertDialog.Trigger class={cn(buttonVariants({ variant: 'ghost' }), classes)}>
-    {$dict.account.delete.button}
+  <AlertDialog.Trigger class={cn(buttonVariants({ variant: 'ghost', size: 'sm' }), classes)}>
+    {$dict.account.delete.link}
   </AlertDialog.Trigger>
-  <AlertDialog.Content>
+  <AlertDialog.Content class="border border-destructive">
     <AlertDialog.Header>
       <AlertDialog.Title>
         {$dict.account.delete.title}

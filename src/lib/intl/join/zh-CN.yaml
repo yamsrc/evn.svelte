@@ -1,0 +1,19 @@
+account:
+  title: 账户转移
+  description: 有人创建了此账户，并正在将其转交给您。
+  accept: 接受账户
+  content0: 要获取所有权，请设置您的登录信息。这不会创建新账户，只会让您访问此账户。
+  content1: 这不会创建新账户——只会让你访问并管理此账户。
+  conflict:
+    content0: |-
+      !js
+      (name) => `${name}，接受此账户后，您将退出当前账户并设置新的登录信息。`
+    content1: 这不会合并账户—你将切换到新账户。
+  switch: 切换账号
+  expired:
+    content: 请让发送方生成一个新链接。
+    description: 该转账请求已过期。
+    title: 转移已过期
+actions:
+  discard: 丢弃
+  close: 关闭

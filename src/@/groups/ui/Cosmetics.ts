@@ -1,4 +1,7 @@
+import type { Group } from '@/groups'
+
+type GroupLike = Pick<Group, 'id' | 'name'>
+
 export interface Props {
-  id: string
-  name: string
+  group?: GroupLike
 }

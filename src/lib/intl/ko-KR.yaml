@@ -56,6 +56,12 @@ contacts:
       confirm: 삭제
   add:
     label: 연락처 추가
+    description: 나중에 이 계정을 소유자에게 이전하여, 소유자가 로그인 정보를 설정하고 계정의 소유권을 가질 수 있습니다.
+  share:
+    invite:
+      link: evn에 초대
+      qr: QR 코드 표시
+      description: 초대는 5분 후에 만료됩니다
 join:
   app:
     description: 친구들과 함께 누가 누구에게 얼마를 빚졌는지 스마트하게 추적하는 방법.
@@ -65,9 +71,10 @@ join:
       (name) => `${name}님이 초대했습니다. 회원가입 또는 로그인만 하면 바로 시작할 수 있습니다`
   accept: Evn 시작하기
 groups:
-  leave: 길게 눌러 그룹 해산
+  leave: 길게 눌러서 나가기
   name:
     description: 모든 그룹 구성원이 이 이름을 볼 수 있습니다
+    placeholder: 이름 입력
   members:
     title: 회원
     addMembers: 구성원 추가
@@ -82,6 +89,7 @@ groups:
       to: |-
         !js
         (amount) => `당신은 그들에게 ${amount}을(를) 빚지고 있습니다`
+      even: 아무도 누구에게도 빚지지 않았다
   create: 그룹 만들기
 invite:
   share: 공유
@@ -96,3 +104,4 @@ account:
     description: 계정과 모든 관련 정보를 영구적으로 삭제합니다. 이 작업은 취소할 수 없습니다.
     sorry: 떠나신다니 정말 아쉽습니다.
     hold: 길게 눌러서 확인
+    link: 계정 삭제

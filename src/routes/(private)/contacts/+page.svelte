@@ -1,9 +1,9 @@
 <script lang="ts">
   import { ArrowUpDown } from '@lucide/svelte'
   import { Async } from 'svas'
-  import { Section } from '$com/section'
   import { dict } from '$lib/intl'
   import { Input } from '$ui/input'
+  import { Section } from '@/app/ui'
   import { Header } from '@/app/ui'
   import { contacts } from '@/contacts'
   import { Invite } from '@/contacts/ui'

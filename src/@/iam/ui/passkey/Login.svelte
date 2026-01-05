@@ -18,7 +18,12 @@
 
 <div class="flex flex-col items-center justify-center gap-2">
   <p class="text-sm">{$dict.auth.alreadyHaveAccount}</p>
-  <Button variant="secondary" onclick={login} class="shadow bg-background/75">
+  <Button
+    id="iam-passkey-login-button"
+    variant="secondary"
+    onclick={login}
+    class="shadow bg-background/75"
+  >
     {#if busy}
       <Loader />
     {:else}

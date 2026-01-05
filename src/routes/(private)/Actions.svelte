@@ -18,7 +18,10 @@
 
 <Actions>
   <DropdownMenu.Root>
-    <DropdownMenu.Trigger class={cn(buttonVariants({ size: 'icon' }), 'size-12')}>
+    <DropdownMenu.Trigger
+      id="nav-actions-button"
+      class={cn(buttonVariants({ size: 'icon' }), 'size-12')}
+    >
       <Plus class="size-5" />
     </DropdownMenu.Trigger>
     <DropdownMenu.Content align="end" sideOffset={8} class="px-0.5 py-1 pt-2">
@@ -32,7 +35,11 @@
             </DropdownMenu.Separator>
           </DropdownMenu.GroupHeading>
           {#each group.items as item (item.name)}
-            <DropdownMenu.Item onSelect={item.onSelect} class="text-base px-3.5 py-2.5">
+            <DropdownMenu.Item
+              id={item.id}
+              onSelect={item.onSelect}
+              class="text-base px-3.5 py-2.5"
+            >
               <item.icon size={16} class="text-foreground" />
               {item.name}
             </DropdownMenu.Item>

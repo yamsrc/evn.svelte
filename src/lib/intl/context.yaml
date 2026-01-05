@@ -105,6 +105,18 @@ inputs:
     add:
       label:
         input: Add contact
+      description:
+        input: Later, you’ll be able to transfer this account to the owner, so they can set up their sign-in details and take ownership of it.
+    share:
+      invite:
+        link:
+          input: Invite to evn
+          context: button label (evn is the name of the app)
+        qr:
+          input: Show QR code
+          context: button label
+        description:
+          input: Приглашение истечет через 5 минут
   join:
     app:
       description:
@@ -117,10 +129,14 @@ inputs:
       input: Start Using Evn
   groups:
     leave:
-      input: Hold to disband group
+      input: Hold to leave
+      context: button tooltip (to leave the group)
     name:
       description:
         input: All group members will see this name
+      placeholder:
+        input: Enter name
+        context: input placeholder for a group name
     members:
       title:
         input: Members
@@ -138,6 +154,8 @@ inputs:
           input: "!js (amount) => Members of this group owe you ${amount}"
         to:
           input: "!js (amount) => You owe them ${amount}"
+        even:
+          input: Никто никому не должен
     create:
       input: Create group
   invite:
@@ -162,6 +180,10 @@ inputs:
         input: We're very sorry to see you go.
       hold:
         input: Hold to confirm
+      link:
+        input: Delete account
+        context: link text
 mounts:
   iam: ../../@/iam/ui/intl
   feedback: ../../@/feedback/ui/intl
+  join: join

@@ -87,6 +87,7 @@
 <form onsubmit={onsubmit(submit)}>
   <fieldset class="space-y-2">
     <Input
+      id="iam-username-input"
       bind:value={username}
       name="username"
       type="email"

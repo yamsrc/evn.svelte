@@ -6,8 +6,19 @@
   import Picture from './Picture.svelte'
   import type { Props, Value } from './Cosmetics'
 
-  const { value, label, note, class: classes, autocomplete, onchange }: Props = $props()
-  const blank = $derived(label !== undefined)
+  const {
+    value,
+    placeholder,
+    editable = true,
+    label,
+    note,
+    class: classes,
+    autocomplete,
+    autofocus,
+    onchange,
+  }: Props = $props()
+
+  const blank = $derived(editable && label !== undefined)
 
   let name = $derived(value?.name ?? '')
   let picture = $derived(value?.picture ?? pickpic())
@@ -42,13 +53,30 @@
     <Picture bind:id={picture} onchange={onPictureChange} />
   </div>
   <div class="space-y-2">
-    <Name bind:value={name} bind:busy onchange={onNameChange} {autocomplete} />
-    {#if note}
-      <p class="text-muted-foreground text-sm text-center">{note}</p>
+    {#if editable}
+      <Name
+        bind:value={name}
+        bind:busy
+        onchange={onNameChange}
+        {autocomplete}
+        {placeholder}
+        {autofocus}
+      />
+      {#if note}
+        <p class="text-muted-foreground text-sm text-center">{note}</p>
+      {/if}
+    {:else}
+      <p class="text-center text-3xl font-bold">{name}</p>
     {/if}
   </div>
   {#if blank}
-    <Button size="lg" class="w-full" disabled={busy || !name.trim()} {onclick}>
+    <Button
+      id="app-cosmetics-submit-button"
+      size="lg"
+      class="w-full"
+      disabled={busy || !name.trim()}
+      {onclick}
+    >
       {label}
     </Button>
   {/if}

@@ -58,6 +58,14 @@ contacts:
       confirm: Löschen
   add:
     label: Kontakt hinzufügen
+    description: >-
+      Später kannst du dieses Konto an den Eigentümer übertragen, damit er seine
+      Anmeldedaten einrichten und die Inhaberschaft übernehmen kann.
+  share:
+    invite:
+      link: Zu evn einladen
+      qr: QR-Code anzeigen
+      description: Die Einladung läuft in 5 Minuten ab
 join:
   app:
     description: >-
@@ -71,9 +79,10 @@ join:
       melde dich an, und schon kann es losgehen`
   accept: Jetzt mit Evn starten
 groups:
-  leave: Zum Auflösen der Gruppe gedrückt halten
+  leave: Gedrückt halten zum Verlassen
   name:
     description: Alle Gruppenmitglieder sehen diesen Namen
+    placeholder: Name eingeben
   members:
     title: Mitglieder
     addMembers: Mitglieder hinzufügen
@@ -90,6 +99,7 @@ groups:
       to: |-
         !js
         (amount) => `Du schuldest ihnen ${amount}`
+      even: Niemand schuldet jemandem etwas
   create: Gruppe erstellen
 invite:
   share: Teilen
@@ -106,3 +116,4 @@ account:
       Diese Aktion kann nicht rückgängig gemacht werden.
     sorry: Es tut uns sehr leid, zu sehen, dass Sie gehen.
     hold: Zum Bestätigen halten
+    link: Konto löschen

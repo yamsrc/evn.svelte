@@ -9,6 +9,8 @@
     value = $bindable(''),
     busy = $bindable(false),
     autocomplete = 'off',
+    autofocus,
+    placeholder = $dict.form.enterName,
     onchange,
     class: classes,
   }: Props = $props()
@@ -40,12 +42,14 @@
 
 <form onsubmit={handleSubmit(submit)}>
   <Input
+    id="app-cosmetics-name-input"
     bind:ref
     bind:value
     name="name"
     type="text"
+    {autofocus}
     {autocomplete}
-    placeholder={$dict.form.enterName}
+    {placeholder}
     class={cn('text-center text-3xl font-bold', classes)}
     required
     disabled={busy}

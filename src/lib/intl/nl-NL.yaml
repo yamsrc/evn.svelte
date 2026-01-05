@@ -58,6 +58,14 @@ contacts:
       confirm: Verwijderen
   add:
     label: Contact toevoegen
+    description: >-
+      Later kun je dit account overdragen aan de eigenaar, zodat die zijn of
+      haar inloggegevens kan instellen en het account kan overnemen.
+  share:
+    invite:
+      link: Uitnodigen voor evn
+      qr: QR-code tonen
+      description: De uitnodiging verloopt over 5 minuten
 join:
   app:
     description: >-
@@ -71,9 +79,10 @@ join:
       je bent klaar om te beginnen`
   accept: Evn gebruiken starten
 groups:
-  leave: Houd vast om groep te ontbinden
+  leave: Vasthouden om te verlaten
   name:
     description: Alle groepsleden kunnen deze naam zien
+    placeholder: Naam invoeren
   members:
     title: Leden
     addMembers: Leden toevoegen
@@ -88,6 +97,7 @@ groups:
       to: |-
         !js
         (amount) => `Je bent hen ${amount} verschuldigd`
+      even: Niemand is iemand iets verschuldigd
   create: Groep aanmaken
 invite:
   share: Delen
@@ -104,3 +114,4 @@ account:
       actie kan niet ongedaan worden gemaakt.
     sorry: Het spijt ons zeer om je te zien gaan.
     hold: Houd vast om te bevestigen
+    link: Account verwijderen

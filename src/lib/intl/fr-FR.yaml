@@ -58,6 +58,14 @@ contacts:
       confirm: Supprimer
   add:
     label: Ajouter un contact
+    description: >-
+      Plus tard, vous pourrez transférer ce compte au propriétaire afin qu'il
+      puisse définir ses informations de connexion et en prendre possession.
+  share:
+    invite:
+      link: Inviter sur evn
+      qr: Afficher le code QR
+      description: L'invitation expirera dans 5 minutes
 join:
   app:
     description: La façon intelligente de suivre qui doit quoi à qui, avec vos amis.
@@ -69,9 +77,10 @@ join:
       connectez-vous, et tout est prêt`
   accept: Commencer à utiliser Evn
 groups:
-  leave: Maintenir pour dissoudre le groupe
+  leave: Maintenez appuyé pour quitter
   name:
     description: Tous les membres du groupe verront ce nom
+    placeholder: Saisir le nom
   members:
     title: Membres
     addMembers: Ajouter des membres
@@ -88,6 +97,7 @@ groups:
       to: |-
         !js
         (amount) => `Vous leur devez ${amount}`
+      even: Personne ne doit rien à personne
   create: Créer un groupe
 invite:
   share: Partager
@@ -104,3 +114,4 @@ account:
       informations associées. Cette action est irréversible.
     sorry: Nous sommes vraiment désolés de vous voir partir.
     hold: Maintenir pour confirmer
+    link: Supprimer le compte

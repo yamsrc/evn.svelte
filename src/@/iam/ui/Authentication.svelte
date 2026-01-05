@@ -8,8 +8,9 @@
   import { Authentication as OIDC } from './oidc'
   import { Authentication as Passkey } from './passkey'
   import { Authentication as Password } from './password'
+  import type { Props } from './Authentication'
 
-  const { class: classes }: { class?: string } = $props()
+  const { class: classes, account }: Props = $props()
 
   let tabsRef = $state<HTMLDivElement | null>(null)
 
@@ -29,11 +30,11 @@
 <Tabs.Root bind:value class={cn('w-full', classes)} {onValueChange} bind:ref={tabsRef}>
   <div class="flex justify-between gap-2">
     <Tabs.List>
-      <Tabs.Trigger value="passkey">
+      <Tabs.Trigger value="passkey" data-marker="passkey-tab">
         <FingerprintPattern color="var(--muted-foreground)" />
         {$dict.auth.passkey}
       </Tabs.Trigger>
-      <Tabs.Trigger value="password">
+      <Tabs.Trigger value="password" id="iam-email-tab">
         <AtSign color="var(--muted-foreground)" />
         {$dict.auth.email}
       </Tabs.Trigger>
@@ -41,7 +42,7 @@
     <OIDC />
   </div>
   <Tabs.Content value="passkey">
-    <Passkey />
+    <Passkey {account} />
   </Tabs.Content>
   <Tabs.Content value="password">
     <Password />

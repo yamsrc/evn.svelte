@@ -1,0 +1,25 @@
+account:
+  title: Trasferimento account
+  description: Qualcuno ha creato questo account e lo sta trasferendo a te.
+  accept: Accetta account
+  content0: >-
+    Per assumere la proprietà, imposta i tuoi dettagli di accesso. Questo non
+    creerà un nuovo account — ti darà solo accesso a questo.
+  content1: >-
+    Questo non creerà un nuovo account — ti permetterà semplicemente di accedere
+    e gestire questo.
+  conflict:
+    content0: >-
+      !js
+
+      (name) => `${name}, per accettare questo account, verrai disconnesso dal
+      tuo attuale e dovrai impostare nuove credenziali di accesso.`
+    content1: "Questo non unirà gli account: passerai semplicemente a quello nuovo."
+  switch: Cambia account
+  expired:
+    content: Chiedi al mittente di generare un nuovo link.
+    description: Questa richiesta di trasferimento è scaduta.
+    title: Trasferimento scaduto
+actions:
+  discard: Rifiuta
+  close: Chiudi

@@ -56,6 +56,14 @@ contacts:
       confirm: Sil
   add:
     label: Kişi ekle
+    description: >-
+      Daha sonra bu hesabı sahibine aktarabileceksin, böylece giriş bilgilerini
+      ayarlayıp hesabın sahibi olabilir.
+  share:
+    invite:
+      link: evn’e davet et
+      qr: QR kodunu göster
+      description: Davet 5 dakika içinde sona erecek
 join:
   app:
     description: >-
@@ -69,9 +77,10 @@ join:
       yapın, ve hazırsınız`
   accept: Evn'i kullanmaya başla
 groups:
-  leave: Grubu dağıtmak için basılı tut
+  leave: Ayrılmak için basılı tut
   name:
     description: Tüm grup üyeleri bu ismi görecek
+    placeholder: Ad girin
   members:
     title: Üyeler
     addMembers: Üyeleri ekle
@@ -86,6 +95,7 @@ groups:
       to: |-
         !js
         (amount) => `Onlara ${amount} borçlusunuz`
+      even: Kimse kimseye borçlu değil
   create: Grup oluştur
 invite:
   share: Paylaş
@@ -102,3 +112,4 @@ account:
       geri alınamaz.
     sorry: Gitmene çok üzüldük.
     hold: Onaylamak için basılı tutun
+    link: Hesabı sil

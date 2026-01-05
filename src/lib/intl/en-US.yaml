@@ -58,6 +58,14 @@ contacts:
       confirm: Delete
   add:
     label: Add contact
+    description: >-
+      Later, you'll be able to transfer this account to the owner so they can
+      set up their sign-in details and take ownership.
+  share:
+    invite:
+      link: Invite to evn
+      qr: Show QR code
+      description: The invitation will expire in 5 minutes
 join:
   app:
     description: The smart way to track who owes whom, together with friends.
@@ -69,9 +77,10 @@ join:
       you’re all set`
   accept: Start Using Evn
 groups:
-  leave: Hold to disband group
+  leave: Hold to leave
   name:
     description: All group members will see this name
+    placeholder: Enter name
   members:
     title: Members
     addMembers: Add members
@@ -86,6 +95,7 @@ groups:
       to: |-
         !js
         (amount) => `You owe them ${amount}`
+      even: No one owes anyone anything
   create: Create group
 invite:
   share: Share
@@ -102,3 +112,4 @@ account:
       This action cannot be undone.
     sorry: We're very sorry to see you go.
     hold: Hold to confirm
+    link: Delete account

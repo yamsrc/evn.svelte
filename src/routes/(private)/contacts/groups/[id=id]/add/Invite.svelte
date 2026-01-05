@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Share2 } from '@lucide/svelte'
+  import { Share } from '$com/buttons'
   import { QR } from '$com/qr'
-  import { Share } from '$com/share'
   import { dict } from '$lib/intl'
   import { cn } from '$lib/utils'
   import { buttonVariants } from '$ui/button'
@@ -37,7 +37,7 @@
           variant="ghost"
           size="lg"
           class="w-auto justify-start focus-visible:ring-0 focus-visible:border-none"
-          data={invitation.url}
+          text={invitation.url}
           label={$dict.invite.qr}
         />
       {/snippet}

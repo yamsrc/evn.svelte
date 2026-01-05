@@ -20,3 +20,14 @@ export async function patch(id: string, body: Editable): Promise<Account | Error
 export async function del(id: string): Promise<void | Error> {
   return await accounts.json(id, { method: 'DELETE', credentials: 'include' })
 }
+
+export const managed = {
+  patch: (identity: string, managed: string, body: Editable) => patch(`managed/${identity}/${managed}`, body),
+}
+
+export const echo = {
+  get: (authorization: string) => accounts.json('echo', {
+    headers: { authorization },
+    credentials: 'include',
+  }),
+}

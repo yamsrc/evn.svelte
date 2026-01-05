@@ -1,0 +1,111 @@
+native: Русскей
+locale: ru-RU
+actions:
+  continue: Погнали дальше
+  holdToLogout: Зажми и съеби
+  signout: Съебаться
+  close: Закрыть к хуям
+  cheques:
+    title: Ебаные чеки
+    scan: Просканить
+    input: Вбить руками
+  contacts:
+    group: Бригада
+    title: Кореша
+    contact: Кореш
+  addSelected: Закинуть выбранное
+  cancel: Забить хуй
+  search: Рыскать
+nav:
+  home: Хата
+  evns: Разборки
+  profile: Чёткий
+  contacts: Кореша
+terms: Понятия
+privacy: Не стучим
+madeBy: Слеплено какими-то типами
+profile:
+  title: Мой ебучий профиль
+  language:
+    title: Базар
+    description: На распознавание чеков это дерьмо не влияет. Мы и так шарим почти за всё.
+form:
+  enterName: Впиши погоняло
+copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
+onboarding:
+  name:
+    title: Твоё погоняло
+    description: Как тебя будут кликать в приложухе
+contacts:
+  title: Кореша
+  empty:
+    title: Пусто, как в хате без хавки
+    description: Подтяни корешей вручную или зазови этих оболтусов
+    invite:
+      share: Позвать корешей
+      qr: Позвать по QR-хуете
+      manual: Вбить руками
+  all: Все кореша
+  contact:
+    owesYou: Этот тип тебе торчит
+    youOwe: Ты этому типу торчишь
+  delete:
+    confirm:
+      title: Выпилить кореша
+      description: Все разборки с этим типом пойдут нахуй
+      confirm: Выпилить к хуям
+  add:
+    label: Готово, блять
+    description: >-
+      Потом просто скинешь этот акк нужному типу — пусть сам ебётся с логином и
+      забирает всё под себя.
+  share:
+    invite:
+      link: Подтянуть в evn
+      qr: Светануть QR
+      description: Протухнет нахуй через 5 минут
+join:
+  app:
+    description: Чоткая тема — считать, кто кому, блять, торчит, вместе с корешами.
+  inviter:
+    description: >-
+      !js
+
+      (name) => `Тебя, сука, зазвал ${name}. Вкатывайся или логинься — и
+      погнали`
+  accept: Вкатиться в evn нахуй
+groups:
+  leave: Зажми чтобы съебать
+  name:
+    placeholder: Пиши название
+    description: Это название увидят все уёбки
+  members:
+    title: Состав
+    addMembers: Подтянуть народ
+    addMember: Подтянуть чела
+    empty: Тут пока нихуя нет. Закинь людей — и можно мутить движ.
+  title: Бригады
+  summary:
+    balance:
+      from: |-
+        !js
+        (amount) => `Эти хуи тебе должны ${amount}`
+      to: |-
+        !js
+        (amount) => `Ты этим хуям должен ${amount}`
+      even: Все ровно
+  create: Сколотить бригаду
+invite:
+  share: Расшарить нахуй
+  qr: Показать QR
+  invite: Позвать
+etc:
+  or: или, блять
+account:
+  delete:
+    title: Съебаться с концами
+    description: Мы сотрём к хуям твой аккаунт и всю твою поебень. Обратки не будет.
+    sorry: Пошёл нахуй.
+    button: Пойти нахуй
+    hold: Держи дольше, бля
+    link: Заебало

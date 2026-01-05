@@ -1,0 +1,28 @@
+account:
+  title: Kontenübertrag
+  description: Jemand hat dieses Konto erstellt und überträgt es nun an dich.
+  accept: Konto akzeptieren
+  content0: >-
+    Um die Inhaberschaft zu übernehmen, richte bitte deine Anmeldedaten ein.
+    Dadurch wird kein neues Konto erstellt – du erhältst nur Zugriff auf dieses
+    Konto.
+  content1: >-
+    Dadurch wird kein neues Konto erstellt – du bekommst lediglich Zugriff auf
+    dieses und kannst es verwalten.
+  conflict:
+    content0: >-
+      !js
+
+      (name) => `${name}, um dieses Konto zu akzeptieren, wirst du von deinem
+      aktuellen Konto abgemeldet und musst neue Anmeldedaten festlegen.`
+    content1: >-
+      Dadurch werden die Konten nicht zusammengeführt – du wechselst einfach zum
+      neuen Konto.
+  switch: Konto wechseln
+  expired:
+    content: Bitte den Absender, einen neuen Link zu erstellen.
+    description: Diese Überweisungsanfrage ist abgelaufen.
+    title: Übertragung abgelaufen
+actions:
+  discard: Ablehnen
+  close: Schließen

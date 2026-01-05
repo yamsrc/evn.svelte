@@ -1,11 +1,11 @@
 <script lang="ts">
   import { ChevronUp, ChevronDown } from '@lucide/svelte'
-  import Section from '$com/section/Section.svelte'
   import { cn } from '$lib/utils'
   import { buttonVariants } from '$ui/button'
   import * as Collapsible from '$ui/collapsible'
+  import { Section } from '@/app/ui'
   import { filter } from '@/groups'
-  import Group from './Group.svelte'
+  import Group from './Panel.svelte'
   import type { Props } from './Groups'
 
   let { groups, title, selection = $bindable(), search }: Props = $props()

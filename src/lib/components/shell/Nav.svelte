@@ -39,6 +39,7 @@
         {@const active = match(section.href, page.url.pathname)}
         <li>
           <Button
+            id={`nav-${section.id}-button`}
             href={exact(section.href, page.url.pathname) ? null : href(section.href)}
             variant="ghost"
             class={cn(

@@ -7,7 +7,11 @@
   import { Input } from '$ui/input'
   import { update, type Account } from '@/accounts'
 
-  const { account, class: classes }: { account: Account; class?: string } = $props()
+  const {
+    account,
+    autofocus,
+    class: classes,
+  }: { account: Account; autofocus?: boolean; class?: string } = $props()
 
   let ref = $state<HTMLInputElement | null>(null)
   let value = $derived(account.name)
@@ -34,10 +38,12 @@
 
 <form onsubmit={onsubmit(submit)} class="flex items-center gap-2">
   <Input
+    id="accounts-name-input"
     bind:ref
     bind:value
     name="name"
     type="text"
+    {autofocus}
     autocomplete="given-name"
     placeholder={$dict.form.enterName}
     class={cn('text-center', classes)}

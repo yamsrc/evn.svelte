@@ -4,7 +4,7 @@
  * @author copilot
  */
 
-export type Locale = 'ar-SA' | 'de-DE' | 'en-US' | 'es-ES' | 'fr-FR' | 'hi-IN' | 'it-IT' | 'ja-JP' | 'ko-KR' | 'nl-NL' | 'ru-RU' | 'sw-TZ' | 'tr-TR' | 'uk-UA' | 'zh-CN'
+export type Locale = 'ar-SA' | 'de-DE' | 'en-US' | 'es-ES' | 'fr-FR' | 'hi-IN' | 'it-IT' | 'ja-JP' | 'ko-KR' | 'nl-NL' | 'ru-FU' | 'ru-RU' | 'sw-TZ' | 'tr-TR' | 'uk-UA' | 'zh-CN'
 
 export type Dictionary = {
       native: string
@@ -79,6 +79,14 @@ export type Dictionary = {
         }
         add: {
           label: string
+          description: string
+        }
+        share: {
+          invite: {
+            link: string
+            qr: string
+            description: string
+          }
         }
       }
       join: {
@@ -94,6 +102,7 @@ export type Dictionary = {
         leave: string
         name: {
           description: string
+          placeholder: string
         }
         members: {
           title: string
@@ -106,6 +115,7 @@ export type Dictionary = {
           balance: {
             from: (value: any) => string
             to: (value: any) => string
+            even: string
           }
         }
         create: string
@@ -125,6 +135,7 @@ export type Dictionary = {
           description: string
           sorry: string
           hold: string
+          link: string
         }
       }
     }

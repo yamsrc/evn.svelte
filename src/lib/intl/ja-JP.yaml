@@ -56,6 +56,12 @@ contacts:
       confirm: 削除
   add:
     label: 連絡先を追加
+    description: 後でこのアカウントを所有者に譲渡できるようになり、所有者がサインイン情報を設定して引き継ぐことができます。
+  share:
+    invite:
+      link: evnに招待
+      qr: QRコードを表示
+      description: 招待は5分後に期限切れになります
 join:
   app:
     description: 友だちと一緒に「誰が誰にいくら借りているか」をスマートに管理。
@@ -65,9 +71,10 @@ join:
       (name) => `${name} から招待されました。登録またはログインするだけで、準備完了です`
   accept: Evn を使い始める
 groups:
-  leave: 長押しでグループを解散
+  leave: 長押しして退出
   name:
     description: すべてのグループメンバーがこの名前を表示します
+    placeholder: 名前を入力
   members:
     title: メンバー
     addMembers: メンバーを追加
@@ -82,6 +89,7 @@ groups:
       to: |-
         !js
         (amount) => `あなたは彼らに${amount}を借りています`
+      even: 誰も誰にも借りはない
   create: グループを作成
 invite:
   share: 共有
@@ -96,3 +104,4 @@ account:
     description: あなたのアカウントおよび関連するすべての情報を完全に削除します。この操作は元に戻せません。
     sorry: ご利用いただけなくなることを大変残念に思います。
     hold: 押し続けて確定
+    link: アカウントを削除

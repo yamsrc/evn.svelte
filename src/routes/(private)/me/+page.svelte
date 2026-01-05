@@ -1,12 +1,12 @@
 <script lang="ts">
   import { LogOut } from '@lucide/svelte'
   import { goto } from '$app/navigation'
-  import { Hold } from '$com/hold'
-  import { Section } from '$com/section'
+  import { Hold } from '$com/buttons'
   import { Separator } from '$com/separator'
   import { version } from '$config'
   import { dict } from '$lib/intl'
   import { Cosmetics, Delete, Language } from '@/accounts/ui'
+  import { Section } from '@/app/ui'
   import { Header } from '@/app/ui'
   import { Feedback } from '@/feedback/ui'
   import { logout } from '@/iam'
@@ -25,6 +25,7 @@
       <Header.Title>{$dict.profile.title}</Header.Title>
       <Header.Actions>
         <Hold
+          id="me-logout-button"
           onclick={getout}
           variant="ghost"
           class="size-12 bg-accent/50 border border-border"
@@ -63,11 +64,11 @@
           $time,
         ).getFullYear()}
       </p>
-      <div>
+      <p class="[&_a]:text-muted-foreground">
         <a href="/terms/">{$dict.terms}</a>,
         <a href="/privacy/">{$dict.privacy}</a>,
-        <Delete class="inline-block p-0 font-normal h-auto" />
-      </div>
+        <Delete class="p-0 underline underline-offset-3 font-normal" ondelete={getout} />
+      </p>
       <p>v{version}</p>
     </footer>
   </Section>
