@@ -3,7 +3,7 @@ import { dictionaries, locales } from './built.js'
 import { account } from '@/iam'
 import type { Locale, Dictionary } from './types'
 import { value } from 'svas'
-import { DefaultLocale } from '$config'
+import { defaultLocale } from '$config'
 import { supported, resolveLocale } from './bcp'
 
 type Translation<T = string> = Record<Locale, T>
@@ -29,7 +29,7 @@ const locale = derived([account, selected], ([$account, $selected]) => {
   if ($account?.locale !== undefined && supported($account?.locale))
     return resolveLocale($account.locale)
   else
-    return preferred() ?? DefaultLocale
+    return preferred() ?? defaultLocale
 })
 
 function preferred(): Locale | null {

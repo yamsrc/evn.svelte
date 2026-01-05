@@ -1,6 +1,6 @@
 import { locales } from "./built"
 import type { Locale } from "./types"
-import { DefaultLocale } from "$config"
+import { defaultLocale } from "$config"
 
 /**
  * Check if a BCP 47 language code matches a language code in the list
@@ -20,7 +20,7 @@ function supported(code: string): boolean {
  * @returns {Locale} A Locale type with the matched locale, or the default locale if no match is found.
  */
 function resolveLocale(code: string): Locale {
-  return locales.find(locale => locale.startsWith(code)) ?? DefaultLocale
+  return locales.find(locale => locale.startsWith(code)) ?? defaultLocale
 }
 
 export { supported, resolveLocale }

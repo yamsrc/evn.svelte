@@ -1,7 +1,7 @@
 import type { HTMLInputAttributes } from 'svelte/elements'
 
 export interface Props {
-  value?: Value
+  value?: Partial<Value>
   editable?: boolean
   placeholder?: string
   label?: string
@@ -14,5 +14,5 @@ export interface Props {
 
 export interface Value {
   name: string
-  picture?: string
+  picture: string
 }

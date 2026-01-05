@@ -2,11 +2,11 @@
   import { onMount } from 'svelte'
   import { locale } from '$lib/intl'
   import { Select, SelectTrigger, SelectContent, SelectItem } from '$ui/select'
-  import { set } from '@/iam'
+  import { me } from '@/accounts'
   import { options, hidden } from './Language'
 
   function change(locale: string) {
-    set({ locale })
+    void me.update({ locale })
   }
 
   let opens = $state(0)

@@ -67,7 +67,7 @@
       <p class="[&_a]:text-muted-foreground">
         <a href="/terms/">{$dict.terms}</a>,
         <a href="/privacy/">{$dict.privacy}</a>,
-        <Delete class="p-0 underline underline-offset-3 font-normal" />
+        <Delete class="p-0 underline underline-offset-3 font-normal" ondelete={getout} />
       </p>
       <p>v{version}</p>
     </footer>
