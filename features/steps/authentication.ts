@@ -32,7 +32,7 @@ Then('I am not authenticated', async ({ page }) => {
   await isNotAuthenticated(page)
 })
 
-async function isAuthenticated(page: Page, tobe: boolean = true) {
+async function isAuthenticated(page: Page) {
   await expect(page.locator('#nav-me-button')).toBeVisible()
 }
 
