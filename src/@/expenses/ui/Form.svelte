@@ -1,5 +1,6 @@
 <script lang="ts">
   import { Separator } from '$com/separator'
+  import { dict } from '$lib/intl'
   import { onsubmit } from '$lib/tools'
   import { Button } from '$ui/button'
   import { Input } from '$ui/input'
@@ -25,18 +26,13 @@
 
     const result = 'id' in expense ? await update(expense.id, data) : await add(data)
 
-    if (result instanceof Error) {
-      console.error('Failed to add expense:', result)
-
-      return
-    }
+    if (result instanceof Error) return
 
     onsend?.(result)
   }
 
   $effect(() => {
     expense.participants = participants
-    console.table(expense.participants)
   })
 </script>
 
@@ -47,10 +43,14 @@
         bind:value={expense.title}
         name="title"
         required
-        placeholder="What have spent on?"
+        placeholder={$dict.expenses.form.title.placeholder}
         class="text-3xl font-bold"
       />
-      <Input bind:value={expense.location} name="location" placeholder="WhereWhere? (Optional)" />
+      <Input
+        bind:value={expense.location}
+        name="location"
+        placeholder={$dict.expenses.form.location.placeholder}
+      />
     </fieldset>
   </Section>
 
@@ -60,12 +60,9 @@
 
   <Separator />
 
-  <Section class="space-y-5">
-    <h2>Paid by</h2>
-    <Payers bind:participants />
-  </Section>
+  <Payers bind:participants />
 
-  <Section class="space-y-5">
-    <Button type="submit" size="lg" class="w-full">Save and update balances</Button>
+  <Section>
+    <Button type="submit" size="lg" class="w-full">{$dict.expenses.form.save}</Button>
   </Section>
 </form>

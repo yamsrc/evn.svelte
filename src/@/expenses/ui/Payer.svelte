@@ -39,6 +39,7 @@
     {onclick}
   >
     {#if $me?.id === account.id}
+      <!-- TODO: Me -->
       <Item.Title>{account.name}</Item.Title>
       <Item.Media>
         <Picture {account} size={32} />

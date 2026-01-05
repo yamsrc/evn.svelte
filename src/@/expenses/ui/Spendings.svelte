@@ -3,6 +3,7 @@
   import { Plus } from '@lucide/svelte'
   import { Async } from 'svas'
   import { Separator } from '$com/separator'
+  import { dict } from '$lib/intl'
   import { currency } from '$lib/tools'
   import { Button } from '$ui/button'
   import * as Card from '$ui/card'
@@ -49,6 +50,7 @@
   <div class="flex items-center justify-between gap-2">
     <div class="flex items-center gap-2 flex-1">
       <Picture {account} class="size-8" />
+      <!-- TODO: Me -->
       <span class="flex-1 overflow-hidden text-ellipsis whitespace-nowrap">{account.name}</span>
     </div>
     <Amount class="w-24" oninput={oninput(account.id)} value={participant.amount ?? 0} />
@@ -56,7 +58,7 @@
 {/snippet}
 
 <Section class="flex flex-col gap-1.5">
-  <h2>Spendings</h2>
+  <h2>{$dict.expenses.spendings.title}</h2>
 
   <Card.Root class="bg-background w-full p-4">
     <Card.Content class="space-y-2 p-0">
@@ -70,6 +72,7 @@
           {/snippet}
         </Async>
       {/each}
+      <!-- TODO: Add extras -->
       <Separator />
       <div class="flex items-center justify-between gap-2 min-h-12">
         <span>Total</span>

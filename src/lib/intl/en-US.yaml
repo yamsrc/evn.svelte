@@ -113,3 +113,14 @@ account:
     sorry: We're very sorry to see you go.
     hold: Hold to confirm
     link: Delete account
+expenses:
+  spendings:
+    title: Spendings
+  payers:
+    title: Paid by
+  form:
+    title:
+      placeholder: What have you spent on?
+    location:
+      placeholder: Where? (Optional)
+    save: Save and update balances

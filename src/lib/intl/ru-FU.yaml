@@ -109,3 +109,14 @@ account:
     button: Пойти нахуй
     hold: Держи дольше, бля
     link: Заебало
+expenses:
+  spendings:
+    title: Расходы
+  payers:
+    title: Оплачено
+  form:
+    title:
+      placeholder: На что ты потратил?
+    location:
+      placeholder: Где? (необязательно)
+    save: Сохранить и обновить балансы

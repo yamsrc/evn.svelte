@@ -117,3 +117,14 @@ account:
     sorry: Lamentamos mucho que te vayas.
     hold: Mantén pulsado para confirmar
     link: Eliminar cuenta
+expenses:
+  spendings:
+    title: Gastos
+  payers:
+    title: Pagado por
+  form:
+    title:
+      placeholder: ¿En qué has gastado?
+    location:
+      placeholder: ¿Dónde? (opcional)
+    save: Guardar y actualizar saldos

@@ -1,7 +1,9 @@
 <script lang="ts">
   import { Async, combined } from 'svas'
   import { SvelteSet } from 'svelte/reactivity'
+  import { dict } from '$lib/intl'
   import { accounts } from '@/accounts'
+  import { Section } from '@/app/ui'
   import { contacts } from '@/contacts'
   import Payer from './Payer.svelte'
   import type { Props } from './Payers'
@@ -61,7 +63,8 @@
   $effect.pre(() => updateTotal())
 </script>
 
-<div class="flex flex-col gap-1.5">
+<Section class="flex flex-col gap-1.5">
+  <h2>{$dict.expenses.payers.title}</h2>
   {#each Object.entries(participants) as [identity, participant] (identity)}
     <Async store={combined(accounts.get(identity), contacts)}>
       {#snippet awaited([account, contacts])}
@@ -71,4 +74,4 @@
       {/snippet}
     </Async>
   {/each}
-</div>
+</Section>

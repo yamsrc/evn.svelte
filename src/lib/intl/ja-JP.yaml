@@ -105,3 +105,14 @@ account:
     sorry: ご利用いただけなくなることを大変残念に思います。
     hold: 押し続けて確定
     link: アカウントを削除
+expenses:
+  spendings:
+    title: 支出
+  payers:
+    title: 支払い者
+  form:
+    title:
+      placeholder: 何に使ったの？
+    location:
+      placeholder: どこですか？（任意）
+    save: 保存して残高を更新

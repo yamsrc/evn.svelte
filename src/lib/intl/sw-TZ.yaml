@@ -111,3 +111,14 @@ account:
     sorry: Tunaomba radhi sana kukuona ukiondoka.
     hold: Shikilia kuthibitisha
     link: Futa akaunti
+expenses:
+  spendings:
+    title: Matumizi
+  payers:
+    title: Imelipwa na
+  form:
+    title:
+      placeholder: Umetumia kwenye nini?
+    location:
+      placeholder: Wapi? (Hiari)
+    save: Hifadhi na sasisha mizania

@@ -138,4 +138,21 @@ export type Dictionary = {
           link: string
         }
       }
+      expenses: {
+        spendings: {
+          title: string
+        }
+        payers: {
+          title: string
+        }
+        form: {
+          title: {
+            placeholder: string
+          }
+          location: {
+            placeholder: string
+          }
+          save: string
+        }
+      }
     }

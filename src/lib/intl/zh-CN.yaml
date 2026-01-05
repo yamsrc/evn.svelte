@@ -105,3 +105,14 @@ account:
     sorry: 很遗憾看到您离开。
     hold: 按住以确认
     link: 删除账户
+expenses:
+  spendings:
+    title: 支出
+  payers:
+    title: 付款方
+  form:
+    title:
+      placeholder: 你花钱花在了什么上？
+    location:
+      placeholder: 在哪里？（可选）
+    save: 保存并更新余额

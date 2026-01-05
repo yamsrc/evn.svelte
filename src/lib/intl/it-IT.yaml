@@ -117,3 +117,14 @@ account:
     sorry: Ci dispiace molto vederti andare via.
     hold: Tieni premuto per confermare
     link: Elimina account
+expenses:
+  spendings:
+    title: Spese
+  payers:
+    title: Pagato da
+  form:
+    title:
+      placeholder: Su cosa hai speso?
+    location:
+      placeholder: Dove? (opzionale)
+    save: Salva e aggiorna i saldi

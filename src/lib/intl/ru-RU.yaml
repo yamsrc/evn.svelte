@@ -115,3 +115,14 @@ account:
     sorry: Нам очень жаль, что вы уходите.
     hold: Удерживайте для подтверждения
     link: Удалить аккаунт
+expenses:
+  spendings:
+    title: Расходы
+  payers:
+    title: Оплачено
+  form:
+    title:
+      placeholder: На что ты потратил?
+    location:
+      placeholder: Где? (необязательно)
+    save: Сохранить и обновить балансы

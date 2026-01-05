@@ -115,3 +115,14 @@ account:
     sorry: Het spijt ons zeer om je te zien gaan.
     hold: Houd vast om te bevestigen
     link: Account verwijderen
+expenses:
+  spendings:
+    title: Uitgaven
+  payers:
+    title: Betaald door
+  form:
+    title:
+      placeholder: Waar heb je geld aan uitgegeven?
+    location:
+      placeholder: Waar? (optioneel)
+    save: Opslaan en saldi bijwerken

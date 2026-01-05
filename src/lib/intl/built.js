@@ -133,6 +133,23 @@ export const dictionaries = {
         "hold": "اضغط مع الاستمرار للتأكيد",
         "link": "حذف الحساب"
       }
+    },
+    "expenses": {
+      "spendings": {
+        "title": "النفقات"
+      },
+      "payers": {
+        "title": "مدفوع بواسطة"
+      },
+      "form": {
+        "title": {
+          "placeholder": "على ماذا أنفقتَ المال؟"
+        },
+        "location": {
+          "placeholder": "أين؟ (اختياري)"
+        },
+        "save": "احفظ وقم بتحديث الأرصدة"
+      }
     }
   },
   "de-DE": {
@@ -265,6 +282,23 @@ export const dictionaries = {
         "sorry": "Es tut uns sehr leid, zu sehen, dass Sie gehen.",
         "hold": "Zum Bestätigen halten",
         "link": "Konto löschen"
+      }
+    },
+    "expenses": {
+      "spendings": {
+        "title": "Ausgaben"
+      },
+      "payers": {
+        "title": "Bezahlt von"
+      },
+      "form": {
+        "title": {
+          "placeholder": "Wofür hast du Geld ausgegeben?"
+        },
+        "location": {
+          "placeholder": "Wo? (optional)"
+        },
+        "save": "Speichern und Salden aktualisieren"
       }
     }
   },
@@ -399,6 +433,23 @@ export const dictionaries = {
         "hold": "Hold to confirm",
         "link": "Delete account"
       }
+    },
+    "expenses": {
+      "spendings": {
+        "title": "Spendings"
+      },
+      "payers": {
+        "title": "Paid by"
+      },
+      "form": {
+        "title": {
+          "placeholder": "What have you spent on?"
+        },
+        "location": {
+          "placeholder": "Where? (Optional)"
+        },
+        "save": "Save and update balances"
+      }
     }
   },
   "es-ES": {
@@ -531,6 +582,23 @@ export const dictionaries = {
         "sorry": "Lamentamos mucho que te vayas.",
         "hold": "Mantén pulsado para confirmar",
         "link": "Eliminar cuenta"
+      }
+    },
+    "expenses": {
+      "spendings": {
+        "title": "Gastos"
+      },
+      "payers": {
+        "title": "Pagado por"
+      },
+      "form": {
+        "title": {
+          "placeholder": "¿En qué has gastado?"
+        },
+        "location": {
+          "placeholder": "¿Dónde? (opcional)"
+        },
+        "save": "Guardar y actualizar saldos"
       }
     }
   },
@@ -665,6 +733,23 @@ export const dictionaries = {
         "hold": "Maintenir pour confirmer",
         "link": "Supprimer le compte"
       }
+    },
+    "expenses": {
+      "spendings": {
+        "title": "Dépenses"
+      },
+      "payers": {
+        "title": "Payé par"
+      },
+      "form": {
+        "title": {
+          "placeholder": "Dans quoi as-tu dépensé ?"
+        },
+        "location": {
+          "placeholder": "Où ? (facultatif)"
+        },
+        "save": "Enregistrer et mettre à jour les soldes"
+      }
     }
   },
   "hi-IN": {
@@ -797,6 +882,23 @@ export const dictionaries = {
         "sorry": "हमें आपको जाते हुए देखकर बहुत दुख हुआ।",
         "hold": "पुष्टि करने के लिए दबाए रखें",
         "link": "खाता हटाएं"
+      }
+    },
+    "expenses": {
+      "spendings": {
+        "title": "खर्च"
+      },
+      "payers": {
+        "title": "द्वारा भुगतान किया गया"
+      },
+      "form": {
+        "title": {
+          "placeholder": "आपने किस पर खर्च किया?"
+        },
+        "location": {
+          "placeholder": "कहाँ? (वैकल्पिक)"
+        },
+        "save": "सहेजें और बैलेंस अपडेट करें"
       }
     }
   },
@@ -931,6 +1033,23 @@ export const dictionaries = {
         "hold": "Tieni premuto per confermare",
         "link": "Elimina account"
       }
+    },
+    "expenses": {
+      "spendings": {
+        "title": "Spese"
+      },
+      "payers": {
+        "title": "Pagato da"
+      },
+      "form": {
+        "title": {
+          "placeholder": "Su cosa hai speso?"
+        },
+        "location": {
+          "placeholder": "Dove? (opzionale)"
+        },
+        "save": "Salva e aggiorna i saldi"
+      }
     }
   },
   "ja-JP": {
@@ -1063,6 +1182,23 @@ export const dictionaries = {
         "sorry": "ご利用いただけなくなることを大変残念に思います。",
         "hold": "押し続けて確定",
         "link": "アカウントを削除"
+      }
+    },
+    "expenses": {
+      "spendings": {
+        "title": "支出"
+      },
+      "payers": {
+        "title": "支払い者"
+      },
+      "form": {
+        "title": {
+          "placeholder": "何に使ったの？"
+        },
+        "location": {
+          "placeholder": "どこですか？（任意）"
+        },
+        "save": "保存して残高を更新"
       }
     }
   },
@@ -1197,6 +1333,23 @@ export const dictionaries = {
         "hold": "길게 눌러서 확인",
         "link": "계정 삭제"
       }
+    },
+    "expenses": {
+      "spendings": {
+        "title": "지출"
+      },
+      "payers": {
+        "title": "지불자"
+      },
+      "form": {
+        "title": {
+          "placeholder": "무엇에 썼나요?"
+        },
+        "location": {
+          "placeholder": "어디인가요? (선택 사항)"
+        },
+        "save": "저장하고 잔액 업데이트"
+      }
     }
   },
   "nl-NL": {
@@ -1329,6 +1482,23 @@ export const dictionaries = {
         "sorry": "Het spijt ons zeer om je te zien gaan.",
         "hold": "Houd vast om te bevestigen",
         "link": "Account verwijderen"
+      }
+    },
+    "expenses": {
+      "spendings": {
+        "title": "Uitgaven"
+      },
+      "payers": {
+        "title": "Betaald door"
+      },
+      "form": {
+        "title": {
+          "placeholder": "Waar heb je geld aan uitgegeven?"
+        },
+        "location": {
+          "placeholder": "Waar? (optioneel)"
+        },
+        "save": "Opslaan en saldi bijwerken"
       }
     }
   },
@@ -1463,6 +1633,23 @@ export const dictionaries = {
         "hold": "Держи дольше, бля",
         "link": "Заебало"
       }
+    },
+    "expenses": {
+      "spendings": {
+        "title": "Расходы"
+      },
+      "payers": {
+        "title": "Оплачено"
+      },
+      "form": {
+        "title": {
+          "placeholder": "На что ты потратил?"
+        },
+        "location": {
+          "placeholder": "Где? (необязательно)"
+        },
+        "save": "Сохранить и обновить балансы"
+      }
     }
   },
   "ru-RU": {
@@ -1595,6 +1782,23 @@ export const dictionaries = {
         "sorry": "Нам очень жаль, что вы уходите.",
         "hold": "Удерживайте для подтверждения",
         "link": "Удалить аккаунт"
+      }
+    },
+    "expenses": {
+      "spendings": {
+        "title": "Расходы"
+      },
+      "payers": {
+        "title": "Оплачено"
+      },
+      "form": {
+        "title": {
+          "placeholder": "На что ты потратил?"
+        },
+        "location": {
+          "placeholder": "Где? (необязательно)"
+        },
+        "save": "Сохранить и обновить балансы"
       }
     }
   },
@@ -1729,6 +1933,23 @@ export const dictionaries = {
         "hold": "Shikilia kuthibitisha",
         "link": "Futa akaunti"
       }
+    },
+    "expenses": {
+      "spendings": {
+        "title": "Matumizi"
+      },
+      "payers": {
+        "title": "Imelipwa na"
+      },
+      "form": {
+        "title": {
+          "placeholder": "Umetumia kwenye nini?"
+        },
+        "location": {
+          "placeholder": "Wapi? (Hiari)"
+        },
+        "save": "Hifadhi na sasisha mizania"
+      }
     }
   },
   "tr-TR": {
@@ -1861,6 +2082,23 @@ export const dictionaries = {
         "sorry": "Gitmene çok üzüldük.",
         "hold": "Onaylamak için basılı tutun",
         "link": "Hesabı sil"
+      }
+    },
+    "expenses": {
+      "spendings": {
+        "title": "Harcamalar"
+      },
+      "payers": {
+        "title": "Ödeyen"
+      },
+      "form": {
+        "title": {
+          "placeholder": "Neye harcadın?"
+        },
+        "location": {
+          "placeholder": "Nerede? (Opsiyonel)"
+        },
+        "save": "Bakiyeleri kaydet ve güncelle"
       }
     }
   },
@@ -1995,6 +2233,23 @@ export const dictionaries = {
         "hold": "Утримуйте для підтвердження",
         "link": "Видалити акаунт"
       }
+    },
+    "expenses": {
+      "spendings": {
+        "title": "Витрати"
+      },
+      "payers": {
+        "title": "Оплачено"
+      },
+      "form": {
+        "title": {
+          "placeholder": "На що ти витратив?"
+        },
+        "location": {
+          "placeholder": "Де? (необов’язково)"
+        },
+        "save": "Зберегти й оновити баланси"
+      }
     }
   },
   "zh-CN": {
@@ -2127,6 +2382,23 @@ export const dictionaries = {
         "sorry": "很遗憾看到您离开。",
         "hold": "按住以确认",
         "link": "删除账户"
+      }
+    },
+    "expenses": {
+      "spendings": {
+        "title": "支出"
+      },
+      "payers": {
+        "title": "付款方"
+      },
+      "form": {
+        "title": {
+          "placeholder": "你花钱花在了什么上？"
+        },
+        "location": {
+          "placeholder": "在哪里？（可选）"
+        },
+        "save": "保存并更新余额"
       }
     }
   }

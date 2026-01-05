@@ -183,6 +183,22 @@ inputs:
       link:
         input: Delete account
         context: link text
+  expenses:
+    spendings:
+      title:
+        input: Spendings
+    payers:
+      title:
+        input: Paid by
+    form:
+      title:
+        placeholder:
+          input: What have spent on?
+      location:
+        placeholder:
+          input: Where? (Optional)
+      save:
+        input: Save and update balances
 mounts:
   iam: ../../@/iam/ui/intl
   feedback: ../../@/feedback/ui/intl

@@ -105,3 +105,14 @@ account:
     sorry: 떠나신다니 정말 아쉽습니다.
     hold: 길게 눌러서 확인
     link: 계정 삭제
+expenses:
+  spendings:
+    title: 지출
+  payers:
+    title: 지불자
+  form:
+    title:
+      placeholder: 무엇에 썼나요?
+    location:
+      placeholder: 어디인가요? (선택 사항)
+    save: 저장하고 잔액 업데이트

@@ -115,3 +115,14 @@ account:
     sorry: Нам дуже шкода, що ви йдете.
     hold: Утримуйте для підтвердження
     link: Видалити акаунт
+expenses:
+  spendings:
+    title: Витрати
+  payers:
+    title: Оплачено
+  form:
+    title:
+      placeholder: На що ти витратив?
+    location:
+      placeholder: Де? (необов’язково)
+    save: Зберегти й оновити баланси

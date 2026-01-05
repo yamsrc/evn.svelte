@@ -115,3 +115,14 @@ account:
     sorry: Nous sommes vraiment désolés de vous voir partir.
     hold: Maintenir pour confirmer
     link: Supprimer le compte
+expenses:
+  spendings:
+    title: Dépenses
+  payers:
+    title: Payé par
+  form:
+    title:
+      placeholder: Dans quoi as-tu dépensé ?
+    location:
+      placeholder: Où ? (facultatif)
+    save: Enregistrer et mettre à jour les soldes

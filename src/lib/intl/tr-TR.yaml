@@ -113,3 +113,14 @@ account:
     sorry: Gitmene çok üzüldük.
     hold: Onaylamak için basılı tutun
     link: Hesabı sil
+expenses:
+  spendings:
+    title: Harcamalar
+  payers:
+    title: Ödeyen
+  form:
+    title:
+      placeholder: Neye harcadın?
+    location:
+      placeholder: Nerede? (Opsiyonel)
+    save: Bakiyeleri kaydet ve güncelle

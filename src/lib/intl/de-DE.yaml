@@ -117,3 +117,14 @@ account:
     sorry: Es tut uns sehr leid, zu sehen, dass Sie gehen.
     hold: Zum Bestätigen halten
     link: Konto löschen
+expenses:
+  spendings:
+    title: Ausgaben
+  payers:
+    title: Bezahlt von
+  form:
+    title:
+      placeholder: Wofür hast du Geld ausgegeben?
+    location:
+      placeholder: Wo? (optional)
+    save: Speichern und Salden aktualisieren
