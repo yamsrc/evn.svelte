@@ -11,7 +11,7 @@
 
     if (balance < 0) return 'var(--destructive)'
 
-    return 'var(--foreground)'
+    return 'var(--muted-foreground)'
   }
 </script>
 
@@ -23,7 +23,7 @@
       {$dict.contacts.contact.youOwe}
     {/if}
   </div>
-  <div class="font-bold">
+  <div class="font-bold text-foreground">
     {currency(Math.abs(balance))}
   </div>
   <div>
