@@ -1,7 +1,7 @@
 <script lang="ts">
   import { cn } from '$lib/utils'
-  import Button from '$ui/button/button.svelte'
   import * as Item from '$ui/item'
+  import { Toggle } from '$ui/toggle'
   import { Picture } from '@/accounts/ui'
   import { Balance } from '@/app/ui'
   import { account as me } from '@/iam'
@@ -18,9 +18,9 @@
     onselect,
   }: Props = $props()
 
-  function onclick() {
-    onselect?.(account.id, !selected)
-  }
+  $effect(() => {
+    onselect?.(account.id, selected ?? false)
+  })
 
   function oninput(paid: number) {
     participant.paid = paid
@@ -31,15 +31,13 @@
 </script>
 
 <Item.Root variant="outline" class="flex flex-nowrap items-stretch gap-2 p-0 border-none">
-  <Button
+  <Toggle
     variant="outline"
     class={cn(
       'h-full min-h-14 flex-1 flex flex-row justify-between items-center flex-nowrap overflow-hidden',
-      {
-        'bg-accent dark:bg-accent outline-solid outline-2 outline-muted-foreground/50': selected,
-      },
+      'data-[state=on]:bg-accent data-[state=on]:dark:bg-accent data-[state=on]:outline-solid data-[state=on]:outline-2 data-[state=on]:outline-muted-foreground/50',
     )}
-    {onclick}
+    bind:pressed={selected}
   >
     {#if $me?.id === account.id}
       <div class="flex items-center gap-2 w-full">
@@ -58,13 +56,11 @@
       </div>
       {#if !(selected && split)}
         <Item.Content>
-          <Item.Description>
-            <Balance balance={contact?.balance ?? 0} />
-          </Item.Description>
+          <Balance balance={contact?.balance ?? 0} />
         </Item.Content>
       {/if}
     {/if}
-  </Button>
+  </Toggle>
   {#if selected && split}
     <Amount
       class="flex-1 max-w-32 shrink min-h-14 h-full"
