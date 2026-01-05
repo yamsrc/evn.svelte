@@ -13,10 +13,9 @@
     account,
     contact,
     participant = $bindable<Participant>(),
-    partial = false,
+    split = false,
     selected = $bindable(),
     onselect,
-    onchange,
   }: Props = $props()
 
   function onclick() {
@@ -24,9 +23,7 @@
   }
 
   function oninput(paid: number) {
-    participant = { ...participant, paid }
-
-    onchange?.(account.id, paid)
+    participant.paid = paid
   }
 </script>
 
@@ -49,14 +46,14 @@
         <Picture {account} size={32} />
       </Item.Media>
       <Item.Title>{account.name}</Item.Title>
-      {#if !(selected && partial)}
+      {#if !(selected && split)}
         <Item.Description>
           <Balance balance={contact?.balance ?? 0} />
         </Item.Description>
       {/if}
     {/if}
   </Button>
-  {#if selected && partial}
+  {#if selected && split}
     <Amount class="w-32" {oninput} value={participant.paid ?? 0} />
   {/if}
 </Item.Root>

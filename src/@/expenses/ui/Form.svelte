@@ -14,8 +14,6 @@
 
   let { expense = $bindable<Expense | net.Editable>(), onsend }: Props = $props()
 
-  let participants = $state.raw(expense.participants)
-
   async function submit() {
     const data: net.Editable = {
       title: expense.title,
@@ -30,10 +28,6 @@
 
     onsend?.(result)
   }
-
-  $effect(() => {
-    expense.participants = participants
-  })
 </script>
 
 <form onsubmit={onsubmit(submit)} class="space-y-5">
@@ -56,11 +50,11 @@
 
   <Separator />
 
-  <Spendings bind:participants />
+  <Spendings bind:participants={expense.participants} />
 
   <Separator />
 
-  <Payers bind:participants />
+  <Payers bind:participants={expense.participants} />
 
   <Section>
     <Button type="submit" size="lg" class="w-full">{$dict.expenses.form.save}</Button>

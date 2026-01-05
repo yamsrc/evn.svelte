@@ -6,8 +6,7 @@ export interface Props {
   account: Account
   participant: Participant
   contact?: Contact
-  partial?: boolean
+  split?: boolean
   selected?: boolean
   onselect?: (identity: string, selected: boolean) => void
-  onchange?: (identity: string, paid: number) => void
 }

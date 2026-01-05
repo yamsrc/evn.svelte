@@ -25,25 +25,9 @@
   const participantIds = $derived(Object.keys(participants))
   const otherIds = $derived(participantIds.filter((id) => id !== $account?.id))
 
-  let total = $state(0)
-
-  function updateTotal() {
-    total = Object.values(participants).reduce((acc, participant) => acc + participant.amount, 0)
-  }
-
-  $effect.pre(() => updateTotal())
-
-  const oninput = (id: string) => (amount: number) => {
-    participants = {
-      ...participants,
-      [id]: {
-        ...participants[id],
-        amount,
-      },
-    }
-
-    updateTotal()
-  }
+  const total = $derived(
+    Object.values(participants).reduce((acc, participant) => acc + participant.amount, 0),
+  )
 </script>
 
 {#snippet spendingItem(account: Account, participant: Expense['participants'][string])}
@@ -53,7 +37,7 @@
       <!-- TODO: Me -->
       <span class="flex-1 overflow-hidden text-ellipsis whitespace-nowrap">{account.name}</span>
     </div>
-    <Amount class="w-24" oninput={oninput(account.id)} value={participant.amount ?? 0} />
+    <Amount class="w-24" bind:value={participants[account.id].amount} />
   </div>
 {/snippet}
 

@@ -17,28 +17,16 @@
       .map(([identity]) => identity),
   )
 
-  const partial = $derived(selection.size > 1)
+  const split = $derived(selection.size > 1)
 
-  let total = $state(0)
-
-  function updateTotal() {
-    total = Object.values(participants).reduce((acc, participant) => acc + participant.amount, 0)
-  }
+  const total = $derived(
+    Object.values(participants).reduce((acc, participant) => acc + participant.amount, 0),
+  )
 
   function update() {
-    updateTotal()
-
-    participants = {
-      ...participants,
-      ...Object.fromEntries(
-        Object.entries(participants).map(([identity, participant]) => {
-          if (selection.has(identity) && !partial) participant.paid = total
-          else if (!selection.has(identity)) participant.paid = 0
-
-          return [identity, participant]
-        }),
-      ),
-    }
+    for (const [identity, participant] of Object.entries(participants))
+      if (selection.has(identity) && !split) participant.paid = total
+      else if (!selection.has(identity)) participant.paid = 0
   }
 
   function onselect(identity: string, selected: boolean) {
@@ -47,30 +35,23 @@
 
     update()
   }
-
-  function onchange(identity: string, paid: number) {
-    participants = {
-      ...participants,
-      [identity]: {
-        ...participants[identity],
-        paid,
-      },
-    }
-
-    update()
-  }
-
-  $effect.pre(() => updateTotal())
 </script>
 
 <Section class="flex flex-col gap-1.5">
   <h2>{$dict.expenses.payers.title}</h2>
-  {#each Object.entries(participants) as [identity, participant] (identity)}
+  {#each Object.keys(participants) as identity (identity)}
     <Async store={combined(accounts.get(identity), contacts)}>
       {#snippet awaited([account, contacts])}
         {@const contact = contacts.find((c) => c.identity === identity)}
         {@const selected = selection?.has(identity)}
-        <Payer {participant} {account} {contact} {partial} {selected} {onselect} {onchange} />
+        <Payer
+          bind:participant={participants[identity]}
+          {account}
+          {contact}
+          {split}
+          {selected}
+          {onselect}
+        />
       {/snippet}
     </Async>
   {/each}

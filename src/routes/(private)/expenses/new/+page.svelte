@@ -18,4 +18,4 @@
   </Header.Root>
 </Section>
 
-<Form expense={$draft} {onsend} />
+<Form bind:expense={$draft} {onsend} />

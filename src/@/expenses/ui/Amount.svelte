@@ -5,13 +5,15 @@
   import * as InputGroup from '$ui/input-group'
   import type { Props } from './Amount'
 
-  const { value, oninput: oninputCb, class: classes }: Props = $props()
+  let { value = $bindable(), oninput: oninputCb, class: classes }: Props = $props()
 
   function oninput(e: Event) {
-    const value = (e.target as HTMLInputElement)?.value
-    const amount = value ? unit(Number(value)) : 0
+    const val = (e.target as HTMLInputElement)?.value
+    const amount = val ? unit(Number(val)) : 0
 
-    oninputCb(amount)
+    value = amount
+
+    oninputCb?.(amount)
   }
 </script>
 
