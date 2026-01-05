@@ -39,7 +39,7 @@
         required
         {autofocus}
       />
-      <Button size="icon" type="submit" class="size-12">
+      <Button id="iam-passkey-create-button" size="icon" type="submit" class="size-12">
         {#if busy}
           <Loader />
         {:else}

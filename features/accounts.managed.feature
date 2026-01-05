@@ -31,4 +31,5 @@ Feature: Managed accounts
     And I open link from the clipboard
     Then 'join-accounts-accept-button' is visible
     When I tap 'join-accounts-accept-button'
-    Then 'iam-passkey-login-button' is not visible
+    Then 'iam-passkey-create-button' is visible
+    And 'iam-passkey-login-button' is not visible

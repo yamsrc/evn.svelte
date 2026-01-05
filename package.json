@@ -61,7 +61,7 @@
 	},
 	"bin": {
 		"shad": "tools/shad.js",
-		"feat": "tools/feat.js"
+		"play": "tools/play.js"
 	},
 	"dependencies": {
 		"qr-code-styling": "^1.9.2"
