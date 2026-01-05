@@ -18,9 +18,9 @@ actions:
   search: 검색
 nav:
   home: 홈
-  evns: 정산
   profile: 나
   contacts: 친구
+  expenses: 정산
 terms: 이용 약관
 privacy: 개인정보처리방침
 madeBy: 제작자
@@ -116,3 +116,4 @@ expenses:
     location:
       placeholder: 어디인가요? (선택 사항)
     save: 저장하고 잔액 업데이트
+  title: 정산

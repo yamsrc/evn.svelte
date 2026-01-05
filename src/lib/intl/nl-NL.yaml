@@ -18,9 +18,9 @@ actions:
   search: Zoeken
 nav:
   home: Home
-  evns: Afrekening
   profile: Ik
   contacts: Vrienden
+  expenses: Afrekening
 terms: Algemene voorwaarden
 privacy: Privacybeleid
 madeBy: Gemaakt door
@@ -126,3 +126,4 @@ expenses:
     location:
       placeholder: Waar? (optioneel)
     save: Opslaan en saldi bijwerken
+  title: Vereffenen

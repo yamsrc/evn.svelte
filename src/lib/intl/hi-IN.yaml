@@ -18,9 +18,9 @@ actions:
   search: खोजें
 nav:
   home: मुख्य पृष्ठ
-  evns: सेटलमेंट
   profile: मैं
   contacts: मित्र
+  expenses: सेटलमेंट
 terms: नियम व शर्तें
 privacy: गोपनीयता नीति
 madeBy: द्वारा निर्मित
@@ -124,3 +124,4 @@ expenses:
     location:
       placeholder: कहाँ? (वैकल्पिक)
     save: सहेजें और बैलेंस अपडेट करें
+  title: हिसाब

@@ -18,9 +18,9 @@ actions:
   search: Suchen
 nav:
   home: Startseite
-  evns: Ausgleich
   profile: Ich
   contacts: Freunde
+  expenses: Ausgleich
 terms: Allgemeine Geschäftsbedingungen
 privacy: Datenschutzrichtlinie
 madeBy: Erstellt von
@@ -128,3 +128,4 @@ expenses:
     location:
       placeholder: Wo? (optional)
     save: Speichern und Salden aktualisieren
+  title: Ausgleichen

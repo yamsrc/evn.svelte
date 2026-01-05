@@ -18,9 +18,9 @@ actions:
   search: Buscar
 nav:
   home: Inicio
-  evns: Ajustes
   profile: Yo
   contacts: Amigos
+  expenses: Ajustes
 terms: Términos y condiciones
 privacy: Política de privacidad
 madeBy: Hecho por
@@ -128,3 +128,4 @@ expenses:
     location:
       placeholder: ¿Dónde? (opcional)
     save: Guardar y actualizar saldos
+  title: Ajustar

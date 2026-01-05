@@ -18,9 +18,9 @@ actions:
   search: Поиск
 nav:
   home: Главная
-  evns: Расчёты
   profile: Я
   contacts: Друзья
+  expenses: Расчёты
 terms: Условия и положения
 privacy: Политика конфиденциальности
 madeBy: Сделано
@@ -126,3 +126,4 @@ expenses:
     location:
       placeholder: Где? (необязательно)
     save: Сохранить и обновить балансы
+  title: Рассчитать

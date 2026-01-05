@@ -18,9 +18,9 @@ actions:
   search: بحث
 nav:
   home: الرئيسية
-  evns: تسوية
   profile: أنا
   contacts: الأصدقاء
+  expenses: تسوية
 terms: الشروط والأحكام
 privacy: سياسة الخصوصية
 madeBy: من صنع
@@ -122,3 +122,4 @@ expenses:
     location:
       placeholder: أين؟ (اختياري)
     save: احفظ وقم بتحديث الأرصدة
+  title: تسوية

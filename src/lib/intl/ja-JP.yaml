@@ -18,9 +18,9 @@ actions:
   search: 検索
 nav:
   home: ホーム
-  evns: 清算
   profile: 私
   contacts: 友だち
+  expenses: 清算
 terms: 利用規約
 privacy: プライバシーポリシー
 madeBy: 作成者
@@ -116,3 +116,4 @@ expenses:
     location:
       placeholder: どこですか？（任意）
     save: 保存して残高を更新
+  title: 清算

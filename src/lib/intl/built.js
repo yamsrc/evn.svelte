@@ -26,9 +26,9 @@ export const dictionaries = {
     },
     "nav": {
       "home": "الرئيسية",
-      "evns": "تسوية",
       "profile": "أنا",
-      "contacts": "الأصدقاء"
+      "contacts": "الأصدقاء",
+      "expenses": "تسوية"
     },
     "terms": "الشروط والأحكام",
     "privacy": "سياسة الخصوصية",
@@ -149,7 +149,8 @@ export const dictionaries = {
           "placeholder": "أين؟ (اختياري)"
         },
         "save": "احفظ وقم بتحديث الأرصدة"
-      }
+      },
+      "title": "تسوية"
     }
   },
   "de-DE": {
@@ -176,9 +177,9 @@ export const dictionaries = {
     },
     "nav": {
       "home": "Startseite",
-      "evns": "Ausgleich",
       "profile": "Ich",
-      "contacts": "Freunde"
+      "contacts": "Freunde",
+      "expenses": "Ausgleich"
     },
     "terms": "Allgemeine Geschäftsbedingungen",
     "privacy": "Datenschutzrichtlinie",
@@ -299,7 +300,8 @@ export const dictionaries = {
           "placeholder": "Wo? (optional)"
         },
         "save": "Speichern und Salden aktualisieren"
-      }
+      },
+      "title": "Ausgleichen"
     }
   },
   "en-US": {
@@ -326,9 +328,9 @@ export const dictionaries = {
     },
     "nav": {
       "home": "Home",
-      "evns": "Evns",
       "profile": "Me",
-      "contacts": "Friends"
+      "contacts": "Friends",
+      "expenses": "Evns"
     },
     "terms": "Terms & Conditions",
     "privacy": "Privacy Policy",
@@ -449,7 +451,8 @@ export const dictionaries = {
           "placeholder": "Where? (Optional)"
         },
         "save": "Save and update balances"
-      }
+      },
+      "title": "Evns"
     }
   },
   "es-ES": {
@@ -476,9 +479,9 @@ export const dictionaries = {
     },
     "nav": {
       "home": "Inicio",
-      "evns": "Ajustes",
       "profile": "Yo",
-      "contacts": "Amigos"
+      "contacts": "Amigos",
+      "expenses": "Ajustes"
     },
     "terms": "Términos y condiciones",
     "privacy": "Política de privacidad",
@@ -599,7 +602,8 @@ export const dictionaries = {
           "placeholder": "¿Dónde? (opcional)"
         },
         "save": "Guardar y actualizar saldos"
-      }
+      },
+      "title": "Ajustar"
     }
   },
   "fr-FR": {
@@ -626,9 +630,9 @@ export const dictionaries = {
     },
     "nav": {
       "home": "Accueil",
-      "evns": "Règlements",
       "profile": "Moi",
-      "contacts": "Amis"
+      "contacts": "Amis",
+      "expenses": "Règlements"
     },
     "terms": "Conditions générales",
     "privacy": "Politique de confidentialité",
@@ -749,7 +753,8 @@ export const dictionaries = {
           "placeholder": "Où ? (facultatif)"
         },
         "save": "Enregistrer et mettre à jour les soldes"
-      }
+      },
+      "title": "Régler"
     }
   },
   "hi-IN": {
@@ -776,9 +781,9 @@ export const dictionaries = {
     },
     "nav": {
       "home": "मुख्य पृष्ठ",
-      "evns": "सेटलमेंट",
       "profile": "मैं",
-      "contacts": "मित्र"
+      "contacts": "मित्र",
+      "expenses": "सेटलमेंट"
     },
     "terms": "नियम व शर्तें",
     "privacy": "गोपनीयता नीति",
@@ -899,7 +904,8 @@ export const dictionaries = {
           "placeholder": "कहाँ? (वैकल्पिक)"
         },
         "save": "सहेजें और बैलेंस अपडेट करें"
-      }
+      },
+      "title": "हिसाब"
     }
   },
   "it-IT": {
@@ -926,9 +932,9 @@ export const dictionaries = {
     },
     "nav": {
       "home": "Home",
-      "evns": "Saldo",
       "profile": "Io",
-      "contacts": "Amici"
+      "contacts": "Amici",
+      "expenses": "Saldo"
     },
     "terms": "Termini e condizioni",
     "privacy": "Informativa sulla privacy",
@@ -1049,7 +1055,8 @@ export const dictionaries = {
           "placeholder": "Dove? (opzionale)"
         },
         "save": "Salva e aggiorna i saldi"
-      }
+      },
+      "title": "Saldo"
     }
   },
   "ja-JP": {
@@ -1076,9 +1083,9 @@ export const dictionaries = {
     },
     "nav": {
       "home": "ホーム",
-      "evns": "清算",
       "profile": "私",
-      "contacts": "友だち"
+      "contacts": "友だち",
+      "expenses": "清算"
     },
     "terms": "利用規約",
     "privacy": "プライバシーポリシー",
@@ -1199,7 +1206,8 @@ export const dictionaries = {
           "placeholder": "どこですか？（任意）"
         },
         "save": "保存して残高を更新"
-      }
+      },
+      "title": "清算"
     }
   },
   "ko-KR": {
@@ -1226,9 +1234,9 @@ export const dictionaries = {
     },
     "nav": {
       "home": "홈",
-      "evns": "정산",
       "profile": "나",
-      "contacts": "친구"
+      "contacts": "친구",
+      "expenses": "정산"
     },
     "terms": "이용 약관",
     "privacy": "개인정보처리방침",
@@ -1349,7 +1357,8 @@ export const dictionaries = {
           "placeholder": "어디인가요? (선택 사항)"
         },
         "save": "저장하고 잔액 업데이트"
-      }
+      },
+      "title": "정산"
     }
   },
   "nl-NL": {
@@ -1376,9 +1385,9 @@ export const dictionaries = {
     },
     "nav": {
       "home": "Home",
-      "evns": "Afrekening",
       "profile": "Ik",
-      "contacts": "Vrienden"
+      "contacts": "Vrienden",
+      "expenses": "Afrekening"
     },
     "terms": "Algemene voorwaarden",
     "privacy": "Privacybeleid",
@@ -1499,7 +1508,8 @@ export const dictionaries = {
           "placeholder": "Waar? (optioneel)"
         },
         "save": "Opslaan en saldi bijwerken"
-      }
+      },
+      "title": "Vereffenen"
     }
   },
   "ru-FU": {
@@ -1526,9 +1536,9 @@ export const dictionaries = {
     },
     "nav": {
       "home": "Хата",
-      "evns": "Разборки",
       "profile": "Чёткий",
-      "contacts": "Кореша"
+      "contacts": "Кореша",
+      "expenses": "Разборки"
     },
     "terms": "Понятия",
     "privacy": "Не стучим",
@@ -1649,7 +1659,8 @@ export const dictionaries = {
           "placeholder": "Где? (необязательно)"
         },
         "save": "Сохранить и обновить балансы"
-      }
+      },
+      "title": "Рассчитать"
     }
   },
   "ru-RU": {
@@ -1676,9 +1687,9 @@ export const dictionaries = {
     },
     "nav": {
       "home": "Главная",
-      "evns": "Расчёты",
       "profile": "Я",
-      "contacts": "Друзья"
+      "contacts": "Друзья",
+      "expenses": "Расчёты"
     },
     "terms": "Условия и положения",
     "privacy": "Политика конфиденциальности",
@@ -1799,7 +1810,8 @@ export const dictionaries = {
           "placeholder": "Где? (необязательно)"
         },
         "save": "Сохранить и обновить балансы"
-      }
+      },
+      "title": "Рассчитать"
     }
   },
   "sw-TZ": {
@@ -1826,9 +1838,9 @@ export const dictionaries = {
     },
     "nav": {
       "home": "Mwanzo",
-      "evns": "Marejesho",
       "profile": "Mimi",
-      "contacts": "Marafiki"
+      "contacts": "Marafiki",
+      "expenses": "Marejesho"
     },
     "terms": "Vigezo na masharti",
     "privacy": "Sera ya Faragha",
@@ -1949,7 +1961,8 @@ export const dictionaries = {
           "placeholder": "Wapi? (Hiari)"
         },
         "save": "Hifadhi na sasisha mizania"
-      }
+      },
+      "title": "Lipa"
     }
   },
   "tr-TR": {
@@ -1976,9 +1989,9 @@ export const dictionaries = {
     },
     "nav": {
       "home": "Ana Sayfa",
-      "evns": "Hesaplaşma",
       "profile": "Ben",
-      "contacts": "Arkadaşlar"
+      "contacts": "Arkadaşlar",
+      "expenses": "Hesaplaşma"
     },
     "terms": "Şartlar ve koşullar",
     "privacy": "Gizlilik Politikası",
@@ -2099,7 +2112,8 @@ export const dictionaries = {
           "placeholder": "Nerede? (Opsiyonel)"
         },
         "save": "Bakiyeleri kaydet ve güncelle"
-      }
+      },
+      "title": "Hesapla"
     }
   },
   "uk-UA": {
@@ -2126,9 +2140,9 @@ export const dictionaries = {
     },
     "nav": {
       "home": "Головна",
-      "evns": "Розрахунок",
       "profile": "Я",
-      "contacts": "Друзі"
+      "contacts": "Друзі",
+      "expenses": "Розрахунок"
     },
     "terms": "Умови та положення",
     "privacy": "Політика конфіденційності",
@@ -2249,7 +2263,8 @@ export const dictionaries = {
           "placeholder": "Де? (необов’язково)"
         },
         "save": "Зберегти й оновити баланси"
-      }
+      },
+      "title": "Розрахунок"
     }
   },
   "zh-CN": {
@@ -2276,9 +2291,9 @@ export const dictionaries = {
     },
     "nav": {
       "home": "首页",
-      "evns": "结算",
       "profile": "我",
-      "contacts": "朋友"
+      "contacts": "朋友",
+      "expenses": "结算"
     },
     "terms": "条款和条件",
     "privacy": "隐私政策",
@@ -2399,7 +2414,8 @@ export const dictionaries = {
           "placeholder": "在哪里？（可选）"
         },
         "save": "保存并更新余额"
-      }
+      },
+      "title": "结清"
     }
   }
 };

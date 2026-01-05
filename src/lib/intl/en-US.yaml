@@ -18,9 +18,9 @@ actions:
   search: Search
 nav:
   home: Home
-  evns: Evns
   profile: Me
   contacts: Friends
+  expenses: Evns
 terms: Terms & Conditions
 privacy: Privacy Policy
 madeBy: Made by
@@ -124,3 +124,4 @@ expenses:
     location:
       placeholder: Where? (Optional)
     save: Save and update balances
+  title: Evns

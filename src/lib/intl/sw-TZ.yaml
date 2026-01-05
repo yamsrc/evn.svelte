@@ -18,9 +18,9 @@ actions:
   search: Tafuta
 nav:
   home: Mwanzo
-  evns: Marejesho
   profile: Mimi
   contacts: Marafiki
+  expenses: Marejesho
 terms: Vigezo na masharti
 privacy: Sera ya Faragha
 madeBy: Imetengenezwa na
@@ -122,3 +122,4 @@ expenses:
     location:
       placeholder: Wapi? (Hiari)
     save: Hifadhi na sasisha mizania
+  title: Lipa

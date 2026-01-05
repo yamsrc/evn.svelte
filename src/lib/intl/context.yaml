@@ -38,13 +38,13 @@ inputs:
   nav:
     home:
       input: Home
-    evns:
-      input: Evns
-      context: Use Evns for english. In other languages use short word with meaning settle up debts after spliting recipt
     profile:
       input: Me
     contacts:
       input: Friends
+    expenses:
+      input: Evns
+      context: Use Evns for english. In other languages use short word with meaning settle up debts after spliting recipt
   terms:
     input: Terms & conditions
   privacy:
@@ -199,6 +199,9 @@ inputs:
           input: Where? (Optional)
       save:
         input: Save and update balances
+    title:
+      input: Evns
+      context: Use Evns for english. In other languages use short word with meaning settle up debts after spliting recipt
 mounts:
   iam: ../../@/iam/ui/intl
   feedback: ../../@/feedback/ui/intl

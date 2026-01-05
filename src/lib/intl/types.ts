@@ -30,9 +30,9 @@ export type Dictionary = {
       }
       nav: {
         home: string
-        evns: string
         profile: string
         contacts: string
+        expenses: string
       }
       terms: string
       privacy: string
@@ -154,5 +154,6 @@ export type Dictionary = {
           }
           save: string
         }
+        title: string
       }
     }

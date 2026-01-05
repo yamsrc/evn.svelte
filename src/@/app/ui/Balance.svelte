@@ -16,7 +16,7 @@
 </script>
 
 <div class="flex items-center flex-end gap-2">
-  <div class="text-muted-foreground text-sm">
+  <div class="text-muted-foreground text-sm text-nowrap">
     {#if balance > 0}
       {$dict.contacts.contact.owesYou}
     {:else if balance < 0}

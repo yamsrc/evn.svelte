@@ -18,9 +18,9 @@ actions:
   search: Рыскать
 nav:
   home: Хата
-  evns: Разборки
   profile: Чёткий
   contacts: Кореша
+  expenses: Разборки
 terms: Понятия
 privacy: Не стучим
 madeBy: Слеплено какими-то типами
@@ -120,3 +120,4 @@ expenses:
     location:
       placeholder: Где? (необязательно)
     save: Сохранить и обновить балансы
+  title: Рассчитать

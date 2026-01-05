@@ -31,13 +31,17 @@
 </script>
 
 {#snippet spendingItem(account: Account, participant: Expense['participants'][string])}
-  <div class="flex items-center justify-between gap-2">
-    <div class="flex items-center gap-2 flex-1">
+  <div class="flex flex-nowrap items-center justify-between gap-2">
+    <div class="flex items-center gap-2 flex-1 overflow-hidden">
       <Picture {account} class="size-8" />
       <!-- TODO: Me -->
-      <span class="flex-1 overflow-hidden text-ellipsis whitespace-nowrap">{account.name}</span>
+      <div
+        class="inline text-start flex-1 overflow-hidden text-base text-ellipsis whitespace-nowrap font-normal"
+      >
+        {account.name}
+      </div>
     </div>
-    <Amount class="w-24" bind:value={participants[account.id].amount} />
+    <Amount class="flex-1 max-w-24 shrink" bind:value={participants[account.id].amount} />
   </div>
 {/snippet}
 

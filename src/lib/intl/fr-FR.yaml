@@ -18,9 +18,9 @@ actions:
   search: Rechercher
 nav:
   home: Accueil
-  evns: Règlements
   profile: Moi
   contacts: Amis
+  expenses: Règlements
 terms: Conditions générales
 privacy: Politique de confidentialité
 madeBy: Créé par
@@ -126,3 +126,4 @@ expenses:
     location:
       placeholder: Où ? (facultatif)
     save: Enregistrer et mettre à jour les soldes
+  title: Régler

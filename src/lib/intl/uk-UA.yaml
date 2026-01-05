@@ -18,9 +18,9 @@ actions:
   search: Пошук
 nav:
   home: Головна
-  evns: Розрахунок
   profile: Я
   contacts: Друзі
+  expenses: Розрахунок
 terms: Умови та положення
 privacy: Політика конфіденційності
 madeBy: Створено
@@ -126,3 +126,4 @@ expenses:
     location:
       placeholder: Де? (необов’язково)
     save: Зберегти й оновити баланси
+  title: Розрахунок

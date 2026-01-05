@@ -18,9 +18,9 @@ actions:
   search: Cerca
 nav:
   home: Home
-  evns: Saldo
   profile: Io
   contacts: Amici
+  expenses: Saldo
 terms: Termini e condizioni
 privacy: Informativa sulla privacy
 madeBy: Realizzato da
@@ -128,3 +128,4 @@ expenses:
     location:
       placeholder: Dove? (opzionale)
     save: Salva e aggiorna i saldi
+  title: Saldo

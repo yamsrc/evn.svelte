@@ -18,9 +18,9 @@ actions:
   search: Ara
 nav:
   home: Ana Sayfa
-  evns: Hesaplaşma
   profile: Ben
   contacts: Arkadaşlar
+  expenses: Hesaplaşma
 terms: Şartlar ve koşullar
 privacy: Gizlilik Politikası
 madeBy: Tarafından yapıldı
@@ -124,3 +124,4 @@ expenses:
     location:
       placeholder: Nerede? (Opsiyonel)
     save: Bakiyeleri kaydet ve güncelle
+  title: Hesapla

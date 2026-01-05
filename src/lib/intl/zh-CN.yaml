@@ -18,9 +18,9 @@ actions:
   search: 搜索
 nav:
   home: 首页
-  evns: 结算
   profile: 我
   contacts: 朋友
+  expenses: 结算
 terms: 条款和条件
 privacy: 隐私政策
 madeBy: 由...制作
@@ -116,3 +116,4 @@ expenses:
     location:
       placeholder: 在哪里？（可选）
     save: 保存并更新余额
+  title: 结清
