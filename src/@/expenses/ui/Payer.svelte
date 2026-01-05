@@ -30,11 +30,11 @@
     'inline text-start flex-1 overflow-hidden text-base text-ellipsis whitespace-nowrap font-normal'
 </script>
 
-<Item.Root variant="outline" class="flex flex-nowrap gap-2 min-h-14 p-0 border-none">
+<Item.Root variant="outline" class="flex flex-nowrap items-stretch gap-2 p-0 border-none">
   <Button
     variant="outline"
     class={cn(
-      'size-full flex-1 flex flex-row justify-between items-center flex-nowrap overflow-hidden',
+      'h-full min-h-14 flex-1 flex flex-row justify-between items-center flex-nowrap overflow-hidden',
       {
         'bg-accent dark:bg-accent outline-solid outline-2 outline-muted-foreground/50': selected,
       },
@@ -66,6 +66,10 @@
     {/if}
   </Button>
   {#if selected && split}
-    <Amount class="flex-1 max-w-32 shrink" {oninput} value={participant.paid ?? 0} />
+    <Amount
+      class="flex-1 max-w-32 shrink min-h-14 h-full"
+      {oninput}
+      value={participant.paid ?? 0}
+    />
   {/if}
 </Item.Root>
