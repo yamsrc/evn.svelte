@@ -20,7 +20,7 @@
 
     busy = true
 
-    await passkeys.create(name)
+    await passkeys.create(name, account?.id)
 
     busy = false
   }

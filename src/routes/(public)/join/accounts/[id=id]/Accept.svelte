@@ -8,7 +8,7 @@
   import { authenticated, account as iam, logout } from '@/iam'
   import type { Props } from './Accept'
 
-  let { account, code, error = $bindable(false) }: Props = $props()
+  let { account, code, accepted = $bindable(false), error = $bindable(false) }: Props = $props()
 
   let open = $state(true)
 
@@ -20,11 +20,12 @@
     const ok = await codes.verify(account.id, code)
 
     if (ok !== true) error = true
+    else accepted = true
   }
 </script>
 
 <AlertDialog.Root {open}>
-  <AlertDialog.Content>
+  <AlertDialog.Content escapeKeydownBehavior="ignore">
     <AlertDialog.Header>
       <AlertDialog.Title>
         <h2>{$dict.account.title}</h2>

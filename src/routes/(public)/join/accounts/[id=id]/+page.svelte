@@ -1,7 +1,8 @@
 <script lang="ts">
   import { ok } from 'svas'
   import { page } from '$app/state'
-  import { Screen, Authenticated } from '@/app/ui'
+  import { Screen, Authenticated, Goto } from '@/app/ui'
+  import { account as iam } from '@/iam'
   import Accept from './Accept.svelte'
   import Expired from './Expired.svelte'
   import type { PageData } from './$types'
@@ -11,6 +12,7 @@
   const code = page.url.searchParams.get('code')
   const good = ok(account) && code !== null
 
+  let accepted = $state(false)
   let error = $state(!good)
 </script>
 
@@ -19,9 +21,10 @@
 {:else if good}
   <Screen>
     <Authenticated {account}>
-      <h1>Hello World</h1>
-      <p>{account.name} {code}</p>
+      {#if accepted || $iam?.id === account.id}
+        <Goto href="/" />
+      {/if}
     </Authenticated>
   </Screen>
-  <Accept {account} {code} bind:error />
+  <Accept {account} {code} bind:accepted bind:error />
 {/if}
