@@ -14,22 +14,25 @@
   import Amount from './Amount.svelte'
   import type { Props } from './Spendings'
   import type { Account } from '@/accounts'
+  import type { Extra, Participant } from '@/expenses'
 
-  let { expense = $bindable() }: Props = $props()
+  let {
+    participants = $bindable<Record<string, Participant>>({}),
+    extras = $bindable<Extra[]>([]),
+  }: Props = $props()
 
   $effect.pre(() => {
-    if ($account?.id && !expense.participants[$account.id])
-      expense.participants[$account.id] = { amount: 0 }
+    if ($account?.id && !participants[$account.id]) participants[$account.id] = { amount: 0 }
 
-    if (expense.extras.length === 0) expense.extras.push({ amount: 0 })
+    if (extras.length === 0) extras.push({ amount: 0 })
   })
 
-  const participantIds = $derived(Object.keys(expense.participants))
+  const participantIds = $derived(Object.keys(participants))
   const otherIds = $derived(participantIds.filter((id) => id !== $account?.id))
 
   const total = $derived(
-    Object.values(expense.participants).reduce((acc, participant) => acc + participant.amount, 0) +
-      expense.extras[0].amount,
+    Object.values(participants).reduce((acc, participant) => acc + participant.amount, 0) +
+      extras[0].amount,
   )
 </script>
 
@@ -44,7 +47,7 @@
         {account.name}
       </div>
     </div>
-    <Amount class="flex-1 max-w-24 shrink" bind:value={expense.participants[account.id].amount} />
+    <Amount class="flex-1 max-w-24 shrink" bind:value={participants[account.id].amount} />
   </div>
 {/snippet}
 
@@ -53,7 +56,7 @@
 
   <Card.Root class="bg-background w-full p-4">
     <Card.Content class="space-y-2 p-0">
-      {#if $account?.id && expense.participants[$account.id]}
+      {#if $account?.id && participants[$account.id]}
         {@render spendingItem($account)}
       {/if}
       {#each otherIds as id (id)}
@@ -75,7 +78,7 @@
               {$dict.expenses.spendings.extras.title}
             </div>
           </div>
-          <Amount class="flex-1 max-w-24 shrink" bind:value={expense.extras[0].amount} />
+          <Amount class="flex-1 max-w-24 shrink" bind:value={extras[0].amount} />
         </div>
         <div class="text-sm">{$dict.expenses.spendings.extras.description}</div>
       </div>
@@ -91,8 +94,7 @@
     </Card.Content>
   </Card.Root>
 
-  {@const href = 'id' in expense ? `/expenses/${expense.id}/add/` : '/expenses/add/'}
-  <Button size="lg" variant="secondary" class="w-full" {href}>
+  <Button size="lg" variant="secondary" class="w-full" href="add/">
     <Plus />
     Add participant
   </Button>

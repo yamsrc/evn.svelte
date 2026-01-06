@@ -1,9 +1,9 @@
 import { writable } from 'svelte/store'
-import type { net } from '@/expenses/svc'
+import type { Value } from './Form'
 
-export const draft = writable<net.Editable>({
-  title: '',
-  location: '',
-  participants: {},
-  extras: [],
-})
+export interface Draft {
+  id: string
+  value: Value
+}
+
+export const draft = writable<Draft | null>(null)

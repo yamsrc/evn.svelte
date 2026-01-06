@@ -1,6 +1,13 @@
-import type { Expense, net } from '@/expenses'
+import type { net } from '@/expenses'
+
+export interface Value {
+  title: string
+  location: string
+  participants: Record<string, net.Participant>
+  extras: net.Extra[]
+}
 
 export interface Props {
-  expense: Expense | net.Editable
-  onsend?: (expense: Expense) => void
+  value?: Value
+  onsubmit?: (value: Value) => Promise<void | Error>
 }

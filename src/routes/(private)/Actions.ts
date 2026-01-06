@@ -1,5 +1,6 @@
 import { ScanLine, PencilLine, User, Users } from '@lucide/svelte'
 import { goto } from '$app/navigation'
+import { NEWID } from '$lib/tools'
 import type { Dictionary } from '$lib/intl'
 import type { Icon } from '@lucide/svelte'
 
@@ -32,7 +33,7 @@ export const actions = (dict: Dictionary): ActionGroup[] => ([
         name: dict.actions.cheques.input,
         icon: PencilLine,
         onSelect: () => {
-          goto('/expenses/new/')
+          goto(`/expenses/${NEWID}/`)
         },
       },
     ],
