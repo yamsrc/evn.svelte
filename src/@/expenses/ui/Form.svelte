@@ -35,7 +35,7 @@
 
   <Separator />
 
-  <Spendings bind:participants={expense.participants} bind:extras={expense.extras} />
+  <Spendings bind:expense />
 
   <Separator />
 

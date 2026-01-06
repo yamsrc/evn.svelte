@@ -7,10 +7,10 @@
   import { Header } from '@/app/ui'
   import { expenses } from '@/expenses'
   import { Form } from '@/expenses/ui'
-  import type { Expense } from '@/expenses'
+  import type { net } from '@/expenses'
 
   const id = $derived(page.params.id as string)
-  const editableExpense = writable<Expense | undefined>(undefined)
+  const editableExpense = writable<net.Editable | undefined>(undefined)
 
   $effect(() => {
     const unsubscribe = expenses.get(id).subscribe((expense) => {

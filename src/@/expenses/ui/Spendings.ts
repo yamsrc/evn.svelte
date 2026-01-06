@@ -1,6 +1,5 @@
-import type { Extra, Participant } from '@/expenses'
+import type { Expense, net } from '@/expenses'
 
 export interface Props {
-  participants: Record<string, Participant>
-  extras: Extra[]
+  expense: Expense | net.Editable
 }

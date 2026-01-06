@@ -12,7 +12,7 @@
   import { Contacts } from '@/contacts/ui'
   import { expenses, update } from '@/expenses'
   import { draft } from '@/expenses/ui'
-  import type { Expense } from '@/expenses'
+  import type { Expense, net } from '@/expenses'
 
   const id = $derived(page.params.id)
 
@@ -42,24 +42,31 @@
       return
     }
 
-    const data = {
-      ...expense,
+    const data: net.Editable = {
+      title: expense.title,
+      location: expense.location,
+      extras: expense.extras,
       participants: { ...expense.participants, ...participants },
     }
 
     const res = await update(id, data)
 
-    if (res instanceof Error) return
+    if (res instanceof Error) {
+      busy = false
 
-    busy = false
+      return
+    }
 
     goto(`/expenses/${id}`)
+
+    busy = false
   }
 </script>
 
 <Section>
   <Header.Root>
-    <Back href="/expenses/">Evns</Back>
+    {@const href = expense?.id ? `/expenses/${expense.id}/` : '/expenses/'}
+    <Back {href}>Evns</Back>
   </Header.Root>
 </Section>
 
