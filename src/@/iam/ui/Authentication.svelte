@@ -45,6 +45,6 @@
     <Passkey {account} />
   </Tabs.Content>
   <Tabs.Content value="password">
-    <Password />
+    <Password {account} />
   </Tabs.Content>
 </Tabs.Root>
