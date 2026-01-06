@@ -24,9 +24,9 @@
   )
 
   function update() {
-    for (const [identity, participant] of Object.entries(participants))
-      if (selection.has(identity) && !split) participant.paid = total
-      else if (!selection.has(identity)) participant.paid = 0
+    for (const identity of Object.keys(participants))
+      if (selection.has(identity) && !split) participants[identity].paid = total
+      else if (!selection.has(identity)) participants[identity].paid = 0
   }
 
   function onselect(identity: string, selected: boolean) {

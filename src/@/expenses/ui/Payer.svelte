@@ -18,9 +18,9 @@
     onselect,
   }: Props = $props()
 
-  $effect(() => {
+  function onPressedChange(selected: boolean) {
     onselect?.(account.id, selected ?? false)
-  })
+  }
 
   function oninput(paid: number) {
     participant.paid = paid
@@ -38,6 +38,7 @@
       'data-[state=on]:bg-accent data-[state=on]:dark:bg-accent data-[state=on]:outline-solid data-[state=on]:outline-2 data-[state=on]:outline-muted-foreground/50',
     )}
     bind:pressed={selected}
+    {onPressedChange}
   >
     {#if $me?.id === account.id}
       <div class="flex items-center gap-2 w-full">
