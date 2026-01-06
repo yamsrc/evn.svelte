@@ -16,6 +16,8 @@ actions:
   addSelected: Добавить выбранные
   cancel: Отмена
   search: Поиск
+  save: Сохранить
+  create: Создать
 nav:
   home: Главная
   profile: Я
@@ -135,3 +137,7 @@ expenses:
     total: Итоговый счет
     youAreOwed: Вам должны
     youOwe: Вы должны
+  participants:
+    create:
+      title: Создать нового участника
+    title: Добавить участников

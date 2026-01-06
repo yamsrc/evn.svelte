@@ -16,6 +16,8 @@ actions:
   addSelected: Ajouter la sélection
   cancel: Annuler
   search: Rechercher
+  save: Enregistrer
+  create: Créer
 nav:
   home: Accueil
   profile: Moi
@@ -135,3 +137,7 @@ expenses:
     total: Facture totale
     youAreOwed: On te doit
     youOwe: Vous devez
+  participants:
+    create:
+      title: Créer un nouveau participant
+    title: Ajouter des participants

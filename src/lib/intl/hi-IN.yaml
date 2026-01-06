@@ -16,6 +16,8 @@ actions:
   addSelected: चयनित जोड़ें
   cancel: रद्द करें
   search: खोजें
+  save: सहेजें
+  create: सृजन करें
 nav:
   home: मुख्य पृष्ठ
   profile: मैं
@@ -133,3 +135,7 @@ expenses:
     total: कुल बिल
     youAreOwed: आपको कुछ मिलना बाकी है
     youOwe: आप पर बकाया है
+  participants:
+    create:
+      title: नया प्रतिभागी बनाएँ
+    title: प्रतिभागी जोड़ें

@@ -16,6 +16,8 @@ actions:
   addSelected: 선택 항목 추가
   cancel: 취소
   search: 검색
+  save: 저장
+  create: 생성
 nav:
   home: 홈
   profile: 나
@@ -125,3 +127,7 @@ expenses:
     total: 총 금액
     youAreOwed: 당신은 받을 돈이 있습니다
     youOwe: 당신은 빚졌습니다
+  participants:
+    create:
+      title: 새 참가자 생성
+    title: 참가자 추가

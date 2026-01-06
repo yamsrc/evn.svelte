@@ -16,6 +16,8 @@ actions:
   addSelected: Aggiungi selezionati
   cancel: Annulla
   search: Cerca
+  save: Salva
+  create: Crea
 nav:
   home: Home
   profile: Io
@@ -137,3 +139,7 @@ expenses:
     total: Totale conto
     youAreOwed: Ti è dovuto
     youOwe: Devi
+  participants:
+    create:
+      title: Crea un nuovo partecipante
+    title: Aggiungi partecipanti

@@ -16,6 +16,8 @@ actions:
   addSelected: Add selected
   cancel: Cancel
   search: Search
+  save: Save
+  create: Create
 nav:
   home: Home
   profile: Me
@@ -133,3 +135,7 @@ expenses:
     total: Total bill
     youAreOwed: You are owed
     youOwe: You owe
+  participants:
+    create:
+      title: Create a new participant
+    title: Add participants

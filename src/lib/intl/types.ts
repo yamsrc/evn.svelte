@@ -27,6 +27,8 @@ export type Dictionary = {
         addSelected: string
         cancel: string
         search: string
+        save: string
+        create: string
       }
       nav: {
         home: string
@@ -164,6 +166,12 @@ export type Dictionary = {
           total: string
           youAreOwed: string
           youOwe: string
+        }
+        participants: {
+          create: {
+            title: string
+          }
+          title: string
         }
       }
     }

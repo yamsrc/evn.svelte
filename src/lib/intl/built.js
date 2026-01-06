@@ -22,7 +22,9 @@ export const dictionaries = {
       },
       "addSelected": "إضافة المحدد",
       "cancel": "إلغاء",
-      "search": "بحث"
+      "search": "بحث",
+      "save": "حفظ",
+      "create": "إنشاء"
     },
     "nav": {
       "home": "الرئيسية",
@@ -160,6 +162,12 @@ export const dictionaries = {
         "total": "إجمالي الفاتورة",
         "youAreOwed": "لك مستحقات",
         "youOwe": "أنت مدين"
+      },
+      "participants": {
+        "create": {
+          "title": "إنشاء مشارك جديد"
+        },
+        "title": "إضافة مشاركين"
       }
     }
   },
@@ -183,7 +191,9 @@ export const dictionaries = {
       },
       "addSelected": "Ausgewählte hinzufügen",
       "cancel": "Abbrechen",
-      "search": "Suchen"
+      "search": "Suchen",
+      "save": "Speichern",
+      "create": "Erstellen"
     },
     "nav": {
       "home": "Startseite",
@@ -321,6 +331,12 @@ export const dictionaries = {
         "total": "Gesamtrechnung",
         "youAreOwed": "Dir steht etwas zu",
         "youOwe": "Du schuldest"
+      },
+      "participants": {
+        "create": {
+          "title": "Neuen Teilnehmer erstellen"
+        },
+        "title": "Teilnehmer hinzufügen"
       }
     }
   },
@@ -344,7 +360,9 @@ export const dictionaries = {
       },
       "addSelected": "Add selected",
       "cancel": "Cancel",
-      "search": "Search"
+      "search": "Search",
+      "save": "Save",
+      "create": "Create"
     },
     "nav": {
       "home": "Home",
@@ -482,6 +500,12 @@ export const dictionaries = {
         "total": "Total bill",
         "youAreOwed": "You are owed",
         "youOwe": "You owe"
+      },
+      "participants": {
+        "create": {
+          "title": "Create a new participant"
+        },
+        "title": "Add participants"
       }
     }
   },
@@ -505,7 +529,9 @@ export const dictionaries = {
       },
       "addSelected": "Agregar seleccionado(s)",
       "cancel": "Cancelar",
-      "search": "Buscar"
+      "search": "Buscar",
+      "save": "Guardar",
+      "create": "Crear"
     },
     "nav": {
       "home": "Inicio",
@@ -643,6 +669,12 @@ export const dictionaries = {
         "total": "Factura total",
         "youAreOwed": "Te deben",
         "youOwe": "Debes"
+      },
+      "participants": {
+        "create": {
+          "title": "Crear un nuevo participante"
+        },
+        "title": "Agregar participantes"
       }
     }
   },
@@ -666,7 +698,9 @@ export const dictionaries = {
       },
       "addSelected": "Ajouter la sélection",
       "cancel": "Annuler",
-      "search": "Rechercher"
+      "search": "Rechercher",
+      "save": "Enregistrer",
+      "create": "Créer"
     },
     "nav": {
       "home": "Accueil",
@@ -804,6 +838,12 @@ export const dictionaries = {
         "total": "Facture totale",
         "youAreOwed": "On te doit",
         "youOwe": "Vous devez"
+      },
+      "participants": {
+        "create": {
+          "title": "Créer un nouveau participant"
+        },
+        "title": "Ajouter des participants"
       }
     }
   },
@@ -827,7 +867,9 @@ export const dictionaries = {
       },
       "addSelected": "चयनित जोड़ें",
       "cancel": "रद्द करें",
-      "search": "खोजें"
+      "search": "खोजें",
+      "save": "सहेजें",
+      "create": "सृजन करें"
     },
     "nav": {
       "home": "मुख्य पृष्ठ",
@@ -965,6 +1007,12 @@ export const dictionaries = {
         "total": "कुल बिल",
         "youAreOwed": "आपको कुछ मिलना बाकी है",
         "youOwe": "आप पर बकाया है"
+      },
+      "participants": {
+        "create": {
+          "title": "नया प्रतिभागी बनाएँ"
+        },
+        "title": "प्रतिभागी जोड़ें"
       }
     }
   },
@@ -988,7 +1036,9 @@ export const dictionaries = {
       },
       "addSelected": "Aggiungi selezionati",
       "cancel": "Annulla",
-      "search": "Cerca"
+      "search": "Cerca",
+      "save": "Salva",
+      "create": "Crea"
     },
     "nav": {
       "home": "Home",
@@ -1126,6 +1176,12 @@ export const dictionaries = {
         "total": "Totale conto",
         "youAreOwed": "Ti è dovuto",
         "youOwe": "Devi"
+      },
+      "participants": {
+        "create": {
+          "title": "Crea un nuovo partecipante"
+        },
+        "title": "Aggiungi partecipanti"
       }
     }
   },
@@ -1149,7 +1205,9 @@ export const dictionaries = {
       },
       "addSelected": "選択したものを追加",
       "cancel": "キャンセル",
-      "search": "検索"
+      "search": "検索",
+      "save": "保存",
+      "create": "作成"
     },
     "nav": {
       "home": "ホーム",
@@ -1287,6 +1345,12 @@ export const dictionaries = {
         "total": "合計金額",
         "youAreOwed": "あなたには支払いが残っています",
         "youOwe": "あなたは借りがあります"
+      },
+      "participants": {
+        "create": {
+          "title": "新しい参加者を作成"
+        },
+        "title": "参加者を追加"
       }
     }
   },
@@ -1310,7 +1374,9 @@ export const dictionaries = {
       },
       "addSelected": "선택 항목 추가",
       "cancel": "취소",
-      "search": "검색"
+      "search": "검색",
+      "save": "저장",
+      "create": "생성"
     },
     "nav": {
       "home": "홈",
@@ -1448,6 +1514,12 @@ export const dictionaries = {
         "total": "총 금액",
         "youAreOwed": "당신은 받을 돈이 있습니다",
         "youOwe": "당신은 빚졌습니다"
+      },
+      "participants": {
+        "create": {
+          "title": "새 참가자 생성"
+        },
+        "title": "참가자 추가"
       }
     }
   },
@@ -1471,7 +1543,9 @@ export const dictionaries = {
       },
       "addSelected": "Geselecteerde toevoegen",
       "cancel": "Annuleren",
-      "search": "Zoeken"
+      "search": "Zoeken",
+      "save": "Opslaan",
+      "create": "Aanmaken"
     },
     "nav": {
       "home": "Home",
@@ -1609,6 +1683,12 @@ export const dictionaries = {
         "total": "Totaalrekening",
         "youAreOwed": "Je hebt iets tegoed",
         "youOwe": "Je bent schuldig"
+      },
+      "participants": {
+        "create": {
+          "title": "Nieuwe deelnemer aanmaken"
+        },
+        "title": "Deelnemers toevoegen"
       }
     }
   },
@@ -1632,7 +1712,9 @@ export const dictionaries = {
       },
       "addSelected": "Закинуть выбранное",
       "cancel": "Забить хуй",
-      "search": "Рыскать"
+      "search": "Рыскать",
+      "save": "Сохранить",
+      "create": "Создать"
     },
     "nav": {
       "home": "Хата",
@@ -1770,6 +1852,12 @@ export const dictionaries = {
         "total": "Итоговый счет",
         "youAreOwed": "Вам должны",
         "youOwe": "Вы должны"
+      },
+      "participants": {
+        "create": {
+          "title": "Создать нового участника"
+        },
+        "title": "Добавить участников"
       }
     }
   },
@@ -1793,7 +1881,9 @@ export const dictionaries = {
       },
       "addSelected": "Добавить выбранные",
       "cancel": "Отмена",
-      "search": "Поиск"
+      "search": "Поиск",
+      "save": "Сохранить",
+      "create": "Создать"
     },
     "nav": {
       "home": "Главная",
@@ -1931,6 +2021,12 @@ export const dictionaries = {
         "total": "Итоговый счет",
         "youAreOwed": "Вам должны",
         "youOwe": "Вы должны"
+      },
+      "participants": {
+        "create": {
+          "title": "Создать нового участника"
+        },
+        "title": "Добавить участников"
       }
     }
   },
@@ -1954,7 +2050,9 @@ export const dictionaries = {
       },
       "addSelected": "Ongeza zilizochaguliwa",
       "cancel": "Ghairi",
-      "search": "Tafuta"
+      "search": "Tafuta",
+      "save": "Hifadhi",
+      "create": "Unda"
     },
     "nav": {
       "home": "Mwanzo",
@@ -2092,6 +2190,12 @@ export const dictionaries = {
         "total": "Jumla ya bili",
         "youAreOwed": "Unadai malipo",
         "youOwe": "Unadaiwa"
+      },
+      "participants": {
+        "create": {
+          "title": "Unda mshiriki mpya"
+        },
+        "title": "Ongeza washiriki"
       }
     }
   },
@@ -2115,7 +2219,9 @@ export const dictionaries = {
       },
       "addSelected": "Seçileni ekle",
       "cancel": "İptal",
-      "search": "Ara"
+      "search": "Ara",
+      "save": "Kaydet",
+      "create": "Oluştur"
     },
     "nav": {
       "home": "Ana Sayfa",
@@ -2253,6 +2359,12 @@ export const dictionaries = {
         "total": "Toplam fatura",
         "youAreOwed": "Sana borç var",
         "youOwe": "Borcunuz var"
+      },
+      "participants": {
+        "create": {
+          "title": "Yeni katılımcı oluştur"
+        },
+        "title": "Katılımcı ekle"
       }
     }
   },
@@ -2276,7 +2388,9 @@ export const dictionaries = {
       },
       "addSelected": "Додати вибране",
       "cancel": "Скасувати",
-      "search": "Пошук"
+      "search": "Пошук",
+      "save": "Зберегти",
+      "create": "Створити"
     },
     "nav": {
       "home": "Головна",
@@ -2414,6 +2528,12 @@ export const dictionaries = {
         "total": "Загальний рахунок",
         "youAreOwed": "Вам винні",
         "youOwe": "Ви винні"
+      },
+      "participants": {
+        "create": {
+          "title": "Створити нового учасника"
+        },
+        "title": "Додати учасників"
       }
     }
   },
@@ -2437,7 +2557,9 @@ export const dictionaries = {
       },
       "addSelected": "添加已选项",
       "cancel": "取消",
-      "search": "搜索"
+      "search": "搜索",
+      "save": "保存",
+      "create": "创建"
     },
     "nav": {
       "home": "首页",
@@ -2575,6 +2697,12 @@ export const dictionaries = {
         "total": "总账单",
         "youAreOwed": "你有应得的",
         "youOwe": "你欠款"
+      },
+      "participants": {
+        "create": {
+          "title": "创建新参与者"
+        },
+        "title": "添加参与者"
       }
     }
   }

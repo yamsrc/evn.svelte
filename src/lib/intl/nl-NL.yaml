@@ -16,6 +16,8 @@ actions:
   addSelected: Geselecteerde toevoegen
   cancel: Annuleren
   search: Zoeken
+  save: Opslaan
+  create: Aanmaken
 nav:
   home: Home
   profile: Ik
@@ -135,3 +137,7 @@ expenses:
     total: Totaalrekening
     youAreOwed: Je hebt iets tegoed
     youOwe: Je bent schuldig
+  participants:
+    create:
+      title: Nieuwe deelnemer aanmaken
+    title: Deelnemers toevoegen

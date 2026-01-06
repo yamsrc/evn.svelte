@@ -16,6 +16,8 @@ actions:
   addSelected: 添加已选项
   cancel: 取消
   search: 搜索
+  save: 保存
+  create: 创建
 nav:
   home: 首页
   profile: 我
@@ -125,3 +127,7 @@ expenses:
     total: 总账单
     youAreOwed: 你有应得的
     youOwe: 你欠款
+  participants:
+    create:
+      title: 创建新参与者
+    title: 添加参与者

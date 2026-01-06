@@ -16,6 +16,8 @@ actions:
   addSelected: Додати вибране
   cancel: Скасувати
   search: Пошук
+  save: Зберегти
+  create: Створити
 nav:
   home: Головна
   profile: Я
@@ -135,3 +137,7 @@ expenses:
     total: Загальний рахунок
     youAreOwed: Вам винні
     youOwe: Ви винні
+  participants:
+    create:
+      title: Створити нового учасника
+    title: Додати учасників

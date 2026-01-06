@@ -16,6 +16,8 @@ actions:
   addSelected: Seçileni ekle
   cancel: İptal
   search: Ara
+  save: Kaydet
+  create: Oluştur
 nav:
   home: Ana Sayfa
   profile: Ben
@@ -133,3 +135,7 @@ expenses:
     total: Toplam fatura
     youAreOwed: Sana borç var
     youOwe: Borcunuz var
+  participants:
+    create:
+      title: Yeni katılımcı oluştur
+    title: Katılımcı ekle

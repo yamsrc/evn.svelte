@@ -16,6 +16,8 @@ actions:
   addSelected: Ongeza zilizochaguliwa
   cancel: Ghairi
   search: Tafuta
+  save: Hifadhi
+  create: Unda
 nav:
   home: Mwanzo
   profile: Mimi
@@ -131,3 +133,7 @@ expenses:
     total: Jumla ya bili
     youAreOwed: Unadai malipo
     youOwe: Unadaiwa
+  participants:
+    create:
+      title: Unda mshiriki mpya
+    title: Ongeza washiriki

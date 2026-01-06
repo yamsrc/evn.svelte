@@ -5,11 +5,12 @@
   import { page } from '$app/state'
   import { Back } from '$com/history'
   import { dict } from '$lib/intl'
-  import { Button } from '$ui/button'
+  import { buttonVariants, Button } from '$ui/button'
   import { Section } from '@/app/ui'
   import { Header } from '@/app/ui'
   import { contacts } from '@/contacts'
   import { Contacts } from '@/contacts/ui'
+  import { CreateDialog } from '@/contacts/ui'
   import { expenses, update } from '@/expenses'
   import { draft } from '@/expenses/ui'
   import type { Expense, net } from '@/expenses'
@@ -66,7 +67,7 @@
 <Section>
   <Header.Root>
     {@const href = expense?.id ? `/expenses/${expense.id}/` : '/expenses/'}
-    <Back {href}>Evns</Back>
+    <Back {href}>{expense?.title ?? $dict.expenses.title}</Back>
   </Header.Root>
 </Section>
 
@@ -75,15 +76,13 @@
     {@const list = contacts.filter(
       (c) => !(c.identity in (expense?.participants ?? $draft.participants)),
     )}
-    <Contacts title={$dict.contacts.all} contacts={list} bind:selection />
+    <Contacts title={$dict.expenses.participants.title} contacts={list} bind:selection />
   {/snippet}
 </Async>
 
-<Section class="flex items-center gap-2">
+<Section class="flex items-center justify-evenly gap-2">
   <Button size="lg" class="flex-1" onclick={add} disabled={busy}>
     {$dict.actions.addSelected}
   </Button>
-  <Button size="lg" variant="secondary" class="flex-1" href="/contacts/new/" disabled={busy}>
-    + Create
-  </Button>
+  <CreateDialog class={buttonVariants({ size: 'lg', variant: 'secondary', class: 'flex-1' })} />
 </Section>

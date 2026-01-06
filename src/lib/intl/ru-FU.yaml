@@ -16,6 +16,8 @@ actions:
   addSelected: Закинуть выбранное
   cancel: Забить хуй
   search: Рыскать
+  save: Сохранить
+  create: Создать
 nav:
   home: Хата
   profile: Чёткий
@@ -129,3 +131,7 @@ expenses:
     total: Итоговый счет
     youAreOwed: Вам должны
     youOwe: Вы должны
+  participants:
+    create:
+      title: Создать нового участника
+    title: Добавить участников

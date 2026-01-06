@@ -35,6 +35,10 @@ inputs:
       input: Cancel
     search:
       input: Search
+    save:
+      input: Save
+    create:
+      input: Create
   nav:
     home:
       input: Home
@@ -216,6 +220,12 @@ inputs:
         input: You are owed
       youOwe:
         input: You owe
+    participants:
+      create:
+        title:
+          input: Create a new participant
+      title:
+        input: Add participants
 mounts:
   iam: ../../@/iam/ui/intl
   feedback: ../../@/feedback/ui/intl
