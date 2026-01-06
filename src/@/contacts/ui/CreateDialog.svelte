@@ -5,7 +5,7 @@
   import { buttonVariants } from '$ui/button'
   import { Button } from '$ui/button'
   import { pickpic } from '@/accounts'
-  import { Name, Picture } from '@/app/ui/cosmetics'
+  import * as Cosmetics from '@/app/ui/cosmetics'
   import { add } from '@/contacts'
   import type { Props } from './CreateDialog'
 
@@ -18,8 +18,6 @@
   let busy = $state(false)
 
   async function submit() {
-    console.log('submit', name, picture)
-
     if (!name.trim()) return
 
     busy = true
@@ -42,7 +40,6 @@
 
   function onPictureChange(id: string) {
     picture = id
-
     submit()
   }
 </script>
@@ -58,18 +55,20 @@
         <h2>{$dict.expenses.participants.create.title}</h2>
       </Dialog.Title>
     </Dialog.Header>
-    <div class="flex flex-col items-center gap-4">
-      <Picture bind:id={picture} onchange={onPictureChange} />
-      <Name bind:value={name} bind:busy onchange={submit} />
-    </div>
-    <Dialog.Footer class="flex-row">
-      <Dialog.Close
-        class={buttonVariants({ size: 'lg', variant: 'secondary', class: 'flex-1' })}
-        disabled={busy}>{$dict.actions.cancel}</Dialog.Close
-      >
-      <Button size="lg" class="flex-1" disabled={busy || !name.trim()} onclick={submit}
-        >{$dict.actions.save}</Button
-      >
-    </Dialog.Footer>
+    <Cosmetics.Root>
+      <Cosmetics.Picture bind:id={picture} onchange={onPictureChange} />
+      <Cosmetics.Name bind:value={name} bind:busy onchange={submit} />
+      <Dialog.Footer>
+        <Cosmetics.Actions class="w-full flex gap-2">
+          <Dialog.Close
+            class={buttonVariants({ size: 'lg', variant: 'secondary', class: 'flex-1' })}
+            disabled={busy}>{$dict.actions.cancel}</Dialog.Close
+          >
+          <Button size="lg" class="flex-1" disabled={busy || !name.trim()} onclick={submit}
+            >{$dict.actions.save}</Button
+          >
+        </Cosmetics.Actions>
+      </Dialog.Footer>
+    </Cosmetics.Root>
   </Dialog.Content>
 </Dialog.Root>
