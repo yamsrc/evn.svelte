@@ -29,7 +29,10 @@
   async function basic() {
     busy = true
 
-    const result = await iam.basic(username, password)
+    const result =
+      account === undefined
+        ? await iam.basic.verify(username, password)
+        : await iam.basic.capture(account.id, { username, password })
 
     busy = false
 
@@ -40,9 +43,7 @@
     busy = true
 
     const response =
-      account === undefined
-        ? await iam.otp.send(username)
-        : await iam.otp.create(account.id, username)
+      account === undefined ? await iam.otp.send(username) : await iam.otp.add(account.id, username)
 
     busy = false
 

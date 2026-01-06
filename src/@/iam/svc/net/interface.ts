@@ -11,7 +11,7 @@ async function get(authorization?: string): Promise<Echo | Error> {
     options.credentials = 'include'
   }
 
-  return echo.json('.', options)
+  return echo.json(options)
 }
 
 export { get }

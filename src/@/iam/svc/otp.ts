@@ -5,7 +5,7 @@ export async function send(email: string): Promise<void | Error> {
   return net.otp.post({ email })
 }
 
-export async function create(identity: string, email: string): Promise<void | Error> {
+export async function add(identity: string, email: string): Promise<void | Error> {
   return await net.otp.post(identity, { email })
 }
 
