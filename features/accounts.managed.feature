@@ -33,3 +33,11 @@ Feature: Managed accounts
     When I tap 'join-accounts-accept-button'
     Then 'iam-passkey-create-button' is visible
     And 'iam-passkey-login-button' is not visible
+    When I tap 'iam-email-tab'
+    And 'iam-username-input' is focused
+    And I type random email
+    And I press 'Tab'
+    Then 'iam-password-input' is focused
+    And I type random password
+    And I press 'Enter'
+    Then I am authenticated
