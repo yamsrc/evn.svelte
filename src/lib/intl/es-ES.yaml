@@ -28,7 +28,9 @@ profile:
   title: Mi perfil
   language:
     title: Idioma
-    description: Esto no afecta al reconocimiento de cheques. De todas formas, entendemos la mayoría de los idiomas allí.
+    description: >-
+      Esto no afecta al reconocimiento de cheques. De todas formas, entendemos
+      la mayoría de los idiomas allí.
 form:
   enterName: Introduce el nombre
 copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
@@ -56,7 +58,9 @@ contacts:
       confirm: Eliminar
   add:
     label: Agregar contacto
-    description: Más adelante podrás transferir esta cuenta al propietario para que configure sus datos de acceso y tome el control de la cuenta.
+    description: >-
+      Más adelante podrás transferir esta cuenta al propietario para que
+      configure sus datos de acceso y tome el control de la cuenta.
   share:
     invite:
       link: Invitar a evn
@@ -64,11 +68,15 @@ contacts:
       description: La invitación caducará en 5 minutos
 join:
   app:
-    description: La forma inteligente de llevar el control de quién le debe a quién, junto con tus amigos.
+    description: >-
+      La forma inteligente de llevar el control de quién le debe a quién, junto
+      con tus amigos.
   inviter:
-    description: |-
+    description: >-
       !js
-      (name) => `Has sido invitado por ${name}. Solo regístrate o inicia sesión, y ya está todo listo`
+
+      (name) => `Has sido invitado por ${name}. Solo regístrate o inicia sesión,
+      y ya está todo listo`
   accept: Comienza a usar Evn
 groups:
   leave: Mantén pulsado para salir
@@ -79,7 +87,9 @@ groups:
     title: Miembros
     addMembers: Agregar miembros
     addMember: Añadir miembro
-    empty: Todavía no hay nadie aquí. Agrega algunos miembros para empezar a usar este grupo.
+    empty: >-
+      Todavía no hay nadie aquí. Agrega algunos miembros para empezar a usar
+      este grupo.
   title: Grupos
   summary:
     balance:
@@ -101,7 +111,9 @@ account:
   delete:
     button: Eliminar cuenta
     title: Eliminar cuenta
-    description: Eliminaremos permanentemente tu cuenta y toda la información asociada. Esta acción no se puede deshacer.
+    description: >-
+      Eliminaremos permanentemente tu cuenta y toda la información asociada.
+      Esta acción no se puede deshacer.
     sorry: Lamentamos mucho que te vayas.
     hold: Mantén pulsado para confirmar
     link: Eliminar cuenta
@@ -121,3 +133,7 @@ expenses:
       placeholder: ¿Dónde? (opcional)
     save: Guardar y actualizar saldos
   title: Ajustar
+  balance:
+    total: Factura total
+    youAreOwed: Te deben
+    youOwe: Debes

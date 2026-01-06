@@ -209,6 +209,13 @@ inputs:
     title:
       input: Evns
       context: Use Evns for english. In other languages use short word with meaning settle up debts after spliting recipt
+    balance:
+      total:
+        input: Total bill
+      youAreOwed:
+        input: You are owed
+      youOwe:
+        input: You owe
 mounts:
   iam: ../../@/iam/ui/intl
   feedback: ../../@/feedback/ui/intl

@@ -6,7 +6,7 @@
   import { cn } from '$lib/utils'
   import { accounts } from '@/accounts'
   import { Picture } from '@/accounts/ui'
-  import { Balance } from '@/app/ui'
+  import { Balance } from '@/contacts/ui'
   import { account } from '@/iam'
   import type { Props } from './Panel'
 

@@ -2,7 +2,7 @@
   import { Panel } from '$com/panel'
   import { cn } from '$lib/utils'
   import { Picture } from '@/accounts/ui'
-  import { Balance } from '@/app/ui'
+  import { Balance } from '@/contacts/ui'
   import type { Props } from './Panel'
 
   let {

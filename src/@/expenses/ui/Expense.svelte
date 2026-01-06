@@ -1,0 +1,68 @@
+<script lang="ts">
+  import { Async } from 'svas'
+  import { Separator } from '$com/separator'
+  import { Button } from '$ui/button'
+  import { accounts } from '@/accounts'
+  import { Picture } from '@/accounts/ui'
+  import { Balance } from '@/expenses/ui'
+  import { account } from '@/iam'
+  import type { Props } from './Expense'
+  import type { Expense } from '@/expenses'
+
+  const { expense }: Props = $props()
+
+  const participants = $derived(Object.keys(expense.participants))
+
+  function totalBalance(expense: Expense) {
+    return (
+      Object.values(expense.participants).reduce(
+        (acc, participant) => acc + participant.amount,
+        0,
+      ) + expense.extras[0].amount
+    )
+  }
+
+  // difference between spending and paid by me
+  function owe(expense: Expense) {
+    if (!$account?.id) return 0
+
+    const myExpense = expense.participants[$account.id]
+    const paidByMe = myExpense?.paid ?? 0
+
+    return paidByMe - myExpense?.amount
+  }
+</script>
+
+<Button
+  href={`/expenses/${expense.id}/`}
+  variant="outline"
+  class="px-4 py-3 h-fit flex flex-col gap-3 font-normal"
+>
+  <div class="w-full flex justify-between items-center">
+    <div class="flex flex-col items-start">
+      <div>{expense.title}</div>
+      <div class="text-sm text-muted-foreground">{expense.location}</div>
+    </div>
+    <div class="flex flex-col items-end">
+      <Balance total={totalBalance(expense)} />
+    </div>
+  </div>
+  <Separator />
+  <div class="flex justify-between items-center w-full">
+    <div class="flex flex-nowrap flex-1 items-center justify-start">
+      {#each participants.slice(0, 5) as participant (participant)}
+        <Async store={accounts.get(participant)} class="not-first:-ml-3 shrink-0">
+          {#snippet awaited(account)}
+            <Picture {account} class="size-8" />
+          {/snippet}
+        </Async>
+      {/each}
+      {#if participants.length > 5}
+        <div class="ml-2">
+          +{participants.length - 5}
+        </div>
+      {/if}
+    </div>
+    <Balance balance={owe(expense)} />
+  </div>
+</Button>

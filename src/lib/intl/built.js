@@ -155,7 +155,12 @@ export const dictionaries = {
         },
         "save": "احفظ وقم بتحديث الأرصدة"
       },
-      "title": "تسوية"
+      "title": "تسوية",
+      "balance": {
+        "total": "إجمالي الفاتورة",
+        "youAreOwed": "لك مستحقات",
+        "youOwe": "أنت مدين"
+      }
     }
   },
   "de-DE": {
@@ -311,7 +316,12 @@ export const dictionaries = {
         },
         "save": "Speichern und Salden aktualisieren"
       },
-      "title": "Ausgleichen"
+      "title": "Ausgleichen",
+      "balance": {
+        "total": "Gesamtrechnung",
+        "youAreOwed": "Dir steht etwas zu",
+        "youOwe": "Du schuldest"
+      }
     }
   },
   "en-US": {
@@ -467,7 +477,12 @@ export const dictionaries = {
         },
         "save": "Save and update balances"
       },
-      "title": "Evns"
+      "title": "Evns",
+      "balance": {
+        "total": "Total bill",
+        "youAreOwed": "You are owed",
+        "youOwe": "You owe"
+      }
     }
   },
   "es-ES": {
@@ -623,7 +638,12 @@ export const dictionaries = {
         },
         "save": "Guardar y actualizar saldos"
       },
-      "title": "Ajustar"
+      "title": "Ajustar",
+      "balance": {
+        "total": "Factura total",
+        "youAreOwed": "Te deben",
+        "youOwe": "Debes"
+      }
     }
   },
   "fr-FR": {
@@ -779,7 +799,12 @@ export const dictionaries = {
         },
         "save": "Enregistrer et mettre à jour les soldes"
       },
-      "title": "Régler"
+      "title": "Régler",
+      "balance": {
+        "total": "Facture totale",
+        "youAreOwed": "On te doit",
+        "youOwe": "Vous devez"
+      }
     }
   },
   "hi-IN": {
@@ -935,7 +960,12 @@ export const dictionaries = {
         },
         "save": "सहेजें और बैलेंस अपडेट करें"
       },
-      "title": "हिसाब"
+      "title": "हिसाब",
+      "balance": {
+        "total": "कुल बिल",
+        "youAreOwed": "आपको कुछ मिलना बाकी है",
+        "youOwe": "आप पर बकाया है"
+      }
     }
   },
   "it-IT": {
@@ -1091,7 +1121,12 @@ export const dictionaries = {
         },
         "save": "Salva e aggiorna i saldi"
       },
-      "title": "Saldo"
+      "title": "Saldo",
+      "balance": {
+        "total": "Totale conto",
+        "youAreOwed": "Ti è dovuto",
+        "youOwe": "Devi"
+      }
     }
   },
   "ja-JP": {
@@ -1247,7 +1282,12 @@ export const dictionaries = {
         },
         "save": "保存して残高を更新"
       },
-      "title": "清算"
+      "title": "清算",
+      "balance": {
+        "total": "合計金額",
+        "youAreOwed": "あなたには支払いが残っています",
+        "youOwe": "あなたは借りがあります"
+      }
     }
   },
   "ko-KR": {
@@ -1403,7 +1443,12 @@ export const dictionaries = {
         },
         "save": "저장하고 잔액 업데이트"
       },
-      "title": "정산"
+      "title": "정산",
+      "balance": {
+        "total": "총 금액",
+        "youAreOwed": "당신은 받을 돈이 있습니다",
+        "youOwe": "당신은 빚졌습니다"
+      }
     }
   },
   "nl-NL": {
@@ -1559,7 +1604,12 @@ export const dictionaries = {
         },
         "save": "Opslaan en saldi bijwerken"
       },
-      "title": "Vereffenen"
+      "title": "Vereffenen",
+      "balance": {
+        "total": "Totaalrekening",
+        "youAreOwed": "Je hebt iets tegoed",
+        "youOwe": "Je bent schuldig"
+      }
     }
   },
   "ru-FU": {
@@ -1715,7 +1765,12 @@ export const dictionaries = {
         },
         "save": "Сохранить и обновить балансы"
       },
-      "title": "Рассчитать"
+      "title": "Рассчитать",
+      "balance": {
+        "total": "Итоговый счет",
+        "youAreOwed": "Вам должны",
+        "youOwe": "Вы должны"
+      }
     }
   },
   "ru-RU": {
@@ -1871,7 +1926,12 @@ export const dictionaries = {
         },
         "save": "Сохранить и обновить балансы"
       },
-      "title": "Рассчитать"
+      "title": "Рассчитать",
+      "balance": {
+        "total": "Итоговый счет",
+        "youAreOwed": "Вам должны",
+        "youOwe": "Вы должны"
+      }
     }
   },
   "sw-TZ": {
@@ -2027,7 +2087,12 @@ export const dictionaries = {
         },
         "save": "Hifadhi na sasisha mizania"
       },
-      "title": "Lipa"
+      "title": "Lipa",
+      "balance": {
+        "total": "Jumla ya bili",
+        "youAreOwed": "Unadai malipo",
+        "youOwe": "Unadaiwa"
+      }
     }
   },
   "tr-TR": {
@@ -2183,7 +2248,12 @@ export const dictionaries = {
         },
         "save": "Bakiyeleri kaydet ve güncelle"
       },
-      "title": "Hesapla"
+      "title": "Hesapla",
+      "balance": {
+        "total": "Toplam fatura",
+        "youAreOwed": "Sana borç var",
+        "youOwe": "Borcunuz var"
+      }
     }
   },
   "uk-UA": {
@@ -2339,7 +2409,12 @@ export const dictionaries = {
         },
         "save": "Зберегти й оновити баланси"
       },
-      "title": "Розрахунок"
+      "title": "Розрахунок",
+      "balance": {
+        "total": "Загальний рахунок",
+        "youAreOwed": "Вам винні",
+        "youOwe": "Ви винні"
+      }
     }
   },
   "zh-CN": {
@@ -2495,7 +2570,12 @@ export const dictionaries = {
         },
         "save": "保存并更新余额"
       },
-      "title": "结清"
+      "title": "结清",
+      "balance": {
+        "total": "总账单",
+        "youAreOwed": "你有应得的",
+        "youOwe": "你欠款"
+      }
     }
   }
 };

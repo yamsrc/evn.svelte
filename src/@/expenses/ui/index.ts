@@ -1,1 +1,5 @@
 export * from './store'
+export { default as Balance } from './Balance.svelte'
+export { default as Form } from './Form.svelte'
+export { default as Expense } from './Expense.svelte'
+export { default as Expenses } from './Expenses.svelte'

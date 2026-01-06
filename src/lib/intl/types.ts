@@ -160,5 +160,10 @@ export type Dictionary = {
           save: string
         }
         title: string
+        balance: {
+          total: string
+          youAreOwed: string
+          youOwe: string
+        }
       }
     }

@@ -3,9 +3,8 @@
   import { Back } from '$com/history'
   import { Section } from '@/app/ui'
   import { Header } from '@/app/ui'
-  import { draft } from '@/expenses/ui'
-  import Form from '@/expenses/ui/Form.svelte'
-  import type { Expense } from '@/expenses/svc/net'
+  import { draft, Form } from '@/expenses/ui'
+  import type { Expense } from '@/expenses'
 
   function onsend(expense: Expense) {
     goto(`/expenses/${expense.id}`)

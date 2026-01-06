@@ -1,5 +1,6 @@
 export * as net from './net'
 export * from './store'
+export { filter } from './filter'
 export { get } from './get'
 export { add } from './add'
 export { update } from './update'

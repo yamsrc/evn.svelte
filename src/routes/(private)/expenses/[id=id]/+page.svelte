@@ -6,7 +6,7 @@
   import { Section } from '@/app/ui'
   import { Header } from '@/app/ui'
   import { expenses } from '@/expenses'
-  import Form from '@/expenses/ui/Form.svelte'
+  import { Form } from '@/expenses/ui'
   import type { Expense } from '@/expenses'
 
   const id = $derived(page.params.id as string)

@@ -121,3 +121,7 @@ expenses:
       placeholder: 어디인가요? (선택 사항)
     save: 저장하고 잔액 업데이트
   title: 정산
+  balance:
+    total: 총 금액
+    youAreOwed: 당신은 받을 돈이 있습니다
+    youOwe: 당신은 빚졌습니다

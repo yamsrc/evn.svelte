@@ -121,3 +121,7 @@ expenses:
       placeholder: どこですか？（任意）
     save: 保存して残高を更新
   title: 清算
+  balance:
+    total: 合計金額
+    youAreOwed: あなたには支払いが残っています
+    youOwe: あなたは借りがあります

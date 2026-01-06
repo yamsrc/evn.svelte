@@ -5,7 +5,7 @@
   import { page } from '$app/state'
   import { Back } from '$com/history'
   import { dict } from '$lib/intl'
-  import Button from '$ui/button/button.svelte'
+  import { Button } from '$ui/button'
   import { Section } from '@/app/ui'
   import { Header } from '@/app/ui'
   import { contacts } from '@/contacts'
