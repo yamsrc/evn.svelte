@@ -187,6 +187,13 @@ inputs:
     spendings:
       title:
         input: Spendings
+      total:
+        input: Total
+      extras:
+        description:
+          input: Tips, table service, etc. divided equally.
+        title:
+          input: Service / Other
     payers:
       title:
         input: Paid by

@@ -14,23 +14,29 @@
   import Amount from './Amount.svelte'
   import type { Props } from './Spendings'
   import type { Account } from '@/accounts'
-  import type { Expense } from '@/expenses'
+  import type { Expense, Extra } from '@/expenses'
 
-  let { participants = $bindable<Expense['participants']>({}) }: Props = $props()
+  let {
+    participants = $bindable<Expense['participants']>({}),
+    extras = $bindable<Extra[]>([]),
+  }: Props = $props()
 
   $effect.pre(() => {
     if ($account?.id && !participants[$account.id]) participants[$account.id] = { amount: 0 }
+
+    if (extras.length === 0) extras.push({ amount: 0 })
   })
 
   const participantIds = $derived(Object.keys(participants))
   const otherIds = $derived(participantIds.filter((id) => id !== $account?.id))
 
   const total = $derived(
-    Object.values(participants).reduce((acc, participant) => acc + participant.amount, 0),
+    Object.values(participants).reduce((acc, participant) => acc + participant.amount, 0) +
+      extras[0].amount,
   )
 </script>
 
-{#snippet spendingItem(account: Account, participant: Expense['participants'][string])}
+{#snippet spendingItem(account: Account)}
   <div class="flex flex-nowrap items-center justify-between gap-2">
     <div class="flex items-center gap-2 flex-1 overflow-hidden">
       <Picture {account} class="size-8" />
@@ -51,20 +57,35 @@
   <Card.Root class="bg-background w-full p-4">
     <Card.Content class="space-y-2 p-0">
       {#if $account?.id && participants[$account.id]}
-        {@render spendingItem($account, participants[$account.id])}
+        {@render spendingItem($account)}
       {/if}
       {#each otherIds as id (id)}
         <Separator />
         <Async store={accounts.get(id)}>
           {#snippet awaited(account)}
-            {@render spendingItem(account, participants[id])}
+            {@render spendingItem(account)}
           {/snippet}
         </Async>
       {/each}
-      <!-- TODO: Add extras -->
+
+      <Separator />
+      <div class="flex flex-col gap-2">
+        <div class="flex flex-nowrap items-center justify-between gap-2">
+          <div class="flex items-center gap-2 flex-1 overflow-hidden">
+            <div
+              class="inline text-start flex-1 overflow-hidden text-base text-ellipsis whitespace-nowrap font-normal"
+            >
+              {$dict.expenses.spendings.extras.title}
+            </div>
+          </div>
+          <Amount class="flex-1 max-w-24 shrink" bind:value={extras[0].amount} />
+        </div>
+        <div class="text-sm">{$dict.expenses.spendings.extras.description}</div>
+      </div>
+
       <Separator />
       <div class="flex items-center justify-between gap-2 min-h-12">
-        <span>Total</span>
+        <span>{$dict.expenses.spendings.total}</span>
         <div class="flex items-center gap-2">
           <span class="text-3xl font-bold">{currency(total)}</span>
           <Coins class="text-muted-foreground" size={16} />

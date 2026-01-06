@@ -108,6 +108,10 @@ account:
 expenses:
   spendings:
     title: 支出
+    total: 总计
+    extras:
+      description: 小费、桌边服务等均等分配。
+      title: 服务 / 其他
   payers:
     title: 付款方
   form:

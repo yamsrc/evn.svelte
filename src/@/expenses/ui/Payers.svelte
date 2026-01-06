@@ -9,7 +9,7 @@
   import type { Props } from './Payers'
   import type { Participant } from '@/expenses'
 
-  let { participants = $bindable<Record<string, Participant>>({}) }: Props = $props()
+  let { participants = $bindable<Record<string, Participant>>({}), extras }: Props = $props()
 
   const selection = new SvelteSet<string>(
     Object.entries(participants)
@@ -20,7 +20,8 @@
   const split = $derived(selection.size > 1)
 
   const total = $derived(
-    Object.values(participants).reduce((acc, participant) => acc + participant.amount, 0),
+    Object.values(participants).reduce((acc, participant) => acc + participant.amount, 0) +
+      extras[0].amount,
   )
 
   function update() {

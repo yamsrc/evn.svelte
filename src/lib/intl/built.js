@@ -136,7 +136,12 @@ export const dictionaries = {
     },
     "expenses": {
       "spendings": {
-        "title": "النفقات"
+        "title": "النفقات",
+        "total": "الإجمالي",
+        "extras": {
+          "description": "الإكراميات، وخدمة الطاولة، وما إلى ذلك تُقسّم بالتساوي.",
+          "title": "خدمة / أخرى"
+        }
       },
       "payers": {
         "title": "مدفوع بواسطة"
@@ -287,7 +292,12 @@ export const dictionaries = {
     },
     "expenses": {
       "spendings": {
-        "title": "Ausgaben"
+        "title": "Ausgaben",
+        "total": "Gesamt",
+        "extras": {
+          "description": "Trinkgeld, Tischservice usw. werden gleichmäßig aufgeteilt.",
+          "title": "Dienstleistung / Sonstiges"
+        }
       },
       "payers": {
         "title": "Bezahlt von"
@@ -438,7 +448,12 @@ export const dictionaries = {
     },
     "expenses": {
       "spendings": {
-        "title": "Spendings"
+        "title": "Spendings",
+        "total": "Total",
+        "extras": {
+          "description": "Tips, table service, etc. are divided equally.",
+          "title": "Service / Other"
+        }
       },
       "payers": {
         "title": "Paid by"
@@ -589,7 +604,12 @@ export const dictionaries = {
     },
     "expenses": {
       "spendings": {
-        "title": "Gastos"
+        "title": "Gastos",
+        "total": "Total",
+        "extras": {
+          "description": "Las propinas, el servicio de mesa, etc. se reparten por igual.",
+          "title": "Servicio / Otro"
+        }
       },
       "payers": {
         "title": "Pagado por"
@@ -740,7 +760,12 @@ export const dictionaries = {
     },
     "expenses": {
       "spendings": {
-        "title": "Dépenses"
+        "title": "Dépenses",
+        "total": "Total",
+        "extras": {
+          "description": "Pourboires, service à table, etc. partagés équitablement.",
+          "title": "Service / Autre"
+        }
       },
       "payers": {
         "title": "Payé par"
@@ -891,7 +916,12 @@ export const dictionaries = {
     },
     "expenses": {
       "spendings": {
-        "title": "खर्च"
+        "title": "खर्च",
+        "total": "कुल",
+        "extras": {
+          "description": "टिप्स, टेबल सेवा आदि समान रूप से बाँटी जाती हैं।",
+          "title": "सेवा / अन्य"
+        }
       },
       "payers": {
         "title": "द्वारा भुगतान किया गया"
@@ -1042,7 +1072,12 @@ export const dictionaries = {
     },
     "expenses": {
       "spendings": {
-        "title": "Spese"
+        "title": "Spese",
+        "total": "Totale",
+        "extras": {
+          "description": "Mance, servizio al tavolo, ecc. sono divisi equamente.",
+          "title": "Servizio / Altro"
+        }
       },
       "payers": {
         "title": "Pagato da"
@@ -1193,7 +1228,12 @@ export const dictionaries = {
     },
     "expenses": {
       "spendings": {
-        "title": "支出"
+        "title": "支出",
+        "total": "合計",
+        "extras": {
+          "description": "チップやテーブルサービスなどは均等に分けられます。",
+          "title": "サービス / その他"
+        }
       },
       "payers": {
         "title": "支払い者"
@@ -1344,7 +1384,12 @@ export const dictionaries = {
     },
     "expenses": {
       "spendings": {
-        "title": "지출"
+        "title": "지출",
+        "total": "총합",
+        "extras": {
+          "description": "팁, 테이블 서비스 등은 모두 균등하게 나눕니다.",
+          "title": "서비스 / 기타"
+        }
       },
       "payers": {
         "title": "지불자"
@@ -1495,7 +1540,12 @@ export const dictionaries = {
     },
     "expenses": {
       "spendings": {
-        "title": "Uitgaven"
+        "title": "Uitgaven",
+        "total": "Totaal",
+        "extras": {
+          "description": "Fooien, tafelbediening, enzovoort worden gelijk verdeeld.",
+          "title": "Service / Overig"
+        }
       },
       "payers": {
         "title": "Betaald door"
@@ -1646,7 +1696,12 @@ export const dictionaries = {
     },
     "expenses": {
       "spendings": {
-        "title": "Расходы"
+        "title": "Расходы",
+        "total": "Итого",
+        "extras": {
+          "description": "Чаевые, обслуживание стола и прочее делятся поровну.",
+          "title": "Сервис / Другое"
+        }
       },
       "payers": {
         "title": "Оплачено"
@@ -1797,7 +1852,12 @@ export const dictionaries = {
     },
     "expenses": {
       "spendings": {
-        "title": "Расходы"
+        "title": "Расходы",
+        "total": "Итого",
+        "extras": {
+          "description": "Чаевые, обслуживание стола и прочее делятся поровну.",
+          "title": "Сервис / Другое"
+        }
       },
       "payers": {
         "title": "Оплачено"
@@ -1948,7 +2008,12 @@ export const dictionaries = {
     },
     "expenses": {
       "spendings": {
-        "title": "Matumizi"
+        "title": "Matumizi",
+        "total": "Jumla",
+        "extras": {
+          "description": "Vidokezo, huduma ya meza, n.k. vimegawanywa sawa.",
+          "title": "Huduma / Nyingine"
+        }
       },
       "payers": {
         "title": "Imelipwa na"
@@ -2099,7 +2164,12 @@ export const dictionaries = {
     },
     "expenses": {
       "spendings": {
-        "title": "Harcamalar"
+        "title": "Harcamalar",
+        "total": "Toplam",
+        "extras": {
+          "description": "Bahşişler, masa servisi vb. eşit olarak paylaştırılır.",
+          "title": "Hizmet / Diğer"
+        }
       },
       "payers": {
         "title": "Ödeyen"
@@ -2250,7 +2320,12 @@ export const dictionaries = {
     },
     "expenses": {
       "spendings": {
-        "title": "Витрати"
+        "title": "Витрати",
+        "total": "Разом",
+        "extras": {
+          "description": "Чайові, обслуговування столу тощо діляться порівну.",
+          "title": "Сервіс / Інше"
+        }
       },
       "payers": {
         "title": "Оплачено"
@@ -2401,7 +2476,12 @@ export const dictionaries = {
     },
     "expenses": {
       "spendings": {
-        "title": "支出"
+        "title": "支出",
+        "total": "总计",
+        "extras": {
+          "description": "小费、桌边服务等均等分配。",
+          "title": "服务 / 其他"
+        }
       },
       "payers": {
         "title": "付款方"

@@ -141,6 +141,11 @@ export type Dictionary = {
       expenses: {
         spendings: {
           title: string
+          total: string
+          extras: {
+            description: string
+            title: string
+          }
         }
         payers: {
           title: string

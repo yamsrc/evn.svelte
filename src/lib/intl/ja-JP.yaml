@@ -108,6 +108,10 @@ account:
 expenses:
   spendings:
     title: 支出
+    total: 合計
+    extras:
+      description: チップやテーブルサービスなどは均等に分けられます。
+      title: サービス / その他
   payers:
     title: 支払い者
   form:

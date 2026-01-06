@@ -108,6 +108,10 @@ account:
 expenses:
   spendings:
     title: 지출
+    total: 총합
+    extras:
+      description: 팁, 테이블 서비스 등은 모두 균등하게 나눕니다.
+      title: 서비스 / 기타
   payers:
     title: 지불자
   form:

@@ -50,11 +50,11 @@
 
   <Separator />
 
-  <Spendings bind:participants={expense.participants} />
+  <Spendings bind:participants={expense.participants} bind:extras={expense.extras} />
 
   <Separator />
 
-  <Payers bind:participants={expense.participants} />
+  <Payers bind:participants={expense.participants} extras={expense.extras} />
 
   <Section>
     <Button type="submit" size="lg" class="w-full">{$dict.expenses.form.save}</Button>
