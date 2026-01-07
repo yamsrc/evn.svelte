@@ -3,7 +3,7 @@
   import * as Item from '$ui/item'
   import { Toggle } from '$ui/toggle'
   import { Picture } from '@/accounts/ui'
-  import { Balance } from '@/contacts/ui'
+  import { Balance } from '@/app/ui'
   import { account as me } from '@/iam'
   import Amount from './Amount.svelte'
   import type { Props } from './Payer'

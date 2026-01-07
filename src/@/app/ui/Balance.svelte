@@ -14,7 +14,7 @@
     class: classes,
   }: Props = $props()
 
-  const amount = $derived(Math.abs(total ?? balance ?? 0))
+  const amount = $derived(total ?? balance ?? 0)
 
   function color(amount: number) {
     if (balance && amount > 0) return 'var(--constructive)'
@@ -25,7 +25,7 @@
   }
 </script>
 
-<div class={cn('flex flex-col-reverse items-end', classes)}>
+<div class={cn('flex items-center justify-end gap-2', classes)}>
   <div class="text-muted-foreground text-sm text-nowrap">
     {#if total !== undefined}
       {totalLabel}
@@ -36,7 +36,7 @@
     {/if}
   </div>
   <div class="flex items-center justify-end gap-2">
-    <div class="font-bold text-foreground">{currency(amount)}</div>
+    <div class="font-bold text-foreground">{currency(Math.abs(amount))}</div>
     <div>
       <Coins size={16} color={color(amount)} />
     </div>

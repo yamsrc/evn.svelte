@@ -3,10 +3,11 @@
   import { Async } from 'svas'
   import { goto } from '$app/navigation'
   import { Panel } from '$com/panel'
+  import { dict } from '$lib/intl'
   import { cn } from '$lib/utils'
   import { accounts } from '@/accounts'
   import { Picture } from '@/accounts/ui'
-  import { Balance } from '@/contacts/ui'
+  import { Balance } from '@/app/ui'
   import { account } from '@/iam'
   import type { Props } from './Panel'
 
@@ -47,6 +48,6 @@
     </div>
   {/snippet}
   {#snippet right()}
-    <Balance balance={group.balance} />
+    <Balance balance={group.balance} youAreOwed={$dict.contacts.contact.owesYou} />
   {/snippet}
 </Panel>

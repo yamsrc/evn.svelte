@@ -4,9 +4,9 @@
   import { Button } from '$ui/button'
   import { accounts } from '@/accounts'
   import { Picture } from '@/accounts/ui'
+  import { Balance } from '@/app/ui'
   import { total } from '@/expenses'
   import { owe } from '@/expenses'
-  import { Balance } from '@/expenses/ui'
   import { account } from '@/iam'
   import type { Props } from './Expense'
 
@@ -26,7 +26,7 @@
       <div class="text-sm text-muted-foreground">{expense.location}</div>
     </div>
     <div class="flex flex-col items-end">
-      <Balance total={total(expense)} />
+      <Balance total={total(expense)} class="flex-col-reverse items-end" />
     </div>
   </div>
   <Separator />
@@ -45,6 +45,6 @@
         </div>
       {/if}
     </div>
-    <Balance balance={owe(expense.participants, $account?.id)} />
+    <Balance balance={owe(expense.participants, $account?.id)} class="flex-col-reverse items-end" />
   </div>
 </Button>

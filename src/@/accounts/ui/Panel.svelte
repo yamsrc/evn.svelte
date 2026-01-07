@@ -1,8 +1,9 @@
 <script lang="ts">
   import { Panel } from '$com/panel'
+  import { dict } from '$lib/intl'
   import { cn } from '$lib/utils'
   import { Picture } from '@/accounts/ui'
-  import { Balance } from '@/contacts/ui'
+  import { Balance } from '@/app/ui'
   import type { Props } from './Panel'
 
   let {
@@ -43,6 +44,6 @@
     </div>
   {/snippet}
   {#snippet right()}
-    <Balance {balance} />
+    <Balance {balance} youAreOwed={$dict.contacts.contact.owesYou} />
   {/snippet}
 </Panel>
