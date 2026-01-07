@@ -14,22 +14,12 @@
     autofocus,
     onchange,
     editable = true,
-    class: className,
+    class: classes,
   }: NameProps = $props()
 </script>
 
-<div class="space-y-2">
-  {#if editable}
-    <Name
-      bind:value
-      bind:busy
-      {onchange}
-      {autocomplete}
-      {placeholder}
-      {autofocus}
-      class={className}
-    />
-  {:else}
-    <p class="text-center text-3xl font-bold">{value}</p>
-  {/if}
-</div>
+{#if editable}
+  <Name bind:value bind:busy {onchange} {autocomplete} {placeholder} {autofocus} class={classes} />
+{:else}
+  <p class="text-center text-3xl font-bold">{value}</p>
+{/if}

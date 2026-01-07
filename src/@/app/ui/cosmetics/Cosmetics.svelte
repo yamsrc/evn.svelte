@@ -52,18 +52,20 @@
 
 <Root class={classes}>
   <Picture bind:id={picture} onchange={onPictureChange} />
-  <Name
-    bind:value={name}
-    bind:busy
-    onchange={onNameChange}
-    {autocomplete}
-    {placeholder}
-    {autofocus}
-    {editable}
-  />
-  {#if note}
-    <Note>{note}</Note>
-  {/if}
+  <div class="space-y-2">
+    <Name
+      bind:value={name}
+      bind:busy
+      onchange={onNameChange}
+      {autocomplete}
+      {placeholder}
+      {autofocus}
+      {editable}
+    />
+    {#if note}
+      <Note>{note}</Note>
+    {/if}
+  </div>
   {#if blank && label}
     <Actions {label} {busy} {onclick} />
   {/if}
