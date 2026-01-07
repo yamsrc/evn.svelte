@@ -1,10 +1,11 @@
 <script lang="ts">
   import { pickpic } from '@/accounts'
-  import Actions from './cosmetics-actions.svelte'
-  import Name from './cosmetics-name.svelte'
-  import Note from './cosmetics-note.svelte'
-  import Picture from './cosmetics-picture.svelte'
-  import Root from './cosmetics-root.svelte'
+  import Actions from './Actions.svelte'
+  import Content from './Content.svelte'
+  import Name from './Name.svelte'
+  import Note from './Note.svelte'
+  import Picture from './Picture.svelte'
+  import Root from './Root.svelte'
   import type { Props, Value } from './Cosmetics'
 
   // Default implementation for backward compatibility
@@ -51,21 +52,23 @@
 </script>
 
 <Root class={classes}>
-  <Picture bind:id={picture} onchange={onPictureChange} />
-  <div class="space-y-2">
-    <Name
-      bind:value={name}
-      bind:busy
-      onchange={onNameChange}
-      {autocomplete}
-      {placeholder}
-      {autofocus}
-      {editable}
-    />
-    {#if note}
-      <Note>{note}</Note>
-    {/if}
-  </div>
+  <Content>
+    <Picture bind:id={picture} onchange={onPictureChange} />
+    <div class="space-y-2">
+      <Name
+        bind:value={name}
+        bind:busy
+        onchange={onNameChange}
+        {autocomplete}
+        {placeholder}
+        {autofocus}
+        {editable}
+      />
+      {#if note}
+        <Note>{note}</Note>
+      {/if}
+    </div>
+  </Content>
   {#if blank && label}
     <Actions {label} {busy} {onclick} />
   {/if}

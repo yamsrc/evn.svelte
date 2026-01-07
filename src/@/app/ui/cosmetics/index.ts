@@ -1,21 +1,24 @@
+import Actions from './Actions.svelte'
+import Content from './Content.svelte'
 import Cosmetics from './Cosmetics.svelte'
-import Actions from './cosmetics-actions.svelte'
-import Name from './cosmetics-name.svelte'
-import Note from './cosmetics-note.svelte'
-import Picture from './cosmetics-picture.svelte'
-import Root from './cosmetics-root.svelte'
+import Name from './Name.svelte'
+import Note from './Note.svelte'
+import Picture from './Picture.svelte'
+import Root from './Root.svelte'
 
 export type { Props, Value } from './Cosmetics'
 
 // Export compound components
 export {
   Root,
+  Content,
   Picture,
   Name,
   Note,
   Actions,
   //
   Root as CosmeticsRoot,
+  Content as CosmeticsContent,
   Picture as CosmeticsPicture,
   Name as CosmeticsName,
   Note as CosmeticsNote,
