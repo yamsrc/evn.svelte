@@ -135,6 +135,8 @@ expenses:
     total: Toplam fatura
     youAreOwed: Sana borç var
     youOwe: Borcunuz var
+    youWillOwe: Borçlu olacaksın
+    youWillBeOwed: Diğerleri sana borçlu olacak
   participants:
     create:
       title: Yeni katılımcı oluştur

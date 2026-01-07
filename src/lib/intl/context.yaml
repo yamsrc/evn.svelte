@@ -220,6 +220,10 @@ inputs:
         input: You are owed
       youOwe:
         input: You owe
+      youWillOwe:
+        input: You will owe
+      youWillBeOwed:
+        input: Others will owe you
     participants:
       create:
         title:

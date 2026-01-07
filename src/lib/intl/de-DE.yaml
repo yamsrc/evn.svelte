@@ -139,6 +139,8 @@ expenses:
     total: Gesamtrechnung
     youAreOwed: Dir steht etwas zu
     youOwe: Du schuldest
+    youWillOwe: Du wirst schulden
+    youWillBeOwed: Andere werden dir etwas schulden
   participants:
     create:
       title: Neuen Teilnehmer erstellen

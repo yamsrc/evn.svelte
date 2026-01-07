@@ -137,6 +137,8 @@ expenses:
     total: Facture totale
     youAreOwed: On te doit
     youOwe: Vous devez
+    youWillOwe: Vous devrez
+    youWillBeOwed: Les autres te devront quelque chose
   participants:
     create:
       title: Créer un nouveau participant

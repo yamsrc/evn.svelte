@@ -139,6 +139,8 @@ expenses:
     total: Totale conto
     youAreOwed: Ti è dovuto
     youOwe: Devi
+    youWillOwe: Dovrai
+    youWillBeOwed: Gli altri ti saranno debitori
   participants:
     create:
       title: Crea un nuovo partecipante

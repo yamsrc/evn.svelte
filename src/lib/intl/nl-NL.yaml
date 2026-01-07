@@ -137,6 +137,8 @@ expenses:
     total: Totaalrekening
     youAreOwed: Je hebt iets tegoed
     youOwe: Je bent schuldig
+    youWillOwe: Je zult verschuldigd zijn
+    youWillBeOwed: Anderen zullen jou iets verschuldigd zijn
   participants:
     create:
       title: Nieuwe deelnemer aanmaken

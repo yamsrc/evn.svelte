@@ -133,6 +133,8 @@ expenses:
     total: Jumla ya bili
     youAreOwed: Unadai malipo
     youOwe: Unadaiwa
+    youWillOwe: Utakuwa na deni
+    youWillBeOwed: Wengine watakudai fadhila
   participants:
     create:
       title: Unda mshiriki mpya

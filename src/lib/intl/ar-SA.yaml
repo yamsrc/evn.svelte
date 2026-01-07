@@ -133,6 +133,8 @@ expenses:
     total: إجمالي الفاتورة
     youAreOwed: لك مستحقات
     youOwe: أنت مدين
+    youWillOwe: سَتَدِين
+    youWillBeOwed: سيَدِين لك الآخرون
   participants:
     create:
       title: إنشاء مشارك جديد

@@ -137,6 +137,8 @@ expenses:
     total: Загальний рахунок
     youAreOwed: Вам винні
     youOwe: Ви винні
+    youWillOwe: Ви будете винні
+    youWillBeOwed: Інші будуть у тебе в боргу
   participants:
     create:
       title: Створити нового учасника

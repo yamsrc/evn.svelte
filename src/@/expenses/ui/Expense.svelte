@@ -5,22 +5,14 @@
   import { accounts } from '@/accounts'
   import { Picture } from '@/accounts/ui'
   import { total } from '@/expenses'
+  import { owe } from '@/expenses'
   import { Balance } from '@/expenses/ui'
   import { account } from '@/iam'
   import type { Props } from './Expense'
-  import type { Expense } from '@/expenses'
 
   const { expense }: Props = $props()
 
   const participants = $derived(Object.keys(expense.participants))
-
-  function owe(expense: Expense) {
-    if (!$account) return 0
-
-    const { paid = 0, amount } = expense.participants[$account.id]
-
-    return paid - amount
-  }
 </script>
 
 <Button
@@ -53,6 +45,6 @@
         </div>
       {/if}
     </div>
-    <Balance balance={owe(expense)} />
+    <Balance balance={owe(expense.participants, $account?.id)} />
   </div>
 </Button>

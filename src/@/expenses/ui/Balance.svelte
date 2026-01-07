@@ -2,9 +2,17 @@
   import { Coins } from '@lucide/svelte'
   import { dict } from '$lib/intl'
   import { currency } from '$lib/tools'
+  import { cn } from '$lib/utils'
   import type { Props } from './Balance'
 
-  const { total, balance }: Props = $props()
+  const {
+    total,
+    balance,
+    totalLabel = $dict.expenses.balance.total,
+    youOwe = $dict.expenses.balance.youOwe,
+    youAreOwed = $dict.expenses.balance.youAreOwed,
+    class: classes,
+  }: Props = $props()
 
   const amount = $derived(Math.abs(total ?? balance ?? 0))
 
@@ -17,14 +25,14 @@
   }
 </script>
 
-<div class="flex flex-col-reverse items-end">
+<div class={cn('flex flex-col-reverse items-end', classes)}>
   <div class="text-muted-foreground text-sm text-nowrap">
     {#if total !== undefined}
-      {$dict.expenses.balance.total}
+      {totalLabel}
     {:else if balance !== undefined && balance > 0}
-      {$dict.expenses.balance.youAreOwed}
+      {youAreOwed}
     {:else if balance !== undefined && balance < 0}
-      {$dict.expenses.balance.youOwe}
+      {youOwe}
     {/if}
   </div>
   <div class="flex items-center justify-end gap-2">

@@ -137,6 +137,8 @@ expenses:
     total: Итоговый счет
     youAreOwed: Вам должны
     youOwe: Вы должны
+    youWillOwe: Вы будете должны
+    youWillBeOwed: Другие будут должны тебе
   participants:
     create:
       title: Создать нового участника

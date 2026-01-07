@@ -135,6 +135,8 @@ expenses:
     total: कुल बिल
     youAreOwed: आपको कुछ मिलना बाकी है
     youOwe: आप पर बकाया है
+    youWillOwe: आप पर बकाया होगा
+    youWillBeOwed: दूसरे लोग आपके एहसानमंद होंगे
   participants:
     create:
       title: नया प्रतिभागी बनाएँ

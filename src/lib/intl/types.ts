@@ -166,6 +166,8 @@ export type Dictionary = {
           total: string
           youAreOwed: string
           youOwe: string
+          youWillOwe: string
+          youWillBeOwed: string
         }
         participants: {
           create: {

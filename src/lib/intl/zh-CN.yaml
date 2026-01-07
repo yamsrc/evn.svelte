@@ -127,6 +127,8 @@ expenses:
     total: 总账单
     youAreOwed: 你有应得的
     youOwe: 你欠款
+    youWillOwe: 你将欠款
+    youWillBeOwed: 别人会欠你人情
   participants:
     create:
       title: 创建新参与者

@@ -161,7 +161,9 @@ export const dictionaries = {
       "balance": {
         "total": "إجمالي الفاتورة",
         "youAreOwed": "لك مستحقات",
-        "youOwe": "أنت مدين"
+        "youOwe": "أنت مدين",
+        "youWillOwe": "سَتَدِين",
+        "youWillBeOwed": "سيَدِين لك الآخرون"
       },
       "participants": {
         "create": {
@@ -333,7 +335,9 @@ export const dictionaries = {
       "balance": {
         "total": "Gesamtrechnung",
         "youAreOwed": "Dir steht etwas zu",
-        "youOwe": "Du schuldest"
+        "youOwe": "Du schuldest",
+        "youWillOwe": "Du wirst schulden",
+        "youWillBeOwed": "Andere werden dir etwas schulden"
       },
       "participants": {
         "create": {
@@ -505,7 +509,9 @@ export const dictionaries = {
       "balance": {
         "total": "Total bill",
         "youAreOwed": "You are owed",
-        "youOwe": "You owe"
+        "youOwe": "You owe",
+        "youWillOwe": "You will owe",
+        "youWillBeOwed": "Others will owe you"
       },
       "participants": {
         "create": {
@@ -677,7 +683,9 @@ export const dictionaries = {
       "balance": {
         "total": "Factura total",
         "youAreOwed": "Te deben",
-        "youOwe": "Debes"
+        "youOwe": "Debes",
+        "youWillOwe": "Deberás",
+        "youWillBeOwed": "Los demás te deberán"
       },
       "participants": {
         "create": {
@@ -849,7 +857,9 @@ export const dictionaries = {
       "balance": {
         "total": "Facture totale",
         "youAreOwed": "On te doit",
-        "youOwe": "Vous devez"
+        "youOwe": "Vous devez",
+        "youWillOwe": "Vous devrez",
+        "youWillBeOwed": "Les autres te devront quelque chose"
       },
       "participants": {
         "create": {
@@ -1021,7 +1031,9 @@ export const dictionaries = {
       "balance": {
         "total": "कुल बिल",
         "youAreOwed": "आपको कुछ मिलना बाकी है",
-        "youOwe": "आप पर बकाया है"
+        "youOwe": "आप पर बकाया है",
+        "youWillOwe": "आप पर बकाया होगा",
+        "youWillBeOwed": "दूसरे लोग आपके एहसानमंद होंगे"
       },
       "participants": {
         "create": {
@@ -1193,7 +1205,9 @@ export const dictionaries = {
       "balance": {
         "total": "Totale conto",
         "youAreOwed": "Ti è dovuto",
-        "youOwe": "Devi"
+        "youOwe": "Devi",
+        "youWillOwe": "Dovrai",
+        "youWillBeOwed": "Gli altri ti saranno debitori"
       },
       "participants": {
         "create": {
@@ -1365,7 +1379,9 @@ export const dictionaries = {
       "balance": {
         "total": "合計金額",
         "youAreOwed": "あなたには支払いが残っています",
-        "youOwe": "あなたは借りがあります"
+        "youOwe": "あなたは借りがあります",
+        "youWillOwe": "あなたは支払うことになります",
+        "youWillBeOwed": "他の人たちがあなたに借りができる"
       },
       "participants": {
         "create": {
@@ -1537,7 +1553,9 @@ export const dictionaries = {
       "balance": {
         "total": "총 금액",
         "youAreOwed": "당신은 받을 돈이 있습니다",
-        "youOwe": "당신은 빚졌습니다"
+        "youOwe": "당신은 빚졌습니다",
+        "youWillOwe": "갚아야 합니다",
+        "youWillBeOwed": "다른 사람들이 당신에게 신세를 지게 됩니다"
       },
       "participants": {
         "create": {
@@ -1709,7 +1727,9 @@ export const dictionaries = {
       "balance": {
         "total": "Totaalrekening",
         "youAreOwed": "Je hebt iets tegoed",
-        "youOwe": "Je bent schuldig"
+        "youOwe": "Je bent schuldig",
+        "youWillOwe": "Je zult verschuldigd zijn",
+        "youWillBeOwed": "Anderen zullen jou iets verschuldigd zijn"
       },
       "participants": {
         "create": {
@@ -1881,7 +1901,9 @@ export const dictionaries = {
       "balance": {
         "total": "Итоговый счет",
         "youAreOwed": "Вам должны",
-        "youOwe": "Вы должны"
+        "youOwe": "Вы должны",
+        "youWillOwe": "Вы будете должны",
+        "youWillBeOwed": "Другие будут должны тебе"
       },
       "participants": {
         "create": {
@@ -2053,7 +2075,9 @@ export const dictionaries = {
       "balance": {
         "total": "Итоговый счет",
         "youAreOwed": "Вам должны",
-        "youOwe": "Вы должны"
+        "youOwe": "Вы должны",
+        "youWillOwe": "Вы будете должны",
+        "youWillBeOwed": "Другие будут должны тебе"
       },
       "participants": {
         "create": {
@@ -2225,7 +2249,9 @@ export const dictionaries = {
       "balance": {
         "total": "Jumla ya bili",
         "youAreOwed": "Unadai malipo",
-        "youOwe": "Unadaiwa"
+        "youOwe": "Unadaiwa",
+        "youWillOwe": "Utakuwa na deni",
+        "youWillBeOwed": "Wengine watakudai fadhila"
       },
       "participants": {
         "create": {
@@ -2397,7 +2423,9 @@ export const dictionaries = {
       "balance": {
         "total": "Toplam fatura",
         "youAreOwed": "Sana borç var",
-        "youOwe": "Borcunuz var"
+        "youOwe": "Borcunuz var",
+        "youWillOwe": "Borçlu olacaksın",
+        "youWillBeOwed": "Diğerleri sana borçlu olacak"
       },
       "participants": {
         "create": {
@@ -2569,7 +2597,9 @@ export const dictionaries = {
       "balance": {
         "total": "Загальний рахунок",
         "youAreOwed": "Вам винні",
-        "youOwe": "Ви винні"
+        "youOwe": "Ви винні",
+        "youWillOwe": "Ви будете винні",
+        "youWillBeOwed": "Інші будуть у тебе в боргу"
       },
       "participants": {
         "create": {
@@ -2741,7 +2771,9 @@ export const dictionaries = {
       "balance": {
         "total": "总账单",
         "youAreOwed": "你有应得的",
-        "youOwe": "你欠款"
+        "youOwe": "你欠款",
+        "youWillOwe": "你将欠款",
+        "youWillBeOwed": "别人会欠你人情"
       },
       "participants": {
         "create": {
