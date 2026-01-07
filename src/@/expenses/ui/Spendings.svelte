@@ -12,7 +12,6 @@
   import { Picture } from '@/accounts/ui'
   import { Section } from '@/app/ui'
   import { total } from '@/expenses'
-  import { account } from '@/iam'
   import { account as me } from '@/iam'
   import Amount from './Amount.svelte'
   import type { Props } from './Spendings'
@@ -25,13 +24,13 @@
   }: Props = $props()
 
   $effect.pre(() => {
-    if ($account?.id && !participants[$account.id]) participants[$account.id] = { amount: 0 }
+    if ($me?.id && !participants[$me.id]) participants[$me.id] = { amount: 0 }
 
     if (extras.length === 0) extras.push({ amount: 0 })
   })
 
   const participantIds = $derived(Object.keys(participants))
-  const otherIds = $derived(participantIds.filter((id) => id !== $account?.id))
+  const otherIds = $derived(participantIds.filter((id) => id !== $me?.id))
   const nameClass = 'text-start text-base font-normal flex-1 min-w-0 flex'
   const amountClass = 'min-w-24 max-w-28 flex-1'
 </script>
@@ -56,8 +55,8 @@
 
   <Card.Root class="bg-background p-4">
     <Card.Content class="space-y-2 p-0">
-      {#if $account?.id && participants[$account.id]}
-        {@render spendingItem($account)}
+      {#if $me?.id && participants[$me.id]}
+        {@render spendingItem($me)}
       {/if}
       {#each otherIds as id (id)}
         <Separator />
