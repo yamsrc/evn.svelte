@@ -29,6 +29,14 @@ When('I hold {string} for {int}s', async ({ page }, id, duration) => {
   await page.mouse.up()
 })
 
+When('I tap first item of {string}', async ({ page }, id) => {
+  const container = page.locator(`#${id}`)
+  const firstItem = container.locator('> *').first()
+
+  await expect(firstItem).toBeVisible()
+  await firstItem.click()
+})
+
 Then('{string} is visible', async ({ page }, id) => {
   await expect(page.locator(`#${id}`)).toBeVisible()
 })
@@ -60,6 +68,10 @@ Then('some of {string} contains that {string}', async ({ page }, classname, text
 
 Then('some of {string} contains that name', async ({ page, ctx }, classname) => {
   await contains(page, `.${classname}`, ctx.name)
+})
+
+Then('{string} contains text {string}', async ({ page }, id, text) => {
+  await expect(page.locator(`#${id}`)).toContainText(text)
 })
 
 async function contains(page: Page, selector: string, text: string) {
