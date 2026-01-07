@@ -14,14 +14,15 @@
 
   let { value = $bindable<Value>(), onsubmit: onSubmit }: Props = $props()
 
+  let busy = $state(false)
   const balance = $derived(owe(value.participants, $account?.id))
 
   async function submit() {
-    const result = await onSubmit?.(value)
+    busy = true
 
-    if (result instanceof Error) {
-      // Error handling
-    }
+    await onSubmit?.(value)
+
+    busy = false
   }
 </script>
 
@@ -37,7 +38,9 @@
   <Payers bind:participants={value.participants} extras={value.extras} />
 
   <Section class="flex flex-col items-center gap-2">
-    <Button type="submit" size="lg" class="w-full">{$dict.expenses.form.save}</Button>
+    <Button type="submit" size="lg" class="w-full" disabled={busy}>
+      {$dict.expenses.form.save}
+    </Button>
     {#if balance !== 0}
       <Balance
         {balance}
