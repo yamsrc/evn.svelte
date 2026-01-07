@@ -12,11 +12,24 @@
 
   let { participants = $bindable<Record<string, Participant>>({}), extras }: Props = $props()
 
-  const selection = new SvelteSet<string>(
-    Object.entries(participants)
+  let participantsRef = participants
+
+  function payers(participants: Record<string, Participant>) {
+    return Object.entries(participants)
       .filter(([_, participant]) => (participant.paid ?? 0) > 0)
-      .map(([identity]) => identity),
-  )
+      .map(([identity]) => identity)
+  }
+
+  const selection = new SvelteSet<string>(payers(participants))
+
+  $effect(() => {
+    if (participants === participantsRef) return
+
+    participantsRef = participants
+
+    selection.clear()
+    for (const identity of payers(participants)) selection.add(identity)
+  })
 
   const split = $derived(selection.size > 1)
 
