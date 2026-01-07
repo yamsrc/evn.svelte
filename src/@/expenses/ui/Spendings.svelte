@@ -10,6 +10,7 @@
   import { accounts } from '@/accounts'
   import { Picture } from '@/accounts/ui'
   import { Section } from '@/app/ui'
+  import { total } from '@/expenses'
   import { account } from '@/iam'
   import Amount from './Amount.svelte'
   import type { Props } from './Spendings'
@@ -29,11 +30,6 @@
 
   const participantIds = $derived(Object.keys(participants))
   const otherIds = $derived(participantIds.filter((id) => id !== $account?.id))
-
-  const total = $derived(
-    Object.values(participants).reduce((acc, participant) => acc + participant.amount, 0) +
-      extras[0].amount,
-  )
 </script>
 
 {#snippet spendingItem(account: Account)}
@@ -87,7 +83,7 @@
       <div class="flex items-center justify-between gap-2 min-h-12">
         <span>{$dict.expenses.spendings.total}</span>
         <div class="flex items-center gap-2">
-          <span class="text-3xl font-bold">{currency(total)}</span>
+          <span class="text-3xl font-bold">{currency(total({ participants, extras }))}</span>
           <Coins class="text-muted-foreground" size={16} />
         </div>
       </div>

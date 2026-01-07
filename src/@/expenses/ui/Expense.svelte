@@ -4,6 +4,7 @@
   import { Button } from '$ui/button'
   import { accounts } from '@/accounts'
   import { Picture } from '@/accounts/ui'
+  import { total } from '@/expenses'
   import { Balance } from '@/expenses/ui'
   import { account } from '@/iam'
   import type { Props } from './Expense'
@@ -13,23 +14,12 @@
 
   const participants = $derived(Object.keys(expense.participants))
 
-  function totalBalance(expense: Expense) {
-    return (
-      Object.values(expense.participants).reduce(
-        (acc, participant) => acc + participant.amount,
-        0,
-      ) + expense.extras[0].amount
-    )
-  }
-
-  // difference between spending and paid by me
   function owe(expense: Expense) {
-    if (!$account?.id) return 0
+    if (!$account) return 0
 
-    const myExpense = expense.participants[$account.id]
-    const paidByMe = myExpense?.paid ?? 0
+    const { paid = 0, amount } = expense.participants[$account.id]
 
-    return paidByMe - myExpense?.amount
+    return paid - amount
   }
 </script>
 
@@ -44,7 +34,7 @@
       <div class="text-sm text-muted-foreground">{expense.location}</div>
     </div>
     <div class="flex flex-col items-end">
-      <Balance total={totalBalance(expense)} />
+      <Balance total={total(expense)} />
     </div>
   </div>
   <Separator />

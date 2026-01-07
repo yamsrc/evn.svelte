@@ -5,6 +5,7 @@
   import { accounts } from '@/accounts'
   import { Section } from '@/app/ui'
   import { contacts } from '@/contacts'
+  import { total } from '@/expenses'
   import Payer from './Payer.svelte'
   import type { Props } from './Payers'
   import type { Participant } from '@/expenses'
@@ -19,14 +20,10 @@
 
   const split = $derived(selection.size > 1)
 
-  const total = $derived(
-    Object.values(participants).reduce((acc, participant) => acc + participant.amount, 0) +
-      extras[0].amount,
-  )
-
   function update() {
     for (const identity of Object.keys(participants))
-      if (selection.has(identity) && !split) participants[identity].paid = total
+      if (selection.has(identity) && !split)
+        participants[identity].paid = total({ participants, extras })
       else if (!selection.has(identity)) participants[identity].paid = 0
   }
 
