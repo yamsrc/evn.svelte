@@ -3,9 +3,9 @@
   import { Button } from '$ui/button'
   import { oidc } from '@/iam'
   import { icons } from './icons'
-  import type { Snippet } from 'svelte'
+  import type { Props } from './Button'
 
-  const { idp, children }: { idp: oidc.IDP; children?: Snippet } = $props()
+  const { idp, children, account }: Props = $props()
 
   const Icon = $derived(icons[idp])
 
@@ -14,7 +14,9 @@
 
     button.disabled = true
 
-    await oidc.authenticate(idp)
+    await oidc.authenticate(idp, account?.id)
+
+    button.disabled = false
   }
 </script>
 

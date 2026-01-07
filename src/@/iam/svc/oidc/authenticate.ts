@@ -1,5 +1,6 @@
 import * as net from '../net'
 import { method, iam } from '../store'
+import { sync } from '../sync'
 import { apple } from './apple'
 import { google } from './google'
 import { providers, type Descriptor, type IDP } from './providers'
@@ -7,9 +8,21 @@ import { standard } from './standard'
 
 const vendors = { apple, google } as const
 
-export async function authenticate(idp: IDP) {
+export async function authenticate(idp: IDP, identity?: string) {
   method.set(idp)
 
+  const credentials = await getCredentials(idp)
+
+  if (credentials instanceof Error)
+    return credentials
+
+  if (identity !== undefined)
+    return add(identity, credentials)
+  else
+    return verify(credentials)
+}
+
+async function getCredentials(idp: IDP) {
   const auth = (vendors[idp] ?? standard) as Authenticate
   const descriptor = providers[idp]
 
@@ -21,19 +34,32 @@ export async function authenticate(idp: IDP) {
     return code
   }
 
-  if (code === undefined) // redirect flow, see `hello.ts`
-    return
+  if (code === undefined)
+    throw new Error('Redirect flow not supported')
 
   const data = {
     code,
     iss: descriptor.iss,
-    for: window.location.origin + window.location.pathname,
+    for: window.location.origin,
   }
 
-  const credentials = btoa(JSON.stringify(data))
+  return btoa(JSON.stringify(data))
+}
+
+async function add(identity: string, credentials: string) {
+  const err = await net.federation.post(identity, { scheme: 'code', credentials })
+
+  if (err instanceof Error)
+    return err
+
+  sync()
+}
+
+async function verify(credentials: string) {
   const echo = await net.get('Code ' + credentials)
 
-  if (echo instanceof Error) return echo
+  if (echo instanceof Error)
+    return echo
 
   iam(echo)
 }

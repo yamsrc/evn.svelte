@@ -1,3 +1,8 @@
+/**
+ * OBSOLETE
+ * Currently unused as both apple and google use popups.
+ */
+
 import { goto } from '$app/navigation'
 import { resolve } from '$app/paths'
 import { navigation } from '$config'
@@ -8,9 +13,6 @@ import { account, challenge, greeting } from '../store'
 import { nonce } from './nonce'
 import { providers, type IDP } from './providers'
 
-/**
- * Currently unused as both apple and google use popups.
- */
 export async function hello() {
   const authorization = token() ?? bearer() ?? code()
 

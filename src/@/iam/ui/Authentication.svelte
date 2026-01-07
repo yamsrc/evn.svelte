@@ -39,7 +39,7 @@
         {$dict.auth.email}
       </Tabs.Trigger>
     </Tabs.List>
-    <OIDC />
+    <OIDC {account} />
   </div>
   <Tabs.Content value="passkey">
     <Passkey {account} />
