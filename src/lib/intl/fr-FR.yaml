@@ -145,3 +145,4 @@ expenses:
     title: Ajouter des participants
     add:
       label: Ajouter un participant
+  me: Moi

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { dict } from '$lib/intl'
   import { cn } from '$lib/utils'
   import * as Item from '$ui/item'
   import { Toggle } from '$ui/toggle'
@@ -26,7 +27,7 @@
     participant.paid = paid
   }
 
-  const titleClass =
+  const nameClass =
     'inline text-start flex-1 overflow-hidden text-base text-ellipsis whitespace-nowrap font-normal'
 </script>
 
@@ -42,8 +43,7 @@
   >
     {#if $me?.id === account.id}
       <div class="flex items-center gap-2 w-full">
-        <!-- TODO: Me -->
-        <Item.Title class={titleClass}>{account.name}</Item.Title>
+        <Item.Title class={nameClass}>{$dict.expenses.me}</Item.Title>
         <Item.Media>
           <Picture {account} size={32} />
         </Item.Media>
@@ -53,7 +53,7 @@
         <Item.Media>
           <Picture {account} size={32} />
         </Item.Media>
-        <Item.Title class={titleClass}>{account.name}</Item.Title>
+        <Item.Title class={nameClass}>{account.name}</Item.Title>
       </div>
       {#if !(selected && split)}
         <Item.Content>

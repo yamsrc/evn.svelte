@@ -173,7 +173,8 @@ export const dictionaries = {
         "add": {
           "label": "إضافة مشارك"
         }
-      }
+      },
+      "me": "أنا"
     }
   },
   "de-DE": {
@@ -347,7 +348,8 @@ export const dictionaries = {
         "add": {
           "label": "Teilnehmer hinzufügen"
         }
-      }
+      },
+      "me": "Ich"
     }
   },
   "en-US": {
@@ -521,7 +523,8 @@ export const dictionaries = {
         "add": {
           "label": "Add participant"
         }
-      }
+      },
+      "me": "Me"
     }
   },
   "es-ES": {
@@ -695,7 +698,8 @@ export const dictionaries = {
         "add": {
           "label": "Agregar participante"
         }
-      }
+      },
+      "me": "Yo"
     }
   },
   "fr-FR": {
@@ -869,7 +873,8 @@ export const dictionaries = {
         "add": {
           "label": "Ajouter un participant"
         }
-      }
+      },
+      "me": "Moi"
     }
   },
   "hi-IN": {
@@ -1043,7 +1048,8 @@ export const dictionaries = {
         "add": {
           "label": "प्रतिभागी जोड़ें"
         }
-      }
+      },
+      "me": "मैं"
     }
   },
   "it-IT": {
@@ -1217,7 +1223,8 @@ export const dictionaries = {
         "add": {
           "label": "Aggiungi partecipante"
         }
-      }
+      },
+      "me": "Io"
     }
   },
   "ja-JP": {
@@ -1391,7 +1398,8 @@ export const dictionaries = {
         "add": {
           "label": "参加者を追加"
         }
-      }
+      },
+      "me": "私"
     }
   },
   "ko-KR": {
@@ -1565,7 +1573,8 @@ export const dictionaries = {
         "add": {
           "label": "참가자 추가"
         }
-      }
+      },
+      "me": "나"
     }
   },
   "nl-NL": {
@@ -1739,7 +1748,8 @@ export const dictionaries = {
         "add": {
           "label": "Deelnemer toevoegen"
         }
-      }
+      },
+      "me": "Ik"
     }
   },
   "ru-FU": {
@@ -1913,7 +1923,8 @@ export const dictionaries = {
         "add": {
           "label": "Добавить участника"
         }
-      }
+      },
+      "me": "Я"
     }
   },
   "ru-RU": {
@@ -2087,7 +2098,8 @@ export const dictionaries = {
         "add": {
           "label": "Добавить участника"
         }
-      }
+      },
+      "me": "Я"
     }
   },
   "sw-TZ": {
@@ -2261,7 +2273,8 @@ export const dictionaries = {
         "add": {
           "label": "Ongeza mshiriki"
         }
-      }
+      },
+      "me": "Mimi"
     }
   },
   "tr-TR": {
@@ -2435,7 +2448,8 @@ export const dictionaries = {
         "add": {
           "label": "Katılımcı ekle"
         }
-      }
+      },
+      "me": "Ben"
     }
   },
   "uk-UA": {
@@ -2609,7 +2623,8 @@ export const dictionaries = {
         "add": {
           "label": "Додати учасника"
         }
-      }
+      },
+      "me": "Я"
     }
   },
   "zh-CN": {
@@ -2783,7 +2798,8 @@ export const dictionaries = {
         "add": {
           "label": "添加参与者"
         }
-      }
+      },
+      "me": "我"
     }
   }
 };

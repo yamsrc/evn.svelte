@@ -233,6 +233,8 @@ inputs:
       add:
         label:
           input: Add participant
+    me:
+      input: Me
 mounts:
   iam: ../../@/iam/ui/intl
   feedback: ../../@/feedback/ui/intl

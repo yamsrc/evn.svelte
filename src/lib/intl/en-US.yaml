@@ -143,3 +143,4 @@ expenses:
     title: Add participants
     add:
       label: Add participant
+  me: Me

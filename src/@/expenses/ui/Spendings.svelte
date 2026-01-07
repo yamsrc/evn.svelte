@@ -12,6 +12,7 @@
   import { Section } from '@/app/ui'
   import { total } from '@/expenses'
   import { account } from '@/iam'
+  import { account as me } from '@/iam'
   import Amount from './Amount.svelte'
   import type { Props } from './Spendings'
   import type { Account } from '@/accounts'
@@ -30,18 +31,16 @@
 
   const participantIds = $derived(Object.keys(participants))
   const otherIds = $derived(participantIds.filter((id) => id !== $account?.id))
+  const nameClass =
+    'inline text-start flex-1 overflow-hidden text-ellipsis whitespace-nowrap font-normal'
 </script>
 
 {#snippet spendingItem(account: Account)}
+  {@const name = account?.id === $me?.id ? $dict.expenses.me : account.name}
   <div class="flex flex-nowrap items-center justify-between gap-2">
     <div class="flex items-center gap-2 flex-1 overflow-hidden">
       <Picture {account} class="size-8" />
-      <!-- TODO: Me -->
-      <div
-        class="inline text-start flex-1 overflow-hidden text-base text-ellipsis whitespace-nowrap font-normal"
-      >
-        {account.name}
-      </div>
+      <div class={nameClass}>{name}</div>
     </div>
     <Amount class="flex-1 max-w-24 shrink" bind:value={participants[account.id].amount} />
   </div>
@@ -68,9 +67,7 @@
       <div class="flex flex-col gap-2">
         <div class="flex flex-nowrap items-center justify-between gap-2">
           <div class="flex items-center gap-2 flex-1 overflow-hidden">
-            <div
-              class="inline text-start flex-1 overflow-hidden text-base text-ellipsis whitespace-nowrap font-normal"
-            >
+            <div class={nameClass}>
               {$dict.expenses.spendings.extras.title}
             </div>
           </div>

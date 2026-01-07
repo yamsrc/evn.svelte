@@ -178,5 +178,6 @@ export type Dictionary = {
             label: string
           }
         }
+        me: string
       }
     }
