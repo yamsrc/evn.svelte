@@ -59,7 +59,7 @@
 </Async>
 
 <Section class="flex items-center justify-evenly gap-2">
-  <Button size="lg" class="flex-1" onclick={addParticipants}>
+  <Button id="expenses-add-participants-add-button" size="lg" class="flex-1" onclick={addParticipants}>
     {$dict.actions.addSelected}
   </Button>
   <CreateDialog class={buttonVariants({ size: 'lg', variant: 'secondary', class: 'flex-1' })} />

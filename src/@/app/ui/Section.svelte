@@ -1,9 +1,9 @@
 <script lang="ts">
-  import type { Snippet } from 'svelte'
+  import type { Props } from './Section'
 
-  const { children, class: classes }: { children: Snippet; class?: string } = $props()
+  const { children, class: classes, id }: Props = $props()
 </script>
 
-<section class="px-5 max-w-[1440px] w-full mx-auto {classes}">
+<section {id} class="px-5 max-w-[1440px] w-full mx-auto {classes}">
   {@render children()}
 </section>

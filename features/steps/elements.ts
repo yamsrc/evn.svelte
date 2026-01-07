@@ -7,6 +7,12 @@ When('I tap {string}', async ({ page }, id) => {
   await element.click()
 })
 
+When('I clear {string}', async ({ page }, id) => {
+  const element = page.locator(`#${id}`)
+
+  await element.fill('')
+})
+
 When('I double tap {string}', async ({ page }, id) => {
   const element = page.locator(`#${id}`)
 

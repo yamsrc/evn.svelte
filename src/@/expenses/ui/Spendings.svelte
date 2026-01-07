@@ -91,7 +91,13 @@
     </Card.Content>
   </Card.Root>
 
-  <Button size="lg" variant="secondary" class="w-full" href="add/">
+  <Button
+    id="expenses-spendings-add-participants-button"
+    size="lg"
+    variant="secondary"
+    class="w-full"
+    href="add/"
+  >
     <Plus />
     {$dict.expenses.participants.add.label}
   </Button>

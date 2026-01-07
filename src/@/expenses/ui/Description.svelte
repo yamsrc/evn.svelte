@@ -10,6 +10,7 @@
 <Section class="space-y-5">
   <fieldset class="space-y-2">
     <Input
+      id="expenses-form-title-input"
       bind:value={title}
       name="title"
       required
@@ -17,6 +18,7 @@
       class="text-3xl font-bold"
     />
     <Input
+      id="expenses-form-location-input"
       bind:value={location}
       name="location"
       placeholder={$dict.expenses.form.location.placeholder}

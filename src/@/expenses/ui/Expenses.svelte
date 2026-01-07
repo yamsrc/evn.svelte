@@ -7,7 +7,7 @@
   const { expenses, search }: Props = $props()
 </script>
 
-<Section class="flex flex-col gap-1.5">
+<Section id="expenses-list" class="flex flex-col gap-1.5">
   {#each filter(expenses, search) as expense (expense.id)}
     <Expense {expense} />
   {/each}

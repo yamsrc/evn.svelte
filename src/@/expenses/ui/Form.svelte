@@ -38,7 +38,7 @@
   <Payers bind:participants={value.participants} extras={value.extras} />
 
   <Section class="flex flex-col items-center gap-2">
-    <Button type="submit" size="lg" class="w-full" disabled={busy}>
+    <Button id="expenses-form-save-button" type="submit" size="lg" class="w-full" disabled={busy}>
       {$dict.expenses.form.save}
     </Button>
     {#if balance !== 0}
