@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { TextEllipsis } from '$com/text-ellipsis'
   import { dict } from '$lib/intl'
   import { cn } from '$lib/utils'
   import * as Item from '$ui/item'
@@ -27,8 +28,7 @@
     participant.paid = paid
   }
 
-  const nameClass =
-    'inline text-start flex-1 overflow-hidden text-base text-ellipsis whitespace-nowrap font-normal'
+  const nameClass = 'text-start text-base font-normal flex-1 min-w-0'
 </script>
 
 <Item.Root variant="outline" class="flex flex-nowrap items-stretch gap-2 p-0 border-none">
@@ -43,7 +43,9 @@
   >
     {#if $me?.id === account.id}
       <div class="flex items-center gap-2 w-full">
-        <Item.Title class={nameClass}>{$dict.expenses.me}</Item.Title>
+        <Item.Title class={nameClass}>
+          <TextEllipsis>{$dict.expenses.me}</TextEllipsis>
+        </Item.Title>
         <Item.Media>
           <Picture {account} size={32} />
         </Item.Media>
@@ -53,7 +55,9 @@
         <Item.Media>
           <Picture {account} size={32} />
         </Item.Media>
-        <Item.Title class={nameClass}>{account.name}</Item.Title>
+        <Item.Title class={nameClass}>
+          <TextEllipsis>{account.name}</TextEllipsis>
+        </Item.Title>
       </div>
       {#if !(selected && split)}
         <Item.Content>

@@ -3,6 +3,7 @@
   import { Plus } from '@lucide/svelte'
   import { Async } from 'svas'
   import { Separator } from '$com/separator'
+  import { TextEllipsis } from '$com/text-ellipsis'
   import { dict } from '$lib/intl'
   import { currency } from '$lib/tools'
   import { Button } from '$ui/button'
@@ -31,25 +32,29 @@
 
   const participantIds = $derived(Object.keys(participants))
   const otherIds = $derived(participantIds.filter((id) => id !== $account?.id))
-  const nameClass =
-    'inline text-start flex-1 overflow-hidden text-ellipsis whitespace-nowrap font-normal'
+  const nameClass = 'text-start text-base font-normal flex-1 min-w-0 flex'
+  const amountClass = 'min-w-24 max-w-28 flex-1'
 </script>
 
 {#snippet spendingItem(account: Account)}
   {@const name = account?.id === $me?.id ? $dict.expenses.me : account.name}
   <div class="flex flex-nowrap items-center justify-between gap-2">
-    <div class="flex items-center gap-2 flex-1 overflow-hidden">
-      <Picture {account} class="size-8" />
-      <div class={nameClass}>{name}</div>
+    <div class="flex items-center gap-2 overflow-hidden flex-1">
+      <div class="shrink-0">
+        <Picture {account} class="size-8" />
+      </div>
+      <div class={nameClass}>
+        <TextEllipsis>{name}</TextEllipsis>
+      </div>
     </div>
-    <Amount class="flex-1 max-w-24 shrink" bind:value={participants[account.id].amount} />
+    <Amount class={amountClass} bind:value={participants[account.id].amount} />
   </div>
 {/snippet}
 
 <Section class="flex flex-col gap-1.5">
   <h2>{$dict.expenses.spendings.title}</h2>
 
-  <Card.Root class="bg-background w-full p-4">
+  <Card.Root class="bg-background p-4">
     <Card.Content class="space-y-2 p-0">
       {#if $account?.id && participants[$account.id]}
         {@render spendingItem($account)}
@@ -66,12 +71,12 @@
       <Separator />
       <div class="flex flex-col gap-2">
         <div class="flex flex-nowrap items-center justify-between gap-2">
-          <div class="flex items-center gap-2 flex-1 overflow-hidden">
+          <div class="flex items-center gap-2 overflow-hidden flex-1">
             <div class={nameClass}>
-              {$dict.expenses.spendings.extras.title}
+              <TextEllipsis>{$dict.expenses.spendings.extras.title}</TextEllipsis>
             </div>
           </div>
-          <Amount class="flex-1 max-w-24 shrink" bind:value={extras[0].amount} />
+          <Amount class={amountClass} bind:value={extras[0].amount} />
         </div>
         <div class="text-sm">{$dict.expenses.spendings.extras.description}</div>
       </div>
