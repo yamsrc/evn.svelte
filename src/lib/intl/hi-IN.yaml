@@ -139,3 +139,5 @@ expenses:
     create:
       title: नया प्रतिभागी बनाएँ
     title: प्रतिभागी जोड़ें
+    add:
+      label: प्रतिभागी जोड़ें

@@ -137,3 +137,5 @@ expenses:
     create:
       title: Unda mshiriki mpya
     title: Ongeza washiriki
+    add:
+      label: Ongeza mshiriki

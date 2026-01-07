@@ -141,3 +141,5 @@ expenses:
     create:
       title: Nieuwe deelnemer aanmaken
     title: Deelnemers toevoegen
+    add:
+      label: Deelnemer toevoegen

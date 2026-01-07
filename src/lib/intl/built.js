@@ -167,7 +167,10 @@ export const dictionaries = {
         "create": {
           "title": "إنشاء مشارك جديد"
         },
-        "title": "إضافة مشاركين"
+        "title": "إضافة مشاركين",
+        "add": {
+          "label": "إضافة مشارك"
+        }
       }
     }
   },
@@ -336,7 +339,10 @@ export const dictionaries = {
         "create": {
           "title": "Neuen Teilnehmer erstellen"
         },
-        "title": "Teilnehmer hinzufügen"
+        "title": "Teilnehmer hinzufügen",
+        "add": {
+          "label": "Teilnehmer hinzufügen"
+        }
       }
     }
   },
@@ -505,7 +511,10 @@ export const dictionaries = {
         "create": {
           "title": "Create a new participant"
         },
-        "title": "Add participants"
+        "title": "Add participants",
+        "add": {
+          "label": "Add participant"
+        }
       }
     }
   },
@@ -674,7 +683,10 @@ export const dictionaries = {
         "create": {
           "title": "Crear un nuevo participante"
         },
-        "title": "Agregar participantes"
+        "title": "Agregar participantes",
+        "add": {
+          "label": "Agregar participante"
+        }
       }
     }
   },
@@ -843,7 +855,10 @@ export const dictionaries = {
         "create": {
           "title": "Créer un nouveau participant"
         },
-        "title": "Ajouter des participants"
+        "title": "Ajouter des participants",
+        "add": {
+          "label": "Ajouter un participant"
+        }
       }
     }
   },
@@ -1012,7 +1027,10 @@ export const dictionaries = {
         "create": {
           "title": "नया प्रतिभागी बनाएँ"
         },
-        "title": "प्रतिभागी जोड़ें"
+        "title": "प्रतिभागी जोड़ें",
+        "add": {
+          "label": "प्रतिभागी जोड़ें"
+        }
       }
     }
   },
@@ -1181,7 +1199,10 @@ export const dictionaries = {
         "create": {
           "title": "Crea un nuovo partecipante"
         },
-        "title": "Aggiungi partecipanti"
+        "title": "Aggiungi partecipanti",
+        "add": {
+          "label": "Aggiungi partecipante"
+        }
       }
     }
   },
@@ -1350,7 +1371,10 @@ export const dictionaries = {
         "create": {
           "title": "新しい参加者を作成"
         },
-        "title": "参加者を追加"
+        "title": "参加者を追加",
+        "add": {
+          "label": "参加者を追加"
+        }
       }
     }
   },
@@ -1519,7 +1543,10 @@ export const dictionaries = {
         "create": {
           "title": "새 참가자 생성"
         },
-        "title": "참가자 추가"
+        "title": "참가자 추가",
+        "add": {
+          "label": "참가자 추가"
+        }
       }
     }
   },
@@ -1688,7 +1715,10 @@ export const dictionaries = {
         "create": {
           "title": "Nieuwe deelnemer aanmaken"
         },
-        "title": "Deelnemers toevoegen"
+        "title": "Deelnemers toevoegen",
+        "add": {
+          "label": "Deelnemer toevoegen"
+        }
       }
     }
   },
@@ -1857,7 +1887,10 @@ export const dictionaries = {
         "create": {
           "title": "Создать нового участника"
         },
-        "title": "Добавить участников"
+        "title": "Добавить участников",
+        "add": {
+          "label": "Добавить участника"
+        }
       }
     }
   },
@@ -2026,7 +2059,10 @@ export const dictionaries = {
         "create": {
           "title": "Создать нового участника"
         },
-        "title": "Добавить участников"
+        "title": "Добавить участников",
+        "add": {
+          "label": "Добавить участника"
+        }
       }
     }
   },
@@ -2195,7 +2231,10 @@ export const dictionaries = {
         "create": {
           "title": "Unda mshiriki mpya"
         },
-        "title": "Ongeza washiriki"
+        "title": "Ongeza washiriki",
+        "add": {
+          "label": "Ongeza mshiriki"
+        }
       }
     }
   },
@@ -2364,7 +2403,10 @@ export const dictionaries = {
         "create": {
           "title": "Yeni katılımcı oluştur"
         },
-        "title": "Katılımcı ekle"
+        "title": "Katılımcı ekle",
+        "add": {
+          "label": "Katılımcı ekle"
+        }
       }
     }
   },
@@ -2533,7 +2575,10 @@ export const dictionaries = {
         "create": {
           "title": "Створити нового учасника"
         },
-        "title": "Додати учасників"
+        "title": "Додати учасників",
+        "add": {
+          "label": "Додати учасника"
+        }
       }
     }
   },
@@ -2702,7 +2747,10 @@ export const dictionaries = {
         "create": {
           "title": "创建新参与者"
         },
-        "title": "添加参与者"
+        "title": "添加参与者",
+        "add": {
+          "label": "添加参与者"
+        }
       }
     }
   }

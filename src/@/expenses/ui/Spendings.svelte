@@ -92,6 +92,6 @@
 
   <Button size="lg" variant="secondary" class="w-full" href="add/">
     <Plus />
-    Add participant
+    {$dict.expenses.participants.add.label}
   </Button>
 </Section>

@@ -137,3 +137,5 @@ expenses:
     create:
       title: إنشاء مشارك جديد
     title: إضافة مشاركين
+    add:
+      label: إضافة مشارك

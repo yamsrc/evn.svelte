@@ -172,6 +172,9 @@ export type Dictionary = {
             title: string
           }
           title: string
+          add: {
+            label: string
+          }
         }
       }
     }

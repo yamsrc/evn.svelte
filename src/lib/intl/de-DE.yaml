@@ -143,3 +143,5 @@ expenses:
     create:
       title: Neuen Teilnehmer erstellen
     title: Teilnehmer hinzufügen
+    add:
+      label: Teilnehmer hinzufügen

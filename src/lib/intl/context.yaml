@@ -204,7 +204,7 @@ inputs:
     form:
       title:
         placeholder:
-          input: What have spent on?
+          input: What have you spent on?
       location:
         placeholder:
           input: Where? (Optional)
@@ -226,6 +226,9 @@ inputs:
           input: Create a new participant
       title:
         input: Add participants
+      add:
+        label:
+          input: Add participant
 mounts:
   iam: ../../@/iam/ui/intl
   feedback: ../../@/feedback/ui/intl

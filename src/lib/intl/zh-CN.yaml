@@ -131,3 +131,5 @@ expenses:
     create:
       title: 创建新参与者
     title: 添加参与者
+    add:
+      label: 添加参与者

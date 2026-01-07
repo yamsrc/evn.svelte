@@ -131,3 +131,5 @@ expenses:
     create:
       title: 새 참가자 생성
     title: 참가자 추가
+    add:
+      label: 참가자 추가

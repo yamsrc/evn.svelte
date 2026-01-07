@@ -139,3 +139,5 @@ expenses:
     create:
       title: Yeni katılımcı oluştur
     title: Katılımcı ekle
+    add:
+      label: Katılımcı ekle
