@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { goto } from '$app/navigation'
+  import { back } from '$com/history'
   import { NEWID } from '$lib/tools'
   import { add, update } from '@/expenses'
   import Form from './Form.svelte'
@@ -15,7 +15,7 @@
 
     if (expense instanceof Error) return expense
 
-    await goto(`/expenses/${expense.id}/`)
+    back('/expenses/')
   }
 </script>
 

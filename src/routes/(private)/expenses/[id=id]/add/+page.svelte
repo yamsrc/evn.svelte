@@ -1,9 +1,8 @@
 <script lang="ts">
   import { Async } from 'svas'
   import { SvelteSet } from 'svelte/reactivity'
-  import { goto } from '$app/navigation'
   import { page } from '$app/state'
-  import { Back } from '$com/history'
+  import { back, Back } from '$com/history'
   import { dict } from '$lib/intl'
   import { buttonVariants, Button } from '$ui/button'
   import { Section } from '@/app/ui'
@@ -41,7 +40,7 @@
       }
     })
 
-    await goto(`/expenses/${id}/`)
+    back(`/expenses/${id}/`)
   }
 </script>
 
@@ -59,7 +58,12 @@
 </Async>
 
 <Section class="flex items-center justify-evenly gap-2">
-  <Button id="expenses-add-participants-add-button" size="lg" class="flex-1" onclick={addParticipants}>
+  <Button
+    id="expenses-add-participants-add-button"
+    size="lg"
+    class="flex-1"
+    onclick={addParticipants}
+  >
     {$dict.actions.addSelected}
   </Button>
   <CreateDialog class={buttonVariants({ size: 'lg', variant: 'secondary', class: 'flex-1' })} />
