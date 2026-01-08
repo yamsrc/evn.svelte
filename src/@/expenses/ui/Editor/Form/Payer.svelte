@@ -31,12 +31,13 @@
   const nameClass = 'text-start text-base font-normal flex-1 min-w-0'
 </script>
 
-<Item.Root variant="outline" class="flex flex-nowrap items-stretch gap-2 p-0 border-none">
+<Item.Root variant="outline" class="flex flex-nowrap items-stretch gap-1.5 p-0 border-none">
   <Toggle
     variant="outline"
     class={cn(
       'h-full min-h-14 flex-1 flex flex-row justify-between items-center flex-nowrap overflow-hidden',
-      'data-[state=on]:bg-accent data-[state=on]:dark:bg-accent data-[state=on]:outline-solid data-[state=on]:outline-2 data-[state=on]:outline-muted-foreground/50',
+      'bg-input border-border',
+      'data-[state=on]:bg-accent data-[state=on]:dark:bg-accent data-[state=on]:outline-solid data-[state=on]:outline-2 data-[state=on]:outline-muted-foreground/50 px-4 data-[state=on]:border-none',
     )}
     bind:pressed={selected}
     {onPressedChange}

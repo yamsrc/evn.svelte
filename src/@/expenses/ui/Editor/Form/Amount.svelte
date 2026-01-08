@@ -17,7 +17,7 @@
   }
 </script>
 
-<InputGroup.Root class={cn('bg-input border border-border h-full', classes)}>
+<InputGroup.Root class={cn('bg-input border border-border h-full px-1', classes)}>
   <InputGroup.Input
     placeholder="0"
     type="number"
