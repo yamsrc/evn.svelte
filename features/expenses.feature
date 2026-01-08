@@ -21,13 +21,16 @@ Feature: Expenses
 
   Scenario: Add participant to expense
     Given new account
+    And new managed contact
     And new expense
     When I tap first item of 'expenses-list'
     When I tap 'expenses-spendings-add-participants-button'
-    Then path matches '/expenses/[^/]+/participants'
+    Then path matches '/expenses/editor/[^/]+/participants'
     And 'expenses-add-participants-add-button' is visible
-    When I tap 'expenses-add-participants-add-button'
-    Then path matches '/expenses/[^/]+/$'
+    When I tap first item of 'contacts-list-content'
+    And I tap 'expenses-add-participants-add-button'
+    Then path matches '/expenses/editor/[^/]+/$'
+    And 'expenses-payers-list-content' contains 2 'expenses-payer' items
 
   Scenario: Edit expense
     Given new account

@@ -10,15 +10,28 @@
   import { Contacts } from '@/contacts/ui'
   import { CreateDialog } from '@/contacts/ui'
   import { Editor } from '@/expenses/ui'
+  import { groups } from '@/groups'
+  import { Groups } from '@/groups/ui'
   import type { Participant } from '@/expenses'
 
   const ctx = Editor.getContext()
 
   let selection = new SvelteSet<string>()
+  let groupSelection = new SvelteSet<string>()
+
+  const notParticipant = (identity: string) => !(identity in ctx.value.participants)
 
   async function addParticipants() {
-    const participants = Object.fromEntries(
-      Array.from(selection).map((identity) => [identity, { amount: 0 } as Participant]),
+    const contactIds = Array.from(selection)
+
+    const groupIds = Array.from(groupSelection).flatMap(
+      (id) => $groups.find((g) => g.id === id)?.identities ?? [],
+    )
+
+    const participants: Record<string, Participant> = Object.fromEntries(
+      [...contactIds, ...groupIds]
+        .filter(notParticipant)
+        .map((identity) => [identity, { amount: 0 }]),
     )
 
     ctx.value.participants = {
@@ -36,9 +49,18 @@
   </Header.Root>
 </Section>
 
+<Async store={groups}>
+  {#snippet awaited(groups)}
+    {@const availableGroups = groups.filter(({ identities }) => identities.some(notParticipant))}
+    {#if availableGroups.length > 0}
+      <Groups title={$dict.groups.title} groups={availableGroups} bind:selection={groupSelection} />
+    {/if}
+  {/snippet}
+</Async>
+
 <Async store={contacts}>
   {#snippet awaited(contacts)}
-    {@const list = contacts.filter((c) => !(c.identity in ctx.value.participants))}
+    {@const list = contacts.filter(({ identity }) => notParticipant(identity))}
     <Contacts title={$dict.expenses.participants.title} contacts={list} bind:selection />
   {/snippet}
 </Async>

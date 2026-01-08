@@ -48,22 +48,24 @@
   }
 </script>
 
-<Section class="flex flex-col gap-1.5">
+<Section class="flex flex-col gap-1.5" id="expenses-payers-list">
   <h2>{$dict.expenses.payers.title}</h2>
-  {#each Object.keys(participants) as identity (identity)}
-    <Async store={combined(accounts.get(identity), contacts)}>
-      {#snippet awaited([account, contacts])}
-        {@const contact = contacts.find((c) => c.identity === identity)}
-        {@const selected = selection?.has(identity)}
-        <Payer
-          bind:participant={participants[identity]}
-          {account}
-          {contact}
-          {split}
-          {selected}
-          {onselect}
-        />
-      {/snippet}
-    </Async>
-  {/each}
+  <div id="expenses-payers-list-content" class="flex flex-col gap-1.5">
+    {#each Object.keys(participants) as identity (identity)}
+      <Async store={combined(accounts.get(identity), contacts)} class="expenses-payer">
+        {#snippet awaited([account, contacts])}
+          {@const contact = contacts.find((c) => c.identity === identity)}
+          {@const selected = selection?.has(identity)}
+          <Payer
+            bind:participant={participants[identity]}
+            {account}
+            {contact}
+            {split}
+            {selected}
+            {onselect}
+          />
+        {/snippet}
+      </Async>
+    {/each}
+  </div>
 </Section>
