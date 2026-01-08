@@ -25,10 +25,6 @@
     onselect?.(account.id, selected)
   }
 
-  function oninput(paid: number) {
-    participant.paid = paid
-  }
-
   const nameClass = 'text-start text-base font-normal flex-1 min-w-0'
 </script>
 
@@ -74,10 +70,6 @@
     </Panel>
   </div>
   {#if selected && split}
-    <Amount
-      class="flex-1 max-w-32 shrink min-h-14 h-full"
-      {oninput}
-      bind:value={participant.paid}
-    />
+    <Amount class="flex-1 max-w-32 shrink min-h-14 h-full" bind:value={participant.paid} />
   {/if}
 </Item.Root>
