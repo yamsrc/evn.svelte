@@ -15,9 +15,11 @@
 {:else}
   <Async store={expenses.get(id)} class="space-y-5">
     {#snippet awaited(expense)}
-      <Editor.Context value={expense}>
-        {@render children()}
-      </Editor.Context>
+      {#key id}
+        <Editor.Context value={expense}>
+          {@render children()}
+        </Editor.Context>
+      {/key}
     {/snippet}
   </Async>
 {/if}
