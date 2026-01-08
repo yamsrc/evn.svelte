@@ -35,7 +35,7 @@ async function getCredentials(idp: IDP) {
   }
 
   if (code === undefined)
-    throw new Error('Redirect flow not supported')
+    throw new Error('No authentication code received, redirect flow is not supported')
 
   const data = {
     code,
@@ -52,7 +52,7 @@ async function add(identity: string, credentials: string) {
   if (err instanceof Error)
     return err
 
-  sync()
+  void sync()
 }
 
 async function verify(credentials: string) {

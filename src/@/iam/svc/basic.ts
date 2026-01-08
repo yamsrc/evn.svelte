@@ -21,5 +21,5 @@ export async function capture(identity: string, body: net.basic.Basic): Promise<
 
   if (created instanceof Error) return created
 
-  await sync()
+  void sync()
 }

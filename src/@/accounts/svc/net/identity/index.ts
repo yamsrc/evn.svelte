@@ -1,2 +1,2 @@
 export * from './interface'
-export type { Identity } from './Identity.ts'
+export type { Identity } from './Identity'

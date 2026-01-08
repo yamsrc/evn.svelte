@@ -5,10 +5,13 @@ const win = typeof window !== 'undefined' && (window as any)
 async function apple(descriptor: Descriptor): Promise<string | Error> {
   await init(descriptor)
 
-  const response = await win.AppleID.auth.signIn().catch((err: unknown) => console.error(err))
+  const response = await win.AppleID.auth.signIn().catch((err: unknown) => err)
+
+  if (response instanceof Error)
+    return response
 
   if (!response || !response.authorization)
-    return new Error('NO_RESPONSE', { cause: response })
+    return new Error('No authentication response received', { cause: response })
 
   return response.authorization.code
 }
