@@ -8,7 +8,7 @@
   import { Editor } from '@/expenses/ui'
   import type { Context } from '@/expenses/ui/Editor/Context'
 
-  const id = $derived(page.params.id as string)
+  const id = $derived(page.params.id)
   const ctx = getContext<Context>('editor')
 </script>
 

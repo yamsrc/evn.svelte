@@ -16,7 +16,7 @@
 </script>
 
 <Button
-  href={`/expenses/${expense.id}/`}
+  href={`/expenses/editor/${expense.id}/`}
   variant="outline"
   class="px-4 py-3 h-fit flex flex-col gap-3 font-normal"
 >

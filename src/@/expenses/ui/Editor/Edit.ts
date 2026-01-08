@@ -1,6 +1,6 @@
 import type { Value } from './Context'
 
 export interface Props {
-  id: string
+  id?: string
   value: Value
 }
