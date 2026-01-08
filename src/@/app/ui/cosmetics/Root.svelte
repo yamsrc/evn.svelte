@@ -11,6 +11,6 @@
   const { class: classes, children, ...restProps }: Props = $props()
 </script>
 
-<div class={cn('space-y-6', classes)} role="group" {...restProps}>
+<div class={cn('space-y-5', classes)} role="group" {...restProps}>
   {@render children()}
 </div>

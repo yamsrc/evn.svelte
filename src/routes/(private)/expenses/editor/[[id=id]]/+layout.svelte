@@ -13,7 +13,7 @@
     {@render children()}
   </Editor.Context>
 {:else}
-  <Async store={expenses.get(id)}>
+  <Async store={expenses.get(id)} class="space-y-5">
     {#snippet awaited(expense)}
       <Editor.Context value={expense}>
         {@render children()}

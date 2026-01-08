@@ -34,7 +34,7 @@
   }
 </script>
 
-<Async store={combined(groups, contacts)} class="flex flex-col gap-5">
+<Async store={combined(groups, contacts)} class="space-y-5">
   {#snippet awaited([groups, contacts])}
     {@const group = groups.find((g) => g.id === id)}
     {#if group}
