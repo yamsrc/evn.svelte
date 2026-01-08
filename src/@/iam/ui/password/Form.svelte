@@ -7,6 +7,9 @@
   import * as iam from '@/iam'
   import { dict } from '@/iam/ui/intl'
   import Password from './Password.svelte'
+  import type { Props } from './Form'
+
+  const { account }: Props = $props()
 
   let busy = $state(false)
   let username = $state('')
@@ -26,7 +29,10 @@
   async function basic() {
     busy = true
 
-    const result = await iam.basic(username, password)
+    const result =
+      account === undefined
+        ? await iam.basic.verify(username, password)
+        : await iam.basic.capture(account.id, { username, password })
 
     busy = false
 
@@ -36,7 +42,8 @@
   async function sendOTP() {
     busy = true
 
-    const response = await iam.otp.send(username)
+    const response =
+      account === undefined ? await iam.otp.send(username) : await iam.otp.add(account.id, username)
 
     busy = false
 

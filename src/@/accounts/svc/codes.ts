@@ -14,7 +14,7 @@ export async function create(id: string): Promise<string | Error> {
 
 export async function verify(identity: string, code: string): Promise<boolean | Error> {
   const challenge = btoa(`${identity}:${code}`)
-  const echo = await net.echo.get(`OTP ${challenge}`)
+  const echo = await net.identity.get(`OTP ${challenge}`)
 
   if (echo instanceof Error)
     return echo

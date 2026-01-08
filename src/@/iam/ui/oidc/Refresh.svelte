@@ -1,11 +1,11 @@
 <script lang="ts">
   import { dict } from '@/iam/ui/intl'
   import Button from './Button.svelte'
-  import type { IDP } from '@/iam'
+  import type { oidc } from '@/iam'
 
-  const { idp }: { idp: IDP } = $props()
+  const { idp }: { idp: oidc.IDP } = $props()
 
-  const names: Record<IDP, string> = {
+  const names: Record<oidc.IDP, string> = {
     google: 'Google',
     apple: 'Apple',
   }
