@@ -8,7 +8,7 @@ export function track(nav: AfterNavigate) {
   history.update((stack) => {
     if (nav.to === null) return stack
 
-    const url = nav.to.url.pathname + nav.to.url.search + nav.to.url.hash
+    const url = path(nav.to.url)
 
     const delta = nav.delta ?? 1
 
@@ -21,11 +21,16 @@ export function track(nav: AfterNavigate) {
   })
 }
 
-export function back(href: string) {
+export async function back(href: string) {
   const stack = get(history)
   const previous = stack[stack.length - 2] // [..., prev, current]
-  const back = previous === href
+  const target = path(new URL(href, window.location.href))
+  const back = previous === target
 
   if (back) window.history.back()
-  else goto(href)
+  else await goto(href)
+}
+
+function path(url: URL): string {
+  return url.pathname + url.search + url.hash
 }

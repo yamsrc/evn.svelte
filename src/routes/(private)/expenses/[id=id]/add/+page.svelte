@@ -2,8 +2,7 @@
   import { Async } from 'svas'
   import { getContext } from 'svelte'
   import { SvelteSet } from 'svelte/reactivity'
-  import { goto } from '$app/navigation'
-  import { Back } from '$com/history'
+  import { back, Back } from '$com/history'
   import { dict } from '$lib/intl'
   import { buttonVariants, Button } from '$ui/button'
   import { Section } from '@/app/ui'
@@ -28,7 +27,7 @@
       ...participants,
     }
 
-    await goto('..')
+    await back('..')
   }
 </script>
 
