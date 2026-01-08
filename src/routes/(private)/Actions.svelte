@@ -20,7 +20,7 @@
   <DropdownMenu.Root>
     <DropdownMenu.Trigger
       id="nav-actions-button"
-      class={cn(buttonVariants({ size: 'icon' }), 'size-12 rounded-xl')}
+      class={cn(buttonVariants({ size: 'icon' }), 'size-12')}
     >
       <Plus class="size-5" />
     </DropdownMenu.Trigger>
