@@ -2,11 +2,11 @@
   import { back } from '$com/history'
   import { NEWID } from '$lib/tools'
   import { add, update } from '@/expenses'
-  import Form from './Form.svelte'
+  import { Form } from './Form'
+  import type { Value } from './Context'
   import type { Props } from './Edit'
-  import type { Value } from './Form'
 
-  let { id, draft = $bindable() }: Props = $props()
+  let { id, value = $bindable() }: Props = $props()
 
   const isNew = $derived(id === NEWID)
 
@@ -19,6 +19,4 @@
   }
 </script>
 
-{#if draft?.value}
-  <Form bind:value={draft.value} {onsubmit} />
-{/if}
+<Form bind:value {onsubmit} />

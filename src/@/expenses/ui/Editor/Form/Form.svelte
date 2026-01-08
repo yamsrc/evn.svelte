@@ -12,10 +12,10 @@
   import Spendings from './Spendings.svelte'
   import type { Props, Value } from './Form'
 
-  let { value = $bindable<Value>(), onsubmit: onSubmit }: Props = $props()
+  const { value = $bindable<Value>(), onsubmit: onSubmit }: Props = $props()
+  const balance = $derived(owe(value.participants, $account?.id))
 
   let busy = $state(false)
-  const balance = $derived(owe(value.participants, $account?.id))
 
   async function submit() {
     busy = true

@@ -1,8 +1,9 @@
 <script lang="ts">
   import { Async } from 'svas'
+  import { getContext } from 'svelte'
   import { SvelteSet } from 'svelte/reactivity'
-  import { page } from '$app/state'
-  import { back, Back } from '$com/history'
+  import { goto } from '$app/navigation'
+  import { Back } from '$com/history'
   import { dict } from '$lib/intl'
   import { buttonVariants, Button } from '$ui/button'
   import { Section } from '@/app/ui'
@@ -10,49 +11,36 @@
   import { contacts } from '@/contacts'
   import { Contacts } from '@/contacts/ui'
   import { CreateDialog } from '@/contacts/ui'
-  import { draft } from '@/expenses/ui'
   import type { Participant } from '@/expenses'
+  import type { Context } from '@/expenses/ui/Editor/Context'
 
-  const id = $derived(page.params.id as string)
+  const ctx = getContext<Context>('editor')
 
-  // svelte-ignore non_reactive_update
   let selection = new SvelteSet<string>()
 
   async function addParticipants() {
-    if (!$draft) return
-
     const participants = Object.fromEntries(
       Array.from(selection).map((identity) => [identity, { amount: 0 } as Participant]),
     )
 
-    draft.update((d) => {
-      if (!d) return d
+    ctx.value.participants = {
+      ...ctx.value.participants,
+      ...participants,
+    }
 
-      return {
-        ...d,
-        value: {
-          ...d.value,
-          participants: {
-            ...d.value.participants,
-            ...participants,
-          },
-        },
-      }
-    })
-
-    back(`/expenses/${id}/`)
+    await goto('..')
   }
 </script>
 
 <Section>
   <Header.Root>
-    <Back href={`/expenses/${id}/`}>{$draft?.value.title || $dict.expenses.title}</Back>
+    <Back href="..">{ctx.value.title || $dict.expenses.title}</Back>
   </Header.Root>
 </Section>
 
 <Async store={contacts}>
   {#snippet awaited(contacts)}
-    {@const list = contacts.filter((c) => !(c.identity in ($draft?.value.participants ?? {})))}
+    {@const list = contacts.filter((c) => !(c.identity in ctx.value.participants))}
     <Contacts title={$dict.expenses.participants.title} contacts={list} bind:selection />
   {/snippet}
 </Async>

@@ -1,13 +1,15 @@
 <script lang="ts">
+  import { getContext } from 'svelte'
   import { page } from '$app/state'
   import { Back } from '$com/history'
   import { dict } from '$lib/intl'
   import { Section } from '@/app/ui'
   import { Header } from '@/app/ui'
-  import { Edit } from '@/expenses/ui'
-  import { draft } from '@/expenses/ui'
+  import { Editor } from '@/expenses/ui'
+  import type { Context } from '@/expenses/ui/Editor/Context'
 
   const id = $derived(page.params.id as string)
+  const ctx = getContext<Context>('editor')
 </script>
 
 <Section>
@@ -16,6 +18,4 @@
   </Header.Root>
 </Section>
 
-{#if $draft}
-  <Edit {id} bind:draft={$draft} />
-{/if}
+<Editor.Edit {id} bind:value={ctx.value} />
