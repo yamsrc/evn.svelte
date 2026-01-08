@@ -1,9 +1,9 @@
-import type { Participant } from './net'
+import type { Extra, Participant } from './net'
 
-export function owe(participants: Record<string, Participant>, id?: string) {
+export function owe(participants: Record<string, Participant>, extras: Extra[], id?: string) {
   if (!id) return 0
 
   const { paid = 0, amount = 0 } = participants[id]
 
-  return paid - amount
+  return paid - amount - (extras[0]?.amount ?? 0) / Object.keys(participants).length
 }

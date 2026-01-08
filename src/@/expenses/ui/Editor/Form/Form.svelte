@@ -13,7 +13,7 @@
   import type { Props, Value } from './Form'
 
   const { value = $bindable<Value>(), onsubmit: onSubmit }: Props = $props()
-  const balance = $derived(owe(value.participants, $account?.id))
+  const balance = $derived(owe(value.participants, value.extras, $account?.id))
 
   let busy = $state(false)
 

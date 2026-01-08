@@ -1,5 +1,5 @@
 export interface Props {
-  value: number
+  value?: number
   class?: string
   oninput?: (value: number) => void
 }

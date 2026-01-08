@@ -21,7 +21,7 @@
   <InputGroup.Input
     placeholder="0"
     type="number"
-    value={value > 0 ? currency(value) : null}
+    value={value !== undefined && value > 0 ? currency(value) : null}
     {oninput}
     min={0}
     step="0.01"

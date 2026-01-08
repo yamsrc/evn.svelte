@@ -45,6 +45,9 @@
         </div>
       {/if}
     </div>
-    <Balance balance={owe(expense.participants, $account?.id)} class="flex-col-reverse items-end" />
+    <Balance
+      balance={owe(expense.participants, expense.extras, $account?.id)}
+      class="flex-col-reverse items-end"
+    />
   </div>
 </Button>

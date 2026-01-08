@@ -77,7 +77,7 @@
     <Amount
       class="flex-1 max-w-32 shrink min-h-14 h-full"
       {oninput}
-      value={participant.paid ?? 0}
+      bind:value={participant.paid}
     />
   {/if}
 </Item.Root>
