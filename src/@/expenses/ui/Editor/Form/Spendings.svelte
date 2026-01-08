@@ -96,7 +96,7 @@
     size="lg"
     variant="secondary"
     class="w-full"
-    href="add/"
+    href="participants/"
   >
     <Plus />
     {$dict.expenses.participants.add.label}

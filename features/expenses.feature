@@ -24,7 +24,7 @@ Feature: Expenses
     And new expense
     When I tap first item of 'expenses-list'
     When I tap 'expenses-spendings-add-participants-button'
-    Then path matches '/expenses/[^/]+/add'
+    Then path matches '/expenses/[^/]+/participants'
     And 'expenses-add-participants-add-button' is visible
     When I tap 'expenses-add-participants-add-button'
     Then path matches '/expenses/[^/]+/$'
