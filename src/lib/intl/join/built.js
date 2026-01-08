@@ -23,6 +23,15 @@ export const dictionaries = {
     "actions": {
       "discard": "تجاهل",
       "close": "إغلاق"
+    },
+    "friends": {
+      "app": {
+        "description": "الطريقة الذكية لمتابعة من مدين لمن، مع الأصدقاء معاً."
+      },
+      "inviter": {
+        "description": (name) => `لقد تمت دعوتك من قبل ${name}. فقط سجّل أو قم بتسجيل الدخول، وستكون جاهزًا!`
+      },
+      "accept": "ابدأ استخدام Evn"
     }
   },
   "de-DE": {
@@ -46,6 +55,15 @@ export const dictionaries = {
     "actions": {
       "discard": "Ablehnen",
       "close": "Schließen"
+    },
+    "friends": {
+      "app": {
+        "description": "Die clevere Art, gemeinsam mit Freunden zu verfolgen, wer wem etwas schuldet."
+      },
+      "inviter": {
+        "description": (name) => `${name} hat dich eingeladen. Registriere dich einfach oder melde dich an und schon kann es losgehen!`
+      },
+      "accept": "Evn jetzt nutzen"
     }
   },
   "en-US": {
@@ -69,6 +87,15 @@ export const dictionaries = {
     "actions": {
       "discard": "Discard",
       "close": "Close"
+    },
+    "friends": {
+      "app": {
+        "description": "The smart way to track who owes whom, together with friends."
+      },
+      "inviter": {
+        "description": (name) => `You have been invited by ${name}. Just register or log in, and you’re all set`
+      },
+      "accept": "Start Using Evn"
     }
   },
   "es-ES": {
@@ -92,6 +119,15 @@ export const dictionaries = {
     "actions": {
       "discard": "Descartar",
       "close": "Cerrar"
+    },
+    "friends": {
+      "app": {
+        "description": "La forma inteligente de llevar un registro de quién debe a quién, junto a tus amigos."
+      },
+      "inviter": {
+        "description": (name) => `Has sido invitado por ${name}. Solo regístrate o inicia sesión, ¡y listo!`
+      },
+      "accept": "Comienza a usar Evn"
     }
   },
   "fr-FR": {
@@ -115,6 +151,15 @@ export const dictionaries = {
     "actions": {
       "discard": "Ignorer",
       "close": "Fermer"
+    },
+    "friends": {
+      "app": {
+        "description": "La façon intelligente de suivre qui doit quoi à qui, ensemble avec des amis."
+      },
+      "inviter": {
+        "description": (name) => `Vous avez été invité par ${name}. Inscrivez-vous ou connectez-vous, et tout est prêt !`
+      },
+      "accept": "Commencer à utiliser Evn"
     }
   },
   "hi-IN": {
@@ -138,6 +183,15 @@ export const dictionaries = {
     "actions": {
       "discard": "अस्वीकार करें",
       "close": "बंद करें"
+    },
+    "friends": {
+      "app": {
+        "description": "दोस्तों के साथ मिलकर यह जानने का स्मार्ट तरीका कि किसका किस पर कितना बकाया है।"
+      },
+      "inviter": {
+        "description": (name) => `${name} ने आपको आमंत्रित किया है। बस रजिस्टर करें या लॉग इन करें, और आप तैयार हैं!`
+      },
+      "accept": "Evn का उपयोग शुरू करें"
     }
   },
   "it-IT": {
@@ -161,6 +215,15 @@ export const dictionaries = {
     "actions": {
       "discard": "Rifiuta",
       "close": "Chiudi"
+    },
+    "friends": {
+      "app": {
+        "description": "Il modo intelligente per tenere traccia di chi deve cosa a chi, insieme agli amici."
+      },
+      "inviter": {
+        "description": (name) => `Sei stato invitato da ${name}. Registrati o accedi, ed è tutto pronto!`
+      },
+      "accept": "Inizia a usare Evn"
     }
   },
   "ja-JP": {
@@ -184,6 +247,15 @@ export const dictionaries = {
     "actions": {
       "discard": "破棄",
       "close": "閉じる"
+    },
+    "friends": {
+      "app": {
+        "description": "友達と一緒に、誰が誰にいくら借りているかをスマートに管理する方法。"
+      },
+      "inviter": {
+        "description": (name) => `${name}さんから招待されています。登録またはログインするだけで、すぐにご利用いただけます。`
+      },
+      "accept": "Evn を使い始める"
     }
   },
   "ko-KR": {
@@ -207,6 +279,15 @@ export const dictionaries = {
     "actions": {
       "discard": "버리기",
       "close": "닫기"
+    },
+    "friends": {
+      "app": {
+        "description": "친구들과 함께 누가 누구에게 얼마를 빚졌는지 스마트하게 관리하는 방법."
+      },
+      "inviter": {
+        "description": (name) => `${name}님이 초대하셨습니다. 가입하거나 로그인하면 바로 시작할 수 있어요!`
+      },
+      "accept": "Evn 시작하기"
     }
   },
   "nl-NL": {
@@ -230,6 +311,15 @@ export const dictionaries = {
     "actions": {
       "discard": "Afwijzen",
       "close": "Sluiten"
+    },
+    "friends": {
+      "app": {
+        "description": "De slimme manier om samen met vrienden bij te houden wie wat aan wie verschuldigd is."
+      },
+      "inviter": {
+        "description": (name) => `Je bent uitgenodigd door ${name}. Registreer je of log in, en je bent klaar om te beginnen!`
+      },
+      "accept": "Begin met het gebruik van Evn"
     }
   },
   "ru-FU": {
@@ -253,6 +343,15 @@ export const dictionaries = {
     "actions": {
       "discard": "Забить хуй",
       "close": "Закрыть"
+    },
+    "friends": {
+      "app": {
+        "description": "Умный способ вместе с друзьями отслеживать, кто кому что должен."
+      },
+      "inviter": {
+        "description": (name) => `Вас пригласил(а) ${name}. Просто зарегистрируйтесь или войдите — и всё готово!`
+      },
+      "accept": "Начать использовать Evn"
     }
   },
   "ru-RU": {
@@ -276,6 +375,15 @@ export const dictionaries = {
     "actions": {
       "discard": "Отклонить",
       "close": "Закрыть"
+    },
+    "friends": {
+      "app": {
+        "description": "Умный способ вместе с друзьями отслеживать, кто кому сколько должен."
+      },
+      "inviter": {
+        "description": (name) => `Вас пригласил(а) ${name}. Просто зарегистрируйтесь или войдите — и всё готово!`
+      },
+      "accept": "Начать пользоваться Evn"
     }
   },
   "sw-TZ": {
@@ -299,6 +407,15 @@ export const dictionaries = {
     "actions": {
       "discard": "Tupa mbali",
       "close": "Funga"
+    },
+    "friends": {
+      "app": {
+        "description": "Njia bora ya kufuatilia nani anamdai nani, ukiwa pamoja na marafiki."
+      },
+      "inviter": {
+        "description": (name) => `Umealikwa na ${name}. Jisajili au ingia tu, na uko tayari kuanza!`
+      },
+      "accept": "Anza kutumia Evn"
     }
   },
   "tr-TR": {
@@ -322,6 +439,15 @@ export const dictionaries = {
     "actions": {
       "discard": "Reddet",
       "close": "Kapat"
+    },
+    "friends": {
+      "app": {
+        "description": "Kim kime ne borçlu, arkadaşlarınla birlikte takip etmenin akıllı yolu."
+      },
+      "inviter": {
+        "description": (name) => `${name} tarafından davet edildiniz. Sadece kaydolun veya giriş yapın, hazırsınız!`
+      },
+      "accept": "Evn’i kullanmaya başla"
     }
   },
   "uk-UA": {
@@ -345,6 +471,15 @@ export const dictionaries = {
     "actions": {
       "discard": "Відхилити",
       "close": "Закрити"
+    },
+    "friends": {
+      "app": {
+        "description": "Розумний спосіб разом із друзями відстежувати, хто кому винен."
+      },
+      "inviter": {
+        "description": (name) => `Вас запросив(ла) ${name}. Просто зареєструйтеся або увійдіть — і все готово!`
+      },
+      "accept": "Почати користуватися Evn"
     }
   },
   "zh-CN": {
@@ -368,6 +503,15 @@ export const dictionaries = {
     "actions": {
       "discard": "丢弃",
       "close": "关闭"
+    },
+    "friends": {
+      "app": {
+        "description": "与朋友们一起，智能记录谁欠谁的钱。"
+      },
+      "inviter": {
+        "description": (name) => `您已被${name}邀请。只需注册或登录，您就可以开始了！`
+      },
+      "accept": "开始使用 Evn"
     }
   }
 };

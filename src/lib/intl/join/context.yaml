@@ -36,3 +36,15 @@ inputs:
     close:
       input: Close
       context: button label (close dialog)
+  friends:
+    app:
+      description:
+        input: The smart way to track who owes whom, together with friends.
+    inviter:
+      description:
+        input: |2-
+
+                (name) => `You have been invited by ${name}. Just register or log in, and
+                you’re all set`
+    accept:
+      input: Start Using Evn
