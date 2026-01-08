@@ -2,11 +2,11 @@ import type { Snippet } from 'svelte'
 
 export function context(value?: Value): Context {
   return {
-    value: value ? extract(value) : blank(),
+    value: value ? exact(value) : blank(),
   }
 }
 
-function extract(value: Value): Value {
+function exact(value: Value): Value {
   return {
     title: value.title,
     location: value.location,
