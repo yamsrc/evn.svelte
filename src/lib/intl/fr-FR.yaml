@@ -146,3 +146,7 @@ expenses:
     add:
       label: Ajouter un participant
   me: Moi
+  empty:
+    title: Aucune dépense pour l’instant
+    description: Créez votre première dépense pour commencer à suivre
+    create: Créer une dépense

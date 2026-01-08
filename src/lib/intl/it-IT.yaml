@@ -148,3 +148,7 @@ expenses:
     add:
       label: Aggiungi partecipante
   me: Io
+  empty:
+    title: Nessuna spesa ancora
+    description: Crea la tua prima spesa per iniziare a tenere traccia
+    create: Crea spesa

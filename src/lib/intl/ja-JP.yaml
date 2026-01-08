@@ -136,3 +136,7 @@ expenses:
     add:
       label: 参加者を追加
   me: 私
+  empty:
+    title: まだ支出がありません
+    description: 最初の支出を作成して、記録を始めましょう
+    create: 支出を作成

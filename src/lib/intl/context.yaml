@@ -213,6 +213,13 @@ inputs:
     title:
       input: Evns
       context: Use Evns for english. In other languages use short word with meaning settle up debts after spliting recipt
+    empty:
+      title:
+        input: No expenses yet
+      description:
+        input: Create your first expense to start tracking
+      create:
+        input: Create expense
     balance:
       total:
         input: Total bill

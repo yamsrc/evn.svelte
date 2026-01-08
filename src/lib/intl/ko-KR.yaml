@@ -136,3 +136,7 @@ expenses:
     add:
       label: 참가자 추가
   me: 나
+  empty:
+    title: 아직 지출이 없습니다
+    description: 첫 번째 지출을 추가하여 추적을 시작하세요
+    create: 지출 생성

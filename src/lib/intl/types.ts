@@ -179,5 +179,10 @@ export type Dictionary = {
           }
         }
         me: string
+        empty: {
+          title: string
+          description: string
+          create: string
+        }
       }
     }

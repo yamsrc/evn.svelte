@@ -144,3 +144,7 @@ expenses:
     add:
       label: Katılımcı ekle
   me: Ben
+  empty:
+    title: Henüz gider yok
+    description: Takibe başlamak için ilk giderini oluştur
+    create: Gider oluştur

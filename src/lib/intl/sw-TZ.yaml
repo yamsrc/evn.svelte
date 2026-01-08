@@ -142,3 +142,7 @@ expenses:
     add:
       label: Ongeza mshiriki
   me: Mimi
+  empty:
+    title: Hakuna matumizi bado
+    description: Unda matumizi yako ya kwanza ili kuanza kufuatilia
+    create: Unda gharama

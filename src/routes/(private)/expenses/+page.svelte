@@ -5,7 +5,8 @@
   import { Section } from '@/app/ui'
   import { Header } from '@/app/ui'
   import { expenses } from '@/expenses'
-  import { Expenses } from '@/expenses/ui'
+  import { Expenses, Create } from '@/expenses/ui'
+  import { account } from '@/iam'
 
   let search = $state('')
 </script>
@@ -15,12 +16,20 @@
     <Header.Title>{$dict.expenses.title}</Header.Title>
   </Header.Root>
 </Section>
-<Section>
-  <Input type="text" placeholder={$dict.actions.search} bind:value={search} />
-</Section>
 
-<Async store={expenses}>
+<Async store={expenses} class="flex-1 flex flex-col space-y-5">
   {#snippet awaited(expenses)}
-    <Expenses {expenses} {search} />
+    {#if expenses.length}
+      <Section>
+        <Input type="text" placeholder={$dict.actions.search} bind:value={search} />
+      </Section>
+      <Expenses {expenses} {search} />
+    {:else if $account}
+      <Section class="m-auto flex flex-col items-center justify-center gap-2">
+        <h2>{$dict.expenses.empty.title}</h2>
+        <p>{$dict.expenses.empty.description}</p>
+        <Create />
+      </Section>
+    {/if}
   {/snippet}
 </Async>

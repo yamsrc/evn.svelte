@@ -174,7 +174,12 @@ export const dictionaries = {
           "label": "إضافة مشارك"
         }
       },
-      "me": "أنا"
+      "me": "أنا",
+      "empty": {
+        "title": "لا توجد مصروفات بعد",
+        "description": "أنشئ أول مصروفك لبدء التتبع",
+        "create": "إنشاء مصروف"
+      }
     }
   },
   "de-DE": {
@@ -349,7 +354,12 @@ export const dictionaries = {
           "label": "Teilnehmer hinzufügen"
         }
       },
-      "me": "Ich"
+      "me": "Ich",
+      "empty": {
+        "title": "Noch keine Ausgaben",
+        "description": "Erstelle deine erste Ausgabe, um mit dem Verfolgen zu beginnen",
+        "create": "Ausgabe erstellen"
+      }
     }
   },
   "en-US": {
@@ -508,6 +518,11 @@ export const dictionaries = {
         "save": "Save and update balances"
       },
       "title": "Evns",
+      "empty": {
+        "title": "No expenses yet",
+        "description": "Create your first expense to start tracking",
+        "create": "Create expense"
+      },
       "balance": {
         "total": "Total bill",
         "youAreOwed": "You are owed",
@@ -699,7 +714,12 @@ export const dictionaries = {
           "label": "Agregar participante"
         }
       },
-      "me": "Yo"
+      "me": "Yo",
+      "empty": {
+        "title": "Aún no hay gastos",
+        "description": "Crea tu primer gasto para empezar a realizar un seguimiento",
+        "create": "Crear gasto"
+      }
     }
   },
   "fr-FR": {
@@ -874,7 +894,12 @@ export const dictionaries = {
           "label": "Ajouter un participant"
         }
       },
-      "me": "Moi"
+      "me": "Moi",
+      "empty": {
+        "title": "Aucune dépense pour l’instant",
+        "description": "Créez votre première dépense pour commencer à suivre",
+        "create": "Créer une dépense"
+      }
     }
   },
   "hi-IN": {
@@ -1049,7 +1074,12 @@ export const dictionaries = {
           "label": "प्रतिभागी जोड़ें"
         }
       },
-      "me": "मैं"
+      "me": "मैं",
+      "empty": {
+        "title": "अभी तक कोई खर्च नहीं",
+        "description": "ट्रैकिंग शुरू करने के लिए अपना पहला खर्च दर्ज करें",
+        "create": "व्यय बनाएं"
+      }
     }
   },
   "it-IT": {
@@ -1224,7 +1254,12 @@ export const dictionaries = {
           "label": "Aggiungi partecipante"
         }
       },
-      "me": "Io"
+      "me": "Io",
+      "empty": {
+        "title": "Nessuna spesa ancora",
+        "description": "Crea la tua prima spesa per iniziare a tenere traccia",
+        "create": "Crea spesa"
+      }
     }
   },
   "ja-JP": {
@@ -1399,7 +1434,12 @@ export const dictionaries = {
           "label": "参加者を追加"
         }
       },
-      "me": "私"
+      "me": "私",
+      "empty": {
+        "title": "まだ支出がありません",
+        "description": "最初の支出を作成して、記録を始めましょう",
+        "create": "支出を作成"
+      }
     }
   },
   "ko-KR": {
@@ -1574,7 +1614,12 @@ export const dictionaries = {
           "label": "참가자 추가"
         }
       },
-      "me": "나"
+      "me": "나",
+      "empty": {
+        "title": "아직 지출이 없습니다",
+        "description": "첫 번째 지출을 추가하여 추적을 시작하세요",
+        "create": "지출 생성"
+      }
     }
   },
   "nl-NL": {
@@ -1749,7 +1794,12 @@ export const dictionaries = {
           "label": "Deelnemer toevoegen"
         }
       },
-      "me": "Ik"
+      "me": "Ik",
+      "empty": {
+        "title": "Nog geen uitgaven",
+        "description": "Maak je eerste uitgave aan om het bijhouden te starten",
+        "create": "Uitgave aanmaken"
+      }
     }
   },
   "ru-FU": {
@@ -1924,7 +1974,12 @@ export const dictionaries = {
           "label": "Добавить участника"
         }
       },
-      "me": "Я"
+      "me": "Я",
+      "empty": {
+        "title": "Пока что расходов нет",
+        "description": "Создайте первый расход, чтобы начать отслеживание",
+        "create": "Создать расход"
+      }
     }
   },
   "ru-RU": {
@@ -2099,7 +2154,12 @@ export const dictionaries = {
           "label": "Добавить участника"
         }
       },
-      "me": "Я"
+      "me": "Я",
+      "empty": {
+        "title": "Пока нет расходов",
+        "description": "Создайте первый расход, чтобы начать отслеживание",
+        "create": "Создать расход"
+      }
     }
   },
   "sw-TZ": {
@@ -2274,7 +2334,12 @@ export const dictionaries = {
           "label": "Ongeza mshiriki"
         }
       },
-      "me": "Mimi"
+      "me": "Mimi",
+      "empty": {
+        "title": "Hakuna matumizi bado",
+        "description": "Unda matumizi yako ya kwanza ili kuanza kufuatilia",
+        "create": "Unda gharama"
+      }
     }
   },
   "tr-TR": {
@@ -2449,7 +2514,12 @@ export const dictionaries = {
           "label": "Katılımcı ekle"
         }
       },
-      "me": "Ben"
+      "me": "Ben",
+      "empty": {
+        "title": "Henüz gider yok",
+        "description": "Takibe başlamak için ilk giderini oluştur",
+        "create": "Gider oluştur"
+      }
     }
   },
   "uk-UA": {
@@ -2624,7 +2694,12 @@ export const dictionaries = {
           "label": "Додати учасника"
         }
       },
-      "me": "Я"
+      "me": "Я",
+      "empty": {
+        "title": "Поки що немає витрат",
+        "description": "Створіть свою першу витрату, щоб почати відстеження",
+        "create": "Створити витрату"
+      }
     }
   },
   "zh-CN": {
@@ -2799,7 +2874,12 @@ export const dictionaries = {
           "label": "添加参与者"
         }
       },
-      "me": "我"
+      "me": "我",
+      "empty": {
+        "title": "暂无支出",
+        "description": "创建您的第一笔支出以开始记录",
+        "create": "创建支出"
+      }
     }
   }
 };
