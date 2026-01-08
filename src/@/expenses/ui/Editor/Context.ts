@@ -21,8 +21,8 @@ function exact(value: Value): Value {
   return {
     title: value.title,
     location: value.location,
-    participants: value.participants,
-    extras: value.extras,
+    participants: structuredClone(value.participants),
+    extras: structuredClone(value.extras),
   }
 }
 
