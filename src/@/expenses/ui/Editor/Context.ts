@@ -1,6 +1,17 @@
+import { getContext as svelteGetContext, setContext as svelteSetContext } from 'svelte'
 import type { Snippet } from 'svelte'
 
-export function context(value?: Value): Context {
+const CONTEXT = Symbol('editor')
+
+export function setContext(ctx: Context): void {
+  svelteSetContext(CONTEXT, ctx)
+}
+
+export function getContext(): Context {
+  return svelteGetContext(CONTEXT)
+}
+
+export function createContext(value?: Value): Context {
   return {
     value: value ? exact(value) : blank(),
   }

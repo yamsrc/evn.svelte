@@ -1,6 +1,5 @@
 <script lang="ts">
   import { Async } from 'svas'
-  import { getContext } from 'svelte'
   import { SvelteSet } from 'svelte/reactivity'
   import { back, Back } from '$com/history'
   import { dict } from '$lib/intl'
@@ -10,10 +9,10 @@
   import { contacts } from '@/contacts'
   import { Contacts } from '@/contacts/ui'
   import { CreateDialog } from '@/contacts/ui'
+  import { Editor } from '@/expenses/ui'
   import type { Participant } from '@/expenses'
-  import type { Context } from '@/expenses/ui/Editor/Context'
 
-  const ctx = getContext<Context>('editor')
+  const ctx = Editor.getContext()
 
   let selection = new SvelteSet<string>()
 
