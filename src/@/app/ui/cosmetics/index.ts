@@ -8,23 +8,13 @@ import Root from './Root.svelte'
 
 export type { Props, Value } from './Cosmetics'
 
-// Export compound components
 export {
+  Cosmetics,
+
   Root,
   Content,
   Picture,
   Name,
   Note,
   Actions,
-  //
-  Root as CosmeticsRoot,
-  Content as CosmeticsContent,
-  Picture as CosmeticsPicture,
-  Name as CosmeticsName,
-  Note as CosmeticsNote,
-  Actions as CosmeticsActions,
 }
-
-// Export default Cosmetics component
-export default Cosmetics
-export { Cosmetics }
