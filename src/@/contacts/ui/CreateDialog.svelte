@@ -56,8 +56,10 @@
       </Dialog.Title>
     </Dialog.Header>
     <Cosmetics.Root>
-      <Cosmetics.Picture bind:id={picture} onchange={onPictureChange} />
-      <Cosmetics.Name bind:value={name} bind:busy onchange={submit} />
+      <Cosmetics.Content>
+        <Cosmetics.Picture bind:id={picture} onchange={onPictureChange} />
+        <Cosmetics.Name bind:value={name} bind:busy onchange={submit} />
+      </Cosmetics.Content>
       <Dialog.Footer>
         <Cosmetics.Actions class="w-full flex gap-2">
           <Dialog.Close
