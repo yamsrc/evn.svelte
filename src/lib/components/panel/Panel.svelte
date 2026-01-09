@@ -41,7 +41,7 @@
     <div class="w-full shrink-0 snap-start z-10">
       <Button
         class={cn(
-          'w-full max-w-full flex items-center justify-between gap-2 text-base',
+          'w-full max-w-full flex items-center justify-between gap-2 text-base font-normal',
           h || 'h-auto',
           classes,
           {

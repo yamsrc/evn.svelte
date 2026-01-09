@@ -183,6 +183,9 @@ inputs:
       link:
         input: Delete account
         context: link text
+  favorites:
+    title:
+      input: Favorites
 mounts:
   iam: ../../@/iam/ui/intl
   feedback: ../../@/feedback/ui/intl

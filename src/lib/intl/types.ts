@@ -138,4 +138,7 @@ export type Dictionary = {
           link: string
         }
       }
+      favorites: {
+        title: string
+      }
     }

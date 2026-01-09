@@ -1,6 +1,6 @@
 <script lang="ts">
   import { ArrowUpDown } from '@lucide/svelte'
-  import { Async } from 'svas'
+  import { Async, combined } from 'svas'
   import { dict } from '$lib/intl'
   import { Input } from '$ui/input'
   import { Section } from '@/app/ui'
@@ -8,6 +8,8 @@
   import { contacts } from '@/contacts'
   import { Invite } from '@/contacts/ui'
   import { Contacts } from '@/contacts/ui'
+  import { favorites } from '@/favorites'
+  import { Favorites } from '@/favorites/ui'
   import { groups } from '@/groups'
   import { Groups } from '@/groups/ui'
   import { account } from '@/iam'
@@ -26,12 +28,16 @@
   </Header.Root>
 </Section>
 
-<Async store={contacts} class="flex-1 flex flex-col space-y-5">
-  {#snippet awaited(contacts)}
-    {#if $groups.length || contacts.length}
+<Async store={combined(contacts, favorites)} class="flex-1 flex flex-col space-y-5">
+  {#snippet awaited([contacts, favorites])}
+    {#if $groups.length || contacts.length || favorites.length}
       <Section>
         <Input type="text" placeholder={$dict.actions.search} bind:value={search} />
       </Section>
+
+      {#if favorites.length}
+        <Favorites title={$dict.favorites.title} {favorites} />
+      {/if}
 
       {#if $groups.length}
         <Groups title={$dict.groups.title} groups={$groups} {search} />

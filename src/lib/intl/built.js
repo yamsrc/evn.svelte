@@ -133,6 +133,9 @@ export const dictionaries = {
         "hold": "اضغط مع الاستمرار للتأكيد",
         "link": "حذف الحساب"
       }
+    },
+    "favorites": {
+      "title": "المفضلة"
     }
   },
   "de-DE": {
@@ -266,6 +269,9 @@ export const dictionaries = {
         "hold": "Zum Bestätigen halten",
         "link": "Konto löschen"
       }
+    },
+    "favorites": {
+      "title": "Favoriten"
     }
   },
   "en-US": {
@@ -399,6 +405,9 @@ export const dictionaries = {
         "hold": "Hold to confirm",
         "link": "Delete account"
       }
+    },
+    "favorites": {
+      "title": "Favorites"
     }
   },
   "es-ES": {
@@ -532,6 +541,9 @@ export const dictionaries = {
         "hold": "Mantén pulsado para confirmar",
         "link": "Eliminar cuenta"
       }
+    },
+    "favorites": {
+      "title": "Favoritos"
     }
   },
   "fr-FR": {
@@ -665,6 +677,9 @@ export const dictionaries = {
         "hold": "Maintenir pour confirmer",
         "link": "Supprimer le compte"
       }
+    },
+    "favorites": {
+      "title": "Favoris"
     }
   },
   "hi-IN": {
@@ -798,6 +813,9 @@ export const dictionaries = {
         "hold": "पुष्टि करने के लिए दबाए रखें",
         "link": "खाता हटाएं"
       }
+    },
+    "favorites": {
+      "title": "पसंदीदा"
     }
   },
   "it-IT": {
@@ -931,6 +949,9 @@ export const dictionaries = {
         "hold": "Tieni premuto per confermare",
         "link": "Elimina account"
       }
+    },
+    "favorites": {
+      "title": "Preferiti"
     }
   },
   "ja-JP": {
@@ -1064,6 +1085,9 @@ export const dictionaries = {
         "hold": "押し続けて確定",
         "link": "アカウントを削除"
       }
+    },
+    "favorites": {
+      "title": "お気に入り"
     }
   },
   "ko-KR": {
@@ -1197,6 +1221,9 @@ export const dictionaries = {
         "hold": "길게 눌러서 확인",
         "link": "계정 삭제"
       }
+    },
+    "favorites": {
+      "title": "즐겨찾기"
     }
   },
   "nl-NL": {
@@ -1330,6 +1357,9 @@ export const dictionaries = {
         "hold": "Houd vast om te bevestigen",
         "link": "Account verwijderen"
       }
+    },
+    "favorites": {
+      "title": "Favorieten"
     }
   },
   "ru-FU": {
@@ -1463,6 +1493,9 @@ export const dictionaries = {
         "hold": "Держи дольше, бля",
         "link": "Заебало"
       }
+    },
+    "favorites": {
+      "title": "Избранное"
     }
   },
   "ru-RU": {
@@ -1596,6 +1629,9 @@ export const dictionaries = {
         "hold": "Удерживайте для подтверждения",
         "link": "Удалить аккаунт"
       }
+    },
+    "favorites": {
+      "title": "Избранное"
     }
   },
   "sw-TZ": {
@@ -1729,6 +1765,9 @@ export const dictionaries = {
         "hold": "Shikilia kuthibitisha",
         "link": "Futa akaunti"
       }
+    },
+    "favorites": {
+      "title": "Vipendwa"
     }
   },
   "tr-TR": {
@@ -1862,6 +1901,9 @@ export const dictionaries = {
         "hold": "Onaylamak için basılı tutun",
         "link": "Hesabı sil"
       }
+    },
+    "favorites": {
+      "title": "Favoriler"
     }
   },
   "uk-UA": {
@@ -1995,6 +2037,9 @@ export const dictionaries = {
         "hold": "Утримуйте для підтвердження",
         "link": "Видалити акаунт"
       }
+    },
+    "favorites": {
+      "title": "Улюблене"
     }
   },
   "zh-CN": {
@@ -2128,6 +2173,9 @@ export const dictionaries = {
         "hold": "按住以确认",
         "link": "删除账户"
       }
+    },
+    "favorites": {
+      "title": "收藏夹"
     }
   }
 };
