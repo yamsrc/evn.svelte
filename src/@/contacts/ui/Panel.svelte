@@ -51,7 +51,7 @@
     {selected}
     {onselect}
     actions={actionable ? actions : []}
-    class={cn('font-normal', contact.managed && 'text-muted-foreground', 'contacts-panel')}
+    class={cn(contact.managed && 'text-muted-foreground', 'contacts-panel')}
   >
     {#snippet action(id)}
       {#if id === 'favorite'}

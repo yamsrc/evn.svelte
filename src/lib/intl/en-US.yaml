@@ -148,3 +148,5 @@ expenses:
     add:
       label: Add participant
   me: Me
+favorites:
+  title: Favorites

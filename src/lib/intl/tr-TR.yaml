@@ -148,3 +148,7 @@ expenses:
     title: Henüz gider yok
     description: Takibe başlamak için ilk giderini oluştur
     create: Gider oluştur
+
+favorites:
+  title: Favoriler
+

@@ -146,3 +146,7 @@ expenses:
     title: لا توجد مصروفات بعد
     description: أنشئ أول مصروفك لبدء التتبع
     create: إنشاء مصروف
+
+favorites:
+  title: المفضلة
+

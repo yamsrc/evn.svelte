@@ -140,3 +140,7 @@ expenses:
     title: まだ支出がありません
     description: 最初の支出を作成して、記録を始めましょう
     create: 支出を作成
+
+favorites:
+  title: お気に入り
+

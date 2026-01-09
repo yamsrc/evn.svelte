@@ -11,6 +11,8 @@
   import { Header } from '@/app/ui'
   import { contacts } from '@/contacts'
   import { Contacts } from '@/contacts/ui'
+  import { favorites } from '@/favorites'
+  import { Favorites } from '@/favorites/ui'
   import { groups, add } from '@/groups'
   import Invite from './Invite.svelte'
 
@@ -18,13 +20,16 @@
 
   const id = $derived(page.params.id as string)
   // svelte-ignore non_reactive_update
-  let selection = new SvelteSet<string>()
+  let contactsSelection = new SvelteSet<string>()
+  // svelte-ignore non_reactive_update
+  let favoritesSelection = new SvelteSet<string>()
   let busy = $state(false)
 
   async function addMembers() {
     busy = true
 
-    const res = await add(id, Array.from(selection))
+    const identities = Array.from(new Set([...contactsSelection, ...favoritesSelection]))
+    const res = await add(id, identities)
 
     busy = false
 
@@ -34,8 +39,13 @@
   }
 </script>
 
+<<<<<<< HEAD
 <Async store={combined(groups, contacts)} class="space-y-5">
   {#snippet awaited([groups, contacts])}
+=======
+<Async store={combined(groups, contacts, favorites)} class="flex flex-col gap-5">
+  {#snippet awaited([groups, contacts, favorites])}
+>>>>>>> 3f109d7 (feat(favorites): add favorites section)
     {@const group = groups.find((g) => g.id === id)}
     {#if group}
       <Section>
@@ -47,14 +57,25 @@
         <h1>{$dict.groups.members.addMembers}</h1>
         <Input type="text" placeholder={$dict.actions.search} bind:value={search} />
       </Section>
-      <!-- TODO: add favorites -->
+
+      {@const favs = favorites.filter((f) => !group.identities.includes(f.favorite))}
+      <Favorites
+        title={$dict.favorites.title}
+        favorites={favs}
+        bind:selection={favoritesSelection}
+      />
 
       {@const list = contacts.filter((c) => !group.identities.includes(c.identity))}
-      <Contacts contacts={list} title={$dict.contacts.all} bind:selection {search} />
+      <Contacts
+        contacts={list}
+        title={$dict.contacts.all}
+        bind:selection={contactsSelection}
+        {search}
+      />
       <Section class="flex gap-2 w-full items-center justify-stretch">
         <Button
           class="flex-1"
-          disabled={selection.size === 0 || busy}
+          disabled={(contactsSelection.size === 0 && favoritesSelection.size === 0) || busy}
           onclick={addMembers}
           size="lg">{$dict.actions.addSelected}</Button
         >

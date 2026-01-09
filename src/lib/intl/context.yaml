@@ -243,6 +243,11 @@ inputs:
           input: Add participant
     me:
       input: Me
+
+  favorites:
+    title:
+      input: Favorites
+
 mounts:
   iam: ../../@/iam/ui/intl
   feedback: ../../@/feedback/ui/intl

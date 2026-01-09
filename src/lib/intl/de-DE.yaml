@@ -152,3 +152,5 @@ expenses:
     title: Noch keine Ausgaben
     description: Erstelle deine erste Ausgabe, um mit dem Verfolgen zu beginnen
     create: Ausgabe erstellen
+favorites:
+  title: Favoriten

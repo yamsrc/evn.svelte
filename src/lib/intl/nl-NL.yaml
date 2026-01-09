@@ -150,3 +150,7 @@ expenses:
     title: Nog geen uitgaven
     description: Maak je eerste uitgave aan om het bijhouden te starten
     create: Uitgave aanmaken
+
+favorites:
+  title: Favorieten
+

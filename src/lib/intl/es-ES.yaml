@@ -154,3 +154,7 @@ expenses:
     title: Aún no hay gastos
     description: Crea tu primer gasto para empezar a realizar un seguimiento
     create: Crear gasto
+
+favorites:
+  title: Favoritos
+
