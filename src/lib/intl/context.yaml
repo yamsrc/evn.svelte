@@ -245,7 +245,6 @@ inputs:
           input: Add participant
     me:
       input: Me
->>>>>>> dev
 mounts:
   iam: ../../@/iam/ui/intl
   feedback: ../../@/feedback/ui/intl
