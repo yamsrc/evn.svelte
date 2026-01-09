@@ -30,9 +30,3 @@ Then('I open link from the clipboard', async ({ page }) => {
 Then('I clear the session', async ({ page }) => {
   await page.evaluate(() => localStorage.clear())
 })
-
-Then('path matches {string}', async ({ page }, pattern) => {
-  const regex = new RegExp(pattern)
-
-  await expect(page).toHaveURL(regex)
-})

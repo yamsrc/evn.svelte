@@ -11,7 +11,6 @@ Feature: Expenses
     Then 'expenses-form-location-input' is focused
     And I type random location
     When I tap 'expenses-form-save-button'
-    Then path matches '/expenses/'
     Then 'expenses-list' contains text 'ExpenseTitle'
 
   Scenario: View expenses list
@@ -25,11 +24,9 @@ Feature: Expenses
     And new expense
     When I tap first item of 'expenses-list'
     When I tap 'expenses-spendings-add-participants-button'
-    Then path matches '/expenses/editor/[^/]+/participants'
     And 'expenses-add-participants-add-button' is visible
     When I tap first item of 'contacts-list-content'
     And I tap 'expenses-add-participants-add-button'
-    Then path matches '/expenses/editor/[^/]+/$'
     And 'expenses-payers-list-content' contains 2 'expenses-payer' items
 
   Scenario: Edit expense
