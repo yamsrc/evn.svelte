@@ -7,6 +7,12 @@ When('I tap {string}', async ({ page }, id) => {
   await element.click()
 })
 
+When('I clear {string}', async ({ page }, id) => {
+  const element = page.locator(`#${id}`)
+
+  await element.fill('')
+})
+
 When('I double tap {string}', async ({ page }, id) => {
   const element = page.locator(`#${id}`)
 
@@ -21,6 +27,14 @@ When('I hold {string} for {int}s', async ({ page }, id, duration) => {
   await page.mouse.down()
   await page.waitForTimeout(duration * 1000)
   await page.mouse.up()
+})
+
+When('I tap first item of {string}', async ({ page }, id) => {
+  const container = page.locator(`#${id}`)
+  const firstItem = container.locator('> *').first()
+
+  await expect(firstItem).toBeVisible()
+  await firstItem.click()
 })
 
 Then('{string} is visible', async ({ page }, id) => {
@@ -54,6 +68,18 @@ Then('some of {string} contains that {string}', async ({ page }, classname, text
 
 Then('some of {string} contains that name', async ({ page, ctx }, classname) => {
   await contains(page, `.${classname}`, ctx.name)
+})
+
+Then('{string} contains text {string}', async ({ page }, id, text) => {
+  await expect(page.locator(`#${id}`)).toContainText(text)
+})
+
+Then('{string} contains {int} {string} items', async ({ page }, containerId, count, itemClass) => {
+  const container = page.locator(`#${containerId}`)
+  const items = container.locator(`.${itemClass}`)
+
+  await expect(items).toHaveCount(count)
+  await expect(items.first()).toBeVisible()
 })
 
 async function contains(page: Page, selector: string, text: string) {

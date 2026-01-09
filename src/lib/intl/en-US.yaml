@@ -16,11 +16,13 @@ actions:
   addSelected: Add selected
   cancel: Cancel
   search: Search
+  save: Save
+  create: Create
 nav:
   home: Home
-  evns: Evns
   profile: Me
   contacts: Friends
+  expenses: Evns
 terms: Terms & Conditions
 privacy: Privacy Policy
 madeBy: Made by
@@ -113,3 +115,36 @@ account:
     sorry: We're very sorry to see you go.
     hold: Hold to confirm
     link: Delete account
+expenses:
+  spendings:
+    title: Spendings
+    total: Total
+    extras:
+      description: Tips, table service, etc. are divided equally.
+      title: Service / Other
+  payers:
+    title: Paid by
+  form:
+    title:
+      placeholder: What have you spent on?
+    location:
+      placeholder: Where? (Optional)
+    save: Save and update balances
+  title: Evns
+  empty:
+    title: No expenses yet
+    description: Create your first expense to start tracking
+    create: Create expense
+  balance:
+    total: Total bill
+    youAreOwed: You are owed
+    youOwe: You owe
+    youWillOwe: You will owe
+    youWillBeOwed: Others will owe you
+  participants:
+    create:
+      title: Create a new participant
+    title: Add participants
+    add:
+      label: Add participant
+  me: Me

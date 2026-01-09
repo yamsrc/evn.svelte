@@ -16,11 +16,13 @@ actions:
   addSelected: 選択したものを追加
   cancel: キャンセル
   search: 検索
+  save: 保存
+  create: 作成
 nav:
   home: ホーム
-  evns: 清算
   profile: 私
   contacts: 友だち
+  expenses: 清算
 terms: 利用規約
 privacy: プライバシーポリシー
 madeBy: 作成者
@@ -105,3 +107,36 @@ account:
     sorry: ご利用いただけなくなることを大変残念に思います。
     hold: 押し続けて確定
     link: アカウントを削除
+expenses:
+  spendings:
+    title: 支出
+    total: 合計
+    extras:
+      description: チップやテーブルサービスなどは均等に分けられます。
+      title: サービス / その他
+  payers:
+    title: 支払い者
+  form:
+    title:
+      placeholder: 何に使ったの？
+    location:
+      placeholder: どこですか？（任意）
+    save: 保存して残高を更新
+  title: 清算
+  balance:
+    total: 合計金額
+    youAreOwed: あなたには支払いが残っています
+    youOwe: あなたは借りがあります
+    youWillOwe: あなたは支払うことになります
+    youWillBeOwed: 他の人たちがあなたに借りができる
+  participants:
+    create:
+      title: 新しい参加者を作成
+    title: 参加者を追加
+    add:
+      label: 参加者を追加
+  me: 私
+  empty:
+    title: まだ支出がありません
+    description: 最初の支出を作成して、記録を始めましょう
+    create: 支出を作成

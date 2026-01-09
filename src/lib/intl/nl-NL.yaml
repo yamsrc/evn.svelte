@@ -16,11 +16,13 @@ actions:
   addSelected: Geselecteerde toevoegen
   cancel: Annuleren
   search: Zoeken
+  save: Opslaan
+  create: Aanmaken
 nav:
   home: Home
-  evns: Afrekening
   profile: Ik
   contacts: Vrienden
+  expenses: Afrekening
 terms: Algemene voorwaarden
 privacy: Privacybeleid
 madeBy: Gemaakt door
@@ -115,3 +117,36 @@ account:
     sorry: Het spijt ons zeer om je te zien gaan.
     hold: Houd vast om te bevestigen
     link: Account verwijderen
+expenses:
+  spendings:
+    title: Uitgaven
+    total: Totaal
+    extras:
+      description: Fooien, tafelbediening, enzovoort worden gelijk verdeeld.
+      title: Service / Overig
+  payers:
+    title: Betaald door
+  form:
+    title:
+      placeholder: Waar heb je geld aan uitgegeven?
+    location:
+      placeholder: Waar? (optioneel)
+    save: Opslaan en saldi bijwerken
+  title: Vereffenen
+  balance:
+    total: Totaalrekening
+    youAreOwed: Je hebt iets tegoed
+    youOwe: Je bent schuldig
+    youWillOwe: Je zult verschuldigd zijn
+    youWillBeOwed: Anderen zullen jou iets verschuldigd zijn
+  participants:
+    create:
+      title: Nieuwe deelnemer aanmaken
+    title: Deelnemers toevoegen
+    add:
+      label: Deelnemer toevoegen
+  me: Ik
+  empty:
+    title: Nog geen uitgaven
+    description: Maak je eerste uitgave aan om het bijhouden te starten
+    create: Uitgave aanmaken

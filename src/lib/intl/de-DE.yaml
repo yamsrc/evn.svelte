@@ -16,11 +16,13 @@ actions:
   addSelected: Ausgewählte hinzufügen
   cancel: Abbrechen
   search: Suchen
+  save: Speichern
+  create: Erstellen
 nav:
   home: Startseite
-  evns: Ausgleich
   profile: Ich
   contacts: Freunde
+  expenses: Ausgleich
 terms: Allgemeine Geschäftsbedingungen
 privacy: Datenschutzrichtlinie
 madeBy: Erstellt von
@@ -117,3 +119,36 @@ account:
     sorry: Es tut uns sehr leid, zu sehen, dass Sie gehen.
     hold: Zum Bestätigen halten
     link: Konto löschen
+expenses:
+  spendings:
+    title: Ausgaben
+    total: Gesamt
+    extras:
+      description: Trinkgeld, Tischservice usw. werden gleichmäßig aufgeteilt.
+      title: Dienstleistung / Sonstiges
+  payers:
+    title: Bezahlt von
+  form:
+    title:
+      placeholder: Wofür hast du Geld ausgegeben?
+    location:
+      placeholder: Wo? (optional)
+    save: Speichern und Salden aktualisieren
+  title: Ausgleichen
+  balance:
+    total: Gesamtrechnung
+    youAreOwed: Dir steht etwas zu
+    youOwe: Du schuldest
+    youWillOwe: Du wirst schulden
+    youWillBeOwed: Andere werden dir etwas schulden
+  participants:
+    create:
+      title: Neuen Teilnehmer erstellen
+    title: Teilnehmer hinzufügen
+    add:
+      label: Teilnehmer hinzufügen
+  me: Ich
+  empty:
+    title: Noch keine Ausgaben
+    description: Erstelle deine erste Ausgabe, um mit dem Verfolgen zu beginnen
+    create: Ausgabe erstellen

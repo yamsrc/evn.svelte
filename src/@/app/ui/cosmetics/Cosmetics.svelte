@@ -1,11 +1,14 @@
 <script lang="ts">
-  import { cn } from '$lib/utils'
-  import { Button } from '$ui/button'
   import { pickpic } from '@/accounts'
+  import Actions from './Actions.svelte'
+  import Content from './Content.svelte'
   import Name from './Name.svelte'
+  import Note from './Note.svelte'
   import Picture from './Picture.svelte'
+  import Root from './Root.svelte'
   import type { Props, Value } from './Cosmetics'
 
+  // Default implementation for backward compatibility
   const {
     value,
     placeholder,
@@ -48,12 +51,10 @@
   }
 </script>
 
-<div class={cn('space-y-6', classes)}>
-  <div class="flex justify-center" data-slot="picture">
+<Root class={classes}>
+  <Content>
     <Picture bind:id={picture} onchange={onPictureChange} />
-  </div>
-  <div class="space-y-2">
-    {#if editable}
+    <div class="space-y-2">
       <Name
         bind:value={name}
         bind:busy
@@ -61,23 +62,14 @@
         {autocomplete}
         {placeholder}
         {autofocus}
+        {editable}
       />
       {#if note}
-        <p class="text-muted-foreground text-sm text-center">{note}</p>
+        <Note>{note}</Note>
       {/if}
-    {:else}
-      <p class="text-center text-3xl font-bold">{name}</p>
-    {/if}
-  </div>
-  {#if blank}
-    <Button
-      id="app-cosmetics-submit-button"
-      size="lg"
-      class="w-full"
-      disabled={busy || !name.trim()}
-      {onclick}
-    >
-      {label}
-    </Button>
+    </div>
+  </Content>
+  {#if blank && label}
+    <Actions {label} {busy} {onclick} />
   {/if}
-</div>
+</Root>

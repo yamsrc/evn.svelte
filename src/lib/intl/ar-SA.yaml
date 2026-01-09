@@ -16,11 +16,13 @@ actions:
   addSelected: إضافة المحدد
   cancel: إلغاء
   search: بحث
+  save: حفظ
+  create: إنشاء
 nav:
   home: الرئيسية
-  evns: تسوية
   profile: أنا
   contacts: الأصدقاء
+  expenses: تسوية
 terms: الشروط والأحكام
 privacy: سياسة الخصوصية
 madeBy: من صنع
@@ -111,3 +113,36 @@ account:
     sorry: نأسف جدًا لرؤيتك تغادر.
     hold: اضغط مع الاستمرار للتأكيد
     link: حذف الحساب
+expenses:
+  spendings:
+    title: النفقات
+    total: الإجمالي
+    extras:
+      description: الإكراميات، وخدمة الطاولة، وما إلى ذلك تُقسّم بالتساوي.
+      title: خدمة / أخرى
+  payers:
+    title: مدفوع بواسطة
+  form:
+    title:
+      placeholder: على ماذا أنفقتَ المال؟
+    location:
+      placeholder: أين؟ (اختياري)
+    save: احفظ وقم بتحديث الأرصدة
+  title: تسوية
+  balance:
+    total: إجمالي الفاتورة
+    youAreOwed: لك مستحقات
+    youOwe: أنت مدين
+    youWillOwe: سَتَدِين
+    youWillBeOwed: سيَدِين لك الآخرون
+  participants:
+    create:
+      title: إنشاء مشارك جديد
+    title: إضافة مشاركين
+    add:
+      label: إضافة مشارك
+  me: أنا
+  empty:
+    title: لا توجد مصروفات بعد
+    description: أنشئ أول مصروفك لبدء التتبع
+    create: إنشاء مصروف

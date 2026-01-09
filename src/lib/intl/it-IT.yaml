@@ -16,11 +16,13 @@ actions:
   addSelected: Aggiungi selezionati
   cancel: Annulla
   search: Cerca
+  save: Salva
+  create: Crea
 nav:
   home: Home
-  evns: Saldo
   profile: Io
   contacts: Amici
+  expenses: Saldo
 terms: Termini e condizioni
 privacy: Informativa sulla privacy
 madeBy: Realizzato da
@@ -117,3 +119,36 @@ account:
     sorry: Ci dispiace molto vederti andare via.
     hold: Tieni premuto per confermare
     link: Elimina account
+expenses:
+  spendings:
+    title: Spese
+    total: Totale
+    extras:
+      description: Mance, servizio al tavolo, ecc. sono divisi equamente.
+      title: Servizio / Altro
+  payers:
+    title: Pagato da
+  form:
+    title:
+      placeholder: Su cosa hai speso?
+    location:
+      placeholder: Dove? (opzionale)
+    save: Salva e aggiorna i saldi
+  title: Saldo
+  balance:
+    total: Totale conto
+    youAreOwed: Ti è dovuto
+    youOwe: Devi
+    youWillOwe: Dovrai
+    youWillBeOwed: Gli altri ti saranno debitori
+  participants:
+    create:
+      title: Crea un nuovo partecipante
+    title: Aggiungi partecipanti
+    add:
+      label: Aggiungi partecipante
+  me: Io
+  empty:
+    title: Nessuna spesa ancora
+    description: Crea la tua prima spesa per iniziare a tenere traccia
+    create: Crea spesa

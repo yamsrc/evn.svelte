@@ -27,12 +27,14 @@ export type Dictionary = {
         addSelected: string
         cancel: string
         search: string
+        save: string
+        create: string
       }
       nav: {
         home: string
-        evns: string
         profile: string
         contacts: string
+        expenses: string
       }
       terms: string
       privacy: string
@@ -136,6 +138,51 @@ export type Dictionary = {
           sorry: string
           hold: string
           link: string
+        }
+      }
+      expenses: {
+        spendings: {
+          title: string
+          total: string
+          extras: {
+            description: string
+            title: string
+          }
+        }
+        payers: {
+          title: string
+        }
+        form: {
+          title: {
+            placeholder: string
+          }
+          location: {
+            placeholder: string
+          }
+          save: string
+        }
+        title: string
+        balance: {
+          total: string
+          youAreOwed: string
+          youOwe: string
+          youWillOwe: string
+          youWillBeOwed: string
+        }
+        participants: {
+          create: {
+            title: string
+          }
+          title: string
+          add: {
+            label: string
+          }
+        }
+        me: string
+        empty: {
+          title: string
+          description: string
+          create: string
         }
       }
     }

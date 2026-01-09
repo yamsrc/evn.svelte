@@ -16,11 +16,13 @@ actions:
   addSelected: Ajouter la sélection
   cancel: Annuler
   search: Rechercher
+  save: Enregistrer
+  create: Créer
 nav:
   home: Accueil
-  evns: Règlements
   profile: Moi
   contacts: Amis
+  expenses: Règlements
 terms: Conditions générales
 privacy: Politique de confidentialité
 madeBy: Créé par
@@ -115,3 +117,36 @@ account:
     sorry: Nous sommes vraiment désolés de vous voir partir.
     hold: Maintenir pour confirmer
     link: Supprimer le compte
+expenses:
+  spendings:
+    title: Dépenses
+    total: Total
+    extras:
+      description: Pourboires, service à table, etc. partagés équitablement.
+      title: Service / Autre
+  payers:
+    title: Payé par
+  form:
+    title:
+      placeholder: Dans quoi as-tu dépensé ?
+    location:
+      placeholder: Où ? (facultatif)
+    save: Enregistrer et mettre à jour les soldes
+  title: Régler
+  balance:
+    total: Facture totale
+    youAreOwed: On te doit
+    youOwe: Vous devez
+    youWillOwe: Vous devrez
+    youWillBeOwed: Les autres te devront quelque chose
+  participants:
+    create:
+      title: Créer un nouveau participant
+    title: Ajouter des participants
+    add:
+      label: Ajouter un participant
+  me: Moi
+  empty:
+    title: Aucune dépense pour l’instant
+    description: Créez votre première dépense pour commencer à suivre
+    create: Créer une dépense

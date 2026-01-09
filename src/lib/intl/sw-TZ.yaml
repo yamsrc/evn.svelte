@@ -16,11 +16,13 @@ actions:
   addSelected: Ongeza zilizochaguliwa
   cancel: Ghairi
   search: Tafuta
+  save: Hifadhi
+  create: Unda
 nav:
   home: Mwanzo
-  evns: Marejesho
   profile: Mimi
   contacts: Marafiki
+  expenses: Marejesho
 terms: Vigezo na masharti
 privacy: Sera ya Faragha
 madeBy: Imetengenezwa na
@@ -111,3 +113,36 @@ account:
     sorry: Tunaomba radhi sana kukuona ukiondoka.
     hold: Shikilia kuthibitisha
     link: Futa akaunti
+expenses:
+  spendings:
+    title: Matumizi
+    total: Jumla
+    extras:
+      description: Vidokezo, huduma ya meza, n.k. vimegawanywa sawa.
+      title: Huduma / Nyingine
+  payers:
+    title: Imelipwa na
+  form:
+    title:
+      placeholder: Umetumia kwenye nini?
+    location:
+      placeholder: Wapi? (Hiari)
+    save: Hifadhi na sasisha mizania
+  title: Lipa
+  balance:
+    total: Jumla ya bili
+    youAreOwed: Unadai malipo
+    youOwe: Unadaiwa
+    youWillOwe: Utakuwa na deni
+    youWillBeOwed: Wengine watakudai fadhila
+  participants:
+    create:
+      title: Unda mshiriki mpya
+    title: Ongeza washiriki
+    add:
+      label: Ongeza mshiriki
+  me: Mimi
+  empty:
+    title: Hakuna matumizi bado
+    description: Unda matumizi yako ya kwanza ili kuanza kufuatilia
+    create: Unda gharama

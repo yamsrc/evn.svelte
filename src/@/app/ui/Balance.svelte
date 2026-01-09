@@ -2,31 +2,43 @@
   import { Coins } from '@lucide/svelte'
   import { dict } from '$lib/intl'
   import { currency } from '$lib/tools'
+  import { cn } from '$lib/utils'
   import type { Props } from './Balance'
 
-  const { balance }: Props = $props()
+  const {
+    total,
+    balance,
+    totalLabel = $dict.expenses.balance.total,
+    youOwe = $dict.expenses.balance.youOwe,
+    youAreOwed = $dict.expenses.balance.youAreOwed,
+    class: classes,
+  }: Props = $props()
 
-  function color(balance: number) {
-    if (balance > 0) return 'var(--constructive)'
+  const amount = $derived(total ?? balance ?? 0)
 
-    if (balance < 0) return 'var(--destructive)'
+  function color(amount: number) {
+    if (balance && amount > 0) return 'var(--constructive)'
 
-    return 'var(--foreground)'
+    if (balance && amount < 0) return 'var(--destructive)'
+
+    return 'var(--muted-foreground)'
   }
 </script>
 
-<div class="flex items-center flex-end gap-2">
-  <div class="text-muted-foreground text-sm">
-    {#if balance > 0}
-      {$dict.contacts.contact.owesYou}
-    {:else if balance < 0}
-      {$dict.contacts.contact.youOwe}
+<div class={cn('flex items-center justify-end gap-2', classes)}>
+  <div class="text-muted-foreground text-sm text-nowrap">
+    {#if total !== undefined}
+      {totalLabel}
+    {:else if balance !== undefined && balance > 0}
+      {youAreOwed}
+    {:else if balance !== undefined && balance < 0}
+      {youOwe}
     {/if}
   </div>
-  <div class="font-bold">
-    {currency(Math.abs(balance))}
-  </div>
-  <div>
-    <Coins size={16} color={color(balance)} />
+  <div class="flex items-center justify-end gap-2">
+    <div class="font-bold text-foreground">{currency(Math.abs(amount))}</div>
+    <div>
+      <Coins size={16} color={color(amount)} />
+    </div>
   </div>
 </div>

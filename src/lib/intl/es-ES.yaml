@@ -16,11 +16,13 @@ actions:
   addSelected: Agregar seleccionado(s)
   cancel: Cancelar
   search: Buscar
+  save: Guardar
+  create: Crear
 nav:
   home: Inicio
-  evns: Ajustes
   profile: Yo
   contacts: Amigos
+  expenses: Ajustes
 terms: Términos y condiciones
 privacy: Política de privacidad
 madeBy: Hecho por
@@ -117,3 +119,36 @@ account:
     sorry: Lamentamos mucho que te vayas.
     hold: Mantén pulsado para confirmar
     link: Eliminar cuenta
+expenses:
+  spendings:
+    title: Gastos
+    total: Total
+    extras:
+      description: Las propinas, el servicio de mesa, etc. se reparten por igual.
+      title: Servicio / Otro
+  payers:
+    title: Pagado por
+  form:
+    title:
+      placeholder: ¿En qué has gastado?
+    location:
+      placeholder: ¿Dónde? (opcional)
+    save: Guardar y actualizar saldos
+  title: Ajustar
+  balance:
+    total: Factura total
+    youAreOwed: Te deben
+    youOwe: Debes
+    youWillOwe: Deberás
+    youWillBeOwed: Los demás te deberán
+  participants:
+    create:
+      title: Crear un nuevo participante
+    title: Agregar participantes
+    add:
+      label: Agregar participante
+  me: Yo
+  empty:
+    title: Aún no hay gastos
+    description: Crea tu primer gasto para empezar a realizar un seguimiento
+    create: Crear gasto

@@ -1,3 +1,8 @@
 export interface Props {
-  balance: number
+  class?: string
+  total?: number
+  balance?: number
+  totalLabel?: string
+  youOwe?: string
+  youAreOwed?: string
 }

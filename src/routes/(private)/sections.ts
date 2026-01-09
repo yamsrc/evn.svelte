@@ -16,9 +16,9 @@ export const sections = (dict: Dictionary): Section[] => [
     Icon: Users,
   },
   {
-    id: 'evns',
-    href: '/evns/',
-    label: dict.nav.evns,
+    id: 'expenses',
+    href: '/expenses/',
+    label: dict.nav.expenses,
     Icon: Ticket,
   },
   {
