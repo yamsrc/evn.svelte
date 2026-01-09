@@ -21,3 +21,13 @@ account:
 actions:
   discard: Tupa mbali
   close: Funga
+friends:
+  app:
+    description: Njia bora ya kufuatilia nani anamdai nani, ukiwa pamoja na marafiki.
+  inviter:
+    description: >-
+      !js
+
+      (name) => `Umealikwa na ${name}. Jisajili au ingia tu, na uko tayari
+      kuanza!`
+  accept: Anza kutumia Evn

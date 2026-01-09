@@ -25,7 +25,7 @@
     <h2>{title}</h2>
   {/if}
   <div id="contacts-list-content" class="flex flex-col gap-1.5">
-    {#each filter(contacts, search) as contact (contact.identity)}
+    {#each filter(contacts, search) as contact (contact.id)}
       {@const selected = selection?.has(contact.identity)}
       {@const selectedProps = selectable ? { selected, onselect } : undefined}
       <Panel {contact} {actionable} {...selectedProps} />

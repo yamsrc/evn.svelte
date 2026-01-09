@@ -1,6 +1,7 @@
 <script lang="ts">
   import { goto } from '$app/navigation'
   import { dict } from '$lib/intl/join'
+  import { cn } from '$lib/utils'
   import * as AlertDialog from '$ui/alert-dialog'
   import { Button, buttonVariants } from '$ui/button'
   import { codes } from '@/accounts'
@@ -45,14 +46,14 @@
         <p>{$dict.account.content0}</p>
       {/if}
     </div>
-    <AlertDialog.Footer class="flex-row [&>button]:w-1/2">
+    <AlertDialog.Footer class="flex-row">
       <AlertDialog.Cancel
-        class={buttonVariants({ size: 'lg', variant: 'secondary' })}
+        class={cn(buttonVariants({ size: 'lg', variant: 'secondary' }), 'flex-1')}
         onclick={() => goto('/')}
       >
         {$dict.actions.discard}
       </AlertDialog.Cancel>
-      <Button id="join-accounts-accept-button" size="lg" {onclick}>
+      <Button id="join-accounts-accept-button" size="lg" class="flex-1" {onclick}>
         {#if $authenticated}
           {$dict.account.switch}
         {:else}

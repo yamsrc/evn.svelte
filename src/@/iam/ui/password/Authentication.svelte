@@ -3,8 +3,9 @@
   import * as Card from '$ui/card'
   import { dict } from '@/iam/ui/intl'
   import Form from './Form.svelte'
+  import type { Props } from './Authentication'
 
-  const { class: classes }: { class?: string } = $props()
+  const { class: classes, account }: Props = $props()
 </script>
 
 <Card.Root class={cn('pt-4 gap-4 bg-background/75', classes)}>
@@ -13,6 +14,6 @@
     <Card.Description>{$dict.auth.passwordDescription}</Card.Description>
   </Card.Header>
   <Card.Content>
-    <Form />
+    <Form {account} />
   </Card.Content>
 </Card.Root>
