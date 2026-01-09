@@ -23,12 +23,6 @@
     extras = $bindable<Extra[]>([]),
   }: Props = $props()
 
-  $effect.pre(() => {
-    if ($me?.id && !participants[$me.id]) participants[$me.id] = { amount: 0 }
-
-    if (extras.length === 0) extras.push({ amount: 0 })
-  })
-
   const participantIds = $derived(Object.keys(participants))
   const otherIds = $derived(participantIds.filter((id) => id !== $me?.id))
   const nameClass = 'text-start text-base font-normal flex-1 min-w-0 flex'
@@ -67,18 +61,24 @@
         </Async>
       {/each}
 
-      <Separator />
-      <div class="flex flex-col gap-2">
-        <div class="flex flex-nowrap items-center justify-between gap-2">
-          <div class="flex items-center gap-2 overflow-hidden flex-1">
-            <div class={nameClass}>
-              <TextEllipsis>{$dict.expenses.spendings.extras.title}</TextEllipsis>
+      {#each extras as extra, i (i)}
+        <Separator />
+        <div class="flex flex-col gap-2">
+          <div class="flex flex-nowrap items-center justify-between gap-2">
+            <div class="flex items-center gap-2 overflow-hidden flex-1">
+              <div class={nameClass}>
+                <TextEllipsis>
+                  {extra.comment ?? $dict.expenses.spendings.extras.title}
+                </TextEllipsis>
+              </div>
             </div>
+            <Amount class={amountClass} bind:value={extras[i].amount} />
           </div>
-          <Amount class={amountClass} bind:value={extras[0].amount} />
+          {#if i > 0}
+            <div class="text-sm">{$dict.expenses.spendings.extras.description}</div>
+          {/if}
         </div>
-        <div class="text-sm">{$dict.expenses.spendings.extras.description}</div>
-      </div>
+      {/each}
 
       <Separator />
       <div class="flex items-center justify-between gap-2 min-h-12">

@@ -1,5 +1,6 @@
-import { getContext as svelteGetContext, setContext as svelteSetContext } from 'svelte'
-import type { Snippet } from 'svelte'
+import { getContext as svelteGetContext, setContext as svelteSetContext, type Snippet } from 'svelte'
+import { get } from 'svelte/store'
+import { account } from '@/iam'
 
 const CONTEXT = Symbol('editor')
 
@@ -27,11 +28,17 @@ function exact(value: Value): Value {
 }
 
 function blank(): Value {
+  const participants: Record<string, Participant> = {}
+  const me = get(account)
+
+  if (me !== null)
+    participants[me.id] = { amount: 0 }
+
   return {
     title: '',
     location: '',
-    participants: {},
-    extras: [],
+    participants,
+    extras: [{ amount: 0 }],
   }
 }
 
