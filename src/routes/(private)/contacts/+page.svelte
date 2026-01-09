@@ -28,7 +28,7 @@
   </Header.Root>
 </Section>
 
-<Async store={combined(contacts, favorites)} class="flex-1 flex flex-col space-y-5">
+<Async store={combined(contacts, favorites)}>
   {#snippet awaited([contacts, favorites])}
     {#if $groups.length || contacts.length || favorites.length}
       <Section>

@@ -52,7 +52,7 @@
   <h2>{$dict.expenses.payers.title}</h2>
   <div id="expenses-payers-list-content" class="flex flex-col gap-1.5">
     {#each Object.keys(participants) as identity (identity)}
-      <Async store={combined(accounts.get(identity), contacts)} class="expenses-payer">
+      <Async store={combined(accounts.get(identity), contacts)}>
         {#snippet awaited([account, contacts])}
           {@const contact = contacts.find((c) => c.identity === identity)}
           {@const selected = selection?.has(identity)}

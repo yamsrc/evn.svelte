@@ -28,7 +28,10 @@
   const nameClass = 'text-start text-base font-normal flex-1 min-w-0'
 </script>
 
-<Item.Root variant="outline" class="flex flex-nowrap items-stretch gap-1.5 p-0 border-none">
+<Item.Root
+  variant="outline"
+  class="expenses-payer flex flex-nowrap items-stretch gap-1.5 p-0 border-none"
+>
   <div class="flex-1 min-w-0">
     <Panel
       href={`/contacts/${account.id}/`}
