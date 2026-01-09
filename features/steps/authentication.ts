@@ -33,15 +33,7 @@ Then('I am not authenticated', async ({ page }) => {
 })
 
 async function isAuthenticated(page: Page) {
-  const button = page.locator('#nav-me-button')
-  // Use toPass() to retry the visibility check, handling race conditions where
-  // authentication completes but Nav component hasn't rendered yet
-  // Increase timeout to 20 seconds to allow for slower authentication flows
-  // toBeVisible() already waits for the element to be attached, so we don't need a separate waitFor
-
-  await expect(async () => {
-    await expect(button).toBeVisible({ timeout: 10_000 })
-  }).toPass({ timeout: 20_000 })
+  await expect(page.locator('#nav-me-button')).toBeVisible()
 }
 
 async function isNotAuthenticated(page: Page) {
