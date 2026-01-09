@@ -18,7 +18,7 @@
   }
 </script>
 
-<Section class="overflow-visible flex flex-col gap-1.5">
+<Section class="overflow-visible flex flex-col gap-1.5" id="favorites-list">
   {#if title}
     <div class="flex items-center gap-2">
       <div
@@ -30,7 +30,7 @@
     </div>
   {/if}
   <div class="overflow-x-auto -mx-5 px-5 py-2 -my-2 no-scrollbar">
-    <div class="w-fit flex gap-1.5">
+    <div id="favorites-list-content" class="w-fit flex gap-1.5">
       {#each favorites as favorite (favorite.id)}
         {@const selected = selection?.has(favorite.favorite)}
         {@const selectedProps = selectable ? { selected, onselect } : undefined}
