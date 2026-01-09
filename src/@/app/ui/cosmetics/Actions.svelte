@@ -12,8 +12,6 @@
   }
 
   const { label, busy = false, disabled, onclick, class: classes, children }: Props = $props()
-
-  const isDisabled = $derived(disabled ?? busy)
 </script>
 
 {#if children}
@@ -25,7 +23,7 @@
     id="app-cosmetics-submit-button"
     size="lg"
     class={classes ?? 'w-full'}
-    disabled={isDisabled}
+    disabled={disabled || busy}
     {onclick}
   >
     {label}
