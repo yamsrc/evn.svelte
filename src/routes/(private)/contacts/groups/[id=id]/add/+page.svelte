@@ -51,7 +51,7 @@
 
       {@const list = contacts.filter((c) => !group.identities.includes(c.identity))}
       <Contacts contacts={list} title={$dict.contacts.all} bind:selection {search} />
-      <Section class="flex gap-2 w-full items-center justify-stretch">
+      <Section class="flex gap-2 w-full items-center justify-stretch sticky bottom-25 z-10">
         <Button
           class="flex-1"
           disabled={selection.size === 0 || busy}

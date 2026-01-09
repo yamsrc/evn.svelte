@@ -65,7 +65,7 @@
   {/snippet}
 </Async>
 
-<Section class="flex items-center justify-evenly gap-2">
+<Section class="flex items-center justify-evenly gap-2 sticky bottom-25 z-10">
   <Button
     id="expenses-add-participants-add-button"
     size="lg"
