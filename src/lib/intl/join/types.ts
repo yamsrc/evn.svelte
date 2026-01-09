@@ -28,4 +28,13 @@ export type Dictionary = {
         discard: string
         close: string
       }
+      friends: {
+        app: {
+          description: string
+        }
+        inviter: {
+          description: (value: any) => string
+        }
+        accept: string
+      }
     }

@@ -17,3 +17,11 @@ account:
 actions:
   discard: 丢弃
   close: 关闭
+friends:
+  app:
+    description: 与朋友们一起，智能记录谁欠谁的钱。
+  inviter:
+    description: |-
+      !js
+      (name) => `您已被${name}邀请。只需注册或登录，您就可以开始了！`
+  accept: 开始使用 Evn

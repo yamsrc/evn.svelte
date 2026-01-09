@@ -25,3 +25,15 @@ account:
 actions:
   discard: Ignorer
   close: Fermer
+friends:
+  app:
+    description: >-
+      La façon intelligente de suivre qui doit quoi à qui, ensemble avec des
+      amis.
+  inviter:
+    description: >-
+      !js
+
+      (name) => `Vous avez été invité par ${name}. Inscrivez-vous ou
+      connectez-vous, et tout est prêt !`
+  accept: Commencer à utiliser Evn

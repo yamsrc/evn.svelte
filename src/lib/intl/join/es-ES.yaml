@@ -23,3 +23,15 @@ account:
 actions:
   discard: Descartar
   close: Cerrar
+friends:
+  app:
+    description: >-
+      La forma inteligente de llevar un registro de quién debe a quién, junto a
+      tus amigos.
+  inviter:
+    description: >-
+      !js
+
+      (name) => `Has sido invitado por ${name}. Solo regístrate o inicia sesión,
+      ¡y listo!`
+  accept: Comienza a usar Evn
