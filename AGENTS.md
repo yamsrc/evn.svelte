@@ -13,6 +13,12 @@ Before making any changes to the codebase, **always refer to `architecture.md`**
 
 Understanding the architecture is essential for maintaining code quality and consistency.
 
+## Backend API Documentation
+
+When working with backend API integration:
+
+- **Backend API location** - Backend API docs, tests, examples, and source code are located in `../{project}.toa` directory (next sibling directory, replace `.svelte` with `.toa` of current directory). When you need to understand API endpoints, request/response formats, or implementation details, look for documentation and source code in the sibling `{project}.toa` directory.
+
 ## Internationalization (i18n)
 
 This project uses the `svintl` package for internationalization. When working with i18n:
@@ -30,3 +36,69 @@ This project uses the `svintl` package for internationalization. When working wi
 When working with Svelte code:
 
 - **Use `$effect` only as a last resort** - Having `$effect` in code indicates a bad architectural solution that leads to bugs and unexpected behaviors. Always prefer reactive declarations (`$:`), proper state management, and declarative patterns over `$effect`. If you find yourself reaching for `$effect`, reconsider the architecture and find a more declarative solution.
+
+## Testing
+
+This project uses **Playwright BDD** with Gherkin feature files for end-to-end testing.
+
+### Structure
+
+- **Feature files** (`features/*.feature`) - Gherkin scenarios
+- **Step definitions** (`features/steps/*.ts`) - Implement steps used in features
+- **Fixtures** (`features/steps/fixtures.ts`) - Test context (`ctx`)
+
+### Writing Tests
+
+**Feature files** - Write scenarios in plain language:
+
+```gherkin
+Feature: Feature Name
+  Scenario: Test description
+    Given prerequisite
+    When action
+    Then assertion
+```
+
+**Step definitions** - Organized by domain:
+
+- `elements.ts` - **Generic steps only** (domain-agnostic, reusable)
+- Domain files (`contacts.ts`, `favorites.ts`, etc.) - Domain-specific steps
+
+**Example:**
+
+```typescript
+import { expect } from '@playwright/test'
+import { When, Then } from './fixtures'
+
+When('I tap {string}', async ({ page }, id) => {
+  await page.locator(`#${id}`).click()
+})
+
+Then('{string} contains that name', async ({ page, ctx }, id) => {
+  await expect(page.locator(`#${id}`)).toContainText(ctx.name)
+})
+```
+
+### Running Tests
+
+```bash
+# Run all tests
+npx play
+
+# Run specific feature
+npx play features/favorites.feature
+
+# Run with grep filter
+npx play features/favorites.feature --grep "scenario name"
+
+# Run against production
+BASE_URL=https://evnapp.com npx play
+```
+
+### Best Practices
+
+- **Generic steps only in `elements.ts`** - Must work across any domain
+- **Use `ctx` fixture** - Store values between steps (e.g., `ctx.name`)
+- **Add test IDs** - Use `id` attributes on UI components for selectors
+- **Remove unused steps** - Clean up step definitions not used in features
+- **Prefer comprehensive scenarios** - Combine related test cases when appropriate
