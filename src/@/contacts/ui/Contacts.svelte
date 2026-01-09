@@ -20,13 +20,15 @@
   }
 </script>
 
-<Section class="flex flex-col gap-1.5">
+<Section class="flex flex-col gap-1.5" id="contacts-list">
   {#if title}
     <h2>{title}</h2>
   {/if}
-  {#each filter(contacts, search) as contact (contact.id)}
-    {@const selected = selection?.has(contact.identity)}
-    {@const selectedProps = selectable ? { selected, onselect } : undefined}
-    <Panel {contact} {actionable} {...selectedProps} />
-  {/each}
+  <div id="contacts-list-content" class="flex flex-col gap-1.5">
+    {#each filter(contacts, search) as contact (contact.id)}
+      {@const selected = selection?.has(contact.identity)}
+      {@const selectedProps = selectable ? { selected, onselect } : undefined}
+      <Panel {contact} {actionable} {...selectedProps} />
+    {/each}
+  </div>
 </Section>

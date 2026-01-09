@@ -16,11 +16,13 @@ actions:
   addSelected: Seçileni ekle
   cancel: İptal
   search: Ara
+  save: Kaydet
+  create: Oluştur
 nav:
   home: Ana Sayfa
-  evns: Hesaplaşma
   profile: Ben
   contacts: Arkadaşlar
+  expenses: Hesaplaşma
 terms: Şartlar ve koşullar
 privacy: Gizlilik Politikası
 madeBy: Tarafından yapıldı
@@ -115,3 +117,36 @@ account:
     link: Hesabı sil
 favorites:
   title: Favoriler
+expenses:
+  spendings:
+    title: Harcamalar
+    total: Toplam
+    extras:
+      description: Bahşişler, masa servisi vb. eşit olarak paylaştırılır.
+      title: Hizmet / Diğer
+  payers:
+    title: Ödeyen
+  form:
+    title:
+      placeholder: Neye harcadın?
+    location:
+      placeholder: Nerede? (Opsiyonel)
+    save: Bakiyeleri kaydet ve güncelle
+  title: Hesapla
+  balance:
+    total: Toplam fatura
+    youAreOwed: Sana borç var
+    youOwe: Borcunuz var
+    youWillOwe: Borçlu olacaksın
+    youWillBeOwed: Diğerleri sana borçlu olacak
+  participants:
+    create:
+      title: Yeni katılımcı oluştur
+    title: Katılımcı ekle
+    add:
+      label: Katılımcı ekle
+  me: Ben
+  empty:
+    title: Henüz gider yok
+    description: Takibe başlamak için ilk giderini oluştur
+    create: Gider oluştur

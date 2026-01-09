@@ -21,3 +21,13 @@ account:
 actions:
   discard: Reddet
   close: Kapat
+friends:
+  app:
+    description: Kim kime ne borçlu, arkadaşlarınla birlikte takip etmenin akıllı yolu.
+  inviter:
+    description: >-
+      !js
+
+      (name) => `${name} tarafından davet edildiniz. Sadece kaydolun veya giriş
+      yapın, hazırsınız!`
+  accept: Evn’i kullanmaya başla

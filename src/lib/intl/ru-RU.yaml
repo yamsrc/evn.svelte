@@ -16,11 +16,13 @@ actions:
   addSelected: Добавить выбранные
   cancel: Отмена
   search: Поиск
+  save: Сохранить
+  create: Создать
 nav:
   home: Главная
-  evns: Расчёты
   profile: Я
   contacts: Друзья
+  expenses: Расчёты
 terms: Условия и положения
 privacy: Политика конфиденциальности
 madeBy: Сделано
@@ -117,3 +119,36 @@ account:
     link: Удалить аккаунт
 favorites:
   title: Избранное
+expenses:
+  spendings:
+    title: Расходы
+    total: Итого
+    extras:
+      description: Чаевые, обслуживание стола и прочее делятся поровну.
+      title: Сервис / Другое
+  payers:
+    title: Оплачено
+  form:
+    title:
+      placeholder: На что ты потратил?
+    location:
+      placeholder: Где? (необязательно)
+    save: Сохранить и обновить балансы
+  title: Рассчитать
+  balance:
+    total: Итоговый счет
+    youAreOwed: Вам должны
+    youOwe: Вы должны
+    youWillOwe: Вы будете должны
+    youWillBeOwed: Другие будут должны тебе
+  participants:
+    create:
+      title: Создать нового участника
+    title: Добавить участников
+    add:
+      label: Добавить участника
+  me: Я
+  empty:
+    title: Пока нет расходов
+    description: Создайте первый расход, чтобы начать отслеживание
+    create: Создать расход

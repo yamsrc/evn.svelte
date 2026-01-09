@@ -16,11 +16,13 @@ actions:
   addSelected: 선택 항목 추가
   cancel: 취소
   search: 검색
+  save: 저장
+  create: 생성
 nav:
   home: 홈
-  evns: 정산
   profile: 나
   contacts: 친구
+  expenses: 정산
 terms: 이용 약관
 privacy: 개인정보처리방침
 madeBy: 제작자
@@ -107,3 +109,36 @@ account:
     link: 계정 삭제
 favorites:
   title: 즐겨찾기
+expenses:
+  spendings:
+    title: 지출
+    total: 총합
+    extras:
+      description: 팁, 테이블 서비스 등은 모두 균등하게 나눕니다.
+      title: 서비스 / 기타
+  payers:
+    title: 지불자
+  form:
+    title:
+      placeholder: 무엇에 썼나요?
+    location:
+      placeholder: 어디인가요? (선택 사항)
+    save: 저장하고 잔액 업데이트
+  title: 정산
+  balance:
+    total: 총 금액
+    youAreOwed: 당신은 받을 돈이 있습니다
+    youOwe: 당신은 빚졌습니다
+    youWillOwe: 갚아야 합니다
+    youWillBeOwed: 다른 사람들이 당신에게 신세를 지게 됩니다
+  participants:
+    create:
+      title: 새 참가자 생성
+    title: 참가자 추가
+    add:
+      label: 참가자 추가
+  me: 나
+  empty:
+    title: 아직 지출이 없습니다
+    description: 첫 번째 지출을 추가하여 추적을 시작하세요
+    create: 지출 생성

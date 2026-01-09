@@ -21,3 +21,13 @@ account:
 actions:
   discard: تجاهل
   close: إغلاق
+friends:
+  app:
+    description: الطريقة الذكية لمتابعة من مدين لمن، مع الأصدقاء معاً.
+  inviter:
+    description: >-
+      !js
+
+      (name) => `لقد تمت دعوتك من قبل ${name}. فقط سجّل أو قم بتسجيل الدخول،
+      وستكون جاهزًا!`
+  accept: ابدأ استخدام Evn

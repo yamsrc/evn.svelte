@@ -1,27 +1,27 @@
 <script lang="ts">
+  import { ok } from 'svas'
   import { page } from '$app/state'
-  import { Loader } from '$com/loader'
-  import { Screen } from '$com/shell'
-  import { Footer } from '@/app/ui'
-  import { Authenticated } from '@/iam/ui'
-  import { Languages } from '@/iam/ui'
-  import Invitation from './Invitation.svelte'
+  import { Screen, Authenticated, Goto } from '@/app/ui'
+  import Accept from './Accept.svelte'
+  import type { PageData } from './$types'
 
-  const id = page.params.id as string
+  const data = page.data as PageData
+  const inviter = data.inviter
+  const good = ok(inviter)
+
+  let accepted = $state(false)
+  let error = $state(!good)
 </script>
 
-<Screen class="flex-1 flex flex-col justify-between">
-  <Authenticated>
-    {#snippet screen({ authentication })}
-      <Languages />
-      <Invitation {id}>
-        {@render authentication()}
-      </Invitation>
-      <Footer />
-    {/snippet}
-
-    <Invitation {id}>
-      <Loader />
-    </Invitation>
-  </Authenticated>
-</Screen>
+{#if error}
+  <Goto href="/" />
+{:else if good}
+  <Screen>
+    <Authenticated>
+      {#if accepted}
+        <Goto href="/" />
+      {/if}
+    </Authenticated>
+  </Screen>
+  <Accept {inviter} bind:accepted bind:error />
+{/if}

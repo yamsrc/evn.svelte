@@ -67,6 +67,49 @@ src/lib/components/
     └── Screen.ts
 ```
 
+## Forms Pattern
+
+Forms should follow a clear separation of concerns between data collection, validation, and business logic execution.
+
+### Form Components
+
+**Form Declaration**:
+
+- Forms should declare a `Value` interface representing the form data structure
+- Forms should accept an `onsubmit` callback prop for handling form submission
+- Forms should not directly interact with domain services or perform business operations
+
+```typescript
+export interface Value {
+  title: string
+}
+
+export interface Props {
+  value?: Value
+  onsubmit?: (value: Value) => Promise<void | Error>
+}
+```
+
+### Service Connector
+
+Bridge forms with domain services by implementing specific business operations (Create, Edit, Update, etc.)
+
+```typescript
+// Create.svelte - connects Form to something.add service
+<script lang="ts">
+  import { add } from '@/something'
+  import { Form, type Value } from './form'
+
+  let value: Value = $state({ title: '' })
+
+  async function onsubmit(value: Value) {
+    return await add(value)
+  }
+</script>
+
+<Form {value} {onsubmit} />
+```
+
 ## Svelte Components
 
 ### EntityLike props

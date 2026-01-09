@@ -1,8 +1,8 @@
 <script lang="ts">
   import { Users } from '@lucide/svelte'
   import { Async } from 'svas'
-  import { goto } from '$app/navigation'
   import { Panel } from '$com/panel'
+  import { dict } from '$lib/intl'
   import { cn } from '$lib/utils'
   import { accounts } from '@/accounts'
   import { Picture } from '@/accounts/ui'
@@ -19,11 +19,16 @@
       event.preventDefault()
       selected = !selected
       onselect(group.id, selected)
-    } else goto(`/contacts/groups/${group.id}`)
+    }
   }
 </script>
 
-<Panel {selected} class={cn('bg-card border border-border h-20')} {onclick}>
+<Panel
+  {selected}
+  class={cn('bg-card border border-border h-20')}
+  {onclick}
+  href={`/contacts/groups/${group.id}`}
+>
   {#snippet left()}
     <div class="flex flex-col items-start gap-1">
       <div class="flex items-center gap-2">
@@ -47,6 +52,6 @@
     </div>
   {/snippet}
   {#snippet right()}
-    <Balance balance={group.balance} />
+    <Balance balance={group.balance} youAreOwed={$dict.contacts.contact.owesYou} />
   {/snippet}
 </Panel>

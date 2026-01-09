@@ -19,3 +19,11 @@ account:
 actions:
   discard: 破棄
   close: 閉じる
+friends:
+  app:
+    description: 友達と一緒に、誰が誰にいくら借りているかをスマートに管理する方法。
+  inviter:
+    description: |-
+      !js
+      (name) => `${name}さんから招待されています。登録またはログインするだけで、すぐにご利用いただけます。`
+  accept: Evn を使い始める

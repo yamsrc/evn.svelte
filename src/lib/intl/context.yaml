@@ -35,16 +35,20 @@ inputs:
       input: Cancel
     search:
       input: Search
+    save:
+      input: Save
+    create:
+      input: Create
   nav:
     home:
       input: Home
-    evns:
-      input: Evns
-      context: Use Evns for english. In other languages use short word with meaning settle up debts after spliting recipt
     profile:
       input: Me
     contacts:
       input: Friends
+    expenses:
+      input: Evns
+      context: Use Evns for english. In other languages use short word with meaning settle up debts after spliting recipt
   terms:
     input: Terms & conditions
   privacy:
@@ -186,6 +190,62 @@ inputs:
   favorites:
     title:
       input: Favorites
+  expenses:
+    spendings:
+      title:
+        input: Spendings
+      total:
+        input: Total
+      extras:
+        description:
+          input: Tips, table service, etc. divided equally.
+        title:
+          input: Service / Other
+    payers:
+      title:
+        input: Paid by
+    form:
+      title:
+        placeholder:
+          input: What have you spent on?
+      location:
+        placeholder:
+          input: Where? (Optional)
+      save:
+        input: Save and update balances
+    title:
+      input: Evns
+      context: Use Evns for english. In other languages use short word with meaning settle up debts after spliting recipt
+    empty:
+      title:
+        input: No expenses yet
+      description:
+        input: Create your first expense to start tracking
+      create:
+        input: Create expense
+    balance:
+      total:
+        input: Total bill
+      youAreOwed:
+        input: You are owed
+      youOwe:
+        input: You owe
+      youWillOwe:
+        input: You will owe
+      youWillBeOwed:
+        input: Others will owe you
+    participants:
+      create:
+        title:
+          input: Create a new participant
+      title:
+        input: Add participants
+      add:
+        label:
+          input: Add participant
+    me:
+      input: Me
+>>>>>>> dev
 mounts:
   iam: ../../@/iam/ui/intl
   feedback: ../../@/feedback/ui/intl

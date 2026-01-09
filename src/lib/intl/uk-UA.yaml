@@ -16,11 +16,13 @@ actions:
   addSelected: Додати вибране
   cancel: Скасувати
   search: Пошук
+  save: Зберегти
+  create: Створити
 nav:
   home: Головна
-  evns: Розрахунок
   profile: Я
   contacts: Друзі
+  expenses: Розрахунок
 terms: Умови та положення
 privacy: Політика конфіденційності
 madeBy: Створено
@@ -117,3 +119,36 @@ account:
     link: Видалити акаунт
 favorites:
   title: Улюблене
+expenses:
+  spendings:
+    title: Витрати
+    total: Разом
+    extras:
+      description: Чайові, обслуговування столу тощо діляться порівну.
+      title: Сервіс / Інше
+  payers:
+    title: Оплачено
+  form:
+    title:
+      placeholder: На що ти витратив?
+    location:
+      placeholder: Де? (необов’язково)
+    save: Зберегти й оновити баланси
+  title: Розрахунок
+  balance:
+    total: Загальний рахунок
+    youAreOwed: Вам винні
+    youOwe: Ви винні
+    youWillOwe: Ви будете винні
+    youWillBeOwed: Інші будуть у тебе в боргу
+  participants:
+    create:
+      title: Створити нового учасника
+    title: Додати учасників
+    add:
+      label: Додати учасника
+  me: Я
+  empty:
+    title: Поки що немає витрат
+    description: Створіть свою першу витрату, щоб почати відстеження
+    create: Створити витрату

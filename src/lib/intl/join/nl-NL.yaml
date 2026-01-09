@@ -25,3 +25,15 @@ account:
 actions:
   discard: Afwijzen
   close: Sluiten
+friends:
+  app:
+    description: >-
+      De slimme manier om samen met vrienden bij te houden wie wat aan wie
+      verschuldigd is.
+  inviter:
+    description: >-
+      !js
+
+      (name) => `Je bent uitgenodigd door ${name}. Registreer je of log in, en
+      je bent klaar om te beginnen!`
+  accept: Begin met het gebruik van Evn

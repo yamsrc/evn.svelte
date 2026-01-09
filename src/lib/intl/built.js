@@ -22,13 +22,15 @@ export const dictionaries = {
       },
       "addSelected": "إضافة المحدد",
       "cancel": "إلغاء",
-      "search": "بحث"
+      "search": "بحث",
+      "save": "حفظ",
+      "create": "إنشاء"
     },
     "nav": {
       "home": "الرئيسية",
-      "evns": "تسوية",
       "profile": "أنا",
-      "contacts": "الأصدقاء"
+      "contacts": "الأصدقاء",
+      "expenses": "تسوية"
     },
     "terms": "الشروط والأحكام",
     "privacy": "سياسة الخصوصية",
@@ -136,6 +138,51 @@ export const dictionaries = {
     },
     "favorites": {
       "title": "المفضلة"
+    },
+    "expenses": {
+      "spendings": {
+        "title": "النفقات",
+        "total": "الإجمالي",
+        "extras": {
+          "description": "الإكراميات، وخدمة الطاولة، وما إلى ذلك تُقسّم بالتساوي.",
+          "title": "خدمة / أخرى"
+        }
+      },
+      "payers": {
+        "title": "مدفوع بواسطة"
+      },
+      "form": {
+        "title": {
+          "placeholder": "على ماذا أنفقتَ المال؟"
+        },
+        "location": {
+          "placeholder": "أين؟ (اختياري)"
+        },
+        "save": "احفظ وقم بتحديث الأرصدة"
+      },
+      "title": "تسوية",
+      "balance": {
+        "total": "إجمالي الفاتورة",
+        "youAreOwed": "لك مستحقات",
+        "youOwe": "أنت مدين",
+        "youWillOwe": "سَتَدِين",
+        "youWillBeOwed": "سيَدِين لك الآخرون"
+      },
+      "participants": {
+        "create": {
+          "title": "إنشاء مشارك جديد"
+        },
+        "title": "إضافة مشاركين",
+        "add": {
+          "label": "إضافة مشارك"
+        }
+      },
+      "me": "أنا",
+      "empty": {
+        "title": "لا توجد مصروفات بعد",
+        "description": "أنشئ أول مصروفك لبدء التتبع",
+        "create": "إنشاء مصروف"
+      }
     }
   },
   "de-DE": {
@@ -158,13 +205,15 @@ export const dictionaries = {
       },
       "addSelected": "Ausgewählte hinzufügen",
       "cancel": "Abbrechen",
-      "search": "Suchen"
+      "search": "Suchen",
+      "save": "Speichern",
+      "create": "Erstellen"
     },
     "nav": {
       "home": "Startseite",
-      "evns": "Ausgleich",
       "profile": "Ich",
-      "contacts": "Freunde"
+      "contacts": "Freunde",
+      "expenses": "Ausgleich"
     },
     "terms": "Allgemeine Geschäftsbedingungen",
     "privacy": "Datenschutzrichtlinie",
@@ -272,6 +321,51 @@ export const dictionaries = {
     },
     "favorites": {
       "title": "Favoriten"
+    },
+    "expenses": {
+      "spendings": {
+        "title": "Ausgaben",
+        "total": "Gesamt",
+        "extras": {
+          "description": "Trinkgeld, Tischservice usw. werden gleichmäßig aufgeteilt.",
+          "title": "Dienstleistung / Sonstiges"
+        }
+      },
+      "payers": {
+        "title": "Bezahlt von"
+      },
+      "form": {
+        "title": {
+          "placeholder": "Wofür hast du Geld ausgegeben?"
+        },
+        "location": {
+          "placeholder": "Wo? (optional)"
+        },
+        "save": "Speichern und Salden aktualisieren"
+      },
+      "title": "Ausgleichen",
+      "balance": {
+        "total": "Gesamtrechnung",
+        "youAreOwed": "Dir steht etwas zu",
+        "youOwe": "Du schuldest",
+        "youWillOwe": "Du wirst schulden",
+        "youWillBeOwed": "Andere werden dir etwas schulden"
+      },
+      "participants": {
+        "create": {
+          "title": "Neuen Teilnehmer erstellen"
+        },
+        "title": "Teilnehmer hinzufügen",
+        "add": {
+          "label": "Teilnehmer hinzufügen"
+        }
+      },
+      "me": "Ich",
+      "empty": {
+        "title": "Noch keine Ausgaben",
+        "description": "Erstelle deine erste Ausgabe, um mit dem Verfolgen zu beginnen",
+        "create": "Ausgabe erstellen"
+      }
     }
   },
   "en-US": {
@@ -294,13 +388,15 @@ export const dictionaries = {
       },
       "addSelected": "Add selected",
       "cancel": "Cancel",
-      "search": "Search"
+      "search": "Search",
+      "save": "Save",
+      "create": "Create"
     },
     "nav": {
       "home": "Home",
-      "evns": "Evns",
       "profile": "Me",
-      "contacts": "Friends"
+      "contacts": "Friends",
+      "expenses": "Evns"
     },
     "terms": "Terms & Conditions",
     "privacy": "Privacy Policy",
@@ -408,6 +504,51 @@ export const dictionaries = {
     },
     "favorites": {
       "title": "Favorites"
+    },
+    "expenses": {
+      "spendings": {
+        "title": "Spendings",
+        "total": "Total",
+        "extras": {
+          "description": "Tips, table service, etc. are divided equally.",
+          "title": "Service / Other"
+        }
+      },
+      "payers": {
+        "title": "Paid by"
+      },
+      "form": {
+        "title": {
+          "placeholder": "What have you spent on?"
+        },
+        "location": {
+          "placeholder": "Where? (Optional)"
+        },
+        "save": "Save and update balances"
+      },
+      "title": "Evns",
+      "empty": {
+        "title": "No expenses yet",
+        "description": "Create your first expense to start tracking",
+        "create": "Create expense"
+      },
+      "balance": {
+        "total": "Total bill",
+        "youAreOwed": "You are owed",
+        "youOwe": "You owe",
+        "youWillOwe": "You will owe",
+        "youWillBeOwed": "Others will owe you"
+      },
+      "participants": {
+        "create": {
+          "title": "Create a new participant"
+        },
+        "title": "Add participants",
+        "add": {
+          "label": "Add participant"
+        }
+      },
+      "me": "Me"
     }
   },
   "es-ES": {
@@ -430,13 +571,15 @@ export const dictionaries = {
       },
       "addSelected": "Agregar seleccionado(s)",
       "cancel": "Cancelar",
-      "search": "Buscar"
+      "search": "Buscar",
+      "save": "Guardar",
+      "create": "Crear"
     },
     "nav": {
       "home": "Inicio",
-      "evns": "Ajustes",
       "profile": "Yo",
-      "contacts": "Amigos"
+      "contacts": "Amigos",
+      "expenses": "Ajustes"
     },
     "terms": "Términos y condiciones",
     "privacy": "Política de privacidad",
@@ -544,6 +687,51 @@ export const dictionaries = {
     },
     "favorites": {
       "title": "Favoritos"
+    },
+    "expenses": {
+      "spendings": {
+        "title": "Gastos",
+        "total": "Total",
+        "extras": {
+          "description": "Las propinas, el servicio de mesa, etc. se reparten por igual.",
+          "title": "Servicio / Otro"
+        }
+      },
+      "payers": {
+        "title": "Pagado por"
+      },
+      "form": {
+        "title": {
+          "placeholder": "¿En qué has gastado?"
+        },
+        "location": {
+          "placeholder": "¿Dónde? (opcional)"
+        },
+        "save": "Guardar y actualizar saldos"
+      },
+      "title": "Ajustar",
+      "balance": {
+        "total": "Factura total",
+        "youAreOwed": "Te deben",
+        "youOwe": "Debes",
+        "youWillOwe": "Deberás",
+        "youWillBeOwed": "Los demás te deberán"
+      },
+      "participants": {
+        "create": {
+          "title": "Crear un nuevo participante"
+        },
+        "title": "Agregar participantes",
+        "add": {
+          "label": "Agregar participante"
+        }
+      },
+      "me": "Yo",
+      "empty": {
+        "title": "Aún no hay gastos",
+        "description": "Crea tu primer gasto para empezar a realizar un seguimiento",
+        "create": "Crear gasto"
+      }
     }
   },
   "fr-FR": {
@@ -566,13 +754,15 @@ export const dictionaries = {
       },
       "addSelected": "Ajouter la sélection",
       "cancel": "Annuler",
-      "search": "Rechercher"
+      "search": "Rechercher",
+      "save": "Enregistrer",
+      "create": "Créer"
     },
     "nav": {
       "home": "Accueil",
-      "evns": "Règlements",
       "profile": "Moi",
-      "contacts": "Amis"
+      "contacts": "Amis",
+      "expenses": "Règlements"
     },
     "terms": "Conditions générales",
     "privacy": "Politique de confidentialité",
@@ -680,6 +870,51 @@ export const dictionaries = {
     },
     "favorites": {
       "title": "Favoris"
+    },
+    "expenses": {
+      "spendings": {
+        "title": "Dépenses",
+        "total": "Total",
+        "extras": {
+          "description": "Pourboires, service à table, etc. partagés équitablement.",
+          "title": "Service / Autre"
+        }
+      },
+      "payers": {
+        "title": "Payé par"
+      },
+      "form": {
+        "title": {
+          "placeholder": "Dans quoi as-tu dépensé ?"
+        },
+        "location": {
+          "placeholder": "Où ? (facultatif)"
+        },
+        "save": "Enregistrer et mettre à jour les soldes"
+      },
+      "title": "Régler",
+      "balance": {
+        "total": "Facture totale",
+        "youAreOwed": "On te doit",
+        "youOwe": "Vous devez",
+        "youWillOwe": "Vous devrez",
+        "youWillBeOwed": "Les autres te devront quelque chose"
+      },
+      "participants": {
+        "create": {
+          "title": "Créer un nouveau participant"
+        },
+        "title": "Ajouter des participants",
+        "add": {
+          "label": "Ajouter un participant"
+        }
+      },
+      "me": "Moi",
+      "empty": {
+        "title": "Aucune dépense pour l’instant",
+        "description": "Créez votre première dépense pour commencer à suivre",
+        "create": "Créer une dépense"
+      }
     }
   },
   "hi-IN": {
@@ -702,13 +937,15 @@ export const dictionaries = {
       },
       "addSelected": "चयनित जोड़ें",
       "cancel": "रद्द करें",
-      "search": "खोजें"
+      "search": "खोजें",
+      "save": "सहेजें",
+      "create": "सृजन करें"
     },
     "nav": {
       "home": "मुख्य पृष्ठ",
-      "evns": "सेटलमेंट",
       "profile": "मैं",
-      "contacts": "मित्र"
+      "contacts": "मित्र",
+      "expenses": "सेटलमेंट"
     },
     "terms": "नियम व शर्तें",
     "privacy": "गोपनीयता नीति",
@@ -816,6 +1053,51 @@ export const dictionaries = {
     },
     "favorites": {
       "title": "पसंदीदा"
+    },
+    "expenses": {
+      "spendings": {
+        "title": "खर्च",
+        "total": "कुल",
+        "extras": {
+          "description": "टिप्स, टेबल सेवा आदि समान रूप से बाँटी जाती हैं।",
+          "title": "सेवा / अन्य"
+        }
+      },
+      "payers": {
+        "title": "द्वारा भुगतान किया गया"
+      },
+      "form": {
+        "title": {
+          "placeholder": "आपने किस पर खर्च किया?"
+        },
+        "location": {
+          "placeholder": "कहाँ? (वैकल्पिक)"
+        },
+        "save": "सहेजें और बैलेंस अपडेट करें"
+      },
+      "title": "हिसाब",
+      "balance": {
+        "total": "कुल बिल",
+        "youAreOwed": "आपको कुछ मिलना बाकी है",
+        "youOwe": "आप पर बकाया है",
+        "youWillOwe": "आप पर बकाया होगा",
+        "youWillBeOwed": "दूसरे लोग आपके एहसानमंद होंगे"
+      },
+      "participants": {
+        "create": {
+          "title": "नया प्रतिभागी बनाएँ"
+        },
+        "title": "प्रतिभागी जोड़ें",
+        "add": {
+          "label": "प्रतिभागी जोड़ें"
+        }
+      },
+      "me": "मैं",
+      "empty": {
+        "title": "अभी तक कोई खर्च नहीं",
+        "description": "ट्रैकिंग शुरू करने के लिए अपना पहला खर्च दर्ज करें",
+        "create": "व्यय बनाएं"
+      }
     }
   },
   "it-IT": {
@@ -838,13 +1120,15 @@ export const dictionaries = {
       },
       "addSelected": "Aggiungi selezionati",
       "cancel": "Annulla",
-      "search": "Cerca"
+      "search": "Cerca",
+      "save": "Salva",
+      "create": "Crea"
     },
     "nav": {
       "home": "Home",
-      "evns": "Saldo",
       "profile": "Io",
-      "contacts": "Amici"
+      "contacts": "Amici",
+      "expenses": "Saldo"
     },
     "terms": "Termini e condizioni",
     "privacy": "Informativa sulla privacy",
@@ -952,6 +1236,51 @@ export const dictionaries = {
     },
     "favorites": {
       "title": "Preferiti"
+    },
+    "expenses": {
+      "spendings": {
+        "title": "Spese",
+        "total": "Totale",
+        "extras": {
+          "description": "Mance, servizio al tavolo, ecc. sono divisi equamente.",
+          "title": "Servizio / Altro"
+        }
+      },
+      "payers": {
+        "title": "Pagato da"
+      },
+      "form": {
+        "title": {
+          "placeholder": "Su cosa hai speso?"
+        },
+        "location": {
+          "placeholder": "Dove? (opzionale)"
+        },
+        "save": "Salva e aggiorna i saldi"
+      },
+      "title": "Saldo",
+      "balance": {
+        "total": "Totale conto",
+        "youAreOwed": "Ti è dovuto",
+        "youOwe": "Devi",
+        "youWillOwe": "Dovrai",
+        "youWillBeOwed": "Gli altri ti saranno debitori"
+      },
+      "participants": {
+        "create": {
+          "title": "Crea un nuovo partecipante"
+        },
+        "title": "Aggiungi partecipanti",
+        "add": {
+          "label": "Aggiungi partecipante"
+        }
+      },
+      "me": "Io",
+      "empty": {
+        "title": "Nessuna spesa ancora",
+        "description": "Crea la tua prima spesa per iniziare a tenere traccia",
+        "create": "Crea spesa"
+      }
     }
   },
   "ja-JP": {
@@ -974,13 +1303,15 @@ export const dictionaries = {
       },
       "addSelected": "選択したものを追加",
       "cancel": "キャンセル",
-      "search": "検索"
+      "search": "検索",
+      "save": "保存",
+      "create": "作成"
     },
     "nav": {
       "home": "ホーム",
-      "evns": "清算",
       "profile": "私",
-      "contacts": "友だち"
+      "contacts": "友だち",
+      "expenses": "清算"
     },
     "terms": "利用規約",
     "privacy": "プライバシーポリシー",
@@ -1088,6 +1419,51 @@ export const dictionaries = {
     },
     "favorites": {
       "title": "お気に入り"
+    },
+    "expenses": {
+      "spendings": {
+        "title": "支出",
+        "total": "合計",
+        "extras": {
+          "description": "チップやテーブルサービスなどは均等に分けられます。",
+          "title": "サービス / その他"
+        }
+      },
+      "payers": {
+        "title": "支払い者"
+      },
+      "form": {
+        "title": {
+          "placeholder": "何に使ったの？"
+        },
+        "location": {
+          "placeholder": "どこですか？（任意）"
+        },
+        "save": "保存して残高を更新"
+      },
+      "title": "清算",
+      "balance": {
+        "total": "合計金額",
+        "youAreOwed": "あなたには支払いが残っています",
+        "youOwe": "あなたは借りがあります",
+        "youWillOwe": "あなたは支払うことになります",
+        "youWillBeOwed": "他の人たちがあなたに借りができる"
+      },
+      "participants": {
+        "create": {
+          "title": "新しい参加者を作成"
+        },
+        "title": "参加者を追加",
+        "add": {
+          "label": "参加者を追加"
+        }
+      },
+      "me": "私",
+      "empty": {
+        "title": "まだ支出がありません",
+        "description": "最初の支出を作成して、記録を始めましょう",
+        "create": "支出を作成"
+      }
     }
   },
   "ko-KR": {
@@ -1110,13 +1486,15 @@ export const dictionaries = {
       },
       "addSelected": "선택 항목 추가",
       "cancel": "취소",
-      "search": "검색"
+      "search": "검색",
+      "save": "저장",
+      "create": "생성"
     },
     "nav": {
       "home": "홈",
-      "evns": "정산",
       "profile": "나",
-      "contacts": "친구"
+      "contacts": "친구",
+      "expenses": "정산"
     },
     "terms": "이용 약관",
     "privacy": "개인정보처리방침",
@@ -1224,6 +1602,51 @@ export const dictionaries = {
     },
     "favorites": {
       "title": "즐겨찾기"
+    },
+    "expenses": {
+      "spendings": {
+        "title": "지출",
+        "total": "총합",
+        "extras": {
+          "description": "팁, 테이블 서비스 등은 모두 균등하게 나눕니다.",
+          "title": "서비스 / 기타"
+        }
+      },
+      "payers": {
+        "title": "지불자"
+      },
+      "form": {
+        "title": {
+          "placeholder": "무엇에 썼나요?"
+        },
+        "location": {
+          "placeholder": "어디인가요? (선택 사항)"
+        },
+        "save": "저장하고 잔액 업데이트"
+      },
+      "title": "정산",
+      "balance": {
+        "total": "총 금액",
+        "youAreOwed": "당신은 받을 돈이 있습니다",
+        "youOwe": "당신은 빚졌습니다",
+        "youWillOwe": "갚아야 합니다",
+        "youWillBeOwed": "다른 사람들이 당신에게 신세를 지게 됩니다"
+      },
+      "participants": {
+        "create": {
+          "title": "새 참가자 생성"
+        },
+        "title": "참가자 추가",
+        "add": {
+          "label": "참가자 추가"
+        }
+      },
+      "me": "나",
+      "empty": {
+        "title": "아직 지출이 없습니다",
+        "description": "첫 번째 지출을 추가하여 추적을 시작하세요",
+        "create": "지출 생성"
+      }
     }
   },
   "nl-NL": {
@@ -1246,13 +1669,15 @@ export const dictionaries = {
       },
       "addSelected": "Geselecteerde toevoegen",
       "cancel": "Annuleren",
-      "search": "Zoeken"
+      "search": "Zoeken",
+      "save": "Opslaan",
+      "create": "Aanmaken"
     },
     "nav": {
       "home": "Home",
-      "evns": "Afrekening",
       "profile": "Ik",
-      "contacts": "Vrienden"
+      "contacts": "Vrienden",
+      "expenses": "Afrekening"
     },
     "terms": "Algemene voorwaarden",
     "privacy": "Privacybeleid",
@@ -1360,6 +1785,51 @@ export const dictionaries = {
     },
     "favorites": {
       "title": "Favorieten"
+    },
+    "expenses": {
+      "spendings": {
+        "title": "Uitgaven",
+        "total": "Totaal",
+        "extras": {
+          "description": "Fooien, tafelbediening, enzovoort worden gelijk verdeeld.",
+          "title": "Service / Overig"
+        }
+      },
+      "payers": {
+        "title": "Betaald door"
+      },
+      "form": {
+        "title": {
+          "placeholder": "Waar heb je geld aan uitgegeven?"
+        },
+        "location": {
+          "placeholder": "Waar? (optioneel)"
+        },
+        "save": "Opslaan en saldi bijwerken"
+      },
+      "title": "Vereffenen",
+      "balance": {
+        "total": "Totaalrekening",
+        "youAreOwed": "Je hebt iets tegoed",
+        "youOwe": "Je bent schuldig",
+        "youWillOwe": "Je zult verschuldigd zijn",
+        "youWillBeOwed": "Anderen zullen jou iets verschuldigd zijn"
+      },
+      "participants": {
+        "create": {
+          "title": "Nieuwe deelnemer aanmaken"
+        },
+        "title": "Deelnemers toevoegen",
+        "add": {
+          "label": "Deelnemer toevoegen"
+        }
+      },
+      "me": "Ik",
+      "empty": {
+        "title": "Nog geen uitgaven",
+        "description": "Maak je eerste uitgave aan om het bijhouden te starten",
+        "create": "Uitgave aanmaken"
+      }
     }
   },
   "ru-FU": {
@@ -1382,13 +1852,15 @@ export const dictionaries = {
       },
       "addSelected": "Закинуть выбранное",
       "cancel": "Забить хуй",
-      "search": "Рыскать"
+      "search": "Рыскать",
+      "save": "Сохранить",
+      "create": "Создать"
     },
     "nav": {
       "home": "Хата",
-      "evns": "Разборки",
       "profile": "Чёткий",
-      "contacts": "Кореша"
+      "contacts": "Кореша",
+      "expenses": "Разборки"
     },
     "terms": "Понятия",
     "privacy": "Не стучим",
@@ -1496,6 +1968,51 @@ export const dictionaries = {
     },
     "favorites": {
       "title": "Избранное"
+    },
+    "expenses": {
+      "spendings": {
+        "title": "Расходы",
+        "total": "Итого",
+        "extras": {
+          "description": "Чаевые, обслуживание стола и прочее делятся поровну.",
+          "title": "Сервис / Другое"
+        }
+      },
+      "payers": {
+        "title": "Оплачено"
+      },
+      "form": {
+        "title": {
+          "placeholder": "На что ты потратил?"
+        },
+        "location": {
+          "placeholder": "Где? (необязательно)"
+        },
+        "save": "Сохранить и обновить балансы"
+      },
+      "title": "Рассчитать",
+      "balance": {
+        "total": "Итоговый счет",
+        "youAreOwed": "Вам должны",
+        "youOwe": "Вы должны",
+        "youWillOwe": "Вы будете должны",
+        "youWillBeOwed": "Другие будут должны тебе"
+      },
+      "participants": {
+        "create": {
+          "title": "Создать нового участника"
+        },
+        "title": "Добавить участников",
+        "add": {
+          "label": "Добавить участника"
+        }
+      },
+      "me": "Я",
+      "empty": {
+        "title": "Пока что расходов нет",
+        "description": "Создайте первый расход, чтобы начать отслеживание",
+        "create": "Создать расход"
+      }
     }
   },
   "ru-RU": {
@@ -1518,13 +2035,15 @@ export const dictionaries = {
       },
       "addSelected": "Добавить выбранные",
       "cancel": "Отмена",
-      "search": "Поиск"
+      "search": "Поиск",
+      "save": "Сохранить",
+      "create": "Создать"
     },
     "nav": {
       "home": "Главная",
-      "evns": "Расчёты",
       "profile": "Я",
-      "contacts": "Друзья"
+      "contacts": "Друзья",
+      "expenses": "Расчёты"
     },
     "terms": "Условия и положения",
     "privacy": "Политика конфиденциальности",
@@ -1632,6 +2151,51 @@ export const dictionaries = {
     },
     "favorites": {
       "title": "Избранное"
+    },
+    "expenses": {
+      "spendings": {
+        "title": "Расходы",
+        "total": "Итого",
+        "extras": {
+          "description": "Чаевые, обслуживание стола и прочее делятся поровну.",
+          "title": "Сервис / Другое"
+        }
+      },
+      "payers": {
+        "title": "Оплачено"
+      },
+      "form": {
+        "title": {
+          "placeholder": "На что ты потратил?"
+        },
+        "location": {
+          "placeholder": "Где? (необязательно)"
+        },
+        "save": "Сохранить и обновить балансы"
+      },
+      "title": "Рассчитать",
+      "balance": {
+        "total": "Итоговый счет",
+        "youAreOwed": "Вам должны",
+        "youOwe": "Вы должны",
+        "youWillOwe": "Вы будете должны",
+        "youWillBeOwed": "Другие будут должны тебе"
+      },
+      "participants": {
+        "create": {
+          "title": "Создать нового участника"
+        },
+        "title": "Добавить участников",
+        "add": {
+          "label": "Добавить участника"
+        }
+      },
+      "me": "Я",
+      "empty": {
+        "title": "Пока нет расходов",
+        "description": "Создайте первый расход, чтобы начать отслеживание",
+        "create": "Создать расход"
+      }
     }
   },
   "sw-TZ": {
@@ -1654,13 +2218,15 @@ export const dictionaries = {
       },
       "addSelected": "Ongeza zilizochaguliwa",
       "cancel": "Ghairi",
-      "search": "Tafuta"
+      "search": "Tafuta",
+      "save": "Hifadhi",
+      "create": "Unda"
     },
     "nav": {
       "home": "Mwanzo",
-      "evns": "Marejesho",
       "profile": "Mimi",
-      "contacts": "Marafiki"
+      "contacts": "Marafiki",
+      "expenses": "Marejesho"
     },
     "terms": "Vigezo na masharti",
     "privacy": "Sera ya Faragha",
@@ -1768,6 +2334,51 @@ export const dictionaries = {
     },
     "favorites": {
       "title": "Vipendwa"
+    },
+    "expenses": {
+      "spendings": {
+        "title": "Matumizi",
+        "total": "Jumla",
+        "extras": {
+          "description": "Vidokezo, huduma ya meza, n.k. vimegawanywa sawa.",
+          "title": "Huduma / Nyingine"
+        }
+      },
+      "payers": {
+        "title": "Imelipwa na"
+      },
+      "form": {
+        "title": {
+          "placeholder": "Umetumia kwenye nini?"
+        },
+        "location": {
+          "placeholder": "Wapi? (Hiari)"
+        },
+        "save": "Hifadhi na sasisha mizania"
+      },
+      "title": "Lipa",
+      "balance": {
+        "total": "Jumla ya bili",
+        "youAreOwed": "Unadai malipo",
+        "youOwe": "Unadaiwa",
+        "youWillOwe": "Utakuwa na deni",
+        "youWillBeOwed": "Wengine watakudai fadhila"
+      },
+      "participants": {
+        "create": {
+          "title": "Unda mshiriki mpya"
+        },
+        "title": "Ongeza washiriki",
+        "add": {
+          "label": "Ongeza mshiriki"
+        }
+      },
+      "me": "Mimi",
+      "empty": {
+        "title": "Hakuna matumizi bado",
+        "description": "Unda matumizi yako ya kwanza ili kuanza kufuatilia",
+        "create": "Unda gharama"
+      }
     }
   },
   "tr-TR": {
@@ -1790,13 +2401,15 @@ export const dictionaries = {
       },
       "addSelected": "Seçileni ekle",
       "cancel": "İptal",
-      "search": "Ara"
+      "search": "Ara",
+      "save": "Kaydet",
+      "create": "Oluştur"
     },
     "nav": {
       "home": "Ana Sayfa",
-      "evns": "Hesaplaşma",
       "profile": "Ben",
-      "contacts": "Arkadaşlar"
+      "contacts": "Arkadaşlar",
+      "expenses": "Hesaplaşma"
     },
     "terms": "Şartlar ve koşullar",
     "privacy": "Gizlilik Politikası",
@@ -1904,6 +2517,51 @@ export const dictionaries = {
     },
     "favorites": {
       "title": "Favoriler"
+    },
+    "expenses": {
+      "spendings": {
+        "title": "Harcamalar",
+        "total": "Toplam",
+        "extras": {
+          "description": "Bahşişler, masa servisi vb. eşit olarak paylaştırılır.",
+          "title": "Hizmet / Diğer"
+        }
+      },
+      "payers": {
+        "title": "Ödeyen"
+      },
+      "form": {
+        "title": {
+          "placeholder": "Neye harcadın?"
+        },
+        "location": {
+          "placeholder": "Nerede? (Opsiyonel)"
+        },
+        "save": "Bakiyeleri kaydet ve güncelle"
+      },
+      "title": "Hesapla",
+      "balance": {
+        "total": "Toplam fatura",
+        "youAreOwed": "Sana borç var",
+        "youOwe": "Borcunuz var",
+        "youWillOwe": "Borçlu olacaksın",
+        "youWillBeOwed": "Diğerleri sana borçlu olacak"
+      },
+      "participants": {
+        "create": {
+          "title": "Yeni katılımcı oluştur"
+        },
+        "title": "Katılımcı ekle",
+        "add": {
+          "label": "Katılımcı ekle"
+        }
+      },
+      "me": "Ben",
+      "empty": {
+        "title": "Henüz gider yok",
+        "description": "Takibe başlamak için ilk giderini oluştur",
+        "create": "Gider oluştur"
+      }
     }
   },
   "uk-UA": {
@@ -1926,13 +2584,15 @@ export const dictionaries = {
       },
       "addSelected": "Додати вибране",
       "cancel": "Скасувати",
-      "search": "Пошук"
+      "search": "Пошук",
+      "save": "Зберегти",
+      "create": "Створити"
     },
     "nav": {
       "home": "Головна",
-      "evns": "Розрахунок",
       "profile": "Я",
-      "contacts": "Друзі"
+      "contacts": "Друзі",
+      "expenses": "Розрахунок"
     },
     "terms": "Умови та положення",
     "privacy": "Політика конфіденційності",
@@ -2040,6 +2700,51 @@ export const dictionaries = {
     },
     "favorites": {
       "title": "Улюблене"
+    },
+    "expenses": {
+      "spendings": {
+        "title": "Витрати",
+        "total": "Разом",
+        "extras": {
+          "description": "Чайові, обслуговування столу тощо діляться порівну.",
+          "title": "Сервіс / Інше"
+        }
+      },
+      "payers": {
+        "title": "Оплачено"
+      },
+      "form": {
+        "title": {
+          "placeholder": "На що ти витратив?"
+        },
+        "location": {
+          "placeholder": "Де? (необов’язково)"
+        },
+        "save": "Зберегти й оновити баланси"
+      },
+      "title": "Розрахунок",
+      "balance": {
+        "total": "Загальний рахунок",
+        "youAreOwed": "Вам винні",
+        "youOwe": "Ви винні",
+        "youWillOwe": "Ви будете винні",
+        "youWillBeOwed": "Інші будуть у тебе в боргу"
+      },
+      "participants": {
+        "create": {
+          "title": "Створити нового учасника"
+        },
+        "title": "Додати учасників",
+        "add": {
+          "label": "Додати учасника"
+        }
+      },
+      "me": "Я",
+      "empty": {
+        "title": "Поки що немає витрат",
+        "description": "Створіть свою першу витрату, щоб почати відстеження",
+        "create": "Створити витрату"
+      }
     }
   },
   "zh-CN": {
@@ -2062,13 +2767,15 @@ export const dictionaries = {
       },
       "addSelected": "添加已选项",
       "cancel": "取消",
-      "search": "搜索"
+      "search": "搜索",
+      "save": "保存",
+      "create": "创建"
     },
     "nav": {
       "home": "首页",
-      "evns": "结算",
       "profile": "我",
-      "contacts": "朋友"
+      "contacts": "朋友",
+      "expenses": "结算"
     },
     "terms": "条款和条件",
     "privacy": "隐私政策",
@@ -2176,6 +2883,51 @@ export const dictionaries = {
     },
     "favorites": {
       "title": "收藏夹"
+    },
+    "expenses": {
+      "spendings": {
+        "title": "支出",
+        "total": "总计",
+        "extras": {
+          "description": "小费、桌边服务等均等分配。",
+          "title": "服务 / 其他"
+        }
+      },
+      "payers": {
+        "title": "付款方"
+      },
+      "form": {
+        "title": {
+          "placeholder": "你花钱花在了什么上？"
+        },
+        "location": {
+          "placeholder": "在哪里？（可选）"
+        },
+        "save": "保存并更新余额"
+      },
+      "title": "结清",
+      "balance": {
+        "total": "总账单",
+        "youAreOwed": "你有应得的",
+        "youOwe": "你欠款",
+        "youWillOwe": "你将欠款",
+        "youWillBeOwed": "别人会欠你人情"
+      },
+      "participants": {
+        "create": {
+          "title": "创建新参与者"
+        },
+        "title": "添加参与者",
+        "add": {
+          "label": "添加参与者"
+        }
+      },
+      "me": "我",
+      "empty": {
+        "title": "暂无支出",
+        "description": "创建您的第一笔支出以开始记录",
+        "create": "创建支出"
+      }
     }
   }
 };

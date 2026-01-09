@@ -22,3 +22,13 @@ When('I type random name', async ({ page, ctx }) => {
 
   await page.keyboard.type(ctx.name)
 })
+
+When('I type random expense title', async ({ page, ctx }) => {
+  ctx.name = faker.commerce.productName()
+
+  await page.keyboard.type(ctx.name)
+})
+
+When('I type random location', async ({ page }) => {
+  await page.keyboard.type(faker.location.city())
+})
