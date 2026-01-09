@@ -7,12 +7,18 @@
   import { Panel } from '@/accounts/ui'
   import { Confirm } from '@/app/ui'
   import * as contacts from '@/contacts'
+  import * as favorites from '@/favorites'
+  import { favorites as store } from '@/favorites'
   import type { Action } from '$com/panel'
   import type { Props } from './Panel'
 
   const { contact, selected = $bindable(), actionable = false, onselect }: Props = $props()
 
   let confirmDelete = $state(false)
+
+  const favorite = $derived(
+    ok($store) ? $store.find((f) => f.favorite === contact.identity) : undefined,
+  )
 
   function deleteContact() {
     contacts.del(contact)
@@ -21,7 +27,10 @@
 
   const fav: Action = $derived({
     id: 'favorite',
-    onclick: () => {},
+    onclick: () => {
+      if (favorite) favorites.del(favorite.id)
+      else favorites.add(contact.identity)
+    },
   })
 
   const del: Action = $derived({
@@ -46,7 +55,7 @@
   >
     {#snippet action(id)}
       {#if id === 'favorite'}
-        <Star size={16} class="text-background" />
+        <Star size={16} class="text-background" fill={favorite ? 'currentColor' : 'none'} />
       {:else if id === 'edit'}
         <Pencil size={16} class="text-background" />
       {:else if id === 'delete'}
