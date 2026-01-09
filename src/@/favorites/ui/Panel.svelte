@@ -1,6 +1,5 @@
 <script lang="ts">
-  import { Async } from 'svas'
-  import { combined } from 'svas'
+  import { Async, combined } from 'svas'
   import { Panel } from '$com/panel'
   import { cn } from '$lib/utils'
   import { accounts } from '@/accounts'

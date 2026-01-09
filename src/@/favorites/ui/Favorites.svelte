@@ -32,7 +32,7 @@
   <div class="overflow-x-auto -mx-5 px-5 py-2 -my-2 no-scrollbar">
     <div class="w-fit flex gap-1.5">
       {#each favorites as favorite (favorite.id)}
-        {@const selected = selection?.has(favorite.id)}
+        {@const selected = selection?.has(favorite.favorite)}
         {@const selectedProps = selectable ? { selected, onselect } : undefined}
         <Panel {favorite} {...selectedProps} />
       {/each}
