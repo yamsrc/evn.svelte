@@ -11,7 +11,7 @@ export function getContext(): Context {
 }
 
 export interface Context {
-  payers: number
+  payers: string[]
   split: boolean
   total: number
   paid: number

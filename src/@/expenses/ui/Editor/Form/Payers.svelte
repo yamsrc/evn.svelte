@@ -4,14 +4,19 @@
   import { Section } from '@/app/ui'
   import { contacts } from '@/contacts'
   import { account as me } from '@/iam'
+  import { getContext } from './Context'
   import Payer from './Payer.svelte'
   import type { Props } from './Payers'
 
   const { value = $bindable() }: Props = $props()
 
-  function ontoggle(identity: string, on: boolean) {
-    console.log('ontoggle', identity, on)
+  function ontoggle() {
+    console.log(payers.length, total)
   }
+
+  const ctx = getContext()
+  const payers = $derived(ctx.payers)
+  const total = $derived(ctx.total)
 </script>
 
 <Async store={contacts}>

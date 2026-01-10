@@ -8,9 +8,10 @@
   import { numbers } from '@/expenses'
   import { setContext } from './Context'
   import Description from './Description.svelte'
+  import { normalize, type Props, type Value } from './Form'
+  import { autoeffects } from './Form'
   import Participants from './Participants.svelte'
   import Payers from './Payers.svelte'
-  import type { Props, Value } from './Form'
 
   let { value = $bindable<Value>(), onsubmit: callback }: Props = $props()
   let busy = $state(false)
@@ -18,16 +19,19 @@
   async function submit() {
     busy = true
 
-    await callback?.(value)
+    const normalized = normalize(value)
+
+    await callback?.(normalized)
 
     busy = false
   }
 
+  /** identities of participants who have paid */
   const payers = $derived(
-    Object.values(value.participants).filter((p) => p.paid !== undefined).length,
+    Object.keys(value.participants).filter((id) => value.participants[id].paid !== undefined),
   )
 
-  const split = $derived(payers > 1)
+  const split = $derived(payers.length > 1)
   const total = $derived(numbers.total(value))
   const paid = $derived(numbers.paid(value))
 
@@ -47,7 +51,9 @@
   })
 
   const balance = $derived(numbers.balance(value))
-  const enough = $derived(payers === 1 || paid >= total)
+  const enough = $derived(payers.length === 1 || paid >= total)
+
+  $effect(() => autoeffects(value, payers, total))
 </script>
 
 <form onsubmit={onsubmit(submit)} class="space-y-5">
