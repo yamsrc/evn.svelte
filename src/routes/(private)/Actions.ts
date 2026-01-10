@@ -32,7 +32,7 @@ export const actions = (dict: Dictionary): ActionGroup[] => ([
         name: dict.actions.cheques.input,
         icon: PencilLine,
         onSelect: () => {
-          goto('/expenses/editor/')
+          goto('/expenses/editor/participants/')
         },
       },
     ],
