@@ -51,7 +51,7 @@
   })
 
   const balance = $derived(numbers.balance(value))
-  const enough = $derived(payers.length === 1 || paid >= total)
+  const enough = $derived(paid > 0 && (payers.length === 1 || paid >= total))
 
   $effect(() => autoeffects(value, payers, total))
 </script>
@@ -62,8 +62,6 @@
   <Separator />
 
   <Participants bind:value />
-
-  <Separator />
 
   <Payers bind:value />
 

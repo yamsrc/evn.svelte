@@ -53,8 +53,23 @@
         </div>
       {/each}
 
+      <div class="py-2">
+        <Button
+          id="expenses-spendings-add-participants-button"
+          size="lg"
+          variant="secondary"
+          class="w-full"
+          href="participants/"
+        >
+          <Plus />
+          {$dict.expenses.participants.add.label}
+        </Button>
+      </div>
+
       {#each value.extras as extra, i (i)}
-        <Separator />
+        {#if i > 0}
+          <Separator />
+        {/if}
         <div class="flex flex-col gap-2">
           <div class="flex flex-nowrap items-center justify-between gap-2">
             <div class="flex items-center gap-2 overflow-hidden flex-1">
@@ -90,15 +105,4 @@
       </div>
     </Card.Content>
   </Card.Root>
-
-  <Button
-    id="expenses-spendings-add-participants-button"
-    size="lg"
-    variant="secondary"
-    class="w-full"
-    href="participants/"
-  >
-    <Plus />
-    {$dict.expenses.participants.add.label}
-  </Button>
 </Section>
