@@ -8,7 +8,7 @@ export function normalize(value: Value): net.Editable {
     extras: value.extras.filter((extra) => extra.amount !== 0),
   }
 
-  const overpayment = numbers.overpayment(value)
+  const overpayment = numbers.overpaid(value)
 
   if (overpayment > 0)
     normalized.extras.push({ amount: overpayment })

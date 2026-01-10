@@ -82,7 +82,7 @@
             <Amount
               class={amountClass}
               bind:value={value.extras[i].amount}
-              placeholder={currency(overpayment, $locale)}
+              placeholder={i === value.extras.length - 1 ? currency(overpayment, $locale) : '0'}
             />
           </div>
           {#if i === 0}

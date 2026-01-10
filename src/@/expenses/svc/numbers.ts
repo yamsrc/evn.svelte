@@ -16,7 +16,7 @@ export function paid({ participants }: Value): number {
     .reduce((acc, participant) => acc + (participant.paid ?? 0), 0)
 }
 
-export function overpayment(value: Value): number {
+export function overpaid(value: Value): number {
   return Math.max(paid(value) - total(value), 0)
 }
 
@@ -27,11 +27,11 @@ export function balance(value: Value): number {
     return 0
 
   const totalSpent = total(value)
-  const overpaid = overpayment(value)
+  const overpaidAmount = overpaid(value)
 
   // when the bill is overpaid, excess amount will be added to the extras
   // and should be split among the participants proportionally to their spending
-  const bill = totalSpent + overpaid
+  const bill = totalSpent + overpaidAmount
   const myPercent = percentage(value, me.id)
   const myBill = Math.round(bill * myPercent)
   const iPaid = value.participants[me.id].paid ?? 0

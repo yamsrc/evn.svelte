@@ -34,6 +34,7 @@
   const split = $derived(payers.length > 1)
   const total = $derived(numbers.total(value))
   const paid = $derived(numbers.paid(value))
+  const overpaid = $derived(numbers.overpaid(value))
 
   setContext({
     get payers() {
@@ -47,6 +48,9 @@
     },
     get paid() {
       return paid
+    },
+    get overpaid() {
+      return overpaid
     },
   })
 

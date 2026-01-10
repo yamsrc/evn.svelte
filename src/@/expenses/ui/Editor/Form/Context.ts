@@ -11,8 +11,9 @@ export function getContext(): Context {
 }
 
 export interface Context {
-  payers: string[]
-  split: boolean
-  total: number
-  paid: number
+  readonly payers: string[]
+  readonly split: boolean
+  readonly total: number
+  readonly paid: number
+  readonly overpaid: number
 }
