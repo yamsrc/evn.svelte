@@ -22,6 +22,8 @@
   const { value = $bindable() }: Props = $props()
   const ctx = getContext()
   const total = $derived(ctx.total)
+  const paid = $derived(ctx.paid)
+  const overpayment = $derived(Math.max(paid - total, 0))
 </script>
 
 <Section class="flex flex-col gap-1.5">
@@ -62,7 +64,11 @@
                 </TextEllipsis>
               </div>
             </div>
-            <Amount class={amountClass} bind:value={value.extras[i].amount} />
+            <Amount
+              class={amountClass}
+              bind:value={value.extras[i].amount}
+              placeholder={currency(overpayment, $locale)}
+            />
           </div>
           {#if i === 0}
             <div class="text-sm text-muted-foreground">

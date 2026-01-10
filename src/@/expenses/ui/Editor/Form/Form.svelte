@@ -5,9 +5,8 @@
   import { Button } from '$ui/button'
   import { Section } from '@/app/ui'
   import { Balance } from '@/app/ui'
-  import { owe } from '@/expenses'
-  import { account } from '@/iam'
-  import { sumup, setContext } from './Context'
+  import { numbers } from '@/expenses'
+  import { setContext } from './Context'
   import Description from './Description.svelte'
   import Participants from './Participants.svelte'
   import Payers from './Payers.svelte'
@@ -15,8 +14,6 @@
 
   let { value = $bindable<Value>(), onsubmit: callback }: Props = $props()
   let busy = $state(false)
-
-  const balance = $derived(owe(value.participants, value.extras, $account?.id))
 
   async function submit() {
     busy = true
@@ -31,7 +28,8 @@
   )
 
   const split = $derived(payers > 1)
-  const total = $derived(sumup(value))
+  const total = $derived(numbers.total(value))
+  const paid = $derived(numbers.paid(value))
 
   setContext({
     get payers() {
@@ -43,7 +41,13 @@
     get total() {
       return total
     },
+    get paid() {
+      return paid
+    },
   })
+
+  const balance = $derived(numbers.balance(value))
+  const enough = $derived(payers === 1 || paid >= total)
 </script>
 
 <form onsubmit={onsubmit(submit)} class="space-y-5">
@@ -58,7 +62,13 @@
   <Payers bind:value />
 
   <Section class="flex flex-col items-center gap-2">
-    <Button id="expenses-form-save-button" type="submit" size="lg" class="w-full" disabled={busy}>
+    <Button
+      id="expenses-form-save-button"
+      type="submit"
+      size="lg"
+      class="w-full"
+      disabled={busy || !enough}
+    >
       {$dict.expenses.form.save}
     </Button>
     {#if balance !== 0}
