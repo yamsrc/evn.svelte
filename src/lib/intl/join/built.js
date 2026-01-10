@@ -322,38 +322,6 @@ export const dictionaries = {
       "accept": "Begin met het gebruik van Evn"
     }
   },
-  "ru-FU": {
-    "account": {
-      "title": "Подгон аккаунта",
-      "description": "Кто-то заебенил этот аккаунт и теперь скидывает его тебе.",
-      "accept": "Забрать аккаунт",
-      "content0": "Забираешь аккаунт — заебениваешь вход. Без новых регистраций и лишней ебалы.",
-      "content1": "Новый аккаунт не заводится — ты просто вваливаешься в этот и начинаешь им рулить.",
-      "conflict": {
-        "content0": (name) => `${name}, чтобы забрать этот аккаунт, тебе придётся вывалиться из текущего и заебенить новые данные для входа.`,
-        "content1": "Аккаунты не склеятся — просто перепрыгнешь на новый."
-      },
-      "switch": "Переобуться",
-      "expired": {
-        "content": "Попросите отправителя создать новую ссылку.",
-        "description": "Запрос на передачу благополучно сдох.",
-        "title": "Время передачи истекло"
-      }
-    },
-    "actions": {
-      "discard": "Забить хуй",
-      "close": "Закрыть"
-    },
-    "friends": {
-      "app": {
-        "description": "Умный способ вместе с друзьями отслеживать, кто кому что должен."
-      },
-      "inviter": {
-        "description": (name) => `Вас пригласил(а) ${name}. Просто зарегистрируйтесь или войдите — и всё готово!`
-      },
-      "accept": "Начать использовать Evn"
-    }
-  },
   "ru-RU": {
     "account": {
       "title": "Перевод аккаунта",
@@ -517,4 +485,4 @@ export const dictionaries = {
 };
 
 /** @type {import('./types').Locale[]} */
-export const locales = ["ar-SA","de-DE","en-US","es-ES","fr-FR","hi-IN","it-IT","ja-JP","ko-KR","nl-NL","ru-FU","ru-RU","sw-TZ","tr-TR","uk-UA","zh-CN"];
+export const locales = ["ar-SA","de-DE","en-US","es-ES","fr-FR","hi-IN","it-IT","ja-JP","ko-KR","nl-NL","ru-RU","sw-TZ","tr-TR","uk-UA","zh-CN"];

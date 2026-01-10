@@ -362,41 +362,6 @@ export const dictionaries = {
       }
     }
   },
-  "ru-FU": {
-    "auth": {
-      "welcomeBack": "О, снова ты, братюня",
-      "signupTitle": "Зарегаться в один тычок",
-      "passwordTitle": "Вкатывайся по паролю",
-      "passwordDescription": "Слепить акк или залететь",
-      "passkey": "Ключики, епта",
-      "email": "Мыло",
-      "alreadyHaveAccount": "Акк уже есть, чё?",
-      "betterSecurity": "Секьюрность по красоте",
-      "passkeysNotSupported": "Ключи тут нихуя не работают",
-      "passkeysWarning": "Твой браузер ложил болт на твою приватность и безопасность.",
-      "learnMore": "Чё за движ?",
-      "passwordBlank": "Оставь пароль пустым, <nobr>чтоб выдали</nobr> <nobr>одноразовый код, блять</nobr>.",
-      "otpInstructions": "Вбей код, что прилетел тебе на мыло. Через 5 минут он сдохнет, не тупи.",
-      "holdToLogout": "Зажми и свали отсюда",
-      "continueWith": (provider) => { return `Вломиться через ${provider}, нахуй`; },
-      "passkeysDescription": "Ключи — это охуенно: безопаснее паролей, проще юзать и их хрен спиздишь.",
-      "yourName": "Твоё погоняло",
-      "password": "Парольчик, сука",
-      "refresh": {
-        "description": (name) =>
-  `${name ? name + ', слушай! По' : 'По'} причинам безопасности твоя сессия протухла. Залетай заново, если жить хочешь.`,
-        "title": "Ну здарова, не ждали"
-      },
-      "signout": "Съебаться",
-      "login": "Вкатиться",
-      "signin": "Вкатиться",
-      "inApp": {
-        "title": "Стремный контекст",
-        "description": "Ради твоей же шкуры мы открыли эту хуйню в браузере.",
-        "continue": "Погнали дальше"
-      }
-    }
-  },
   "ru-RU": {
     "auth": {
       "welcomeBack": "С возвращением",
@@ -580,4 +545,4 @@ export const dictionaries = {
 };
 
 /** @type {import('./types').Locale[]} */
-export const locales = ["ar-SA","de-DE","en-US","es-ES","fr-FR","hi-IN","it-IT","ja-JP","ko-KR","nl-NL","ru-FU","ru-RU","sw-TZ","tr-TR","uk-UA","zh-CN"];
+export const locales = ["ar-SA","de-DE","en-US","es-ES","fr-FR","hi-IN","it-IT","ja-JP","ko-KR","nl-NL","ru-RU","sw-TZ","tr-TR","uk-UA","zh-CN"];
