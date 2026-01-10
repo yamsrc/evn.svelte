@@ -1,12 +1,8 @@
-import type { Account } from '@/accounts'
+import type { Value } from './Form'
 import type { Contact } from '@/contacts'
-import type { Participant } from '@/expenses'
 
 export interface Props {
-  account: Account
-  participant: Participant
+  participant: Value['participants'][string]
   contact?: Contact
-  split?: boolean
-  selected?: boolean
-  onselect?: (identity: string, selected: boolean) => void
+  ontoggle?: (identity: string, on: boolean) => void
 }

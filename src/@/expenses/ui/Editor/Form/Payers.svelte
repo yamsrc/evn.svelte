@@ -1,71 +1,35 @@
 <script lang="ts">
-  import { Async, combined } from 'svas'
-  import { SvelteSet } from 'svelte/reactivity'
+  import { Async } from 'svas'
   import { dict } from '$lib/intl'
-  import { accounts } from '@/accounts'
   import { Section } from '@/app/ui'
   import { contacts } from '@/contacts'
-  import { total } from '@/expenses'
+  import { account as me } from '@/iam'
   import Payer from './Payer.svelte'
   import type { Props } from './Payers'
-  import type { Participant } from '@/expenses'
 
-  let { participants = $bindable<Record<string, Participant>>({}), extras }: Props = $props()
+  const { value = $bindable() }: Props = $props()
 
-  let participantsRef = participants
-
-  function payers(participants: Record<string, Participant>) {
-    return Object.entries(participants)
-      .filter(([_, participant]) => (participant.paid ?? 0) > 0)
-      .map(([identity]) => identity)
-  }
-
-  const selection = new SvelteSet<string>(payers(participants))
-
-  $effect(() => {
-    if (participants === participantsRef) return
-
-    participantsRef = participants
-
-    selection.clear()
-    for (const identity of payers(participants)) selection.add(identity)
-  })
-
-  const split = $derived(selection.size > 1)
-
-  function update() {
-    for (const identity of Object.keys(participants))
-      if (selection.has(identity) && !split)
-        participants[identity].paid = total({ participants, extras })
-      else if (!selection.has(identity)) participants[identity].paid = 0
-  }
-
-  function onselect(identity: string, selected: boolean) {
-    if (selected) selection.add(identity)
-    else selection.delete(identity)
-
-    update()
+  function ontoggle(identity: string, on: boolean) {
+    console.log('ontoggle', identity, on)
   }
 </script>
 
-<Section class="flex flex-col gap-1.5" id="expenses-payers-list">
-  <h2>{$dict.expenses.payers.title}</h2>
-  <div id="expenses-payers-list-content" class="flex flex-col gap-1.5">
-    {#each Object.keys(participants) as identity (identity)}
-      <Async store={combined(accounts.get(identity), contacts)} class="expenses-payer">
-        {#snippet awaited([account, contacts])}
-          {@const contact = contacts.find((c) => c.identity === identity)}
-          {@const selected = selection?.has(identity)}
-          <Payer
-            bind:participant={participants[identity]}
-            {account}
-            {contact}
-            {split}
-            {selected}
-            {onselect}
-          />
-        {/snippet}
-      </Async>
-    {/each}
-  </div>
-</Section>
+<Async store={contacts}>
+  {#snippet awaited(contacts)}
+    <Section class="flex flex-col gap-1.5" id="expenses-payers-list">
+      <h2>{$dict.expenses.payers.title}</h2>
+      <div id="expenses-payers-list-content" class="flex flex-col gap-1.5">
+        {#each Object.keys(value.participants) as identity (identity)}
+          {#if identity === $me?.id}
+            <Payer bind:participant={value.participants[identity]} {ontoggle} />
+          {:else}
+            {@const contact = contacts.find((c) => c.identity === identity)}
+            {#if contact}
+              <Payer bind:participant={value.participants[identity]} {contact} {ontoggle} />
+            {/if}
+          {/if}
+        {/each}
+      </div>
+    </Section>
+  {/snippet}
+</Async>

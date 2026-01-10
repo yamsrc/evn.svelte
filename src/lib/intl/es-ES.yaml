@@ -124,8 +124,10 @@ expenses:
     title: Gastos
     total: Total
     extras:
-      description: Las propinas, el servicio de mesa, etc. se reparten por igual.
-      title: Servicio / Otro
+      description: >-
+        Las propinas, los impuestos y otros extras se reparten de forma
+        proporcional.
+      title: Extras
   payers:
     title: Pagado por
   form:

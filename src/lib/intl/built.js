@@ -141,8 +141,8 @@ export const dictionaries = {
         "title": "النفقات",
         "total": "الإجمالي",
         "extras": {
-          "description": "الإكراميات، وخدمة الطاولة، وما إلى ذلك تُقسّم بالتساوي.",
-          "title": "خدمة / أخرى"
+          "description": "يتم تقسيم الإكراميات والضرائب والمصاريف الإضافية الأخرى بشكل نسبي.",
+          "title": "إضافات"
         }
       },
       "payers": {
@@ -321,8 +321,8 @@ export const dictionaries = {
         "title": "Ausgaben",
         "total": "Gesamt",
         "extras": {
-          "description": "Trinkgeld, Tischservice usw. werden gleichmäßig aufgeteilt.",
-          "title": "Dienstleistung / Sonstiges"
+          "description": "Trinkgelder, Steuern und andere Zusatzkosten werden anteilig aufgeteilt.",
+          "title": "Extras"
         }
       },
       "payers": {
@@ -501,8 +501,8 @@ export const dictionaries = {
         "title": "Spendings",
         "total": "Total",
         "extras": {
-          "description": "Tips, table service, etc. are divided equally.",
-          "title": "Service / Other"
+          "description": "Tips, taxes, and other extras are split proportionally.",
+          "title": "Extras"
         }
       },
       "payers": {
@@ -681,8 +681,8 @@ export const dictionaries = {
         "title": "Gastos",
         "total": "Total",
         "extras": {
-          "description": "Las propinas, el servicio de mesa, etc. se reparten por igual.",
-          "title": "Servicio / Otro"
+          "description": "Las propinas, los impuestos y otros extras se reparten de forma proporcional.",
+          "title": "Extras"
         }
       },
       "payers": {
@@ -861,8 +861,8 @@ export const dictionaries = {
         "title": "Dépenses",
         "total": "Total",
         "extras": {
-          "description": "Pourboires, service à table, etc. partagés équitablement.",
-          "title": "Service / Autre"
+          "description": "Les pourboires, taxes et autres frais supplémentaires sont répartis proportionnellement.",
+          "title": "Extras"
         }
       },
       "payers": {
@@ -1041,8 +1041,8 @@ export const dictionaries = {
         "title": "खर्च",
         "total": "कुल",
         "extras": {
-          "description": "टिप्स, टेबल सेवा आदि समान रूप से बाँटी जाती हैं।",
-          "title": "सेवा / अन्य"
+          "description": "टिप्स, कर और अन्य अतिरिक्त शुल्क आनुपातिक रूप से बाँटे जाते हैं।",
+          "title": "अतिरिक्त खर्च"
         }
       },
       "payers": {
@@ -1221,8 +1221,8 @@ export const dictionaries = {
         "title": "Spese",
         "total": "Totale",
         "extras": {
-          "description": "Mance, servizio al tavolo, ecc. sono divisi equamente.",
-          "title": "Servizio / Altro"
+          "description": "Mance, tasse e altre spese extra sono suddivise in modo proporzionale.",
+          "title": "Extra"
         }
       },
       "payers": {
@@ -1401,8 +1401,8 @@ export const dictionaries = {
         "title": "支出",
         "total": "合計",
         "extras": {
-          "description": "チップやテーブルサービスなどは均等に分けられます。",
-          "title": "サービス / その他"
+          "description": "チップ、税金、その他の追加料金は比例して分割されます。",
+          "title": "追加料金"
         }
       },
       "payers": {
@@ -1581,8 +1581,8 @@ export const dictionaries = {
         "title": "지출",
         "total": "총합",
         "extras": {
-          "description": "팁, 테이블 서비스 등은 모두 균등하게 나눕니다.",
-          "title": "서비스 / 기타"
+          "description": "팁, 세금 및 기타 추가 비용은 비율에 따라 나눠집니다.",
+          "title": "추가비용"
         }
       },
       "payers": {
@@ -1761,8 +1761,8 @@ export const dictionaries = {
         "title": "Uitgaven",
         "total": "Totaal",
         "extras": {
-          "description": "Fooien, tafelbediening, enzovoort worden gelijk verdeeld.",
-          "title": "Service / Overig"
+          "description": "Fooi, belastingen en andere toeslagen worden evenredig verdeeld.",
+          "title": "Extra's"
         }
       },
       "payers": {
@@ -1941,8 +1941,8 @@ export const dictionaries = {
         "title": "Расходы",
         "total": "Итого",
         "extras": {
-          "description": "Чаевые, обслуживание стола и прочее делятся поровну.",
-          "title": "Сервис / Другое"
+          "description": "Чаевые, налоги и другие доплаты делятся пропорционально.",
+          "title": "Дополнительные расходы"
         }
       },
       "payers": {
@@ -2121,8 +2121,8 @@ export const dictionaries = {
         "title": "Расходы",
         "total": "Итого",
         "extras": {
-          "description": "Чаевые, обслуживание стола и прочее делятся поровну.",
-          "title": "Сервис / Другое"
+          "description": "Чаевые, налоги и другие дополнительные расходы делятся пропорционально.",
+          "title": "Дополнительно"
         }
       },
       "payers": {
@@ -2301,8 +2301,8 @@ export const dictionaries = {
         "title": "Matumizi",
         "total": "Jumla",
         "extras": {
-          "description": "Vidokezo, huduma ya meza, n.k. vimegawanywa sawa.",
-          "title": "Huduma / Nyingine"
+          "description": "Vidokezo, kodi, na gharama nyingine za ziada hugawanywa kwa uwiano.",
+          "title": "Za ziada"
         }
       },
       "payers": {
@@ -2481,8 +2481,8 @@ export const dictionaries = {
         "title": "Harcamalar",
         "total": "Toplam",
         "extras": {
-          "description": "Bahşişler, masa servisi vb. eşit olarak paylaştırılır.",
-          "title": "Hizmet / Diğer"
+          "description": "Bahşişler, vergiler ve diğer ek masraflar orantılı olarak bölüştürülür.",
+          "title": "Ekstra"
         }
       },
       "payers": {
@@ -2661,8 +2661,8 @@ export const dictionaries = {
         "title": "Витрати",
         "total": "Разом",
         "extras": {
-          "description": "Чайові, обслуговування столу тощо діляться порівну.",
-          "title": "Сервіс / Інше"
+          "description": "Чайові, податки та інші додаткові витрати розподіляються пропорційно.",
+          "title": "Додатково"
         }
       },
       "payers": {
@@ -2841,8 +2841,8 @@ export const dictionaries = {
         "title": "支出",
         "total": "总计",
         "extras": {
-          "description": "小费、桌边服务等均等分配。",
-          "title": "服务 / 其他"
+          "description": "小费、税费及其他附加费用将按比例分摊。",
+          "title": "额外费用"
         }
       },
       "payers": {

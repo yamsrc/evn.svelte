@@ -112,8 +112,8 @@ expenses:
     title: 支出
     total: 合計
     extras:
-      description: チップやテーブルサービスなどは均等に分けられます。
-      title: サービス / その他
+      description: チップ、税金、その他の追加料金は比例して分割されます。
+      title: 追加料金
   payers:
     title: 支払い者
   form:

@@ -1,5 +1,6 @@
 <script lang="ts">
   import { Coins } from '@lucide/svelte'
+  import { locale } from '$lib/intl'
   import { currency, unit } from '$lib/tools'
   import { cn } from '$lib/utils'
   import * as InputGroup from '$ui/input-group'
@@ -9,7 +10,7 @@
 
   function oninput(e: Event) {
     const val = (e.target as HTMLInputElement)?.value
-    const amount = val ? unit(Number(val)) : 0
+    const amount = val ? unit(Number(val), $locale) : 0
 
     value = amount
 
@@ -21,7 +22,7 @@
   <InputGroup.Input
     placeholder="0"
     type="number"
-    value={value !== undefined && value > 0 ? currency(value) : null}
+    value={value !== undefined && value > 0 ? currency(value, $locale) : null}
     {oninput}
     min={0}
     step="0.01"
