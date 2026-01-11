@@ -10,11 +10,11 @@
   let { favorite, selected = $bindable(), onselect, class: classes }: Props = $props()
 
   function onclick(event: MouseEvent) {
-    if (selected !== undefined && onselect) {
-      event.preventDefault()
-      selected = !selected
-      onselect(favorite.favorite, selected)
-    }
+    if (selected === undefined || onselect === undefined) return
+
+    event.preventDefault()
+    selected = !selected
+    onselect(favorite.favorite, selected)
   }
 </script>
 
