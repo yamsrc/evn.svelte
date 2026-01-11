@@ -15,16 +15,16 @@ Then('I capture the first contact name', async ({ page, ctx }) => {
   const contactName = await firstContact.textContent()
   // Extract just the name part (before any numbers/balance)
   // The name is typically the first word or words before numbers
-  const nameMatch = contactName?.match(/^[\s]*([A-Za-z]+(?:\s+[A-Za-z]+)*)/)
+  const nameMatch = contactName?.match(/^[\s]*([A-Za-z]+(?:\s+[A-Za-z]+)*)/) ?? null
 
-  ctx.name = nameMatch ? nameMatch[1].trim() : (contactName?.trim() || '')
+  ctx.name = nameMatch === null ? (contactName?.trim() ?? '') : nameMatch[1].trim()
 })
 
 When('I swipe left on the panel', async ({ page }) => {
   const panel = page.locator('.contacts-panel').first()
   const box = await panel.boundingBox()
 
-  if (box) {
+  if (box !== null) {
     await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2)
     await page.mouse.down()
     await page.mouse.move(box.x - box.width / 2, box.y + box.height / 2)

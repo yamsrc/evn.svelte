@@ -14,7 +14,7 @@ export function getContext(): Context {
 
 export function createContext(value?: Value): Context {
   return {
-    value: value ? exact(value) : blank(),
+    value: value === undefined ? blank() : exact(value),
   }
 }
 

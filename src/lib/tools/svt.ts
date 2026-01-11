@@ -14,7 +14,7 @@ export function mount() {
 }
 
 export function transit(fn: () => void = () => undefined): Promise<void> {
-  if (!document.startViewTransition || hasUAVisualTransition) return Promise.resolve(fn())
+  if (document.startViewTransition === undefined || hasUAVisualTransition) return Promise.resolve(fn())
   else return new Promise((resolve) => document.startViewTransition(() => resolve(fn())))
 }
 
