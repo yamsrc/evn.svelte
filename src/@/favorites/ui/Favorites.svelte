@@ -8,7 +8,7 @@
 
   const { favorites, title, selection = $bindable() }: Props = $props()
 
-  const selectable = $derived(!!selection)
+  const selectable = $derived(selection !== undefined)
 
   function onselect(id: string, selected: boolean) {
     if (!selection) return

@@ -64,7 +64,7 @@ export const APPLE_CLIENT_ID = 'com.evnapp.id'
 const MAJOR_VERSION = '1'
 
 export const version = (() => {
-  const date = new Date(+ver)
+  const date = new Date(Number.parseInt(ver))
   const year = date.getFullYear()
   const startOfYear = new Date(year, 0, 1).getTime()
   const startNextYear = new Date(year + 1, 0, 1).getTime()

@@ -45,6 +45,7 @@ export default [
     rules: {
       'no-void': ['error', { allowAsStatement: true }],
       curly: ['error', 'multi'],
+      'no-implicit-coercion': 'error',
       '@stylistic/comma-dangle': ['error', 'always-multiline'],
       '@stylistic/space-before-function-paren': ['error', {
         asyncArrow: 'always',

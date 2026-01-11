@@ -6,7 +6,7 @@
 
   let { contacts, title, actionable, selection = $bindable(), search }: Props = $props()
 
-  const selectable = $derived(!!selection)
+  const selectable = $derived(selection !== undefined)
 
   function onselect(identity: string, selected: boolean) {
     if (!selection) return
