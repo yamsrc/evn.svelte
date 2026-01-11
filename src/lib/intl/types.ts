@@ -140,7 +140,6 @@ export type Dictionary = {
           link: string
         }
       }
-<<<<<<< HEAD
       expenses: {
         spendings: {
           title: string
@@ -185,9 +184,8 @@ export type Dictionary = {
           description: string
           create: string
         }
-=======
+      }
       favorites: {
         title: string
->>>>>>> 3f109d7 (feat(favorites): add favorites section)
       }
     }

@@ -136,7 +136,6 @@ export const dictionaries = {
         "link": "حذف الحساب"
       }
     },
-<<<<<<< HEAD
     "expenses": {
       "spendings": {
         "title": "النفقات",
@@ -181,10 +180,9 @@ export const dictionaries = {
         "description": "أنشئ أول مصروفك لبدء التتبع",
         "create": "إنشاء مصروف"
       }
-=======
+    },
     "favorites": {
       "title": "المفضلة"
->>>>>>> 3f109d7 (feat(favorites): add favorites section)
     }
   },
   "de-DE": {
@@ -321,7 +319,6 @@ export const dictionaries = {
         "link": "Konto löschen"
       }
     },
-<<<<<<< HEAD
     "expenses": {
       "spendings": {
         "title": "Ausgaben",
@@ -366,10 +363,9 @@ export const dictionaries = {
         "description": "Erstelle deine erste Ausgabe, um mit dem Verfolgen zu beginnen",
         "create": "Ausgabe erstellen"
       }
-=======
+    },
     "favorites": {
       "title": "Favoriten"
->>>>>>> 3f109d7 (feat(favorites): add favorites section)
     }
   },
   "en-US": {
@@ -506,7 +502,6 @@ export const dictionaries = {
         "link": "Delete account"
       }
     },
-<<<<<<< HEAD
     "expenses": {
       "spendings": {
         "title": "Spendings",
@@ -551,10 +546,9 @@ export const dictionaries = {
         }
       },
       "me": "Me"
-=======
+    },
     "favorites": {
       "title": "Favorites"
->>>>>>> 3f109d7 (feat(favorites): add favorites section)
     }
   },
   "es-ES": {
@@ -691,7 +685,6 @@ export const dictionaries = {
         "link": "Eliminar cuenta"
       }
     },
-<<<<<<< HEAD
     "expenses": {
       "spendings": {
         "title": "Gastos",
@@ -736,10 +729,9 @@ export const dictionaries = {
         "description": "Crea tu primer gasto para empezar a realizar un seguimiento",
         "create": "Crear gasto"
       }
-=======
+    },
     "favorites": {
       "title": "Favoritos"
->>>>>>> 3f109d7 (feat(favorites): add favorites section)
     }
   },
   "fr-FR": {
@@ -876,7 +868,6 @@ export const dictionaries = {
         "link": "Supprimer le compte"
       }
     },
-<<<<<<< HEAD
     "expenses": {
       "spendings": {
         "title": "Dépenses",
@@ -921,10 +912,9 @@ export const dictionaries = {
         "description": "Créez votre première dépense pour commencer à suivre",
         "create": "Créer une dépense"
       }
-=======
+    },
     "favorites": {
       "title": "Favoris"
->>>>>>> 3f109d7 (feat(favorites): add favorites section)
     }
   },
   "hi-IN": {
@@ -1061,7 +1051,6 @@ export const dictionaries = {
         "link": "खाता हटाएं"
       }
     },
-<<<<<<< HEAD
     "expenses": {
       "spendings": {
         "title": "खर्च",
@@ -1106,10 +1095,9 @@ export const dictionaries = {
         "description": "ट्रैकिंग शुरू करने के लिए अपना पहला खर्च दर्ज करें",
         "create": "व्यय बनाएं"
       }
-=======
+    },
     "favorites": {
       "title": "पसंदीदा"
->>>>>>> 3f109d7 (feat(favorites): add favorites section)
     }
   },
   "it-IT": {
@@ -1246,7 +1234,6 @@ export const dictionaries = {
         "link": "Elimina account"
       }
     },
-<<<<<<< HEAD
     "expenses": {
       "spendings": {
         "title": "Spese",
@@ -1291,10 +1278,9 @@ export const dictionaries = {
         "description": "Crea la tua prima spesa per iniziare a tenere traccia",
         "create": "Crea spesa"
       }
-=======
+    },
     "favorites": {
       "title": "Preferiti"
->>>>>>> 3f109d7 (feat(favorites): add favorites section)
     }
   },
   "ja-JP": {
@@ -1431,7 +1417,6 @@ export const dictionaries = {
         "link": "アカウントを削除"
       }
     },
-<<<<<<< HEAD
     "expenses": {
       "spendings": {
         "title": "支出",
@@ -1476,10 +1461,9 @@ export const dictionaries = {
         "description": "最初の支出を作成して、記録を始めましょう",
         "create": "支出を作成"
       }
-=======
+    },
     "favorites": {
       "title": "お気に入り"
->>>>>>> 3f109d7 (feat(favorites): add favorites section)
     }
   },
   "ko-KR": {
@@ -1616,7 +1600,6 @@ export const dictionaries = {
         "link": "계정 삭제"
       }
     },
-<<<<<<< HEAD
     "expenses": {
       "spendings": {
         "title": "지출",
@@ -1661,10 +1644,9 @@ export const dictionaries = {
         "description": "첫 번째 지출을 추가하여 추적을 시작하세요",
         "create": "지출 생성"
       }
-=======
+    },
     "favorites": {
       "title": "즐겨찾기"
->>>>>>> 3f109d7 (feat(favorites): add favorites section)
     }
   },
   "nl-NL": {
@@ -1801,7 +1783,6 @@ export const dictionaries = {
         "link": "Account verwijderen"
       }
     },
-<<<<<<< HEAD
     "expenses": {
       "spendings": {
         "title": "Uitgaven",
@@ -1810,24 +1791,6 @@ export const dictionaries = {
           "description": "Fooi, belastingen en andere toeslagen worden evenredig verdeeld.",
           "title": "Extra's"
         }
-=======
-    "favorites": {
-      "title": "Favorieten"
-    }
-  },
-  "ru-FU": {
-    "native": "Русскей",
-    "locale": "ru-RU",
-    "actions": {
-      "continue": "Погнали дальше",
-      "holdToLogout": "Зажми и съеби",
-      "signout": "Съебаться",
-      "close": "Закрыть к хуям",
-      "cheques": {
-        "title": "Ебаные чеки",
-        "scan": "Просканить",
-        "input": "Вбить руками"
->>>>>>> 3f109d7 (feat(favorites): add favorites section)
       },
       "payers": {
         "title": "Betaald door"
@@ -1866,7 +1829,7 @@ export const dictionaries = {
       }
     },
     "favorites": {
-      "title": "Избранное"
+      "title": "Favorieten"
     }
   },
   "ru-RU": {
@@ -2003,7 +1966,6 @@ export const dictionaries = {
         "link": "Удалить аккаунт"
       }
     },
-<<<<<<< HEAD
     "expenses": {
       "spendings": {
         "title": "Расходы",
@@ -2048,10 +2010,9 @@ export const dictionaries = {
         "description": "Создайте первый расход, чтобы начать отслеживание",
         "create": "Создать расход"
       }
-=======
+    },
     "favorites": {
       "title": "Избранное"
->>>>>>> 3f109d7 (feat(favorites): add favorites section)
     }
   },
   "sw-TZ": {
@@ -2188,7 +2149,6 @@ export const dictionaries = {
         "link": "Futa akaunti"
       }
     },
-<<<<<<< HEAD
     "expenses": {
       "spendings": {
         "title": "Matumizi",
@@ -2233,10 +2193,9 @@ export const dictionaries = {
         "description": "Unda matumizi yako ya kwanza ili kuanza kufuatilia",
         "create": "Unda gharama"
       }
-=======
+    },
     "favorites": {
       "title": "Vipendwa"
->>>>>>> 3f109d7 (feat(favorites): add favorites section)
     }
   },
   "tr-TR": {
@@ -2373,7 +2332,6 @@ export const dictionaries = {
         "link": "Hesabı sil"
       }
     },
-<<<<<<< HEAD
     "expenses": {
       "spendings": {
         "title": "Harcamalar",
@@ -2418,10 +2376,9 @@ export const dictionaries = {
         "description": "Takibe başlamak için ilk giderini oluştur",
         "create": "Gider oluştur"
       }
-=======
+    },
     "favorites": {
       "title": "Favoriler"
->>>>>>> 3f109d7 (feat(favorites): add favorites section)
     }
   },
   "uk-UA": {
@@ -2558,7 +2515,6 @@ export const dictionaries = {
         "link": "Видалити акаунт"
       }
     },
-<<<<<<< HEAD
     "expenses": {
       "spendings": {
         "title": "Витрати",
@@ -2603,10 +2559,9 @@ export const dictionaries = {
         "description": "Створіть свою першу витрату, щоб почати відстеження",
         "create": "Створити витрату"
       }
-=======
+    },
     "favorites": {
       "title": "Улюблене"
->>>>>>> 3f109d7 (feat(favorites): add favorites section)
     }
   },
   "zh-CN": {
@@ -2743,7 +2698,6 @@ export const dictionaries = {
         "link": "删除账户"
       }
     },
-<<<<<<< HEAD
     "expenses": {
       "spendings": {
         "title": "支出",
@@ -2788,10 +2742,9 @@ export const dictionaries = {
         "description": "创建您的第一笔支出以开始记录",
         "create": "创建支出"
       }
-=======
+    },
     "favorites": {
       "title": "收藏夹"
->>>>>>> 3f109d7 (feat(favorites): add favorites section)
     }
   }
 };

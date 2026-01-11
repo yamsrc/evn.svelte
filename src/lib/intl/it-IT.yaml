@@ -119,7 +119,6 @@ account:
     sorry: Ci dispiace molto vederti andare via.
     hold: Tieni premuto per confermare
     link: Elimina account
-<<<<<<< HEAD
 expenses:
   spendings:
     title: Spese
@@ -153,7 +152,5 @@ expenses:
     title: Nessuna spesa ancora
     description: Crea la tua prima spesa per iniziare a tenere traccia
     create: Crea spesa
-=======
 favorites:
   title: Preferiti
->>>>>>> 3f109d7 (feat(favorites): add favorites section)

@@ -39,13 +39,8 @@
   }
 </script>
 
-<<<<<<< HEAD
-<Async store={combined(groups, contacts)} class="space-y-5">
-  {#snippet awaited([groups, contacts])}
-=======
 <Async store={combined(groups, contacts, favorites)} class="flex flex-col gap-5">
   {#snippet awaited([groups, contacts, favorites])}
->>>>>>> 3f109d7 (feat(favorites): add favorites section)
     {@const group = groups.find((g) => g.id === id)}
     {#if group}
       <Section>
