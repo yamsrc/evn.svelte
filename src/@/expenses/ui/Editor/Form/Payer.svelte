@@ -10,7 +10,7 @@
   import { getContext } from './Context'
   import type { Props } from './Payer'
 
-  const { contact, account, participant = $bindable(), ontoggle }: Props = $props()
+  const { contact, account, participant = $bindable() }: Props = $props()
   const selected = $derived(participant.paid !== undefined)
 
   function onclick(e: MouseEvent) {
@@ -18,8 +18,6 @@
 
     if (participant.paid === undefined) participant.paid = 0
     else delete participant.paid
-
-    ontoggle?.(account.id, selected)
   }
 
   const nameClass = 'text-start text-base font-normal flex-1 min-w-0'

@@ -6,5 +6,4 @@ export interface Props {
   participant: Value['participants'][string]
   account: Account
   contact?: Contact
-  ontoggle?: (identity: string, on: boolean) => void
 }
