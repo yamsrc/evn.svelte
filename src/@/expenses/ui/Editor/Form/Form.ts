@@ -1,4 +1,5 @@
-import { numbers, type net } from '@/expenses'
+import { numbers } from '@/expenses'
+import type { Value } from '../Context'
 
 export function normalize(value: Value): Value {
   const normalized: Value = {
@@ -22,14 +23,9 @@ export function autoeffects(value: Value, payers: string[], total: number): void
     value.participants[payers[0]].paid = total
 }
 
-export interface Value {
-  title: string
-  location: string
-  participants: Record<string, net.Participant>
-  extras: net.Extra[]
-}
-
 export interface Props {
   value?: Value
   onsubmit?: (value: Value) => Promise<void | Error>
 }
+
+export type { Value }

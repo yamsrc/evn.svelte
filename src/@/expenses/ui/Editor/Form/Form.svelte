@@ -26,7 +26,6 @@
     busy = false
   }
 
-  /** identities of participants who have paid */
   const payers = $derived(
     Object.keys(value.participants).filter((id) => value.participants[id].paid !== undefined),
   )

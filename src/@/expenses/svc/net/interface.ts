@@ -3,7 +3,7 @@ import type { Expense } from './Expense'
 
 const expenses = origin.resource<Expense>('/expenses/', { credentials: 'include' })
 
-export type Editable = Omit<Expense, 'id' | '_created' | '_version' | 'timestamp'>
+export type Editable = Pick<Expense, 'title' | 'location' | 'participants' | 'extras'>
 
 export async function get(identity: string): Promise<Expense[] | Error> {
   return expenses.json(identity)

@@ -12,7 +12,7 @@ export interface Extra {
 export interface Expense {
   id: string
   title: string
-  location: string
+  location?: string
   timestamp: number
   participants: Record<string, Participant>
   extras: Extra[]

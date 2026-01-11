@@ -53,7 +53,7 @@ export interface Context {
 
 export interface Value {
   title: string
-  location: string
+  location?: string
   participants: Record<string, Participant>
   extras: Extra[]
 }
