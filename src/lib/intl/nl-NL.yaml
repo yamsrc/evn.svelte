@@ -124,8 +124,8 @@ expenses:
     title: Uitgaven
     total: Totaal
     extras:
-      description: Fooien, tafelbediening, enzovoort worden gelijk verdeeld.
-      title: Service / Overig
+      description: Fooi, belastingen en andere toeslagen worden evenredig verdeeld.
+      title: Extra's
   payers:
     title: Betaald door
   form:

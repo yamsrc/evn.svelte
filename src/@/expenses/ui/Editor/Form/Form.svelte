@@ -5,25 +5,59 @@
   import { Button } from '$ui/button'
   import { Section } from '@/app/ui'
   import { Balance } from '@/app/ui'
-  import { owe } from '@/expenses'
-  import { account } from '@/iam'
+  import { numbers } from '@/expenses'
+  import { setContext } from './Context'
   import Description from './Description.svelte'
+  import { normalize, type Props, type Value } from './Form'
+  import { autoeffects } from './Form'
+  import Participants from './Participants.svelte'
   import Payers from './Payers.svelte'
-  import Spendings from './Spendings.svelte'
-  import type { Props, Value } from './Form'
 
-  const { value = $bindable<Value>(), onsubmit: onSubmit }: Props = $props()
-  const balance = $derived(owe(value.participants, value.extras, $account?.id))
-
+  let { value = $bindable<Value>(), onsubmit: callback }: Props = $props()
   let busy = $state(false)
 
   async function submit() {
     busy = true
 
-    await onSubmit?.(value)
+    const normalized = normalize(value)
+
+    await callback?.(normalized)
 
     busy = false
   }
+
+  /** identities of participants who have paid */
+  const payers = $derived(
+    Object.keys(value.participants).filter((id) => value.participants[id].paid !== undefined),
+  )
+
+  const split = $derived(payers.length > 1)
+  const total = $derived(numbers.total(value))
+  const paid = $derived(numbers.paid(value))
+  const overpaid = $derived(numbers.overpaid(value))
+
+  setContext({
+    get payers() {
+      return payers
+    },
+    get split() {
+      return split
+    },
+    get total() {
+      return total
+    },
+    get paid() {
+      return paid
+    },
+    get overpaid() {
+      return overpaid
+    },
+  })
+
+  const balance = $derived(numbers.balance(value))
+  const enough = $derived(paid > 0 && (payers.length === 1 || paid >= total))
+
+  $effect(() => autoeffects(value, payers, total))
 </script>
 
 <form onsubmit={onsubmit(submit)} class="space-y-5">
@@ -31,14 +65,18 @@
 
   <Separator />
 
-  <Spendings bind:participants={value.participants} bind:extras={value.extras} />
+  <Participants bind:value />
 
-  <Separator />
-
-  <Payers bind:participants={value.participants} extras={value.extras} />
+  <Payers bind:value />
 
   <Section class="flex flex-col items-center gap-2">
-    <Button id="expenses-form-save-button" type="submit" size="lg" class="w-full" disabled={busy}>
+    <Button
+      id="expenses-form-save-button"
+      type="submit"
+      size="lg"
+      class="w-full"
+      disabled={busy || !enough}
+    >
       {$dict.expenses.form.save}
     </Button>
     {#if balance !== 0}

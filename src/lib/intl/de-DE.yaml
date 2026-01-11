@@ -126,8 +126,8 @@ expenses:
     title: Ausgaben
     total: Gesamt
     extras:
-      description: Trinkgeld, Tischservice usw. werden gleichmäßig aufgeteilt.
-      title: Dienstleistung / Sonstiges
+      description: Trinkgelder, Steuern und andere Zusatzkosten werden anteilig aufgeteilt.
+      title: Extras
   payers:
     title: Bezahlt von
   form:

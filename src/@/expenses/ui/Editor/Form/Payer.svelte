@@ -7,25 +7,23 @@
   import { Balance } from '@/app/ui'
   import { account as me } from '@/iam'
   import Amount from './Amount.svelte'
+  import { getContext } from './Context'
   import type { Props } from './Payer'
-  import type { Participant } from '@/expenses'
 
-  let {
-    account,
-    contact,
-    participant = $bindable<Participant>(),
-    split = false,
-    selected = $bindable(),
-    onselect,
-  }: Props = $props()
+  const { contact, account, participant = $bindable() }: Props = $props()
+  const selected = $derived(participant.paid !== undefined)
 
-  function onclick(event: MouseEvent) {
-    event.preventDefault()
-    selected = !selected
-    onselect?.(account.id, selected)
+  function onclick(e: MouseEvent) {
+    e.preventDefault()
+
+    if (participant.paid === undefined) participant.paid = 0
+    else delete participant.paid
   }
 
   const nameClass = 'text-start text-base font-normal flex-1 min-w-0'
+
+  const ctx = getContext()
+  const split = $derived(ctx.split)
 </script>
 
 <Item.Root
@@ -33,13 +31,7 @@
   class="expenses-payer flex flex-nowrap items-stretch gap-1.5 p-0 border-none"
 >
   <div class="flex-1 min-w-0">
-    <Panel
-      href={`/contacts/${account.id}/`}
-      variant="outline"
-      h="min-h-14 h-fit"
-      {selected}
-      {onclick}
-    >
+    <Panel variant="outline" h="min-h-14 h-fit" {selected} {onclick}>
       {#snippet left()}
         {#if $me?.id === account.id}
           <div class="flex items-center justify-between gap-2 w-full">
@@ -59,9 +51,9 @@
         {/if}
       {/snippet}
       {#snippet right()}
-        {#if $me?.id !== account.id && !(selected && split)}
+        {#if contact && !(selected && split)}
           <Item.Content>
-            <Balance balance={contact?.balance ?? 0} />
+            <Balance balance={contact.balance ?? 0} />
           </Item.Content>
         {/if}
         {#if $me?.id === account.id}

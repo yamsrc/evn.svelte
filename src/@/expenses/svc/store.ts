@@ -13,3 +13,5 @@ export const expenses = collection<Expense>({
 })
 
 events.on('default.expenses.sync', (entry: Expense) => sync(expenses, entry))
+
+export type { Expense }

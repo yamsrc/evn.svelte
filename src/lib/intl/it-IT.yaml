@@ -126,8 +126,8 @@ expenses:
     title: Spese
     total: Totale
     extras:
-      description: Mance, servizio al tavolo, ecc. sono divisi equamente.
-      title: Servizio / Altro
+      description: Mance, tasse e altre spese extra sono suddivise in modo proporzionale.
+      title: Extra
   payers:
     title: Pagato da
   form:

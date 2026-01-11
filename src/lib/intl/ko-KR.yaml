@@ -114,8 +114,8 @@ expenses:
     title: 지출
     total: 총합
     extras:
-      description: 팁, 테이블 서비스 등은 모두 균등하게 나눕니다.
-      title: 서비스 / 기타
+      description: 팁, 세금 및 기타 추가 비용은 비율에 따라 나눠집니다.
+      title: 추가비용
   payers:
     title: 지불자
   form:

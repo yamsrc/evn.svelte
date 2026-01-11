@@ -1,15 +1,21 @@
 <script lang="ts">
   import { Coins } from '@lucide/svelte'
+  import { locale } from '$lib/intl'
   import { currency, unit } from '$lib/tools'
   import { cn } from '$lib/utils'
   import * as InputGroup from '$ui/input-group'
   import type { Props } from './Amount'
 
-  let { value = $bindable(), oninput: oninputCb, class: classes }: Props = $props()
+  let {
+    value = $bindable(),
+    placeholder = '0',
+    oninput: oninputCb,
+    class: classes,
+  }: Props = $props()
 
   function oninput(e: Event) {
     const val = (e.target as HTMLInputElement)?.value
-    const amount = val ? unit(Number(val)) : 0
+    const amount = val ? unit(Number(val), $locale) : 0
 
     value = amount
 
@@ -19,9 +25,9 @@
 
 <InputGroup.Root class={cn('bg-input border border-border h-full px-1', classes)}>
   <InputGroup.Input
-    placeholder="0"
+    {placeholder}
     type="number"
-    value={value !== undefined && value > 0 ? currency(value) : null}
+    value={value !== undefined && value > 0 ? currency(value, $locale) : null}
     {oninput}
     min={0}
     step="0.01"

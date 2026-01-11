@@ -122,8 +122,8 @@ expenses:
     title: Harcamalar
     total: Toplam
     extras:
-      description: Bahşişler, masa servisi vb. eşit olarak paylaştırılır.
-      title: Hizmet / Diğer
+      description: Bahşişler, vergiler ve diğer ek masraflar orantılı olarak bölüştürülür.
+      title: Ekstra
   payers:
     title: Ödeyen
   form:

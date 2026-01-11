@@ -18,7 +18,3 @@ export const options = [
   { value: 'tr-TR', label: 'Türkçe' },
   { value: 'uk-UA', label: 'Українська' },
 ] as const satisfies Option<Locale>[]
-
-export const hidden = [
-  { value: 'ru-FU', label: 'Русскей' },
-] satisfies Option<Locale>[]

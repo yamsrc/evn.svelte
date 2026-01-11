@@ -124,8 +124,10 @@ expenses:
     title: Dépenses
     total: Total
     extras:
-      description: Pourboires, service à table, etc. partagés équitablement.
-      title: Service / Autre
+      description: >-
+        Les pourboires, taxes et autres frais supplémentaires sont répartis
+        proportionnellement.
+      title: Extras
   payers:
     title: Payé par
   form:

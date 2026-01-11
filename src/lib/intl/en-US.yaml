@@ -122,8 +122,8 @@ expenses:
     title: Spendings
     total: Total
     extras:
-      description: Tips, table service, etc. are divided equally.
-      title: Service / Other
+      description: Tips, taxes, and other extras are split proportionally.
+      title: Extras
   payers:
     title: Paid by
   form:
