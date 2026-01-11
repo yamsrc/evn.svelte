@@ -1,71 +1,55 @@
 <script lang="ts">
-  import { Async, combined } from 'svas'
-  import { SvelteSet } from 'svelte/reactivity'
-  import { dict } from '$lib/intl'
+  import { Async } from 'svas'
+  import { dict, locale } from '$lib/intl'
+  import { currency } from '$lib/tools'
+  import { cn } from '$lib/utils'
+  import { Progress } from '$ui/progress'
   import { accounts } from '@/accounts'
   import { Section } from '@/app/ui'
   import { contacts } from '@/contacts'
-  import { total } from '@/expenses'
+  import { getContext } from './Context'
   import Payer from './Payer.svelte'
   import type { Props } from './Payers'
-  import type { Participant } from '@/expenses'
 
-  let { participants = $bindable<Record<string, Participant>>({}), extras }: Props = $props()
-
-  let participantsRef = participants
-
-  function payers(participants: Record<string, Participant>) {
-    return Object.entries(participants)
-      .filter(([_, participant]) => (participant.paid ?? 0) > 0)
-      .map(([identity]) => identity)
-  }
-
-  const selection = new SvelteSet<string>(payers(participants))
-
-  $effect(() => {
-    if (participants === participantsRef) return
-
-    participantsRef = participants
-
-    selection.clear()
-    for (const identity of payers(participants)) selection.add(identity)
-  })
-
-  const split = $derived(selection.size > 1)
-
-  function update() {
-    for (const identity of Object.keys(participants))
-      if (selection.has(identity) && !split)
-        participants[identity].paid = total({ participants, extras })
-      else if (!selection.has(identity)) participants[identity].paid = 0
-  }
-
-  function onselect(identity: string, selected: boolean) {
-    if (selected) selection.add(identity)
-    else selection.delete(identity)
-
-    update()
-  }
+  const { value = $bindable() }: Props = $props()
+  const ctx = getContext()
+  const payers = $derived(ctx.payers)
+  const total = $derived(ctx.total)
+  const paid = $derived(ctx.paid)
+  const overpaid = $derived(ctx.overpaid)
 </script>
 
-<Section class="flex flex-col gap-1.5" id="expenses-payers-list">
-  <h2>{$dict.expenses.payers.title}</h2>
-  <div id="expenses-payers-list-content" class="flex flex-col gap-1.5">
-    {#each Object.keys(participants) as identity (identity)}
-      <Async store={combined(accounts.get(identity), contacts)} class="expenses-payer">
-        {#snippet awaited([account, contacts])}
-          {@const contact = contacts.find((c) => c.identity === identity)}
-          {@const selected = selection?.has(identity)}
-          <Payer
-            bind:participant={participants[identity]}
-            {account}
-            {contact}
-            {split}
-            {selected}
-            {onselect}
+<Async store={contacts}>
+  {#snippet awaited(contacts)}
+    <Section class="flex flex-col gap-1.5" id="expenses-payers-list">
+      <div class="flex justify-between items-center">
+        <h2>{$dict.expenses.payers.title}</h2>
+        <div
+          class={cn('w-32 text-right space-y-1', payers.length > 1 ? 'opacity-100' : 'opacity-0')}
+        >
+          <span class={cn('text-xs text-muted-foreground', overpaid > 0 && 'text-primary')}>
+            {currency(paid, $locale)}
+          </span>
+          <Progress
+            value={paid - overpaid}
+            max={total + overpaid}
+            class={cn(
+              'h-1 transition-opacity [&_div[data-slot=progress-indicator]]:bg-constructive',
+              overpaid === 0 ? 'bg-constructive/20' : 'bg-primary',
+            )}
           />
-        {/snippet}
-      </Async>
-    {/each}
-  </div>
-</Section>
+        </div>
+      </div>
+      <div id="expenses-payers-list-content" class="flex flex-col gap-1.5">
+        {#each Object.keys(value.participants) as identity (identity)}
+          <Async store={accounts.get(identity)}>
+            {#snippet awaited(account)}
+              {@const contact = contacts.find((c) => c.identity === identity)}
+              <Payer bind:participant={value.participants[identity]} {account} {contact} />
+            {/snippet}
+          </Async>
+        {/each}
+      </div>
+    </Section>
+  {/snippet}
+</Async>

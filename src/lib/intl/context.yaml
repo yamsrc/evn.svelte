@@ -195,9 +195,10 @@ inputs:
         input: Total
       extras:
         description:
-          input: Tips, table service, etc. divided equally.
+          input: Tips, taxes, and other extras are split proportionally.
         title:
-          input: Service / Other
+          input: Extras
+          context: additional expenses (tips, table service, taxes etc. keep short in all languages
     payers:
       title:
         input: Paid by

@@ -142,20 +142,6 @@ export const dictionaries = {
       }
     }
   },
-  "ru-FU": {
-    "title": "Малява",
-    "description": "Пиши сюда любую хуйню — всё равно никто это не читает. Но пиши от души.",
-    "send": "Закинуть",
-    "form": {
-      "email": {
-        "placeholder": "Твоё мыло (нам не надо)",
-        "description": "Если вдруг надеешься, что нам делать больше нехуй, кроме как тебе ответить."
-      },
-      "message": {
-        "placeholder": "Пиши свой высер"
-      }
-    }
-  },
   "ru-RU": {
     "title": "Отзыв",
     "description": "Нам важно ваше мнение! Пожалуйста, поделитесь своими мыслями, отзывами и предложениями.",
@@ -229,4 +215,4 @@ export const dictionaries = {
 };
 
 /** @type {import('./types').Locale[]} */
-export const locales = ["ar-SA","de-DE","en-US","es-ES","fr-FR","hi-IN","it-IT","ja-JP","ko-KR","nl-NL","ru-FU","ru-RU","sw-TZ","tr-TR","uk-UA","zh-CN"];
+export const locales = ["ar-SA","de-DE","en-US","es-ES","fr-FR","hi-IN","it-IT","ja-JP","ko-KR","nl-NL","ru-RU","sw-TZ","tr-TR","uk-UA","zh-CN"];

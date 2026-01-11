@@ -141,8 +141,8 @@ export const dictionaries = {
         "title": "النفقات",
         "total": "الإجمالي",
         "extras": {
-          "description": "الإكراميات، وخدمة الطاولة، وما إلى ذلك تُقسّم بالتساوي.",
-          "title": "خدمة / أخرى"
+          "description": "يتم تقسيم الإكراميات والضرائب والمصاريف الإضافية الأخرى بشكل نسبي.",
+          "title": "إضافات"
         }
       },
       "payers": {
@@ -321,8 +321,8 @@ export const dictionaries = {
         "title": "Ausgaben",
         "total": "Gesamt",
         "extras": {
-          "description": "Trinkgeld, Tischservice usw. werden gleichmäßig aufgeteilt.",
-          "title": "Dienstleistung / Sonstiges"
+          "description": "Trinkgelder, Steuern und andere Zusatzkosten werden anteilig aufgeteilt.",
+          "title": "Extras"
         }
       },
       "payers": {
@@ -501,8 +501,8 @@ export const dictionaries = {
         "title": "Spendings",
         "total": "Total",
         "extras": {
-          "description": "Tips, table service, etc. are divided equally.",
-          "title": "Service / Other"
+          "description": "Tips, taxes, and other extras are split proportionally.",
+          "title": "Extras"
         }
       },
       "payers": {
@@ -681,8 +681,8 @@ export const dictionaries = {
         "title": "Gastos",
         "total": "Total",
         "extras": {
-          "description": "Las propinas, el servicio de mesa, etc. se reparten por igual.",
-          "title": "Servicio / Otro"
+          "description": "Las propinas, los impuestos y otros extras se reparten de forma proporcional.",
+          "title": "Extras"
         }
       },
       "payers": {
@@ -861,8 +861,8 @@ export const dictionaries = {
         "title": "Dépenses",
         "total": "Total",
         "extras": {
-          "description": "Pourboires, service à table, etc. partagés équitablement.",
-          "title": "Service / Autre"
+          "description": "Les pourboires, taxes et autres frais supplémentaires sont répartis proportionnellement.",
+          "title": "Extras"
         }
       },
       "payers": {
@@ -1041,8 +1041,8 @@ export const dictionaries = {
         "title": "खर्च",
         "total": "कुल",
         "extras": {
-          "description": "टिप्स, टेबल सेवा आदि समान रूप से बाँटी जाती हैं।",
-          "title": "सेवा / अन्य"
+          "description": "टिप्स, कर और अन्य अतिरिक्त शुल्क आनुपातिक रूप से बाँटे जाते हैं।",
+          "title": "अतिरिक्त खर्च"
         }
       },
       "payers": {
@@ -1221,8 +1221,8 @@ export const dictionaries = {
         "title": "Spese",
         "total": "Totale",
         "extras": {
-          "description": "Mance, servizio al tavolo, ecc. sono divisi equamente.",
-          "title": "Servizio / Altro"
+          "description": "Mance, tasse e altre spese extra sono suddivise in modo proporzionale.",
+          "title": "Extra"
         }
       },
       "payers": {
@@ -1401,8 +1401,8 @@ export const dictionaries = {
         "title": "支出",
         "total": "合計",
         "extras": {
-          "description": "チップやテーブルサービスなどは均等に分けられます。",
-          "title": "サービス / その他"
+          "description": "チップ、税金、その他の追加料金は比例して分割されます。",
+          "title": "追加料金"
         }
       },
       "payers": {
@@ -1581,8 +1581,8 @@ export const dictionaries = {
         "title": "지출",
         "total": "총합",
         "extras": {
-          "description": "팁, 테이블 서비스 등은 모두 균등하게 나눕니다.",
-          "title": "서비스 / 기타"
+          "description": "팁, 세금 및 기타 추가 비용은 비율에 따라 나눠집니다.",
+          "title": "추가비용"
         }
       },
       "payers": {
@@ -1761,8 +1761,8 @@ export const dictionaries = {
         "title": "Uitgaven",
         "total": "Totaal",
         "extras": {
-          "description": "Fooien, tafelbediening, enzovoort worden gelijk verdeeld.",
-          "title": "Service / Overig"
+          "description": "Fooi, belastingen en andere toeslagen worden evenredig verdeeld.",
+          "title": "Extra's"
         }
       },
       "payers": {
@@ -1799,186 +1799,6 @@ export const dictionaries = {
         "title": "Nog geen uitgaven",
         "description": "Maak je eerste uitgave aan om het bijhouden te starten",
         "create": "Uitgave aanmaken"
-      }
-    }
-  },
-  "ru-FU": {
-    "native": "Русскей",
-    "locale": "ru-RU",
-    "actions": {
-      "continue": "Погнали дальше",
-      "holdToLogout": "Зажми и съеби",
-      "signout": "Съебаться",
-      "close": "Закрыть к хуям",
-      "cheques": {
-        "title": "Ебаные чеки",
-        "scan": "Просканить",
-        "input": "Вбить руками"
-      },
-      "contacts": {
-        "group": "Бригада",
-        "title": "Кореша",
-        "contact": "Кореш"
-      },
-      "addSelected": "Закинуть выбранное",
-      "cancel": "Забить хуй",
-      "search": "Рыскать",
-      "save": "Сохранить",
-      "create": "Создать"
-    },
-    "nav": {
-      "home": "Хата",
-      "profile": "Чёткий",
-      "contacts": "Кореша",
-      "expenses": "Разборки"
-    },
-    "terms": "Понятия",
-    "privacy": "Не стучим",
-    "madeBy": "Слеплено какими-то типами",
-    "profile": {
-      "title": "Мой ебучий профиль",
-      "language": {
-        "title": "Базар",
-        "description": "На распознавание чеков это дерьмо не влияет. Мы и так шарим почти за всё."
-      }
-    },
-    "form": {
-      "enterName": "Впиши погоняло"
-    },
-    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
-    "onboarding": {
-      "name": {
-        "title": "Твоё погоняло",
-        "description": "Как тебя будут кликать в приложухе"
-      }
-    },
-    "contacts": {
-      "title": "Кореша",
-      "empty": {
-        "title": "Пусто, как в хате без хавки",
-        "description": "Подтяни корешей вручную или зазови этих оболтусов",
-        "invite": {
-          "share": "Позвать корешей",
-          "qr": "Позвать по QR-хуете",
-          "manual": "Вбить руками"
-        }
-      },
-      "all": "Все кореша",
-      "contact": {
-        "owesYou": "Этот тип тебе торчит",
-        "youOwe": "Ты этому типу торчишь"
-      },
-      "delete": {
-        "confirm": {
-          "title": "Выпилить кореша",
-          "description": "Все разборки с этим типом пойдут нахуй",
-          "confirm": "Выпилить к хуям"
-        }
-      },
-      "add": {
-        "label": "Готово, блять",
-        "description": "Потом просто скинешь этот акк нужному типу — пусть сам ебётся с логином и забирает всё под себя."
-      },
-      "share": {
-        "invite": {
-          "link": "Подтянуть в evn",
-          "qr": "Светануть QR",
-          "description": "Протухнет нахуй через 5 минут"
-        }
-      }
-    },
-    "join": {
-      "app": {
-        "description": "Чоткая тема — считать, кто кому, блять, торчит, вместе с корешами."
-      },
-      "inviter": {
-        "description": (name) => `Тебя, сука, зазвал ${name}. Вкатывайся или логинься — и погнали`
-      },
-      "accept": "Вкатиться в evn нахуй"
-    },
-    "groups": {
-      "leave": "Зажми чтобы съебать",
-      "name": {
-        "placeholder": "Пиши название",
-        "description": "Это название увидят все уёбки"
-      },
-      "members": {
-        "title": "Состав",
-        "addMembers": "Подтянуть народ",
-        "addMember": "Подтянуть чела",
-        "empty": "Тут пока нихуя нет. Закинь людей — и можно мутить движ."
-      },
-      "title": "Бригады",
-      "summary": {
-        "balance": {
-          "from": (amount) => `Эти хуи тебе должны ${amount}`,
-          "to": (amount) => `Ты этим хуям должен ${amount}`,
-          "even": "Все ровно"
-        }
-      },
-      "create": "Сколотить бригаду"
-    },
-    "invite": {
-      "share": "Расшарить нахуй",
-      "qr": "Показать QR",
-      "invite": "Позвать"
-    },
-    "etc": {
-      "or": "или, блять"
-    },
-    "account": {
-      "delete": {
-        "title": "Съебаться с концами",
-        "description": "Мы сотрём к хуям твой аккаунт и всю твою поебень. Обратки не будет.",
-        "sorry": "Пошёл нахуй.",
-        "button": "Пойти нахуй",
-        "hold": "Держи дольше, бля",
-        "link": "Заебало"
-      }
-    },
-    "expenses": {
-      "spendings": {
-        "title": "Расходы",
-        "total": "Итого",
-        "extras": {
-          "description": "Чаевые, обслуживание стола и прочее делятся поровну.",
-          "title": "Сервис / Другое"
-        }
-      },
-      "payers": {
-        "title": "Оплачено"
-      },
-      "form": {
-        "title": {
-          "placeholder": "На что ты потратил?"
-        },
-        "location": {
-          "placeholder": "Где? (необязательно)"
-        },
-        "save": "Сохранить и обновить балансы"
-      },
-      "title": "Рассчитать",
-      "balance": {
-        "total": "Итоговый счет",
-        "youAreOwed": "Вам должны",
-        "youOwe": "Вы должны",
-        "youWillOwe": "Вы будете должны",
-        "youWillBeOwed": "Другие будут должны тебе"
-      },
-      "participants": {
-        "create": {
-          "title": "Создать нового участника"
-        },
-        "title": "Добавить участников",
-        "add": {
-          "label": "Добавить участника"
-        }
-      },
-      "me": "Я",
-      "empty": {
-        "title": "Пока что расходов нет",
-        "description": "Создайте первый расход, чтобы начать отслеживание",
-        "create": "Создать расход"
       }
     }
   },
@@ -2121,8 +1941,8 @@ export const dictionaries = {
         "title": "Расходы",
         "total": "Итого",
         "extras": {
-          "description": "Чаевые, обслуживание стола и прочее делятся поровну.",
-          "title": "Сервис / Другое"
+          "description": "Чаевые, налоги и другие дополнительные расходы делятся пропорционально.",
+          "title": "Дополнительно"
         }
       },
       "payers": {
@@ -2301,8 +2121,8 @@ export const dictionaries = {
         "title": "Matumizi",
         "total": "Jumla",
         "extras": {
-          "description": "Vidokezo, huduma ya meza, n.k. vimegawanywa sawa.",
-          "title": "Huduma / Nyingine"
+          "description": "Vidokezo, kodi, na gharama nyingine za ziada hugawanywa kwa uwiano.",
+          "title": "Za ziada"
         }
       },
       "payers": {
@@ -2481,8 +2301,8 @@ export const dictionaries = {
         "title": "Harcamalar",
         "total": "Toplam",
         "extras": {
-          "description": "Bahşişler, masa servisi vb. eşit olarak paylaştırılır.",
-          "title": "Hizmet / Diğer"
+          "description": "Bahşişler, vergiler ve diğer ek masraflar orantılı olarak bölüştürülür.",
+          "title": "Ekstra"
         }
       },
       "payers": {
@@ -2661,8 +2481,8 @@ export const dictionaries = {
         "title": "Витрати",
         "total": "Разом",
         "extras": {
-          "description": "Чайові, обслуговування столу тощо діляться порівну.",
-          "title": "Сервіс / Інше"
+          "description": "Чайові, податки та інші додаткові витрати розподіляються пропорційно.",
+          "title": "Додатково"
         }
       },
       "payers": {
@@ -2841,8 +2661,8 @@ export const dictionaries = {
         "title": "支出",
         "total": "总计",
         "extras": {
-          "description": "小费、桌边服务等均等分配。",
-          "title": "服务 / 其他"
+          "description": "小费、税费及其他附加费用将按比例分摊。",
+          "title": "额外费用"
         }
       },
       "payers": {
@@ -2885,4 +2705,4 @@ export const dictionaries = {
 };
 
 /** @type {import('./types').Locale[]} */
-export const locales = ["ar-SA","de-DE","en-US","es-ES","fr-FR","hi-IN","it-IT","ja-JP","ko-KR","nl-NL","ru-FU","ru-RU","sw-TZ","tr-TR","uk-UA","zh-CN"];
+export const locales = ["ar-SA","de-DE","en-US","es-ES","fr-FR","hi-IN","it-IT","ja-JP","ko-KR","nl-NL","ru-RU","sw-TZ","tr-TR","uk-UA","zh-CN"];

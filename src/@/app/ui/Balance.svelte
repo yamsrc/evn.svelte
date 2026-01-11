@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Coins } from '@lucide/svelte'
-  import { dict } from '$lib/intl'
+  import { dict, locale } from '$lib/intl'
   import { currency } from '$lib/tools'
   import { cn } from '$lib/utils'
   import type { Props } from './Balance'
@@ -36,7 +36,7 @@
     {/if}
   </div>
   <div class="flex items-center justify-end gap-2">
-    <div class="font-bold text-foreground">{currency(Math.abs(amount))}</div>
+    <div class="font-bold text-foreground">{currency(Math.abs(amount), $locale)}</div>
     <div>
       <Coins size={16} color={color(amount)} />
     </div>

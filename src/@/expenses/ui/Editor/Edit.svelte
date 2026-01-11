@@ -12,7 +12,7 @@
 
     if (expense instanceof Error) return expense
 
-    back('/expenses/')
+    await back('/expenses/')
   }
 </script>
 
