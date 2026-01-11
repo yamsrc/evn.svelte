@@ -43,7 +43,7 @@
 		"husky": "^9.1.7",
 		"neostandard": "0.12.2",
 		"playwright-bdd": "8.4.2",
-		"svas": "1.1.0",
+		"svas": "1.2.1",
 		"svelte": "5.46.1",
 		"svelte-check": "4.3.5",
 		"svintl": "1.7.5",
