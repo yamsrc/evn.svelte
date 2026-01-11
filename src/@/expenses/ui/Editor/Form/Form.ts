@@ -1,7 +1,7 @@
 import { numbers, type net } from '@/expenses'
 
-export function normalize(value: Value): net.Editable {
-  const normalized: net.Editable = {
+export function normalize(value: Value): Value {
+  const normalized: Value = {
     title: value.title,
     location: value.location,
     participants: value.participants,
@@ -13,11 +13,12 @@ export function normalize(value: Value): net.Editable {
   if (overpayment > 0)
     normalized.extras.push({ amount: overpayment })
 
-  return normalized as net.Editable
+  return normalized
 }
 
 export function autoeffects(value: Value, payers: string[], total: number): void {
   if (payers.length === 1)
+    // payer MUST be in participants
     value.participants[payers[0]].paid = total
 }
 
