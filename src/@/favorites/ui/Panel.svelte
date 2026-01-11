@@ -26,7 +26,7 @@
         'bg-card border border-border min-h-14 w-fit flex-col justify-center gap-0',
         classes,
       )}
-      href={`/contacts/${contact?.id}`}
+      href={contact ? `/contacts/${contact.id}/` : undefined}
       {selected}
       {onclick}
     >
