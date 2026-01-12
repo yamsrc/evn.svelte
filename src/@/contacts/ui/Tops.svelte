@@ -49,17 +49,19 @@
   </div>
 {/snippet}
 
-<div class="space-y-1">
+<div class="space-y-2">
   <h2>{$dict.tops.title}</h2>
 
   {#if negative.length + positive.length === 0}
     <p class="text-muted-foreground">{$dict.tops.empty}</p>
   {:else}
-    {#if negative.length > 0}
-      {@render list('negative', negative)}
-    {/if}
-    {#if positive.length > 0}
-      {@render list('positive', positive)}
-    {/if}
+    <div class="space-y-4">
+      {#if negative.length > 0}
+        {@render list('negative', negative)}
+      {/if}
+      {#if positive.length > 0}
+        {@render list('positive', positive)}
+      {/if}
+    </div>
   {/if}
 </div>

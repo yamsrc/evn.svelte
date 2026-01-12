@@ -7,7 +7,7 @@
   const LIMIT = 3
 </script>
 
-<div>
+<div class="space-y-2">
   <h2>{$dict.recent.title}</h2>
   {#if expenses.length === 0}
     <p class="text-muted-foreground">{$dict.recent.empty}</p>
