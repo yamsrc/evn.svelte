@@ -2,15 +2,13 @@ import { expect } from '@playwright/test'
 import { When } from './fixtures'
 
 When('I tap the favorite action button', async ({ page }) => {
-  // After swiping, the actions appear as buttons in a separate div
-  // The favorite action is the first button (star icon) in the actions area
-  // The panel structure: the actions are in a div with class containing "snap-end"
-  // Find the panel, then find its ancestor container, then find buttons in the actions div
-  const panel = page.locator('.contacts-panel').first()
-  // Find the scrollable container that contains both the panel and actions
-  const container = panel.locator('xpath=ancestor::div[contains(@class, "overflow-x-auto")][1]')
-  // Find buttons in the actions area (div with snap-end class)
-  const favoriteButton = container.locator('div[class*="snap-end"] button').first()
+  // Locate the favorite action associated with the first contacts panel
+  // and simulate the user tapping that action button.
+  // This step assumes the favorite action is exposed as a button in the panel's actions area.
+  // Find the container that groups the contacts panel and its swipe actions.
+  const container = page.locator('.panel-container:has(.contacts-panel)').first()
+  // Within the actions area for this panel, select the first action button (favorite).
+  const favoriteButton = container.locator('[role="toolbar"] button').first()
 
   await expect(favoriteButton).toBeVisible({ timeout: 2000 })
   await favoriteButton.click()
