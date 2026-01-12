@@ -1,0 +1,152 @@
+native: Nederlands
+locale: nl-NL
+actions:
+  continue: Doorgaan
+  holdToLogout: Ingedrukt houden om uit te loggen
+  signout: Afmelden
+  close: Sluiten
+  cheques:
+    title: Cheques
+    scan: Cheque scannen
+    input: Handmatig invoeren
+  contacts:
+    group: Groep
+    title: Vrienden
+    contact: Vriend
+  addSelected: Geselecteerde toevoegen
+  cancel: Annuleren
+  search: Zoeken
+  save: Opslaan
+  create: Aanmaken
+nav:
+  home: Home
+  profile: Ik
+  contacts: Vrienden
+  expenses: Afrekening
+terms: Algemene voorwaarden
+privacy: Privacybeleid
+madeBy: Gemaakt door
+profile:
+  title: Mijn profiel
+  language:
+    title: Taal
+    description: >-
+      Dit heeft geen invloed op de chequedetectie. We begrijpen daar toch de
+      meeste talen.
+form:
+  enterName: Naam invoeren
+copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
+onboarding:
+  name:
+    title: Persoonlijk tintje
+    description: Je naam zoals die getoond zal worden
+contacts:
+  title: Vrienden
+  empty:
+    title: Het is hier verlaten
+    description: Voeg vrienden handmatig toe of nodig mensen uit
+    invite:
+      share: Vrienden uitnodigen
+      qr: Uitnodigen via QR-code
+      manual: Handmatig toevoegen
+  all: Alle vrienden
+  contact:
+    owesYou: Is jou iets verschuldigd
+    youOwe: Je bent verschuldigd
+  delete:
+    confirm:
+      title: Contact verwijderen
+      description: Je saldo met deze persoon zal verloren gaan
+      confirm: Verwijderen
+  add:
+    label: Contact toevoegen
+    description: >-
+      Later kun je dit account overdragen aan de eigenaar, zodat die zijn of
+      haar inloggegevens kan instellen en het account kan overnemen.
+  share:
+    invite:
+      link: Uitnodigen voor evn
+      qr: QR-code tonen
+      description: De uitnodiging verloopt over 5 minuten
+join:
+  app:
+    description: >-
+      De slimme manier om samen met vrienden bij te houden wie wat aan wie
+      verschuldigd is.
+  inviter:
+    description: >-
+      !js
+
+      (name) => `Je bent uitgenodigd door ${name}. Registreer je of log in, en
+      je bent klaar om te beginnen`
+  accept: Evn gebruiken starten
+groups:
+  leave: Vasthouden om te verlaten
+  name:
+    description: Alle groepsleden kunnen deze naam zien
+    placeholder: Naam invoeren
+  members:
+    title: Leden
+    addMembers: Leden toevoegen
+    addMember: Lid toevoegen
+    empty: Er is hier nog niemand. Voeg leden toe om deze groep te gebruiken.
+  title: Groepen
+  summary:
+    balance:
+      from: |-
+        !js
+        (amount) => `Leden van deze groep zijn je ${amount} verschuldigd`
+      to: |-
+        !js
+        (amount) => `Je bent hen ${amount} verschuldigd`
+      even: Niemand is iemand iets verschuldigd
+  create: Groep aanmaken
+invite:
+  share: Delen
+  qr: QR-code tonen
+  invite: Uitnodigen
+etc:
+  or: of
+account:
+  delete:
+    button: Account verwijderen
+    title: Account verwijderen
+    description: >-
+      We verwijderen je account en alle bijbehorende informatie permanent. Deze
+      actie kan niet ongedaan worden gemaakt.
+    sorry: Het spijt ons zeer om je te zien gaan.
+    hold: Houd vast om te bevestigen
+    link: Account verwijderen
+expenses:
+  spendings:
+    title: Uitgaven
+    total: Totaal
+    extras:
+      description: Fooi, belastingen en andere toeslagen worden evenredig verdeeld.
+      title: Extra's
+  payers:
+    title: Betaald door
+  form:
+    title:
+      placeholder: Waar heb je geld aan uitgegeven?
+    location:
+      placeholder: Waar? (optioneel)
+    save: Opslaan en saldi bijwerken
+  title: Vereffenen
+  balance:
+    total: Totaalrekening
+    youAreOwed: Je hebt iets tegoed
+    youOwe: Je bent schuldig
+    youWillOwe: Je zult verschuldigd zijn
+    youWillBeOwed: Anderen zullen jou iets verschuldigd zijn
+  participants:
+    create:
+      title: Nieuwe deelnemer aanmaken
+    title: Deelnemers toevoegen
+    add:
+      label: Deelnemer toevoegen
+  me: Ik
+  empty:
+    title: Nog geen uitgaven
+    description: Maak je eerste uitgave aan om het bijhouden te starten
+    create: Uitgave aanmaken

@@ -1,0 +1,33 @@
+account:
+  title: Hesap transferi
+  description: Birisi bu hesabı oluşturdu ve şimdi onu sana devrediyor.
+  accept: Hesabı kabul et
+  content0: >-
+    Sahipliği almak için oturum açma bilgilerini ayarla. Bu, yeni bir hesap
+    oluşturmaz — sadece bu hesaba erişmeni sağlar.
+  content1: Bu yeni bir hesap oluşturmaz — sadece bu hesaba erişip yönetmeni sağlar.
+  conflict:
+    content0: >-
+      !js
+
+      (name) => `${name}, bu hesabı kabul etmek için mevcut hesabınızdan çıkış
+      yapacak ve yeni oturum açma bilgileri ayarlayacaksınız.`
+    content1: Bu hesapları birleştirmez — yeni hesabına geçiş yapacaksın.
+  switch: Hesabı değiştir
+  expired:
+    content: Gönderen kişiden yeni bir bağlantı oluşturmasını isteyin.
+    description: Bu transfer isteğinin süresi doldu.
+    title: Aktarım süresi doldu
+actions:
+  discard: Reddet
+  close: Kapat
+friends:
+  app:
+    description: Kim kime ne borçlu, arkadaşlarınla birlikte takip etmenin akıllı yolu.
+  inviter:
+    description: >-
+      !js
+
+      (name) => `${name} tarafından davet edildiniz. Sadece kaydolun veya giriş
+      yapın, hazırsınız!`
+  accept: Evn’i kullanmaya başla

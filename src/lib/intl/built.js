@@ -2,11 +2,2707 @@
 
 /** @type {Record<import('./types').Locale, import('./types').Dictionary>} */
 export const dictionaries = {
+  "ar-SA": {
+    "native": "العربية",
+    "locale": "ar-SA",
+    "actions": {
+      "continue": "متابعة",
+      "holdToLogout": "اضغط مطولًا لتسجيل الخروج",
+      "signout": "تسجيل الخروج",
+      "close": "إغلاق",
+      "cheques": {
+        "title": "شيكات",
+        "scan": "مسح الشيك",
+        "input": "إدخال يدوي"
+      },
+      "contacts": {
+        "group": "مجموعة",
+        "title": "أصدقاء",
+        "contact": "صديق"
+      },
+      "addSelected": "إضافة المحدد",
+      "cancel": "إلغاء",
+      "search": "بحث",
+      "save": "حفظ",
+      "create": "إنشاء"
+    },
+    "nav": {
+      "home": "الرئيسية",
+      "profile": "أنا",
+      "contacts": "الأصدقاء",
+      "expenses": "تسوية"
+    },
+    "terms": "الشروط والأحكام",
+    "privacy": "سياسة الخصوصية",
+    "madeBy": "من صنع",
+    "profile": {
+      "title": "ملفي الشخصي",
+      "language": {
+        "title": "اللغة",
+        "description": "هذا لا يؤثر على التعرف على الشيك. على أي حال، نحن نفهم معظم اللغات هناك."
+      }
+    },
+    "form": {
+      "enterName": "أدخل الاسم"
+    },
+    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
+    "onboarding": {
+      "name": {
+        "title": "لمسة شخصية",
+        "description": "اسمك كما سيظهر"
+      }
+    },
+    "contacts": {
+      "title": "الأصدقاء",
+      "empty": {
+        "title": "المكان هنا موحش",
+        "description": "أضِف الأصدقاء يدويًا أو ادعُ الأشخاص",
+        "invite": {
+          "share": "دعوة الأصدقاء",
+          "qr": "دعوة عبر رمز الاستجابة السريعة",
+          "manual": "إضافة يدويًا"
+        }
+      },
+      "all": "جميع الأصدقاء",
+      "contact": {
+        "owesYou": "مدين لك",
+        "youOwe": "أنت مدين"
+      },
+      "delete": {
+        "confirm": {
+          "title": "حذف جهة الاتصال",
+          "description": "سيتم فقدان رصيدك مع هذا الشخص",
+          "confirm": "حذف"
+        }
+      },
+      "add": {
+        "label": "إضافة جهة اتصال",
+        "description": "لاحقًا، ستتمكن من نقل هذا الحساب إلى المالك حتى يتمكن من إعداد بيانات تسجيل الدخول الخاصة به وتولي ملكيته."
+      },
+      "share": {
+        "invite": {
+          "link": "دعوة إلى evn",
+          "qr": "عرض رمز الاستجابة السريعة",
+          "description": "ستنتهي صلاحية الدعوة خلال 5 دقائق"
+        }
+      }
+    },
+    "join": {
+      "app": {
+        "description": "الطريقة الذكية لمتابعة من يدين لمن، مع الأصدقاء."
+      },
+      "inviter": {
+        "description": (name) => `لقد تمّت دعوتك من قِبل ${name}. فقط سجّل أو قم بتسجيل الدخول، وستكون جاهزًا للبدء`
+      },
+      "accept": "ابدأ استخدام Evn"
+    },
+    "groups": {
+      "leave": "اضغط مع الاستمرار للمغادرة",
+      "name": {
+        "description": "سيرى جميع أعضاء المجموعة هذا الاسم",
+        "placeholder": "أدخل الاسم"
+      },
+      "members": {
+        "title": "الأعضاء",
+        "addMembers": "إضافة أعضاء",
+        "addMember": "إضافة عضو",
+        "empty": "لا يوجد أحد هنا بعد. أضف بعض الأعضاء للبدء في استخدام هذه المجموعة."
+      },
+      "title": "المجموعات",
+      "summary": {
+        "balance": {
+          "from": (amount) => `أعضاء هذه المجموعة مدينون لك بـ${amount}`,
+          "to": (amount) => `أنت مدين لهم بـ${amount}`,
+          "even": "لا أحد مدين لأحد بشيء"
+        }
+      },
+      "create": "إنشاء مجموعة"
+    },
+    "invite": {
+      "share": "مشاركة",
+      "qr": "عرض رمز الاستجابة السريعة",
+      "invite": "دعوة"
+    },
+    "etc": {
+      "or": "أو"
+    },
+    "account": {
+      "delete": {
+        "button": "حذف الحساب",
+        "title": "حذف الحساب",
+        "description": "سنقوم بحذف حسابك وجميع المعلومات المرتبطة به بشكل نهائي. لا يمكن التراجع عن هذا الإجراء.",
+        "sorry": "نأسف جدًا لرؤيتك تغادر.",
+        "hold": "اضغط مع الاستمرار للتأكيد",
+        "link": "حذف الحساب"
+      }
+    },
+    "expenses": {
+      "spendings": {
+        "title": "النفقات",
+        "total": "الإجمالي",
+        "extras": {
+          "description": "يتم تقسيم الإكراميات والضرائب والمصاريف الإضافية الأخرى بشكل نسبي.",
+          "title": "إضافات"
+        }
+      },
+      "payers": {
+        "title": "مدفوع بواسطة"
+      },
+      "form": {
+        "title": {
+          "placeholder": "على ماذا أنفقتَ المال؟"
+        },
+        "location": {
+          "placeholder": "أين؟ (اختياري)"
+        },
+        "save": "احفظ وقم بتحديث الأرصدة"
+      },
+      "title": "تسوية",
+      "balance": {
+        "total": "إجمالي الفاتورة",
+        "youAreOwed": "لك مستحقات",
+        "youOwe": "أنت مدين",
+        "youWillOwe": "سَتَدِين",
+        "youWillBeOwed": "سيَدِين لك الآخرون"
+      },
+      "participants": {
+        "create": {
+          "title": "إنشاء مشارك جديد"
+        },
+        "title": "إضافة مشاركين",
+        "add": {
+          "label": "إضافة مشارك"
+        }
+      },
+      "me": "أنا",
+      "empty": {
+        "title": "لا توجد مصروفات بعد",
+        "description": "أنشئ أول مصروفك لبدء التتبع",
+        "create": "إنشاء مصروف"
+      }
+    }
+  },
+  "de-DE": {
+    "native": "Deutsch",
+    "locale": "de-DE",
+    "actions": {
+      "continue": "Weiter",
+      "holdToLogout": "Zum Abmelden gedrückt halten",
+      "signout": "Abmelden",
+      "close": "Schließen",
+      "cheques": {
+        "title": "Schecks",
+        "scan": "Scheck scannen",
+        "input": "Manuell eingeben"
+      },
+      "contacts": {
+        "group": "Gruppe",
+        "title": "Freunde",
+        "contact": "Freund"
+      },
+      "addSelected": "Ausgewählte hinzufügen",
+      "cancel": "Abbrechen",
+      "search": "Suchen",
+      "save": "Speichern",
+      "create": "Erstellen"
+    },
+    "nav": {
+      "home": "Startseite",
+      "profile": "Ich",
+      "contacts": "Freunde",
+      "expenses": "Ausgleich"
+    },
+    "terms": "Allgemeine Geschäftsbedingungen",
+    "privacy": "Datenschutzrichtlinie",
+    "madeBy": "Erstellt von",
+    "profile": {
+      "title": "Mein Profil",
+      "language": {
+        "title": "Sprache",
+        "description": "Das beeinflusst die Scheck-Erkennung nicht. Wir verstehen dort ohnehin die meisten Sprachen."
+      }
+    },
+    "form": {
+      "enterName": "Name eingeben"
+    },
+    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
+    "onboarding": {
+      "name": {
+        "title": "Persönliche Note",
+        "description": "Ihr Name, wie er angezeigt wird"
+      }
+    },
+    "contacts": {
+      "title": "Freunde",
+      "empty": {
+        "title": "Hier ist es einsam",
+        "description": "Freunde manuell hinzufügen oder Personen einladen",
+        "invite": {
+          "share": "Freunde einladen",
+          "qr": "Per QR-Code einladen",
+          "manual": "Manuell hinzufügen"
+        }
+      },
+      "all": "Alle Freunde",
+      "contact": {
+        "owesYou": "Schuldet dir",
+        "youOwe": "Du schuldest"
+      },
+      "delete": {
+        "confirm": {
+          "title": "Kontakt löschen",
+          "description": "Ihr Guthaben mit dieser Person wird verloren gehen",
+          "confirm": "Löschen"
+        }
+      },
+      "add": {
+        "label": "Kontakt hinzufügen",
+        "description": "Später kannst du dieses Konto an den Eigentümer übertragen, damit er seine Anmeldedaten einrichten und die Inhaberschaft übernehmen kann."
+      },
+      "share": {
+        "invite": {
+          "link": "Zu evn einladen",
+          "qr": "QR-Code anzeigen",
+          "description": "Die Einladung läuft in 5 Minuten ab"
+        }
+      }
+    },
+    "join": {
+      "app": {
+        "description": "Die clevere Art, gemeinsam mit Freunden den Überblick zu behalten, wer wem etwas schuldet."
+      },
+      "inviter": {
+        "description": (name) => `${name} hat dich eingeladen. Registriere dich einfach oder melde dich an, und schon kann es losgehen`
+      },
+      "accept": "Jetzt mit Evn starten"
+    },
+    "groups": {
+      "leave": "Gedrückt halten zum Verlassen",
+      "name": {
+        "description": "Alle Gruppenmitglieder sehen diesen Namen",
+        "placeholder": "Name eingeben"
+      },
+      "members": {
+        "title": "Mitglieder",
+        "addMembers": "Mitglieder hinzufügen",
+        "addMember": "Mitglied hinzufügen",
+        "empty": "Hier ist noch niemand. Füge einige Mitglieder hinzu, um mit dieser Gruppe zu starten."
+      },
+      "title": "Gruppen",
+      "summary": {
+        "balance": {
+          "from": (amount) => `Mitglieder dieser Gruppe schulden dir ${amount}`,
+          "to": (amount) => `Du schuldest ihnen ${amount}`,
+          "even": "Niemand schuldet jemandem etwas"
+        }
+      },
+      "create": "Gruppe erstellen"
+    },
+    "invite": {
+      "share": "Teilen",
+      "qr": "QR-Code anzeigen",
+      "invite": "Einladen"
+    },
+    "etc": {
+      "or": "oder"
+    },
+    "account": {
+      "delete": {
+        "button": "Konto löschen",
+        "title": "Konto löschen",
+        "description": "Wir werden Ihr Konto und alle zugehörigen Informationen dauerhaft löschen. Diese Aktion kann nicht rückgängig gemacht werden.",
+        "sorry": "Es tut uns sehr leid, zu sehen, dass Sie gehen.",
+        "hold": "Zum Bestätigen halten",
+        "link": "Konto löschen"
+      }
+    },
+    "expenses": {
+      "spendings": {
+        "title": "Ausgaben",
+        "total": "Gesamt",
+        "extras": {
+          "description": "Trinkgelder, Steuern und andere Zusatzkosten werden anteilig aufgeteilt.",
+          "title": "Extras"
+        }
+      },
+      "payers": {
+        "title": "Bezahlt von"
+      },
+      "form": {
+        "title": {
+          "placeholder": "Wofür hast du Geld ausgegeben?"
+        },
+        "location": {
+          "placeholder": "Wo? (optional)"
+        },
+        "save": "Speichern und Salden aktualisieren"
+      },
+      "title": "Ausgleichen",
+      "balance": {
+        "total": "Gesamtrechnung",
+        "youAreOwed": "Dir steht etwas zu",
+        "youOwe": "Du schuldest",
+        "youWillOwe": "Du wirst schulden",
+        "youWillBeOwed": "Andere werden dir etwas schulden"
+      },
+      "participants": {
+        "create": {
+          "title": "Neuen Teilnehmer erstellen"
+        },
+        "title": "Teilnehmer hinzufügen",
+        "add": {
+          "label": "Teilnehmer hinzufügen"
+        }
+      },
+      "me": "Ich",
+      "empty": {
+        "title": "Noch keine Ausgaben",
+        "description": "Erstelle deine erste Ausgabe, um mit dem Verfolgen zu beginnen",
+        "create": "Ausgabe erstellen"
+      }
+    }
+  },
   "en-US": {
     "native": "English",
-    "locale": "en-US"
+    "locale": "en-US",
+    "actions": {
+      "continue": "Continue",
+      "holdToLogout": "Hold to log out",
+      "signout": "Sign out",
+      "close": "Close",
+      "cheques": {
+        "title": "Checks",
+        "scan": "Scan cheque",
+        "input": "Enter manually"
+      },
+      "contacts": {
+        "group": "Group",
+        "title": "Friends",
+        "contact": "Friend"
+      },
+      "addSelected": "Add selected",
+      "cancel": "Cancel",
+      "search": "Search",
+      "save": "Save",
+      "create": "Create"
+    },
+    "nav": {
+      "home": "Home",
+      "profile": "Me",
+      "contacts": "Friends",
+      "expenses": "Evns"
+    },
+    "terms": "Terms & Conditions",
+    "privacy": "Privacy Policy",
+    "madeBy": "Made by",
+    "profile": {
+      "title": "My Profile",
+      "language": {
+        "title": "Language",
+        "description": "This does not affect cheque recognition. We understand most languages there anyway."
+      }
+    },
+    "form": {
+      "enterName": "Enter name"
+    },
+    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
+    "onboarding": {
+      "name": {
+        "title": "Personal Touch",
+        "description": "Your name as it will appear"
+      }
+    },
+    "contacts": {
+      "title": "Friends",
+      "empty": {
+        "title": "It's lonely here",
+        "description": "Add friends manually or invite people",
+        "invite": {
+          "share": "Invite friends",
+          "qr": "Invite by QR code",
+          "manual": "Add manually"
+        }
+      },
+      "all": "All friends",
+      "contact": {
+        "owesYou": "Owes you",
+        "youOwe": "You owe"
+      },
+      "delete": {
+        "confirm": {
+          "title": "Delete contact",
+          "description": "Your balance with this person will be lost",
+          "confirm": "Delete"
+        }
+      },
+      "add": {
+        "label": "Add contact",
+        "description": "Later, you'll be able to transfer this account to the owner so they can set up their sign-in details and take ownership."
+      },
+      "share": {
+        "invite": {
+          "link": "Invite to evn",
+          "qr": "Show QR code",
+          "description": "The invitation will expire in 5 minutes"
+        }
+      }
+    },
+    "join": {
+      "app": {
+        "description": "The smart way to track who owes whom, together with friends."
+      },
+      "inviter": {
+        "description": (name) => `You have been invited by ${name}. Just register or log in, and you’re all set`
+      },
+      "accept": "Start Using Evn"
+    },
+    "groups": {
+      "leave": "Hold to leave",
+      "name": {
+        "description": "All group members will see this name",
+        "placeholder": "Enter name"
+      },
+      "members": {
+        "title": "Members",
+        "addMembers": "Add members",
+        "addMember": "Add member",
+        "empty": "Nobody here yet. Add some members to start using this group."
+      },
+      "title": "Groups",
+      "summary": {
+        "balance": {
+          "from": (amount) => `Members of this group owe you ${amount}`,
+          "to": (amount) => `You owe them ${amount}`,
+          "even": "No one owes anyone anything"
+        }
+      },
+      "create": "Create group"
+    },
+    "invite": {
+      "share": "Share",
+      "qr": "Show QR code",
+      "invite": "Invite"
+    },
+    "etc": {
+      "or": "or"
+    },
+    "account": {
+      "delete": {
+        "button": "Delete account",
+        "title": "Delete account",
+        "description": "We will permanently delete your account and all associated information. This action cannot be undone.",
+        "sorry": "We're very sorry to see you go.",
+        "hold": "Hold to confirm",
+        "link": "Delete account"
+      }
+    },
+    "expenses": {
+      "spendings": {
+        "title": "Spendings",
+        "total": "Total",
+        "extras": {
+          "description": "Tips, taxes, and other extras are split proportionally.",
+          "title": "Extras"
+        }
+      },
+      "payers": {
+        "title": "Paid by"
+      },
+      "form": {
+        "title": {
+          "placeholder": "What have you spent on?"
+        },
+        "location": {
+          "placeholder": "Where? (Optional)"
+        },
+        "save": "Save and update balances"
+      },
+      "title": "Evns",
+      "empty": {
+        "title": "No expenses yet",
+        "description": "Create your first expense to start tracking",
+        "create": "Create expense"
+      },
+      "balance": {
+        "total": "Total bill",
+        "youAreOwed": "You are owed",
+        "youOwe": "You owe",
+        "youWillOwe": "You will owe",
+        "youWillBeOwed": "Others will owe you"
+      },
+      "participants": {
+        "create": {
+          "title": "Create a new participant"
+        },
+        "title": "Add participants",
+        "add": {
+          "label": "Add participant"
+        }
+      },
+      "me": "Me"
+    }
+  },
+  "es-ES": {
+    "native": "Español",
+    "locale": "es-ES",
+    "actions": {
+      "continue": "Continuar",
+      "holdToLogout": "Mantén pulsado para cerrar sesión",
+      "signout": "Cerrar sesión",
+      "close": "Cerrar",
+      "cheques": {
+        "title": "Cheques",
+        "scan": "Escanear cheque",
+        "input": "Introducir manualmente"
+      },
+      "contacts": {
+        "group": "Grupo",
+        "title": "Amigos",
+        "contact": "Amigo"
+      },
+      "addSelected": "Agregar seleccionado(s)",
+      "cancel": "Cancelar",
+      "search": "Buscar",
+      "save": "Guardar",
+      "create": "Crear"
+    },
+    "nav": {
+      "home": "Inicio",
+      "profile": "Yo",
+      "contacts": "Amigos",
+      "expenses": "Ajustes"
+    },
+    "terms": "Términos y condiciones",
+    "privacy": "Política de privacidad",
+    "madeBy": "Hecho por",
+    "profile": {
+      "title": "Mi perfil",
+      "language": {
+        "title": "Idioma",
+        "description": "Esto no afecta al reconocimiento de cheques. De todas formas, entendemos la mayoría de los idiomas allí."
+      }
+    },
+    "form": {
+      "enterName": "Introduce el nombre"
+    },
+    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
+    "onboarding": {
+      "name": {
+        "title": "Toque personal",
+        "description": "Tu nombre tal como se verá"
+      }
+    },
+    "contacts": {
+      "title": "Amigos",
+      "empty": {
+        "title": "Aquí está solitario",
+        "description": "Añade amigos manualmente o invita a personas",
+        "invite": {
+          "share": "Invitar a amigos",
+          "qr": "Invitar por código QR",
+          "manual": "Agregar manualmente"
+        }
+      },
+      "all": "Todos los amigos",
+      "contact": {
+        "owesYou": "Te debe",
+        "youOwe": "Debes"
+      },
+      "delete": {
+        "confirm": {
+          "title": "Eliminar contacto",
+          "description": "Tu saldo con esta persona se perderá",
+          "confirm": "Eliminar"
+        }
+      },
+      "add": {
+        "label": "Agregar contacto",
+        "description": "Más adelante podrás transferir esta cuenta al propietario para que configure sus datos de acceso y tome el control de la cuenta."
+      },
+      "share": {
+        "invite": {
+          "link": "Invitar a evn",
+          "qr": "Mostrar código QR",
+          "description": "La invitación caducará en 5 minutos"
+        }
+      }
+    },
+    "join": {
+      "app": {
+        "description": "La forma inteligente de llevar el control de quién le debe a quién, junto con tus amigos."
+      },
+      "inviter": {
+        "description": (name) => `Has sido invitado por ${name}. Solo regístrate o inicia sesión, y ya está todo listo`
+      },
+      "accept": "Comienza a usar Evn"
+    },
+    "groups": {
+      "leave": "Mantén pulsado para salir",
+      "name": {
+        "description": "Todos los miembros del grupo verán este nombre",
+        "placeholder": "Introduce el nombre"
+      },
+      "members": {
+        "title": "Miembros",
+        "addMembers": "Agregar miembros",
+        "addMember": "Añadir miembro",
+        "empty": "Todavía no hay nadie aquí. Agrega algunos miembros para empezar a usar este grupo."
+      },
+      "title": "Grupos",
+      "summary": {
+        "balance": {
+          "from": (amount) => `Los miembros de este grupo te deben ${amount}`,
+          "to": (amount) => `Les debes ${amount}`,
+          "even": "Nadie le debe nada a nadie"
+        }
+      },
+      "create": "Crear grupo"
+    },
+    "invite": {
+      "share": "Compartir",
+      "qr": "Mostrar código QR",
+      "invite": "Invitar"
+    },
+    "etc": {
+      "or": "o"
+    },
+    "account": {
+      "delete": {
+        "button": "Eliminar cuenta",
+        "title": "Eliminar cuenta",
+        "description": "Eliminaremos permanentemente tu cuenta y toda la información asociada. Esta acción no se puede deshacer.",
+        "sorry": "Lamentamos mucho que te vayas.",
+        "hold": "Mantén pulsado para confirmar",
+        "link": "Eliminar cuenta"
+      }
+    },
+    "expenses": {
+      "spendings": {
+        "title": "Gastos",
+        "total": "Total",
+        "extras": {
+          "description": "Las propinas, los impuestos y otros extras se reparten de forma proporcional.",
+          "title": "Extras"
+        }
+      },
+      "payers": {
+        "title": "Pagado por"
+      },
+      "form": {
+        "title": {
+          "placeholder": "¿En qué has gastado?"
+        },
+        "location": {
+          "placeholder": "¿Dónde? (opcional)"
+        },
+        "save": "Guardar y actualizar saldos"
+      },
+      "title": "Ajustar",
+      "balance": {
+        "total": "Factura total",
+        "youAreOwed": "Te deben",
+        "youOwe": "Debes",
+        "youWillOwe": "Deberás",
+        "youWillBeOwed": "Los demás te deberán"
+      },
+      "participants": {
+        "create": {
+          "title": "Crear un nuevo participante"
+        },
+        "title": "Agregar participantes",
+        "add": {
+          "label": "Agregar participante"
+        }
+      },
+      "me": "Yo",
+      "empty": {
+        "title": "Aún no hay gastos",
+        "description": "Crea tu primer gasto para empezar a realizar un seguimiento",
+        "create": "Crear gasto"
+      }
+    }
+  },
+  "fr-FR": {
+    "native": "Français",
+    "locale": "fr-FR",
+    "actions": {
+      "continue": "Continuer",
+      "holdToLogout": "Maintenez pour vous déconnecter",
+      "signout": "Se déconnecter",
+      "close": "Fermer",
+      "cheques": {
+        "title": "Chèques",
+        "scan": "Scanner le chèque",
+        "input": "Saisir manuellement"
+      },
+      "contacts": {
+        "group": "Groupe",
+        "title": "Amis",
+        "contact": "Ami"
+      },
+      "addSelected": "Ajouter la sélection",
+      "cancel": "Annuler",
+      "search": "Rechercher",
+      "save": "Enregistrer",
+      "create": "Créer"
+    },
+    "nav": {
+      "home": "Accueil",
+      "profile": "Moi",
+      "contacts": "Amis",
+      "expenses": "Règlements"
+    },
+    "terms": "Conditions générales",
+    "privacy": "Politique de confidentialité",
+    "madeBy": "Créé par",
+    "profile": {
+      "title": "Mon profil",
+      "language": {
+        "title": "Langue",
+        "description": "Cela n’affecte pas la reconnaissance des chèques. Nous comprenons de toute façon la plupart des langues là-bas."
+      }
+    },
+    "form": {
+      "enterName": "Saisissez le nom"
+    },
+    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
+    "onboarding": {
+      "name": {
+        "title": "Touche personnelle",
+        "description": "Votre nom tel qu'il sera affiché"
+      }
+    },
+    "contacts": {
+      "title": "Amis",
+      "empty": {
+        "title": "C'est désert ici",
+        "description": "Ajoutez des amis manuellement ou invitez des personnes",
+        "invite": {
+          "share": "Inviter des amis",
+          "qr": "Inviter par QR code",
+          "manual": "Ajouter manuellement"
+        }
+      },
+      "all": "Tous les amis",
+      "contact": {
+        "owesYou": "Te doit",
+        "youOwe": "Vous devez"
+      },
+      "delete": {
+        "confirm": {
+          "title": "Supprimer le contact",
+          "description": "Votre solde avec cette personne sera perdu",
+          "confirm": "Supprimer"
+        }
+      },
+      "add": {
+        "label": "Ajouter un contact",
+        "description": "Plus tard, vous pourrez transférer ce compte au propriétaire afin qu'il puisse définir ses informations de connexion et en prendre possession."
+      },
+      "share": {
+        "invite": {
+          "link": "Inviter sur evn",
+          "qr": "Afficher le code QR",
+          "description": "L'invitation expirera dans 5 minutes"
+        }
+      }
+    },
+    "join": {
+      "app": {
+        "description": "La façon intelligente de suivre qui doit quoi à qui, avec vos amis."
+      },
+      "inviter": {
+        "description": (name) => `Vous avez été invité(e) par ${name}. Inscrivez-vous ou connectez-vous, et tout est prêt`
+      },
+      "accept": "Commencer à utiliser Evn"
+    },
+    "groups": {
+      "leave": "Maintenez appuyé pour quitter",
+      "name": {
+        "description": "Tous les membres du groupe verront ce nom",
+        "placeholder": "Saisir le nom"
+      },
+      "members": {
+        "title": "Membres",
+        "addMembers": "Ajouter des membres",
+        "addMember": "Ajouter un membre",
+        "empty": "Personne ici pour l'instant. Ajoutez des membres pour commencer à utiliser ce groupe."
+      },
+      "title": "Groupes",
+      "summary": {
+        "balance": {
+          "from": (amount) => `Les membres de ce groupe te doivent ${amount}`,
+          "to": (amount) => `Vous leur devez ${amount}`,
+          "even": "Personne ne doit rien à personne"
+        }
+      },
+      "create": "Créer un groupe"
+    },
+    "invite": {
+      "share": "Partager",
+      "qr": "Afficher le code QR",
+      "invite": "Inviter"
+    },
+    "etc": {
+      "or": "ou"
+    },
+    "account": {
+      "delete": {
+        "button": "Supprimer le compte",
+        "title": "Supprimer le compte",
+        "description": "Nous supprimerons définitivement votre compte ainsi que toutes les informations associées. Cette action est irréversible.",
+        "sorry": "Nous sommes vraiment désolés de vous voir partir.",
+        "hold": "Maintenir pour confirmer",
+        "link": "Supprimer le compte"
+      }
+    },
+    "expenses": {
+      "spendings": {
+        "title": "Dépenses",
+        "total": "Total",
+        "extras": {
+          "description": "Les pourboires, taxes et autres frais supplémentaires sont répartis proportionnellement.",
+          "title": "Extras"
+        }
+      },
+      "payers": {
+        "title": "Payé par"
+      },
+      "form": {
+        "title": {
+          "placeholder": "Dans quoi as-tu dépensé ?"
+        },
+        "location": {
+          "placeholder": "Où ? (facultatif)"
+        },
+        "save": "Enregistrer et mettre à jour les soldes"
+      },
+      "title": "Régler",
+      "balance": {
+        "total": "Facture totale",
+        "youAreOwed": "On te doit",
+        "youOwe": "Vous devez",
+        "youWillOwe": "Vous devrez",
+        "youWillBeOwed": "Les autres te devront quelque chose"
+      },
+      "participants": {
+        "create": {
+          "title": "Créer un nouveau participant"
+        },
+        "title": "Ajouter des participants",
+        "add": {
+          "label": "Ajouter un participant"
+        }
+      },
+      "me": "Moi",
+      "empty": {
+        "title": "Aucune dépense pour l’instant",
+        "description": "Créez votre première dépense pour commencer à suivre",
+        "create": "Créer une dépense"
+      }
+    }
+  },
+  "hi-IN": {
+    "native": "हिन्दी",
+    "locale": "hi-IN",
+    "actions": {
+      "continue": "जारी रखें",
+      "holdToLogout": "लॉगआउट के लिए दबाए रखें",
+      "signout": "साइन आउट करें",
+      "close": "बंद करें",
+      "cheques": {
+        "title": "चेक",
+        "scan": "चेक स्कैन करें",
+        "input": "मैन्युअल रूप से दर्ज करें"
+      },
+      "contacts": {
+        "group": "समूह",
+        "title": "मित्र",
+        "contact": "मित्र"
+      },
+      "addSelected": "चयनित जोड़ें",
+      "cancel": "रद्द करें",
+      "search": "खोजें",
+      "save": "सहेजें",
+      "create": "सृजन करें"
+    },
+    "nav": {
+      "home": "मुख्य पृष्ठ",
+      "profile": "मैं",
+      "contacts": "मित्र",
+      "expenses": "सेटलमेंट"
+    },
+    "terms": "नियम व शर्तें",
+    "privacy": "गोपनीयता नीति",
+    "madeBy": "द्वारा निर्मित",
+    "profile": {
+      "title": "मेरा प्रोफ़ाइल",
+      "language": {
+        "title": "भाषा",
+        "description": "यह चेक की पहचान को प्रभावित नहीं करता है। वैसे भी, हम वहां अधिकांश भाषाओं को समझते हैं।"
+      }
+    },
+    "form": {
+      "enterName": "नाम दर्ज करें"
+    },
+    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
+    "onboarding": {
+      "name": {
+        "title": "व्यक्तिगत स्पर्श",
+        "description": "आपका नाम जैसा दिखाई देगा"
+      }
+    },
+    "contacts": {
+      "title": "दोस्त",
+      "empty": {
+        "title": "यहाँ अकेलापन है",
+        "description": "दोस्तों को मैन्युअली जोड़ें या लोगों को आमंत्रित करें",
+        "invite": {
+          "share": "दोस्तों को आमंत्रित करें",
+          "qr": "QR कोड से आमंत्रित करें",
+          "manual": "मैन्युअल रूप से जोड़ें"
+        }
+      },
+      "all": "सभी मित्र",
+      "contact": {
+        "owesYou": "आपका कर्ज़दार है",
+        "youOwe": "आपको देना है"
+      },
+      "delete": {
+        "confirm": {
+          "title": "संपर्क हटाएं",
+          "description": "इस व्यक्ति के साथ आपका बैलेंस खो जाएगा",
+          "confirm": "हटाएँ"
+        }
+      },
+      "add": {
+        "label": "संपर्क जोड़ें",
+        "description": "बाद में, आप इस खाते को मालिक को ट्रांसफ़र कर सकेंगे, ताकि वे अपनी साइन-इन जानकारी सेट कर सकें और खाते के स्वामी बन सकें।"
+      },
+      "share": {
+        "invite": {
+          "link": "evn पर आमंत्रित करें",
+          "qr": "QR कोड दिखाएं",
+          "description": "निमंत्रण 5 मिनट में समाप्त हो जाएगा"
+        }
+      }
+    },
+    "join": {
+      "app": {
+        "description": "दोस्तों के साथ मिलकर, कौन किसका कितना बकाया है, इसका स्मार्ट तरीका।"
+      },
+      "inviter": {
+        "description": (name) => `${name} ने आपको आमंत्रित किया है। बस रजिस्टर करें या लॉग इन करें, और आप तैयार हैं`
+      },
+      "accept": "Evn का उपयोग शुरू करें"
+    },
+    "groups": {
+      "leave": "छोड़ने के लिए दबाए रखें",
+      "name": {
+        "description": "सभी समूह सदस्य यह नाम देखेंगे",
+        "placeholder": "नाम दर्ज करें"
+      },
+      "members": {
+        "title": "सदस्य",
+        "addMembers": "सदस्य जोड़ें",
+        "addMember": "सदस्य जोड़ें",
+        "empty": "यहाँ अभी कोई नहीं है। इस समूह का उपयोग शुरू करने के लिए कुछ सदस्य जोड़ें।"
+      },
+      "title": "समूह",
+      "summary": {
+        "balance": {
+          "from": (amount) => `इस समूह के सदस्य आपको ${amount} का भुगतान करते हैं`,
+          "to": (amount) => `आप उन्हें ${amount} के ऋणी हैं`,
+          "even": "कोई किसी का कोई कर्ज़दार नहीं है"
+        }
+      },
+      "create": "समूह बनाएँ"
+    },
+    "invite": {
+      "share": "साझा करें",
+      "qr": "QR कोड दिखाएँ",
+      "invite": "आमंत्रित करें"
+    },
+    "etc": {
+      "or": "या"
+    },
+    "account": {
+      "delete": {
+        "button": "खाता हटाएँ",
+        "title": "खाता हटाएं",
+        "description": "हम आपके खाते और उससे जुड़ी सभी जानकारी को स्थायी रूप से हटा देंगे। इस कार्रवाई को वापस नहीं लिया जा सकता।",
+        "sorry": "हमें आपको जाते हुए देखकर बहुत दुख हुआ।",
+        "hold": "पुष्टि करने के लिए दबाए रखें",
+        "link": "खाता हटाएं"
+      }
+    },
+    "expenses": {
+      "spendings": {
+        "title": "खर्च",
+        "total": "कुल",
+        "extras": {
+          "description": "टिप्स, कर और अन्य अतिरिक्त शुल्क आनुपातिक रूप से बाँटे जाते हैं।",
+          "title": "अतिरिक्त खर्च"
+        }
+      },
+      "payers": {
+        "title": "द्वारा भुगतान किया गया"
+      },
+      "form": {
+        "title": {
+          "placeholder": "आपने किस पर खर्च किया?"
+        },
+        "location": {
+          "placeholder": "कहाँ? (वैकल्पिक)"
+        },
+        "save": "सहेजें और बैलेंस अपडेट करें"
+      },
+      "title": "हिसाब",
+      "balance": {
+        "total": "कुल बिल",
+        "youAreOwed": "आपको कुछ मिलना बाकी है",
+        "youOwe": "आप पर बकाया है",
+        "youWillOwe": "आप पर बकाया होगा",
+        "youWillBeOwed": "दूसरे लोग आपके एहसानमंद होंगे"
+      },
+      "participants": {
+        "create": {
+          "title": "नया प्रतिभागी बनाएँ"
+        },
+        "title": "प्रतिभागी जोड़ें",
+        "add": {
+          "label": "प्रतिभागी जोड़ें"
+        }
+      },
+      "me": "मैं",
+      "empty": {
+        "title": "अभी तक कोई खर्च नहीं",
+        "description": "ट्रैकिंग शुरू करने के लिए अपना पहला खर्च दर्ज करें",
+        "create": "व्यय बनाएं"
+      }
+    }
+  },
+  "it-IT": {
+    "native": "Italiano",
+    "locale": "it-IT",
+    "actions": {
+      "continue": "Continua",
+      "holdToLogout": "Tieni premuto per uscire",
+      "signout": "Esci",
+      "close": "Chiudi",
+      "cheques": {
+        "title": "Assegni",
+        "scan": "Scansiona assegno",
+        "input": "Inserisci manualmente"
+      },
+      "contacts": {
+        "group": "Gruppo",
+        "title": "Amici",
+        "contact": "Amico"
+      },
+      "addSelected": "Aggiungi selezionati",
+      "cancel": "Annulla",
+      "search": "Cerca",
+      "save": "Salva",
+      "create": "Crea"
+    },
+    "nav": {
+      "home": "Home",
+      "profile": "Io",
+      "contacts": "Amici",
+      "expenses": "Saldo"
+    },
+    "terms": "Termini e condizioni",
+    "privacy": "Informativa sulla privacy",
+    "madeBy": "Realizzato da",
+    "profile": {
+      "title": "Il mio profilo",
+      "language": {
+        "title": "Lingua",
+        "description": "Questo non influisce sul riconoscimento dell'assegno. Comunque, lì capiamo la maggior parte delle lingue."
+      }
+    },
+    "form": {
+      "enterName": "Inserisci il nome"
+    },
+    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
+    "onboarding": {
+      "name": {
+        "title": "Tocco personale",
+        "description": "Il tuo nome come verrà visualizzato"
+      }
+    },
+    "contacts": {
+      "title": "Amici",
+      "empty": {
+        "title": "È solitario qui",
+        "description": "Aggiungi amici manualmente o invita persone",
+        "invite": {
+          "share": "Invita amici",
+          "qr": "Invita tramite codice QR",
+          "manual": "Aggiungi manualmente"
+        }
+      },
+      "all": "Tutti gli amici",
+      "contact": {
+        "owesYou": "Ti deve",
+        "youOwe": "Devi"
+      },
+      "delete": {
+        "confirm": {
+          "title": "Elimina contatto",
+          "description": "Il tuo saldo con questa persona andrà perso",
+          "confirm": "Elimina"
+        }
+      },
+      "add": {
+        "label": "Aggiungi contatto",
+        "description": "Successivamente, potrai trasferire questo account al proprietario, così potrà impostare i dettagli di accesso e prenderne possesso."
+      },
+      "share": {
+        "invite": {
+          "link": "Invita su evn",
+          "qr": "Mostra codice QR",
+          "description": "L'invito scadrà tra 5 minuti"
+        }
+      }
+    },
+    "join": {
+      "app": {
+        "description": "Il modo intelligente per tenere traccia di chi deve cosa a chi, insieme agli amici."
+      },
+      "inviter": {
+        "description": (name) => `Sei stato invitato da ${name}. Basta registrarsi o accedere, e sei pronto`
+      },
+      "accept": "Inizia a usare Evn"
+    },
+    "groups": {
+      "leave": "Tieni premuto per uscire",
+      "name": {
+        "description": "Tutti i membri del gruppo vedranno questo nome",
+        "placeholder": "Inserisci nome"
+      },
+      "members": {
+        "title": "Membri",
+        "addMembers": "Aggiungi membri",
+        "addMember": "Aggiungi membro",
+        "empty": "Non c’è ancora nessuno qui. Aggiungi dei membri per iniziare a usare questo gruppo."
+      },
+      "title": "Gruppi",
+      "summary": {
+        "balance": {
+          "from": (amount) => `I membri di questo gruppo ti devono ${amount}`,
+          "to": (amount) => `Devi loro ${amount}`,
+          "even": "Nessuno deve niente a nessuno"
+        }
+      },
+      "create": "Crea gruppo"
+    },
+    "invite": {
+      "share": "Condividi",
+      "qr": "Mostra codice QR",
+      "invite": "Invita"
+    },
+    "etc": {
+      "or": "o"
+    },
+    "account": {
+      "delete": {
+        "button": "Elimina account",
+        "title": "Elimina account",
+        "description": "Elimineremo definitivamente il tuo account e tutte le informazioni associate. Questa azione non può essere annullata.",
+        "sorry": "Ci dispiace molto vederti andare via.",
+        "hold": "Tieni premuto per confermare",
+        "link": "Elimina account"
+      }
+    },
+    "expenses": {
+      "spendings": {
+        "title": "Spese",
+        "total": "Totale",
+        "extras": {
+          "description": "Mance, tasse e altre spese extra sono suddivise in modo proporzionale.",
+          "title": "Extra"
+        }
+      },
+      "payers": {
+        "title": "Pagato da"
+      },
+      "form": {
+        "title": {
+          "placeholder": "Su cosa hai speso?"
+        },
+        "location": {
+          "placeholder": "Dove? (opzionale)"
+        },
+        "save": "Salva e aggiorna i saldi"
+      },
+      "title": "Saldo",
+      "balance": {
+        "total": "Totale conto",
+        "youAreOwed": "Ti è dovuto",
+        "youOwe": "Devi",
+        "youWillOwe": "Dovrai",
+        "youWillBeOwed": "Gli altri ti saranno debitori"
+      },
+      "participants": {
+        "create": {
+          "title": "Crea un nuovo partecipante"
+        },
+        "title": "Aggiungi partecipanti",
+        "add": {
+          "label": "Aggiungi partecipante"
+        }
+      },
+      "me": "Io",
+      "empty": {
+        "title": "Nessuna spesa ancora",
+        "description": "Crea la tua prima spesa per iniziare a tenere traccia",
+        "create": "Crea spesa"
+      }
+    }
+  },
+  "ja-JP": {
+    "native": "日本語",
+    "locale": "ja-JP",
+    "actions": {
+      "continue": "続ける",
+      "holdToLogout": "長押ししてログアウト",
+      "signout": "サインアウト",
+      "close": "閉じる",
+      "cheques": {
+        "title": "小切手",
+        "scan": "小切手をスキャン",
+        "input": "手動で入力"
+      },
+      "contacts": {
+        "group": "グループ",
+        "title": "友達",
+        "contact": "友達"
+      },
+      "addSelected": "選択したものを追加",
+      "cancel": "キャンセル",
+      "search": "検索",
+      "save": "保存",
+      "create": "作成"
+    },
+    "nav": {
+      "home": "ホーム",
+      "profile": "私",
+      "contacts": "友だち",
+      "expenses": "清算"
+    },
+    "terms": "利用規約",
+    "privacy": "プライバシーポリシー",
+    "madeBy": "作成者",
+    "profile": {
+      "title": "マイプロフィール",
+      "language": {
+        "title": "言語",
+        "description": "これは小切手の認識には影響しません。そもそも、私たちはほとんどの言語を理解しています。"
+      }
+    },
+    "form": {
+      "enterName": "名前を入力してください"
+    },
+    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
+    "onboarding": {
+      "name": {
+        "title": "パーソナルタッチ",
+        "description": "表示されるあなたの名前"
+      }
+    },
+    "contacts": {
+      "title": "友達",
+      "empty": {
+        "title": "ここは寂しいです",
+        "description": "友達を手動で追加するか、招待する",
+        "invite": {
+          "share": "友達を招待する",
+          "qr": "QRコードで招待",
+          "manual": "手動で追加"
+        }
+      },
+      "all": "すべての友達",
+      "contact": {
+        "owesYou": "あなたに借りがある",
+        "youOwe": "あなたが支払うべきです"
+      },
+      "delete": {
+        "confirm": {
+          "title": "連絡先を削除",
+          "description": "この相手との残高が失われます",
+          "confirm": "削除"
+        }
+      },
+      "add": {
+        "label": "連絡先を追加",
+        "description": "後でこのアカウントを所有者に譲渡できるようになり、所有者がサインイン情報を設定して引き継ぐことができます。"
+      },
+      "share": {
+        "invite": {
+          "link": "evnに招待",
+          "qr": "QRコードを表示",
+          "description": "招待は5分後に期限切れになります"
+        }
+      }
+    },
+    "join": {
+      "app": {
+        "description": "友だちと一緒に「誰が誰にいくら借りているか」をスマートに管理。"
+      },
+      "inviter": {
+        "description": (name) => `${name} から招待されました。登録またはログインするだけで、準備完了です`
+      },
+      "accept": "Evn を使い始める"
+    },
+    "groups": {
+      "leave": "長押しして退出",
+      "name": {
+        "description": "すべてのグループメンバーがこの名前を表示します",
+        "placeholder": "名前を入力"
+      },
+      "members": {
+        "title": "メンバー",
+        "addMembers": "メンバーを追加",
+        "addMember": "メンバーを追加",
+        "empty": "まだ誰もいません。このグループを使い始めるにはメンバーを追加してください。"
+      },
+      "title": "グループ",
+      "summary": {
+        "balance": {
+          "from": (amount) => `このグループのメンバーはあなたに${amount}の支払いがあります`,
+          "to": (amount) => `あなたは彼らに${amount}を借りています`,
+          "even": "誰も誰にも借りはない"
+        }
+      },
+      "create": "グループを作成"
+    },
+    "invite": {
+      "share": "共有",
+      "qr": "QRコードを表示",
+      "invite": "招待"
+    },
+    "etc": {
+      "or": "または"
+    },
+    "account": {
+      "delete": {
+        "button": "アカウントを削除",
+        "title": "アカウントを削除",
+        "description": "あなたのアカウントおよび関連するすべての情報を完全に削除します。この操作は元に戻せません。",
+        "sorry": "ご利用いただけなくなることを大変残念に思います。",
+        "hold": "押し続けて確定",
+        "link": "アカウントを削除"
+      }
+    },
+    "expenses": {
+      "spendings": {
+        "title": "支出",
+        "total": "合計",
+        "extras": {
+          "description": "チップ、税金、その他の追加料金は比例して分割されます。",
+          "title": "追加料金"
+        }
+      },
+      "payers": {
+        "title": "支払い者"
+      },
+      "form": {
+        "title": {
+          "placeholder": "何に使ったの？"
+        },
+        "location": {
+          "placeholder": "どこですか？（任意）"
+        },
+        "save": "保存して残高を更新"
+      },
+      "title": "清算",
+      "balance": {
+        "total": "合計金額",
+        "youAreOwed": "あなたには支払いが残っています",
+        "youOwe": "あなたは借りがあります",
+        "youWillOwe": "あなたは支払うことになります",
+        "youWillBeOwed": "他の人たちがあなたに借りができる"
+      },
+      "participants": {
+        "create": {
+          "title": "新しい参加者を作成"
+        },
+        "title": "参加者を追加",
+        "add": {
+          "label": "参加者を追加"
+        }
+      },
+      "me": "私",
+      "empty": {
+        "title": "まだ支出がありません",
+        "description": "最初の支出を作成して、記録を始めましょう",
+        "create": "支出を作成"
+      }
+    }
+  },
+  "ko-KR": {
+    "native": "한국어",
+    "locale": "ko-KR",
+    "actions": {
+      "continue": "계속",
+      "holdToLogout": "길게 눌러 로그아웃",
+      "signout": "로그아웃",
+      "close": "닫기",
+      "cheques": {
+        "title": "수표",
+        "scan": "수표 스캔",
+        "input": "수동 입력"
+      },
+      "contacts": {
+        "group": "그룹",
+        "title": "친구",
+        "contact": "친구"
+      },
+      "addSelected": "선택 항목 추가",
+      "cancel": "취소",
+      "search": "검색",
+      "save": "저장",
+      "create": "생성"
+    },
+    "nav": {
+      "home": "홈",
+      "profile": "나",
+      "contacts": "친구",
+      "expenses": "정산"
+    },
+    "terms": "이용 약관",
+    "privacy": "개인정보처리방침",
+    "madeBy": "제작자",
+    "profile": {
+      "title": "내 프로필",
+      "language": {
+        "title": "언어",
+        "description": "이는 수표 인식에 영향을 주지 않습니다. 어차피 저희는 대부분의 언어를 이해합니다."
+      }
+    },
+    "form": {
+      "enterName": "이름을 입력하세요"
+    },
+    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
+    "onboarding": {
+      "name": {
+        "title": "개인적인 터치",
+        "description": "표시될 이름"
+      }
+    },
+    "contacts": {
+      "title": "친구",
+      "empty": {
+        "title": "여기는 외로워요",
+        "description": "친구를 직접 추가하거나 사람들을 초대하세요",
+        "invite": {
+          "share": "친구 초대하기",
+          "qr": "QR 코드로 초대",
+          "manual": "수동으로 추가"
+        }
+      },
+      "all": "모든 친구",
+      "contact": {
+        "owesYou": "당신에게 빚졌어요",
+        "youOwe": "당신이 빚졌습니다"
+      },
+      "delete": {
+        "confirm": {
+          "title": "연락처 삭제",
+          "description": "이 사람과의 잔액이 사라집니다",
+          "confirm": "삭제"
+        }
+      },
+      "add": {
+        "label": "연락처 추가",
+        "description": "나중에 이 계정을 소유자에게 이전하여, 소유자가 로그인 정보를 설정하고 계정의 소유권을 가질 수 있습니다."
+      },
+      "share": {
+        "invite": {
+          "link": "evn에 초대",
+          "qr": "QR 코드 표시",
+          "description": "초대는 5분 후에 만료됩니다"
+        }
+      }
+    },
+    "join": {
+      "app": {
+        "description": "친구들과 함께 누가 누구에게 얼마를 빚졌는지 스마트하게 추적하는 방법."
+      },
+      "inviter": {
+        "description": (name) => `${name}님이 초대했습니다. 회원가입 또는 로그인만 하면 바로 시작할 수 있습니다`
+      },
+      "accept": "Evn 시작하기"
+    },
+    "groups": {
+      "leave": "길게 눌러서 나가기",
+      "name": {
+        "description": "모든 그룹 구성원이 이 이름을 볼 수 있습니다",
+        "placeholder": "이름 입력"
+      },
+      "members": {
+        "title": "회원",
+        "addMembers": "구성원 추가",
+        "addMember": "구성원 추가",
+        "empty": "아직 아무도 없습니다. 그룹을 사용하려면 멤버를 추가하세요."
+      },
+      "title": "그룹",
+      "summary": {
+        "balance": {
+          "from": (amount) => `이 그룹의 구성원들이 당신에게 ${amount}을(를) 빚지고 있습니다`,
+          "to": (amount) => `당신은 그들에게 ${amount}을(를) 빚지고 있습니다`,
+          "even": "아무도 누구에게도 빚지지 않았다"
+        }
+      },
+      "create": "그룹 만들기"
+    },
+    "invite": {
+      "share": "공유",
+      "qr": "QR 코드 표시",
+      "invite": "초대"
+    },
+    "etc": {
+      "or": "또는"
+    },
+    "account": {
+      "delete": {
+        "button": "계정 삭제",
+        "title": "계정 삭제",
+        "description": "계정과 모든 관련 정보를 영구적으로 삭제합니다. 이 작업은 취소할 수 없습니다.",
+        "sorry": "떠나신다니 정말 아쉽습니다.",
+        "hold": "길게 눌러서 확인",
+        "link": "계정 삭제"
+      }
+    },
+    "expenses": {
+      "spendings": {
+        "title": "지출",
+        "total": "총합",
+        "extras": {
+          "description": "팁, 세금 및 기타 추가 비용은 비율에 따라 나눠집니다.",
+          "title": "추가비용"
+        }
+      },
+      "payers": {
+        "title": "지불자"
+      },
+      "form": {
+        "title": {
+          "placeholder": "무엇에 썼나요?"
+        },
+        "location": {
+          "placeholder": "어디인가요? (선택 사항)"
+        },
+        "save": "저장하고 잔액 업데이트"
+      },
+      "title": "정산",
+      "balance": {
+        "total": "총 금액",
+        "youAreOwed": "당신은 받을 돈이 있습니다",
+        "youOwe": "당신은 빚졌습니다",
+        "youWillOwe": "갚아야 합니다",
+        "youWillBeOwed": "다른 사람들이 당신에게 신세를 지게 됩니다"
+      },
+      "participants": {
+        "create": {
+          "title": "새 참가자 생성"
+        },
+        "title": "참가자 추가",
+        "add": {
+          "label": "참가자 추가"
+        }
+      },
+      "me": "나",
+      "empty": {
+        "title": "아직 지출이 없습니다",
+        "description": "첫 번째 지출을 추가하여 추적을 시작하세요",
+        "create": "지출 생성"
+      }
+    }
+  },
+  "nl-NL": {
+    "native": "Nederlands",
+    "locale": "nl-NL",
+    "actions": {
+      "continue": "Doorgaan",
+      "holdToLogout": "Ingedrukt houden om uit te loggen",
+      "signout": "Afmelden",
+      "close": "Sluiten",
+      "cheques": {
+        "title": "Cheques",
+        "scan": "Cheque scannen",
+        "input": "Handmatig invoeren"
+      },
+      "contacts": {
+        "group": "Groep",
+        "title": "Vrienden",
+        "contact": "Vriend"
+      },
+      "addSelected": "Geselecteerde toevoegen",
+      "cancel": "Annuleren",
+      "search": "Zoeken",
+      "save": "Opslaan",
+      "create": "Aanmaken"
+    },
+    "nav": {
+      "home": "Home",
+      "profile": "Ik",
+      "contacts": "Vrienden",
+      "expenses": "Afrekening"
+    },
+    "terms": "Algemene voorwaarden",
+    "privacy": "Privacybeleid",
+    "madeBy": "Gemaakt door",
+    "profile": {
+      "title": "Mijn profiel",
+      "language": {
+        "title": "Taal",
+        "description": "Dit heeft geen invloed op de chequedetectie. We begrijpen daar toch de meeste talen."
+      }
+    },
+    "form": {
+      "enterName": "Naam invoeren"
+    },
+    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
+    "onboarding": {
+      "name": {
+        "title": "Persoonlijk tintje",
+        "description": "Je naam zoals die getoond zal worden"
+      }
+    },
+    "contacts": {
+      "title": "Vrienden",
+      "empty": {
+        "title": "Het is hier verlaten",
+        "description": "Voeg vrienden handmatig toe of nodig mensen uit",
+        "invite": {
+          "share": "Vrienden uitnodigen",
+          "qr": "Uitnodigen via QR-code",
+          "manual": "Handmatig toevoegen"
+        }
+      },
+      "all": "Alle vrienden",
+      "contact": {
+        "owesYou": "Is jou iets verschuldigd",
+        "youOwe": "Je bent verschuldigd"
+      },
+      "delete": {
+        "confirm": {
+          "title": "Contact verwijderen",
+          "description": "Je saldo met deze persoon zal verloren gaan",
+          "confirm": "Verwijderen"
+        }
+      },
+      "add": {
+        "label": "Contact toevoegen",
+        "description": "Later kun je dit account overdragen aan de eigenaar, zodat die zijn of haar inloggegevens kan instellen en het account kan overnemen."
+      },
+      "share": {
+        "invite": {
+          "link": "Uitnodigen voor evn",
+          "qr": "QR-code tonen",
+          "description": "De uitnodiging verloopt over 5 minuten"
+        }
+      }
+    },
+    "join": {
+      "app": {
+        "description": "De slimme manier om samen met vrienden bij te houden wie wat aan wie verschuldigd is."
+      },
+      "inviter": {
+        "description": (name) => `Je bent uitgenodigd door ${name}. Registreer je of log in, en je bent klaar om te beginnen`
+      },
+      "accept": "Evn gebruiken starten"
+    },
+    "groups": {
+      "leave": "Vasthouden om te verlaten",
+      "name": {
+        "description": "Alle groepsleden kunnen deze naam zien",
+        "placeholder": "Naam invoeren"
+      },
+      "members": {
+        "title": "Leden",
+        "addMembers": "Leden toevoegen",
+        "addMember": "Lid toevoegen",
+        "empty": "Er is hier nog niemand. Voeg leden toe om deze groep te gebruiken."
+      },
+      "title": "Groepen",
+      "summary": {
+        "balance": {
+          "from": (amount) => `Leden van deze groep zijn je ${amount} verschuldigd`,
+          "to": (amount) => `Je bent hen ${amount} verschuldigd`,
+          "even": "Niemand is iemand iets verschuldigd"
+        }
+      },
+      "create": "Groep aanmaken"
+    },
+    "invite": {
+      "share": "Delen",
+      "qr": "QR-code tonen",
+      "invite": "Uitnodigen"
+    },
+    "etc": {
+      "or": "of"
+    },
+    "account": {
+      "delete": {
+        "button": "Account verwijderen",
+        "title": "Account verwijderen",
+        "description": "We verwijderen je account en alle bijbehorende informatie permanent. Deze actie kan niet ongedaan worden gemaakt.",
+        "sorry": "Het spijt ons zeer om je te zien gaan.",
+        "hold": "Houd vast om te bevestigen",
+        "link": "Account verwijderen"
+      }
+    },
+    "expenses": {
+      "spendings": {
+        "title": "Uitgaven",
+        "total": "Totaal",
+        "extras": {
+          "description": "Fooi, belastingen en andere toeslagen worden evenredig verdeeld.",
+          "title": "Extra's"
+        }
+      },
+      "payers": {
+        "title": "Betaald door"
+      },
+      "form": {
+        "title": {
+          "placeholder": "Waar heb je geld aan uitgegeven?"
+        },
+        "location": {
+          "placeholder": "Waar? (optioneel)"
+        },
+        "save": "Opslaan en saldi bijwerken"
+      },
+      "title": "Vereffenen",
+      "balance": {
+        "total": "Totaalrekening",
+        "youAreOwed": "Je hebt iets tegoed",
+        "youOwe": "Je bent schuldig",
+        "youWillOwe": "Je zult verschuldigd zijn",
+        "youWillBeOwed": "Anderen zullen jou iets verschuldigd zijn"
+      },
+      "participants": {
+        "create": {
+          "title": "Nieuwe deelnemer aanmaken"
+        },
+        "title": "Deelnemers toevoegen",
+        "add": {
+          "label": "Deelnemer toevoegen"
+        }
+      },
+      "me": "Ik",
+      "empty": {
+        "title": "Nog geen uitgaven",
+        "description": "Maak je eerste uitgave aan om het bijhouden te starten",
+        "create": "Uitgave aanmaken"
+      }
+    }
+  },
+  "ru-RU": {
+    "native": "Русский",
+    "locale": "ru-RU",
+    "actions": {
+      "continue": "Продолжить",
+      "holdToLogout": "Удерживайте для выхода",
+      "signout": "Выйти",
+      "close": "Закрыть",
+      "cheques": {
+        "title": "Чеки",
+        "scan": "Сканировать чек",
+        "input": "Ввести вручную"
+      },
+      "contacts": {
+        "group": "Группа",
+        "title": "Друзья",
+        "contact": "Друг"
+      },
+      "addSelected": "Добавить выбранные",
+      "cancel": "Отмена",
+      "search": "Поиск",
+      "save": "Сохранить",
+      "create": "Создать"
+    },
+    "nav": {
+      "home": "Главная",
+      "profile": "Я",
+      "contacts": "Друзья",
+      "expenses": "Расчёты"
+    },
+    "terms": "Условия и положения",
+    "privacy": "Политика конфиденциальности",
+    "madeBy": "Сделано",
+    "profile": {
+      "title": "Мой профиль",
+      "language": {
+        "title": "Язык",
+        "description": "Это не влияет на распознавание чеков. Мы и так понимаем там большинство языков."
+      }
+    },
+    "form": {
+      "enterName": "Введите имя"
+    },
+    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
+    "onboarding": {
+      "name": {
+        "title": "Личный штрих",
+        "description": "Ваше имя, как оно будет отображаться"
+      }
+    },
+    "contacts": {
+      "title": "Друзья",
+      "empty": {
+        "title": "Здесь одиноко",
+        "description": "Добавьте друзей вручную или пригласите людей",
+        "invite": {
+          "share": "Пригласить друзей",
+          "qr": "Пригласить по QR-коду",
+          "manual": "Добавить вручную"
+        }
+      },
+      "all": "Все друзья",
+      "contact": {
+        "owesYou": "Должен тебе",
+        "youOwe": "Вы должны"
+      },
+      "delete": {
+        "confirm": {
+          "title": "Удалить контакт",
+          "description": "Ваш баланс с этим человеком будет потерян",
+          "confirm": "Удалить"
+        }
+      },
+      "add": {
+        "label": "Добавить контакт",
+        "description": "Позже вы сможете передать этот аккаунт владельцу, чтобы он мог настроить данные для входа и стать его обладателем."
+      },
+      "share": {
+        "invite": {
+          "link": "Пригласить в evn",
+          "qr": "Показать QR-код",
+          "description": "Приглашение истечет через 5 минут"
+        }
+      }
+    },
+    "join": {
+      "app": {
+        "description": "Умный способ отслеживать, кто кому должен, вместе с друзьями."
+      },
+      "inviter": {
+        "description": (name) => `Вас пригласил(а) ${name}. Просто зарегистрируйтесь или войдите, и вы готовы начать`
+      },
+      "accept": "Начать использовать Evn"
+    },
+    "groups": {
+      "leave": "Удерживайте, чтобы выйти",
+      "name": {
+        "description": "Все участники группы увидят это имя",
+        "placeholder": "Введите имя"
+      },
+      "members": {
+        "title": "Участники",
+        "addMembers": "Добавить участников",
+        "addMember": "Добавить участника",
+        "empty": "Здесь пока никого нет. Добавьте участников, чтобы начать пользоваться этой группой."
+      },
+      "title": "Группы",
+      "summary": {
+        "balance": {
+          "from": (amount) => `Участники этой группы должны вам ${amount}`,
+          "to": (amount) => `Вы должны им ${amount}`,
+          "even": "Никто никому не должен"
+        }
+      },
+      "create": "Создать группу"
+    },
+    "invite": {
+      "share": "Поделиться",
+      "qr": "Показать QR-код",
+      "invite": "Пригласить"
+    },
+    "etc": {
+      "or": "или"
+    },
+    "account": {
+      "delete": {
+        "button": "Удалить аккаунт",
+        "title": "Удалить аккаунт",
+        "description": "Мы навсегда удалим ваш аккаунт и всю связанную с ним информацию. Это действие нельзя отменить.",
+        "sorry": "Нам очень жаль, что вы уходите.",
+        "hold": "Удерживайте для подтверждения",
+        "link": "Удалить аккаунт"
+      }
+    },
+    "expenses": {
+      "spendings": {
+        "title": "Расходы",
+        "total": "Итого",
+        "extras": {
+          "description": "Чаевые, налоги и другие дополнительные расходы делятся пропорционально.",
+          "title": "Дополнительно"
+        }
+      },
+      "payers": {
+        "title": "Оплачено"
+      },
+      "form": {
+        "title": {
+          "placeholder": "На что ты потратил?"
+        },
+        "location": {
+          "placeholder": "Где? (необязательно)"
+        },
+        "save": "Сохранить и обновить балансы"
+      },
+      "title": "Рассчитать",
+      "balance": {
+        "total": "Итоговый счет",
+        "youAreOwed": "Вам должны",
+        "youOwe": "Вы должны",
+        "youWillOwe": "Вы будете должны",
+        "youWillBeOwed": "Другие будут должны тебе"
+      },
+      "participants": {
+        "create": {
+          "title": "Создать нового участника"
+        },
+        "title": "Добавить участников",
+        "add": {
+          "label": "Добавить участника"
+        }
+      },
+      "me": "Я",
+      "empty": {
+        "title": "Пока нет расходов",
+        "description": "Создайте первый расход, чтобы начать отслеживание",
+        "create": "Создать расход"
+      }
+    }
+  },
+  "sw-TZ": {
+    "native": "Kiswahili",
+    "locale": "sw-TZ",
+    "actions": {
+      "continue": "Endelea",
+      "holdToLogout": "Shikilia ili utoke",
+      "signout": "Ondoka",
+      "close": "Funga",
+      "cheques": {
+        "title": "Hundi",
+        "scan": "Changanua hundi",
+        "input": "Ingiza mwenyewe"
+      },
+      "contacts": {
+        "group": "Kikundi",
+        "title": "Marafiki",
+        "contact": "Rafiki"
+      },
+      "addSelected": "Ongeza zilizochaguliwa",
+      "cancel": "Ghairi",
+      "search": "Tafuta",
+      "save": "Hifadhi",
+      "create": "Unda"
+    },
+    "nav": {
+      "home": "Mwanzo",
+      "profile": "Mimi",
+      "contacts": "Marafiki",
+      "expenses": "Marejesho"
+    },
+    "terms": "Vigezo na masharti",
+    "privacy": "Sera ya Faragha",
+    "madeBy": "Imetengenezwa na",
+    "profile": {
+      "title": "Wasifu wangu",
+      "language": {
+        "title": "Lugha",
+        "description": "Hili haiathiri utambuzi wa hundi. Hata hivyo, tunaelewa lugha nyingi hapo."
+      }
+    },
+    "form": {
+      "enterName": "Weka jina"
+    },
+    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
+    "onboarding": {
+      "name": {
+        "title": "Mguso wa kibinafsi",
+        "description": "Jina lako litakavyoonekana"
+      }
+    },
+    "contacts": {
+      "title": "Marafiki",
+      "empty": {
+        "title": "Hapa ni upweke",
+        "description": "Ongeza marafiki mwenyewe au alika watu",
+        "invite": {
+          "share": "Alika marafiki",
+          "qr": "Alika kwa kutumia msimbo wa QR",
+          "manual": "Ongeza kwa mkono"
+        }
+      },
+      "all": "Marafiki wote",
+      "contact": {
+        "owesYou": "Ana deni lako",
+        "youOwe": "Unadaiwa"
+      },
+      "delete": {
+        "confirm": {
+          "title": "Futa mawasiliano",
+          "description": "Salio lako na mtu huyu litapotea",
+          "confirm": "Futa"
+        }
+      },
+      "add": {
+        "label": "Ongeza mawasiliano",
+        "description": "Baadaye utaweza kuhamisha akaunti hii kwa mmiliki ili aweze kuweka taarifa zake za kuingia na kuchukua umiliki wa akaunti."
+      },
+      "share": {
+        "invite": {
+          "link": "Alika kwenye evn",
+          "qr": "Onyesha msimbo wa QR",
+          "description": "Mwaliko utatamatika baada ya dakika 5"
+        }
+      }
+    },
+    "join": {
+      "app": {
+        "description": "Njia bora ya kufuatilia nani anamdai nani, ukiwa na marafiki zako."
+      },
+      "inviter": {
+        "description": (name) => `${name} amekualika. Jisajili au ingia, na uko tayari kuanza`
+      },
+      "accept": "Anza kutumia Evn"
+    },
+    "groups": {
+      "leave": "Shikilia kuondoka",
+      "name": {
+        "description": "Wanachama wote wa kundi wataona jina hili",
+        "placeholder": "Weka jina"
+      },
+      "members": {
+        "title": "Wanachama",
+        "addMembers": "Ongeza wanachama",
+        "addMember": "Ongeza mwanachama",
+        "empty": "Hakuna mtu hapa bado. Ongeza baadhi ya wanachama ili kuanza kutumia kundi hili."
+      },
+      "title": "Makundi",
+      "summary": {
+        "balance": {
+          "from": (amount) => `Wanachama wa kundi hili wanakudai ${amount}`,
+          "to": (amount) => `Unawadaiwa ${amount}`,
+          "even": "Hakuna anayemdai mwingine chochote"
+        }
+      },
+      "create": "Unda kundi"
+    },
+    "invite": {
+      "share": "Shiriki",
+      "qr": "Onyesha msimbo wa QR",
+      "invite": "Alika"
+    },
+    "etc": {
+      "or": "au"
+    },
+    "account": {
+      "delete": {
+        "button": "Futa akaunti",
+        "title": "Futa akaunti",
+        "description": "Tutafuta akaunti yako na taarifa zote zinazohusiana nayo kabisa. Hatua hii haiwezi kutenduliwa.",
+        "sorry": "Tunaomba radhi sana kukuona ukiondoka.",
+        "hold": "Shikilia kuthibitisha",
+        "link": "Futa akaunti"
+      }
+    },
+    "expenses": {
+      "spendings": {
+        "title": "Matumizi",
+        "total": "Jumla",
+        "extras": {
+          "description": "Vidokezo, kodi, na gharama nyingine za ziada hugawanywa kwa uwiano.",
+          "title": "Za ziada"
+        }
+      },
+      "payers": {
+        "title": "Imelipwa na"
+      },
+      "form": {
+        "title": {
+          "placeholder": "Umetumia kwenye nini?"
+        },
+        "location": {
+          "placeholder": "Wapi? (Hiari)"
+        },
+        "save": "Hifadhi na sasisha mizania"
+      },
+      "title": "Lipa",
+      "balance": {
+        "total": "Jumla ya bili",
+        "youAreOwed": "Unadai malipo",
+        "youOwe": "Unadaiwa",
+        "youWillOwe": "Utakuwa na deni",
+        "youWillBeOwed": "Wengine watakudai fadhila"
+      },
+      "participants": {
+        "create": {
+          "title": "Unda mshiriki mpya"
+        },
+        "title": "Ongeza washiriki",
+        "add": {
+          "label": "Ongeza mshiriki"
+        }
+      },
+      "me": "Mimi",
+      "empty": {
+        "title": "Hakuna matumizi bado",
+        "description": "Unda matumizi yako ya kwanza ili kuanza kufuatilia",
+        "create": "Unda gharama"
+      }
+    }
+  },
+  "tr-TR": {
+    "native": "Türkçe",
+    "locale": "tr-TR",
+    "actions": {
+      "continue": "Devam Et",
+      "holdToLogout": "Çıkış yapmak için basılı tutun",
+      "signout": "Oturumu kapat",
+      "close": "Kapat",
+      "cheques": {
+        "title": "Çekler",
+        "scan": "Çeki tara",
+        "input": "Manuel gir"
+      },
+      "contacts": {
+        "group": "Grup",
+        "title": "Arkadaşlar",
+        "contact": "Arkadaş"
+      },
+      "addSelected": "Seçileni ekle",
+      "cancel": "İptal",
+      "search": "Ara",
+      "save": "Kaydet",
+      "create": "Oluştur"
+    },
+    "nav": {
+      "home": "Ana Sayfa",
+      "profile": "Ben",
+      "contacts": "Arkadaşlar",
+      "expenses": "Hesaplaşma"
+    },
+    "terms": "Şartlar ve koşullar",
+    "privacy": "Gizlilik Politikası",
+    "madeBy": "Tarafından yapıldı",
+    "profile": {
+      "title": "Profilim",
+      "language": {
+        "title": "Dil",
+        "description": "Bu, çek tanımayı etkilemez. Zaten oradaki dillerin çoğunu anlıyoruz."
+      }
+    },
+    "form": {
+      "enterName": "İsim girin"
+    },
+    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
+    "onboarding": {
+      "name": {
+        "title": "Kişisel dokunuş",
+        "description": "Adınızın görüneceği şekliyle"
+      }
+    },
+    "contacts": {
+      "title": "Arkadaşlar",
+      "empty": {
+        "title": "Burası yalnız",
+        "description": "Arkadaşları manuel olarak ekleyin veya kişileri davet edin",
+        "invite": {
+          "share": "Arkadaşlarını davet et",
+          "qr": "QR kod ile davet et",
+          "manual": "Manuel ekle"
+        }
+      },
+      "all": "Tüm arkadaşlar",
+      "contact": {
+        "owesYou": "Sana borçlu",
+        "youOwe": "Borçlusun"
+      },
+      "delete": {
+        "confirm": {
+          "title": "Kişiyi sil",
+          "description": "Bu kişiyle olan bakiyeniz kaybolacak",
+          "confirm": "Sil"
+        }
+      },
+      "add": {
+        "label": "Kişi ekle",
+        "description": "Daha sonra bu hesabı sahibine aktarabileceksin, böylece giriş bilgilerini ayarlayıp hesabın sahibi olabilir."
+      },
+      "share": {
+        "invite": {
+          "link": "evn’e davet et",
+          "qr": "QR kodunu göster",
+          "description": "Davet 5 dakika içinde sona erecek"
+        }
+      }
+    },
+    "join": {
+      "app": {
+        "description": "Kimin kime borcu olduğunu arkadaşlarınla birlikte akıllıca takip etmenin yolu."
+      },
+      "inviter": {
+        "description": (name) => `${name} tarafından davet edildiniz. Sadece kaydolun veya giriş yapın, ve hazırsınız`
+      },
+      "accept": "Evn'i kullanmaya başla"
+    },
+    "groups": {
+      "leave": "Ayrılmak için basılı tut",
+      "name": {
+        "description": "Tüm grup üyeleri bu ismi görecek",
+        "placeholder": "Ad girin"
+      },
+      "members": {
+        "title": "Üyeler",
+        "addMembers": "Üyeleri ekle",
+        "addMember": "Üye ekle",
+        "empty": "Burada henüz kimse yok. Bu grubu kullanmaya başlamak için birkaç üye ekle."
+      },
+      "title": "Gruplar",
+      "summary": {
+        "balance": {
+          "from": (amount) => `Bu grubun üyeleri sana ${amount} borçlu`,
+          "to": (amount) => `Onlara ${amount} borçlusunuz`,
+          "even": "Kimse kimseye borçlu değil"
+        }
+      },
+      "create": "Grup oluştur"
+    },
+    "invite": {
+      "share": "Paylaş",
+      "qr": "QR kodunu göster",
+      "invite": "Davet et"
+    },
+    "etc": {
+      "or": "veya"
+    },
+    "account": {
+      "delete": {
+        "button": "Hesabı sil",
+        "title": "Hesabı sil",
+        "description": "Hesabınızı ve tüm bağlantılı bilgileri kalıcı olarak sileceğiz. Bu işlem geri alınamaz.",
+        "sorry": "Gitmene çok üzüldük.",
+        "hold": "Onaylamak için basılı tutun",
+        "link": "Hesabı sil"
+      }
+    },
+    "expenses": {
+      "spendings": {
+        "title": "Harcamalar",
+        "total": "Toplam",
+        "extras": {
+          "description": "Bahşişler, vergiler ve diğer ek masraflar orantılı olarak bölüştürülür.",
+          "title": "Ekstra"
+        }
+      },
+      "payers": {
+        "title": "Ödeyen"
+      },
+      "form": {
+        "title": {
+          "placeholder": "Neye harcadın?"
+        },
+        "location": {
+          "placeholder": "Nerede? (Opsiyonel)"
+        },
+        "save": "Bakiyeleri kaydet ve güncelle"
+      },
+      "title": "Hesapla",
+      "balance": {
+        "total": "Toplam fatura",
+        "youAreOwed": "Sana borç var",
+        "youOwe": "Borcunuz var",
+        "youWillOwe": "Borçlu olacaksın",
+        "youWillBeOwed": "Diğerleri sana borçlu olacak"
+      },
+      "participants": {
+        "create": {
+          "title": "Yeni katılımcı oluştur"
+        },
+        "title": "Katılımcı ekle",
+        "add": {
+          "label": "Katılımcı ekle"
+        }
+      },
+      "me": "Ben",
+      "empty": {
+        "title": "Henüz gider yok",
+        "description": "Takibe başlamak için ilk giderini oluştur",
+        "create": "Gider oluştur"
+      }
+    }
+  },
+  "uk-UA": {
+    "native": "Українська",
+    "locale": "uk-UA",
+    "actions": {
+      "continue": "Продовжити",
+      "holdToLogout": "Утримуйте, щоб вийти",
+      "signout": "Вийти",
+      "close": "Закрити",
+      "cheques": {
+        "title": "Чеки",
+        "scan": "Сканувати чек",
+        "input": "Ввести вручну"
+      },
+      "contacts": {
+        "group": "Група",
+        "title": "Друзі",
+        "contact": "Друг"
+      },
+      "addSelected": "Додати вибране",
+      "cancel": "Скасувати",
+      "search": "Пошук",
+      "save": "Зберегти",
+      "create": "Створити"
+    },
+    "nav": {
+      "home": "Головна",
+      "profile": "Я",
+      "contacts": "Друзі",
+      "expenses": "Розрахунок"
+    },
+    "terms": "Умови та положення",
+    "privacy": "Політика конфіденційності",
+    "madeBy": "Створено",
+    "profile": {
+      "title": "Мій профіль",
+      "language": {
+        "title": "Мова",
+        "description": "Це не впливає на розпізнавання чеків. Ми й так розуміємо там більшість мов."
+      }
+    },
+    "form": {
+      "enterName": "Введіть ім’я"
+    },
+    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
+    "onboarding": {
+      "name": {
+        "title": "Особистий штрих",
+        "description": "Ваше ім’я, як воно буде відображатися"
+      }
+    },
+    "contacts": {
+      "title": "Друзі",
+      "empty": {
+        "title": "Тут самотньо",
+        "description": "Додайте друзів вручну або запросіть людей",
+        "invite": {
+          "share": "Запросити друзів",
+          "qr": "Запросити за QR-кодом",
+          "manual": "Додати вручну"
+        }
+      },
+      "all": "Усі друзі",
+      "contact": {
+        "owesYou": "Винен тобі",
+        "youOwe": "Ви винні"
+      },
+      "delete": {
+        "confirm": {
+          "title": "Видалити контакт",
+          "description": "Ваш баланс із цією особою буде втрачено",
+          "confirm": "Видалити"
+        }
+      },
+      "add": {
+        "label": "Додати контакт",
+        "description": "Пізніше ви зможете передати цей акаунт власнику, щоб він міг налаштувати дані для входу і стати власником облікового запису."
+      },
+      "share": {
+        "invite": {
+          "link": "Запросити до evn",
+          "qr": "Показати QR-код",
+          "description": "Запрошення втратить чинність через 5 хвилин"
+        }
+      }
+    },
+    "join": {
+      "app": {
+        "description": "Розумний спосіб відстежувати, хто кому винен, разом із друзями."
+      },
+      "inviter": {
+        "description": (name) => `Вас запросив(ла) ${name}. Просто зареєструйтеся або увійдіть, і все готово`
+      },
+      "accept": "Почати користуватися Evn"
+    },
+    "groups": {
+      "leave": "Утримуйте, щоб вийти",
+      "name": {
+        "description": "Усі учасники групи побачать це ім’я",
+        "placeholder": "Введіть ім’я"
+      },
+      "members": {
+        "title": "Учасники",
+        "addMembers": "Додати учасників",
+        "addMember": "Додати учасника",
+        "empty": "Тут ще нікого немає. Додайте учасників, щоб почати користуватися цією групою."
+      },
+      "title": "Групи",
+      "summary": {
+        "balance": {
+          "from": (amount) => `Члени цієї групи винні вам ${amount}`,
+          "to": (amount) => `Ви винні їм ${amount}`,
+          "even": "Ніхто нікому нічого не винен"
+        }
+      },
+      "create": "Створити групу"
+    },
+    "invite": {
+      "share": "Поділитися",
+      "qr": "Показати QR-код",
+      "invite": "Запросити"
+    },
+    "etc": {
+      "or": "або"
+    },
+    "account": {
+      "delete": {
+        "button": "Видалити обліковий запис",
+        "title": "Видалити обліковий запис",
+        "description": "Ми назавжди видалимо ваш обліковий запис і всю пов'язану інформацію. Цю дію не можна скасувати.",
+        "sorry": "Нам дуже шкода, що ви йдете.",
+        "hold": "Утримуйте для підтвердження",
+        "link": "Видалити акаунт"
+      }
+    },
+    "expenses": {
+      "spendings": {
+        "title": "Витрати",
+        "total": "Разом",
+        "extras": {
+          "description": "Чайові, податки та інші додаткові витрати розподіляються пропорційно.",
+          "title": "Додатково"
+        }
+      },
+      "payers": {
+        "title": "Оплачено"
+      },
+      "form": {
+        "title": {
+          "placeholder": "На що ти витратив?"
+        },
+        "location": {
+          "placeholder": "Де? (необов’язково)"
+        },
+        "save": "Зберегти й оновити баланси"
+      },
+      "title": "Розрахунок",
+      "balance": {
+        "total": "Загальний рахунок",
+        "youAreOwed": "Вам винні",
+        "youOwe": "Ви винні",
+        "youWillOwe": "Ви будете винні",
+        "youWillBeOwed": "Інші будуть у тебе в боргу"
+      },
+      "participants": {
+        "create": {
+          "title": "Створити нового учасника"
+        },
+        "title": "Додати учасників",
+        "add": {
+          "label": "Додати учасника"
+        }
+      },
+      "me": "Я",
+      "empty": {
+        "title": "Поки що немає витрат",
+        "description": "Створіть свою першу витрату, щоб почати відстеження",
+        "create": "Створити витрату"
+      }
+    }
+  },
+  "zh-CN": {
+    "native": "中文",
+    "locale": "zh-CN",
+    "actions": {
+      "continue": "继续",
+      "holdToLogout": "按住退出登录",
+      "signout": "退出登录",
+      "close": "关闭",
+      "cheques": {
+        "title": "支票",
+        "scan": "扫描支票",
+        "input": "手动输入"
+      },
+      "contacts": {
+        "group": "群组",
+        "title": "朋友",
+        "contact": "朋友"
+      },
+      "addSelected": "添加已选项",
+      "cancel": "取消",
+      "search": "搜索",
+      "save": "保存",
+      "create": "创建"
+    },
+    "nav": {
+      "home": "首页",
+      "profile": "我",
+      "contacts": "朋友",
+      "expenses": "结算"
+    },
+    "terms": "条款和条件",
+    "privacy": "隐私政策",
+    "madeBy": "由...制作",
+    "profile": {
+      "title": "我的个人资料",
+      "language": {
+        "title": "语言",
+        "description": "这不会影响支票识别。反正我们在那里大多数语言都能理解。"
+      }
+    },
+    "form": {
+      "enterName": "输入姓名"
+    },
+    "copyright": (timestamp) => `© seed.me，2025–${new Date(timestamp).getFullYear()}`,
+    "onboarding": {
+      "name": {
+        "title": "个性化体验",
+        "description": "您的姓名将被显示为"
+      }
+    },
+    "contacts": {
+      "title": "朋友",
+      "empty": {
+        "title": "这里很孤独",
+        "description": "手动添加好友或邀请他人",
+        "invite": {
+          "share": "邀请朋友",
+          "qr": "通过二维码邀请",
+          "manual": "手动添加"
+        }
+      },
+      "all": "所有好友",
+      "contact": {
+        "owesYou": "欠你的",
+        "youOwe": "你欠"
+      },
+      "delete": {
+        "confirm": {
+          "title": "删除联系人",
+          "description": "您与此人的余额将会丢失",
+          "confirm": "删除"
+        }
+      },
+      "add": {
+        "label": "添加联系人",
+        "description": "稍后，您可以将此账户转移给所有者，让其设置登录信息并接管账户。"
+      },
+      "share": {
+        "invite": {
+          "link": "邀请加入 evn",
+          "qr": "显示二维码",
+          "description": "邀请将在5分钟后失效"
+        }
+      }
+    },
+    "join": {
+      "app": {
+        "description": "和朋友们一起智能记录谁欠谁。"
+      },
+      "inviter": {
+        "description": (name) => `您已被${name}邀请。只需注册或登录，您就可以开始了`
+      },
+      "accept": "开始使用 Evn"
+    },
+    "groups": {
+      "leave": "长按退出",
+      "name": {
+        "description": "所有群组成员都能看到这个名称",
+        "placeholder": "输入名称"
+      },
+      "members": {
+        "title": "成员",
+        "addMembers": "添加成员",
+        "addMember": "添加成员",
+        "empty": "这里还没有人。添加一些成员以开始使用这个群组。"
+      },
+      "title": "群组",
+      "summary": {
+        "balance": {
+          "from": (amount) => `该群组成员欠你${amount}`,
+          "to": (amount) => `你欠他们${amount}`,
+          "even": "没有人欠任何人任何东西"
+        }
+      },
+      "create": "创建群组"
+    },
+    "invite": {
+      "share": "分享",
+      "qr": "显示二维码",
+      "invite": "邀请"
+    },
+    "etc": {
+      "or": "或"
+    },
+    "account": {
+      "delete": {
+        "button": "删除账户",
+        "title": "删除账户",
+        "description": "我们将永久删除您的账户及所有关联信息。此操作无法撤销。",
+        "sorry": "很遗憾看到您离开。",
+        "hold": "按住以确认",
+        "link": "删除账户"
+      }
+    },
+    "expenses": {
+      "spendings": {
+        "title": "支出",
+        "total": "总计",
+        "extras": {
+          "description": "小费、税费及其他附加费用将按比例分摊。",
+          "title": "额外费用"
+        }
+      },
+      "payers": {
+        "title": "付款方"
+      },
+      "form": {
+        "title": {
+          "placeholder": "你花钱花在了什么上？"
+        },
+        "location": {
+          "placeholder": "在哪里？（可选）"
+        },
+        "save": "保存并更新余额"
+      },
+      "title": "结清",
+      "balance": {
+        "total": "总账单",
+        "youAreOwed": "你有应得的",
+        "youOwe": "你欠款",
+        "youWillOwe": "你将欠款",
+        "youWillBeOwed": "别人会欠你人情"
+      },
+      "participants": {
+        "create": {
+          "title": "创建新参与者"
+        },
+        "title": "添加参与者",
+        "add": {
+          "label": "添加参与者"
+        }
+      },
+      "me": "我",
+      "empty": {
+        "title": "暂无支出",
+        "description": "创建您的第一笔支出以开始记录",
+        "create": "创建支出"
+      }
+    }
   }
 };
 
 /** @type {import('./types').Locale[]} */
-export const locales = ["en-US"];
+export const locales = ["ar-SA","de-DE","en-US","es-ES","fr-FR","hi-IN","it-IT","ja-JP","ko-KR","nl-NL","ru-RU","sw-TZ","tr-TR","uk-UA","zh-CN"];

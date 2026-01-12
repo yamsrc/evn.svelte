@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json.schemastore.org/web-manifest.json",
+  "id": "com.evnapp",
+  "name": "evn",
+  "short_name": "evn",
+  "description": "Split expenses wiser",
+  "categories": [
+    "social",
+    "finance"
+  ],
+  "start_url": "/",
+  "scope": "/",
+  "theme_color": "#130A03",
+  "background_color": "#130A03",
+  "display": "standalone",
+  "orientation": "portrait",
+  "launch_handler": {
+    "client_mode": [
+      "navigate-existing",
+      "auto"
+    ]
+  },
+  "icons": []
+}

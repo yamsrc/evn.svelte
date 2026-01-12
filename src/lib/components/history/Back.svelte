@@ -12,8 +12,8 @@
   }
 </script>
 
-<a {href} {onclick} class="flex items-center gap-1 text-muted-foreground -ml-1">
-  <ArrowLeft class="size-4 rtl:rotate-180" />
+<a {href} {onclick} class="flex items-center gap-1 -ml-1">
+  <ArrowLeft class="size-4 rtl:rotate-180 text-muted-foreground" />
   <span style={name ? `view-transition-name: ${name}` : undefined}>
     {@render children()}
   </span>

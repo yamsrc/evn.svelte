@@ -1,0 +1,150 @@
+native: हिन्दी
+locale: hi-IN
+actions:
+  continue: जारी रखें
+  holdToLogout: लॉगआउट के लिए दबाए रखें
+  signout: साइन आउट करें
+  close: बंद करें
+  cheques:
+    title: चेक
+    scan: चेक स्कैन करें
+    input: मैन्युअल रूप से दर्ज करें
+  contacts:
+    group: समूह
+    title: मित्र
+    contact: मित्र
+  addSelected: चयनित जोड़ें
+  cancel: रद्द करें
+  search: खोजें
+  save: सहेजें
+  create: सृजन करें
+nav:
+  home: मुख्य पृष्ठ
+  profile: मैं
+  contacts: मित्र
+  expenses: सेटलमेंट
+terms: नियम व शर्तें
+privacy: गोपनीयता नीति
+madeBy: द्वारा निर्मित
+profile:
+  title: मेरा प्रोफ़ाइल
+  language:
+    title: भाषा
+    description: >-
+      यह चेक की पहचान को प्रभावित नहीं करता है। वैसे भी, हम वहां अधिकांश भाषाओं
+      को समझते हैं।
+form:
+  enterName: नाम दर्ज करें
+copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
+onboarding:
+  name:
+    title: व्यक्तिगत स्पर्श
+    description: आपका नाम जैसा दिखाई देगा
+contacts:
+  title: दोस्त
+  empty:
+    title: यहाँ अकेलापन है
+    description: दोस्तों को मैन्युअली जोड़ें या लोगों को आमंत्रित करें
+    invite:
+      share: दोस्तों को आमंत्रित करें
+      qr: QR कोड से आमंत्रित करें
+      manual: मैन्युअल रूप से जोड़ें
+  all: सभी मित्र
+  contact:
+    owesYou: आपका कर्ज़दार है
+    youOwe: आपको देना है
+  delete:
+    confirm:
+      title: संपर्क हटाएं
+      description: इस व्यक्ति के साथ आपका बैलेंस खो जाएगा
+      confirm: हटाएँ
+  add:
+    label: संपर्क जोड़ें
+    description: >-
+      बाद में, आप इस खाते को मालिक को ट्रांसफ़र कर सकेंगे, ताकि वे अपनी साइन-इन
+      जानकारी सेट कर सकें और खाते के स्वामी बन सकें।
+  share:
+    invite:
+      link: evn पर आमंत्रित करें
+      qr: QR कोड दिखाएं
+      description: निमंत्रण 5 मिनट में समाप्त हो जाएगा
+join:
+  app:
+    description: दोस्तों के साथ मिलकर, कौन किसका कितना बकाया है, इसका स्मार्ट तरीका।
+  inviter:
+    description: >-
+      !js
+
+      (name) => `${name} ने आपको आमंत्रित किया है। बस रजिस्टर करें या लॉग इन
+      करें, और आप तैयार हैं`
+  accept: Evn का उपयोग शुरू करें
+groups:
+  leave: छोड़ने के लिए दबाए रखें
+  name:
+    description: सभी समूह सदस्य यह नाम देखेंगे
+    placeholder: नाम दर्ज करें
+  members:
+    title: सदस्य
+    addMembers: सदस्य जोड़ें
+    addMember: सदस्य जोड़ें
+    empty: यहाँ अभी कोई नहीं है। इस समूह का उपयोग शुरू करने के लिए कुछ सदस्य जोड़ें।
+  title: समूह
+  summary:
+    balance:
+      from: |-
+        !js
+        (amount) => `इस समूह के सदस्य आपको ${amount} का भुगतान करते हैं`
+      to: |-
+        !js
+        (amount) => `आप उन्हें ${amount} के ऋणी हैं`
+      even: कोई किसी का कोई कर्ज़दार नहीं है
+  create: समूह बनाएँ
+invite:
+  share: साझा करें
+  qr: QR कोड दिखाएँ
+  invite: आमंत्रित करें
+etc:
+  or: या
+account:
+  delete:
+    button: खाता हटाएँ
+    title: खाता हटाएं
+    description: >-
+      हम आपके खाते और उससे जुड़ी सभी जानकारी को स्थायी रूप से हटा देंगे। इस
+      कार्रवाई को वापस नहीं लिया जा सकता।
+    sorry: हमें आपको जाते हुए देखकर बहुत दुख हुआ।
+    hold: पुष्टि करने के लिए दबाए रखें
+    link: खाता हटाएं
+expenses:
+  spendings:
+    title: खर्च
+    total: कुल
+    extras:
+      description: टिप्स, कर और अन्य अतिरिक्त शुल्क आनुपातिक रूप से बाँटे जाते हैं।
+      title: अतिरिक्त खर्च
+  payers:
+    title: द्वारा भुगतान किया गया
+  form:
+    title:
+      placeholder: आपने किस पर खर्च किया?
+    location:
+      placeholder: कहाँ? (वैकल्पिक)
+    save: सहेजें और बैलेंस अपडेट करें
+  title: हिसाब
+  balance:
+    total: कुल बिल
+    youAreOwed: आपको कुछ मिलना बाकी है
+    youOwe: आप पर बकाया है
+    youWillOwe: आप पर बकाया होगा
+    youWillBeOwed: दूसरे लोग आपके एहसानमंद होंगे
+  participants:
+    create:
+      title: नया प्रतिभागी बनाएँ
+    title: प्रतिभागी जोड़ें
+    add:
+      label: प्रतिभागी जोड़ें
+  me: मैं
+  empty:
+    title: अभी तक कोई खर्च नहीं
+    description: ट्रैकिंग शुरू करने के लिए अपना पहला खर्च दर्ज करें
+    create: व्यय बनाएं

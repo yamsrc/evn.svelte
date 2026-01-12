@@ -1,0 +1,35 @@
+account:
+  title: Account Transfer
+  description: Someone has created this account and is transferring it to you.
+  accept: Accept account
+  content0: >-
+    To take ownership, set up your sign-in details. This won’t create a new
+    account — it just gives you access to this one.
+  content1: >-
+    This won’t create a new account — it will simply let you access and manage
+    this one.
+  conflict:
+    content0: >-
+      !js
+
+      (name) => `${name}, to accept this account, you’ll be signed out of your
+      current one and set up new sign-in details.`
+    content1: This won’t merge accounts — you’ll switch to the new one.
+  switch: Switch account
+  expired:
+    content: Ask the sender to generate a new link.
+    description: This transfer request has expired.
+    title: Transfer Expired
+actions:
+  discard: Discard
+  close: Close
+friends:
+  app:
+    description: The smart way to track who owes whom, together with friends.
+  inviter:
+    description: >-
+      !js
+
+      (name) => `You have been invited by ${name}. Just register or log in, and
+      you’re all set`
+  accept: Start Using Evn

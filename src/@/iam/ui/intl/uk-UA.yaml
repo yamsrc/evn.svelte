@@ -1,0 +1,42 @@
+auth:
+  welcomeBack: З поверненням
+  signupTitle: Реєстрація в один дотик
+  passwordTitle: Увійти за допомогою пароля
+  passwordDescription: Створіть акаунт або увійдіть
+  passkey: Ключі
+  email: Пошта
+  alreadyHaveAccount: Вже маєте обліковий запис?
+  betterSecurity: Кращий захист
+  passkeysNotSupported: Ключі доступу не підтримуються
+  passkeysWarning: Ваш браузер не дбає про вашу приватність і безпеку.
+  learnMore: Дізнатися більше
+  passwordBlank: >-
+    Залиште поле пароля порожнім <nobr>щоб отримати</nobr>
+    <nobr>одноразовий</nobr> код доступу.
+  otpInstructions: Введіть код, надісланий на вашу електронну пошту. Термін дії — 5 хвилин.
+  holdToLogout: Утримуйте для виходу
+  continueWith: |
+    !js
+    (provider) => {
+      return `Продовжити з ${provider}`
+    }
+  passkeysDescription: >-
+    Ключі доступу безпечніші за паролі, простіші у використанні та їх неможливо
+    вкрасти.
+  yourName: Ваше ім'я
+  password: Пароль
+  refresh:
+    description: >-
+      !js
+
+      (name) => `${name ? name + ", з міркувань" : "З міркувань"} безпеки термін
+      дії ваших облікових даних закінчився. Будь ласка, увійдіть знову, щоб
+      продовжити.`
+    title: Ласкаво просимо назад
+  signout: Вийти
+  login: Увійти
+  signin: Увійти
+  inApp:
+    title: Небезпечний контекст
+    description: Задля вашої безпеки ми відкрили додаток у вашому браузері.
+    continue: Продовжити

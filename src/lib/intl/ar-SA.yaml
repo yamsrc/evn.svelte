@@ -1,0 +1,148 @@
+native: العربية
+locale: ar-SA
+actions:
+  continue: متابعة
+  holdToLogout: اضغط مطولًا لتسجيل الخروج
+  signout: تسجيل الخروج
+  close: إغلاق
+  cheques:
+    title: شيكات
+    scan: مسح الشيك
+    input: إدخال يدوي
+  contacts:
+    group: مجموعة
+    title: أصدقاء
+    contact: صديق
+  addSelected: إضافة المحدد
+  cancel: إلغاء
+  search: بحث
+  save: حفظ
+  create: إنشاء
+nav:
+  home: الرئيسية
+  profile: أنا
+  contacts: الأصدقاء
+  expenses: تسوية
+terms: الشروط والأحكام
+privacy: سياسة الخصوصية
+madeBy: من صنع
+profile:
+  title: ملفي الشخصي
+  language:
+    title: اللغة
+    description: هذا لا يؤثر على التعرف على الشيك. على أي حال، نحن نفهم معظم اللغات هناك.
+form:
+  enterName: أدخل الاسم
+copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
+onboarding:
+  name:
+    title: لمسة شخصية
+    description: اسمك كما سيظهر
+contacts:
+  title: الأصدقاء
+  empty:
+    title: المكان هنا موحش
+    description: أضِف الأصدقاء يدويًا أو ادعُ الأشخاص
+    invite:
+      share: دعوة الأصدقاء
+      qr: دعوة عبر رمز الاستجابة السريعة
+      manual: إضافة يدويًا
+  all: جميع الأصدقاء
+  contact:
+    owesYou: مدين لك
+    youOwe: أنت مدين
+  delete:
+    confirm:
+      title: حذف جهة الاتصال
+      description: سيتم فقدان رصيدك مع هذا الشخص
+      confirm: حذف
+  add:
+    label: إضافة جهة اتصال
+    description: >-
+      لاحقًا، ستتمكن من نقل هذا الحساب إلى المالك حتى يتمكن من إعداد بيانات
+      تسجيل الدخول الخاصة به وتولي ملكيته.
+  share:
+    invite:
+      link: دعوة إلى evn
+      qr: عرض رمز الاستجابة السريعة
+      description: ستنتهي صلاحية الدعوة خلال 5 دقائق
+join:
+  app:
+    description: الطريقة الذكية لمتابعة من يدين لمن، مع الأصدقاء.
+  inviter:
+    description: >-
+      !js
+
+      (name) => `لقد تمّت دعوتك من قِبل ${name}. فقط سجّل أو قم بتسجيل الدخول،
+      وستكون جاهزًا للبدء`
+  accept: ابدأ استخدام Evn
+groups:
+  leave: اضغط مع الاستمرار للمغادرة
+  name:
+    description: سيرى جميع أعضاء المجموعة هذا الاسم
+    placeholder: أدخل الاسم
+  members:
+    title: الأعضاء
+    addMembers: إضافة أعضاء
+    addMember: إضافة عضو
+    empty: لا يوجد أحد هنا بعد. أضف بعض الأعضاء للبدء في استخدام هذه المجموعة.
+  title: المجموعات
+  summary:
+    balance:
+      from: |-
+        !js
+        (amount) => `أعضاء هذه المجموعة مدينون لك بـ${amount}`
+      to: |-
+        !js
+        (amount) => `أنت مدين لهم بـ${amount}`
+      even: لا أحد مدين لأحد بشيء
+  create: إنشاء مجموعة
+invite:
+  share: مشاركة
+  qr: عرض رمز الاستجابة السريعة
+  invite: دعوة
+etc:
+  or: أو
+account:
+  delete:
+    button: حذف الحساب
+    title: حذف الحساب
+    description: >-
+      سنقوم بحذف حسابك وجميع المعلومات المرتبطة به بشكل نهائي. لا يمكن التراجع
+      عن هذا الإجراء.
+    sorry: نأسف جدًا لرؤيتك تغادر.
+    hold: اضغط مع الاستمرار للتأكيد
+    link: حذف الحساب
+expenses:
+  spendings:
+    title: النفقات
+    total: الإجمالي
+    extras:
+      description: يتم تقسيم الإكراميات والضرائب والمصاريف الإضافية الأخرى بشكل نسبي.
+      title: إضافات
+  payers:
+    title: مدفوع بواسطة
+  form:
+    title:
+      placeholder: على ماذا أنفقتَ المال؟
+    location:
+      placeholder: أين؟ (اختياري)
+    save: احفظ وقم بتحديث الأرصدة
+  title: تسوية
+  balance:
+    total: إجمالي الفاتورة
+    youAreOwed: لك مستحقات
+    youOwe: أنت مدين
+    youWillOwe: سَتَدِين
+    youWillBeOwed: سيَدِين لك الآخرون
+  participants:
+    create:
+      title: إنشاء مشارك جديد
+    title: إضافة مشاركين
+    add:
+      label: إضافة مشارك
+  me: أنا
+  empty:
+    title: لا توجد مصروفات بعد
+    description: أنشئ أول مصروفك لبدء التتبع
+    create: إنشاء مصروف

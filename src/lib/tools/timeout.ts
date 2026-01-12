@@ -3,10 +3,10 @@ import { readable } from 'svelte/store'
 /**
  * Create a Readable<number> that counts down from ms to 0
  */
-export function timeout(ms: number) {
+export function timeout(ms: number, fps = 24) {
   return readable(ms, (set) => {
     const then = Date.now()
-    const interval = setInterval(() => tick(), 1000 / FPS)
+    const interval = setInterval(() => tick(), 1000 / fps)
 
     function tick() {
       const remaining = ms - (Date.now() - then)
@@ -24,5 +24,3 @@ export function timeout(ms: number) {
     return () => clearInterval(interval)
   })
 }
-
-const FPS = 24

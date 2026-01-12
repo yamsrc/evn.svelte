@@ -1,7 +1,9 @@
 <script lang="ts">
+  import { Fingerprint } from '@lucide/svelte'
   import { Loader } from '$com/loader'
   import { Button } from '$ui/button'
   import { passkeys } from '@/iam'
+  import { dict } from '@/iam/ui/intl'
 
   let busy = $state(false)
 
@@ -15,12 +17,18 @@
 </script>
 
 <div class="flex flex-col items-center justify-center gap-2">
-  <p class="text-sm">Already have an account?</p>
-  <Button variant="outline" onclick={login}>
+  <p class="text-sm">{$dict.auth.alreadyHaveAccount}</p>
+  <Button
+    id="iam-passkey-login-button"
+    variant="secondary"
+    onclick={login}
+    class="shadow bg-background/75"
+  >
     {#if busy}
       <Loader />
     {:else}
-      Sign in
+      <Fingerprint />
     {/if}
+    {$dict.auth.signin}
   </Button>
 </div>

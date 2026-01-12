@@ -1,0 +1,142 @@
+native: 中文
+locale: zh-CN
+actions:
+  continue: 继续
+  holdToLogout: 按住退出登录
+  signout: 退出登录
+  close: 关闭
+  cheques:
+    title: 支票
+    scan: 扫描支票
+    input: 手动输入
+  contacts:
+    group: 群组
+    title: 朋友
+    contact: 朋友
+  addSelected: 添加已选项
+  cancel: 取消
+  search: 搜索
+  save: 保存
+  create: 创建
+nav:
+  home: 首页
+  profile: 我
+  contacts: 朋友
+  expenses: 结算
+terms: 条款和条件
+privacy: 隐私政策
+madeBy: 由...制作
+profile:
+  title: 我的个人资料
+  language:
+    title: 语言
+    description: 这不会影响支票识别。反正我们在那里大多数语言都能理解。
+form:
+  enterName: 输入姓名
+copyright: "!js (timestamp) => `© seed.me，2025–${new Date(timestamp).getFullYear()}`"
+onboarding:
+  name:
+    title: 个性化体验
+    description: 您的姓名将被显示为
+contacts:
+  title: 朋友
+  empty:
+    title: 这里很孤独
+    description: 手动添加好友或邀请他人
+    invite:
+      share: 邀请朋友
+      qr: 通过二维码邀请
+      manual: 手动添加
+  all: 所有好友
+  contact:
+    owesYou: 欠你的
+    youOwe: 你欠
+  delete:
+    confirm:
+      title: 删除联系人
+      description: 您与此人的余额将会丢失
+      confirm: 删除
+  add:
+    label: 添加联系人
+    description: 稍后，您可以将此账户转移给所有者，让其设置登录信息并接管账户。
+  share:
+    invite:
+      link: 邀请加入 evn
+      qr: 显示二维码
+      description: 邀请将在5分钟后失效
+join:
+  app:
+    description: 和朋友们一起智能记录谁欠谁。
+  inviter:
+    description: |-
+      !js
+      (name) => `您已被${name}邀请。只需注册或登录，您就可以开始了`
+  accept: 开始使用 Evn
+groups:
+  leave: 长按退出
+  name:
+    description: 所有群组成员都能看到这个名称
+    placeholder: 输入名称
+  members:
+    title: 成员
+    addMembers: 添加成员
+    addMember: 添加成员
+    empty: 这里还没有人。添加一些成员以开始使用这个群组。
+  title: 群组
+  summary:
+    balance:
+      from: |-
+        !js
+        (amount) => `该群组成员欠你${amount}`
+      to: |-
+        !js
+        (amount) => `你欠他们${amount}`
+      even: 没有人欠任何人任何东西
+  create: 创建群组
+invite:
+  share: 分享
+  qr: 显示二维码
+  invite: 邀请
+etc:
+  or: 或
+account:
+  delete:
+    button: 删除账户
+    title: 删除账户
+    description: 我们将永久删除您的账户及所有关联信息。此操作无法撤销。
+    sorry: 很遗憾看到您离开。
+    hold: 按住以确认
+    link: 删除账户
+expenses:
+  spendings:
+    title: 支出
+    total: 总计
+    extras:
+      description: 小费、税费及其他附加费用将按比例分摊。
+      title: 额外费用
+  payers:
+    title: 付款方
+  form:
+    title:
+      placeholder: 你花钱花在了什么上？
+    location:
+      placeholder: 在哪里？（可选）
+    save: 保存并更新余额
+  title: 结清
+  balance:
+    total: 总账单
+    youAreOwed: 你有应得的
+    youOwe: 你欠款
+    youWillOwe: 你将欠款
+    youWillBeOwed: 别人会欠你人情
+  participants:
+    create:
+      title: 创建新参与者
+    title: 添加参与者
+    add:
+      label: 添加参与者
+  me: 我
+  empty:
+    title: 暂无支出
+    description: 创建您的第一笔支出以开始记录
+    create: 创建支出

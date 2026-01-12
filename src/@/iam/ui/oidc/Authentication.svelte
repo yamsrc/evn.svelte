@@ -1,11 +1,11 @@
 <script lang="ts">
-  import { apple } from '$lib/tools'
   import Button from './Button.svelte'
+  import type { Props } from './Authentication'
+
+  const { account }: Props = $props()
 </script>
 
 <div class="flex gap-2">
-  <Button idp="google" />
-  {#if apple}
-    <Button idp="apple" />
-  {/if}
+  <Button idp="google" {account} />
+  <Button idp="apple" {account} />
 </div>

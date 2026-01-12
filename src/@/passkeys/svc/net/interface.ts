@@ -9,12 +9,13 @@ async function post(body: RequestResponse): Promise<void | Error>
 async function post(identity: string, body: CreationResponse): Promise<Passkey | Error>
 
 async function post(
-  identity: string | RequestResponse,
+  arg: string | RequestResponse,
   body?: CreationResponse,
 ): Promise<void | Passkey | Error> {
-  if (typeof identity === 'string')
-    return await passkeys.json(identity, { body, credentials: 'include' })
-  else return await passkeys.json('.', { body: identity })
+  if (typeof arg === 'string')
+    return await passkeys.json(arg, { body, credentials: 'include' })
+  else
+    return await passkeys.json({ body: arg })
 }
 
 async function get(identity: string): Promise<Passkey[] | Error> {

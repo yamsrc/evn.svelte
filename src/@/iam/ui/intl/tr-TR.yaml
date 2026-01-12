@@ -1,0 +1,42 @@
+auth:
+  welcomeBack: Tekrar hoş geldiniz
+  signupTitle: Tek dokunuşla kayıt
+  passwordTitle: Şifre ile giriş yap
+  passwordDescription: Hesap oluşturun veya giriş yapın
+  passkey: Anahtar
+  email: E-posta
+  alreadyHaveAccount: Zaten bir hesabınız var mı?
+  betterSecurity: Daha iyi güvenlik
+  passkeysNotSupported: Geçiş anahtarları desteklenmiyor
+  passkeysWarning: Tarayıcınız gizliliğinize ve güvenliğinize saygı göstermiyor.
+  learnMore: Daha fazla bilgi edinin
+  passwordBlank: >-
+    Tek seferlik bir şifre almak için <nobr>şifreyi boş</nobr>
+    <nobr>bırakın.</nobr>
+  otpInstructions: E-postanıza gönderilen kodu girin. 5 dakika içinde süresi dolacak.
+  holdToLogout: Çıkış yapmak için basılı tutun
+  continueWith: |
+    !js
+    (provider) => {
+      return `${provider} ile devam et`
+    }
+  passkeysDescription: >-
+    Geçiş anahtarları şifrelerden daha güvenlidir, kullanımı daha kolaydır ve
+    çalınamaz.
+  yourName: Adınız
+  password: Şifre
+  refresh:
+    description: >-
+      !js
+
+      (name) => `${name ? name + ", güvenlik nedeniyle" : "Güvenlik nedeniyle"}
+      giriş bilgilerinizin süresi doldu. Devam etmek için lütfen tekrar giriş
+      yapın.`
+    title: Tekrar hoş geldiniz
+  signout: Oturumu kapat
+  login: Giriş Yap
+  signin: Giriş Yap
+  inApp:
+    title: Güvensiz bağlam
+    description: Güvenliğiniz için uygulamayı tarayıcınızda açtık.
+    continue: Devam et

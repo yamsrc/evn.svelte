@@ -1,0 +1,33 @@
+account:
+  title: Uhamisho wa akaunti
+  description: Mtu fulani ameunda akaunti hii na anaikukabidhi kwako.
+  accept: Kubali akaunti
+  content0: >-
+    Ili kuwa mmiliki, weka taarifa zako za kuingia. Hii haitaunda akaunti mpya —
+    itakupa tu ufikiaji wa hii.
+  content1: Hii haitaunda akaunti mpya — itakuwezesha tu kupata na kudhibiti hii.
+  conflict:
+    content0: >-
+      !js
+
+      (name) => `${name}, ili kukubali akaunti hii, utatolewa kwenye akaunti
+      yako ya sasa na kuweka maelezo mapya ya kuingia.`
+    content1: Hili haitaunganisha akaunti — utahama kwenda mpya.
+  switch: Badilisha akaunti
+  expired:
+    content: Muombe mtoa taarifa atengeneze kiungo kipya.
+    description: Ombi hili la uhamisho limekwisha muda wake.
+    title: Uhamisho umeisha muda wake
+actions:
+  discard: Tupa mbali
+  close: Funga
+friends:
+  app:
+    description: Njia bora ya kufuatilia nani anamdai nani, ukiwa pamoja na marafiki.
+  inviter:
+    description: >-
+      !js
+
+      (name) => `Umealikwa na ${name}. Jisajili au ingia tu, na uko tayari
+      kuanza!`
+  accept: Anza kutumia Evn

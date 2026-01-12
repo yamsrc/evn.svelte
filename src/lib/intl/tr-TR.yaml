@@ -1,0 +1,150 @@
+native: Türkçe
+locale: tr-TR
+actions:
+  continue: Devam Et
+  holdToLogout: Çıkış yapmak için basılı tutun
+  signout: Oturumu kapat
+  close: Kapat
+  cheques:
+    title: Çekler
+    scan: Çeki tara
+    input: Manuel gir
+  contacts:
+    group: Grup
+    title: Arkadaşlar
+    contact: Arkadaş
+  addSelected: Seçileni ekle
+  cancel: İptal
+  search: Ara
+  save: Kaydet
+  create: Oluştur
+nav:
+  home: Ana Sayfa
+  profile: Ben
+  contacts: Arkadaşlar
+  expenses: Hesaplaşma
+terms: Şartlar ve koşullar
+privacy: Gizlilik Politikası
+madeBy: Tarafından yapıldı
+profile:
+  title: Profilim
+  language:
+    title: Dil
+    description: Bu, çek tanımayı etkilemez. Zaten oradaki dillerin çoğunu anlıyoruz.
+form:
+  enterName: İsim girin
+copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
+onboarding:
+  name:
+    title: Kişisel dokunuş
+    description: Adınızın görüneceği şekliyle
+contacts:
+  title: Arkadaşlar
+  empty:
+    title: Burası yalnız
+    description: Arkadaşları manuel olarak ekleyin veya kişileri davet edin
+    invite:
+      share: Arkadaşlarını davet et
+      qr: QR kod ile davet et
+      manual: Manuel ekle
+  all: Tüm arkadaşlar
+  contact:
+    owesYou: Sana borçlu
+    youOwe: Borçlusun
+  delete:
+    confirm:
+      title: Kişiyi sil
+      description: Bu kişiyle olan bakiyeniz kaybolacak
+      confirm: Sil
+  add:
+    label: Kişi ekle
+    description: >-
+      Daha sonra bu hesabı sahibine aktarabileceksin, böylece giriş bilgilerini
+      ayarlayıp hesabın sahibi olabilir.
+  share:
+    invite:
+      link: evn’e davet et
+      qr: QR kodunu göster
+      description: Davet 5 dakika içinde sona erecek
+join:
+  app:
+    description: >-
+      Kimin kime borcu olduğunu arkadaşlarınla birlikte akıllıca takip etmenin
+      yolu.
+  inviter:
+    description: >-
+      !js
+
+      (name) => `${name} tarafından davet edildiniz. Sadece kaydolun veya giriş
+      yapın, ve hazırsınız`
+  accept: Evn'i kullanmaya başla
+groups:
+  leave: Ayrılmak için basılı tut
+  name:
+    description: Tüm grup üyeleri bu ismi görecek
+    placeholder: Ad girin
+  members:
+    title: Üyeler
+    addMembers: Üyeleri ekle
+    addMember: Üye ekle
+    empty: Burada henüz kimse yok. Bu grubu kullanmaya başlamak için birkaç üye ekle.
+  title: Gruplar
+  summary:
+    balance:
+      from: |-
+        !js
+        (amount) => `Bu grubun üyeleri sana ${amount} borçlu`
+      to: |-
+        !js
+        (amount) => `Onlara ${amount} borçlusunuz`
+      even: Kimse kimseye borçlu değil
+  create: Grup oluştur
+invite:
+  share: Paylaş
+  qr: QR kodunu göster
+  invite: Davet et
+etc:
+  or: veya
+account:
+  delete:
+    button: Hesabı sil
+    title: Hesabı sil
+    description: >-
+      Hesabınızı ve tüm bağlantılı bilgileri kalıcı olarak sileceğiz. Bu işlem
+      geri alınamaz.
+    sorry: Gitmene çok üzüldük.
+    hold: Onaylamak için basılı tutun
+    link: Hesabı sil
+expenses:
+  spendings:
+    title: Harcamalar
+    total: Toplam
+    extras:
+      description: Bahşişler, vergiler ve diğer ek masraflar orantılı olarak bölüştürülür.
+      title: Ekstra
+  payers:
+    title: Ödeyen
+  form:
+    title:
+      placeholder: Neye harcadın?
+    location:
+      placeholder: Nerede? (Opsiyonel)
+    save: Bakiyeleri kaydet ve güncelle
+  title: Hesapla
+  balance:
+    total: Toplam fatura
+    youAreOwed: Sana borç var
+    youOwe: Borcunuz var
+    youWillOwe: Borçlu olacaksın
+    youWillBeOwed: Diğerleri sana borçlu olacak
+  participants:
+    create:
+      title: Yeni katılımcı oluştur
+    title: Katılımcı ekle
+    add:
+      label: Katılımcı ekle
+  me: Ben
+  empty:
+    title: Henüz gider yok
+    description: Takibe başlamak için ilk giderini oluştur
+    create: Gider oluştur

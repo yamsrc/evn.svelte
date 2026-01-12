@@ -1,0 +1,42 @@
+auth:
+  welcomeBack: Bienvenido de vuelta
+  signupTitle: Registro de un toque
+  passwordTitle: Entra con contraseña
+  passwordDescription: Crear una cuenta o iniciar sesión
+  passkey: Llaves
+  email: Correo
+  alreadyHaveAccount: ¿Ya tienes una cuenta?
+  betterSecurity: Mejor seguridad
+  passkeysNotSupported: Llaves de acceso no soportadas
+  passkeysWarning: Tu navegador no respeta tu privacidad y seguridad.
+  learnMore: Saber más
+  passwordBlank: >-
+    Deja la contraseña en blanco <nobr>para recibir</nobr> <nobr>un código de
+    acceso de un solo uso</nobr>.
+  otpInstructions: Ingresa el código enviado a tu correo electrónico. Expira en 5 minutos.
+  holdToLogout: Mantén presionado para cerrar sesión
+  continueWith: |
+    !js
+    (provider) => {
+      return `Continuar con ${provider}`
+    }
+  passkeysDescription: >-
+    Las claves de acceso son más seguras que las contraseñas, más fáciles de
+    usar y no pueden ser robadas.
+  yourName: Tu nombre
+  password: Contraseña
+  refresh:
+    description: >-
+      !js
+
+      (name) => `${name ? name + ", por" : "Por"} motivos de seguridad, tus
+      credenciales han caducado. Por favor, vuelve a&nbsp;iniciar sesión
+      para&nbsp;continuar.`
+    title: Bienvenido de nuevo
+  signout: Cerrar sesión
+  login: Iniciar sesión
+  signin: Iniciar sesión
+  inApp:
+    title: Contexto no seguro
+    description: Por tu seguridad, hemos abierto la aplicación en tu navegador.
+    continue: Continuar

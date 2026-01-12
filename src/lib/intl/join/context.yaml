@@ -1,0 +1,50 @@
+context: Mount 'join' context
+inputs:
+  account:
+    title:
+      input: Account transfer
+      context: dialog title
+    description:
+      input: Someone has created this account and is transferring it to you.
+    accept:
+      input: Accept account
+      context: button label
+    content0:
+      input: To take ownership, set up your sign-in details. This won’t create a new account — it just gives you access to this one.
+    content1:
+      input: This won’t create a new account — it will simply let you access and manage this one.
+    conflict:
+      content0:
+        input: "{name}, to accept this account, you’ll be signed out of your current one and set up new sign-in details."
+        context: make it a function (name) => ...
+      content1:
+        input: This won’t merge accounts — you’ll switch to the new one.
+    switch:
+      input: Switch account
+    expired:
+      content:
+        input: Ask the sender to generate a new link.
+      description:
+        input: This transfer request has expired.
+      title:
+        input: Transfer expired
+        context: dialog title
+  actions:
+    discard:
+      input: Discard
+      context: button label, discard invitation
+    close:
+      input: Close
+      context: button label (close dialog)
+  friends:
+    app:
+      description:
+        input: The smart way to track who owes whom, together with friends.
+    inviter:
+      description:
+        input: |2-
+
+                (name) => `You have been invited by ${name}. Just register or log in, and
+                you’re all set`
+    accept:
+      input: Start Using Evn

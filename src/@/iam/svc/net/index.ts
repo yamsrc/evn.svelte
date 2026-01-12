@@ -1,4 +1,6 @@
 export * from './interface'
-export * as passkeys from './passkeys'
+export * as basic from './basic'
 export * as otp from './otp'
+export * as passkeys from './passkeys'
+export * as federation from './federation'
 export type { Echo } from './Echo'

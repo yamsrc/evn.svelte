@@ -1,0 +1,156 @@
+native: Español
+locale: es-ES
+actions:
+  continue: Continuar
+  holdToLogout: Mantén pulsado para cerrar sesión
+  signout: Cerrar sesión
+  close: Cerrar
+  cheques:
+    title: Cheques
+    scan: Escanear cheque
+    input: Introducir manualmente
+  contacts:
+    group: Grupo
+    title: Amigos
+    contact: Amigo
+  addSelected: Agregar seleccionado(s)
+  cancel: Cancelar
+  search: Buscar
+  save: Guardar
+  create: Crear
+nav:
+  home: Inicio
+  profile: Yo
+  contacts: Amigos
+  expenses: Ajustes
+terms: Términos y condiciones
+privacy: Política de privacidad
+madeBy: Hecho por
+profile:
+  title: Mi perfil
+  language:
+    title: Idioma
+    description: >-
+      Esto no afecta al reconocimiento de cheques. De todas formas, entendemos
+      la mayoría de los idiomas allí.
+form:
+  enterName: Introduce el nombre
+copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
+onboarding:
+  name:
+    title: Toque personal
+    description: Tu nombre tal como se verá
+contacts:
+  title: Amigos
+  empty:
+    title: Aquí está solitario
+    description: Añade amigos manualmente o invita a personas
+    invite:
+      share: Invitar a amigos
+      qr: Invitar por código QR
+      manual: Agregar manualmente
+  all: Todos los amigos
+  contact:
+    owesYou: Te debe
+    youOwe: Debes
+  delete:
+    confirm:
+      title: Eliminar contacto
+      description: Tu saldo con esta persona se perderá
+      confirm: Eliminar
+  add:
+    label: Agregar contacto
+    description: >-
+      Más adelante podrás transferir esta cuenta al propietario para que
+      configure sus datos de acceso y tome el control de la cuenta.
+  share:
+    invite:
+      link: Invitar a evn
+      qr: Mostrar código QR
+      description: La invitación caducará en 5 minutos
+join:
+  app:
+    description: >-
+      La forma inteligente de llevar el control de quién le debe a quién, junto
+      con tus amigos.
+  inviter:
+    description: >-
+      !js
+
+      (name) => `Has sido invitado por ${name}. Solo regístrate o inicia sesión,
+      y ya está todo listo`
+  accept: Comienza a usar Evn
+groups:
+  leave: Mantén pulsado para salir
+  name:
+    description: Todos los miembros del grupo verán este nombre
+    placeholder: Introduce el nombre
+  members:
+    title: Miembros
+    addMembers: Agregar miembros
+    addMember: Añadir miembro
+    empty: >-
+      Todavía no hay nadie aquí. Agrega algunos miembros para empezar a usar
+      este grupo.
+  title: Grupos
+  summary:
+    balance:
+      from: |-
+        !js
+        (amount) => `Los miembros de este grupo te deben ${amount}`
+      to: |-
+        !js
+        (amount) => `Les debes ${amount}`
+      even: Nadie le debe nada a nadie
+  create: Crear grupo
+invite:
+  share: Compartir
+  qr: Mostrar código QR
+  invite: Invitar
+etc:
+  or: o
+account:
+  delete:
+    button: Eliminar cuenta
+    title: Eliminar cuenta
+    description: >-
+      Eliminaremos permanentemente tu cuenta y toda la información asociada.
+      Esta acción no se puede deshacer.
+    sorry: Lamentamos mucho que te vayas.
+    hold: Mantén pulsado para confirmar
+    link: Eliminar cuenta
+expenses:
+  spendings:
+    title: Gastos
+    total: Total
+    extras:
+      description: >-
+        Las propinas, los impuestos y otros extras se reparten de forma
+        proporcional.
+      title: Extras
+  payers:
+    title: Pagado por
+  form:
+    title:
+      placeholder: ¿En qué has gastado?
+    location:
+      placeholder: ¿Dónde? (opcional)
+    save: Guardar y actualizar saldos
+  title: Ajustar
+  balance:
+    total: Factura total
+    youAreOwed: Te deben
+    youOwe: Debes
+    youWillOwe: Deberás
+    youWillBeOwed: Los demás te deberán
+  participants:
+    create:
+      title: Crear un nuevo participante
+    title: Agregar participantes
+    add:
+      label: Agregar participante
+  me: Yo
+  empty:
+    title: Aún no hay gastos
+    description: Crea tu primer gasto para empezar a realizar un seguimiento
+    create: Crear gasto

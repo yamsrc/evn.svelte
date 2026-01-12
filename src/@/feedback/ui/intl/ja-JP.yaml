@@ -1,0 +1,9 @@
+title: フィードバック
+description: ぜひご意見をお聞かせください！ご感想やご意見、ご提案をお寄せください。
+send: 送信
+form:
+  email:
+    description: 返信が必要な場合は、メールアドレスを任意でご入力ください。
+    placeholder: あなたのメールアドレス
+  message:
+    placeholder: メッセージを入力してください

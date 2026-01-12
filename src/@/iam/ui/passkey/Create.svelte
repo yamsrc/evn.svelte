@@ -5,10 +5,12 @@
   import { Button } from '$ui/button'
   import { Input } from '$ui/input'
   import { passkeys } from '@/iam'
+  import { dict } from '@/iam/ui/intl'
+  import type { Props } from './Create'
 
-  const { disabled }: { disabled?: boolean } = $props()
+  const { account, disabled }: Props = $props()
 
-  let value = $state('')
+  let value = $derived(account?.name ?? '')
   let busy = $state(false)
 
   async function submit() {
@@ -18,7 +20,7 @@
 
     busy = true
 
-    await passkeys.create(name)
+    await passkeys.create(name, account?.id)
 
     busy = false
   }
@@ -32,16 +34,16 @@
         class="placeholder:text-sm"
         id="name"
         type="text"
-        placeholder="Your name"
+        placeholder={$dict.auth.yourName}
         autocomplete="given-name"
         required
         {autofocus}
       />
-      <Button size="icon" type="submit">
+      <Button id="iam-passkey-create-button" size="icon" type="submit" class="size-12">
         {#if busy}
           <Loader />
         {:else}
-          <ArrowRight />
+          <ArrowRight class="size-5" />
         {/if}
       </Button>
     </div>

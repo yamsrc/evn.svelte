@@ -1,0 +1,21 @@
+export interface Participant {
+  amount: number
+  paid?: number
+  comment?: string
+}
+
+export interface Extra {
+  amount: number
+  comment?: string
+}
+
+export interface Expense {
+  id: string
+  title: string
+  location?: string
+  timestamp: number
+  participants: Record<string, Participant>
+  extras: Extra[]
+  _created: number
+  _version: number
+}

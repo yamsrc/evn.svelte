@@ -1,0 +1,142 @@
+native: 日本語
+locale: ja-JP
+actions:
+  continue: 続ける
+  holdToLogout: 長押ししてログアウト
+  signout: サインアウト
+  close: 閉じる
+  cheques:
+    title: 小切手
+    scan: 小切手をスキャン
+    input: 手動で入力
+  contacts:
+    group: グループ
+    title: 友達
+    contact: 友達
+  addSelected: 選択したものを追加
+  cancel: キャンセル
+  search: 検索
+  save: 保存
+  create: 作成
+nav:
+  home: ホーム
+  profile: 私
+  contacts: 友だち
+  expenses: 清算
+terms: 利用規約
+privacy: プライバシーポリシー
+madeBy: 作成者
+profile:
+  title: マイプロフィール
+  language:
+    title: 言語
+    description: これは小切手の認識には影響しません。そもそも、私たちはほとんどの言語を理解しています。
+form:
+  enterName: 名前を入力してください
+copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
+onboarding:
+  name:
+    title: パーソナルタッチ
+    description: 表示されるあなたの名前
+contacts:
+  title: 友達
+  empty:
+    title: ここは寂しいです
+    description: 友達を手動で追加するか、招待する
+    invite:
+      share: 友達を招待する
+      qr: QRコードで招待
+      manual: 手動で追加
+  all: すべての友達
+  contact:
+    owesYou: あなたに借りがある
+    youOwe: あなたが支払うべきです
+  delete:
+    confirm:
+      title: 連絡先を削除
+      description: この相手との残高が失われます
+      confirm: 削除
+  add:
+    label: 連絡先を追加
+    description: 後でこのアカウントを所有者に譲渡できるようになり、所有者がサインイン情報を設定して引き継ぐことができます。
+  share:
+    invite:
+      link: evnに招待
+      qr: QRコードを表示
+      description: 招待は5分後に期限切れになります
+join:
+  app:
+    description: 友だちと一緒に「誰が誰にいくら借りているか」をスマートに管理。
+  inviter:
+    description: |-
+      !js
+      (name) => `${name} から招待されました。登録またはログインするだけで、準備完了です`
+  accept: Evn を使い始める
+groups:
+  leave: 長押しして退出
+  name:
+    description: すべてのグループメンバーがこの名前を表示します
+    placeholder: 名前を入力
+  members:
+    title: メンバー
+    addMembers: メンバーを追加
+    addMember: メンバーを追加
+    empty: まだ誰もいません。このグループを使い始めるにはメンバーを追加してください。
+  title: グループ
+  summary:
+    balance:
+      from: |-
+        !js
+        (amount) => `このグループのメンバーはあなたに${amount}の支払いがあります`
+      to: |-
+        !js
+        (amount) => `あなたは彼らに${amount}を借りています`
+      even: 誰も誰にも借りはない
+  create: グループを作成
+invite:
+  share: 共有
+  qr: QRコードを表示
+  invite: 招待
+etc:
+  or: または
+account:
+  delete:
+    button: アカウントを削除
+    title: アカウントを削除
+    description: あなたのアカウントおよび関連するすべての情報を完全に削除します。この操作は元に戻せません。
+    sorry: ご利用いただけなくなることを大変残念に思います。
+    hold: 押し続けて確定
+    link: アカウントを削除
+expenses:
+  spendings:
+    title: 支出
+    total: 合計
+    extras:
+      description: チップ、税金、その他の追加料金は比例して分割されます。
+      title: 追加料金
+  payers:
+    title: 支払い者
+  form:
+    title:
+      placeholder: 何に使ったの？
+    location:
+      placeholder: どこですか？（任意）
+    save: 保存して残高を更新
+  title: 清算
+  balance:
+    total: 合計金額
+    youAreOwed: あなたには支払いが残っています
+    youOwe: あなたは借りがあります
+    youWillOwe: あなたは支払うことになります
+    youWillBeOwed: 他の人たちがあなたに借りができる
+  participants:
+    create:
+      title: 新しい参加者を作成
+    title: 参加者を追加
+    add:
+      label: 参加者を追加
+  me: 私
+  empty:
+    title: まだ支出がありません
+    description: 最初の支出を作成して、記録を始めましょう
+    create: 支出を作成

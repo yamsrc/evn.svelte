@@ -1,6 +1,17 @@
 import mitt from 'mitt'
+import type { Events as AccountEvents } from '@/accounts/svc/net'
+import type { Events as ContactsEvents } from '@/contacts/svc/net'
+import type { Events as ExpensesEvents } from '@/expenses/svc/net'
+import type { Events as GroupsEvents } from '@/groups/svc/net'
 
-export type Events = Record<string, unknown> // add domain events here
+export type Events = AccountEvents & ContactsEvents & GroupsEvents & ExpensesEvents // add domain events here
+
+export type Message = {
+  [E in keyof Events]: {
+    event: E
+    data: Events[E]
+  }
+}[keyof Events]
 
 export const events = mitt<Events & { heartbeat: undefined }>()
 

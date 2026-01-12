@@ -1,0 +1,142 @@
+native: 한국어
+locale: ko-KR
+actions:
+  continue: 계속
+  holdToLogout: 길게 눌러 로그아웃
+  signout: 로그아웃
+  close: 닫기
+  cheques:
+    title: 수표
+    scan: 수표 스캔
+    input: 수동 입력
+  contacts:
+    group: 그룹
+    title: 친구
+    contact: 친구
+  addSelected: 선택 항목 추가
+  cancel: 취소
+  search: 검색
+  save: 저장
+  create: 생성
+nav:
+  home: 홈
+  profile: 나
+  contacts: 친구
+  expenses: 정산
+terms: 이용 약관
+privacy: 개인정보처리방침
+madeBy: 제작자
+profile:
+  title: 내 프로필
+  language:
+    title: 언어
+    description: 이는 수표 인식에 영향을 주지 않습니다. 어차피 저희는 대부분의 언어를 이해합니다.
+form:
+  enterName: 이름을 입력하세요
+copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
+onboarding:
+  name:
+    title: 개인적인 터치
+    description: 표시될 이름
+contacts:
+  title: 친구
+  empty:
+    title: 여기는 외로워요
+    description: 친구를 직접 추가하거나 사람들을 초대하세요
+    invite:
+      share: 친구 초대하기
+      qr: QR 코드로 초대
+      manual: 수동으로 추가
+  all: 모든 친구
+  contact:
+    owesYou: 당신에게 빚졌어요
+    youOwe: 당신이 빚졌습니다
+  delete:
+    confirm:
+      title: 연락처 삭제
+      description: 이 사람과의 잔액이 사라집니다
+      confirm: 삭제
+  add:
+    label: 연락처 추가
+    description: 나중에 이 계정을 소유자에게 이전하여, 소유자가 로그인 정보를 설정하고 계정의 소유권을 가질 수 있습니다.
+  share:
+    invite:
+      link: evn에 초대
+      qr: QR 코드 표시
+      description: 초대는 5분 후에 만료됩니다
+join:
+  app:
+    description: 친구들과 함께 누가 누구에게 얼마를 빚졌는지 스마트하게 추적하는 방법.
+  inviter:
+    description: |-
+      !js
+      (name) => `${name}님이 초대했습니다. 회원가입 또는 로그인만 하면 바로 시작할 수 있습니다`
+  accept: Evn 시작하기
+groups:
+  leave: 길게 눌러서 나가기
+  name:
+    description: 모든 그룹 구성원이 이 이름을 볼 수 있습니다
+    placeholder: 이름 입력
+  members:
+    title: 회원
+    addMembers: 구성원 추가
+    addMember: 구성원 추가
+    empty: 아직 아무도 없습니다. 그룹을 사용하려면 멤버를 추가하세요.
+  title: 그룹
+  summary:
+    balance:
+      from: |-
+        !js
+        (amount) => `이 그룹의 구성원들이 당신에게 ${amount}을(를) 빚지고 있습니다`
+      to: |-
+        !js
+        (amount) => `당신은 그들에게 ${amount}을(를) 빚지고 있습니다`
+      even: 아무도 누구에게도 빚지지 않았다
+  create: 그룹 만들기
+invite:
+  share: 공유
+  qr: QR 코드 표시
+  invite: 초대
+etc:
+  or: 또는
+account:
+  delete:
+    button: 계정 삭제
+    title: 계정 삭제
+    description: 계정과 모든 관련 정보를 영구적으로 삭제합니다. 이 작업은 취소할 수 없습니다.
+    sorry: 떠나신다니 정말 아쉽습니다.
+    hold: 길게 눌러서 확인
+    link: 계정 삭제
+expenses:
+  spendings:
+    title: 지출
+    total: 총합
+    extras:
+      description: 팁, 세금 및 기타 추가 비용은 비율에 따라 나눠집니다.
+      title: 추가비용
+  payers:
+    title: 지불자
+  form:
+    title:
+      placeholder: 무엇에 썼나요?
+    location:
+      placeholder: 어디인가요? (선택 사항)
+    save: 저장하고 잔액 업데이트
+  title: 정산
+  balance:
+    total: 총 금액
+    youAreOwed: 당신은 받을 돈이 있습니다
+    youOwe: 당신은 빚졌습니다
+    youWillOwe: 갚아야 합니다
+    youWillBeOwed: 다른 사람들이 당신에게 신세를 지게 됩니다
+  participants:
+    create:
+      title: 새 참가자 생성
+    title: 참가자 추가
+    add:
+      label: 참가자 추가
+  me: 나
+  empty:
+    title: 아직 지출이 없습니다
+    description: 첫 번째 지출을 추가하여 추적을 시작하세요
+    create: 지출 생성

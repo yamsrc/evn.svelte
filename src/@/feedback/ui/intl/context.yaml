@@ -1,0 +1,22 @@
+context: Mount 'feedback' context
+inputs:
+  title:
+    input: Feedback
+  description:
+    input: We would love to hear from you! Please share your thoughts, feedback, and suggestions.
+    context: feedback form description
+  send:
+    input: Send
+    context: feedback form submit button
+  form:
+    email:
+      description:
+        input: Optionally, you can provide your email to get a response.
+        context: feedback form email field description
+      placeholder:
+        input: Your email
+        context: form email placeholder
+    message:
+      placeholder:
+        input: Type your message
+        context: form textarea placeholder

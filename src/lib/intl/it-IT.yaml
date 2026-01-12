@@ -1,0 +1,154 @@
+native: Italiano
+locale: it-IT
+actions:
+  continue: Continua
+  holdToLogout: Tieni premuto per uscire
+  signout: Esci
+  close: Chiudi
+  cheques:
+    title: Assegni
+    scan: Scansiona assegno
+    input: Inserisci manualmente
+  contacts:
+    group: Gruppo
+    title: Amici
+    contact: Amico
+  addSelected: Aggiungi selezionati
+  cancel: Annulla
+  search: Cerca
+  save: Salva
+  create: Crea
+nav:
+  home: Home
+  profile: Io
+  contacts: Amici
+  expenses: Saldo
+terms: Termini e condizioni
+privacy: Informativa sulla privacy
+madeBy: Realizzato da
+profile:
+  title: Il mio profilo
+  language:
+    title: Lingua
+    description: >-
+      Questo non influisce sul riconoscimento dell'assegno. Comunque, lì capiamo
+      la maggior parte delle lingue.
+form:
+  enterName: Inserisci il nome
+copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
+onboarding:
+  name:
+    title: Tocco personale
+    description: Il tuo nome come verrà visualizzato
+contacts:
+  title: Amici
+  empty:
+    title: È solitario qui
+    description: Aggiungi amici manualmente o invita persone
+    invite:
+      share: Invita amici
+      qr: Invita tramite codice QR
+      manual: Aggiungi manualmente
+  all: Tutti gli amici
+  contact:
+    owesYou: Ti deve
+    youOwe: Devi
+  delete:
+    confirm:
+      title: Elimina contatto
+      description: Il tuo saldo con questa persona andrà perso
+      confirm: Elimina
+  add:
+    label: Aggiungi contatto
+    description: >-
+      Successivamente, potrai trasferire questo account al proprietario, così
+      potrà impostare i dettagli di accesso e prenderne possesso.
+  share:
+    invite:
+      link: Invita su evn
+      qr: Mostra codice QR
+      description: L'invito scadrà tra 5 minuti
+join:
+  app:
+    description: >-
+      Il modo intelligente per tenere traccia di chi deve cosa a chi, insieme
+      agli amici.
+  inviter:
+    description: >-
+      !js
+
+      (name) => `Sei stato invitato da ${name}. Basta registrarsi o accedere, e
+      sei pronto`
+  accept: Inizia a usare Evn
+groups:
+  leave: Tieni premuto per uscire
+  name:
+    description: Tutti i membri del gruppo vedranno questo nome
+    placeholder: Inserisci nome
+  members:
+    title: Membri
+    addMembers: Aggiungi membri
+    addMember: Aggiungi membro
+    empty: >-
+      Non c’è ancora nessuno qui. Aggiungi dei membri per iniziare a usare
+      questo gruppo.
+  title: Gruppi
+  summary:
+    balance:
+      from: |-
+        !js
+        (amount) => `I membri di questo gruppo ti devono ${amount}`
+      to: |-
+        !js
+        (amount) => `Devi loro ${amount}`
+      even: Nessuno deve niente a nessuno
+  create: Crea gruppo
+invite:
+  share: Condividi
+  qr: Mostra codice QR
+  invite: Invita
+etc:
+  or: o
+account:
+  delete:
+    button: Elimina account
+    title: Elimina account
+    description: >-
+      Elimineremo definitivamente il tuo account e tutte le informazioni
+      associate. Questa azione non può essere annullata.
+    sorry: Ci dispiace molto vederti andare via.
+    hold: Tieni premuto per confermare
+    link: Elimina account
+expenses:
+  spendings:
+    title: Spese
+    total: Totale
+    extras:
+      description: Mance, tasse e altre spese extra sono suddivise in modo proporzionale.
+      title: Extra
+  payers:
+    title: Pagato da
+  form:
+    title:
+      placeholder: Su cosa hai speso?
+    location:
+      placeholder: Dove? (opzionale)
+    save: Salva e aggiorna i saldi
+  title: Saldo
+  balance:
+    total: Totale conto
+    youAreOwed: Ti è dovuto
+    youOwe: Devi
+    youWillOwe: Dovrai
+    youWillBeOwed: Gli altri ti saranno debitori
+  participants:
+    create:
+      title: Crea un nuovo partecipante
+    title: Aggiungi partecipanti
+    add:
+      label: Aggiungi partecipante
+  me: Io
+  empty:
+    title: Nessuna spesa ancora
+    description: Crea la tua prima spesa per iniziare a tenere traccia
+    create: Crea spesa

@@ -1,0 +1,37 @@
+auth:
+  welcomeBack: 다시 오신 것을 환영합니다
+  signupTitle: 원탭 회원가입
+  passwordTitle: 비밀번호로 로그인
+  passwordDescription: 계정을 만들거나 로그인하세요
+  passkey: 패스키
+  email: 이메일
+  alreadyHaveAccount: 이미 계정이 있으신가요?
+  betterSecurity: 더 나은 보안
+  passkeysNotSupported: 패스키가 지원되지 않습니다
+  passkeysWarning: 사용 중인 브라우저는 개인정보 보호와 보안을 준수하지 않습니다.
+  learnMore: 자세히 알아보기
+  passwordBlank: 비밀번호를 비워두면 <nobr>일회용</nobr> <nobr>인증 코드가</nobr> 전송됩니다.
+  otpInstructions: 이메일로 전송된 코드를 입력하세요. 5분 후 만료됩니다.
+  holdToLogout: 길게 눌러 로그아웃
+  continueWith: |
+    !js
+    (provider) => {
+      return `${provider}로 계속하기`
+    }
+  passkeysDescription: 패스키는 비밀번호보다 더 안전하고 사용하기 쉬우며, 도난당할 수 없습니다.
+  yourName: 이름
+  password: 비밀번호
+  refresh:
+    description: >-
+      !js
+
+      (name) => `${name ? name + "님, 보안상의 이유로" : "보안상의 이유로"} 인증 정보가 만료되었습니다.
+      계속하려면 다시 로그인해 주세요.`
+    title: 다시 오신 것을 환영합니다
+  signout: 로그아웃
+  login: 로그인
+  signin: 로그인
+  inApp:
+    title: 보안되지 않은 환경
+    description: 보안을 위해 앱을 브라우저에서 열었습니다.
+    continue: 계속
