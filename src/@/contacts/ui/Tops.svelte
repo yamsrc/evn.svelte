@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { cn } from '$lib/utils'
   import { Progress } from '$ui/progress'
   import Panel from './Panel.svelte'
   import { dict } from './intl'
@@ -10,7 +11,7 @@
   const negative = $derived(
     contacts
       .filter((contact) => contact.balance < 0)
-      .sort((a, b) => b.balance - a.balance)
+      .sort((a, b) => a.balance - b.balance)
       .slice(0, LIMIT),
   )
 
@@ -23,7 +24,7 @@
 </script>
 
 {#snippet list(sign: Sign, contacts: Contact[])}
-  {@const total = contacts.reduce((acc, contact) => acc + contact.balance, 0)}
+  {@const total = Math.abs(contacts.reduce((acc, contact) => acc + contact.balance, 0))}
   <div class="space-y-1">
     <p>{$dict.tops[sign]}</p>
     <ul class="space-y-2">
@@ -32,7 +33,14 @@
           <Panel {contact} />
           {#if contacts.length > 1}
             <div class="px-1">
-              <Progress value={(contact.balance / total) * 100} class="h-1" />
+              <Progress
+                value={(Math.abs(contact.balance) / total) * 100}
+                class={cn(
+                  'h-1',
+                  sign === 'positive' &&
+                    'bg-constructive/20 [&_div[data-slot=progress-indicator]]:bg-constructive',
+                )}
+              />
             </div>
           {/if}
         </li>
