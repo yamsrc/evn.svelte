@@ -12,7 +12,7 @@
 <Select type="single" value={$locale} onValueChange={change}>
   {@const selected = options.find((option) => option.value === $locale)}
   <SelectTrigger class="w-full">{selected?.label}</SelectTrigger>
-  <SelectContent>
+  <SelectContent collisionPadding={{ top: 64, bottom: 88 }}>
     {#each options as option (option.value)}
       <SelectItem value={option.value}>{option.label}</SelectItem>
     {/each}
