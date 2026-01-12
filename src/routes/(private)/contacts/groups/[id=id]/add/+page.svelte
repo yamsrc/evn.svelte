@@ -54,11 +54,13 @@
       </Section>
 
       {@const favs = favorites.filter((f) => !group.identities.includes(f.favorite))}
-      <Favorites
-        title={$dict.favorites.title}
-        favorites={favs}
-        bind:selection={favoritesSelection}
-      />
+      {#if favs.length > 0}
+        <Favorites
+          title={$dict.favorites.title}
+          favorites={favs}
+          bind:selection={favoritesSelection}
+        />
+      {/if}
 
       {@const list = contacts.filter((c) => !group.identities.includes(c.identity))}
       <Contacts
