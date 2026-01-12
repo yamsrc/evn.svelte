@@ -1,3 +1,8 @@
 totals:
   negative: Unadaiwa na marafiki zako
   positive: Marafiki wanakudai
+tops:
+  title: Marafiki
+  empty: Hadi sasa, hakuna anayekudai na wewe haumdai mtu yeyote.
+  negative: "Una deni mkubwa hasa kwa:"
+  positive: "Waliokukudai zaidi:"

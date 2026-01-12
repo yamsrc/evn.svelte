@@ -1,3 +1,8 @@
 totals:
   negative: You owe your friends
   positive: Friends owe you
+tops:
+  title: Friends
+  empty: So far, nobody owes you and you owe nothing.
+  negative: "You owe mostly to:"
+  positive: "Owe you the most:"

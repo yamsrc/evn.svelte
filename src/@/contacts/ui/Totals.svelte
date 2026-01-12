@@ -7,20 +7,16 @@
   const { contacts }: Props = $props()
 
   const negative = $derived(
-    contacts
-      .filter((contact) => contact.balance < 0)
-      .reduce((acc, contact) => acc + contact.balance, 0),
+    contacts.reduce((acc, contact) => acc + (contact.balance < 0 ? contact.balance : 0), 0),
   )
 
   const positive = $derived(
-    contacts
-      .filter((contact) => contact.balance > 0)
-      .reduce((acc, contact) => acc + contact.balance, 0),
+    contacts.reduce((acc, contact) => acc + (contact.balance > 0 ? contact.balance : 0), 0),
   )
 </script>
 
 {#snippet card(sign: Sign, amount: number)}
-  <Card.Root class="px-4 py-3 gap-0">
+  <Card.Root class="px-4 py-3 gap-0 justify-between">
     <Card.Header class="p-0">
       <Card.Title class="text-sm text-muted-foreground">
         {$dict.totals[sign]}

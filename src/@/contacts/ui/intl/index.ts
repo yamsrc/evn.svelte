@@ -1,8 +1,8 @@
-import { derived, writable } from 'svelte/store'
+import { derived } from 'svelte/store'
+import { locale } from '$lib/intl'
 import { dictionaries, locales } from './built.js'
 import type { Locale, Dictionary } from './types'
 
-const locale = writable<Locale>('en-US')
 const dict = derived(locale, ($locale) => dictionaries[$locale])
 
 export { dict, dictionaries, locales, locale }

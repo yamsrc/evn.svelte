@@ -11,4 +11,10 @@ export type Dictionary = {
         negative: string
         positive: string
       }
+      tops: {
+        title: string
+        empty: string
+        negative: string
+        positive: string
+      }
     }

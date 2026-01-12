@@ -1,3 +1,8 @@
 totals:
   negative: Du stehst bei deinen Freunden in der Schuld
   positive: Freunde schulden dir etwas
+tops:
+  title: Freunde
+  empty: Bisher schuldet dir niemand etwas und du schuldest auch nichts.
+  negative: "Du schuldest hauptsächlich:"
+  positive: "Wer dir am meisten schuldet:"

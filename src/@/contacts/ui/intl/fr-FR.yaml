@@ -1,3 +1,8 @@
 totals:
   negative: Tu dois à tes amis
   positive: Tes amis te doivent quelque chose
+tops:
+  title: Amis
+  empty: Pour l’instant, personne ne te doit rien et tu ne dois rien non plus.
+  negative: "Vous devez principalement à :"
+  positive: "Ceux qui te doivent le plus :"

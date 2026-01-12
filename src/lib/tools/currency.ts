@@ -6,14 +6,15 @@ import type { Locale } from '$lib/intl'
  *
  * @param amount - The balance value in the currency's smallest unit (integer)
  * @param locale - Locale for formatting
- * @param currency - Optional ISO 4217 currency code (e.g., 'USD', 'EUR', 'JPY'). Defaults to 'USD'
+ * @param currency - Optional ISO 4217 currency code (e.g., 'USD', 'EUR', 'JPY').
  * @returns Formatted currency string (e.g., "$1.00", "€1.00", "¥100")
  */
 export function currency(amount: number, locale: Locale, currency?: string): string {
   if (currency === undefined) {
     const value = amount / 100
+    const precision = value > 100 ? 0 : 2
 
-    return Number.isInteger(value) ? value.toString() : value.toFixed(2)
+    return Number.isInteger(value) ? value.toString() : value.toFixed(precision)
   }
 
   const formatter = new Intl.NumberFormat(locale, {

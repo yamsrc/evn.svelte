@@ -3,7 +3,7 @@
   import { dict } from '$lib/intl'
   import { Header, Section } from '@/app/ui'
   import { contacts } from '@/contacts'
-  import { Totals } from '@/contacts/ui'
+  import { Totals, Tops } from '@/contacts/ui'
   import { account } from '@/iam'
 </script>
 
@@ -13,7 +13,14 @@
       <Header.Root>
         <Header.Title>{$dict.home.title(account.name)}</Header.Title>
       </Header.Root>
+    </Section>
+
+    <Section>
       <Totals {contacts} />
+    </Section>
+
+    <Section>
+      <Tops {contacts} />
     </Section>
   {/snippet}
 </Async>
