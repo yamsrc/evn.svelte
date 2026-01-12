@@ -4,11 +4,13 @@
   import { Header, Section } from '@/app/ui'
   import { contacts } from '@/contacts'
   import { Totals, Tops } from '@/contacts/ui'
+  import { expenses } from '@/expenses'
+  import { Recent } from '@/expenses/ui'
   import { account } from '@/iam'
 </script>
 
-<Async store={combined(account, contacts)}>
-  {#snippet awaited([account, contacts])}
+<Async store={combined(account, contacts, expenses)}>
+  {#snippet awaited([account, contacts, expenses])}
     <Section>
       <Header.Root>
         <Header.Title>{$dict.home.title(account.name)}</Header.Title>
@@ -21,6 +23,10 @@
 
     <Section>
       <Tops {contacts} />
+    </Section>
+
+    <Section>
+      <Recent {expenses} />
     </Section>
   {/snippet}
 </Async>

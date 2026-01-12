@@ -252,3 +252,4 @@ mounts:
   feedback: ../../@/feedback/ui/intl
   join: join
   contacts: ../../@/contacts/ui/intl
+  expenses: ../../@/expenses/ui/intl
