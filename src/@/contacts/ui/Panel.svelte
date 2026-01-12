@@ -21,15 +21,15 @@
   )
 
   function deleteContact() {
-    contacts.del(contact)
+    void contacts.del(contact)
     confirmDelete = false
   }
 
   const fav: Action = $derived({
     id: 'favorite',
     onclick: () => {
-      if (favorite) favorites.del(favorite.id)
-      else favorites.add(contact.identity)
+      if (favorite) void favorites.del(favorite.id)
+      else void favorites.add(contact.identity)
     },
   })
 
