@@ -152,3 +152,7 @@ expenses:
     title: Nessuna spesa ancora
     description: Crea la tua prima spesa per iniziare a tenere traccia
     create: Crea spesa
+home:
+  title: |-
+    !js
+    (name) => `Ciao ${name}!`

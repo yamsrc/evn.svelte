@@ -243,7 +243,13 @@ inputs:
           input: Add participant
     me:
       input: Me
+  home:
+    title:
+      input: Hi {name}!
+      context: make it function
 mounts:
   iam: ../../@/iam/ui/intl
   feedback: ../../@/feedback/ui/intl
   join: join
+  contacts: ../../@/contacts/ui/intl
+  expenses: ../../@/expenses/ui/intl

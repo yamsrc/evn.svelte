@@ -1,0 +1,8 @@
+totals:
+  negative: Les debes a tus amigos
+  positive: Tus amigos te deben
+tops:
+  title: Amigos
+  empty: Hasta ahora, nadie te debe nada y tú no debes nada.
+  negative: "Principalmente debes a:"
+  positive: "Quienes más te deben:"

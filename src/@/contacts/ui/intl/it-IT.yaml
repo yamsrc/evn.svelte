@@ -1,0 +1,8 @@
+totals:
+  negative: Devi qualcosa ai tuoi amici
+  positive: Gli amici ti devono qualcosa
+tops:
+  title: Amici
+  empty: Finora nessuno ti deve nulla e tu non devi niente a nessuno.
+  negative: "Devi principalmente a:"
+  positive: "Chi ti deve di più:"

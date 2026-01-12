@@ -1,0 +1,19 @@
+context: Mount 'contacts' context
+inputs:
+  totals:
+    negative:
+      input: You owe your friends
+    positive:
+      input: Friends owe you
+  tops:
+    title:
+      input: Friends
+      context: section title
+    empty:
+      input: So far, nobody owes you and you owe nothing.
+    negative:
+      input: "You owe mostly to:"
+      context: list of contacts I owe money to
+    positive:
+      input: "Owe you the most:"
+      context: list of contacts who owe me the most money, ends with a colon
