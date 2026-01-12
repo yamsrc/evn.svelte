@@ -152,3 +152,7 @@ expenses:
     title: Aucune dépense pour l’instant
     description: Créez votre première dépense pour commencer à suivre
     create: Créer une dépense
+home:
+  title: |-
+    !js
+    (name) => `Salut ${name} !`

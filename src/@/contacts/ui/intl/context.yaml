@@ -1,0 +1,7 @@
+context: Mount 'contacts' context
+inputs:
+  totals:
+    negative:
+      input: You owe your friends
+    positive:
+      input: Friends owe you
