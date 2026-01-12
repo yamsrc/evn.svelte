@@ -117,6 +117,8 @@ account:
     sorry: Нам очень жаль, что вы уходите.
     hold: Удерживайте для подтверждения
     link: Удалить аккаунт
+favorites:
+  title: Избранное
 expenses:
   spendings:
     title: Расходы

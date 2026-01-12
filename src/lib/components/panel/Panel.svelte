@@ -38,11 +38,14 @@
     selected && 'outline-muted-foreground/50 outline-2',
   )}
 >
-  <div bind:this={container} class="flex w-full overflow-x-auto snap-x snap-mandatory no-scrollbar">
+  <div
+    bind:this={container}
+    class="panel-container flex w-full overflow-x-auto snap-x snap-mandatory no-scrollbar"
+  >
     <div class="w-full shrink-0 snap-start z-10">
       <Button
         class={cn(
-          'w-full max-w-full flex items-center justify-between gap-2 text-base',
+          'w-full max-w-full flex items-center justify-between gap-2 text-base font-normal',
           h || 'h-auto',
           classes,
           {
@@ -66,7 +69,10 @@
       </Button>
     </div>
     {#if actions}
-      <div class="flex shrink-0 snap-end text-xs [&_svg]:size-4 -ml-1 z-0 bg-foreground">
+      <div
+        role="toolbar"
+        class="panel-actions flex shrink-0 snap-end text-xs [&_svg]:size-4 -ml-1 z-0 bg-foreground"
+      >
         {#each actions as { id, class: classes, href, onclick } (id)}
           <button
             onclick={(e) => click(e, { href, onclick })}

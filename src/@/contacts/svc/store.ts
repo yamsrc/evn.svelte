@@ -36,7 +36,7 @@ export const contacts = derived<[typeof internal, typeof account], Maybe<Contact
 
       const i = values.findIndex((value) => value.identity === account.id)
 
-      if (i < 0 || !values[i])
+      if (i < 0 || values[i] === undefined)
         return values
 
       const managed = account.overlord === $me.id

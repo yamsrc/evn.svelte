@@ -136,6 +136,9 @@ export const dictionaries = {
         "link": "حذف الحساب"
       }
     },
+    "favorites": {
+      "title": "المفضلة"
+    },
     "expenses": {
       "spendings": {
         "title": "النفقات",
@@ -318,6 +321,9 @@ export const dictionaries = {
         "hold": "Zum Bestätigen halten",
         "link": "Konto löschen"
       }
+    },
+    "favorites": {
+      "title": "Favoriten"
     },
     "expenses": {
       "spendings": {
@@ -502,6 +508,9 @@ export const dictionaries = {
         "link": "Delete account"
       }
     },
+    "favorites": {
+      "title": "Favorites"
+    },
     "expenses": {
       "spendings": {
         "title": "Spendings",
@@ -684,6 +693,9 @@ export const dictionaries = {
         "hold": "Mantén pulsado para confirmar",
         "link": "Eliminar cuenta"
       }
+    },
+    "favorites": {
+      "title": "Favoritos"
     },
     "expenses": {
       "spendings": {
@@ -868,6 +880,9 @@ export const dictionaries = {
         "link": "Supprimer le compte"
       }
     },
+    "favorites": {
+      "title": "Favoris"
+    },
     "expenses": {
       "spendings": {
         "title": "Dépenses",
@@ -1050,6 +1065,9 @@ export const dictionaries = {
         "hold": "पुष्टि करने के लिए दबाए रखें",
         "link": "खाता हटाएं"
       }
+    },
+    "favorites": {
+      "title": "पसंदीदा"
     },
     "expenses": {
       "spendings": {
@@ -1234,6 +1252,9 @@ export const dictionaries = {
         "link": "Elimina account"
       }
     },
+    "favorites": {
+      "title": "Preferiti"
+    },
     "expenses": {
       "spendings": {
         "title": "Spese",
@@ -1416,6 +1437,9 @@ export const dictionaries = {
         "hold": "押し続けて確定",
         "link": "アカウントを削除"
       }
+    },
+    "favorites": {
+      "title": "お気に入り"
     },
     "expenses": {
       "spendings": {
@@ -1600,6 +1624,9 @@ export const dictionaries = {
         "link": "계정 삭제"
       }
     },
+    "favorites": {
+      "title": "즐겨찾기"
+    },
     "expenses": {
       "spendings": {
         "title": "지출",
@@ -1782,6 +1809,9 @@ export const dictionaries = {
         "hold": "Houd vast om te bevestigen",
         "link": "Account verwijderen"
       }
+    },
+    "favorites": {
+      "title": "Favorieten"
     },
     "expenses": {
       "spendings": {
@@ -1966,6 +1996,9 @@ export const dictionaries = {
         "link": "Удалить аккаунт"
       }
     },
+    "favorites": {
+      "title": "Избранное"
+    },
     "expenses": {
       "spendings": {
         "title": "Расходы",
@@ -2148,6 +2181,9 @@ export const dictionaries = {
         "hold": "Shikilia kuthibitisha",
         "link": "Futa akaunti"
       }
+    },
+    "favorites": {
+      "title": "Vipendwa"
     },
     "expenses": {
       "spendings": {
@@ -2332,6 +2368,9 @@ export const dictionaries = {
         "link": "Hesabı sil"
       }
     },
+    "favorites": {
+      "title": "Favoriler"
+    },
     "expenses": {
       "spendings": {
         "title": "Harcamalar",
@@ -2515,6 +2554,9 @@ export const dictionaries = {
         "link": "Видалити акаунт"
       }
     },
+    "favorites": {
+      "title": "Улюблене"
+    },
     "expenses": {
       "spendings": {
         "title": "Витрати",
@@ -2697,6 +2739,9 @@ export const dictionaries = {
         "hold": "按住以确认",
         "link": "删除账户"
       }
+    },
+    "favorites": {
+      "title": "收藏夹"
     },
     "expenses": {
       "spendings": {

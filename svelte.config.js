@@ -20,6 +20,11 @@ const config = {
       $origin: './src/origin',
       '@': './src/@',
     },
+    typescript: {
+      config: (config) => {
+        config.include.push('../features/**/*.ts')
+      },
+    },
   },
 }
 

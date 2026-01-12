@@ -18,7 +18,7 @@ async function google(descriptor: Descriptor): Promise<string | Error> {
     client.requestCode()
   }) as { code?: string; error?: string }
 
-  if (!response || !response.code)
+  if (response?.code === undefined)
     return new Error('NO_RESPONSE', { cause: response })
 
   return response.code
@@ -26,7 +26,7 @@ async function google(descriptor: Descriptor): Promise<string | Error> {
 
 function init() {
   return new Promise((resolve, reject) => {
-    if (window.google?.accounts?.oauth2) return resolve(undefined)
+    if (window.google?.accounts?.oauth2 !== undefined) return resolve(undefined)
 
     const script = document.createElement('script')
 

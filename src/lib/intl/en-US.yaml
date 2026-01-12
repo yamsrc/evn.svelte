@@ -115,6 +115,8 @@ account:
     sorry: We're very sorry to see you go.
     hold: Hold to confirm
     link: Delete account
+favorites:
+  title: Favorites
 expenses:
   spendings:
     title: Spendings

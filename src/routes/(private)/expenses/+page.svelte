@@ -17,7 +17,7 @@
   </Header.Root>
 </Section>
 
-<Async store={expenses} class="flex-1 flex flex-col space-y-5">
+<Async store={expenses}>
   {#snippet awaited(expenses)}
     {#if expenses.length}
       <Section>

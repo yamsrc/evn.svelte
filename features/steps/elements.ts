@@ -82,6 +82,10 @@ Then('{string} contains {int} {string} items', async ({ page }, containerId, cou
   await expect(items.first()).toBeVisible()
 })
 
+Then('{string} contains that name', async ({ page, ctx }, id) => {
+  await contains(page, `#${id}`, ctx.name)
+})
+
 async function contains(page: Page, selector: string, text: string) {
   await expect(async () => {
     const elements = page.locator(selector)

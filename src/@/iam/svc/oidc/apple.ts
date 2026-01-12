@@ -10,7 +10,7 @@ async function apple(descriptor: Descriptor): Promise<string | Error> {
   if (response instanceof Error)
     return response
 
-  if (!response || !response.authorization)
+  if (response?.authorization === undefined)
     return new Error('No authentication response received', { cause: response })
 
   return response.authorization.code

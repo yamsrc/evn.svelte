@@ -36,19 +36,19 @@
           <Separator />
         {/if}
         <div class="flex flex-nowrap items-center justify-between gap-2">
-          <!-- <div class="flex items-center gap-2 overflow-hidden flex-1"> -->
-          <Async store={accounts.get(id)} class="flex items-center gap-2 overflow-hidden flex-1">
-            {#snippet awaited(account)}
-              {@const name = id === $me?.id ? $dict.expenses.me : account.name}
-              <div class="shrink-0">
-                <Picture {account} class="size-8" />
-              </div>
-              <div class={nameClass}>
-                <TextEllipsis>{name}</TextEllipsis>
-              </div>
-            {/snippet}
-          </Async>
-          <!-- </div> -->
+          <div class="flex items-center gap-2 overflow-hidden flex-1">
+            <Async store={accounts.get(id)}>
+              {#snippet awaited(account)}
+                {@const name = id === $me?.id ? $dict.expenses.me : account.name}
+                <div class="shrink-0">
+                  <Picture {account} class="size-8" />
+                </div>
+                <div class={nameClass}>
+                  <TextEllipsis>{name}</TextEllipsis>
+                </div>
+              {/snippet}
+            </Async>
+          </div>
           <Amount class={amountClass} bind:value={value.participants[id].amount} />
         </div>
       {/each}

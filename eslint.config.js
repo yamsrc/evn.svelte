@@ -1,3 +1,4 @@
+import tsPlugin from '@typescript-eslint/eslint-plugin'
 import importPlugin from 'eslint-plugin-import'
 import svelte from 'eslint-plugin-svelte'
 import globals from 'globals'
@@ -18,6 +19,7 @@ export default [
   {
     plugins: {
       import: importPlugin,
+      '@typescript-eslint': tsPlugin,
     },
   },
   ...svelte.configs['flat/recommended'],
@@ -45,6 +47,7 @@ export default [
     rules: {
       'no-void': ['error', { allowAsStatement: true }],
       curly: ['error', 'multi'],
+      'no-implicit-coercion': 'error',
       '@stylistic/comma-dangle': ['error', 'always-multiline'],
       '@stylistic/space-before-function-paren': ['error', {
         asyncArrow: 'always',
@@ -116,9 +119,19 @@ export default [
     },
   },
   {
-    files: ['**/*.ts'],
+    files: ['src/**/*.ts', 'features/**/*.ts'],
+    languageOptions: {
+      parserOptions: {
+        project: './tsconfig.json',
+      },
+    },
     rules: {
       '@typescript-eslint/consistent-type-imports': 'error',
+      '@typescript-eslint/strict-boolean-expressions': ['error', {
+        allowNullableObject: false,
+        allowNumber: false,
+        allowString: false,
+      }],
     },
   },
 ]

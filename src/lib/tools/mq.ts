@@ -64,7 +64,7 @@ export function isInAppWebView(ua: string = navigator.userAgent): boolean {
 
     const regex = new RegExp(`(${rules.join('|')})`, 'ig')
 
-    return !!ua.match(regex)
+    return ua.match(regex) !== null
   }
 
   const isTelegram = () => (

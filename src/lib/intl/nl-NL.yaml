@@ -117,6 +117,8 @@ account:
     sorry: Het spijt ons zeer om je te zien gaan.
     hold: Houd vast om te bevestigen
     link: Account verwijderen
+favorites:
+  title: Favorieten
 expenses:
   spendings:
     title: Uitgaven

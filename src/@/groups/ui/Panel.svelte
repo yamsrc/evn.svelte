@@ -37,9 +37,11 @@
       </div>
       <div class="flex flex-nowrap gap-1 items-center">
         {#each members.slice(0, 5) as identity (identity)}
-          <Async store={accounts.get(identity)} class="not-first:-ml-3 shrink-0">
+          <Async store={accounts.get(identity)}>
             {#snippet awaited(account)}
-              <Picture {account} class="size-8" />
+              <div class="not-first:-ml-3 shrink-0">
+                <Picture {account} class="size-8" />
+              </div>
             {/snippet}
           </Async>
         {/each}

@@ -107,6 +107,8 @@ account:
     sorry: ご利用いただけなくなることを大変残念に思います。
     hold: 押し続けて確定
     link: アカウントを削除
+favorites:
+  title: お気に入り
 expenses:
   spendings:
     title: 支出
