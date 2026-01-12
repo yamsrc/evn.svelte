@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { onMount } from 'svelte'
+  import { preloadCode } from '$app/navigation'
   import { page } from '$app/state'
   import { cn } from '$lib/utils'
   import { Button } from '$ui/button'
@@ -9,6 +11,10 @@
   const action = $derived($actions.at(-1) ?? null)
 
   const rounded = 'rounded-xl'
+
+  onMount(() => {
+    for (const section of sections) preloadCode(section.href)
+  })
 </script>
 
 <div class="h-20 sm:h-24"></div>
