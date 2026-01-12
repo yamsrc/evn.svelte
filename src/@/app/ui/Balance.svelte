@@ -1,8 +1,7 @@
 <script lang="ts">
-  import { Coins } from '@lucide/svelte'
-  import { dict, locale } from '$lib/intl'
-  import { currency } from '$lib/tools'
+  import { dict } from '$lib/intl'
   import { cn } from '$lib/utils'
+  import Coins from './Coins.svelte'
   import type { Props } from './Balance'
 
   const {
@@ -15,14 +14,6 @@
   }: Props = $props()
 
   const amount = $derived(total ?? balance ?? 0)
-
-  function color(amount: number) {
-    if (balance && amount > 0) return 'var(--constructive)'
-
-    if (balance && amount < 0) return 'var(--destructive)'
-
-    return 'var(--muted-foreground)'
-  }
 </script>
 
 <div class={cn('flex items-center justify-end gap-2', classes)}>
@@ -35,10 +26,5 @@
       {youOwe}
     {/if}
   </div>
-  <div class="flex items-center justify-end gap-2">
-    <div class="font-bold text-foreground">{currency(Math.abs(amount), $locale)}</div>
-    <div>
-      <Coins size={16} color={color(amount)} />
-    </div>
-  </div>
+  <Coins {amount} />
 </div>

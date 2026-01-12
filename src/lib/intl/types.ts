@@ -185,4 +185,7 @@ export type Dictionary = {
           create: string
         }
       }
+      home: {
+        title: (value: any) => string
+      }
     }

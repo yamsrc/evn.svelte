@@ -1,12 +1,32 @@
 <script lang="ts">
-  import { LogOut } from '@lucide/svelte'
-  import { Button } from '$ui/button'
-  import { logout } from '@/iam'
+  import { Async, combined } from 'svas'
+  import { dict } from '$lib/intl'
+  import { Header, Section } from '@/app/ui'
+  import { contacts } from '@/contacts'
+  import { Totals, Tops } from '@/contacts/ui'
+  import { expenses } from '@/expenses'
+  import { Recent } from '@/expenses/ui'
+  import { account } from '@/iam'
 </script>
 
-<div class="flex flex-col items-center justify-center h-screen gap-4">
-  <Button onclick={logout}>
-    <LogOut />
-    Sign out
-  </Button>
-</div>
+<Async store={combined(account, contacts, expenses)}>
+  {#snippet awaited([account, contacts, expenses])}
+    <Section>
+      <Header.Root>
+        <Header.Title>{$dict.home.title(account.name)}</Header.Title>
+      </Header.Root>
+    </Section>
+
+    <Section>
+      <Totals {contacts} />
+    </Section>
+
+    <Section>
+      <Tops {contacts} />
+    </Section>
+
+    <Section>
+      <Recent {expenses} />
+    </Section>
+  {/snippet}
+</Async>

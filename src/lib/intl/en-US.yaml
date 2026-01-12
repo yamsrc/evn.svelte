@@ -148,3 +148,7 @@ expenses:
     add:
       label: Add participant
   me: Me
+home:
+  title: |-
+    !js
+    (name) => `Hi ${name}!`

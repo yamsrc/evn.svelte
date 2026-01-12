@@ -4,6 +4,7 @@ import type { Snippet } from 'svelte'
 export type Props = {
   left: Snippet
   right?: Snippet
+  bottom?: Snippet
   icon?: Snippet
   collapsed?: boolean
   selected?: boolean

@@ -180,6 +180,9 @@ export const dictionaries = {
         "description": "أنشئ أول مصروفك لبدء التتبع",
         "create": "إنشاء مصروف"
       }
+    },
+    "home": {
+      "title": (name) => `مرحبًا ${name}!`
     }
   },
   "de-DE": {
@@ -360,6 +363,9 @@ export const dictionaries = {
         "description": "Erstelle deine erste Ausgabe, um mit dem Verfolgen zu beginnen",
         "create": "Ausgabe erstellen"
       }
+    },
+    "home": {
+      "title": (name) => `Hallo ${name}!`
     }
   },
   "en-US": {
@@ -540,6 +546,9 @@ export const dictionaries = {
         }
       },
       "me": "Me"
+    },
+    "home": {
+      "title": (name) => `Hi ${name}!`
     }
   },
   "es-ES": {
@@ -720,6 +729,9 @@ export const dictionaries = {
         "description": "Crea tu primer gasto para empezar a realizar un seguimiento",
         "create": "Crear gasto"
       }
+    },
+    "home": {
+      "title": (name) => `¡Hola ${name}!`
     }
   },
   "fr-FR": {
@@ -900,6 +912,9 @@ export const dictionaries = {
         "description": "Créez votre première dépense pour commencer à suivre",
         "create": "Créer une dépense"
       }
+    },
+    "home": {
+      "title": (name) => `Salut ${name} !`
     }
   },
   "hi-IN": {
@@ -1080,6 +1095,9 @@ export const dictionaries = {
         "description": "ट्रैकिंग शुरू करने के लिए अपना पहला खर्च दर्ज करें",
         "create": "व्यय बनाएं"
       }
+    },
+    "home": {
+      "title": (name) => `नमस्ते ${name}!`
     }
   },
   "it-IT": {
@@ -1260,6 +1278,9 @@ export const dictionaries = {
         "description": "Crea la tua prima spesa per iniziare a tenere traccia",
         "create": "Crea spesa"
       }
+    },
+    "home": {
+      "title": (name) => `Ciao ${name}!`
     }
   },
   "ja-JP": {
@@ -1440,6 +1461,9 @@ export const dictionaries = {
         "description": "最初の支出を作成して、記録を始めましょう",
         "create": "支出を作成"
       }
+    },
+    "home": {
+      "title": (name) => `${name}さん、こんにちは！`
     }
   },
   "ko-KR": {
@@ -1620,6 +1644,9 @@ export const dictionaries = {
         "description": "첫 번째 지출을 추가하여 추적을 시작하세요",
         "create": "지출 생성"
       }
+    },
+    "home": {
+      "title": (name) => `${name}님, 안녕하세요!`
     }
   },
   "nl-NL": {
@@ -1800,6 +1827,9 @@ export const dictionaries = {
         "description": "Maak je eerste uitgave aan om het bijhouden te starten",
         "create": "Uitgave aanmaken"
       }
+    },
+    "home": {
+      "title": (name) => `Hoi ${name}!`
     }
   },
   "ru-RU": {
@@ -1980,6 +2010,9 @@ export const dictionaries = {
         "description": "Создайте первый расход, чтобы начать отслеживание",
         "create": "Создать расход"
       }
+    },
+    "home": {
+      "title": (name) => `Привет, ${name}!`
     }
   },
   "sw-TZ": {
@@ -2160,6 +2193,9 @@ export const dictionaries = {
         "description": "Unda matumizi yako ya kwanza ili kuanza kufuatilia",
         "create": "Unda gharama"
       }
+    },
+    "home": {
+      "title": (name) => `Habari ${name}!`
     }
   },
   "tr-TR": {
@@ -2340,6 +2376,9 @@ export const dictionaries = {
         "description": "Takibe başlamak için ilk giderini oluştur",
         "create": "Gider oluştur"
       }
+    },
+    "home": {
+      "title": (name) => `Merhaba ${name}!`
     }
   },
   "uk-UA": {
@@ -2520,6 +2559,9 @@ export const dictionaries = {
         "description": "Створіть свою першу витрату, щоб почати відстеження",
         "create": "Створити витрату"
       }
+    },
+    "home": {
+      "title": (name) => `Привіт, ${name}!`
     }
   },
   "zh-CN": {
@@ -2700,6 +2742,9 @@ export const dictionaries = {
         "description": "创建您的第一笔支出以开始记录",
         "create": "创建支出"
       }
+    },
+    "home": {
+      "title": (name) => `${name}，你好！`
     }
   }
 };
