@@ -11,6 +11,7 @@
     placeholder = '0',
     oninput: oninputCb,
     class: classes,
+    id,
   }: Props = $props()
 
   function oninput(e: Event) {
@@ -25,6 +26,7 @@
 
 <InputGroup.Root class={cn('bg-input border border-border h-full px-1', classes)}>
   <InputGroup.Input
+    {id}
     {placeholder}
     type="number"
     value={value !== undefined && value > 0 ? currency(value, $locale) : null}
