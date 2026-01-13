@@ -7,7 +7,7 @@
   const { contact, class: classes }: Props = $props()
 </script>
 
-<div class={cn('flex gap-2', classes)}>
+<div class={cn('flex items-center gap-2', classes)}>
   <div class="text-muted-foreground text-sm text-nowrap">
     {#if contact.balance > 0}
       {$dict.contacts.contact.owesYou}

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Async, ok } from 'svas'
+  import { Async, combined, ok } from 'svas'
   import { page } from '$app/state'
   import { Back } from '$com/history'
   import { Separator } from '$com/separator'
@@ -9,7 +9,8 @@
   import { Section } from '@/app/ui'
   import { Header } from '@/app/ui'
   import { contacts } from '@/contacts'
-  import { Balance, Share } from '@/contacts/ui'
+  import { Balance, Share, Groups } from '@/contacts/ui'
+  import { groups } from '@/groups'
 
   const id = $derived(page.params.id) as string
 </script>
@@ -20,8 +21,8 @@
   </Header.Root>
 </Section>
 
-<Async store={contacts}>
-  {#snippet awaited(contacts)}
+<Async store={combined(contacts, groups)}>
+  {#snippet awaited([contacts, groups])}
     {@const contact = contacts.find((contact) => contact.id === id)}
     {#if contact?.account && ok(contact.account)}
       <Section>
@@ -37,6 +38,9 @@
 
       <Section>
         <Balance {contact} class="justify-center" />
+      </Section>
+      <Section class="space-y-4">
+        <Groups {contact} {groups} />
       </Section>
     {:else}
       <Spinner class="m-auto" />

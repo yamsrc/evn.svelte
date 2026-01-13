@@ -6,3 +6,6 @@ tops:
   empty: 到目前为止，没有人欠你，你也不欠任何人。
   negative: 你主要欠款给：
   positive: 欠你最多的人：
+groups:
+  title: 所属群组
+  empty: 未加入任何群组。

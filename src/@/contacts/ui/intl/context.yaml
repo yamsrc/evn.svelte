@@ -17,3 +17,9 @@ inputs:
     positive:
       input: "Owe you the most:"
       context: list of contacts who owe me the most money, ends with a colon
+  groups:
+    title:
+      input: Belongs to groups
+      context: a list of groups that a sepcific user belongs to
+    empty:
+      input: Not a member of any group.

@@ -6,3 +6,6 @@ tops:
   empty: Finora nessuno ti deve nulla e tu non devi niente a nessuno.
   negative: "Devi principalmente a:"
   positive: "Chi ti deve di più:"
+groups:
+  title: Appartiene ai gruppi
+  empty: Non fai parte di nessun gruppo.
