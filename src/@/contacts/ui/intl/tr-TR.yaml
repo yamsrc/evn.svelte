@@ -9,3 +9,6 @@ tops:
 groups:
   title: Gruplara ait
   empty: Herhangi bir grubun üyesi değilsin.
+expenses:
+  title: Evns
+  empty: Şu ana kadar paylaşılan bir harcama yok.

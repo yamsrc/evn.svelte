@@ -9,3 +9,6 @@ tops:
 groups:
   title: Состоит в группах
   empty: Вы не состоите ни в одной группе.
+expenses:
+  title: Evns
+  empty: Пока нет совместных расходов.

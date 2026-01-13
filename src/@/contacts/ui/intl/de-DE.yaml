@@ -9,3 +9,6 @@ tops:
 groups:
   title: Gehört zu Gruppen
   empty: Du bist in keiner Gruppe Mitglied.
+expenses:
+  title: Evns
+  empty: Bisher keine geteilten Ausgaben.

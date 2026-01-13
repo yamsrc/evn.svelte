@@ -9,3 +9,6 @@ tops:
 groups:
   title: Належить до груп
   empty: Ви не є учасником жодної групи.
+expenses:
+  title: Evns
+  empty: Поки що спільних витрат немає.

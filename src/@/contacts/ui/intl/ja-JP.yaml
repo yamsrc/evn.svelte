@@ -9,3 +9,6 @@ tops:
 groups:
   title: 所属グループ
   empty: どのグループにも所属していません。
+expenses:
+  title: Evns
+  empty: これまでに共有された支出はありません。

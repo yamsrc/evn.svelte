@@ -23,3 +23,8 @@ inputs:
       context: a list of groups that a sepcific user belongs to
     empty:
       input: Not a member of any group.
+  expenses:
+    title:
+      input: Evns
+    empty:
+      input: No shared expenses so far.

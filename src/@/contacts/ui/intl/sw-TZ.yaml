@@ -9,3 +9,6 @@ tops:
 groups:
   title: Anahusishwa na vikundi
   empty: Sio mwanachama wa kundi lolote.
+expenses:
+  title: Evns
+  empty: Hakuna gharama za pamoja hadi sasa.

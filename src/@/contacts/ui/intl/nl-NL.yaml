@@ -11,3 +11,6 @@ tops:
 groups:
   title: Behoort tot groepen
   empty: Je bent geen lid van een groep.
+expenses:
+  title: Evns
+  empty: Tot nu toe geen gedeelde uitgaven.

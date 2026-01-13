@@ -16,6 +16,10 @@ export const dictionaries = {
     "groups": {
       "title": "ينتمي إلى المجموعات",
       "empty": "لست عضوًا في أي مجموعة."
+    },
+    "expenses": {
+      "title": "Evns",
+      "empty": "لا توجد مصروفات مشتركة حتى الآن."
     }
   },
   "de-DE": {
@@ -32,6 +36,10 @@ export const dictionaries = {
     "groups": {
       "title": "Gehört zu Gruppen",
       "empty": "Du bist in keiner Gruppe Mitglied."
+    },
+    "expenses": {
+      "title": "Evns",
+      "empty": "Bisher keine geteilten Ausgaben."
     }
   },
   "en-US": {
@@ -48,6 +56,10 @@ export const dictionaries = {
     "groups": {
       "title": "Belongs to groups",
       "empty": "Not a member of any group."
+    },
+    "expenses": {
+      "title": "Evns",
+      "empty": "No shared expenses so far."
     }
   },
   "es-ES": {
@@ -64,6 +76,10 @@ export const dictionaries = {
     "groups": {
       "title": "Pertenece a grupos",
       "empty": "No eres miembro de ningún grupo."
+    },
+    "expenses": {
+      "title": "Evns",
+      "empty": "No hay gastos compartidos hasta ahora."
     }
   },
   "fr-FR": {
@@ -80,6 +96,10 @@ export const dictionaries = {
     "groups": {
       "title": "Appartient aux groupes",
       "empty": "Vous n'êtes membre d'aucun groupe."
+    },
+    "expenses": {
+      "title": "Evns",
+      "empty": "Aucune dépense partagée pour le moment."
     }
   },
   "hi-IN": {
@@ -96,6 +116,10 @@ export const dictionaries = {
     "groups": {
       "title": "समूहों का सदस्य है",
       "empty": "आप किसी भी समूह के सदस्य नहीं हैं।"
+    },
+    "expenses": {
+      "title": "Evns",
+      "empty": "अब तक कोई साझा खर्च नहीं हुआ है।"
     }
   },
   "it-IT": {
@@ -112,6 +136,10 @@ export const dictionaries = {
     "groups": {
       "title": "Appartiene ai gruppi",
       "empty": "Non fai parte di nessun gruppo."
+    },
+    "expenses": {
+      "title": "Evns",
+      "empty": "Nessuna spesa condivisa finora."
     }
   },
   "ja-JP": {
@@ -128,6 +156,10 @@ export const dictionaries = {
     "groups": {
       "title": "所属グループ",
       "empty": "どのグループにも所属していません。"
+    },
+    "expenses": {
+      "title": "Evns",
+      "empty": "これまでに共有された支出はありません。"
     }
   },
   "ko-KR": {
@@ -144,6 +176,10 @@ export const dictionaries = {
     "groups": {
       "title": "소속 그룹",
       "empty": "어떤 그룹에도 속해 있지 않습니다."
+    },
+    "expenses": {
+      "title": "Evns",
+      "empty": "아직 공유된 지출이 없습니다."
     }
   },
   "nl-NL": {
@@ -160,6 +196,10 @@ export const dictionaries = {
     "groups": {
       "title": "Behoort tot groepen",
       "empty": "Je bent geen lid van een groep."
+    },
+    "expenses": {
+      "title": "Evns",
+      "empty": "Tot nu toe geen gedeelde uitgaven."
     }
   },
   "ru-RU": {
@@ -176,6 +216,10 @@ export const dictionaries = {
     "groups": {
       "title": "Состоит в группах",
       "empty": "Вы не состоите ни в одной группе."
+    },
+    "expenses": {
+      "title": "Evns",
+      "empty": "Пока нет совместных расходов."
     }
   },
   "sw-TZ": {
@@ -192,6 +236,10 @@ export const dictionaries = {
     "groups": {
       "title": "Anahusishwa na vikundi",
       "empty": "Sio mwanachama wa kundi lolote."
+    },
+    "expenses": {
+      "title": "Evns",
+      "empty": "Hakuna gharama za pamoja hadi sasa."
     }
   },
   "tr-TR": {
@@ -208,6 +256,10 @@ export const dictionaries = {
     "groups": {
       "title": "Gruplara ait",
       "empty": "Herhangi bir grubun üyesi değilsin."
+    },
+    "expenses": {
+      "title": "Evns",
+      "empty": "Şu ana kadar paylaşılan bir harcama yok."
     }
   },
   "uk-UA": {
@@ -224,6 +276,10 @@ export const dictionaries = {
     "groups": {
       "title": "Належить до груп",
       "empty": "Ви не є учасником жодної групи."
+    },
+    "expenses": {
+      "title": "Evns",
+      "empty": "Поки що спільних витрат немає."
     }
   },
   "zh-CN": {
@@ -240,6 +296,10 @@ export const dictionaries = {
     "groups": {
       "title": "所属群组",
       "empty": "未加入任何群组。"
+    },
+    "expenses": {
+      "title": "Evns",
+      "empty": "目前还没有共享支出。"
     }
   }
 };

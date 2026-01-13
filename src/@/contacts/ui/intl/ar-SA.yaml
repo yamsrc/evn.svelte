@@ -9,3 +9,6 @@ tops:
 groups:
   title: ينتمي إلى المجموعات
   empty: لست عضوًا في أي مجموعة.
+expenses:
+  title: Evns
+  empty: لا توجد مصروفات مشتركة حتى الآن.

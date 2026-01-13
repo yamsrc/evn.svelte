@@ -9,7 +9,8 @@
   import { Section } from '@/app/ui'
   import { Header } from '@/app/ui'
   import { contacts } from '@/contacts'
-  import { Balance, Share, Groups } from '@/contacts/ui'
+  import { Balance, Share, Groups, Expenses } from '@/contacts/ui'
+  import { expenses } from '@/expenses'
   import { groups } from '@/groups'
 
   const id = $derived(page.params.id) as string
@@ -21,8 +22,8 @@
   </Header.Root>
 </Section>
 
-<Async store={combined(contacts, groups)}>
-  {#snippet awaited([contacts, groups])}
+<Async store={combined(contacts, groups, expenses)}>
+  {#snippet awaited([contacts, groups, expenses])}
     {@const contact = contacts.find((contact) => contact.id === id)}
     {#if contact?.account && ok(contact.account)}
       <Section>
@@ -41,6 +42,7 @@
       </Section>
       <Section class="space-y-4">
         <Groups {contact} {groups} />
+        <Expenses {contact} {expenses} />
       </Section>
     {:else}
       <Spinner class="m-auto" />

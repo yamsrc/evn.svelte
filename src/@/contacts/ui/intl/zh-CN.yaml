@@ -9,3 +9,6 @@ tops:
 groups:
   title: 所属群组
   empty: 未加入任何群组。
+expenses:
+  title: Evns
+  empty: 目前还没有共享支出。
