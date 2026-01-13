@@ -12,18 +12,14 @@ export const accounts = values<Account>({
   bind: account,
 })
 
-if (browser) {
-  account.subscribe((value) => {
-    if (value !== null)
-      accounts.set(value.id, value)
-  })
-
+if (browser)
   events.on('default.accounts.sync', (value) => {
+    accounts.set(value.id, value)
+
     const me = account.extract()
 
-    if (me !== null && me.id === value.id && value._version !== undefined && value._version > me._version)
+    if (me?.id === value.id && (me._version === undefined || (value._version !== undefined && value._version > me._version))) {
+      console.log('update iam')
       update(value)
-    else
-      accounts.set(value.id, value)
+    }
   })
-}

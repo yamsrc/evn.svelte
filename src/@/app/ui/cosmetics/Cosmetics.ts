@@ -9,7 +9,8 @@ export interface Props {
   class?: string
   autocomplete?: HTMLInputAttributes['autocomplete']
   autofocus?: HTMLInputAttributes['autofocus']
-  onchange?: (value: Value) => void | Promise<void>
+  onchange?: (value: Value) => Promise<void>
+  onupload?: (file: File) => Promise<void>
 }
 
 export interface Value {

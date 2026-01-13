@@ -1,3 +1,9 @@
+import { ensure } from 'svas'
+import { account } from '@/iam'
+import * as managed from './managed'
+import * as net from './net'
+import { update } from './update'
+
 export const pictures = [
   'f89bea1dcfdb2f85c3d30a222233c841',
   '9dfe81f959245e5507cc9a1332be6a88',
@@ -16,4 +22,20 @@ export function pickpic() {
   const i = Math.floor(Math.random() * pictures.length)
 
   return pictures[i]
+}
+
+export async function upload(identity: string, file: File): Promise<void | Error> {
+  const entry = await net.pictures.post(file)
+
+  if (entry instanceof Error)
+    return entry
+
+  const me = ensure(account)
+
+  const updated = me.id === identity
+    ? await update(identity, { picture: entry.id })
+    : await managed.update(identity, { picture: entry.id })
+
+  if (updated instanceof Error)
+    return updated
 }

@@ -8,9 +8,9 @@
     children: Snippet
   }
 
-  const { class: classes, children, ...restProps }: Props = $props()
+  const { class: classes, children, ...rest }: Props = $props()
 </script>
 
-<div class={cn('flex flex-col items-center gap-6', classes)} {...restProps}>
+<div class={cn('flex flex-col items-center gap-6', classes)} {...rest}>
   {@render children()}
 </div>

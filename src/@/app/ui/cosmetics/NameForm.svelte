@@ -15,12 +15,12 @@
     class: classes,
   }: Props = $props()
 
-  const original = value
+  let original = $state(value)
   const blank = value === ''
 
   let ref = $state<HTMLInputElement | null>(null)
 
-  function submit() {
+  async function submit() {
     const normalized = value.trim()
 
     if (normalized === '') return reset()
@@ -28,7 +28,10 @@
     if (normalized === original) return
 
     value = normalized
-    onchange?.(normalized)
+
+    const ok = await onchange?.(normalized)
+
+    if (!(ok instanceof Error)) original = value
   }
 
   function reset() {
@@ -53,7 +56,6 @@
     class={cn('text-center text-3xl font-bold', classes)}
     required
     disabled={busy}
-    onblur={blank ? undefined : onblur}
-  />
+    onblur={blank ? undefined : onblur} />
   <button type="submit" class="sr-only">Submit</button>
 </form>
