@@ -9,7 +9,7 @@ Feature: Authentication
     Then 'iam-password-input' is focused
     And I type random password
     And I press 'Enter'
-    Then 'accounts-name-input' is focused
+    Then 'app-cosmetics-name-input' is focused
     And I type random name
     And I press 'Enter'
     Then I am authenticated
