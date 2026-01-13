@@ -11,7 +11,7 @@ Given('new account', async ({ page }) => {
   await page.keyboard.press('Tab')
   await page.keyboard.type(faker.internet.password())
   await page.keyboard.press('Enter')
-  await expect(page.locator('#accounts-name-input')).toBeFocused()
+  await expect(page.locator('#app-cosmetics-name-input')).toBeFocused()
   await page.keyboard.type(faker.person.firstName())
   await page.keyboard.press('Enter')
   await isAuthenticated(page)

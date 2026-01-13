@@ -30,8 +30,7 @@
           variant="ghost"
           class="size-12 bg-accent/50 border border-border"
           position="left"
-          label={$dict.actions.holdToLogout}
-        >
+          label={$dict.actions.holdToLogout}>
           <LogOut class="size-5" />
         </Hold>
       </Header.Actions>
@@ -60,13 +59,14 @@
     <Separator class="mb-4" />
     <footer class="text-muted-foreground text-sm">
       <p>
-        &copy; <a href="https://seed.me" target="_blank">seed.me</a>, 2025–{new Date(
-          $time,
-        ).getFullYear()}
+        &copy; <a href="https://seed.me" target="_blank">seed.me</a>
+        , 2025–{new Date($time).getFullYear()}
       </p>
       <p class="[&_a]:text-muted-foreground">
-        <a href="/terms/">{$dict.terms}</a>,
-        <a href="/privacy/">{$dict.privacy}</a>,
+        <a href="/terms/">{$dict.terms}</a>
+        ,
+        <a href="/privacy/">{$dict.privacy}</a>
+        ,
         <Delete class="p-0 underline underline-offset-3 font-normal" ondelete={getout} />
       </p>
       <p>v{version}</p>
