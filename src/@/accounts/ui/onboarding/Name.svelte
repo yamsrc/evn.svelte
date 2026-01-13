@@ -1,57 +1,55 @@
 <script lang="ts">
   import { ArrowRight } from '@lucide/svelte'
   import { dict } from '$lib/intl'
-  import { onsubmit } from '$lib/tools'
-  import { cn } from '$lib/utils'
   import { Button } from '$ui/button'
-  import { Input } from '$ui/input'
+  import { pickpic } from '@/accounts'
   import { update, type Account } from '@/accounts'
+  import * as Cosmetics from '@/app/ui/cosmetics'
 
-  const {
-    account,
-    autofocus,
-    class: classes,
-  }: { account: Account; autofocus?: boolean; class?: string } = $props()
+  const { account, autofocus }: { account: Account; autofocus?: boolean } = $props()
 
-  let ref = $state<HTMLInputElement | null>(null)
-  let value = $derived(account.name)
+  let name = $state<string>('')
+  let picture = $state<string>(pickpic())
   let busy = $state(false)
 
-  async function submit() {
-    const name = value?.trim()
-
-    if (!name) return
-
+  async function save(value: { name: string; picture: string }) {
     busy = true
-    await update(account.id, { name })
+    await update(account.id, { name: value.name, picture: value.picture })
     busy = false
   }
 
-  function reset() {
-    value = account.name
+  async function onclick() {
+    if (busy || name.trim() === '') return
+
+    await save({ name, picture })
   }
 
-  function onblur() {
-    if (!value) reset()
+  async function onchange(_value: string) {
+    if (busy || name.trim() === '') return
+
+    await save({ name, picture })
   }
 </script>
 
-<form onsubmit={onsubmit(submit)} class="flex items-center gap-2">
-  <Input
-    id="accounts-name-input"
-    bind:ref
-    bind:value
-    name="name"
-    type="text"
-    {autofocus}
-    autocomplete="given-name"
-    placeholder={$dict.form.enterName}
-    class={cn('text-center', classes)}
-    required
-    disabled={busy}
-    {onblur}
-  />
-  <Button size="icon" type="submit" class="size-12" disabled={busy}>
-    <ArrowRight class="size-5" />
-  </Button>
-</form>
+<Cosmetics.Root class="flex flex-col justify-between">
+  <Cosmetics.Content>
+    <Cosmetics.Picture bind:id={picture} />
+    <div class="space-y-2">
+      <Cosmetics.Name
+        bind:value={name}
+        bind:busy
+        placeholder={$dict.form.enterName}
+        {autofocus}
+        autocomplete="given-name"
+        {onchange}
+      />
+      <Cosmetics.Note>{$dict.onboarding.name.description}</Cosmetics.Note>
+    </div>
+  </Cosmetics.Content>
+  <Cosmetics.Actions label={$dict.actions.continue} {busy} {onclick}>
+    <Button size="lg" class="w-full" disabled={busy || !name.trim()} {onclick}>
+      {$dict.actions.continue}
+      <ArrowRight size={16} />
+    </Button>
+  </Cosmetics.Actions>
+</Cosmetics.Root>
