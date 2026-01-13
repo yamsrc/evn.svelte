@@ -6,7 +6,7 @@ const echo = origin.resource<Echo>('/accounts/echo/')
 async function get(authorization?: string): Promise<Echo | Error> {
   const options: RequestOptions = { method: 'GET' }
 
-  if (authorization) {
+  if (authorization !== undefined) {
     options.headers = { authorization }
     options.credentials = 'include'
   }

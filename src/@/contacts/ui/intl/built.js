@@ -12,6 +12,14 @@ export const dictionaries = {
       "empty": "حتى الآن، لا أحد مدين لك وأنت لا تدين لأحد بأي شيء.",
       "negative": "أنت مدين في الغالب لـ:",
       "positive": "أكثر من يدينون لك:"
+    },
+    "groups": {
+      "title": "ينتمي إلى المجموعات",
+      "empty": "لست عضوًا في أي مجموعة."
+    },
+    "expenses": {
+      "title": "Evns",
+      "empty": "لا توجد مصروفات مشتركة حتى الآن."
     }
   },
   "de-DE": {
@@ -24,6 +32,14 @@ export const dictionaries = {
       "empty": "Bisher schuldet dir niemand etwas und du schuldest auch nichts.",
       "negative": "Du schuldest hauptsächlich:",
       "positive": "Wer dir am meisten schuldet:"
+    },
+    "groups": {
+      "title": "Gehört zu Gruppen",
+      "empty": "Du bist in keiner Gruppe Mitglied."
+    },
+    "expenses": {
+      "title": "Evns",
+      "empty": "Bisher keine geteilten Ausgaben."
     }
   },
   "en-US": {
@@ -36,6 +52,14 @@ export const dictionaries = {
       "empty": "So far, nobody owes you and you owe nothing.",
       "negative": "You owe mostly to:",
       "positive": "Owe you the most:"
+    },
+    "groups": {
+      "title": "Belongs to groups",
+      "empty": "Not a member of any group."
+    },
+    "expenses": {
+      "title": "Evns",
+      "empty": "No shared expenses so far."
     }
   },
   "es-ES": {
@@ -48,6 +72,14 @@ export const dictionaries = {
       "empty": "Hasta ahora, nadie te debe nada y tú no debes nada.",
       "negative": "Principalmente debes a:",
       "positive": "Quienes más te deben:"
+    },
+    "groups": {
+      "title": "Pertenece a grupos",
+      "empty": "No eres miembro de ningún grupo."
+    },
+    "expenses": {
+      "title": "Evns",
+      "empty": "No hay gastos compartidos hasta ahora."
     }
   },
   "fr-FR": {
@@ -60,6 +92,14 @@ export const dictionaries = {
       "empty": "Pour l’instant, personne ne te doit rien et tu ne dois rien non plus.",
       "negative": "Vous devez principalement à :",
       "positive": "Ceux qui te doivent le plus :"
+    },
+    "groups": {
+      "title": "Appartient aux groupes",
+      "empty": "Vous n'êtes membre d'aucun groupe."
+    },
+    "expenses": {
+      "title": "Evns",
+      "empty": "Aucune dépense partagée pour le moment."
     }
   },
   "hi-IN": {
@@ -72,6 +112,14 @@ export const dictionaries = {
       "empty": "अभी तक कोई भी आपको कुछ नहीं लौटाता और आप भी किसी के कर्जदार नहीं हैं।",
       "negative": "आप मुख्यतः इनसे उधार हैं:",
       "positive": "जो आपको सबसे ज़्यादा पैसे देते हैं:"
+    },
+    "groups": {
+      "title": "समूहों का सदस्य है",
+      "empty": "आप किसी भी समूह के सदस्य नहीं हैं।"
+    },
+    "expenses": {
+      "title": "Evns",
+      "empty": "अब तक कोई साझा खर्च नहीं हुआ है।"
     }
   },
   "it-IT": {
@@ -84,6 +132,14 @@ export const dictionaries = {
       "empty": "Finora nessuno ti deve nulla e tu non devi niente a nessuno.",
       "negative": "Devi principalmente a:",
       "positive": "Chi ti deve di più:"
+    },
+    "groups": {
+      "title": "Appartiene ai gruppi",
+      "empty": "Non fai parte di nessun gruppo."
+    },
+    "expenses": {
+      "title": "Evns",
+      "empty": "Nessuna spesa condivisa finora."
     }
   },
   "ja-JP": {
@@ -96,6 +152,14 @@ export const dictionaries = {
       "empty": "今のところ、誰もあなたに借りはなく、あなたも誰にも借りはありません。",
       "negative": "主に借りている相手：",
       "positive": "あなたに最も多く借りている人:"
+    },
+    "groups": {
+      "title": "所属グループ",
+      "empty": "どのグループにも所属していません。"
+    },
+    "expenses": {
+      "title": "Evns",
+      "empty": "これまでに共有された支出はありません。"
     }
   },
   "ko-KR": {
@@ -108,6 +172,14 @@ export const dictionaries = {
       "empty": "지금까지 아무도 당신에게 빚진 것이 없고, 당신도 아무에게도 빚이 없습니다.",
       "negative": "주로 빚이 있는 사람:",
       "positive": "가장 많이 빚진 사람:"
+    },
+    "groups": {
+      "title": "소속 그룹",
+      "empty": "어떤 그룹에도 속해 있지 않습니다."
+    },
+    "expenses": {
+      "title": "Evns",
+      "empty": "아직 공유된 지출이 없습니다."
     }
   },
   "nl-NL": {
@@ -120,6 +192,14 @@ export const dictionaries = {
       "empty": "Tot nu toe is niemand jou iets verschuldigd en jij bent niemand iets verschuldigd.",
       "negative": "Je bent vooral iets verschuldigd aan:",
       "positive": "Degenen die jou het meest schuldig zijn:"
+    },
+    "groups": {
+      "title": "Behoort tot groepen",
+      "empty": "Je bent geen lid van een groep."
+    },
+    "expenses": {
+      "title": "Evns",
+      "empty": "Tot nu toe geen gedeelde uitgaven."
     }
   },
   "ru-RU": {
@@ -132,6 +212,14 @@ export const dictionaries = {
       "empty": "Пока что тебе никто не должен, и ты тоже никому не должен.",
       "negative": "В основном вы должны:",
       "positive": "Больше всех должны тебе:"
+    },
+    "groups": {
+      "title": "Состоит в группах",
+      "empty": "Вы не состоите ни в одной группе."
+    },
+    "expenses": {
+      "title": "Evns",
+      "empty": "Пока нет совместных расходов."
     }
   },
   "sw-TZ": {
@@ -144,6 +232,14 @@ export const dictionaries = {
       "empty": "Hadi sasa, hakuna anayekudai na wewe haumdai mtu yeyote.",
       "negative": "Una deni mkubwa hasa kwa:",
       "positive": "Waliokukudai zaidi:"
+    },
+    "groups": {
+      "title": "Anahusishwa na vikundi",
+      "empty": "Sio mwanachama wa kundi lolote."
+    },
+    "expenses": {
+      "title": "Evns",
+      "empty": "Hakuna gharama za pamoja hadi sasa."
     }
   },
   "tr-TR": {
@@ -156,6 +252,14 @@ export const dictionaries = {
       "empty": "Şu ana kadar kimse sana borçlu değil ve sen de kimseye borçlu değilsin.",
       "negative": "En çok borçlu olduğunuz kişiler:",
       "positive": "Sana en çok borcu olanlar:"
+    },
+    "groups": {
+      "title": "Gruplara ait",
+      "empty": "Herhangi bir grubun üyesi değilsin."
+    },
+    "expenses": {
+      "title": "Evns",
+      "empty": "Şu ana kadar paylaşılan bir harcama yok."
     }
   },
   "uk-UA": {
@@ -168,6 +272,14 @@ export const dictionaries = {
       "empty": "Поки що тобі ніхто не винен, і ти теж нікому не винен.",
       "negative": "Ви найбільше винні:",
       "positive": "Хто найбільше тобі винен:"
+    },
+    "groups": {
+      "title": "Належить до груп",
+      "empty": "Ви не є учасником жодної групи."
+    },
+    "expenses": {
+      "title": "Evns",
+      "empty": "Поки що спільних витрат немає."
     }
   },
   "zh-CN": {
@@ -180,6 +292,14 @@ export const dictionaries = {
       "empty": "到目前为止，没有人欠你，你也不欠任何人。",
       "negative": "你主要欠款给：",
       "positive": "欠你最多的人："
+    },
+    "groups": {
+      "title": "所属群组",
+      "empty": "未加入任何群组。"
+    },
+    "expenses": {
+      "title": "Evns",
+      "empty": "目前还没有共享支出。"
     }
   }
 };

@@ -119,6 +119,8 @@ account:
     sorry: Ci dispiace molto vederti andare via.
     hold: Tieni premuto per confermare
     link: Elimina account
+favorites:
+  title: Preferiti
 expenses:
   spendings:
     title: Spese

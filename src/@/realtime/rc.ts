@@ -1,9 +1,11 @@
-import { account } from '@/iam'
+import { account, authenticated } from '@/iam'
 import { disconnect, connect } from './svc/connect'
 
 function rc() {
-  account.subscribe((me) => {
-    if (me === null) disconnect()
+  authenticated.subscribe((authenticated) => {
+    const me = account.extract()!
+
+    if (!authenticated) disconnect()
     else void connect(me.id)
   })
 }

@@ -35,7 +35,7 @@ export const origin = (() => {
 export const sleep: [number, number] | undefined = (() => {
   const sleep = import.meta.env.VITE_DEV_SLEEP
 
-  if (!sleep || typeof window === 'undefined')
+  if (sleep === undefined || typeof window === 'undefined')
     return
 
   const hostname = new URL(origin).hostname
@@ -45,7 +45,7 @@ export const sleep: [number, number] | undefined = (() => {
 
   const match = sleep.match(/^(?<min>\d+)-(?<max>\d+)$/)
 
-  if (!match || !match.groups)
+  if (match?.groups === undefined)
     throw new Error(`Invalid sleep value: ${sleep}`)
 
   const min = Number.parseInt(match.groups.min)
@@ -64,7 +64,7 @@ export const APPLE_CLIENT_ID = 'com.evnapp.id'
 const MAJOR_VERSION = '1'
 
 export const version = (() => {
-  const date = new Date(+ver)
+  const date = new Date(Number.parseInt(ver))
   const year = date.getFullYear()
   const startOfYear = new Date(year, 0, 1).getTime()
   const startNextYear = new Date(year + 1, 0, 1).getTime()

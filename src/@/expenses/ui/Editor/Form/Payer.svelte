@@ -26,7 +26,10 @@
   const split = $derived(ctx.split)
 </script>
 
-<Item.Root variant="outline" class="flex flex-nowrap items-stretch gap-1.5 p-0 border-none">
+<Item.Root
+  variant="outline"
+  class="expenses-payer flex flex-nowrap items-stretch gap-1.5 p-0 border-none"
+>
   <div class="flex-1 min-w-0">
     <Panel variant="outline" h="min-h-14 h-fit" {selected} {onclick}>
       {#snippet left()}

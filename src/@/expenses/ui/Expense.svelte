@@ -33,9 +33,11 @@
   <div class="flex justify-between items-center w-full">
     <div class="flex flex-nowrap flex-1 items-center justify-start">
       {#each participants.slice(0, 5) as participant (participant)}
-        <Async store={accounts.get(participant)} class="not-first:-ml-3 shrink-0">
+        <Async store={accounts.get(participant)}>
           {#snippet awaited(account)}
-            <Picture {account} class="size-8" />
+            <div class="not-first:-ml-3 shrink-0">
+              <Picture {account} class="size-8" />
+            </div>
           {/snippet}
         </Async>
       {/each}

@@ -6,3 +6,9 @@ tops:
   empty: So far, nobody owes you and you owe nothing.
   negative: "You owe mostly to:"
   positive: "Owe you the most:"
+groups:
+  title: Belongs to groups
+  empty: Not a member of any group.
+expenses:
+  title: Evns
+  empty: No shared expenses so far.

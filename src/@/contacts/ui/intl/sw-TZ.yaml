@@ -6,3 +6,9 @@ tops:
   empty: Hadi sasa, hakuna anayekudai na wewe haumdai mtu yeyote.
   negative: "Una deni mkubwa hasa kwa:"
   positive: "Waliokukudai zaidi:"
+groups:
+  title: Anahusishwa na vikundi
+  empty: Sio mwanachama wa kundi lolote.
+expenses:
+  title: Evns
+  empty: Hakuna gharama za pamoja hadi sasa.

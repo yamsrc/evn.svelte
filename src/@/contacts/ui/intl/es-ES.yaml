@@ -6,3 +6,9 @@ tops:
   empty: Hasta ahora, nadie te debe nada y tú no debes nada.
   negative: "Principalmente debes a:"
   positive: "Quienes más te deben:"
+groups:
+  title: Pertenece a grupos
+  empty: No eres miembro de ningún grupo.
+expenses:
+  title: Evns
+  empty: No hay gastos compartidos hasta ahora.

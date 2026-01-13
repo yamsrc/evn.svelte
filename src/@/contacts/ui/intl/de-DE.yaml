@@ -6,3 +6,9 @@ tops:
   empty: Bisher schuldet dir niemand etwas und du schuldest auch nichts.
   negative: "Du schuldest hauptsächlich:"
   positive: "Wer dir am meisten schuldet:"
+groups:
+  title: Gehört zu Gruppen
+  empty: Du bist in keiner Gruppe Mitglied.
+expenses:
+  title: Evns
+  empty: Bisher keine geteilten Ausgaben.

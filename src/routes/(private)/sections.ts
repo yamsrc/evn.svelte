@@ -5,7 +5,7 @@ import type { Dictionary } from '$lib/intl'
 export const sections = (dict: Dictionary): Section[] => [
   {
     id: 'home',
-    href: ['/'],
+    href: '/',
     label: dict.nav.home,
     Icon: LayoutGrid,
   },

@@ -107,6 +107,8 @@ account:
     sorry: 떠나신다니 정말 아쉽습니다.
     hold: 길게 눌러서 확인
     link: 계정 삭제
+favorites:
+  title: 즐겨찾기
 expenses:
   spendings:
     title: 지출

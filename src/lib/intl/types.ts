@@ -140,6 +140,9 @@ export type Dictionary = {
           link: string
         }
       }
+      favorites: {
+        title: string
+      }
       expenses: {
         spendings: {
           title: string

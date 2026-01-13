@@ -12,7 +12,7 @@
 
   let open = $state(true)
 
-  const selectable = $derived(!!selection)
+  const selectable = $derived(selection !== undefined)
 
   function onselect(id: string, selected: boolean) {
     if (!selection) return

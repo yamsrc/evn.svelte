@@ -6,3 +6,9 @@ tops:
   empty: 今のところ、誰もあなたに借りはなく、あなたも誰にも借りはありません。
   negative: 主に借りている相手：
   positive: "あなたに最も多く借りている人:"
+groups:
+  title: 所属グループ
+  empty: どのグループにも所属していません。
+expenses:
+  title: Evns
+  empty: これまでに共有された支出はありません。
