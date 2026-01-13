@@ -8,8 +8,10 @@
 
   const { account, autofocus }: { account: Account; autofocus?: boolean } = $props()
 
-  let name = $state<string>('')
-  let picture = $state<string>(pickpic())
+  // svelte-ignore state_referenced_locally
+  let name = $state<string>(account.name ?? '')
+  // svelte-ignore state_referenced_locally
+  let picture = $state<string>(account.picture ?? pickpic())
   let busy = $state(false)
 
   async function save(value: { name: string; picture: string }) {
