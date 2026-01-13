@@ -18,13 +18,7 @@
     busy = false
   }
 
-  async function onclick() {
-    if (busy || name.trim() === '') return
-
-    await save({ name, picture })
-  }
-
-  async function onchange(_value: string) {
+  async function submit() {
     if (busy || name.trim() === '') return
 
     await save({ name, picture })
@@ -41,13 +35,13 @@
         placeholder={$dict.form.enterName}
         {autofocus}
         autocomplete="given-name"
-        {onchange}
+        onchange={submit}
       />
       <Cosmetics.Note>{$dict.onboarding.name.description}</Cosmetics.Note>
     </div>
   </Cosmetics.Content>
-  <Cosmetics.Actions label={$dict.actions.continue} {busy} {onclick}>
-    <Button size="lg" class="w-full" disabled={busy || !name.trim()} {onclick}>
+  <Cosmetics.Actions label={$dict.actions.continue} {busy}>
+    <Button size="lg" class="w-full" disabled={busy || !name.trim()} onclick={submit}>
       {$dict.actions.continue}
       <ArrowRight size={16} />
     </Button>
