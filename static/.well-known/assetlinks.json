@@ -4,7 +4,10 @@
     "target": {
       "namespace": "android_app",
       "package_name": "com.evnapp",
-      "sha256_cert_fingerprints": ["38:7A:A5:97:92:C2:41:FE:09:F0:BD:90:5C:5B:8D:33:41:63:D6:45:BA:93:9A:89:BC:66:E6:AE:AB:32:5C:D4"]
+      "sha256_cert_fingerprints": [
+        "C5:85:11:B8:61:89:E9:B8:12:34:D7:05:9E:6C:32:F8:68:EF:C8:8E:6B:FA:DD:E6:16:24:4C:5F:11:B2:15:6B",
+        "38:7A:A5:97:92:C2:41:FE:09:F0:BD:90:5C:5B:8D:33:41:63:D6:45:BA:93:9A:89:BC:66:E6:AE:AB:32:5C:D4"
+      ]
     }
   }
 ]
