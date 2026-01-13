@@ -49,7 +49,11 @@
               {/snippet}
             </Async>
           </div>
-          <Amount class={amountClass} bind:value={value.participants[id].amount} />
+          <Amount
+            id={`expenses-participant-amount-${i}`}
+            class={amountClass}
+            bind:value={value.participants[id].amount}
+          />
         </div>
       {/each}
 

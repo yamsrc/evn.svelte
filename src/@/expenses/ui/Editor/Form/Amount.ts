@@ -3,4 +3,5 @@ export interface Props {
   placeholder?: string
   class?: string
   oninput?: (value: number) => void
+  id?: string
 }
