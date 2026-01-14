@@ -16,4 +16,5 @@ export interface Context {
   readonly total: number
   readonly paid: number
   readonly overpaid: number
+  shares: Record<string, number>
 }

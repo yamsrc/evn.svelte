@@ -8,7 +8,7 @@
   import { numbers } from '@/expenses'
   import { setContext } from './Context'
   import Description from './Description.svelte'
-  import { normalize, type Props, type Value } from './Form'
+  import { normalize, share, type Props, type Value } from './Form'
   import { autoeffects } from './Form'
   import Participants from './Participants.svelte'
   import PayerSelect from './PayerSelect.svelte'
@@ -20,7 +20,6 @@
 
   async function submit() {
     if (total !== numbers.total(value)) {
-      console.log('total mismatch', total, numbers.total(value))
       error = true
 
       setTimeout(() => {
@@ -47,6 +46,7 @@
   const split = $derived(payers.length > 1)
   const paid = $derived(numbers.paid(value))
   const overpaid = $derived(numbers.overpaid(value))
+  let shares = $state(share(value))
 
   setContext({
     get payers() {
@@ -63,6 +63,12 @@
     },
     get overpaid() {
       return overpaid
+    },
+    get shares() {
+      return shares
+    },
+    set shares(value) {
+      shares = value
     },
   })
 

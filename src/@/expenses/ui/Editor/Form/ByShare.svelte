@@ -10,9 +10,9 @@
   import { Picture } from '@/accounts/ui'
   import { account as me } from '@/iam'
   import Amount from './Amount.svelte'
-  import { split, type Props } from './ByShare'
   import { getContext } from './Context'
   import ShareAmount from './ShareAmount.svelte'
+  import type { Props } from './ByShare'
 
   const nameClass = 'text-start text-base font-normal flex-1 min-w-0 flex'
   const amountClass = 'min-w-24 max-w-48 flex-1'
@@ -26,14 +26,15 @@
 
   const participants = $derived(Object.keys(value.participants))
 
-  const shares = $state(split(value))
-
   $effect(() => {
-    const parts = Object.values(shares).reduce((acc, share) => acc + share, 0)
+    const parts = Object.values(ctx.shares).reduce((acc, share) => acc + share, 0)
+
+    if (parts === 0) return
+
     let sum = 0
 
     for (const [i, id] of participants.entries()) {
-      const share = shares[id] ?? 0
+      const share = ctx.shares[id] ?? 0
       const amount = Math.floor((total / parts) * share)
       const last = i === participants.length - 1
 
@@ -69,7 +70,7 @@
         id={`expenses-participant-share-${i}`}
         class={amountClass}
         amount={value.participants[id]?.amount ?? 0}
-        bind:share={shares[id]} />
+        bind:share={ctx.shares[id]} />
     </div>
   {/each}
 
