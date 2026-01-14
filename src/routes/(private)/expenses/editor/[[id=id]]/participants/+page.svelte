@@ -9,10 +9,10 @@
   import { contacts } from '@/contacts'
   import { Contacts } from '@/contacts/ui'
   import { CreateDialog } from '@/contacts/ui'
+  import { numbers, split, type Participant } from '@/expenses'
   import { Editor } from '@/expenses/ui'
   import { groups } from '@/groups'
   import { Groups } from '@/groups/ui'
-  import type { Participant } from '@/expenses'
 
   const ctx = Editor.getContext()
 
@@ -28,6 +28,14 @@
       (id) => $groups.find((g) => g.id === id)?.identities ?? [],
     )
 
+    const existingParticipantIds = Object.keys(ctx.value.participants)
+
+    const even =
+      existingParticipantIds.length > 0 &&
+      split.isEvenlySplit(ctx.value.participants, existingParticipantIds)
+
+    const total = numbers.total(ctx.value)
+
     const participants: Record<string, Participant> = Object.fromEntries(
       [...contactIds, ...groupIds]
         .filter(notParticipant)
@@ -37,6 +45,13 @@
     ctx.value.participants = {
       ...ctx.value.participants,
       ...participants,
+    }
+
+    if (even && total > 0) {
+      const splitAmounts = split.splitEvenly(total, Object.keys(ctx.value.participants))
+
+      for (const [id, amount] of Object.entries(splitAmounts))
+        ctx.value.participants[id].amount = amount
     }
 
     await back('..')
@@ -69,14 +84,12 @@
   class="
     sticky bottom-26 z-10
     flex items-center justify-evenly gap-2
-    "
->
+    ">
   <Button
     id="expenses-add-participants-add-button"
     size="lg"
     class="flex-1"
-    onclick={addParticipants}
-  >
+    onclick={addParticipants}>
     {$dict.actions.addSelected}
   </Button>
   <CreateDialog class={buttonVariants({ size: 'lg', variant: 'secondary', class: 'flex-1' })} />
