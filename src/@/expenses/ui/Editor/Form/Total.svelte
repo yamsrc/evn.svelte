@@ -10,11 +10,11 @@
   const participantIds = $derived(Object.keys(value.participants))
   const isEvenlySplit = $derived(numbers.even(value.participants, participantIds))
 
-  function onTotalChange(newTotal: number) {
-    total = newTotal
+  function oninput(amount: number) {
+    total = amount
 
     if (isEvenlySplit && participantIds.length > 0) {
-      const splitAmounts = numbers.split(newTotal, participantIds)
+      const splitAmounts = numbers.split(amount, participantIds)
 
       for (const [id, amount] of Object.entries(splitAmounts))
         value.participants[id].amount = amount
@@ -25,6 +25,6 @@
 <Section class="flex flex-col gap-1.5">
   <div class="flex items-center gap-4 min-h-12">
     <h2>{$dict.expenses.spendings.total}</h2>
-    <Amount id="expenses-total-input" class="min-w-32" value={total} oninput={onTotalChange} />
+    <Amount id="expenses-total-input" class="min-w-32" value={total} {oninput} />
   </div>
 </Section>
