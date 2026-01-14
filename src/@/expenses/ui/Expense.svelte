@@ -5,8 +5,7 @@
   import { accounts } from '@/accounts'
   import { Picture } from '@/accounts/ui'
   import { Balance } from '@/app/ui'
-  import { total } from '@/expenses'
-  import { owe } from '@/expenses'
+  import { numbers, owe } from '@/expenses'
   import { account } from '@/iam'
   import type { Props } from './Expense'
 
@@ -18,15 +17,14 @@
 <Button
   href={`/expenses/editor/${expense.id}/`}
   variant="outline"
-  class="px-4 py-3 h-fit flex flex-col gap-3 font-normal"
->
+  class="px-4 py-3 h-fit flex flex-col gap-3 font-normal">
   <div class="w-full flex justify-between items-center">
     <div class="flex flex-col items-start">
       <div>{expense.title}</div>
       <div class="text-sm text-muted-foreground">{expense.location}</div>
     </div>
     <div class="flex flex-col items-end">
-      <Balance total={total(expense)} class="flex-col-reverse items-end" />
+      <Balance total={numbers.total(expense)} class="flex-col-reverse items-end" />
     </div>
   </div>
   <Separator />
@@ -49,7 +47,6 @@
     </div>
     <Balance
       balance={owe(expense.participants, expense.extras, $account?.id)}
-      class="flex-col-reverse items-end"
-    />
+      class="flex-col-reverse items-end" />
   </div>
 </Button>

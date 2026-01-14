@@ -3,18 +3,16 @@
   import { Section } from '@/app/ui'
   import { split } from '@/expenses'
   import Amount from './Amount.svelte'
-  import { getContext } from './Context'
   import type { Props } from './Total'
 
-  const { value = $bindable() }: Props = $props()
-  const ctx = getContext()
-  const total = $derived(ctx.total)
+  let { value = $bindable(), total = $bindable() }: Props = $props()
 
   const participantIds = $derived(Object.keys(value.participants))
   const isEvenlySplit = $derived(split.isEvenlySplit(value.participants, participantIds))
 
   function onTotalChange(newTotal: number) {
-    // Only update if amounts are currently evenly split
+    total = newTotal
+
     if (isEvenlySplit && participantIds.length > 0) {
       const splitAmounts = split.splitEvenly(newTotal, participantIds)
 

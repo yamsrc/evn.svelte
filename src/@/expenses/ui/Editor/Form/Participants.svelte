@@ -5,6 +5,7 @@
   import { TextEllipsis } from '$com/text-ellipsis'
   import { dict, locale } from '$lib/intl'
   import { currency } from '$lib/tools'
+  import { cn } from '$lib/utils'
   import { Button } from '$ui/button'
   import * as Card from '$ui/card'
   import { accounts } from '@/accounts'
@@ -18,7 +19,7 @@
   const nameClass = 'text-start text-base font-normal flex-1 min-w-0 flex'
   const amountClass = 'min-w-24 max-w-28 flex-1'
 
-  const { value = $bindable() }: Props = $props()
+  const { value = $bindable(), error = $bindable(false) }: Props = $props()
   const ctx = getContext()
   const paid = $derived(ctx.paid)
   const total = $derived(ctx.total)
@@ -27,7 +28,7 @@
   const participants = $derived(Object.keys(value.participants))
 </script>
 
-<Section class="flex flex-col gap-1.5 -mt-3">
+<Section class={cn('flex flex-col gap-1.5 -mt-3', { shake: error })}>
   <Card.Root class="bg-background p-4 relative">
     <div
       class="absolute -top-[0.4rem] right-4 size-3 bg-background border-t border-r border-border -rotate-45">
@@ -100,3 +101,45 @@
     </Card.Content>
   </Card.Root>
 </Section>
+
+<style>
+  :global(.shake) {
+    animation: shake 0.6s ease-in-out;
+  }
+
+  @keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+    10% {
+      transform: translateX(-12px);
+    }
+    20% {
+      transform: translateX(12px);
+    }
+    30% {
+      transform: translateX(-8px);
+    }
+    40% {
+      transform: translateX(8px);
+    }
+    50% {
+      transform: translateX(-4px);
+    }
+    60% {
+      transform: translateX(4px);
+    }
+    70% {
+      transform: translateX(-2px);
+    }
+    80% {
+      transform: translateX(2px);
+    }
+    90% {
+      transform: translateX(-1px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+</style>

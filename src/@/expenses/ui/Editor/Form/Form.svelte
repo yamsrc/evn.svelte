@@ -16,8 +16,19 @@
 
   let { value = $bindable<Value>(), onsubmit: callback }: Props = $props()
   let busy = $state(false)
+  let error = $state(false)
 
   async function submit() {
+    if (total !== numbers.total(value)) {
+      error = true
+
+      setTimeout(() => {
+        error = false
+      }, 600)
+
+      return
+    }
+
     busy = true
 
     const normalized = normalize(value)
@@ -31,8 +42,8 @@
     Object.keys(value.participants).filter((id) => value.participants[id].paid !== undefined),
   )
 
+  let total = $state(numbers.total(value))
   const split = $derived(payers.length > 1)
-  const total = $derived(numbers.total(value))
   const paid = $derived(numbers.paid(value))
   const overpaid = $derived(numbers.overpaid(value))
 
@@ -65,9 +76,9 @@
 
   <Separator />
 
-  <Total bind:value />
+  <Total bind:value bind:total />
 
-  <Participants bind:value />
+  <Participants bind:value bind:error />
 
   <PayerSelect bind:value />
 
