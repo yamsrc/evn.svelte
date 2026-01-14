@@ -1,9 +1,9 @@
 <script lang="ts">
-  import { dict } from '$lib/intl'
   import { cn } from '$lib/utils'
   import * as Card from '$ui/card'
   import * as Tabs from '$ui/tabs'
   import { Section } from '@/app/ui'
+  import { dict } from '@/expenses/ui/intl'
   import ByShare from './ByShare.svelte'
   import BySum from './BySum.svelte'
   import type { Props } from './Participants'
@@ -11,10 +11,6 @@
   let { value = $bindable(), error = $bindable(false) }: Props = $props()
 
   let tab = $state<'sums' | 'shares'>('sums')
-
-  const tabs = $derived(
-    ($dict.expenses.participants as any).tabs ?? { sums: 'By sums', shares: 'By shares' },
-  )
 </script>
 
 <Section class={cn('flex flex-col gap-1.5 -mt-3', { shake: error })}>
@@ -26,10 +22,10 @@
       <Tabs.Root bind:value={tab}>
         <Tabs.List>
           <Tabs.Trigger value="sums">
-            {tabs.sums}
+            {$dict.participants.tabs.sums}
           </Tabs.Trigger>
           <Tabs.Trigger value="shares">
-            {tabs.shares}
+            {$dict.participants.tabs.shares}
           </Tabs.Trigger>
         </Tabs.List>
         <Tabs.Content value="sums">
