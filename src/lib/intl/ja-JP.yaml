@@ -18,6 +18,7 @@ actions:
   search: 検索
   save: 保存
   create: 作成
+  noResults: 結果が見つかりませんでした
 nav:
   home: ホーム
   profile: 私

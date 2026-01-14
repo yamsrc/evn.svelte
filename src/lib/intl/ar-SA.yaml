@@ -18,6 +18,7 @@ actions:
   search: بحث
   save: حفظ
   create: إنشاء
+  noResults: لم يتم العثور على نتائج
 nav:
   home: الرئيسية
   profile: أنا

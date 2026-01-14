@@ -39,6 +39,8 @@ inputs:
       input: Save
     create:
       input: Create
+    noResults:
+      input: No results found
   nav:
     home:
       input: Home

@@ -18,6 +18,7 @@ actions:
   search: Tafuta
   save: Hifadhi
   create: Unda
+  noResults: Hakuna matokeo yaliyopatikana
 nav:
   home: Mwanzo
   profile: Mimi

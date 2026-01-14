@@ -18,6 +18,7 @@ actions:
   search: खोजें
   save: सहेजें
   create: सृजन करें
+  noResults: कोई परिणाम नहीं मिला
 nav:
   home: मुख्य पृष्ठ
   profile: मैं

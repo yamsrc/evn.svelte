@@ -18,6 +18,7 @@ actions:
   search: Suchen
   save: Speichern
   create: Erstellen
+  noResults: Keine Ergebnisse gefunden
 nav:
   home: Startseite
   profile: Ich

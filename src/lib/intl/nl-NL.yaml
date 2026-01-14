@@ -18,6 +18,7 @@ actions:
   search: Zoeken
   save: Opslaan
   create: Aanmaken
+  noResults: Geen resultaten gevonden
 nav:
   home: Home
   profile: Ik

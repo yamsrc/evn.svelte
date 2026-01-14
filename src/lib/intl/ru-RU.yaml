@@ -18,6 +18,7 @@ actions:
   search: Поиск
   save: Сохранить
   create: Создать
+  noResults: Результаты не найдены
 nav:
   home: Главная
   profile: Я

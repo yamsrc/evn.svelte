@@ -18,6 +18,7 @@ actions:
   search: Buscar
   save: Guardar
   create: Crear
+  noResults: No se encontraron resultados
 nav:
   home: Inicio
   profile: Yo

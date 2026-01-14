@@ -4,7 +4,7 @@
   import { Input } from '$ui/input'
   import { Section } from '@/app/ui'
   import { Header } from '@/app/ui'
-  import { expenses } from '@/expenses'
+  import { expenses, filter } from '@/expenses'
   import { Expenses, Create } from '@/expenses/ui'
   import { account } from '@/iam'
 
@@ -19,11 +19,18 @@
 
 <Async store={expenses}>
   {#snippet awaited(expenses)}
+    {@const filteredExpenses = filter(expenses, search)}
+
     {#if expenses.length}
       <Section>
         <Input type="text" placeholder={$dict.actions.search} bind:value={search} />
       </Section>
       <Expenses {expenses} {search} />
+      {#if search && filteredExpenses.length === 0}
+        <Section>
+          <p class="text-muted-foreground text-center">{$dict.actions.noResults}</p>
+        </Section>
+      {/if}
     {:else if $account}
       <Section class="m-auto flex flex-col items-center justify-center gap-2">
         <h2>{$dict.expenses.empty.title}</h2>

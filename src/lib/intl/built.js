@@ -24,7 +24,8 @@ export const dictionaries = {
       "cancel": "إلغاء",
       "search": "بحث",
       "save": "حفظ",
-      "create": "إنشاء"
+      "create": "إنشاء",
+      "noResults": "لم يتم العثور على نتائج"
     },
     "nav": {
       "home": "الرئيسية",
@@ -210,7 +211,8 @@ export const dictionaries = {
       "cancel": "Abbrechen",
       "search": "Suchen",
       "save": "Speichern",
-      "create": "Erstellen"
+      "create": "Erstellen",
+      "noResults": "Keine Ergebnisse gefunden"
     },
     "nav": {
       "home": "Startseite",
@@ -396,7 +398,8 @@ export const dictionaries = {
       "cancel": "Cancel",
       "search": "Search",
       "save": "Save",
-      "create": "Create"
+      "create": "Create",
+      "noResults": "No results found"
     },
     "nav": {
       "home": "Home",
@@ -582,7 +585,8 @@ export const dictionaries = {
       "cancel": "Cancelar",
       "search": "Buscar",
       "save": "Guardar",
-      "create": "Crear"
+      "create": "Crear",
+      "noResults": "No se encontraron resultados"
     },
     "nav": {
       "home": "Inicio",
@@ -768,7 +772,8 @@ export const dictionaries = {
       "cancel": "Annuler",
       "search": "Rechercher",
       "save": "Enregistrer",
-      "create": "Créer"
+      "create": "Créer",
+      "noResults": "Aucun résultat trouvé"
     },
     "nav": {
       "home": "Accueil",
@@ -954,7 +959,8 @@ export const dictionaries = {
       "cancel": "रद्द करें",
       "search": "खोजें",
       "save": "सहेजें",
-      "create": "सृजन करें"
+      "create": "सृजन करें",
+      "noResults": "कोई परिणाम नहीं मिला"
     },
     "nav": {
       "home": "मुख्य पृष्ठ",
@@ -1140,7 +1146,8 @@ export const dictionaries = {
       "cancel": "Annulla",
       "search": "Cerca",
       "save": "Salva",
-      "create": "Crea"
+      "create": "Crea",
+      "noResults": "Nessun risultato trovato"
     },
     "nav": {
       "home": "Home",
@@ -1326,7 +1333,8 @@ export const dictionaries = {
       "cancel": "キャンセル",
       "search": "検索",
       "save": "保存",
-      "create": "作成"
+      "create": "作成",
+      "noResults": "結果が見つかりませんでした"
     },
     "nav": {
       "home": "ホーム",
@@ -1512,7 +1520,8 @@ export const dictionaries = {
       "cancel": "취소",
       "search": "검색",
       "save": "저장",
-      "create": "생성"
+      "create": "생성",
+      "noResults": "결과를 찾을 수 없습니다"
     },
     "nav": {
       "home": "홈",
@@ -1698,7 +1707,8 @@ export const dictionaries = {
       "cancel": "Annuleren",
       "search": "Zoeken",
       "save": "Opslaan",
-      "create": "Aanmaken"
+      "create": "Aanmaken",
+      "noResults": "Geen resultaten gevonden"
     },
     "nav": {
       "home": "Home",
@@ -1884,7 +1894,8 @@ export const dictionaries = {
       "cancel": "Отмена",
       "search": "Поиск",
       "save": "Сохранить",
-      "create": "Создать"
+      "create": "Создать",
+      "noResults": "Результаты не найдены"
     },
     "nav": {
       "home": "Главная",
@@ -2070,7 +2081,8 @@ export const dictionaries = {
       "cancel": "Ghairi",
       "search": "Tafuta",
       "save": "Hifadhi",
-      "create": "Unda"
+      "create": "Unda",
+      "noResults": "Hakuna matokeo yaliyopatikana"
     },
     "nav": {
       "home": "Mwanzo",
@@ -2256,7 +2268,8 @@ export const dictionaries = {
       "cancel": "İptal",
       "search": "Ara",
       "save": "Kaydet",
-      "create": "Oluştur"
+      "create": "Oluştur",
+      "noResults": "Sonuç bulunamadı"
     },
     "nav": {
       "home": "Ana Sayfa",
@@ -2442,7 +2455,8 @@ export const dictionaries = {
       "cancel": "Скасувати",
       "search": "Пошук",
       "save": "Зберегти",
-      "create": "Створити"
+      "create": "Створити",
+      "noResults": "Результатів не знайдено"
     },
     "nav": {
       "home": "Головна",
@@ -2628,7 +2642,8 @@ export const dictionaries = {
       "cancel": "取消",
       "search": "搜索",
       "save": "保存",
-      "create": "创建"
+      "create": "创建",
+      "noResults": "未找到结果"
     },
     "nav": {
       "home": "首页",

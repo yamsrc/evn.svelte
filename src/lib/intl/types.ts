@@ -29,6 +29,7 @@ export type Dictionary = {
         search: string
         save: string
         create: string
+        noResults: string
       }
       nav: {
         home: string

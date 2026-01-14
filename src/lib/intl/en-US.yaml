@@ -18,6 +18,7 @@ actions:
   search: Search
   save: Save
   create: Create
+  noResults: No results found
 nav:
   home: Home
   profile: Me

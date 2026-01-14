@@ -5,12 +5,12 @@
   import { Input } from '$ui/input'
   import { Section } from '@/app/ui'
   import { Header } from '@/app/ui'
-  import { contacts } from '@/contacts'
+  import { contacts, filter as filterContacts } from '@/contacts'
   import { Invite } from '@/contacts/ui'
   import { Contacts } from '@/contacts/ui'
   import { favorites } from '@/favorites'
   import { Favorites } from '@/favorites/ui'
-  import { groups } from '@/groups'
+  import { groups, filter as filterGroups } from '@/groups'
   import { Groups } from '@/groups/ui'
   import { account } from '@/iam'
 
@@ -30,6 +30,10 @@
 
 <Async store={combined(contacts, favorites)}>
   {#snippet awaited([contacts, favorites])}
+    {@const filteredGroups = filterGroups($groups, search)}
+    {@const filteredContacts = filterContacts(contacts, search)}
+    {@const hasSearchableResults = filteredGroups.length > 0 || filteredContacts.length > 0}
+
     {#if $groups.length || contacts.length || favorites.length}
       <Section>
         <Input type="text" placeholder={$dict.actions.search} bind:value={search} />
@@ -45,6 +49,12 @@
 
       {#if contacts.length}
         <Contacts title={$dict.contacts.all} {contacts} {search} actionable />
+      {/if}
+
+      {#if search && !hasSearchableResults}
+        <Section>
+          <p class="text-muted-foreground text-center">{$dict.actions.noResults}</p>
+        </Section>
       {/if}
     {:else if $account}
       <Section class="m-auto flex flex-col items-center justify-center gap-2">

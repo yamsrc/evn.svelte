@@ -18,6 +18,7 @@ actions:
   search: 搜索
   save: 保存
   create: 创建
+  noResults: 未找到结果
 nav:
   home: 首页
   profile: 我
