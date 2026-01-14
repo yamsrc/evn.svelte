@@ -22,8 +22,7 @@
   {#if title}
     <div class="flex items-center gap-2">
       <div
-        class={cn(buttonVariants({ variant: 'secondary', size: 'icon' }), 'rounded-full size-6')}
-      >
+        class={cn(buttonVariants({ variant: 'secondary', size: 'icon' }), 'rounded-full size-6')}>
         <Star size={16} />
       </div>
       <h2>{title}</h2>

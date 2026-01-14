@@ -8,7 +8,7 @@
   import { contacts, filter as filterContacts } from '@/contacts'
   import { Invite } from '@/contacts/ui'
   import { Contacts } from '@/contacts/ui'
-  import { favorites } from '@/favorites'
+  import { favorites, filter as filterFavorites } from '@/favorites'
   import { Favorites } from '@/favorites/ui'
   import { groups, filter as filterGroups } from '@/groups'
   import { Groups } from '@/groups/ui'
@@ -32,26 +32,28 @@
   {#snippet awaited([contacts, favorites])}
     {@const filteredGroups = filterGroups($groups, search)}
     {@const filteredContacts = filterContacts(contacts, search)}
-    {@const hasSearchableResults = filteredGroups.length > 0 || filteredContacts.length > 0}
+    {@const filteredFavorites = filterFavorites(favorites, contacts, search)}
+    {@const hasResults =
+      filteredGroups.length > 0 || filteredContacts.length > 0 || filteredFavorites.length > 0}
 
     {#if $groups.length || contacts.length || favorites.length}
       <Section>
         <Input type="text" placeholder={$dict.actions.search} bind:value={search} />
       </Section>
 
-      {#if favorites.length}
-        <Favorites title={$dict.favorites.title} {favorites} />
+      {#if filteredFavorites.length}
+        <Favorites title={$dict.favorites.title} favorites={filteredFavorites} />
       {/if}
 
-      {#if $groups.length}
-        <Groups title={$dict.groups.title} groups={$groups} {search} />
+      {#if filteredGroups.length}
+        <Groups title={$dict.groups.title} groups={filteredGroups} />
       {/if}
 
-      {#if contacts.length}
-        <Contacts title={$dict.contacts.all} {contacts} {search} actionable />
+      {#if filteredContacts.length}
+        <Contacts title={$dict.contacts.all} contacts={filteredContacts} actionable />
       {/if}
 
-      {#if search && !hasSearchableResults}
+      {#if search && !hasResults}
         <Section>
           <p class="text-muted-foreground text-center">{$dict.actions.noResults}</p>
         </Section>

@@ -4,5 +4,4 @@ export interface Props {
   groups: Group[]
   title?: string
   selection?: Set<string>
-  search?: string
 }

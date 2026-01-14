@@ -9,9 +9,9 @@
   import { Input } from '$ui/input'
   import { Section } from '@/app/ui'
   import { Header } from '@/app/ui'
-  import { contacts } from '@/contacts'
+  import { contacts, filter as filterContacts } from '@/contacts'
   import { Contacts } from '@/contacts/ui'
-  import { favorites } from '@/favorites'
+  import { favorites, filter as filterFavorites } from '@/favorites'
   import { Favorites } from '@/favorites/ui'
   import { groups, add } from '@/groups'
   import Invite from './Invite.svelte'
@@ -53,29 +53,39 @@
         <Input type="text" placeholder={$dict.actions.search} bind:value={search} />
       </Section>
 
-      {@const favs = favorites.filter((f) => !group.identities.includes(f.favorite))}
-      {#if favs.length > 0}
+      {@const availableFavs = favorites.filter((f) => !group.identities.includes(f.favorite))}
+      {@const filteredFavs = filterFavorites(availableFavs, contacts, search)}
+      {#if filteredFavs.length > 0}
         <Favorites
           title={$dict.favorites.title}
-          favorites={favs}
-          bind:selection={favoritesSelection}
-        />
+          favorites={filteredFavs}
+          bind:selection={favoritesSelection} />
       {/if}
 
-      {@const list = contacts.filter((c) => !group.identities.includes(c.identity))}
-      <Contacts
-        contacts={list}
-        title={$dict.contacts.all}
-        bind:selection={contactsSelection}
-        {search}
-      />
+      {@const availableContacts = contacts.filter((c) => !group.identities.includes(c.identity))}
+      {@const filteredContacts = filterContacts(availableContacts, search)}
+      {#if filteredContacts.length > 0}
+        <Contacts
+          contacts={filteredContacts}
+          title={$dict.contacts.all}
+          bind:selection={contactsSelection} />
+      {/if}
+
+      {@const hasResults = filteredFavs.length > 0 || filteredContacts.length > 0}
+      {#if search && !hasResults}
+        <Section>
+          <p class="text-muted-foreground text-center">{$dict.actions.noResults}</p>
+        </Section>
+      {/if}
+
       <Section class="flex gap-2 w-full items-center justify-stretch">
         <Button
           class="flex-1"
           disabled={(contactsSelection.size === 0 && favoritesSelection.size === 0) || busy}
           onclick={addMembers}
-          size="lg">{$dict.actions.addSelected}</Button
-        >
+          size="lg">
+          {$dict.actions.addSelected}
+        </Button>
         <Invite {id} />
       </Section>
     {/if}
