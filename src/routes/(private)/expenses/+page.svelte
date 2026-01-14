@@ -20,14 +20,14 @@
 <Async store={expenses}>
   {#snippet awaited(expenses)}
     {@const filteredExpenses = filter(expenses, search)}
-    {@const noResults = filteredExpenses.length === 0}
+    {@const empty = filteredExpenses.length === 0}
 
     {#if expenses.length}
       <Section>
         <Input type="text" placeholder={$dict.actions.search} bind:value={search} />
       </Section>
       <Expenses {expenses} {search} />
-      {#if search && noResults}
+      {#if search && empty}
         <Section>
           <p class="text-muted-foreground text-center">{$dict.actions.noResults}</p>
         </Section>
