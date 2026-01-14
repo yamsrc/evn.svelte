@@ -45,5 +45,85 @@
       "type": "image/png",
       "purpose": "any"
     }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/FeatureGraphic.png",
+      "sizes": "1024x500",
+      "type": "image/png",
+      "platform": "play"
+    },
+    {
+      "src": "/screenshots/01.png",
+      "sizes": "576x1024",
+      "type": "image/png",
+      "platform": "android"
+    },
+    {
+      "src": "/screenshots/01.png",
+      "sizes": "576x1024",
+      "type": "image/png",
+      "platform": "ios"
+    },
+    {
+      "src": "/screenshots/02.png",
+      "sizes": "576x1024",
+      "type": "image/png",
+      "platform": "android"
+    },
+    {
+      "src": "/screenshots/02.png",
+      "sizes": "576x1024",
+      "type": "image/png",
+      "platform": "ios"
+    },
+    {
+      "src": "/screenshots/03.png",
+      "sizes": "576x1024",
+      "type": "image/png",
+      "platform": "android"
+    },
+    {
+      "src": "/screenshots/03.png",
+      "sizes": "576x1024",
+      "type": "image/png",
+      "platform": "ios"
+    },
+    {
+      "src": "/screenshots/04.png",
+      "sizes": "576x1024",
+      "type": "image/png",
+      "platform": "android"
+    },
+    {
+      "src": "/screenshots/04.png",
+      "sizes": "576x1024",
+      "type": "image/png",
+      "platform": "ios"
+    },
+    {
+      "src": "/screenshots/05.png",
+      "sizes": "576x1024",
+      "type": "image/png",
+      "platform": "android"
+    },
+    {
+      "src": "/screenshots/05.png",
+      "sizes": "576x1024",
+      "type": "image/png",
+      "platform": "ios"
+    },
+    {
+      "src": "/screenshots/06.png",
+      "sizes": "576x1024",
+      "type": "image/png",
+      "platform": "android"
+    },
+    {
+      "src": "/screenshots/06.png",
+      "sizes": "576x1024",
+      "type": "image/png",
+      "platform": "ios"
+    }
   ]
 }
