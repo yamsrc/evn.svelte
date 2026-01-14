@@ -5,6 +5,7 @@
   import { accounts } from '@/accounts'
   import { Picture } from '@/accounts/ui'
   import { Section } from '@/app/ui'
+  import { dict as expensesDict } from '@/expenses/ui/intl'
   import { account as me } from '@/iam'
   import { getContext } from './Context'
   import type { Props } from './PayerSelect'
@@ -47,7 +48,7 @@
       </Async>
     {:else}
       <SelectTrigger class="w-full">
-        <span class="text-muted-foreground">Select payer</span>
+        <span class="text-muted-foreground">{$expensesDict.payer.placeholder}</span>
       </SelectTrigger>
     {/if}
     <SelectContent>

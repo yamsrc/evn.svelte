@@ -11,4 +11,7 @@ export type Dictionary = {
         title: string
         empty: string
       }
+      payer: {
+        placeholder: string
+      }
     }

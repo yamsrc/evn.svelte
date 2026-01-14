@@ -3,3 +3,5 @@ recent:
   empty: >-
     Rien ne s'est encore passé. Ajoutez des dépenses ou invitez des amis pour
     lancer les choses.
+payer:
+  placeholder: Sélectionner le payeur

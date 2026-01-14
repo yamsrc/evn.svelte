@@ -3,3 +3,5 @@ recent:
   empty: >-
     Es ist noch nichts passiert. Füge Ausgaben hinzu oder lade Freunde ein, um
     loszulegen.
+payer:
+  placeholder: Zahler auswählen

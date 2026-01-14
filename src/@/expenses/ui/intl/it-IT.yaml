@@ -3,3 +3,5 @@ recent:
   empty: >-
     Non è ancora successo nulla. Aggiungi qualche spesa o invita amici per
     iniziare.
+payer:
+  placeholder: Seleziona il pagatore
