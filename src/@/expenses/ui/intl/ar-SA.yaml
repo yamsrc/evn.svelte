@@ -3,3 +3,7 @@ recent:
   empty: لم يحدث شيء بعد. أضف بعض المصروفات أو ادعُ أصدقاءك لبدء النشاط.
 payer:
   placeholder: اختر الدافع
+participants:
+  tabs:
+    sums: حسب المبالغ
+    shares: حسب الحصص

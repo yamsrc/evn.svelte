@@ -5,3 +5,7 @@ recent:
     started.
 payer:
   placeholder: Select payer
+participants:
+  tabs:
+    sums: By sums
+    shares: By shares

@@ -8,3 +8,9 @@ inputs:
   payer:
     placeholder:
       input: Select payer
+  participants:
+    tabs:
+      sums:
+        input: By sums
+      shares:
+        input: By shares

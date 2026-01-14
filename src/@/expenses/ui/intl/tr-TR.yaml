@@ -5,3 +5,7 @@ recent:
     edin, böylece her şey başlasın.
 payer:
   placeholder: Ödeyeni seç
+participants:
+  tabs:
+    sums: Toplamlara göre
+    shares: Hisselere göre

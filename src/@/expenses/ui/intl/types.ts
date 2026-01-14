@@ -14,4 +14,10 @@ export type Dictionary = {
       payer: {
         placeholder: string
       }
+      participants: {
+        tabs: {
+          sums: string
+          shares: string
+        }
+      }
     }

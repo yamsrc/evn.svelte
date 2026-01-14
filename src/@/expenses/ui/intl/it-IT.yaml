@@ -5,3 +5,7 @@ recent:
     iniziare.
 payer:
   placeholder: Seleziona il pagatore
+participants:
+  tabs:
+    sums: Per somme
+    shares: Per quote

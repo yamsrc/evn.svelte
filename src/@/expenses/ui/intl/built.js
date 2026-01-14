@@ -9,6 +9,12 @@ export const dictionaries = {
     },
     "payer": {
       "placeholder": "اختر الدافع"
+    },
+    "participants": {
+      "tabs": {
+        "sums": "حسب المبالغ",
+        "shares": "حسب الحصص"
+      }
     }
   },
   "de-DE": {
@@ -18,6 +24,12 @@ export const dictionaries = {
     },
     "payer": {
       "placeholder": "Zahler auswählen"
+    },
+    "participants": {
+      "tabs": {
+        "sums": "Nach Beträgen",
+        "shares": "Anhand von Anteilen"
+      }
     }
   },
   "en-US": {
@@ -27,6 +39,12 @@ export const dictionaries = {
     },
     "payer": {
       "placeholder": "Select payer"
+    },
+    "participants": {
+      "tabs": {
+        "sums": "By sums",
+        "shares": "By shares"
+      }
     }
   },
   "es-ES": {
@@ -36,6 +54,12 @@ export const dictionaries = {
     },
     "payer": {
       "placeholder": "Seleccionar pagador"
+    },
+    "participants": {
+      "tabs": {
+        "sums": "Por sumas",
+        "shares": "Por acciones"
+      }
     }
   },
   "fr-FR": {
@@ -45,6 +69,12 @@ export const dictionaries = {
     },
     "payer": {
       "placeholder": "Sélectionner le payeur"
+    },
+    "participants": {
+      "tabs": {
+        "sums": "Par sommes",
+        "shares": "Par parts"
+      }
     }
   },
   "hi-IN": {
@@ -54,6 +84,12 @@ export const dictionaries = {
     },
     "payer": {
       "placeholder": "भुगतानकर्ता चुनें"
+    },
+    "participants": {
+      "tabs": {
+        "sums": "राशि के अनुसार",
+        "shares": "शेयरों के अनुसार"
+      }
     }
   },
   "it-IT": {
@@ -63,6 +99,12 @@ export const dictionaries = {
     },
     "payer": {
       "placeholder": "Seleziona il pagatore"
+    },
+    "participants": {
+      "tabs": {
+        "sums": "Per somme",
+        "shares": "Per quote"
+      }
     }
   },
   "ja-JP": {
@@ -72,6 +114,12 @@ export const dictionaries = {
     },
     "payer": {
       "placeholder": "支払者を選択"
+    },
+    "participants": {
+      "tabs": {
+        "sums": "合計別",
+        "shares": "持分ごとに"
+      }
     }
   },
   "ko-KR": {
@@ -81,6 +129,12 @@ export const dictionaries = {
     },
     "payer": {
       "placeholder": "지불자 선택"
+    },
+    "participants": {
+      "tabs": {
+        "sums": "금액별",
+        "shares": "지분별로"
+      }
     }
   },
   "nl-NL": {
@@ -90,6 +144,12 @@ export const dictionaries = {
     },
     "payer": {
       "placeholder": "Betaler selecteren"
+    },
+    "participants": {
+      "tabs": {
+        "sums": "Op bedragen",
+        "shares": "Op basis van aandelen"
+      }
     }
   },
   "ru-RU": {
@@ -99,6 +159,12 @@ export const dictionaries = {
     },
     "payer": {
       "placeholder": "Выберите плательщика"
+    },
+    "participants": {
+      "tabs": {
+        "sums": "По суммам",
+        "shares": "По долям"
+      }
     }
   },
   "sw-TZ": {
@@ -108,6 +174,12 @@ export const dictionaries = {
     },
     "payer": {
       "placeholder": "Chagua mtoaji wa malipo"
+    },
+    "participants": {
+      "tabs": {
+        "sums": "Kwa jumla",
+        "shares": "Kwa hisa"
+      }
     }
   },
   "tr-TR": {
@@ -117,6 +189,12 @@ export const dictionaries = {
     },
     "payer": {
       "placeholder": "Ödeyeni seç"
+    },
+    "participants": {
+      "tabs": {
+        "sums": "Toplamlara göre",
+        "shares": "Hisselere göre"
+      }
     }
   },
   "uk-UA": {
@@ -126,6 +204,12 @@ export const dictionaries = {
     },
     "payer": {
       "placeholder": "Виберіть платника"
+    },
+    "participants": {
+      "tabs": {
+        "sums": "За сумами",
+        "shares": "За частками"
+      }
     }
   },
   "zh-CN": {
@@ -135,6 +219,12 @@ export const dictionaries = {
     },
     "payer": {
       "placeholder": "选择付款方"
+    },
+    "participants": {
+      "tabs": {
+        "sums": "按金额",
+        "shares": "按份额"
+      }
     }
   }
 };

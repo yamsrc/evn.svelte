@@ -5,3 +5,7 @@ recent:
     बुलाएं।
 payer:
   placeholder: भुगतानकर्ता चुनें
+participants:
+  tabs:
+    sums: राशि के अनुसार
+    shares: शेयरों के अनुसार

@@ -5,3 +5,7 @@ recent:
     lancer les choses.
 payer:
   placeholder: Sélectionner le payeur
+participants:
+  tabs:
+    sums: Par sommes
+    shares: Par parts

@@ -5,3 +5,7 @@ recent:
     gang te komen.
 payer:
   placeholder: Betaler selecteren
+participants:
+  tabs:
+    sums: Op bedragen
+    shares: Op basis van aandelen

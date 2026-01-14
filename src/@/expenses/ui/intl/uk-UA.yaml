@@ -5,3 +5,7 @@ recent:
     розпочати.
 payer:
   placeholder: Виберіть платника
+participants:
+  tabs:
+    sums: За сумами
+    shares: За частками

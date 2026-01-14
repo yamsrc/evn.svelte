@@ -5,3 +5,7 @@ recent:
     начать.
 payer:
   placeholder: Выберите плательщика
+participants:
+  tabs:
+    sums: По суммам
+    shares: По долям
