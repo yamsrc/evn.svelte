@@ -61,20 +61,15 @@
 
     {@const availableGroups = groups.filter(({ identities }) => identities.some(notParticipant))}
     {@const filteredGroups = filterGroups(availableGroups, search)}
-    {#if filteredGroups.length > 0}
-      <Groups title={$dict.groups.title} groups={filteredGroups} bind:selection={groupSelection} />
-    {/if}
-
     {@const availableContacts = contacts.filter(({ identity }) => notParticipant(identity))}
     {@const filteredContacts = filterContacts(availableContacts, search)}
-    {#if filteredContacts.length > 0}
-      <Contacts
-        title={$dict.expenses.participants.title}
-        contacts={filteredContacts}
-        bind:selection />
-    {/if}
-
     {@const hasResults = filteredGroups.length > 0 || filteredContacts.length > 0}
+
+    <Groups title={$dict.groups.title} groups={filteredGroups} bind:selection={groupSelection} />
+    <Contacts
+      title={$dict.expenses.participants.title}
+      contacts={filteredContacts}
+      bind:selection />
     {#if search && !hasResults}
       <Section>
         <p class="text-muted-foreground text-center">{$dict.actions.noResults}</p>

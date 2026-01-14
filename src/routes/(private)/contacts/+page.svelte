@@ -41,17 +41,9 @@
         <Input type="text" placeholder={$dict.actions.search} bind:value={search} />
       </Section>
 
-      {#if filteredFavorites.length}
-        <Favorites title={$dict.favorites.title} favorites={filteredFavorites} />
-      {/if}
-
-      {#if filteredGroups.length}
-        <Groups title={$dict.groups.title} groups={filteredGroups} />
-      {/if}
-
-      {#if filteredContacts.length}
-        <Contacts title={$dict.contacts.all} contacts={filteredContacts} actionable />
-      {/if}
+      <Favorites title={$dict.favorites.title} favorites={filteredFavorites} />
+      <Groups title={$dict.groups.title} groups={filteredGroups} />
+      <Contacts title={$dict.contacts.all} contacts={filteredContacts} actionable />
 
       {#if search && !hasResults}
         <Section>

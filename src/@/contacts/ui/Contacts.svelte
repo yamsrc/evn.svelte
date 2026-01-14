@@ -19,15 +19,17 @@
   }
 </script>
 
-<Section class="flex flex-col gap-1.5" id="contacts-list">
-  {#if title}
-    <h2>{title}</h2>
-  {/if}
-  <div id="contacts-list-content" class="flex flex-col gap-1.5">
-    {#each contacts as contact (contact.id)}
-      {@const selected = selection?.has(contact.identity)}
-      {@const selectedProps = selectable ? { selected, onselect } : undefined}
-      <Panel {contact} {actionable} {...selectedProps} />
-    {/each}
-  </div>
-</Section>
+{#if contacts.length}
+  <Section class="flex flex-col gap-1.5" id="contacts-list">
+    {#if title}
+      <h2>{title}</h2>
+    {/if}
+    <div id="contacts-list-content" class="flex flex-col gap-1.5">
+      {#each contacts as contact (contact.id)}
+        {@const selected = selection?.has(contact.identity)}
+        {@const selectedProps = selectable ? { selected, onselect } : undefined}
+        <Panel {contact} {actionable} {...selectedProps} />
+      {/each}
+    </div>
+  </Section>
+{/if}

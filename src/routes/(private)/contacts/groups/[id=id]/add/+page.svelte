@@ -55,23 +55,18 @@
 
       {@const availableFavs = favorites.filter((f) => !group.identities.includes(f.favorite))}
       {@const filteredFavs = filterFavorites(availableFavs, contacts, search)}
-      {#if filteredFavs.length > 0}
-        <Favorites
-          title={$dict.favorites.title}
-          favorites={filteredFavs}
-          bind:selection={favoritesSelection} />
-      {/if}
-
       {@const availableContacts = contacts.filter((c) => !group.identities.includes(c.identity))}
       {@const filteredContacts = filterContacts(availableContacts, search)}
-      {#if filteredContacts.length > 0}
-        <Contacts
-          contacts={filteredContacts}
-          title={$dict.contacts.all}
-          bind:selection={contactsSelection} />
-      {/if}
-
       {@const hasResults = filteredFavs.length > 0 || filteredContacts.length > 0}
+
+      <Favorites
+        title={$dict.favorites.title}
+        favorites={filteredFavs}
+        bind:selection={favoritesSelection} />
+      <Contacts
+        contacts={filteredContacts}
+        title={$dict.contacts.all}
+        bind:selection={contactsSelection} />
       {#if search && !hasResults}
         <Section>
           <p class="text-muted-foreground text-center">{$dict.actions.noResults}</p>
