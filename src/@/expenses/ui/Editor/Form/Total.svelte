@@ -1,20 +1,20 @@
 <script lang="ts">
   import { dict } from '$lib/intl'
   import { Section } from '@/app/ui'
-  import { split } from '@/expenses'
+  import { numbers } from '@/expenses'
   import Amount from './Amount.svelte'
   import type { Props } from './Total'
 
   let { value = $bindable(), total = $bindable() }: Props = $props()
 
   const participantIds = $derived(Object.keys(value.participants))
-  const isEvenlySplit = $derived(split.isEvenlySplit(value.participants, participantIds))
+  const isEvenlySplit = $derived(numbers.even(value.participants, participantIds))
 
   function onTotalChange(newTotal: number) {
     total = newTotal
 
     if (isEvenlySplit && participantIds.length > 0) {
-      const splitAmounts = split.splitEvenly(newTotal, participantIds)
+      const splitAmounts = numbers.split(newTotal, participantIds)
 
       for (const [id, amount] of Object.entries(splitAmounts))
         value.participants[id].amount = amount

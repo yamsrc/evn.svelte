@@ -9,7 +9,7 @@
   import { contacts } from '@/contacts'
   import { Contacts } from '@/contacts/ui'
   import { CreateDialog } from '@/contacts/ui'
-  import { numbers, split, type Participant } from '@/expenses'
+  import { numbers, type Participant } from '@/expenses'
   import { Editor } from '@/expenses/ui'
   import { groups } from '@/groups'
   import { Groups } from '@/groups/ui'
@@ -32,7 +32,7 @@
 
     const even =
       existingParticipantIds.length > 0 &&
-      split.isEvenlySplit(ctx.value.participants, existingParticipantIds)
+      numbers.even(ctx.value.participants, existingParticipantIds)
 
     const total = numbers.total(ctx.value)
 
@@ -48,7 +48,7 @@
     }
 
     if (even && total > 0) {
-      const splitAmounts = split.splitEvenly(total, Object.keys(ctx.value.participants))
+      const splitAmounts = numbers.split(total, Object.keys(ctx.value.participants))
 
       for (const [id, amount] of Object.entries(splitAmounts))
         ctx.value.participants[id].amount = amount
