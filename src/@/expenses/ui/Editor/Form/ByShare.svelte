@@ -10,14 +10,15 @@
   import { Picture } from '@/accounts/ui'
   import { account as me } from '@/iam'
   import Amount from './Amount.svelte'
+  import { split, type Props } from './ByShare'
   import { getContext } from './Context'
   import ShareAmount from './ShareAmount.svelte'
-  import type { Props } from './ByShare'
 
   const nameClass = 'text-start text-base font-normal flex-1 min-w-0 flex'
   const amountClass = 'min-w-24 max-w-48 flex-1'
 
   let { value = $bindable() }: Props = $props()
+
   const ctx = getContext()
   const paid = $derived(ctx.paid)
   const total = $derived(ctx.total)
@@ -25,39 +26,21 @@
 
   const participants = $derived(Object.keys(value.participants))
 
-  let shares = $state<Record<string, number>>({})
-  let initialized = $state(false)
+  const shares = $state(split(value))
 
-  // Initialize shares from current amounts if empty
   $effect(() => {
-    if (!initialized) {
-      const newShares: Record<string, number> = {}
+    const parts = Object.values(shares).reduce((acc, share) => acc + share, 0)
+    let sum = 0
 
-      for (const id of participants) {
-        const amount = value.participants[id]?.amount ?? 0
-
-        // Initialize with proportional share based on amount
-        newShares[id] = amount > 0 ? Math.max(1, Math.round((amount / (total || 1)) * 10)) : 1
-      }
-
-      shares = newShares
-      initialized = true
-    } else for (const id of participants) if (shares[id] === undefined) shares[id] = 1
-  })
-
-  // Calculate amounts from shares proportionally
-  $effect(() => {
-    if (!initialized) return
-
-    const sumOfShares = Object.values(shares).reduce((acc, share) => acc + share, 0)
-
-    if (sumOfShares === 0) return
-
-    for (const id of participants) {
+    for (const [i, id] of participants.entries()) {
       const share = shares[id] ?? 0
-      const calculatedAmount = Math.round((total * share) / sumOfShares)
+      const amount = Math.floor((total / parts) * share)
+      const last = i === participants.length - 1
 
-      if (value.participants[id]) value.participants[id].amount = calculatedAmount
+      if (last) value.participants[id].amount = total - sum
+      else value.participants[id].amount = amount
+
+      sum += amount
     }
   })
 </script>
@@ -86,7 +69,7 @@
         id={`expenses-participant-share-${i}`}
         class={amountClass}
         amount={value.participants[id]?.amount ?? 0}
-        bind:value={shares[id]} />
+        bind:share={shares[id]} />
     </div>
   {/each}
 

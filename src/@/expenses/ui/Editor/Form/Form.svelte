@@ -20,6 +20,7 @@
 
   async function submit() {
     if (total !== numbers.total(value)) {
+      console.log('total mismatch', total, numbers.total(value))
       error = true
 
       setTimeout(() => {
