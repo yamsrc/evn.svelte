@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { Coins } from '@lucide/svelte'
   import { Plus } from '@lucide/svelte'
   import { Async } from 'svas'
   import { Separator } from '$com/separator'
@@ -21,17 +20,21 @@
 
   const { value = $bindable() }: Props = $props()
   const ctx = getContext()
-  const total = $derived(ctx.total)
   const paid = $derived(ctx.paid)
+  const total = $derived(ctx.total)
   const overpayment = $derived(Math.max(paid - total, 0))
+
+  const participants = $derived(Object.keys(value.participants))
 </script>
 
-<Section class="flex flex-col gap-1.5">
-  <h2>{$dict.expenses.spendings.title}</h2>
-
-  <Card.Root class="bg-background p-4">
+<Section class="flex flex-col gap-1.5 -mt-3">
+  <Card.Root class="bg-background p-4 relative">
+    <div
+      class="absolute -top-[0.4rem] right-4 size-3 bg-background border-t border-r border-border -rotate-45">
+    </div>
     <Card.Content class="space-y-2 p-0">
-      {#each Object.keys(value.participants) as id, i (id)}
+      <!-- Participants -->
+      {#each participants as id, i (id)}
         {#if i > 0}
           <Separator />
         {/if}
@@ -52,8 +55,7 @@
           <Amount
             id={`expenses-participant-amount-${i}`}
             class={amountClass}
-            bind:value={value.participants[id].amount}
-          />
+            bind:value={value.participants[id].amount} />
         </div>
       {/each}
 
@@ -63,13 +65,13 @@
           size="lg"
           variant="secondary"
           class="w-full"
-          href="participants/"
-        >
+          href="participants/">
           <Plus />
           {$dict.expenses.participants.add.label}
         </Button>
       </div>
 
+      <!-- Extras -->
       {#each value.extras as extra, i (i)}
         {#if i > 0}
           <Separator />
@@ -86,8 +88,7 @@
             <Amount
               class={amountClass}
               bind:value={value.extras[i].amount}
-              placeholder={i === value.extras.length - 1 ? currency(overpayment, $locale) : '0'}
-            />
+              placeholder={i === value.extras.length - 1 ? currency(overpayment, $locale) : '0'} />
           </div>
           {#if i === 0}
             <div class="text-sm text-muted-foreground">
@@ -96,17 +97,6 @@
           {/if}
         </div>
       {/each}
-
-      <Separator />
-      <div class="flex items-center justify-between gap-2 min-h-12">
-        <span>{$dict.expenses.spendings.total}</span>
-        <div class="flex items-center gap-2">
-          <span class="text-3xl font-bold">
-            {currency(total, $locale)}
-          </span>
-          <Coins class="text-muted-foreground" size={16} />
-        </div>
-      </div>
     </Card.Content>
   </Card.Root>
 </Section>

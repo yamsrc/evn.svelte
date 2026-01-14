@@ -11,7 +11,8 @@
   import { normalize, type Props, type Value } from './Form'
   import { autoeffects } from './Form'
   import Participants from './Participants.svelte'
-  import Payers from './Payers.svelte'
+  import PayerSelect from './PayerSelect.svelte'
+  import Total from './Total.svelte'
 
   let { value = $bindable<Value>(), onsubmit: callback }: Props = $props()
   let busy = $state(false)
@@ -64,9 +65,11 @@
 
   <Separator />
 
+  <Total bind:value />
+
   <Participants bind:value />
 
-  <Payers bind:value />
+  <PayerSelect bind:value />
 
   <Section class="flex flex-col items-center gap-2">
     <Button
@@ -74,16 +77,14 @@
       type="submit"
       size="lg"
       class="w-full"
-      disabled={busy || !enough}
-    >
+      disabled={busy || !enough}>
       {$dict.expenses.form.save}
     </Button>
     {#if balance !== 0}
       <Balance
         {balance}
         youOwe={$dict.expenses.balance.youWillOwe}
-        youAreOwed={$dict.expenses.balance.youWillBeOwed}
-      />
+        youAreOwed={$dict.expenses.balance.youWillBeOwed} />
     {/if}
   </Section>
 </form>

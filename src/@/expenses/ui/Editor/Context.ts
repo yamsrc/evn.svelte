@@ -38,7 +38,7 @@ function blank(): Value {
     title: '',
     location: '',
     participants,
-    extras: [{ amount: 0 }],
+    extras: [],
   }
 }
 
