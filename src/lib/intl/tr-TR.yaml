@@ -18,7 +18,6 @@ actions:
   search: Ara
   save: Kaydet
   create: Oluştur
-  noResults: Sonuç bulunamadı
 nav:
   home: Ana Sayfa
   profile: Ben
@@ -155,3 +154,5 @@ home:
   title: |-
     !js
     (name) => `Merhaba ${name}!`
+search:
+  empty: Sonuç bulunamadı

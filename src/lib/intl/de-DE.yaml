@@ -18,7 +18,6 @@ actions:
   search: Suchen
   save: Speichern
   create: Erstellen
-  noResults: Keine Ergebnisse gefunden
 nav:
   home: Startseite
   profile: Ich
@@ -159,3 +158,5 @@ home:
   title: |-
     !js
     (name) => `Hallo ${name}!`
+search:
+  empty: Keine Ergebnisse gefunden

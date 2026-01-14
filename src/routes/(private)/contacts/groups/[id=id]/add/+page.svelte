@@ -69,7 +69,7 @@
         bind:selection={contactsSelection} />
       {#if search && empty}
         <Section>
-          <p class="text-muted-foreground text-center">{$dict.actions.noResults}</p>
+          <p class="text-muted-foreground text-center">{$dict.search.empty}</p>
         </Section>
       {/if}
 

@@ -18,7 +18,6 @@ actions:
   search: Пошук
   save: Зберегти
   create: Створити
-  noResults: Результатів не знайдено
 nav:
   home: Головна
   profile: Я
@@ -157,3 +156,5 @@ home:
   title: |-
     !js
     (name) => `Привіт, ${name}!`
+search:
+  empty: Результатів не знайдено

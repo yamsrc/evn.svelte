@@ -18,7 +18,6 @@ actions:
   search: Tafuta
   save: Hifadhi
   create: Unda
-  noResults: Hakuna matokeo yaliyopatikana
 nav:
   home: Mwanzo
   profile: Mimi
@@ -153,3 +152,5 @@ home:
   title: |-
     !js
     (name) => `Habari ${name}!`
+search:
+  empty: Hakuna matokeo yaliyopatikana

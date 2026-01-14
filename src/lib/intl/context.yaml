@@ -39,8 +39,6 @@ inputs:
       input: Save
     create:
       input: Create
-    noResults:
-      input: No results found
   nav:
     home:
       input: Home
@@ -252,6 +250,9 @@ inputs:
     title:
       input: Hi {name}!
       context: make it function
+  search:
+    empty:
+      input: No results found
 mounts:
   iam: ../../@/iam/ui/intl
   feedback: ../../@/feedback/ui/intl

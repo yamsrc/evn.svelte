@@ -18,7 +18,6 @@ actions:
   search: Search
   save: Save
   create: Create
-  noResults: No results found
 nav:
   home: Home
   profile: Me
@@ -155,3 +154,5 @@ home:
   title: |-
     !js
     (name) => `Hi ${name}!`
+search:
+  empty: No results found

@@ -18,7 +18,6 @@ actions:
   search: Cerca
   save: Salva
   create: Crea
-  noResults: Nessun risultato trovato
 nav:
   home: Home
   profile: Io
@@ -159,3 +158,5 @@ home:
   title: |-
     !js
     (name) => `Ciao ${name}!`
+search:
+  empty: Nessun risultato trovato

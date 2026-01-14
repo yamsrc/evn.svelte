@@ -18,7 +18,6 @@ actions:
   search: खोजें
   save: सहेजें
   create: सृजन करें
-  noResults: कोई परिणाम नहीं मिला
 nav:
   home: मुख्य पृष्ठ
   profile: मैं
@@ -155,3 +154,5 @@ home:
   title: |-
     !js
     (name) => `नमस्ते ${name}!`
+search:
+  empty: कोई परिणाम नहीं मिला

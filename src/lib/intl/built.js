@@ -24,8 +24,7 @@ export const dictionaries = {
       "cancel": "إلغاء",
       "search": "بحث",
       "save": "حفظ",
-      "create": "إنشاء",
-      "noResults": "لم يتم العثور على نتائج"
+      "create": "إنشاء"
     },
     "nav": {
       "home": "الرئيسية",
@@ -187,6 +186,9 @@ export const dictionaries = {
     },
     "home": {
       "title": (name) => `مرحبًا ${name}!`
+    },
+    "search": {
+      "empty": "لم يتم العثور على نتائج"
     }
   },
   "de-DE": {
@@ -211,8 +213,7 @@ export const dictionaries = {
       "cancel": "Abbrechen",
       "search": "Suchen",
       "save": "Speichern",
-      "create": "Erstellen",
-      "noResults": "Keine Ergebnisse gefunden"
+      "create": "Erstellen"
     },
     "nav": {
       "home": "Startseite",
@@ -374,6 +375,9 @@ export const dictionaries = {
     },
     "home": {
       "title": (name) => `Hallo ${name}!`
+    },
+    "search": {
+      "empty": "Keine Ergebnisse gefunden"
     }
   },
   "en-US": {
@@ -398,8 +402,7 @@ export const dictionaries = {
       "cancel": "Cancel",
       "search": "Search",
       "save": "Save",
-      "create": "Create",
-      "noResults": "No results found"
+      "create": "Create"
     },
     "nav": {
       "home": "Home",
@@ -561,6 +564,9 @@ export const dictionaries = {
     },
     "home": {
       "title": (name) => `Hi ${name}!`
+    },
+    "search": {
+      "empty": "No results found"
     }
   },
   "es-ES": {
@@ -585,8 +591,7 @@ export const dictionaries = {
       "cancel": "Cancelar",
       "search": "Buscar",
       "save": "Guardar",
-      "create": "Crear",
-      "noResults": "No se encontraron resultados"
+      "create": "Crear"
     },
     "nav": {
       "home": "Inicio",
@@ -748,6 +753,9 @@ export const dictionaries = {
     },
     "home": {
       "title": (name) => `¡Hola ${name}!`
+    },
+    "search": {
+      "empty": "No se encontraron resultados"
     }
   },
   "fr-FR": {
@@ -772,8 +780,7 @@ export const dictionaries = {
       "cancel": "Annuler",
       "search": "Rechercher",
       "save": "Enregistrer",
-      "create": "Créer",
-      "noResults": "Aucun résultat trouvé"
+      "create": "Créer"
     },
     "nav": {
       "home": "Accueil",
@@ -935,6 +942,9 @@ export const dictionaries = {
     },
     "home": {
       "title": (name) => `Salut ${name} !`
+    },
+    "search": {
+      "empty": "Aucun résultat trouvé"
     }
   },
   "hi-IN": {
@@ -959,8 +969,7 @@ export const dictionaries = {
       "cancel": "रद्द करें",
       "search": "खोजें",
       "save": "सहेजें",
-      "create": "सृजन करें",
-      "noResults": "कोई परिणाम नहीं मिला"
+      "create": "सृजन करें"
     },
     "nav": {
       "home": "मुख्य पृष्ठ",
@@ -1122,6 +1131,9 @@ export const dictionaries = {
     },
     "home": {
       "title": (name) => `नमस्ते ${name}!`
+    },
+    "search": {
+      "empty": "कोई परिणाम नहीं मिला"
     }
   },
   "it-IT": {
@@ -1146,8 +1158,7 @@ export const dictionaries = {
       "cancel": "Annulla",
       "search": "Cerca",
       "save": "Salva",
-      "create": "Crea",
-      "noResults": "Nessun risultato trovato"
+      "create": "Crea"
     },
     "nav": {
       "home": "Home",
@@ -1309,6 +1320,9 @@ export const dictionaries = {
     },
     "home": {
       "title": (name) => `Ciao ${name}!`
+    },
+    "search": {
+      "empty": "Nessun risultato trovato"
     }
   },
   "ja-JP": {
@@ -1333,8 +1347,7 @@ export const dictionaries = {
       "cancel": "キャンセル",
       "search": "検索",
       "save": "保存",
-      "create": "作成",
-      "noResults": "結果が見つかりませんでした"
+      "create": "作成"
     },
     "nav": {
       "home": "ホーム",
@@ -1496,6 +1509,9 @@ export const dictionaries = {
     },
     "home": {
       "title": (name) => `${name}さん、こんにちは！`
+    },
+    "search": {
+      "empty": "結果が見つかりませんでした"
     }
   },
   "ko-KR": {
@@ -1520,8 +1536,7 @@ export const dictionaries = {
       "cancel": "취소",
       "search": "검색",
       "save": "저장",
-      "create": "생성",
-      "noResults": "결과를 찾을 수 없습니다"
+      "create": "생성"
     },
     "nav": {
       "home": "홈",
@@ -1683,6 +1698,9 @@ export const dictionaries = {
     },
     "home": {
       "title": (name) => `${name}님, 안녕하세요!`
+    },
+    "search": {
+      "empty": "결과를 찾을 수 없습니다"
     }
   },
   "nl-NL": {
@@ -1707,8 +1725,7 @@ export const dictionaries = {
       "cancel": "Annuleren",
       "search": "Zoeken",
       "save": "Opslaan",
-      "create": "Aanmaken",
-      "noResults": "Geen resultaten gevonden"
+      "create": "Aanmaken"
     },
     "nav": {
       "home": "Home",
@@ -1870,6 +1887,9 @@ export const dictionaries = {
     },
     "home": {
       "title": (name) => `Hoi ${name}!`
+    },
+    "search": {
+      "empty": "Geen resultaten gevonden"
     }
   },
   "ru-RU": {
@@ -1894,8 +1914,7 @@ export const dictionaries = {
       "cancel": "Отмена",
       "search": "Поиск",
       "save": "Сохранить",
-      "create": "Создать",
-      "noResults": "Результаты не найдены"
+      "create": "Создать"
     },
     "nav": {
       "home": "Главная",
@@ -2057,6 +2076,9 @@ export const dictionaries = {
     },
     "home": {
       "title": (name) => `Привет, ${name}!`
+    },
+    "search": {
+      "empty": "Результаты не найдены"
     }
   },
   "sw-TZ": {
@@ -2081,8 +2103,7 @@ export const dictionaries = {
       "cancel": "Ghairi",
       "search": "Tafuta",
       "save": "Hifadhi",
-      "create": "Unda",
-      "noResults": "Hakuna matokeo yaliyopatikana"
+      "create": "Unda"
     },
     "nav": {
       "home": "Mwanzo",
@@ -2244,6 +2265,9 @@ export const dictionaries = {
     },
     "home": {
       "title": (name) => `Habari ${name}!`
+    },
+    "search": {
+      "empty": "Hakuna matokeo yaliyopatikana"
     }
   },
   "tr-TR": {
@@ -2268,8 +2292,7 @@ export const dictionaries = {
       "cancel": "İptal",
       "search": "Ara",
       "save": "Kaydet",
-      "create": "Oluştur",
-      "noResults": "Sonuç bulunamadı"
+      "create": "Oluştur"
     },
     "nav": {
       "home": "Ana Sayfa",
@@ -2431,6 +2454,9 @@ export const dictionaries = {
     },
     "home": {
       "title": (name) => `Merhaba ${name}!`
+    },
+    "search": {
+      "empty": "Sonuç bulunamadı"
     }
   },
   "uk-UA": {
@@ -2455,8 +2481,7 @@ export const dictionaries = {
       "cancel": "Скасувати",
       "search": "Пошук",
       "save": "Зберегти",
-      "create": "Створити",
-      "noResults": "Результатів не знайдено"
+      "create": "Створити"
     },
     "nav": {
       "home": "Головна",
@@ -2618,6 +2643,9 @@ export const dictionaries = {
     },
     "home": {
       "title": (name) => `Привіт, ${name}!`
+    },
+    "search": {
+      "empty": "Результатів не знайдено"
     }
   },
   "zh-CN": {
@@ -2642,8 +2670,7 @@ export const dictionaries = {
       "cancel": "取消",
       "search": "搜索",
       "save": "保存",
-      "create": "创建",
-      "noResults": "未找到结果"
+      "create": "创建"
     },
     "nav": {
       "home": "首页",
@@ -2805,6 +2832,9 @@ export const dictionaries = {
     },
     "home": {
       "title": (name) => `${name}，你好！`
+    },
+    "search": {
+      "empty": "未找到结果"
     }
   }
 };

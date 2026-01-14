@@ -18,7 +18,6 @@ actions:
   search: Zoeken
   save: Opslaan
   create: Aanmaken
-  noResults: Geen resultaten gevonden
 nav:
   home: Home
   profile: Ik
@@ -157,3 +156,5 @@ home:
   title: |-
     !js
     (name) => `Hoi ${name}!`
+search:
+  empty: Geen resultaten gevonden
