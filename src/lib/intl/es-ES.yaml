@@ -160,3 +160,5 @@ home:
   title: |-
     !js
     (name) => `¡Hola ${name}!`
+search:
+  empty: No se encontraron resultados

@@ -18,24 +18,25 @@
   }
 </script>
 
-<Section class="overflow-visible flex flex-col gap-1.5" id="favorites-list">
-  {#if title}
-    <div class="flex items-center gap-2">
-      <div
-        class={cn(buttonVariants({ variant: 'secondary', size: 'icon' }), 'rounded-full size-6')}
-      >
-        <Star size={16} />
+{#if favorites.length}
+  <Section class="overflow-visible flex flex-col gap-1.5" id="favorites-list">
+    {#if title}
+      <div class="flex items-center gap-2">
+        <div
+          class={cn(buttonVariants({ variant: 'secondary', size: 'icon' }), 'rounded-full size-6')}>
+          <Star size={16} />
+        </div>
+        <h2>{title}</h2>
       </div>
-      <h2>{title}</h2>
+    {/if}
+    <div class="overflow-x-auto -mx-5 px-5 py-2 -my-2 no-scrollbar">
+      <div id="favorites-list-content" class="w-fit flex gap-1.5">
+        {#each favorites as favorite (favorite.id)}
+          {@const selected = selection?.has(favorite.favorite)}
+          {@const selectedProps = selectable ? { selected, onselect } : undefined}
+          <Panel {favorite} {...selectedProps} />
+        {/each}
+      </div>
     </div>
-  {/if}
-  <div class="overflow-x-auto -mx-5 px-5 py-2 -my-2 no-scrollbar">
-    <div id="favorites-list-content" class="w-fit flex gap-1.5">
-      {#each favorites as favorite (favorite.id)}
-        {@const selected = selection?.has(favorite.favorite)}
-        {@const selectedProps = selectable ? { selected, onselect } : undefined}
-        <Panel {favorite} {...selectedProps} />
-      {/each}
-    </div>
-  </div>
-</Section>
+  </Section>
+{/if}

@@ -156,3 +156,5 @@ home:
   title: |-
     !js
     (name) => `Привіт, ${name}!`
+search:
+  empty: Результатів не знайдено
