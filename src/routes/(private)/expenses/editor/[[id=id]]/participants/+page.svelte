@@ -19,14 +19,14 @@
 
   let search = $state('')
   // svelte-ignore non_reactive_update
-  let selection = new SvelteSet<string>()
+  let contactsSelection = new SvelteSet<string>()
   // svelte-ignore non_reactive_update
   let groupSelection = new SvelteSet<string>()
 
   const notParticipant = (identity: string) => !(identity in ctx.value.participants)
 
   async function addParticipants() {
-    const contactIds = Array.from(selection)
+    const contactIds = Array.from(contactsSelection)
 
     const groupIds = Array.from(groupSelection).flatMap(
       (id) => $groups.find((g) => g.id === id)?.identities ?? [],
@@ -69,7 +69,7 @@
     <Contacts
       title={$dict.expenses.participants.title}
       contacts={filteredContacts}
-      bind:selection />
+      bind:selection={contactsSelection} />
     {#if search && noResults}
       <Section>
         <p class="text-muted-foreground text-center">{$dict.actions.noResults}</p>
@@ -83,6 +83,7 @@
     id="expenses-add-participants-add-button"
     size="lg"
     class="flex-1"
+    disabled={contactsSelection.size === 0 && groupSelection.size === 0}
     onclick={addParticipants}>
     {$dict.actions.addSelected}
   </Button>
