@@ -57,7 +57,7 @@
       {@const filteredFavs = filterFavorites(availableFavs, contacts, search)}
       {@const availableContacts = contacts.filter((c) => !group.identities.includes(c.identity))}
       {@const filteredContacts = filterContacts(availableContacts, search)}
-      {@const hasResults = filteredFavs.length > 0 || filteredContacts.length > 0}
+      {@const noResults = filteredFavs.length === 0 && filteredContacts.length === 0}
 
       <Favorites
         title={$dict.favorites.title}
@@ -67,7 +67,7 @@
         contacts={filteredContacts}
         title={$dict.contacts.all}
         bind:selection={contactsSelection} />
-      {#if search && !hasResults}
+      {#if search && noResults}
         <Section>
           <p class="text-muted-foreground text-center">{$dict.actions.noResults}</p>
         </Section>

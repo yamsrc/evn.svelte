@@ -33,8 +33,10 @@
     {@const filteredGroups = filterGroups($groups, search)}
     {@const filteredContacts = filterContacts(contacts, search)}
     {@const filteredFavorites = filterFavorites(favorites, contacts, search)}
-    {@const hasResults =
-      filteredGroups.length > 0 || filteredContacts.length > 0 || filteredFavorites.length > 0}
+    {@const noResults =
+      filteredGroups.length === 0 &&
+      filteredContacts.length === 0 &&
+      filteredFavorites.length === 0}
 
     {#if $groups.length || contacts.length || favorites.length}
       <Section>
@@ -45,7 +47,7 @@
       <Groups title={$dict.groups.title} groups={filteredGroups} />
       <Contacts title={$dict.contacts.all} contacts={filteredContacts} actionable />
 
-      {#if search && !hasResults}
+      {#if search && noResults}
         <Section>
           <p class="text-muted-foreground text-center">{$dict.actions.noResults}</p>
         </Section>
