@@ -1,28 +1,32 @@
 <script lang="ts">
-  import { Async } from 'svas'
+  import { Async, combined } from 'svas'
   import { SvelteSet } from 'svelte/reactivity'
   import { back, Back } from '$com/history'
   import { dict } from '$lib/intl'
   import { buttonVariants, Button } from '$ui/button'
+  import { Input } from '$ui/input'
   import { Section } from '@/app/ui'
   import { Header } from '@/app/ui'
-  import { contacts } from '@/contacts'
+  import { contacts, filter as filterContacts } from '@/contacts'
   import { Contacts } from '@/contacts/ui'
   import { CreateDialog } from '@/contacts/ui'
   import { numbers, type Participant } from '@/expenses'
   import { Editor } from '@/expenses/ui'
-  import { groups } from '@/groups'
+  import { groups, filter as filterGroups } from '@/groups'
   import { Groups } from '@/groups/ui'
 
   const ctx = Editor.getContext()
 
-  let selection = new SvelteSet<string>()
+  let search = $state('')
+  // svelte-ignore non_reactive_update
+  let contactsSelection = new SvelteSet<string>()
+  // svelte-ignore non_reactive_update
   let groupSelection = new SvelteSet<string>()
 
   const notParticipant = (identity: string) => !(identity in ctx.value.participants)
 
   async function addParticipants() {
-    const contactIds = Array.from(selection)
+    const contactIds = Array.from(contactsSelection)
 
     const groupIds = Array.from(groupSelection).flatMap(
       (id) => $groups.find((g) => g.id === id)?.identities ?? [],
@@ -64,31 +68,37 @@
   </Header.Root>
 </Section>
 
-<Async store={groups}>
-  {#snippet awaited(groups)}
+<Async store={combined(groups, contacts)}>
+  {#snippet awaited([groups, contacts])}
+    <Section>
+      <Input type="text" placeholder={$dict.actions.search} bind:value={search} />
+    </Section>
+
     {@const availableGroups = groups.filter(({ identities }) => identities.some(notParticipant))}
-    {#if availableGroups.length > 0}
-      <Groups title={$dict.groups.title} groups={availableGroups} bind:selection={groupSelection} />
+    {@const filteredGroups = filterGroups(availableGroups, search)}
+    {@const availableContacts = contacts.filter(({ identity }) => notParticipant(identity))}
+    {@const filteredContacts = filterContacts(availableContacts, search)}
+    {@const empty = filteredGroups.length === 0 && filteredContacts.length === 0}
+
+    <Groups title={$dict.groups.title} groups={filteredGroups} bind:selection={groupSelection} />
+    <Contacts
+      title={$dict.expenses.participants.title}
+      contacts={filteredContacts}
+      bind:selection={contactsSelection} />
+    {#if search && empty}
+      <Section>
+        <p class="text-muted-foreground text-center">{$dict.search.empty}</p>
+      </Section>
     {/if}
   {/snippet}
 </Async>
 
-<Async store={contacts}>
-  {#snippet awaited(contacts)}
-    {@const list = contacts.filter(({ identity }) => notParticipant(identity))}
-    <Contacts title={$dict.expenses.participants.title} contacts={list} bind:selection />
-  {/snippet}
-</Async>
-
-<Section
-  class="
-    sticky bottom-26 z-10
-    flex items-center justify-evenly gap-2
-    ">
+<Section class="sticky bottom-26 z-10 flex items-center justify-evenly gap-2">
   <Button
     id="expenses-add-participants-add-button"
     size="lg"
     class="flex-1"
+    disabled={contactsSelection.size === 0 && groupSelection.size === 0}
     onclick={addParticipants}>
     {$dict.actions.addSelected}
   </Button>

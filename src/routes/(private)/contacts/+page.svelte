@@ -5,12 +5,12 @@
   import { Input } from '$ui/input'
   import { Section } from '@/app/ui'
   import { Header } from '@/app/ui'
-  import { contacts } from '@/contacts'
+  import { contacts, filter as filterContacts } from '@/contacts'
   import { Invite } from '@/contacts/ui'
   import { Contacts } from '@/contacts/ui'
-  import { favorites } from '@/favorites'
+  import { favorites, filter as filterFavorites } from '@/favorites'
   import { Favorites } from '@/favorites/ui'
-  import { groups } from '@/groups'
+  import { groups, filter as filterGroups } from '@/groups'
   import { Groups } from '@/groups/ui'
   import { account } from '@/iam'
 
@@ -30,21 +30,27 @@
 
 <Async store={combined(contacts, favorites)}>
   {#snippet awaited([contacts, favorites])}
+    {@const filteredGroups = filterGroups($groups, search)}
+    {@const filteredContacts = filterContacts(contacts, search)}
+    {@const filteredFavorites = filterFavorites(favorites, contacts, search)}
+    {@const empty =
+      filteredGroups.length === 0 &&
+      filteredContacts.length === 0 &&
+      filteredFavorites.length === 0}
+
     {#if $groups.length || contacts.length || favorites.length}
       <Section>
         <Input type="text" placeholder={$dict.actions.search} bind:value={search} />
       </Section>
 
-      {#if favorites.length}
-        <Favorites title={$dict.favorites.title} {favorites} />
-      {/if}
+      <Favorites title={$dict.favorites.title} favorites={filteredFavorites} />
+      <Groups title={$dict.groups.title} groups={filteredGroups} />
+      <Contacts title={$dict.contacts.all} contacts={filteredContacts} actionable />
 
-      {#if $groups.length}
-        <Groups title={$dict.groups.title} groups={$groups} {search} />
-      {/if}
-
-      {#if contacts.length}
-        <Contacts title={$dict.contacts.all} {contacts} {search} actionable />
+      {#if search && empty}
+        <Section>
+          <p class="text-muted-foreground text-center">{$dict.search.empty}</p>
+        </Section>
       {/if}
     {:else if $account}
       <Section class="m-auto flex flex-col items-center justify-center gap-2">

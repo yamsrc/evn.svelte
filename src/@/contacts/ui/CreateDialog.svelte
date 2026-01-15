@@ -56,17 +56,18 @@
       </Dialog.Title>
     </Dialog.Header>
     <Cosmetics.Root>
-      <Cosmetics.Picture bind:id={picture} onchange={onPictureChange} />
+      <Cosmetics.Picture bind:id={picture} onchange={onPictureChange} class="mx-auto" />
       <Cosmetics.Name bind:value={name} bind:busy onchange={submit} />
       <Dialog.Footer>
         <Cosmetics.Actions class="w-full flex gap-2">
           <Dialog.Close
             class={buttonVariants({ size: 'lg', variant: 'secondary', class: 'flex-1' })}
-            disabled={busy}>{$dict.actions.cancel}</Dialog.Close
-          >
-          <Button size="lg" class="flex-1" disabled={busy || !name.trim()} onclick={submit}
-            >{$dict.actions.save}</Button
-          >
+            disabled={busy}>
+            {$dict.actions.cancel}
+          </Dialog.Close>
+          <Button size="lg" class="flex-1" disabled={busy || !name.trim()} onclick={submit}>
+            {$dict.actions.save}
+          </Button>
         </Cosmetics.Actions>
       </Dialog.Footer>
     </Cosmetics.Root>

@@ -152,3 +152,5 @@ home:
   title: |-
     !js
     (name) => `مرحبًا ${name}!`
+search:
+  empty: لم يتم العثور على نتائج

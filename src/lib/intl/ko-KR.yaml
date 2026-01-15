@@ -146,3 +146,5 @@ home:
   title: |-
     !js
     (name) => `${name}님, 안녕하세요!`
+search:
+  empty: 결과를 찾을 수 없습니다

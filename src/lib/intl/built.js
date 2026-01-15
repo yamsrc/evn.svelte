@@ -186,6 +186,9 @@ export const dictionaries = {
     },
     "home": {
       "title": (name) => `مرحبًا ${name}!`
+    },
+    "search": {
+      "empty": "لم يتم العثور على نتائج"
     }
   },
   "de-DE": {
@@ -372,6 +375,9 @@ export const dictionaries = {
     },
     "home": {
       "title": (name) => `Hallo ${name}!`
+    },
+    "search": {
+      "empty": "Keine Ergebnisse gefunden"
     }
   },
   "en-US": {
@@ -558,6 +564,9 @@ export const dictionaries = {
     },
     "home": {
       "title": (name) => `Hi ${name}!`
+    },
+    "search": {
+      "empty": "No results found"
     }
   },
   "es-ES": {
@@ -744,6 +753,9 @@ export const dictionaries = {
     },
     "home": {
       "title": (name) => `¡Hola ${name}!`
+    },
+    "search": {
+      "empty": "No se encontraron resultados"
     }
   },
   "fr-FR": {
@@ -930,6 +942,9 @@ export const dictionaries = {
     },
     "home": {
       "title": (name) => `Salut ${name} !`
+    },
+    "search": {
+      "empty": "Aucun résultat trouvé"
     }
   },
   "hi-IN": {
@@ -1116,6 +1131,9 @@ export const dictionaries = {
     },
     "home": {
       "title": (name) => `नमस्ते ${name}!`
+    },
+    "search": {
+      "empty": "कोई परिणाम नहीं मिला"
     }
   },
   "it-IT": {
@@ -1302,6 +1320,9 @@ export const dictionaries = {
     },
     "home": {
       "title": (name) => `Ciao ${name}!`
+    },
+    "search": {
+      "empty": "Nessun risultato trovato"
     }
   },
   "ja-JP": {
@@ -1488,6 +1509,9 @@ export const dictionaries = {
     },
     "home": {
       "title": (name) => `${name}さん、こんにちは！`
+    },
+    "search": {
+      "empty": "結果が見つかりませんでした"
     }
   },
   "ko-KR": {
@@ -1674,6 +1698,9 @@ export const dictionaries = {
     },
     "home": {
       "title": (name) => `${name}님, 안녕하세요!`
+    },
+    "search": {
+      "empty": "결과를 찾을 수 없습니다"
     }
   },
   "nl-NL": {
@@ -1860,6 +1887,9 @@ export const dictionaries = {
     },
     "home": {
       "title": (name) => `Hoi ${name}!`
+    },
+    "search": {
+      "empty": "Geen resultaten gevonden"
     }
   },
   "ru-RU": {
@@ -2046,6 +2076,9 @@ export const dictionaries = {
     },
     "home": {
       "title": (name) => `Привет, ${name}!`
+    },
+    "search": {
+      "empty": "Результаты не найдены"
     }
   },
   "sw-TZ": {
@@ -2232,6 +2265,9 @@ export const dictionaries = {
     },
     "home": {
       "title": (name) => `Habari ${name}!`
+    },
+    "search": {
+      "empty": "Hakuna matokeo yaliyopatikana"
     }
   },
   "tr-TR": {
@@ -2418,6 +2454,9 @@ export const dictionaries = {
     },
     "home": {
       "title": (name) => `Merhaba ${name}!`
+    },
+    "search": {
+      "empty": "Sonuç bulunamadı"
     }
   },
   "uk-UA": {
@@ -2604,6 +2643,9 @@ export const dictionaries = {
     },
     "home": {
       "title": (name) => `Привіт, ${name}!`
+    },
+    "search": {
+      "empty": "Результатів не знайдено"
     }
   },
   "zh-CN": {
@@ -2790,6 +2832,9 @@ export const dictionaries = {
     },
     "home": {
       "title": (name) => `${name}，你好！`
+    },
+    "search": {
+      "empty": "未找到结果"
     }
   }
 };
