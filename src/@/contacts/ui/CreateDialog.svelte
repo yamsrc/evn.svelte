@@ -45,7 +45,7 @@
 </script>
 
 <Dialog.Root bind:open>
-  <Dialog.Trigger class={classes}>
+  <Dialog.Trigger id="expenses-add-participants-create-button" class={classes}>
     <Plus />
     {$dict.actions.create}
   </Dialog.Trigger>
@@ -65,7 +65,12 @@
             disabled={busy}>
             {$dict.actions.cancel}
           </Dialog.Close>
-          <Button size="lg" class="flex-1" disabled={busy || !name.trim()} onclick={submit}>
+          <Button
+            id="app-cosmetics-submit-button"
+            size="lg"
+            class="flex-1"
+            disabled={busy || !name.trim()}
+            onclick={submit}>
             {$dict.actions.save}
           </Button>
         </Cosmetics.Actions>

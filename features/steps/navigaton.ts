@@ -9,11 +9,6 @@ Then('the page is loaded', async ({ page }) => {
   await expect(page).toHaveURL(/.+/)
 })
 
-Then('I wait for navigation', async ({ page }) => {
-  // Wait for any navigation to complete (e.g., after form submission)
-  await page.waitForTimeout(1000)
-})
-
 Then('my clipboard is not empty', async ({ page }) => {
   await expect(async () => {
     const clipboard = await page.evaluate(() => navigator.clipboard.readText())

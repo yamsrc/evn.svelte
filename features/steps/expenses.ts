@@ -7,7 +7,20 @@ Given('new expense', async ({ page, ctx }) => {
   await page.locator('#nav-actions-button').click()
   await page.locator('#nav-actions-cheqes-input-button').click()
   await expect(page.locator('#expenses-add-participants-add-button')).toBeVisible()
+
+  // Create a new participant via CreateDialog
+  await page.locator('#expenses-add-participants-create-button').click()
+  await expect(page.locator('#app-cosmetics-name-input')).toBeVisible()
+  await page.locator('#app-cosmetics-name-input').click()
+  await page.keyboard.type(faker.person.firstName())
+  await expect(page.locator('#app-cosmetics-submit-button')).not.toBeDisabled()
+  await page.locator('#app-cosmetics-submit-button').click()
+  await expect(page.locator('#app-cosmetics-name-input')).not.toBeVisible()
+
+  // Select the newly created participant and add it
+  await page.locator('#contacts-list-content > *').first().click()
   await page.locator('#expenses-add-participants-add-button').click()
+
   await expect(page.locator('#expenses-form-title-input')).toBeVisible()
   await page.locator('#expenses-form-title-input').click()
   ctx.name = faker.commerce.productName()
@@ -15,14 +28,14 @@ Given('new expense', async ({ page, ctx }) => {
   await page.keyboard.press('Tab')
   await page.keyboard.type(faker.location.city())
 
-  // Enter total amount
+  // Enter total amount (will auto-split between 2 participants: user + contact)
   await page.locator('#expenses-total-input').click()
   await page.keyboard.type('100')
 
-  // Enter amount for participant to enable save button
+  // Enter amount for participant to enable save button (user gets 50, contact gets 50)
   const firstParticipantInput = page.locator('#expenses-participant-amount-0')
 
-  await firstParticipantInput.fill('100')
+  await firstParticipantInput.fill('50')
 
   // Select payer from dropdown
   await page.locator('#expenses-payer-select-trigger').click()

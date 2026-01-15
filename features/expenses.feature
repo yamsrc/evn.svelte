@@ -8,8 +8,17 @@ Feature: Expenses
     And I tap 'nav-actions-cheqes-input-button'
     # Verify expense form is ready for participant selection
     Then 'expenses-add-participants-add-button' is visible
-    # Add self as participant (default participant)
-    When I tap 'expenses-add-participants-add-button'
+    # Create a new participant via CreateDialog
+    When I tap 'expenses-add-participants-create-button'
+    Then 'app-cosmetics-name-input' is visible
+    When I tap 'app-cosmetics-name-input'
+    And I type random name
+    Then 'app-cosmetics-submit-button' is not disabled
+    When I tap 'app-cosmetics-submit-button'
+    Then 'app-cosmetics-name-input' is not visible
+    # Select the newly created participant and add it
+    When I tap first item of 'contacts-list-content'
+    And I tap 'expenses-add-participants-add-button'
     Then 'expenses-form-title-input' is visible
     # Fill in expense details: title and location
     When I tap 'expenses-form-title-input'
@@ -17,14 +26,14 @@ Feature: Expenses
     And I press 'Tab'
     Then 'expenses-form-location-input' is focused
     And I type random location
-    # Set total amount and verify it auto-fills participant amount
+    # Set total amount and verify it auto-fills participant amounts (split evenly between 2 participants)
     When I tap 'expenses-total-input'
     And I type '100'
-    Then input 'expenses-participant-amount-0' contains '100'
+    Then input 'expenses-participant-amount-0' contains '50'
+    And input 'expenses-participant-amount-1' contains '50'
     # Select payer and save expense
     When I select payer from dropdown
     And I tap 'expenses-form-save-button'
-    And I wait for navigation
     # Verify expense appears in list with correct details
     Then 'expenses-list' contains that name
     And 'expenses-list' contains text '100'
@@ -55,7 +64,6 @@ Feature: Expenses
     Then 'expenses-participant-amount-1' is visible
     # Save changes
     When I tap 'expenses-form-save-button'
-    And I wait for navigation
     # Verify expense still appears in list with correct total
     Then 'expenses-list' contains that name
     And 'expenses-list' contains text '100'
@@ -73,11 +81,12 @@ Feature: Expenses
     And I type random expense title
     And I press 'Tab'
     Then input 'expenses-form-title-input' contains that name
-    # Update total amount and verify participant amount updates
+    # Update total amount and verify participant amounts update (split evenly between 2 participants)
     When I tap 'expenses-total-input'
     And I clear 'expenses-total-input'
     And I type '200'
-    Then input 'expenses-participant-amount-0' contains '200'
+    Then input 'expenses-participant-amount-0' contains '100'
+    And input 'expenses-participant-amount-1' contains '100'
     # Manually override participant amount
     When I tap 'expenses-participant-amount-0'
     And I clear 'expenses-participant-amount-0'
@@ -85,16 +94,14 @@ Feature: Expenses
     Then input 'expenses-participant-amount-0' contains '150'
     # Save first set of changes
     When I tap 'expenses-form-save-button'
-    And I wait for navigation
     Then 'expenses-form-title-input' is visible
     # Re-open and adjust participant amount back to match total
     When I tap 'expenses-participant-amount-0'
     And I clear 'expenses-participant-amount-0'
-    And I type '200'
-    Then input 'expenses-participant-amount-0' contains '200'
+    And I type '100'
+    Then input 'expenses-participant-amount-0' contains '100'
     # Save final changes
     When I tap 'expenses-form-save-button'
-    And I wait for navigation
     # Verify expense updated correctly in list
     Then 'expenses-list' contains that name
     And 'expenses-list' contains text '200'
@@ -107,8 +114,9 @@ Feature: Expenses
     When I tap 'nav-actions-button'
     And I tap 'nav-actions-cheqes-input-button'
     Then 'expenses-add-participants-add-button' is visible
-    # Add self as first participant
-    When I tap 'expenses-add-participants-add-button'
+    # Select the managed contact and add it
+    When I tap first item of 'contacts-list-content'
+    And I tap 'expenses-add-participants-add-button'
     Then 'expenses-form-title-input' is visible
     # Fill in expense basic details
     When I tap 'expenses-form-title-input'
@@ -118,17 +126,28 @@ Feature: Expenses
     # Set total amount
     When I tap 'expenses-total-input'
     And I type '100'
-    # Add second participant (contact)
-    When I tap first visible 'expenses-spendings-add-participants-button'
-    Then 'expenses-add-participants-add-button' is visible
-    When I tap first item of 'contacts-list-content'
-    And I tap 'expenses-add-participants-add-button'
     Then 'expenses-participant-amount-1' is visible
+    # Verify amounts are split evenly (50 each) before switching to shares tab
+    Then input 'expenses-participant-amount-0' contains '50'
+    And input 'expenses-participant-amount-1' contains '50'
     # Switch to shares tab for proportional splitting
     When I tap 'expenses-participants-tabs-shares'
     Then 'expenses-participant-share-0' is visible
     And 'expenses-participant-share-1' is visible
-    # Verify initial equal shares (5 dots each = 50/50 split)
+    # Verify initial shares (0 dots each - shares not initialized yet)
+    Then 'expenses-participant-share-0-dots' contains 0 elements
+    And 'expenses-participant-share-1-dots' contains 0 elements
+    # Initialize shares: increment both to 5 dots each
+    When I tap 'expenses-participant-share-0-increment'
+    And I tap 'expenses-participant-share-0-increment'
+    And I tap 'expenses-participant-share-0-increment'
+    And I tap 'expenses-participant-share-0-increment'
+    And I tap 'expenses-participant-share-0-increment'
+    And I tap 'expenses-participant-share-1-increment'
+    And I tap 'expenses-participant-share-1-increment'
+    And I tap 'expenses-participant-share-1-increment'
+    And I tap 'expenses-participant-share-1-increment'
+    And I tap 'expenses-participant-share-1-increment'
     Then 'expenses-participant-share-0-dots' contains 5 elements
     And 'expenses-participant-share-1-dots' contains 5 elements
     # Adjust shares: reduce second participant's share by 2 (from 5 to 3 dots)
@@ -146,7 +165,6 @@ Feature: Expenses
     When I tap 'expenses-participants-tabs-shares'
     And I select payer from dropdown
     And I tap 'expenses-form-save-button'
-    And I wait for navigation
     # Verify expense saved correctly
     Then 'expenses-list' contains that name
     And 'expenses-list' contains text '100'
@@ -159,21 +177,18 @@ Feature: Expenses
     When I tap 'nav-actions-button'
     And I tap 'nav-actions-cheqes-input-button'
     Then 'expenses-add-participants-add-button' is visible
-    # Add first participant
-    When I tap 'expenses-add-participants-add-button'
+    # Select the managed contact and add it
+    When I tap first item of 'contacts-list-content'
+    And I tap 'expenses-add-participants-add-button'
     Then 'expenses-form-title-input' is visible
     # Fill in expense details
     When I tap 'expenses-form-title-input'
     And I type random expense title
     And I press 'Tab'
     And I type random location
-    # Set total and add second participant
+    # Set total (now we have 2 participants: user + contact)
     When I tap 'expenses-total-input'
     And I type '100'
-    When I tap first visible 'expenses-spendings-add-participants-button'
-    Then 'expenses-add-participants-add-button' is visible
-    When I tap first item of 'contacts-list-content'
-    And I tap 'expenses-add-participants-add-button'
     Then 'expenses-participant-amount-1' is visible
     # Manually set first participant amount to 50 (on sums tab)
     When I tap 'expenses-participant-amount-0'
@@ -190,7 +205,6 @@ Feature: Expenses
     # Complete expense creation
     When I select payer from dropdown
     And I tap 'expenses-form-save-button'
-    And I wait for navigation
     # Verify expense saved
     Then 'expenses-list' contains that name
     And 'expenses-list' contains text '100'
@@ -203,24 +217,34 @@ Feature: Expenses
     When I tap 'nav-actions-button'
     And I tap 'nav-actions-cheqes-input-button'
     Then 'expenses-add-participants-add-button' is visible
-    # Add first participant and fill expense details
-    When I tap 'expenses-add-participants-add-button'
+    # Select the managed contact and add it
+    When I tap first item of 'contacts-list-content'
+    And I tap 'expenses-add-participants-add-button'
     Then 'expenses-form-title-input' is visible
     When I tap 'expenses-form-title-input'
     And I type random expense title
     And I press 'Tab'
     And I type random location
-    # Set total and add second participant
+    # Set total (now we have 2 participants: user + contact)
     When I tap 'expenses-total-input'
     And I type '100'
-    When I tap first visible 'expenses-spendings-add-participants-button'
-    Then 'expenses-add-participants-add-button' is visible
-    When I tap first item of 'contacts-list-content'
-    And I tap 'expenses-add-participants-add-button'
     Then 'expenses-participant-amount-1' is visible
     # Switch to shares tab
     When I tap 'expenses-participants-tabs-shares'
-    # Verify initial equal shares
+    # Verify initial shares (0 dots each - shares not initialized yet)
+    Then 'expenses-participant-share-0-dots' contains 0 elements
+    And 'expenses-participant-share-1-dots' contains 0 elements
+    # Initialize shares: increment both to 5 dots each
+    When I tap 'expenses-participant-share-0-increment'
+    And I tap 'expenses-participant-share-0-increment'
+    And I tap 'expenses-participant-share-0-increment'
+    And I tap 'expenses-participant-share-0-increment'
+    And I tap 'expenses-participant-share-0-increment'
+    And I tap 'expenses-participant-share-1-increment'
+    And I tap 'expenses-participant-share-1-increment'
+    And I tap 'expenses-participant-share-1-increment'
+    And I tap 'expenses-participant-share-1-increment'
+    And I tap 'expenses-participant-share-1-increment'
     Then 'expenses-participant-share-0-dots' contains 5 elements
     And 'expenses-participant-share-1-dots' contains 5 elements
     # Test share adjustment: reduce second participant by 1 (5:4 ratio)
@@ -258,42 +282,34 @@ Feature: Expenses
     # Complete expense creation
     When I select payer from dropdown
     And I tap 'expenses-form-save-button'
-    And I wait for navigation
     # Verify expense saved correctly
     Then 'expenses-list' contains that name
     And 'expenses-list' contains text '100'
 
   Scenario: Total changes with even split
-    # Setup: Create account and contact
+    # Setup: Create account and expense with participant
     Given new account
-    And new managed contact
-    # Navigate to expense creation form
-    When I tap 'nav-actions-button'
-    And I tap 'nav-actions-cheqes-input-button'
-    Then 'expenses-add-participants-add-button' is visible
-    # Add first participant and fill expense details
-    When I tap 'expenses-add-participants-add-button'
+    And new expense
+    # Open expense for editing
+    When I tap first item of 'expenses-list'
     Then 'expenses-form-title-input' is visible
-    When I tap 'expenses-form-title-input'
-    And I type random expense title
-    And I press 'Tab'
-    And I type random location
-    # Set initial total to 100
+    # Set initial total to 100 (already has 2 participants from new expense, split 50/50)
     When I tap 'expenses-total-input'
+    And I clear 'expenses-total-input'
     And I type '100'
-    # Manually set participant amount to match total (even split with single participant)
-    When I tap 'expenses-participant-amount-0'
-    And I type '100'
-    # Update total to 200 and verify participant amount updates proportionally
+    # Verify amounts are split evenly
+    Then input 'expenses-participant-amount-0' contains '50'
+    And input 'expenses-participant-amount-1' contains '50'
+    # Update total to 200 and verify amounts recalculate evenly (since amounts are evenly split, changing total recalculates)
     When I tap 'expenses-total-input'
     And I clear 'expenses-total-input'
     And I type '200'
-    # Verify participant amount updates to match new total
-    Then input 'expenses-participant-amount-0' contains '200'
+    # Verify amounts are recalculated evenly (100 each for 2 participants)
+    Then input 'expenses-participant-amount-0' contains '100'
+    And input 'expenses-participant-amount-1' contains '100'
     # Complete expense creation
     When I select payer from dropdown
     And I tap 'expenses-form-save-button'
-    And I wait for navigation
     # Verify expense saved with updated total
     Then 'expenses-list' contains that name
     And 'expenses-list' contains text '200'
