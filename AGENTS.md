@@ -102,3 +102,8 @@ BASE_URL=https://evnapp.com npx play
 - **Add test IDs** - Use `id` attributes on UI components for selectors
 - **Remove unused steps** - Clean up step definitions not used in features
 - **Prefer comprehensive scenarios** - Combine related test cases when appropriate
+
+## Plan Mode
+
+- Make the plan extremely concise. Sacrifice grammar for the sake of concision.
+- At the end of each plan, give me a list of unresolved questions to answer, if any.
