@@ -36,7 +36,7 @@
     {#if payerId}
       <Async store={accounts.get(payerId)}>
         {#snippet awaited(account)}
-          <SelectTrigger class="w-full">
+          <SelectTrigger id="expenses-payer-select-trigger" class="w-full">
             <div class="flex items-center gap-2">
               <Picture {account} class="size-6" />
               <span>
@@ -47,7 +47,7 @@
         {/snippet}
       </Async>
     {:else}
-      <SelectTrigger class="w-full">
+      <SelectTrigger id="expenses-payer-select-trigger" class="w-full">
         <span class="text-muted-foreground">{$expensesDict.payer.placeholder}</span>
       </SelectTrigger>
     {/if}

@@ -37,6 +37,13 @@ When('I tap first item of {string}', async ({ page }, id) => {
   await firstItem.click()
 })
 
+When('I tap first visible {string}', async ({ page }, id) => {
+  const element = page.locator(`#${id}`).first()
+
+  await expect(element).toBeVisible()
+  await element.click()
+})
+
 Then('{string} is visible', async ({ page }, id) => {
   await expect(page.locator(`#${id}`)).toBeVisible()
 })
@@ -62,6 +69,10 @@ Then('input {string} contains that name', async ({ page, ctx }, id) => {
   await expect(page.locator(`#${id}`)).toHaveValue(ctx.name)
 })
 
+Then('input {string} contains {string}', async ({ page }, id, value) => {
+  await expect(page.locator(`#${id}`)).toHaveValue(value)
+})
+
 Then('some of {string} contains that {string}', async ({ page }, classname, text) => {
   await contains(page, `.${classname}`, text)
 })
@@ -74,12 +85,27 @@ Then('{string} contains text {string}', async ({ page }, id, text) => {
   await expect(page.locator(`#${id}`)).toContainText(text)
 })
 
+Then('the page contains text {string}', async ({ page }, text) => {
+  await expect(page.getByText(text)).toBeVisible({ timeout: 10000 })
+})
+
+Then('the page contains that name', async ({ page, ctx }) => {
+  await expect(page.getByText(ctx.name)).toBeVisible({ timeout: 10000 })
+})
+
 Then('{string} contains {int} {string} items', async ({ page }, containerId, count, itemClass) => {
   const container = page.locator(`#${containerId}`)
   const items = container.locator(`.${itemClass}`)
 
   await expect(items).toHaveCount(count)
   await expect(items.first()).toBeVisible()
+})
+
+Then('{string} contains {int} elements', async ({ page }, containerId, count) => {
+  const container = page.locator(`#${containerId}`)
+  const elements = container.locator('> *')
+
+  await expect(elements).toHaveCount(count)
 })
 
 Then('{string} contains that name', async ({ page, ctx }, id) => {

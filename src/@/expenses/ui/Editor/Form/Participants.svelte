@@ -21,10 +21,10 @@
     <Card.Content class="space-y-2 p-0">
       <Tabs.Root bind:value={tab}>
         <Tabs.List>
-          <Tabs.Trigger value="sums">
+          <Tabs.Trigger id="expenses-participants-tabs-sums" value="sums">
             {$dict.participants.tabs.sums}
           </Tabs.Trigger>
-          <Tabs.Trigger value="shares">
+          <Tabs.Trigger id="expenses-participants-tabs-shares" value="shares">
             {$dict.participants.tabs.shares}
           </Tabs.Trigger>
         </Tabs.List>
