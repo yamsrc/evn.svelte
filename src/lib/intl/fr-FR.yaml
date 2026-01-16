@@ -158,3 +158,5 @@ home:
   title: |-
     !js
     (name) => `Salut ${name} !`
+search:
+  empty: Aucun résultat trouvé

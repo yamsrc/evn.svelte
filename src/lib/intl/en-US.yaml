@@ -154,3 +154,5 @@ home:
   title: |-
     !js
     (name) => `Hi ${name}!`
+search:
+  empty: No results found

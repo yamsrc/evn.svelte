@@ -156,3 +156,5 @@ home:
   title: |-
     !js
     (name) => `Hoi ${name}!`
+search:
+  empty: Geen resultaten gevonden

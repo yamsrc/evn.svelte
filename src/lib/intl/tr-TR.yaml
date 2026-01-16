@@ -154,3 +154,5 @@ home:
   title: |-
     !js
     (name) => `Merhaba ${name}!`
+search:
+  empty: Sonuç bulunamadı

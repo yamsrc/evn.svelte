@@ -191,4 +191,7 @@ export type Dictionary = {
       home: {
         title: (value: any) => string
       }
+      search: {
+        empty: string
+      }
     }
