@@ -7,8 +7,14 @@ declare global {
 
     interface PageData {
       meta?: {
-        title: string
-        description: string
+        title?: string
+        description?: string
+        image?: {
+          url: string
+          width: number
+          height: number
+          type: string
+        }
       }
     }
 
@@ -17,4 +23,4 @@ declare global {
   }
 }
 
-export {}
+export { }

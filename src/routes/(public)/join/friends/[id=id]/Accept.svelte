@@ -28,28 +28,28 @@
 
 <AlertDialog.Root {open}>
   <AlertDialog.Content escapeKeydownBehavior="ignore">
-    <AlertDialog.Header class="gap-4">
+    <AlertDialog.Header>
       <AlertDialog.Title>
-        <h2>{$dict.friends.app.description}</h2>
+        <h2>{$dict.friends.dialog.title}</h2>
       </AlertDialog.Title>
-      <AlertDialog.Description
-        class="flex flex-row gap-4 p-4 rounded-md bg-muted justify-center items-center"
-      >
-        <Picture account={inviter} class="size-10" />
-        <p class="text-balance! text-start text-base text-foreground">
-          {$dict.friends.inviter.description(inviter.name)}
-        </p>
+      <AlertDialog.Description>
+        {$dict.friends.dialog.description}
       </AlertDialog.Description>
     </AlertDialog.Header>
+    <div class="flex flex-row gap-4 p-4 rounded-md bg-muted justify-center items-center">
+      <Picture account={inviter} class="size-10" />
+      <p class="text-balance">
+        {$dict.friends.dialog.content(inviter.name)}
+      </p>
+    </div>
     <AlertDialog.Footer class="flex-row">
       <AlertDialog.Cancel
         class={cn(buttonVariants({ size: 'lg', variant: 'secondary' }), 'flex-1')}
-        onclick={() => goto('/')}
-      >
-        {$dict.actions.discard}
+        onclick={() => goto('/')}>
+        {$dict.friends.dialog.decline}
       </AlertDialog.Cancel>
       <Button id="join-friends-accept-button" size="lg" class="flex-1" {onclick}>
-        {$dict.friends.accept}
+        {$dict.friends.dialog.accept}
       </Button>
     </AlertDialog.Footer>
   </AlertDialog.Content>

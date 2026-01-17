@@ -2,18 +2,12 @@ account:
   title: Trasferimento account
   description: Qualcuno ha creato questo account e lo sta trasferendo a te.
   accept: Accetta account
-  content0: >-
-    Per assumere la proprietà, imposta i tuoi dettagli di accesso. Questo non
-    creerà un nuovo account — ti darà solo accesso a questo.
-  content1: >-
-    Questo non creerà un nuovo account — ti permetterà semplicemente di accedere
-    e gestire questo.
+  content0: Per assumere la proprietà, imposta i tuoi dettagli di accesso. Questo non creerà un nuovo account — ti darà solo accesso a questo.
+  content1: Questo non creerà un nuovo account — ti permetterà semplicemente di accedere e gestire questo.
   conflict:
-    content0: >-
+    content0: |-
       !js
-
-      (name) => `${name}, per accettare questo account, verrai disconnesso dal
-      tuo attuale e dovrai impostare nuove credenziali di accesso.`
+      (name) => `${name}, per accettare questo account, verrai disconnesso dal tuo attuale e dovrai impostare nuove credenziali di accesso.`
     content1: "Questo non unirà gli account: passerai semplicemente a quello nuovo."
   switch: Cambia account
   expired:
@@ -25,13 +19,22 @@ actions:
   close: Chiudi
 friends:
   app:
-    description: >-
-      Il modo intelligente per tenere traccia di chi deve cosa a chi, insieme
-      agli amici.
+    description: Il modo intelligente per tenere traccia di chi deve cosa a chi, insieme agli amici.
   inviter:
-    description: >-
+    description: |-
       !js
-
-      (name) => `Sei stato invitato da ${name}. Registrati o accedi, ed è tutto
-      pronto!`
+      (name) => `Sei stato invitato da ${name}. Registrati o accedi, ed è tutto pronto!`
   accept: Inizia a usare Evn
+  og:
+    description: Tieni traccia delle spese condivise, dividi i costi e rimani sincronizzato — insieme su Evnly.
+    title: |-
+      !js
+      (name) => `Unisciti a ${name} su Evnly`
+  dialog:
+    title: Connettiti su Evnly
+    description: Accedi o crea un account per continuare.
+    accept: Connetti
+    decline: Non ora
+    content: |-
+      !js
+      (name) => `${name} vuole connettersi con te su Evnly per tenere traccia delle spese condivise.`

@@ -36,5 +36,16 @@ export type Dictionary = {
           description: (value: any) => string
         }
         accept: string
+        og: {
+          description: string
+          title: (value: any) => string
+        }
+        dialog: {
+          title: string
+          description: string
+          accept: string
+          decline: string
+          content: (value: any) => string
+        }
       }
     }

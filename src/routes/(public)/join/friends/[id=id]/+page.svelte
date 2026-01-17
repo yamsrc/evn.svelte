@@ -3,7 +3,7 @@
   import { page } from '$app/state'
   import { Screen, Authenticated, Goto } from '@/app/ui'
   import Accept from './Accept.svelte'
-  import type { PageData } from './$types'
+  import type { PageData } from './$types.js'
 
   const data = page.data as PageData
   const inviter = data.inviter

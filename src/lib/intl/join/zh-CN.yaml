@@ -25,3 +25,16 @@ friends:
       !js
       (name) => `您已被${name}邀请。只需注册或登录，您就可以开始了！`
   accept: 开始使用 Evn
+  og:
+    description: 跟踪共享支出、分摊费用、保持同步 —— 一起在 Evnly 上。
+    title: |-
+      !js
+      (name) => `在Evnly上加入${name}`
+  dialog:
+    title: 在Evnly上连接
+    description: 请登录或创建账户以继续。
+    accept: 连接
+    decline: 现在不要
+    content: |-
+      !js
+      (name) => `${name} 想在 Evnly 上与你建立联系，以便一起管理共同支出。`

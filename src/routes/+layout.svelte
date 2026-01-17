@@ -11,6 +11,7 @@
   const { children } = $props()
   const title = $derived(page.data.meta?.title ?? meta.title)
   const description = $derived(page.data.meta?.description ?? meta.description)
+  const image = $derived(page.data.meta?.image ?? meta.image)
 
   onMount(mount)
   onNavigate(navigate)
@@ -29,6 +30,17 @@
   <meta property="og:url" content={page.url.href} />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
+
+  <meta property="og:image" content={image.url} />
+  <meta property="og:image:width" content={image.width.toString()} />
+  <meta property="og:image:height" content={image.height.toString()} />
+  <meta property="og:image:type" content={image.type} />
+
+  <!-- X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={image.url} />
 </svelte:head>
 
 {@render children()}

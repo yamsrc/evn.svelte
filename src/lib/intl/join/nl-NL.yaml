@@ -2,21 +2,13 @@ account:
   title: Accountoverdracht
   description: Iemand heeft dit account aangemaakt en draagt het nu aan jou over.
   accept: Account accepteren
-  content0: >-
-    Om eigenaar te worden, stel je je inloggegevens in. Er wordt geen nieuw
-    account aangemaakt — je krijgt alleen toegang tot dit account.
-  content1: >-
-    Dit maakt geen nieuw account aan — het geeft je alleen toegang tot en beheer
-    over dit account.
+  content0: Om eigenaar te worden, stel je je inloggegevens in. Er wordt geen nieuw account aangemaakt — je krijgt alleen toegang tot dit account.
+  content1: Dit maakt geen nieuw account aan — het geeft je alleen toegang tot en beheer over dit account.
   conflict:
-    content0: >-
+    content0: |-
       !js
-
-      (name) => `${name}, om dit account te accepteren, word je afgemeld van je
-      huidige account en stel je nieuwe inloggegevens in.`
-    content1: >-
-      Dit voegt de accounts niet samen — je schakelt over naar het nieuwe
-      account.
+      (name) => `${name}, om dit account te accepteren, word je afgemeld van je huidige account en stel je nieuwe inloggegevens in.`
+    content1: Dit voegt de accounts niet samen — je schakelt over naar het nieuwe account.
   switch: Van account wisselen
   expired:
     content: Vraag de afzender om een nieuwe link te genereren.
@@ -27,13 +19,22 @@ actions:
   close: Sluiten
 friends:
   app:
-    description: >-
-      De slimme manier om samen met vrienden bij te houden wie wat aan wie
-      verschuldigd is.
+    description: De slimme manier om samen met vrienden bij te houden wie wat aan wie verschuldigd is.
   inviter:
-    description: >-
+    description: |-
       !js
-
-      (name) => `Je bent uitgenodigd door ${name}. Registreer je of log in, en
-      je bent klaar om te beginnen!`
+      (name) => `Je bent uitgenodigd door ${name}. Registreer je of log in, en je bent klaar om te beginnen!`
   accept: Begin met het gebruik van Evn
+  og:
+    description: Houd gezamenlijke uitgaven bij, splits de kosten en blijf op één lijn — samen op Evnly.
+    title: |-
+      !js
+      (name) => `Word lid van ${name} op Evnly`
+  dialog:
+    title: Verbinden via Evnly
+    description: Log in of maak een account aan om verder te gaan.
+    accept: Verbinden
+    decline: Niet nu
+    content: |-
+      !js
+      (name) => `${name} wil graag contact maken op Evnly om gezamenlijke uitgaven bij te houden.`

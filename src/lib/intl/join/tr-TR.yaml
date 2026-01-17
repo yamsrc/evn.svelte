@@ -2,16 +2,12 @@ account:
   title: Hesap transferi
   description: Birisi bu hesabı oluşturdu ve şimdi onu sana devrediyor.
   accept: Hesabı kabul et
-  content0: >-
-    Sahipliği almak için oturum açma bilgilerini ayarla. Bu, yeni bir hesap
-    oluşturmaz — sadece bu hesaba erişmeni sağlar.
+  content0: Sahipliği almak için oturum açma bilgilerini ayarla. Bu, yeni bir hesap oluşturmaz — sadece bu hesaba erişmeni sağlar.
   content1: Bu yeni bir hesap oluşturmaz — sadece bu hesaba erişip yönetmeni sağlar.
   conflict:
-    content0: >-
+    content0: |-
       !js
-
-      (name) => `${name}, bu hesabı kabul etmek için mevcut hesabınızdan çıkış
-      yapacak ve yeni oturum açma bilgileri ayarlayacaksınız.`
+      (name) => `${name}, bu hesabı kabul etmek için mevcut hesabınızdan çıkış yapacak ve yeni oturum açma bilgileri ayarlayacaksınız.`
     content1: Bu hesapları birleştirmez — yeni hesabına geçiş yapacaksın.
   switch: Hesabı değiştir
   expired:
@@ -25,9 +21,20 @@ friends:
   app:
     description: Kim kime ne borçlu, arkadaşlarınla birlikte takip etmenin akıllı yolu.
   inviter:
-    description: >-
+    description: |-
       !js
-
-      (name) => `${name} tarafından davet edildiniz. Sadece kaydolun veya giriş
-      yapın, hazırsınız!`
+      (name) => `${name} tarafından davet edildiniz. Sadece kaydolun veya giriş yapın, hazırsınız!`
   accept: Evn’i kullanmaya başla
+  og:
+    description: Paylaşılan harcamaları takip edin, masrafları bölüştürün ve uyumlu kalın — Evnly'de birlikte.
+    title: |-
+      !js
+      (name) => `Evnly'de ${name}'e katıl`
+  dialog:
+    title: Evnly'de bağlan
+    description: Devam etmek için giriş yapın veya bir hesap oluşturun.
+    accept: Bağlan
+    decline: Şimdi değil
+    content: |-
+      !js
+      (name) => `${name}, Evnly'de seninle bağlantı kurup ortak giderlerinizi takip etmek istiyor.`

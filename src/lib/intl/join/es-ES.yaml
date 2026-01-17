@@ -2,18 +2,12 @@ account:
   title: Transferencia de cuenta
   description: Alguien ha creado esta cuenta y te la está transfiriendo.
   accept: Aceptar cuenta
-  content0: >-
-    Para tomar posesión, configura tus datos de inicio de sesión. Esto no creará
-    una cuenta nueva, solo te da acceso a esta.
-  content1: >-
-    Esto no creará una nueva cuenta; simplemente te permitirá acceder y
-    gestionar esta.
+  content0: Para tomar posesión, configura tus datos de inicio de sesión. Esto no creará una cuenta nueva, solo te da acceso a esta.
+  content1: Esto no creará una nueva cuenta; simplemente te permitirá acceder y gestionar esta.
   conflict:
-    content0: >-
+    content0: |-
       !js
-
-      (name) => `${name}, para aceptar esta cuenta, cerrarás sesión en la actual
-      y se configurarán nuevos datos de acceso.`
+      (name) => `${name}, para aceptar esta cuenta, cerrarás sesión en la actual y se configurarán nuevos datos de acceso.`
     content1: Esto no fusionará las cuentas; solo cambiarás a la nueva.
   switch: Cambiar de cuenta
   expired:
@@ -25,13 +19,22 @@ actions:
   close: Cerrar
 friends:
   app:
-    description: >-
-      La forma inteligente de llevar un registro de quién debe a quién, junto a
-      tus amigos.
+    description: La forma inteligente de llevar un registro de quién debe a quién, junto a tus amigos.
   inviter:
-    description: >-
+    description: |-
       !js
-
-      (name) => `Has sido invitado por ${name}. Solo regístrate o inicia sesión,
-      ¡y listo!`
+      (name) => `Has sido invitado por ${name}. Solo regístrate o inicia sesión, ¡y listo!`
   accept: Comienza a usar Evn
+  og:
+    description: Lleva el control de los gastos compartidos, divide los costes y mantente sincronizado, todo juntos en Evnly.
+    title: |-
+      !js
+      (name) => `Únete a ${name} en Evnly`
+  dialog:
+    title: Conéctate en Evnly
+    description: Inicia sesión o crea una cuenta para continuar.
+    accept: Conectar
+    decline: Ahora no
+    content: |-
+      !js
+      (name) => `${name} quiere conectar contigo en Evnly para llevar un seguimiento de los gastos compartidos.`

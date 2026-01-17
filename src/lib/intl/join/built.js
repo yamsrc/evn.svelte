@@ -31,7 +31,18 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `لقد تمت دعوتك من قبل ${name}. فقط سجّل أو قم بتسجيل الدخول، وستكون جاهزًا!`
       },
-      "accept": "ابدأ استخدام Evn"
+      "accept": "ابدأ استخدام Evn",
+      "og": {
+        "description": "تابع المصاريف المشتركة، ووزّع التكاليف، وابقَ متزامنًا — معًا على Evnly.",
+        "title": (name) => `انضم إلى ${name} على Evnly`
+      },
+      "dialog": {
+        "title": "تواصل على إيفنلي",
+        "description": "سجّل الدخول أو أنشئ حسابًا للمتابعة.",
+        "accept": "اتصل",
+        "decline": "ليس الآن",
+        "content": (name) => `${name} يرغب في التواصل معك عبر Evnly لتتبع النفقات المشتركة.`
+      }
     }
   },
   "de-DE": {
@@ -63,7 +74,18 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `${name} hat dich eingeladen. Registriere dich einfach oder melde dich an und schon kann es losgehen!`
       },
-      "accept": "Evn jetzt nutzen"
+      "accept": "Evn jetzt nutzen",
+      "og": {
+        "description": "Geteilte Ausgaben verfolgen, Kosten aufteilen und immer abgestimmt bleiben – gemeinsam auf Evnly.",
+        "title": (name) => `Tritt ${name} auf Evnly bei`
+      },
+      "dialog": {
+        "title": "Auf Evnly verbinden",
+        "description": "Melden Sie sich an oder erstellen Sie ein Konto, um fortzufahren.",
+        "accept": "Verbinden",
+        "decline": "Nicht jetzt",
+        "content": (name) => `${name} möchte sich auf Evnly mit dir verbinden, um gemeinsame Ausgaben zu verfolgen.`
+      }
     }
   },
   "en-US": {
@@ -95,7 +117,18 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `You have been invited by ${name}. Just register or log in, and you’re all set`
       },
-      "accept": "Start Using Evn"
+      "accept": "Start Using Evn",
+      "og": {
+        "description": "Track shared expenses, split costs, and stay in sync — together on Evnly.",
+        "title": (name) => `Join ${name} on Evnly`
+      },
+      "dialog": {
+        "title": "Connect on Evnly",
+        "description": "Sign in or create an account to continue.",
+        "accept": "Connect",
+        "decline": "Not now",
+        "content": (name) => `${name} wants to connect with you on Evnly to track shared expenses.`
+      }
     }
   },
   "es-ES": {
@@ -127,7 +160,18 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `Has sido invitado por ${name}. Solo regístrate o inicia sesión, ¡y listo!`
       },
-      "accept": "Comienza a usar Evn"
+      "accept": "Comienza a usar Evn",
+      "og": {
+        "description": "Lleva el control de los gastos compartidos, divide los costes y mantente sincronizado, todo juntos en Evnly.",
+        "title": (name) => `Únete a ${name} en Evnly`
+      },
+      "dialog": {
+        "title": "Conéctate en Evnly",
+        "description": "Inicia sesión o crea una cuenta para continuar.",
+        "accept": "Conectar",
+        "decline": "Ahora no",
+        "content": (name) => `${name} quiere conectar contigo en Evnly para llevar un seguimiento de los gastos compartidos.`
+      }
     }
   },
   "fr-FR": {
@@ -159,7 +203,18 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `Vous avez été invité par ${name}. Inscrivez-vous ou connectez-vous, et tout est prêt !`
       },
-      "accept": "Commencer à utiliser Evn"
+      "accept": "Commencer à utiliser Evn",
+      "og": {
+        "description": "Gérez vos dépenses partagées, répartissez les coûts et restez synchronisés — ensemble sur Evnly.",
+        "title": (name) => `Rejoins ${name} sur Evnly`
+      },
+      "dialog": {
+        "title": "Connectez-vous sur Evnly",
+        "description": "Connectez-vous ou créez un compte pour continuer.",
+        "accept": "Se connecter",
+        "decline": "Pas maintenant",
+        "content": (name) => `${name} souhaite se connecter avec vous sur Evnly pour suivre les dépenses partagées.`
+      }
     }
   },
   "hi-IN": {
@@ -191,7 +246,18 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `${name} ने आपको आमंत्रित किया है। बस रजिस्टर करें या लॉग इन करें, और आप तैयार हैं!`
       },
-      "accept": "Evn का उपयोग शुरू करें"
+      "accept": "Evn का उपयोग शुरू करें",
+      "og": {
+        "description": "साझा खर्च ट्रैक करें, खर्चों को बांटें, और हमेशा साथ रहें — Evnly पर मिलकर।",
+        "title": (name) => `${name} के साथ Evnly पर जुड़ें`
+      },
+      "dialog": {
+        "title": "Evnly पर कनेक्ट करें",
+        "description": "जारी रखने के लिए साइन इन करें या एक खाता बनाएं।",
+        "accept": "कनेक्ट करें",
+        "decline": "अभी नहीं",
+        "content": (name) => `${name} Evnly पर आपके साथ जुड़ना चाहता है ताकि साझा खर्च ट्रैक कर सकें।`
+      }
     }
   },
   "it-IT": {
@@ -223,7 +289,18 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `Sei stato invitato da ${name}. Registrati o accedi, ed è tutto pronto!`
       },
-      "accept": "Inizia a usare Evn"
+      "accept": "Inizia a usare Evn",
+      "og": {
+        "description": "Tieni traccia delle spese condivise, dividi i costi e rimani sincronizzato — insieme su Evnly.",
+        "title": (name) => `Unisciti a ${name} su Evnly`
+      },
+      "dialog": {
+        "title": "Connettiti su Evnly",
+        "description": "Accedi o crea un account per continuare.",
+        "accept": "Connetti",
+        "decline": "Non ora",
+        "content": (name) => `${name} vuole connettersi con te su Evnly per tenere traccia delle spese condivise.`
+      }
     }
   },
   "ja-JP": {
@@ -255,7 +332,18 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `${name}さんから招待されています。登録またはログインするだけで、すぐにご利用いただけます。`
       },
-      "accept": "Evn を使い始める"
+      "accept": "Evn を使い始める",
+      "og": {
+        "description": "共有の支出を管理し、費用を分担し、みんなで常に連携——Evnlyで一緒に。",
+        "title": (name) => `Evnlyで${name}に参加しよう`
+      },
+      "dialog": {
+        "title": "Evnlyでつながる",
+        "description": "続行するにはサインインするかアカウントを作成してください。",
+        "accept": "接続",
+        "decline": "今はしない",
+        "content": (name) => `${name}さんがEvnlyであなたとつながり、共有した支出を管理したいと考えています。`
+      }
     }
   },
   "ko-KR": {
@@ -287,7 +375,18 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `${name}님이 초대하셨습니다. 가입하거나 로그인하면 바로 시작할 수 있어요!`
       },
-      "accept": "Evn 시작하기"
+      "accept": "Evn 시작하기",
+      "og": {
+        "description": "공동 지출을 기록하고, 비용을 나누며, 항상 함께 맞춰보세요 — Evnly에서 같이.",
+        "title": (name) => `Evnly에서 ${name}와 함께해요`
+      },
+      "dialog": {
+        "title": "Evnly에서 연결하기",
+        "description": "계속하려면 로그인하거나 계정을 생성하세요.",
+        "accept": "연결",
+        "decline": "지금은 아니에요",
+        "content": (name) => `${name}님이 Evnly에서 함께 연결해 공동 지출을 관리하고 싶어합니다.`
+      }
     }
   },
   "nl-NL": {
@@ -319,7 +418,18 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `Je bent uitgenodigd door ${name}. Registreer je of log in, en je bent klaar om te beginnen!`
       },
-      "accept": "Begin met het gebruik van Evn"
+      "accept": "Begin met het gebruik van Evn",
+      "og": {
+        "description": "Houd gezamenlijke uitgaven bij, splits de kosten en blijf op één lijn — samen op Evnly.",
+        "title": (name) => `Word lid van ${name} op Evnly`
+      },
+      "dialog": {
+        "title": "Verbinden via Evnly",
+        "description": "Log in of maak een account aan om verder te gaan.",
+        "accept": "Verbinden",
+        "decline": "Niet nu",
+        "content": (name) => `${name} wil graag contact maken op Evnly om gezamenlijke uitgaven bij te houden.`
+      }
     }
   },
   "ru-RU": {
@@ -351,7 +461,18 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `Вас пригласил(а) ${name}. Просто зарегистрируйтесь или войдите — и всё готово!`
       },
-      "accept": "Начать пользоваться Evn"
+      "accept": "Начать пользоваться Evn",
+      "og": {
+        "description": "Отслеживайте общие расходы, делите затраты и оставайтесь на одной волне — вместе на Evnly.",
+        "title": (name) => `Присоединяйся к ${name} на Evnly`
+      },
+      "dialog": {
+        "title": "Подключиться на Evnly",
+        "description": "Войдите или создайте аккаунт, чтобы продолжить.",
+        "accept": "Подключиться",
+        "decline": "Не сейчас",
+        "content": (name) => `${name} хочет добавить вас в друзья на Evnly, чтобы отслеживать общие расходы.`
+      }
     }
   },
   "sw-TZ": {
@@ -383,7 +504,18 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `Umealikwa na ${name}. Jisajili au ingia tu, na uko tayari kuanza!`
       },
-      "accept": "Anza kutumia Evn"
+      "accept": "Anza kutumia Evn",
+      "og": {
+        "description": "Fatilia matumizi ya pamoja, gawanya gharama, na dumuni mmelingano — pamoja kwenye Evnly.",
+        "title": (name) => `Jiunge na ${name} kwenye Evnly`
+      },
+      "dialog": {
+        "title": "Unganisha kwenye Evnly",
+        "description": "Ingia au tengeneza akaunti ili kuendelea.",
+        "accept": "Unganisha",
+        "decline": "Siyo sasa",
+        "content": (name) => `${name} anataka kuungana nawe kwenye Evnly ili kufuatilia matumizi yenu ya pamoja.`
+      }
     }
   },
   "tr-TR": {
@@ -415,7 +547,18 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `${name} tarafından davet edildiniz. Sadece kaydolun veya giriş yapın, hazırsınız!`
       },
-      "accept": "Evn’i kullanmaya başla"
+      "accept": "Evn’i kullanmaya başla",
+      "og": {
+        "description": "Paylaşılan harcamaları takip edin, masrafları bölüştürün ve uyumlu kalın — Evnly'de birlikte.",
+        "title": (name) => `Evnly'de ${name}'e katıl`
+      },
+      "dialog": {
+        "title": "Evnly'de bağlan",
+        "description": "Devam etmek için giriş yapın veya bir hesap oluşturun.",
+        "accept": "Bağlan",
+        "decline": "Şimdi değil",
+        "content": (name) => `${name}, Evnly'de seninle bağlantı kurup ortak giderlerinizi takip etmek istiyor.`
+      }
     }
   },
   "uk-UA": {
@@ -447,7 +590,18 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `Вас запросив(ла) ${name}. Просто зареєструйтеся або увійдіть — і все готово!`
       },
-      "accept": "Почати користуватися Evn"
+      "accept": "Почати користуватися Evn",
+      "og": {
+        "description": "Відстежуйте спільні витрати, діліть рахунки та залишайтеся на зв’язку — разом на Evnly.",
+        "title": (name) => `Приєднуйся до ${name} на Evnly`
+      },
+      "dialog": {
+        "title": "Підключайтеся на Evnly",
+        "description": "Увійдіть або створіть обліковий запис, щоб продовжити.",
+        "accept": "Підключитися",
+        "decline": "Не зараз",
+        "content": (name) => `${name} хоче підключитися до вас у Evnly, щоб відстежувати спільні витрати.`
+      }
     }
   },
   "zh-CN": {
@@ -479,7 +633,18 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `您已被${name}邀请。只需注册或登录，您就可以开始了！`
       },
-      "accept": "开始使用 Evn"
+      "accept": "开始使用 Evn",
+      "og": {
+        "description": "跟踪共享支出、分摊费用、保持同步 —— 一起在 Evnly 上。",
+        "title": (name) => `在Evnly上加入${name}`
+      },
+      "dialog": {
+        "title": "在Evnly上连接",
+        "description": "请登录或创建账户以继续。",
+        "accept": "连接",
+        "decline": "现在不要",
+        "content": (name) => `${name} 想在 Evnly 上与你建立联系，以便一起管理共同支出。`
+      }
     }
   }
 };

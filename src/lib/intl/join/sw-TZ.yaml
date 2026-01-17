@@ -2,16 +2,12 @@ account:
   title: Uhamisho wa akaunti
   description: Mtu fulani ameunda akaunti hii na anaikukabidhi kwako.
   accept: Kubali akaunti
-  content0: >-
-    Ili kuwa mmiliki, weka taarifa zako za kuingia. Hii haitaunda akaunti mpya —
-    itakupa tu ufikiaji wa hii.
+  content0: Ili kuwa mmiliki, weka taarifa zako za kuingia. Hii haitaunda akaunti mpya — itakupa tu ufikiaji wa hii.
   content1: Hii haitaunda akaunti mpya — itakuwezesha tu kupata na kudhibiti hii.
   conflict:
-    content0: >-
+    content0: |-
       !js
-
-      (name) => `${name}, ili kukubali akaunti hii, utatolewa kwenye akaunti
-      yako ya sasa na kuweka maelezo mapya ya kuingia.`
+      (name) => `${name}, ili kukubali akaunti hii, utatolewa kwenye akaunti yako ya sasa na kuweka maelezo mapya ya kuingia.`
     content1: Hili haitaunganisha akaunti — utahama kwenda mpya.
   switch: Badilisha akaunti
   expired:
@@ -25,9 +21,20 @@ friends:
   app:
     description: Njia bora ya kufuatilia nani anamdai nani, ukiwa pamoja na marafiki.
   inviter:
-    description: >-
+    description: |-
       !js
-
-      (name) => `Umealikwa na ${name}. Jisajili au ingia tu, na uko tayari
-      kuanza!`
+      (name) => `Umealikwa na ${name}. Jisajili au ingia tu, na uko tayari kuanza!`
   accept: Anza kutumia Evn
+  og:
+    description: Fatilia matumizi ya pamoja, gawanya gharama, na dumuni mmelingano — pamoja kwenye Evnly.
+    title: |-
+      !js
+      (name) => `Jiunge na ${name} kwenye Evnly`
+  dialog:
+    title: Unganisha kwenye Evnly
+    description: Ingia au tengeneza akaunti ili kuendelea.
+    accept: Unganisha
+    decline: Siyo sasa
+    content: |-
+      !js
+      (name) => `${name} anataka kuungana nawe kwenye Evnly ili kufuatilia matumizi yenu ya pamoja.`

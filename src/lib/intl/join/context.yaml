@@ -48,3 +48,21 @@ inputs:
                 you’re all set`
     accept:
       input: Start Using Evn
+    og:
+      description:
+        input: Track shared expenses, split costs, and stay in sync — together on Evnly.
+      title:
+        input: Join {name} on Evnly
+        context: non-formal, friendly CTA, second-person singular,  make it a function
+    dialog:
+      title:
+        input: Connect on Evnly
+      description:
+        input: Sign in or create an account to continue.
+      accept:
+        input: Connect
+      decline:
+        input: Not now
+      content:
+        input: "{name} wants to connect with you on Evnly to track shared expenses."
+        context: make it a function
