@@ -201,3 +201,5 @@ events.on('default.contacts.sync', async (entry: net.Contact) => {
 Static assets must be stored in the `static/` directory or inside the component directory.
 
 > Assets in the `routes/` directory may create multiple URLs for the same asset, which breaks caching.
+
+Optimize images using `npx sharp`.
