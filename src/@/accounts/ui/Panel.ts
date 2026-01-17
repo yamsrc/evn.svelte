@@ -5,7 +5,7 @@ type AccountLike = Pick<Account, 'id' | 'name' | 'picture'>
 
 export type Props = {
   account: AccountLike
-  balance: number
+  balance?: number
   selected?: boolean
   href?: string
   class?: string
