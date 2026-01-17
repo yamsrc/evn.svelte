@@ -47,6 +47,17 @@ export const dictionaries = {
         "decline": "ليس الآن",
         "content": (name) => `${name} يرغب في التواصل معك عبر Evnly لتتبع النفقات المشتركة.`
       }
+    },
+    "group": {
+      "og": {
+        "title": (groupName) => `انضم إلى "${groupName}" على Evnly`,
+        "description": (names) => `قسّم المصاريف مع ${new Intl.ListFormat("ar", { style: "long", type: "conjunction" }).format(names)}`
+      },
+      "dialog": {
+        "title": (groupname) => `انضم إلى ${groupname}`,
+        "join": "انضم",
+        "decline": "رفض"
+      }
     }
   },
   "de-DE": {
@@ -93,6 +104,17 @@ export const dictionaries = {
         "accept": "Verbinden",
         "decline": "Nicht jetzt",
         "content": (name) => `${name} möchte sich auf Evnly mit dir verbinden, um gemeinsame Ausgaben zu verfolgen.`
+      }
+    },
+    "group": {
+      "og": {
+        "title": (groupName) => `Tritt "${groupName}" auf Evnly bei`,
+        "description": (names) => `Teile die Ausgaben mit ${new Intl.ListFormat("de", { style: "long", type: "conjunction" }).format(names)}`
+      },
+      "dialog": {
+        "title": (groupname) => `Tritt ${groupname} bei`,
+        "join": "Beitreten",
+        "decline": "Ablehnen"
       }
     }
   },
@@ -141,6 +163,17 @@ export const dictionaries = {
         "decline": "Not now",
         "content": (name) => `${name} wants to connect with you on Evnly to track shared expenses.`
       }
+    },
+    "group": {
+      "og": {
+        "title": (groupName) => `Join "${groupName}" on Evnly`,
+        "description": (names) => `Split expenses with ${new Intl.ListFormat("en", { style: "long", type: "conjunction" }).format(names)}`
+      },
+      "dialog": {
+        "title": (groupname) => `Join ${groupname}`,
+        "join": "Join",
+        "decline": "Decline"
+      }
     }
   },
   "es-ES": {
@@ -187,6 +220,17 @@ export const dictionaries = {
         "accept": "Conectar",
         "decline": "Ahora no",
         "content": (name) => `${name} quiere conectar contigo en Evnly para llevar un seguimiento de los gastos compartidos.`
+      }
+    },
+    "group": {
+      "og": {
+        "title": (groupName) => `Únete a "${groupName}" en Evnly`,
+        "description": (names) => `Divide los gastos con ${new Intl.ListFormat("es", { style: "long", type: "conjunction" }).format(names)}`
+      },
+      "dialog": {
+        "title": (groupname) => `Únete a ${groupname}`,
+        "join": "Unirse",
+        "decline": "Rechazar"
       }
     }
   },
@@ -235,6 +279,17 @@ export const dictionaries = {
         "decline": "Pas maintenant",
         "content": (name) => `${name} souhaite se connecter avec vous sur Evnly pour suivre les dépenses partagées.`
       }
+    },
+    "group": {
+      "og": {
+        "title": (groupName) => `Rejoindre « ${groupName} » sur Evnly`,
+        "description": (names) => `Partagez les dépenses avec ${new Intl.ListFormat("fr", { style: "long", type: "conjunction" }).format(names)}`
+      },
+      "dialog": {
+        "title": (groupname) => `Rejoindre ${groupname}`,
+        "join": "Rejoindre",
+        "decline": "Refuser"
+      }
     }
   },
   "hi-IN": {
@@ -281,6 +336,17 @@ export const dictionaries = {
         "accept": "कनेक्ट करें",
         "decline": "अभी नहीं",
         "content": (name) => `${name} Evnly पर आपके साथ जुड़ना चाहता है ताकि साझा खर्च ट्रैक कर सकें।`
+      }
+    },
+    "group": {
+      "og": {
+        "title": (groupName) => `Evnly पर "${groupName}" से जुड़ें`,
+        "description": (names) => `${new Intl.ListFormat("hi", { style: "long", type: "conjunction" }).format(names)} के साथ खर्च बाँटे`
+      },
+      "dialog": {
+        "title": (groupname) => `${groupname} से जुड़ें`,
+        "join": "जुड़ें",
+        "decline": "अस्वीकृत करें"
       }
     }
   },
@@ -329,6 +395,17 @@ export const dictionaries = {
         "decline": "Non ora",
         "content": (name) => `${name} vuole connettersi con te su Evnly per tenere traccia delle spese condivise.`
       }
+    },
+    "group": {
+      "og": {
+        "title": (groupName) => `Unisciti a "${groupName}" su Evnly`,
+        "description": (names) => `Dividi le spese con ${new Intl.ListFormat("it", { style: "long", type: "conjunction" }).format(names)}`
+      },
+      "dialog": {
+        "title": (groupname) => `Unisciti a ${groupname}`,
+        "join": "Unisciti",
+        "decline": "Rifiuta"
+      }
     }
   },
   "ja-JP": {
@@ -375,6 +452,17 @@ export const dictionaries = {
         "accept": "接続",
         "decline": "今はしない",
         "content": (name) => `${name}さんがEvnlyであなたとつながり、共有した支出を管理したいと考えています。`
+      }
+    },
+    "group": {
+      "og": {
+        "title": (groupName) => `Evnlyで「${groupName}」に参加する`,
+        "description": (names) => `${new Intl.ListFormat("ja", { style: "long", type: "conjunction" }).format(names)}と費用を分割する`
+      },
+      "dialog": {
+        "title": (groupname) => `${groupname}に参加する`,
+        "join": "参加する",
+        "decline": "辞退する"
       }
     }
   },
@@ -423,6 +511,17 @@ export const dictionaries = {
         "decline": "지금은 아니에요",
         "content": (name) => `${name}님이 Evnly에서 함께 연결해 공동 지출을 관리하고 싶어합니다.`
       }
+    },
+    "group": {
+      "og": {
+        "title": (groupName) => `Evnly에서 "${groupName}"에 가입하기`,
+        "description": (names) => `${new Intl.ListFormat("ko", { style: "long", type: "conjunction" }).format(names)}와(과) 비용을 나누세요`
+      },
+      "dialog": {
+        "title": (groupname) => `${groupname}에 가입하기`,
+        "join": "참여하기",
+        "decline": "거절"
+      }
     }
   },
   "nl-NL": {
@@ -469,6 +568,17 @@ export const dictionaries = {
         "accept": "Verbinden",
         "decline": "Niet nu",
         "content": (name) => `${name} wil graag contact maken op Evnly om gezamenlijke uitgaven bij te houden.`
+      }
+    },
+    "group": {
+      "og": {
+        "title": (groupName) => `Word lid van "${groupName}" op Evnly`,
+        "description": (names) => `Deel uitgaven met ${new Intl.ListFormat("nl", { style: "long", type: "conjunction" }).format(names)}`
+      },
+      "dialog": {
+        "title": (groupname) => `Word lid van ${groupname}`,
+        "join": "Meedoen",
+        "decline": "Weigeren"
       }
     }
   },
@@ -517,6 +627,17 @@ export const dictionaries = {
         "decline": "Не сейчас",
         "content": (name) => `${name} хочет добавить вас в друзья на Evnly, чтобы отслеживать общие расходы.`
       }
+    },
+    "group": {
+      "og": {
+        "title": (groupName) => `Присоединиться к «${groupName}» на Evnly`,
+        "description": (names) => `Разделяй расходы с ${new Intl.ListFormat("ru", { style: "long", type: "conjunction" }).format(names)}`
+      },
+      "dialog": {
+        "title": (groupname) => `Присоединиться к ${groupname}`,
+        "join": "Присоединиться",
+        "decline": "Отклонить"
+      }
     }
   },
   "sw-TZ": {
@@ -563,6 +684,17 @@ export const dictionaries = {
         "accept": "Unganisha",
         "decline": "Siyo sasa",
         "content": (name) => `${name} anataka kuungana nawe kwenye Evnly ili kufuatilia matumizi yenu ya pamoja.`
+      }
+    },
+    "group": {
+      "og": {
+        "title": (groupName) => `Jiunge na "${groupName}" kwenye Evnly`,
+        "description": (names) => `Gawa gharama na ${new Intl.ListFormat("sw", { style: "long", type: "conjunction" }).format(names)}`
+      },
+      "dialog": {
+        "title": (groupname) => `Jiunge na ${groupname}`,
+        "join": "Jiunge",
+        "decline": "Kataa"
       }
     }
   },
@@ -611,6 +743,17 @@ export const dictionaries = {
         "decline": "Şimdi değil",
         "content": (name) => `${name}, Evnly'de seninle bağlantı kurup ortak giderlerinizi takip etmek istiyor.`
       }
+    },
+    "group": {
+      "og": {
+        "title": (groupName) => `Evnly'de "${groupName}" grubuna katıl`,
+        "description": (names) => `${new Intl.ListFormat("tr", { style: "long", type: "conjunction" }).format(names)} ile masrafları paylaş`
+      },
+      "dialog": {
+        "title": (groupname) => `${groupname}’e Katıl`,
+        "join": "Katıl",
+        "decline": "Reddet"
+      }
     }
   },
   "uk-UA": {
@@ -658,6 +801,17 @@ export const dictionaries = {
         "decline": "Не зараз",
         "content": (name) => `${name} хоче підключитися до вас у Evnly, щоб відстежувати спільні витрати.`
       }
+    },
+    "group": {
+      "og": {
+        "title": (groupName) => `Приєднатися до «${groupName}» на Evnly`,
+        "description": (names) => `Розділіть витрати з ${new Intl.ListFormat("uk", { style: "long", type: "conjunction" }).format(names)}`
+      },
+      "dialog": {
+        "title": (groupname) => `Приєднатися до ${groupname}`,
+        "join": "Приєднатися",
+        "decline": "Відхилити"
+      }
     }
   },
   "zh-CN": {
@@ -704,6 +858,17 @@ export const dictionaries = {
         "accept": "连接",
         "decline": "现在不要",
         "content": (name) => `${name} 想在 Evnly 上与你建立联系，以便一起管理共同支出。`
+      }
+    },
+    "group": {
+      "og": {
+        "title": (groupName) => `在Evnly加入“${groupName}”`,
+        "description": (names) => `与${new Intl.ListFormat("zh", { style: "long", type: "conjunction" }).format(names)}分摊费用`
+      },
+      "dialog": {
+        "title": (groupname) => `加入${groupname}`,
+        "join": "加入",
+        "decline": "拒绝"
       }
     }
   }

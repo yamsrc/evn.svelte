@@ -55,3 +55,19 @@ friends:
 
       (name) => `${name} anataka kuungana nawe kwenye Evnly ili kufuatilia
       matumizi yenu ya pamoja.`
+group:
+  og:
+    title: |-
+      !js
+      (groupName) => `Jiunge na "${groupName}" kwenye Evnly`
+    description: >-
+      !js
+
+      (names) => `Gawa gharama na ${new Intl.ListFormat("sw", { style: "long",
+      type: "conjunction" }).format(names)}`
+  dialog:
+    title: |-
+      !js
+      (groupname) => `Jiunge na ${groupname}`
+    join: Jiunge
+    decline: Kataa

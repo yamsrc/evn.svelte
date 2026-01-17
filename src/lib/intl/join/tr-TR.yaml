@@ -55,3 +55,19 @@ friends:
 
       (name) => `${name}, Evnly'de seninle bağlantı kurup ortak giderlerinizi
       takip etmek istiyor.`
+group:
+  og:
+    title: |-
+      !js
+      (groupName) => `Evnly'de "${groupName}" grubuna katıl`
+    description: >-
+      !js
+
+      (names) => `${new Intl.ListFormat("tr", { style: "long", type:
+      "conjunction" }).format(names)} ile masrafları paylaş`
+  dialog:
+    title: |-
+      !js
+      (groupname) => `${groupname}’e Katıl`
+    join: Katıl
+    decline: Reddet

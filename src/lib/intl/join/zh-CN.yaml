@@ -43,3 +43,19 @@ friends:
     content: |-
       !js
       (name) => `${name} 想在 Evnly 上与你建立联系，以便一起管理共同支出。`
+group:
+  og:
+    title: |-
+      !js
+      (groupName) => `在Evnly加入“${groupName}”`
+    description: >-
+      !js
+
+      (names) => `与${new Intl.ListFormat("zh", { style: "long", type:
+      "conjunction" }).format(names)}分摊费用`
+  dialog:
+    title: |-
+      !js
+      (groupname) => `加入${groupname}`
+    join: 加入
+    decline: 拒绝

@@ -57,3 +57,19 @@ friends:
 
       (name) => `${name} хочет добавить вас в друзья на Evnly, чтобы отслеживать
       общие расходы.`
+group:
+  og:
+    title: |-
+      !js
+      (groupName) => `Присоединиться к «${groupName}» на Evnly`
+    description: >-
+      !js
+
+      (names) => `Разделяй расходы с ${new Intl.ListFormat("ru", { style:
+      "long", type: "conjunction" }).format(names)}`
+  dialog:
+    title: |-
+      !js
+      (groupname) => `Присоединиться к ${groupname}`
+    join: Присоединиться
+    decline: Отклонить

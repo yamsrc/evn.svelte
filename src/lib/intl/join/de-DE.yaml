@@ -62,3 +62,19 @@ friends:
 
       (name) => `${name} möchte sich auf Evnly mit dir verbinden, um gemeinsame
       Ausgaben zu verfolgen.`
+group:
+  og:
+    title: |-
+      !js
+      (groupName) => `Tritt "${groupName}" auf Evnly bei`
+    description: >-
+      !js
+
+      (names) => `Teile die Ausgaben mit ${new Intl.ListFormat("de", { style:
+      "long", type: "conjunction" }).format(names)}`
+  dialog:
+    title: |-
+      !js
+      (groupname) => `Tritt ${groupname} bei`
+    join: Beitreten
+    decline: Ablehnen

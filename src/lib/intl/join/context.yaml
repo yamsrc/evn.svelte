@@ -72,3 +72,21 @@ inputs:
       content:
         input: "{name} wants to connect with you on Evnly to track shared expenses."
         context: make it a function
+  group:
+    og:
+      title:
+        input: Join “{groupName}” on Evnly
+        context: make it a function, use quotes natural to corresponding language
+      description:
+        input: Split expenses with {names}
+        context: make a function, that accepts an array of strings and substitutes list of those strings using Intl.ListFormat type conjunction long
+    dialog:
+      title:
+        input: Join {groupname}
+        context: make a function
+      join:
+        input: Join
+        context: button label
+      decline:
+        input: Decline
+        context: button label

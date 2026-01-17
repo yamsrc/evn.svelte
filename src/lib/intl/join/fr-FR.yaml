@@ -61,3 +61,17 @@ friends:
 
       (name) => `${name} souhaite se connecter avec vous sur Evnly pour suivre
       les dépenses partagées.`
+group:
+  og:
+    title: "!js\n(groupName) => `Rejoindre «\_${groupName}\_» sur Evnly`"
+    description: >-
+      !js
+
+      (names) => `Partagez les dépenses avec ${new Intl.ListFormat("fr", {
+      style: "long", type: "conjunction" }).format(names)}`
+  dialog:
+    title: |-
+      !js
+      (groupname) => `Rejoindre ${groupname}`
+    join: Rejoindre
+    decline: Refuser

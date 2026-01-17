@@ -52,4 +52,15 @@ export type Dictionary = {
           content: (value: any) => string
         }
       }
+      group: {
+        og: {
+          title: (value: any) => string
+          description: (value: any) => string
+        }
+        dialog: {
+          title: (value: any) => string
+          join: string
+          decline: string
+        }
+      }
     }

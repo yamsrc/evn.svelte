@@ -59,3 +59,19 @@ friends:
 
       (name) => `${name} Evnly पर आपके साथ जुड़ना चाहता है ताकि साझा खर्च ट्रैक
       कर सकें।`
+group:
+  og:
+    title: |-
+      !js
+      (groupName) => `Evnly पर "${groupName}" से जुड़ें`
+    description: >-
+      !js
+
+      (names) => `${new Intl.ListFormat("hi", { style: "long", type:
+      "conjunction" }).format(names)} के साथ खर्च बाँटे`
+  dialog:
+    title: |-
+      !js
+      (groupname) => `${groupname} से जुड़ें`
+    join: जुड़ें
+    decline: अस्वीकृत करें

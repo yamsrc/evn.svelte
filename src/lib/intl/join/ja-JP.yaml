@@ -45,3 +45,19 @@ friends:
     content: |-
       !js
       (name) => `${name}さんがEvnlyであなたとつながり、共有した支出を管理したいと考えています。`
+group:
+  og:
+    title: |-
+      !js
+      (groupName) => `Evnlyで「${groupName}」に参加する`
+    description: >-
+      !js
+
+      (names) => `${new Intl.ListFormat("ja", { style: "long", type:
+      "conjunction" }).format(names)}と費用を分割する`
+  dialog:
+    title: |-
+      !js
+      (groupname) => `${groupname}に参加する`
+    join: 参加する
+    decline: 辞退する

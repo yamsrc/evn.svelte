@@ -61,3 +61,19 @@ friends:
 
       (name) => `${name} wil graag contact maken op Evnly om gezamenlijke
       uitgaven bij te houden.`
+group:
+  og:
+    title: |-
+      !js
+      (groupName) => `Word lid van "${groupName}" op Evnly`
+    description: >-
+      !js
+
+      (names) => `Deel uitgaven met ${new Intl.ListFormat("nl", { style: "long",
+      type: "conjunction" }).format(names)}`
+  dialog:
+    title: |-
+      !js
+      (groupname) => `Word lid van ${groupname}`
+    join: Meedoen
+    decline: Weigeren

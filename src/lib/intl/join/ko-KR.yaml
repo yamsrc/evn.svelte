@@ -43,3 +43,19 @@ friends:
     content: |-
       !js
       (name) => `${name}님이 Evnly에서 함께 연결해 공동 지출을 관리하고 싶어합니다.`
+group:
+  og:
+    title: |-
+      !js
+      (groupName) => `Evnly에서 "${groupName}"에 가입하기`
+    description: >-
+      !js
+
+      (names) => `${new Intl.ListFormat("ko", { style: "long", type:
+      "conjunction" }).format(names)}와(과) 비용을 나누세요`
+  dialog:
+    title: |-
+      !js
+      (groupname) => `${groupname}에 가입하기`
+    join: 참여하기
+    decline: 거절

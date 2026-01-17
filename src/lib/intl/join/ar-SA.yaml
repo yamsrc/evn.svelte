@@ -51,3 +51,19 @@ friends:
     content: |-
       !js
       (name) => `${name} يرغب في التواصل معك عبر Evnly لتتبع النفقات المشتركة.`
+group:
+  og:
+    title: |-
+      !js
+      (groupName) => `انضم إلى "${groupName}" على Evnly`
+    description: >-
+      !js
+
+      (names) => `قسّم المصاريف مع ${new Intl.ListFormat("ar", { style: "long",
+      type: "conjunction" }).format(names)}`
+  dialog:
+    title: |-
+      !js
+      (groupname) => `انضم إلى ${groupname}`
+    join: انضم
+    decline: رفض

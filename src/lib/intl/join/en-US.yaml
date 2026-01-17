@@ -55,3 +55,19 @@ friends:
 
       (name) => `${name} wants to connect with you on Evnly to track shared
       expenses.`
+group:
+  og:
+    title: |-
+      !js
+      (groupName) => `Join "${groupName}" on Evnly`
+    description: >-
+      !js
+
+      (names) => `Split expenses with ${new Intl.ListFormat("en", { style:
+      "long", type: "conjunction" }).format(names)}`
+  dialog:
+    title: |-
+      !js
+      (groupname) => `Join ${groupname}`
+    join: Join
+    decline: Decline
