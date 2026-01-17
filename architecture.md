@@ -202,4 +202,4 @@ Static assets must be stored in the `static/` directory or inside the component 
 
 > Assets in the `routes/` directory may create multiple URLs for the same asset, which breaks caching.
 
-Optimize images using `npx sharp`.
+Optimize images using `npx sharp --optimize`.
