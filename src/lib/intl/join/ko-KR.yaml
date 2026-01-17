@@ -14,6 +14,11 @@ account:
     content: 보내는 사람에게 새 링크를 생성해 달라고 요청하세요.
     description: 이체 요청이 만료되었습니다.
     title: 전송 만료됨
+  og:
+    tile: Evnly에서 계정을 인수하세요.
+    description: |-
+      !js
+      (name) => `${name}님, 이 계정은 회원님을 위해 생성되었습니다. 로그인 정보를 설정하여 소유권을 가져가세요.`
 actions:
   discard: 버리기
   close: 닫기

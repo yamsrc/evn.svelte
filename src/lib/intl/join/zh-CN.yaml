@@ -14,6 +14,11 @@ account:
     content: 请让发送方生成一个新链接。
     description: 该转账请求已过期。
     title: 转移已过期
+  og:
+    tile: 接管您在Evnly的账户。
+    description: |-
+      !js
+      (name) => `${name}，此账户是为您创建的。请设置登录信息以获取账户所有权。`
 actions:
   discard: 丢弃
   close: 关闭

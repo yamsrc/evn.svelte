@@ -18,6 +18,10 @@ export const dictionaries = {
         "content": "اطلب من المُرسِل إنشاء رابط جديد.",
         "description": "انتهت صلاحية طلب التحويل هذا.",
         "title": "انتهت صلاحية النقل"
+      },
+      "og": {
+        "tile": "استلم التحكم في حسابك على Evnly.",
+        "description": (name) => `${name}، تم إنشاء هذا الحساب لك. أنشئ بيانات تسجيل الدخول لتصبح المالك.`
       }
     },
     "actions": {
@@ -61,6 +65,10 @@ export const dictionaries = {
         "content": "Bitte den Absender, einen neuen Link zu erstellen.",
         "description": "Diese Überweisungsanfrage ist abgelaufen.",
         "title": "Übertragung abgelaufen"
+      },
+      "og": {
+        "tile": "Übernimm dein Evnly-Konto.",
+        "description": (name) => `${name}, dieses Konto wurde für dich erstellt. Übernimm es, indem du deine Anmeldedaten festlegst.`
       }
     },
     "actions": {
@@ -104,6 +112,10 @@ export const dictionaries = {
         "content": "Ask the sender to generate a new link.",
         "description": "This transfer request has expired.",
         "title": "Transfer Expired"
+      },
+      "og": {
+        "tile": "Take over your account on Evnly.",
+        "description": (name) => `${name}, this account was created for you. Take ownership by setting up sign-in details.`
       }
     },
     "actions": {
@@ -147,6 +159,10 @@ export const dictionaries = {
         "content": "Pide al remitente que genere un nuevo enlace.",
         "description": "Esta solicitud de transferencia ha caducado.",
         "title": "Transferencia caducada"
+      },
+      "og": {
+        "tile": "Toma el control de tu cuenta en Evnly.",
+        "description": (name) => `${name}, esta cuenta fue creada para ti. Hazla tuya configurando tus datos de acceso.`
       }
     },
     "actions": {
@@ -190,6 +206,10 @@ export const dictionaries = {
         "content": "Demandez à l'expéditeur de générer un nouveau lien.",
         "description": "Cette demande de transfert a expiré.",
         "title": "Transfert expiré"
+      },
+      "og": {
+        "tile": "Prenez le contrôle de votre compte Evnly.",
+        "description": (name) => `${name}, ce compte a été créé pour vous. Prenez-en possession en configurant vos identifiants de connexion.`
       }
     },
     "actions": {
@@ -233,6 +253,10 @@ export const dictionaries = {
         "content": "प्रेषक से नया लिंक बनाने के लिए कहें।",
         "description": "इस ट्रांसफ़र अनुरोध की अवधि समाप्त हो गई है।",
         "title": "स्थानांतरण की अवधि समाप्त"
+      },
+      "og": {
+        "tile": "Evnly पर अपने खाते का नियंत्रण संभालें।",
+        "description": (name) => `${name}, यह खाता आपके लिए बनाया गया है। साइन-इन विवरण सेट करके स्वामित्व लें।`
       }
     },
     "actions": {
@@ -276,6 +300,10 @@ export const dictionaries = {
         "content": "Chiedi al mittente di generare un nuovo link.",
         "description": "Questa richiesta di trasferimento è scaduta.",
         "title": "Trasferimento scaduto"
+      },
+      "og": {
+        "tile": "Prendi il controllo del tuo account su Evnly.",
+        "description": (name) => `${name}, questo account è stato creato per te. Prendine possesso impostando i tuoi dati di accesso.`
       }
     },
     "actions": {
@@ -319,6 +347,10 @@ export const dictionaries = {
         "content": "送信者に新しいリンクを生成するよう依頼してください。",
         "description": "この送金リクエストの有効期限が切れました。",
         "title": "転送の有効期限が切れました"
+      },
+      "og": {
+        "tile": "Evnlyのアカウントを引き継ぐ。",
+        "description": (name) => `${name}さん、このアカウントはあなたのために作成されました。サインイン情報を設定してご自身のものにしてください。`
       }
     },
     "actions": {
@@ -362,6 +394,10 @@ export const dictionaries = {
         "content": "보내는 사람에게 새 링크를 생성해 달라고 요청하세요.",
         "description": "이체 요청이 만료되었습니다.",
         "title": "전송 만료됨"
+      },
+      "og": {
+        "tile": "Evnly에서 계정을 인수하세요.",
+        "description": (name) => `${name}님, 이 계정은 회원님을 위해 생성되었습니다. 로그인 정보를 설정하여 소유권을 가져가세요.`
       }
     },
     "actions": {
@@ -405,6 +441,10 @@ export const dictionaries = {
         "content": "Vraag de afzender om een nieuwe link te genereren.",
         "description": "Dit verzoek tot overboeking is verlopen.",
         "title": "Overdracht verlopen"
+      },
+      "og": {
+        "tile": "Neem de controle over je account op Evnly.",
+        "description": (name) => `${name}, dit account is voor jou aangemaakt. Neem het in gebruik door je inloggegevens in te stellen.`
       }
     },
     "actions": {
@@ -448,6 +488,10 @@ export const dictionaries = {
         "content": "Попросите отправителя сгенерировать новую ссылку.",
         "description": "Срок действия этого запроса на перевод истёк.",
         "title": "Время передачи истекло"
+      },
+      "og": {
+        "tile": "Перехватите управление своим аккаунтом на Evnly.",
+        "description": (name) => `${name}, для вас создана эта учетная запись. Примите владение, настроив данные для входа.`
       }
     },
     "actions": {
@@ -491,6 +535,10 @@ export const dictionaries = {
         "content": "Muombe mtoa taarifa atengeneze kiungo kipya.",
         "description": "Ombi hili la uhamisho limekwisha muda wake.",
         "title": "Uhamisho umeisha muda wake"
+      },
+      "og": {
+        "tile": "Chukua udhibiti wa akaunti yako kwenye Evnly.",
+        "description": (name) => `${name}, akaunti hii iliundwa kwa ajili yako. Miliki kwa kuweka maelezo ya kuingia.`
       }
     },
     "actions": {
@@ -534,6 +582,10 @@ export const dictionaries = {
         "content": "Gönderen kişiden yeni bir bağlantı oluşturmasını isteyin.",
         "description": "Bu transfer isteğinin süresi doldu.",
         "title": "Aktarım süresi doldu"
+      },
+      "og": {
+        "tile": "Evnly hesabınızı devralın.",
+        "description": (name) => `${name}, bu hesap sizin için oluşturuldu. Giriş bilgilerinizi ayarlayarak sahiplenin.`
       }
     },
     "actions": {
@@ -577,6 +629,10 @@ export const dictionaries = {
         "content": "Попросіть відправника створити нове посилання.",
         "description": "Термін дії цього запиту на переказ минув.",
         "title": "Термін передачі минув"
+      },
+      "og": {
+        "tile": "Переберіть контроль над своїм обліковим записом на Evnly.",
+        "description": (name) => `${name}, цей обліковий запис створено для вас. Станьте власником, налаштувавши дані для входу.`
       }
     },
     "actions": {
@@ -620,6 +676,10 @@ export const dictionaries = {
         "content": "请让发送方生成一个新链接。",
         "description": "该转账请求已过期。",
         "title": "转移已过期"
+      },
+      "og": {
+        "tile": "接管您在Evnly的账户。",
+        "description": (name) => `${name}，此账户是为您创建的。请设置登录信息以获取账户所有权。`
       }
     },
     "actions": {

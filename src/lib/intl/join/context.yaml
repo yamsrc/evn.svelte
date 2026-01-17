@@ -29,6 +29,12 @@ inputs:
       title:
         input: Transfer expired
         context: dialog title
+    og:
+      tile:
+        input: Take over your account on Evnly.
+      description:
+        input: "{name}, this account was created for you. Take ownership by setting up sign-in details."
+        context: make a function
   actions:
     discard:
       input: Discard

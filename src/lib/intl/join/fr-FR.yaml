@@ -2,31 +2,52 @@ account:
   title: Transfert de compte
   description: Quelqu’un a créé ce compte et est en train de vous le transférer.
   accept: Accepter le compte
-  content0: Pour prendre la main, configurez vos identifiants de connexion. Cela ne créera pas un nouveau compte — cela vous donnera simplement accès à celui-ci.
-  content1: Cela ne créera pas un nouveau compte — cela vous permettra simplement d'accéder à celui-ci et de le gérer.
+  content0: >-
+    Pour prendre la main, configurez vos identifiants de connexion. Cela ne
+    créera pas un nouveau compte — cela vous donnera simplement accès à
+    celui-ci.
+  content1: >-
+    Cela ne créera pas un nouveau compte — cela vous permettra simplement
+    d'accéder à celui-ci et de le gérer.
   conflict:
-    content0: |-
+    content0: >-
       !js
-      (name) => `${name}, pour accepter ce compte, vous serez déconnecté de votre compte actuel et devrez définir de nouvelles informations de connexion.`
+
+      (name) => `${name}, pour accepter ce compte, vous serez déconnecté de
+      votre compte actuel et devrez définir de nouvelles informations de
+      connexion.`
     content1: Cela ne fusionnera pas les comptes — vous passerez simplement au nouveau.
   switch: Changer de compte
   expired:
     content: Demandez à l'expéditeur de générer un nouveau lien.
     description: Cette demande de transfert a expiré.
     title: Transfert expiré
+  og:
+    tile: Prenez le contrôle de votre compte Evnly.
+    description: >-
+      !js
+
+      (name) => `${name}, ce compte a été créé pour vous. Prenez-en possession
+      en configurant vos identifiants de connexion.`
 actions:
   discard: Ignorer
   close: Fermer
 friends:
   app:
-    description: La façon intelligente de suivre qui doit quoi à qui, ensemble avec des amis.
+    description: >-
+      La façon intelligente de suivre qui doit quoi à qui, ensemble avec des
+      amis.
   inviter:
-    description: |-
+    description: >-
       !js
-      (name) => `Vous avez été invité par ${name}. Inscrivez-vous ou connectez-vous, et tout est prêt !`
+
+      (name) => `Vous avez été invité par ${name}. Inscrivez-vous ou
+      connectez-vous, et tout est prêt !`
   accept: Commencer à utiliser Evn
   og:
-    description: Gérez vos dépenses partagées, répartissez les coûts et restez synchronisés — ensemble sur Evnly.
+    description: >-
+      Gérez vos dépenses partagées, répartissez les coûts et restez synchronisés
+      — ensemble sur Evnly.
     title: |-
       !js
       (name) => `Rejoins ${name} sur Evnly`
@@ -35,6 +56,8 @@ friends:
     description: Connectez-vous ou créez un compte pour continuer.
     accept: Se connecter
     decline: Pas maintenant
-    content: |-
+    content: >-
       !js
-      (name) => `${name} souhaite se connecter avec vous sur Evnly pour suivre les dépenses partagées.`
+
+      (name) => `${name} souhaite se connecter avec vous sur Evnly pour suivre
+      les dépenses partagées.`

@@ -23,6 +23,10 @@ export type Dictionary = {
           description: string
           title: string
         }
+        og: {
+          tile: string
+          description: (value: any) => string
+        }
       }
       actions: {
         discard: string
