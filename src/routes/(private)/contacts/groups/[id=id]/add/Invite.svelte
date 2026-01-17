@@ -10,7 +10,7 @@
 
   const { id }: Props = $props()
 
-  const invitation = $derived({ url: `${window.location.origin}/join/groups/${id}/` })
+  const invitation = $derived({ url: `${window.location.origin}/join/group/${id}/` })
 </script>
 
 <DropdownMenu.Root>

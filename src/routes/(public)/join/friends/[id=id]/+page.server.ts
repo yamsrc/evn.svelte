@@ -1,12 +1,9 @@
 import { acceptable } from '$lib/intl'
 import { dictionaries } from '$lib/intl/join'
 import { get } from '@/accounts/svc/get'
-import { origin } from '@/net'
 import type { PageServerLoad } from './$types.js'
 
 export const load: PageServerLoad = async ({ params, fetch, request }) => {
-  origin.use(fetch)
-
   const inviter = await get(params.id)
   const locale = acceptable(request.headers.get('accept-language'))
   const dict = dictionaries[locale]
