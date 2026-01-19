@@ -27,8 +27,7 @@
   {selected}
   class={cn('bg-card border border-border h-20')}
   {onclick}
-  href={`/contacts/groups/${group.id}`}
->
+  href={`/contacts/groups/${group.id}`}>
   {#snippet left()}
     <div class="flex flex-col items-start gap-1">
       <div class="flex items-center gap-2">
@@ -54,6 +53,8 @@
     </div>
   {/snippet}
   {#snippet right()}
-    <Balance balance={group.balance} youAreOwed={$dict.contacts.contact.owesYou} />
+    {#if group.balance}
+      <Balance balance={group.balance} youAreOwed={$dict.contacts.contact.owesYou} />
+    {/if}
   {/snippet}
 </Panel>

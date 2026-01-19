@@ -6,8 +6,8 @@
   import type { PageData } from './$types.js'
 
   const data = page.data as PageData
-  const inviter = data.inviter
-  const good = ok(inviter)
+  const group = data.group
+  const good = ok(group)
 
   let accepted = $state(false)
   let error = $state(!good)
@@ -23,5 +23,5 @@
       {/if}
     </Authenticated>
   </Screen>
-  <Accept {inviter} bind:accepted bind:error />
+  <Accept {group} bind:accepted bind:error />
 {/if}

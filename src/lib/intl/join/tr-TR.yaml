@@ -18,6 +18,13 @@ account:
     content: Gönderen kişiden yeni bir bağlantı oluşturmasını isteyin.
     description: Bu transfer isteğinin süresi doldu.
     title: Aktarım süresi doldu
+  og:
+    tile: Evnly hesabınızı devralın.
+    description: >-
+      !js
+
+      (name) => `${name}, bu hesap sizin için oluşturuldu. Giriş bilgilerinizi
+      ayarlayarak sahiplenin.`
 actions:
   discard: Reddet
   close: Kapat
@@ -31,3 +38,36 @@ friends:
       (name) => `${name} tarafından davet edildiniz. Sadece kaydolun veya giriş
       yapın, hazırsınız!`
   accept: Evn’i kullanmaya başla
+  og:
+    description: >-
+      Paylaşılan harcamaları takip edin, masrafları bölüştürün ve uyumlu kalın —
+      Evnly'de birlikte.
+    title: |-
+      !js
+      (name) => `Evnly'de ${name}'e katıl`
+  dialog:
+    title: Evnly'de bağlan
+    description: Devam etmek için giriş yapın veya bir hesap oluşturun.
+    accept: Bağlan
+    decline: Şimdi değil
+    content: >-
+      !js
+
+      (name) => `${name}, Evnly'de seninle bağlantı kurup ortak giderlerinizi
+      takip etmek istiyor.`
+group:
+  og:
+    title: |-
+      !js
+      (groupName) => `Evnly'de "${groupName}" grubuna katıl`
+    description: >-
+      !js
+
+      (names) => `${new Intl.ListFormat("tr", { style: "long", type:
+      "conjunction" }).format(names)} ile masrafları paylaş`
+  dialog:
+    title: |-
+      !js
+      (groupname) => `${groupname}’e Katıl`
+    join: Katıl
+    decline: Reddet

@@ -14,6 +14,11 @@ account:
     content: 보내는 사람에게 새 링크를 생성해 달라고 요청하세요.
     description: 이체 요청이 만료되었습니다.
     title: 전송 만료됨
+  og:
+    tile: Evnly에서 계정을 인수하세요.
+    description: |-
+      !js
+      (name) => `${name}님, 이 계정은 회원님을 위해 생성되었습니다. 로그인 정보를 설정하여 소유권을 가져가세요.`
 actions:
   discard: 버리기
   close: 닫기
@@ -25,3 +30,32 @@ friends:
       !js
       (name) => `${name}님이 초대하셨습니다. 가입하거나 로그인하면 바로 시작할 수 있어요!`
   accept: Evn 시작하기
+  og:
+    description: 공동 지출을 기록하고, 비용을 나누며, 항상 함께 맞춰보세요 — Evnly에서 같이.
+    title: |-
+      !js
+      (name) => `Evnly에서 ${name}와 함께해요`
+  dialog:
+    title: Evnly에서 연결하기
+    description: 계속하려면 로그인하거나 계정을 생성하세요.
+    accept: 연결
+    decline: 지금은 아니에요
+    content: |-
+      !js
+      (name) => `${name}님이 Evnly에서 함께 연결해 공동 지출을 관리하고 싶어합니다.`
+group:
+  og:
+    title: |-
+      !js
+      (groupName) => `Evnly에서 "${groupName}"에 가입하기`
+    description: >-
+      !js
+
+      (names) => `${new Intl.ListFormat("ko", { style: "long", type:
+      "conjunction" }).format(names)}와(과) 비용을 나누세요`
+  dialog:
+    title: |-
+      !js
+      (groupname) => `${groupname}에 가입하기`
+    join: 참여하기
+    decline: 거절

@@ -20,6 +20,13 @@ account:
     content: Попросите отправителя сгенерировать новую ссылку.
     description: Срок действия этого запроса на перевод истёк.
     title: Время передачи истекло
+  og:
+    tile: Перехватите управление своим аккаунтом на Evnly.
+    description: >-
+      !js
+
+      (name) => `${name}, для вас создана эта учетная запись. Примите владение,
+      настроив данные для входа.`
 actions:
   discard: Отклонить
   close: Закрыть
@@ -33,3 +40,36 @@ friends:
       (name) => `Вас пригласил(а) ${name}. Просто зарегистрируйтесь или войдите
       — и всё готово!`
   accept: Начать пользоваться Evn
+  og:
+    description: >-
+      Отслеживайте общие расходы, делите затраты и оставайтесь на одной волне —
+      вместе на Evnly.
+    title: |-
+      !js
+      (name) => `Присоединяйся к ${name} на Evnly`
+  dialog:
+    title: Подключиться на Evnly
+    description: Войдите или создайте аккаунт, чтобы продолжить.
+    accept: Подключиться
+    decline: Не сейчас
+    content: >-
+      !js
+
+      (name) => `${name} хочет добавить вас в друзья на Evnly, чтобы отслеживать
+      общие расходы.`
+group:
+  og:
+    title: |-
+      !js
+      (groupName) => `Присоединиться к «${groupName}» на Evnly`
+    description: >-
+      !js
+
+      (names) => `Разделяй расходы с ${new Intl.ListFormat("ru", { style:
+      "long", type: "conjunction" }).format(names)}`
+  dialog:
+    title: |-
+      !js
+      (groupname) => `Присоединиться к ${groupname}`
+    join: Присоединиться
+    decline: Отклонить

@@ -5,6 +5,7 @@ import type { Locale, Dictionary } from './types'
 import { value } from 'svas'
 import { defaultLocale } from '$config'
 import { supported, resolveLocale } from './bcp'
+import Negotiator from 'negotiator'
 
 type Translation<T = string> = Record<Locale, T>
 
@@ -38,6 +39,16 @@ function preferred(): Locale | null {
   }
 
   return null
+}
+
+export function acceptable(header: string | null): Locale {
+  if (header === null)
+    return defaultLocale
+
+  const negotiator = new Negotiator({ headers: { 'accept-language': header } })
+  const languages = negotiator.languages(locales) as Locale[]
+
+  return languages[0] ?? defaultLocale
 }
 
 const dict = derived(locale, ($locale) => dictionaries[$locale])
