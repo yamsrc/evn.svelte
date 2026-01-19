@@ -13,16 +13,13 @@
 
 <Section class={cn('flex flex-col gap-1.5 -mt-3', { shake: error })}>
   <Card.Root class="bg-background p-4 relative">
-    <div
-      class="absolute -top-[0.4rem] right-4 size-3 bg-background border-t border-r border-border -rotate-45">
-    </div>
     <Card.Content class="space-y-2 p-0">
-      <Tabs.Root bind:value={mode}>
-        <Tabs.List>
-          <Tabs.Trigger id="expenses-participants-tabs-sums" value="sums">
+      <Tabs.Root bind:value={mode} class="w-full">
+        <Tabs.List class="w-full h-12">
+          <Tabs.Trigger id="expenses-participants-tabs-sums" value="sums" class="text-base">
             {$dict.participants.tabs.sums}
           </Tabs.Trigger>
-          <Tabs.Trigger id="expenses-participants-tabs-shares" value="shares">
+          <Tabs.Trigger id="expenses-participants-tabs-shares" value="shares" class="text-base">
             {$dict.participants.tabs.shares}
           </Tabs.Trigger>
         </Tabs.List>

@@ -33,17 +33,12 @@
       id={`${id}-decrement`}
       type="button"
       variant="outline"
-      size="icon-sm"
+      size="icon"
       onclick={decrement}
       disabled={share <= min}>
       <Minus />
     </Button>
-    <Button
-      id={`${id}-increment`}
-      type="button"
-      variant="outline"
-      size="icon-sm"
-      onclick={increment}>
+    <Button id={`${id}-increment`} type="button" variant="outline" size="icon" onclick={increment}>
       <Plus />
     </Button>
   </ButtonGroup.Root>

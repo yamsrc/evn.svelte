@@ -23,8 +23,13 @@
 </script>
 
 <Section class="flex flex-col gap-1.5">
-  <div class="flex items-center gap-4 min-h-12">
-    <h2>{$dict.expenses.spendings.total}</h2>
-    <Amount id="expenses-total-input" class="min-w-32" value={total} {oninput} />
+  <div class="flex items-center justify-between gap-4 min-h-12">
+    <div>{$dict.expenses.spendings.total}</div>
+    <Amount
+      id="expenses-total-input"
+      class="max-w-40"
+      inputClass="text-3xl font-bold"
+      value={total}
+      {oninput} />
   </div>
 </Section>

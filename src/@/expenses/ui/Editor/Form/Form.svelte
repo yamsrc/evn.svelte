@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { Separator } from '$com/separator'
   import { dict } from '$lib/intl'
   import { onsubmit } from '$lib/tools'
   import { Button } from '$ui/button'
@@ -78,13 +77,9 @@
 <form onsubmit={onsubmit(submit)} class="space-y-5">
   <Description bind:title={value.title} bind:location={value.location} />
 
-  <Separator />
-
-  <Total bind:value bind:total />
-
-  <Participants bind:value bind:error bind:mode />
-
   <PayerSelect bind:value />
+  <Total bind:value bind:total />
+  <Participants bind:value bind:error bind:mode />
 
   <Section class="flex flex-col items-center gap-2">
     <Button
