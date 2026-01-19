@@ -43,7 +43,7 @@
     const participants: Record<string, Participant> = Object.fromEntries(
       [...contactIds, ...groupIds]
         .filter(notParticipant)
-        .map((identity) => [identity, { amount: 0 }]),
+        .map((identity) => [identity, { amount: 0, shares: 0 }]),
     )
 
     ctx.value.participants = {

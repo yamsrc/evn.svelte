@@ -40,7 +40,7 @@ function blank(): Value {
   const me = get(account)
 
   if (me !== null)
-    participants[me.id] = { amount: 0, shares: 0 }
+    participants[me.id] = { amount: 0, paid: 0, shares: 0 }
 
   return {
     title: '',

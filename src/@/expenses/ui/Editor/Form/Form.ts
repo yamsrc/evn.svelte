@@ -30,6 +30,16 @@ export function autoeffects(value: Value, payers: string[], total: number): void
   if (payers.length === 1)
     // payer MUST be in participants
     value.participants[payers[0]].paid = total
+
+  if (total === 0)
+    return
+
+  const parts = Object.values(value.participants)
+    .reduce((acc, participant) => acc + (participant.shares ?? 0), 0)
+
+  if (parts === 0)
+    for (const participant of Object.values(value.participants))
+      participant.shares = 1
 }
 
 export function balance(value: Value, mode: 'sums' | 'shares'): number {
@@ -48,6 +58,10 @@ export function balance(value: Value, mode: 'sums' | 'shares'): number {
   const total = numbers.total(value)
   const overpaid = numbers.overpaid(value)
   const bill = total + overpaid
+
+  if (parts === 0)
+    return 0
+
   const myPercent = shares[me.id] / parts
   const myBill = Math.round(bill * myPercent)
   const iPaid = value.participants[me.id].paid ?? 0
