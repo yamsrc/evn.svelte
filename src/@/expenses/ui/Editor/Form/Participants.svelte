@@ -8,9 +8,7 @@
   import BySum from './BySum.svelte'
   import type { Props } from './Participants'
 
-  let { value = $bindable(), error = $bindable(false) }: Props = $props()
-
-  let tab = $state<'sums' | 'shares'>('sums')
+  let { value = $bindable(), error = $bindable(false), mode = $bindable('sums') }: Props = $props()
 </script>
 
 <Section class={cn('flex flex-col gap-1.5 -mt-3', { shake: error })}>
@@ -19,7 +17,7 @@
       class="absolute -top-[0.4rem] right-4 size-3 bg-background border-t border-r border-border -rotate-45">
     </div>
     <Card.Content class="space-y-2 p-0">
-      <Tabs.Root bind:value={tab}>
+      <Tabs.Root bind:value={mode}>
         <Tabs.List>
           <Tabs.Trigger id="expenses-participants-tabs-sums" value="sums">
             {$dict.participants.tabs.sums}

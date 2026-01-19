@@ -23,10 +23,6 @@
   const overpayment = $derived(Math.max(paid - total, 0))
 
   const participants = $derived(Object.keys(value.participants))
-
-  function oninput() {
-    for (const id of Object.keys(ctx.shares)) ctx.shares[id] = 0
-  }
 </script>
 
 <div class="space-y-2">
@@ -52,8 +48,7 @@
       <Amount
         id={`expenses-participant-amount-${i}`}
         class={amountClass}
-        bind:value={value.participants[id].amount}
-        {oninput} />
+        bind:value={value.participants[id].amount} />
     </div>
   {/each}
 

@@ -8,13 +8,17 @@
   import { numbers } from '@/expenses'
   import { setContext } from './Context'
   import Description from './Description.svelte'
-  import { normalize, share, type Props, type Value } from './Form'
+  import { normalize, type Props, type Value } from './Form'
   import { autoeffects } from './Form'
   import Participants from './Participants.svelte'
   import PayerSelect from './PayerSelect.svelte'
   import Total from './Total.svelte'
 
-  let { value = $bindable<Value>(), onsubmit: callback }: Props = $props()
+  let {
+    value = $bindable<Value>(),
+    mode = $bindable<'sums' | 'shares'>(),
+    onsubmit: callback,
+  }: Props = $props()
   let busy = $state(false)
   let error = $state(false)
 
@@ -46,7 +50,6 @@
   const split = $derived(payers.length > 1)
   const paid = $derived(numbers.paid(value))
   const overpaid = $derived(numbers.overpaid(value))
-  let shares = $state(share(value))
 
   setContext({
     get payers() {
@@ -64,12 +67,6 @@
     get overpaid() {
       return overpaid
     },
-    get shares() {
-      return shares
-    },
-    set shares(value) {
-      shares = value
-    },
   })
 
   const balance = $derived(numbers.balance(value))
@@ -85,7 +82,7 @@
 
   <Total bind:value bind:total />
 
-  <Participants bind:value bind:error />
+  <Participants bind:value bind:error bind:mode />
 
   <PayerSelect bind:value />
 

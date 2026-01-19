@@ -15,14 +15,21 @@ export function getContext(): Context {
 export function createContext(value?: Value): Context {
   return {
     value: value === undefined ? blank() : exact(value),
+    mode: 'sums',
   }
 }
 
 function exact(value: Value): Value {
+  const participants = structuredClone(value.participants)
+
+  for (const id of Object.keys(participants))
+    if (participants[id].shares === undefined)
+      participants[id].shares = 0
+
   return {
     title: value.title,
     location: value.location,
-    participants: structuredClone(value.participants),
+    participants,
     extras: structuredClone(value.extras),
   }
 }
@@ -32,7 +39,7 @@ function blank(): Value {
   const me = get(account)
 
   if (me !== null)
-    participants[me.id] = { amount: 0 }
+    participants[me.id] = { amount: 0, shares: 0 }
 
   return {
     title: '',
@@ -49,6 +56,7 @@ export interface Props {
 
 export interface Context {
   value: Value
+  mode: 'sums' | 'shares'
 }
 
 export interface Value {
@@ -62,6 +70,7 @@ interface Participant {
   amount: number
   paid?: number
   comment?: string
+  shares?: number
 }
 
 interface Extra {

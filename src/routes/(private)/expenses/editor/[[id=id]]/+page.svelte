@@ -16,4 +16,4 @@
   </Header.Root>
 </Section>
 
-<Editor.Edit {id} bind:value={ctx.value} />
+<Editor.Edit {id} bind:value={ctx.value} bind:mode={ctx.mode} />

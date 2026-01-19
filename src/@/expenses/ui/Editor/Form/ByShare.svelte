@@ -27,15 +27,18 @@
   const participants = $derived(Object.keys(value.participants))
 
   $effect(() => {
-    const parts = Object.values(ctx.shares).reduce((acc, share) => acc + share, 0)
+    const parts = Object.values(value.participants).reduce(
+      (acc, { shares }) => acc + (shares ?? 0),
+      0,
+    )
 
     if (parts === 0) return
 
     let sum = 0
 
     for (const [i, id] of participants.entries()) {
-      const share = ctx.shares[id] ?? 0
-      const amount = Math.floor((total / parts) * share)
+      const { shares } = value.participants[id]
+      const amount = Math.floor((total / parts) * (shares ?? 0))
       const last = i === participants.length - 1
 
       if (last) value.participants[id].amount = total - sum
@@ -66,11 +69,13 @@
           {/snippet}
         </Async>
       </div>
-      <ShareAmount
-        id={`expenses-participant-share-${i}`}
-        class={amountClass}
-        amount={value.participants[id]?.amount ?? 0}
-        bind:share={ctx.shares[id]} />
+      {#if value.participants[id]?.shares !== undefined}
+        <ShareAmount
+          id={`expenses-participant-share-${i}`}
+          class={amountClass}
+          amount={value.participants[id]?.amount ?? 0}
+          bind:share={value.participants[id].shares} />
+      {/if}
     </div>
   {/each}
 

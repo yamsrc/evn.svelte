@@ -2,10 +2,15 @@ import { numbers } from '@/expenses'
 import type { Value } from '../Context'
 
 export function normalize(value: Value): Value {
+  const participants =
+    Object.fromEntries(
+      Object.entries(value.participants)
+        .map(([id, { amount, paid, comment }]) => [id, { amount, paid, comment }]))
+
   const normalized: Value = {
     title: value.title,
     location: value.location,
-    participants: value.participants,
+    participants,
     extras: value.extras.filter((extra) => extra.amount !== 0),
   }
 
@@ -38,6 +43,7 @@ export function share(value: Value): Record<string, number> {
 
 export interface Props {
   value?: Value
+  mode?: 'sums' | 'shares'
   onsubmit?: (value: Value) => Promise<void | Error>
 }
 
