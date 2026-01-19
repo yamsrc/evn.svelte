@@ -13,7 +13,7 @@ export const load: PageServerLoad = async ({ params, fetch, request }) => {
 
   const locale = acceptable(request.headers.get('accept-language'))
   const dict = dictionaries[locale]
-  const url = `${origin}/pictures/${account.picture}.300x300!.jpeg`
+  const url = `${origin}/pictures/${account.picture}.150x150!.jpeg`
 
   return {
     account,

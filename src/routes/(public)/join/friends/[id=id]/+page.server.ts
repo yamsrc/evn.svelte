@@ -1,3 +1,4 @@
+import { redirect } from '@sveltejs/kit'
 import { acceptable } from '$lib/intl'
 import { dictionaries } from '$lib/intl/join'
 import { get } from '@/accounts/svc/get'
@@ -5,6 +6,10 @@ import type { PageServerLoad } from './$types.js'
 
 export const load: PageServerLoad = async ({ params, fetch, request }) => {
   const inviter = await get(params.id)
+
+  if (inviter instanceof Error)
+    return redirect(302, '/')
+
   const locale = acceptable(request.headers.get('accept-language'))
   const dict = dictionaries[locale]
 
