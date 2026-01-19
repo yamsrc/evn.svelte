@@ -18,6 +18,13 @@ account:
     content: Muombe mtoa taarifa atengeneze kiungo kipya.
     description: Ombi hili la uhamisho limekwisha muda wake.
     title: Uhamisho umeisha muda wake
+  og:
+    tile: Chukua udhibiti wa akaunti yako kwenye Evnly.
+    description: >-
+      !js
+
+      (name) => `${name}, akaunti hii iliundwa kwa ajili yako. Miliki kwa kuweka
+      maelezo ya kuingia.`
 actions:
   discard: Tupa mbali
   close: Funga
@@ -31,3 +38,36 @@ friends:
       (name) => `Umealikwa na ${name}. Jisajili au ingia tu, na uko tayari
       kuanza!`
   accept: Anza kutumia Evn
+  og:
+    description: >-
+      Fatilia matumizi ya pamoja, gawanya gharama, na dumuni mmelingano — pamoja
+      kwenye Evnly.
+    title: |-
+      !js
+      (name) => `Jiunge na ${name} kwenye Evnly`
+  dialog:
+    title: Unganisha kwenye Evnly
+    description: Ingia au tengeneza akaunti ili kuendelea.
+    accept: Unganisha
+    decline: Siyo sasa
+    content: >-
+      !js
+
+      (name) => `${name} anataka kuungana nawe kwenye Evnly ili kufuatilia
+      matumizi yenu ya pamoja.`
+group:
+  og:
+    title: |-
+      !js
+      (groupName) => `Jiunge na "${groupName}" kwenye Evnly`
+    description: >-
+      !js
+
+      (names) => `Gawa gharama na ${new Intl.ListFormat("sw", { style: "long",
+      type: "conjunction" }).format(names)}`
+  dialog:
+    title: |-
+      !js
+      (groupname) => `Jiunge na ${groupname}`
+    join: Jiunge
+    decline: Kataa

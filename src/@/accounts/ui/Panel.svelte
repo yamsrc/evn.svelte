@@ -33,8 +33,7 @@
   {selected}
   class={cn('bg-card border border-border h-14', classes)}
   {onclick}
-  {...actionProps}
->
+  {...actionProps}>
   {#snippet icon()}
     <Picture {account} class="size-8" />
   {/snippet}
@@ -44,6 +43,8 @@
     </div>
   {/snippet}
   {#snippet right()}
-    <Balance {balance} youAreOwed={$dict.contacts.contact.owesYou} />
+    {#if balance}
+      <Balance {balance} youAreOwed={$dict.contacts.contact.owesYou} />
+    {/if}
   {/snippet}
 </Panel>

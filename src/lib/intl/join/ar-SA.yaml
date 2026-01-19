@@ -18,6 +18,13 @@ account:
     content: اطلب من المُرسِل إنشاء رابط جديد.
     description: انتهت صلاحية طلب التحويل هذا.
     title: انتهت صلاحية النقل
+  og:
+    tile: استلم التحكم في حسابك على Evnly.
+    description: >-
+      !js
+
+      (name) => `${name}، تم إنشاء هذا الحساب لك. أنشئ بيانات تسجيل الدخول لتصبح
+      المالك.`
 actions:
   discard: تجاهل
   close: إغلاق
@@ -31,3 +38,32 @@ friends:
       (name) => `لقد تمت دعوتك من قبل ${name}. فقط سجّل أو قم بتسجيل الدخول،
       وستكون جاهزًا!`
   accept: ابدأ استخدام Evn
+  og:
+    description: تابع المصاريف المشتركة، ووزّع التكاليف، وابقَ متزامنًا — معًا على Evnly.
+    title: |-
+      !js
+      (name) => `انضم إلى ${name} على Evnly`
+  dialog:
+    title: تواصل على إيفنلي
+    description: سجّل الدخول أو أنشئ حسابًا للمتابعة.
+    accept: اتصل
+    decline: ليس الآن
+    content: |-
+      !js
+      (name) => `${name} يرغب في التواصل معك عبر Evnly لتتبع النفقات المشتركة.`
+group:
+  og:
+    title: |-
+      !js
+      (groupName) => `انضم إلى "${groupName}" على Evnly`
+    description: >-
+      !js
+
+      (names) => `قسّم المصاريف مع ${new Intl.ListFormat("ar", { style: "long",
+      type: "conjunction" }).format(names)}`
+  dialog:
+    title: |-
+      !js
+      (groupname) => `انضم إلى ${groupname}`
+    join: انضم
+    decline: رفض

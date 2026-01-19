@@ -23,6 +23,10 @@ export type Dictionary = {
           description: string
           title: string
         }
+        og: {
+          tile: string
+          description: (value: any) => string
+        }
       }
       actions: {
         discard: string
@@ -36,5 +40,27 @@ export type Dictionary = {
           description: (value: any) => string
         }
         accept: string
+        og: {
+          description: string
+          title: (value: any) => string
+        }
+        dialog: {
+          title: string
+          description: string
+          accept: string
+          decline: string
+          content: (value: any) => string
+        }
+      }
+      group: {
+        og: {
+          title: (value: any) => string
+          description: (value: any) => string
+        }
+        dialog: {
+          title: (value: any) => string
+          join: string
+          decline: string
+        }
       }
     }

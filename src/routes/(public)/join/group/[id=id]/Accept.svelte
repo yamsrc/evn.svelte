@@ -5,12 +5,12 @@
   import { cn } from '$lib/utils'
   import * as AlertDialog from '$ui/alert-dialog'
   import { Button, buttonVariants } from '$ui/button'
-  import { Picture } from '@/accounts/ui'
-  import { add } from '@/contacts'
+  import { invitations } from '@/groups'
+  import { Panel } from '@/groups/ui'
   import { account } from '@/iam'
   import type { Props } from './Accept'
 
-  let { inviter, accepted = $bindable(false), error = $bindable(false) }: Props = $props()
+  let { group, accepted = $bindable(false), error = $bindable(false) }: Props = $props()
 
   let open = $state(true)
 
@@ -19,7 +19,7 @@
 
     await having(account)
 
-    const res = await add({ with: inviter.id })
+    const res = await invitations.accept(group.id)
 
     if (res instanceof Error) error = true
     else accepted = true
@@ -30,26 +30,19 @@
   <AlertDialog.Content escapeKeydownBehavior="ignore">
     <AlertDialog.Header>
       <AlertDialog.Title>
-        <h2>{$dict.friends.dialog.title}</h2>
+        <h2>{$dict.group.dialog.title(group.name)}</h2>
       </AlertDialog.Title>
-      <AlertDialog.Description>
-        {$dict.friends.dialog.description}
-      </AlertDialog.Description>
+      <AlertDialog.Description />
     </AlertDialog.Header>
-    <div class="flex flex-row gap-4 p-4 rounded-md bg-muted justify-center items-center">
-      <Picture account={inviter} class="size-10" />
-      <p class="text-balance">
-        {$dict.friends.dialog.content(inviter.name)}
-      </p>
-    </div>
+    <Panel {group} />
     <AlertDialog.Footer class="flex-row">
       <AlertDialog.Cancel
         class={cn(buttonVariants({ size: 'lg', variant: 'secondary' }), 'flex-1')}
         onclick={() => goto('/')}>
-        {$dict.friends.dialog.decline}
+        {$dict.group.dialog.decline}
       </AlertDialog.Cancel>
-      <Button id="join-friends-accept-button" size="lg" class="flex-1" {onclick}>
-        {$dict.friends.dialog.accept}
+      <Button id="join-group-accept-button" size="lg" class="flex-1" {onclick}>
+        {$dict.group.dialog.join}
       </Button>
     </AlertDialog.Footer>
   </AlertDialog.Content>

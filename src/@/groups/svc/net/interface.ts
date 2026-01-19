@@ -2,6 +2,7 @@ import { origin } from '@/net'
 import type { Group } from './Group'
 
 const groups = origin.resource<Group>('/groups/', { credentials: 'include' })
+// const invitations = origin.resource<Group>('/groups/invitations/', { credentials: 'include' })
 
 export type Editable = Pick<Group, 'name'>
 
@@ -23,4 +24,10 @@ export async function patch(identity: string, group: string, body: Editable): Pr
 
 export async function del(identity: string, group: string): Promise<void | Error> {
   return groups.json(`${identity}/${group}`, { method: 'DELETE' })
+}
+
+export const invitations = {
+  resource: origin.resource<Group>('/groups/invitations/'),
+  get: (id: string) => invitations.resource.json(id),
+  del: (id: string) => invitations.resource.json(id, { method: 'DELETE', credentials: 'include' }),
 }

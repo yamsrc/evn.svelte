@@ -195,3 +195,11 @@ events.on('default.contacts.sync', async (entry: net.Contact) => {
 - **Rich Domain Models**: Application logic works with complete, meaningful entities
 - **Reusability**: Linked entities can reference shared domain models (e.g., `Account`)
 - **Maintainability**: Changes to related domains are automatically reflected through references
+
+## Static assets
+
+Static assets must be stored in the `static/` directory or inside the component directory.
+
+> Assets in the `routes/` directory may create multiple URLs for the same asset, which breaks caching.
+
+Optimize images using `npx sharp --optimize`.

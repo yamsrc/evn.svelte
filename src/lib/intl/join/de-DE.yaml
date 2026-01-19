@@ -23,6 +23,13 @@ account:
     content: Bitte den Absender, einen neuen Link zu erstellen.
     description: Diese Überweisungsanfrage ist abgelaufen.
     title: Übertragung abgelaufen
+  og:
+    tile: Übernimm dein Evnly-Konto.
+    description: >-
+      !js
+
+      (name) => `${name}, dieses Konto wurde für dich erstellt. Übernimm es,
+      indem du deine Anmeldedaten festlegst.`
 actions:
   discard: Ablehnen
   close: Schließen
@@ -38,3 +45,36 @@ friends:
       (name) => `${name} hat dich eingeladen. Registriere dich einfach oder
       melde dich an und schon kann es losgehen!`
   accept: Evn jetzt nutzen
+  og:
+    description: >-
+      Geteilte Ausgaben verfolgen, Kosten aufteilen und immer abgestimmt bleiben
+      – gemeinsam auf Evnly.
+    title: |-
+      !js
+      (name) => `Tritt ${name} auf Evnly bei`
+  dialog:
+    title: Auf Evnly verbinden
+    description: Melden Sie sich an oder erstellen Sie ein Konto, um fortzufahren.
+    accept: Verbinden
+    decline: Nicht jetzt
+    content: >-
+      !js
+
+      (name) => `${name} möchte sich auf Evnly mit dir verbinden, um gemeinsame
+      Ausgaben zu verfolgen.`
+group:
+  og:
+    title: |-
+      !js
+      (groupName) => `Tritt "${groupName}" auf Evnly bei`
+    description: >-
+      !js
+
+      (names) => `Teile die Ausgaben mit ${new Intl.ListFormat("de", { style:
+      "long", type: "conjunction" }).format(names)}`
+  dialog:
+    title: |-
+      !js
+      (groupname) => `Tritt ${groupname} bei`
+    join: Beitreten
+    decline: Ablehnen

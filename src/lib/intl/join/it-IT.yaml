@@ -20,6 +20,13 @@ account:
     content: Chiedi al mittente di generare un nuovo link.
     description: Questa richiesta di trasferimento è scaduta.
     title: Trasferimento scaduto
+  og:
+    tile: Prendi il controllo del tuo account su Evnly.
+    description: >-
+      !js
+
+      (name) => `${name}, questo account è stato creato per te. Prendine
+      possesso impostando i tuoi dati di accesso.`
 actions:
   discard: Rifiuta
   close: Chiudi
@@ -35,3 +42,36 @@ friends:
       (name) => `Sei stato invitato da ${name}. Registrati o accedi, ed è tutto
       pronto!`
   accept: Inizia a usare Evn
+  og:
+    description: >-
+      Tieni traccia delle spese condivise, dividi i costi e rimani sincronizzato
+      — insieme su Evnly.
+    title: |-
+      !js
+      (name) => `Unisciti a ${name} su Evnly`
+  dialog:
+    title: Connettiti su Evnly
+    description: Accedi o crea un account per continuare.
+    accept: Connetti
+    decline: Non ora
+    content: >-
+      !js
+
+      (name) => `${name} vuole connettersi con te su Evnly per tenere traccia
+      delle spese condivise.`
+group:
+  og:
+    title: |-
+      !js
+      (groupName) => `Unisciti a "${groupName}" su Evnly`
+    description: >-
+      !js
+
+      (names) => `Dividi le spese con ${new Intl.ListFormat("it", { style:
+      "long", type: "conjunction" }).format(names)}`
+  dialog:
+    title: |-
+      !js
+      (groupname) => `Unisciti a ${groupname}`
+    join: Unisciti
+    decline: Rifiuta

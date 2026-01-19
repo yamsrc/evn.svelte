@@ -5,8 +5,14 @@ export const defaultLocale = 'en-US'
 
 // change this
 export const meta = {
-  title: 'evn',
+  title: 'Evnly',
   description: 'Split wiser',
+  image: {
+    url: '/og/app.jpg',
+    width: 1200,
+    height: 630,
+    type: 'image/jpg',
+  },
 } as const
 
 export const navigation = {

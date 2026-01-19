@@ -20,6 +20,13 @@ account:
     content: प्रेषक से नया लिंक बनाने के लिए कहें।
     description: इस ट्रांसफ़र अनुरोध की अवधि समाप्त हो गई है।
     title: स्थानांतरण की अवधि समाप्त
+  og:
+    tile: Evnly पर अपने खाते का नियंत्रण संभालें।
+    description: >-
+      !js
+
+      (name) => `${name}, यह खाता आपके लिए बनाया गया है। साइन-इन विवरण सेट करके
+      स्वामित्व लें।`
 actions:
   discard: अस्वीकार करें
   close: बंद करें
@@ -35,3 +42,36 @@ friends:
       (name) => `${name} ने आपको आमंत्रित किया है। बस रजिस्टर करें या लॉग इन
       करें, और आप तैयार हैं!`
   accept: Evn का उपयोग शुरू करें
+  og:
+    description: >-
+      साझा खर्च ट्रैक करें, खर्चों को बांटें, और हमेशा साथ रहें — Evnly पर
+      मिलकर।
+    title: |-
+      !js
+      (name) => `${name} के साथ Evnly पर जुड़ें`
+  dialog:
+    title: Evnly पर कनेक्ट करें
+    description: जारी रखने के लिए साइन इन करें या एक खाता बनाएं।
+    accept: कनेक्ट करें
+    decline: अभी नहीं
+    content: >-
+      !js
+
+      (name) => `${name} Evnly पर आपके साथ जुड़ना चाहता है ताकि साझा खर्च ट्रैक
+      कर सकें।`
+group:
+  og:
+    title: |-
+      !js
+      (groupName) => `Evnly पर "${groupName}" से जुड़ें`
+    description: >-
+      !js
+
+      (names) => `${new Intl.ListFormat("hi", { style: "long", type:
+      "conjunction" }).format(names)} के साथ खर्च बाँटे`
+  dialog:
+    title: |-
+      !js
+      (groupname) => `${groupname} से जुड़ें`
+    join: जुड़ें
+    decline: अस्वीकृत करें
