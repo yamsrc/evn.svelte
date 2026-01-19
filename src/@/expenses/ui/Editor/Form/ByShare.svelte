@@ -31,8 +31,6 @@
   )
 
   const amounts = $derived(numbers.amounts(value, shares))
-
-  $inspect(amounts)
 </script>
 
 <div class="space-y-2">

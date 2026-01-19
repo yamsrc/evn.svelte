@@ -33,17 +33,8 @@ Given('new expense', async ({ page, ctx }) => {
   await page.keyboard.type('100')
 
   // Enter amount for participant to enable save button (user gets 50, contact gets 50)
-  const firstParticipantInput = page.locator('#expenses-participant-amount-0')
-
-  await firstParticipantInput.fill('50')
-
-  // Select payer from dropdown
-  await page.locator('#expenses-payer-select-trigger').click()
-  await expect(page.locator('[data-slot="select-content"]')).toBeVisible()
-
-  const firstPayerOption = page.locator('[data-slot="select-content"]').locator('[role="option"]').first()
-
-  await firstPayerOption.click()
+  await expect(page.locator('#expenses-participant-amount-0')).toHaveValue('50')
+  await expect(page.locator('#expenses-participant-amount-1')).toHaveValue('50')
 
   await expect(page.locator('#expenses-form-save-button')).toBeVisible()
   await expect(page.locator('#expenses-form-save-button')).toBeEnabled()

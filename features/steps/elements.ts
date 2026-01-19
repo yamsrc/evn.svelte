@@ -86,11 +86,11 @@ Then('{string} contains text {string}', async ({ page }, id, text) => {
 })
 
 Then('the page contains text {string}', async ({ page }, text) => {
-  await expect(page.getByText(text)).toBeVisible({ timeout: 10000 })
+  await expect(page.getByText(text)).toBeVisible()
 })
 
 Then('the page contains that name', async ({ page, ctx }) => {
-  await expect(page.getByText(ctx.name)).toBeVisible({ timeout: 10000 })
+  await expect(page.getByText(ctx.name)).toBeVisible()
 })
 
 Then('{string} contains {int} {string} items', async ({ page }, containerId, count, itemClass) => {
