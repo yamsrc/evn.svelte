@@ -8,7 +8,7 @@
   import { numbers } from '@/expenses'
   import { setContext } from './Context'
   import Description from './Description.svelte'
-  import { normalize, type Props, type Value } from './Form'
+  import { normalize, balance as due, type Props, type Value } from './Form'
   import { autoeffects } from './Form'
   import Participants from './Participants.svelte'
   import PayerSelect from './PayerSelect.svelte'
@@ -35,7 +35,7 @@
 
     busy = true
 
-    const normalized = normalize(value)
+    const normalized = normalize(value, mode)
 
     await callback?.(normalized)
 
@@ -69,7 +69,7 @@
     },
   })
 
-  const balance = $derived(numbers.balance(value))
+  const balance = $derived(due(value, mode))
   const enough = $derived(paid > 0 && (payers.length === 1 || paid >= total))
 
   $effect(() => autoeffects(value, payers, total))

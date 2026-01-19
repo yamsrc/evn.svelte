@@ -1,5 +1,6 @@
 import { getContext as svelteGetContext, setContext as svelteSetContext, type Snippet } from 'svelte'
 import { get } from 'svelte/store'
+import { numbers } from '@/expenses'
 import { account } from '@/iam'
 
 const CONTEXT = Symbol('editor')
@@ -21,10 +22,10 @@ export function createContext(value?: Value): Context {
 
 function exact(value: Value): Value {
   const participants = structuredClone(value.participants)
+  const shares = numbers.shares(value)
 
   for (const id of Object.keys(participants))
-    if (participants[id].shares === undefined)
-      participants[id].shares = 0
+    participants[id].shares = shares[id]
 
   return {
     title: value.title,

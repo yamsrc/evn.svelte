@@ -100,3 +100,77 @@ export function even(participants: Record<string, Participant>, ids: string[]): 
     (amount) => amount === base || amount === base + remainder,
   )
 }
+
+/**
+ * Calculates normalized shares from participant amounts.
+ * Normalizes ratios so the smallest share is always 1.
+ *
+ * @param value - The expense value
+ * @returns A record mapping participant IDs to their normalized share values
+ */
+export function shares(value: Value): Record<string, number> {
+  const totalSpent = total(value)
+
+  if (totalSpent === 0)
+    return Object.fromEntries(Object.keys(value.participants).map((id) => [id, 0]))
+
+  const ratios = share(value)
+  const ratioValues = Object.values(ratios).filter((r) => r > 0)
+
+  if (ratioValues.length === 0)
+    return Object.fromEntries(Object.keys(value.participants).map((id) => [id, 0]))
+
+  const min = Math.min(...ratioValues)
+
+  for (let divisor = min; divisor > 0; divisor--)
+    if (ratioValues.every((r) => r % divisor === 0))
+      return Object.fromEntries(
+        Object.entries(ratios).map(([id, ratio]) => [id, ratio / divisor]),
+      )
+
+  return ratios
+}
+
+export function share(value: Value): Record<string, number> {
+  const participants = value.participants
+  const totalSpent = total(value)
+
+  return Object.fromEntries(
+    Object.keys(participants).map((id) => {
+      const amount = participants[id]?.amount ?? 0
+
+      return [id, totalSpent > 0 ? Math.max(0, Math.round((amount / totalSpent) * 10)) : 0]
+    }),
+  )
+}
+
+/**
+ * Calculates the amounts of each participant based on their shares.
+ *
+ * @param value - The expense value
+ * @returns A record mapping participant IDs to their amounts
+ */
+export function amounts(value: Value, shares: Record<string, number>): Record<string, number> {
+  const parts = Object.values(shares).reduce((acc, share) => acc + share, 0)
+
+  const participants = Object.keys(value.participants)
+
+  const totalSum = total(value)
+
+  let sum = 0
+
+  const amounts = Object.fromEntries(
+    participants.map((id, i) => {
+      const share = shares[id]
+      const last = i === participants.length - 1
+      const chunk = Math.floor((totalSum / parts) * (share ?? 0))
+      const amount = last ? totalSum - sum : chunk
+
+      sum += chunk
+
+      return [id, amount]
+    }),
+  )
+
+  return amounts
+}

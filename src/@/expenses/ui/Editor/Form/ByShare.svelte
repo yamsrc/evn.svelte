@@ -8,6 +8,7 @@
   import { Button } from '$ui/button'
   import { accounts } from '@/accounts'
   import { Picture } from '@/accounts/ui'
+  import { numbers } from '@/expenses'
   import { account as me } from '@/iam'
   import Amount from './Amount.svelte'
   import { getContext } from './Context'
@@ -23,30 +24,13 @@
   const paid = $derived(ctx.paid)
   const total = $derived(ctx.total)
   const overpayment = $derived(Math.max(paid - total, 0))
-
   const participants = $derived(Object.keys(value.participants))
 
-  $effect(() => {
-    const parts = Object.values(value.participants).reduce(
-      (acc, { shares }) => acc + (shares ?? 0),
-      0,
-    )
+  const shares = $derived(
+    Object.fromEntries(participants.map((id) => [id, value.participants[id].shares ?? 0])),
+  )
 
-    if (parts === 0) return
-
-    let sum = 0
-
-    for (const [i, id] of participants.entries()) {
-      const { shares } = value.participants[id]
-      const amount = Math.floor((total / parts) * (shares ?? 0))
-      const last = i === participants.length - 1
-
-      if (last) value.participants[id].amount = total - sum
-      else value.participants[id].amount = amount
-
-      sum += amount
-    }
-  })
+  const amounts = $derived(numbers.amounts(value, shares))
 </script>
 
 <div class="space-y-2">
@@ -73,7 +57,7 @@
         <ShareAmount
           id={`expenses-participant-share-${i}`}
           class={amountClass}
-          amount={value.participants[id]?.amount ?? 0}
+          amount={amounts[id]}
           bind:share={value.participants[id].shares} />
       {/if}
     </div>
