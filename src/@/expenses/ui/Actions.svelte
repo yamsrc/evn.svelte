@@ -1,17 +1,17 @@
 <script lang="ts">
   import { ScanLine, PencilLine } from '@lucide/svelte'
   import { Actions } from '$com/shell'
-  import { Button } from '$ui/button'
   import * as ButtonGroup from '$ui/button-group'
+  import { Action } from '@/app/ui'
 </script>
 
 <Actions>
   <ButtonGroup.Root>
-    <Button id="nav-action-scan" size="icon-lg">
+    <Action id="nav-action-scan" variant="default">
       <ScanLine class="size-5" />
-    </Button>
-    <Button id="nav-action-input" href="/expenses/editor/participants/" size="icon-lg">
+    </Action>
+    <Action id="nav-action-input" href="/expenses/editor/">
       <PencilLine class="size-5" />
-    </Button>
+    </Action>
   </ButtonGroup.Root>
 </Actions>

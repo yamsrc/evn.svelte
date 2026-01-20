@@ -60,7 +60,7 @@
             onclick={isNested ? () => back(section.href) : null}
             variant="ghost"
             class={cn(
-              'relative flex flex-col h-full flex-1 min-w-16 p-2 gap-1 text-sm transition-colors duration-300 hover:bg-accent/25 overflow-hidden',
+              'relative flex flex-col h-full flex-1 min-w-16 p-3 gap-1 text-sm transition-colors duration-300 hover:bg-accent/25 overflow-hidden',
               rounded,
               active && 'text-accent-foreground',
               hidden && 'hidden',
