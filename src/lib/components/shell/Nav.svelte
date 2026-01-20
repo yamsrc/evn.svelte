@@ -11,11 +11,8 @@
   const { sections, position = 'start', class: classes }: Props = $props()
   const action = $derived($actions.at(-1) ?? null)
 
-  const isNested = $derived.by(() => {
-    const active = sections.find((s) => match(s.href, page.url.pathname))
-
-    return active ? nested(active.href, page.url.pathname) : false
-  })
+  const active = $derived(sections.find(({ href }) => match(href, page.url.pathname)))
+  const isNested = $derived(active ? nested(active.href, page.url.pathname) : false)
 
   const visible = $derived(
     sections.filter((section) => !isNested || match(section.href, page.url.pathname)),
