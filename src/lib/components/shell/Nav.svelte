@@ -82,21 +82,21 @@
         </li>
       {/each}
     </ul>
-    <div
-      class={cn(
-        'pointer-events-auto',
-        'bg-background/50 backdrop-blur-xs sm:mr-4 transition-all duration-300',
-        rounded,
-        action || 'opacity-0',
-        position === 'center' && !action && 'hidden',
-      )}
-      style="view-transition-name: shell-actions;">
-      <div class={cn('flex items-center min-h-10', action?.class)}>
-        {#if action}
+    {#if action}
+      <div
+        class={cn(
+          'pointer-events-auto',
+          'bg-primary sm:mr-4 transition-all duration-300',
+          rounded,
+          action || 'opacity-0',
+          position === 'center' && !action && 'hidden',
+        )}
+        style="view-transition-name: shell-actions-{position};">
+        <div class={cn('flex items-center min-h-10', action?.class)}>
           {@render action.snippet()}
-        {/if}
+        </div>
       </div>
-    </div>
+    {/if}
   </div>
 </nav>
 
@@ -106,8 +106,10 @@
     width: auto;
   }
 
-  ::view-transition-old(shell-actions),
-  ::view-transition-new(shell-actions) {
+  ::view-transition-old(shell-actions-start),
+  ::view-transition-new(shell-actions-start),
+  ::view-transition-old(shell-actions-end),
+  ::view-transition-new(shell-actions-end) {
     width: auto;
     z-index: 5;
     isolation: isolate;
@@ -119,7 +121,48 @@
     z-index: 5;
   }
 
-  ::view-transition-group(shell-actions) {
+  ::view-transition-group(shell-actions-start),
+  ::view-transition-group(shell-actions-end) {
     z-index: 5;
+  }
+
+  @keyframes slide-out-right {
+    to {
+      transform: translateX(150%);
+    }
+  }
+
+  @keyframes slide-in-left {
+    from {
+      transform: translateX(150%);
+    }
+  }
+
+  @keyframes slide-out-left {
+    to {
+      transform: translateX(-150%);
+    }
+  }
+
+  @keyframes slide-in-right {
+    from {
+      transform: translateX(-150%);
+    }
+  }
+
+  ::view-transition-old(shell-actions-start):only-child {
+    animation: slide-out-right 0.3s ease-out both;
+  }
+
+  ::view-transition-new(shell-actions-start):only-child {
+    animation: slide-in-left 0.3s ease-out both;
+  }
+
+  ::view-transition-old(shell-actions-end):only-child {
+    animation: slide-out-left 0.3s ease-out both;
+  }
+
+  ::view-transition-new(shell-actions-end):only-child {
+    animation: slide-in-right 0.3s ease-out both;
   }
 </style>
