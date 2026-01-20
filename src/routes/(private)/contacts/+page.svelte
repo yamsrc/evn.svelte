@@ -6,8 +6,7 @@
   import { Section } from '@/app/ui'
   import { Header } from '@/app/ui'
   import { contacts, filter as filterContacts } from '@/contacts'
-  import { Invite } from '@/contacts/ui'
-  import { Contacts } from '@/contacts/ui'
+  import { Actions, Invite, Contacts } from '@/contacts/ui'
   import { favorites, filter as filterFavorites } from '@/favorites'
   import { Favorites } from '@/favorites/ui'
   import { groups, filter as filterGroups } from '@/groups'
@@ -61,3 +60,5 @@
     {/if}
   {/snippet}
 </Async>
+
+<Actions />
