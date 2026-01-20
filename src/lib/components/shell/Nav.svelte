@@ -46,7 +46,7 @@
     )}>
     <ul
       class={cn(
-        'bg-muted backdrop-blur-xs border overflow-hidden flex pointer-events-auto sm:ml-4 h-16',
+        'bg-muted backdrop-blur-xs overflow-hidden flex pointer-events-auto sm:ml-4 h-16',
         rounded,
       )}
       style="view-transition-name: shell-nav;">
