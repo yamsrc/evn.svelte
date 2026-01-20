@@ -1,19 +1,23 @@
 <script lang="ts">
+  import { Check } from '@lucide/svelte'
   import { Async, combined } from 'svas'
   import { SvelteSet } from 'svelte/reactivity'
   import { goto } from '$app/navigation'
   import { page } from '$app/state'
+  import { Share } from '$com/buttons'
+  import { QR } from '$com/qr'
+  import { Actions, Return } from '$com/shell'
   import { dict } from '$lib/intl'
-  import { Button } from '$ui/button'
+  import * as ButtonGroup from '$ui/button-group'
   import { Input } from '$ui/input'
-  import { Section } from '@/app/ui'
+  import { Spinner } from '$ui/spinner'
+  import { Action, Section } from '@/app/ui'
   import { Header } from '@/app/ui'
   import { contacts, filter as filterContacts } from '@/contacts'
   import { Contacts } from '@/contacts/ui'
   import { favorites, filter as filterFavorites } from '@/favorites'
   import { Favorites } from '@/favorites/ui'
   import { groups, add } from '@/groups'
-  import Invite from './Invite.svelte'
 
   let search = $state('')
 
@@ -36,6 +40,8 @@
 
     goto(`/contacts/groups/${id}`)
   }
+
+  const invitation = $derived({ url: `${window.location.origin}/join/group/${id}/` })
 </script>
 
 <Async store={combined(groups, contacts, favorites)}>
@@ -71,17 +77,25 @@
           <p class="text-muted-foreground text-center">{$dict.search.empty}</p>
         </Section>
       {/if}
-
-      <Section class="flex gap-2 w-full items-center justify-stretch">
-        <Button
-          class="flex-1"
-          disabled={(contactsSelection.size === 0 && favoritesSelection.size === 0) || busy}
-          onclick={addMembers}
-          size="lg">
-          {$dict.actions.addSelected}
-        </Button>
-        <Invite {id} />
-      </Section>
     {/if}
   {/snippet}
 </Async>
+
+<Return />
+
+<Actions>
+  <ButtonGroup.Root class="[&_svg:not([class*='size-'])]:size-5">
+    <Share size="icon-lg" variant="secondary" class="flex-1 size-14" data={invitation} />
+    <QR variant="secondary" size="icon-lg" class="flex-1 size-14" text={invitation.url} />
+    <Action
+      disabled={(contactsSelection.size === 0 && favoritesSelection.size === 0) || busy}
+      onclick={addMembers}>
+      {#if busy}
+        <Spinner />
+      {:else}
+        <Check />
+      {/if}
+      <span>{$dict.actions.addSelected}</span>
+    </Action>
+  </ButtonGroup.Root>
+</Actions>

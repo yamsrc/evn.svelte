@@ -9,7 +9,7 @@
 <Button
   {size}
   class={cn(
-    "size-14 [&_svg:not([class*='size-'])]:size-5 [&_span]:hidden sm:[&_span]:inline",
+    "size-14 [&_svg:not([class*='size-'])]:size-5 [&_span]:sr-only sm:[&_span]:not-sr-only",
     classes,
   )}
   {...props}>
