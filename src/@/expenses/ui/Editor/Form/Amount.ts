@@ -5,5 +5,4 @@ export interface Props {
   inputClass?: string
   oninput?: (value: number) => void
   id?: string
-  participant?: string
 }

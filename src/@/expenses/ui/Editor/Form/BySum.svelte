@@ -47,7 +47,6 @@
       </div>
       <Amount
         id={`expenses-participant-amount-${i}`}
-        participant={id}
         class={amountClass}
         bind:value={value.participants[id].amount} />
     </div>

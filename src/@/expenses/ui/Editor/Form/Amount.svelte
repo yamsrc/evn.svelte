@@ -1,10 +1,9 @@
 <script lang="ts">
+  import { Coins } from '@lucide/svelte'
   import { locale } from '$lib/intl'
   import { currency, unit } from '$lib/tools'
   import { cn } from '$lib/utils'
   import * as InputGroup from '$ui/input-group'
-  import { Coins } from '@/app/ui'
-  import { getContext } from './Context'
   import type { Props } from './Amount'
 
   let {
@@ -14,15 +13,7 @@
     class: classes,
     inputClass,
     id,
-    participant,
   }: Props = $props()
-
-  const amount = $derived(value ?? 0)
-  const ctx = getContext()
-  const paid = $derived(ctx.paid)
-  const payer = $derived(ctx.payers[0])
-  const owed = $derived(payer === participant ? paid - amount : -amount)
-  const sign = $derived(owed > 0 ? 'positive' : owed < 0 ? 'negative' : 'none')
 
   function oninput(e: Event) {
     const val = (e.target as HTMLInputElement)?.value
@@ -45,6 +36,6 @@
     step="0.01"
     class={inputClass} />
   <InputGroup.Addon align="inline-end">
-    <Coins {sign} />
+    <Coins />
   </InputGroup.Addon>
 </InputGroup.Root>

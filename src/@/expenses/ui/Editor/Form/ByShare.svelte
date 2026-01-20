@@ -56,7 +56,6 @@
       {#if value.participants[id]?.shares !== undefined}
         <ShareAmount
           id={`expenses-participant-share-${i}`}
-          participant={id}
           class={amountClass}
           amount={amounts[id]}
           bind:share={value.participants[id].shares} />
