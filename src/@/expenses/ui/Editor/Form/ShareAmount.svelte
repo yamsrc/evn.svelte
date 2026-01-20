@@ -4,6 +4,7 @@
   import { Button } from '$ui/button'
   import * as ButtonGroup from '$ui/button-group'
   import { Coins } from '@/app/ui'
+  import { getContext } from './Context'
   import type { Props } from './ShareAmount'
 
   let {
@@ -13,8 +14,14 @@
     max = 5,
     class: classes,
     id,
-    sign,
+    participant,
   }: Props = $props()
+
+  const ctx = getContext()
+  const paid = $derived(ctx.paid)
+  const payer = $derived(ctx.payers[0])
+  const owed = $derived(payer === participant ? paid - amount : -amount)
+  const sign = $derived(owed > 0 ? 'positive' : owed < 0 ? 'negative' : 'none')
 
   function decrement() {
     share = Math.max(min, share - 1)

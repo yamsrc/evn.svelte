@@ -4,6 +4,7 @@
   import { cn } from '$lib/utils'
   import * as InputGroup from '$ui/input-group'
   import { Coins } from '@/app/ui'
+  import { getContext } from './Context'
   import type { Props } from './Amount'
 
   let {
@@ -13,8 +14,15 @@
     class: classes,
     inputClass,
     id,
-    sign,
+    participant,
   }: Props = $props()
+
+  const amount = $derived(value ?? 0)
+  const ctx = getContext()
+  const paid = $derived(ctx.paid)
+  const payer = $derived(ctx.payers[0])
+  const owed = $derived(payer === participant ? paid - amount : -amount)
+  const sign = $derived(owed > 0 ? 'positive' : owed < 0 ? 'negative' : 'none')
 
   function oninput(e: Event) {
     const val = (e.target as HTMLInputElement)?.value
