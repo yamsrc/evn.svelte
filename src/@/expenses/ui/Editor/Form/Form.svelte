@@ -3,11 +3,10 @@
   import { onsubmit } from '$lib/tools'
   import { Button } from '$ui/button'
   import { Section } from '@/app/ui'
-  import { Balance } from '@/app/ui'
   import { numbers } from '@/expenses'
   import { setContext } from './Context'
   import Description from './Description.svelte'
-  import { normalize, balance as due, type Props, type Value } from './Form'
+  import { normalize, type Props, type Value } from './Form'
   import { autoeffects } from './Form'
   import Participants from './Participants.svelte'
   import PayerSelect from './PayerSelect.svelte'
@@ -68,7 +67,6 @@
     },
   })
 
-  const balance = $derived(due(value, mode))
   const enough = $derived(paid > 0 && (payers.length === 1 || paid >= total))
 
   $effect(() => autoeffects(value, payers, total))
@@ -90,11 +88,5 @@
       disabled={busy || !enough}>
       {$dict.expenses.form.save}
     </Button>
-    {#if balance !== 0}
-      <Balance
-        {balance}
-        youOwe={$dict.expenses.balance.youWillOwe}
-        youAreOwed={$dict.expenses.balance.youWillBeOwed} />
-    {/if}
   </Section>
 </form>

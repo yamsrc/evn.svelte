@@ -5,4 +5,5 @@ export interface Props {
   max?: number
   class?: string
   id?: string
+  sign?: 'positive' | 'negative' | 'none'
 }

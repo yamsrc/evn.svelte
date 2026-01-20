@@ -23,6 +23,20 @@
   const overpayment = $derived(Math.max(paid - total, 0))
 
   const participants = $derived(Object.keys(value.participants))
+  const payer = $derived(participants.find((id) => value.participants[id].paid !== undefined))
+  const payerPaid = $derived(payer ? (value.participants[payer].paid ?? 0) : 0)
+
+  const amounts = $derived(
+    Object.fromEntries(participants.map((id) => [id, value.participants[id].amount ?? 0])),
+  )
+
+  function sign(id: string) {
+    const amount = amounts[id] ?? 0
+
+    const owed = id === payer ? payerPaid - amount : -amount
+
+    return owed > 0 ? 'positive' : owed < 0 ? 'negative' : 'none'
+  }
 </script>
 
 <div class="space-y-2">
@@ -48,7 +62,8 @@
       <Amount
         id={`expenses-participant-amount-${i}`}
         class={amountClass}
-        bind:value={value.participants[id].amount} />
+        bind:value={value.participants[id].amount}
+        sign={sign(id)} />
     </div>
   {/each}
 

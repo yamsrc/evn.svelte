@@ -1,9 +1,9 @@
 <script lang="ts">
-  import { Coins } from '@lucide/svelte'
   import { locale } from '$lib/intl'
   import { currency, unit } from '$lib/tools'
   import { cn } from '$lib/utils'
   import * as InputGroup from '$ui/input-group'
+  import { Coins } from '@/app/ui'
   import type { Props } from './Amount'
 
   let {
@@ -13,6 +13,7 @@
     class: classes,
     inputClass,
     id,
+    sign,
   }: Props = $props()
 
   function oninput(e: Event) {
@@ -36,6 +37,6 @@
     step="0.01"
     class={inputClass} />
   <InputGroup.Addon align="inline-end">
-    <Coins />
+    <Coins {sign} />
   </InputGroup.Addon>
 </InputGroup.Root>
