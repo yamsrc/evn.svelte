@@ -11,7 +11,7 @@
   let { value = $bindable(), error = $bindable(false), mode = $bindable('sums') }: Props = $props()
 </script>
 
-<Section class={cn('flex flex-col gap-1.5 -mt-3', { shake: error })}>
+<Section class={cn('flex flex-col gap-1.5', { shake: error })}>
   <Card.Root class="bg-background p-4 relative">
     <Card.Content class="space-y-2 p-0">
       <Tabs.Root bind:value={mode} class="w-full">
