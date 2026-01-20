@@ -8,6 +8,7 @@
   import { Cosmetics, Delete, Language } from '@/accounts/ui'
   import { Section } from '@/app/ui'
   import { Header } from '@/app/ui'
+  import { Actions } from '@/app/ui'
   import { Feedback } from '@/feedback/ui'
   import { logout } from '@/iam'
   import { account } from '@/iam'
@@ -73,3 +74,5 @@
     </footer>
   </Section>
 {/if}
+
+<Actions />

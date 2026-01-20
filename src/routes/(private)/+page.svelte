@@ -3,6 +3,7 @@
   import { Async, combined } from 'svas'
   import { dict } from '$lib/intl'
   import { Header, Section } from '@/app/ui'
+  import { Actions } from '@/app/ui'
   import { contacts } from '@/contacts'
   import { Totals, Tops } from '@/contacts/ui'
   import { expenses } from '@/expenses'
@@ -36,3 +37,5 @@
     </Section>
   {/snippet}
 </Async>
+
+<Actions />
