@@ -1,5 +1,8 @@
 export interface Props {
   amount?: number
-  sign?: 'positive' | 'negative' | 'none'
+  share: number
+  min?: number
+  max?: number
   class?: string
+  id?: string
 }

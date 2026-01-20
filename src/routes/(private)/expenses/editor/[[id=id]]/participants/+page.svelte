@@ -10,10 +10,10 @@
   import { contacts, filter as filterContacts } from '@/contacts'
   import { Contacts } from '@/contacts/ui'
   import { CreateDialog } from '@/contacts/ui'
+  import { numbers, type Participant } from '@/expenses'
   import { Editor } from '@/expenses/ui'
   import { groups, filter as filterGroups } from '@/groups'
   import { Groups } from '@/groups/ui'
-  import type { Participant } from '@/expenses'
 
   const ctx = Editor.getContext()
 
@@ -32,15 +32,30 @@
       (id) => $groups.find((g) => g.id === id)?.identities ?? [],
     )
 
+    const existingParticipantIds = Object.keys(ctx.value.participants)
+
+    const even =
+      existingParticipantIds.length > 0 &&
+      numbers.even(ctx.value.participants, existingParticipantIds)
+
+    const total = numbers.total(ctx.value)
+
     const participants: Record<string, Participant> = Object.fromEntries(
       [...contactIds, ...groupIds]
         .filter(notParticipant)
-        .map((identity) => [identity, { amount: 0 }]),
+        .map((identity) => [identity, { amount: 0, shares: 0 }]),
     )
 
     ctx.value.participants = {
       ...ctx.value.participants,
       ...participants,
+    }
+
+    if (even && total > 0) {
+      const splitAmounts = numbers.split(total, Object.keys(ctx.value.participants))
+
+      for (const [id, amount] of Object.entries(splitAmounts))
+        ctx.value.participants[id].amount = amount
     }
 
     await back('..')

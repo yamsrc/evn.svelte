@@ -14,6 +14,9 @@ export default defineConfig({
     // fuck.
     permissions: ['clipboard-read', 'clipboard-write'],
     baseURL: process.env.BASE_URL ?? 'http://localhost:5173',
+    launchOptions: {
+      slowMo: parseInt(process.env.PLAYWRIGHT_SLOW_MO || '0'),
+    },
   },
   expect: { timeout: 3_000 },
 })

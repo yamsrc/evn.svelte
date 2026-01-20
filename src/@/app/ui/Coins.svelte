@@ -8,16 +8,20 @@
   const { amount, sign, class: classes }: Props = $props()
 
   const color = $derived.by(() => {
-    if (sign === 'positive' || (sign === undefined && amount > 0)) return 'var(--constructive)'
+    if (sign === 'positive' || (sign === undefined && amount !== undefined && amount > 0))
+      return 'var(--constructive)'
 
-    if (sign === 'negative' || (sign === undefined && amount < 0)) return 'var(--destructive)'
+    if (sign === 'negative' || (sign === undefined && amount !== undefined && amount < 0))
+      return 'var(--destructive)'
 
     return 'var(--muted-foreground)'
   })
 </script>
 
 <div class={cn('flex items-center gap-2', classes)}>
-  <div class="font-bold">{currency(Math.abs(amount), $locale)}</div>
+  {#if amount !== undefined}
+    <div class="font-bold">{currency(Math.abs(amount), $locale)}</div>
+  {/if}
   <div>
     <Coins size={16} {color} />
   </div>

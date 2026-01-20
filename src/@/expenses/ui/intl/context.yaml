@@ -5,3 +5,12 @@ inputs:
       input: Evns
     empty:
       input: Nothing happened yet. Add some spending, bring some friends to start things rolling.
+  payer:
+    placeholder:
+      input: Select payer
+  participants:
+    tabs:
+      sums:
+        input: By sums
+      shares:
+        input: By shares

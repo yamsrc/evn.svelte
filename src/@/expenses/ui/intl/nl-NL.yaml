@@ -3,3 +3,9 @@ recent:
   empty: >-
     Er is nog niets gebeurd. Voeg wat uitgaven toe of nodig vrienden uit om op
     gang te komen.
+payer:
+  placeholder: Betaler selecteren
+participants:
+  tabs:
+    sums: Op bedragen
+    shares: Op basis van aandelen

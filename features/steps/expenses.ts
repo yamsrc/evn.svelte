@@ -1,13 +1,26 @@
 import { faker } from '@faker-js/faker'
 import { expect } from '@playwright/test'
-import { Given } from './fixtures'
+import { Given, When } from './fixtures'
 
 Given('new expense', async ({ page, ctx }) => {
   await page.goto('/')
   await page.locator('#nav-actions-button').click()
   await page.locator('#nav-actions-cheqes-input-button').click()
   await expect(page.locator('#expenses-add-participants-add-button')).toBeVisible()
+
+  // Create a new participant via CreateDialog
+  await page.locator('#expenses-add-participants-create-button').click()
+  await expect(page.locator('#app-cosmetics-name-input')).toBeVisible()
+  await page.locator('#app-cosmetics-name-input').click()
+  await page.keyboard.type(faker.person.firstName())
+  await expect(page.locator('#app-cosmetics-submit-button')).not.toBeDisabled()
+  await page.locator('#app-cosmetics-submit-button').click()
+  await expect(page.locator('#app-cosmetics-name-input')).not.toBeVisible()
+
+  // Select the newly created participant and add it
+  await page.locator('#contacts-list-content > *').first().click()
   await page.locator('#expenses-add-participants-add-button').click()
+
   await expect(page.locator('#expenses-form-title-input')).toBeVisible()
   await page.locator('#expenses-form-title-input').click()
   ctx.name = faker.commerce.productName()
@@ -15,18 +28,25 @@ Given('new expense', async ({ page, ctx }) => {
   await page.keyboard.press('Tab')
   await page.keyboard.type(faker.location.city())
 
-  // Click on payer to enable save button
-  const payersList = page.locator('#expenses-payers-list-content')
+  // Enter total amount (will auto-split between 2 participants: user + contact)
+  await page.locator('#expenses-total-input').click()
+  await page.keyboard.type('100')
 
-  await expect(payersList).toBeVisible()
-  await payersList.locator('.expenses-payer').first().click()
+  // Enter amount for participant to enable save button (user gets 50, contact gets 50)
+  await expect(page.locator('#expenses-participant-amount-0')).toHaveValue('50')
+  await expect(page.locator('#expenses-participant-amount-1')).toHaveValue('50')
 
-  // Enter amount for participant to enable save button
-  const firstParticipantInput = page.locator('#expenses-participant-amount-0')
-
-  await firstParticipantInput.fill('100')
   await expect(page.locator('#expenses-form-save-button')).toBeVisible()
   await expect(page.locator('#expenses-form-save-button')).toBeEnabled()
   await page.locator('#expenses-form-save-button').click()
   await expect(page).toHaveURL(/\/expenses\/[^/]+\/$/)
+})
+
+When('I select payer from dropdown', async ({ page }) => {
+  await page.locator('#expenses-payer-select-trigger').click()
+  await expect(page.locator('[data-slot="select-content"]')).toBeVisible()
+
+  const firstPayerOption = page.locator('[data-slot="select-content"]').locator('[role="option"]').first()
+
+  await firstPayerOption.click()
 })

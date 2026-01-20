@@ -11,6 +11,7 @@
     placeholder = '0',
     oninput: oninputCb,
     class: classes,
+    inputClass,
     id,
   }: Props = $props()
 
@@ -33,7 +34,7 @@
     {oninput}
     min={0}
     step="0.01"
-  />
+    class={inputClass} />
   <InputGroup.Addon align="inline-end">
     <Coins />
   </InputGroup.Addon>

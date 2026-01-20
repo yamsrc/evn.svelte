@@ -3,3 +3,9 @@ recent:
   empty: >-
     Es ist noch nichts passiert. Füge Ausgaben hinzu oder lade Freunde ein, um
     loszulegen.
+payer:
+  placeholder: Zahler auswählen
+participants:
+  tabs:
+    sums: Nach Beträgen
+    shares: Anhand von Anteilen
