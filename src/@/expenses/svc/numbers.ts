@@ -131,6 +131,12 @@ export function shares(value: Value): Record<string, number> {
   return ratios
 }
 
+/**
+ * Calculates the shares of each participant based on their amounts.
+ *
+ * @param value - The expense value
+ * @returns A record mapping participant IDs to their share values
+ */
 export function share(value: Value): Record<string, number> {
   const participants = value.participants
   const totalSpent = total(value)
@@ -163,10 +169,10 @@ export function amounts(value: Value, shares: Record<string, number>): Record<st
     participants.map((id, i) => {
       const share = shares[id]
       const last = i === participants.length - 1
-      const chunk = Math.floor((totalSum / parts) * (share ?? 0))
-      const amount = last ? totalSum - sum : chunk
+      const portion = Math.floor((totalSum / parts) * (share ?? 0))
+      const amount = last ? totalSum - sum : portion
 
-      sum += chunk
+      sum += portion
 
       return [id, amount]
     }),
