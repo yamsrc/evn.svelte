@@ -86,7 +86,7 @@
     <div
       class={cn(
         'pointer-events-auto',
-        'bg-background/50 backdrop-blur-xs border sm:mr-4 transition-all duration-300',
+        'bg-background/50 backdrop-blur-xs sm:mr-4 transition-all duration-300',
         rounded,
         action || 'opacity-0',
         position === 'center' && !action && 'hidden',
