@@ -9,3 +9,5 @@ participants:
   tabs:
     sums: За сумами
     shares: За частками
+  add:
+    label: Додати учасників

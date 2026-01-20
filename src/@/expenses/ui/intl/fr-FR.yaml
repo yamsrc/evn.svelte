@@ -9,3 +9,5 @@ participants:
   tabs:
     sums: Par sommes
     shares: Par parts
+  add:
+    label: Ajouter des participants

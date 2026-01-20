@@ -9,3 +9,5 @@ participants:
   tabs:
     sums: Toplamlara göre
     shares: Hisselere göre
+  add:
+    label: Katılımcı ekle

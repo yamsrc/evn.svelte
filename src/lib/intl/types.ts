@@ -178,7 +178,7 @@ export type Dictionary = {
           }
           title: string
           add: {
-            label: string
+
           }
         }
         me: string

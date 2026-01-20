@@ -135,8 +135,7 @@ expenses:
     create:
       title: 新しい参加者を作成
     title: 参加者を追加
-    add:
-      label: 参加者を追加
+    add: {}
   me: 私
   empty:
     title: まだ支出がありません

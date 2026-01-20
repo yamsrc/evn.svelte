@@ -7,3 +7,5 @@ participants:
   tabs:
     sums: 按金额
     shares: 按份额
+  add:
+    label: 添加参与者

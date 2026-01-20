@@ -14,3 +14,7 @@ inputs:
         input: By sums
       shares:
         input: By shares
+    add:
+      label:
+        input: Add participants
+        context: button label

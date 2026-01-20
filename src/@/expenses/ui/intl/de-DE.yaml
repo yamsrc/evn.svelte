@@ -9,3 +9,5 @@ participants:
   tabs:
     sums: Nach Beträgen
     shares: Anhand von Anteilen
+  add:
+    label: Teilnehmer hinzufügen

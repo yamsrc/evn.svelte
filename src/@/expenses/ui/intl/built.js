@@ -14,6 +14,9 @@ export const dictionaries = {
       "tabs": {
         "sums": "حسب المبالغ",
         "shares": "حسب الحصص"
+      },
+      "add": {
+        "label": "إضافة مشاركين"
       }
     }
   },
@@ -29,6 +32,9 @@ export const dictionaries = {
       "tabs": {
         "sums": "Nach Beträgen",
         "shares": "Anhand von Anteilen"
+      },
+      "add": {
+        "label": "Teilnehmer hinzufügen"
       }
     }
   },
@@ -44,6 +50,9 @@ export const dictionaries = {
       "tabs": {
         "sums": "By sums",
         "shares": "By shares"
+      },
+      "add": {
+        "label": "Add participants"
       }
     }
   },
@@ -59,6 +68,9 @@ export const dictionaries = {
       "tabs": {
         "sums": "Por sumas",
         "shares": "Por acciones"
+      },
+      "add": {
+        "label": "Agregar participantes"
       }
     }
   },
@@ -74,6 +86,9 @@ export const dictionaries = {
       "tabs": {
         "sums": "Par sommes",
         "shares": "Par parts"
+      },
+      "add": {
+        "label": "Ajouter des participants"
       }
     }
   },
@@ -89,6 +104,9 @@ export const dictionaries = {
       "tabs": {
         "sums": "राशि के अनुसार",
         "shares": "शेयरों के अनुसार"
+      },
+      "add": {
+        "label": "प्रतिभागी जोड़ें"
       }
     }
   },
@@ -104,6 +122,9 @@ export const dictionaries = {
       "tabs": {
         "sums": "Per somme",
         "shares": "Per quote"
+      },
+      "add": {
+        "label": "Aggiungi partecipanti"
       }
     }
   },
@@ -119,6 +140,9 @@ export const dictionaries = {
       "tabs": {
         "sums": "合計別",
         "shares": "持分ごとに"
+      },
+      "add": {
+        "label": "参加者を追加"
       }
     }
   },
@@ -134,6 +158,9 @@ export const dictionaries = {
       "tabs": {
         "sums": "금액별",
         "shares": "지분별로"
+      },
+      "add": {
+        "label": "참가자 추가"
       }
     }
   },
@@ -149,6 +176,9 @@ export const dictionaries = {
       "tabs": {
         "sums": "Op bedragen",
         "shares": "Op basis van aandelen"
+      },
+      "add": {
+        "label": "Deelnemers toevoegen"
       }
     }
   },
@@ -164,6 +194,9 @@ export const dictionaries = {
       "tabs": {
         "sums": "По суммам",
         "shares": "По долям"
+      },
+      "add": {
+        "label": "Добавить участников"
       }
     }
   },
@@ -179,6 +212,9 @@ export const dictionaries = {
       "tabs": {
         "sums": "Kwa jumla",
         "shares": "Kwa hisa"
+      },
+      "add": {
+        "label": "Ongeza washiriki"
       }
     }
   },
@@ -194,6 +230,9 @@ export const dictionaries = {
       "tabs": {
         "sums": "Toplamlara göre",
         "shares": "Hisselere göre"
+      },
+      "add": {
+        "label": "Katılımcı ekle"
       }
     }
   },
@@ -209,6 +248,9 @@ export const dictionaries = {
       "tabs": {
         "sums": "За сумами",
         "shares": "За частками"
+      },
+      "add": {
+        "label": "Додати учасників"
       }
     }
   },
@@ -224,6 +266,9 @@ export const dictionaries = {
       "tabs": {
         "sums": "按金额",
         "shares": "按份额"
+      },
+      "add": {
+        "label": "添加参与者"
       }
     }
   }

@@ -1,8 +1,9 @@
 <script lang="ts">
+  import { Check } from '@lucide/svelte'
+  import { Actions } from '$com/shell'
   import { dict } from '$lib/intl'
   import { onsubmit } from '$lib/tools'
-  import { Button } from '$ui/button'
-  import { Section } from '@/app/ui'
+  import { Action } from '@/app/ui'
   import { numbers } from '@/expenses'
   import { setContext } from './Context'
   import Description from './Description.svelte'
@@ -70,6 +71,8 @@
   const enough = $derived(paid > 0 && (payers.length === 1 || paid >= total))
 
   $effect(() => autoeffects(value, payers, total))
+
+  let submitButton = $state<HTMLButtonElement | null>(null)
 </script>
 
 <form onsubmit={onsubmit(submit)} class="space-y-5">
@@ -79,14 +82,18 @@
   <Total bind:value bind:total />
   <Participants bind:value bind:error bind:mode />
 
-  <Section class="flex flex-col items-center gap-2">
-    <Button
-      id="expenses-form-save-button"
-      type="submit"
-      size="lg"
-      class="w-full"
-      disabled={busy || !enough}>
-      {$dict.expenses.form.save}
-    </Button>
-  </Section>
+  <button bind:this={submitButton} type="submit" class="sr-only">
+    {$dict.expenses.form.save}
+  </button>
 </form>
+
+<Actions>
+  <Action
+    id="expenses-form-save-button"
+    type="submit"
+    disabled={busy || !enough}
+    onclick={() => submitButton?.click()}>
+    <Check />
+    <span>{$dict.expenses.form.save}</span>
+  </Action>
+</Actions>

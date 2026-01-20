@@ -58,9 +58,7 @@ contacts:
       confirm: Sil
   add:
     label: Kişi ekle
-    description: >-
-      Daha sonra bu hesabı sahibine aktarabileceksin, böylece giriş bilgilerini
-      ayarlayıp hesabın sahibi olabilir.
+    description: Daha sonra bu hesabı sahibine aktarabileceksin, böylece giriş bilgilerini ayarlayıp hesabın sahibi olabilir.
   share:
     invite:
       link: evn’e davet et
@@ -68,15 +66,11 @@ contacts:
       description: Davet 5 dakika içinde sona erecek
 join:
   app:
-    description: >-
-      Kimin kime borcu olduğunu arkadaşlarınla birlikte akıllıca takip etmenin
-      yolu.
+    description: Kimin kime borcu olduğunu arkadaşlarınla birlikte akıllıca takip etmenin yolu.
   inviter:
-    description: >-
+    description: |-
       !js
-
-      (name) => `${name} tarafından davet edildiniz. Sadece kaydolun veya giriş
-      yapın, ve hazırsınız`
+      (name) => `${name} tarafından davet edildiniz. Sadece kaydolun veya giriş yapın, ve hazırsınız`
   accept: Evn'i kullanmaya başla
 groups:
   leave: Ayrılmak için basılı tut
@@ -109,9 +103,7 @@ account:
   delete:
     button: Hesabı sil
     title: Hesabı sil
-    description: >-
-      Hesabınızı ve tüm bağlantılı bilgileri kalıcı olarak sileceğiz. Bu işlem
-      geri alınamaz.
+    description: Hesabınızı ve tüm bağlantılı bilgileri kalıcı olarak sileceğiz. Bu işlem geri alınamaz.
     sorry: Gitmene çok üzüldük.
     hold: Onaylamak için basılı tutun
     link: Hesabı sil
@@ -143,8 +135,7 @@ expenses:
     create:
       title: Yeni katılımcı oluştur
     title: Katılımcı ekle
-    add:
-      label: Katılımcı ekle
+    add: {}
   me: Ben
   empty:
     title: Henüz gider yok

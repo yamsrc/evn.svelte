@@ -58,9 +58,7 @@ contacts:
       confirm: Futa
   add:
     label: Ongeza mawasiliano
-    description: >-
-      Baadaye utaweza kuhamisha akaunti hii kwa mmiliki ili aweze kuweka taarifa
-      zake za kuingia na kuchukua umiliki wa akaunti.
+    description: Baadaye utaweza kuhamisha akaunti hii kwa mmiliki ili aweze kuweka taarifa zake za kuingia na kuchukua umiliki wa akaunti.
   share:
     invite:
       link: Alika kwenye evn
@@ -83,9 +81,7 @@ groups:
     title: Wanachama
     addMembers: Ongeza wanachama
     addMember: Ongeza mwanachama
-    empty: >-
-      Hakuna mtu hapa bado. Ongeza baadhi ya wanachama ili kuanza kutumia kundi
-      hili.
+    empty: Hakuna mtu hapa bado. Ongeza baadhi ya wanachama ili kuanza kutumia kundi hili.
   title: Makundi
   summary:
     balance:
@@ -107,9 +103,7 @@ account:
   delete:
     button: Futa akaunti
     title: Futa akaunti
-    description: >-
-      Tutafuta akaunti yako na taarifa zote zinazohusiana nayo kabisa. Hatua hii
-      haiwezi kutenduliwa.
+    description: Tutafuta akaunti yako na taarifa zote zinazohusiana nayo kabisa. Hatua hii haiwezi kutenduliwa.
     sorry: Tunaomba radhi sana kukuona ukiondoka.
     hold: Shikilia kuthibitisha
     link: Futa akaunti
@@ -141,8 +135,7 @@ expenses:
     create:
       title: Unda mshiriki mpya
     title: Ongeza washiriki
-    add:
-      label: Ongeza mshiriki
+    add: {}
   me: Mimi
   empty:
     title: Hakuna matumizi bado

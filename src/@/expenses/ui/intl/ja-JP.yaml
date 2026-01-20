@@ -7,3 +7,5 @@ participants:
   tabs:
     sums: 合計別
     shares: 持分ごとに
+  add:
+    label: 参加者を追加

@@ -9,3 +9,5 @@ participants:
   tabs:
     sums: По суммам
     shares: По долям
+  add:
+    label: Добавить участников

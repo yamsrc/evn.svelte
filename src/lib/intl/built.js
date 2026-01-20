@@ -174,7 +174,7 @@ export const dictionaries = {
         },
         "title": "إضافة مشاركين",
         "add": {
-          "label": "إضافة مشارك"
+
         }
       },
       "me": "أنا",
@@ -363,7 +363,7 @@ export const dictionaries = {
         },
         "title": "Teilnehmer hinzufügen",
         "add": {
-          "label": "Teilnehmer hinzufügen"
+
         }
       },
       "me": "Ich",
@@ -557,7 +557,7 @@ export const dictionaries = {
         },
         "title": "Add participants",
         "add": {
-          "label": "Add participant"
+
         }
       },
       "me": "Me"
@@ -741,7 +741,7 @@ export const dictionaries = {
         },
         "title": "Agregar participantes",
         "add": {
-          "label": "Agregar participante"
+
         }
       },
       "me": "Yo",
@@ -930,7 +930,7 @@ export const dictionaries = {
         },
         "title": "Ajouter des participants",
         "add": {
-          "label": "Ajouter un participant"
+
         }
       },
       "me": "Moi",
@@ -1119,7 +1119,7 @@ export const dictionaries = {
         },
         "title": "प्रतिभागी जोड़ें",
         "add": {
-          "label": "प्रतिभागी जोड़ें"
+
         }
       },
       "me": "मैं",
@@ -1308,7 +1308,7 @@ export const dictionaries = {
         },
         "title": "Aggiungi partecipanti",
         "add": {
-          "label": "Aggiungi partecipante"
+
         }
       },
       "me": "Io",
@@ -1497,7 +1497,7 @@ export const dictionaries = {
         },
         "title": "参加者を追加",
         "add": {
-          "label": "参加者を追加"
+
         }
       },
       "me": "私",
@@ -1686,7 +1686,7 @@ export const dictionaries = {
         },
         "title": "참가자 추가",
         "add": {
-          "label": "참가자 추가"
+
         }
       },
       "me": "나",
@@ -1875,7 +1875,7 @@ export const dictionaries = {
         },
         "title": "Deelnemers toevoegen",
         "add": {
-          "label": "Deelnemer toevoegen"
+
         }
       },
       "me": "Ik",
@@ -2064,7 +2064,7 @@ export const dictionaries = {
         },
         "title": "Добавить участников",
         "add": {
-          "label": "Добавить участника"
+
         }
       },
       "me": "Я",
@@ -2253,7 +2253,7 @@ export const dictionaries = {
         },
         "title": "Ongeza washiriki",
         "add": {
-          "label": "Ongeza mshiriki"
+
         }
       },
       "me": "Mimi",
@@ -2442,7 +2442,7 @@ export const dictionaries = {
         },
         "title": "Katılımcı ekle",
         "add": {
-          "label": "Katılımcı ekle"
+
         }
       },
       "me": "Ben",
@@ -2631,7 +2631,7 @@ export const dictionaries = {
         },
         "title": "Додати учасників",
         "add": {
-          "label": "Додати учасника"
+
         }
       },
       "me": "Я",
@@ -2820,7 +2820,7 @@ export const dictionaries = {
         },
         "title": "添加参与者",
         "add": {
-          "label": "添加参与者"
+
         }
       },
       "me": "我",

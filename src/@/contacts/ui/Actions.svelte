@@ -7,10 +7,10 @@
 
 <Actions>
   <ButtonGroup.Root>
-    <Action id="nav-action-group" href="/contacts/groups/">
+    <Action id="nav-action-group" href="/contacts/groups/" variant="secondary">
       <Users />
     </Action>
-    <Action id="nav-action-contact" href="/contacts/new/" variant="default">
+    <Action id="nav-action-contact" href="/contacts/new/">
       <UserPlus />
     </Action>
   </ButtonGroup.Root>

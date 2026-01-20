@@ -241,9 +241,6 @@ inputs:
           input: Create a new participant
       title:
         input: Add participants
-      add:
-        label:
-          input: Add participant
     me:
       input: Me
   home:

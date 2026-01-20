@@ -9,3 +9,5 @@ participants:
   tabs:
     sums: Op bedragen
     shares: Op basis van aandelen
+  add:
+    label: Deelnemers toevoegen

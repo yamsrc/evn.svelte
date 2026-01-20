@@ -9,3 +9,5 @@ participants:
   tabs:
     sums: राशि के अनुसार
     shares: शेयरों के अनुसार
+  add:
+    label: प्रतिभागी जोड़ें

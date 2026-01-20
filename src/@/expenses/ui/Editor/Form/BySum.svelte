@@ -1,11 +1,9 @@
 <script lang="ts">
-  import { Plus } from '@lucide/svelte'
   import { Async } from 'svas'
   import { Separator } from '$com/separator'
   import { TextEllipsis } from '$com/text-ellipsis'
   import { dict, locale } from '$lib/intl'
   import { currency } from '$lib/tools'
-  import { Button } from '$ui/button'
   import { accounts } from '@/accounts'
   import { Picture } from '@/accounts/ui'
   import { account as me } from '@/iam'
@@ -51,18 +49,6 @@
         bind:value={value.participants[id].amount} />
     </div>
   {/each}
-
-  <div class="py-2">
-    <Button
-      id="expenses-spendings-add-participants-button"
-      size="lg"
-      variant="secondary"
-      class="w-full"
-      href="participants/">
-      <Plus />
-      {$dict.expenses.participants.add.label}
-    </Button>
-  </div>
 
   <!-- Extras -->
   {#each value.extras as extra, i (i)}
