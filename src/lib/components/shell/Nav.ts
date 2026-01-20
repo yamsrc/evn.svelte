@@ -29,8 +29,8 @@ export function href(paths: string | string[]): string | null {
   else return paths[0]
 }
 
-export function nested(sectionHref: string, current: string): boolean {
-  if (sectionHref === '/') return false
+export function nested(href: string, current: string): boolean {
+  if (href === '/') return false
 
-  return match(sectionHref, current) && !exact(sectionHref, current)
+  return match(href, current) && !exact(href, current)
 }

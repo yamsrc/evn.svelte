@@ -1,21 +1,22 @@
 <script lang="ts">
+  import { ChevronLeft } from '@lucide/svelte'
   import { onMount } from 'svelte'
   import { preloadCode } from '$app/navigation'
   import { page } from '$app/state'
   import { back } from '$com/history'
   import { cn } from '$lib/utils'
   import { Button } from '$ui/button'
-  import { actions } from './Actions'
   import { exact, href, match, nested, type Props, type Section } from './Nav'
+  import { actions, returns } from './store'
 
   const { sections, position = 'start', class: classes }: Props = $props()
   const action = $derived($actions.at(-1) ?? null)
 
   const active = $derived(sections.find(({ href }) => match(href, page.url.pathname)))
-  const isNested = $derived(active ? nested(active.href, page.url.pathname) : false)
+  const collapsed = $derived(active ? nested(active.href, page.url.pathname) : false)
 
   const visible = $derived(
-    sections.filter((section) => !isNested || match(section.href, page.url.pathname)),
+    sections.filter((section) => !collapsed || match(section.href, page.url.pathname)),
   )
 
   const rounded = 'rounded-xl'
@@ -25,7 +26,7 @@
   })
 
   function link(section: Section) {
-    return isNested ? null : exact(section.href, page.url.pathname) ? null : href(section.href)
+    return collapsed ? null : exact(section.href, page.url.pathname) ? null : href(section.href)
   }
 </script>
 
@@ -53,17 +54,19 @@
       {#each sections as section, i (section.href)}
         {@const active = match(section.href, page.url.pathname)}
         {@const hidden = !visible.includes(section)}
+        {@const ret = $returns.at(-1)}
         <li>
           <Button
             id={`nav-${section.id}-button`}
             href={link(section)}
-            onclick={isNested ? () => back(section.href) : null}
+            onclick={collapsed ? () => back(ret?.href ?? section.href) : null}
             variant="ghost"
             class={cn(
               'relative flex flex-col h-full flex-1 min-w-16 p-3 gap-1 text-sm transition-colors duration-300 hover:bg-accent/25 overflow-hidden',
               rounded,
               active && 'text-accent-foreground',
               hidden && 'hidden',
+              ret && ret.class,
             )}>
             <div
               class={cn(
@@ -73,10 +76,18 @@
               style={active ? 'view-transition-name: shell-nav-active;' : ''}>
             </div>
             <div
-              class="flex flex-col items-center gap-0.5 z-10 relative font-bold"
+              class="flex flex-col items-center gap-0.5 z-10 relative font-bold [&_svg:not([class*='size-'])]:size-5"
               style={`view-transition-name: shell-nav-${i}`}>
-              <section.Icon class="size-5" color="var(--muted-foreground)" />
-              {section.label}
+              {#if ret}
+                {#if ret.children}
+                  {@render ret.children()}
+                {:else}
+                  <ChevronLeft />
+                {/if}
+              {:else}
+                <section.Icon color="var(--muted-foreground)" />
+                <span>{section.label}</span>
+              {/if}
             </div>
           </Button>
         </li>

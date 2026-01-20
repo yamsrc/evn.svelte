@@ -3,7 +3,7 @@
   import { Async, combined } from 'svas'
   import { SvelteSet } from 'svelte/reactivity'
   import { back } from '$com/history'
-  import { Actions } from '$com/shell'
+  import { Actions, Return } from '$com/shell'
   import { dict } from '$lib/intl'
   import { buttonVariants } from '$ui/button'
   import * as ButtonGroup from '$ui/button-group'
@@ -95,6 +95,8 @@
     {/if}
   {/snippet}
 </Async>
+
+<Return />
 
 <Actions>
   <ButtonGroup.Root>

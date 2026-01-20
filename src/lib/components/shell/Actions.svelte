@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte'
-  import { actions, type Props } from './Actions'
+  import { actions } from './store'
+  import type { Props } from './Actions'
 
   const { children, class: classes }: Props = $props()
 
