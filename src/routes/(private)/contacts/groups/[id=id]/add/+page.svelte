@@ -3,7 +3,6 @@
   import { SvelteSet } from 'svelte/reactivity'
   import { goto } from '$app/navigation'
   import { page } from '$app/state'
-  import { Back } from '$com/history'
   import { dict } from '$lib/intl'
   import { Button } from '$ui/button'
   import { Input } from '$ui/input'
@@ -45,7 +44,7 @@
     {#if group}
       <Section>
         <Header.Root>
-          <Back href={`/contacts/groups/${group.id}`}>{group.name}</Back>
+          <Header.Title>{group.name}</Header.Title>
         </Header.Root>
       </Section>
       <Section>

@@ -14,10 +14,8 @@ export interface Section {
 }
 
 export function match(path: string | string[], current: string): boolean {
-  if (typeof path === 'string')
-    return path === '/' ? current === '/' : current.startsWith(path)
-  else
-    return path.some((p) => match(p, current))
+  if (typeof path === 'string') return path === '/' ? current === '/' : current.startsWith(path)
+  else return path.some((p) => match(p, current))
 }
 
 export function exact(paths: string | string[], current: string): boolean {
@@ -29,4 +27,10 @@ export function exact(paths: string | string[], current: string): boolean {
 export function href(paths: string | string[]): string | null {
   if (typeof paths === 'string') return paths
   else return paths[0]
+}
+
+export function nested(sectionHref: string, current: string): boolean {
+  if (sectionHref === '/') return false
+
+  return match(sectionHref, current) && !exact(sectionHref, current)
 }

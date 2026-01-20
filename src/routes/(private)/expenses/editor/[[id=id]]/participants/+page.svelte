@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Async, combined } from 'svas'
   import { SvelteSet } from 'svelte/reactivity'
-  import { back, Back } from '$com/history'
+  import { back } from '$com/history'
   import { dict } from '$lib/intl'
   import { buttonVariants, Button } from '$ui/button'
   import { Input } from '$ui/input'
@@ -64,7 +64,7 @@
 
 <Section>
   <Header.Root>
-    <Back href="..">{ctx.value.title || $dict.expenses.title}</Back>
+    <Header.Title>{ctx.value.title || $dict.expenses.title}</Header.Title>
   </Header.Root>
 </Section>
 

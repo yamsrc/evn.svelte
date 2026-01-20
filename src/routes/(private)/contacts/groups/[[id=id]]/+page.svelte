@@ -5,7 +5,6 @@
   import { page } from '$app/state'
   import { Hold } from '$com/buttons'
   import { Separator } from '$com/separator'
-  import { Back } from '$lib/components/history'
   import { locale } from '$lib/intl'
   import { dict } from '$lib/intl'
   import { currency } from '$lib/tools'
@@ -59,7 +58,7 @@
 
 <Section>
   <Header.Root>
-    <Back href="/contacts/">{$dict.contacts.title}</Back>
+    <Header.Title>{$dict.contacts.title}</Header.Title>
     <Header.Actions>
       <Hold
         onclick={leave}

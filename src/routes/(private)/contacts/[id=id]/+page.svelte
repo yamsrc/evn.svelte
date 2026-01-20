@@ -1,7 +1,6 @@
 <script lang="ts">
   import { Async, combined, ok } from 'svas'
   import { page } from '$app/state'
-  import { Back } from '$com/history'
   import { Separator } from '$com/separator'
   import { dict } from '$lib/intl'
   import { Spinner } from '$ui/spinner'
@@ -18,7 +17,7 @@
 
 <Section>
   <Header.Root>
-    <Back href="/contacts/">{$dict.contacts.title}</Back>
+    <Header.Title>{$dict.contacts.title}</Header.Title>
   </Header.Root>
 </Section>
 
