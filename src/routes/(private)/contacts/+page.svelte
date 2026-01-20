@@ -23,7 +23,7 @@
       <Header.Button disabled>
         <ArrowUpDown />
       </Header.Button>
-      <Header.Button href="/me/">
+      <Header.Button href="/me/" id="header-me-button">
         <User class="size-5" />
       </Header.Button>
     </Header.Actions>
