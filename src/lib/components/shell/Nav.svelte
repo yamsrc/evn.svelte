@@ -50,8 +50,9 @@
         rounded,
       )}
       style="view-transition-name: shell-nav;">
-      {#each visible as section, i (section.href)}
+      {#each sections as section, i (section.href)}
         {@const active = match(section.href, page.url.pathname)}
+        {@const hidden = !visible.includes(section)}
         <li>
           <Button
             id={`nav-${section.id}-button`}
@@ -62,6 +63,7 @@
               'relative flex flex-col h-full flex-1 min-w-16 p-2 gap-1 text-sm transition-colors duration-300 hover:bg-accent/25 overflow-hidden',
               rounded,
               active && 'text-accent-foreground',
+              hidden && 'hidden',
             )}>
             <div
               class={cn(
