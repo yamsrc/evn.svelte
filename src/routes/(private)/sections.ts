@@ -1,4 +1,4 @@
-import { LayoutGrid, Ticket, User, Users } from '@lucide/svelte'
+import { LayoutGrid, Ticket, Users } from '@lucide/svelte'
 import type { Section } from '$com/shell'
 import type { Dictionary } from '$lib/intl'
 
@@ -20,11 +20,5 @@ export const sections = (dict: Dictionary): Section[] => [
     href: '/expenses/',
     label: dict.nav.expenses,
     Icon: Ticket,
-  },
-  {
-    id: 'me',
-    href: '/me/',
-    label: dict.nav.profile,
-    Icon: User,
   },
 ] as const satisfies Section[]

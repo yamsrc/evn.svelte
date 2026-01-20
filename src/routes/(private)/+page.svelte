@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { User } from '@lucide/svelte'
   import { Async, combined } from 'svas'
   import { dict } from '$lib/intl'
   import { Header, Section } from '@/app/ui'
@@ -14,6 +15,11 @@
     <Section>
       <Header.Root>
         <Header.Title>{$dict.home.title(account.name)}</Header.Title>
+        <Header.Actions>
+          <Header.Button href="/me/">
+            <User class="size-5" />
+          </Header.Button>
+        </Header.Actions>
       </Header.Root>
     </Section>
 

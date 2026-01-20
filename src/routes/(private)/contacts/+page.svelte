@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { ArrowUpDown } from '@lucide/svelte'
+  import { ArrowUpDown, User } from '@lucide/svelte'
   import { Async, combined } from 'svas'
   import { dict } from '$lib/intl'
   import { Input } from '$ui/input'
@@ -22,6 +22,9 @@
     <Header.Actions>
       <Header.Button disabled>
         <ArrowUpDown />
+      </Header.Button>
+      <Header.Button href="/me/">
+        <User class="size-5" />
       </Header.Button>
     </Header.Actions>
   </Header.Root>
