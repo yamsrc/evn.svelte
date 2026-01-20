@@ -58,18 +58,20 @@
 
 <Section>
   <Header.Root>
-    <Header.Title>{$dict.contacts.title}</Header.Title>
-    <Header.Actions>
-      <Hold
-        onclick={leave}
-        variant="ghost"
-        class="size-12 bg-accent/50 border border-border"
-        position="left"
-        label={$dict.groups.leave}
-        disabled={!group}>
-        <LogOut class="size-5" />
-      </Hold>
-    </Header.Actions>
+    <Header.Title>{$dict.groups.create}</Header.Title>
+    {#if id}
+      <Header.Actions>
+        <Hold
+          onclick={leave}
+          variant="ghost"
+          class="size-12 bg-accent/50 border border-border"
+          position="left"
+          label={$dict.groups.leave}
+          disabled={!group}>
+          <LogOut class="size-5" />
+        </Hold>
+      </Header.Actions>
+    {/if}
   </Header.Root>
 </Section>
 

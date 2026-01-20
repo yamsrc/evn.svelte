@@ -98,6 +98,7 @@
         class={cn(
           'pointer-events-auto',
           'sm:mr-4 transition-all duration-300',
+          "[&_svg:not([class*='size-'])]:size-5",
           rounded,
           action || 'opacity-0',
           position === 'center' && !action && 'hidden',

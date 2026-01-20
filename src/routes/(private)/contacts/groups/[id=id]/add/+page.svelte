@@ -84,7 +84,7 @@
 <Return />
 
 <Actions>
-  <ButtonGroup.Root class="[&_svg:not([class*='size-'])]:size-5">
+  <ButtonGroup.Root>
     <Share size="icon-lg" variant="secondary" class="flex-1 size-14" data={invitation} />
     <QR variant="secondary" size="icon-lg" class="flex-1 size-14" text={invitation.url} />
     <Action
