@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Plus } from '@lucide/svelte'
+  import { UserPlus } from '@lucide/svelte'
   import * as Dialog from '$com/ui/dialog'
   import { dict } from '$lib/intl'
   import { buttonVariants } from '$ui/button'
@@ -46,8 +46,8 @@
 
 <Dialog.Root bind:open>
   <Dialog.Trigger id="expenses-add-participants-create-button" class={classes}>
-    <Plus />
-    {$dict.actions.create}
+    <UserPlus />
+    <span>{$dict.actions.create}</span>
   </Dialog.Trigger>
   <Dialog.Content>
     <Dialog.Header>

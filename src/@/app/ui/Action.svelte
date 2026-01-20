@@ -12,6 +12,13 @@
   }: Props = $props()
 </script>
 
-<Button {size} {variant} class={cn('size-14', classes)} {...props}>
+<Button
+  {size}
+  {variant}
+  class={cn(
+    "size-14 [&_svg:not([class*='size-'])]:size-5 [&_span]:hidden sm:[&_span]:inline",
+    classes,
+  )}
+  {...props}>
   {@render children?.()}
 </Button>

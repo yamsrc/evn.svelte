@@ -86,7 +86,7 @@
       <div
         class={cn(
           'pointer-events-auto',
-          'bg-primary sm:mr-4 transition-all duration-300',
+          'sm:mr-4 transition-all duration-300',
           rounded,
           action || 'opacity-0',
           position === 'center' && !action && 'hidden',

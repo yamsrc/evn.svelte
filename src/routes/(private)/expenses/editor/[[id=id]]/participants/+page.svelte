@@ -1,11 +1,14 @@
 <script lang="ts">
+  import { Check } from '@lucide/svelte'
   import { Async, combined } from 'svas'
   import { SvelteSet } from 'svelte/reactivity'
   import { back } from '$com/history'
+  import { Actions } from '$com/shell'
   import { dict } from '$lib/intl'
-  import { buttonVariants, Button } from '$ui/button'
+  import { buttonVariants } from '$ui/button'
+  import * as ButtonGroup from '$ui/button-group'
   import { Input } from '$ui/input'
-  import { Section } from '@/app/ui'
+  import { Action, Section } from '@/app/ui'
   import { Header } from '@/app/ui'
   import { contacts, filter as filterContacts } from '@/contacts'
   import { Contacts } from '@/contacts/ui'
@@ -93,14 +96,21 @@
   {/snippet}
 </Async>
 
-<Section class="sticky bottom-26 z-10 flex items-center justify-evenly gap-2">
-  <Button
-    id="expenses-add-participants-add-button"
-    size="lg"
-    class="flex-1"
-    disabled={contactsSelection.size === 0 && groupSelection.size === 0}
-    onclick={addParticipants}>
-    {$dict.actions.addSelected}
-  </Button>
-  <CreateDialog class={buttonVariants({ size: 'lg', variant: 'secondary', class: 'flex-1' })} />
-</Section>
+<Actions>
+  <ButtonGroup.Root>
+    <CreateDialog
+      class={buttonVariants({
+        size: 'icon-lg',
+        variant: 'secondary',
+        class: 'flex-1 size-14 [&_span]:hidden sm:[&_span]:inline',
+      })} />
+    <Action
+      id="expenses-add-participants-add-button"
+      variant="default"
+      disabled={contactsSelection.size === 0 && groupSelection.size === 0}
+      onclick={addParticipants}>
+      <Check />
+      <span>{$dict.actions.addSelected}</span>
+    </Action>
+  </ButtonGroup.Root>
+</Actions>
