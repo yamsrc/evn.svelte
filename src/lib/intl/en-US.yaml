@@ -71,7 +71,7 @@ join:
     description: |-
       !js
       (name) => `You have been invited by ${name}. Just register or log in, and you’re all set`
-  accept: Start Using Evn
+  accept: Start Using Evnly
 groups:
   leave: Hold to leave
   name:

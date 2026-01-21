@@ -19,7 +19,7 @@ account:
     description: Bu transfer isteğinin süresi doldu.
     title: Aktarım süresi doldu
   og:
-    tile: Evnly hesabınızı devralın.
+    tile: Evnlyly hesabınızı devralın.
     description: >-
       !js
 
@@ -37,29 +37,29 @@ friends:
 
       (name) => `${name} tarafından davet edildiniz. Sadece kaydolun veya giriş
       yapın, hazırsınız!`
-  accept: Evn’i kullanmaya başla
+  accept: Evnly’i kullanmaya başla
   og:
     description: >-
       Paylaşılan harcamaları takip edin, masrafları bölüştürün ve uyumlu kalın —
-      Evnly'de birlikte.
+      Evnlyly'de birlikte.
     title: |-
       !js
-      (name) => `Evnly'de ${name}'e katıl`
+      (name) => `Evnlyly'de ${name}'e katıl`
   dialog:
-    title: Evnly'de bağlan
+    title: Evnlyly'de bağlan
     description: Devam etmek için giriş yapın veya bir hesap oluşturun.
     accept: Bağlan
     decline: Şimdi değil
     content: >-
       !js
 
-      (name) => `${name}, Evnly'de seninle bağlantı kurup ortak giderlerinizi
+      (name) => `${name}, Evnlyly'de seninle bağlantı kurup ortak giderlerinizi
       takip etmek istiyor.`
 group:
   og:
     title: |-
       !js
-      (groupName) => `Evnly'de "${groupName}" grubuna katıl`
+      (groupName) => `Evnlyly'de "${groupName}" grubuna katıl`
     description: >-
       !js
 

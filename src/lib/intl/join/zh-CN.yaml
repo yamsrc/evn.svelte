@@ -29,7 +29,7 @@ friends:
     description: |-
       !js
       (name) => `您已被${name}邀请。只需注册或登录，您就可以开始了！`
-  accept: 开始使用 Evn
+  accept: 开始使用 Evnly
   og:
     description: 跟踪共享支出、分摊费用、保持同步 —— 一起在 Evnly 上。
     title: |-

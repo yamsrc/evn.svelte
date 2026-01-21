@@ -21,7 +21,7 @@ account:
     description: Questa richiesta di trasferimento è scaduta.
     title: Trasferimento scaduto
   og:
-    tile: Prendi il controllo del tuo account su Evnly.
+    tile: Prendi il controllo del tuo account su Evnlyly.
     description: >-
       !js
 
@@ -41,29 +41,29 @@ friends:
 
       (name) => `Sei stato invitato da ${name}. Registrati o accedi, ed è tutto
       pronto!`
-  accept: Inizia a usare Evn
+  accept: Inizia a usare Evnly
   og:
     description: >-
       Tieni traccia delle spese condivise, dividi i costi e rimani sincronizzato
-      — insieme su Evnly.
+      — insieme su Evnlyly.
     title: |-
       !js
-      (name) => `Unisciti a ${name} su Evnly`
+      (name) => `Unisciti a ${name} su Evnlyly`
   dialog:
-    title: Connettiti su Evnly
+    title: Connettiti su Evnlyly
     description: Accedi o crea un account per continuare.
     accept: Connetti
     decline: Non ora
     content: >-
       !js
 
-      (name) => `${name} vuole connettersi con te su Evnly per tenere traccia
+      (name) => `${name} vuole connettersi con te su Evnlyly per tenere traccia
       delle spese condivise.`
 group:
   og:
     title: |-
       !js
-      (groupName) => `Unisciti a "${groupName}" su Evnly`
+      (groupName) => `Unisciti a "${groupName}" su Evnlyly`
     description: >-
       !js
 

@@ -71,7 +71,7 @@ join:
     description: |-
       !js
       (name) => `${name} tarafından davet edildiniz. Sadece kaydolun veya giriş yapın, ve hazırsınız`
-  accept: Evn'i kullanmaya başla
+  accept: Evnly'i kullanmaya başla
 groups:
   leave: Ayrılmak için basılı tut
   name:

@@ -17,7 +17,7 @@ account:
     description: この送金リクエストの有効期限が切れました。
     title: 転送の有効期限が切れました
   og:
-    tile: Evnlyのアカウントを引き継ぐ。
+    tile: Evnlylyのアカウントを引き継ぐ。
     description: |-
       !js
       (name) => `${name}さん、このアカウントはあなたのために作成されました。サインイン情報を設定してご自身のものにしてください。`
@@ -31,25 +31,25 @@ friends:
     description: |-
       !js
       (name) => `${name}さんから招待されています。登録またはログインするだけで、すぐにご利用いただけます。`
-  accept: Evn を使い始める
+  accept: Evnly を使い始める
   og:
-    description: 共有の支出を管理し、費用を分担し、みんなで常に連携——Evnlyで一緒に。
+    description: 共有の支出を管理し、費用を分担し、みんなで常に連携——Evnlylyで一緒に。
     title: |-
       !js
-      (name) => `Evnlyで${name}に参加しよう`
+      (name) => `Evnlylyで${name}に参加しよう`
   dialog:
-    title: Evnlyでつながる
+    title: Evnlylyでつながる
     description: 続行するにはサインインするかアカウントを作成してください。
     accept: 接続
     decline: 今はしない
     content: |-
       !js
-      (name) => `${name}さんがEvnlyであなたとつながり、共有した支出を管理したいと考えています。`
+      (name) => `${name}さんがEvnlylyであなたとつながり、共有した支出を管理したいと考えています。`
 group:
   og:
     title: |-
       !js
-      (groupName) => `Evnlyで「${groupName}」に参加する`
+      (groupName) => `Evnlylyで「${groupName}」に参加する`
     description: >-
       !js
 

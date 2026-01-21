@@ -94,7 +94,7 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `لقد تمّت دعوتك من قِبل ${name}. فقط سجّل أو قم بتسجيل الدخول، وستكون جاهزًا للبدء`
       },
-      "accept": "ابدأ استخدام Evn"
+      "accept": "ابدأ استخدام Evnly"
     },
     "groups": {
       "leave": "اضغط مع الاستمرار للمغادرة",
@@ -283,7 +283,7 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `${name} hat dich eingeladen. Registriere dich einfach oder melde dich an, und schon kann es losgehen`
       },
-      "accept": "Jetzt mit Evn starten"
+      "accept": "Jetzt mit Evnly starten"
     },
     "groups": {
       "leave": "Gedrückt halten zum Verlassen",
@@ -472,7 +472,7 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `You have been invited by ${name}. Just register or log in, and you’re all set`
       },
-      "accept": "Start Using Evn"
+      "accept": "Start Using Evnly"
     },
     "groups": {
       "leave": "Hold to leave",
@@ -661,7 +661,7 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `Has sido invitado por ${name}. Solo regístrate o inicia sesión, y ya está todo listo`
       },
-      "accept": "Comienza a usar Evn"
+      "accept": "Comienza a usar Evnly"
     },
     "groups": {
       "leave": "Mantén pulsado para salir",
@@ -850,7 +850,7 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `Vous avez été invité(e) par ${name}. Inscrivez-vous ou connectez-vous, et tout est prêt`
       },
-      "accept": "Commencer à utiliser Evn"
+      "accept": "Commencer à utiliser Evnly"
     },
     "groups": {
       "leave": "Maintenez appuyé pour quitter",
@@ -1039,7 +1039,7 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `${name} ने आपको आमंत्रित किया है। बस रजिस्टर करें या लॉग इन करें, और आप तैयार हैं`
       },
-      "accept": "Evn का उपयोग शुरू करें"
+      "accept": "Evnly का उपयोग शुरू करें"
     },
     "groups": {
       "leave": "छोड़ने के लिए दबाए रखें",
@@ -1228,7 +1228,7 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `Sei stato invitato da ${name}. Basta registrarsi o accedere, e sei pronto`
       },
-      "accept": "Inizia a usare Evn"
+      "accept": "Inizia a usare Evnly"
     },
     "groups": {
       "leave": "Tieni premuto per uscire",
@@ -1417,7 +1417,7 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `${name} から招待されました。登録またはログインするだけで、準備完了です`
       },
-      "accept": "Evn を使い始める"
+      "accept": "Evnly を使い始める"
     },
     "groups": {
       "leave": "長押しして退出",
@@ -1606,7 +1606,7 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `${name}님이 초대했습니다. 회원가입 또는 로그인만 하면 바로 시작할 수 있습니다`
       },
-      "accept": "Evn 시작하기"
+      "accept": "Evnly 시작하기"
     },
     "groups": {
       "leave": "길게 눌러서 나가기",
@@ -1795,7 +1795,7 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `Je bent uitgenodigd door ${name}. Registreer je of log in, en je bent klaar om te beginnen`
       },
-      "accept": "Evn gebruiken starten"
+      "accept": "Evnly gebruiken starten"
     },
     "groups": {
       "leave": "Vasthouden om te verlaten",
@@ -1984,7 +1984,7 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `Вас пригласил(а) ${name}. Просто зарегистрируйтесь или войдите, и вы готовы начать`
       },
-      "accept": "Начать использовать Evn"
+      "accept": "Начать использовать Evnly"
     },
     "groups": {
       "leave": "Удерживайте, чтобы выйти",
@@ -2173,7 +2173,7 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `${name} amekualika. Jisajili au ingia, na uko tayari kuanza`
       },
-      "accept": "Anza kutumia Evn"
+      "accept": "Anza kutumia Evnly"
     },
     "groups": {
       "leave": "Shikilia kuondoka",
@@ -2362,7 +2362,7 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `${name} tarafından davet edildiniz. Sadece kaydolun veya giriş yapın, ve hazırsınız`
       },
-      "accept": "Evn'i kullanmaya başla"
+      "accept": "Evnly'i kullanmaya başla"
     },
     "groups": {
       "leave": "Ayrılmak için basılı tut",
@@ -2551,7 +2551,7 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `Вас запросив(ла) ${name}. Просто зареєструйтеся або увійдіть, і все готово`
       },
-      "accept": "Почати користуватися Evn"
+      "accept": "Почати користуватися Evnly"
     },
     "groups": {
       "leave": "Утримуйте, щоб вийти",
@@ -2740,7 +2740,7 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `您已被${name}邀请。只需注册或登录，您就可以开始了`
       },
-      "accept": "开始使用 Evn"
+      "accept": "开始使用 Evnly"
     },
     "groups": {
       "leave": "长按退出",

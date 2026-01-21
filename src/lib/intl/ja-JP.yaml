@@ -71,7 +71,7 @@ join:
     description: |-
       !js
       (name) => `${name} から招待されました。登録またはログインするだけで、準備完了です`
-  accept: Evn を使い始める
+  accept: Evnly を使い始める
 groups:
   leave: 長押しして退出
   name:

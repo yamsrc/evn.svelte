@@ -23,7 +23,7 @@ account:
     description: Cette demande de transfert a expiré.
     title: Transfert expiré
   og:
-    tile: Prenez le contrôle de votre compte Evnly.
+    tile: Prenez le contrôle de votre compte Evnlyly.
     description: >-
       !js
 
@@ -43,27 +43,27 @@ friends:
 
       (name) => `Vous avez été invité par ${name}. Inscrivez-vous ou
       connectez-vous, et tout est prêt !`
-  accept: Commencer à utiliser Evn
+  accept: Commencer à utiliser Evnly
   og:
     description: >-
       Gérez vos dépenses partagées, répartissez les coûts et restez synchronisés
-      — ensemble sur Evnly.
+      — ensemble sur Evnlyly.
     title: |-
       !js
-      (name) => `Rejoins ${name} sur Evnly`
+      (name) => `Rejoins ${name} sur Evnlyly`
   dialog:
-    title: Connectez-vous sur Evnly
+    title: Connectez-vous sur Evnlyly
     description: Connectez-vous ou créez un compte pour continuer.
     accept: Se connecter
     decline: Pas maintenant
     content: >-
       !js
 
-      (name) => `${name} souhaite se connecter avec vous sur Evnly pour suivre
+      (name) => `${name} souhaite se connecter avec vous sur Evnlyly pour suivre
       les dépenses partagées.`
 group:
   og:
-    title: "!js\n(groupName) => `Rejoindre «\_${groupName}\_» sur Evnly`"
+    title: "!js\n(groupName) => `Rejoindre «\_${groupName}\_» sur Evnlyly`"
     description: >-
       !js
 

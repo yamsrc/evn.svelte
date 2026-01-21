@@ -53,7 +53,7 @@ inputs:
                 (name) => `You have been invited by ${name}. Just register or log in, and
                 you’re all set`
     accept:
-      input: Start Using Evn
+      input: Start Using Evnly
     og:
       description:
         input: Track shared expenses, split costs, and stay in sync — together on Evnly.

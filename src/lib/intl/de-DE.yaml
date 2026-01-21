@@ -71,7 +71,7 @@ join:
     description: |-
       !js
       (name) => `${name} hat dich eingeladen. Registriere dich einfach oder melde dich an, und schon kann es losgehen`
-  accept: Jetzt mit Evn starten
+  accept: Jetzt mit Evnly starten
 groups:
   leave: Gedrückt halten zum Verlassen
   name:

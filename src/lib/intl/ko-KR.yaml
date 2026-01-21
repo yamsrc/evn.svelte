@@ -71,7 +71,7 @@ join:
     description: |-
       !js
       (name) => `${name}님이 초대했습니다. 회원가입 또는 로그인만 하면 바로 시작할 수 있습니다`
-  accept: Evn 시작하기
+  accept: Evnly 시작하기
 groups:
   leave: 길게 눌러서 나가기
   name:

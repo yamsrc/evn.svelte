@@ -21,7 +21,7 @@ account:
     description: Срок действия этого запроса на перевод истёк.
     title: Время передачи истекло
   og:
-    tile: Перехватите управление своим аккаунтом на Evnly.
+    tile: Перехватите управление своим аккаунтом на Evnlyly.
     description: >-
       !js
 
@@ -39,29 +39,29 @@ friends:
 
       (name) => `Вас пригласил(а) ${name}. Просто зарегистрируйтесь или войдите
       — и всё готово!`
-  accept: Начать пользоваться Evn
+  accept: Начать пользоваться Evnly
   og:
     description: >-
       Отслеживайте общие расходы, делите затраты и оставайтесь на одной волне —
-      вместе на Evnly.
+      вместе на Evnlyly.
     title: |-
       !js
-      (name) => `Присоединяйся к ${name} на Evnly`
+      (name) => `Присоединяйся к ${name} на Evnlyly`
   dialog:
-    title: Подключиться на Evnly
+    title: Подключиться на Evnlyly
     description: Войдите или создайте аккаунт, чтобы продолжить.
     accept: Подключиться
     decline: Не сейчас
     content: >-
       !js
 
-      (name) => `${name} хочет добавить вас в друзья на Evnly, чтобы отслеживать
+      (name) => `${name} хочет добавить вас в друзья на Evnlyly, чтобы отслеживать
       общие расходы.`
 group:
   og:
     title: |-
       !js
-      (groupName) => `Присоединиться к «${groupName}» на Evnly`
+      (groupName) => `Присоединиться к «${groupName}» на Evnlyly`
     description: >-
       !js
 

@@ -71,7 +71,7 @@ join:
     description: |-
       !js
       (name) => `Je bent uitgenodigd door ${name}. Registreer je of log in, en je bent klaar om te beginnen`
-  accept: Evn gebruiken starten
+  accept: Evnly gebruiken starten
 groups:
   leave: Vasthouden om te verlaten
   name:

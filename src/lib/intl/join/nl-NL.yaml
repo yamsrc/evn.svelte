@@ -23,7 +23,7 @@ account:
     description: Dit verzoek tot overboeking is verlopen.
     title: Overdracht verlopen
   og:
-    tile: Neem de controle over je account op Evnly.
+    tile: Neem de controle over je account op Evnlyly.
     description: >-
       !js
 
@@ -43,29 +43,29 @@ friends:
 
       (name) => `Je bent uitgenodigd door ${name}. Registreer je of log in, en
       je bent klaar om te beginnen!`
-  accept: Begin met het gebruik van Evn
+  accept: Begin met het gebruik van Evnly
   og:
     description: >-
       Houd gezamenlijke uitgaven bij, splits de kosten en blijf op één lijn —
-      samen op Evnly.
+      samen op Evnlyly.
     title: |-
       !js
-      (name) => `Word lid van ${name} op Evnly`
+      (name) => `Word lid van ${name} op Evnlyly`
   dialog:
-    title: Verbinden via Evnly
+    title: Verbinden via Evnlyly
     description: Log in of maak een account aan om verder te gaan.
     accept: Verbinden
     decline: Niet nu
     content: >-
       !js
 
-      (name) => `${name} wil graag contact maken op Evnly om gezamenlijke
+      (name) => `${name} wil graag contact maken op Evnlyly om gezamenlijke
       uitgaven bij te houden.`
 group:
   og:
     title: |-
       !js
-      (groupName) => `Word lid van "${groupName}" op Evnly`
+      (groupName) => `Word lid van "${groupName}" op Evnlyly`
     description: >-
       !js
 

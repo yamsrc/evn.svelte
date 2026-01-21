@@ -130,7 +130,7 @@ inputs:
       description:
         input: js! (name) => You have been invited by . Just register or log in, and you are all set
     accept:
-      input: Start Using Evn
+      input: Start Using Evnly
   groups:
     leave:
       input: Hold to leave
