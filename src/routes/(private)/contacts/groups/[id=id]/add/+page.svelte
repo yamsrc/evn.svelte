@@ -11,7 +11,7 @@
   import * as ButtonGroup from '$ui/button-group'
   import { Input } from '$ui/input'
   import { Spinner } from '$ui/spinner'
-  import { Action, Section } from '@/app/ui'
+  import { Action, Section, actionVariants } from '@/app/ui'
   import { Header } from '@/app/ui'
   import { contacts, filter as filterContacts } from '@/contacts'
   import { Contacts } from '@/contacts/ui'
@@ -85,8 +85,8 @@
 
 <Actions>
   <ButtonGroup.Root>
-    <Share size="icon-lg" variant="secondary" class="flex-1" data={invitation} />
-    <QR variant="secondary" size="icon-lg" class="flex-1" text={invitation.url} />
+    <Share class={actionVariants({ variant: 'secondary', class: 'flex-1' })} data={invitation} />
+    <QR class={actionVariants({ variant: 'secondary', class: 'flex-1' })} text={invitation.url} />
     <Action
       disabled={(contactsSelection.size === 0 && favoritesSelection.size === 0) || busy}
       onclick={addMembers}>
