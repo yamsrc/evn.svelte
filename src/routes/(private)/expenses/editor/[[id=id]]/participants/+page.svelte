@@ -104,7 +104,7 @@
       class={buttonVariants({
         size: 'icon-lg',
         variant: 'secondary',
-        class: 'flex-1 size-14 [&_span]:hidden sm:[&_span]:inline',
+        class: 'flex-1 size-14 [&_span]:hidden',
       })} />
     <Action
       id="expenses-add-participants-add-button"
