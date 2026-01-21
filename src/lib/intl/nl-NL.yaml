@@ -6,9 +6,9 @@ actions:
   signout: Afmelden
   close: Sluiten
   cheques:
-    title: Cheques
+    title: Uitgaven
     scan: Cheque scannen
-    input: Handmatig invoeren
+    input: Uitgave toevoegen
   contacts:
     group: Groep
     title: Vrienden
@@ -22,7 +22,7 @@ nav:
   home: Home
   profile: Ik
   contacts: Vrienden
-  expenses: Afrekening
+  expenses: Uitgaven
 terms: Algemene voorwaarden
 privacy: Privacybeleid
 madeBy: Gemaakt door
@@ -79,7 +79,7 @@ join:
 
       (name) => `Je bent uitgenodigd door ${name}. Registreer je of log in, en
       je bent klaar om te beginnen`
-  accept: Evn gebruiken starten
+  accept: Evnly gebruiken starten
 groups:
   leave: Vasthouden om te verlaten
   name:
@@ -134,7 +134,7 @@ expenses:
     location:
       placeholder: Waar? (optioneel)
     save: Opslaan en saldi bijwerken
-  title: Vereffenen
+  title: Uitgaven
   balance:
     total: Totaalrekening
     youAreOwed: Je hebt iets tegoed
@@ -145,8 +145,7 @@ expenses:
     create:
       title: Nieuwe deelnemer aanmaken
     title: Deelnemers toevoegen
-    add:
-      label: Deelnemer toevoegen
+    add: {}
   me: Ik
   empty:
     title: Nog geen uitgaven

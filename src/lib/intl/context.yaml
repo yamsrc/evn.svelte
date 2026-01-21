@@ -17,11 +17,11 @@ inputs:
       input: Close
     cheques:
       title:
-        input: Cheques
+        input: Expenses
       scan:
         input: Scan cheque
       input:
-        input: Input manually
+        input: Add expense
     contacts:
       group:
         input: Group
@@ -47,8 +47,7 @@ inputs:
     contacts:
       input: Friends
     expenses:
-      input: Evns
-      context: Use Evns for english. In other languages use short word with meaning settle up debts after spliting recipt
+      input: Expenses
   terms:
     input: Terms & conditions
   privacy:
@@ -130,7 +129,7 @@ inputs:
       description:
         input: js! (name) => You have been invited by . Just register or log in, and you are all set
     accept:
-      input: Start Using Evn
+      input: Start Using Evnly
   groups:
     leave:
       input: Hold to leave
@@ -215,8 +214,7 @@ inputs:
       save:
         input: Save and update balances
     title:
-      input: Evns
-      context: Use Evns for english. In other languages use short word with meaning settle up debts after spliting recipt
+      input: Expenses
     empty:
       title:
         input: No expenses yet
@@ -241,9 +239,6 @@ inputs:
           input: Create a new participant
       title:
         input: Add participants
-      add:
-        label:
-          input: Add participant
     me:
       input: Me
   home:

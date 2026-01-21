@@ -6,9 +6,9 @@ actions:
   signout: تسجيل الخروج
   close: إغلاق
   cheques:
-    title: شيكات
+    title: المصروفات
     scan: مسح الشيك
-    input: إدخال يدوي
+    input: إضافة مصروف
   contacts:
     group: مجموعة
     title: أصدقاء
@@ -22,7 +22,7 @@ nav:
   home: الرئيسية
   profile: أنا
   contacts: الأصدقاء
-  expenses: تسوية
+  expenses: المصاريف
 terms: الشروط والأحكام
 privacy: سياسة الخصوصية
 madeBy: من صنع
@@ -75,7 +75,7 @@ join:
 
       (name) => `لقد تمّت دعوتك من قِبل ${name}. فقط سجّل أو قم بتسجيل الدخول،
       وستكون جاهزًا للبدء`
-  accept: ابدأ استخدام Evn
+  accept: ابدأ استخدام Evnly
 groups:
   leave: اضغط مع الاستمرار للمغادرة
   name:
@@ -130,7 +130,7 @@ expenses:
     location:
       placeholder: أين؟ (اختياري)
     save: احفظ وقم بتحديث الأرصدة
-  title: تسوية
+  title: المصروفات
   balance:
     total: إجمالي الفاتورة
     youAreOwed: لك مستحقات
@@ -141,8 +141,7 @@ expenses:
     create:
       title: إنشاء مشارك جديد
     title: إضافة مشاركين
-    add:
-      label: إضافة مشارك
+    add: {}
   me: أنا
   empty:
     title: لا توجد مصروفات بعد

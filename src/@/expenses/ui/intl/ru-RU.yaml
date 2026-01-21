@@ -1,5 +1,13 @@
 recent:
-  title: Evns
+  title: Расходы
   empty: >-
     Пока ничего не произошло. Добавьте расходы или пригласите друзей, чтобы
     начать.
+payer:
+  placeholder: Выберите плательщика
+participants:
+  tabs:
+    sums: По суммам
+    shares: По долям
+  add:
+    label: Добавить участников

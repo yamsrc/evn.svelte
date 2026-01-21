@@ -6,9 +6,9 @@ actions:
   signout: 로그아웃
   close: 닫기
   cheques:
-    title: 수표
+    title: 지출
     scan: 수표 스캔
-    input: 수동 입력
+    input: 지출 추가
   contacts:
     group: 그룹
     title: 친구
@@ -22,7 +22,7 @@ nav:
   home: 홈
   profile: 나
   contacts: 친구
-  expenses: 정산
+  expenses: 지출
 terms: 이용 약관
 privacy: 개인정보처리방침
 madeBy: 제작자
@@ -71,7 +71,7 @@ join:
     description: |-
       !js
       (name) => `${name}님이 초대했습니다. 회원가입 또는 로그인만 하면 바로 시작할 수 있습니다`
-  accept: Evn 시작하기
+  accept: Evnly 시작하기
 groups:
   leave: 길게 눌러서 나가기
   name:
@@ -124,7 +124,7 @@ expenses:
     location:
       placeholder: 어디인가요? (선택 사항)
     save: 저장하고 잔액 업데이트
-  title: 정산
+  title: 지출
   balance:
     total: 총 금액
     youAreOwed: 당신은 받을 돈이 있습니다
@@ -135,8 +135,7 @@ expenses:
     create:
       title: 새 참가자 생성
     title: 참가자 추가
-    add:
-      label: 참가자 추가
+    add: {}
   me: 나
   empty:
     title: 아직 지출이 없습니다

@@ -5,7 +5,7 @@
   import { Section } from '@/app/ui'
   import { Header } from '@/app/ui'
   import { expenses, filter } from '@/expenses'
-  import { Expenses, Create } from '@/expenses/ui'
+  import { Actions, Expenses, Create } from '@/expenses/ui'
   import { account } from '@/iam'
 
   let search = $state('')
@@ -41,3 +41,5 @@
     {/if}
   {/snippet}
 </Async>
+
+<Actions />

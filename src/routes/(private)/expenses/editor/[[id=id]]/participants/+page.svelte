@@ -1,19 +1,22 @@
 <script lang="ts">
+  import { Check } from '@lucide/svelte'
   import { Async, combined } from 'svas'
   import { SvelteSet } from 'svelte/reactivity'
-  import { back, Back } from '$com/history'
+  import { back } from '$com/history'
+  import { Actions, Return } from '$com/shell'
   import { dict } from '$lib/intl'
-  import { buttonVariants, Button } from '$ui/button'
+  import { buttonVariants } from '$ui/button'
+  import * as ButtonGroup from '$ui/button-group'
   import { Input } from '$ui/input'
-  import { Section } from '@/app/ui'
+  import { Action, Section } from '@/app/ui'
   import { Header } from '@/app/ui'
   import { contacts, filter as filterContacts } from '@/contacts'
   import { Contacts } from '@/contacts/ui'
   import { CreateDialog } from '@/contacts/ui'
+  import { numbers, type Participant } from '@/expenses'
   import { Editor } from '@/expenses/ui'
   import { groups, filter as filterGroups } from '@/groups'
   import { Groups } from '@/groups/ui'
-  import type { Participant } from '@/expenses'
 
   const ctx = Editor.getContext()
 
@@ -32,15 +35,30 @@
       (id) => $groups.find((g) => g.id === id)?.identities ?? [],
     )
 
+    const existingParticipantIds = Object.keys(ctx.value.participants)
+
+    const even =
+      existingParticipantIds.length > 0 &&
+      numbers.even(ctx.value.participants, existingParticipantIds)
+
+    const total = numbers.total(ctx.value)
+
     const participants: Record<string, Participant> = Object.fromEntries(
       [...contactIds, ...groupIds]
         .filter(notParticipant)
-        .map((identity) => [identity, { amount: 0 }]),
+        .map((identity) => [identity, { amount: 0, shares: 0 }]),
     )
 
     ctx.value.participants = {
       ...ctx.value.participants,
       ...participants,
+    }
+
+    if (even && total > 0) {
+      const splitAmounts = numbers.split(total, Object.keys(ctx.value.participants))
+
+      for (const [id, amount] of Object.entries(splitAmounts))
+        ctx.value.participants[id].amount = amount
     }
 
     await back('..')
@@ -49,7 +67,7 @@
 
 <Section>
   <Header.Root>
-    <Back href="..">{ctx.value.title || $dict.expenses.title}</Back>
+    <Header.Title>{ctx.value.title || $dict.expenses.title}</Header.Title>
   </Header.Root>
 </Section>
 
@@ -78,14 +96,23 @@
   {/snippet}
 </Async>
 
-<Section class="sticky bottom-26 z-10 flex items-center justify-evenly gap-2">
-  <Button
-    id="expenses-add-participants-add-button"
-    size="lg"
-    class="flex-1"
-    disabled={contactsSelection.size === 0 && groupSelection.size === 0}
-    onclick={addParticipants}>
-    {$dict.actions.addSelected}
-  </Button>
-  <CreateDialog class={buttonVariants({ size: 'lg', variant: 'secondary', class: 'flex-1' })} />
-</Section>
+<Return />
+
+<Actions>
+  <ButtonGroup.Root>
+    <CreateDialog
+      class={buttonVariants({
+        size: 'icon-lg',
+        variant: 'secondary',
+        class: 'flex-1 [&_span]:hidden',
+      })} />
+    <Action
+      id="expenses-add-participants-add-button"
+      variant="default"
+      disabled={contactsSelection.size === 0 && groupSelection.size === 0}
+      onclick={addParticipants}>
+      <Check />
+      <span>{$dict.actions.addSelected}</span>
+    </Action>
+  </ButtonGroup.Root>
+</Actions>

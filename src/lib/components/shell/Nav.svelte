@@ -1,20 +1,33 @@
 <script lang="ts">
+  import { ChevronLeft } from '@lucide/svelte'
   import { onMount } from 'svelte'
   import { preloadCode } from '$app/navigation'
   import { page } from '$app/state'
+  import { back } from '$com/history'
   import { cn } from '$lib/utils'
   import { Button } from '$ui/button'
-  import { actions } from './Actions'
-  import { exact, href, match, type Props } from './Nav'
+  import { exact, href, match, nested, type Props, type Section } from './Nav'
+  import { actions, returns } from './store'
 
   const { sections, position = 'start', class: classes }: Props = $props()
   const action = $derived($actions.at(-1) ?? null)
+
+  const active = $derived(sections.find(({ href }) => match(href, page.url.pathname)))
+  const collapsed = $derived(active ? nested(active.href, page.url.pathname) : false)
+
+  const visible = $derived(
+    sections.filter((section) => !collapsed || match(section.href, page.url.pathname)),
+  )
 
   const rounded = 'rounded-xl'
 
   onMount(() => {
     for (const section of sections) preloadCode(section.href)
   })
+
+  function link(section: Section) {
+    return collapsed ? null : exact(section.href, page.url.pathname) ? null : href(section.href)
+  }
 </script>
 
 <div class="h-20 sm:h-24"></div>
@@ -25,87 +38,138 @@
   left-[env(safe-area-inset-left)] right-[env(safe-area-inset-right)]
   pointer-events-none
   {classes}
-  "
->
+  ">
   <div
     class={cn(
       'flex items-center gap-2 p-5 pt-0 sm:pb-6 standalone:px-6 standalone:pb-0',
       position === 'center' ? 'justify-center' : 'justify-between',
       position === 'start' ? 'flex-row' : 'flex-row-reverse',
-    )}
-  >
+    )}>
     <ul
       class={cn(
-        'bg-muted backdrop-blur-xs border overflow-hidden flex pointer-events-auto sm:ml-4 h-17',
+        'bg-muted backdrop-blur-xs overflow-hidden flex pointer-events-auto sm:ml-4 h-16',
         rounded,
       )}
-      style="view-transition-name: shell-nav;"
-    >
+      style="view-transition-name: shell-nav;">
       {#each sections as section, i (section.href)}
         {@const active = match(section.href, page.url.pathname)}
+        {@const hidden = !visible.includes(section)}
+        {@const ret = $returns.at(-1)}
         <li>
           <Button
             id={`nav-${section.id}-button`}
-            href={exact(section.href, page.url.pathname) ? null : href(section.href)}
+            href={link(section)}
+            onclick={collapsed ? () => back(ret?.href ?? section.href) : null}
             variant="ghost"
             class={cn(
-              'relative flex flex-col h-full flex-1 min-w-16 p-2 gap-1 text-sm transition-colors duration-300 hover:bg-accent/25 overflow-hidden',
+              'relative flex flex-col h-full flex-1 min-w-16 p-3 gap-1 text-sm transition-colors duration-300 hover:bg-accent/25 overflow-hidden',
               rounded,
               active && 'text-accent-foreground',
-            )}
-          >
+              hidden && 'hidden',
+              ret && ret.class,
+            )}>
             <div
               class={cn(
                 'absolute inset-0 bg-background z-0 m-1 rounded-[calc(var(--radius)+2px)]',
                 active || 'hidden',
               )}
-              style={active ? 'view-transition-name: shell-nav-active;' : ''}
-            ></div>
+              style={active ? 'view-transition-name: shell-nav-active;' : ''}>
+            </div>
             <div
-              class="flex flex-col items-center gap-0.5 z-10 relative font-bold"
-              style={`view-transition-name: shell-nav-${i}`}
-            >
-              <section.Icon class="size-5" color="var(--muted-foreground)" />
-              {section.label}
+              class={cn(
+                "flex flex-col items-center gap-0.5 z-10 relative font-bold [&_svg:not([class*='size-'])]:size-5",
+              )}
+              style="view-transition-name: shell-nav-item-{i};">
+              {#if ret}
+                {#if ret.children}
+                  {@render ret.children()}
+                {:else}
+                  <ChevronLeft />
+                {/if}
+              {:else}
+                <section.Icon color="var(--muted-foreground)" />
+                <span>{section.label}</span>
+              {/if}
             </div>
           </Button>
         </li>
       {/each}
     </ul>
-    <div
-      class={cn(
-        'pointer-events-auto',
-        'bg-background/50 backdrop-blur-xs border sm:mr-4 transition-all duration-300',
-        rounded,
-        action || 'opacity-0',
-        position === 'center' && !action && 'hidden',
-      )}
-      style="view-transition-name: shell-actions;"
-    >
-      <div class={cn('flex items-center min-h-10', action?.class)}>
-        {#if action}
+    {#if action}
+      <div
+        class={cn(
+          'pointer-events-auto',
+          'sm:mr-4 transition-all duration-300',
+          "[&_svg:not([class*='size-'])]:size-5",
+          rounded,
+          action || 'opacity-0',
+          position === 'center' && !action && 'hidden',
+        )}
+        style="view-transition-name: shell-actions-{position};">
+        <div class={cn('flex items-center min-h-10', action?.class)}>
           {@render action.snippet()}
-        {/if}
+        </div>
       </div>
-    </div>
+    {/if}
   </div>
 </nav>
 
 <style>
-  ::view-transition-old(shell-actions),
-  ::view-transition-new(shell-actions) {
+  ::view-transition-old(shell-nav),
+  ::view-transition-new(shell-nav) {
     width: auto;
-    z-index: 5;
     isolation: isolate;
   }
 
-  ::view-transition-group(shell-nav),
-  ::view-transition-group(shell-nav-active),
-  ::view-transition-group([name^='shell-nav-']) {
-    z-index: 5;
+  ::view-transition-new(shell-nav-active):only-child {
+    opacity: 0;
   }
 
-  ::view-transition-group(shell-actions) {
-    z-index: 5;
+  ::view-transition-old(shell-actions-start),
+  ::view-transition-new(shell-actions-start),
+  ::view-transition-old(shell-actions-end),
+  ::view-transition-new(shell-actions-end) {
+    width: auto;
+    isolation: isolate;
+  }
+
+  @keyframes slide-out-right {
+    to {
+      transform: translateX(150%);
+    }
+  }
+
+  @keyframes slide-in-left {
+    from {
+      transform: translateX(150%);
+    }
+  }
+
+  @keyframes slide-out-left {
+    to {
+      transform: translateX(-150%);
+    }
+  }
+
+  @keyframes slide-in-right {
+    from {
+      transform: translateX(-150%);
+    }
+  }
+
+  ::view-transition-old(shell-actions-start):only-child {
+    animation: slide-out-right 0.3s ease-out both;
+  }
+
+  ::view-transition-new(shell-actions-start):only-child {
+    animation: slide-in-left 0.3s ease-out both;
+  }
+
+  ::view-transition-old(shell-actions-end):only-child {
+    animation: slide-out-left 0.3s ease-out both;
+  }
+
+  ::view-transition-new(shell-actions-end):only-child {
+    animation: slide-in-right 0.3s ease-out both;
   }
 </style>

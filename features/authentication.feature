@@ -16,6 +16,6 @@ Feature: Authentication
 
   Scenario: Logout
     Given new account
-    When I tap 'nav-me-button'
+    When I tap 'header-me-button'
     And I hold 'me-logout-button' for 1s
     Then I am not authenticated

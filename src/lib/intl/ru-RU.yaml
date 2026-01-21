@@ -6,9 +6,9 @@ actions:
   signout: Выйти
   close: Закрыть
   cheques:
-    title: Чеки
+    title: Расходы
     scan: Сканировать чек
-    input: Ввести вручную
+    input: Добавить расход
   contacts:
     group: Группа
     title: Друзья
@@ -22,7 +22,7 @@ nav:
   home: Главная
   profile: Я
   contacts: Друзья
-  expenses: Расчёты
+  expenses: Расходы
 terms: Условия и положения
 privacy: Политика конфиденциальности
 madeBy: Сделано
@@ -77,7 +77,7 @@ join:
 
       (name) => `Вас пригласил(а) ${name}. Просто зарегистрируйтесь или войдите,
       и вы готовы начать`
-  accept: Начать использовать Evn
+  accept: Начать использовать Evnly
 groups:
   leave: Удерживайте, чтобы выйти
   name:
@@ -134,7 +134,7 @@ expenses:
     location:
       placeholder: Где? (необязательно)
     save: Сохранить и обновить балансы
-  title: Рассчитать
+  title: Расходы
   balance:
     total: Итоговый счет
     youAreOwed: Вам должны
@@ -145,8 +145,7 @@ expenses:
     create:
       title: Создать нового участника
     title: Добавить участников
-    add:
-      label: Добавить участника
+    add: {}
   me: Я
   empty:
     title: Пока нет расходов

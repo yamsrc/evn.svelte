@@ -1,18 +1,17 @@
 <script lang="ts">
-  import { LogOut, Plus } from '@lucide/svelte'
+  import { LogOut, UserPlus } from '@lucide/svelte'
   import { Async, ok } from 'svas'
   import { goto } from '$app/navigation'
   import { page } from '$app/state'
   import { Hold } from '$com/buttons'
   import { Separator } from '$com/separator'
-  import { Back } from '$lib/components/history'
+  import { Actions } from '$com/shell'
   import { locale } from '$lib/intl'
   import { dict } from '$lib/intl'
   import { currency } from '$lib/tools'
-  import { Button } from '$ui/button'
   import { accounts } from '@/accounts'
   import { Panel } from '@/accounts/ui'
-  import { Section } from '@/app/ui'
+  import { Action, Section } from '@/app/ui'
   import { Header } from '@/app/ui'
   import { contacts } from '@/contacts'
   import { groups, del } from '@/groups'
@@ -59,18 +58,20 @@
 
 <Section>
   <Header.Root>
-    <Back href="/contacts/">{$dict.contacts.title}</Back>
-    <Header.Actions>
-      <Hold
-        onclick={leave}
-        variant="ghost"
-        class="size-12 bg-accent/50 border border-border"
-        position="left"
-        label={$dict.groups.leave}
-        disabled={!group}>
-        <LogOut class="size-5" />
-      </Hold>
-    </Header.Actions>
+    <Header.Title></Header.Title>
+    {#if id}
+      <Header.Actions>
+        <Hold
+          onclick={leave}
+          variant="ghost"
+          class="size-12 bg-accent/50 border border-border"
+          position="left"
+          label={$dict.groups.leave}
+          disabled={!group}>
+          <LogOut class="size-5" />
+        </Hold>
+      </Header.Actions>
+    {/if}
   </Header.Root>
 </Section>
 
@@ -115,13 +116,16 @@
             {/if}
           {/each}
         {/if}
-        <Button size="lg" class="w-full" href={`/contacts/groups/${id}/add`} disabled={!group}>
-          <Plus />
-          {$dict.groups.members.addMember}
-        </Button>
       </Section>
     {/snippet}
   </Async>
+
+  <Actions>
+    <Action href={`/contacts/groups/${id}/add`} disabled={!group}>
+      <UserPlus />
+      <span>{$dict.groups.members.addMember}</span>
+    </Action>
+  </Actions>
   <!-- TODO: add history -->
 {:else}
   <Section class="flex flex-col gap-2 items-center">

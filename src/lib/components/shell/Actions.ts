@@ -1,18 +1,12 @@
-import { writable } from 'svelte/store'
 import type { Snippet } from 'svelte'
 
-interface Props {
+export interface Props {
   children: Snippet
   class?: string
 }
 
-interface Action {
+export interface Action {
   id: string
   snippet: Snippet
   class?: string
 }
-
-const actions = writable<Action[]>([])
-
-export { actions }
-export type { Props }

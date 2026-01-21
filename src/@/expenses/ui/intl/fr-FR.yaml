@@ -1,5 +1,13 @@
 recent:
-  title: Evns
+  title: Dépenses
   empty: >-
     Rien ne s'est encore passé. Ajoutez des dépenses ou invitez des amis pour
     lancer les choses.
+payer:
+  placeholder: Sélectionner le payeur
+participants:
+  tabs:
+    sums: Par sommes
+    shares: Par parts
+  add:
+    label: Ajouter des participants

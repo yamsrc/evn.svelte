@@ -43,7 +43,7 @@ friends:
 
       (name) => `Vous avez été invité par ${name}. Inscrivez-vous ou
       connectez-vous, et tout est prêt !`
-  accept: Commencer à utiliser Evn
+  accept: Commencer à utiliser Evnly
   og:
     description: >-
       Gérez vos dépenses partagées, répartissez les coûts et restez synchronisés
@@ -63,7 +63,9 @@ friends:
       les dépenses partagées.`
 group:
   og:
-    title: "!js\n(groupName) => `Rejoindre «\_${groupName}\_» sur Evnly`"
+    title: |-
+      !js
+      (groupName) => `Rejoignez ${groupName} sur Evnly`
     description: >-
       !js
 

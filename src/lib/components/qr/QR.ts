@@ -1,5 +1,4 @@
 import QRCodeStyling from 'qr-code-styling'
-import Logo from './logo.png'
 import type { ButtonProps } from '$ui/button'
 
 export interface Props extends ButtonProps {
@@ -27,12 +26,12 @@ export async function createQR(arg: string | Retriever) {
       mode: 'Byte',
       errorCorrectionLevel: 'Q',
     },
-    image: Logo,
+    image: '/icon.svg',
     imageOptions: {
       saveAsBlob: true,
       hideBackgroundDots: true,
-      imageSize: 0.4,
-      margin: 0,
+      imageSize: 0.5,
+      margin: 6,
     },
     dotsOptions: {
       type: 'extra-rounded',

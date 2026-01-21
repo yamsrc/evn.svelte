@@ -38,7 +38,7 @@
   </Section>
 
   <Section>
-    <Cosmetics account={$account} />
+    <Cosmetics account={$account} pictureStyle="view-transition-name: my-avatar;" />
   </Section>
 
   <Separator class="mt-5" />

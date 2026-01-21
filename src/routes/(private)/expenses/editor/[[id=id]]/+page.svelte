@@ -1,6 +1,5 @@
 <script lang="ts">
   import { page } from '$app/state'
-  import { Back } from '$com/history'
   import { dict } from '$lib/intl'
   import { Section } from '@/app/ui'
   import { Header } from '@/app/ui'
@@ -12,8 +11,8 @@
 
 <Section>
   <Header.Root>
-    <Back href="/expenses/">{$dict.expenses.title}</Back>
+    <Header.Title>{$dict.expenses.title}</Header.Title>
   </Header.Root>
 </Section>
 
-<Editor.Edit {id} bind:value={ctx.value} />
+<Editor.Edit {id} bind:value={ctx.value} bind:mode={ctx.mode} />

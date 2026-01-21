@@ -1,5 +1,13 @@
 recent:
-  title: Evns
+  title: Matumizi
   empty: >-
     Bado hakuna kilichotokea. Ongeza matumizi au alika marafiki ili mambo
     yaanze.
+payer:
+  placeholder: Chagua mtoaji wa malipo
+participants:
+  tabs:
+    sums: Kwa jumla
+    shares: Kwa hisa
+  add:
+    label: Ongeza washiriki

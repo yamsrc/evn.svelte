@@ -35,7 +35,7 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `لقد تمت دعوتك من قبل ${name}. فقط سجّل أو قم بتسجيل الدخول، وستكون جاهزًا!`
       },
-      "accept": "ابدأ استخدام Evn",
+      "accept": "ابدأ استخدام Evnly",
       "og": {
         "description": "تابع المصاريف المشتركة، ووزّع التكاليف، وابقَ متزامنًا — معًا على Evnly.",
         "title": (name) => `انضم إلى ${name} على Evnly`
@@ -50,7 +50,7 @@ export const dictionaries = {
     },
     "group": {
       "og": {
-        "title": (groupName) => `انضم إلى "${groupName}" على Evnly`,
+        "title": (groupName) => `انضم إلى ${groupName} على Evnly`,
         "description": (names) => `قسّم المصاريف مع ${new Intl.ListFormat("ar", { style: "long", type: "conjunction" }).format(names)}`
       },
       "dialog": {
@@ -78,7 +78,7 @@ export const dictionaries = {
         "title": "Übertragung abgelaufen"
       },
       "og": {
-        "tile": "Übernimm dein Evnly-Konto.",
+        "tile": "Übernimm dein Evnly.",
         "description": (name) => `${name}, dieses Konto wurde für dich erstellt. Übernimm es, indem du deine Anmeldedaten festlegst.`
       }
     },
@@ -93,7 +93,7 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `${name} hat dich eingeladen. Registriere dich einfach oder melde dich an und schon kann es losgehen!`
       },
-      "accept": "Evn jetzt nutzen",
+      "accept": "Evnly jetzt nutzen",
       "og": {
         "description": "Geteilte Ausgaben verfolgen, Kosten aufteilen und immer abgestimmt bleiben – gemeinsam auf Evnly.",
         "title": (name) => `Tritt ${name} auf Evnly bei`
@@ -108,7 +108,7 @@ export const dictionaries = {
     },
     "group": {
       "og": {
-        "title": (groupName) => `Tritt "${groupName}" auf Evnly bei`,
+        "title": (groupName) => `Tritt ${groupName} auf Evnly bei`,
         "description": (names) => `Teile die Ausgaben mit ${new Intl.ListFormat("de", { style: "long", type: "conjunction" }).format(names)}`
       },
       "dialog": {
@@ -151,7 +151,7 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `You have been invited by ${name}. Just register or log in, and you’re all set`
       },
-      "accept": "Start Using Evn",
+      "accept": "Start Using Evnly",
       "og": {
         "description": "Track shared expenses, split costs, and stay in sync — together on Evnly.",
         "title": (name) => `Join ${name} on Evnly`
@@ -166,7 +166,7 @@ export const dictionaries = {
     },
     "group": {
       "og": {
-        "title": (groupName) => `Join "${groupName}" on Evnly`,
+        "title": (groupName) => `Join ${groupName} on Evnly`,
         "description": (names) => `Split expenses with ${new Intl.ListFormat("en", { style: "long", type: "conjunction" }).format(names)}`
       },
       "dialog": {
@@ -209,7 +209,7 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `Has sido invitado por ${name}. Solo regístrate o inicia sesión, ¡y listo!`
       },
-      "accept": "Comienza a usar Evn",
+      "accept": "Comienza a usar Evnly",
       "og": {
         "description": "Lleva el control de los gastos compartidos, divide los costes y mantente sincronizado, todo juntos en Evnly.",
         "title": (name) => `Únete a ${name} en Evnly`
@@ -224,7 +224,7 @@ export const dictionaries = {
     },
     "group": {
       "og": {
-        "title": (groupName) => `Únete a "${groupName}" en Evnly`,
+        "title": (groupName) => `Únete a ${groupName} en Evnly`,
         "description": (names) => `Divide los gastos con ${new Intl.ListFormat("es", { style: "long", type: "conjunction" }).format(names)}`
       },
       "dialog": {
@@ -267,7 +267,7 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `Vous avez été invité par ${name}. Inscrivez-vous ou connectez-vous, et tout est prêt !`
       },
-      "accept": "Commencer à utiliser Evn",
+      "accept": "Commencer à utiliser Evnly",
       "og": {
         "description": "Gérez vos dépenses partagées, répartissez les coûts et restez synchronisés — ensemble sur Evnly.",
         "title": (name) => `Rejoins ${name} sur Evnly`
@@ -282,7 +282,7 @@ export const dictionaries = {
     },
     "group": {
       "og": {
-        "title": (groupName) => `Rejoindre « ${groupName} » sur Evnly`,
+        "title": (groupName) => `Rejoignez ${groupName} sur Evnly`,
         "description": (names) => `Partagez les dépenses avec ${new Intl.ListFormat("fr", { style: "long", type: "conjunction" }).format(names)}`
       },
       "dialog": {
@@ -325,7 +325,7 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `${name} ने आपको आमंत्रित किया है। बस रजिस्टर करें या लॉग इन करें, और आप तैयार हैं!`
       },
-      "accept": "Evn का उपयोग शुरू करें",
+      "accept": "Evnly का उपयोग शुरू करें",
       "og": {
         "description": "साझा खर्च ट्रैक करें, खर्चों को बांटें, और हमेशा साथ रहें — Evnly पर मिलकर।",
         "title": (name) => `${name} के साथ Evnly पर जुड़ें`
@@ -340,7 +340,7 @@ export const dictionaries = {
     },
     "group": {
       "og": {
-        "title": (groupName) => `Evnly पर "${groupName}" से जुड़ें`,
+        "title": (groupName) => `Evnly पर ${groupName} से जुड़ें`,
         "description": (names) => `${new Intl.ListFormat("hi", { style: "long", type: "conjunction" }).format(names)} के साथ खर्च बाँटे`
       },
       "dialog": {
@@ -383,7 +383,7 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `Sei stato invitato da ${name}. Registrati o accedi, ed è tutto pronto!`
       },
-      "accept": "Inizia a usare Evn",
+      "accept": "Inizia a usare Evnly",
       "og": {
         "description": "Tieni traccia delle spese condivise, dividi i costi e rimani sincronizzato — insieme su Evnly.",
         "title": (name) => `Unisciti a ${name} su Evnly`
@@ -398,7 +398,7 @@ export const dictionaries = {
     },
     "group": {
       "og": {
-        "title": (groupName) => `Unisciti a "${groupName}" su Evnly`,
+        "title": (groupName) => `Unisciti a ${groupName} su Evnly`,
         "description": (names) => `Dividi le spese con ${new Intl.ListFormat("it", { style: "long", type: "conjunction" }).format(names)}`
       },
       "dialog": {
@@ -441,7 +441,7 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `${name}さんから招待されています。登録またはログインするだけで、すぐにご利用いただけます。`
       },
-      "accept": "Evn を使い始める",
+      "accept": "Evnly を使い始める",
       "og": {
         "description": "共有の支出を管理し、費用を分担し、みんなで常に連携——Evnlyで一緒に。",
         "title": (name) => `Evnlyで${name}に参加しよう`
@@ -456,7 +456,7 @@ export const dictionaries = {
     },
     "group": {
       "og": {
-        "title": (groupName) => `Evnlyで「${groupName}」に参加する`,
+        "title": (groupName) => `Evnlyで${groupName}に参加する`,
         "description": (names) => `${new Intl.ListFormat("ja", { style: "long", type: "conjunction" }).format(names)}と費用を分割する`
       },
       "dialog": {
@@ -499,7 +499,7 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `${name}님이 초대하셨습니다. 가입하거나 로그인하면 바로 시작할 수 있어요!`
       },
-      "accept": "Evn 시작하기",
+      "accept": "Evnly 시작하기",
       "og": {
         "description": "공동 지출을 기록하고, 비용을 나누며, 항상 함께 맞춰보세요 — Evnly에서 같이.",
         "title": (name) => `Evnly에서 ${name}와 함께해요`
@@ -514,7 +514,7 @@ export const dictionaries = {
     },
     "group": {
       "og": {
-        "title": (groupName) => `Evnly에서 "${groupName}"에 가입하기`,
+        "title": (groupName) => `Evnly에서 ${groupName}에 참여하세요`,
         "description": (names) => `${new Intl.ListFormat("ko", { style: "long", type: "conjunction" }).format(names)}와(과) 비용을 나누세요`
       },
       "dialog": {
@@ -557,7 +557,7 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `Je bent uitgenodigd door ${name}. Registreer je of log in, en je bent klaar om te beginnen!`
       },
-      "accept": "Begin met het gebruik van Evn",
+      "accept": "Begin met het gebruik van Evnly",
       "og": {
         "description": "Houd gezamenlijke uitgaven bij, splits de kosten en blijf op één lijn — samen op Evnly.",
         "title": (name) => `Word lid van ${name} op Evnly`
@@ -572,7 +572,7 @@ export const dictionaries = {
     },
     "group": {
       "og": {
-        "title": (groupName) => `Word lid van "${groupName}" op Evnly`,
+        "title": (groupName) => `Word lid van ${groupName} op Evnly`,
         "description": (names) => `Deel uitgaven met ${new Intl.ListFormat("nl", { style: "long", type: "conjunction" }).format(names)}`
       },
       "dialog": {
@@ -615,7 +615,7 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `Вас пригласил(а) ${name}. Просто зарегистрируйтесь или войдите — и всё готово!`
       },
-      "accept": "Начать пользоваться Evn",
+      "accept": "Начать пользоваться Evnly",
       "og": {
         "description": "Отслеживайте общие расходы, делите затраты и оставайтесь на одной волне — вместе на Evnly.",
         "title": (name) => `Присоединяйся к ${name} на Evnly`
@@ -630,7 +630,7 @@ export const dictionaries = {
     },
     "group": {
       "og": {
-        "title": (groupName) => `Присоединиться к «${groupName}» на Evnly`,
+        "title": (groupName) => `Присоединиться к ${groupName} на Evnly`,
         "description": (names) => `Разделяй расходы с ${new Intl.ListFormat("ru", { style: "long", type: "conjunction" }).format(names)}`
       },
       "dialog": {
@@ -673,7 +673,7 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `Umealikwa na ${name}. Jisajili au ingia tu, na uko tayari kuanza!`
       },
-      "accept": "Anza kutumia Evn",
+      "accept": "Anza kutumia Evnly",
       "og": {
         "description": "Fatilia matumizi ya pamoja, gawanya gharama, na dumuni mmelingano — pamoja kwenye Evnly.",
         "title": (name) => `Jiunge na ${name} kwenye Evnly`
@@ -688,7 +688,7 @@ export const dictionaries = {
     },
     "group": {
       "og": {
-        "title": (groupName) => `Jiunge na "${groupName}" kwenye Evnly`,
+        "title": (groupName) => `Jiunge na ${groupName} kwenye Evnly`,
         "description": (names) => `Gawa gharama na ${new Intl.ListFormat("sw", { style: "long", type: "conjunction" }).format(names)}`
       },
       "dialog": {
@@ -731,7 +731,7 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `${name} tarafından davet edildiniz. Sadece kaydolun veya giriş yapın, hazırsınız!`
       },
-      "accept": "Evn’i kullanmaya başla",
+      "accept": "Evnly’i kullanmaya başla",
       "og": {
         "description": "Paylaşılan harcamaları takip edin, masrafları bölüştürün ve uyumlu kalın — Evnly'de birlikte.",
         "title": (name) => `Evnly'de ${name}'e katıl`
@@ -746,7 +746,7 @@ export const dictionaries = {
     },
     "group": {
       "og": {
-        "title": (groupName) => `Evnly'de "${groupName}" grubuna katıl`,
+        "title": (groupName) => `Evnly'de ${groupName} grubuna katıl`,
         "description": (names) => `${new Intl.ListFormat("tr", { style: "long", type: "conjunction" }).format(names)} ile masrafları paylaş`
       },
       "dialog": {
@@ -789,7 +789,7 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `Вас запросив(ла) ${name}. Просто зареєструйтеся або увійдіть — і все готово!`
       },
-      "accept": "Почати користуватися Evn",
+      "accept": "Почати користуватися Evnly",
       "og": {
         "description": "Відстежуйте спільні витрати, діліть рахунки та залишайтеся на зв’язку — разом на Evnly.",
         "title": (name) => `Приєднуйся до ${name} на Evnly`
@@ -804,7 +804,7 @@ export const dictionaries = {
     },
     "group": {
       "og": {
-        "title": (groupName) => `Приєднатися до «${groupName}» на Evnly`,
+        "title": (groupName) => `Приєднатися до ${groupName} на Evnly`,
         "description": (names) => `Розділіть витрати з ${new Intl.ListFormat("uk", { style: "long", type: "conjunction" }).format(names)}`
       },
       "dialog": {
@@ -847,7 +847,7 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `您已被${name}邀请。只需注册或登录，您就可以开始了！`
       },
-      "accept": "开始使用 Evn",
+      "accept": "开始使用 Evnly",
       "og": {
         "description": "跟踪共享支出、分摊费用、保持同步 —— 一起在 Evnly 上。",
         "title": (name) => `在Evnly上加入${name}`
@@ -862,7 +862,7 @@ export const dictionaries = {
     },
     "group": {
       "og": {
-        "title": (groupName) => `在Evnly加入“${groupName}”`,
+        "title": (groupName) => `在Evnly加入${groupName}`,
         "description": (names) => `与${new Intl.ListFormat("zh", { style: "long", type: "conjunction" }).format(names)}分摊费用`
       },
       "dialog": {

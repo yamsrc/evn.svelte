@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Plus } from '@lucide/svelte'
+  import { UserPlus } from '@lucide/svelte'
   import * as Dialog from '$com/ui/dialog'
   import { dict } from '$lib/intl'
   import { buttonVariants } from '$ui/button'
@@ -45,9 +45,9 @@
 </script>
 
 <Dialog.Root bind:open>
-  <Dialog.Trigger class={classes}>
-    <Plus />
-    {$dict.actions.create}
+  <Dialog.Trigger id="expenses-add-participants-create-button" class={classes}>
+    <UserPlus />
+    <span>{$dict.actions.create}</span>
   </Dialog.Trigger>
   <Dialog.Content>
     <Dialog.Header>
@@ -65,7 +65,12 @@
             disabled={busy}>
             {$dict.actions.cancel}
           </Dialog.Close>
-          <Button size="lg" class="flex-1" disabled={busy || !name.trim()} onclick={submit}>
+          <Button
+            id="app-cosmetics-submit-button"
+            size="lg"
+            class="flex-1"
+            disabled={busy || !name.trim()}
+            onclick={submit}>
             {$dict.actions.save}
           </Button>
         </Cosmetics.Actions>

@@ -11,6 +11,7 @@ export interface Props {
   autofocus?: HTMLInputAttributes['autofocus']
   onchange?: (value: Value) => Promise<void>
   onupload?: (file: File) => Promise<void>
+  pictureStyle?: string
 }
 
 export interface Value {

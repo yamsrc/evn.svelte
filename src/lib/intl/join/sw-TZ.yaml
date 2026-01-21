@@ -37,7 +37,7 @@ friends:
 
       (name) => `Umealikwa na ${name}. Jisajili au ingia tu, na uko tayari
       kuanza!`
-  accept: Anza kutumia Evn
+  accept: Anza kutumia Evnly
   og:
     description: >-
       Fatilia matumizi ya pamoja, gawanya gharama, na dumuni mmelingano — pamoja
@@ -59,7 +59,7 @@ group:
   og:
     title: |-
       !js
-      (groupName) => `Jiunge na "${groupName}" kwenye Evnly`
+      (groupName) => `Jiunge na ${groupName} kwenye Evnly`
     description: >-
       !js
 

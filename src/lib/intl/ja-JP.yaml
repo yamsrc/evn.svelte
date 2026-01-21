@@ -6,9 +6,9 @@ actions:
   signout: サインアウト
   close: 閉じる
   cheques:
-    title: 小切手
+    title: 経費
     scan: 小切手をスキャン
-    input: 手動で入力
+    input: 支出を追加
   contacts:
     group: グループ
     title: 友達
@@ -22,7 +22,7 @@ nav:
   home: ホーム
   profile: 私
   contacts: 友だち
-  expenses: 清算
+  expenses: 経費
 terms: 利用規約
 privacy: プライバシーポリシー
 madeBy: 作成者
@@ -71,7 +71,7 @@ join:
     description: |-
       !js
       (name) => `${name} から招待されました。登録またはログインするだけで、準備完了です`
-  accept: Evn を使い始める
+  accept: Evnly を使い始める
 groups:
   leave: 長押しして退出
   name:
@@ -124,7 +124,7 @@ expenses:
     location:
       placeholder: どこですか？（任意）
     save: 保存して残高を更新
-  title: 清算
+  title: 経費
   balance:
     total: 合計金額
     youAreOwed: あなたには支払いが残っています
@@ -135,8 +135,7 @@ expenses:
     create:
       title: 新しい参加者を作成
     title: 参加者を追加
-    add:
-      label: 参加者を追加
+    add: {}
   me: 私
   empty:
     title: まだ支出がありません

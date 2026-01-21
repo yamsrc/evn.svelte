@@ -18,7 +18,7 @@ Given('new account', async ({ page }) => {
 })
 
 When('I log out', async ({ page }) => {
-  await page.locator('#nav-me-button').click()
+  await page.locator('#header-me-button').click()
   await page.locator('#me-logout-button').click({ modifiers: ['Alt'] })
 
   await isNotAuthenticated(page)
@@ -33,9 +33,9 @@ Then('I am not authenticated', async ({ page }) => {
 })
 
 async function isAuthenticated(page: Page) {
-  await expect(page.locator('#nav-me-button')).toBeVisible()
+  await expect(page.locator('#header-me-button')).toBeVisible()
 }
 
 async function isNotAuthenticated(page: Page) {
-  await expect(page.locator('#nav-me-button')).not.toBeVisible()
+  await expect(page.locator('#header-me-button')).not.toBeVisible()
 }

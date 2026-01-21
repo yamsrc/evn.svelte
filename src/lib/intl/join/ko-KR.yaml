@@ -29,7 +29,7 @@ friends:
     description: |-
       !js
       (name) => `${name}님이 초대하셨습니다. 가입하거나 로그인하면 바로 시작할 수 있어요!`
-  accept: Evn 시작하기
+  accept: Evnly 시작하기
   og:
     description: 공동 지출을 기록하고, 비용을 나누며, 항상 함께 맞춰보세요 — Evnly에서 같이.
     title: |-
@@ -47,7 +47,7 @@ group:
   og:
     title: |-
       !js
-      (groupName) => `Evnly에서 "${groupName}"에 가입하기`
+      (groupName) => `Evnly에서 ${groupName}에 참여하세요`
     description: >-
       !js
 

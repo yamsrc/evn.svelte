@@ -37,7 +37,7 @@ friends:
 
       (name) => `لقد تمت دعوتك من قبل ${name}. فقط سجّل أو قم بتسجيل الدخول،
       وستكون جاهزًا!`
-  accept: ابدأ استخدام Evn
+  accept: ابدأ استخدام Evnly
   og:
     description: تابع المصاريف المشتركة، ووزّع التكاليف، وابقَ متزامنًا — معًا على Evnly.
     title: |-
@@ -55,7 +55,7 @@ group:
   og:
     title: |-
       !js
-      (groupName) => `انضم إلى "${groupName}" على Evnly`
+      (groupName) => `انضم إلى ${groupName} على Evnly`
     description: >-
       !js
 

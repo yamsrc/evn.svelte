@@ -25,6 +25,6 @@ inputs:
       input: Not a member of any group.
   expenses:
     title:
-      input: Evns
+      input: Expenses
     empty:
       input: No shared expenses so far.

@@ -1,5 +1,13 @@
 recent:
-  title: Evns
+  title: Витрати
   empty: >-
     Поки що нічого не сталося. Додайте витрати або запросіть друзів, щоб
     розпочати.
+payer:
+  placeholder: Виберіть платника
+participants:
+  tabs:
+    sums: За сумами
+    shares: За частками
+  add:
+    label: Додати учасників

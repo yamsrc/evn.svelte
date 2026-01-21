@@ -6,9 +6,9 @@ actions:
   signout: Sign out
   close: Close
   cheques:
-    title: Checks
+    title: Expenses
     scan: Scan cheque
-    input: Enter manually
+    input: Add expense
   contacts:
     group: Group
     title: Friends
@@ -22,7 +22,7 @@ nav:
   home: Home
   profile: Me
   contacts: Friends
-  expenses: Evns
+  expenses: Expenses
 terms: Terms & Conditions
 privacy: Privacy Policy
 madeBy: Made by
@@ -77,7 +77,7 @@ join:
 
       (name) => `You have been invited by ${name}. Just register or log in, and
       you’re all set`
-  accept: Start Using Evn
+  accept: Start Using Evnly
 groups:
   leave: Hold to leave
   name:
@@ -132,7 +132,7 @@ expenses:
     location:
       placeholder: Where? (Optional)
     save: Save and update balances
-  title: Evns
+  title: Expenses
   empty:
     title: No expenses yet
     description: Create your first expense to start tracking
@@ -147,8 +147,7 @@ expenses:
     create:
       title: Create a new participant
     title: Add participants
-    add:
-      label: Add participant
+    add: {}
   me: Me
 home:
   title: |-

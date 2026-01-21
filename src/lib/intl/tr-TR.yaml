@@ -6,9 +6,9 @@ actions:
   signout: Oturumu kapat
   close: Kapat
   cheques:
-    title: Çekler
+    title: Giderler
     scan: Çeki tara
-    input: Manuel gir
+    input: Gider ekle
   contacts:
     group: Grup
     title: Arkadaşlar
@@ -22,7 +22,7 @@ nav:
   home: Ana Sayfa
   profile: Ben
   contacts: Arkadaşlar
-  expenses: Hesaplaşma
+  expenses: Giderler
 terms: Şartlar ve koşullar
 privacy: Gizlilik Politikası
 madeBy: Tarafından yapıldı
@@ -77,7 +77,7 @@ join:
 
       (name) => `${name} tarafından davet edildiniz. Sadece kaydolun veya giriş
       yapın, ve hazırsınız`
-  accept: Evn'i kullanmaya başla
+  accept: Evnly'i kullanmaya başla
 groups:
   leave: Ayrılmak için basılı tut
   name:
@@ -132,7 +132,7 @@ expenses:
     location:
       placeholder: Nerede? (Opsiyonel)
     save: Bakiyeleri kaydet ve güncelle
-  title: Hesapla
+  title: Giderler
   balance:
     total: Toplam fatura
     youAreOwed: Sana borç var
@@ -143,8 +143,7 @@ expenses:
     create:
       title: Yeni katılımcı oluştur
     title: Katılımcı ekle
-    add:
-      label: Katılımcı ekle
+    add: {}
   me: Ben
   empty:
     title: Henüz gider yok

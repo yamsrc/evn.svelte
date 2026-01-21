@@ -6,9 +6,9 @@ actions:
   signout: Cerrar sesión
   close: Cerrar
   cheques:
-    title: Cheques
+    title: Gastos
     scan: Escanear cheque
-    input: Introducir manualmente
+    input: Añadir gasto
   contacts:
     group: Grupo
     title: Amigos
@@ -22,7 +22,7 @@ nav:
   home: Inicio
   profile: Yo
   contacts: Amigos
-  expenses: Ajustes
+  expenses: Gastos
 terms: Términos y condiciones
 privacy: Política de privacidad
 madeBy: Hecho por
@@ -79,7 +79,7 @@ join:
 
       (name) => `Has sido invitado por ${name}. Solo regístrate o inicia sesión,
       y ya está todo listo`
-  accept: Comienza a usar Evn
+  accept: Comienza a usar Evnly
 groups:
   leave: Mantén pulsado para salir
   name:
@@ -138,7 +138,7 @@ expenses:
     location:
       placeholder: ¿Dónde? (opcional)
     save: Guardar y actualizar saldos
-  title: Ajustar
+  title: Gastos
   balance:
     total: Factura total
     youAreOwed: Te deben
@@ -149,8 +149,7 @@ expenses:
     create:
       title: Crear un nuevo participante
     title: Agregar participantes
-    add:
-      label: Agregar participante
+    add: {}
   me: Yo
   empty:
     title: Aún no hay gastos

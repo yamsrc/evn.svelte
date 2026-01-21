@@ -22,6 +22,7 @@
     autofocus,
     onchange,
     onupload,
+    pictureStyle,
   }: Props = $props()
 
   const blank = $derived(editable && label !== undefined)
@@ -82,7 +83,7 @@
       disabled={!uploadable || busy}
       onclick={() => uploadEl?.click()}
       class={cn('relative', uploadable && 'hover:cursor-pointer')}>
-      <Picture bind:id={picture} onchange={onPictureChange} />
+      <Picture bind:id={picture} onchange={onPictureChange} style={pictureStyle} />
       {#if uploading}
         <Spinner class="absolute right-0 bottom-0 text-muted-foreground" />
       {/if}

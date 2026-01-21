@@ -1,0 +1,79 @@
+<script lang="ts">
+  import { Async } from 'svas'
+  import { Separator } from '$com/separator'
+  import { TextEllipsis } from '$com/text-ellipsis'
+  import { dict, locale } from '$lib/intl'
+  import { currency } from '$lib/tools'
+  import { accounts } from '@/accounts'
+  import { Picture } from '@/accounts/ui'
+  import { account as me } from '@/iam'
+  import Amount from './Amount.svelte'
+  import { getContext } from './Context'
+  import type { Props } from './BySum'
+
+  const nameClass = 'text-start text-base font-normal flex-1 min-w-0 flex'
+  const amountClass = 'min-w-24 max-w-28 flex-1'
+
+  let { value = $bindable() }: Props = $props()
+  const ctx = getContext()
+  const paid = $derived(ctx.paid)
+  const total = $derived(ctx.total)
+  const overpayment = $derived(Math.max(paid - total, 0))
+
+  const participants = $derived(Object.keys(value.participants))
+</script>
+
+<div class="space-y-2">
+  <!-- Participants -->
+  {#each participants as id, i (id)}
+    {#if i > 0}
+      <Separator />
+    {/if}
+    <div class="flex flex-nowrap items-center justify-between gap-2 min-h-13">
+      <div class="flex items-center gap-2 overflow-hidden flex-1">
+        <Async store={accounts.get(id)}>
+          {#snippet awaited(account)}
+            {@const name = id === $me?.id ? $dict.expenses.me : account.name}
+            <div class="shrink-0">
+              <Picture {account} class="size-8" />
+            </div>
+            <div class={nameClass}>
+              <TextEllipsis>{name}</TextEllipsis>
+            </div>
+          {/snippet}
+        </Async>
+      </div>
+      <Amount
+        id={`expenses-participant-amount-${i}`}
+        class={amountClass}
+        bind:value={value.participants[id].amount} />
+    </div>
+  {/each}
+
+  <!-- Extras -->
+  {#each value.extras as extra, i (i)}
+    {#if i > 0}
+      <Separator />
+    {/if}
+    <div class="flex flex-col gap-2">
+      <div class="flex flex-nowrap items-center justify-between gap-2">
+        <div class="flex items-center gap-2 overflow-hidden flex-1">
+          <div class={nameClass}>
+            <TextEllipsis>
+              {extra.comment ?? $dict.expenses.spendings.extras.title}
+            </TextEllipsis>
+          </div>
+        </div>
+        <Amount
+          class={amountClass}
+          bind:value={value.extras[i].amount}
+          placeholder={i === value.extras.length - 1 ? currency(overpayment, $locale) : '0'} />
+      </div>
+      {#if i === 0}
+        <div class="text-sm text-muted-foreground">
+          {$dict.expenses.spendings.extras.description}
+        </div>
+      {/if}
+    </div>
+  {/each}
+</div>

@@ -1,3 +1,11 @@
 recent:
-  title: Evns
+  title: 지출
   empty: 아직 아무 일도 일어나지 않았어요. 지출을 추가하거나 친구를 초대해 시작해보세요.
+payer:
+  placeholder: 지불자 선택
+participants:
+  tabs:
+    sums: 금액별
+    shares: 지분별로
+  add:
+    label: 참가자 추가

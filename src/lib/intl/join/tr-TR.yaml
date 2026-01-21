@@ -37,7 +37,7 @@ friends:
 
       (name) => `${name} tarafından davet edildiniz. Sadece kaydolun veya giriş
       yapın, hazırsınız!`
-  accept: Evn’i kullanmaya başla
+  accept: Evnly’i kullanmaya başla
   og:
     description: >-
       Paylaşılan harcamaları takip edin, masrafları bölüştürün ve uyumlu kalın —
@@ -59,7 +59,7 @@ group:
   og:
     title: |-
       !js
-      (groupName) => `Evnly'de "${groupName}" grubuna katıl`
+      (groupName) => `Evnly'de ${groupName} grubuna katıl`
     description: >-
       !js
 

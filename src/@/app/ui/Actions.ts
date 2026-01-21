@@ -1,4 +1,4 @@
-import { ScanLine, PencilLine, User, Users } from '@lucide/svelte'
+import { PencilLine, User, Users } from '@lucide/svelte'
 import { goto } from '$app/navigation'
 import type { Dictionary } from '$lib/intl'
 import type { Icon } from '@lucide/svelte'
@@ -19,14 +19,6 @@ export const actions = (dict: Dictionary): ActionGroup[] => ([
   {
     name: dict.actions.cheques.title,
     items: [
-      {
-        id: 'nav-actions-cheqes-scan-button',
-        name: dict.actions.cheques.scan,
-        icon: ScanLine,
-        onSelect: () => {
-
-        },
-      },
       {
         id: 'nav-actions-cheqes-input-button',
         name: dict.actions.cheques.input,
