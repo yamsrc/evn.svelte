@@ -76,8 +76,10 @@
               style={active ? 'view-transition-name: shell-nav-active;' : ''}>
             </div>
             <div
-              class="flex flex-col items-center gap-0.5 z-10 relative font-bold [&_svg:not([class*='size-'])]:size-5"
-              style={`view-transition-name: shell-nav-${i}`}>
+              class={cn(
+                "flex flex-col items-center gap-0.5 z-10 relative font-bold [&_svg:not([class*='size-'])]:size-5",
+              )}
+              style="view-transition-name: shell-nav-item-{i};">
               {#if ret}
                 {#if ret.children}
                   {@render ret.children()}
@@ -93,22 +95,22 @@
         </li>
       {/each}
     </ul>
-    <div
-      class={cn(
-        'pointer-events-auto',
-        'sm:mr-4 transition-all duration-300',
-        "[&_svg:not([class*='size-'])]:size-5",
-        rounded,
-        action || 'opacity-0',
-        position === 'center' && !action && 'hidden',
-      )}
-      style="view-transition-name: shell-actions-{position};">
-      <div class={cn('flex items-center min-h-10', action?.class)}>
-        {#if action}
+    {#if action}
+      <div
+        class={cn(
+          'pointer-events-auto',
+          'sm:mr-4 transition-all duration-300',
+          "[&_svg:not([class*='size-'])]:size-5",
+          rounded,
+          action || 'opacity-0',
+          position === 'center' && !action && 'hidden',
+        )}
+        style="view-transition-name: shell-actions-{position};">
+        <div class={cn('flex items-center min-h-10', action?.class)}>
           {@render action.snippet()}
-        {/if}
+        </div>
       </div>
-    </div>
+    {/if}
   </div>
 </nav>
 
@@ -116,6 +118,11 @@
   ::view-transition-old(shell-nav),
   ::view-transition-new(shell-nav) {
     width: auto;
+    isolation: isolate;
+  }
+
+  ::view-transition-new(shell-nav-active):only-child {
+    opacity: 0;
   }
 
   ::view-transition-old(shell-actions-start),
@@ -123,19 +130,7 @@
   ::view-transition-old(shell-actions-end),
   ::view-transition-new(shell-actions-end) {
     width: auto;
-    z-index: 5;
     isolation: isolate;
-  }
-
-  ::view-transition-group(shell-nav),
-  ::view-transition-group(shell-nav-active),
-  ::view-transition-group([name^='shell-nav-']) {
-    z-index: 5;
-  }
-
-  ::view-transition-group(shell-actions-start),
-  ::view-transition-group(shell-actions-end) {
-    z-index: 5;
   }
 
   @keyframes slide-out-right {
