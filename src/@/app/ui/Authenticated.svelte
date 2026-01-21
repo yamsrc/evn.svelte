@@ -14,7 +14,7 @@
     <Languages />
     <Section class="flex-1 flex flex-col items-center max-w-sm mx-auto">
       <div class="py-[10vh]">
-        <img src="/logo.svg" alt="seed.me" class="h-10 mx-auto" />
+        <!-- <img src="/logo.svg" alt="seed.me" class="h-10 mx-auto" /> -->
       </div>
       {@render authentication()}
     </Section>
