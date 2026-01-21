@@ -47,8 +47,7 @@ inputs:
     contacts:
       input: Friends
     expenses:
-      input: Evns
-      context: Use Evns for english. In other languages use short word with meaning settle up debts after spliting recipt
+      input: Expenses
   terms:
     input: Terms & conditions
   privacy:
@@ -215,8 +214,7 @@ inputs:
       save:
         input: Save and update balances
     title:
-      input: Evns
-      context: Use Evns for english. In other languages use short word with meaning settle up debts after spliting recipt
+      input: Expenses
     empty:
       title:
         input: No expenses yet

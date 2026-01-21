@@ -22,7 +22,7 @@ nav:
   home: ホーム
   profile: 私
   contacts: 友だち
-  expenses: 清算
+  expenses: 経費
 terms: 利用規約
 privacy: プライバシーポリシー
 madeBy: 作成者
@@ -124,7 +124,7 @@ expenses:
     location:
       placeholder: どこですか？（任意）
     save: 保存して残高を更新
-  title: 清算
+  title: 経費
   balance:
     total: 合計金額
     youAreOwed: あなたには支払いが残っています

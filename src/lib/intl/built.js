@@ -30,7 +30,7 @@ export const dictionaries = {
       "home": "الرئيسية",
       "profile": "أنا",
       "contacts": "الأصدقاء",
-      "expenses": "تسوية"
+      "expenses": "المصاريف"
     },
     "terms": "الشروط والأحكام",
     "privacy": "سياسة الخصوصية",
@@ -160,7 +160,7 @@ export const dictionaries = {
         },
         "save": "احفظ وقم بتحديث الأرصدة"
       },
-      "title": "تسوية",
+      "title": "المصروفات",
       "balance": {
         "total": "إجمالي الفاتورة",
         "youAreOwed": "لك مستحقات",
@@ -219,7 +219,7 @@ export const dictionaries = {
       "home": "Startseite",
       "profile": "Ich",
       "contacts": "Freunde",
-      "expenses": "Ausgleich"
+      "expenses": "Ausgaben"
     },
     "terms": "Allgemeine Geschäftsbedingungen",
     "privacy": "Datenschutzrichtlinie",
@@ -349,7 +349,7 @@ export const dictionaries = {
         },
         "save": "Speichern und Salden aktualisieren"
       },
-      "title": "Ausgleichen",
+      "title": "Ausgaben",
       "balance": {
         "total": "Gesamtrechnung",
         "youAreOwed": "Dir steht etwas zu",
@@ -408,7 +408,7 @@ export const dictionaries = {
       "home": "Home",
       "profile": "Me",
       "contacts": "Friends",
-      "expenses": "Evns"
+      "expenses": "Expenses"
     },
     "terms": "Terms & Conditions",
     "privacy": "Privacy Policy",
@@ -538,7 +538,7 @@ export const dictionaries = {
         },
         "save": "Save and update balances"
       },
-      "title": "Evns",
+      "title": "Expenses",
       "empty": {
         "title": "No expenses yet",
         "description": "Create your first expense to start tracking",
@@ -597,7 +597,7 @@ export const dictionaries = {
       "home": "Inicio",
       "profile": "Yo",
       "contacts": "Amigos",
-      "expenses": "Ajustes"
+      "expenses": "Gastos"
     },
     "terms": "Términos y condiciones",
     "privacy": "Política de privacidad",
@@ -727,7 +727,7 @@ export const dictionaries = {
         },
         "save": "Guardar y actualizar saldos"
       },
-      "title": "Ajustar",
+      "title": "Gastos",
       "balance": {
         "total": "Factura total",
         "youAreOwed": "Te deben",
@@ -786,7 +786,7 @@ export const dictionaries = {
       "home": "Accueil",
       "profile": "Moi",
       "contacts": "Amis",
-      "expenses": "Règlements"
+      "expenses": "Dépenses"
     },
     "terms": "Conditions générales",
     "privacy": "Politique de confidentialité",
@@ -916,7 +916,7 @@ export const dictionaries = {
         },
         "save": "Enregistrer et mettre à jour les soldes"
       },
-      "title": "Régler",
+      "title": "Dépenses",
       "balance": {
         "total": "Facture totale",
         "youAreOwed": "On te doit",
@@ -975,7 +975,7 @@ export const dictionaries = {
       "home": "मुख्य पृष्ठ",
       "profile": "मैं",
       "contacts": "मित्र",
-      "expenses": "सेटलमेंट"
+      "expenses": "खर्चे"
     },
     "terms": "नियम व शर्तें",
     "privacy": "गोपनीयता नीति",
@@ -1105,7 +1105,7 @@ export const dictionaries = {
         },
         "save": "सहेजें और बैलेंस अपडेट करें"
       },
-      "title": "हिसाब",
+      "title": "खर्चे",
       "balance": {
         "total": "कुल बिल",
         "youAreOwed": "आपको कुछ मिलना बाकी है",
@@ -1164,7 +1164,7 @@ export const dictionaries = {
       "home": "Home",
       "profile": "Io",
       "contacts": "Amici",
-      "expenses": "Saldo"
+      "expenses": "Spese"
     },
     "terms": "Termini e condizioni",
     "privacy": "Informativa sulla privacy",
@@ -1294,7 +1294,7 @@ export const dictionaries = {
         },
         "save": "Salva e aggiorna i saldi"
       },
-      "title": "Saldo",
+      "title": "Spese",
       "balance": {
         "total": "Totale conto",
         "youAreOwed": "Ti è dovuto",
@@ -1353,7 +1353,7 @@ export const dictionaries = {
       "home": "ホーム",
       "profile": "私",
       "contacts": "友だち",
-      "expenses": "清算"
+      "expenses": "経費"
     },
     "terms": "利用規約",
     "privacy": "プライバシーポリシー",
@@ -1483,7 +1483,7 @@ export const dictionaries = {
         },
         "save": "保存して残高を更新"
       },
-      "title": "清算",
+      "title": "経費",
       "balance": {
         "total": "合計金額",
         "youAreOwed": "あなたには支払いが残っています",
@@ -1542,7 +1542,7 @@ export const dictionaries = {
       "home": "홈",
       "profile": "나",
       "contacts": "친구",
-      "expenses": "정산"
+      "expenses": "지출"
     },
     "terms": "이용 약관",
     "privacy": "개인정보처리방침",
@@ -1672,7 +1672,7 @@ export const dictionaries = {
         },
         "save": "저장하고 잔액 업데이트"
       },
-      "title": "정산",
+      "title": "지출",
       "balance": {
         "total": "총 금액",
         "youAreOwed": "당신은 받을 돈이 있습니다",
@@ -1731,7 +1731,7 @@ export const dictionaries = {
       "home": "Home",
       "profile": "Ik",
       "contacts": "Vrienden",
-      "expenses": "Afrekening"
+      "expenses": "Uitgaven"
     },
     "terms": "Algemene voorwaarden",
     "privacy": "Privacybeleid",
@@ -1861,7 +1861,7 @@ export const dictionaries = {
         },
         "save": "Opslaan en saldi bijwerken"
       },
-      "title": "Vereffenen",
+      "title": "Uitgaven",
       "balance": {
         "total": "Totaalrekening",
         "youAreOwed": "Je hebt iets tegoed",
@@ -1920,7 +1920,7 @@ export const dictionaries = {
       "home": "Главная",
       "profile": "Я",
       "contacts": "Друзья",
-      "expenses": "Расчёты"
+      "expenses": "Расходы"
     },
     "terms": "Условия и положения",
     "privacy": "Политика конфиденциальности",
@@ -2050,7 +2050,7 @@ export const dictionaries = {
         },
         "save": "Сохранить и обновить балансы"
       },
-      "title": "Рассчитать",
+      "title": "Расходы",
       "balance": {
         "total": "Итоговый счет",
         "youAreOwed": "Вам должны",
@@ -2109,7 +2109,7 @@ export const dictionaries = {
       "home": "Mwanzo",
       "profile": "Mimi",
       "contacts": "Marafiki",
-      "expenses": "Marejesho"
+      "expenses": "Matumizi"
     },
     "terms": "Vigezo na masharti",
     "privacy": "Sera ya Faragha",
@@ -2239,7 +2239,7 @@ export const dictionaries = {
         },
         "save": "Hifadhi na sasisha mizania"
       },
-      "title": "Lipa",
+      "title": "Matumizi",
       "balance": {
         "total": "Jumla ya bili",
         "youAreOwed": "Unadai malipo",
@@ -2298,7 +2298,7 @@ export const dictionaries = {
       "home": "Ana Sayfa",
       "profile": "Ben",
       "contacts": "Arkadaşlar",
-      "expenses": "Hesaplaşma"
+      "expenses": "Giderler"
     },
     "terms": "Şartlar ve koşullar",
     "privacy": "Gizlilik Politikası",
@@ -2428,7 +2428,7 @@ export const dictionaries = {
         },
         "save": "Bakiyeleri kaydet ve güncelle"
       },
-      "title": "Hesapla",
+      "title": "Giderler",
       "balance": {
         "total": "Toplam fatura",
         "youAreOwed": "Sana borç var",
@@ -2487,7 +2487,7 @@ export const dictionaries = {
       "home": "Головна",
       "profile": "Я",
       "contacts": "Друзі",
-      "expenses": "Розрахунок"
+      "expenses": "Витрати"
     },
     "terms": "Умови та положення",
     "privacy": "Політика конфіденційності",
@@ -2617,7 +2617,7 @@ export const dictionaries = {
         },
         "save": "Зберегти й оновити баланси"
       },
-      "title": "Розрахунок",
+      "title": "Витрати",
       "balance": {
         "total": "Загальний рахунок",
         "youAreOwed": "Вам винні",
@@ -2676,7 +2676,7 @@ export const dictionaries = {
       "home": "首页",
       "profile": "我",
       "contacts": "朋友",
-      "expenses": "结算"
+      "expenses": "支出"
     },
     "terms": "条款和条件",
     "privacy": "隐私政策",
@@ -2806,7 +2806,7 @@ export const dictionaries = {
         },
         "save": "保存并更新余额"
       },
-      "title": "结清",
+      "title": "支出",
       "balance": {
         "total": "总账单",
         "youAreOwed": "你有应得的",

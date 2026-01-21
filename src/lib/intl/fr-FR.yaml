@@ -22,7 +22,7 @@ nav:
   home: Accueil
   profile: Moi
   contacts: Amis
-  expenses: Règlements
+  expenses: Dépenses
 terms: Conditions générales
 privacy: Politique de confidentialité
 madeBy: Créé par
@@ -30,7 +30,9 @@ profile:
   title: Mon profil
   language:
     title: Langue
-    description: Cela n’affecte pas la reconnaissance des chèques. Nous comprenons de toute façon la plupart des langues là-bas.
+    description: >-
+      Cela n’affecte pas la reconnaissance des chèques. Nous comprenons de toute
+      façon la plupart des langues là-bas.
 form:
   enterName: Saisissez le nom
 copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
@@ -58,7 +60,9 @@ contacts:
       confirm: Supprimer
   add:
     label: Ajouter un contact
-    description: Plus tard, vous pourrez transférer ce compte au propriétaire afin qu'il puisse définir ses informations de connexion et en prendre possession.
+    description: >-
+      Plus tard, vous pourrez transférer ce compte au propriétaire afin qu'il
+      puisse définir ses informations de connexion et en prendre possession.
   share:
     invite:
       link: Inviter sur evn
@@ -68,9 +72,11 @@ join:
   app:
     description: La façon intelligente de suivre qui doit quoi à qui, avec vos amis.
   inviter:
-    description: |-
+    description: >-
       !js
-      (name) => `Vous avez été invité(e) par ${name}. Inscrivez-vous ou connectez-vous, et tout est prêt`
+
+      (name) => `Vous avez été invité(e) par ${name}. Inscrivez-vous ou
+      connectez-vous, et tout est prêt`
   accept: Commencer à utiliser Evnly
 groups:
   leave: Maintenez appuyé pour quitter
@@ -81,7 +87,9 @@ groups:
     title: Membres
     addMembers: Ajouter des membres
     addMember: Ajouter un membre
-    empty: Personne ici pour l'instant. Ajoutez des membres pour commencer à utiliser ce groupe.
+    empty: >-
+      Personne ici pour l'instant. Ajoutez des membres pour commencer à utiliser
+      ce groupe.
   title: Groupes
   summary:
     balance:
@@ -103,7 +111,9 @@ account:
   delete:
     button: Supprimer le compte
     title: Supprimer le compte
-    description: Nous supprimerons définitivement votre compte ainsi que toutes les informations associées. Cette action est irréversible.
+    description: >-
+      Nous supprimerons définitivement votre compte ainsi que toutes les
+      informations associées. Cette action est irréversible.
     sorry: Nous sommes vraiment désolés de vous voir partir.
     hold: Maintenir pour confirmer
     link: Supprimer le compte
@@ -114,7 +124,9 @@ expenses:
     title: Dépenses
     total: Total
     extras:
-      description: Les pourboires, taxes et autres frais supplémentaires sont répartis proportionnellement.
+      description: >-
+        Les pourboires, taxes et autres frais supplémentaires sont répartis
+        proportionnellement.
       title: Extras
   payers:
     title: Payé par
@@ -124,7 +136,7 @@ expenses:
     location:
       placeholder: Où ? (facultatif)
     save: Enregistrer et mettre à jour les soldes
-  title: Régler
+  title: Dépenses
   balance:
     total: Facture totale
     youAreOwed: On te doit

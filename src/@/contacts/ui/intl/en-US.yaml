@@ -10,5 +10,5 @@ groups:
   title: Belongs to groups
   empty: Not a member of any group.
 expenses:
-  title: Evns
+  title: Expenses
   empty: No shared expenses so far.

@@ -22,7 +22,7 @@ nav:
   home: Home
   profile: Io
   contacts: Amici
-  expenses: Saldo
+  expenses: Spese
 terms: Termini e condizioni
 privacy: Informativa sulla privacy
 madeBy: Realizzato da
@@ -30,7 +30,9 @@ profile:
   title: Il mio profilo
   language:
     title: Lingua
-    description: Questo non influisce sul riconoscimento dell'assegno. Comunque, lì capiamo la maggior parte delle lingue.
+    description: >-
+      Questo non influisce sul riconoscimento dell'assegno. Comunque, lì capiamo
+      la maggior parte delle lingue.
 form:
   enterName: Inserisci il nome
 copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
@@ -58,7 +60,9 @@ contacts:
       confirm: Elimina
   add:
     label: Aggiungi contatto
-    description: Successivamente, potrai trasferire questo account al proprietario, così potrà impostare i dettagli di accesso e prenderne possesso.
+    description: >-
+      Successivamente, potrai trasferire questo account al proprietario, così
+      potrà impostare i dettagli di accesso e prenderne possesso.
   share:
     invite:
       link: Invita su evn
@@ -66,11 +70,15 @@ contacts:
       description: L'invito scadrà tra 5 minuti
 join:
   app:
-    description: Il modo intelligente per tenere traccia di chi deve cosa a chi, insieme agli amici.
+    description: >-
+      Il modo intelligente per tenere traccia di chi deve cosa a chi, insieme
+      agli amici.
   inviter:
-    description: |-
+    description: >-
       !js
-      (name) => `Sei stato invitato da ${name}. Basta registrarsi o accedere, e sei pronto`
+
+      (name) => `Sei stato invitato da ${name}. Basta registrarsi o accedere, e
+      sei pronto`
   accept: Inizia a usare Evnly
 groups:
   leave: Tieni premuto per uscire
@@ -81,7 +89,9 @@ groups:
     title: Membri
     addMembers: Aggiungi membri
     addMember: Aggiungi membro
-    empty: Non c’è ancora nessuno qui. Aggiungi dei membri per iniziare a usare questo gruppo.
+    empty: >-
+      Non c’è ancora nessuno qui. Aggiungi dei membri per iniziare a usare
+      questo gruppo.
   title: Gruppi
   summary:
     balance:
@@ -103,7 +113,9 @@ account:
   delete:
     button: Elimina account
     title: Elimina account
-    description: Elimineremo definitivamente il tuo account e tutte le informazioni associate. Questa azione non può essere annullata.
+    description: >-
+      Elimineremo definitivamente il tuo account e tutte le informazioni
+      associate. Questa azione non può essere annullata.
     sorry: Ci dispiace molto vederti andare via.
     hold: Tieni premuto per confermare
     link: Elimina account
@@ -124,7 +136,7 @@ expenses:
     location:
       placeholder: Dove? (opzionale)
     save: Salva e aggiorna i saldi
-  title: Saldo
+  title: Spese
   balance:
     total: Totale conto
     youAreOwed: Ti è dovuto
