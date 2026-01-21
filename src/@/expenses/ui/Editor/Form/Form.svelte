@@ -90,7 +90,6 @@
 <Actions>
   <Action
     id="expenses-form-save-button"
-    type="submit"
     disabled={busy || !enough}
     onclick={() => submitButton?.click()}>
     <Check />
