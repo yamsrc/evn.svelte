@@ -1,4 +1,13 @@
 {
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "Q367F8BWY7.com.evnapp",
+        "paths": ["*"]
+      }
+    ]
+  },
   "webcredentials": {
     "apps": ["Q367F8BWY7.com.evnapp"]
   }
