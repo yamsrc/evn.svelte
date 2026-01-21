@@ -43,7 +43,7 @@ friends:
 
       (name) => `Je bent uitgenodigd door ${name}. Registreer je of log in, en
       je bent klaar om te beginnen!`
-  accept: Begin met het gebruik van Evn
+  accept: Begin met het gebruik van Evnly
   og:
     description: >-
       Houd gezamenlijke uitgaven bij, splits de kosten en blijf op één lijn —
@@ -65,7 +65,7 @@ group:
   og:
     title: |-
       !js
-      (groupName) => `Word lid van "${groupName}" op Evnly`
+      (groupName) => `Word lid van ${groupName} op Evnly`
     description: >-
       !js
 

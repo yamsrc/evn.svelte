@@ -1,7 +1,9 @@
 <script lang="ts">
   import { Async, combined } from 'svas'
   import { dict } from '$lib/intl'
+  import { Avatar } from '@/accounts/ui'
   import { Header, Section } from '@/app/ui'
+  import { Actions } from '@/app/ui'
   import { contacts } from '@/contacts'
   import { Totals, Tops } from '@/contacts/ui'
   import { expenses } from '@/expenses'
@@ -14,6 +16,11 @@
     <Section>
       <Header.Root>
         <Header.Title>{$dict.home.title(account.name)}</Header.Title>
+        <Header.Actions>
+          <Header.Button href="/me/" id="header-me-button">
+            <Avatar size={24} />
+          </Header.Button>
+        </Header.Actions>
       </Header.Root>
     </Section>
 
@@ -30,3 +37,5 @@
     </Section>
   {/snippet}
 </Async>
+
+<Actions />

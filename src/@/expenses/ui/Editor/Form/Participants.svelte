@@ -1,5 +1,7 @@
 <script lang="ts">
+  import { UserPlus } from '@lucide/svelte'
   import { cn } from '$lib/utils'
+  import { Button } from '$ui/button'
   import * as Card from '$ui/card'
   import * as Tabs from '$ui/tabs'
   import { Section } from '@/app/ui'
@@ -13,7 +15,7 @@
 
 <Section class={cn('flex flex-col gap-1.5', { shake: error })}>
   <Card.Root class="bg-background p-4 relative">
-    <Card.Content class="space-y-2 p-0">
+    <Card.Content class="space-y-4 p-0">
       <Tabs.Root bind:value={mode} class="w-full">
         <Tabs.List class="w-full h-12">
           <Tabs.Trigger id="expenses-participants-tabs-sums" value="sums" class="text-base">
@@ -30,6 +32,15 @@
           <ByShare bind:value />
         </Tabs.Content>
       </Tabs.Root>
+      <Button
+        id="expenses-spendings-add-participants-button"
+        size="lg"
+        variant="secondary"
+        class="w-full"
+        href="participants/">
+        <UserPlus />
+        {$dict.participants.add.label}
+      </Button>
     </Card.Content>
   </Card.Root>
 </Section>

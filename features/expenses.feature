@@ -2,8 +2,10 @@ Feature: Expenses
 
   Scenario: Create a new expense
     Given new account
-    When I tap 'nav-actions-button'
-    And I tap 'nav-actions-cheqes-input-button'
+    And I tap 'nav-contacts-button'
+    And I tap 'nav-expenses-button'
+    And I tap 'nav-action-input'
+    And I tap 'expenses-spendings-add-participants-button'
     Then 'expenses-add-participants-add-button' is visible
     When I tap 'expenses-add-participants-create-button'
     Then 'app-cosmetics-name-input' is visible
@@ -84,8 +86,10 @@ Feature: Expenses
   Scenario: Create expense with share-based splitting
     Given new account
     And new managed contact
-    When I tap 'nav-actions-button'
-    And I tap 'nav-actions-cheqes-input-button'
+    And I tap 'nav-contacts-button'
+    And I tap 'nav-expenses-button'
+    And I tap 'nav-action-input'
+    And I tap 'expenses-spendings-add-participants-button'
     Then 'expenses-add-participants-add-button' is visible
     When I tap first item of 'contacts-list-content'
     And I tap 'expenses-add-participants-add-button'
@@ -130,8 +134,10 @@ Feature: Expenses
   Scenario: Tab switching and state preservation
     Given new account
     And new managed contact
-    When I tap 'nav-actions-button'
-    And I tap 'nav-actions-cheqes-input-button'
+    And I tap 'nav-contacts-button'
+    And I tap 'nav-expenses-button'
+    And I tap 'nav-action-input'
+    And I tap 'expenses-spendings-add-participants-button'
     Then 'expenses-add-participants-add-button' is visible
     When I tap first item of 'contacts-list-content'
     And I tap 'expenses-add-participants-add-button'
@@ -159,8 +165,10 @@ Feature: Expenses
   Scenario: Share limits and edge cases
     Given new account
     And new managed contact
-    When I tap 'nav-actions-button'
-    And I tap 'nav-actions-cheqes-input-button'
+    And I tap 'nav-contacts-button'
+    And I tap 'nav-expenses-button'
+    And I tap 'nav-action-input'
+    And I tap 'expenses-spendings-add-participants-button'
     Then 'expenses-add-participants-add-button' is visible
     When I tap first item of 'contacts-list-content'
     And I tap 'expenses-add-participants-add-button'

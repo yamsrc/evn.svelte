@@ -1,13 +1,11 @@
 <script lang="ts">
-  import { ArrowUpDown } from '@lucide/svelte'
   import { Async, combined } from 'svas'
   import { dict } from '$lib/intl'
   import { Input } from '$ui/input'
   import { Section } from '@/app/ui'
   import { Header } from '@/app/ui'
   import { contacts, filter as filterContacts } from '@/contacts'
-  import { Invite } from '@/contacts/ui'
-  import { Contacts } from '@/contacts/ui'
+  import { Actions, Invite, Contacts } from '@/contacts/ui'
   import { favorites, filter as filterFavorites } from '@/favorites'
   import { Favorites } from '@/favorites/ui'
   import { groups, filter as filterGroups } from '@/groups'
@@ -20,11 +18,6 @@
 <Section>
   <Header.Root>
     <Header.Title>{$dict.contacts.title}</Header.Title>
-    <Header.Actions>
-      <Header.Button disabled>
-        <ArrowUpDown />
-      </Header.Button>
-    </Header.Actions>
   </Header.Root>
 </Section>
 
@@ -52,6 +45,7 @@
           <p class="text-muted-foreground text-center">{$dict.search.empty}</p>
         </Section>
       {/if}
+      <Actions />
     {:else if $account}
       <Section class="m-auto flex flex-col items-center justify-center gap-2">
         <h2>{$dict.contacts.empty.title}</h2>

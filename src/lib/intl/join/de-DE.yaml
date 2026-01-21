@@ -24,7 +24,7 @@ account:
     description: Diese Überweisungsanfrage ist abgelaufen.
     title: Übertragung abgelaufen
   og:
-    tile: Übernimm dein Evnly-Konto.
+    tile: Übernimm dein Evnly.
     description: >-
       !js
 
@@ -44,7 +44,7 @@ friends:
 
       (name) => `${name} hat dich eingeladen. Registriere dich einfach oder
       melde dich an und schon kann es losgehen!`
-  accept: Evn jetzt nutzen
+  accept: Evnly jetzt nutzen
   og:
     description: >-
       Geteilte Ausgaben verfolgen, Kosten aufteilen und immer abgestimmt bleiben
@@ -66,7 +66,7 @@ group:
   og:
     title: |-
       !js
-      (groupName) => `Tritt "${groupName}" auf Evnly bei`
+      (groupName) => `Tritt ${groupName} auf Evnly bei`
     description: >-
       !js
 

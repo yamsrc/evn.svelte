@@ -1,5 +1,5 @@
 recent:
-  title: Evns
+  title: Spese
   empty: >-
     Non è ancora successo nulla. Aggiungi qualche spesa o invita amici per
     iniziare.
@@ -9,3 +9,5 @@ participants:
   tabs:
     sums: Per somme
     shares: Per quote
+  add:
+    label: Aggiungi partecipanti

@@ -11,9 +11,9 @@ export const dictionaries = {
       "signout": "تسجيل الخروج",
       "close": "إغلاق",
       "cheques": {
-        "title": "شيكات",
+        "title": "المصروفات",
         "scan": "مسح الشيك",
-        "input": "إدخال يدوي"
+        "input": "إضافة مصروف"
       },
       "contacts": {
         "group": "مجموعة",
@@ -30,7 +30,7 @@ export const dictionaries = {
       "home": "الرئيسية",
       "profile": "أنا",
       "contacts": "الأصدقاء",
-      "expenses": "تسوية"
+      "expenses": "المصاريف"
     },
     "terms": "الشروط والأحكام",
     "privacy": "سياسة الخصوصية",
@@ -94,7 +94,7 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `لقد تمّت دعوتك من قِبل ${name}. فقط سجّل أو قم بتسجيل الدخول، وستكون جاهزًا للبدء`
       },
-      "accept": "ابدأ استخدام Evn"
+      "accept": "ابدأ استخدام Evnly"
     },
     "groups": {
       "leave": "اضغط مع الاستمرار للمغادرة",
@@ -160,7 +160,7 @@ export const dictionaries = {
         },
         "save": "احفظ وقم بتحديث الأرصدة"
       },
-      "title": "تسوية",
+      "title": "المصروفات",
       "balance": {
         "total": "إجمالي الفاتورة",
         "youAreOwed": "لك مستحقات",
@@ -174,7 +174,7 @@ export const dictionaries = {
         },
         "title": "إضافة مشاركين",
         "add": {
-          "label": "إضافة مشارك"
+
         }
       },
       "me": "أنا",
@@ -200,9 +200,9 @@ export const dictionaries = {
       "signout": "Abmelden",
       "close": "Schließen",
       "cheques": {
-        "title": "Schecks",
+        "title": "Ausgaben",
         "scan": "Scheck scannen",
-        "input": "Manuell eingeben"
+        "input": "Ausgabe hinzufügen"
       },
       "contacts": {
         "group": "Gruppe",
@@ -219,7 +219,7 @@ export const dictionaries = {
       "home": "Startseite",
       "profile": "Ich",
       "contacts": "Freunde",
-      "expenses": "Ausgleich"
+      "expenses": "Ausgaben"
     },
     "terms": "Allgemeine Geschäftsbedingungen",
     "privacy": "Datenschutzrichtlinie",
@@ -283,7 +283,7 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `${name} hat dich eingeladen. Registriere dich einfach oder melde dich an, und schon kann es losgehen`
       },
-      "accept": "Jetzt mit Evn starten"
+      "accept": "Jetzt mit Evnly starten"
     },
     "groups": {
       "leave": "Gedrückt halten zum Verlassen",
@@ -349,7 +349,7 @@ export const dictionaries = {
         },
         "save": "Speichern und Salden aktualisieren"
       },
-      "title": "Ausgleichen",
+      "title": "Ausgaben",
       "balance": {
         "total": "Gesamtrechnung",
         "youAreOwed": "Dir steht etwas zu",
@@ -363,7 +363,7 @@ export const dictionaries = {
         },
         "title": "Teilnehmer hinzufügen",
         "add": {
-          "label": "Teilnehmer hinzufügen"
+
         }
       },
       "me": "Ich",
@@ -389,9 +389,9 @@ export const dictionaries = {
       "signout": "Sign out",
       "close": "Close",
       "cheques": {
-        "title": "Checks",
+        "title": "Expenses",
         "scan": "Scan cheque",
-        "input": "Enter manually"
+        "input": "Add expense"
       },
       "contacts": {
         "group": "Group",
@@ -408,7 +408,7 @@ export const dictionaries = {
       "home": "Home",
       "profile": "Me",
       "contacts": "Friends",
-      "expenses": "Evns"
+      "expenses": "Expenses"
     },
     "terms": "Terms & Conditions",
     "privacy": "Privacy Policy",
@@ -472,7 +472,7 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `You have been invited by ${name}. Just register or log in, and you’re all set`
       },
-      "accept": "Start Using Evn"
+      "accept": "Start Using Evnly"
     },
     "groups": {
       "leave": "Hold to leave",
@@ -538,7 +538,7 @@ export const dictionaries = {
         },
         "save": "Save and update balances"
       },
-      "title": "Evns",
+      "title": "Expenses",
       "empty": {
         "title": "No expenses yet",
         "description": "Create your first expense to start tracking",
@@ -557,7 +557,7 @@ export const dictionaries = {
         },
         "title": "Add participants",
         "add": {
-          "label": "Add participant"
+
         }
       },
       "me": "Me"
@@ -578,9 +578,9 @@ export const dictionaries = {
       "signout": "Cerrar sesión",
       "close": "Cerrar",
       "cheques": {
-        "title": "Cheques",
+        "title": "Gastos",
         "scan": "Escanear cheque",
-        "input": "Introducir manualmente"
+        "input": "Añadir gasto"
       },
       "contacts": {
         "group": "Grupo",
@@ -597,7 +597,7 @@ export const dictionaries = {
       "home": "Inicio",
       "profile": "Yo",
       "contacts": "Amigos",
-      "expenses": "Ajustes"
+      "expenses": "Gastos"
     },
     "terms": "Términos y condiciones",
     "privacy": "Política de privacidad",
@@ -661,7 +661,7 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `Has sido invitado por ${name}. Solo regístrate o inicia sesión, y ya está todo listo`
       },
-      "accept": "Comienza a usar Evn"
+      "accept": "Comienza a usar Evnly"
     },
     "groups": {
       "leave": "Mantén pulsado para salir",
@@ -727,7 +727,7 @@ export const dictionaries = {
         },
         "save": "Guardar y actualizar saldos"
       },
-      "title": "Ajustar",
+      "title": "Gastos",
       "balance": {
         "total": "Factura total",
         "youAreOwed": "Te deben",
@@ -741,7 +741,7 @@ export const dictionaries = {
         },
         "title": "Agregar participantes",
         "add": {
-          "label": "Agregar participante"
+
         }
       },
       "me": "Yo",
@@ -767,9 +767,9 @@ export const dictionaries = {
       "signout": "Se déconnecter",
       "close": "Fermer",
       "cheques": {
-        "title": "Chèques",
+        "title": "Dépenses",
         "scan": "Scanner le chèque",
-        "input": "Saisir manuellement"
+        "input": "Ajouter une dépense"
       },
       "contacts": {
         "group": "Groupe",
@@ -786,7 +786,7 @@ export const dictionaries = {
       "home": "Accueil",
       "profile": "Moi",
       "contacts": "Amis",
-      "expenses": "Règlements"
+      "expenses": "Dépenses"
     },
     "terms": "Conditions générales",
     "privacy": "Politique de confidentialité",
@@ -850,7 +850,7 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `Vous avez été invité(e) par ${name}. Inscrivez-vous ou connectez-vous, et tout est prêt`
       },
-      "accept": "Commencer à utiliser Evn"
+      "accept": "Commencer à utiliser Evnly"
     },
     "groups": {
       "leave": "Maintenez appuyé pour quitter",
@@ -916,7 +916,7 @@ export const dictionaries = {
         },
         "save": "Enregistrer et mettre à jour les soldes"
       },
-      "title": "Régler",
+      "title": "Dépenses",
       "balance": {
         "total": "Facture totale",
         "youAreOwed": "On te doit",
@@ -930,7 +930,7 @@ export const dictionaries = {
         },
         "title": "Ajouter des participants",
         "add": {
-          "label": "Ajouter un participant"
+
         }
       },
       "me": "Moi",
@@ -956,9 +956,9 @@ export const dictionaries = {
       "signout": "साइन आउट करें",
       "close": "बंद करें",
       "cheques": {
-        "title": "चेक",
+        "title": "खर्चे",
         "scan": "चेक स्कैन करें",
-        "input": "मैन्युअल रूप से दर्ज करें"
+        "input": "खर्च जोड़ें"
       },
       "contacts": {
         "group": "समूह",
@@ -975,7 +975,7 @@ export const dictionaries = {
       "home": "मुख्य पृष्ठ",
       "profile": "मैं",
       "contacts": "मित्र",
-      "expenses": "सेटलमेंट"
+      "expenses": "खर्चे"
     },
     "terms": "नियम व शर्तें",
     "privacy": "गोपनीयता नीति",
@@ -1039,7 +1039,7 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `${name} ने आपको आमंत्रित किया है। बस रजिस्टर करें या लॉग इन करें, और आप तैयार हैं`
       },
-      "accept": "Evn का उपयोग शुरू करें"
+      "accept": "Evnly का उपयोग शुरू करें"
     },
     "groups": {
       "leave": "छोड़ने के लिए दबाए रखें",
@@ -1105,7 +1105,7 @@ export const dictionaries = {
         },
         "save": "सहेजें और बैलेंस अपडेट करें"
       },
-      "title": "हिसाब",
+      "title": "खर्चे",
       "balance": {
         "total": "कुल बिल",
         "youAreOwed": "आपको कुछ मिलना बाकी है",
@@ -1119,7 +1119,7 @@ export const dictionaries = {
         },
         "title": "प्रतिभागी जोड़ें",
         "add": {
-          "label": "प्रतिभागी जोड़ें"
+
         }
       },
       "me": "मैं",
@@ -1145,9 +1145,9 @@ export const dictionaries = {
       "signout": "Esci",
       "close": "Chiudi",
       "cheques": {
-        "title": "Assegni",
+        "title": "Spese",
         "scan": "Scansiona assegno",
-        "input": "Inserisci manualmente"
+        "input": "Aggiungi spesa"
       },
       "contacts": {
         "group": "Gruppo",
@@ -1164,7 +1164,7 @@ export const dictionaries = {
       "home": "Home",
       "profile": "Io",
       "contacts": "Amici",
-      "expenses": "Saldo"
+      "expenses": "Spese"
     },
     "terms": "Termini e condizioni",
     "privacy": "Informativa sulla privacy",
@@ -1228,7 +1228,7 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `Sei stato invitato da ${name}. Basta registrarsi o accedere, e sei pronto`
       },
-      "accept": "Inizia a usare Evn"
+      "accept": "Inizia a usare Evnly"
     },
     "groups": {
       "leave": "Tieni premuto per uscire",
@@ -1294,7 +1294,7 @@ export const dictionaries = {
         },
         "save": "Salva e aggiorna i saldi"
       },
-      "title": "Saldo",
+      "title": "Spese",
       "balance": {
         "total": "Totale conto",
         "youAreOwed": "Ti è dovuto",
@@ -1308,7 +1308,7 @@ export const dictionaries = {
         },
         "title": "Aggiungi partecipanti",
         "add": {
-          "label": "Aggiungi partecipante"
+
         }
       },
       "me": "Io",
@@ -1334,9 +1334,9 @@ export const dictionaries = {
       "signout": "サインアウト",
       "close": "閉じる",
       "cheques": {
-        "title": "小切手",
+        "title": "経費",
         "scan": "小切手をスキャン",
-        "input": "手動で入力"
+        "input": "支出を追加"
       },
       "contacts": {
         "group": "グループ",
@@ -1353,7 +1353,7 @@ export const dictionaries = {
       "home": "ホーム",
       "profile": "私",
       "contacts": "友だち",
-      "expenses": "清算"
+      "expenses": "経費"
     },
     "terms": "利用規約",
     "privacy": "プライバシーポリシー",
@@ -1417,7 +1417,7 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `${name} から招待されました。登録またはログインするだけで、準備完了です`
       },
-      "accept": "Evn を使い始める"
+      "accept": "Evnly を使い始める"
     },
     "groups": {
       "leave": "長押しして退出",
@@ -1483,7 +1483,7 @@ export const dictionaries = {
         },
         "save": "保存して残高を更新"
       },
-      "title": "清算",
+      "title": "経費",
       "balance": {
         "total": "合計金額",
         "youAreOwed": "あなたには支払いが残っています",
@@ -1497,7 +1497,7 @@ export const dictionaries = {
         },
         "title": "参加者を追加",
         "add": {
-          "label": "参加者を追加"
+
         }
       },
       "me": "私",
@@ -1523,9 +1523,9 @@ export const dictionaries = {
       "signout": "로그아웃",
       "close": "닫기",
       "cheques": {
-        "title": "수표",
+        "title": "지출",
         "scan": "수표 스캔",
-        "input": "수동 입력"
+        "input": "지출 추가"
       },
       "contacts": {
         "group": "그룹",
@@ -1542,7 +1542,7 @@ export const dictionaries = {
       "home": "홈",
       "profile": "나",
       "contacts": "친구",
-      "expenses": "정산"
+      "expenses": "지출"
     },
     "terms": "이용 약관",
     "privacy": "개인정보처리방침",
@@ -1606,7 +1606,7 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `${name}님이 초대했습니다. 회원가입 또는 로그인만 하면 바로 시작할 수 있습니다`
       },
-      "accept": "Evn 시작하기"
+      "accept": "Evnly 시작하기"
     },
     "groups": {
       "leave": "길게 눌러서 나가기",
@@ -1672,7 +1672,7 @@ export const dictionaries = {
         },
         "save": "저장하고 잔액 업데이트"
       },
-      "title": "정산",
+      "title": "지출",
       "balance": {
         "total": "총 금액",
         "youAreOwed": "당신은 받을 돈이 있습니다",
@@ -1686,7 +1686,7 @@ export const dictionaries = {
         },
         "title": "참가자 추가",
         "add": {
-          "label": "참가자 추가"
+
         }
       },
       "me": "나",
@@ -1712,9 +1712,9 @@ export const dictionaries = {
       "signout": "Afmelden",
       "close": "Sluiten",
       "cheques": {
-        "title": "Cheques",
+        "title": "Uitgaven",
         "scan": "Cheque scannen",
-        "input": "Handmatig invoeren"
+        "input": "Uitgave toevoegen"
       },
       "contacts": {
         "group": "Groep",
@@ -1731,7 +1731,7 @@ export const dictionaries = {
       "home": "Home",
       "profile": "Ik",
       "contacts": "Vrienden",
-      "expenses": "Afrekening"
+      "expenses": "Uitgaven"
     },
     "terms": "Algemene voorwaarden",
     "privacy": "Privacybeleid",
@@ -1795,7 +1795,7 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `Je bent uitgenodigd door ${name}. Registreer je of log in, en je bent klaar om te beginnen`
       },
-      "accept": "Evn gebruiken starten"
+      "accept": "Evnly gebruiken starten"
     },
     "groups": {
       "leave": "Vasthouden om te verlaten",
@@ -1861,7 +1861,7 @@ export const dictionaries = {
         },
         "save": "Opslaan en saldi bijwerken"
       },
-      "title": "Vereffenen",
+      "title": "Uitgaven",
       "balance": {
         "total": "Totaalrekening",
         "youAreOwed": "Je hebt iets tegoed",
@@ -1875,7 +1875,7 @@ export const dictionaries = {
         },
         "title": "Deelnemers toevoegen",
         "add": {
-          "label": "Deelnemer toevoegen"
+
         }
       },
       "me": "Ik",
@@ -1901,9 +1901,9 @@ export const dictionaries = {
       "signout": "Выйти",
       "close": "Закрыть",
       "cheques": {
-        "title": "Чеки",
+        "title": "Расходы",
         "scan": "Сканировать чек",
-        "input": "Ввести вручную"
+        "input": "Добавить расход"
       },
       "contacts": {
         "group": "Группа",
@@ -1920,7 +1920,7 @@ export const dictionaries = {
       "home": "Главная",
       "profile": "Я",
       "contacts": "Друзья",
-      "expenses": "Расчёты"
+      "expenses": "Расходы"
     },
     "terms": "Условия и положения",
     "privacy": "Политика конфиденциальности",
@@ -1984,7 +1984,7 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `Вас пригласил(а) ${name}. Просто зарегистрируйтесь или войдите, и вы готовы начать`
       },
-      "accept": "Начать использовать Evn"
+      "accept": "Начать использовать Evnly"
     },
     "groups": {
       "leave": "Удерживайте, чтобы выйти",
@@ -2050,7 +2050,7 @@ export const dictionaries = {
         },
         "save": "Сохранить и обновить балансы"
       },
-      "title": "Рассчитать",
+      "title": "Расходы",
       "balance": {
         "total": "Итоговый счет",
         "youAreOwed": "Вам должны",
@@ -2064,7 +2064,7 @@ export const dictionaries = {
         },
         "title": "Добавить участников",
         "add": {
-          "label": "Добавить участника"
+
         }
       },
       "me": "Я",
@@ -2090,9 +2090,9 @@ export const dictionaries = {
       "signout": "Ondoka",
       "close": "Funga",
       "cheques": {
-        "title": "Hundi",
+        "title": "Matumizi",
         "scan": "Changanua hundi",
-        "input": "Ingiza mwenyewe"
+        "input": "Ongeza gharama"
       },
       "contacts": {
         "group": "Kikundi",
@@ -2109,7 +2109,7 @@ export const dictionaries = {
       "home": "Mwanzo",
       "profile": "Mimi",
       "contacts": "Marafiki",
-      "expenses": "Marejesho"
+      "expenses": "Matumizi"
     },
     "terms": "Vigezo na masharti",
     "privacy": "Sera ya Faragha",
@@ -2173,7 +2173,7 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `${name} amekualika. Jisajili au ingia, na uko tayari kuanza`
       },
-      "accept": "Anza kutumia Evn"
+      "accept": "Anza kutumia Evnly"
     },
     "groups": {
       "leave": "Shikilia kuondoka",
@@ -2239,7 +2239,7 @@ export const dictionaries = {
         },
         "save": "Hifadhi na sasisha mizania"
       },
-      "title": "Lipa",
+      "title": "Matumizi",
       "balance": {
         "total": "Jumla ya bili",
         "youAreOwed": "Unadai malipo",
@@ -2253,7 +2253,7 @@ export const dictionaries = {
         },
         "title": "Ongeza washiriki",
         "add": {
-          "label": "Ongeza mshiriki"
+
         }
       },
       "me": "Mimi",
@@ -2279,9 +2279,9 @@ export const dictionaries = {
       "signout": "Oturumu kapat",
       "close": "Kapat",
       "cheques": {
-        "title": "Çekler",
+        "title": "Giderler",
         "scan": "Çeki tara",
-        "input": "Manuel gir"
+        "input": "Gider ekle"
       },
       "contacts": {
         "group": "Grup",
@@ -2298,7 +2298,7 @@ export const dictionaries = {
       "home": "Ana Sayfa",
       "profile": "Ben",
       "contacts": "Arkadaşlar",
-      "expenses": "Hesaplaşma"
+      "expenses": "Giderler"
     },
     "terms": "Şartlar ve koşullar",
     "privacy": "Gizlilik Politikası",
@@ -2362,7 +2362,7 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `${name} tarafından davet edildiniz. Sadece kaydolun veya giriş yapın, ve hazırsınız`
       },
-      "accept": "Evn'i kullanmaya başla"
+      "accept": "Evnly'i kullanmaya başla"
     },
     "groups": {
       "leave": "Ayrılmak için basılı tut",
@@ -2428,7 +2428,7 @@ export const dictionaries = {
         },
         "save": "Bakiyeleri kaydet ve güncelle"
       },
-      "title": "Hesapla",
+      "title": "Giderler",
       "balance": {
         "total": "Toplam fatura",
         "youAreOwed": "Sana borç var",
@@ -2442,7 +2442,7 @@ export const dictionaries = {
         },
         "title": "Katılımcı ekle",
         "add": {
-          "label": "Katılımcı ekle"
+
         }
       },
       "me": "Ben",
@@ -2468,9 +2468,9 @@ export const dictionaries = {
       "signout": "Вийти",
       "close": "Закрити",
       "cheques": {
-        "title": "Чеки",
+        "title": "Витрати",
         "scan": "Сканувати чек",
-        "input": "Ввести вручну"
+        "input": "Додати витрату"
       },
       "contacts": {
         "group": "Група",
@@ -2487,7 +2487,7 @@ export const dictionaries = {
       "home": "Головна",
       "profile": "Я",
       "contacts": "Друзі",
-      "expenses": "Розрахунок"
+      "expenses": "Витрати"
     },
     "terms": "Умови та положення",
     "privacy": "Політика конфіденційності",
@@ -2551,7 +2551,7 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `Вас запросив(ла) ${name}. Просто зареєструйтеся або увійдіть, і все готово`
       },
-      "accept": "Почати користуватися Evn"
+      "accept": "Почати користуватися Evnly"
     },
     "groups": {
       "leave": "Утримуйте, щоб вийти",
@@ -2617,7 +2617,7 @@ export const dictionaries = {
         },
         "save": "Зберегти й оновити баланси"
       },
-      "title": "Розрахунок",
+      "title": "Витрати",
       "balance": {
         "total": "Загальний рахунок",
         "youAreOwed": "Вам винні",
@@ -2631,7 +2631,7 @@ export const dictionaries = {
         },
         "title": "Додати учасників",
         "add": {
-          "label": "Додати учасника"
+
         }
       },
       "me": "Я",
@@ -2657,9 +2657,9 @@ export const dictionaries = {
       "signout": "退出登录",
       "close": "关闭",
       "cheques": {
-        "title": "支票",
+        "title": "支出",
         "scan": "扫描支票",
-        "input": "手动输入"
+        "input": "添加支出"
       },
       "contacts": {
         "group": "群组",
@@ -2676,7 +2676,7 @@ export const dictionaries = {
       "home": "首页",
       "profile": "我",
       "contacts": "朋友",
-      "expenses": "结算"
+      "expenses": "支出"
     },
     "terms": "条款和条件",
     "privacy": "隐私政策",
@@ -2740,7 +2740,7 @@ export const dictionaries = {
       "inviter": {
         "description": (name) => `您已被${name}邀请。只需注册或登录，您就可以开始了`
       },
-      "accept": "开始使用 Evn"
+      "accept": "开始使用 Evnly"
     },
     "groups": {
       "leave": "长按退出",
@@ -2806,7 +2806,7 @@ export const dictionaries = {
         },
         "save": "保存并更新余额"
       },
-      "title": "结清",
+      "title": "支出",
       "balance": {
         "total": "总账单",
         "youAreOwed": "你有应得的",
@@ -2820,7 +2820,7 @@ export const dictionaries = {
         },
         "title": "添加参与者",
         "add": {
-          "label": "添加参与者"
+
         }
       },
       "me": "我",

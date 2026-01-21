@@ -1,5 +1,5 @@
 recent:
-  title: Evns
+  title: Uitgaven
   empty: >-
     Er is nog niets gebeurd. Voeg wat uitgaven toe of nodig vrienden uit om op
     gang te komen.
@@ -9,3 +9,5 @@ participants:
   tabs:
     sums: Op bedragen
     shares: Op basis van aandelen
+  add:
+    label: Deelnemers toevoegen

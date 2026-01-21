@@ -31,7 +31,7 @@ friends:
     description: |-
       !js
       (name) => `${name}さんから招待されています。登録またはログインするだけで、すぐにご利用いただけます。`
-  accept: Evn を使い始める
+  accept: Evnly を使い始める
   og:
     description: 共有の支出を管理し、費用を分担し、みんなで常に連携——Evnlyで一緒に。
     title: |-
@@ -49,7 +49,7 @@ group:
   og:
     title: |-
       !js
-      (groupName) => `Evnlyで「${groupName}」に参加する`
+      (groupName) => `Evnlyで${groupName}に参加する`
     description: >-
       !js
 

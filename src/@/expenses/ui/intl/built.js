@@ -4,7 +4,7 @@
 export const dictionaries = {
   "ar-SA": {
     "recent": {
-      "title": "Evns",
+      "title": "المصروفات",
       "empty": "لم يحدث شيء بعد. أضف بعض المصروفات أو ادعُ أصدقاءك لبدء النشاط."
     },
     "payer": {
@@ -14,12 +14,15 @@ export const dictionaries = {
       "tabs": {
         "sums": "حسب المبالغ",
         "shares": "حسب الحصص"
+      },
+      "add": {
+        "label": "إضافة مشاركين"
       }
     }
   },
   "de-DE": {
     "recent": {
-      "title": "Evns",
+      "title": "Ausgaben",
       "empty": "Es ist noch nichts passiert. Füge Ausgaben hinzu oder lade Freunde ein, um loszulegen."
     },
     "payer": {
@@ -29,12 +32,15 @@ export const dictionaries = {
       "tabs": {
         "sums": "Nach Beträgen",
         "shares": "Anhand von Anteilen"
+      },
+      "add": {
+        "label": "Teilnehmer hinzufügen"
       }
     }
   },
   "en-US": {
     "recent": {
-      "title": "Evns",
+      "title": "Expenses",
       "empty": "Nothing happened yet. Add some spending or invite friends to get things started."
     },
     "payer": {
@@ -44,12 +50,15 @@ export const dictionaries = {
       "tabs": {
         "sums": "By sums",
         "shares": "By shares"
+      },
+      "add": {
+        "label": "Add participants"
       }
     }
   },
   "es-ES": {
     "recent": {
-      "title": "Evns",
+      "title": "Gastos",
       "empty": "Aún no ha pasado nada. Añade algún gasto o invita a tus amigos para poner esto en marcha."
     },
     "payer": {
@@ -59,12 +68,15 @@ export const dictionaries = {
       "tabs": {
         "sums": "Por sumas",
         "shares": "Por acciones"
+      },
+      "add": {
+        "label": "Agregar participantes"
       }
     }
   },
   "fr-FR": {
     "recent": {
-      "title": "Evns",
+      "title": "Dépenses",
       "empty": "Rien ne s'est encore passé. Ajoutez des dépenses ou invitez des amis pour lancer les choses."
     },
     "payer": {
@@ -74,12 +86,15 @@ export const dictionaries = {
       "tabs": {
         "sums": "Par sommes",
         "shares": "Par parts"
+      },
+      "add": {
+        "label": "Ajouter des participants"
       }
     }
   },
   "hi-IN": {
     "recent": {
-      "title": "Evns",
+      "title": "खर्चे",
       "empty": "अभी तक कुछ नहीं हुआ है। कुछ खर्च जोड़ें या शुरुआत करने के लिए दोस्तों को बुलाएं।"
     },
     "payer": {
@@ -89,12 +104,15 @@ export const dictionaries = {
       "tabs": {
         "sums": "राशि के अनुसार",
         "shares": "शेयरों के अनुसार"
+      },
+      "add": {
+        "label": "प्रतिभागी जोड़ें"
       }
     }
   },
   "it-IT": {
     "recent": {
-      "title": "Evns",
+      "title": "Spese",
       "empty": "Non è ancora successo nulla. Aggiungi qualche spesa o invita amici per iniziare."
     },
     "payer": {
@@ -104,12 +122,15 @@ export const dictionaries = {
       "tabs": {
         "sums": "Per somme",
         "shares": "Per quote"
+      },
+      "add": {
+        "label": "Aggiungi partecipanti"
       }
     }
   },
   "ja-JP": {
     "recent": {
-      "title": "Evns",
+      "title": "経費",
       "empty": "まだ何も起きていません。支出を追加したり、友達を招待して始めてみましょう。"
     },
     "payer": {
@@ -119,12 +140,15 @@ export const dictionaries = {
       "tabs": {
         "sums": "合計別",
         "shares": "持分ごとに"
+      },
+      "add": {
+        "label": "参加者を追加"
       }
     }
   },
   "ko-KR": {
     "recent": {
-      "title": "Evns",
+      "title": "지출",
       "empty": "아직 아무 일도 일어나지 않았어요. 지출을 추가하거나 친구를 초대해 시작해보세요."
     },
     "payer": {
@@ -134,12 +158,15 @@ export const dictionaries = {
       "tabs": {
         "sums": "금액별",
         "shares": "지분별로"
+      },
+      "add": {
+        "label": "참가자 추가"
       }
     }
   },
   "nl-NL": {
     "recent": {
-      "title": "Evns",
+      "title": "Uitgaven",
       "empty": "Er is nog niets gebeurd. Voeg wat uitgaven toe of nodig vrienden uit om op gang te komen."
     },
     "payer": {
@@ -149,12 +176,15 @@ export const dictionaries = {
       "tabs": {
         "sums": "Op bedragen",
         "shares": "Op basis van aandelen"
+      },
+      "add": {
+        "label": "Deelnemers toevoegen"
       }
     }
   },
   "ru-RU": {
     "recent": {
-      "title": "Evns",
+      "title": "Расходы",
       "empty": "Пока ничего не произошло. Добавьте расходы или пригласите друзей, чтобы начать."
     },
     "payer": {
@@ -164,12 +194,15 @@ export const dictionaries = {
       "tabs": {
         "sums": "По суммам",
         "shares": "По долям"
+      },
+      "add": {
+        "label": "Добавить участников"
       }
     }
   },
   "sw-TZ": {
     "recent": {
-      "title": "Evns",
+      "title": "Matumizi",
       "empty": "Bado hakuna kilichotokea. Ongeza matumizi au alika marafiki ili mambo yaanze."
     },
     "payer": {
@@ -179,12 +212,15 @@ export const dictionaries = {
       "tabs": {
         "sums": "Kwa jumla",
         "shares": "Kwa hisa"
+      },
+      "add": {
+        "label": "Ongeza washiriki"
       }
     }
   },
   "tr-TR": {
     "recent": {
-      "title": "Evns",
+      "title": "Giderler",
       "empty": "Henüz hiçbir şey olmadı. Biraz harcama ekleyin veya arkadaşlarınızı davet edin, böylece her şey başlasın."
     },
     "payer": {
@@ -194,12 +230,15 @@ export const dictionaries = {
       "tabs": {
         "sums": "Toplamlara göre",
         "shares": "Hisselere göre"
+      },
+      "add": {
+        "label": "Katılımcı ekle"
       }
     }
   },
   "uk-UA": {
     "recent": {
-      "title": "Evns",
+      "title": "Витрати",
       "empty": "Поки що нічого не сталося. Додайте витрати або запросіть друзів, щоб розпочати."
     },
     "payer": {
@@ -209,12 +248,15 @@ export const dictionaries = {
       "tabs": {
         "sums": "За сумами",
         "shares": "За частками"
+      },
+      "add": {
+        "label": "Додати учасників"
       }
     }
   },
   "zh-CN": {
     "recent": {
-      "title": "Evns",
+      "title": "支出",
       "empty": "还没有任何活动。添加一些支出或邀请朋友一起开启新体验吧。"
     },
     "payer": {
@@ -224,6 +266,9 @@ export const dictionaries = {
       "tabs": {
         "sums": "按金额",
         "shares": "按份额"
+      },
+      "add": {
+        "label": "添加参与者"
       }
     }
   }

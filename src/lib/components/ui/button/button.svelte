@@ -23,7 +23,7 @@
         lg: 'h-12 rounded-lg px-6 has-[>svg]:px-4 text-base',
         icon: 'size-12',
         'icon-sm': 'size-8',
-        'icon-lg': 'size-16',
+        'icon-lg': 'size-16 rounded-xl',
       },
     },
     defaultVariants: {

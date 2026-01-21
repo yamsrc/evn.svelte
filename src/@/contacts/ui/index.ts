@@ -1,3 +1,4 @@
+export { default as Actions } from './Actions.svelte'
 export { default as Invite } from './Invite.svelte'
 export { default as Contacts } from './Contacts.svelte'
 export { default as Panel } from './Panel.svelte'

@@ -6,9 +6,9 @@ actions:
   signout: Abmelden
   close: Schließen
   cheques:
-    title: Schecks
+    title: Ausgaben
     scan: Scheck scannen
-    input: Manuell eingeben
+    input: Ausgabe hinzufügen
   contacts:
     group: Gruppe
     title: Freunde
@@ -22,7 +22,7 @@ nav:
   home: Startseite
   profile: Ich
   contacts: Freunde
-  expenses: Ausgleich
+  expenses: Ausgaben
 terms: Allgemeine Geschäftsbedingungen
 privacy: Datenschutzrichtlinie
 madeBy: Erstellt von
@@ -79,7 +79,7 @@ join:
 
       (name) => `${name} hat dich eingeladen. Registriere dich einfach oder
       melde dich an, und schon kann es losgehen`
-  accept: Jetzt mit Evn starten
+  accept: Jetzt mit Evnly starten
 groups:
   leave: Gedrückt halten zum Verlassen
   name:
@@ -136,7 +136,7 @@ expenses:
     location:
       placeholder: Wo? (optional)
     save: Speichern und Salden aktualisieren
-  title: Ausgleichen
+  title: Ausgaben
   balance:
     total: Gesamtrechnung
     youAreOwed: Dir steht etwas zu
@@ -147,8 +147,7 @@ expenses:
     create:
       title: Neuen Teilnehmer erstellen
     title: Teilnehmer hinzufügen
-    add:
-      label: Teilnehmer hinzufügen
+    add: {}
   me: Ich
   empty:
     title: Noch keine Ausgaben

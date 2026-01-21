@@ -10,5 +10,5 @@ groups:
   title: ينتمي إلى المجموعات
   empty: لست عضوًا في أي مجموعة.
 expenses:
-  title: Evns
+  title: المصروفات
   empty: لا توجد مصروفات مشتركة حتى الآن.

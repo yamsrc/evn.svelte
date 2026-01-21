@@ -6,9 +6,9 @@ actions:
   signout: साइन आउट करें
   close: बंद करें
   cheques:
-    title: चेक
+    title: खर्चे
     scan: चेक स्कैन करें
-    input: मैन्युअल रूप से दर्ज करें
+    input: खर्च जोड़ें
   contacts:
     group: समूह
     title: मित्र
@@ -22,7 +22,7 @@ nav:
   home: मुख्य पृष्ठ
   profile: मैं
   contacts: मित्र
-  expenses: सेटलमेंट
+  expenses: खर्चे
 terms: नियम व शर्तें
 privacy: गोपनीयता नीति
 madeBy: द्वारा निर्मित
@@ -77,7 +77,7 @@ join:
 
       (name) => `${name} ने आपको आमंत्रित किया है। बस रजिस्टर करें या लॉग इन
       करें, और आप तैयार हैं`
-  accept: Evn का उपयोग शुरू करें
+  accept: Evnly का उपयोग शुरू करें
 groups:
   leave: छोड़ने के लिए दबाए रखें
   name:
@@ -132,7 +132,7 @@ expenses:
     location:
       placeholder: कहाँ? (वैकल्पिक)
     save: सहेजें और बैलेंस अपडेट करें
-  title: हिसाब
+  title: खर्चे
   balance:
     total: कुल बिल
     youAreOwed: आपको कुछ मिलना बाकी है
@@ -143,8 +143,7 @@ expenses:
     create:
       title: नया प्रतिभागी बनाएँ
     title: प्रतिभागी जोड़ें
-    add:
-      label: प्रतिभागी जोड़ें
+    add: {}
   me: मैं
   empty:
     title: अभी तक कोई खर्च नहीं

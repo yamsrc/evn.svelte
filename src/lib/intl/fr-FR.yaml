@@ -6,9 +6,9 @@ actions:
   signout: Se déconnecter
   close: Fermer
   cheques:
-    title: Chèques
+    title: Dépenses
     scan: Scanner le chèque
-    input: Saisir manuellement
+    input: Ajouter une dépense
   contacts:
     group: Groupe
     title: Amis
@@ -22,7 +22,7 @@ nav:
   home: Accueil
   profile: Moi
   contacts: Amis
-  expenses: Règlements
+  expenses: Dépenses
 terms: Conditions générales
 privacy: Politique de confidentialité
 madeBy: Créé par
@@ -77,7 +77,7 @@ join:
 
       (name) => `Vous avez été invité(e) par ${name}. Inscrivez-vous ou
       connectez-vous, et tout est prêt`
-  accept: Commencer à utiliser Evn
+  accept: Commencer à utiliser Evnly
 groups:
   leave: Maintenez appuyé pour quitter
   name:
@@ -136,7 +136,7 @@ expenses:
     location:
       placeholder: Où ? (facultatif)
     save: Enregistrer et mettre à jour les soldes
-  title: Régler
+  title: Dépenses
   balance:
     total: Facture totale
     youAreOwed: On te doit
@@ -147,8 +147,7 @@ expenses:
     create:
       title: Créer un nouveau participant
     title: Ajouter des participants
-    add:
-      label: Ajouter un participant
+    add: {}
   me: Moi
   empty:
     title: Aucune dépense pour l’instant

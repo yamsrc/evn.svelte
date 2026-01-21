@@ -6,9 +6,9 @@ actions:
   signout: Esci
   close: Chiudi
   cheques:
-    title: Assegni
+    title: Spese
     scan: Scansiona assegno
-    input: Inserisci manualmente
+    input: Aggiungi spesa
   contacts:
     group: Gruppo
     title: Amici
@@ -22,7 +22,7 @@ nav:
   home: Home
   profile: Io
   contacts: Amici
-  expenses: Saldo
+  expenses: Spese
 terms: Termini e condizioni
 privacy: Informativa sulla privacy
 madeBy: Realizzato da
@@ -79,7 +79,7 @@ join:
 
       (name) => `Sei stato invitato da ${name}. Basta registrarsi o accedere, e
       sei pronto`
-  accept: Inizia a usare Evn
+  accept: Inizia a usare Evnly
 groups:
   leave: Tieni premuto per uscire
   name:
@@ -136,7 +136,7 @@ expenses:
     location:
       placeholder: Dove? (opzionale)
     save: Salva e aggiorna i saldi
-  title: Saldo
+  title: Spese
   balance:
     total: Totale conto
     youAreOwed: Ti è dovuto
@@ -147,8 +147,7 @@ expenses:
     create:
       title: Crea un nuovo partecipante
     title: Aggiungi partecipanti
-    add:
-      label: Aggiungi partecipante
+    add: {}
   me: Io
   empty:
     title: Nessuna spesa ancora

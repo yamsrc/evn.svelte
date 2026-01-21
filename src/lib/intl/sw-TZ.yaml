@@ -6,9 +6,9 @@ actions:
   signout: Ondoka
   close: Funga
   cheques:
-    title: Hundi
+    title: Matumizi
     scan: Changanua hundi
-    input: Ingiza mwenyewe
+    input: Ongeza gharama
   contacts:
     group: Kikundi
     title: Marafiki
@@ -22,7 +22,7 @@ nav:
   home: Mwanzo
   profile: Mimi
   contacts: Marafiki
-  expenses: Marejesho
+  expenses: Matumizi
 terms: Vigezo na masharti
 privacy: Sera ya Faragha
 madeBy: Imetengenezwa na
@@ -73,7 +73,7 @@ join:
     description: |-
       !js
       (name) => `${name} amekualika. Jisajili au ingia, na uko tayari kuanza`
-  accept: Anza kutumia Evn
+  accept: Anza kutumia Evnly
 groups:
   leave: Shikilia kuondoka
   name:
@@ -130,7 +130,7 @@ expenses:
     location:
       placeholder: Wapi? (Hiari)
     save: Hifadhi na sasisha mizania
-  title: Lipa
+  title: Matumizi
   balance:
     total: Jumla ya bili
     youAreOwed: Unadai malipo
@@ -141,8 +141,7 @@ expenses:
     create:
       title: Unda mshiriki mpya
     title: Ongeza washiriki
-    add:
-      label: Ongeza mshiriki
+    add: {}
   me: Mimi
   empty:
     title: Hakuna matumizi bado

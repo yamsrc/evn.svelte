@@ -6,9 +6,9 @@ actions:
   signout: 退出登录
   close: 关闭
   cheques:
-    title: 支票
+    title: 支出
     scan: 扫描支票
-    input: 手动输入
+    input: 添加支出
   contacts:
     group: 群组
     title: 朋友
@@ -22,7 +22,7 @@ nav:
   home: 首页
   profile: 我
   contacts: 朋友
-  expenses: 结算
+  expenses: 支出
 terms: 条款和条件
 privacy: 隐私政策
 madeBy: 由...制作
@@ -71,7 +71,7 @@ join:
     description: |-
       !js
       (name) => `您已被${name}邀请。只需注册或登录，您就可以开始了`
-  accept: 开始使用 Evn
+  accept: 开始使用 Evnly
 groups:
   leave: 长按退出
   name:
@@ -124,7 +124,7 @@ expenses:
     location:
       placeholder: 在哪里？（可选）
     save: 保存并更新余额
-  title: 结清
+  title: 支出
   balance:
     total: 总账单
     youAreOwed: 你有应得的
@@ -135,8 +135,7 @@ expenses:
     create:
       title: 创建新参与者
     title: 添加参与者
-    add:
-      label: 添加参与者
+    add: {}
   me: 我
   empty:
     title: 暂无支出

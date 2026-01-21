@@ -39,7 +39,7 @@ friends:
 
       (name) => `Вас запросив(ла) ${name}. Просто зареєструйтеся або увійдіть —
       і все готово!`
-  accept: Почати користуватися Evn
+  accept: Почати користуватися Evnly
   og:
     description: >-
       Відстежуйте спільні витрати, діліть рахунки та залишайтеся на зв’язку —
@@ -61,7 +61,7 @@ group:
   og:
     title: |-
       !js
-      (groupName) => `Приєднатися до «${groupName}» на Evnly`
+      (groupName) => `Приєднатися до ${groupName} на Evnly`
     description: >-
       !js
 

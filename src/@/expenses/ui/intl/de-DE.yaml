@@ -1,5 +1,5 @@
 recent:
-  title: Evns
+  title: Ausgaben
   empty: >-
     Es ist noch nichts passiert. Füge Ausgaben hinzu oder lade Freunde ein, um
     loszulegen.
@@ -9,3 +9,5 @@ participants:
   tabs:
     sums: Nach Beträgen
     shares: Anhand von Anteilen
+  add:
+    label: Teilnehmer hinzufügen

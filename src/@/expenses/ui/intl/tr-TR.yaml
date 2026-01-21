@@ -1,5 +1,5 @@
 recent:
-  title: Evns
+  title: Giderler
   empty: >-
     Henüz hiçbir şey olmadı. Biraz harcama ekleyin veya arkadaşlarınızı davet
     edin, böylece her şey başlasın.
@@ -9,3 +9,5 @@ participants:
   tabs:
     sums: Toplamlara göre
     shares: Hisselere göre
+  add:
+    label: Katılımcı ekle

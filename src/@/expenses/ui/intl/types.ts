@@ -19,5 +19,8 @@ export type Dictionary = {
           sums: string
           shares: string
         }
+        add: {
+          label: string
+        }
       }
     }

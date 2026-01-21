@@ -41,7 +41,7 @@ friends:
 
       (name) => `${name} ने आपको आमंत्रित किया है। बस रजिस्टर करें या लॉग इन
       करें, और आप तैयार हैं!`
-  accept: Evn का उपयोग शुरू करें
+  accept: Evnly का उपयोग शुरू करें
   og:
     description: >-
       साझा खर्च ट्रैक करें, खर्चों को बांटें, और हमेशा साथ रहें — Evnly पर
@@ -63,7 +63,7 @@ group:
   og:
     title: |-
       !js
-      (groupName) => `Evnly पर "${groupName}" से जुड़ें`
+      (groupName) => `Evnly पर ${groupName} से जुड़ें`
     description: >-
       !js
 
