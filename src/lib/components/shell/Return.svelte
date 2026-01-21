@@ -18,9 +18,7 @@
 
     function remove() {
       returns.update((back) => {
-        back = back.filter((back) => back.id !== id)
-
-        return back
+        return back.filter((back) => back.id !== id)
       })
     }
 
