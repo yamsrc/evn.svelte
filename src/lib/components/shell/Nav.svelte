@@ -93,22 +93,22 @@
         </li>
       {/each}
     </ul>
-    {#if action}
-      <div
-        class={cn(
-          'pointer-events-auto',
-          'sm:mr-4 transition-all duration-300',
-          "[&_svg:not([class*='size-'])]:size-5",
-          rounded,
-          action || 'opacity-0',
-          position === 'center' && !action && 'hidden',
-        )}
-        style="view-transition-name: shell-actions-{position};">
-        <div class={cn('flex items-center min-h-10', action?.class)}>
+    <div
+      class={cn(
+        'pointer-events-auto',
+        'sm:mr-4 transition-all duration-300',
+        "[&_svg:not([class*='size-'])]:size-5",
+        rounded,
+        action || 'opacity-0',
+        position === 'center' && !action && 'hidden',
+      )}
+      style="view-transition-name: shell-actions-{position};">
+      <div class={cn('flex items-center min-h-10', action?.class)}>
+        {#if action}
           {@render action.snippet()}
-        </div>
+        {/if}
       </div>
-    {/if}
+    </div>
   </div>
 </nav>
 
