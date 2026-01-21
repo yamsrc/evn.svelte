@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { User } from '@lucide/svelte'
   import { Async, combined } from 'svas'
   import { dict } from '$lib/intl'
+  import { Avatar } from '@/accounts/ui'
   import { Header, Section } from '@/app/ui'
   import { Actions } from '@/app/ui'
   import { contacts } from '@/contacts'
@@ -18,7 +18,7 @@
         <Header.Title>{$dict.home.title(account.name)}</Header.Title>
         <Header.Actions>
           <Header.Button href="/me/" id="header-me-button">
-            <User class="size-5" />
+            <Avatar size={24} />
           </Header.Button>
         </Header.Actions>
       </Header.Root>

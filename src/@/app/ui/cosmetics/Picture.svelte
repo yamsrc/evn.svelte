@@ -3,7 +3,7 @@
   import { Picture } from '@/media/ui'
   import type { Props } from './Picture'
 
-  const { id = $bindable(), onchange, class: classes }: Props = $props()
+  const { id = $bindable(), onchange, class: classes, style }: Props = $props()
 
   ;(() => {
     // not yet implemented; suppress warning
@@ -18,4 +18,5 @@
   width={150}
   height={150}
   class={cn('rounded-full', classes)}
+  {style}
   loading="lazy" />

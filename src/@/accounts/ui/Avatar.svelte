@@ -7,5 +7,5 @@
 </script>
 
 {#if $account}
-  <Picture account={$account} {...props} />
+  <Picture account={$account} {...props} style="view-transition-name: my-avatar;" />
 {/if}

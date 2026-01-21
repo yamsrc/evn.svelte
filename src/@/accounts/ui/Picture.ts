@@ -6,4 +6,5 @@ export interface Props {
   account: AccountLike
   size?: number
   class?: string
+  style?: string
 }
