@@ -8,7 +8,6 @@
   import { QR } from '$com/qr'
   import { Actions, Return } from '$com/shell'
   import { dict } from '$lib/intl'
-  import * as ButtonGroup from '$ui/button-group'
   import { Input } from '$ui/input'
   import { Spinner } from '$ui/spinner'
   import { Action, Section, actionVariants } from '@/app/ui'
@@ -84,18 +83,16 @@
 <Return />
 
 <Actions>
-  <ButtonGroup.Root>
-    <Share class={actionVariants({ variant: 'secondary', class: 'flex-1' })} data={invitation} />
-    <QR class={actionVariants({ variant: 'secondary', class: 'flex-1' })} text={invitation.url} />
-    <Action
-      disabled={(contactsSelection.size === 0 && favoritesSelection.size === 0) || busy}
-      onclick={addMembers}>
-      {#if busy}
-        <Spinner />
-      {:else}
-        <Check />
-      {/if}
-      <span>{$dict.actions.addSelected}</span>
-    </Action>
-  </ButtonGroup.Root>
+  <Share class={actionVariants({ variant: 'secondary', class: 'flex-1' })} data={invitation} />
+  <QR class={actionVariants({ variant: 'secondary', class: 'flex-1' })} text={invitation.url} />
+  <Action
+    disabled={(contactsSelection.size === 0 && favoritesSelection.size === 0) || busy}
+    onclick={addMembers}>
+    {#if busy}
+      <Spinner />
+    {:else}
+      <Check />
+    {/if}
+    <span>{$dict.actions.addSelected}</span>
+  </Action>
 </Actions>

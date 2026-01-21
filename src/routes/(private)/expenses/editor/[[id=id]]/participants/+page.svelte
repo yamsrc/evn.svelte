@@ -5,7 +5,6 @@
   import { back } from '$com/history'
   import { Actions, Return } from '$com/shell'
   import { dict } from '$lib/intl'
-  import * as ButtonGroup from '$ui/button-group'
   import { Input } from '$ui/input'
   import { Action, Section } from '@/app/ui'
   import { Header } from '@/app/ui'
@@ -99,16 +98,17 @@
 <Return />
 
 <Actions>
-  <ButtonGroup.Root>
-    <CreateDialog
-      class={actionVariants({ variant: 'secondary', class: 'flex-1 [&_span]:hidden' })} />
-    <Action
-      id="expenses-add-participants-add-button"
-      variant="default"
-      disabled={contactsSelection.size === 0 && groupSelection.size === 0}
-      onclick={addParticipants}>
-      <Check />
-      <span>{$dict.actions.addSelected}</span>
-    </Action>
-  </ButtonGroup.Root>
+  <CreateDialog
+    class={actionVariants({
+      variant: 'secondary',
+      class: 'flex-1 [&_span]:hidden',
+    })} />
+  <Action
+    id="expenses-add-participants-add-button"
+    variant="default"
+    disabled={contactsSelection.size === 0 && groupSelection.size === 0}
+    onclick={addParticipants}>
+    <Check />
+    <span>{$dict.actions.addSelected}</span>
+  </Action>
 </Actions>

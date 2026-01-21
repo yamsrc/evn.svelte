@@ -6,6 +6,7 @@
   import { back } from '$com/history'
   import { cn } from '$lib/utils'
   import { Button } from '$ui/button'
+  import * as ButtonGroup from '$ui/button-group'
   import { exact, href, match, nested, type Props, type Section } from './Nav'
   import { actions, returns } from './store'
 
@@ -20,6 +21,7 @@
   )
 
   const rounded = 'rounded-xl'
+  const buttonMargin = 'm-1'
 
   onMount(() => {
     for (const section of sections) preloadCode(section.href)
@@ -41,13 +43,13 @@
   ">
   <div
     class={cn(
-      'flex items-center gap-2 p-5 pt-0 sm:pb-6 standalone:px-6 standalone:pb-0',
+      'flex items-center gap-2 h-21 p-5 pt-0 sm:pb-6 standalone:px-6 standalone:pb-0',
       position === 'center' ? 'justify-center' : 'justify-between',
       position === 'start' ? 'flex-row' : 'flex-row-reverse',
     )}>
     <ul
       class={cn(
-        'bg-muted backdrop-blur-xs overflow-hidden flex pointer-events-auto sm:ml-4 h-16',
+        'bg-muted backdrop-blur-xs overflow-hidden flex pointer-events-auto sm:ml-4 h-full',
         rounded,
       )}
       style="view-transition-name: shell-nav;">
@@ -70,7 +72,8 @@
             )}>
             <div
               class={cn(
-                'absolute inset-0 bg-background z-0 m-1 rounded-[calc(var(--radius)+2px)]',
+                'absolute inset-0 bg-background z-0 rounded-[calc(var(--radius)+2px)]',
+                buttonMargin,
                 active || 'hidden',
               )}
               style={active ? 'view-transition-name: shell-nav-active;' : ''}>
@@ -98,6 +101,7 @@
     {#if action}
       <div
         class={cn(
+          'flex h-full',
           'pointer-events-auto',
           'sm:mr-4 transition-all duration-300',
           "[&_svg:not([class*='size-'])]:size-5",
@@ -106,9 +110,9 @@
           position === 'center' && !action && 'hidden',
         )}
         style="view-transition-name: shell-actions-{position};">
-        <div class={cn('flex items-center min-h-10', action?.class)}>
+        <ButtonGroup.Root class={cn('flex-1 flex', buttonMargin, action?.class)}>
           {@render action.snippet()}
-        </div>
+        </ButtonGroup.Root>
       </div>
     {/if}
   </div>
