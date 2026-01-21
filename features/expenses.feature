@@ -5,6 +5,7 @@ Feature: Expenses
     And I tap 'nav-contacts-button'
     And I tap 'nav-expenses-button'
     And I tap 'nav-action-input'
+    And I tap 'expenses-spendings-add-participants-button'
     Then 'expenses-add-participants-add-button' is visible
     When I tap 'expenses-add-participants-create-button'
     Then 'app-cosmetics-name-input' is visible
@@ -88,6 +89,7 @@ Feature: Expenses
     And I tap 'nav-contacts-button'
     And I tap 'nav-expenses-button'
     And I tap 'nav-action-input'
+    And I tap 'expenses-spendings-add-participants-button'
     Then 'expenses-add-participants-add-button' is visible
     When I tap first item of 'contacts-list-content'
     And I tap 'expenses-add-participants-add-button'
@@ -135,6 +137,7 @@ Feature: Expenses
     And I tap 'nav-contacts-button'
     And I tap 'nav-expenses-button'
     And I tap 'nav-action-input'
+    And I tap 'expenses-spendings-add-participants-button'
     Then 'expenses-add-participants-add-button' is visible
     When I tap first item of 'contacts-list-content'
     And I tap 'expenses-add-participants-add-button'
@@ -165,6 +168,7 @@ Feature: Expenses
     And I tap 'nav-contacts-button'
     And I tap 'nav-expenses-button'
     And I tap 'nav-action-input'
+    And I tap 'expenses-spendings-add-participants-button'
     Then 'expenses-add-participants-add-button' is visible
     When I tap first item of 'contacts-list-content'
     And I tap 'expenses-add-participants-add-button'
