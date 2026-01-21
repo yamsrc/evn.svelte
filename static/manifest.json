@@ -1,9 +1,9 @@
 {
   "$schema": "https://json.schemastore.org/web-manifest.json",
   "id": "com.evnapp",
-  "name": "evn",
-  "short_name": "evn",
-  "description": "Split expenses wiser",
+  "name": "Evnly",
+  "short_name": "Evnly",
+  "description": "Split wiser",
   "categories": [
     "social",
     "finance"
@@ -20,6 +20,16 @@
       "auto"
     ]
   },
+  "shortcuts": [
+    {
+      "name": "Friends",
+      "url": "/outfits/"
+    },
+    {
+      "name": "Expenses",
+      "url": "/expenses/"
+    }
+  ],
   "icons": [
     {
       "src": "/icon-192.png",
