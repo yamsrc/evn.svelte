@@ -1,6 +1,7 @@
 <script lang="ts">
   import { ok } from 'svas'
   import { page } from '$app/state'
+  import { oidc } from '$config'
   import { Screen, Authenticated, Goto } from '@/app/ui'
   import { account as iam } from '@/iam'
   import Accept from './Accept.svelte'
@@ -20,7 +21,7 @@
   <Expired />
 {:else if good}
   <Screen>
-    <Authenticated {account}>
+    <Authenticated {account} {oidc}>
       {#if accepted || $iam?.id === account.id}
         <Goto href="/" />
       {/if}
