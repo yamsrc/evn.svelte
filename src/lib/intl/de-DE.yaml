@@ -6,9 +6,9 @@ actions:
   signout: Abmelden
   close: Schließen
   cheques:
-    title: Schecks
+    title: Ausgaben
     scan: Scheck scannen
-    input: Manuell eingeben
+    input: Ausgabe hinzufügen
   contacts:
     group: Gruppe
     title: Freunde

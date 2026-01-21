@@ -6,9 +6,9 @@ actions:
   signout: تسجيل الخروج
   close: إغلاق
   cheques:
-    title: شيكات
+    title: المصروفات
     scan: مسح الشيك
-    input: إدخال يدوي
+    input: إضافة مصروف
   contacts:
     group: مجموعة
     title: أصدقاء

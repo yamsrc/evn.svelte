@@ -6,9 +6,9 @@ actions:
   signout: Oturumu kapat
   close: Kapat
   cheques:
-    title: Çekler
+    title: Giderler
     scan: Çeki tara
-    input: Manuel gir
+    input: Gider ekle
   contacts:
     group: Grup
     title: Arkadaşlar

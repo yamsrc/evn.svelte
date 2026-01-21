@@ -6,9 +6,9 @@ actions:
   signout: साइन आउट करें
   close: बंद करें
   cheques:
-    title: चेक
+    title: खर्चे
     scan: चेक स्कैन करें
-    input: मैन्युअल रूप से दर्ज करें
+    input: खर्च जोड़ें
   contacts:
     group: समूह
     title: मित्र

@@ -6,9 +6,9 @@ actions:
   signout: サインアウト
   close: 閉じる
   cheques:
-    title: 小切手
+    title: 経費
     scan: 小切手をスキャン
-    input: 手動で入力
+    input: 支出を追加
   contacts:
     group: グループ
     title: 友達

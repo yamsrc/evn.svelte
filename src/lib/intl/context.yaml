@@ -17,11 +17,11 @@ inputs:
       input: Close
     cheques:
       title:
-        input: Cheques
+        input: Expenses
       scan:
         input: Scan cheque
       input:
-        input: Input manually
+        input: Add expense
     contacts:
       group:
         input: Group

@@ -11,9 +11,9 @@ export const dictionaries = {
       "signout": "تسجيل الخروج",
       "close": "إغلاق",
       "cheques": {
-        "title": "شيكات",
+        "title": "المصروفات",
         "scan": "مسح الشيك",
-        "input": "إدخال يدوي"
+        "input": "إضافة مصروف"
       },
       "contacts": {
         "group": "مجموعة",
@@ -200,9 +200,9 @@ export const dictionaries = {
       "signout": "Abmelden",
       "close": "Schließen",
       "cheques": {
-        "title": "Schecks",
+        "title": "Ausgaben",
         "scan": "Scheck scannen",
-        "input": "Manuell eingeben"
+        "input": "Ausgabe hinzufügen"
       },
       "contacts": {
         "group": "Gruppe",
@@ -389,9 +389,9 @@ export const dictionaries = {
       "signout": "Sign out",
       "close": "Close",
       "cheques": {
-        "title": "Checks",
+        "title": "Expenses",
         "scan": "Scan cheque",
-        "input": "Enter manually"
+        "input": "Add expense"
       },
       "contacts": {
         "group": "Group",
@@ -578,9 +578,9 @@ export const dictionaries = {
       "signout": "Cerrar sesión",
       "close": "Cerrar",
       "cheques": {
-        "title": "Cheques",
+        "title": "Gastos",
         "scan": "Escanear cheque",
-        "input": "Introducir manualmente"
+        "input": "Añadir gasto"
       },
       "contacts": {
         "group": "Grupo",
@@ -767,9 +767,9 @@ export const dictionaries = {
       "signout": "Se déconnecter",
       "close": "Fermer",
       "cheques": {
-        "title": "Chèques",
+        "title": "Dépenses",
         "scan": "Scanner le chèque",
-        "input": "Saisir manuellement"
+        "input": "Ajouter une dépense"
       },
       "contacts": {
         "group": "Groupe",
@@ -956,9 +956,9 @@ export const dictionaries = {
       "signout": "साइन आउट करें",
       "close": "बंद करें",
       "cheques": {
-        "title": "चेक",
+        "title": "खर्चे",
         "scan": "चेक स्कैन करें",
-        "input": "मैन्युअल रूप से दर्ज करें"
+        "input": "खर्च जोड़ें"
       },
       "contacts": {
         "group": "समूह",
@@ -1145,9 +1145,9 @@ export const dictionaries = {
       "signout": "Esci",
       "close": "Chiudi",
       "cheques": {
-        "title": "Assegni",
+        "title": "Spese",
         "scan": "Scansiona assegno",
-        "input": "Inserisci manualmente"
+        "input": "Aggiungi spesa"
       },
       "contacts": {
         "group": "Gruppo",
@@ -1334,9 +1334,9 @@ export const dictionaries = {
       "signout": "サインアウト",
       "close": "閉じる",
       "cheques": {
-        "title": "小切手",
+        "title": "経費",
         "scan": "小切手をスキャン",
-        "input": "手動で入力"
+        "input": "支出を追加"
       },
       "contacts": {
         "group": "グループ",
@@ -1523,9 +1523,9 @@ export const dictionaries = {
       "signout": "로그아웃",
       "close": "닫기",
       "cheques": {
-        "title": "수표",
+        "title": "지출",
         "scan": "수표 스캔",
-        "input": "수동 입력"
+        "input": "지출 추가"
       },
       "contacts": {
         "group": "그룹",
@@ -1712,9 +1712,9 @@ export const dictionaries = {
       "signout": "Afmelden",
       "close": "Sluiten",
       "cheques": {
-        "title": "Cheques",
+        "title": "Uitgaven",
         "scan": "Cheque scannen",
-        "input": "Handmatig invoeren"
+        "input": "Uitgave toevoegen"
       },
       "contacts": {
         "group": "Groep",
@@ -1901,9 +1901,9 @@ export const dictionaries = {
       "signout": "Выйти",
       "close": "Закрыть",
       "cheques": {
-        "title": "Чеки",
+        "title": "Расходы",
         "scan": "Сканировать чек",
-        "input": "Ввести вручную"
+        "input": "Добавить расход"
       },
       "contacts": {
         "group": "Группа",
@@ -2090,9 +2090,9 @@ export const dictionaries = {
       "signout": "Ondoka",
       "close": "Funga",
       "cheques": {
-        "title": "Hundi",
+        "title": "Matumizi",
         "scan": "Changanua hundi",
-        "input": "Ingiza mwenyewe"
+        "input": "Ongeza gharama"
       },
       "contacts": {
         "group": "Kikundi",
@@ -2279,9 +2279,9 @@ export const dictionaries = {
       "signout": "Oturumu kapat",
       "close": "Kapat",
       "cheques": {
-        "title": "Çekler",
+        "title": "Giderler",
         "scan": "Çeki tara",
-        "input": "Manuel gir"
+        "input": "Gider ekle"
       },
       "contacts": {
         "group": "Grup",
@@ -2468,9 +2468,9 @@ export const dictionaries = {
       "signout": "Вийти",
       "close": "Закрити",
       "cheques": {
-        "title": "Чеки",
+        "title": "Витрати",
         "scan": "Сканувати чек",
-        "input": "Ввести вручну"
+        "input": "Додати витрату"
       },
       "contacts": {
         "group": "Група",
@@ -2657,9 +2657,9 @@ export const dictionaries = {
       "signout": "退出登录",
       "close": "关闭",
       "cheques": {
-        "title": "支票",
+        "title": "支出",
         "scan": "扫描支票",
-        "input": "手动输入"
+        "input": "添加支出"
       },
       "contacts": {
         "group": "群组",

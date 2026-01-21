@@ -6,9 +6,9 @@ actions:
   signout: Sign out
   close: Close
   cheques:
-    title: Checks
+    title: Expenses
     scan: Scan cheque
-    input: Enter manually
+    input: Add expense
   contacts:
     group: Group
     title: Friends

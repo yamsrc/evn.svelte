@@ -6,9 +6,9 @@ actions:
   signout: Ondoka
   close: Funga
   cheques:
-    title: Hundi
+    title: Matumizi
     scan: Changanua hundi
-    input: Ingiza mwenyewe
+    input: Ongeza gharama
   contacts:
     group: Kikundi
     title: Marafiki

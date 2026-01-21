@@ -6,9 +6,9 @@ actions:
   signout: Afmelden
   close: Sluiten
   cheques:
-    title: Cheques
+    title: Uitgaven
     scan: Cheque scannen
-    input: Handmatig invoeren
+    input: Uitgave toevoegen
   contacts:
     group: Groep
     title: Vrienden

@@ -6,9 +6,9 @@ actions:
   signout: Se déconnecter
   close: Fermer
   cheques:
-    title: Chèques
+    title: Dépenses
     scan: Scanner le chèque
-    input: Saisir manuellement
+    input: Ajouter une dépense
   contacts:
     group: Groupe
     title: Amis

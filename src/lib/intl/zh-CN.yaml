@@ -6,9 +6,9 @@ actions:
   signout: 退出登录
   close: 关闭
   cheques:
-    title: 支票
+    title: 支出
     scan: 扫描支票
-    input: 手动输入
+    input: 添加支出
   contacts:
     group: 群组
     title: 朋友

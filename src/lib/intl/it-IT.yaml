@@ -6,9 +6,9 @@ actions:
   signout: Esci
   close: Chiudi
   cheques:
-    title: Assegni
+    title: Spese
     scan: Scansiona assegno
-    input: Inserisci manualmente
+    input: Aggiungi spesa
   contacts:
     group: Gruppo
     title: Amici

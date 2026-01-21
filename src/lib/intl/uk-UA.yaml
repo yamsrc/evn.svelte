@@ -6,9 +6,9 @@ actions:
   signout: Вийти
   close: Закрити
   cheques:
-    title: Чеки
+    title: Витрати
     scan: Сканувати чек
-    input: Ввести вручну
+    input: Додати витрату
   contacts:
     group: Група
     title: Друзі
