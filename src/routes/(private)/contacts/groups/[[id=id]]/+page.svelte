@@ -58,7 +58,7 @@
 
 <Section>
   <Header.Root>
-    <Header.Title>{$dict.groups.create}</Header.Title>
+    <Header.Title></Header.Title>
     {#if id}
       <Header.Actions>
         <Hold
