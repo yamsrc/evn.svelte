@@ -61,7 +61,7 @@ group:
   og:
     title: |-
       !js
-      (groupName) => `Приєднатися до «${groupName}» на Evnly`
+      (groupName) => `Приєднатися до ${groupName} на Evnly`
     description: >-
       !js
 

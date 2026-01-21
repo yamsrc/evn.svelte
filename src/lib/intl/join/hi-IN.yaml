@@ -21,7 +21,7 @@ account:
     description: इस ट्रांसफ़र अनुरोध की अवधि समाप्त हो गई है।
     title: स्थानांतरण की अवधि समाप्त
   og:
-    tile: Evnlyly पर अपने खाते का नियंत्रण संभालें।
+    tile: Evnly पर अपने खाते का नियंत्रण संभालें।
     description: >-
       !js
 
@@ -44,26 +44,26 @@ friends:
   accept: Evnly का उपयोग शुरू करें
   og:
     description: >-
-      साझा खर्च ट्रैक करें, खर्चों को बांटें, और हमेशा साथ रहें — Evnlyly पर
+      साझा खर्च ट्रैक करें, खर्चों को बांटें, और हमेशा साथ रहें — Evnly पर
       मिलकर।
     title: |-
       !js
-      (name) => `${name} के साथ Evnlyly पर जुड़ें`
+      (name) => `${name} के साथ Evnly पर जुड़ें`
   dialog:
-    title: Evnlyly पर कनेक्ट करें
+    title: Evnly पर कनेक्ट करें
     description: जारी रखने के लिए साइन इन करें या एक खाता बनाएं।
     accept: कनेक्ट करें
     decline: अभी नहीं
     content: >-
       !js
 
-      (name) => `${name} Evnlyly पर आपके साथ जुड़ना चाहता है ताकि साझा खर्च ट्रैक
+      (name) => `${name} Evnly पर आपके साथ जुड़ना चाहता है ताकि साझा खर्च ट्रैक
       कर सकें।`
 group:
   og:
     title: |-
       !js
-      (groupName) => `Evnlyly पर "${groupName}" से जुड़ें`
+      (groupName) => `Evnly पर ${groupName} से जुड़ें`
     description: >-
       !js
 

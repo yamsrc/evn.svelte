@@ -19,7 +19,7 @@ account:
     description: Ombi hili la uhamisho limekwisha muda wake.
     title: Uhamisho umeisha muda wake
   og:
-    tile: Chukua udhibiti wa akaunti yako kwenye Evnlyly.
+    tile: Chukua udhibiti wa akaunti yako kwenye Evnly.
     description: >-
       !js
 
@@ -41,25 +41,25 @@ friends:
   og:
     description: >-
       Fatilia matumizi ya pamoja, gawanya gharama, na dumuni mmelingano — pamoja
-      kwenye Evnlyly.
+      kwenye Evnly.
     title: |-
       !js
-      (name) => `Jiunge na ${name} kwenye Evnlyly`
+      (name) => `Jiunge na ${name} kwenye Evnly`
   dialog:
-    title: Unganisha kwenye Evnlyly
+    title: Unganisha kwenye Evnly
     description: Ingia au tengeneza akaunti ili kuendelea.
     accept: Unganisha
     decline: Siyo sasa
     content: >-
       !js
 
-      (name) => `${name} anataka kuungana nawe kwenye Evnlyly ili kufuatilia
+      (name) => `${name} anataka kuungana nawe kwenye Evnly ili kufuatilia
       matumizi yenu ya pamoja.`
 group:
   og:
     title: |-
       !js
-      (groupName) => `Jiunge na "${groupName}" kwenye Evnlyly`
+      (groupName) => `Jiunge na ${groupName} kwenye Evnly`
     description: >-
       !js
 

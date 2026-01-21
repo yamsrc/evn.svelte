@@ -59,7 +59,7 @@ group:
   og:
     title: |-
       !js
-      (groupName) => `Join "${groupName}" on Evnly`
+      (groupName) => `Join ${groupName} on Evnly`
     description: >-
       !js
 

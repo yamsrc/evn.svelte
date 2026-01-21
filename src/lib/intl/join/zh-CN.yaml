@@ -47,7 +47,7 @@ group:
   og:
     title: |-
       !js
-      (groupName) => `在Evnly加入“${groupName}”`
+      (groupName) => `在Evnly加入${groupName}`
     description: >-
       !js
 

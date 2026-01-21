@@ -21,7 +21,7 @@ account:
     description: Esta solicitud de transferencia ha caducado.
     title: Transferencia caducada
   og:
-    tile: Toma el control de tu cuenta en Evnlyly.
+    tile: Toma el control de tu cuenta en Evnly.
     description: >-
       !js
 
@@ -45,25 +45,25 @@ friends:
   og:
     description: >-
       Lleva el control de los gastos compartidos, divide los costes y mantente
-      sincronizado, todo juntos en Evnlyly.
+      sincronizado, todo juntos en Evnly.
     title: |-
       !js
-      (name) => `Únete a ${name} en Evnlyly`
+      (name) => `Únete a ${name} en Evnly`
   dialog:
-    title: Conéctate en Evnlyly
+    title: Conéctate en Evnly
     description: Inicia sesión o crea una cuenta para continuar.
     accept: Conectar
     decline: Ahora no
     content: >-
       !js
 
-      (name) => `${name} quiere conectar contigo en Evnlyly para llevar un
+      (name) => `${name} quiere conectar contigo en Evnly para llevar un
       seguimiento de los gastos compartidos.`
 group:
   og:
     title: |-
       !js
-      (groupName) => `Únete a "${groupName}" en Evnlyly`
+      (groupName) => `Únete a ${groupName} en Evnly`
     description: >-
       !js
 

@@ -19,7 +19,7 @@ account:
     description: انتهت صلاحية طلب التحويل هذا.
     title: انتهت صلاحية النقل
   og:
-    tile: استلم التحكم في حسابك على Evnlyly.
+    tile: استلم التحكم في حسابك على Evnly.
     description: >-
       !js
 
@@ -39,10 +39,10 @@ friends:
       وستكون جاهزًا!`
   accept: ابدأ استخدام Evnly
   og:
-    description: تابع المصاريف المشتركة، ووزّع التكاليف، وابقَ متزامنًا — معًا على Evnlyly.
+    description: تابع المصاريف المشتركة، ووزّع التكاليف، وابقَ متزامنًا — معًا على Evnly.
     title: |-
       !js
-      (name) => `انضم إلى ${name} على Evnlyly`
+      (name) => `انضم إلى ${name} على Evnly`
   dialog:
     title: تواصل على إيفنلي
     description: سجّل الدخول أو أنشئ حسابًا للمتابعة.
@@ -50,12 +50,12 @@ friends:
     decline: ليس الآن
     content: |-
       !js
-      (name) => `${name} يرغب في التواصل معك عبر Evnlyly لتتبع النفقات المشتركة.`
+      (name) => `${name} يرغب في التواصل معك عبر Evnly لتتبع النفقات المشتركة.`
 group:
   og:
     title: |-
       !js
-      (groupName) => `انضم إلى "${groupName}" على Evnlyly`
+      (groupName) => `انضم إلى ${groupName} على Evnly`
     description: >-
       !js
 

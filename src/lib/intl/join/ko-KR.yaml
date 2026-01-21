@@ -15,7 +15,7 @@ account:
     description: 이체 요청이 만료되었습니다.
     title: 전송 만료됨
   og:
-    tile: Evnlyly에서 계정을 인수하세요.
+    tile: Evnly에서 계정을 인수하세요.
     description: |-
       !js
       (name) => `${name}님, 이 계정은 회원님을 위해 생성되었습니다. 로그인 정보를 설정하여 소유권을 가져가세요.`
@@ -31,23 +31,23 @@ friends:
       (name) => `${name}님이 초대하셨습니다. 가입하거나 로그인하면 바로 시작할 수 있어요!`
   accept: Evnly 시작하기
   og:
-    description: 공동 지출을 기록하고, 비용을 나누며, 항상 함께 맞춰보세요 — Evnlyly에서 같이.
+    description: 공동 지출을 기록하고, 비용을 나누며, 항상 함께 맞춰보세요 — Evnly에서 같이.
     title: |-
       !js
-      (name) => `Evnlyly에서 ${name}와 함께해요`
+      (name) => `Evnly에서 ${name}와 함께해요`
   dialog:
-    title: Evnlyly에서 연결하기
+    title: Evnly에서 연결하기
     description: 계속하려면 로그인하거나 계정을 생성하세요.
     accept: 연결
     decline: 지금은 아니에요
     content: |-
       !js
-      (name) => `${name}님이 Evnlyly에서 함께 연결해 공동 지출을 관리하고 싶어합니다.`
+      (name) => `${name}님이 Evnly에서 함께 연결해 공동 지출을 관리하고 싶어합니다.`
 group:
   og:
     title: |-
       !js
-      (groupName) => `Evnlyly에서 "${groupName}"에 가입하기`
+      (groupName) => `Evnly에서 ${groupName}에 참여하세요`
     description: >-
       !js
 

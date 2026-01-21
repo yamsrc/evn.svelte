@@ -20,7 +20,7 @@ export const dictionaries = {
         "title": "انتهت صلاحية النقل"
       },
       "og": {
-        "tile": "استلم التحكم في حسابك على Evnlyly.",
+        "tile": "استلم التحكم في حسابك على Evnly.",
         "description": (name) => `${name}، تم إنشاء هذا الحساب لك. أنشئ بيانات تسجيل الدخول لتصبح المالك.`
       }
     },
@@ -37,20 +37,20 @@ export const dictionaries = {
       },
       "accept": "ابدأ استخدام Evnly",
       "og": {
-        "description": "تابع المصاريف المشتركة، ووزّع التكاليف، وابقَ متزامنًا — معًا على Evnlyly.",
-        "title": (name) => `انضم إلى ${name} على Evnlyly`
+        "description": "تابع المصاريف المشتركة، ووزّع التكاليف، وابقَ متزامنًا — معًا على Evnly.",
+        "title": (name) => `انضم إلى ${name} على Evnly`
       },
       "dialog": {
         "title": "تواصل على إيفنلي",
         "description": "سجّل الدخول أو أنشئ حسابًا للمتابعة.",
         "accept": "اتصل",
         "decline": "ليس الآن",
-        "content": (name) => `${name} يرغب في التواصل معك عبر Evnlyly لتتبع النفقات المشتركة.`
+        "content": (name) => `${name} يرغب في التواصل معك عبر Evnly لتتبع النفقات المشتركة.`
       }
     },
     "group": {
       "og": {
-        "title": (groupName) => `انضم إلى "${groupName}" على Evnlyly`,
+        "title": (groupName) => `انضم إلى ${groupName} على Evnly`,
         "description": (names) => `قسّم المصاريف مع ${new Intl.ListFormat("ar", { style: "long", type: "conjunction" }).format(names)}`
       },
       "dialog": {
@@ -78,7 +78,7 @@ export const dictionaries = {
         "title": "Übertragung abgelaufen"
       },
       "og": {
-        "tile": "Übernimm dein Evnlyly-Konto.",
+        "tile": "Übernimm dein Evnly.",
         "description": (name) => `${name}, dieses Konto wurde für dich erstellt. Übernimm es, indem du deine Anmeldedaten festlegst.`
       }
     },
@@ -95,20 +95,20 @@ export const dictionaries = {
       },
       "accept": "Evnly jetzt nutzen",
       "og": {
-        "description": "Geteilte Ausgaben verfolgen, Kosten aufteilen und immer abgestimmt bleiben – gemeinsam auf Evnlyly.",
-        "title": (name) => `Tritt ${name} auf Evnlyly bei`
+        "description": "Geteilte Ausgaben verfolgen, Kosten aufteilen und immer abgestimmt bleiben – gemeinsam auf Evnly.",
+        "title": (name) => `Tritt ${name} auf Evnly bei`
       },
       "dialog": {
-        "title": "Auf Evnlyly verbinden",
+        "title": "Auf Evnly verbinden",
         "description": "Melden Sie sich an oder erstellen Sie ein Konto, um fortzufahren.",
         "accept": "Verbinden",
         "decline": "Nicht jetzt",
-        "content": (name) => `${name} möchte sich auf Evnlyly mit dir verbinden, um gemeinsame Ausgaben zu verfolgen.`
+        "content": (name) => `${name} möchte sich auf Evnly mit dir verbinden, um gemeinsame Ausgaben zu verfolgen.`
       }
     },
     "group": {
       "og": {
-        "title": (groupName) => `Tritt "${groupName}" auf Evnlyly bei`,
+        "title": (groupName) => `Tritt ${groupName} auf Evnly bei`,
         "description": (names) => `Teile die Ausgaben mit ${new Intl.ListFormat("de", { style: "long", type: "conjunction" }).format(names)}`
       },
       "dialog": {
@@ -166,7 +166,7 @@ export const dictionaries = {
     },
     "group": {
       "og": {
-        "title": (groupName) => `Join "${groupName}" on Evnly`,
+        "title": (groupName) => `Join ${groupName} on Evnly`,
         "description": (names) => `Split expenses with ${new Intl.ListFormat("en", { style: "long", type: "conjunction" }).format(names)}`
       },
       "dialog": {
@@ -194,7 +194,7 @@ export const dictionaries = {
         "title": "Transferencia caducada"
       },
       "og": {
-        "tile": "Toma el control de tu cuenta en Evnlyly.",
+        "tile": "Toma el control de tu cuenta en Evnly.",
         "description": (name) => `${name}, esta cuenta fue creada para ti. Hazla tuya configurando tus datos de acceso.`
       }
     },
@@ -211,20 +211,20 @@ export const dictionaries = {
       },
       "accept": "Comienza a usar Evnly",
       "og": {
-        "description": "Lleva el control de los gastos compartidos, divide los costes y mantente sincronizado, todo juntos en Evnlyly.",
-        "title": (name) => `Únete a ${name} en Evnlyly`
+        "description": "Lleva el control de los gastos compartidos, divide los costes y mantente sincronizado, todo juntos en Evnly.",
+        "title": (name) => `Únete a ${name} en Evnly`
       },
       "dialog": {
-        "title": "Conéctate en Evnlyly",
+        "title": "Conéctate en Evnly",
         "description": "Inicia sesión o crea una cuenta para continuar.",
         "accept": "Conectar",
         "decline": "Ahora no",
-        "content": (name) => `${name} quiere conectar contigo en Evnlyly para llevar un seguimiento de los gastos compartidos.`
+        "content": (name) => `${name} quiere conectar contigo en Evnly para llevar un seguimiento de los gastos compartidos.`
       }
     },
     "group": {
       "og": {
-        "title": (groupName) => `Únete a "${groupName}" en Evnlyly`,
+        "title": (groupName) => `Únete a ${groupName} en Evnly`,
         "description": (names) => `Divide los gastos con ${new Intl.ListFormat("es", { style: "long", type: "conjunction" }).format(names)}`
       },
       "dialog": {
@@ -252,7 +252,7 @@ export const dictionaries = {
         "title": "Transfert expiré"
       },
       "og": {
-        "tile": "Prenez le contrôle de votre compte Evnlyly.",
+        "tile": "Prenez le contrôle de votre compte Evnly.",
         "description": (name) => `${name}, ce compte a été créé pour vous. Prenez-en possession en configurant vos identifiants de connexion.`
       }
     },
@@ -269,20 +269,20 @@ export const dictionaries = {
       },
       "accept": "Commencer à utiliser Evnly",
       "og": {
-        "description": "Gérez vos dépenses partagées, répartissez les coûts et restez synchronisés — ensemble sur Evnlyly.",
-        "title": (name) => `Rejoins ${name} sur Evnlyly`
+        "description": "Gérez vos dépenses partagées, répartissez les coûts et restez synchronisés — ensemble sur Evnly.",
+        "title": (name) => `Rejoins ${name} sur Evnly`
       },
       "dialog": {
-        "title": "Connectez-vous sur Evnlyly",
+        "title": "Connectez-vous sur Evnly",
         "description": "Connectez-vous ou créez un compte pour continuer.",
         "accept": "Se connecter",
         "decline": "Pas maintenant",
-        "content": (name) => `${name} souhaite se connecter avec vous sur Evnlyly pour suivre les dépenses partagées.`
+        "content": (name) => `${name} souhaite se connecter avec vous sur Evnly pour suivre les dépenses partagées.`
       }
     },
     "group": {
       "og": {
-        "title": (groupName) => `Rejoindre « ${groupName} » sur Evnlyly`,
+        "title": (groupName) => `Rejoignez ${groupName} sur Evnly`,
         "description": (names) => `Partagez les dépenses avec ${new Intl.ListFormat("fr", { style: "long", type: "conjunction" }).format(names)}`
       },
       "dialog": {
@@ -310,7 +310,7 @@ export const dictionaries = {
         "title": "स्थानांतरण की अवधि समाप्त"
       },
       "og": {
-        "tile": "Evnlyly पर अपने खाते का नियंत्रण संभालें।",
+        "tile": "Evnly पर अपने खाते का नियंत्रण संभालें।",
         "description": (name) => `${name}, यह खाता आपके लिए बनाया गया है। साइन-इन विवरण सेट करके स्वामित्व लें।`
       }
     },
@@ -327,20 +327,20 @@ export const dictionaries = {
       },
       "accept": "Evnly का उपयोग शुरू करें",
       "og": {
-        "description": "साझा खर्च ट्रैक करें, खर्चों को बांटें, और हमेशा साथ रहें — Evnlyly पर मिलकर।",
-        "title": (name) => `${name} के साथ Evnlyly पर जुड़ें`
+        "description": "साझा खर्च ट्रैक करें, खर्चों को बांटें, और हमेशा साथ रहें — Evnly पर मिलकर।",
+        "title": (name) => `${name} के साथ Evnly पर जुड़ें`
       },
       "dialog": {
-        "title": "Evnlyly पर कनेक्ट करें",
+        "title": "Evnly पर कनेक्ट करें",
         "description": "जारी रखने के लिए साइन इन करें या एक खाता बनाएं।",
         "accept": "कनेक्ट करें",
         "decline": "अभी नहीं",
-        "content": (name) => `${name} Evnlyly पर आपके साथ जुड़ना चाहता है ताकि साझा खर्च ट्रैक कर सकें।`
+        "content": (name) => `${name} Evnly पर आपके साथ जुड़ना चाहता है ताकि साझा खर्च ट्रैक कर सकें।`
       }
     },
     "group": {
       "og": {
-        "title": (groupName) => `Evnlyly पर "${groupName}" से जुड़ें`,
+        "title": (groupName) => `Evnly पर ${groupName} से जुड़ें`,
         "description": (names) => `${new Intl.ListFormat("hi", { style: "long", type: "conjunction" }).format(names)} के साथ खर्च बाँटे`
       },
       "dialog": {
@@ -368,7 +368,7 @@ export const dictionaries = {
         "title": "Trasferimento scaduto"
       },
       "og": {
-        "tile": "Prendi il controllo del tuo account su Evnlyly.",
+        "tile": "Prendi il controllo del tuo account su Evnly.",
         "description": (name) => `${name}, questo account è stato creato per te. Prendine possesso impostando i tuoi dati di accesso.`
       }
     },
@@ -385,20 +385,20 @@ export const dictionaries = {
       },
       "accept": "Inizia a usare Evnly",
       "og": {
-        "description": "Tieni traccia delle spese condivise, dividi i costi e rimani sincronizzato — insieme su Evnlyly.",
-        "title": (name) => `Unisciti a ${name} su Evnlyly`
+        "description": "Tieni traccia delle spese condivise, dividi i costi e rimani sincronizzato — insieme su Evnly.",
+        "title": (name) => `Unisciti a ${name} su Evnly`
       },
       "dialog": {
-        "title": "Connettiti su Evnlyly",
+        "title": "Connettiti su Evnly",
         "description": "Accedi o crea un account per continuare.",
         "accept": "Connetti",
         "decline": "Non ora",
-        "content": (name) => `${name} vuole connettersi con te su Evnlyly per tenere traccia delle spese condivise.`
+        "content": (name) => `${name} vuole connettersi con te su Evnly per tenere traccia delle spese condivise.`
       }
     },
     "group": {
       "og": {
-        "title": (groupName) => `Unisciti a "${groupName}" su Evnlyly`,
+        "title": (groupName) => `Unisciti a ${groupName} su Evnly`,
         "description": (names) => `Dividi le spese con ${new Intl.ListFormat("it", { style: "long", type: "conjunction" }).format(names)}`
       },
       "dialog": {
@@ -426,7 +426,7 @@ export const dictionaries = {
         "title": "転送の有効期限が切れました"
       },
       "og": {
-        "tile": "Evnlylyのアカウントを引き継ぐ。",
+        "tile": "Evnlyのアカウントを引き継ぐ。",
         "description": (name) => `${name}さん、このアカウントはあなたのために作成されました。サインイン情報を設定してご自身のものにしてください。`
       }
     },
@@ -443,20 +443,20 @@ export const dictionaries = {
       },
       "accept": "Evnly を使い始める",
       "og": {
-        "description": "共有の支出を管理し、費用を分担し、みんなで常に連携——Evnlylyで一緒に。",
-        "title": (name) => `Evnlylyで${name}に参加しよう`
+        "description": "共有の支出を管理し、費用を分担し、みんなで常に連携——Evnlyで一緒に。",
+        "title": (name) => `Evnlyで${name}に参加しよう`
       },
       "dialog": {
-        "title": "Evnlylyでつながる",
+        "title": "Evnlyでつながる",
         "description": "続行するにはサインインするかアカウントを作成してください。",
         "accept": "接続",
         "decline": "今はしない",
-        "content": (name) => `${name}さんがEvnlylyであなたとつながり、共有した支出を管理したいと考えています。`
+        "content": (name) => `${name}さんがEvnlyであなたとつながり、共有した支出を管理したいと考えています。`
       }
     },
     "group": {
       "og": {
-        "title": (groupName) => `Evnlylyで「${groupName}」に参加する`,
+        "title": (groupName) => `Evnlyで${groupName}に参加する`,
         "description": (names) => `${new Intl.ListFormat("ja", { style: "long", type: "conjunction" }).format(names)}と費用を分割する`
       },
       "dialog": {
@@ -484,7 +484,7 @@ export const dictionaries = {
         "title": "전송 만료됨"
       },
       "og": {
-        "tile": "Evnlyly에서 계정을 인수하세요.",
+        "tile": "Evnly에서 계정을 인수하세요.",
         "description": (name) => `${name}님, 이 계정은 회원님을 위해 생성되었습니다. 로그인 정보를 설정하여 소유권을 가져가세요.`
       }
     },
@@ -501,20 +501,20 @@ export const dictionaries = {
       },
       "accept": "Evnly 시작하기",
       "og": {
-        "description": "공동 지출을 기록하고, 비용을 나누며, 항상 함께 맞춰보세요 — Evnlyly에서 같이.",
-        "title": (name) => `Evnlyly에서 ${name}와 함께해요`
+        "description": "공동 지출을 기록하고, 비용을 나누며, 항상 함께 맞춰보세요 — Evnly에서 같이.",
+        "title": (name) => `Evnly에서 ${name}와 함께해요`
       },
       "dialog": {
-        "title": "Evnlyly에서 연결하기",
+        "title": "Evnly에서 연결하기",
         "description": "계속하려면 로그인하거나 계정을 생성하세요.",
         "accept": "연결",
         "decline": "지금은 아니에요",
-        "content": (name) => `${name}님이 Evnlyly에서 함께 연결해 공동 지출을 관리하고 싶어합니다.`
+        "content": (name) => `${name}님이 Evnly에서 함께 연결해 공동 지출을 관리하고 싶어합니다.`
       }
     },
     "group": {
       "og": {
-        "title": (groupName) => `Evnlyly에서 "${groupName}"에 가입하기`,
+        "title": (groupName) => `Evnly에서 ${groupName}에 참여하세요`,
         "description": (names) => `${new Intl.ListFormat("ko", { style: "long", type: "conjunction" }).format(names)}와(과) 비용을 나누세요`
       },
       "dialog": {
@@ -542,7 +542,7 @@ export const dictionaries = {
         "title": "Overdracht verlopen"
       },
       "og": {
-        "tile": "Neem de controle over je account op Evnlyly.",
+        "tile": "Neem de controle over je account op Evnly.",
         "description": (name) => `${name}, dit account is voor jou aangemaakt. Neem het in gebruik door je inloggegevens in te stellen.`
       }
     },
@@ -559,20 +559,20 @@ export const dictionaries = {
       },
       "accept": "Begin met het gebruik van Evnly",
       "og": {
-        "description": "Houd gezamenlijke uitgaven bij, splits de kosten en blijf op één lijn — samen op Evnlyly.",
-        "title": (name) => `Word lid van ${name} op Evnlyly`
+        "description": "Houd gezamenlijke uitgaven bij, splits de kosten en blijf op één lijn — samen op Evnly.",
+        "title": (name) => `Word lid van ${name} op Evnly`
       },
       "dialog": {
-        "title": "Verbinden via Evnlyly",
+        "title": "Verbinden via Evnly",
         "description": "Log in of maak een account aan om verder te gaan.",
         "accept": "Verbinden",
         "decline": "Niet nu",
-        "content": (name) => `${name} wil graag contact maken op Evnlyly om gezamenlijke uitgaven bij te houden.`
+        "content": (name) => `${name} wil graag contact maken op Evnly om gezamenlijke uitgaven bij te houden.`
       }
     },
     "group": {
       "og": {
-        "title": (groupName) => `Word lid van "${groupName}" op Evnlyly`,
+        "title": (groupName) => `Word lid van ${groupName} op Evnly`,
         "description": (names) => `Deel uitgaven met ${new Intl.ListFormat("nl", { style: "long", type: "conjunction" }).format(names)}`
       },
       "dialog": {
@@ -600,7 +600,7 @@ export const dictionaries = {
         "title": "Время передачи истекло"
       },
       "og": {
-        "tile": "Перехватите управление своим аккаунтом на Evnlyly.",
+        "tile": "Перехватите управление своим аккаунтом на Evnly.",
         "description": (name) => `${name}, для вас создана эта учетная запись. Примите владение, настроив данные для входа.`
       }
     },
@@ -617,20 +617,20 @@ export const dictionaries = {
       },
       "accept": "Начать пользоваться Evnly",
       "og": {
-        "description": "Отслеживайте общие расходы, делите затраты и оставайтесь на одной волне — вместе на Evnlyly.",
-        "title": (name) => `Присоединяйся к ${name} на Evnlyly`
+        "description": "Отслеживайте общие расходы, делите затраты и оставайтесь на одной волне — вместе на Evnly.",
+        "title": (name) => `Присоединяйся к ${name} на Evnly`
       },
       "dialog": {
-        "title": "Подключиться на Evnlyly",
+        "title": "Подключиться на Evnly",
         "description": "Войдите или создайте аккаунт, чтобы продолжить.",
         "accept": "Подключиться",
         "decline": "Не сейчас",
-        "content": (name) => `${name} хочет добавить вас в друзья на Evnlyly, чтобы отслеживать общие расходы.`
+        "content": (name) => `${name} хочет добавить вас в друзья на Evnly, чтобы отслеживать общие расходы.`
       }
     },
     "group": {
       "og": {
-        "title": (groupName) => `Присоединиться к «${groupName}» на Evnlyly`,
+        "title": (groupName) => `Присоединиться к ${groupName} на Evnly`,
         "description": (names) => `Разделяй расходы с ${new Intl.ListFormat("ru", { style: "long", type: "conjunction" }).format(names)}`
       },
       "dialog": {
@@ -658,7 +658,7 @@ export const dictionaries = {
         "title": "Uhamisho umeisha muda wake"
       },
       "og": {
-        "tile": "Chukua udhibiti wa akaunti yako kwenye Evnlyly.",
+        "tile": "Chukua udhibiti wa akaunti yako kwenye Evnly.",
         "description": (name) => `${name}, akaunti hii iliundwa kwa ajili yako. Miliki kwa kuweka maelezo ya kuingia.`
       }
     },
@@ -675,20 +675,20 @@ export const dictionaries = {
       },
       "accept": "Anza kutumia Evnly",
       "og": {
-        "description": "Fatilia matumizi ya pamoja, gawanya gharama, na dumuni mmelingano — pamoja kwenye Evnlyly.",
-        "title": (name) => `Jiunge na ${name} kwenye Evnlyly`
+        "description": "Fatilia matumizi ya pamoja, gawanya gharama, na dumuni mmelingano — pamoja kwenye Evnly.",
+        "title": (name) => `Jiunge na ${name} kwenye Evnly`
       },
       "dialog": {
-        "title": "Unganisha kwenye Evnlyly",
+        "title": "Unganisha kwenye Evnly",
         "description": "Ingia au tengeneza akaunti ili kuendelea.",
         "accept": "Unganisha",
         "decline": "Siyo sasa",
-        "content": (name) => `${name} anataka kuungana nawe kwenye Evnlyly ili kufuatilia matumizi yenu ya pamoja.`
+        "content": (name) => `${name} anataka kuungana nawe kwenye Evnly ili kufuatilia matumizi yenu ya pamoja.`
       }
     },
     "group": {
       "og": {
-        "title": (groupName) => `Jiunge na "${groupName}" kwenye Evnlyly`,
+        "title": (groupName) => `Jiunge na ${groupName} kwenye Evnly`,
         "description": (names) => `Gawa gharama na ${new Intl.ListFormat("sw", { style: "long", type: "conjunction" }).format(names)}`
       },
       "dialog": {
@@ -716,7 +716,7 @@ export const dictionaries = {
         "title": "Aktarım süresi doldu"
       },
       "og": {
-        "tile": "Evnlyly hesabınızı devralın.",
+        "tile": "Evnly hesabınızı devralın.",
         "description": (name) => `${name}, bu hesap sizin için oluşturuldu. Giriş bilgilerinizi ayarlayarak sahiplenin.`
       }
     },
@@ -733,20 +733,20 @@ export const dictionaries = {
       },
       "accept": "Evnly’i kullanmaya başla",
       "og": {
-        "description": "Paylaşılan harcamaları takip edin, masrafları bölüştürün ve uyumlu kalın — Evnlyly'de birlikte.",
-        "title": (name) => `Evnlyly'de ${name}'e katıl`
+        "description": "Paylaşılan harcamaları takip edin, masrafları bölüştürün ve uyumlu kalın — Evnly'de birlikte.",
+        "title": (name) => `Evnly'de ${name}'e katıl`
       },
       "dialog": {
-        "title": "Evnlyly'de bağlan",
+        "title": "Evnly'de bağlan",
         "description": "Devam etmek için giriş yapın veya bir hesap oluşturun.",
         "accept": "Bağlan",
         "decline": "Şimdi değil",
-        "content": (name) => `${name}, Evnlyly'de seninle bağlantı kurup ortak giderlerinizi takip etmek istiyor.`
+        "content": (name) => `${name}, Evnly'de seninle bağlantı kurup ortak giderlerinizi takip etmek istiyor.`
       }
     },
     "group": {
       "og": {
-        "title": (groupName) => `Evnlyly'de "${groupName}" grubuna katıl`,
+        "title": (groupName) => `Evnly'de ${groupName} grubuna katıl`,
         "description": (names) => `${new Intl.ListFormat("tr", { style: "long", type: "conjunction" }).format(names)} ile masrafları paylaş`
       },
       "dialog": {
@@ -804,7 +804,7 @@ export const dictionaries = {
     },
     "group": {
       "og": {
-        "title": (groupName) => `Приєднатися до «${groupName}» на Evnly`,
+        "title": (groupName) => `Приєднатися до ${groupName} на Evnly`,
         "description": (names) => `Розділіть витрати з ${new Intl.ListFormat("uk", { style: "long", type: "conjunction" }).format(names)}`
       },
       "dialog": {
@@ -862,7 +862,7 @@ export const dictionaries = {
     },
     "group": {
       "og": {
-        "title": (groupName) => `在Evnly加入“${groupName}”`,
+        "title": (groupName) => `在Evnly加入${groupName}`,
         "description": (names) => `与${new Intl.ListFormat("zh", { style: "long", type: "conjunction" }).format(names)}分摊费用`
       },
       "dialog": {
