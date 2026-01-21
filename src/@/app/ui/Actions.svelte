@@ -18,9 +18,7 @@
 
 <Actions>
   <DropdownMenu.Root>
-    <DropdownMenu.Trigger
-      id="nav-actions-button"
-      class={cn(buttonVariants({ size: 'icon-lg', class: 'size-14' }))}>
+    <DropdownMenu.Trigger id="nav-actions-button" class={cn(buttonVariants({ size: 'icon-lg' }))}>
       <Plus class="size-5" />
     </DropdownMenu.Trigger>
     <DropdownMenu.Content align="end" sideOffset={8} class="px-0.5 py-1 pt-2">

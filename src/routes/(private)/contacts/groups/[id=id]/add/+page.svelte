@@ -85,8 +85,8 @@
 
 <Actions>
   <ButtonGroup.Root>
-    <Share size="icon-lg" variant="secondary" class="flex-1 size-14" data={invitation} />
-    <QR variant="secondary" size="icon-lg" class="flex-1 size-14" text={invitation.url} />
+    <Share size="icon-lg" variant="secondary" class="flex-1" data={invitation} />
+    <QR variant="secondary" size="icon-lg" class="flex-1" text={invitation.url} />
     <Action
       disabled={(contactsSelection.size === 0 && favoritesSelection.size === 0) || busy}
       onclick={addMembers}>
