@@ -3,12 +3,7 @@
   import { Button } from '$ui/button'
   import { defaults, type Props } from './Action'
 
-  const {
-    children,
-    size = defaults.size,
-    class: classes = defaults.class,
-    ...props
-  }: Props = $props()
+  const { children, size = defaults.size, class: classes, ...props }: Props = $props()
 </script>
 
 <Button {size} class={cn('[&_span]:sr-only', defaults.class, classes)} {...props}>
