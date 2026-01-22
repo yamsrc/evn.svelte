@@ -12,7 +12,7 @@
   {#snippet awaited(groups)}
     {@const group = groups.find((g) => g.id === notification.key)}
     {#if group}
-      {@const inviterIdentity = notification.payload?.identities?.[0]}
+      {@const inviterIdentity = notification.payload.identities[0]}
       <div class="flex items-center gap-3">
         {#if inviterIdentity}
           <Async store={accounts.get(inviterIdentity)}>

@@ -3,7 +3,7 @@ import { groups } from './groups'
 import type { Notification } from '@/notifications'
 import type { Component } from 'svelte'
 
-export const components = { accounts, groups }
+export const components = { accounts, groups } as const
 
 type Components = typeof components
 type EventsOf<D extends keyof Components> = Extract<keyof Components[D], string>
@@ -17,6 +17,10 @@ export type NotificationWithComponent = {
 export type NotificationComponent<D extends keyof Components, E extends EventsOf<D>> =
   Components[D][E]
 
+export type NotificationComponentFor<N extends Notification> = Component<{
+  notification: N
+}>
+
 function hasDomain(domain: string): domain is keyof Components {
   return domain in components
 }
@@ -28,14 +32,14 @@ function hasEvent<D extends keyof Components>(
   return event in components[domain]
 }
 
-export function pickComponent(
-  notification: Notification,
-): Component | undefined {
+export function pick<N extends Notification>(
+  notification: N,
+): NotificationComponentFor<N> | undefined {
   const { domain, event } = notification
 
-  if (!hasDomain(domain)) return undefined
+  if (!hasDomain(domain)) return
 
-  if (!hasEvent(domain, event)) return undefined
+  if (!hasEvent(domain, event)) return
 
   return components[domain][event]
 }

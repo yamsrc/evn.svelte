@@ -1,8 +1,7 @@
-import type { Notification } from '@/notifications'
-import type { Component } from 'svelte'
+import type { NotificationComponentFor, NotificationWithComponent } from './components'
 
-export type Props = {
-  notification: Notification
-  component: Component
+export type Props<N extends NotificationWithComponent = NotificationWithComponent> = {
+  notification: N
+  component: NotificationComponentFor<N>
   ondismiss?: (id: string) => void
 }

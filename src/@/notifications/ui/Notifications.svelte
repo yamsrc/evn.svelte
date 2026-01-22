@@ -1,8 +1,14 @@
 <script lang="ts">
   import { del } from '@/notifications'
   import Notification from './Notification.svelte'
-  import { pickComponent } from './components'
+  import { pick } from './components'
   import type { Props } from './Notifications'
+  import type { NotificationComponentFor, NotificationWithComponent } from './components'
+
+  type Renderable = {
+    notification: NotificationWithComponent
+    component: NotificationComponentFor<NotificationWithComponent>
+  }
 
   const { notifications, limit = 5 }: Props = $props()
 
@@ -12,14 +18,14 @@
 
   const renderable = $derived(
     notifications
-      .map((notification) => {
-        const component = pickComponent(notification)
+      .map((notification): Renderable | null => {
+        const component = pick(notification)
 
         if (!component) return null
 
         return { notification, component }
       })
-      .filter((item): item is NonNullable<typeof item> => item !== null),
+      .filter((item): item is Renderable => item !== null),
   )
 </script>
 
