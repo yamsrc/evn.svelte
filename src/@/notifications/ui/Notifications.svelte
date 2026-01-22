@@ -34,7 +34,7 @@
 
   const visible = $derived(renderable.slice(0, limit))
 
-  const MIN_CLEARABLE_NOTIFICATIONS = 0
+  const MIN_CLEARABLE_NOTIFICATIONS = 3
 </script>
 
 <div class="space-y-2">
