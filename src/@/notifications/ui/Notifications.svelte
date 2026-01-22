@@ -1,7 +1,7 @@
 <script lang="ts">
   import { del } from '@/notifications'
   import Notification from './Notification.svelte'
-  import { components } from './components'
+  import { pickComponent } from './components'
   import type { Props } from './Notifications'
 
   const { notifications, limit = 5 }: Props = $props()
@@ -13,13 +13,11 @@
   const renderable = $derived(
     notifications
       .map((notification) => {
-        const domainComponents = components[notification.domain] as
-          | Record<string, unknown>
-          | undefined
+        const component = pickComponent(notification)
 
-        const component = domainComponents?.[notification.event] as any
+        if (!component) return null
 
-        return component ? { notification, component } : null
+        return { notification, component }
       })
       .filter((item): item is NonNullable<typeof item> => item !== null),
   )

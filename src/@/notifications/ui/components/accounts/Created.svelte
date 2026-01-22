@@ -1,4 +1,9 @@
 <script lang="ts">
+  import type { Props } from './Created'
+
+  const { notification }: Props = $props()
 </script>
 
-<div class="text-sm">Welcome to the app!</div>
+{#if notification}
+  <div class="text-sm">Welcome to the app!</div>
+{/if}

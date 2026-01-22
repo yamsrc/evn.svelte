@@ -3,7 +3,7 @@ interface BaseNotification<D extends string = string, E extends string = string,
   identity: string
   domain: D
   event: E
-  key?: string
+  key: string
   payload: P
 }
 
