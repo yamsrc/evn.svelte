@@ -14,7 +14,7 @@
 
   const { notifications, limit = 5 }: Props = $props()
 
-  const refs = $state<Array<{ dismiss: () => Promise<void> } | undefined>>([])
+  const refs = $state<Array<{ dismiss: () => Promise<void> | void } | undefined>>([])
 
   function onclick() {
     refs.forEach((ref, i) => setTimeout(() => ref?.dismiss(), i * 50))
