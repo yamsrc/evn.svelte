@@ -3,5 +3,4 @@ import type { NotificationComponentFor, NotificationWithComponent } from './comp
 export type Props<N extends NotificationWithComponent = NotificationWithComponent> = {
   notification: N
   component: NotificationComponentFor<N>
-  ondismiss?: (id: string) => void
 }

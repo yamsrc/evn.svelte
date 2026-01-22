@@ -15,10 +15,6 @@
 
   const { notifications, limit = 5 }: Props = $props()
 
-  async function ondismiss(id: string) {
-    await del(id)
-  }
-
   async function onclick() {
     await Promise.all(renderable.map(({ notification }) => del(notification.id)))
   }
@@ -42,7 +38,7 @@
   {#if renderable.length > 0}
     <div class="flex flex-col gap-2">
       {#each renderable.slice(0, limit) as { notification, component } (notification.id)}
-        <Notification {notification} {component} {ondismiss} />
+        <Notification {notification} {component} />
       {/each}
     </div>
     {#if renderable.length > MIN_CLEARABLE_NOTIFICATIONS}

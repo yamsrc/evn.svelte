@@ -1,19 +1,20 @@
 <script lang="ts">
+  import { del } from '@/notifications'
   import type { Props } from './Notification'
 
-  const { notification, component: Component, ondismiss }: Props = $props()
+  const { notification, component: Component }: Props = $props()
 
   let container: HTMLDivElement | undefined = $state()
   let hasDismissed = $state(false)
 
-  function handleScrollEnd() {
+  async function handleScrollEnd() {
     if (!container || hasDismissed) return
 
     const maxLeft = container.scrollWidth - container.clientWidth
 
     if (container.scrollLeft >= maxLeft - 1) {
       hasDismissed = true
-      ondismiss?.(notification.id)
+      await del(notification.id)
     }
   }
 </script>
