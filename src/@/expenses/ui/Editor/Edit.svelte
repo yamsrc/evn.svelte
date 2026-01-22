@@ -1,6 +1,7 @@
 <script lang="ts">
   import { back } from '$com/history'
   import { add, update } from '@/expenses'
+  import Attachments from '../Attachments.svelte'
   import { Form } from './Form'
   import type { Value } from './Context'
   import type { Props } from './Edit'
@@ -16,4 +17,5 @@
   }
 </script>
 
+<Attachments attachments={value.attachments} />
 <Form bind:value bind:mode {onsubmit} />

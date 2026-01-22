@@ -3,7 +3,7 @@
   import { Actions } from '$com/shell'
   import { dict } from '$lib/intl'
   import { onsubmit } from '$lib/tools'
-  import { Action } from '@/app/ui'
+  import { Action, Section } from '@/app/ui'
   import { numbers } from '@/expenses'
   import { setContext } from './Context'
   import Description from './Description.svelte'
@@ -75,17 +75,18 @@
   let submitButton = $state<HTMLButtonElement | null>(null)
 </script>
 
-<form onsubmit={onsubmit(submit)} class="space-y-5">
-  <Description bind:title={value.title} bind:location={value.location} />
+<Section>
+  <form onsubmit={onsubmit(submit)} class="space-y-5">
+    <Description bind:title={value.title} bind:location={value.location} />
+    <Total bind:value bind:total />
+    <Participants bind:value bind:error bind:mode />
+    <PayerSelect bind:value />
 
-  <PayerSelect bind:value />
-  <Total bind:value bind:total />
-  <Participants bind:value bind:error bind:mode />
-
-  <button bind:this={submitButton} type="submit" class="sr-only">
-    {$dict.expenses.form.save}
-  </button>
-</form>
+    <button bind:this={submitButton} type="submit" class="sr-only">
+      {$dict.expenses.form.save}
+    </button>
+  </form>
+</Section>
 
 <Actions>
   <Action

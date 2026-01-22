@@ -1,6 +1,5 @@
 <script lang="ts">
-  import { origin } from '$config'
-  import type { Props } from './Pircure'
+  import { url, type Props } from './Pircure'
 
   let {
     ref = $bindable(),
@@ -10,7 +9,7 @@
     width,
     height,
     variant,
-    format = 'webp',
+    format,
     class: classes,
     style,
     loading,
@@ -19,11 +18,10 @@
 
 <img
   bind:this={ref}
-  src={`${origin}${path}${id}.${variant}.${format}`}
+  src={url({ id, path, variant, format })}
   alt={alt ?? id}
   {width}
   {height}
   class={classes}
   {style}
-  {loading}
-/>
+  {loading} />

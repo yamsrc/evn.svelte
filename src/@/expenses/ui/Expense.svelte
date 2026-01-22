@@ -1,17 +1,23 @@
 <script lang="ts">
+  import { Paperclip } from '@lucide/svelte'
   import { Async } from 'svas'
   import { Separator } from '$com/separator'
+  import { locale, dict } from '$lib/intl'
   import { Button } from '$ui/button'
   import { accounts } from '@/accounts'
   import { Picture } from '@/accounts/ui'
-  import { Balance } from '@/app/ui'
+  import { Balance, Coins } from '@/app/ui'
   import { numbers, owe } from '@/expenses'
   import { account } from '@/iam'
   import type { Props } from './Expense'
 
   const { expense }: Props = $props()
-
   const participants = $derived(Object.keys(expense.participants))
+  const formatter = $derived(new Intl.DateTimeFormat($locale, { month: 'short', day: 'numeric' }))
+
+  const description = $derived(
+    `${formatter.format(new Date(expense.date))}${expense.location ? `, ${expense.location}` : ''}`,
+  )
 </script>
 
 <Button
@@ -21,10 +27,18 @@
   <div class="w-full flex justify-between items-center">
     <div class="flex flex-col items-start">
       <div>{expense.title}</div>
-      <div class="text-sm text-muted-foreground">{expense.location}</div>
+      <div class="text-sm text-muted-foreground">
+        {description}
+      </div>
     </div>
-    <div class="flex flex-col items-end">
-      <Balance total={numbers.total(expense)} class="flex-col-reverse items-end" />
+    <div class="flex flex-col items-end gap-2">
+      <Coins amount={numbers.total(expense)} sign="neutral" />
+      <div class="text-muted-foreground text-sm text-nowrap flex items-center gap-2">
+        <span>{$dict.expenses.balance.total}</span>
+        {#if expense.attachments.length > 0}
+          <Paperclip size={14} />
+        {/if}
+      </div>
     </div>
   </div>
   <Separator />

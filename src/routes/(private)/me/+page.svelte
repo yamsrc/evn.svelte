@@ -11,7 +11,6 @@
   import { Feedback } from '@/feedback/ui'
   import { logout } from '@/iam'
   import { account } from '@/iam'
-  import { time } from '@/realtime'
 
   async function getout() {
     logout()
@@ -28,7 +27,7 @@
           id="me-logout-button"
           onclick={getout}
           variant="ghost"
-          class="size-12 bg-accent/50 border border-border"
+          size="icon"
           position="left"
           label={$dict.actions.holdToLogout}>
           <LogOut class="size-5" />
@@ -57,19 +56,10 @@
 
   <Section>
     <Separator class="mb-4" />
-    <footer class="text-muted-foreground text-sm">
-      <p>
-        &copy; <a href="https://seed.me" target="_blank">seed.me</a>
-        , 2025–{new Date($time).getFullYear()}
-      </p>
-      <p class="[&_a]:text-muted-foreground">
-        <!-- <a href="/terms/">{$dict.terms}</a>
-        ,
-        <a href="/privacy/">{$dict.privacy}</a>
-        , -->
-        <Delete class="p-0 underline underline-offset-3 font-normal" ondelete={getout} />
-      </p>
+    <footer class="text-muted-foreground text-sm text-center">
+      <p>{$dict.copyright(Date.now())}</p>
       <p>v{version}</p>
+      <Delete class="py-0 underline underline-offset-3 font-normal" ondelete={getout} />
     </footer>
   </Section>
 {/if}

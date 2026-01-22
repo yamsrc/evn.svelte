@@ -18,8 +18,6 @@ if (browser)
 
     const me = account.extract()
 
-    if (me?.id === value.id && (me._version === undefined || (value._version !== undefined && value._version > me._version))) {
-      console.log('update iam')
+    if (me?.id === value.id && (me._version === undefined || (value._version !== undefined && value._version > me._version)))
       update(value)
-    }
   })

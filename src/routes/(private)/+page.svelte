@@ -18,7 +18,7 @@
         <Header.Title>{$dict.home.title(account.name)}</Header.Title>
         <Header.Actions>
           <Header.Button href="/me/" id="header-me-button">
-            <Avatar size={24} />
+            <Avatar size={32} />
           </Header.Button>
         </Header.Actions>
       </Header.Root>

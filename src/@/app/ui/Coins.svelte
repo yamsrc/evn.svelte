@@ -8,6 +8,8 @@
   const { amount, sign, class: classes }: Props = $props()
 
   const color = $derived.by(() => {
+    if (sign === 'neutral' || (sign === undefined && amount === 0)) return 'var(--muted-foreground)'
+
     if (sign === 'positive' || (sign === undefined && amount !== undefined && amount > 0))
       return 'var(--constructive)'
 

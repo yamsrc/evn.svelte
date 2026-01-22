@@ -13,9 +13,10 @@ export interface Expense {
   id: string
   title: string
   location?: string
-  timestamp: number
+  date: string
   participants: Record<string, Participant>
   extras: Extra[]
+  attachments: string[]
   _created: number
   _version: number
 }
