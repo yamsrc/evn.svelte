@@ -6,11 +6,16 @@ import { notifications as store } from './store'
 export async function del(id: string): Promise<void | Error> {
   const me = ensure(account)
 
-  const entity = await net.del(me.id, id)
+  const previous = store.extract(id)
 
-  if (entity instanceof Error) return entity
-
+  // optimistic
   store.delete(id)
 
-  return entity
+  const res = await net.del(me.id, id)
+
+  if (res instanceof Error) {
+    if (previous !== null) store.add(previous)
+
+    return res
+  }
 }
