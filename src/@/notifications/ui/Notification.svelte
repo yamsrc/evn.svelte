@@ -18,12 +18,12 @@
   }
 </script>
 
-<div class="relative overflow-hidden rounded-lg">
+<div class="relative rounded-lg">
   <div
     bind:this={container}
     class="flex w-full overflow-x-auto snap-x snap-mandatory no-scrollbar"
     onscrollend={handleScrollEnd}>
-    <div class="w-full shrink-0 snap-start bg-card border border-border rounded-lg p-4">
+    <div class="w-full shrink-0 snap-start bg-accent rounded-lg p-4">
       <Component {notification} />
     </div>
     <div class="w-full shrink-0 snap-end" aria-hidden="true"></div>
