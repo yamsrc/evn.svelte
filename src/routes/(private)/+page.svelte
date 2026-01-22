@@ -9,10 +9,12 @@
   import { expenses } from '@/expenses'
   import { Recent } from '@/expenses/ui'
   import { account } from '@/iam'
+  import { notifications } from '@/notifications'
+  import { Notifications } from '@/notifications/ui'
 </script>
 
-<Async store={combined(account, contacts, expenses)}>
-  {#snippet awaited([account, contacts, expenses])}
+<Async store={combined(account, contacts, expenses, notifications)}>
+  {#snippet awaited([account, contacts, expenses, notifications])}
     <Section>
       <Header.Root>
         <Header.Title>{$dict.home.title(account.name)}</Header.Title>
@@ -26,6 +28,10 @@
 
     <Section>
       <Totals {contacts} />
+    </Section>
+
+    <Section>
+      <Notifications {notifications} />
     </Section>
 
     <Section>
