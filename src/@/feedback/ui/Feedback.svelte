@@ -1,12 +1,12 @@
 <script lang="ts">
-  import { Check, Send } from '@lucide/svelte'
+  import { Check, ChevronUp, Send } from '@lucide/svelte'
   import { transit } from '$lib/tools'
   import { Button } from '$ui/button'
   import * as Card from '$ui/card'
   import Form from './Form.svelte'
   import { dict } from './intl'
 
-  let open = $state(false)
+  let open = $state(true)
   let card = $state<HTMLDivElement | null>(null)
   let success = $state(false)
 
@@ -27,7 +27,14 @@
 </script>
 
 {#if open}
-  <Card.Root class="bg-muted pt-4" bind:ref={card}>
+  <Card.Root class="bg-muted pt-4 relative" bind:ref={card}>
+    <Button
+      variant="ghost"
+      size="icon"
+      onclick={() => toggle(false)}
+      class="absolute right-0 top-0">
+      <ChevronUp />
+    </Button>
     <Card.Header>
       <Card.Title class="flex justify-center">
         <h2>
@@ -48,8 +55,7 @@
     variant="secondary"
     class="w-full sm:w-auto"
     onclick={() => toggle(true)}
-    style="view-transition-name: feedback-button;"
-  >
+    style="view-transition-name: feedback-button;">
     {$dict.title}
     {#if success}
       <Check class="text-constructive" />
