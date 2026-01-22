@@ -5,11 +5,10 @@
   import { back } from '$com/history'
   import { Actions, Return } from '$com/shell'
   import { dict } from '$lib/intl'
-  import { buttonVariants } from '$ui/button'
-  import * as ButtonGroup from '$ui/button-group'
   import { Input } from '$ui/input'
   import { Action, Section } from '@/app/ui'
   import { Header } from '@/app/ui'
+  import { actionVariants } from '@/app/ui'
   import { contacts, filter as filterContacts } from '@/contacts'
   import { Contacts } from '@/contacts/ui'
   import { CreateDialog } from '@/contacts/ui'
@@ -99,20 +98,17 @@
 <Return />
 
 <Actions>
-  <ButtonGroup.Root>
-    <CreateDialog
-      class={buttonVariants({
-        size: 'icon-lg',
-        variant: 'secondary',
-        class: 'flex-1 [&_span]:hidden',
-      })} />
-    <Action
-      id="expenses-add-participants-add-button"
-      variant="default"
-      disabled={contactsSelection.size === 0 && groupSelection.size === 0}
-      onclick={addParticipants}>
-      <Check />
-      <span>{$dict.actions.addSelected}</span>
-    </Action>
-  </ButtonGroup.Root>
+  <CreateDialog
+    class={actionVariants({
+      variant: 'secondary',
+      class: 'flex-1 [&_span]:hidden',
+    })} />
+  <Action
+    id="expenses-add-participants-add-button"
+    variant="default"
+    disabled={contactsSelection.size === 0 && groupSelection.size === 0}
+    onclick={addParticipants}>
+    <Check />
+    <span>{$dict.actions.addSelected}</span>
+  </Action>
 </Actions>
