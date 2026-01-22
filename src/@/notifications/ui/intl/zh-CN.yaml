@@ -11,7 +11,5 @@ groups:
 accounts:
   created:
     welcome: 欢迎来到 Evnly！
-    hint: 滑动以移除
-erase: |-
-  !js
-  (n) => `全部清除 (${n})`
+    hint: 向左滑动以关闭
+erase: 全部清除

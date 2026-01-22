@@ -12,7 +12,5 @@ groups:
 accounts:
   created:
     welcome: Evnly में आपका स्वागत है!
-    hint: हटाने के लिए स्वाइप करें
-erase: |-
-  !js
-  (n) => `सभी मिटाएँ (${n})`
+    hint: हटाने के लिए बाएँ स्वाइप करें
+erase: सभी साफ़ करें

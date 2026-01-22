@@ -12,7 +12,5 @@ groups:
 accounts:
   created:
     welcome: مرحبًا بك في Evnly!
-    hint: اسحب للإزالة
-erase: |-
-  !js
-  (n) => `مسح الكل (${n})`
+    hint: اسحب لليسار لإزالة
+erase: مسح الكل

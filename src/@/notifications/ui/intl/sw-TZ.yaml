@@ -12,7 +12,5 @@ groups:
 accounts:
   created:
     welcome: Karibu kwenye Evnly!
-    hint: Gusa uondoe
-erase: |-
-  !js
-  (n) => `Futa vyote (${n})`
+    hint: Sogeza kushoto kuondoa
+erase: Futa zote

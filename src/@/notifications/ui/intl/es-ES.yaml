@@ -12,7 +12,5 @@ groups:
 accounts:
   created:
     welcome: ¡Bienvenido a Evnly!
-    hint: Desliza para eliminar
-erase: |-
-  !js
-  (n) => `Borrar todo (${n})`
+    hint: Desliza a la izquierda para descartar
+erase: Borrar todo

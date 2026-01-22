@@ -12,7 +12,5 @@ groups:
 accounts:
   created:
     welcome: Ласкаво просимо до Evnly!
-    hint: Проведіть, щоб видалити
-erase: |-
-  !js
-  (n) => `Видалити все (${n})`
+    hint: Проведіть вліво, щоб закрити
+erase: Очистити все

@@ -12,10 +12,10 @@ export const dictionaries = {
     "accounts": {
       "created": {
         "welcome": "مرحبًا بك في Evnly!",
-        "hint": "اسحب للإزالة"
+        "hint": "اسحب لليسار لإزالة"
       }
     },
-    "erase": (n) => `مسح الكل (${n})`
+    "erase": "مسح الكل"
   },
   "de-DE": {
     "groups": {
@@ -27,10 +27,10 @@ export const dictionaries = {
     "accounts": {
       "created": {
         "welcome": "Willkommen bei Evnly!",
-        "hint": "Zum Entfernen wischen"
+        "hint": "Nach links wischen zum Ausblenden"
       }
     },
-    "erase": (n) => `Alle löschen (${n})`
+    "erase": "Alle löschen"
   },
   "en-US": {
     "groups": {
@@ -42,10 +42,10 @@ export const dictionaries = {
     "accounts": {
       "created": {
         "welcome": "Welcome to Evnly!",
-        "hint": "Swipe to remove"
+        "hint": "Swipe left to dismiss"
       }
     },
-    "erase": (n) => `Erase all (${n})`
+    "erase": "Clear all"
   },
   "es-ES": {
     "groups": {
@@ -57,10 +57,10 @@ export const dictionaries = {
     "accounts": {
       "created": {
         "welcome": "¡Bienvenido a Evnly!",
-        "hint": "Desliza para eliminar"
+        "hint": "Desliza a la izquierda para descartar"
       }
     },
-    "erase": (n) => `Borrar todo (${n})`
+    "erase": "Borrar todo"
   },
   "fr-FR": {
     "groups": {
@@ -72,10 +72,10 @@ export const dictionaries = {
     "accounts": {
       "created": {
         "welcome": "Bienvenue chez Evnly !",
-        "hint": "Faites glisser pour supprimer"
+        "hint": "Faites glisser vers la gauche pour ignorer"
       }
     },
-    "erase": (n) => `Tout effacer (${n})`
+    "erase": "Tout effacer"
   },
   "hi-IN": {
     "groups": {
@@ -87,10 +87,10 @@ export const dictionaries = {
     "accounts": {
       "created": {
         "welcome": "Evnly में आपका स्वागत है!",
-        "hint": "हटाने के लिए स्वाइप करें"
+        "hint": "हटाने के लिए बाएँ स्वाइप करें"
       }
     },
-    "erase": (n) => `सभी मिटाएँ (${n})`
+    "erase": "सभी साफ़ करें"
   },
   "it-IT": {
     "groups": {
@@ -102,10 +102,10 @@ export const dictionaries = {
     "accounts": {
       "created": {
         "welcome": "Benvenuto su Evnly!",
-        "hint": "Scorri per rimuovere"
+        "hint": "Scorri verso sinistra per rimuovere"
       }
     },
-    "erase": (n) => `Cancella tutto (${n})`
+    "erase": "Cancella tutto"
   },
   "ja-JP": {
     "groups": {
@@ -117,10 +117,10 @@ export const dictionaries = {
     "accounts": {
       "created": {
         "welcome": "Evnlyへようこそ！",
-        "hint": "スワイプして削除"
+        "hint": "左にスワイプして閉じる"
       }
     },
-    "erase": (n) => `すべて消去 (${n})`
+    "erase": "すべてクリア"
   },
   "ko-KR": {
     "groups": {
@@ -132,10 +132,10 @@ export const dictionaries = {
     "accounts": {
       "created": {
         "welcome": "Evnly에 오신 것을 환영합니다!",
-        "hint": "삭제하려면 스와이프하세요"
+        "hint": "왼쪽으로 밀어서 닫기"
       }
     },
-    "erase": (n) => `모두 지우기 (${n})`
+    "erase": "모두 지우기"
   },
   "nl-NL": {
     "groups": {
@@ -147,10 +147,10 @@ export const dictionaries = {
     "accounts": {
       "created": {
         "welcome": "Welkom bij Evnly!",
-        "hint": "Veeg om te verwijderen"
+        "hint": "Veeg naar links om te sluiten"
       }
     },
-    "erase": (n) => `Alles wissen (${n})`
+    "erase": "Alles wissen"
   },
   "ru-RU": {
     "groups": {
@@ -162,10 +162,10 @@ export const dictionaries = {
     "accounts": {
       "created": {
         "welcome": "Добро пожаловать в Evnly!",
-        "hint": "Свайпните, чтобы удалить"
+        "hint": "Проведите влево, чтобы закрыть"
       }
     },
-    "erase": (n) => `Удалить всё (${n})`
+    "erase": "Очистить все"
   },
   "sw-TZ": {
     "groups": {
@@ -177,10 +177,10 @@ export const dictionaries = {
     "accounts": {
       "created": {
         "welcome": "Karibu kwenye Evnly!",
-        "hint": "Gusa uondoe"
+        "hint": "Sogeza kushoto kuondoa"
       }
     },
-    "erase": (n) => `Futa vyote (${n})`
+    "erase": "Futa zote"
   },
   "tr-TR": {
     "groups": {
@@ -192,10 +192,10 @@ export const dictionaries = {
     "accounts": {
       "created": {
         "welcome": "Evnly'e hoş geldiniz!",
-        "hint": "Kaldırmak için kaydırın"
+        "hint": "Kapatmak için sola kaydır"
       }
     },
-    "erase": (n) => `Hepsini sil (${n})`
+    "erase": "Tümünü temizle"
   },
   "uk-UA": {
     "groups": {
@@ -207,10 +207,10 @@ export const dictionaries = {
     "accounts": {
       "created": {
         "welcome": "Ласкаво просимо до Evnly!",
-        "hint": "Проведіть, щоб видалити"
+        "hint": "Проведіть вліво, щоб закрити"
       }
     },
-    "erase": (n) => `Видалити все (${n})`
+    "erase": "Очистити все"
   },
   "zh-CN": {
     "groups": {
@@ -222,10 +222,10 @@ export const dictionaries = {
     "accounts": {
       "created": {
         "welcome": "欢迎来到 Evnly！",
-        "hint": "滑动以移除"
+        "hint": "向左滑动以关闭"
       }
     },
-    "erase": (n) => `全部清除 (${n})`
+    "erase": "全部清除"
   }
 };
 

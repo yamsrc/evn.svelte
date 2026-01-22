@@ -39,9 +39,9 @@
 {#if renderable.length > 0}
   <div class="flex flex-col gap-2">
     <div class="flex justify-end px-4">
-      <Button variant="ghost" size="sm" {onclick} class="gap-2 text-secondary-foreground">
+      <Button variant="ghost" size="sm" {onclick} class="text-muted-foreground">
         <Trash2 size={16} />
-        {$dict.erase(renderable.length)}
+        {$dict.erase}
       </Button>
     </div>
     {#each renderable.slice(0, limit) as { notification, component } (notification.id)}

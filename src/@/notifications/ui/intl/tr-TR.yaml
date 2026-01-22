@@ -11,7 +11,5 @@ groups:
 accounts:
   created:
     welcome: Evnly'e hoş geldiniz!
-    hint: Kaldırmak için kaydırın
-erase: |-
-  !js
-  (n) => `Hepsini sil (${n})`
+    hint: Kapatmak için sola kaydır
+erase: Tümünü temizle

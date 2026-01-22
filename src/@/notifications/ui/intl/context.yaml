@@ -11,7 +11,7 @@ inputs:
   accounts:
     created:
       hint:
-        input: swipe to remove
+        input: Swipe left to dismiss
   erase:
-    input: Erase all (${n})
-    context: Make it function
+    input: Clear all
+    context: button label (clears all notifications)

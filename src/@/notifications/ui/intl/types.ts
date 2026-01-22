@@ -19,5 +19,5 @@ export type Dictionary = {
           hint: string
         }
       }
-      erase: (value: any) => string
+      erase: string
     }
