@@ -58,10 +58,8 @@
     <Separator class="mb-4" />
     <footer class="text-muted-foreground text-sm text-center">
       <p>{$dict.copyright(Date.now())}</p>
-      <p class="[&_a]:text-muted-foreground">
-        <Delete class="p-0 underline underline-offset-3 font-normal" ondelete={getout} />
-      </p>
       <p>v{version}</p>
+      <Delete class="py-0 underline underline-offset-3 font-normal" ondelete={getout} />
     </footer>
   </Section>
 {/if}

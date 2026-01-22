@@ -6,7 +6,7 @@
   import Form from './Form.svelte'
   import { dict } from './intl'
 
-  let open = $state(true)
+  let open = $state(false)
   let card = $state<HTMLDivElement | null>(null)
   let success = $state(false)
 
