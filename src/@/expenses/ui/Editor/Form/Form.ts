@@ -21,8 +21,10 @@ export function normalize(value: Value, mode: 'sums' | 'shares'): Value {
   return {
     title: value.title,
     location: value.location,
+    date: value.date,
     participants,
     extras: value.extras.filter((extra) => extra.amount !== 0),
+    attachments: value.attachments,
   }
 }
 

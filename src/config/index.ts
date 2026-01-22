@@ -1,6 +1,6 @@
 import { dev, version as ver } from '$app/environment'
 import { PUBLIC_API_ORIGIN } from '$env/static/public'
-import type { IDP } from '@/iam'
+import type { oidc as oauth } from '@/iam'
 
 export const defaultLocale = 'en-US'
 
@@ -71,7 +71,7 @@ export const APPLE_CLIENT_ID = 'com.evnapp.id'
 export const oidc = {
   apple: false,
   google: false,
-} as const satisfies Record<IDP, boolean>
+} as const satisfies Record<oauth.IDP, boolean>
 
 const MAJOR_VERSION = '1'
 
