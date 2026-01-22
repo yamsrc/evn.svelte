@@ -7,7 +7,7 @@ export async function attach(files: File[], id?: string): Promise<string[] | Err
   const me = ensure(account)
 
   const ids = await Promise.all(files.map((file) => id === undefined ? create(me.id, file) : update(me.id, file, id)))
-  const err = ids.find((id) => id instanceof Error)
+  const err = ids.find((i) => i instanceof Error)
 
   if (err !== undefined)
     return err
@@ -15,7 +15,7 @@ export async function attach(files: File[], id?: string): Promise<string[] | Err
   return ids as string[]
 }
 
-async function create(identity: string, file: File, id?: string): Promise<string | Error> {
+async function create(identity: string, file: File): Promise<string | Error> {
   const entry = await net.attachments.post(identity, file)
 
   if (entry instanceof Error)

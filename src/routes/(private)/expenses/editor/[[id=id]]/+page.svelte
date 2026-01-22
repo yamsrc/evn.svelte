@@ -19,9 +19,12 @@
 
     if (target.files === null) return
 
+    const files = Array.from(target.files)
+
+    target.value = ''
     uploading = true
 
-    const ids = await attach(Array.from(target.files), id)
+    const ids = await attach(files, id)
 
     uploading = false
 
@@ -32,7 +35,6 @@
     }
 
     ctx.value.attachments.push(...ids)
-    target.value = ''
   }
 </script>
 
