@@ -34,7 +34,7 @@
     <div class="flex flex-col items-end gap-2">
       <Coins amount={numbers.total(expense)} sign="neutral" />
       <div class="text-muted-foreground text-sm text-nowrap flex items-center gap-2">
-        {$dict.expenses.balance.total}
+        <span>{$dict.expenses.balance.total}</span>
         {#if expense.attachments.length > 0}
           <Paperclip size={14} />
         {/if}
