@@ -1,5 +1,5 @@
 export interface Props {
   amount?: number
-  sign?: 'positive' | 'negative' | 'none'
+  sign?: 'positive' | 'negative' | 'neutral'
   class?: string
 }

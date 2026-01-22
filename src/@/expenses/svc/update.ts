@@ -2,13 +2,13 @@ import { ensure, sync } from 'svas'
 import { account } from '@/iam'
 import * as net from './net'
 import { expenses } from './store'
-import type { Exact } from '$lib/tools'
 
-export async function update<T>(id: string, input: Exact<T, net.Editable>): Promise<net.Expense | Error> {
+export async function update(id: string, properties: Partial<net.Editable>): Promise<net.Expense | Error> {
   const me = ensure(account)
-  const expense = await net.put(me.id, id, input)
+  const expense = await net.put(me.id, id, properties)
 
-  if (expense instanceof Error) return expense
+  if (expense instanceof Error)
+    return expense
 
   sync(expenses, expense)
 
