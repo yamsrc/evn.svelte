@@ -6,3 +6,7 @@ groups:
     others: |-
       !js
       (name) => `انضم إلى المجموعة ${name}`
+accounts:
+  created:
+    welcome: مرحبًا بك في Evnly!
+    hint: اسحب للإزالة

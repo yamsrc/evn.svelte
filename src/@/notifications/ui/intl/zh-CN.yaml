@@ -6,3 +6,7 @@ groups:
     others: |-
       !js
       (name) => `已加入群组${name}`
+accounts:
+  created:
+    welcome: 欢迎来到 Evnly！
+    hint: 滑动以移除

@@ -6,3 +6,7 @@ groups:
     others: |-
       !js
       (name) => `amejiunga na kundi ${name}`
+accounts:
+  created:
+    welcome: Karibu kwenye Evnly!
+    hint: Gusa uondoe

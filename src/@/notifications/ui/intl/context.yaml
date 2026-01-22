@@ -8,3 +8,7 @@ inputs:
       others:
         input: joined the group {name}
         context: Make it function
+  accounts:
+    created:
+      hint:
+        input: swipe to remove

@@ -6,3 +6,7 @@ groups:
     others: |-
       !js
       (name) => `heeft zich aangesloten bij groep ${name}`
+accounts:
+  created:
+    welcome: Welkom bij Evnly!
+    hint: Veeg om te verwijderen

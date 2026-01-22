@@ -6,3 +6,7 @@ groups:
     others: |-
       !js
       (name) => `${name} グループに参加しました`
+accounts:
+  created:
+    welcome: Evnlyへようこそ！
+    hint: スワイプして削除

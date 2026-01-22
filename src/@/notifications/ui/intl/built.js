@@ -8,6 +8,12 @@ export const dictionaries = {
         "me": (name) => `لقد انضممت إلى المجموعة ${name}`,
         "others": (name) => `انضم إلى المجموعة ${name}`
       }
+    },
+    "accounts": {
+      "created": {
+        "welcome": "مرحبًا بك في Evnly!",
+        "hint": "اسحب للإزالة"
+      }
     }
   },
   "de-DE": {
@@ -15,6 +21,12 @@ export const dictionaries = {
       "joined": {
         "me": (name) => `Du bist der Gruppe ${name} beigetreten`,
         "others": (name) => `${name} ist der Gruppe beigetreten`
+      }
+    },
+    "accounts": {
+      "created": {
+        "welcome": "Willkommen bei Evnly!",
+        "hint": "Zum Entfernen wischen"
       }
     }
   },
@@ -24,6 +36,12 @@ export const dictionaries = {
         "me": (name) => `You have joined the group ${name}`,
         "others": (name) => `joined the group ${name}`
       }
+    },
+    "accounts": {
+      "created": {
+        "welcome": "Welcome to Evnly!",
+        "hint": "Swipe to remove"
+      }
     }
   },
   "es-ES": {
@@ -31,6 +49,12 @@ export const dictionaries = {
       "joined": {
         "me": (name) => `Te has unido al grupo ${name}`,
         "others": (name) => `se unió al grupo ${name}`
+      }
+    },
+    "accounts": {
+      "created": {
+        "welcome": "¡Bienvenido a Evnly!",
+        "hint": "Desliza para eliminar"
       }
     }
   },
@@ -40,6 +64,12 @@ export const dictionaries = {
         "me": (name) => `Vous avez rejoint le groupe ${name}`,
         "others": (name) => `a rejoint le groupe ${name}`
       }
+    },
+    "accounts": {
+      "created": {
+        "welcome": "Bienvenue chez Evnly !",
+        "hint": "Faites glisser pour supprimer"
+      }
     }
   },
   "hi-IN": {
@@ -47,6 +77,12 @@ export const dictionaries = {
       "joined": {
         "me": (name) => `आप समूह ${name} में शामिल हो गए हैं`,
         "others": (name) => `${name} समूह में शामिल हुआ`
+      }
+    },
+    "accounts": {
+      "created": {
+        "welcome": "Evnly में आपका स्वागत है!",
+        "hint": "हटाने के लिए स्वाइप करें"
       }
     }
   },
@@ -56,6 +92,12 @@ export const dictionaries = {
         "me": (name) => `Sei entrato nel gruppo ${name}`,
         "others": (name) => `si è unito al gruppo ${name}`
       }
+    },
+    "accounts": {
+      "created": {
+        "welcome": "Benvenuto su Evnly!",
+        "hint": "Scorri per rimuovere"
+      }
     }
   },
   "ja-JP": {
@@ -63,6 +105,12 @@ export const dictionaries = {
       "joined": {
         "me": (name) => `グループ「${name}」に参加しました`,
         "others": (name) => `${name} グループに参加しました`
+      }
+    },
+    "accounts": {
+      "created": {
+        "welcome": "Evnlyへようこそ！",
+        "hint": "スワイプして削除"
       }
     }
   },
@@ -72,6 +120,12 @@ export const dictionaries = {
         "me": (name) => `그룹 ${name}에 참가하셨습니다`,
         "others": (name) => `${name} 그룹에 가입함`
       }
+    },
+    "accounts": {
+      "created": {
+        "welcome": "Evnly에 오신 것을 환영합니다!",
+        "hint": "삭제하려면 스와이프하세요"
+      }
     }
   },
   "nl-NL": {
@@ -79,6 +133,12 @@ export const dictionaries = {
       "joined": {
         "me": (name) => `Je bent lid geworden van de groep ${name}`,
         "others": (name) => `heeft zich aangesloten bij groep ${name}`
+      }
+    },
+    "accounts": {
+      "created": {
+        "welcome": "Welkom bij Evnly!",
+        "hint": "Veeg om te verwijderen"
       }
     }
   },
@@ -88,6 +148,12 @@ export const dictionaries = {
         "me": (name) => `Вы присоединились к группе ${name}`,
         "others": (name) => `присоединился к группе ${name}`
       }
+    },
+    "accounts": {
+      "created": {
+        "welcome": "Добро пожаловать в Evnly!",
+        "hint": "Свайпните, чтобы удалить"
+      }
     }
   },
   "sw-TZ": {
@@ -95,6 +161,12 @@ export const dictionaries = {
       "joined": {
         "me": (name) => `Umejiunga na kikundi ${name}`,
         "others": (name) => `amejiunga na kundi ${name}`
+      }
+    },
+    "accounts": {
+      "created": {
+        "welcome": "Karibu kwenye Evnly!",
+        "hint": "Gusa uondoe"
       }
     }
   },
@@ -104,6 +176,12 @@ export const dictionaries = {
         "me": (name) => `${name} grubuna katıldınız`,
         "others": (name) => `${name} grubuna katıldı`
       }
+    },
+    "accounts": {
+      "created": {
+        "welcome": "Evnly'e hoş geldiniz!",
+        "hint": "Kaldırmak için kaydırın"
+      }
     }
   },
   "uk-UA": {
@@ -112,6 +190,12 @@ export const dictionaries = {
         "me": (name) => `Ви приєдналися до групи ${name}`,
         "others": (name) => `приєднався до групи ${name}`
       }
+    },
+    "accounts": {
+      "created": {
+        "welcome": "Ласкаво просимо до Evnly!",
+        "hint": "Проведіть, щоб видалити"
+      }
     }
   },
   "zh-CN": {
@@ -119,6 +203,12 @@ export const dictionaries = {
       "joined": {
         "me": (name) => `你已加入群组${name}`,
         "others": (name) => `已加入群组${name}`
+      }
+    },
+    "accounts": {
+      "created": {
+        "welcome": "欢迎来到 Evnly！",
+        "hint": "滑动以移除"
       }
     }
   }

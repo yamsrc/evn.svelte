@@ -6,3 +6,7 @@ groups:
     others: |-
       !js
       (name) => `${name} grubuna katıldı`
+accounts:
+  created:
+    welcome: Evnly'e hoş geldiniz!
+    hint: Kaldırmak için kaydırın

@@ -13,4 +13,10 @@ export type Dictionary = {
           others: (value: any) => string
         }
       }
+      accounts: {
+        created: {
+          welcome: string
+          hint: string
+        }
+      }
     }

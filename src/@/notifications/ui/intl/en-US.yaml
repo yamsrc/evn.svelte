@@ -6,3 +6,7 @@ groups:
     others: |-
       !js
       (name) => `joined the group ${name}`
+accounts:
+  created:
+    welcome: Welcome to Evnly!
+    hint: Swipe to remove
