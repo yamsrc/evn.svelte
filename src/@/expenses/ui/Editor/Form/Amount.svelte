@@ -34,7 +34,7 @@
     {oninput}
     min={0}
     step="0.01"
-    class={inputClass} />
+    class={cn('text-right', inputClass)} />
   <InputGroup.Addon align="inline-end">
     <Coins />
   </InputGroup.Addon>

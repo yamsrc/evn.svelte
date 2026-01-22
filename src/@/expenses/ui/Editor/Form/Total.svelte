@@ -1,6 +1,5 @@
 <script lang="ts">
   import { dict } from '$lib/intl'
-  import { Section } from '@/app/ui'
   import { numbers } from '@/expenses'
   import Amount from './Amount.svelte'
   import type { Props } from './Total'
@@ -22,14 +21,12 @@
   }
 </script>
 
-<Section class="flex flex-col gap-1.5">
-  <div class="flex items-center justify-between gap-4 min-h-12">
-    <div>{$dict.expenses.spendings.total}</div>
-    <Amount
-      id="expenses-total-input"
-      class="max-w-40"
-      inputClass="text-3xl font-bold"
-      value={total}
-      {oninput} />
-  </div>
-</Section>
+<div class="flex items-center justify-between gap-4">
+  <div class="pl-3">{$dict.expenses.spendings.total}</div>
+  <Amount
+    id="expenses-total-input"
+    class="max-w-2/3"
+    inputClass="text-3xl font-bold"
+    value={total}
+    {oninput} />
+</div>

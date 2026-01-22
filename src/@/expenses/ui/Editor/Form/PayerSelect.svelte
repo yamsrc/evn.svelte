@@ -4,7 +4,6 @@
   import { Select, SelectTrigger, SelectContent, SelectItem } from '$ui/select'
   import { accounts } from '@/accounts'
   import { Picture } from '@/accounts/ui'
-  import { Section } from '@/app/ui'
   import { dict as expensesDict } from '@/expenses/ui/intl'
   import { account as me } from '@/iam'
   import { getContext } from './Context'
@@ -29,7 +28,7 @@
   }
 </script>
 
-<Section class="flex flex-col gap-1.5">
+<div class="space-y-2">
   <h2>{$dict.expenses.payers.title}</h2>
 
   <Select type="single" value={payerId} {onValueChange}>
@@ -68,4 +67,4 @@
       {/each}
     </SelectContent>
   </Select>
-</Section>
+</div>
