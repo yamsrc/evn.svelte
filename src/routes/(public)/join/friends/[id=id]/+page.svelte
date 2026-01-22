@@ -1,6 +1,7 @@
 <script lang="ts">
   import { ok } from 'svas'
   import { page } from '$app/state'
+  import { oidc } from '$config'
   import { Screen, Authenticated, Goto } from '@/app/ui'
   import Accept from './Accept.svelte'
   import type { PageData } from './$types.js'
@@ -17,7 +18,7 @@
   <Goto href="/" />
 {:else if good}
   <Screen>
-    <Authenticated>
+    <Authenticated {oidc}>
       {#if accepted}
         <Goto href="/" />
       {/if}

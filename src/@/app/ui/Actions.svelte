@@ -2,9 +2,8 @@
   import { Plus } from '@lucide/svelte'
   import { Actions } from '$com/shell'
   import { dict } from '$lib/intl'
-  import { cn } from '$lib/utils'
-  import { buttonVariants } from '$ui/button'
   import * as DropdownMenu from '$ui/dropdown-menu'
+  import { actionVariants } from './Action'
   import { actions } from './Actions'
 </script>
 
@@ -18,8 +17,8 @@
 
 <Actions>
   <DropdownMenu.Root>
-    <DropdownMenu.Trigger id="nav-actions-button" class={cn(buttonVariants({ size: 'icon-lg' }))}>
-      <Plus class="size-5" />
+    <DropdownMenu.Trigger id="nav-actions-button" class={actionVariants()}>
+      <Plus />
     </DropdownMenu.Trigger>
     <DropdownMenu.Content align="end" sideOffset={8} class="px-0.5 py-1 pt-2">
       {#each actions($dict) as group (group.name)}

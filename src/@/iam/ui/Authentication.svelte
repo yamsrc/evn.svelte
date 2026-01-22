@@ -10,7 +10,7 @@
   import { Authentication as Password } from './password'
   import type { Props } from './Authentication'
 
-  const { class: classes, account }: Props = $props()
+  const { class: classes, account, oidc }: Props = $props()
 
   let tabsRef = $state<HTMLDivElement | null>(null)
 
@@ -39,7 +39,7 @@
         {$dict.auth.email}
       </Tabs.Trigger>
     </Tabs.List>
-    <OIDC {account} />
+    <OIDC {account} apple={oidc?.apple !== false} google={oidc?.google !== false} />
   </div>
   <Tabs.Content value="passkey">
     <Passkey {account} />
