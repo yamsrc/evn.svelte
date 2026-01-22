@@ -1,4 +1,4 @@
-import type { Notification } from '../svc'
+import type { Notification } from '@/notifications'
 
 export type Props = {
   notifications: Notification[]
