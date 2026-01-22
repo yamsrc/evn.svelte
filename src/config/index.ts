@@ -1,5 +1,6 @@
 import { dev, version as ver } from '$app/environment'
 import { PUBLIC_API_ORIGIN } from '$env/static/public'
+import type { IDP } from '@/iam'
 
 export const defaultLocale = 'en-US'
 
@@ -66,6 +67,11 @@ function isLocalIP(hostname: string) {
 
 export const GOOGLE_CLIENT_ID = '105318496428-724qi60cql3vlpduf7h145s9962rjffl.apps.googleusercontent.com'
 export const APPLE_CLIENT_ID = 'com.evnapp.id'
+
+export const oidc = {
+  apple: false,
+  google: false,
+} as const satisfies Record<IDP, boolean>
 
 const MAJOR_VERSION = '1'
 
