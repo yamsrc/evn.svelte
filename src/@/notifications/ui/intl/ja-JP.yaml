@@ -1,0 +1,8 @@
+groups:
+  joined:
+    me: |-
+      !js
+      (name) => `グループ「${name}」に参加しました`
+    others: |-
+      !js
+      (name) => `${name} グループに参加しました`

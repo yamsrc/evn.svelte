@@ -1,0 +1,8 @@
+groups:
+  joined:
+    me: |-
+      !js
+      (name) => `आप समूह ${name} में शामिल हो गए हैं`
+    others: |-
+      !js
+      (name) => `${name} समूह में शामिल हुआ`

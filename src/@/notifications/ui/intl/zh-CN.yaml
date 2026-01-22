@@ -1,0 +1,8 @@
+groups:
+  joined:
+    me: |-
+      !js
+      (name) => `你已加入群组${name}`
+    others: |-
+      !js
+      (name) => `已加入群组${name}`

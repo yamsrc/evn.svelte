@@ -1,0 +1,8 @@
+groups:
+  joined:
+    me: |-
+      !js
+      (name) => `Umejiunga na kikundi ${name}`
+    others: |-
+      !js
+      (name) => `amejiunga na kundi ${name}`

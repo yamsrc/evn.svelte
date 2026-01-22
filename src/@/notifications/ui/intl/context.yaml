@@ -1,0 +1,10 @@
+context: Mount 'notifications' context
+inputs:
+  groups:
+    joined:
+      me:
+        input: You have joined the group {name}
+        context: Make it function
+      others:
+        input: joined the group {name}
+        context: Make it function

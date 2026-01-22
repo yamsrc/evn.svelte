@@ -24,7 +24,7 @@
     class="flex w-full overflow-x-auto snap-x snap-mandatory no-scrollbar"
     onscrollend={handleScrollEnd}>
     <div class="w-full px-4 shrink-0">
-      <div class="w-full shrink-0 snap-center bg-accent rounded-lg p-4">
+      <div class="w-full shrink-0 snap-center bg-accent rounded-lg">
         <Component {notification} />
       </div>
     </div>

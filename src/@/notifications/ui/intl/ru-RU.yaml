@@ -1,0 +1,8 @@
+groups:
+  joined:
+    me: |-
+      !js
+      (name) => `Вы присоединились к группе ${name}`
+    others: |-
+      !js
+      (name) => `присоединился к группе ${name}`
