@@ -11,7 +11,6 @@
   import { Feedback } from '@/feedback/ui'
   import { logout } from '@/iam'
   import { account } from '@/iam'
-  import { time } from '@/realtime'
 
   async function getout() {
     logout()
@@ -57,16 +56,12 @@
 
   <Section>
     <Separator class="mb-4" />
-    <footer class="text-muted-foreground text-sm">
+    <footer class="text-muted-foreground text-sm text-center">
       <p>
         &copy; <a href="https://seed.me" target="_blank">seed.me</a>
         , 2025–{new Date($time).getFullYear()}
       </p>
       <p class="[&_a]:text-muted-foreground">
-        <!-- <a href="/terms/">{$dict.terms}</a>
-        ,
-        <a href="/privacy/">{$dict.privacy}</a>
-        , -->
         <Delete class="p-0 underline underline-offset-3 font-normal" ondelete={getout} />
       </p>
       <p>v{version}</p>

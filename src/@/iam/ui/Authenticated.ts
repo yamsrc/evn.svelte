@@ -1,5 +1,5 @@
-import type { IDP } from '@/iam'
 import type { AccountLike } from './AccountLike'
+import type { IDP } from '@/iam'
 import type { Snippet } from 'svelte'
 
 export interface Props {
