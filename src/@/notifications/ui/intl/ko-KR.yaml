@@ -2,10 +2,12 @@ groups:
   joined:
     me: |-
       !js
-      (name) => `그룹 ${name}에 참가하셨습니다`
-    others: |-
+      (groupName) => `${groupName}에 참가하셨습니다`
+    others: >-
       !js
-      (name) => `${name} 그룹에 가입함`
+
+      (names, groupName) => `${new Intl.ListFormat("ko", { style: "long", type:
+      "conjunction" }).format(names)}님이 ${groupName}에 가입했습니다`
 accounts:
   created:
     welcome: Evnly에 오신 것을 환영합니다!

@@ -2,10 +2,13 @@ groups:
   joined:
     me: |-
       !js
-      (name) => `Ви приєдналися до групи ${name}`
-    others: |-
+      (groupName) => `Ви приєдналися до ${groupName}`
+    others: >-
       !js
-      (name) => `приєднався до групи ${name}`
+
+      (names, groupName) => `${new Intl.ListFormat("uk", { style: "long", type:
+      "conjunction" }).format(names)} приєдна${names.length === 1 ? "вся" :
+      "лися"} до групи ${groupName}`
 accounts:
   created:
     welcome: Ласкаво просимо до Evnly!

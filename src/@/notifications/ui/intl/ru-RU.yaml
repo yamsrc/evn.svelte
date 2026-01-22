@@ -2,10 +2,13 @@ groups:
   joined:
     me: |-
       !js
-      (name) => `Вы присоединились к группе ${name}`
-    others: |-
+      (groupName) => `Вы присоединились к группе ${groupName}`
+    others: >-
       !js
-      (name) => `присоединился к группе ${name}`
+
+      (names, groupName) => `${new Intl.ListFormat("ru", { style: "long", type:
+      "conjunction" }).format(names)} присоединил${names.length === 1 ? "ся" :
+      "ись"} к группе ${groupName}`
 accounts:
   created:
     welcome: Добро пожаловать в Evnly!

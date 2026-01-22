@@ -2,10 +2,12 @@ groups:
   joined:
     me: |-
       !js
-      (name) => `你已加入群组${name}`
-    others: |-
+      (groupName) => `您已加入${groupName}`
+    others: >-
       !js
-      (name) => `已加入群组${name}`
+
+      (names, groupName) => `${new Intl.ListFormat("zh-CN", { style: "long",
+      type: "conjunction" }).format(names)}已加入${groupName}`
 accounts:
   created:
     welcome: 欢迎来到 Evnly！

@@ -10,7 +10,7 @@ export type Dictionary = {
       groups: {
         joined: {
           me: (value: any) => string
-          others: (value: any) => string
+          others: (...args: [any, any]) => string
         }
       }
       accounts: {

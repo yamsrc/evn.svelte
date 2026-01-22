@@ -2,10 +2,12 @@ groups:
   joined:
     me: |-
       !js
-      (name) => `${name} grubuna katıldınız`
-    others: |-
+      (groupName) => `${groupName} grubuna katıldınız`
+    others: >-
       !js
-      (name) => `${name} grubuna katıldı`
+
+      (names, groupName) => `${new Intl.ListFormat("tr", { style: "long", type:
+      "conjunction" }).format(names)} ${groupName} grubuna katıldı`
 accounts:
   created:
     welcome: Evnly'e hoş geldiniz!

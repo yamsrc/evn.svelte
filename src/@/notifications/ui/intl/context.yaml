@@ -3,11 +3,11 @@ inputs:
   groups:
     joined:
       me:
-        input: You have joined the group {name}
-        context: Make it function
+        input: You have joined {groupName}
+        context: make it a function
       others:
-        input: joined the group {name}
-        context: Make it function
+        input: "{...names} joined {groupName}"
+        context: make a function, that accepts array of names and a group name. list is formatted using Intl.ListFormat
   accounts:
     created:
       hint:

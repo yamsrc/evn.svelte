@@ -2,10 +2,13 @@ groups:
   joined:
     me: |-
       !js
-      (name) => `Je bent lid geworden van de groep ${name}`
-    others: |-
+      (groupName) => `Je bent lid geworden van ${groupName}`
+    others: >-
       !js
-      (name) => `heeft zich aangesloten bij groep ${name}`
+
+      (names, groupName) => `${new Intl.ListFormat("nl", { style: "long", type:
+      "conjunction" }).format(names)} ${names.length === 1 ? "is" : "zijn"} lid
+      geworden van ${groupName}`
 accounts:
   created:
     welcome: Welkom bij Evnly!

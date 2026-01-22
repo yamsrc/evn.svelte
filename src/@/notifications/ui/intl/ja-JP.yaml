@@ -2,10 +2,12 @@ groups:
   joined:
     me: |-
       !js
-      (name) => `グループ「${name}」に参加しました`
-    others: |-
+      (groupName) => `${groupName} に参加しました`
+    others: >-
       !js
-      (name) => `${name} グループに参加しました`
+
+      (names, groupName) => `${new Intl.ListFormat("ja", { style: "long", type:
+      "conjunction" }).format(names)} が${groupName}に参加しました`
 accounts:
   created:
     welcome: Evnlyへようこそ！

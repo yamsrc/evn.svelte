@@ -2,10 +2,13 @@ groups:
   joined:
     me: |-
       !js
-      (name) => `आप समूह ${name} में शामिल हो गए हैं`
-    others: |-
+      (groupName) => `${groupName} में आप शामिल हो गए हैं`
+    others: >-
       !js
-      (name) => `${name} समूह में शामिल हुआ`
+
+      (names, groupName) => `${new Intl.ListFormat("hi", { style: "long", type:
+      "conjunction" }).format(names)} ${names.length === 1 ? "ने" : "ने"}
+      ${groupName} को जॉइन किया`
 accounts:
   created:
     welcome: Evnly में आपका स्वागत है!

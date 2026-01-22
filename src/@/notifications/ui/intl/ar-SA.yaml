@@ -2,10 +2,13 @@ groups:
   joined:
     me: |-
       !js
-      (name) => `لقد انضممت إلى المجموعة ${name}`
-    others: |-
+      (groupName) => `لقد انضممت إلى ${groupName}`
+    others: >-
       !js
-      (name) => `انضم إلى المجموعة ${name}`
+
+      (names, groupName) => `${new Intl.ListFormat("ar", { style: "long", type:
+      "conjunction" }).format(names)} انضم${names.length === 1 ? "/ت" : "وا"}
+      إلى ${groupName}`
 accounts:
   created:
     welcome: مرحبًا بك في Evnly!

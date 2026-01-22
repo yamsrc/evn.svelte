@@ -2,10 +2,13 @@ groups:
   joined:
     me: |-
       !js
-      (name) => `Te has unido al grupo ${name}`
-    others: |-
+      (groupName) => `Te has unido a ${groupName}`
+    others: >-
       !js
-      (name) => `se unió al grupo ${name}`
+
+      (names, groupName) => `${new Intl.ListFormat("es", { style: "long", type:
+      "conjunction" }).format(names)} se ha${names.length === 1 ? "" : "n"}
+      unido a ${groupName}`
 accounts:
   created:
     welcome: ¡Bienvenido a Evnly!
