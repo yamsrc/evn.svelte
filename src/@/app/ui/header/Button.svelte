@@ -5,12 +5,12 @@
   const {
     children,
     size = 'icon',
-    variant = 'secondary',
+    variant = 'ghost',
     class: classes,
     ...rest
   }: ButtonProps = $props()
 </script>
 
-<Button class={cn('size-12 bg-accent/50 border border-border', classes)} {size} {variant} {...rest}>
+<Button class={cn("[&_svg:not([class*='size-'])]:size-5", classes)} {size} {variant} {...rest}>
   {@render children?.()}
 </Button>

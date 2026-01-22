@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { Paperclip } from '@lucide/svelte'
   import { page } from '$app/state'
   import { dict } from '$lib/intl'
   import { Section } from '@/app/ui'
@@ -12,6 +13,11 @@
 <Section>
   <Header.Root>
     <Header.Title>{$dict.expenses.title}</Header.Title>
+    <Header.Actions>
+      <Header.Button href="/me/" id="expenses-attach-button">
+        <Paperclip />
+      </Header.Button>
+    </Header.Actions>
   </Header.Root>
 </Section>
 

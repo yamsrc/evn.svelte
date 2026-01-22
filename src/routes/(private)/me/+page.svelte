@@ -27,7 +27,7 @@
           id="me-logout-button"
           onclick={getout}
           variant="ghost"
-          class="size-12 bg-accent/50 border border-border"
+          size="icon"
           position="left"
           label={$dict.actions.holdToLogout}>
           <LogOut class="size-5" />
