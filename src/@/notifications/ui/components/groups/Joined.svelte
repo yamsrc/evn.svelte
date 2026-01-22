@@ -34,9 +34,9 @@
         {@const me = newbies.find(({ id }) => id === account.id)}
         <Button
           href={`/contacts/groups/${group.id}`}
-          class="w-full p-4 items-start h-fit"
+          class="w-full p-4 items-start h-fit font-normal"
           variant="ghost">
-          <span class="text-start w-full text-prettier whitespace-normal">
+          <span class="text-start w-full text-pretty whitespace-normal">
             {#if me}
               {$dict.groups.joined.me(group.name)}
             {:else}
