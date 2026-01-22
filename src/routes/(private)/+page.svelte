@@ -30,7 +30,7 @@
       <Totals {contacts} />
     </Section>
 
-    <Section>
+    <Section class="px-0">
       <Notifications {notifications} />
     </Section>
 

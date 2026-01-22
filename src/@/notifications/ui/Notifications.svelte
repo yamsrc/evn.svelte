@@ -29,12 +29,10 @@
   )
 </script>
 
-<div class="flex flex-col gap-2">
-  {#if renderable.length > 0}
-    <div class="flex flex-col gap-2">
-      {#each renderable.slice(0, limit) as { notification, component } (notification.id)}
-        <Notification {notification} {component} {ondismiss} />
-      {/each}
-    </div>
-  {/if}
-</div>
+{#if renderable.length > 0}
+  <div class="flex flex-col gap-2">
+    {#each renderable.slice(0, limit) as { notification, component } (notification.id)}
+      <Notification {notification} {component} {ondismiss} />
+    {/each}
+  </div>
+{/if}
