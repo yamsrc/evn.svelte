@@ -10,3 +10,6 @@ accounts:
   created:
     welcome: Welkom bij Evnly!
     hint: Veeg om te verwijderen
+erase: |-
+  !js
+  (n) => `Alles wissen (${n})`

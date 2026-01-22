@@ -12,3 +12,6 @@ inputs:
     created:
       hint:
         input: swipe to remove
+  erase:
+    input: Erase all (${n})
+    context: Make it function

@@ -14,7 +14,8 @@ export const dictionaries = {
         "welcome": "مرحبًا بك في Evnly!",
         "hint": "اسحب للإزالة"
       }
-    }
+    },
+    "erase": (n) => `مسح الكل (${n})`
   },
   "de-DE": {
     "groups": {
@@ -28,7 +29,8 @@ export const dictionaries = {
         "welcome": "Willkommen bei Evnly!",
         "hint": "Zum Entfernen wischen"
       }
-    }
+    },
+    "erase": (n) => `Alle löschen (${n})`
   },
   "en-US": {
     "groups": {
@@ -42,7 +44,8 @@ export const dictionaries = {
         "welcome": "Welcome to Evnly!",
         "hint": "Swipe to remove"
       }
-    }
+    },
+    "erase": (n) => `Erase all (${n})`
   },
   "es-ES": {
     "groups": {
@@ -56,7 +59,8 @@ export const dictionaries = {
         "welcome": "¡Bienvenido a Evnly!",
         "hint": "Desliza para eliminar"
       }
-    }
+    },
+    "erase": (n) => `Borrar todo (${n})`
   },
   "fr-FR": {
     "groups": {
@@ -70,7 +74,8 @@ export const dictionaries = {
         "welcome": "Bienvenue chez Evnly !",
         "hint": "Faites glisser pour supprimer"
       }
-    }
+    },
+    "erase": (n) => `Tout effacer (${n})`
   },
   "hi-IN": {
     "groups": {
@@ -84,7 +89,8 @@ export const dictionaries = {
         "welcome": "Evnly में आपका स्वागत है!",
         "hint": "हटाने के लिए स्वाइप करें"
       }
-    }
+    },
+    "erase": (n) => `सभी मिटाएँ (${n})`
   },
   "it-IT": {
     "groups": {
@@ -98,7 +104,8 @@ export const dictionaries = {
         "welcome": "Benvenuto su Evnly!",
         "hint": "Scorri per rimuovere"
       }
-    }
+    },
+    "erase": (n) => `Cancella tutto (${n})`
   },
   "ja-JP": {
     "groups": {
@@ -112,7 +119,8 @@ export const dictionaries = {
         "welcome": "Evnlyへようこそ！",
         "hint": "スワイプして削除"
       }
-    }
+    },
+    "erase": (n) => `すべて消去 (${n})`
   },
   "ko-KR": {
     "groups": {
@@ -126,7 +134,8 @@ export const dictionaries = {
         "welcome": "Evnly에 오신 것을 환영합니다!",
         "hint": "삭제하려면 스와이프하세요"
       }
-    }
+    },
+    "erase": (n) => `모두 지우기 (${n})`
   },
   "nl-NL": {
     "groups": {
@@ -140,7 +149,8 @@ export const dictionaries = {
         "welcome": "Welkom bij Evnly!",
         "hint": "Veeg om te verwijderen"
       }
-    }
+    },
+    "erase": (n) => `Alles wissen (${n})`
   },
   "ru-RU": {
     "groups": {
@@ -154,7 +164,8 @@ export const dictionaries = {
         "welcome": "Добро пожаловать в Evnly!",
         "hint": "Свайпните, чтобы удалить"
       }
-    }
+    },
+    "erase": (n) => `Удалить всё (${n})`
   },
   "sw-TZ": {
     "groups": {
@@ -168,7 +179,8 @@ export const dictionaries = {
         "welcome": "Karibu kwenye Evnly!",
         "hint": "Gusa uondoe"
       }
-    }
+    },
+    "erase": (n) => `Futa vyote (${n})`
   },
   "tr-TR": {
     "groups": {
@@ -182,7 +194,8 @@ export const dictionaries = {
         "welcome": "Evnly'e hoş geldiniz!",
         "hint": "Kaldırmak için kaydırın"
       }
-    }
+    },
+    "erase": (n) => `Hepsini sil (${n})`
   },
   "uk-UA": {
     "groups": {
@@ -196,7 +209,8 @@ export const dictionaries = {
         "welcome": "Ласкаво просимо до Evnly!",
         "hint": "Проведіть, щоб видалити"
       }
-    }
+    },
+    "erase": (n) => `Видалити все (${n})`
   },
   "zh-CN": {
     "groups": {
@@ -210,7 +224,8 @@ export const dictionaries = {
         "welcome": "欢迎来到 Evnly！",
         "hint": "滑动以移除"
       }
-    }
+    },
+    "erase": (n) => `全部清除 (${n})`
   }
 };
 

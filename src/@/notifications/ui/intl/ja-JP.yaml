@@ -10,3 +10,6 @@ accounts:
   created:
     welcome: Evnlyへようこそ！
     hint: スワイプして削除
+erase: |-
+  !js
+  (n) => `すべて消去 (${n})`

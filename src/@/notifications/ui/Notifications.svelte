@@ -1,5 +1,8 @@
 <script lang="ts">
+  import { Trash2 } from '@lucide/svelte'
+  import { Button } from '$ui/button'
   import { del } from '@/notifications'
+  import { dict } from '@/notifications/ui/intl'
   import Notification from './Notification.svelte'
   import { pick } from './components'
   import type { Props } from './Notifications'
@@ -14,6 +17,10 @@
 
   async function ondismiss(id: string) {
     await del(id)
+  }
+
+  async function onclick() {
+    await Promise.all(renderable.map(({ notification }) => del(notification.id)))
   }
 
   const renderable = $derived(
@@ -31,6 +38,12 @@
 
 {#if renderable.length > 0}
   <div class="flex flex-col gap-2">
+    <div class="flex justify-end px-4">
+      <Button variant="ghost" size="sm" {onclick} class="gap-2 text-secondary-foreground">
+        <Trash2 size={16} />
+        {$dict.erase(renderable.length)}
+      </Button>
+    </div>
     {#each renderable.slice(0, limit) as { notification, component } (notification.id)}
       <Notification {notification} {component} {ondismiss} />
     {/each}

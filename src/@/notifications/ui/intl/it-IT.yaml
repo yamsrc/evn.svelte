@@ -10,3 +10,6 @@ accounts:
   created:
     welcome: Benvenuto su Evnly!
     hint: Scorri per rimuovere
+erase: |-
+  !js
+  (n) => `Cancella tutto (${n})`

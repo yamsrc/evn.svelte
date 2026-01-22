@@ -10,3 +10,6 @@ accounts:
   created:
     welcome: ¡Bienvenido a Evnly!
     hint: Desliza para eliminar
+erase: |-
+  !js
+  (n) => `Borrar todo (${n})`

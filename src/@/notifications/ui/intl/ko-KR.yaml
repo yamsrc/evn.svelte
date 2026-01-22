@@ -10,3 +10,6 @@ accounts:
   created:
     welcome: Evnly에 오신 것을 환영합니다!
     hint: 삭제하려면 스와이프하세요
+erase: |-
+  !js
+  (n) => `모두 지우기 (${n})`

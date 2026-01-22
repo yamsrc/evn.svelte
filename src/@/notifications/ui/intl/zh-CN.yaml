@@ -10,3 +10,6 @@ accounts:
   created:
     welcome: 欢迎来到 Evnly！
     hint: 滑动以移除
+erase: |-
+  !js
+  (n) => `全部清除 (${n})`

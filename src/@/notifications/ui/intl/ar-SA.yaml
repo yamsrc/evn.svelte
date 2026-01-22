@@ -10,3 +10,6 @@ accounts:
   created:
     welcome: مرحبًا بك في Evnly!
     hint: اسحب للإزالة
+erase: |-
+  !js
+  (n) => `مسح الكل (${n})`
