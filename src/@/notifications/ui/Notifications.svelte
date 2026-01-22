@@ -34,18 +34,24 @@
       })
       .filter((item): item is Renderable => item !== null),
   )
+
+  const MIN_CLEARABLE_NOTIFICATIONS = 3
 </script>
 
-{#if renderable.length > 0}
-  <div class="flex flex-col gap-2">
-    <div class="flex justify-end px-4">
-      <Button variant="ghost" size="sm" {onclick} class="text-muted-foreground">
-        <Trash2 size={16} />
-        {$dict.erase}
-      </Button>
+<div class="space-y-2">
+  {#if renderable.length > 0}
+    <div class="flex flex-col gap-2">
+      {#each renderable.slice(0, limit) as { notification, component } (notification.id)}
+        <Notification {notification} {component} {ondismiss} />
+      {/each}
     </div>
-    {#each renderable.slice(0, limit) as { notification, component } (notification.id)}
-      <Notification {notification} {component} {ondismiss} />
-    {/each}
-  </div>
-{/if}
+    {#if renderable.length > MIN_CLEARABLE_NOTIFICATIONS}
+      <div class="flex justify-center">
+        <Button variant="ghost" size="sm" {onclick} class="text-muted-foreground">
+          <Trash2 size={16} />
+          {$dict.erase}
+        </Button>
+      </div>
+    {/if}
+  {/if}
+</div>
