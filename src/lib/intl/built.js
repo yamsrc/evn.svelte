@@ -11,7 +11,7 @@ export const dictionaries = {
       "signout": "تسجيل الخروج",
       "close": "إغلاق",
       "cheques": {
-        "title": "المصروفات",
+        "title": "المال",
         "scan": "مسح الشيك",
         "input": "إضافة مصروف"
       },
@@ -30,7 +30,7 @@ export const dictionaries = {
       "home": "الرئيسية",
       "profile": "أنا",
       "contacts": "الأصدقاء",
-      "expenses": "المصاريف"
+      "expenses": "المال"
     },
     "terms": "الشروط والأحكام",
     "privacy": "سياسة الخصوصية",
@@ -165,7 +165,7 @@ export const dictionaries = {
         },
         "save": "احفظ وقم بتحديث الأرصدة"
       },
-      "title": "المصروفات",
+      "title": "مال",
       "balance": {
         "total": "إجمالي الفاتورة",
         "youAreOwed": "لك مستحقات",
@@ -205,7 +205,7 @@ export const dictionaries = {
       "signout": "Abmelden",
       "close": "Schließen",
       "cheques": {
-        "title": "Ausgaben",
+        "title": "Geld",
         "scan": "Scheck scannen",
         "input": "Ausgabe hinzufügen"
       },
@@ -224,7 +224,7 @@ export const dictionaries = {
       "home": "Startseite",
       "profile": "Ich",
       "contacts": "Freunde",
-      "expenses": "Ausgaben"
+      "expenses": "Geld"
     },
     "terms": "Allgemeine Geschäftsbedingungen",
     "privacy": "Datenschutzrichtlinie",
@@ -359,7 +359,7 @@ export const dictionaries = {
         },
         "save": "Speichern und Salden aktualisieren"
       },
-      "title": "Ausgaben",
+      "title": "Geld",
       "balance": {
         "total": "Gesamtrechnung",
         "youAreOwed": "Dir steht etwas zu",
@@ -399,7 +399,7 @@ export const dictionaries = {
       "signout": "Sign out",
       "close": "Close",
       "cheques": {
-        "title": "Expenses",
+        "title": "Money",
         "scan": "Scan cheque",
         "input": "Add expense"
       },
@@ -418,7 +418,7 @@ export const dictionaries = {
       "home": "Home",
       "profile": "Me",
       "contacts": "Friends",
-      "expenses": "Expenses"
+      "expenses": "Money"
     },
     "terms": "Terms & Conditions",
     "privacy": "Privacy Policy",
@@ -553,7 +553,7 @@ export const dictionaries = {
         },
         "save": "Save and update balances"
       },
-      "title": "Expenses",
+      "title": "Money",
       "empty": {
         "title": "No expenses yet",
         "description": "Create your first expense to start tracking",
@@ -593,7 +593,7 @@ export const dictionaries = {
       "signout": "Cerrar sesión",
       "close": "Cerrar",
       "cheques": {
-        "title": "Gastos",
+        "title": "Dinero",
         "scan": "Escanear cheque",
         "input": "Añadir gasto"
       },
@@ -612,7 +612,7 @@ export const dictionaries = {
       "home": "Inicio",
       "profile": "Yo",
       "contacts": "Amigos",
-      "expenses": "Gastos"
+      "expenses": "Dinero"
     },
     "terms": "Términos y condiciones",
     "privacy": "Política de privacidad",
@@ -747,7 +747,7 @@ export const dictionaries = {
         },
         "save": "Guardar y actualizar saldos"
       },
-      "title": "Gastos",
+      "title": "Dinero",
       "balance": {
         "total": "Factura total",
         "youAreOwed": "Te deben",
@@ -787,7 +787,7 @@ export const dictionaries = {
       "signout": "Se déconnecter",
       "close": "Fermer",
       "cheques": {
-        "title": "Dépenses",
+        "title": "Argent",
         "scan": "Scanner le chèque",
         "input": "Ajouter une dépense"
       },
@@ -806,7 +806,7 @@ export const dictionaries = {
       "home": "Accueil",
       "profile": "Moi",
       "contacts": "Amis",
-      "expenses": "Dépenses"
+      "expenses": "Argent"
     },
     "terms": "Conditions générales",
     "privacy": "Politique de confidentialité",
@@ -941,7 +941,7 @@ export const dictionaries = {
         },
         "save": "Enregistrer et mettre à jour les soldes"
       },
-      "title": "Dépenses",
+      "title": "Argent",
       "balance": {
         "total": "Facture totale",
         "youAreOwed": "On te doit",
@@ -981,7 +981,7 @@ export const dictionaries = {
       "signout": "साइन आउट करें",
       "close": "बंद करें",
       "cheques": {
-        "title": "खर्चे",
+        "title": "पैसे",
         "scan": "चेक स्कैन करें",
         "input": "खर्च जोड़ें"
       },
@@ -1000,7 +1000,7 @@ export const dictionaries = {
       "home": "मुख्य पृष्ठ",
       "profile": "मैं",
       "contacts": "मित्र",
-      "expenses": "खर्चे"
+      "expenses": "पैसा"
     },
     "terms": "नियम व शर्तें",
     "privacy": "गोपनीयता नीति",
@@ -1135,7 +1135,7 @@ export const dictionaries = {
         },
         "save": "सहेजें और बैलेंस अपडेट करें"
       },
-      "title": "खर्चे",
+      "title": "पैसे",
       "balance": {
         "total": "कुल बिल",
         "youAreOwed": "आपको कुछ मिलना बाकी है",
@@ -1175,7 +1175,7 @@ export const dictionaries = {
       "signout": "Esci",
       "close": "Chiudi",
       "cheques": {
-        "title": "Spese",
+        "title": "Denaro",
         "scan": "Scansiona assegno",
         "input": "Aggiungi spesa"
       },
@@ -1194,7 +1194,7 @@ export const dictionaries = {
       "home": "Home",
       "profile": "Io",
       "contacts": "Amici",
-      "expenses": "Spese"
+      "expenses": "Denaro"
     },
     "terms": "Termini e condizioni",
     "privacy": "Informativa sulla privacy",
@@ -1329,7 +1329,7 @@ export const dictionaries = {
         },
         "save": "Salva e aggiorna i saldi"
       },
-      "title": "Spese",
+      "title": "Denaro",
       "balance": {
         "total": "Totale conto",
         "youAreOwed": "Ti è dovuto",
@@ -1369,7 +1369,7 @@ export const dictionaries = {
       "signout": "サインアウト",
       "close": "閉じる",
       "cheques": {
-        "title": "経費",
+        "title": "お金",
         "scan": "小切手をスキャン",
         "input": "支出を追加"
       },
@@ -1388,7 +1388,7 @@ export const dictionaries = {
       "home": "ホーム",
       "profile": "私",
       "contacts": "友だち",
-      "expenses": "経費"
+      "expenses": "お金"
     },
     "terms": "利用規約",
     "privacy": "プライバシーポリシー",
@@ -1523,7 +1523,7 @@ export const dictionaries = {
         },
         "save": "保存して残高を更新"
       },
-      "title": "経費",
+      "title": "お金",
       "balance": {
         "total": "合計金額",
         "youAreOwed": "あなたには支払いが残っています",
@@ -1563,7 +1563,7 @@ export const dictionaries = {
       "signout": "로그아웃",
       "close": "닫기",
       "cheques": {
-        "title": "지출",
+        "title": "돈",
         "scan": "수표 스캔",
         "input": "지출 추가"
       },
@@ -1582,7 +1582,7 @@ export const dictionaries = {
       "home": "홈",
       "profile": "나",
       "contacts": "친구",
-      "expenses": "지출"
+      "expenses": "돈"
     },
     "terms": "이용 약관",
     "privacy": "개인정보처리방침",
@@ -1717,7 +1717,7 @@ export const dictionaries = {
         },
         "save": "저장하고 잔액 업데이트"
       },
-      "title": "지출",
+      "title": "돈",
       "balance": {
         "total": "총 금액",
         "youAreOwed": "당신은 받을 돈이 있습니다",
@@ -1757,7 +1757,7 @@ export const dictionaries = {
       "signout": "Afmelden",
       "close": "Sluiten",
       "cheques": {
-        "title": "Uitgaven",
+        "title": "Geld",
         "scan": "Cheque scannen",
         "input": "Uitgave toevoegen"
       },
@@ -1776,7 +1776,7 @@ export const dictionaries = {
       "home": "Home",
       "profile": "Ik",
       "contacts": "Vrienden",
-      "expenses": "Uitgaven"
+      "expenses": "Geld"
     },
     "terms": "Algemene voorwaarden",
     "privacy": "Privacybeleid",
@@ -1911,7 +1911,7 @@ export const dictionaries = {
         },
         "save": "Opslaan en saldi bijwerken"
       },
-      "title": "Uitgaven",
+      "title": "Geld",
       "balance": {
         "total": "Totaalrekening",
         "youAreOwed": "Je hebt iets tegoed",
@@ -1951,7 +1951,7 @@ export const dictionaries = {
       "signout": "Выйти",
       "close": "Закрыть",
       "cheques": {
-        "title": "Расходы",
+        "title": "Деньги",
         "scan": "Сканировать чек",
         "input": "Добавить расход"
       },
@@ -1970,7 +1970,7 @@ export const dictionaries = {
       "home": "Главная",
       "profile": "Я",
       "contacts": "Друзья",
-      "expenses": "Расходы"
+      "expenses": "Деньги"
     },
     "terms": "Условия и положения",
     "privacy": "Политика конфиденциальности",
@@ -2105,7 +2105,7 @@ export const dictionaries = {
         },
         "save": "Сохранить и обновить балансы"
       },
-      "title": "Расходы",
+      "title": "Деньги",
       "balance": {
         "total": "Итоговый счет",
         "youAreOwed": "Вам должны",
@@ -2145,7 +2145,7 @@ export const dictionaries = {
       "signout": "Ondoka",
       "close": "Funga",
       "cheques": {
-        "title": "Matumizi",
+        "title": "Pesa",
         "scan": "Changanua hundi",
         "input": "Ongeza gharama"
       },
@@ -2164,7 +2164,7 @@ export const dictionaries = {
       "home": "Mwanzo",
       "profile": "Mimi",
       "contacts": "Marafiki",
-      "expenses": "Matumizi"
+      "expenses": "Pesa"
     },
     "terms": "Vigezo na masharti",
     "privacy": "Sera ya Faragha",
@@ -2299,7 +2299,7 @@ export const dictionaries = {
         },
         "save": "Hifadhi na sasisha mizania"
       },
-      "title": "Matumizi",
+      "title": "Pesa",
       "balance": {
         "total": "Jumla ya bili",
         "youAreOwed": "Unadai malipo",
@@ -2339,7 +2339,7 @@ export const dictionaries = {
       "signout": "Oturumu kapat",
       "close": "Kapat",
       "cheques": {
-        "title": "Giderler",
+        "title": "Para",
         "scan": "Çeki tara",
         "input": "Gider ekle"
       },
@@ -2358,7 +2358,7 @@ export const dictionaries = {
       "home": "Ana Sayfa",
       "profile": "Ben",
       "contacts": "Arkadaşlar",
-      "expenses": "Giderler"
+      "expenses": "Para"
     },
     "terms": "Şartlar ve koşullar",
     "privacy": "Gizlilik Politikası",
@@ -2493,7 +2493,7 @@ export const dictionaries = {
         },
         "save": "Bakiyeleri kaydet ve güncelle"
       },
-      "title": "Giderler",
+      "title": "Para",
       "balance": {
         "total": "Toplam fatura",
         "youAreOwed": "Sana borç var",
@@ -2533,7 +2533,7 @@ export const dictionaries = {
       "signout": "Вийти",
       "close": "Закрити",
       "cheques": {
-        "title": "Витрати",
+        "title": "Гроші",
         "scan": "Сканувати чек",
         "input": "Додати витрату"
       },
@@ -2552,7 +2552,7 @@ export const dictionaries = {
       "home": "Головна",
       "profile": "Я",
       "contacts": "Друзі",
-      "expenses": "Витрати"
+      "expenses": "Гроші"
     },
     "terms": "Умови та положення",
     "privacy": "Політика конфіденційності",
@@ -2687,7 +2687,7 @@ export const dictionaries = {
         },
         "save": "Зберегти й оновити баланси"
       },
-      "title": "Витрати",
+      "title": "Гроші",
       "balance": {
         "total": "Загальний рахунок",
         "youAreOwed": "Вам винні",
@@ -2727,7 +2727,7 @@ export const dictionaries = {
       "signout": "退出登录",
       "close": "关闭",
       "cheques": {
-        "title": "支出",
+        "title": "钱",
         "scan": "扫描支票",
         "input": "添加支出"
       },
@@ -2746,7 +2746,7 @@ export const dictionaries = {
       "home": "首页",
       "profile": "我",
       "contacts": "朋友",
-      "expenses": "支出"
+      "expenses": "钱"
     },
     "terms": "条款和条件",
     "privacy": "隐私政策",
@@ -2881,7 +2881,7 @@ export const dictionaries = {
         },
         "save": "保存并更新余额"
       },
-      "title": "支出",
+      "title": "钱",
       "balance": {
         "total": "总账单",
         "youAreOwed": "你有应得的",

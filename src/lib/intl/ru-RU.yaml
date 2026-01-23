@@ -6,7 +6,7 @@ actions:
   signout: Выйти
   close: Закрыть
   cheques:
-    title: Расходы
+    title: Деньги
     scan: Сканировать чек
     input: Добавить расход
   contacts:
@@ -22,7 +22,7 @@ nav:
   home: Главная
   profile: Я
   contacts: Друзья
-  expenses: Расходы
+  expenses: Деньги
 terms: Условия и положения
 privacy: Политика конфиденциальности
 madeBy: Сделано
@@ -145,7 +145,7 @@ expenses:
     location:
       placeholder: Где? (необязательно)
     save: Сохранить и обновить балансы
-  title: Расходы
+  title: Деньги
   balance:
     total: Итоговый счет
     youAreOwed: Вам должны

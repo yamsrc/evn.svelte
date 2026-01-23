@@ -6,7 +6,7 @@ actions:
   signout: 退出登录
   close: 关闭
   cheques:
-    title: 支出
+    title: 钱
     scan: 扫描支票
     input: 添加支出
   contacts:
@@ -22,7 +22,7 @@ nav:
   home: 首页
   profile: 我
   contacts: 朋友
-  expenses: 支出
+  expenses: 钱
 terms: 条款和条件
 privacy: 隐私政策
 madeBy: 由...制作
@@ -130,7 +130,7 @@ expenses:
     location:
       placeholder: 在哪里？（可选）
     save: 保存并更新余额
-  title: 支出
+  title: 钱
   balance:
     total: 总账单
     youAreOwed: 你有应得的

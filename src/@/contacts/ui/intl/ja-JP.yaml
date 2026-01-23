@@ -10,5 +10,5 @@ groups:
   title: 所属グループ
   empty: どのグループにも所属していません。
 expenses:
-  title: 費用
+  title: お金
   empty: これまでに共有された支出はありません。

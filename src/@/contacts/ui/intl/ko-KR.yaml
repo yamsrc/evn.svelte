@@ -10,5 +10,5 @@ groups:
   title: 소속 그룹
   empty: 어떤 그룹에도 속해 있지 않습니다.
 expenses:
-  title: 지출
+  title: 돈
   empty: 아직 공유된 지출이 없습니다.

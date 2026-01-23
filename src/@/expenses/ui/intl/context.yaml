@@ -2,7 +2,7 @@ context: Mount 'expenses' context
 inputs:
   recent:
     title:
-      input: Expenses
+      input: Money
     empty:
       input: Nothing happened yet. Add some spending, bring some friends to start things rolling.
   payer:

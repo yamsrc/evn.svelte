@@ -10,5 +10,5 @@ groups:
   title: Gruplara ait
   empty: Herhangi bir grubun üyesi değilsin.
 expenses:
-  title: Giderler
+  title: Para
   empty: Şu ana kadar paylaşılan bir harcama yok.

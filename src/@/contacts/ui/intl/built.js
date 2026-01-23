@@ -18,7 +18,7 @@ export const dictionaries = {
       "empty": "لست عضوًا في أي مجموعة."
     },
     "expenses": {
-      "title": "المصروفات",
+      "title": "المال",
       "empty": "لا توجد مصروفات مشتركة حتى الآن."
     }
   },
@@ -38,7 +38,7 @@ export const dictionaries = {
       "empty": "Du bist in keiner Gruppe Mitglied."
     },
     "expenses": {
-      "title": "Ausgaben",
+      "title": "Geld",
       "empty": "Bisher keine geteilten Ausgaben."
     }
   },
@@ -58,7 +58,7 @@ export const dictionaries = {
       "empty": "Not a member of any group."
     },
     "expenses": {
-      "title": "Expenses",
+      "title": "Money",
       "empty": "No shared expenses so far."
     }
   },
@@ -78,7 +78,7 @@ export const dictionaries = {
       "empty": "No eres miembro de ningún grupo."
     },
     "expenses": {
-      "title": "Gastos",
+      "title": "Dinero",
       "empty": "No hay gastos compartidos hasta ahora."
     }
   },
@@ -98,7 +98,7 @@ export const dictionaries = {
       "empty": "Vous n'êtes membre d'aucun groupe."
     },
     "expenses": {
-      "title": "Dépenses",
+      "title": "Argent",
       "empty": "Aucune dépense partagée pour le moment."
     }
   },
@@ -118,7 +118,7 @@ export const dictionaries = {
       "empty": "आप किसी भी समूह के सदस्य नहीं हैं।"
     },
     "expenses": {
-      "title": "खर्चे",
+      "title": "पैसे",
       "empty": "अब तक कोई साझा खर्च नहीं हुआ है।"
     }
   },
@@ -138,7 +138,7 @@ export const dictionaries = {
       "empty": "Non fai parte di nessun gruppo."
     },
     "expenses": {
-      "title": "Spese",
+      "title": "Denaro",
       "empty": "Nessuna spesa condivisa finora."
     }
   },
@@ -158,7 +158,7 @@ export const dictionaries = {
       "empty": "どのグループにも所属していません。"
     },
     "expenses": {
-      "title": "費用",
+      "title": "お金",
       "empty": "これまでに共有された支出はありません。"
     }
   },
@@ -178,7 +178,7 @@ export const dictionaries = {
       "empty": "어떤 그룹에도 속해 있지 않습니다."
     },
     "expenses": {
-      "title": "지출",
+      "title": "돈",
       "empty": "아직 공유된 지출이 없습니다."
     }
   },
@@ -198,7 +198,7 @@ export const dictionaries = {
       "empty": "Je bent geen lid van een groep."
     },
     "expenses": {
-      "title": "Uitgaven",
+      "title": "Geld",
       "empty": "Tot nu toe geen gedeelde uitgaven."
     }
   },
@@ -218,7 +218,7 @@ export const dictionaries = {
       "empty": "Вы не состоите ни в одной группе."
     },
     "expenses": {
-      "title": "Расходы",
+      "title": "Деньги",
       "empty": "Пока нет совместных расходов."
     }
   },
@@ -238,7 +238,7 @@ export const dictionaries = {
       "empty": "Sio mwanachama wa kundi lolote."
     },
     "expenses": {
-      "title": "Matumizi",
+      "title": "Pesa",
       "empty": "Hakuna gharama za pamoja hadi sasa."
     }
   },
@@ -258,7 +258,7 @@ export const dictionaries = {
       "empty": "Herhangi bir grubun üyesi değilsin."
     },
     "expenses": {
-      "title": "Giderler",
+      "title": "Para",
       "empty": "Şu ana kadar paylaşılan bir harcama yok."
     }
   },
@@ -278,7 +278,7 @@ export const dictionaries = {
       "empty": "Ви не є учасником жодної групи."
     },
     "expenses": {
-      "title": "Витрати",
+      "title": "Гроші",
       "empty": "Поки що спільних витрат немає."
     }
   },
@@ -298,7 +298,7 @@ export const dictionaries = {
       "empty": "未加入任何群组。"
     },
     "expenses": {
-      "title": "支出",
+      "title": "钱",
       "empty": "目前还没有共享支出。"
     }
   }

@@ -6,7 +6,7 @@ actions:
   signout: Sign out
   close: Close
   cheques:
-    title: Expenses
+    title: Money
     scan: Scan cheque
     input: Add expense
   contacts:
@@ -22,7 +22,7 @@ nav:
   home: Home
   profile: Me
   contacts: Friends
-  expenses: Expenses
+  expenses: Money
 terms: Terms & Conditions
 privacy: Privacy Policy
 madeBy: Made by
@@ -142,7 +142,7 @@ expenses:
     location:
       placeholder: Where? (Optional)
     save: Save and update balances
-  title: Expenses
+  title: Money
   empty:
     title: No expenses yet
     description: Create your first expense to start tracking

@@ -6,7 +6,7 @@ actions:
   signout: تسجيل الخروج
   close: إغلاق
   cheques:
-    title: المصروفات
+    title: المال
     scan: مسح الشيك
     input: إضافة مصروف
   contacts:
@@ -22,7 +22,7 @@ nav:
   home: الرئيسية
   profile: أنا
   contacts: الأصدقاء
-  expenses: المصاريف
+  expenses: المال
 terms: الشروط والأحكام
 privacy: سياسة الخصوصية
 madeBy: من صنع
@@ -140,7 +140,7 @@ expenses:
     location:
       placeholder: أين؟ (اختياري)
     save: احفظ وقم بتحديث الأرصدة
-  title: المصروفات
+  title: مال
   balance:
     total: إجمالي الفاتورة
     youAreOwed: لك مستحقات

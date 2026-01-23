@@ -18,7 +18,7 @@ inputs:
       input: Close
     cheques:
       title:
-        input: Expenses
+        input: Money
       scan:
         input: Scan cheque
       input:
@@ -48,7 +48,7 @@ inputs:
     contacts:
       input: Friends
     expenses:
-      input: Expenses
+      input: Money
   terms:
     input: Terms & conditions
   privacy:
@@ -223,7 +223,7 @@ inputs:
       save:
         input: Save and update balances
     title:
-      input: Expenses
+      input: Money
     empty:
       title:
         input: No expenses yet

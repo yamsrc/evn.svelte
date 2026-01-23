@@ -10,5 +10,5 @@ groups:
   title: Appartiene ai gruppi
   empty: Non fai parte di nessun gruppo.
 expenses:
-  title: Spese
+  title: Denaro
   empty: Nessuna spesa condivisa finora.
