@@ -5,6 +5,8 @@ type AccountLike = Pick<Account, 'id' | 'name' | 'grammar'>
 
 export interface Props {
   account: AccountLike
+  managed?: boolean
+  class?: string
 }
 
 export type Value = Grammar | ''
