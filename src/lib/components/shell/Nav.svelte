@@ -108,7 +108,7 @@
           position === 'center' && !action && 'hidden',
         )}
         style="view-transition-name: shell-actions-{position};">
-        <ButtonGroup.Root class={cn('flex h-full', 'mr-0', action?.class)}>
+        <ButtonGroup.Root class={cn('flex h-full', action?.class)}>
           {@render action.snippet()}
         </ButtonGroup.Root>
       </div>
