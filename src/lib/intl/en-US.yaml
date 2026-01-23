@@ -33,6 +33,21 @@ profile:
     description: >-
       This does not affect cheque recognition. We understand most languages
       there anyway.
+  grammar:
+    title: Grammatical Form
+    description: >-
+      In some languages, message wording depends on grammatical gender. We use
+      this setting to make interface texts sound natural and correct.
+    examples:
+      he: |-
+        !js
+        (name) => `${name} added an expense`
+      she: |-
+        !js
+        (name) => `${name} added an expense`
+      they: |-
+        !js
+        (name) => `${name} added an expense`
 form:
   enterName: Enter name
 copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"

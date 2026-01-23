@@ -33,6 +33,22 @@ profile:
     description: >-
       Esto no afecta al reconocimiento de cheques. De todas formas, entendemos
       la mayoría de los idiomas allí.
+  grammar:
+    title: Forma gramatical
+    description: >-
+      En algunos idiomas, la redacción de los mensajes depende del género
+      gramatical. Usamos este ajuste para que los textos de la interfaz suenen
+      naturales y correctos.
+    examples:
+      he: |-
+        !js
+        (name) => `${name} ha añadido un gasto`
+      she: |-
+        !js
+        (name) => `${name} ha añadido un gasto`
+      they: |-
+        !js
+        (name) => `${name} ha añadido un gasto`
 form:
   enterName: Introduce el nombre
 copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"

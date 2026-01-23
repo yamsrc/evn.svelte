@@ -33,6 +33,22 @@ profile:
     description: >-
       Questo non influisce sul riconoscimento dell'assegno. Comunque, lì capiamo
       la maggior parte delle lingue.
+  grammar:
+    title: Forma grammaticale
+    description: >-
+      In alcune lingue, la formulazione dei messaggi dipende dal genere
+      grammaticale. Usiamo questa impostazione per rendere i testi
+      dell’interfaccia naturali e corretti.
+    examples:
+      he: |-
+        !js
+        (name) => `${name} ha aggiunto una spesa`
+      she: |-
+        !js
+        (name) => `${name} ha aggiunto una spesa`
+      they: |-
+        !js
+        (name) => `${name} ha aggiunto una spesa`
 form:
   enterName: Inserisci il nome
 copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"

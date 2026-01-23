@@ -5,7 +5,7 @@
   import { Separator } from '$com/separator'
   import { version } from '$config'
   import { dict } from '$lib/intl'
-  import { Cosmetics, Delete, Language } from '@/accounts/ui'
+  import { Cosmetics, Delete, Grammar, Language } from '@/accounts/ui'
   import { Section } from '@/app/ui'
   import { Header } from '@/app/ui'
   import { Feedback } from '@/feedback/ui'
@@ -42,11 +42,16 @@
 
   <Separator class="mt-5" />
 
-  <Section class="flex flex-col gap-6 flex-1">
+  <Section class="flex flex-col gap-6 flex-1 [&_p]:text-muted-foreground">
     <div class="flex flex-col gap-2">
       <h2>{$dict.profile.language.title}</h2>
-      <p class="text-muted-foreground">{$dict.profile.language.description}</p>
+      <p>{$dict.profile.language.description}</p>
       <Language />
+    </div>
+    <div class="flex flex-col gap-2">
+      <h3>{$dict.profile.grammar.title}</h3>
+      <p>{$dict.profile.grammar.description}</p>
+      <Grammar account={$account} />
     </div>
   </Section>
 

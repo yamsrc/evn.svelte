@@ -62,6 +62,22 @@ inputs:
         input: Language
       description:
         input: "Does not affect the cheque recognition. We\_understand most languages there anyway."
+    grammar:
+      title:
+        input: Grammatical form
+        context: section title
+      description:
+        input: In some languages, message wording depends on grammatical gender. We use this setting to make interface texts sound natural and correct.
+      examples:
+        he:
+          input: "{name} добавил расход"
+          context: "make it a function, grammatical gender is: he"
+        she:
+          input: "{name} добавила расход"
+          context: "make it a function, grammatical gender is: she"
+        they:
+          input: "{name} добавил(а) расход"
+          context: "make it a function, grammatical gender is: unknown"
   form:
     enterName:
       input: Enter name

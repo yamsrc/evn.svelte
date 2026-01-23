@@ -31,6 +31,21 @@ profile:
   language:
     title: اللغة
     description: هذا لا يؤثر على التعرف على الشيك. على أي حال، نحن نفهم معظم اللغات هناك.
+  grammar:
+    title: الصيغة النحوية
+    description: >-
+      في بعض اللغات، تعتمد صياغة الرسائل على الجنس النحوي. نستخدم هذا الإعداد
+      لجعل نصوص الواجهة تبدو طبيعية وصحيحة.
+    examples:
+      he: |-
+        !js
+        (name) => `${name} أضاف مصروفًا`
+      she: |-
+        !js
+        (name) => `${name} أضافت مصروفًا`
+      they: |-
+        !js
+        (name) => `${name} أضاف/ت مصروفًا`
 form:
   enterName: أدخل الاسم
 copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"

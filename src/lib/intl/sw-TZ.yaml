@@ -31,6 +31,22 @@ profile:
   language:
     title: Lugha
     description: Hili haiathiri utambuzi wa hundi. Hata hivyo, tunaelewa lugha nyingi hapo.
+  grammar:
+    title: Umbo wa kisarufi
+    description: >-
+      Katika baadhi ya lugha, uundaji wa ujumbe hutegemea jinsia ya kisarufi.
+      Tunatumia kipimo hiki ili maandishi ya kiolesura yawe ya kawaida na
+      sahihi.
+    examples:
+      he: |-
+        !js
+        (name) => `${name} ameongeza matumizi`
+      she: |-
+        !js
+        (name) => `${name} ameongeza matumizi`
+      they: |-
+        !js
+        (name) => `${name} ameongeza matumizi`
 form:
   enterName: Weka jina
 copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"

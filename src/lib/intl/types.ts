@@ -45,6 +45,15 @@ export type Dictionary = {
           title: string
           description: string
         }
+        grammar: {
+          title: string
+          description: string
+          examples: {
+            he: (value: any) => string
+            she: (value: any) => string
+            they: (value: any) => string
+          }
+        }
       }
       form: {
         enterName: string

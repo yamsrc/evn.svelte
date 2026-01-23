@@ -33,6 +33,22 @@ profile:
     description: >-
       Dit heeft geen invloed op de chequedetectie. We begrijpen daar toch de
       meeste talen.
+  grammar:
+    title: Grammaticale vorm
+    description: >-
+      In sommige talen is de formulering van berichten afhankelijk van de
+      grammaticale gender. We gebruiken deze instelling om de teksten in de
+      interface natuurlijk en correct te laten klinken.
+    examples:
+      he: |-
+        !js
+        (name) => `${name} heeft een uitgave toegevoegd`
+      she: |-
+        !js
+        (name) => `${name} heeft een uitgave toegevoegd`
+      they: |-
+        !js
+        (name) => `${name} heeft een uitgave toegevoegd`
 form:
   enterName: Naam invoeren
 copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
