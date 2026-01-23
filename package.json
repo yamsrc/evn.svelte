@@ -26,7 +26,7 @@
 		"@eslint/js": "9.39.2",
 		"@faker-js/faker": "10.2.0",
 		"@internationalized/date": "3.10.1",
-		"@lucide/svelte": "0.563.0",
+		"@lucide/svelte": "0.562.0",
 		"@playwright/test": "1.57.0",
 		"@sveltejs/adapter-vercel": "6.3.1",
 		"@sveltejs/kit": "2.50.1",

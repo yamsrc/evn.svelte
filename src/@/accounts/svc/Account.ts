@@ -1,1 +1,1 @@
-export type { Account, Grammar } from './net'
+export type { Account } from './net'
