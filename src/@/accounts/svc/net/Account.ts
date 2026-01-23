@@ -1,3 +1,5 @@
+import type { Grammar } from '$lib/intl'
+
 export interface Account {
   id: string
   name: string
@@ -8,5 +10,3 @@ export interface Account {
   _created: number
   _version: number
 }
-
-export type Grammar = 'he' | 'she' | 'they'

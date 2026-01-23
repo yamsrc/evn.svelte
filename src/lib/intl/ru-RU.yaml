@@ -39,16 +39,11 @@ profile:
       В некоторых языках формулировка сообщений зависит от грамматического рода.
       Эта настройка помогает сделать тексты интерфейса естественными и
       правильными.
-    examples:
-      he: |-
-        !js
-        (name) => `${name} добавил расход`
-      she: |-
-        !js
-        (name) => `${name} добавила расход`
-      they: |-
-        !js
-        (name) => `${name} добавил(а) расход`
+    example: >-
+      !js
+
+      (name, gender) => gender === "he" ? `${name} добавил расход` : gender ===
+      "she" ? `${name} добавила расход` : `${name} добавил(а) расход`
 form:
   enterName: Введите имя
 copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"

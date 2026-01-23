@@ -34,16 +34,9 @@ profile:
   grammar:
     title: 文法形式
     description: 言語によっては、メッセージの表現に文法上の性別が関係します。この設定によって、インターフェースの文言が自然で正確になるようにしています。
-    examples:
-      he: |-
-        !js
-        (name) => `${name}が支出を追加しました`
-      she: |-
-        !js
-        (name) => `${name}さんが支出を追加しました`
-      they: |-
-        !js
-        (name) => `${name}さんが支出を追加しました`
+    example: |-
+      !js
+      (name, gender) => `${name} さんが支出を追加しました`
 form:
   enterName: 名前を入力してください
 copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"

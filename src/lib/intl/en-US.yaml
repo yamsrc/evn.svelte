@@ -38,16 +38,11 @@ profile:
     description: >-
       In some languages, message wording depends on grammatical gender. We use
       this setting to make interface texts sound natural and correct.
-    examples:
-      he: |-
-        !js
-        (name) => `${name} added an expense`
-      she: |-
-        !js
-        (name) => `${name} added an expense`
-      they: |-
-        !js
-        (name) => `${name} added an expense`
+    example: >-
+      !js
+
+      (name, gender) => gender === "he" ? `${name} added an expense` : gender
+      === "she" ? `${name} added an expense` : `${name} added an expense`
 form:
   enterName: Enter name
 copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"

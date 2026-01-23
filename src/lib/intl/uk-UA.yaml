@@ -39,16 +39,11 @@ profile:
       У деяких мовах формулювання повідомлень залежить від граматичного роду. Ми
       використовуємо цей параметр, щоб текст інтерфейсу звучав природно та
       правильно.
-    examples:
-      he: |-
-        !js
-        (name) => `${name} додав витрату`
-      she: |-
-        !js
-        (name) => `${name} додала витрату`
-      they: |-
-        !js
-        (name) => `${name} додав(ла) витрату`
+    example: >-
+      !js
+
+      (name, gender) => gender === "he" ? `${name} додав витрату` : gender ===
+      "she" ? `${name} додала витрату` : `${name} додав(ла) витрату`
 form:
   enterName: Введіть ім’я
 copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"

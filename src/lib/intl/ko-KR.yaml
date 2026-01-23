@@ -36,16 +36,9 @@ profile:
     description: >-
       일부 언어에서는 메시지 문구가 문법적 성별에 따라 달라집니다. 이 설정을 통해 인터페이스의 텍스트가 자연스럽고 올바르게 표시되도록
       합니다.
-    examples:
-      he: |-
-        !js
-        (name) => `${name}님이 지출을 추가했습니다`
-      she: |-
-        !js
-        (name) => `${name}님이 지출을 추가했습니다`
-      they: |-
-        !js
-        (name) => `${name}님이 지출을 추가했습니다`
+    example: |-
+      !js
+      (name, gender) => `${name}님이 지출을 추가했습니다`
 form:
   enterName: 이름을 입력하세요
 copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"

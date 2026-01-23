@@ -36,16 +36,11 @@ profile:
     description: >-
       في بعض اللغات، تعتمد صياغة الرسائل على الجنس النحوي. نستخدم هذا الإعداد
       لجعل نصوص الواجهة تبدو طبيعية وصحيحة.
-    examples:
-      he: |-
-        !js
-        (name) => `${name} أضاف مصروفًا`
-      she: |-
-        !js
-        (name) => `${name} أضافت مصروفًا`
-      they: |-
-        !js
-        (name) => `${name} أضاف/ت مصروفًا`
+    example: >-
+      !js
+
+      (name, gender) => gender === "he" ? `${name} أضاف مصروفًا` : gender ===
+      "she" ? `${name} أضافت مصروفًا` : `${name} أضاف(ت) مصروفًا`
 form:
   enterName: أدخل الاسم
 copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"

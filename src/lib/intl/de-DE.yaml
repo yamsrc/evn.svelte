@@ -39,16 +39,12 @@ profile:
       In einigen Sprachen hängt die Formulierung von Nachrichten vom
       grammatischen Geschlecht ab. Diese Einstellung sorgt dafür, dass die Texte
       der Benutzeroberfläche natürlich und korrekt klingen.
-    examples:
-      he: |-
-        !js
-        (name) => `${name} hat eine Ausgabe hinzugefügt`
-      she: |-
-        !js
-        (name) => `${name} hat eine Ausgabe hinzugefügt`
-      they: |-
-        !js
-        (name) => `${name} hat eine Ausgabe hinzugefügt`
+    example: >-
+      !js
+
+      (name, gender) => gender === "he" ? `${name} hat eine Ausgabe hinzugefügt`
+      : gender === "she" ? `${name} hat eine Ausgabe hinzugefügt` : `${name} hat
+      eine Ausgabe hinzugefügt`
 form:
   enterName: Name eingeben
 copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"

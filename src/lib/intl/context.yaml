@@ -1,4 +1,5 @@
 context: Internationalization project
+genders: true
 inputs:
   locale:
     input: locale
@@ -68,16 +69,8 @@ inputs:
         context: section title
       description:
         input: In some languages, message wording depends on grammatical gender. We use this setting to make interface texts sound natural and correct.
-      examples:
-        he:
-          input: "{name} добавил расход"
-          context: "make it a function, grammatical gender is: he"
-        she:
-          input: "{name} добавила расход"
-          context: "make it a function, grammatical gender is: she"
-        they:
-          input: "{name} добавил(а) расход"
-          context: "make it a function, grammatical gender is: unknown"
+      example:
+        input: "{name} добавил(а) расход"
   form:
     enterName:
       input: Enter name

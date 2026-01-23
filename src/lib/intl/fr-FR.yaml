@@ -39,16 +39,12 @@ profile:
       Dans certaines langues, la formulation des messages dépend du genre
       grammatical. Nous utilisons ce réglage pour que les textes de l’interface
       soient naturels et corrects.
-    examples:
-      he: |-
-        !js
-        (name) => `${name} a ajouté une dépense`
-      she: |-
-        !js
-        (name) => `${name} a ajouté une dépense`
-      they: |-
-        !js
-        (name) => `${name} a ajouté une dépense`
+    example: >-
+      !js
+
+      (name, gender) => gender === "he" ? `${name} a ajouté une dépense` :
+      gender === "she" ? `${name} a ajouté une dépense` : `${name} a ajouté une
+      dépense`
 form:
   enterName: Saisissez le nom
 copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"

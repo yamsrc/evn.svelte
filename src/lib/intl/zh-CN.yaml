@@ -34,16 +34,9 @@ profile:
   grammar:
     title: 语法形式
     description: 在某些语言中，消息的措辞取决于语法性别。我们使用此设置以使界面文本更自然、更准确。
-    examples:
-      he: |-
-        !js
-        (name) => `${name} 添加了支出`
-      she: |-
-        !js
-        (name) => `${name} 添加了一笔支出`
-      they: |-
-        !js
-        (name) => `${name} 添加了一笔支出`
+    example: |-
+      !js
+      (name, gender) => `${name} 添加了一笔支出`
 form:
   enterName: 输入姓名
 copyright: "!js (timestamp) => `© seed.me，2025–${new Date(timestamp).getFullYear()}`"

@@ -36,16 +36,9 @@ profile:
     description: >-
       Bazı dillerde mesajın ifadesi dilbilgisel cinsiyete bağlıdır. Arayüz
       metinlerinin doğal ve doğru olması için bu ayarı kullanıyoruz.
-    examples:
-      he: |-
-        !js
-        (name) => `${name} bir harcama ekledi`
-      she: |-
-        !js
-        (name) => `${name} bir harcama ekledi`
-      they: |-
-        !js
-        (name) => `${name} bir gider ekledi`
+    example: |-
+      !js
+      (name, gender) => `${name} bir harcama ekledi`
 form:
   enterName: İsim girin
 copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"

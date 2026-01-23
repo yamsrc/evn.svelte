@@ -6,6 +6,8 @@
 
 export type Locale = 'ar-SA' | 'de-DE' | 'en-US' | 'es-ES' | 'fr-FR' | 'hi-IN' | 'it-IT' | 'ja-JP' | 'ko-KR' | 'nl-NL' | 'ru-RU' | 'sw-TZ' | 'tr-TR' | 'uk-UA' | 'zh-CN'
 
+export type Grammar = 'he' | 'she' | 'none'
+
 export type Dictionary = {
       native: string
       locale: string
@@ -48,11 +50,7 @@ export type Dictionary = {
         grammar: {
           title: string
           description: string
-          examples: {
-            he: (value: any) => string
-            she: (value: any) => string
-            they: (value: any) => string
-          }
+          example: (...args: [any, any]) => string
         }
       }
       form: {

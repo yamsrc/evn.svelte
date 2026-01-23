@@ -38,16 +38,11 @@ profile:
     description: >-
       कुछ भाषाओं में संदेशों की भाषा व्याकरणिक लिंग पर निर्भर करती है। हम इस
       सेटिंग का उपयोग करते हैं ताकि इंटरफ़ेस के सभी पाठ स्वाभाविक और सही लगें।
-    examples:
-      he: |-
-        !js
-        (name) => `${name} ने खर्च जोड़ा`
-      she: |-
-        !js
-        (name) => `${name} ने खर्च जोड़ा`
-      they: |-
-        !js
-        (name) => `${name} ने खर्च जोड़ा`
+    example: >-
+      !js
+
+      (name, gender) => gender === "he" ? `${name} ने खर्च जोड़ा` : gender ===
+      "she" ? `${name} ने खर्च जोड़ी` : `${name} ने खर्च जोड़ा(जोड़ी)`
 form:
   enterName: नाम दर्ज करें
 copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
