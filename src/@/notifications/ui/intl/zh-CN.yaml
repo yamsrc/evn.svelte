@@ -1,0 +1,15 @@
+groups:
+  joined:
+    me: |-
+      !js
+      (groupName) => `您已加入${groupName}`
+    others: >-
+      !js
+
+      (names, groupName) => `${new Intl.ListFormat("zh", { style: "long", type:
+      "conjunction" }).format(names)}已加入${groupName}`
+accounts:
+  created:
+    welcome: 欢迎来到 Evnly！
+    hint: 向左滑动以关闭
+erase: 全部清除

@@ -1,0 +1,15 @@
+groups:
+  joined:
+    me: |-
+      !js
+      (groupName) => `${groupName} grubuna katıldınız`
+    others: >-
+      !js
+
+      (names, groupName) => `${new Intl.ListFormat("tr", { style: "long", type:
+      "conjunction" }).format(names)} ${groupName} grubuna katıldı`
+accounts:
+  created:
+    welcome: Evnly'e hoş geldiniz!
+    hint: Kapatmak için sola kaydır
+erase: Tümünü temizle
