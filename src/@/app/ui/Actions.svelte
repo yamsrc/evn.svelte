@@ -20,7 +20,10 @@
     <DropdownMenu.Trigger id="nav-actions-button" class={actionVariants()}>
       <Plus />
     </DropdownMenu.Trigger>
-    <DropdownMenu.Content align="end" sideOffset={8} class="px-0.5 py-1 pt-2">
+    <DropdownMenu.Content
+      align="end"
+      sideOffset={8}
+      class="px-0.5 py-1 pt-2 data-[state=closed]:animate-none!">
       {#each actions($dict) as group (group.name)}
         <DropdownMenu.Group>
           <DropdownMenu.GroupHeading class="p-0 text-xs font-bold">
