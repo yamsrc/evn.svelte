@@ -1,11 +1,11 @@
 import { derived } from 'svelte/store'
 import { dictionaries, locales } from './built.js'
 import { account } from '@/iam'
-import type { Locale, Dictionary } from './types'
 import { value } from 'svas'
 import { defaultLocale } from '$config'
 import { supported, resolveLocale } from './bcp'
 import Negotiator from 'negotiator'
+import type { Locale, Dictionary, Grammar } from './types'
 
 type Translation<T = string> = Record<Locale, T>
 
@@ -33,6 +33,8 @@ const locale = derived([account, selected], ([$account, $selected]) => {
     return preferred() ?? defaultLocale
 })
 
+export const grammar = derived(account, ($account) => $account?.grammar ?? 'none')
+
 function preferred(): Locale | null {
   for (const lang of navigator.languages) {
     if (supported(lang)) return resolveLocale(lang)
@@ -54,6 +56,6 @@ export function acceptable(header: string | null): Locale {
 const dict = derived(locale, ($locale) => dictionaries[$locale])
 
 export { dict, dictionaries, locales, selected, locale }
-export type { Locale, Translation, Plural, Dictionary }
+export type { Locale, Translation, Plural, Dictionary, Grammar }
 
 export * from './bcp'

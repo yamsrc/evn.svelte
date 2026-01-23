@@ -31,6 +31,14 @@ profile:
   language:
     title: Dil
     description: Bu, çek tanımayı etkilemez. Zaten oradaki dillerin çoğunu anlıyoruz.
+  grammar:
+    title: Dilbilgisel biçim
+    description: >-
+      Bazı dillerde mesajın ifadesi dilbilgisel cinsiyete bağlıdır. Arayüz
+      metinlerinin doğal ve doğru olması için bu ayarı kullanıyoruz.
+    example: |-
+      !js
+      (name, gender) => `${name} bir harcama ekledi`
 form:
   enterName: İsim girin
 copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"

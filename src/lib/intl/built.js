@@ -40,6 +40,11 @@ export const dictionaries = {
       "language": {
         "title": "اللغة",
         "description": "هذا لا يؤثر على التعرف على الشيك. على أي حال، نحن نفهم معظم اللغات هناك."
+      },
+      "grammar": {
+        "title": "الصيغة النحوية",
+        "description": "في بعض اللغات، تعتمد صياغة الرسائل على الجنس النحوي. نستخدم هذا الإعداد لجعل نصوص الواجهة تبدو طبيعية وصحيحة.",
+        "example": (name, gender) => gender === "he" ? `${name} أضاف مصروفًا` : gender === "she" ? `${name} أضافت مصروفًا` : `${name} أضاف(ت) مصروفًا`
       }
     },
     "form": {
@@ -229,6 +234,11 @@ export const dictionaries = {
       "language": {
         "title": "Sprache",
         "description": "Das beeinflusst die Scheck-Erkennung nicht. Wir verstehen dort ohnehin die meisten Sprachen."
+      },
+      "grammar": {
+        "title": "Grammatische Form",
+        "description": "In einigen Sprachen hängt die Formulierung von Nachrichten vom grammatischen Geschlecht ab. Diese Einstellung sorgt dafür, dass die Texte der Benutzeroberfläche natürlich und korrekt klingen.",
+        "example": (name, gender) => gender === "he" ? `${name} hat eine Ausgabe hinzugefügt` : gender === "she" ? `${name} hat eine Ausgabe hinzugefügt` : `${name} hat eine Ausgabe hinzugefügt`
       }
     },
     "form": {
@@ -418,6 +428,11 @@ export const dictionaries = {
       "language": {
         "title": "Language",
         "description": "This does not affect cheque recognition. We understand most languages there anyway."
+      },
+      "grammar": {
+        "title": "Grammatical Form",
+        "description": "In some languages, message wording depends on grammatical gender. We use this setting to make interface texts sound natural and correct.",
+        "example": (name, gender) => gender === "he" ? `${name} added an expense` : gender === "she" ? `${name} added an expense` : `${name} added an expense`
       }
     },
     "form": {
@@ -607,6 +622,11 @@ export const dictionaries = {
       "language": {
         "title": "Idioma",
         "description": "Esto no afecta al reconocimiento de cheques. De todas formas, entendemos la mayoría de los idiomas allí."
+      },
+      "grammar": {
+        "title": "Forma gramatical",
+        "description": "En algunos idiomas, la redacción de los mensajes depende del género gramatical. Usamos este ajuste para que los textos de la interfaz suenen naturales y correctos.",
+        "example": (name, gender) => gender === "he" ? `${name} añadió un gasto` : gender === "she" ? `${name} añadió un gasto` : `${name} añadió un gasto`
       }
     },
     "form": {
@@ -796,6 +816,11 @@ export const dictionaries = {
       "language": {
         "title": "Langue",
         "description": "Cela n’affecte pas la reconnaissance des chèques. Nous comprenons de toute façon la plupart des langues là-bas."
+      },
+      "grammar": {
+        "title": "Forme grammaticale",
+        "description": "Dans certaines langues, la formulation des messages dépend du genre grammatical. Nous utilisons ce réglage pour que les textes de l’interface soient naturels et corrects.",
+        "example": (name, gender) => gender === "he" ? `${name} a ajouté une dépense` : gender === "she" ? `${name} a ajouté une dépense` : `${name} a ajouté une dépense`
       }
     },
     "form": {
@@ -985,6 +1010,11 @@ export const dictionaries = {
       "language": {
         "title": "भाषा",
         "description": "यह चेक की पहचान को प्रभावित नहीं करता है। वैसे भी, हम वहां अधिकांश भाषाओं को समझते हैं।"
+      },
+      "grammar": {
+        "title": "व्याकरणिक रूप",
+        "description": "कुछ भाषाओं में संदेशों की भाषा व्याकरणिक लिंग पर निर्भर करती है। हम इस सेटिंग का उपयोग करते हैं ताकि इंटरफ़ेस के सभी पाठ स्वाभाविक और सही लगें।",
+        "example": (name, gender) => gender === "he" ? `${name} ने खर्च जोड़ा` : gender === "she" ? `${name} ने खर्च जोड़ी` : `${name} ने खर्च जोड़ा(जोड़ी)`
       }
     },
     "form": {
@@ -1174,6 +1204,11 @@ export const dictionaries = {
       "language": {
         "title": "Lingua",
         "description": "Questo non influisce sul riconoscimento dell'assegno. Comunque, lì capiamo la maggior parte delle lingue."
+      },
+      "grammar": {
+        "title": "Forma grammaticale",
+        "description": "In alcune lingue, la formulazione dei messaggi dipende dal genere grammaticale. Usiamo questa impostazione per rendere i testi dell’interfaccia naturali e corretti.",
+        "example": (name, gender) => gender === "he" ? `${name} ha aggiunto una spesa` : gender === "she" ? `${name} ha aggiunto una spesa` : `${name} ha aggiunto una spesa`
       }
     },
     "form": {
@@ -1363,6 +1398,11 @@ export const dictionaries = {
       "language": {
         "title": "言語",
         "description": "これは小切手の認識には影響しません。そもそも、私たちはほとんどの言語を理解しています。"
+      },
+      "grammar": {
+        "title": "文法形式",
+        "description": "言語によっては、メッセージの表現に文法上の性別が関係します。この設定によって、インターフェースの文言が自然で正確になるようにしています。",
+        "example": (name, gender) => `${name} さんが支出を追加しました`
       }
     },
     "form": {
@@ -1552,6 +1592,11 @@ export const dictionaries = {
       "language": {
         "title": "언어",
         "description": "이는 수표 인식에 영향을 주지 않습니다. 어차피 저희는 대부분의 언어를 이해합니다."
+      },
+      "grammar": {
+        "title": "문법 형태",
+        "description": "일부 언어에서는 메시지 문구가 문법적 성별에 따라 달라집니다. 이 설정을 통해 인터페이스의 텍스트가 자연스럽고 올바르게 표시되도록 합니다.",
+        "example": (name, gender) => `${name}님이 지출을 추가했습니다`
       }
     },
     "form": {
@@ -1741,6 +1786,11 @@ export const dictionaries = {
       "language": {
         "title": "Taal",
         "description": "Dit heeft geen invloed op de chequedetectie. We begrijpen daar toch de meeste talen."
+      },
+      "grammar": {
+        "title": "Grammaticale vorm",
+        "description": "In sommige talen is de formulering van berichten afhankelijk van de grammaticale gender. We gebruiken deze instelling om de teksten in de interface natuurlijk en correct te laten klinken.",
+        "example": (name, gender) => gender === "he" ? `${name} heeft een uitgave toegevoegd` : gender === "she" ? `${name} heeft een uitgave toegevoegd` : `${name} heeft een uitgave toegevoegd`
       }
     },
     "form": {
@@ -1930,6 +1980,11 @@ export const dictionaries = {
       "language": {
         "title": "Язык",
         "description": "Это не влияет на распознавание чеков. Мы и так понимаем там большинство языков."
+      },
+      "grammar": {
+        "title": "Грамматическая форма",
+        "description": "В некоторых языках формулировка сообщений зависит от грамматического рода. Эта настройка помогает сделать тексты интерфейса естественными и правильными.",
+        "example": (name, gender) => gender === "he" ? `${name} добавил расход` : gender === "she" ? `${name} добавила расход` : `${name} добавил(а) расход`
       }
     },
     "form": {
@@ -2119,6 +2174,11 @@ export const dictionaries = {
       "language": {
         "title": "Lugha",
         "description": "Hili haiathiri utambuzi wa hundi. Hata hivyo, tunaelewa lugha nyingi hapo."
+      },
+      "grammar": {
+        "title": "Umbo wa kisarufi",
+        "description": "Katika baadhi ya lugha, uundaji wa ujumbe hutegemea jinsia ya kisarufi. Tunatumia kipimo hiki ili maandishi ya kiolesura yawe ya kawaida na sahihi.",
+        "example": (name, gender) => gender === "he" ? `${name} ameongeza matumizi` : gender === "she" ? `${name} ameongeza matumizi` : `${name} ameongeza matumizi`
       }
     },
     "form": {
@@ -2308,6 +2368,11 @@ export const dictionaries = {
       "language": {
         "title": "Dil",
         "description": "Bu, çek tanımayı etkilemez. Zaten oradaki dillerin çoğunu anlıyoruz."
+      },
+      "grammar": {
+        "title": "Dilbilgisel biçim",
+        "description": "Bazı dillerde mesajın ifadesi dilbilgisel cinsiyete bağlıdır. Arayüz metinlerinin doğal ve doğru olması için bu ayarı kullanıyoruz.",
+        "example": (name, gender) => `${name} bir harcama ekledi`
       }
     },
     "form": {
@@ -2497,6 +2562,11 @@ export const dictionaries = {
       "language": {
         "title": "Мова",
         "description": "Це не впливає на розпізнавання чеків. Ми й так розуміємо там більшість мов."
+      },
+      "grammar": {
+        "title": "Граматична форма",
+        "description": "У деяких мовах формулювання повідомлень залежить від граматичного роду. Ми використовуємо цей параметр, щоб текст інтерфейсу звучав природно та правильно.",
+        "example": (name, gender) => gender === "he" ? `${name} додав витрату` : gender === "she" ? `${name} додала витрату` : `${name} додав(ла) витрату`
       }
     },
     "form": {
@@ -2686,6 +2756,11 @@ export const dictionaries = {
       "language": {
         "title": "语言",
         "description": "这不会影响支票识别。反正我们在那里大多数语言都能理解。"
+      },
+      "grammar": {
+        "title": "语法形式",
+        "description": "在某些语言中，消息的措辞取决于语法性别。我们使用此设置以使界面文本更自然、更准确。",
+        "example": (name, gender) => `${name} 添加了一笔支出`
       }
     },
     "form": {

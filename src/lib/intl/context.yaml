@@ -1,4 +1,5 @@
 context: Internationalization project
+genders: true
 inputs:
   locale:
     input: locale
@@ -62,6 +63,14 @@ inputs:
         input: Language
       description:
         input: "Does not affect the cheque recognition. We\_understand most languages there anyway."
+    grammar:
+      title:
+        input: Grammatical form
+        context: section title
+      description:
+        input: In some languages, message wording depends on grammatical gender. We use this setting to make interface texts sound natural and correct.
+      example:
+        input: "{name} добавил(а) расход"
   form:
     enterName:
       input: Enter name

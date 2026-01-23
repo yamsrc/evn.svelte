@@ -33,6 +33,18 @@ profile:
     description: >-
       Das beeinflusst die Scheck-Erkennung nicht. Wir verstehen dort ohnehin die
       meisten Sprachen.
+  grammar:
+    title: Grammatische Form
+    description: >-
+      In einigen Sprachen hängt die Formulierung von Nachrichten vom
+      grammatischen Geschlecht ab. Diese Einstellung sorgt dafür, dass die Texte
+      der Benutzeroberfläche natürlich und korrekt klingen.
+    example: >-
+      !js
+
+      (name, gender) => gender === "he" ? `${name} hat eine Ausgabe hinzugefügt`
+      : gender === "she" ? `${name} hat eine Ausgabe hinzugefügt` : `${name} hat
+      eine Ausgabe hinzugefügt`
 form:
   enterName: Name eingeben
 copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"

@@ -4,6 +4,7 @@
   import { Separator } from '$com/separator'
   import { dict } from '$lib/intl'
   import { Spinner } from '$ui/spinner'
+  import { Grammar } from '@/accounts/ui'
   import { Cosmetics } from '@/accounts/ui'
   import { Section } from '@/app/ui'
   import { Header } from '@/app/ui'
@@ -29,6 +30,7 @@
         <div class="flex flex-col gap-4">
           <Cosmetics account={contact.account} editable={contact.managed} managed />
           {#if contact.managed}
+            <Grammar account={contact.account} managed class="items-center" />
             <Share {contact} />
           {/if}
         </div>
