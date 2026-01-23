@@ -21,7 +21,6 @@
   )
 
   const rounded = 'rounded-xl'
-  const buttonMargin = 'm-1'
 
   onMount(() => {
     for (const section of sections) preloadCode(section.href)
@@ -72,8 +71,7 @@
             )}>
             <div
               class={cn(
-                'absolute inset-0 bg-background z-0 rounded-[calc(var(--radius)+2px)]',
-                buttonMargin,
+                'absolute inset-0 bg-background z-0 rounded-[calc(var(--radius)+2px)] m-1',
                 active || 'hidden',
               )}
               style={active ? 'view-transition-name: shell-nav-active;' : ''}>
@@ -101,7 +99,7 @@
     {#if action}
       <div
         class={cn(
-          'flex h-full',
+          'flex h-full py-1',
           'pointer-events-auto',
           'sm:mr-4 transition-all duration-300',
           "[&_svg:not([class*='size-'])]:size-5",
@@ -110,7 +108,7 @@
           position === 'center' && !action && 'hidden',
         )}
         style="view-transition-name: shell-actions-{position};">
-        <ButtonGroup.Root class={cn('flex-1 flex', buttonMargin, 'mr-0', action?.class)}>
+        <ButtonGroup.Root class={cn('flex h-full', 'mr-0', action?.class)}>
           {@render action.snippet()}
         </ButtonGroup.Root>
       </div>
