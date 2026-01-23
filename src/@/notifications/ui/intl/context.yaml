@@ -7,7 +7,7 @@ inputs:
         context: make it a function
       others:
         input: "{...names} joined {groupName}"
-        context: make a function, that accepts array of names and a group name. list is formatted using Intl.ListFormat
+        context: make a function, that accepts array of names (one or more) and a group name. list is formatted using Intl.ListFormat
   accounts:
     created:
       hint:

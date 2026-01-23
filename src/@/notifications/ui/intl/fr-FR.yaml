@@ -7,8 +7,8 @@ groups:
       !js
 
       (names, groupName) => `${new Intl.ListFormat("fr", { style: "long", type:
-      "conjunction" }).format(names)} a${names.length === 1 ? "" : "ont"}
-      rejoint ${groupName}`
+      "conjunction" }).format(names)} a${names.length === 1 ? "" : "nt"} rejoint
+      ${groupName}`
 accounts:
   created:
     welcome: Bienvenue chez Evnly !

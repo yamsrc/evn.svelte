@@ -7,7 +7,7 @@ groups:
       !js
 
       (names, groupName) => `${new Intl.ListFormat("ja", { style: "long", type:
-      "conjunction" }).format(names)} が${groupName}に参加しました`
+      "conjunction" }).format(names)}が${groupName}に参加しました`
 accounts:
   created:
     welcome: Evnlyへようこそ！

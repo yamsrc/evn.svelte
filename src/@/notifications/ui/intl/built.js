@@ -6,7 +6,7 @@ export const dictionaries = {
     "groups": {
       "joined": {
         "me": (groupName) => `لقد انضممت إلى ${groupName}`,
-        "others": (names, groupName) => `${new Intl.ListFormat("ar", { style: "long", type: "conjunction" }).format(names)} انضم${names.length === 1 ? "/ت" : "وا"} إلى ${groupName}`
+        "others": (names, groupName) => `${new Intl.ListFormat("ar", { style: "long", type: "conjunction" }).format(names)} انضم${names.length === 1 ? "ت" : "وا"} إلى ${groupName}`
       }
     },
     "accounts": {
@@ -21,7 +21,7 @@ export const dictionaries = {
     "groups": {
       "joined": {
         "me": (groupName) => `Du bist ${groupName} beigetreten`,
-        "others": (names, groupName) => `${new Intl.ListFormat("de", { style: "long", type: "conjunction" }).format(names)} ${names.length === 1 ? "ist" : "sind"} der Gruppe ${groupName} beigetreten`
+        "others": (names, groupName) => `${new Intl.ListFormat("de", { style: "long", type: "conjunction" }).format(names)} ${names.length === 1 ? "ist" : "sind"} ${groupName} beigetreten`
       }
     },
     "accounts": {
@@ -66,7 +66,7 @@ export const dictionaries = {
     "groups": {
       "joined": {
         "me": (groupName) => `Vous avez rejoint ${groupName}`,
-        "others": (names, groupName) => `${new Intl.ListFormat("fr", { style: "long", type: "conjunction" }).format(names)} a${names.length === 1 ? "" : "ont"} rejoint ${groupName}`
+        "others": (names, groupName) => `${new Intl.ListFormat("fr", { style: "long", type: "conjunction" }).format(names)} a${names.length === 1 ? "" : "nt"} rejoint ${groupName}`
       }
     },
     "accounts": {
@@ -81,7 +81,7 @@ export const dictionaries = {
     "groups": {
       "joined": {
         "me": (groupName) => `${groupName} में आप शामिल हो गए हैं`,
-        "others": (names, groupName) => `${new Intl.ListFormat("hi", { style: "long", type: "conjunction" }).format(names)} ${names.length === 1 ? "ने" : "ने"} ${groupName} को जॉइन किया`
+        "others": (names, groupName) => `${new Intl.ListFormat("hi", { style: "long", type: "conjunction" }).format(names)} ने ${groupName} में जॉइन किया`
       }
     },
     "accounts": {
@@ -111,7 +111,7 @@ export const dictionaries = {
     "groups": {
       "joined": {
         "me": (groupName) => `${groupName} に参加しました`,
-        "others": (names, groupName) => `${new Intl.ListFormat("ja", { style: "long", type: "conjunction" }).format(names)} が${groupName}に参加しました`
+        "others": (names, groupName) => `${new Intl.ListFormat("ja", { style: "long", type: "conjunction" }).format(names)}が${groupName}に参加しました`
       }
     },
     "accounts": {
@@ -126,7 +126,7 @@ export const dictionaries = {
     "groups": {
       "joined": {
         "me": (groupName) => `${groupName}에 참가하셨습니다`,
-        "others": (names, groupName) => `${new Intl.ListFormat("ko", { style: "long", type: "conjunction" }).format(names)}님이 ${groupName}에 가입했습니다`
+        "others": (names, groupName) => `${new Intl.ListFormat("ko", { style: "long", type: "conjunction" }).format(names)}님이(가) ${groupName}에 가입했어요`
       }
     },
     "accounts": {
@@ -156,7 +156,7 @@ export const dictionaries = {
     "groups": {
       "joined": {
         "me": (groupName) => `Вы присоединились к группе ${groupName}`,
-        "others": (names, groupName) => `${new Intl.ListFormat("ru", { style: "long", type: "conjunction" }).format(names)} присоединил${names.length === 1 ? "ся" : "ись"} к группе ${groupName}`
+        "others": (names, groupName) => `${new Intl.ListFormat("ru", { style: "long", type: "conjunction" }).format(names)} ${names.length === 1 ? "присоединился" : "присоединились"} к группе ${groupName}`
       }
     },
     "accounts": {
@@ -171,7 +171,7 @@ export const dictionaries = {
     "groups": {
       "joined": {
         "me": (groupName) => `Umejiunga na ${groupName}`,
-        "others": (names, groupName) => `${new Intl.ListFormat("sw", { style: "long", type: "conjunction" }).format(names)} ame${names.length === 1 ? "ji" : "ji"}unga na ${groupName}`
+        "others": (names, groupName) => `${new Intl.ListFormat("sw", { style: "long", type: "conjunction" }).format(names)} amejiunga na ${groupName}`
       }
     },
     "accounts": {
@@ -201,7 +201,7 @@ export const dictionaries = {
     "groups": {
       "joined": {
         "me": (groupName) => `Ви приєдналися до ${groupName}`,
-        "others": (names, groupName) => `${new Intl.ListFormat("uk", { style: "long", type: "conjunction" }).format(names)} приєдна${names.length === 1 ? "вся" : "лися"} до групи ${groupName}`
+        "others": (names, groupName) => `${new Intl.ListFormat("uk", { style: "long", type: "conjunction" }).format(names)} ${names.length === 1 ? "приєднався" : "приєдналися"} до ${groupName}`
       }
     },
     "accounts": {
@@ -216,7 +216,7 @@ export const dictionaries = {
     "groups": {
       "joined": {
         "me": (groupName) => `您已加入${groupName}`,
-        "others": (names, groupName) => `${new Intl.ListFormat("zh-CN", { style: "long", type: "conjunction" }).format(names)}已加入${groupName}`
+        "others": (names, groupName) => `${new Intl.ListFormat("zh", { style: "long", type: "conjunction" }).format(names)}已加入${groupName}`
       }
     },
     "accounts": {

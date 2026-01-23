@@ -7,8 +7,7 @@ groups:
       !js
 
       (names, groupName) => `${new Intl.ListFormat("hi", { style: "long", type:
-      "conjunction" }).format(names)} ${names.length === 1 ? "ने" : "ने"}
-      ${groupName} को जॉइन किया`
+      "conjunction" }).format(names)} ने ${groupName} में जॉइन किया`
 accounts:
   created:
     welcome: Evnly में आपका स्वागत है!

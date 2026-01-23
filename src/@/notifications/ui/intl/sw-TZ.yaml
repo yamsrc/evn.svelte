@@ -7,8 +7,7 @@ groups:
       !js
 
       (names, groupName) => `${new Intl.ListFormat("sw", { style: "long", type:
-      "conjunction" }).format(names)} ame${names.length === 1 ? "ji" : "ji"}unga
-      na ${groupName}`
+      "conjunction" }).format(names)} amejiunga na ${groupName}`
 accounts:
   created:
     welcome: Karibu kwenye Evnly!

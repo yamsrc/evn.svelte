@@ -7,8 +7,8 @@ groups:
       !js
 
       (names, groupName) => `${new Intl.ListFormat("uk", { style: "long", type:
-      "conjunction" }).format(names)} приєдна${names.length === 1 ? "вся" :
-      "лися"} до групи ${groupName}`
+      "conjunction" }).format(names)} ${names.length === 1 ? "приєднався" :
+      "приєдналися"} до ${groupName}`
 accounts:
   created:
     welcome: Ласкаво просимо до Evnly!

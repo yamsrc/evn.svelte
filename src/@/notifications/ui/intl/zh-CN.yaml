@@ -6,8 +6,8 @@ groups:
     others: >-
       !js
 
-      (names, groupName) => `${new Intl.ListFormat("zh-CN", { style: "long",
-      type: "conjunction" }).format(names)}已加入${groupName}`
+      (names, groupName) => `${new Intl.ListFormat("zh", { style: "long", type:
+      "conjunction" }).format(names)}已加入${groupName}`
 accounts:
   created:
     welcome: 欢迎来到 Evnly！
