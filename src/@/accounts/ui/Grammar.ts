@@ -1,5 +1,6 @@
 import { CircleSmall, Mars, Venus, type Icon } from '@lucide/svelte'
-import type { Account, Grammar } from '@/accounts'
+import type { Grammar } from '$lib/intl'
+import type { Account } from '@/accounts'
 
 type AccountLike = Pick<Account, 'id' | 'name' | 'grammar'>
 
@@ -19,5 +20,5 @@ interface Option {
 export const options: Option[] = [
   { value: 'he', Icon: Mars },
   { value: 'she', Icon: Venus },
-  { value: 'they', Icon: CircleSmall },
+  { value: 'none', Icon: CircleSmall },
 ]
