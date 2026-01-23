@@ -11,3 +11,21 @@ participants:
     shares: शेयरों के अनुसार
   add:
     label: प्रतिभागी जोड़ें
+transfer:
+  action: स्थानांतरण
+  dialog:
+    title: बकाया चुकाएँ
+    cancel: रद्द करें
+    action: पुष्टि करें
+  me: मैं
+  direction:
+    byme: >-
+      !js
+
+      (gender) => gender === "he" ? "मैंने भुगतान किया" : (gender === "she" ?
+      "मैंने भुगतान की" : "मैंने भुगतान किया")
+    tome: >-
+      !js
+
+      (gender) => gender === "he" ? "मैंने प्राप्त किया" : (gender === "she" ?
+      "मैंने प्राप्त की" : "मैंने प्राप्त किया/की")

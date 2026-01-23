@@ -1,4 +1,5 @@
 context: Mount 'expenses' context
+genders: true
 inputs:
   recent:
     title:
@@ -18,3 +19,26 @@ inputs:
       label:
         input: Add participants
         context: button label
+  transfer:
+    action:
+      input: Transfer
+      context: money transfer between users
+    dialog:
+      title:
+        input: Settle Up
+        context: dialog title
+      cancel:
+        input: Cancel
+        context: button label
+      action:
+        input: Confirm
+        context: button label
+    me:
+      input: Me
+      context: Я
+    direction:
+      byme:
+        input: Я заплатил
+      tome:
+        input: Я получил
+        context: деньги

@@ -11,3 +11,21 @@ participants:
     shares: Por acciones
   add:
     label: Agregar participantes
+transfer:
+  action: Transferencia
+  dialog:
+    title: Pagar la cuenta
+    cancel: Cancelar
+    action: Confirmar
+  me: Yo
+  direction:
+    byme: >-
+      !js
+
+      (gender) => gender === "he" ? "He pagado" : (gender === "she" ? "He
+      pagado" : "He pagado")
+    tome: >-
+      !js
+
+      (gender) => gender === "he" ? "He recibido" : (gender === "she" ? "He
+      recibido" : "He recibido")

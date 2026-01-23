@@ -18,6 +18,19 @@ export const dictionaries = {
       "add": {
         "label": "إضافة مشاركين"
       }
+    },
+    "transfer": {
+      "action": "تحويل",
+      "dialog": {
+        "title": "تسوية الحساب",
+        "cancel": "إلغاء",
+        "action": "تأكيد"
+      },
+      "me": "أنا",
+      "direction": {
+        "byme": (gender) => gender === "he" ? "لقد دفعت" : (gender === "she" ? "لقد دفعتِ" : "لقد دفعت"),
+        "tome": (gender) => gender === "he" ? "لقد استلمت" : (gender === "she" ? "لقد استلمتِ" : "لقد استلمت")
+      }
     }
   },
   "de-DE": {
@@ -35,6 +48,19 @@ export const dictionaries = {
       },
       "add": {
         "label": "Teilnehmer hinzufügen"
+      }
+    },
+    "transfer": {
+      "action": "Überweisung",
+      "dialog": {
+        "title": "Ausgleichen",
+        "cancel": "Abbrechen",
+        "action": "Bestätigen"
+      },
+      "me": "Ich",
+      "direction": {
+        "byme": (gender) => gender === "he" ? "Ich habe bezahlt" : (gender === "she" ? "Ich habe bezahlt" : "Ich habe bezahlt"),
+        "tome": (gender) => gender === "he" ? "Ich habe erhalten" : (gender === "she" ? "Ich habe erhalten" : "Ich habe erhalten")
       }
     }
   },
@@ -54,6 +80,19 @@ export const dictionaries = {
       "add": {
         "label": "Add participants"
       }
+    },
+    "transfer": {
+      "action": "Transfer",
+      "dialog": {
+        "title": "Settle Up",
+        "cancel": "Cancel",
+        "action": "Confirm"
+      },
+      "me": "Me",
+      "direction": {
+        "byme": (gender) => "I paid",
+        "tome": (gender) => "I received"
+      }
     }
   },
   "es-ES": {
@@ -71,6 +110,19 @@ export const dictionaries = {
       },
       "add": {
         "label": "Agregar participantes"
+      }
+    },
+    "transfer": {
+      "action": "Transferencia",
+      "dialog": {
+        "title": "Pagar la cuenta",
+        "cancel": "Cancelar",
+        "action": "Confirmar"
+      },
+      "me": "Yo",
+      "direction": {
+        "byme": (gender) => gender === "he" ? "He pagado" : (gender === "she" ? "He pagado" : "He pagado"),
+        "tome": (gender) => gender === "he" ? "He recibido" : (gender === "she" ? "He recibido" : "He recibido")
       }
     }
   },
@@ -90,6 +142,19 @@ export const dictionaries = {
       "add": {
         "label": "Ajouter des participants"
       }
+    },
+    "transfer": {
+      "action": "Virement",
+      "dialog": {
+        "title": "Régler le solde",
+        "cancel": "Annuler",
+        "action": "Confirmer"
+      },
+      "me": "Moi",
+      "direction": {
+        "byme": (gender) => gender === "he" ? "J'ai payé" : (gender === "she" ? "J'ai payée" : "J'ai payé(e)"),
+        "tome": (gender) => gender === "he" ? "J'ai reçu" : (gender === "she" ? "J'ai reçu" : "J'ai reçu")
+      }
     }
   },
   "hi-IN": {
@@ -107,6 +172,19 @@ export const dictionaries = {
       },
       "add": {
         "label": "प्रतिभागी जोड़ें"
+      }
+    },
+    "transfer": {
+      "action": "स्थानांतरण",
+      "dialog": {
+        "title": "बकाया चुकाएँ",
+        "cancel": "रद्द करें",
+        "action": "पुष्टि करें"
+      },
+      "me": "मैं",
+      "direction": {
+        "byme": (gender) => gender === "he" ? "मैंने भुगतान किया" : (gender === "she" ? "मैंने भुगतान की" : "मैंने भुगतान किया"),
+        "tome": (gender) => gender === "he" ? "मैंने प्राप्त किया" : (gender === "she" ? "मैंने प्राप्त की" : "मैंने प्राप्त किया/की")
       }
     }
   },
@@ -126,6 +204,19 @@ export const dictionaries = {
       "add": {
         "label": "Aggiungi partecipanti"
       }
+    },
+    "transfer": {
+      "action": "Trasferimento",
+      "dialog": {
+        "title": "Salda il conto",
+        "cancel": "Annulla",
+        "action": "Conferma"
+      },
+      "me": "Io",
+      "direction": {
+        "byme": (gender) => gender === "he" ? "Ho pagato" : (gender === "she" ? "Ho pagata" : "Ho pagato/a"),
+        "tome": (gender) => gender === "he" ? "Ho ricevuto" : (gender === "she" ? "Ho ricevuto" : "Ho ricevuto")
+      }
     }
   },
   "ja-JP": {
@@ -143,6 +234,19 @@ export const dictionaries = {
       },
       "add": {
         "label": "参加者を追加"
+      }
+    },
+    "transfer": {
+      "action": "送金",
+      "dialog": {
+        "title": "精算する",
+        "cancel": "キャンセル",
+        "action": "確認"
+      },
+      "me": "私",
+      "direction": {
+        "byme": (gender) => "支払いました",
+        "tome": (gender) => "受け取りました"
       }
     }
   },
@@ -162,6 +266,19 @@ export const dictionaries = {
       "add": {
         "label": "참가자 추가"
       }
+    },
+    "transfer": {
+      "action": "송금",
+      "dialog": {
+        "title": "정산하기",
+        "cancel": "취소",
+        "action": "확인"
+      },
+      "me": "나",
+      "direction": {
+        "byme": (gender) => "지불했습니다",
+        "tome": (gender) => "받았습니다"
+      }
     }
   },
   "nl-NL": {
@@ -179,6 +296,19 @@ export const dictionaries = {
       },
       "add": {
         "label": "Deelnemers toevoegen"
+      }
+    },
+    "transfer": {
+      "action": "Overschrijving",
+      "dialog": {
+        "title": "Afrekenen",
+        "cancel": "Annuleren",
+        "action": "Bevestigen"
+      },
+      "me": "Ik",
+      "direction": {
+        "byme": (gender) => "Ik heb betaald",
+        "tome": (gender) => "Ik heb ontvangen"
       }
     }
   },
@@ -198,6 +328,19 @@ export const dictionaries = {
       "add": {
         "label": "Добавить участников"
       }
+    },
+    "transfer": {
+      "action": "Перевод",
+      "dialog": {
+        "title": "Рассчитаться",
+        "cancel": "Отмена",
+        "action": "Подтвердить"
+      },
+      "me": "Я",
+      "direction": {
+        "byme": (gender) => gender === "he" ? "Я заплатил" : (gender === "she" ? "Я заплатила" : "Я заплатил(а)"),
+        "tome": (gender) => gender === "he" ? "Я получил" : (gender === "she" ? "Я получила" : "Я получил(а)")
+      }
     }
   },
   "sw-TZ": {
@@ -215,6 +358,19 @@ export const dictionaries = {
       },
       "add": {
         "label": "Ongeza washiriki"
+      }
+    },
+    "transfer": {
+      "action": "Uhamisho",
+      "dialog": {
+        "title": "Lipa deni",
+        "cancel": "Ghairi",
+        "action": "Thibitisha"
+      },
+      "me": "Mimi",
+      "direction": {
+        "byme": (gender) => gender === "he" ? "Nimelipa" : (gender === "she" ? "Nimelipa" : "Nimelipa"),
+        "tome": (gender) => gender === "he" ? "Nimepokea" : (gender === "she" ? "Nimepokea" : "Nimepokea")
       }
     }
   },
@@ -234,6 +390,19 @@ export const dictionaries = {
       "add": {
         "label": "Katılımcı ekle"
       }
+    },
+    "transfer": {
+      "action": "Transfer",
+      "dialog": {
+        "title": "Hesap Kapat",
+        "cancel": "İptal",
+        "action": "Onayla"
+      },
+      "me": "Ben",
+      "direction": {
+        "byme": (gender) => "Ödedim",
+        "tome": (gender) => "Aldım"
+      }
     }
   },
   "uk-UA": {
@@ -252,6 +421,19 @@ export const dictionaries = {
       "add": {
         "label": "Додати учасників"
       }
+    },
+    "transfer": {
+      "action": "Переказ",
+      "dialog": {
+        "title": "Розрахуватися",
+        "cancel": "Скасувати",
+        "action": "Підтвердити"
+      },
+      "me": "Я",
+      "direction": {
+        "byme": (gender) => gender === "he" ? "Я заплатив" : (gender === "she" ? "Я заплатила" : "Я заплатив(ла)"),
+        "tome": (gender) => gender === "he" ? "Я отримав" : (gender === "she" ? "Я отримала" : "Я отримав(ла)")
+      }
     }
   },
   "zh-CN": {
@@ -269,6 +451,19 @@ export const dictionaries = {
       },
       "add": {
         "label": "添加参与者"
+      }
+    },
+    "transfer": {
+      "action": "转账",
+      "dialog": {
+        "title": "结清账单",
+        "cancel": "取消",
+        "action": "确认"
+      },
+      "me": "我",
+      "direction": {
+        "byme": (gender) => "我付了钱",
+        "tome": (gender) => "我收到了"
       }
     }
   }

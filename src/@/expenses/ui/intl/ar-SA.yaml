@@ -9,3 +9,21 @@ participants:
     shares: حسب الحصص
   add:
     label: إضافة مشاركين
+transfer:
+  action: تحويل
+  dialog:
+    title: تسوية الحساب
+    cancel: إلغاء
+    action: تأكيد
+  me: أنا
+  direction:
+    byme: >-
+      !js
+
+      (gender) => gender === "he" ? "لقد دفعت" : (gender === "she" ? "لقد دفعتِ"
+      : "لقد دفعت")
+    tome: >-
+      !js
+
+      (gender) => gender === "he" ? "لقد استلمت" : (gender === "she" ? "لقد
+      استلمتِ" : "لقد استلمت")

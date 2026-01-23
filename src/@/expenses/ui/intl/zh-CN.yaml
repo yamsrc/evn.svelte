@@ -9,3 +9,17 @@ participants:
     shares: 按份额
   add:
     label: 添加参与者
+transfer:
+  action: 转账
+  dialog:
+    title: 结清账单
+    cancel: 取消
+    action: 确认
+  me: 我
+  direction:
+    byme: |-
+      !js
+      (gender) => "我付了钱"
+    tome: |-
+      !js
+      (gender) => "我收到了"

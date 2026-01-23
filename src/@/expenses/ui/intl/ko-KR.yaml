@@ -9,3 +9,17 @@ participants:
     shares: 지분별로
   add:
     label: 참가자 추가
+transfer:
+  action: 송금
+  dialog:
+    title: 정산하기
+    cancel: 취소
+    action: 확인
+  me: 나
+  direction:
+    byme: |-
+      !js
+      (gender) => "지불했습니다"
+    tome: |-
+      !js
+      (gender) => "받았습니다"

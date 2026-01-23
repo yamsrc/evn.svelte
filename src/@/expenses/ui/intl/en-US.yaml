@@ -11,3 +11,17 @@ participants:
     shares: By shares
   add:
     label: Add participants
+transfer:
+  action: Transfer
+  dialog:
+    title: Settle Up
+    cancel: Cancel
+    action: Confirm
+  me: Me
+  direction:
+    byme: |-
+      !js
+      (gender) => "I paid"
+    tome: |-
+      !js
+      (gender) => "I received"

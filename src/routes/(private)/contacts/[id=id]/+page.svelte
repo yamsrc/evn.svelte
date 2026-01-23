@@ -2,6 +2,7 @@
   import { Async, combined, ok } from 'svas'
   import { page } from '$app/state'
   import { Separator } from '$com/separator'
+  import { Actions } from '$com/shell'
   import { dict } from '$lib/intl'
   import { Spinner } from '$ui/spinner'
   import { Grammar } from '@/accounts/ui'
@@ -11,7 +12,9 @@
   import { contacts } from '@/contacts'
   import { Balance, Share, Groups, Expenses } from '@/contacts/ui'
   import { expenses } from '@/expenses'
+  import { TransferAction } from '@/expenses/ui'
   import { groups } from '@/groups'
+  import { account } from '@/iam'
 
   const id = $derived(page.params.id) as string
 </script>
@@ -45,6 +48,14 @@
         <Groups {contact} {groups} />
         <Expenses {contact} {expenses} />
       </Section>
+
+      <Actions>
+        <Async store={account}>
+          {#snippet awaited(account)}
+            <TransferAction {account} {contact} />
+          {/snippet}
+        </Async>
+      </Actions>
     {:else}
       <Spinner class="m-auto" />
     {/if}

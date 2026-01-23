@@ -11,3 +11,17 @@ participants:
     shares: Op basis van aandelen
   add:
     label: Deelnemers toevoegen
+transfer:
+  action: Overschrijving
+  dialog:
+    title: Afrekenen
+    cancel: Annuleren
+    action: Bevestigen
+  me: Ik
+  direction:
+    byme: |-
+      !js
+      (gender) => "Ik heb betaald"
+    tome: |-
+      !js
+      (gender) => "Ik heb ontvangen"

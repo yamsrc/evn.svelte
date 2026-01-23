@@ -11,3 +11,21 @@ participants:
     shares: Par parts
   add:
     label: Ajouter des participants
+transfer:
+  action: Virement
+  dialog:
+    title: Régler le solde
+    cancel: Annuler
+    action: Confirmer
+  me: Moi
+  direction:
+    byme: >-
+      !js
+
+      (gender) => gender === "he" ? "J'ai payé" : (gender === "she" ? "J'ai
+      payée" : "J'ai payé(e)")
+    tome: >-
+      !js
+
+      (gender) => gender === "he" ? "J'ai reçu" : (gender === "she" ? "J'ai
+      reçu" : "J'ai reçu")

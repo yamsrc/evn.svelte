@@ -11,3 +11,17 @@ participants:
     shares: Hisselere göre
   add:
     label: Katılımcı ekle
+transfer:
+  action: Transfer
+  dialog:
+    title: Hesap Kapat
+    cancel: İptal
+    action: Onayla
+  me: Ben
+  direction:
+    byme: |-
+      !js
+      (gender) => "Ödedim"
+    tome: |-
+      !js
+      (gender) => "Aldım"

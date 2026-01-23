@@ -6,8 +6,8 @@
   import { currency } from '$lib/tools'
   import { accounts } from '@/accounts'
   import { Picture } from '@/accounts/ui'
+  import { CoinsInput } from '@/app/ui'
   import { account as me } from '@/iam'
-  import Amount from './Amount.svelte'
   import { getContext } from './Context'
   import type { Props } from './BySum'
 
@@ -43,7 +43,7 @@
           {/snippet}
         </Async>
       </div>
-      <Amount
+      <CoinsInput
         id={`expenses-participant-amount-${i}`}
         class={amountClass}
         bind:value={value.participants[id].amount} />
@@ -64,7 +64,7 @@
             </TextEllipsis>
           </div>
         </div>
-        <Amount
+        <CoinsInput
           class={amountClass}
           bind:value={value.extras[i].amount}
           placeholder={i === value.extras.length - 1 ? currency(overpayment, $locale) : '0'} />

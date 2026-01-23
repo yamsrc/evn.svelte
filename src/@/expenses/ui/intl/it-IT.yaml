@@ -11,3 +11,21 @@ participants:
     shares: Per quote
   add:
     label: Aggiungi partecipanti
+transfer:
+  action: Trasferimento
+  dialog:
+    title: Salda il conto
+    cancel: Annulla
+    action: Conferma
+  me: Io
+  direction:
+    byme: >-
+      !js
+
+      (gender) => gender === "he" ? "Ho pagato" : (gender === "she" ? "Ho
+      pagata" : "Ho pagato/a")
+    tome: >-
+      !js
+
+      (gender) => gender === "he" ? "Ho ricevuto" : (gender === "she" ? "Ho
+      ricevuto" : "Ho ricevuto")

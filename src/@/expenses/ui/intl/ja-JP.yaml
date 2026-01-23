@@ -9,3 +9,17 @@ participants:
     shares: 持分ごとに
   add:
     label: 参加者を追加
+transfer:
+  action: 送金
+  dialog:
+    title: 精算する
+    cancel: キャンセル
+    action: 確認
+  me: 私
+  direction:
+    byme: |-
+      !js
+      (gender) => "支払いました"
+    tome: |-
+      !js
+      (gender) => "受け取りました"

@@ -11,3 +11,21 @@ participants:
     shares: За частками
   add:
     label: Додати учасників
+transfer:
+  action: Переказ
+  dialog:
+    title: Розрахуватися
+    cancel: Скасувати
+    action: Підтвердити
+  me: Я
+  direction:
+    byme: >-
+      !js
+
+      (gender) => gender === "he" ? "Я заплатив" : (gender === "she" ? "Я
+      заплатила" : "Я заплатив(ла)")
+    tome: >-
+      !js
+
+      (gender) => gender === "he" ? "Я отримав" : (gender === "she" ? "Я
+      отримала" : "Я отримав(ла)")
