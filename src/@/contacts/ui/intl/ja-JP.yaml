@@ -2,7 +2,7 @@ totals:
   negative: あなたは友達に借りがあります
   positive: 友達があなたに借りがある
 tops:
-  title: 友達
+  title: 借金
   empty: 今のところ、誰もあなたに借りはなく、あなたも誰にも借りはありません。
   negative: 主に借りている相手：
   positive: "あなたに最も多く借りている人:"

@@ -7,8 +7,7 @@ inputs:
       input: Friends owe you
   tops:
     title:
-      input: Friends
-      context: section title
+      input: Debts
     empty:
       input: So far, nobody owes you and you owe nothing.
     negative:

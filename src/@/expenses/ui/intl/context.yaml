@@ -3,7 +3,7 @@ genders: true
 inputs:
   recent:
     title:
-      input: Money
+      input: Recently
     empty:
       input: Nothing happened yet. Add some spending, bring some friends to start things rolling.
   payer:

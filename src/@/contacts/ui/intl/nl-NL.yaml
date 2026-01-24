@@ -2,10 +2,8 @@ totals:
   negative: Je bent je vrienden wat verschuldigd
   positive: Vrienden zijn je iets verschuldigd
 tops:
-  title: Vrienden
-  empty: >-
-    Tot nu toe is niemand jou iets verschuldigd en jij bent niemand iets
-    verschuldigd.
+  title: Schulden
+  empty: Tot nu toe is niemand jou iets verschuldigd en jij bent niemand iets verschuldigd.
   negative: "Je bent vooral iets verschuldigd aan:"
   positive: "Degenen die jou het meest schuldig zijn:"
 groups:

@@ -2,7 +2,7 @@ totals:
   negative: 你欠你的朋友
   positive: 朋友们欠你
 tops:
-  title: 朋友
+  title: 债务
   empty: 到目前为止，没有人欠你，你也不欠任何人。
   negative: 你主要欠款给：
   positive: 欠你最多的人：
