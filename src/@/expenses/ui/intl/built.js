@@ -31,6 +31,13 @@ export const dictionaries = {
         "byme": (gender) => gender === "he" ? "لقد دفعت" : (gender === "she" ? "لقد دفعتِ" : "لقد دفعت"),
         "tome": (gender) => gender === "he" ? "لقد استلمت" : (gender === "she" ? "لقد استلمتِ" : "لقد استلمت")
       }
+    },
+    "transfers": {
+      "tobe": {
+        "neutral": "ستكون قد استقررت تمامًا",
+        "positive": "سيكون لك دين",
+        "negative": "سَتَدِين"
+      }
     }
   },
   "de-DE": {
@@ -61,6 +68,13 @@ export const dictionaries = {
       "direction": {
         "byme": (gender) => gender === "he" ? "Ich habe bezahlt" : (gender === "she" ? "Ich habe bezahlt" : "Ich habe bezahlt"),
         "tome": (gender) => gender === "he" ? "Ich habe erhalten" : (gender === "she" ? "Ich habe erhalten" : "Ich habe erhalten")
+      }
+    },
+    "transfers": {
+      "tobe": {
+        "neutral": "Du wirst ganz angekommen sein",
+        "positive": "Es wird dir geschuldet",
+        "negative": "Du hast eine offene Forderung"
       }
     }
   },
@@ -93,6 +107,13 @@ export const dictionaries = {
         "byme": (gender) => "I paid",
         "tome": (gender) => "I received"
       }
+    },
+    "transfers": {
+      "tobe": {
+        "neutral": "You’ll be all settled",
+        "positive": "You'll be owed",
+        "negative": "You’ll owe"
+      }
     }
   },
   "es-ES": {
@@ -123,6 +144,13 @@ export const dictionaries = {
       "direction": {
         "byme": (gender) => gender === "he" ? "He pagado" : (gender === "she" ? "He pagado" : "He pagado"),
         "tome": (gender) => gender === "he" ? "He recibido" : (gender === "she" ? "He recibido" : "He recibido")
+      }
+    },
+    "transfers": {
+      "tobe": {
+        "neutral": "Estarás completamente instalado",
+        "positive": "Te lo deberán",
+        "negative": "Tendrás una deuda"
       }
     }
   },
@@ -155,6 +183,13 @@ export const dictionaries = {
         "byme": (gender) => gender === "he" ? "J'ai payé" : (gender === "she" ? "J'ai payée" : "J'ai payé(e)"),
         "tome": (gender) => gender === "he" ? "J'ai reçu" : (gender === "she" ? "J'ai reçu" : "J'ai reçu")
       }
+    },
+    "transfers": {
+      "tobe": {
+        "neutral": "Tu seras bien installé",
+        "positive": "On te devra quelque chose",
+        "negative": "Vous devrez"
+      }
     }
   },
   "hi-IN": {
@@ -185,6 +220,13 @@ export const dictionaries = {
       "direction": {
         "byme": (gender) => gender === "he" ? "मैंने भुगतान किया" : (gender === "she" ? "मैंने भुगतान की" : "मैंने भुगतान किया"),
         "tome": (gender) => gender === "he" ? "मैंने प्राप्त किया" : (gender === "she" ? "मैंने प्राप्त की" : "मैंने प्राप्त किया/की")
+      }
+    },
+    "transfers": {
+      "tobe": {
+        "neutral": "आप पूरी तरह से व्यवस्थित हो जाएंगे",
+        "positive": "आपका बकाया रहेगा",
+        "negative": "आपको देना होगा"
       }
     }
   },
@@ -217,6 +259,13 @@ export const dictionaries = {
         "byme": (gender) => gender === "he" ? "Ho pagato" : (gender === "she" ? "Ho pagata" : "Ho pagato/a"),
         "tome": (gender) => gender === "he" ? "Ho ricevuto" : (gender === "she" ? "Ho ricevuto" : "Ho ricevuto")
       }
+    },
+    "transfers": {
+      "tobe": {
+        "neutral": "Sarai completamente sistemato",
+        "positive": "Ti sarà dovuto",
+        "negative": "Avrai un debito"
+      }
     }
   },
   "ja-JP": {
@@ -247,6 +296,13 @@ export const dictionaries = {
       "direction": {
         "byme": (gender) => "支払いました",
         "tome": (gender) => "受け取りました"
+      }
+    },
+    "transfers": {
+      "tobe": {
+        "neutral": "すっかり落ち着きますよ",
+        "positive": "あなたは借りができることになります",
+        "negative": "あなたに未払いがあります"
       }
     }
   },
@@ -279,6 +335,13 @@ export const dictionaries = {
         "byme": (gender) => "지불했습니다",
         "tome": (gender) => "받았습니다"
       }
+    },
+    "transfers": {
+      "tobe": {
+        "neutral": "완전히 자리 잡을 거예요",
+        "positive": "당신에게 빚이 생길 거예요",
+        "negative": "지불해야 합니다"
+      }
     }
   },
   "nl-NL": {
@@ -309,6 +372,13 @@ export const dictionaries = {
       "direction": {
         "byme": (gender) => "Ik heb betaald",
         "tome": (gender) => "Ik heb ontvangen"
+      }
+    },
+    "transfers": {
+      "tobe": {
+        "neutral": "Je bent straks helemaal gesetteld",
+        "positive": "Jij krijgt nog wat tegoed",
+        "negative": "Je zult verschuldigd zijn"
       }
     }
   },
@@ -341,6 +411,13 @@ export const dictionaries = {
         "byme": (gender) => gender === "he" ? "Я заплатил" : (gender === "she" ? "Я заплатила" : "Я заплатил(а)"),
         "tome": (gender) => gender === "he" ? "Я получил" : (gender === "she" ? "Я получила" : "Я получил(а)")
       }
+    },
+    "transfers": {
+      "tobe": {
+        "neutral": "Ты полностью обустроишься",
+        "positive": "Тебе будут должны",
+        "negative": "Вы будете должны"
+      }
     }
   },
   "sw-TZ": {
@@ -371,6 +448,13 @@ export const dictionaries = {
       "direction": {
         "byme": (gender) => gender === "he" ? "Nimelipa" : (gender === "she" ? "Nimelipa" : "Nimelipa"),
         "tome": (gender) => gender === "he" ? "Nimepokea" : (gender === "she" ? "Nimepokea" : "Nimepokea")
+      }
+    },
+    "transfers": {
+      "tobe": {
+        "neutral": "Utakua umeshatulia kabisa",
+        "positive": "Utakuwa na deni lako",
+        "negative": "Utakuwa na deni"
       }
     }
   },
@@ -403,6 +487,13 @@ export const dictionaries = {
         "byme": (gender) => "Ödedim",
         "tome": (gender) => "Aldım"
       }
+    },
+    "transfers": {
+      "tobe": {
+        "neutral": "Tamamen yerleşmiş olacaksın",
+        "positive": "Sana borçlanılacak",
+        "negative": "Borçlu olacaksın"
+      }
     }
   },
   "uk-UA": {
@@ -434,6 +525,13 @@ export const dictionaries = {
         "byme": (gender) => gender === "he" ? "Я заплатив" : (gender === "she" ? "Я заплатила" : "Я заплатив(ла)"),
         "tome": (gender) => gender === "he" ? "Я отримав" : (gender === "she" ? "Я отримала" : "Я отримав(ла)")
       }
+    },
+    "transfers": {
+      "tobe": {
+        "neutral": "Ти повністю облаштуєшся",
+        "positive": "Тобі будуть винні",
+        "negative": "Ви будете винні"
+      }
     }
   },
   "zh-CN": {
@@ -464,6 +562,13 @@ export const dictionaries = {
       "direction": {
         "byme": (gender) => "我付了钱",
         "tome": (gender) => "我收到了"
+      }
+    },
+    "transfers": {
+      "tobe": {
+        "neutral": "你会完全安顿好的",
+        "positive": "你会被欠下",
+        "negative": "你将欠款"
       }
     }
   }

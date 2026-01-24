@@ -23,3 +23,8 @@ transfer:
     tome: |-
       !js
       (gender) => "받았습니다"
+transfers:
+  tobe:
+    neutral: 완전히 자리 잡을 거예요
+    positive: 당신에게 빚이 생길 거예요
+    negative: 지불해야 합니다

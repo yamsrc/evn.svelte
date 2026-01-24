@@ -12,7 +12,7 @@
   import { contacts } from '@/contacts'
   import { Balance, Share, Groups, Expenses } from '@/contacts/ui'
   import { expenses } from '@/expenses'
-  import { TransferAction } from '@/expenses/ui'
+  import { Transfer } from '@/expenses/ui'
   import { groups } from '@/groups'
   import { account } from '@/iam'
 
@@ -50,11 +50,13 @@
       </Section>
 
       <Actions>
-        <Async store={account}>
-          {#snippet awaited(account)}
-            <TransferAction {account} {contact} />
-          {/snippet}
-        </Async>
+        {#if contact.balance !== 0}
+          <Async store={account}>
+            {#snippet awaited(account)}
+              <Transfer {account} {contact} />
+            {/snippet}
+          </Async>
+        {/if}
       </Actions>
     {:else}
       <Spinner class="m-auto" />

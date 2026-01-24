@@ -42,3 +42,11 @@ inputs:
       tome:
         input: Я получил
         context: деньги
+  transfers:
+    tobe:
+      neutral:
+        input: You’ll be all settled
+      positive:
+        input: You’ll be owed
+      negative:
+        input: You’ll owe

@@ -29,3 +29,8 @@ transfer:
 
       (gender) => gender === "he" ? "He recibido" : (gender === "she" ? "He
       recibido" : "He recibido")
+transfers:
+  tobe:
+    neutral: Estarás completamente instalado
+    positive: Te lo deberán
+    negative: Tendrás una deuda

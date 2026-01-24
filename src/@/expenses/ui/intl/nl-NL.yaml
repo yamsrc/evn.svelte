@@ -25,3 +25,8 @@ transfer:
     tome: |-
       !js
       (gender) => "Ik heb ontvangen"
+transfers:
+  tobe:
+    neutral: Je bent straks helemaal gesetteld
+    positive: Jij krijgt nog wat tegoed
+    negative: Je zult verschuldigd zijn

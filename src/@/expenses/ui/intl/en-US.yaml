@@ -25,3 +25,8 @@ transfer:
     tome: |-
       !js
       (gender) => "I received"
+transfers:
+  tobe:
+    neutral: You’ll be all settled
+    positive: You'll be owed
+    negative: You’ll owe

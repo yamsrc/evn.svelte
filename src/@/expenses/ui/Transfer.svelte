@@ -6,16 +6,18 @@
   import * as AlertDialog from '$ui/alert-dialog'
   import { Button } from '$ui/button'
   import { Avatar } from '@/accounts/ui'
-  import { Action, CoinsInput } from '@/app/ui'
+  import { Action, Coins, CoinsInput } from '@/app/ui'
   import { dict } from './intl'
-  import type { Props } from './TransferAction'
+  import type { Props } from './Transfer'
   import type { Account } from '@/accounts'
 
   const { account, contact }: Props = $props()
 
-  let open = $state(true)
-  let receive = $state(true)
+  let open = $state(false)
+  let receive = $derived(contact.balance > 0)
   let value = $derived(Math.abs(contact.balance))
+
+  const tobe = $derived(contact.balance + value * (receive ? -1 : 1))
 
   function onclick() {
     open = true
@@ -67,7 +69,7 @@
             </div>
           </div>
         </div>
-        <div class="flex items-center justify-between gap-2">
+        <div class="flex flex-col items-center justify-between gap-2">
           <div class="text-nowrap">
             {#if receive}
               {$dict.transfer.direction.tome($grammar)}
@@ -86,6 +88,18 @@
           {$dict.transfer.dialog.action}
         </Button>
       </AlertDialog.Footer>
+      <p class="flex gap-1 items-center justify-center text-muted-foreground">
+        {#if tobe === 0}
+          {$dict.transfers.tobe.neutral}
+        {:else}
+          {#if tobe > 0}
+            {$dict.transfers.tobe.positive}
+          {:else}
+            {$dict.transfers.tobe.negative}
+          {/if}
+          <Coins amount={tobe} />
+        {/if}
+      </p>
     </AlertDialog.Content>
   </AlertDialog.Root>
 {/if}

@@ -23,3 +23,8 @@ transfer:
     tome: |-
       !js
       (gender) => "我收到了"
+transfers:
+  tobe:
+    neutral: 你会完全安顿好的
+    positive: 你会被欠下
+    negative: 你将欠款

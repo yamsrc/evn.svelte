@@ -29,3 +29,8 @@ transfer:
 
       (gender) => gender === "he" ? "Nimepokea" : (gender === "she" ?
       "Nimepokea" : "Nimepokea")
+transfers:
+  tobe:
+    neutral: Utakua umeshatulia kabisa
+    positive: Utakuwa na deni lako
+    negative: Utakuwa na deni

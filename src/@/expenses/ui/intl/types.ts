@@ -38,4 +38,11 @@ export type Dictionary = {
           tome: (value: any) => string
         }
       }
+      transfers: {
+        tobe: {
+          neutral: string
+          positive: string
+          negative: string
+        }
+      }
     }

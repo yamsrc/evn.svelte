@@ -27,3 +27,8 @@ transfer:
 
       (gender) => gender === "he" ? "لقد استلمت" : (gender === "she" ? "لقد
       استلمتِ" : "لقد استلمت")
+transfers:
+  tobe:
+    neutral: ستكون قد استقررت تمامًا
+    positive: سيكون لك دين
+    negative: سَتَدِين

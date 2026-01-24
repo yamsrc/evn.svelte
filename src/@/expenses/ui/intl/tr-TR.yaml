@@ -25,3 +25,8 @@ transfer:
     tome: |-
       !js
       (gender) => "Aldım"
+transfers:
+  tobe:
+    neutral: Tamamen yerleşmiş olacaksın
+    positive: Sana borçlanılacak
+    negative: Borçlu olacaksın

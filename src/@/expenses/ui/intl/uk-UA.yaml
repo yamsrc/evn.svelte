@@ -29,3 +29,8 @@ transfer:
 
       (gender) => gender === "he" ? "Я отримав" : (gender === "she" ? "Я
       отримала" : "Я отримав(ла)")
+transfers:
+  tobe:
+    neutral: Ти повністю облаштуєшся
+    positive: Тобі будуть винні
+    negative: Ви будете винні
