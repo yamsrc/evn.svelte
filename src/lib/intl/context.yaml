@@ -1,4 +1,4 @@
-context: Internationalization project
+context: "Tracking shared expenses app. Friendly informal style (ex: ты а не Вы)"
 genders: true
 inputs:
   locale:
