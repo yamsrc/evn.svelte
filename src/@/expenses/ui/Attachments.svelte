@@ -23,7 +23,11 @@
             <Picture id={attachment} {path} variant="300x600?" class="block h-full snap-center" />
           </a>
           <div class="snap-center flex justify-center items-center bg-destructive p-4">
-            <Button variant="ghost" size="icon-lg" onclick={() => filter(attachment)}>
+            <Button
+              variant="ghost"
+              size="icon-lg"
+              onclick={() => filter(attachment)}
+              class="w-full">
               <Trash2 />
             </Button>
           </div>
