@@ -34,3 +34,14 @@ transfers:
     neutral: Sarai completamente sistemato
     positive: Ti sarà dovuto
     negative: Avrai un debito
+  done:
+    paid: >-
+      !js
+
+      (gender) => gender === "he" ? "Hai pagato" : gender === "she" ? "Hai
+      pagato" : "Hai pagato"
+    received: >-
+      !js
+
+      (gender) => gender === "he" ? "Hai ricevuto" : gender === "she" ? "Hai
+      ricevuta" : "Hai ricevuto/a"

@@ -30,3 +30,10 @@ transfers:
     neutral: Tamamen yerleşmiş olacaksın
     positive: Sana borçlanılacak
     negative: Borçlu olacaksın
+  done:
+    paid: |-
+      !js
+      (gender) => "Ödedin"
+    received: |-
+      !js
+      (gender) => "Aldın"

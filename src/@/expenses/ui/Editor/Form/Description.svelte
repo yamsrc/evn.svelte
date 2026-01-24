@@ -14,7 +14,7 @@
     autofocus={title === ''}
     required
     placeholder={$dict.expenses.form.title.placeholder}
-    class="text-3xl font-bold" />
+    class="text-2xl font-bold" />
   <Input
     id="expenses-form-location-input"
     bind:value={location}

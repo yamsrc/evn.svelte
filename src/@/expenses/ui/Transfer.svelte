@@ -5,8 +5,10 @@
   import { transit } from '$lib/tools'
   import * as AlertDialog from '$ui/alert-dialog'
   import { Button } from '$ui/button'
+  import { Spinner } from '$ui/spinner'
   import { Avatar } from '@/accounts/ui'
   import { Action, Coins, CoinsInput } from '@/app/ui'
+  import { add, type Expense } from '@/expenses'
   import { dict } from './intl'
   import type { Props } from './Transfer'
   import type { Account } from '@/accounts'
@@ -14,6 +16,7 @@
   const { account, contact }: Props = $props()
 
   let open = $state(false)
+  let busy = $state(false)
   let receive = $derived(contact.balance > 0)
   let value = $derived(Math.abs(contact.balance))
 
@@ -25,6 +28,28 @@
 
   function swap() {
     transit(() => (receive = !receive))
+  }
+
+  async function transfer() {
+    if (!contact.account || !ok(contact.account)) return
+
+    const payer = receive ? contact.account : account
+    const payee = receive ? account : contact.account
+
+    const participants: Expense['participants'] = {
+      [payer.id]: { amount: 0, paid: value },
+      [payee.id]: { amount: value },
+    }
+
+    busy = true
+
+    const expense = await add({ participants })
+
+    busy = false
+
+    if (expense instanceof Error) return
+
+    open = false
   }
 </script>
 
@@ -80,12 +105,16 @@
           <CoinsInput bind:value class="max-w-1/2" inputClass="text-3xl font-bold" />
         </div>
       </div>
-      <AlertDialog.Footer class="flex-row [&_button]:flex-1">
+      <AlertDialog.Footer class="flex-row [&_button]:w-1/2">
         <Button variant="secondary" size="lg" onclick={() => (open = false)}>
           {$dict.transfer.dialog.cancel}
         </Button>
-        <Button size="lg">
-          {$dict.transfer.dialog.action}
+        <Button size="lg" onclick={transfer} disabled={busy}>
+          {#if busy}
+            <Spinner />
+          {:else}
+            {$dict.transfer.dialog.action}
+          {/if}
         </Button>
       </AlertDialog.Footer>
       <p class="flex gap-1 items-center justify-center text-muted-foreground">

@@ -44,5 +44,9 @@ export type Dictionary = {
           positive: string
           negative: string
         }
+        done: {
+          paid: (value: any) => string
+          received: (value: any) => string
+        }
       }
     }

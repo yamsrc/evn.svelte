@@ -37,6 +37,10 @@ export const dictionaries = {
         "neutral": "ستكون قد استقررت تمامًا",
         "positive": "سيكون لك دين",
         "negative": "سَتَدِين"
+      },
+      "done": {
+        "paid": (gender) => gender === "he" ? "لقد دفعتَ" : gender === "she" ? "لقد دفعتِ" : "لقد دفعت",
+        "received": (gender) => gender === "he" ? "لقد استلمتَ" : gender === "she" ? "لقد استلمتِ" : "لقد استلمت"
       }
     }
   },
@@ -75,6 +79,10 @@ export const dictionaries = {
         "neutral": "Du wirst ganz angekommen sein",
         "positive": "Es wird dir geschuldet",
         "negative": "Du hast eine offene Forderung"
+      },
+      "done": {
+        "paid": (gender) => gender === "he" ? "Du hast bezahlt" : gender === "she" ? "Du hast bezahlt" : "Du hast bezahlt",
+        "received": (gender) => gender === "he" ? "Du hast bekommen" : gender === "she" ? "Du hast bekommen" : "Du hast bekommen"
       }
     }
   },
@@ -113,6 +121,10 @@ export const dictionaries = {
         "neutral": "You’ll be all settled",
         "positive": "You'll be owed",
         "negative": "You’ll owe"
+      },
+      "done": {
+        "paid": (gender) => "You’ve paid",
+        "received": (gender) => gender === "he" ? "You've received" : gender === "she" ? "You've received" : "You've received"
       }
     }
   },
@@ -151,6 +163,10 @@ export const dictionaries = {
         "neutral": "Estarás completamente instalado",
         "positive": "Te lo deberán",
         "negative": "Tendrás una deuda"
+      },
+      "done": {
+        "paid": (gender) => gender === "he" ? "Has pagado" : gender === "she" ? "Has pagado" : "Has pagado",
+        "received": (gender) => gender === "he" ? "Has recibido" : gender === "she" ? "Has recibido" : "Has recibido"
       }
     }
   },
@@ -189,6 +205,10 @@ export const dictionaries = {
         "neutral": "Tu seras bien installé",
         "positive": "On te devra quelque chose",
         "negative": "Vous devrez"
+      },
+      "done": {
+        "paid": (gender) => gender === "he" ? "Tu as payé" : gender === "she" ? "Tu as payé" : "Tu as payé",
+        "received": (gender) => gender === "he" ? "Tu as reçu" : gender === "she" ? "Tu as reçu" : "Tu as reçu"
       }
     }
   },
@@ -227,6 +247,10 @@ export const dictionaries = {
         "neutral": "आप पूरी तरह से व्यवस्थित हो जाएंगे",
         "positive": "आपका बकाया रहेगा",
         "negative": "आपको देना होगा"
+      },
+      "done": {
+        "paid": (gender) => gender === "he" ? "तुमने पैसे दे दिए" : gender === "she" ? "तुमने पैसे दे दी" : "तुमने पैसे दे दिए",
+        "received": (gender) => gender === "he" ? "तुम्हें मिला है" : gender === "she" ? "तुम्हें मिली है" : "तुम्हें मिला/मिली है"
       }
     }
   },
@@ -265,6 +289,10 @@ export const dictionaries = {
         "neutral": "Sarai completamente sistemato",
         "positive": "Ti sarà dovuto",
         "negative": "Avrai un debito"
+      },
+      "done": {
+        "paid": (gender) => gender === "he" ? "Hai pagato" : gender === "she" ? "Hai pagato" : "Hai pagato",
+        "received": (gender) => gender === "he" ? "Hai ricevuto" : gender === "she" ? "Hai ricevuta" : "Hai ricevuto/a"
       }
     }
   },
@@ -303,6 +331,10 @@ export const dictionaries = {
         "neutral": "すっかり落ち着きますよ",
         "positive": "あなたは借りができることになります",
         "negative": "あなたに未払いがあります"
+      },
+      "done": {
+        "paid": (gender) => "支払いが完了しました",
+        "received": (gender) => "受け取ったよ"
       }
     }
   },
@@ -341,6 +373,10 @@ export const dictionaries = {
         "neutral": "완전히 자리 잡을 거예요",
         "positive": "당신에게 빚이 생길 거예요",
         "negative": "지불해야 합니다"
+      },
+      "done": {
+        "paid": (gender) => "결제하셨습니다",
+        "received": (gender) => "받았어"
       }
     }
   },
@@ -379,6 +415,10 @@ export const dictionaries = {
         "neutral": "Je bent straks helemaal gesetteld",
         "positive": "Jij krijgt nog wat tegoed",
         "negative": "Je zult verschuldigd zijn"
+      },
+      "done": {
+        "paid": (gender) => "Je hebt betaald",
+        "received": (gender) => "Je hebt ontvangen"
       }
     }
   },
@@ -417,6 +457,10 @@ export const dictionaries = {
         "neutral": "Ты полностью обустроишься",
         "positive": "Тебе будут должны",
         "negative": "Вы будете должны"
+      },
+      "done": {
+        "paid": (gender) => gender === "he" ? "Ты заплатил" : gender === "she" ? "Ты заплатила" : "Ты заплатил(а)",
+        "received": (gender) => gender === "he" ? "Ты получил" : gender === "she" ? "Ты получила" : "Ты получил(а)"
       }
     }
   },
@@ -455,6 +499,10 @@ export const dictionaries = {
         "neutral": "Utakua umeshatulia kabisa",
         "positive": "Utakuwa na deni lako",
         "negative": "Utakuwa na deni"
+      },
+      "done": {
+        "paid": (gender) => "Umelipa",
+        "received": (gender) => "Umepewa"
       }
     }
   },
@@ -493,6 +541,10 @@ export const dictionaries = {
         "neutral": "Tamamen yerleşmiş olacaksın",
         "positive": "Sana borçlanılacak",
         "negative": "Borçlu olacaksın"
+      },
+      "done": {
+        "paid": (gender) => "Ödedin",
+        "received": (gender) => "Aldın"
       }
     }
   },
@@ -531,6 +583,10 @@ export const dictionaries = {
         "neutral": "Ти повністю облаштуєшся",
         "positive": "Тобі будуть винні",
         "negative": "Ви будете винні"
+      },
+      "done": {
+        "paid": (gender) => gender === "he" ? "Ти заплатив" : gender === "she" ? "Ти заплатила" : "Ти заплатив(ла)",
+        "received": (gender) => gender === "he" ? "Ти отримав" : gender === "she" ? "Ти отримала" : "Ти отримав(ла)"
       }
     }
   },
@@ -569,6 +625,10 @@ export const dictionaries = {
         "neutral": "你会完全安顿好的",
         "positive": "你会被欠下",
         "negative": "你将欠款"
+      },
+      "done": {
+        "paid": (gender) => "你已付款",
+        "received": (gender) => "你已收到"
       }
     }
   }

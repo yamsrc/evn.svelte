@@ -28,3 +28,10 @@ transfers:
     neutral: すっかり落ち着きますよ
     positive: あなたは借りができることになります
     negative: あなたに未払いがあります
+  done:
+    paid: |-
+      !js
+      (gender) => "支払いが完了しました"
+    received: |-
+      !js
+      (gender) => "受け取ったよ"

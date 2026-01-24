@@ -50,3 +50,10 @@ inputs:
         input: You’ll be owed
       negative:
         input: You’ll owe
+    done:
+      paid:
+        input: You've paid
+        context: use ты with gender
+      received:
+        input: You've received
+        context: use ты with gender

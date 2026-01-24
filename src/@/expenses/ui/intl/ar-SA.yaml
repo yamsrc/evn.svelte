@@ -32,3 +32,14 @@ transfers:
     neutral: ستكون قد استقررت تمامًا
     positive: سيكون لك دين
     negative: سَتَدِين
+  done:
+    paid: >-
+      !js
+
+      (gender) => gender === "he" ? "لقد دفعتَ" : gender === "she" ? "لقد دفعتِ"
+      : "لقد دفعت"
+    received: >-
+      !js
+
+      (gender) => gender === "he" ? "لقد استلمتَ" : gender === "she" ? "لقد
+      استلمتِ" : "لقد استلمت"

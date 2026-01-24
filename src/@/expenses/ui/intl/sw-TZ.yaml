@@ -34,3 +34,10 @@ transfers:
     neutral: Utakua umeshatulia kabisa
     positive: Utakuwa na deni lako
     negative: Utakuwa na deni
+  done:
+    paid: |-
+      !js
+      (gender) => "Umelipa"
+    received: |-
+      !js
+      (gender) => "Umepewa"

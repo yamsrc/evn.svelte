@@ -34,3 +34,14 @@ transfers:
     neutral: Du wirst ganz angekommen sein
     positive: Es wird dir geschuldet
     negative: Du hast eine offene Forderung
+  done:
+    paid: >-
+      !js
+
+      (gender) => gender === "he" ? "Du hast bezahlt" : gender === "she" ? "Du
+      hast bezahlt" : "Du hast bezahlt"
+    received: >-
+      !js
+
+      (gender) => gender === "he" ? "Du hast bekommen" : gender === "she" ? "Du
+      hast bekommen" : "Du hast bekommen"

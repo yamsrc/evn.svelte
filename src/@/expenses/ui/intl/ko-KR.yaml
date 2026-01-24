@@ -28,3 +28,10 @@ transfers:
     neutral: 완전히 자리 잡을 거예요
     positive: 당신에게 빚이 생길 거예요
     negative: 지불해야 합니다
+  done:
+    paid: |-
+      !js
+      (gender) => "결제하셨습니다"
+    received: |-
+      !js
+      (gender) => "받았어"

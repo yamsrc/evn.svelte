@@ -28,3 +28,10 @@ transfers:
     neutral: 你会完全安顿好的
     positive: 你会被欠下
     negative: 你将欠款
+  done:
+    paid: |-
+      !js
+      (gender) => "你已付款"
+    received: |-
+      !js
+      (gender) => "你已收到"

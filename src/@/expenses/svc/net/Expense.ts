@@ -11,7 +11,7 @@ export interface Extra {
 
 export interface Expense {
   id: string
-  title: string
+  title?: string
   location?: string
   date: string
   participants: Record<string, Participant>

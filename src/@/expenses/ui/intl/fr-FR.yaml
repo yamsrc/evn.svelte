@@ -34,3 +34,14 @@ transfers:
     neutral: Tu seras bien installé
     positive: On te devra quelque chose
     negative: Vous devrez
+  done:
+    paid: >-
+      !js
+
+      (gender) => gender === "he" ? "Tu as payé" : gender === "she" ? "Tu as
+      payé" : "Tu as payé"
+    received: >-
+      !js
+
+      (gender) => gender === "he" ? "Tu as reçu" : gender === "she" ? "Tu as
+      reçu" : "Tu as reçu"

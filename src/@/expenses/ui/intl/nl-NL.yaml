@@ -30,3 +30,10 @@ transfers:
     neutral: Je bent straks helemaal gesetteld
     positive: Jij krijgt nog wat tegoed
     negative: Je zult verschuldigd zijn
+  done:
+    paid: |-
+      !js
+      (gender) => "Je hebt betaald"
+    received: |-
+      !js
+      (gender) => "Je hebt ontvangen"

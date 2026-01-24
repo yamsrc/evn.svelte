@@ -34,3 +34,14 @@ transfers:
     neutral: Estarás completamente instalado
     positive: Te lo deberán
     negative: Tendrás una deuda
+  done:
+    paid: >-
+      !js
+
+      (gender) => gender === "he" ? "Has pagado" : gender === "she" ? "Has
+      pagado" : "Has pagado"
+    received: >-
+      !js
+
+      (gender) => gender === "he" ? "Has recibido" : gender === "she" ? "Has
+      recibido" : "Has recibido"

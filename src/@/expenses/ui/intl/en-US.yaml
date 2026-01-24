@@ -30,3 +30,12 @@ transfers:
     neutral: You’ll be all settled
     positive: You'll be owed
     negative: You’ll owe
+  done:
+    paid: |-
+      !js
+      (gender) => "You’ve paid"
+    received: >-
+      !js
+
+      (gender) => gender === "he" ? "You've received" : gender === "she" ?
+      "You've received" : "You've received"

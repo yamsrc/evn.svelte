@@ -34,3 +34,14 @@ transfers:
     neutral: Ты полностью обустроишься
     positive: Тебе будут должны
     negative: Вы будете должны
+  done:
+    paid: >-
+      !js
+
+      (gender) => gender === "he" ? "Ты заплатил" : gender === "she" ? "Ты
+      заплатила" : "Ты заплатил(а)"
+    received: >-
+      !js
+
+      (gender) => gender === "he" ? "Ты получил" : gender === "she" ? "Ты
+      получила" : "Ты получил(а)"
