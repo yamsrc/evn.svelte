@@ -11,7 +11,7 @@
   import { Section } from '@/app/ui'
   import { Header } from '@/app/ui'
   import { contacts } from '@/contacts'
-  import { Balance, Share, Groups, Expenses } from '@/contacts/ui'
+  import { Balance, Share, Groups, Expenses, Favorite } from '@/contacts/ui'
   import { Delete } from '@/contacts/ui'
   import { expenses } from '@/expenses'
   import { Transfer } from '@/expenses/ui'
@@ -73,6 +73,7 @@
             {/snippet}
           </Async>
         {/if}
+        <Favorite {contact} />
       </Actions>
     {:else}
       <Spinner class="m-auto" />
