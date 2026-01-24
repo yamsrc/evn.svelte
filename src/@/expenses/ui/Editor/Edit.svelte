@@ -17,5 +17,5 @@
   }
 </script>
 
-<Attachments attachments={value.attachments} />
+<Attachments bind:attachments={value.attachments} />
 <Form bind:value bind:mode {onsubmit} />
