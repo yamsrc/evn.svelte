@@ -22,8 +22,7 @@ transfer:
     byme: >-
       !js
 
-      (gender) => gender === "he" ? "Ho pagato" : (gender === "she" ? "Ho
-      pagata" : "Ho pagato/a")
+      (gender) => "Ho pagato"
     tome: >-
       !js
 
@@ -38,10 +37,8 @@ transfers:
     paid: >-
       !js
 
-      (gender) => gender === "he" ? "Hai pagato" : gender === "she" ? "Hai
-      pagato" : "Hai pagato"
+      (gender) => "Hai pagato"
     received: >-
       !js
 
-      (gender) => gender === "he" ? "Hai ricevuto" : gender === "she" ? "Hai
-      ricevuta" : "Hai ricevuto/a"
+      (gender) => "Hai ricevuto"

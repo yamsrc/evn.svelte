@@ -280,7 +280,7 @@ export const dictionaries = {
       },
       "me": "Io",
       "direction": {
-        "byme": (gender) => gender === "he" ? "Ho pagato" : (gender === "she" ? "Ho pagata" : "Ho pagato/a"),
+        "byme": (gender) => "Ho pagato",
         "tome": (gender) => gender === "he" ? "Ho ricevuto" : (gender === "she" ? "Ho ricevuto" : "Ho ricevuto")
       }
     },
@@ -291,8 +291,8 @@ export const dictionaries = {
         "negative": "Avrai un debito"
       },
       "done": {
-        "paid": (gender) => gender === "he" ? "Hai pagato" : gender === "she" ? "Hai pagato" : "Hai pagato",
-        "received": (gender) => gender === "he" ? "Hai ricevuto" : gender === "she" ? "Hai ricevuta" : "Hai ricevuto/a"
+        "paid": (gender) => "Hai pagato",
+        "received": (gender) => "Hai ricevuto"
       }
     }
   },

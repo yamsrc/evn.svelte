@@ -22,8 +22,7 @@ transfer:
     byme: >-
       !js
 
-      (gender) => gender === "he" ? "J'ai payé" : (gender === "she" ? "J'ai
-      payée" : "J'ai payé(e)")
+      (gender) => "J'ai payé"
     tome: >-
       !js
 
