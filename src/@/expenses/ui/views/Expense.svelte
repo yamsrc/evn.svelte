@@ -23,22 +23,23 @@
 <Button
   href={`/expenses/editor/${expense.id}/`}
   variant="outline"
-  class="px-4 py-3 h-fit flex flex-col gap-3 font-normal">
-  <div class="w-full flex justify-between items-center">
+  size="lg"
+  class="px-4 py-3 h-fit flex flex-col gap-3">
+  <div class="w-full flex justify-between items-start">
     <div class="flex flex-col items-start">
-      <div>{expense.title}</div>
-      <div class="text-sm text-muted-foreground">
-        {description}
-      </div>
-    </div>
-    <div class="flex flex-col items-end gap-2">
-      <Coins amount={numbers.total(expense)} sign="neutral" />
-      <div class="text-muted-foreground text-sm text-nowrap flex items-center gap-2">
-        <span>{$dict.expenses.balance.total}</span>
+      <div class="flex items-center gap-1">
         {#if expense.attachments.length > 0}
-          <Paperclip size={14} />
+          <Paperclip size={14} class="text-muted-foreground" />
         {/if}
+        <span>{expense.title}</span>
       </div>
+      <p class="text-sm text-muted-foreground">
+        {description}
+      </p>
+    </div>
+    <div class="flex flex-col items-end">
+      <Coins amount={numbers.total(expense)} sign="neutral" />
+      <p class="text-sm text-muted-foreground">{$dict.expenses.balance.total}</p>
     </div>
   </div>
   <Separator />
