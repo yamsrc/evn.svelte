@@ -8,7 +8,7 @@
   import { dict } from '@/iam/ui/intl'
   import type { Props } from './Create'
 
-  const { account, disabled }: Props = $props()
+  const { account, disabled, oncreate }: Props = $props()
 
   let value = $derived(account?.name ?? '')
   let busy = $state(false)
@@ -20,9 +20,13 @@
 
     busy = true
 
-    await passkeys.create(name, account?.id)
+    const echo = await passkeys.create(name, account?.id)
 
     busy = false
+
+    if (echo instanceof Error) return
+
+    oncreate?.(echo)
   }
 </script>
 
