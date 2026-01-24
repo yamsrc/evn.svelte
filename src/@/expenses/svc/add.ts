@@ -1,7 +1,7 @@
 import { having, sync } from 'svas'
 import { account } from '@/iam'
 import * as net from './net'
-import { expenses } from './store'
+import { internal } from './store'
 
 export async function add(properties: Input): Promise<net.Expense | Error> {
   const me = await having(account)
@@ -12,7 +12,7 @@ export async function add(properties: Input): Promise<net.Expense | Error> {
 
   if (expense instanceof Error) return expense
 
-  sync(expenses, expense)
+  sync(internal, expense)
 
   return expense
 }

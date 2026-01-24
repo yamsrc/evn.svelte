@@ -13,13 +13,23 @@
     {@render children()}
   </Editor.Context>
 {:else}
-  <Async store={expenses.get(id)}>
-    {#snippet awaited(expense)}
-      {#key id}
-        <Editor.Context value={expense}>
-          {@render children()}
-        </Editor.Context>
-      {/key}
+  <Async store={expenses}>
+    {#snippet awaited(expenses)}
+      {@const expense = expenses.find((expense) => expense.id === id)}
+      {#if expense}
+        {#key id}
+          {@const value = {
+            title: expense.title ?? '',
+            location: expense.location,
+            participants: expense.participants,
+            extras: expense.extras,
+            attachments: expense.attachments,
+          }}
+          <Editor.Context {value}>
+            {@render children()}
+          </Editor.Context>
+        {/key}
+      {/if}
     {/snippet}
   </Async>
 {/if}
