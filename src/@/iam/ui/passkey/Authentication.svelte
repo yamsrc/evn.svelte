@@ -30,7 +30,7 @@
   <Card.Root class={cn('gap-4 bg-background/75', supported && 'pt-4', classes)}>
     {#if supported}
       <Card.Header class="gap-0">
-        <Card.Title>{$dict.auth.signupTitle}</Card.Title>
+        <Card.Title><h2>{$dict.auth.signupTitle}</h2></Card.Title>
       </Card.Header>
       <Card.Content>
         <Create {account} />

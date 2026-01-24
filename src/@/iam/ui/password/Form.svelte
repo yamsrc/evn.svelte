@@ -102,10 +102,8 @@
       required
       disabled={mode === 'otp' ? true : undefined}
       {autofocus}
-      placeholder={$dict.auth.email}
-      class="placeholder:text-sm"
-    />
-    <div class="space-y-1">
+      placeholder={$dict.auth.email} />
+    <div class="space-y-2">
       <div class="flex items-center gap-2">
         <Password bind:ref={passwordRef} bind:password bind:otp bind:error {mode} />
         <Button size="icon" type="submit" class="size-12">
@@ -117,7 +115,7 @@
           <span class="sr-only">{$dict.auth.login}</span>
         </Button>
       </div>
-      <div class="text-sm text-muted-foreground">
+      <div class="text-sm text-muted-foreground px-1">
         {#if mode === 'password'}
           <!-- eslint-disable-next-line svelte/no-at-html-tags -->
           {@html $dict.auth.passwordBlank}

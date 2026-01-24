@@ -31,14 +31,12 @@
     <div class="flex items-center gap-2">
       <Input
         bind:value
-        class="placeholder:text-sm"
         id="name"
         type="text"
         placeholder={$dict.auth.yourName}
         autocomplete="given-name"
         required
-        {autofocus}
-      />
+        {autofocus} />
       <Button id="iam-passkey-create-button" size="icon" type="submit" class="size-12">
         {#if busy}
           <Loader />
