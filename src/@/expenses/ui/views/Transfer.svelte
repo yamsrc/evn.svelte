@@ -14,27 +14,27 @@
 
   const payer = $derived(
     Object.keys(expense.participants).find((id) => expense.participants[id].paid !== undefined),
-  ) as string
+  )
 
   const received = $derived(payer !== $account?.id)
 
-  const contactId = $derived(
+  const identity = $derived(
     received
       ? payer
       : Object.keys(expense.participants).find((id) => expense.participants[id].amount !== 0),
   )
 
-  const amount = $derived(expense.participants[payer].paid)
+  const amount = $derived(expense.participants[payer!]?.paid)
 
   const formatter = $derived(new Intl.DateTimeFormat($locale, { month: 'short', day: 'numeric' }))
   const date = $derived(formatter.format(new Date(expense.date)))
 </script>
 
-{#if contactId !== undefined}
+{#if identity !== undefined}
   <div
     class="px-4 py-3 border border-constructive/30 bg-constructive/20 rounded-lg flex justify-between items-center">
     <div class="flex items-center gap-3">
-      <Async store={accounts.get(contactId)}>
+      <Async store={accounts.get(identity)}>
         {#snippet awaited(contact)}
           <Avatar account={contact} />
           <div class="flex flex-col">
