@@ -1,5 +1,8 @@
+import { get } from 'svelte/store'
+import { locale } from '$lib/intl'
+import { update } from '@/accounts'
 import { origin } from '@/net'
-import { challenge } from './svc/store'
+import { account, challenge } from './svc/store'
 import { sync } from './svc/sync'
 
 function rc() {
@@ -12,6 +15,14 @@ function rc() {
   challenge.subscribe((challenge) => origin.authenticate(challenge))
 
   void sync()
+
+  account.subscribe((account) => {
+    if (account !== null && account.locale === undefined) {
+      const value = get(locale)
+
+      void update(account.id, { locale: value })
+    }
+  })
 }
 
 export { rc }
