@@ -91,12 +91,8 @@ groups:
   title: 群组
   summary:
     balance:
-      from: |-
-        !js
-        (amount) => `该群组成员欠你${amount}`
-      to: |-
-        !js
-        (amount) => `你欠他们${amount}`
+      from: 他们欠你
+      to: 你欠他们的
       even: 没有人欠任何人任何东西
   create: 创建群组
 invite:

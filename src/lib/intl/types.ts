@@ -122,8 +122,8 @@ export type Dictionary = {
         title: string
         summary: {
           balance: {
-            from: (value: any) => string
-            to: (value: any) => string
+            from: string
+            to: string
             even: string
           }
         }

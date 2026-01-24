@@ -163,9 +163,11 @@ inputs:
     summary:
       balance:
         from:
-          input: "!js (amount) => Members of this group owe you ${amount}"
+          input: They owe you
+          context: followed by a number
         to:
-          input: "!js (amount) => You owe them ${amount}"
+          input: You owe them
+          context: followed by a number
         even:
           input: Никто никому не должен
     create:

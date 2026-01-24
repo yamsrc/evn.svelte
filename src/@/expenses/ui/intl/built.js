@@ -196,7 +196,7 @@ export const dictionaries = {
       },
       "me": "Moi",
       "direction": {
-        "byme": (gender) => gender === "he" ? "J'ai payé" : (gender === "she" ? "J'ai payée" : "J'ai payé(e)"),
+        "byme": (gender) => "J'ai payé",
         "tome": (gender) => gender === "he" ? "J'ai reçu" : (gender === "she" ? "J'ai reçu" : "J'ai reçu")
       }
     },

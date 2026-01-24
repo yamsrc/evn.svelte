@@ -101,12 +101,8 @@ groups:
   title: समूह
   summary:
     balance:
-      from: |-
-        !js
-        (amount) => `इस समूह के सदस्य आपको ${amount} का भुगतान करते हैं`
-      to: |-
-        !js
-        (amount) => `आप उन्हें ${amount} के ऋणी हैं`
+      from: वे तुम्हारे कर्ज़दार हैं
+      to: आपको उन्हें देना है
       even: कोई किसी का कोई कर्ज़दार नहीं है
   create: समूह बनाएँ
 invite:

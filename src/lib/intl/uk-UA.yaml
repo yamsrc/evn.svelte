@@ -104,12 +104,8 @@ groups:
   title: Групи
   summary:
     balance:
-      from: |-
-        !js
-        (amount) => `Члени цієї групи винні вам ${amount}`
-      to: |-
-        !js
-        (amount) => `Ви винні їм ${amount}`
+      from: Вони тобі винні
+      to: Ви їм винні
       even: Ніхто нікому нічого не винен
   create: Створити групу
 invite:

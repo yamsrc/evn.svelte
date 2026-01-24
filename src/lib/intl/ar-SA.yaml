@@ -99,12 +99,8 @@ groups:
   title: المجموعات
   summary:
     balance:
-      from: |-
-        !js
-        (amount) => `أعضاء هذه المجموعة مدينون لك بـ${amount}`
-      to: |-
-        !js
-        (amount) => `أنت مدين لهم بـ${amount}`
+      from: هم مدينون لك
+      to: أنت مدين لهم
       even: لا أحد مدين لأحد بشيء
   create: إنشاء مجموعة
 invite:

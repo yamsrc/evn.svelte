@@ -16,7 +16,7 @@
   const amount = $derived(total ?? balance ?? 0)
 </script>
 
-<div class={cn('flex items-center justify-end', classes)}>
+<div class={cn('flex items-center justify-end gap-2', classes)}>
   <p class="text-muted-foreground text-sm text-nowrap">
     {#if total !== undefined}
       {totalLabel}

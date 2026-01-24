@@ -6,12 +6,10 @@
   import { Hold } from '$com/buttons'
   import { Separator } from '$com/separator'
   import { Actions } from '$com/shell'
-  import { locale } from '$lib/intl'
   import { dict } from '$lib/intl'
-  import { currency } from '$lib/tools'
   import { accounts } from '@/accounts'
   import { Panel } from '@/accounts/ui'
-  import { Action, Section } from '@/app/ui'
+  import { Action, Coins, Section } from '@/app/ui'
   import { Header } from '@/app/ui'
   import { contacts } from '@/contacts'
   import { groups, del } from '@/groups'
@@ -83,13 +81,22 @@
   <Separator />
 
   {#if identities.length > 0}
-    <Section class="text-center">
+    <Section class="space-y-2 flex flex-col items-center">
       {#if balance.from === 0 && balance.to === 0}
         <div>{$dict.groups.summary.balance.even}</div>
-      {:else if balance.from > 0}
-        <div>{$dict.groups.summary.balance.from(currency(balance.from, $locale))}</div>
-      {:else if balance.to > 0}
-        <div>{$dict.groups.summary.balance.to(currency(balance.to, $locale))}</div>
+      {:else}
+        {#if balance.from > 0}
+          <div class="flex items-center gap-2">
+            <div>{$dict.groups.summary.balance.from}</div>
+            <Coins amount={balance.from} />
+          </div>
+        {/if}
+        {#if balance.to > 0}
+          <div class="flex items-center gap-2">
+            <span>{$dict.groups.summary.balance.to}</span>
+            <Coins amount={balance.to} sign="negative" />
+          </div>
+        {/if}
       {/if}
     </Section>
   {/if}

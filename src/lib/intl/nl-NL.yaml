@@ -105,12 +105,8 @@ groups:
   title: Groepen
   summary:
     balance:
-      from: |-
-        !js
-        (amount) => `Leden van deze groep zijn je ${amount} verschuldigd`
-      to: |-
-        !js
-        (amount) => `Je bent hen ${amount} verschuldigd`
+      from: Ze zijn je iets verschuldigd
+      to: Je bent ze verschuldigd
       even: Niemand is iemand iets verschuldigd
   create: Groep aanmaken
 invite:

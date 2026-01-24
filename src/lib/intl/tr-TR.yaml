@@ -99,12 +99,8 @@ groups:
   title: Gruplar
   summary:
     balance:
-      from: |-
-        !js
-        (amount) => `Bu grubun üyeleri sana ${amount} borçlu`
-      to: |-
-        !js
-        (amount) => `Onlara ${amount} borçlusunuz`
+      from: Sana borçlular
+      to: Onlara borçlusun
       even: Kimse kimseye borçlu değil
   create: Grup oluştur
 invite:

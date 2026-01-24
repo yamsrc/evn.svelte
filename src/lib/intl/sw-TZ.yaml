@@ -100,12 +100,8 @@ groups:
   title: Makundi
   summary:
     balance:
-      from: |-
-        !js
-        (amount) => `Wanachama wa kundi hili wanakudai ${amount}`
-      to: |-
-        !js
-        (amount) => `Unawadaiwa ${amount}`
+      from: Wanakudai
+      to: Unawadaiwa
       even: Hakuna anayemdai mwingine chochote
   create: Unda kundi
 invite:

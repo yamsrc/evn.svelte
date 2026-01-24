@@ -91,12 +91,8 @@ groups:
   title: グループ
   summary:
     balance:
-      from: |-
-        !js
-        (amount) => `このグループのメンバーはあなたに${amount}の支払いがあります`
-      to: |-
-        !js
-        (amount) => `あなたは彼らに${amount}を借りています`
+      from: 彼らはあなたに借りがあります
+      to: あなたは彼らに借りがあります
       even: 誰も誰にも借りはない
   create: グループを作成
 invite:

@@ -116,8 +116,8 @@ export const dictionaries = {
       "title": "المجموعات",
       "summary": {
         "balance": {
-          "from": (amount) => `أعضاء هذه المجموعة مدينون لك بـ${amount}`,
-          "to": (amount) => `أنت مدين لهم بـ${amount}`,
+          "from": "هم مدينون لك",
+          "to": "أنت مدين لهم",
           "even": "لا أحد مدين لأحد بشيء"
         }
       },
@@ -310,8 +310,8 @@ export const dictionaries = {
       "title": "Gruppen",
       "summary": {
         "balance": {
-          "from": (amount) => `Mitglieder dieser Gruppe schulden dir ${amount}`,
-          "to": (amount) => `Du schuldest ihnen ${amount}`,
+          "from": "Sie schulden dir",
+          "to": "Du schuldest ihnen",
           "even": "Niemand schuldet jemandem etwas"
         }
       },
@@ -504,8 +504,8 @@ export const dictionaries = {
       "title": "Groups",
       "summary": {
         "balance": {
-          "from": (amount) => `Members of this group owe you ${amount}`,
-          "to": (amount) => `You owe them ${amount}`,
+          "from": "They owe you",
+          "to": "You owe them",
           "even": "No one owes anyone anything"
         }
       },
@@ -698,8 +698,8 @@ export const dictionaries = {
       "title": "Grupos",
       "summary": {
         "balance": {
-          "from": (amount) => `Los miembros de este grupo te deben ${amount}`,
-          "to": (amount) => `Les debes ${amount}`,
+          "from": "Te deben",
+          "to": "Les debes",
           "even": "Nadie le debe nada a nadie"
         }
       },
@@ -892,8 +892,8 @@ export const dictionaries = {
       "title": "Groupes",
       "summary": {
         "balance": {
-          "from": (amount) => `Les membres de ce groupe te doivent ${amount}`,
-          "to": (amount) => `Vous leur devez ${amount}`,
+          "from": "Ils te doivent",
+          "to": "Tu leur dois",
           "even": "Personne ne doit rien à personne"
         }
       },
@@ -1086,8 +1086,8 @@ export const dictionaries = {
       "title": "समूह",
       "summary": {
         "balance": {
-          "from": (amount) => `इस समूह के सदस्य आपको ${amount} का भुगतान करते हैं`,
-          "to": (amount) => `आप उन्हें ${amount} के ऋणी हैं`,
+          "from": "वे तुम्हारे कर्ज़दार हैं",
+          "to": "आपको उन्हें देना है",
           "even": "कोई किसी का कोई कर्ज़दार नहीं है"
         }
       },
@@ -1280,8 +1280,8 @@ export const dictionaries = {
       "title": "Gruppi",
       "summary": {
         "balance": {
-          "from": (amount) => `I membri di questo gruppo ti devono ${amount}`,
-          "to": (amount) => `Devi loro ${amount}`,
+          "from": "Ti devono",
+          "to": "Devi a loro",
           "even": "Nessuno deve niente a nessuno"
         }
       },
@@ -1474,8 +1474,8 @@ export const dictionaries = {
       "title": "グループ",
       "summary": {
         "balance": {
-          "from": (amount) => `このグループのメンバーはあなたに${amount}の支払いがあります`,
-          "to": (amount) => `あなたは彼らに${amount}を借りています`,
+          "from": "彼らはあなたに借りがあります",
+          "to": "あなたは彼らに借りがあります",
           "even": "誰も誰にも借りはない"
         }
       },
@@ -1668,8 +1668,8 @@ export const dictionaries = {
       "title": "그룹",
       "summary": {
         "balance": {
-          "from": (amount) => `이 그룹의 구성원들이 당신에게 ${amount}을(를) 빚지고 있습니다`,
-          "to": (amount) => `당신은 그들에게 ${amount}을(를) 빚지고 있습니다`,
+          "from": "그들은 당신에게 빚이 있습니다",
+          "to": "당신은 그들에게 빚이 있습니다",
           "even": "아무도 누구에게도 빚지지 않았다"
         }
       },
@@ -1862,8 +1862,8 @@ export const dictionaries = {
       "title": "Groepen",
       "summary": {
         "balance": {
-          "from": (amount) => `Leden van deze groep zijn je ${amount} verschuldigd`,
-          "to": (amount) => `Je bent hen ${amount} verschuldigd`,
+          "from": "Ze zijn je iets verschuldigd",
+          "to": "Je bent ze verschuldigd",
           "even": "Niemand is iemand iets verschuldigd"
         }
       },
@@ -2056,8 +2056,8 @@ export const dictionaries = {
       "title": "Группы",
       "summary": {
         "balance": {
-          "from": (amount) => `Участники этой группы должны вам ${amount}`,
-          "to": (amount) => `Вы должны им ${amount}`,
+          "from": "Они тебе должны",
+          "to": "Вы им должны",
           "even": "Никто никому не должен"
         }
       },
@@ -2250,8 +2250,8 @@ export const dictionaries = {
       "title": "Makundi",
       "summary": {
         "balance": {
-          "from": (amount) => `Wanachama wa kundi hili wanakudai ${amount}`,
-          "to": (amount) => `Unawadaiwa ${amount}`,
+          "from": "Wanakudai",
+          "to": "Unawadaiwa",
           "even": "Hakuna anayemdai mwingine chochote"
         }
       },
@@ -2444,8 +2444,8 @@ export const dictionaries = {
       "title": "Gruplar",
       "summary": {
         "balance": {
-          "from": (amount) => `Bu grubun üyeleri sana ${amount} borçlu`,
-          "to": (amount) => `Onlara ${amount} borçlusunuz`,
+          "from": "Sana borçlular",
+          "to": "Onlara borçlusun",
           "even": "Kimse kimseye borçlu değil"
         }
       },
@@ -2638,8 +2638,8 @@ export const dictionaries = {
       "title": "Групи",
       "summary": {
         "balance": {
-          "from": (amount) => `Члени цієї групи винні вам ${amount}`,
-          "to": (amount) => `Ви винні їм ${amount}`,
+          "from": "Вони тобі винні",
+          "to": "Ви їм винні",
           "even": "Ніхто нікому нічого не винен"
         }
       },
@@ -2832,8 +2832,8 @@ export const dictionaries = {
       "title": "群组",
       "summary": {
         "balance": {
-          "from": (amount) => `该群组成员欠你${amount}`,
-          "to": (amount) => `你欠他们${amount}`,
+          "from": "他们欠你",
+          "to": "你欠他们的",
           "even": "没有人欠任何人任何东西"
         }
       },

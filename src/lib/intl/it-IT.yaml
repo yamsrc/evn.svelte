@@ -107,12 +107,8 @@ groups:
   title: Gruppi
   summary:
     balance:
-      from: |-
-        !js
-        (amount) => `I membri di questo gruppo ti devono ${amount}`
-      to: |-
-        !js
-        (amount) => `Devi loro ${amount}`
+      from: Ti devono
+      to: Devi a loro
       even: Nessuno deve niente a nessuno
   create: Crea gruppo
 invite:
