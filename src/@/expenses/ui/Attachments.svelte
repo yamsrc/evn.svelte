@@ -14,7 +14,8 @@
 </script>
 
 {#if attachments.length > 0}
-  <div class="bg-accent flex justify-center p-4 overflow-x-auto overscroll-x-contain touch-pan-x">
+  <div
+    class="bg-accent flex justify-center p-4 overflow-x-auto overscroll-x-contain touch-pan-x no-scrollbar">
     <div class="flex gap-3">
       {#each attachments as attachment (attachment)}
         <div
