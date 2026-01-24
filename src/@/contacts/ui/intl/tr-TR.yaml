@@ -12,3 +12,5 @@ groups:
 expenses:
   title: Para
   empty: Şu ana kadar paylaşılan bir harcama yok.
+delete:
+  label: Silmek için basılı tutun

@@ -12,3 +12,5 @@ groups:
 expenses:
   title: 돈
   empty: 아직 공유된 지출이 없습니다.
+delete:
+  label: 길게 눌러 삭제

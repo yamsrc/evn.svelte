@@ -12,3 +12,5 @@ groups:
 expenses:
   title: पैसे
   empty: अब तक कोई साझा खर्च नहीं हुआ है।
+delete:
+  label: हटाने के लिए दबाए रखें

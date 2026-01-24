@@ -20,6 +20,9 @@ export const dictionaries = {
     "expenses": {
       "title": "المال",
       "empty": "لا توجد مصروفات مشتركة حتى الآن."
+    },
+    "delete": {
+      "label": "اضغط مع الاستمرار للحذف"
     }
   },
   "de-DE": {
@@ -40,6 +43,9 @@ export const dictionaries = {
     "expenses": {
       "title": "Geld",
       "empty": "Bisher keine geteilten Ausgaben."
+    },
+    "delete": {
+      "label": "Zum Löschen gedrückt halten"
     }
   },
   "en-US": {
@@ -60,6 +66,9 @@ export const dictionaries = {
     "expenses": {
       "title": "Money",
       "empty": "No shared expenses so far."
+    },
+    "delete": {
+      "label": "Hold to delete"
     }
   },
   "es-ES": {
@@ -80,6 +89,9 @@ export const dictionaries = {
     "expenses": {
       "title": "Dinero",
       "empty": "No hay gastos compartidos hasta ahora."
+    },
+    "delete": {
+      "label": "Mantén presionado para eliminar"
     }
   },
   "fr-FR": {
@@ -100,6 +112,9 @@ export const dictionaries = {
     "expenses": {
       "title": "Argent",
       "empty": "Aucune dépense partagée pour le moment."
+    },
+    "delete": {
+      "label": "Maintenir pour supprimer"
     }
   },
   "hi-IN": {
@@ -120,6 +135,9 @@ export const dictionaries = {
     "expenses": {
       "title": "पैसे",
       "empty": "अब तक कोई साझा खर्च नहीं हुआ है।"
+    },
+    "delete": {
+      "label": "हटाने के लिए दबाए रखें"
     }
   },
   "it-IT": {
@@ -140,6 +158,9 @@ export const dictionaries = {
     "expenses": {
       "title": "Denaro",
       "empty": "Nessuna spesa condivisa finora."
+    },
+    "delete": {
+      "label": "Tieni premuto per eliminare"
     }
   },
   "ja-JP": {
@@ -160,6 +181,9 @@ export const dictionaries = {
     "expenses": {
       "title": "お金",
       "empty": "これまでに共有された支出はありません。"
+    },
+    "delete": {
+      "label": "長押しで削除"
     }
   },
   "ko-KR": {
@@ -180,6 +204,9 @@ export const dictionaries = {
     "expenses": {
       "title": "돈",
       "empty": "아직 공유된 지출이 없습니다."
+    },
+    "delete": {
+      "label": "길게 눌러 삭제"
     }
   },
   "nl-NL": {
@@ -200,6 +227,9 @@ export const dictionaries = {
     "expenses": {
       "title": "Geld",
       "empty": "Tot nu toe geen gedeelde uitgaven."
+    },
+    "delete": {
+      "label": "Houd vast om te verwijderen"
     }
   },
   "ru-RU": {
@@ -220,6 +250,9 @@ export const dictionaries = {
     "expenses": {
       "title": "Деньги",
       "empty": "Пока нет совместных расходов."
+    },
+    "delete": {
+      "label": "Удерживайте для удаления"
     }
   },
   "sw-TZ": {
@@ -240,6 +273,9 @@ export const dictionaries = {
     "expenses": {
       "title": "Pesa",
       "empty": "Hakuna gharama za pamoja hadi sasa."
+    },
+    "delete": {
+      "label": "Shikilia ili ufute"
     }
   },
   "tr-TR": {
@@ -260,6 +296,9 @@ export const dictionaries = {
     "expenses": {
       "title": "Para",
       "empty": "Şu ana kadar paylaşılan bir harcama yok."
+    },
+    "delete": {
+      "label": "Silmek için basılı tutun"
     }
   },
   "uk-UA": {
@@ -280,6 +319,9 @@ export const dictionaries = {
     "expenses": {
       "title": "Гроші",
       "empty": "Поки що спільних витрат немає."
+    },
+    "delete": {
+      "label": "Утримуйте, щоб видалити"
     }
   },
   "zh-CN": {
@@ -300,6 +342,9 @@ export const dictionaries = {
     "expenses": {
       "title": "钱",
       "empty": "目前还没有共享支出。"
+    },
+    "delete": {
+      "label": "按住以删除"
     }
   }
 };

@@ -12,3 +12,5 @@ groups:
 expenses:
   title: Geld
   empty: Bisher keine geteilten Ausgaben.
+delete:
+  label: Zum Löschen gedrückt halten

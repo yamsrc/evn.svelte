@@ -12,3 +12,5 @@ groups:
 expenses:
   title: 钱
   empty: 目前还没有共享支出。
+delete:
+  label: 按住以删除

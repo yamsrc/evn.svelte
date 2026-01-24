@@ -27,3 +27,6 @@ inputs:
       input: Money
     empty:
       input: No shared expenses so far.
+  delete:
+    label:
+      input: Hold to delete

@@ -27,4 +27,7 @@ export type Dictionary = {
         title: string
         empty: string
       }
+      delete: {
+        label: string
+      }
     }

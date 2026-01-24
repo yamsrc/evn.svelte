@@ -12,3 +12,5 @@ groups:
 expenses:
   title: Pesa
   empty: Hakuna gharama za pamoja hadi sasa.
+delete:
+  label: Shikilia ili ufute

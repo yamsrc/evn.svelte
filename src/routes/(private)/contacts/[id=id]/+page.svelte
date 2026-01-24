@@ -1,5 +1,6 @@
 <script lang="ts">
   import { Async, combined, ok } from 'svas'
+  import { goto } from '$app/navigation'
   import { page } from '$app/state'
   import { Separator } from '$com/separator'
   import { Actions } from '$com/shell'
@@ -11,17 +12,32 @@
   import { Header } from '@/app/ui'
   import { contacts } from '@/contacts'
   import { Balance, Share, Groups, Expenses } from '@/contacts/ui'
+  import { Delete } from '@/contacts/ui'
   import { expenses } from '@/expenses'
   import { Transfer } from '@/expenses/ui'
   import { groups } from '@/groups'
   import { account } from '@/iam'
 
   const id = $derived(page.params.id) as string
+
+  function ondelete() {
+    void goto('..')
+  }
 </script>
 
 <Section>
   <Header.Root>
     <Header.Title>{$dict.contacts.title}</Header.Title>
+    <Header.Actions>
+      <Async store={contacts}>
+        {#snippet awaited(contacts)}
+          {@const contact = contacts.find((contact) => contact.id === id)}
+          {#if contact}
+            <Delete {contact} {ondelete} />
+          {/if}
+        {/snippet}
+      </Async>
+    </Header.Actions>
   </Header.Root>
 </Section>
 

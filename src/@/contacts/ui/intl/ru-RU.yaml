@@ -12,3 +12,5 @@ groups:
 expenses:
   title: Деньги
   empty: Пока нет совместных расходов.
+delete:
+  label: Удерживайте для удаления

@@ -12,3 +12,5 @@ groups:
 expenses:
   title: Argent
   empty: Aucune dépense partagée pour le moment.
+delete:
+  label: Maintenir pour supprimer

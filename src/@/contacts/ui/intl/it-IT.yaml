@@ -12,3 +12,5 @@ groups:
 expenses:
   title: Denaro
   empty: Nessuna spesa condivisa finora.
+delete:
+  label: Tieni premuto per eliminare

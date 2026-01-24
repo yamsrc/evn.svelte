@@ -12,3 +12,5 @@ groups:
 expenses:
   title: Dinero
   empty: No hay gastos compartidos hasta ahora.
+delete:
+  label: Mantén presionado para eliminar

@@ -12,3 +12,5 @@ groups:
 expenses:
   title: Money
   empty: No shared expenses so far.
+delete:
+  label: Hold to delete
