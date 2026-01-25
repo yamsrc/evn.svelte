@@ -32,7 +32,7 @@
 
     const result =
       account === undefined
-        ? verifyPassword()
+        ? await verifyPassword()
         : await iam.basic.capture(account.id, { username, password })
 
     busy = false
