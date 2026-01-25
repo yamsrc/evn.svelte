@@ -50,7 +50,7 @@
         <span class="text-muted-foreground">{$expensesDict.payer.placeholder}</span>
       </SelectTrigger>
     {/if}
-    <SelectContent>
+    <SelectContent collisionPadding={{ top: 64, bottom: 88 }}>
       {#each Object.keys(value.participants) as id (id)}
         <Async store={accounts.get(id)}>
           {#snippet awaited(account)}

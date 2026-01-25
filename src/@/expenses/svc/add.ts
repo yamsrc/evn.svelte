@@ -1,17 +1,22 @@
 import { having, sync } from 'svas'
 import { account } from '@/iam'
 import * as net from './net'
-import { expenses } from './store'
-import type { Exact } from '$lib/tools'
+import { internal } from './store'
 
-export async function add<T>(input: Exact<T, net.Editable>): Promise<net.Expense | Error> {
+export async function add(properties: Input): Promise<net.Expense | Error> {
   const me = await having(account)
 
-  const expense = await net.post(me.id, input)
+  properties.date ??= new Date().toISOString().split('T')[0]
+
+  const expense = await net.post(me.id, properties)
 
   if (expense instanceof Error) return expense
 
-  sync(expenses, expense)
+  sync(internal, expense)
 
   return expense
+}
+
+interface Input extends Partial<net.Post> {
+  participants: net.Post['participants']
 }

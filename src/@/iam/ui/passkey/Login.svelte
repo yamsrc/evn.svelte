@@ -17,8 +17,8 @@
 </script>
 
 <div class="flex flex-col items-center justify-center gap-2">
-  <p class="text-sm">{$dict.auth.alreadyHaveAccount}</p>
-  <Button id="iam-passkey-login-button" variant="secondary" onclick={login}>
+  <p>{$dict.auth.alreadyHaveAccount}</p>
+  <Button id="iam-passkey-login-button" variant="secondary" onclick={login} size="lg">
     {#if busy}
       <Loader />
     {:else}

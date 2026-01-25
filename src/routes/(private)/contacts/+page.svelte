@@ -38,7 +38,7 @@
 
       <Favorites title={$dict.favorites.title} favorites={filteredFavorites} />
       <Groups title={$dict.groups.title} groups={filteredGroups} />
-      <Contacts title={$dict.contacts.all} contacts={filteredContacts} actionable />
+      <Contacts title={$dict.contacts.all} contacts={filteredContacts} />
 
       {#if search && empty}
         <Section>

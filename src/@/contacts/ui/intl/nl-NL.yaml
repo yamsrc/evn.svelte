@@ -2,7 +2,7 @@ totals:
   negative: Je bent je vrienden wat verschuldigd
   positive: Vrienden zijn je iets verschuldigd
 tops:
-  title: Vrienden
+  title: Schulden
   empty: >-
     Tot nu toe is niemand jou iets verschuldigd en jij bent niemand iets
     verschuldigd.
@@ -12,5 +12,7 @@ groups:
   title: Behoort tot groepen
   empty: Je bent geen lid van een groep.
 expenses:
-  title: Uitgaven
+  title: Geld
   empty: Tot nu toe geen gedeelde uitgaven.
+delete:
+  label: Houd vast om te verwijderen

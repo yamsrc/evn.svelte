@@ -1,5 +1,5 @@
 recent:
-  title: Spese
+  title: Recentemente
   empty: >-
     Non è ancora successo nulla. Aggiungi qualche spesa o invita amici per
     iniziare.
@@ -11,3 +11,34 @@ participants:
     shares: Per quote
   add:
     label: Aggiungi partecipanti
+transfer:
+  action: Trasferimento
+  dialog:
+    title: Salda il conto
+    cancel: Annulla
+    action: Conferma
+  me: Io
+  direction:
+    byme: >-
+      !js
+
+      (gender) => "Ho pagato"
+    tome: >-
+      !js
+
+      (gender) => gender === "he" ? "Ho ricevuto" : (gender === "she" ? "Ho
+      ricevuto" : "Ho ricevuto")
+transfers:
+  tobe:
+    neutral: Sarai completamente sistemato
+    positive: Ti sarà dovuto
+    negative: Avrai un debito
+  done:
+    paid: >-
+      !js
+
+      (gender) => "Hai pagato"
+    received: >-
+      !js
+
+      (gender) => "Hai ricevuto"

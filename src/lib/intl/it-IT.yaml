@@ -6,7 +6,7 @@ actions:
   signout: Esci
   close: Chiudi
   cheques:
-    title: Spese
+    title: Denaro
     scan: Scansiona assegno
     input: Aggiungi spesa
   contacts:
@@ -22,7 +22,7 @@ nav:
   home: Home
   profile: Io
   contacts: Amici
-  expenses: Spese
+  expenses: Denaro
 terms: Termini e condizioni
 privacy: Informativa sulla privacy
 madeBy: Realizzato da
@@ -107,12 +107,8 @@ groups:
   title: Gruppi
   summary:
     balance:
-      from: |-
-        !js
-        (amount) => `I membri di questo gruppo ti devono ${amount}`
-      to: |-
-        !js
-        (amount) => `Devi loro ${amount}`
+      from: Ti devono
+      to: Devi a loro
       even: Nessuno deve niente a nessuno
   create: Crea gruppo
 invite:
@@ -148,7 +144,7 @@ expenses:
     location:
       placeholder: Dove? (opzionale)
     save: Salva e aggiorna i saldi
-  title: Spese
+  title: Denaro
   balance:
     total: Totale conto
     youAreOwed: Ti è dovuto

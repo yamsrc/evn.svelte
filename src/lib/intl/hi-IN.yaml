@@ -6,7 +6,7 @@ actions:
   signout: साइन आउट करें
   close: बंद करें
   cheques:
-    title: खर्चे
+    title: पैसे
     scan: चेक स्कैन करें
     input: खर्च जोड़ें
   contacts:
@@ -22,7 +22,7 @@ nav:
   home: मुख्य पृष्ठ
   profile: मैं
   contacts: मित्र
-  expenses: खर्चे
+  expenses: पैसा
 terms: नियम व शर्तें
 privacy: गोपनीयता नीति
 madeBy: द्वारा निर्मित
@@ -101,12 +101,8 @@ groups:
   title: समूह
   summary:
     balance:
-      from: |-
-        !js
-        (amount) => `इस समूह के सदस्य आपको ${amount} का भुगतान करते हैं`
-      to: |-
-        !js
-        (amount) => `आप उन्हें ${amount} के ऋणी हैं`
+      from: वे तुम्हारे कर्ज़दार हैं
+      to: आपको उन्हें देना है
       even: कोई किसी का कोई कर्ज़दार नहीं है
   create: समूह बनाएँ
 invite:
@@ -142,7 +138,7 @@ expenses:
     location:
       placeholder: कहाँ? (वैकल्पिक)
     save: सहेजें और बैलेंस अपडेट करें
-  title: खर्चे
+  title: पैसे
   balance:
     total: कुल बिल
     youAreOwed: आपको कुछ मिलना बाकी है

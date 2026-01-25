@@ -2,7 +2,7 @@ import * as passkeys from '@/passkeys'
 import * as origin from '../net'
 import { method, iam } from '../store'
 
-export async function create(name: string, identity?: string): Promise<void | Error> {
+export async function create(name: string, identity?: string): Promise<origin.Echo | Error> {
   const response = await passkeys.create(name, identity)
 
   if (response instanceof Error) {
@@ -21,4 +21,6 @@ export async function create(name: string, identity?: string): Promise<void | Er
 
   iam(echo)
   method.set('passkey')
+
+  return echo
 }

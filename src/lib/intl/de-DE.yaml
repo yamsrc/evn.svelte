@@ -6,7 +6,7 @@ actions:
   signout: Abmelden
   close: Schließen
   cheques:
-    title: Ausgaben
+    title: Geld
     scan: Scheck scannen
     input: Ausgabe hinzufügen
   contacts:
@@ -22,7 +22,7 @@ nav:
   home: Startseite
   profile: Ich
   contacts: Freunde
-  expenses: Ausgaben
+  expenses: Geld
 terms: Allgemeine Geschäftsbedingungen
 privacy: Datenschutzrichtlinie
 madeBy: Erstellt von
@@ -107,12 +107,8 @@ groups:
   title: Gruppen
   summary:
     balance:
-      from: |-
-        !js
-        (amount) => `Mitglieder dieser Gruppe schulden dir ${amount}`
-      to: |-
-        !js
-        (amount) => `Du schuldest ihnen ${amount}`
+      from: Sie schulden dir
+      to: Du schuldest ihnen
       even: Niemand schuldet jemandem etwas
   create: Gruppe erstellen
 invite:
@@ -148,7 +144,7 @@ expenses:
     location:
       placeholder: Wo? (optional)
     save: Speichern und Salden aktualisieren
-  title: Ausgaben
+  title: Geld
   balance:
     total: Gesamtrechnung
     youAreOwed: Dir steht etwas zu

@@ -1,5 +1,5 @@
 recent:
-  title: Expenses
+  title: Recently
   empty: >-
     Nothing happened yet. Add some spending or invite friends to get things
     started.
@@ -11,3 +11,31 @@ participants:
     shares: By shares
   add:
     label: Add participants
+transfer:
+  action: Transfer
+  dialog:
+    title: Settle Up
+    cancel: Cancel
+    action: Confirm
+  me: Me
+  direction:
+    byme: |-
+      !js
+      (gender) => "I paid"
+    tome: |-
+      !js
+      (gender) => "I received"
+transfers:
+  tobe:
+    neutral: You’ll be all settled
+    positive: You'll be owed
+    negative: You’ll owe
+  done:
+    paid: |-
+      !js
+      (gender) => "You’ve paid"
+    received: >-
+      !js
+
+      (gender) => gender === "he" ? "You've received" : gender === "she" ?
+      "You've received" : "You've received"

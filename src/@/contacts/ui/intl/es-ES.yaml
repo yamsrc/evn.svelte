@@ -2,7 +2,7 @@ totals:
   negative: Les debes a tus amigos
   positive: Tus amigos te deben
 tops:
-  title: Amigos
+  title: Deudas
   empty: Hasta ahora, nadie te debe nada y tú no debes nada.
   negative: "Principalmente debes a:"
   positive: "Quienes más te deben:"
@@ -10,5 +10,7 @@ groups:
   title: Pertenece a grupos
   empty: No eres miembro de ningún grupo.
 expenses:
-  title: Gastos
+  title: Dinero
   empty: No hay gastos compartidos hasta ahora.
+delete:
+  label: Mantén presionado para eliminar

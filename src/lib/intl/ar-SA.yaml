@@ -6,7 +6,7 @@ actions:
   signout: تسجيل الخروج
   close: إغلاق
   cheques:
-    title: المصروفات
+    title: المال
     scan: مسح الشيك
     input: إضافة مصروف
   contacts:
@@ -22,7 +22,7 @@ nav:
   home: الرئيسية
   profile: أنا
   contacts: الأصدقاء
-  expenses: المصاريف
+  expenses: المال
 terms: الشروط والأحكام
 privacy: سياسة الخصوصية
 madeBy: من صنع
@@ -99,12 +99,8 @@ groups:
   title: المجموعات
   summary:
     balance:
-      from: |-
-        !js
-        (amount) => `أعضاء هذه المجموعة مدينون لك بـ${amount}`
-      to: |-
-        !js
-        (amount) => `أنت مدين لهم بـ${amount}`
+      from: هم مدينون لك
+      to: أنت مدين لهم
       even: لا أحد مدين لأحد بشيء
   create: إنشاء مجموعة
 invite:
@@ -140,7 +136,7 @@ expenses:
     location:
       placeholder: أين؟ (اختياري)
     save: احفظ وقم بتحديث الأرصدة
-  title: المصروفات
+  title: مال
   balance:
     total: إجمالي الفاتورة
     youAreOwed: لك مستحقات

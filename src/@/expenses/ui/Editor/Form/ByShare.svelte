@@ -6,9 +6,9 @@
   import { currency } from '$lib/tools'
   import { accounts } from '@/accounts'
   import { Picture } from '@/accounts/ui'
+  import { CoinsInput } from '@/app/ui'
   import { numbers } from '@/expenses'
   import { account as me } from '@/iam'
-  import Amount from './Amount.svelte'
   import { getContext } from './Context'
   import ShareAmount from './ShareAmount.svelte'
   import type { Props } from './ByShare'
@@ -75,7 +75,7 @@
             </TextEllipsis>
           </div>
         </div>
-        <Amount
+        <CoinsInput
           class={amountClass}
           bind:value={value.extras[i].amount}
           placeholder={i === value.extras.length - 1 ? currency(overpayment, $locale) : '0'} />

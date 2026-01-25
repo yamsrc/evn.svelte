@@ -25,4 +25,28 @@ export type Dictionary = {
           label: string
         }
       }
+      transfer: {
+        action: string
+        dialog: {
+          title: string
+          cancel: string
+          action: string
+        }
+        me: string
+        direction: {
+          byme: (value: any) => string
+          tome: (value: any) => string
+        }
+      }
+      transfers: {
+        tobe: {
+          neutral: string
+          positive: string
+          negative: string
+        }
+        done: {
+          paid: (value: any) => string
+          received: (value: any) => string
+        }
+      }
     }

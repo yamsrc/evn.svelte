@@ -4,12 +4,12 @@
   import { currency, unit } from '$lib/tools'
   import { cn } from '$lib/utils'
   import * as InputGroup from '$ui/input-group'
-  import type { Props } from './Amount'
+  import type { Props } from './CoinsInput'
 
   let {
     value = $bindable(),
     placeholder = '0',
-    oninput: oninputCb,
+    oninput: callback,
     class: classes,
     inputClass,
     id,
@@ -21,7 +21,7 @@
 
     value = amount
 
-    oninputCb?.(amount)
+    callback?.(amount)
   }
 </script>
 

@@ -5,8 +5,8 @@
   import * as Item from '$ui/item'
   import { Picture } from '@/accounts/ui'
   import { Balance } from '@/app/ui'
+  import { CoinsInput } from '@/app/ui'
   import { account as me } from '@/iam'
-  import Amount from './Amount.svelte'
   import { getContext } from './Context'
   import type { Props } from './Payer'
 
@@ -28,8 +28,7 @@
 
 <Item.Root
   variant="outline"
-  class="expenses-payer flex flex-nowrap items-stretch gap-1.5 p-0 border-none"
->
+  class="expenses-payer flex flex-nowrap items-stretch gap-1.5 p-0 border-none">
   <div class="flex-1 min-w-0">
     <Panel variant="outline" h="min-h-14 h-fit" {selected} {onclick}>
       {#snippet left()}
@@ -65,6 +64,6 @@
     </Panel>
   </div>
   {#if selected && split}
-    <Amount class="flex-1 max-w-32 shrink min-h-14 h-full" bind:value={participant.paid} />
+    <CoinsInput class="flex-1 max-w-32 shrink min-h-14 h-full" bind:value={participant.paid} />
   {/if}
 </Item.Root>

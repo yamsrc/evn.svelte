@@ -6,7 +6,7 @@ actions:
   signout: Afmelden
   close: Sluiten
   cheques:
-    title: Uitgaven
+    title: Geld
     scan: Cheque scannen
     input: Uitgave toevoegen
   contacts:
@@ -22,7 +22,7 @@ nav:
   home: Home
   profile: Ik
   contacts: Vrienden
-  expenses: Uitgaven
+  expenses: Geld
 terms: Algemene voorwaarden
 privacy: Privacybeleid
 madeBy: Gemaakt door
@@ -105,12 +105,8 @@ groups:
   title: Groepen
   summary:
     balance:
-      from: |-
-        !js
-        (amount) => `Leden van deze groep zijn je ${amount} verschuldigd`
-      to: |-
-        !js
-        (amount) => `Je bent hen ${amount} verschuldigd`
+      from: Ze zijn je iets verschuldigd
+      to: Je bent ze verschuldigd
       even: Niemand is iemand iets verschuldigd
   create: Groep aanmaken
 invite:
@@ -146,7 +142,7 @@ expenses:
     location:
       placeholder: Waar? (optioneel)
     save: Opslaan en saldi bijwerken
-  title: Uitgaven
+  title: Geld
   balance:
     total: Totaalrekening
     youAreOwed: Je hebt iets tegoed

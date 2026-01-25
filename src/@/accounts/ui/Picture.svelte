@@ -6,7 +6,7 @@
   const { account, size = 400, class: classes, style }: Props = $props()
 </script>
 
-{#if account?.picture}
+{#if account.picture}
   <Picture
     id={account.picture}
     alt={account.name}

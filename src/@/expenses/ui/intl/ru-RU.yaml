@@ -1,5 +1,5 @@
 recent:
-  title: Расходы
+  title: Недавно
   empty: >-
     Пока ничего не произошло. Добавьте расходы или пригласите друзей, чтобы
     начать.
@@ -11,3 +11,37 @@ participants:
     shares: По долям
   add:
     label: Добавить участников
+transfer:
+  action: Перевод
+  dialog:
+    title: Рассчитаться
+    cancel: Отмена
+    action: Подтвердить
+  me: Я
+  direction:
+    byme: >-
+      !js
+
+      (gender) => gender === "he" ? "Я заплатил" : (gender === "she" ? "Я
+      заплатила" : "Я заплатил(а)")
+    tome: >-
+      !js
+
+      (gender) => gender === "he" ? "Я получил" : (gender === "she" ? "Я
+      получила" : "Я получил(а)")
+transfers:
+  tobe:
+    neutral: Ты полностью обустроишься
+    positive: Тебе будут должны
+    negative: Вы будете должны
+  done:
+    paid: >-
+      !js
+
+      (gender) => gender === "he" ? "Ты заплатил" : gender === "she" ? "Ты
+      заплатила" : "Ты заплатил(а)"
+    received: >-
+      !js
+
+      (gender) => gender === "he" ? "Ты получил" : gender === "she" ? "Ты
+      получила" : "Ты получил(а)"

@@ -1,5 +1,5 @@
 recent:
-  title: Uitgaven
+  title: Recentelijk
   empty: >-
     Er is nog niets gebeurd. Voeg wat uitgaven toe of nodig vrienden uit om op
     gang te komen.
@@ -11,3 +11,29 @@ participants:
     shares: Op basis van aandelen
   add:
     label: Deelnemers toevoegen
+transfer:
+  action: Overschrijving
+  dialog:
+    title: Afrekenen
+    cancel: Annuleren
+    action: Bevestigen
+  me: Ik
+  direction:
+    byme: |-
+      !js
+      (gender) => "Ik heb betaald"
+    tome: |-
+      !js
+      (gender) => "Ik heb ontvangen"
+transfers:
+  tobe:
+    neutral: Je bent straks helemaal gesetteld
+    positive: Jij krijgt nog wat tegoed
+    negative: Je zult verschuldigd zijn
+  done:
+    paid: |-
+      !js
+      (gender) => "Je hebt betaald"
+    received: |-
+      !js
+      (gender) => "Je hebt ontvangen"

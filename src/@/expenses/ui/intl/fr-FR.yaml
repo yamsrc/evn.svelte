@@ -1,5 +1,5 @@
 recent:
-  title: Dépenses
+  title: Récemment
   empty: >-
     Rien ne s'est encore passé. Ajoutez des dépenses ou invitez des amis pour
     lancer les choses.
@@ -11,3 +11,36 @@ participants:
     shares: Par parts
   add:
     label: Ajouter des participants
+transfer:
+  action: Virement
+  dialog:
+    title: Régler le solde
+    cancel: Annuler
+    action: Confirmer
+  me: Moi
+  direction:
+    byme: >-
+      !js
+
+      (gender) => "J'ai payé"
+    tome: >-
+      !js
+
+      (gender) => gender === "he" ? "J'ai reçu" : (gender === "she" ? "J'ai
+      reçu" : "J'ai reçu")
+transfers:
+  tobe:
+    neutral: Tu seras bien installé
+    positive: On te devra quelque chose
+    negative: Vous devrez
+  done:
+    paid: >-
+      !js
+
+      (gender) => gender === "he" ? "Tu as payé" : gender === "she" ? "Tu as
+      payé" : "Tu as payé"
+    received: >-
+      !js
+
+      (gender) => gender === "he" ? "Tu as reçu" : gender === "she" ? "Tu as
+      reçu" : "Tu as reçu"

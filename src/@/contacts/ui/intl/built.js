@@ -8,7 +8,7 @@ export const dictionaries = {
       "positive": "الأصدقاء مدينون لك"
     },
     "tops": {
-      "title": "الأصدقاء",
+      "title": "الديون",
       "empty": "حتى الآن، لا أحد مدين لك وأنت لا تدين لأحد بأي شيء.",
       "negative": "أنت مدين في الغالب لـ:",
       "positive": "أكثر من يدينون لك:"
@@ -18,8 +18,11 @@ export const dictionaries = {
       "empty": "لست عضوًا في أي مجموعة."
     },
     "expenses": {
-      "title": "المصروفات",
+      "title": "المال",
       "empty": "لا توجد مصروفات مشتركة حتى الآن."
+    },
+    "delete": {
+      "label": "اضغط مع الاستمرار للحذف"
     }
   },
   "de-DE": {
@@ -28,7 +31,7 @@ export const dictionaries = {
       "positive": "Freunde schulden dir etwas"
     },
     "tops": {
-      "title": "Freunde",
+      "title": "Schulden",
       "empty": "Bisher schuldet dir niemand etwas und du schuldest auch nichts.",
       "negative": "Du schuldest hauptsächlich:",
       "positive": "Wer dir am meisten schuldet:"
@@ -38,8 +41,11 @@ export const dictionaries = {
       "empty": "Du bist in keiner Gruppe Mitglied."
     },
     "expenses": {
-      "title": "Ausgaben",
+      "title": "Geld",
       "empty": "Bisher keine geteilten Ausgaben."
+    },
+    "delete": {
+      "label": "Zum Löschen gedrückt halten"
     }
   },
   "en-US": {
@@ -48,7 +54,7 @@ export const dictionaries = {
       "positive": "Friends owe you"
     },
     "tops": {
-      "title": "Friends",
+      "title": "Debts",
       "empty": "So far, nobody owes you and you owe nothing.",
       "negative": "You owe mostly to:",
       "positive": "Owe you the most:"
@@ -58,8 +64,11 @@ export const dictionaries = {
       "empty": "Not a member of any group."
     },
     "expenses": {
-      "title": "Expenses",
+      "title": "Money",
       "empty": "No shared expenses so far."
+    },
+    "delete": {
+      "label": "Hold to delete"
     }
   },
   "es-ES": {
@@ -68,7 +77,7 @@ export const dictionaries = {
       "positive": "Tus amigos te deben"
     },
     "tops": {
-      "title": "Amigos",
+      "title": "Deudas",
       "empty": "Hasta ahora, nadie te debe nada y tú no debes nada.",
       "negative": "Principalmente debes a:",
       "positive": "Quienes más te deben:"
@@ -78,8 +87,11 @@ export const dictionaries = {
       "empty": "No eres miembro de ningún grupo."
     },
     "expenses": {
-      "title": "Gastos",
+      "title": "Dinero",
       "empty": "No hay gastos compartidos hasta ahora."
+    },
+    "delete": {
+      "label": "Mantén presionado para eliminar"
     }
   },
   "fr-FR": {
@@ -88,7 +100,7 @@ export const dictionaries = {
       "positive": "Tes amis te doivent quelque chose"
     },
     "tops": {
-      "title": "Amis",
+      "title": "Dettes",
       "empty": "Pour l’instant, personne ne te doit rien et tu ne dois rien non plus.",
       "negative": "Vous devez principalement à :",
       "positive": "Ceux qui te doivent le plus :"
@@ -98,8 +110,11 @@ export const dictionaries = {
       "empty": "Vous n'êtes membre d'aucun groupe."
     },
     "expenses": {
-      "title": "Dépenses",
+      "title": "Argent",
       "empty": "Aucune dépense partagée pour le moment."
+    },
+    "delete": {
+      "label": "Maintenir pour supprimer"
     }
   },
   "hi-IN": {
@@ -108,7 +123,7 @@ export const dictionaries = {
       "positive": "दोस्त तुम्हारे ऋणी हैं"
     },
     "tops": {
-      "title": "मित्र",
+      "title": "कर्ज़",
       "empty": "अभी तक कोई भी आपको कुछ नहीं लौटाता और आप भी किसी के कर्जदार नहीं हैं।",
       "negative": "आप मुख्यतः इनसे उधार हैं:",
       "positive": "जो आपको सबसे ज़्यादा पैसे देते हैं:"
@@ -118,8 +133,11 @@ export const dictionaries = {
       "empty": "आप किसी भी समूह के सदस्य नहीं हैं।"
     },
     "expenses": {
-      "title": "खर्चे",
+      "title": "पैसे",
       "empty": "अब तक कोई साझा खर्च नहीं हुआ है।"
+    },
+    "delete": {
+      "label": "हटाने के लिए दबाए रखें"
     }
   },
   "it-IT": {
@@ -128,7 +146,7 @@ export const dictionaries = {
       "positive": "Gli amici ti devono qualcosa"
     },
     "tops": {
-      "title": "Amici",
+      "title": "Debiti",
       "empty": "Finora nessuno ti deve nulla e tu non devi niente a nessuno.",
       "negative": "Devi principalmente a:",
       "positive": "Chi ti deve di più:"
@@ -138,8 +156,11 @@ export const dictionaries = {
       "empty": "Non fai parte di nessun gruppo."
     },
     "expenses": {
-      "title": "Spese",
+      "title": "Denaro",
       "empty": "Nessuna spesa condivisa finora."
+    },
+    "delete": {
+      "label": "Tieni premuto per eliminare"
     }
   },
   "ja-JP": {
@@ -148,7 +169,7 @@ export const dictionaries = {
       "positive": "友達があなたに借りがある"
     },
     "tops": {
-      "title": "友達",
+      "title": "借金",
       "empty": "今のところ、誰もあなたに借りはなく、あなたも誰にも借りはありません。",
       "negative": "主に借りている相手：",
       "positive": "あなたに最も多く借りている人:"
@@ -158,8 +179,11 @@ export const dictionaries = {
       "empty": "どのグループにも所属していません。"
     },
     "expenses": {
-      "title": "費用",
+      "title": "お金",
       "empty": "これまでに共有された支出はありません。"
+    },
+    "delete": {
+      "label": "長押しで削除"
     }
   },
   "ko-KR": {
@@ -168,7 +192,7 @@ export const dictionaries = {
       "positive": "친구들이 당신에게 빚졌어요"
     },
     "tops": {
-      "title": "친구",
+      "title": "빚",
       "empty": "지금까지 아무도 당신에게 빚진 것이 없고, 당신도 아무에게도 빚이 없습니다.",
       "negative": "주로 빚이 있는 사람:",
       "positive": "가장 많이 빚진 사람:"
@@ -178,8 +202,11 @@ export const dictionaries = {
       "empty": "어떤 그룹에도 속해 있지 않습니다."
     },
     "expenses": {
-      "title": "지출",
+      "title": "돈",
       "empty": "아직 공유된 지출이 없습니다."
+    },
+    "delete": {
+      "label": "길게 눌러 삭제"
     }
   },
   "nl-NL": {
@@ -188,7 +215,7 @@ export const dictionaries = {
       "positive": "Vrienden zijn je iets verschuldigd"
     },
     "tops": {
-      "title": "Vrienden",
+      "title": "Schulden",
       "empty": "Tot nu toe is niemand jou iets verschuldigd en jij bent niemand iets verschuldigd.",
       "negative": "Je bent vooral iets verschuldigd aan:",
       "positive": "Degenen die jou het meest schuldig zijn:"
@@ -198,8 +225,11 @@ export const dictionaries = {
       "empty": "Je bent geen lid van een groep."
     },
     "expenses": {
-      "title": "Uitgaven",
+      "title": "Geld",
       "empty": "Tot nu toe geen gedeelde uitgaven."
+    },
+    "delete": {
+      "label": "Houd vast om te verwijderen"
     }
   },
   "ru-RU": {
@@ -208,7 +238,7 @@ export const dictionaries = {
       "positive": "Друзья тебе должны"
     },
     "tops": {
-      "title": "Друзья",
+      "title": "Долги",
       "empty": "Пока что тебе никто не должен, и ты тоже никому не должен.",
       "negative": "В основном вы должны:",
       "positive": "Больше всех должны тебе:"
@@ -218,8 +248,11 @@ export const dictionaries = {
       "empty": "Вы не состоите ни в одной группе."
     },
     "expenses": {
-      "title": "Расходы",
+      "title": "Деньги",
       "empty": "Пока нет совместных расходов."
+    },
+    "delete": {
+      "label": "Удерживайте для удаления"
     }
   },
   "sw-TZ": {
@@ -228,7 +261,7 @@ export const dictionaries = {
       "positive": "Marafiki wanakudai"
     },
     "tops": {
-      "title": "Marafiki",
+      "title": "Madeni",
       "empty": "Hadi sasa, hakuna anayekudai na wewe haumdai mtu yeyote.",
       "negative": "Una deni mkubwa hasa kwa:",
       "positive": "Waliokukudai zaidi:"
@@ -238,8 +271,11 @@ export const dictionaries = {
       "empty": "Sio mwanachama wa kundi lolote."
     },
     "expenses": {
-      "title": "Matumizi",
+      "title": "Pesa",
       "empty": "Hakuna gharama za pamoja hadi sasa."
+    },
+    "delete": {
+      "label": "Shikilia ili ufute"
     }
   },
   "tr-TR": {
@@ -248,7 +284,7 @@ export const dictionaries = {
       "positive": "Arkadaşların sana borçlu"
     },
     "tops": {
-      "title": "Arkadaşlar",
+      "title": "Borçlar",
       "empty": "Şu ana kadar kimse sana borçlu değil ve sen de kimseye borçlu değilsin.",
       "negative": "En çok borçlu olduğunuz kişiler:",
       "positive": "Sana en çok borcu olanlar:"
@@ -258,8 +294,11 @@ export const dictionaries = {
       "empty": "Herhangi bir grubun üyesi değilsin."
     },
     "expenses": {
-      "title": "Giderler",
+      "title": "Para",
       "empty": "Şu ana kadar paylaşılan bir harcama yok."
+    },
+    "delete": {
+      "label": "Silmek için basılı tutun"
     }
   },
   "uk-UA": {
@@ -268,7 +307,7 @@ export const dictionaries = {
       "positive": "Друзі тобі винні"
     },
     "tops": {
-      "title": "Друзі",
+      "title": "Борги",
       "empty": "Поки що тобі ніхто не винен, і ти теж нікому не винен.",
       "negative": "Ви найбільше винні:",
       "positive": "Хто найбільше тобі винен:"
@@ -278,8 +317,11 @@ export const dictionaries = {
       "empty": "Ви не є учасником жодної групи."
     },
     "expenses": {
-      "title": "Витрати",
+      "title": "Гроші",
       "empty": "Поки що спільних витрат немає."
+    },
+    "delete": {
+      "label": "Утримуйте, щоб видалити"
     }
   },
   "zh-CN": {
@@ -288,7 +330,7 @@ export const dictionaries = {
       "positive": "朋友们欠你"
     },
     "tops": {
-      "title": "朋友",
+      "title": "债务",
       "empty": "到目前为止，没有人欠你，你也不欠任何人。",
       "negative": "你主要欠款给：",
       "positive": "欠你最多的人："
@@ -298,8 +340,11 @@ export const dictionaries = {
       "empty": "未加入任何群组。"
     },
     "expenses": {
-      "title": "支出",
+      "title": "钱",
       "empty": "目前还没有共享支出。"
+    },
+    "delete": {
+      "label": "按住以删除"
     }
   }
 };

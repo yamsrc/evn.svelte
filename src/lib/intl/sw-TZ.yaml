@@ -6,7 +6,7 @@ actions:
   signout: Ondoka
   close: Funga
   cheques:
-    title: Matumizi
+    title: Pesa
     scan: Changanua hundi
     input: Ongeza gharama
   contacts:
@@ -22,7 +22,7 @@ nav:
   home: Mwanzo
   profile: Mimi
   contacts: Marafiki
-  expenses: Matumizi
+  expenses: Pesa
 terms: Vigezo na masharti
 privacy: Sera ya Faragha
 madeBy: Imetengenezwa na
@@ -100,12 +100,8 @@ groups:
   title: Makundi
   summary:
     balance:
-      from: |-
-        !js
-        (amount) => `Wanachama wa kundi hili wanakudai ${amount}`
-      to: |-
-        !js
-        (amount) => `Unawadaiwa ${amount}`
+      from: Wanakudai
+      to: Unawadaiwa
       even: Hakuna anayemdai mwingine chochote
   create: Unda kundi
 invite:
@@ -141,7 +137,7 @@ expenses:
     location:
       placeholder: Wapi? (Hiari)
     save: Hifadhi na sasisha mizania
-  title: Matumizi
+  title: Pesa
   balance:
     total: Jumla ya bili
     youAreOwed: Unadai malipo

@@ -1,8 +1,9 @@
 context: Mount 'expenses' context
+genders: true
 inputs:
   recent:
     title:
-      input: Expenses
+      input: Recently
     empty:
       input: Nothing happened yet. Add some spending, bring some friends to start things rolling.
   payer:
@@ -18,3 +19,41 @@ inputs:
       label:
         input: Add participants
         context: button label
+  transfer:
+    action:
+      input: Transfer
+      context: money transfer between users
+    dialog:
+      title:
+        input: Settle Up
+        context: dialog title
+      cancel:
+        input: Cancel
+        context: button label
+      action:
+        input: Confirm
+        context: button label
+    me:
+      input: Me
+      context: Я
+    direction:
+      byme:
+        input: Я заплатил
+      tome:
+        input: Я получил
+        context: деньги
+  transfers:
+    tobe:
+      neutral:
+        input: You’ll be all settled
+      positive:
+        input: You’ll be owed
+      negative:
+        input: You’ll owe
+    done:
+      paid:
+        input: You've paid
+        context: use ты with gender
+      received:
+        input: You've received
+        context: use ты with gender

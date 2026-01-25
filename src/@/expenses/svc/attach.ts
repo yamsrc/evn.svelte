@@ -1,7 +1,7 @@
 import { ensure, sync } from 'svas'
 import { account } from '@/iam'
 import * as net from './net'
-import { expenses } from './store'
+import { internal } from './store'
 
 export async function attach(files: File[], id?: string): Promise<string[] | Error> {
   const me = ensure(account)
@@ -37,7 +37,7 @@ async function update(identity: string, file: File, id: string): Promise<string 
       if (expense instanceof Error)
         return resolve(expense)
 
-      sync(expenses, expense)
+      sync(internal, expense)
       resolve(entry.id)
     })
   })

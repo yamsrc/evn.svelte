@@ -17,7 +17,7 @@
 </script>
 
 <div class={cn('flex items-center justify-end gap-2', classes)}>
-  <div class="text-muted-foreground text-sm text-nowrap">
+  <p class="text-muted-foreground text-sm text-nowrap">
     {#if total !== undefined}
       {totalLabel}
     {:else if balance !== undefined && balance > 0}
@@ -25,6 +25,6 @@
     {:else if balance !== undefined && balance < 0}
       {youOwe}
     {/if}
-  </div>
+  </p>
   <Coins {amount} />
 </div>

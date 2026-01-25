@@ -1,7 +1,7 @@
 <script lang="ts">
   import { dict } from '$lib/intl'
+  import { CoinsInput } from '@/app/ui'
   import { numbers } from '@/expenses'
-  import Amount from './Amount.svelte'
   import type { Props } from './Total'
 
   let { value = $bindable(), total = $bindable() }: Props = $props()
@@ -23,7 +23,7 @@
 
 <div class="flex items-center justify-between gap-4">
   <div class="pl-3">{$dict.expenses.spendings.total}</div>
-  <Amount
+  <CoinsInput
     id="expenses-total-input"
     class="max-w-2/3"
     inputClass="text-3xl font-bold"

@@ -6,7 +6,7 @@ actions:
   signout: 退出登录
   close: 关闭
   cheques:
-    title: 支出
+    title: 钱
     scan: 扫描支票
     input: 添加支出
   contacts:
@@ -22,7 +22,7 @@ nav:
   home: 首页
   profile: 我
   contacts: 朋友
-  expenses: 支出
+  expenses: 钱
 terms: 条款和条件
 privacy: 隐私政策
 madeBy: 由...制作
@@ -91,12 +91,8 @@ groups:
   title: 群组
   summary:
     balance:
-      from: |-
-        !js
-        (amount) => `该群组成员欠你${amount}`
-      to: |-
-        !js
-        (amount) => `你欠他们${amount}`
+      from: 他们欠你
+      to: 你欠他们的
       even: 没有人欠任何人任何东西
   create: 创建群组
 invite:
@@ -130,7 +126,7 @@ expenses:
     location:
       placeholder: 在哪里？（可选）
     save: 保存并更新余额
-  title: 支出
+  title: 钱
   balance:
     total: 总账单
     youAreOwed: 你有应得的

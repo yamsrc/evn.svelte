@@ -1,5 +1,5 @@
 recent:
-  title: 経費
+  title: 最近
   empty: まだ何も起きていません。支出を追加したり、友達を招待して始めてみましょう。
 payer:
   placeholder: 支払者を選択
@@ -9,3 +9,29 @@ participants:
     shares: 持分ごとに
   add:
     label: 参加者を追加
+transfer:
+  action: 送金
+  dialog:
+    title: 精算する
+    cancel: キャンセル
+    action: 確認
+  me: 私
+  direction:
+    byme: |-
+      !js
+      (gender) => "支払いました"
+    tome: |-
+      !js
+      (gender) => "受け取りました"
+transfers:
+  tobe:
+    neutral: すっかり落ち着きますよ
+    positive: あなたは借りができることになります
+    negative: あなたに未払いがあります
+  done:
+    paid: |-
+      !js
+      (gender) => "支払いが完了しました"
+    received: |-
+      !js
+      (gender) => "受け取ったよ"

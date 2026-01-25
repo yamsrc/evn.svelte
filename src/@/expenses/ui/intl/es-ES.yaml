@@ -1,5 +1,5 @@
 recent:
-  title: Gastos
+  title: Recientemente
   empty: >-
     Aún no ha pasado nada. Añade algún gasto o invita a tus amigos para poner
     esto en marcha.
@@ -11,3 +11,37 @@ participants:
     shares: Por acciones
   add:
     label: Agregar participantes
+transfer:
+  action: Transferencia
+  dialog:
+    title: Pagar la cuenta
+    cancel: Cancelar
+    action: Confirmar
+  me: Yo
+  direction:
+    byme: >-
+      !js
+
+      (gender) => gender === "he" ? "He pagado" : (gender === "she" ? "He
+      pagado" : "He pagado")
+    tome: >-
+      !js
+
+      (gender) => gender === "he" ? "He recibido" : (gender === "she" ? "He
+      recibido" : "He recibido")
+transfers:
+  tobe:
+    neutral: Estarás completamente instalado
+    positive: Te lo deberán
+    negative: Tendrás una deuda
+  done:
+    paid: >-
+      !js
+
+      (gender) => gender === "he" ? "Has pagado" : gender === "she" ? "Has
+      pagado" : "Has pagado"
+    received: >-
+      !js
+
+      (gender) => gender === "he" ? "Has recibido" : gender === "she" ? "Has
+      recibido" : "Has recibido"

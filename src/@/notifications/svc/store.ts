@@ -7,6 +7,8 @@ import type { Notification } from './net'
 export const notifications = collection<Notification>({
   get,
   bind: account,
+  persist: 'notifications',
+  stale: true,
   values: values<Notification>(),
 })
 
