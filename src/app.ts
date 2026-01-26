@@ -70,3 +70,52 @@ app.addEventListener('fetch', (event) => {
 
   event.respondWith(respond())
 })
+
+app.addEventListener('push', (event) => {
+  async function notify() {
+    let payload: {
+      id?: string
+      title?: string
+      body?: string
+      action?: string
+      data?: Record<string, unknown>
+      delivery?: {
+        key?: string
+        visibility?: 'alert' | 'data'
+        priority?: 'low' | 'normal' | 'high' | 'time-sensitive'
+        ttl?: number
+      }
+    } | null = null
+
+    try {
+      payload = event.data?.json() ?? null
+    } catch {
+      payload = null
+    }
+
+    const title = payload?.title ?? 'Notification'
+
+    const options: NotificationOptions = {
+      body: payload?.body,
+      data: payload?.data ?? { action: payload?.action },
+      tag: payload?.delivery?.key,
+    }
+
+    await app.registration.showNotification(title, options)
+  }
+
+  event.waitUntil(notify())
+})
+
+app.addEventListener('notificationclick', (event) => {
+  const notification = event.notification
+  const action = (notification?.data as { action?: string } | undefined)?.action
+
+  notification.close()
+
+  if (typeof action !== 'string' || action.length === 0) return
+
+  event.waitUntil(
+    app.clients.openWindow(action).catch(() => undefined),
+  )
+})
