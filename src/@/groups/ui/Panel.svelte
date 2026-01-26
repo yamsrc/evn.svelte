@@ -2,6 +2,7 @@
   import { Users } from '@lucide/svelte'
   import { Async } from 'svas'
   import { Panel } from '$com/panel'
+  import { Attention } from '$com/shell'
   import { dict } from '$lib/intl'
   import { accounts } from '@/accounts'
   import { Picture } from '@/accounts/ui'
@@ -24,8 +25,7 @@
 
 <Panel
   {selected}
-  {highlighted}
-  class="bg-card border border-border h-20"
+  class="bg-card border border-border"
   {onclick}
   href={`/contacts/groups/${group.id}`}>
   {#snippet left()}
@@ -34,7 +34,7 @@
         <Users class="size-4" />
         <span class="font-bold">{group.name}</span>
       </div>
-      <div class="flex flex-nowrap gap-1 items-center">
+      <div class="flex flex-nowrap gap-1 items-center pb-1">
         {#each members.slice(0, 5) as identity (identity)}
           <Async store={accounts.get(identity)}>
             {#snippet awaited(account)}
@@ -55,6 +55,9 @@
   {#snippet right()}
     {#if group.balance}
       <Balance balance={group.balance} youAreOwed={$dict.contacts.contact.owesYou} />
+    {/if}
+    {#if highlighted}
+      <Attention id={`groups-notify-${group.id}`} class="absolute top-2 right-2 z-10" />
     {/if}
   {/snippet}
 </Panel>

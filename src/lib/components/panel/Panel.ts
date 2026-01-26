@@ -2,7 +2,6 @@ import type { ButtonProps } from '$ui/button'
 import type { Snippet } from 'svelte'
 
 export type Props = {
-  highlighted?: boolean
   left: Snippet
   right?: Snippet
   bottom?: Snippet

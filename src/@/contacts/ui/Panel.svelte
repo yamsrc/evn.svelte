@@ -12,13 +12,7 @@
   import type { Action } from '$com/panel'
   import type { Props } from './Panel'
 
-  const {
-    contact,
-    selected = $bindable(),
-    highlighted,
-    actionable = false,
-    onselect,
-  }: Props = $props()
+  const { contact, selected = $bindable(), actionable = false, onselect }: Props = $props()
 
   let confirmDelete = $state(false)
 
@@ -55,7 +49,6 @@
     account={contact.account}
     balance={contact.balance}
     {selected}
-    {highlighted}
     {onselect}
     actions={actionable ? actions : []}
     class={cn(contact.managed && 'text-muted-foreground', 'contacts-panel')}>

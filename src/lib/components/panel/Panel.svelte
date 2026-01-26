@@ -7,7 +7,6 @@
   const {
     collapsed,
     selected,
-    highlighted,
     h,
     left,
     right,
@@ -48,7 +47,7 @@
           h || 'h-auto',
           classes,
           {
-            'bg-accent dark:bg-accent': selected || highlighted,
+            'bg-accent dark:bg-accent': selected,
           },
         )}
         {variant}

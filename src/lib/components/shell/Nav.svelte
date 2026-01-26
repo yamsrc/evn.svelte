@@ -7,6 +7,7 @@
   import { cn } from '$lib/utils'
   import { Button } from '$ui/button'
   import * as ButtonGroup from '$ui/button-group'
+  import Attention from './Attention.svelte'
   import { exact, href, match, nested, type Props, type Section } from './Nav'
   import { actions, returns } from './store'
 
@@ -77,10 +78,9 @@
               style={active ? 'view-transition-name: shell-nav-active;' : ''}>
             </div>
             {#if section.unseen && !ret}
-              <div
-                class="absolute top-2.5 right-2.5 size-2 rounded-full bg-constructive z-10"
-                style="view-transition-name: shell-nav-notify-{section.id};">
-              </div>
+              <Attention
+                id={`shell-nav-notify-${section.id}`}
+                class="absolute top-2.5 right-2.5 z-10" />
             {/if}
             <div
               class={cn(

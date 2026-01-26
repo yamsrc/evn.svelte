@@ -7,7 +7,6 @@ export type Props = {
   account: AccountLike
   balance?: number
   selected?: boolean
-  highlighted?: boolean
   href?: string
   class?: string
   onselect?: (id: string, selected: boolean) => void
