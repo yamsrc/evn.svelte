@@ -7,7 +7,7 @@ import type { PageServerLoad } from './$types.js'
 
 const MAX_NAMES = 7
 
-export const load: PageServerLoad = async ({ params, fetch, request }) => {
+export const load: PageServerLoad = async ({ params, request }) => {
   const group = await invitations.get(params.id)
 
   if (group instanceof Error)
