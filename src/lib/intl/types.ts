@@ -53,6 +53,9 @@ export type Dictionary = {
           description: string
           example: (...args: [any, any]) => string
         }
+        background: {
+          title: string
+        }
       }
       form: {
         enterName: string

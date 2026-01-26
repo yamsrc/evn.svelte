@@ -40,6 +40,8 @@ profile:
     example: |-
       !js
       (name, gender) => `${name} bir harcama ekledi`
+  background:
+    title: Arka plan
 form:
   enterName: İsim girin
 copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"

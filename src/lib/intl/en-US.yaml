@@ -44,6 +44,8 @@ profile:
 
       (name, gender) => gender === "he" ? `${name} added an expense` : gender
       === "she" ? `${name} added an expense` : `${name} added an expense`
+  background:
+    title: Background
 form:
   enterName: Enter name
 copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"

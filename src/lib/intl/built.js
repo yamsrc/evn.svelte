@@ -46,6 +46,9 @@ export const dictionaries = {
         "title": "الصيغة النحوية",
         "description": "في بعض اللغات، تعتمد صياغة الرسائل على الجنس النحوي. نستخدم هذا الإعداد لجعل نصوص الواجهة تبدو طبيعية وصحيحة.",
         "example": (name, gender) => gender === "he" ? `${name} أضاف مصروفًا` : gender === "she" ? `${name} أضافت مصروفًا` : `${name} أضاف(ت) مصروفًا`
+      },
+      "background": {
+        "title": "الخلفية"
       }
     },
     "form": {
@@ -242,6 +245,9 @@ export const dictionaries = {
         "title": "Grammatische Form",
         "description": "In einigen Sprachen hängt die Formulierung von Nachrichten vom grammatischen Geschlecht ab. Diese Einstellung sorgt dafür, dass die Texte der Benutzeroberfläche natürlich und korrekt klingen.",
         "example": (name, gender) => gender === "he" ? `${name} hat eine Ausgabe hinzugefügt` : gender === "she" ? `${name} hat eine Ausgabe hinzugefügt` : `${name} hat eine Ausgabe hinzugefügt`
+      },
+      "background": {
+        "title": "Hintergrund"
       }
     },
     "form": {
@@ -438,6 +444,9 @@ export const dictionaries = {
         "title": "Grammatical Form",
         "description": "In some languages, message wording depends on grammatical gender. We use this setting to make interface texts sound natural and correct.",
         "example": (name, gender) => gender === "he" ? `${name} added an expense` : gender === "she" ? `${name} added an expense` : `${name} added an expense`
+      },
+      "background": {
+        "title": "Background"
       }
     },
     "form": {
@@ -634,6 +643,9 @@ export const dictionaries = {
         "title": "Forma gramatical",
         "description": "En algunos idiomas, la redacción de los mensajes depende del género gramatical. Usamos este ajuste para que los textos de la interfaz suenen naturales y correctos.",
         "example": (name, gender) => gender === "he" ? `${name} añadió un gasto` : gender === "she" ? `${name} añadió un gasto` : `${name} añadió un gasto`
+      },
+      "background": {
+        "title": "Fondo"
       }
     },
     "form": {
@@ -830,6 +842,9 @@ export const dictionaries = {
         "title": "Forme grammaticale",
         "description": "Dans certaines langues, la formulation des messages dépend du genre grammatical. Nous utilisons ce réglage pour que les textes de l’interface soient naturels et corrects.",
         "example": (name, gender) => gender === "he" ? `${name} a ajouté une dépense` : gender === "she" ? `${name} a ajouté une dépense` : `${name} a ajouté une dépense`
+      },
+      "background": {
+        "title": "Arrière-plan"
       }
     },
     "form": {
@@ -1026,6 +1041,9 @@ export const dictionaries = {
         "title": "व्याकरणिक रूप",
         "description": "कुछ भाषाओं में संदेशों की भाषा व्याकरणिक लिंग पर निर्भर करती है। हम इस सेटिंग का उपयोग करते हैं ताकि इंटरफ़ेस के सभी पाठ स्वाभाविक और सही लगें।",
         "example": (name, gender) => gender === "he" ? `${name} ने खर्च जोड़ा` : gender === "she" ? `${name} ने खर्च जोड़ी` : `${name} ने खर्च जोड़ा(जोड़ी)`
+      },
+      "background": {
+        "title": "पृष्ठभूमि"
       }
     },
     "form": {
@@ -1222,6 +1240,9 @@ export const dictionaries = {
         "title": "Forma grammaticale",
         "description": "In alcune lingue, la formulazione dei messaggi dipende dal genere grammaticale. Usiamo questa impostazione per rendere i testi dell’interfaccia naturali e corretti.",
         "example": (name, gender) => gender === "he" ? `${name} ha aggiunto una spesa` : gender === "she" ? `${name} ha aggiunto una spesa` : `${name} ha aggiunto una spesa`
+      },
+      "background": {
+        "title": "Sfondo"
       }
     },
     "form": {
@@ -1418,6 +1439,9 @@ export const dictionaries = {
         "title": "文法形式",
         "description": "言語によっては、メッセージの表現に文法上の性別が関係します。この設定によって、インターフェースの文言が自然で正確になるようにしています。",
         "example": (name, gender) => `${name} さんが支出を追加しました`
+      },
+      "background": {
+        "title": "背景"
       }
     },
     "form": {
@@ -1614,6 +1638,9 @@ export const dictionaries = {
         "title": "문법 형태",
         "description": "일부 언어에서는 메시지 문구가 문법적 성별에 따라 달라집니다. 이 설정을 통해 인터페이스의 텍스트가 자연스럽고 올바르게 표시되도록 합니다.",
         "example": (name, gender) => `${name}님이 지출을 추가했습니다`
+      },
+      "background": {
+        "title": "배경"
       }
     },
     "form": {
@@ -1810,6 +1837,9 @@ export const dictionaries = {
         "title": "Grammaticale vorm",
         "description": "In sommige talen is de formulering van berichten afhankelijk van de grammaticale gender. We gebruiken deze instelling om de teksten in de interface natuurlijk en correct te laten klinken.",
         "example": (name, gender) => gender === "he" ? `${name} heeft een uitgave toegevoegd` : gender === "she" ? `${name} heeft een uitgave toegevoegd` : `${name} heeft een uitgave toegevoegd`
+      },
+      "background": {
+        "title": "Achtergrond"
       }
     },
     "form": {
@@ -2006,6 +2036,9 @@ export const dictionaries = {
         "title": "Грамматическая форма",
         "description": "В некоторых языках формулировка сообщений зависит от грамматического рода. Эта настройка помогает сделать тексты интерфейса естественными и правильными.",
         "example": (name, gender) => gender === "he" ? `${name} добавил расход` : gender === "she" ? `${name} добавила расход` : `${name} добавил(а) расход`
+      },
+      "background": {
+        "title": "Фон"
       }
     },
     "form": {
@@ -2202,6 +2235,9 @@ export const dictionaries = {
         "title": "Umbo wa kisarufi",
         "description": "Katika baadhi ya lugha, uundaji wa ujumbe hutegemea jinsia ya kisarufi. Tunatumia kipimo hiki ili maandishi ya kiolesura yawe ya kawaida na sahihi.",
         "example": (name, gender) => gender === "he" ? `${name} ameongeza matumizi` : gender === "she" ? `${name} ameongeza matumizi` : `${name} ameongeza matumizi`
+      },
+      "background": {
+        "title": "Mandharinyuma"
       }
     },
     "form": {
@@ -2398,6 +2434,9 @@ export const dictionaries = {
         "title": "Dilbilgisel biçim",
         "description": "Bazı dillerde mesajın ifadesi dilbilgisel cinsiyete bağlıdır. Arayüz metinlerinin doğal ve doğru olması için bu ayarı kullanıyoruz.",
         "example": (name, gender) => `${name} bir harcama ekledi`
+      },
+      "background": {
+        "title": "Arka plan"
       }
     },
     "form": {
@@ -2594,6 +2633,9 @@ export const dictionaries = {
         "title": "Граматична форма",
         "description": "У деяких мовах формулювання повідомлень залежить від граматичного роду. Ми використовуємо цей параметр, щоб текст інтерфейсу звучав природно та правильно.",
         "example": (name, gender) => gender === "he" ? `${name} додав витрату` : gender === "she" ? `${name} додала витрату` : `${name} додав(ла) витрату`
+      },
+      "background": {
+        "title": "Тло"
       }
     },
     "form": {
@@ -2790,6 +2832,9 @@ export const dictionaries = {
         "title": "语法形式",
         "description": "在某些语言中，消息的措辞取决于语法性别。我们使用此设置以使界面文本更自然、更准确。",
         "example": (name, gender) => `${name} 添加了一笔支出`
+      },
+      "background": {
+        "title": "背景"
       }
     },
     "form": {

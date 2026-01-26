@@ -43,6 +43,8 @@ profile:
 
       (name, gender) => gender === "he" ? `${name} ameongeza matumizi` : gender
       === "she" ? `${name} ameongeza matumizi` : `${name} ameongeza matumizi`
+  background:
+    title: Mandharinyuma
 form:
   enterName: Weka jina
 copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"

@@ -44,6 +44,8 @@ profile:
 
       (name, gender) => gender === "he" ? `${name} ने खर्च जोड़ा` : gender ===
       "she" ? `${name} ने खर्च जोड़ी` : `${name} ने खर्च जोड़ा(जोड़ी)`
+  background:
+    title: पृष्ठभूमि
 form:
   enterName: नाम दर्ज करें
 copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"

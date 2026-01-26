@@ -73,6 +73,9 @@ inputs:
         input: In some languages, message wording depends on grammatical gender. We use this setting to make interface texts sound natural and correct.
       example:
         input: "{name} добавил(а) расход"
+    background:
+      title:
+        input: Background
   form:
     enterName:
       input: Enter name

@@ -38,6 +38,8 @@ profile:
     example: |-
       !js
       (name, gender) => `${name} 添加了一笔支出`
+  background:
+    title: 背景
 form:
   enterName: 输入姓名
 copyright: "!js (timestamp) => `© seed.me，2025–${new Date(timestamp).getFullYear()}`"

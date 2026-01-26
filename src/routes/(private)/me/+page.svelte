@@ -57,7 +57,7 @@
   </Section>
 
   <Section class="space-y-2">
-    <h2>Background</h2>
+    <h2>{$dict.profile.background.title}</h2>
     <div class="border h-40 rounded-lg bg-background">
       <Background scrollable />
     </div>
