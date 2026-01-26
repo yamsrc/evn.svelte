@@ -2,7 +2,7 @@ import { value } from 'svas'
 import { account } from '@/iam'
 
 export const subscriptionIds = value<string[]>({
-  persist: 'push:subscriptionIds',
+  persist: 'push:subscriptions',
   bind: account,
 })
 
