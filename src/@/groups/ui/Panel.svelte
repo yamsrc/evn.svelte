@@ -25,7 +25,7 @@
 <Panel
   {selected}
   {highlighted}
-  class={['bg-card border border-border h-20', highlighted && 'bg-accent']}
+  class="bg-card border border-border h-20"
   {onclick}
   href={`/contacts/groups/${group.id}`}>
   {#snippet left()}

@@ -37,7 +37,6 @@
     'relative overflow-hidden rounded-lg transition-all duration-200 ease-in-out',
     collapsed ? 'h-0' : h,
     selected && 'outline-muted-foreground/50 outline-2',
-    highlighted && 'bg-accent',
   )}>
   <div
     bind:this={container}
@@ -49,7 +48,7 @@
           h || 'h-auto',
           classes,
           {
-            'bg-accent dark:bg-accent': selected,
+            'bg-accent dark:bg-accent': selected || highlighted,
           },
         )}
         {variant}
