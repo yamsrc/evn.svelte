@@ -3,12 +3,12 @@ import type { SubscribeInput, SubscribeResponse, UnsubscribeInput } from './Subs
 
 const transmission = origin.resource<SubscribeResponse>('/transmission/', { credentials: 'include' })
 
-export async function subscribe(accountId: string, body: SubscribeInput): Promise<SubscribeResponse | Error> {
-  return transmission.json(accountId, { method: 'POST', body })
+export async function subscribe(identity: string, body: SubscribeInput): Promise<SubscribeResponse | Error> {
+  return transmission.json(identity, { method: 'POST', body })
 }
 
-export async function unsubscribe(accountId: string, body: UnsubscribeInput): Promise<number | Error> {
-  const result = await transmission.json(accountId, { method: 'POST', body })
+export async function unsubscribe(identity: string, body: UnsubscribeInput): Promise<number | Error> {
+  const result = await transmission.json(identity, { method: 'POST', body })
 
   if (result instanceof Error) return result
 

@@ -94,20 +94,33 @@ self.addEventListener('notificationclick', (event) => {
 
   event.waitUntil(
     self.clients.matchAll({ type: 'window', includeUncontrolled: true }).then((clientList) => {
-      // Check if there's already a window/tab open with the target URL
+      // Convert relative path to absolute URL (required for iOS standalone apps)
       const url = new URL(action, self.location.origin)
       const targetPath = url.pathname
 
-      for (const client of clientList) {
-        const clientUrl = new URL(client.url)
+      // If there are existing clients, navigate them (preferred for iOS standalone apps)
+      if (clientList.length > 0) {
+        // Try to find a client that matches the target path
+        for (const client of clientList) {
+          const clientUrl = new URL(client.url)
 
-        if (clientUrl.pathname === targetPath && 'focus' in client)
-          return client.focus()
+          if (clientUrl.pathname === targetPath && 'focus' in client)
+            return client.focus()
+        }
+
+        // For existing clients, use postMessage to navigate (works reliably for iOS standalone)
+        const client = clientList[0]
+
+        if ('focus' in client)
+          client.focus()
+
+        // Send navigation message to the app (handled in push/rc.ts)
+        return client.postMessage({ type: 'navigate', url: url.href })
       }
 
-      // If no matching client, open a new window
+      // If no clients exist, open a new window (use absolute URL)
       if (self.clients.openWindow)
-        return self.clients.openWindow(action)
+        return self.clients.openWindow(url.href)
     }),
   )
 })

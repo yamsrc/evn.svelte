@@ -1,4 +1,5 @@
 import { browser } from '$app/environment'
+import { goto } from '$app/navigation'
 import { account } from '@/iam'
 import { subscribe, unsubscribe } from './svc'
 
@@ -21,6 +22,17 @@ function registerServiceWorker(): void {
       navigator.serviceWorker.register(SW_PATH).catch((error) => {
         console.error('Service worker re-registration failed:', error)
       })
+  })
+
+  // Listen for messages from service worker (e.g., navigation requests)
+
+  navigator.serviceWorker.addEventListener('message', (event) => {
+    if (event.data?.type === 'navigate' && typeof event.data.url === 'string') {
+      const url = new URL(event.data.url, window.location.origin)
+
+      // Navigate using SvelteKit's goto (handles relative paths correctly)
+      void goto(url.pathname + url.search + url.hash)
+    }
   })
 }
 
