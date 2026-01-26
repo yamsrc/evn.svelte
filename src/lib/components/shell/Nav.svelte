@@ -76,7 +76,7 @@
               )}
               style={active ? 'view-transition-name: shell-nav-active;' : ''}>
             </div>
-            {#if section.unseen}
+            {#if section.unseen && !ret}
               <div
                 class="absolute top-2 right-2 size-2 rounded-full bg-constructive z-10"
                 style="view-transition-name: shell-nav-notify-{i};">
