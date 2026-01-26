@@ -20,6 +20,9 @@ const config = {
       $origin: './src/origin',
       '@': './src/@',
     },
+    files: {
+      serviceWorker: 'src/app.ts',
+    },
     typescript: {
       config: (config) => {
         config.include.push('../features/**/*.ts')
