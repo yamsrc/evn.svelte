@@ -30,9 +30,11 @@
       <Totals {contacts} />
     </Section>
 
-    <Section class="px-0">
-      <Notifications {notifications} />
-    </Section>
+    {#if notifications.length > 0}
+      <Section class="px-0">
+        <Notifications {notifications} />
+      </Section>
+    {/if}
 
     <Section>
       <Tops {contacts} />
