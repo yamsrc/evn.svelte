@@ -1,5 +1,4 @@
-import { ensure, ok } from 'svas'
-import { get } from 'svelte/store'
+import { ensure } from 'svas'
 import { account } from '@/iam'
 import { net } from './net'
 import { notifications } from './store'
@@ -24,10 +23,7 @@ export async function del(id: string): Promise<void | Error> {
 export async function seen(domain: string, key: string): Promise<void | Error> {
   const me = ensure(account)
 
-  const current = get(notifications)
-
-  if (!ok(current)) return
-
+  const current = ensure(notifications)
   const candidates = current.filter((n) => n.domain === domain && n.key === key)
 
   for (const candidate of candidates)

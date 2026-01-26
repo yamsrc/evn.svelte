@@ -13,8 +13,6 @@
 
   const selectable = $derived(selection !== undefined)
 
-  $inspect(notifications)
-
   const unseen = (id: string) =>
     notifications !== undefined && notifications.some((n) => n.key === id)
 
