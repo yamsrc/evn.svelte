@@ -13,7 +13,7 @@ export async function getOrCreate(
   if (existing !== null) return existing
 
   try {
-    return await registration.pushManager.subscribe({ applicationServerKey: vapidKey })
+    return await registration.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: vapidKey })
   } catch (error) {
     return error instanceof Error ? error : new Error('Failed to create push subscription')
   }
