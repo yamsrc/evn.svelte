@@ -52,7 +52,7 @@
         rounded,
       )}
       style="view-transition-name: shell-nav;">
-      {#each sections as section, i (section.href)}
+      {#each sections as section (section.href)}
         {@const active = match(section.href, page.url.pathname)}
         {@const hidden = !visible.includes(section)}
         {@const ret = $returns.at(-1)}
@@ -78,15 +78,15 @@
             </div>
             {#if section.unseen && !ret}
               <div
-                class="absolute top-2 right-2 size-2 rounded-full bg-constructive z-10"
-                style="view-transition-name: shell-nav-notify-{i};">
+                class="absolute top-2.5 right-2.5 size-2 rounded-full bg-constructive z-10"
+                style="view-transition-name: shell-nav-notify-{section.id};">
               </div>
             {/if}
             <div
               class={cn(
                 "flex flex-col items-center gap-0.5 z-10 relative font-bold [&_svg:not([class*='size-'])]:size-5",
               )}
-              style="view-transition-name: shell-nav-item-{i};">
+              style="view-transition-name: shell-nav-item-{section.id};">
               {#if ret}
                 {#if ret.children}
                   {@render ret.children()}
