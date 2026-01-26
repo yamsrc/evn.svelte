@@ -4,18 +4,20 @@
   import { buttonVariants } from '$ui/button'
   import * as Collapsible from '$ui/collapsible'
   import { Section } from '@/app/ui'
-  import { scope } from '@/notifications'
   import Group from './Panel.svelte'
   import type { Props } from './Groups'
 
-  let { groups, title, selection = $bindable() }: Props = $props()
+  let { groups, notifications, title, selection = $bindable() }: Props = $props()
 
   let open = $state(true)
 
   const selectable = $derived(selection !== undefined)
-  const notifications = scope('groups')
 
-  const unseen = (id: string) => $notifications.some((n) => n.key === id)
+  $inspect(notifications)
+
+  const unseen = (id: string) =>
+    notifications !== undefined && notifications.some((n) => n.key === id)
+
   const sorted = $derived(
     [...groups].sort((lhs, rhs) => Number(unseen(rhs.id)) - Number(unseen(lhs.id))),
   )
