@@ -78,7 +78,7 @@
     if (!container) return
 
     containers.push(container)
-    container.scrollLeft = selected * container.clientWidth
+    container.scrollLeft = (selected === -1 ? 0 : selected) * container.clientWidth
     mounted = true
 
     return () => {
