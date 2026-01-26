@@ -34,7 +34,7 @@
         <Users class="size-4" />
         <span class="font-bold">{group.name}</span>
       </div>
-      <div class="flex flex-nowrap gap-1 items-center pb-1">
+      <div class="flex flex-nowrap gap-1 items-center py-1">
         {#each members.slice(0, 5) as identity (identity)}
           <Async store={accounts.get(identity)}>
             {#snippet awaited(account)}
