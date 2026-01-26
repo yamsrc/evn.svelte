@@ -7,6 +7,7 @@
   const {
     collapsed,
     selected,
+    highlighted,
     h,
     left,
     right,
@@ -36,12 +37,11 @@
     'relative overflow-hidden rounded-lg transition-all duration-200 ease-in-out',
     collapsed ? 'h-0' : h,
     selected && 'outline-muted-foreground/50 outline-2',
-  )}
->
+    highlighted && 'bg-accent',
+  )}>
   <div
     bind:this={container}
-    class="panel-container flex w-full overflow-x-auto snap-x snap-mandatory no-scrollbar"
-  >
+    class="panel-container flex w-full overflow-x-auto snap-x snap-mandatory no-scrollbar">
     <div class="w-full shrink-0 snap-start z-10">
       <Button
         class={cn(
@@ -53,8 +53,7 @@
           },
         )}
         {variant}
-        {...props}
-      >
+        {...props}>
         <div class="flex items-center justify-start gap-2 shrink overflow-hidden">
           {#if icon}
             <div class="shrink-0">
@@ -71,8 +70,7 @@
     {#if actions}
       <div
         role="toolbar"
-        class="panel-actions flex shrink-0 snap-end text-xs [&_svg]:size-4 -ml-1 z-0 bg-foreground"
-      >
+        class="panel-actions flex shrink-0 snap-end text-xs [&_svg]:size-4 -ml-1 z-0 bg-foreground">
         {#each actions as { id, class: classes, href, onclick } (id)}
           <button
             onclick={(e) => click(e, { href, onclick })}
@@ -80,8 +78,7 @@
               'flex flex-col items-center justify-center gap-1 hover:cursor-pointer hover:bg-muted-foreground/20',
               actions.length === 1 ? 'w-24' : 'w-16',
               classes,
-            )}
-          >
+            )}>
             {@render action(id)}
           </button>
         {/each}

@@ -10,6 +10,7 @@
     account,
     balance,
     selected = $bindable(),
+    highlighted,
     onselect,
     action,
     actions,
@@ -31,6 +32,7 @@
 <Panel
   {href}
   {selected}
+  {highlighted}
   class={cn('bg-card border border-border h-14', classes)}
   {onclick}
   {...actionProps}>

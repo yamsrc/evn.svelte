@@ -10,3 +10,7 @@ export async function get(identity: string): Promise<Notification[] | Error> {
 export async function del(identity: string, id: string): Promise<void | Error> {
   return notifications.json(`${identity}/${id}`, { method: 'DELETE' })
 }
+
+export async function seen(identity: string, domain: string, key: string): Promise<void | Error> {
+  return notifications.json(`${identity}/${domain}/${key}`, { method: 'DELETE' })
+}

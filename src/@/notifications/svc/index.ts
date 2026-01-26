@@ -1,4 +1,5 @@
 export * from './net'
 export { notifications } from './store'
+export { scope } from './scope'
 export { get } from './get'
-export { del } from './del'
+export { del, seen } from './del'

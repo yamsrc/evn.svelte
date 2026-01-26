@@ -76,6 +76,12 @@
               )}
               style={active ? 'view-transition-name: shell-nav-active;' : ''}>
             </div>
+            {#if section.unseen}
+              <div
+                class="absolute top-2 right-2 size-2 rounded-full bg-constructive z-10"
+                style="view-transition-name: shell-nav-notify-{i};">
+              </div>
+            {/if}
             <div
               class={cn(
                 "flex flex-col items-center gap-0.5 z-10 relative font-bold [&_svg:not([class*='size-'])]:size-5",

@@ -15,6 +15,7 @@
   import { groups, del } from '@/groups'
   import { Cosmetics } from '@/groups/ui'
   import { account } from '@/iam'
+  import { seen } from '@/notifications'
   import type { Group } from '@/groups'
 
   type BalanceSummary = {
@@ -23,6 +24,10 @@
   }
 
   const id = $derived(page.params.id)
+
+  $effect(() => {
+    if (id) void seen('groups', id)
+  })
 
   async function leave() {
     if (!id) return

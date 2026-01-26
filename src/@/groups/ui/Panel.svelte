@@ -3,14 +3,13 @@
   import { Async } from 'svas'
   import { Panel } from '$com/panel'
   import { dict } from '$lib/intl'
-  import { cn } from '$lib/utils'
   import { accounts } from '@/accounts'
   import { Picture } from '@/accounts/ui'
   import { Balance } from '@/app/ui'
   import { account } from '@/iam'
   import type { Props } from './Panel'
 
-  let { group, selected = $bindable(), onselect }: Props = $props()
+  let { group, selected = $bindable(), highlighted, onselect }: Props = $props()
 
   const members = $derived(group.identities.filter((identity) => identity !== $account?.id))
 
@@ -25,7 +24,8 @@
 
 <Panel
   {selected}
-  class={cn('bg-card border border-border h-20')}
+  {highlighted}
+  class={['bg-card border border-border h-20', highlighted && 'bg-accent']}
   {onclick}
   href={`/contacts/groups/${group.id}`}>
   {#snippet left()}
