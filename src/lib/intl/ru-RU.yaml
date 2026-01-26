@@ -18,6 +18,7 @@ actions:
   search: Поиск
   save: Сохранить
   create: Создать
+  slide: Смахни
 nav:
   home: Главная
   profile: Я
@@ -64,6 +65,7 @@ contacts:
   contact:
     owesYou: Должен тебе
     youOwe: Вы должны
+    even: Вы в расчёте
   delete:
     confirm:
       title: Удалить контакт

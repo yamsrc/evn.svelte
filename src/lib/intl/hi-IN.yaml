@@ -18,6 +18,7 @@ actions:
   search: खोजें
   save: सहेजें
   create: सृजन करें
+  slide: स्वाइप करें
 nav:
   home: मुख्य पृष्ठ
   profile: मैं
@@ -63,6 +64,7 @@ contacts:
   contact:
     owesYou: आपका कर्ज़दार है
     youOwe: आपको देना है
+    even: आप दोनों बराबर हैं
   delete:
     confirm:
       title: संपर्क हटाएं

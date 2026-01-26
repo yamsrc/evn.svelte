@@ -4,6 +4,7 @@ export interface Account {
   id: string
   name: string
   picture: string
+  background?: string
   locale?: string
   grammar?: Grammar | null
   overlord?: string | null

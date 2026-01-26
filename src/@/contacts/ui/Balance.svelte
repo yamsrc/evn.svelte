@@ -13,7 +13,11 @@
       {$dict.contacts.contact.owesYou}
     {:else if contact.balance < 0}
       {$dict.contacts.contact.youOwe}
+    {:else}
+      {$dict.contacts.contact.even}
     {/if}
   </div>
-  <Coins amount={contact.balance} />
+  {#if contact.balance !== 0}
+    <Coins amount={contact.balance} />
+  {/if}
 </div>

@@ -18,6 +18,7 @@ actions:
   search: Ara
   save: Kaydet
   create: Oluştur
+  slide: Kaydır
 nav:
   home: Ana Sayfa
   profile: Ben
@@ -59,6 +60,7 @@ contacts:
   contact:
     owesYou: Sana borçlu
     youOwe: Borçlusun
+    even: Artık ödeşmiş oldunuz
   delete:
     confirm:
       title: Kişiyi sil

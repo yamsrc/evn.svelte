@@ -18,6 +18,7 @@ actions:
   search: 搜索
   save: 保存
   create: 创建
+  slide: 滑动
 nav:
   home: 首页
   profile: 我
@@ -57,6 +58,7 @@ contacts:
   contact:
     owesYou: 欠你的
     youOwe: 你欠
+    even: 你们扯平了
   delete:
     confirm:
       title: 删除联系人

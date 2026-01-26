@@ -18,6 +18,7 @@ actions:
   search: Buscar
   save: Guardar
   create: Crear
+  slide: Desliza
 nav:
   home: Inicio
   profile: Yo
@@ -64,6 +65,7 @@ contacts:
   contact:
     owesYou: Te debe
     youOwe: Debes
+    even: Están a mano
   delete:
     confirm:
       title: Eliminar contacto
