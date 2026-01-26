@@ -18,6 +18,7 @@ actions:
   search: Пошук
   save: Зберегти
   create: Створити
+  slide: Змахни
 nav:
   home: Головна
   profile: Я
@@ -64,6 +65,7 @@ contacts:
   contact:
     owesYou: Винен тобі
     youOwe: Ви винні
+    even: Ви квити
   delete:
     confirm:
       title: Видалити контакт

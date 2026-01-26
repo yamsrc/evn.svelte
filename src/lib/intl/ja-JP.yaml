@@ -18,6 +18,7 @@ actions:
   search: 検索
   save: 保存
   create: 作成
+  slide: スワイプ
 nav:
   home: ホーム
   profile: 私
@@ -57,6 +58,7 @@ contacts:
   contact:
     owesYou: あなたに借りがある
     youOwe: あなたが支払うべきです
+    even: これでおあいこです
   delete:
     confirm:
       title: 連絡先を削除

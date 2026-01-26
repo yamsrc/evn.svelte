@@ -40,6 +40,8 @@ inputs:
       input: Save
     create:
       input: Create
+    slide:
+      input: Смахни
   nav:
     home:
       input: Home
@@ -106,6 +108,9 @@ inputs:
         input: Owes you
       youOwe:
         input: You owe
+      even:
+        input: You're even
+        context: no one owes nothing
     delete:
       confirm:
         title:

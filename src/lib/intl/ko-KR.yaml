@@ -18,6 +18,7 @@ actions:
   search: 검색
   save: 저장
   create: 생성
+  slide: 스와이프
 nav:
   home: 홈
   profile: 나
@@ -59,6 +60,7 @@ contacts:
   contact:
     owesYou: 당신에게 빚졌어요
     youOwe: 당신이 빚졌습니다
+    even: 두 분은 이제 비겼어요
   delete:
     confirm:
       title: 연락처 삭제

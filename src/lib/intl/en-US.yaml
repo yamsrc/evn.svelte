@@ -18,6 +18,7 @@ actions:
   search: Search
   save: Save
   create: Create
+  slide: Swipe
 nav:
   home: Home
   profile: Me
@@ -63,6 +64,7 @@ contacts:
   contact:
     owesYou: Owes you
     youOwe: You owe
+    even: You’re even
   delete:
     confirm:
       title: Delete contact

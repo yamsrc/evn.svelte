@@ -24,7 +24,8 @@ export const dictionaries = {
       "cancel": "إلغاء",
       "search": "بحث",
       "save": "حفظ",
-      "create": "إنشاء"
+      "create": "إنشاء",
+      "slide": "اسحب"
     },
     "nav": {
       "home": "الرئيسية",
@@ -71,7 +72,8 @@ export const dictionaries = {
       "all": "جميع الأصدقاء",
       "contact": {
         "owesYou": "مدين لك",
-        "youOwe": "أنت مدين"
+        "youOwe": "أنت مدين",
+        "even": "أنتم متعادلون"
       },
       "delete": {
         "confirm": {
@@ -218,7 +220,8 @@ export const dictionaries = {
       "cancel": "Abbrechen",
       "search": "Suchen",
       "save": "Speichern",
-      "create": "Erstellen"
+      "create": "Erstellen",
+      "slide": "Wischen"
     },
     "nav": {
       "home": "Startseite",
@@ -265,7 +268,8 @@ export const dictionaries = {
       "all": "Alle Freunde",
       "contact": {
         "owesYou": "Schuldet dir",
-        "youOwe": "Du schuldest"
+        "youOwe": "Du schuldest",
+        "even": "Ihr seid quitt"
       },
       "delete": {
         "confirm": {
@@ -412,7 +416,8 @@ export const dictionaries = {
       "cancel": "Cancel",
       "search": "Search",
       "save": "Save",
-      "create": "Create"
+      "create": "Create",
+      "slide": "Swipe"
     },
     "nav": {
       "home": "Home",
@@ -459,7 +464,8 @@ export const dictionaries = {
       "all": "All friends",
       "contact": {
         "owesYou": "Owes you",
-        "youOwe": "You owe"
+        "youOwe": "You owe",
+        "even": "You’re even"
       },
       "delete": {
         "confirm": {
@@ -606,7 +612,8 @@ export const dictionaries = {
       "cancel": "Cancelar",
       "search": "Buscar",
       "save": "Guardar",
-      "create": "Crear"
+      "create": "Crear",
+      "slide": "Desliza"
     },
     "nav": {
       "home": "Inicio",
@@ -653,7 +660,8 @@ export const dictionaries = {
       "all": "Todos los amigos",
       "contact": {
         "owesYou": "Te debe",
-        "youOwe": "Debes"
+        "youOwe": "Debes",
+        "even": "Están a mano"
       },
       "delete": {
         "confirm": {
@@ -800,7 +808,8 @@ export const dictionaries = {
       "cancel": "Annuler",
       "search": "Rechercher",
       "save": "Enregistrer",
-      "create": "Créer"
+      "create": "Créer",
+      "slide": "Balaye"
     },
     "nav": {
       "home": "Accueil",
@@ -847,7 +856,8 @@ export const dictionaries = {
       "all": "Tous les amis",
       "contact": {
         "owesYou": "Te doit",
-        "youOwe": "Vous devez"
+        "youOwe": "Vous devez",
+        "even": "Vous êtes quittes"
       },
       "delete": {
         "confirm": {
@@ -994,7 +1004,8 @@ export const dictionaries = {
       "cancel": "रद्द करें",
       "search": "खोजें",
       "save": "सहेजें",
-      "create": "सृजन करें"
+      "create": "सृजन करें",
+      "slide": "स्वाइप करें"
     },
     "nav": {
       "home": "मुख्य पृष्ठ",
@@ -1041,7 +1052,8 @@ export const dictionaries = {
       "all": "सभी मित्र",
       "contact": {
         "owesYou": "आपका कर्ज़दार है",
-        "youOwe": "आपको देना है"
+        "youOwe": "आपको देना है",
+        "even": "आप दोनों बराबर हैं"
       },
       "delete": {
         "confirm": {
@@ -1188,7 +1200,8 @@ export const dictionaries = {
       "cancel": "Annulla",
       "search": "Cerca",
       "save": "Salva",
-      "create": "Crea"
+      "create": "Crea",
+      "slide": "Scorri"
     },
     "nav": {
       "home": "Home",
@@ -1235,7 +1248,8 @@ export const dictionaries = {
       "all": "Tutti gli amici",
       "contact": {
         "owesYou": "Ti deve",
-        "youOwe": "Devi"
+        "youOwe": "Devi",
+        "even": "Siete pari"
       },
       "delete": {
         "confirm": {
@@ -1382,7 +1396,8 @@ export const dictionaries = {
       "cancel": "キャンセル",
       "search": "検索",
       "save": "保存",
-      "create": "作成"
+      "create": "作成",
+      "slide": "スワイプ"
     },
     "nav": {
       "home": "ホーム",
@@ -1429,7 +1444,8 @@ export const dictionaries = {
       "all": "すべての友達",
       "contact": {
         "owesYou": "あなたに借りがある",
-        "youOwe": "あなたが支払うべきです"
+        "youOwe": "あなたが支払うべきです",
+        "even": "これでおあいこです"
       },
       "delete": {
         "confirm": {
@@ -1576,7 +1592,8 @@ export const dictionaries = {
       "cancel": "취소",
       "search": "검색",
       "save": "저장",
-      "create": "생성"
+      "create": "생성",
+      "slide": "스와이프"
     },
     "nav": {
       "home": "홈",
@@ -1623,7 +1640,8 @@ export const dictionaries = {
       "all": "모든 친구",
       "contact": {
         "owesYou": "당신에게 빚졌어요",
-        "youOwe": "당신이 빚졌습니다"
+        "youOwe": "당신이 빚졌습니다",
+        "even": "두 분은 이제 비겼어요"
       },
       "delete": {
         "confirm": {
@@ -1770,7 +1788,8 @@ export const dictionaries = {
       "cancel": "Annuleren",
       "search": "Zoeken",
       "save": "Opslaan",
-      "create": "Aanmaken"
+      "create": "Aanmaken",
+      "slide": "Veeg"
     },
     "nav": {
       "home": "Home",
@@ -1817,7 +1836,8 @@ export const dictionaries = {
       "all": "Alle vrienden",
       "contact": {
         "owesYou": "Is jou iets verschuldigd",
-        "youOwe": "Je bent verschuldigd"
+        "youOwe": "Je bent verschuldigd",
+        "even": "Jullie staan quitte"
       },
       "delete": {
         "confirm": {
@@ -1964,7 +1984,8 @@ export const dictionaries = {
       "cancel": "Отмена",
       "search": "Поиск",
       "save": "Сохранить",
-      "create": "Создать"
+      "create": "Создать",
+      "slide": "Смахни"
     },
     "nav": {
       "home": "Главная",
@@ -2011,7 +2032,8 @@ export const dictionaries = {
       "all": "Все друзья",
       "contact": {
         "owesYou": "Должен тебе",
-        "youOwe": "Вы должны"
+        "youOwe": "Вы должны",
+        "even": "Вы в расчёте"
       },
       "delete": {
         "confirm": {
@@ -2158,7 +2180,8 @@ export const dictionaries = {
       "cancel": "Ghairi",
       "search": "Tafuta",
       "save": "Hifadhi",
-      "create": "Unda"
+      "create": "Unda",
+      "slide": "Pangusa"
     },
     "nav": {
       "home": "Mwanzo",
@@ -2205,7 +2228,8 @@ export const dictionaries = {
       "all": "Marafiki wote",
       "contact": {
         "owesYou": "Ana deni lako",
-        "youOwe": "Unadaiwa"
+        "youOwe": "Unadaiwa",
+        "even": "Mko sawa"
       },
       "delete": {
         "confirm": {
@@ -2352,7 +2376,8 @@ export const dictionaries = {
       "cancel": "İptal",
       "search": "Ara",
       "save": "Kaydet",
-      "create": "Oluştur"
+      "create": "Oluştur",
+      "slide": "Kaydır"
     },
     "nav": {
       "home": "Ana Sayfa",
@@ -2399,7 +2424,8 @@ export const dictionaries = {
       "all": "Tüm arkadaşlar",
       "contact": {
         "owesYou": "Sana borçlu",
-        "youOwe": "Borçlusun"
+        "youOwe": "Borçlusun",
+        "even": "Artık ödeşmiş oldunuz"
       },
       "delete": {
         "confirm": {
@@ -2546,7 +2572,8 @@ export const dictionaries = {
       "cancel": "Скасувати",
       "search": "Пошук",
       "save": "Зберегти",
-      "create": "Створити"
+      "create": "Створити",
+      "slide": "Змахни"
     },
     "nav": {
       "home": "Головна",
@@ -2593,7 +2620,8 @@ export const dictionaries = {
       "all": "Усі друзі",
       "contact": {
         "owesYou": "Винен тобі",
-        "youOwe": "Ви винні"
+        "youOwe": "Ви винні",
+        "even": "Ви квити"
       },
       "delete": {
         "confirm": {
@@ -2740,7 +2768,8 @@ export const dictionaries = {
       "cancel": "取消",
       "search": "搜索",
       "save": "保存",
-      "create": "创建"
+      "create": "创建",
+      "slide": "滑动"
     },
     "nav": {
       "home": "首页",
@@ -2787,7 +2816,8 @@ export const dictionaries = {
       "all": "所有好友",
       "contact": {
         "owesYou": "欠你的",
-        "youOwe": "你欠"
+        "youOwe": "你欠",
+        "even": "你们扯平了"
       },
       "delete": {
         "confirm": {

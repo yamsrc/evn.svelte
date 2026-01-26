@@ -18,6 +18,7 @@ actions:
   search: بحث
   save: حفظ
   create: إنشاء
+  slide: اسحب
 nav:
   home: الرئيسية
   profile: أنا
@@ -61,6 +62,7 @@ contacts:
   contact:
     owesYou: مدين لك
     youOwe: أنت مدين
+    even: أنتم متعادلون
   delete:
     confirm:
       title: حذف جهة الاتصال
