@@ -10,7 +10,7 @@
   import Refresh from './Refresh.svelte'
   import type { Props } from './Authenticated'
 
-  const { children, screen, account, oidc }: Props = $props()
+  const { children, screen, account, oidc, oncreate }: Props = $props()
 </script>
 
 {#snippet authentication()}
@@ -19,7 +19,11 @@
   {:else if inApp}
     <InApp />
   {:else}
-    <Authentication class={cn('scale-0 transition-transform', browser && 'scale-100')} {account} {oidc} />
+    <Authentication
+      class={cn('scale-0 transition-transform', browser && 'scale-100')}
+      {account}
+      {oidc}
+      {oncreate} />
   {/if}
 {/snippet}
 

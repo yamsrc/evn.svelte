@@ -6,7 +6,7 @@ actions:
   signout: Oturumu kapat
   close: Kapat
   cheques:
-    title: Giderler
+    title: Para
     scan: Çeki tara
     input: Gider ekle
   contacts:
@@ -18,11 +18,12 @@ actions:
   search: Ara
   save: Kaydet
   create: Oluştur
+  slide: Kaydır
 nav:
   home: Ana Sayfa
   profile: Ben
   contacts: Arkadaşlar
-  expenses: Giderler
+  expenses: Para
 terms: Şartlar ve koşullar
 privacy: Gizlilik Politikası
 madeBy: Tarafından yapıldı
@@ -31,6 +32,16 @@ profile:
   language:
     title: Dil
     description: Bu, çek tanımayı etkilemez. Zaten oradaki dillerin çoğunu anlıyoruz.
+  grammar:
+    title: Dilbilgisel biçim
+    description: >-
+      Bazı dillerde mesajın ifadesi dilbilgisel cinsiyete bağlıdır. Arayüz
+      metinlerinin doğal ve doğru olması için bu ayarı kullanıyoruz.
+    example: |-
+      !js
+      (name, gender) => `${name} bir harcama ekledi`
+  background:
+    title: Arka plan
 form:
   enterName: İsim girin
 copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
@@ -51,6 +62,7 @@ contacts:
   contact:
     owesYou: Sana borçlu
     youOwe: Borçlusun
+    even: Artık ödeşmiş oldunuz
   delete:
     confirm:
       title: Kişiyi sil
@@ -91,12 +103,8 @@ groups:
   title: Gruplar
   summary:
     balance:
-      from: |-
-        !js
-        (amount) => `Bu grubun üyeleri sana ${amount} borçlu`
-      to: |-
-        !js
-        (amount) => `Onlara ${amount} borçlusunuz`
+      from: Sana borçlular
+      to: Onlara borçlusun
       even: Kimse kimseye borçlu değil
   create: Grup oluştur
 invite:
@@ -132,7 +140,7 @@ expenses:
     location:
       placeholder: Nerede? (Opsiyonel)
     save: Bakiyeleri kaydet ve güncelle
-  title: Giderler
+  title: Para
   balance:
     total: Toplam fatura
     youAreOwed: Sana borç var

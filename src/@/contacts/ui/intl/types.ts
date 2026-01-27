@@ -6,6 +6,8 @@
 
 export type Locale = 'ar-SA' | 'de-DE' | 'en-US' | 'es-ES' | 'fr-FR' | 'hi-IN' | 'it-IT' | 'ja-JP' | 'ko-KR' | 'nl-NL' | 'ru-RU' | 'sw-TZ' | 'tr-TR' | 'uk-UA' | 'zh-CN'
 
+export type Grammar = 'he' | 'she' | 'none'
+
 export type Dictionary = {
       totals: {
         negative: string
@@ -24,5 +26,8 @@ export type Dictionary = {
       expenses: {
         title: string
         empty: string
+      }
+      delete: {
+        label: string
       }
     }

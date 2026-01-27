@@ -6,7 +6,7 @@ actions:
   signout: 退出登录
   close: 关闭
   cheques:
-    title: 支出
+    title: 钱
     scan: 扫描支票
     input: 添加支出
   contacts:
@@ -18,11 +18,12 @@ actions:
   search: 搜索
   save: 保存
   create: 创建
+  slide: 滑动
 nav:
   home: 首页
   profile: 我
   contacts: 朋友
-  expenses: 支出
+  expenses: 钱
 terms: 条款和条件
 privacy: 隐私政策
 madeBy: 由...制作
@@ -31,6 +32,14 @@ profile:
   language:
     title: 语言
     description: 这不会影响支票识别。反正我们在那里大多数语言都能理解。
+  grammar:
+    title: 语法形式
+    description: 在某些语言中，消息的措辞取决于语法性别。我们使用此设置以使界面文本更自然、更准确。
+    example: |-
+      !js
+      (name, gender) => `${name} 添加了一笔支出`
+  background:
+    title: 背景
 form:
   enterName: 输入姓名
 copyright: "!js (timestamp) => `© seed.me，2025–${new Date(timestamp).getFullYear()}`"
@@ -51,6 +60,7 @@ contacts:
   contact:
     owesYou: 欠你的
     youOwe: 你欠
+    even: 你们扯平了
   delete:
     confirm:
       title: 删除联系人
@@ -85,12 +95,8 @@ groups:
   title: 群组
   summary:
     balance:
-      from: |-
-        !js
-        (amount) => `该群组成员欠你${amount}`
-      to: |-
-        !js
-        (amount) => `你欠他们${amount}`
+      from: 他们欠你
+      to: 你欠他们的
       even: 没有人欠任何人任何东西
   create: 创建群组
 invite:
@@ -124,7 +130,7 @@ expenses:
     location:
       placeholder: 在哪里？（可选）
     save: 保存并更新余额
-  title: 支出
+  title: 钱
   balance:
     total: 总账单
     youAreOwed: 你有应得的

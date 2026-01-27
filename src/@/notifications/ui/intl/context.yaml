@@ -1,0 +1,17 @@
+context: Mount 'notifications' context
+inputs:
+  groups:
+    joined:
+      me:
+        input: You have joined {groupName}
+        context: make it a function
+      others:
+        input: "{...names} joined {groupName}"
+        context: make a function, that accepts array of names (one or more) and a group name. list is formatted using Intl.ListFormat
+  accounts:
+    created:
+      hint:
+        input: Swipe left to dismiss
+  erase:
+    input: Clear all
+    context: button label (clears all notifications)

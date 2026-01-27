@@ -6,6 +6,7 @@
   import { track } from '$com/history'
   import { meta } from '$config'
   import { mount, navigate } from '$lib/tools'
+  import { Background } from '@/app/ui'
   import '../app.css'
 
   const { children } = $props()
@@ -43,4 +44,7 @@
   <meta name="twitter:image" content={image.url} />
 </svelte:head>
 
-{@render children()}
+<Background class="fixed inset-0 -z-50 pointer-events-none" />
+<div class="max-w-2xl mx-auto relative z-10">
+  {@render children()}
+</div>

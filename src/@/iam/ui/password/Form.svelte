@@ -1,5 +1,6 @@
 <script lang="ts">
   import { ArrowRight } from '@lucide/svelte'
+  import { meta } from '@toa.io/origin'
   import { Loader } from '$com/loader'
   import { autofocus, onsubmit } from '$lib/tools'
   import { Button } from '$ui/button'
@@ -9,7 +10,7 @@
   import Password from './Password.svelte'
   import type { Props } from './Form'
 
-  const { account }: Props = $props()
+  const { account, oncreate }: Props = $props()
 
   let busy = $state(false)
   let username = $state('')
@@ -22,7 +23,7 @@
   async function submit() {
     if (password.length === 0)
       if (mode === 'password') await sendOTP()
-      else await useOTP()
+      else await verifyOTP()
     else await basic()
   }
 
@@ -31,12 +32,24 @@
 
     const result =
       account === undefined
-        ? await iam.basic.verify(username, password)
+        ? await verifyPassword()
         : await iam.basic.capture(account.id, { username, password })
 
     busy = false
 
     if (result instanceof Error) shake()
+  }
+
+  async function verifyPassword() {
+    const echo = await iam.basic.verify(username, password)
+
+    if (echo instanceof Error) return echo
+
+    const response = meta(echo)
+
+    if (response?.status === 201) oncreate?.(echo)
+
+    return echo
   }
 
   async function sendOTP() {
@@ -53,7 +66,7 @@
     requestAnimationFrame(() => focus())
   }
 
-  async function useOTP() {
+  async function verifyOTP() {
     if (username.length === 0) {
       console.error('username is required')
 
@@ -68,11 +81,21 @@
 
     busy = true
 
-    const response = await iam.otp.verify(username, otp)
+    const echo = await iam.otp.verify(username, otp)
 
     busy = false
 
-    if (response instanceof Error) shake()
+    if (echo instanceof Error) {
+      shake()
+
+      return
+    }
+
+    const response = meta(echo)
+
+    if (response?.status === 201) oncreate?.(echo)
+
+    return echo
   }
 
   function shake() {
@@ -102,10 +125,8 @@
       required
       disabled={mode === 'otp' ? true : undefined}
       {autofocus}
-      placeholder={$dict.auth.email}
-      class="placeholder:text-sm"
-    />
-    <div class="space-y-1">
+      placeholder={$dict.auth.email} />
+    <div class="space-y-2">
       <div class="flex items-center gap-2">
         <Password bind:ref={passwordRef} bind:password bind:otp bind:error {mode} />
         <Button size="icon" type="submit" class="size-12">
@@ -117,7 +138,7 @@
           <span class="sr-only">{$dict.auth.login}</span>
         </Button>
       </div>
-      <div class="text-sm text-muted-foreground">
+      <div class="text-sm text-muted-foreground px-1">
         {#if mode === 'password'}
           <!-- eslint-disable-next-line svelte/no-at-html-tags -->
           {@html $dict.auth.passwordBlank}

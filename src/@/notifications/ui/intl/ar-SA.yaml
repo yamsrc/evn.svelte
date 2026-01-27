@@ -1,0 +1,16 @@
+groups:
+  joined:
+    me: |-
+      !js
+      (groupName) => `لقد انضممت إلى ${groupName}`
+    others: >-
+      !js
+
+      (names, groupName) => `${new Intl.ListFormat("ar", { style: "long", type:
+      "conjunction" }).format(names)} انضم${names.length === 1 ? "ت" : "وا"} إلى
+      ${groupName}`
+accounts:
+  created:
+    welcome: مرحبًا بك في Evnly!
+    hint: اسحب لليسار لإزالة
+erase: مسح الكل

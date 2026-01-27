@@ -1,5 +1,5 @@
 recent:
-  title: Giderler
+  title: Son zamanlarda
   empty: >-
     Henüz hiçbir şey olmadı. Biraz harcama ekleyin veya arkadaşlarınızı davet
     edin, böylece her şey başlasın.
@@ -11,3 +11,29 @@ participants:
     shares: Hisselere göre
   add:
     label: Katılımcı ekle
+transfer:
+  action: Transfer
+  dialog:
+    title: Hesap Kapat
+    cancel: İptal
+    action: Onayla
+  me: Ben
+  direction:
+    byme: |-
+      !js
+      (gender) => "Ödedim"
+    tome: |-
+      !js
+      (gender) => "Aldım"
+transfers:
+  tobe:
+    neutral: Tamamen yerleşmiş olacaksın
+    positive: Sana borçlanılacak
+    negative: Borçlu olacaksın
+  done:
+    paid: |-
+      !js
+      (gender) => "Ödedin"
+    received: |-
+      !js
+      (gender) => "Aldın"

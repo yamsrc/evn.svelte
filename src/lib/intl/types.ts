@@ -6,6 +6,8 @@
 
 export type Locale = 'ar-SA' | 'de-DE' | 'en-US' | 'es-ES' | 'fr-FR' | 'hi-IN' | 'it-IT' | 'ja-JP' | 'ko-KR' | 'nl-NL' | 'ru-RU' | 'sw-TZ' | 'tr-TR' | 'uk-UA' | 'zh-CN'
 
+export type Grammar = 'he' | 'she' | 'none'
+
 export type Dictionary = {
       native: string
       locale: string
@@ -29,6 +31,7 @@ export type Dictionary = {
         search: string
         save: string
         create: string
+        slide: string
       }
       nav: {
         home: string
@@ -44,6 +47,14 @@ export type Dictionary = {
         language: {
           title: string
           description: string
+        }
+        grammar: {
+          title: string
+          description: string
+          example: (...args: [any, any]) => string
+        }
+        background: {
+          title: string
         }
       }
       form: {
@@ -71,6 +82,7 @@ export type Dictionary = {
         contact: {
           owesYou: string
           youOwe: string
+          even: string
         }
         delete: {
           confirm: {
@@ -115,8 +127,8 @@ export type Dictionary = {
         title: string
         summary: {
           balance: {
-            from: (value: any) => string
-            to: (value: any) => string
+            from: string
+            to: string
             even: string
           }
         }

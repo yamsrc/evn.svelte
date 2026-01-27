@@ -10,7 +10,7 @@
   import Login from './Login.svelte'
   import type { Props } from './Authentication'
 
-  const { class: classes, account }: Props = $props()
+  const { class: classes, account, oncreate }: Props = $props()
 
   const href = apple
     ? 'https://support.apple.com/en-us/102195'
@@ -30,10 +30,10 @@
   <Card.Root class={cn('gap-4 bg-background/75', supported && 'pt-4', classes)}>
     {#if supported}
       <Card.Header class="gap-0">
-        <Card.Title>{$dict.auth.signupTitle}</Card.Title>
+        <Card.Title><h2>{$dict.auth.signupTitle}</h2></Card.Title>
       </Card.Header>
       <Card.Content>
-        <Create {account} />
+        <Create {account} {oncreate} />
       </Card.Content>
     {/if}
     <Card.Footer>

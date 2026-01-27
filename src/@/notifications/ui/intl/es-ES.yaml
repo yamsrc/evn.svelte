@@ -1,0 +1,16 @@
+groups:
+  joined:
+    me: |-
+      !js
+      (groupName) => `Te has unido a ${groupName}`
+    others: >-
+      !js
+
+      (names, groupName) => `${new Intl.ListFormat("es", { style: "long", type:
+      "conjunction" }).format(names)} se ha${names.length === 1 ? "" : "n"}
+      unido a ${groupName}`
+accounts:
+  created:
+    welcome: ¡Bienvenido a Evnly!
+    hint: Desliza a la izquierda para descartar
+erase: Borrar todo

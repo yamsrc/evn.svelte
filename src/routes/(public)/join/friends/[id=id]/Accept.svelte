@@ -7,7 +7,7 @@
   import { Button, buttonVariants } from '$ui/button'
   import { Picture } from '@/accounts/ui'
   import { add } from '@/contacts'
-  import { account } from '@/iam'
+  import { account, named } from '@/iam'
   import type { Props } from './Accept'
 
   let { inviter, accepted = $bindable(false), error = $bindable(false) }: Props = $props()
@@ -18,6 +18,7 @@
     open = false
 
     await having(account)
+    await named()
 
     const res = await add({ with: inviter.id })
 

@@ -1,5 +1,5 @@
 recent:
-  title: 支出
+  title: 最近
   empty: 还没有任何活动。添加一些支出或邀请朋友一起开启新体验吧。
 payer:
   placeholder: 选择付款方
@@ -9,3 +9,29 @@ participants:
     shares: 按份额
   add:
     label: 添加参与者
+transfer:
+  action: 转账
+  dialog:
+    title: 结清账单
+    cancel: 取消
+    action: 确认
+  me: 我
+  direction:
+    byme: |-
+      !js
+      (gender) => "我付了钱"
+    tome: |-
+      !js
+      (gender) => "我收到了"
+transfers:
+  tobe:
+    neutral: 你会完全安顿好的
+    positive: 你会被欠下
+    negative: 你将欠款
+  done:
+    paid: |-
+      !js
+      (gender) => "你已付款"
+    received: |-
+      !js
+      (gender) => "你已收到"

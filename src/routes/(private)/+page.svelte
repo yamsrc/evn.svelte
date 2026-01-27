@@ -9,16 +9,18 @@
   import { expenses } from '@/expenses'
   import { Recent } from '@/expenses/ui'
   import { account } from '@/iam'
+  import { notifications } from '@/notifications'
+  import { Notifications } from '@/notifications/ui'
 </script>
 
-<Async store={combined(account, contacts, expenses)}>
-  {#snippet awaited([account, contacts, expenses])}
+<Async store={combined(account, contacts, expenses, notifications)}>
+  {#snippet awaited([account, contacts, expenses, notifications])}
     <Section>
       <Header.Root>
         <Header.Title>{$dict.home.title(account.name)}</Header.Title>
         <Header.Actions>
-          <Header.Button href="/me/" id="header-me-button">
-            <Avatar size={32} />
+          <Header.Button href="/me/" id="header-me-button" variant="ghost">
+            <Avatar {account} style="view-transition-name: my-avatar;" />
           </Header.Button>
         </Header.Actions>
       </Header.Root>
@@ -27,6 +29,12 @@
     <Section>
       <Totals {contacts} />
     </Section>
+
+    {#if notifications.length > 0}
+      <Section class="px-0">
+        <Notifications {notifications} />
+      </Section>
+    {/if}
 
     <Section>
       <Tops {contacts} />

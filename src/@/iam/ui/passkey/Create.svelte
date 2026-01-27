@@ -8,7 +8,7 @@
   import { dict } from '@/iam/ui/intl'
   import type { Props } from './Create'
 
-  const { account, disabled }: Props = $props()
+  const { account, disabled, oncreate }: Props = $props()
 
   let value = $derived(account?.name ?? '')
   let busy = $state(false)
@@ -20,9 +20,13 @@
 
     busy = true
 
-    await passkeys.create(name, account?.id)
+    const echo = await passkeys.create(name, account?.id)
 
     busy = false
+
+    if (echo instanceof Error) return
+
+    oncreate?.(echo)
   }
 </script>
 
@@ -31,14 +35,12 @@
     <div class="flex items-center gap-2">
       <Input
         bind:value
-        class="placeholder:text-sm"
         id="name"
         type="text"
         placeholder={$dict.auth.yourName}
         autocomplete="given-name"
         required
-        {autofocus}
-      />
+        {autofocus} />
       <Button id="iam-passkey-create-button" size="icon" type="submit" class="size-12">
         {#if busy}
           <Loader />

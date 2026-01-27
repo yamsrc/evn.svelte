@@ -7,6 +7,7 @@
   import { cn } from '$lib/utils'
   import { Button } from '$ui/button'
   import * as ButtonGroup from '$ui/button-group'
+  import Attention from './Attention.svelte'
   import { exact, href, match, nested, type Props, type Section } from './Nav'
   import { actions, returns } from './store'
 
@@ -21,7 +22,6 @@
   )
 
   const rounded = 'rounded-xl'
-  const buttonMargin = 'm-1'
 
   onMount(() => {
     for (const section of sections) preloadCode(section.href)
@@ -43,7 +43,7 @@
   ">
   <div
     class={cn(
-      'flex items-center gap-2 h-21 p-5 pt-0 sm:pb-6 standalone:px-6 standalone:pb-0',
+      'flex items-center gap-2 h-21 p-5 pt-0 sm:pb-6 standalone:h-16 standalone:px-6 standalone:pb-0',
       position === 'center' ? 'justify-center' : 'justify-between',
       position === 'start' ? 'flex-row' : 'flex-row-reverse',
     )}>
@@ -53,7 +53,7 @@
         rounded,
       )}
       style="view-transition-name: shell-nav;">
-      {#each sections as section, i (section.href)}
+      {#each sections as section (section.href)}
         {@const active = match(section.href, page.url.pathname)}
         {@const hidden = !visible.includes(section)}
         {@const ret = $returns.at(-1)}
@@ -72,17 +72,21 @@
             )}>
             <div
               class={cn(
-                'absolute inset-0 bg-background z-0 rounded-[calc(var(--radius)+2px)]',
-                buttonMargin,
+                'absolute inset-0 bg-background z-0 rounded-[calc(var(--radius)+2px)] m-1',
                 active || 'hidden',
               )}
               style={active ? 'view-transition-name: shell-nav-active;' : ''}>
             </div>
+            {#if section.unseen && !ret}
+              <Attention
+                id={`shell-nav-notify-${section.id}`}
+                class="absolute top-2.5 right-2.5 z-10" />
+            {/if}
             <div
               class={cn(
                 "flex flex-col items-center gap-0.5 z-10 relative font-bold [&_svg:not([class*='size-'])]:size-5",
               )}
-              style="view-transition-name: shell-nav-item-{i};">
+              style="view-transition-name: shell-nav-item-{section.id};">
               {#if ret}
                 {#if ret.children}
                   {@render ret.children()}
@@ -101,7 +105,7 @@
     {#if action}
       <div
         class={cn(
-          'flex h-full',
+          'flex h-full py-1',
           'pointer-events-auto',
           'sm:mr-4 transition-all duration-300',
           "[&_svg:not([class*='size-'])]:size-5",
@@ -110,7 +114,7 @@
           position === 'center' && !action && 'hidden',
         )}
         style="view-transition-name: shell-actions-{position};">
-        <ButtonGroup.Root class={cn('flex-1 flex', buttonMargin, action?.class)}>
+        <ButtonGroup.Root class={cn('flex h-full', action?.class)}>
           {@render action.snippet()}
         </ButtonGroup.Root>
       </div>

@@ -7,11 +7,13 @@
   import Group from './Panel.svelte'
   import type { Props } from './Groups'
 
-  let { groups, title, selection = $bindable() }: Props = $props()
+  let { groups, notifications, title, selection = $bindable() }: Props = $props()
 
   let open = $state(true)
 
   const selectable = $derived(selection !== undefined)
+
+  const unseen = (id: string) => notifications?.some((n) => n.key === id) ?? false
 
   function onselect(id: string, selected: boolean) {
     if (!selection) return
@@ -43,8 +45,12 @@
       <Collapsible.Content class="flex flex-col gap-1.5">
         {#each groups as group (group.id)}
           {@const selected = selection?.has(group.id)}
-          {@const selectedProps = selectable ? { selected, onselect } : undefined}
-          <Group {group} {...selectedProps} />
+          {@const highlighted = unseen(group.id)}
+          {#if selectable}
+            <Group {group} {selected} {highlighted} {onselect} />
+          {:else}
+            <Group {group} {highlighted} />
+          {/if}
         {/each}
       </Collapsible.Content>
     </Collapsible.Root>

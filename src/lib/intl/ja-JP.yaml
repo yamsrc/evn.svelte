@@ -6,7 +6,7 @@ actions:
   signout: サインアウト
   close: 閉じる
   cheques:
-    title: 経費
+    title: お金
     scan: 小切手をスキャン
     input: 支出を追加
   contacts:
@@ -18,11 +18,12 @@ actions:
   search: 検索
   save: 保存
   create: 作成
+  slide: スワイプ
 nav:
   home: ホーム
   profile: 私
   contacts: 友だち
-  expenses: 経費
+  expenses: お金
 terms: 利用規約
 privacy: プライバシーポリシー
 madeBy: 作成者
@@ -31,6 +32,14 @@ profile:
   language:
     title: 言語
     description: これは小切手の認識には影響しません。そもそも、私たちはほとんどの言語を理解しています。
+  grammar:
+    title: 文法形式
+    description: 言語によっては、メッセージの表現に文法上の性別が関係します。この設定によって、インターフェースの文言が自然で正確になるようにしています。
+    example: |-
+      !js
+      (name, gender) => `${name} さんが支出を追加しました`
+  background:
+    title: 背景
 form:
   enterName: 名前を入力してください
 copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
@@ -51,6 +60,7 @@ contacts:
   contact:
     owesYou: あなたに借りがある
     youOwe: あなたが支払うべきです
+    even: これでおあいこです
   delete:
     confirm:
       title: 連絡先を削除
@@ -85,12 +95,8 @@ groups:
   title: グループ
   summary:
     balance:
-      from: |-
-        !js
-        (amount) => `このグループのメンバーはあなたに${amount}の支払いがあります`
-      to: |-
-        !js
-        (amount) => `あなたは彼らに${amount}を借りています`
+      from: 彼らはあなたに借りがあります
+      to: あなたは彼らに借りがあります
       even: 誰も誰にも借りはない
   create: グループを作成
 invite:
@@ -124,7 +130,7 @@ expenses:
     location:
       placeholder: どこですか？（任意）
     save: 保存して残高を更新
-  title: 経費
+  title: お金
   balance:
     total: 合計金額
     youAreOwed: あなたには支払いが残っています

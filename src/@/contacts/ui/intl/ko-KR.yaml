@@ -2,7 +2,7 @@ totals:
   negative: 당신은 친구들에게 빚이 있습니다
   positive: 친구들이 당신에게 빚졌어요
 tops:
-  title: 친구
+  title: 빚
   empty: 지금까지 아무도 당신에게 빚진 것이 없고, 당신도 아무에게도 빚이 없습니다.
   negative: "주로 빚이 있는 사람:"
   positive: "가장 많이 빚진 사람:"
@@ -10,5 +10,7 @@ groups:
   title: 소속 그룹
   empty: 어떤 그룹에도 속해 있지 않습니다.
 expenses:
-  title: 지출
+  title: 돈
   empty: 아직 공유된 지출이 없습니다.
+delete:
+  label: 길게 눌러 삭제

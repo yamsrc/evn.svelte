@@ -1,5 +1,5 @@
 recent:
-  title: Ausgaben
+  title: Kürzlich
   empty: >-
     Es ist noch nichts passiert. Füge Ausgaben hinzu oder lade Freunde ein, um
     loszulegen.
@@ -11,3 +11,37 @@ participants:
     shares: Anhand von Anteilen
   add:
     label: Teilnehmer hinzufügen
+transfer:
+  action: Überweisung
+  dialog:
+    title: Ausgleichen
+    cancel: Abbrechen
+    action: Bestätigen
+  me: Ich
+  direction:
+    byme: >-
+      !js
+
+      (gender) => gender === "he" ? "Ich habe bezahlt" : (gender === "she" ?
+      "Ich habe bezahlt" : "Ich habe bezahlt")
+    tome: >-
+      !js
+
+      (gender) => gender === "he" ? "Ich habe erhalten" : (gender === "she" ?
+      "Ich habe erhalten" : "Ich habe erhalten")
+transfers:
+  tobe:
+    neutral: Du wirst ganz angekommen sein
+    positive: Es wird dir geschuldet
+    negative: Du hast eine offene Forderung
+  done:
+    paid: >-
+      !js
+
+      (gender) => gender === "he" ? "Du hast bezahlt" : gender === "she" ? "Du
+      hast bezahlt" : "Du hast bezahlt"
+    received: >-
+      !js
+
+      (gender) => gender === "he" ? "Du hast bekommen" : gender === "she" ? "Du
+      hast bekommen" : "Du hast bekommen"

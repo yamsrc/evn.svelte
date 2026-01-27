@@ -51,8 +51,7 @@
     {selected}
     {onselect}
     actions={actionable ? actions : []}
-    class={cn(contact.managed && 'text-muted-foreground', 'contacts-panel')}
-  >
+    class={cn(contact.managed && 'text-muted-foreground', 'contacts-panel')}>
     {#snippet action(id)}
       {#if id === 'favorite'}
         <Star size={16} class="text-background" fill={favorite ? 'currentColor' : 'none'} />
@@ -69,8 +68,7 @@
   title={$dict.contacts.delete.confirm.title}
   description={$dict.contacts.delete.confirm.description}
   bind:open={confirmDelete}
-  onconfirm={deleteContact}
->
+  onconfirm={deleteContact}>
   {#snippet confirm()}
     <Trash2 />
     {$dict.contacts.delete.confirm.confirm}

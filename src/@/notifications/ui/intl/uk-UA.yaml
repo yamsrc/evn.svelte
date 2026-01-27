@@ -1,0 +1,16 @@
+groups:
+  joined:
+    me: |-
+      !js
+      (groupName) => `Ви приєдналися до ${groupName}`
+    others: >-
+      !js
+
+      (names, groupName) => `${new Intl.ListFormat("uk", { style: "long", type:
+      "conjunction" }).format(names)} ${names.length === 1 ? "приєднався" :
+      "приєдналися"} до ${groupName}`
+accounts:
+  created:
+    welcome: Ласкаво просимо до Evnly!
+    hint: Проведіть вліво, щоб закрити
+erase: Очистити все

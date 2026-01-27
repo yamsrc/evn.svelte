@@ -6,7 +6,7 @@ actions:
   signout: Esci
   close: Chiudi
   cheques:
-    title: Spese
+    title: Denaro
     scan: Scansiona assegno
     input: Aggiungi spesa
   contacts:
@@ -18,11 +18,12 @@ actions:
   search: Cerca
   save: Salva
   create: Crea
+  slide: Scorri
 nav:
   home: Home
   profile: Io
   contacts: Amici
-  expenses: Spese
+  expenses: Denaro
 terms: Termini e condizioni
 privacy: Informativa sulla privacy
 madeBy: Realizzato da
@@ -33,6 +34,20 @@ profile:
     description: >-
       Questo non influisce sul riconoscimento dell'assegno. Comunque, lì capiamo
       la maggior parte delle lingue.
+  grammar:
+    title: Forma grammaticale
+    description: >-
+      In alcune lingue, la formulazione dei messaggi dipende dal genere
+      grammaticale. Usiamo questa impostazione per rendere i testi
+      dell’interfaccia naturali e corretti.
+    example: >-
+      !js
+
+      (name, gender) => gender === "he" ? `${name} ha aggiunto una spesa` :
+      gender === "she" ? `${name} ha aggiunto una spesa` : `${name} ha aggiunto
+      una spesa`
+  background:
+    title: Sfondo
 form:
   enterName: Inserisci il nome
 copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
@@ -53,6 +68,7 @@ contacts:
   contact:
     owesYou: Ti deve
     youOwe: Devi
+    even: Siete pari
   delete:
     confirm:
       title: Elimina contatto
@@ -95,12 +111,8 @@ groups:
   title: Gruppi
   summary:
     balance:
-      from: |-
-        !js
-        (amount) => `I membri di questo gruppo ti devono ${amount}`
-      to: |-
-        !js
-        (amount) => `Devi loro ${amount}`
+      from: Ti devono
+      to: Devi a loro
       even: Nessuno deve niente a nessuno
   create: Crea gruppo
 invite:
@@ -136,7 +148,7 @@ expenses:
     location:
       placeholder: Dove? (opzionale)
     save: Salva e aggiorna i saldi
-  title: Spese
+  title: Denaro
   balance:
     total: Totale conto
     youAreOwed: Ti è dovuto

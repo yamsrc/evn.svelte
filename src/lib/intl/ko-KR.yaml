@@ -6,7 +6,7 @@ actions:
   signout: 로그아웃
   close: 닫기
   cheques:
-    title: 지출
+    title: 돈
     scan: 수표 스캔
     input: 지출 추가
   contacts:
@@ -18,11 +18,12 @@ actions:
   search: 검색
   save: 저장
   create: 생성
+  slide: 스와이프
 nav:
   home: 홈
   profile: 나
   contacts: 친구
-  expenses: 지출
+  expenses: 돈
 terms: 이용 약관
 privacy: 개인정보처리방침
 madeBy: 제작자
@@ -31,6 +32,16 @@ profile:
   language:
     title: 언어
     description: 이는 수표 인식에 영향을 주지 않습니다. 어차피 저희는 대부분의 언어를 이해합니다.
+  grammar:
+    title: 문법 형태
+    description: >-
+      일부 언어에서는 메시지 문구가 문법적 성별에 따라 달라집니다. 이 설정을 통해 인터페이스의 텍스트가 자연스럽고 올바르게 표시되도록
+      합니다.
+    example: |-
+      !js
+      (name, gender) => `${name}님이 지출을 추가했습니다`
+  background:
+    title: 배경
 form:
   enterName: 이름을 입력하세요
 copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
@@ -51,6 +62,7 @@ contacts:
   contact:
     owesYou: 당신에게 빚졌어요
     youOwe: 당신이 빚졌습니다
+    even: 두 분은 이제 비겼어요
   delete:
     confirm:
       title: 연락처 삭제
@@ -85,12 +97,8 @@ groups:
   title: 그룹
   summary:
     balance:
-      from: |-
-        !js
-        (amount) => `이 그룹의 구성원들이 당신에게 ${amount}을(를) 빚지고 있습니다`
-      to: |-
-        !js
-        (amount) => `당신은 그들에게 ${amount}을(를) 빚지고 있습니다`
+      from: 그들은 당신에게 빚이 있습니다
+      to: 당신은 그들에게 빚이 있습니다
       even: 아무도 누구에게도 빚지지 않았다
   create: 그룹 만들기
 invite:
@@ -124,7 +132,7 @@ expenses:
     location:
       placeholder: 어디인가요? (선택 사항)
     save: 저장하고 잔액 업데이트
-  title: 지출
+  title: 돈
   balance:
     total: 총 금액
     youAreOwed: 당신은 받을 돈이 있습니다

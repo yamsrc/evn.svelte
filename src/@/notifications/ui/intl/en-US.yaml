@@ -1,0 +1,15 @@
+groups:
+  joined:
+    me: |-
+      !js
+      (groupName) => `You have joined ${groupName}`
+    others: >-
+      !js
+
+      (names, groupName) => `${new Intl.ListFormat("en", { style: "long", type:
+      "conjunction" }).format(names)} joined ${groupName}`
+accounts:
+  created:
+    welcome: Welcome to Evnly!
+    hint: Swipe left to dismiss
+erase: Clear all

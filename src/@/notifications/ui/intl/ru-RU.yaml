@@ -1,0 +1,16 @@
+groups:
+  joined:
+    me: |-
+      !js
+      (groupName) => `Вы присоединились к группе ${groupName}`
+    others: >-
+      !js
+
+      (names, groupName) => `${new Intl.ListFormat("ru", { style: "long", type:
+      "conjunction" }).format(names)} ${names.length === 1 ? "присоединился" :
+      "присоединились"} к группе ${groupName}`
+accounts:
+  created:
+    welcome: Добро пожаловать в Evnly!
+    hint: Проведите влево, чтобы закрыть
+erase: Очистить все

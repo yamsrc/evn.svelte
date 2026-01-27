@@ -5,7 +5,7 @@ import { dictionaries } from '$lib/intl/join'
 import { get } from '@/accounts/svc/get'
 import type { PageServerLoad } from './$types.js'
 
-export const load: PageServerLoad = async ({ params, fetch, request }) => {
+export const load: PageServerLoad = async ({ params, request }) => {
   const account = await get(params.id)
 
   if (account instanceof Error)

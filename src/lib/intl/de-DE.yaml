@@ -6,7 +6,7 @@ actions:
   signout: Abmelden
   close: Schließen
   cheques:
-    title: Ausgaben
+    title: Geld
     scan: Scheck scannen
     input: Ausgabe hinzufügen
   contacts:
@@ -18,11 +18,12 @@ actions:
   search: Suchen
   save: Speichern
   create: Erstellen
+  slide: Wischen
 nav:
   home: Startseite
   profile: Ich
   contacts: Freunde
-  expenses: Ausgaben
+  expenses: Geld
 terms: Allgemeine Geschäftsbedingungen
 privacy: Datenschutzrichtlinie
 madeBy: Erstellt von
@@ -33,6 +34,20 @@ profile:
     description: >-
       Das beeinflusst die Scheck-Erkennung nicht. Wir verstehen dort ohnehin die
       meisten Sprachen.
+  grammar:
+    title: Grammatische Form
+    description: >-
+      In einigen Sprachen hängt die Formulierung von Nachrichten vom
+      grammatischen Geschlecht ab. Diese Einstellung sorgt dafür, dass die Texte
+      der Benutzeroberfläche natürlich und korrekt klingen.
+    example: >-
+      !js
+
+      (name, gender) => gender === "he" ? `${name} hat eine Ausgabe hinzugefügt`
+      : gender === "she" ? `${name} hat eine Ausgabe hinzugefügt` : `${name} hat
+      eine Ausgabe hinzugefügt`
+  background:
+    title: Hintergrund
 form:
   enterName: Name eingeben
 copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
@@ -53,6 +68,7 @@ contacts:
   contact:
     owesYou: Schuldet dir
     youOwe: Du schuldest
+    even: Ihr seid quitt
   delete:
     confirm:
       title: Kontakt löschen
@@ -95,12 +111,8 @@ groups:
   title: Gruppen
   summary:
     balance:
-      from: |-
-        !js
-        (amount) => `Mitglieder dieser Gruppe schulden dir ${amount}`
-      to: |-
-        !js
-        (amount) => `Du schuldest ihnen ${amount}`
+      from: Sie schulden dir
+      to: Du schuldest ihnen
       even: Niemand schuldet jemandem etwas
   create: Gruppe erstellen
 invite:
@@ -136,7 +148,7 @@ expenses:
     location:
       placeholder: Wo? (optional)
     save: Speichern und Salden aktualisieren
-  title: Ausgaben
+  title: Geld
   balance:
     total: Gesamtrechnung
     youAreOwed: Dir steht etwas zu

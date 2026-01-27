@@ -1,0 +1,16 @@
+groups:
+  joined:
+    me: |-
+      !js
+      (groupName) => `Vous avez rejoint ${groupName}`
+    others: >-
+      !js
+
+      (names, groupName) => `${new Intl.ListFormat("fr", { style: "long", type:
+      "conjunction" }).format(names)} a${names.length === 1 ? "" : "nt"} rejoint
+      ${groupName}`
+accounts:
+  created:
+    welcome: Bienvenue chez Evnly !
+    hint: Faites glisser vers la gauche pour ignorer
+erase: Tout effacer

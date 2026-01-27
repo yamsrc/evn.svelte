@@ -1,4 +1,5 @@
-context: Internationalization project
+context: "Tracking shared expenses app. Friendly informal style (ex: ты а не Вы)"
+genders: true
 inputs:
   locale:
     input: locale
@@ -17,7 +18,7 @@ inputs:
       input: Close
     cheques:
       title:
-        input: Expenses
+        input: Money
       scan:
         input: Scan cheque
       input:
@@ -39,6 +40,8 @@ inputs:
       input: Save
     create:
       input: Create
+    slide:
+      input: Смахни
   nav:
     home:
       input: Home
@@ -47,7 +50,7 @@ inputs:
     contacts:
       input: Friends
     expenses:
-      input: Expenses
+      input: Money
   terms:
     input: Terms & conditions
   privacy:
@@ -62,6 +65,17 @@ inputs:
         input: Language
       description:
         input: "Does not affect the cheque recognition. We\_understand most languages there anyway."
+    grammar:
+      title:
+        input: Grammatical form
+        context: section title
+      description:
+        input: In some languages, message wording depends on grammatical gender. We use this setting to make interface texts sound natural and correct.
+      example:
+        input: "{name} добавил(а) расход"
+    background:
+      title:
+        input: Background
   form:
     enterName:
       input: Enter name
@@ -97,6 +111,9 @@ inputs:
         input: Owes you
       youOwe:
         input: You owe
+      even:
+        input: You're even
+        context: no one owes nothing
     delete:
       confirm:
         title:
@@ -154,9 +171,11 @@ inputs:
     summary:
       balance:
         from:
-          input: "!js (amount) => Members of this group owe you ${amount}"
+          input: They owe you
+          context: followed by a number
         to:
-          input: "!js (amount) => You owe them ${amount}"
+          input: You owe them
+          context: followed by a number
         even:
           input: Никто никому не должен
     create:
@@ -214,7 +233,7 @@ inputs:
       save:
         input: Save and update balances
     title:
-      input: Expenses
+      input: Money
     empty:
       title:
         input: No expenses yet
@@ -254,3 +273,4 @@ mounts:
   join: join
   contacts: ../../@/contacts/ui/intl
   expenses: ../../@/expenses/ui/intl
+  notifications: ../../@/notifications/ui/intl

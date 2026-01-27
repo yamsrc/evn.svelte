@@ -10,7 +10,7 @@
   import { Authentication as Password } from './password'
   import type { Props } from './Authentication'
 
-  const { class: classes, account, oidc }: Props = $props()
+  const { class: classes, account, oidc, oncreate }: Props = $props()
 
   let tabsRef = $state<HTMLDivElement | null>(null)
 
@@ -42,9 +42,9 @@
     <OIDC {account} apple={oidc?.apple !== false} google={oidc?.google !== false} />
   </div>
   <Tabs.Content value="passkey">
-    <Passkey {account} />
+    <Passkey {account} {oncreate} />
   </Tabs.Content>
   <Tabs.Content value="password">
-    <Password {account} />
+    <Password {account} {oncreate} />
   </Tabs.Content>
 </Tabs.Root>

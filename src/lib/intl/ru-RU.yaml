@@ -6,7 +6,7 @@ actions:
   signout: Выйти
   close: Закрыть
   cheques:
-    title: Расходы
+    title: Деньги
     scan: Сканировать чек
     input: Добавить расход
   contacts:
@@ -18,11 +18,12 @@ actions:
   search: Поиск
   save: Сохранить
   create: Создать
+  slide: Смахни
 nav:
   home: Главная
   profile: Я
   contacts: Друзья
-  expenses: Расходы
+  expenses: Деньги
 terms: Условия и положения
 privacy: Политика конфиденциальности
 madeBy: Сделано
@@ -33,6 +34,19 @@ profile:
     description: >-
       Это не влияет на распознавание чеков. Мы и так понимаем там большинство
       языков.
+  grammar:
+    title: Грамматическая форма
+    description: >-
+      В некоторых языках формулировка сообщений зависит от грамматического рода.
+      Эта настройка помогает сделать тексты интерфейса естественными и
+      правильными.
+    example: >-
+      !js
+
+      (name, gender) => gender === "he" ? `${name} добавил расход` : gender ===
+      "she" ? `${name} добавила расход` : `${name} добавил(а) расход`
+  background:
+    title: Фон
 form:
   enterName: Введите имя
 copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
@@ -53,6 +67,7 @@ contacts:
   contact:
     owesYou: Должен тебе
     youOwe: Вы должны
+    even: Вы в расчёте
   delete:
     confirm:
       title: Удалить контакт
@@ -93,12 +108,8 @@ groups:
   title: Группы
   summary:
     balance:
-      from: |-
-        !js
-        (amount) => `Участники этой группы должны вам ${amount}`
-      to: |-
-        !js
-        (amount) => `Вы должны им ${amount}`
+      from: Они тебе должны
+      to: Вы им должны
       even: Никто никому не должен
   create: Создать группу
 invite:
@@ -134,7 +145,7 @@ expenses:
     location:
       placeholder: Где? (необязательно)
     save: Сохранить и обновить балансы
-  title: Расходы
+  title: Деньги
   balance:
     total: Итоговый счет
     youAreOwed: Вам должны

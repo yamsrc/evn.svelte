@@ -11,7 +11,7 @@ export const dictionaries = {
       "signout": "تسجيل الخروج",
       "close": "إغلاق",
       "cheques": {
-        "title": "المصروفات",
+        "title": "المال",
         "scan": "مسح الشيك",
         "input": "إضافة مصروف"
       },
@@ -24,13 +24,14 @@ export const dictionaries = {
       "cancel": "إلغاء",
       "search": "بحث",
       "save": "حفظ",
-      "create": "إنشاء"
+      "create": "إنشاء",
+      "slide": "اسحب"
     },
     "nav": {
       "home": "الرئيسية",
       "profile": "أنا",
       "contacts": "الأصدقاء",
-      "expenses": "المصاريف"
+      "expenses": "المال"
     },
     "terms": "الشروط والأحكام",
     "privacy": "سياسة الخصوصية",
@@ -40,6 +41,14 @@ export const dictionaries = {
       "language": {
         "title": "اللغة",
         "description": "هذا لا يؤثر على التعرف على الشيك. على أي حال، نحن نفهم معظم اللغات هناك."
+      },
+      "grammar": {
+        "title": "الصيغة النحوية",
+        "description": "في بعض اللغات، تعتمد صياغة الرسائل على الجنس النحوي. نستخدم هذا الإعداد لجعل نصوص الواجهة تبدو طبيعية وصحيحة.",
+        "example": (name, gender) => gender === "he" ? `${name} أضاف مصروفًا` : gender === "she" ? `${name} أضافت مصروفًا` : `${name} أضاف(ت) مصروفًا`
+      },
+      "background": {
+        "title": "الخلفية"
       }
     },
     "form": {
@@ -66,7 +75,8 @@ export const dictionaries = {
       "all": "جميع الأصدقاء",
       "contact": {
         "owesYou": "مدين لك",
-        "youOwe": "أنت مدين"
+        "youOwe": "أنت مدين",
+        "even": "أنتم متعادلون"
       },
       "delete": {
         "confirm": {
@@ -111,8 +121,8 @@ export const dictionaries = {
       "title": "المجموعات",
       "summary": {
         "balance": {
-          "from": (amount) => `أعضاء هذه المجموعة مدينون لك بـ${amount}`,
-          "to": (amount) => `أنت مدين لهم بـ${amount}`,
+          "from": "هم مدينون لك",
+          "to": "أنت مدين لهم",
           "even": "لا أحد مدين لأحد بشيء"
         }
       },
@@ -160,7 +170,7 @@ export const dictionaries = {
         },
         "save": "احفظ وقم بتحديث الأرصدة"
       },
-      "title": "المصروفات",
+      "title": "مال",
       "balance": {
         "total": "إجمالي الفاتورة",
         "youAreOwed": "لك مستحقات",
@@ -200,7 +210,7 @@ export const dictionaries = {
       "signout": "Abmelden",
       "close": "Schließen",
       "cheques": {
-        "title": "Ausgaben",
+        "title": "Geld",
         "scan": "Scheck scannen",
         "input": "Ausgabe hinzufügen"
       },
@@ -213,13 +223,14 @@ export const dictionaries = {
       "cancel": "Abbrechen",
       "search": "Suchen",
       "save": "Speichern",
-      "create": "Erstellen"
+      "create": "Erstellen",
+      "slide": "Wischen"
     },
     "nav": {
       "home": "Startseite",
       "profile": "Ich",
       "contacts": "Freunde",
-      "expenses": "Ausgaben"
+      "expenses": "Geld"
     },
     "terms": "Allgemeine Geschäftsbedingungen",
     "privacy": "Datenschutzrichtlinie",
@@ -229,6 +240,14 @@ export const dictionaries = {
       "language": {
         "title": "Sprache",
         "description": "Das beeinflusst die Scheck-Erkennung nicht. Wir verstehen dort ohnehin die meisten Sprachen."
+      },
+      "grammar": {
+        "title": "Grammatische Form",
+        "description": "In einigen Sprachen hängt die Formulierung von Nachrichten vom grammatischen Geschlecht ab. Diese Einstellung sorgt dafür, dass die Texte der Benutzeroberfläche natürlich und korrekt klingen.",
+        "example": (name, gender) => gender === "he" ? `${name} hat eine Ausgabe hinzugefügt` : gender === "she" ? `${name} hat eine Ausgabe hinzugefügt` : `${name} hat eine Ausgabe hinzugefügt`
+      },
+      "background": {
+        "title": "Hintergrund"
       }
     },
     "form": {
@@ -255,7 +274,8 @@ export const dictionaries = {
       "all": "Alle Freunde",
       "contact": {
         "owesYou": "Schuldet dir",
-        "youOwe": "Du schuldest"
+        "youOwe": "Du schuldest",
+        "even": "Ihr seid quitt"
       },
       "delete": {
         "confirm": {
@@ -300,8 +320,8 @@ export const dictionaries = {
       "title": "Gruppen",
       "summary": {
         "balance": {
-          "from": (amount) => `Mitglieder dieser Gruppe schulden dir ${amount}`,
-          "to": (amount) => `Du schuldest ihnen ${amount}`,
+          "from": "Sie schulden dir",
+          "to": "Du schuldest ihnen",
           "even": "Niemand schuldet jemandem etwas"
         }
       },
@@ -349,7 +369,7 @@ export const dictionaries = {
         },
         "save": "Speichern und Salden aktualisieren"
       },
-      "title": "Ausgaben",
+      "title": "Geld",
       "balance": {
         "total": "Gesamtrechnung",
         "youAreOwed": "Dir steht etwas zu",
@@ -389,7 +409,7 @@ export const dictionaries = {
       "signout": "Sign out",
       "close": "Close",
       "cheques": {
-        "title": "Expenses",
+        "title": "Money",
         "scan": "Scan cheque",
         "input": "Add expense"
       },
@@ -402,13 +422,14 @@ export const dictionaries = {
       "cancel": "Cancel",
       "search": "Search",
       "save": "Save",
-      "create": "Create"
+      "create": "Create",
+      "slide": "Swipe"
     },
     "nav": {
       "home": "Home",
       "profile": "Me",
       "contacts": "Friends",
-      "expenses": "Expenses"
+      "expenses": "Money"
     },
     "terms": "Terms & Conditions",
     "privacy": "Privacy Policy",
@@ -418,6 +439,14 @@ export const dictionaries = {
       "language": {
         "title": "Language",
         "description": "This does not affect cheque recognition. We understand most languages there anyway."
+      },
+      "grammar": {
+        "title": "Grammatical Form",
+        "description": "In some languages, message wording depends on grammatical gender. We use this setting to make interface texts sound natural and correct.",
+        "example": (name, gender) => gender === "he" ? `${name} added an expense` : gender === "she" ? `${name} added an expense` : `${name} added an expense`
+      },
+      "background": {
+        "title": "Background"
       }
     },
     "form": {
@@ -444,7 +473,8 @@ export const dictionaries = {
       "all": "All friends",
       "contact": {
         "owesYou": "Owes you",
-        "youOwe": "You owe"
+        "youOwe": "You owe",
+        "even": "You’re even"
       },
       "delete": {
         "confirm": {
@@ -489,8 +519,8 @@ export const dictionaries = {
       "title": "Groups",
       "summary": {
         "balance": {
-          "from": (amount) => `Members of this group owe you ${amount}`,
-          "to": (amount) => `You owe them ${amount}`,
+          "from": "They owe you",
+          "to": "You owe them",
           "even": "No one owes anyone anything"
         }
       },
@@ -538,7 +568,7 @@ export const dictionaries = {
         },
         "save": "Save and update balances"
       },
-      "title": "Expenses",
+      "title": "Money",
       "empty": {
         "title": "No expenses yet",
         "description": "Create your first expense to start tracking",
@@ -578,7 +608,7 @@ export const dictionaries = {
       "signout": "Cerrar sesión",
       "close": "Cerrar",
       "cheques": {
-        "title": "Gastos",
+        "title": "Dinero",
         "scan": "Escanear cheque",
         "input": "Añadir gasto"
       },
@@ -591,13 +621,14 @@ export const dictionaries = {
       "cancel": "Cancelar",
       "search": "Buscar",
       "save": "Guardar",
-      "create": "Crear"
+      "create": "Crear",
+      "slide": "Desliza"
     },
     "nav": {
       "home": "Inicio",
       "profile": "Yo",
       "contacts": "Amigos",
-      "expenses": "Gastos"
+      "expenses": "Dinero"
     },
     "terms": "Términos y condiciones",
     "privacy": "Política de privacidad",
@@ -607,6 +638,14 @@ export const dictionaries = {
       "language": {
         "title": "Idioma",
         "description": "Esto no afecta al reconocimiento de cheques. De todas formas, entendemos la mayoría de los idiomas allí."
+      },
+      "grammar": {
+        "title": "Forma gramatical",
+        "description": "En algunos idiomas, la redacción de los mensajes depende del género gramatical. Usamos este ajuste para que los textos de la interfaz suenen naturales y correctos.",
+        "example": (name, gender) => gender === "he" ? `${name} añadió un gasto` : gender === "she" ? `${name} añadió un gasto` : `${name} añadió un gasto`
+      },
+      "background": {
+        "title": "Fondo"
       }
     },
     "form": {
@@ -633,7 +672,8 @@ export const dictionaries = {
       "all": "Todos los amigos",
       "contact": {
         "owesYou": "Te debe",
-        "youOwe": "Debes"
+        "youOwe": "Debes",
+        "even": "Están a mano"
       },
       "delete": {
         "confirm": {
@@ -678,8 +718,8 @@ export const dictionaries = {
       "title": "Grupos",
       "summary": {
         "balance": {
-          "from": (amount) => `Los miembros de este grupo te deben ${amount}`,
-          "to": (amount) => `Les debes ${amount}`,
+          "from": "Te deben",
+          "to": "Les debes",
           "even": "Nadie le debe nada a nadie"
         }
       },
@@ -727,7 +767,7 @@ export const dictionaries = {
         },
         "save": "Guardar y actualizar saldos"
       },
-      "title": "Gastos",
+      "title": "Dinero",
       "balance": {
         "total": "Factura total",
         "youAreOwed": "Te deben",
@@ -767,7 +807,7 @@ export const dictionaries = {
       "signout": "Se déconnecter",
       "close": "Fermer",
       "cheques": {
-        "title": "Dépenses",
+        "title": "Argent",
         "scan": "Scanner le chèque",
         "input": "Ajouter une dépense"
       },
@@ -780,13 +820,14 @@ export const dictionaries = {
       "cancel": "Annuler",
       "search": "Rechercher",
       "save": "Enregistrer",
-      "create": "Créer"
+      "create": "Créer",
+      "slide": "Balaye"
     },
     "nav": {
       "home": "Accueil",
       "profile": "Moi",
       "contacts": "Amis",
-      "expenses": "Dépenses"
+      "expenses": "Argent"
     },
     "terms": "Conditions générales",
     "privacy": "Politique de confidentialité",
@@ -796,6 +837,14 @@ export const dictionaries = {
       "language": {
         "title": "Langue",
         "description": "Cela n’affecte pas la reconnaissance des chèques. Nous comprenons de toute façon la plupart des langues là-bas."
+      },
+      "grammar": {
+        "title": "Forme grammaticale",
+        "description": "Dans certaines langues, la formulation des messages dépend du genre grammatical. Nous utilisons ce réglage pour que les textes de l’interface soient naturels et corrects.",
+        "example": (name, gender) => gender === "he" ? `${name} a ajouté une dépense` : gender === "she" ? `${name} a ajouté une dépense` : `${name} a ajouté une dépense`
+      },
+      "background": {
+        "title": "Arrière-plan"
       }
     },
     "form": {
@@ -822,7 +871,8 @@ export const dictionaries = {
       "all": "Tous les amis",
       "contact": {
         "owesYou": "Te doit",
-        "youOwe": "Vous devez"
+        "youOwe": "Vous devez",
+        "even": "Vous êtes quittes"
       },
       "delete": {
         "confirm": {
@@ -867,8 +917,8 @@ export const dictionaries = {
       "title": "Groupes",
       "summary": {
         "balance": {
-          "from": (amount) => `Les membres de ce groupe te doivent ${amount}`,
-          "to": (amount) => `Vous leur devez ${amount}`,
+          "from": "Ils te doivent",
+          "to": "Tu leur dois",
           "even": "Personne ne doit rien à personne"
         }
       },
@@ -916,7 +966,7 @@ export const dictionaries = {
         },
         "save": "Enregistrer et mettre à jour les soldes"
       },
-      "title": "Dépenses",
+      "title": "Argent",
       "balance": {
         "total": "Facture totale",
         "youAreOwed": "On te doit",
@@ -956,7 +1006,7 @@ export const dictionaries = {
       "signout": "साइन आउट करें",
       "close": "बंद करें",
       "cheques": {
-        "title": "खर्चे",
+        "title": "पैसे",
         "scan": "चेक स्कैन करें",
         "input": "खर्च जोड़ें"
       },
@@ -969,13 +1019,14 @@ export const dictionaries = {
       "cancel": "रद्द करें",
       "search": "खोजें",
       "save": "सहेजें",
-      "create": "सृजन करें"
+      "create": "सृजन करें",
+      "slide": "स्वाइप करें"
     },
     "nav": {
       "home": "मुख्य पृष्ठ",
       "profile": "मैं",
       "contacts": "मित्र",
-      "expenses": "खर्चे"
+      "expenses": "पैसा"
     },
     "terms": "नियम व शर्तें",
     "privacy": "गोपनीयता नीति",
@@ -985,6 +1036,14 @@ export const dictionaries = {
       "language": {
         "title": "भाषा",
         "description": "यह चेक की पहचान को प्रभावित नहीं करता है। वैसे भी, हम वहां अधिकांश भाषाओं को समझते हैं।"
+      },
+      "grammar": {
+        "title": "व्याकरणिक रूप",
+        "description": "कुछ भाषाओं में संदेशों की भाषा व्याकरणिक लिंग पर निर्भर करती है। हम इस सेटिंग का उपयोग करते हैं ताकि इंटरफ़ेस के सभी पाठ स्वाभाविक और सही लगें।",
+        "example": (name, gender) => gender === "he" ? `${name} ने खर्च जोड़ा` : gender === "she" ? `${name} ने खर्च जोड़ी` : `${name} ने खर्च जोड़ा(जोड़ी)`
+      },
+      "background": {
+        "title": "पृष्ठभूमि"
       }
     },
     "form": {
@@ -1011,7 +1070,8 @@ export const dictionaries = {
       "all": "सभी मित्र",
       "contact": {
         "owesYou": "आपका कर्ज़दार है",
-        "youOwe": "आपको देना है"
+        "youOwe": "आपको देना है",
+        "even": "आप दोनों बराबर हैं"
       },
       "delete": {
         "confirm": {
@@ -1056,8 +1116,8 @@ export const dictionaries = {
       "title": "समूह",
       "summary": {
         "balance": {
-          "from": (amount) => `इस समूह के सदस्य आपको ${amount} का भुगतान करते हैं`,
-          "to": (amount) => `आप उन्हें ${amount} के ऋणी हैं`,
+          "from": "वे तुम्हारे कर्ज़दार हैं",
+          "to": "आपको उन्हें देना है",
           "even": "कोई किसी का कोई कर्ज़दार नहीं है"
         }
       },
@@ -1105,7 +1165,7 @@ export const dictionaries = {
         },
         "save": "सहेजें और बैलेंस अपडेट करें"
       },
-      "title": "खर्चे",
+      "title": "पैसे",
       "balance": {
         "total": "कुल बिल",
         "youAreOwed": "आपको कुछ मिलना बाकी है",
@@ -1145,7 +1205,7 @@ export const dictionaries = {
       "signout": "Esci",
       "close": "Chiudi",
       "cheques": {
-        "title": "Spese",
+        "title": "Denaro",
         "scan": "Scansiona assegno",
         "input": "Aggiungi spesa"
       },
@@ -1158,13 +1218,14 @@ export const dictionaries = {
       "cancel": "Annulla",
       "search": "Cerca",
       "save": "Salva",
-      "create": "Crea"
+      "create": "Crea",
+      "slide": "Scorri"
     },
     "nav": {
       "home": "Home",
       "profile": "Io",
       "contacts": "Amici",
-      "expenses": "Spese"
+      "expenses": "Denaro"
     },
     "terms": "Termini e condizioni",
     "privacy": "Informativa sulla privacy",
@@ -1174,6 +1235,14 @@ export const dictionaries = {
       "language": {
         "title": "Lingua",
         "description": "Questo non influisce sul riconoscimento dell'assegno. Comunque, lì capiamo la maggior parte delle lingue."
+      },
+      "grammar": {
+        "title": "Forma grammaticale",
+        "description": "In alcune lingue, la formulazione dei messaggi dipende dal genere grammaticale. Usiamo questa impostazione per rendere i testi dell’interfaccia naturali e corretti.",
+        "example": (name, gender) => gender === "he" ? `${name} ha aggiunto una spesa` : gender === "she" ? `${name} ha aggiunto una spesa` : `${name} ha aggiunto una spesa`
+      },
+      "background": {
+        "title": "Sfondo"
       }
     },
     "form": {
@@ -1200,7 +1269,8 @@ export const dictionaries = {
       "all": "Tutti gli amici",
       "contact": {
         "owesYou": "Ti deve",
-        "youOwe": "Devi"
+        "youOwe": "Devi",
+        "even": "Siete pari"
       },
       "delete": {
         "confirm": {
@@ -1245,8 +1315,8 @@ export const dictionaries = {
       "title": "Gruppi",
       "summary": {
         "balance": {
-          "from": (amount) => `I membri di questo gruppo ti devono ${amount}`,
-          "to": (amount) => `Devi loro ${amount}`,
+          "from": "Ti devono",
+          "to": "Devi a loro",
           "even": "Nessuno deve niente a nessuno"
         }
       },
@@ -1294,7 +1364,7 @@ export const dictionaries = {
         },
         "save": "Salva e aggiorna i saldi"
       },
-      "title": "Spese",
+      "title": "Denaro",
       "balance": {
         "total": "Totale conto",
         "youAreOwed": "Ti è dovuto",
@@ -1334,7 +1404,7 @@ export const dictionaries = {
       "signout": "サインアウト",
       "close": "閉じる",
       "cheques": {
-        "title": "経費",
+        "title": "お金",
         "scan": "小切手をスキャン",
         "input": "支出を追加"
       },
@@ -1347,13 +1417,14 @@ export const dictionaries = {
       "cancel": "キャンセル",
       "search": "検索",
       "save": "保存",
-      "create": "作成"
+      "create": "作成",
+      "slide": "スワイプ"
     },
     "nav": {
       "home": "ホーム",
       "profile": "私",
       "contacts": "友だち",
-      "expenses": "経費"
+      "expenses": "お金"
     },
     "terms": "利用規約",
     "privacy": "プライバシーポリシー",
@@ -1363,6 +1434,14 @@ export const dictionaries = {
       "language": {
         "title": "言語",
         "description": "これは小切手の認識には影響しません。そもそも、私たちはほとんどの言語を理解しています。"
+      },
+      "grammar": {
+        "title": "文法形式",
+        "description": "言語によっては、メッセージの表現に文法上の性別が関係します。この設定によって、インターフェースの文言が自然で正確になるようにしています。",
+        "example": (name, gender) => `${name} さんが支出を追加しました`
+      },
+      "background": {
+        "title": "背景"
       }
     },
     "form": {
@@ -1389,7 +1468,8 @@ export const dictionaries = {
       "all": "すべての友達",
       "contact": {
         "owesYou": "あなたに借りがある",
-        "youOwe": "あなたが支払うべきです"
+        "youOwe": "あなたが支払うべきです",
+        "even": "これでおあいこです"
       },
       "delete": {
         "confirm": {
@@ -1434,8 +1514,8 @@ export const dictionaries = {
       "title": "グループ",
       "summary": {
         "balance": {
-          "from": (amount) => `このグループのメンバーはあなたに${amount}の支払いがあります`,
-          "to": (amount) => `あなたは彼らに${amount}を借りています`,
+          "from": "彼らはあなたに借りがあります",
+          "to": "あなたは彼らに借りがあります",
           "even": "誰も誰にも借りはない"
         }
       },
@@ -1483,7 +1563,7 @@ export const dictionaries = {
         },
         "save": "保存して残高を更新"
       },
-      "title": "経費",
+      "title": "お金",
       "balance": {
         "total": "合計金額",
         "youAreOwed": "あなたには支払いが残っています",
@@ -1523,7 +1603,7 @@ export const dictionaries = {
       "signout": "로그아웃",
       "close": "닫기",
       "cheques": {
-        "title": "지출",
+        "title": "돈",
         "scan": "수표 스캔",
         "input": "지출 추가"
       },
@@ -1536,13 +1616,14 @@ export const dictionaries = {
       "cancel": "취소",
       "search": "검색",
       "save": "저장",
-      "create": "생성"
+      "create": "생성",
+      "slide": "스와이프"
     },
     "nav": {
       "home": "홈",
       "profile": "나",
       "contacts": "친구",
-      "expenses": "지출"
+      "expenses": "돈"
     },
     "terms": "이용 약관",
     "privacy": "개인정보처리방침",
@@ -1552,6 +1633,14 @@ export const dictionaries = {
       "language": {
         "title": "언어",
         "description": "이는 수표 인식에 영향을 주지 않습니다. 어차피 저희는 대부분의 언어를 이해합니다."
+      },
+      "grammar": {
+        "title": "문법 형태",
+        "description": "일부 언어에서는 메시지 문구가 문법적 성별에 따라 달라집니다. 이 설정을 통해 인터페이스의 텍스트가 자연스럽고 올바르게 표시되도록 합니다.",
+        "example": (name, gender) => `${name}님이 지출을 추가했습니다`
+      },
+      "background": {
+        "title": "배경"
       }
     },
     "form": {
@@ -1578,7 +1667,8 @@ export const dictionaries = {
       "all": "모든 친구",
       "contact": {
         "owesYou": "당신에게 빚졌어요",
-        "youOwe": "당신이 빚졌습니다"
+        "youOwe": "당신이 빚졌습니다",
+        "even": "두 분은 이제 비겼어요"
       },
       "delete": {
         "confirm": {
@@ -1623,8 +1713,8 @@ export const dictionaries = {
       "title": "그룹",
       "summary": {
         "balance": {
-          "from": (amount) => `이 그룹의 구성원들이 당신에게 ${amount}을(를) 빚지고 있습니다`,
-          "to": (amount) => `당신은 그들에게 ${amount}을(를) 빚지고 있습니다`,
+          "from": "그들은 당신에게 빚이 있습니다",
+          "to": "당신은 그들에게 빚이 있습니다",
           "even": "아무도 누구에게도 빚지지 않았다"
         }
       },
@@ -1672,7 +1762,7 @@ export const dictionaries = {
         },
         "save": "저장하고 잔액 업데이트"
       },
-      "title": "지출",
+      "title": "돈",
       "balance": {
         "total": "총 금액",
         "youAreOwed": "당신은 받을 돈이 있습니다",
@@ -1712,7 +1802,7 @@ export const dictionaries = {
       "signout": "Afmelden",
       "close": "Sluiten",
       "cheques": {
-        "title": "Uitgaven",
+        "title": "Geld",
         "scan": "Cheque scannen",
         "input": "Uitgave toevoegen"
       },
@@ -1725,13 +1815,14 @@ export const dictionaries = {
       "cancel": "Annuleren",
       "search": "Zoeken",
       "save": "Opslaan",
-      "create": "Aanmaken"
+      "create": "Aanmaken",
+      "slide": "Veeg"
     },
     "nav": {
       "home": "Home",
       "profile": "Ik",
       "contacts": "Vrienden",
-      "expenses": "Uitgaven"
+      "expenses": "Geld"
     },
     "terms": "Algemene voorwaarden",
     "privacy": "Privacybeleid",
@@ -1741,6 +1832,14 @@ export const dictionaries = {
       "language": {
         "title": "Taal",
         "description": "Dit heeft geen invloed op de chequedetectie. We begrijpen daar toch de meeste talen."
+      },
+      "grammar": {
+        "title": "Grammaticale vorm",
+        "description": "In sommige talen is de formulering van berichten afhankelijk van de grammaticale gender. We gebruiken deze instelling om de teksten in de interface natuurlijk en correct te laten klinken.",
+        "example": (name, gender) => gender === "he" ? `${name} heeft een uitgave toegevoegd` : gender === "she" ? `${name} heeft een uitgave toegevoegd` : `${name} heeft een uitgave toegevoegd`
+      },
+      "background": {
+        "title": "Achtergrond"
       }
     },
     "form": {
@@ -1767,7 +1866,8 @@ export const dictionaries = {
       "all": "Alle vrienden",
       "contact": {
         "owesYou": "Is jou iets verschuldigd",
-        "youOwe": "Je bent verschuldigd"
+        "youOwe": "Je bent verschuldigd",
+        "even": "Jullie staan quitte"
       },
       "delete": {
         "confirm": {
@@ -1812,8 +1912,8 @@ export const dictionaries = {
       "title": "Groepen",
       "summary": {
         "balance": {
-          "from": (amount) => `Leden van deze groep zijn je ${amount} verschuldigd`,
-          "to": (amount) => `Je bent hen ${amount} verschuldigd`,
+          "from": "Ze zijn je iets verschuldigd",
+          "to": "Je bent ze verschuldigd",
           "even": "Niemand is iemand iets verschuldigd"
         }
       },
@@ -1861,7 +1961,7 @@ export const dictionaries = {
         },
         "save": "Opslaan en saldi bijwerken"
       },
-      "title": "Uitgaven",
+      "title": "Geld",
       "balance": {
         "total": "Totaalrekening",
         "youAreOwed": "Je hebt iets tegoed",
@@ -1901,7 +2001,7 @@ export const dictionaries = {
       "signout": "Выйти",
       "close": "Закрыть",
       "cheques": {
-        "title": "Расходы",
+        "title": "Деньги",
         "scan": "Сканировать чек",
         "input": "Добавить расход"
       },
@@ -1914,13 +2014,14 @@ export const dictionaries = {
       "cancel": "Отмена",
       "search": "Поиск",
       "save": "Сохранить",
-      "create": "Создать"
+      "create": "Создать",
+      "slide": "Смахни"
     },
     "nav": {
       "home": "Главная",
       "profile": "Я",
       "contacts": "Друзья",
-      "expenses": "Расходы"
+      "expenses": "Деньги"
     },
     "terms": "Условия и положения",
     "privacy": "Политика конфиденциальности",
@@ -1930,6 +2031,14 @@ export const dictionaries = {
       "language": {
         "title": "Язык",
         "description": "Это не влияет на распознавание чеков. Мы и так понимаем там большинство языков."
+      },
+      "grammar": {
+        "title": "Грамматическая форма",
+        "description": "В некоторых языках формулировка сообщений зависит от грамматического рода. Эта настройка помогает сделать тексты интерфейса естественными и правильными.",
+        "example": (name, gender) => gender === "he" ? `${name} добавил расход` : gender === "she" ? `${name} добавила расход` : `${name} добавил(а) расход`
+      },
+      "background": {
+        "title": "Фон"
       }
     },
     "form": {
@@ -1956,7 +2065,8 @@ export const dictionaries = {
       "all": "Все друзья",
       "contact": {
         "owesYou": "Должен тебе",
-        "youOwe": "Вы должны"
+        "youOwe": "Вы должны",
+        "even": "Вы в расчёте"
       },
       "delete": {
         "confirm": {
@@ -2001,8 +2111,8 @@ export const dictionaries = {
       "title": "Группы",
       "summary": {
         "balance": {
-          "from": (amount) => `Участники этой группы должны вам ${amount}`,
-          "to": (amount) => `Вы должны им ${amount}`,
+          "from": "Они тебе должны",
+          "to": "Вы им должны",
           "even": "Никто никому не должен"
         }
       },
@@ -2050,7 +2160,7 @@ export const dictionaries = {
         },
         "save": "Сохранить и обновить балансы"
       },
-      "title": "Расходы",
+      "title": "Деньги",
       "balance": {
         "total": "Итоговый счет",
         "youAreOwed": "Вам должны",
@@ -2090,7 +2200,7 @@ export const dictionaries = {
       "signout": "Ondoka",
       "close": "Funga",
       "cheques": {
-        "title": "Matumizi",
+        "title": "Pesa",
         "scan": "Changanua hundi",
         "input": "Ongeza gharama"
       },
@@ -2103,13 +2213,14 @@ export const dictionaries = {
       "cancel": "Ghairi",
       "search": "Tafuta",
       "save": "Hifadhi",
-      "create": "Unda"
+      "create": "Unda",
+      "slide": "Pangusa"
     },
     "nav": {
       "home": "Mwanzo",
       "profile": "Mimi",
       "contacts": "Marafiki",
-      "expenses": "Matumizi"
+      "expenses": "Pesa"
     },
     "terms": "Vigezo na masharti",
     "privacy": "Sera ya Faragha",
@@ -2119,6 +2230,14 @@ export const dictionaries = {
       "language": {
         "title": "Lugha",
         "description": "Hili haiathiri utambuzi wa hundi. Hata hivyo, tunaelewa lugha nyingi hapo."
+      },
+      "grammar": {
+        "title": "Umbo wa kisarufi",
+        "description": "Katika baadhi ya lugha, uundaji wa ujumbe hutegemea jinsia ya kisarufi. Tunatumia kipimo hiki ili maandishi ya kiolesura yawe ya kawaida na sahihi.",
+        "example": (name, gender) => gender === "he" ? `${name} ameongeza matumizi` : gender === "she" ? `${name} ameongeza matumizi` : `${name} ameongeza matumizi`
+      },
+      "background": {
+        "title": "Mandharinyuma"
       }
     },
     "form": {
@@ -2145,7 +2264,8 @@ export const dictionaries = {
       "all": "Marafiki wote",
       "contact": {
         "owesYou": "Ana deni lako",
-        "youOwe": "Unadaiwa"
+        "youOwe": "Unadaiwa",
+        "even": "Mko sawa"
       },
       "delete": {
         "confirm": {
@@ -2190,8 +2310,8 @@ export const dictionaries = {
       "title": "Makundi",
       "summary": {
         "balance": {
-          "from": (amount) => `Wanachama wa kundi hili wanakudai ${amount}`,
-          "to": (amount) => `Unawadaiwa ${amount}`,
+          "from": "Wanakudai",
+          "to": "Unawadaiwa",
           "even": "Hakuna anayemdai mwingine chochote"
         }
       },
@@ -2239,7 +2359,7 @@ export const dictionaries = {
         },
         "save": "Hifadhi na sasisha mizania"
       },
-      "title": "Matumizi",
+      "title": "Pesa",
       "balance": {
         "total": "Jumla ya bili",
         "youAreOwed": "Unadai malipo",
@@ -2279,7 +2399,7 @@ export const dictionaries = {
       "signout": "Oturumu kapat",
       "close": "Kapat",
       "cheques": {
-        "title": "Giderler",
+        "title": "Para",
         "scan": "Çeki tara",
         "input": "Gider ekle"
       },
@@ -2292,13 +2412,14 @@ export const dictionaries = {
       "cancel": "İptal",
       "search": "Ara",
       "save": "Kaydet",
-      "create": "Oluştur"
+      "create": "Oluştur",
+      "slide": "Kaydır"
     },
     "nav": {
       "home": "Ana Sayfa",
       "profile": "Ben",
       "contacts": "Arkadaşlar",
-      "expenses": "Giderler"
+      "expenses": "Para"
     },
     "terms": "Şartlar ve koşullar",
     "privacy": "Gizlilik Politikası",
@@ -2308,6 +2429,14 @@ export const dictionaries = {
       "language": {
         "title": "Dil",
         "description": "Bu, çek tanımayı etkilemez. Zaten oradaki dillerin çoğunu anlıyoruz."
+      },
+      "grammar": {
+        "title": "Dilbilgisel biçim",
+        "description": "Bazı dillerde mesajın ifadesi dilbilgisel cinsiyete bağlıdır. Arayüz metinlerinin doğal ve doğru olması için bu ayarı kullanıyoruz.",
+        "example": (name, gender) => `${name} bir harcama ekledi`
+      },
+      "background": {
+        "title": "Arka plan"
       }
     },
     "form": {
@@ -2334,7 +2463,8 @@ export const dictionaries = {
       "all": "Tüm arkadaşlar",
       "contact": {
         "owesYou": "Sana borçlu",
-        "youOwe": "Borçlusun"
+        "youOwe": "Borçlusun",
+        "even": "Artık ödeşmiş oldunuz"
       },
       "delete": {
         "confirm": {
@@ -2379,8 +2509,8 @@ export const dictionaries = {
       "title": "Gruplar",
       "summary": {
         "balance": {
-          "from": (amount) => `Bu grubun üyeleri sana ${amount} borçlu`,
-          "to": (amount) => `Onlara ${amount} borçlusunuz`,
+          "from": "Sana borçlular",
+          "to": "Onlara borçlusun",
           "even": "Kimse kimseye borçlu değil"
         }
       },
@@ -2428,7 +2558,7 @@ export const dictionaries = {
         },
         "save": "Bakiyeleri kaydet ve güncelle"
       },
-      "title": "Giderler",
+      "title": "Para",
       "balance": {
         "total": "Toplam fatura",
         "youAreOwed": "Sana borç var",
@@ -2468,7 +2598,7 @@ export const dictionaries = {
       "signout": "Вийти",
       "close": "Закрити",
       "cheques": {
-        "title": "Витрати",
+        "title": "Гроші",
         "scan": "Сканувати чек",
         "input": "Додати витрату"
       },
@@ -2481,13 +2611,14 @@ export const dictionaries = {
       "cancel": "Скасувати",
       "search": "Пошук",
       "save": "Зберегти",
-      "create": "Створити"
+      "create": "Створити",
+      "slide": "Змахни"
     },
     "nav": {
       "home": "Головна",
       "profile": "Я",
       "contacts": "Друзі",
-      "expenses": "Витрати"
+      "expenses": "Гроші"
     },
     "terms": "Умови та положення",
     "privacy": "Політика конфіденційності",
@@ -2497,6 +2628,14 @@ export const dictionaries = {
       "language": {
         "title": "Мова",
         "description": "Це не впливає на розпізнавання чеків. Ми й так розуміємо там більшість мов."
+      },
+      "grammar": {
+        "title": "Граматична форма",
+        "description": "У деяких мовах формулювання повідомлень залежить від граматичного роду. Ми використовуємо цей параметр, щоб текст інтерфейсу звучав природно та правильно.",
+        "example": (name, gender) => gender === "he" ? `${name} додав витрату` : gender === "she" ? `${name} додала витрату` : `${name} додав(ла) витрату`
+      },
+      "background": {
+        "title": "Тло"
       }
     },
     "form": {
@@ -2523,7 +2662,8 @@ export const dictionaries = {
       "all": "Усі друзі",
       "contact": {
         "owesYou": "Винен тобі",
-        "youOwe": "Ви винні"
+        "youOwe": "Ви винні",
+        "even": "Ви квити"
       },
       "delete": {
         "confirm": {
@@ -2568,8 +2708,8 @@ export const dictionaries = {
       "title": "Групи",
       "summary": {
         "balance": {
-          "from": (amount) => `Члени цієї групи винні вам ${amount}`,
-          "to": (amount) => `Ви винні їм ${amount}`,
+          "from": "Вони тобі винні",
+          "to": "Ви їм винні",
           "even": "Ніхто нікому нічого не винен"
         }
       },
@@ -2617,7 +2757,7 @@ export const dictionaries = {
         },
         "save": "Зберегти й оновити баланси"
       },
-      "title": "Витрати",
+      "title": "Гроші",
       "balance": {
         "total": "Загальний рахунок",
         "youAreOwed": "Вам винні",
@@ -2657,7 +2797,7 @@ export const dictionaries = {
       "signout": "退出登录",
       "close": "关闭",
       "cheques": {
-        "title": "支出",
+        "title": "钱",
         "scan": "扫描支票",
         "input": "添加支出"
       },
@@ -2670,13 +2810,14 @@ export const dictionaries = {
       "cancel": "取消",
       "search": "搜索",
       "save": "保存",
-      "create": "创建"
+      "create": "创建",
+      "slide": "滑动"
     },
     "nav": {
       "home": "首页",
       "profile": "我",
       "contacts": "朋友",
-      "expenses": "支出"
+      "expenses": "钱"
     },
     "terms": "条款和条件",
     "privacy": "隐私政策",
@@ -2686,6 +2827,14 @@ export const dictionaries = {
       "language": {
         "title": "语言",
         "description": "这不会影响支票识别。反正我们在那里大多数语言都能理解。"
+      },
+      "grammar": {
+        "title": "语法形式",
+        "description": "在某些语言中，消息的措辞取决于语法性别。我们使用此设置以使界面文本更自然、更准确。",
+        "example": (name, gender) => `${name} 添加了一笔支出`
+      },
+      "background": {
+        "title": "背景"
       }
     },
     "form": {
@@ -2712,7 +2861,8 @@ export const dictionaries = {
       "all": "所有好友",
       "contact": {
         "owesYou": "欠你的",
-        "youOwe": "你欠"
+        "youOwe": "你欠",
+        "even": "你们扯平了"
       },
       "delete": {
         "confirm": {
@@ -2757,8 +2907,8 @@ export const dictionaries = {
       "title": "群组",
       "summary": {
         "balance": {
-          "from": (amount) => `该群组成员欠你${amount}`,
-          "to": (amount) => `你欠他们${amount}`,
+          "from": "他们欠你",
+          "to": "你欠他们的",
           "even": "没有人欠任何人任何东西"
         }
       },
@@ -2806,7 +2956,7 @@ export const dictionaries = {
         },
         "save": "保存并更新余额"
       },
-      "title": "支出",
+      "title": "钱",
       "balance": {
         "total": "总账单",
         "youAreOwed": "你有应得的",

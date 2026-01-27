@@ -7,4 +7,5 @@ export interface Props {
   screen?: Snippet<[{ authentication: () => ReturnType<Snippet> }]>
   account?: AccountLike
   oidc?: Record<oidc.IDP, boolean>
+  oncreate?: (account: AccountLike) => void
 }

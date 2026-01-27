@@ -1,5 +1,5 @@
 recent:
-  title: 지출
+  title: 최근에
   empty: 아직 아무 일도 일어나지 않았어요. 지출을 추가하거나 친구를 초대해 시작해보세요.
 payer:
   placeholder: 지불자 선택
@@ -9,3 +9,29 @@ participants:
     shares: 지분별로
   add:
     label: 참가자 추가
+transfer:
+  action: 송금
+  dialog:
+    title: 정산하기
+    cancel: 취소
+    action: 확인
+  me: 나
+  direction:
+    byme: |-
+      !js
+      (gender) => "지불했습니다"
+    tome: |-
+      !js
+      (gender) => "받았습니다"
+transfers:
+  tobe:
+    neutral: 완전히 자리 잡을 거예요
+    positive: 당신에게 빚이 생길 거예요
+    negative: 지불해야 합니다
+  done:
+    paid: |-
+      !js
+      (gender) => "결제하셨습니다"
+    received: |-
+      !js
+      (gender) => "받았어"

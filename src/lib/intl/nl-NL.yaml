@@ -6,7 +6,7 @@ actions:
   signout: Afmelden
   close: Sluiten
   cheques:
-    title: Uitgaven
+    title: Geld
     scan: Cheque scannen
     input: Uitgave toevoegen
   contacts:
@@ -18,11 +18,12 @@ actions:
   search: Zoeken
   save: Opslaan
   create: Aanmaken
+  slide: Veeg
 nav:
   home: Home
   profile: Ik
   contacts: Vrienden
-  expenses: Uitgaven
+  expenses: Geld
 terms: Algemene voorwaarden
 privacy: Privacybeleid
 madeBy: Gemaakt door
@@ -33,6 +34,20 @@ profile:
     description: >-
       Dit heeft geen invloed op de chequedetectie. We begrijpen daar toch de
       meeste talen.
+  grammar:
+    title: Grammaticale vorm
+    description: >-
+      In sommige talen is de formulering van berichten afhankelijk van de
+      grammaticale gender. We gebruiken deze instelling om de teksten in de
+      interface natuurlijk en correct te laten klinken.
+    example: >-
+      !js
+
+      (name, gender) => gender === "he" ? `${name} heeft een uitgave toegevoegd`
+      : gender === "she" ? `${name} heeft een uitgave toegevoegd` : `${name}
+      heeft een uitgave toegevoegd`
+  background:
+    title: Achtergrond
 form:
   enterName: Naam invoeren
 copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
@@ -53,6 +68,7 @@ contacts:
   contact:
     owesYou: Is jou iets verschuldigd
     youOwe: Je bent verschuldigd
+    even: Jullie staan quitte
   delete:
     confirm:
       title: Contact verwijderen
@@ -93,12 +109,8 @@ groups:
   title: Groepen
   summary:
     balance:
-      from: |-
-        !js
-        (amount) => `Leden van deze groep zijn je ${amount} verschuldigd`
-      to: |-
-        !js
-        (amount) => `Je bent hen ${amount} verschuldigd`
+      from: Ze zijn je iets verschuldigd
+      to: Je bent ze verschuldigd
       even: Niemand is iemand iets verschuldigd
   create: Groep aanmaken
 invite:
@@ -134,7 +146,7 @@ expenses:
     location:
       placeholder: Waar? (optioneel)
     save: Opslaan en saldi bijwerken
-  title: Uitgaven
+  title: Geld
   balance:
     total: Totaalrekening
     youAreOwed: Je hebt iets tegoed

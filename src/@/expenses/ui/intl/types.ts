@@ -6,6 +6,8 @@
 
 export type Locale = 'ar-SA' | 'de-DE' | 'en-US' | 'es-ES' | 'fr-FR' | 'hi-IN' | 'it-IT' | 'ja-JP' | 'ko-KR' | 'nl-NL' | 'ru-RU' | 'sw-TZ' | 'tr-TR' | 'uk-UA' | 'zh-CN'
 
+export type Grammar = 'he' | 'she' | 'none'
+
 export type Dictionary = {
       recent: {
         title: string
@@ -21,6 +23,30 @@ export type Dictionary = {
         }
         add: {
           label: string
+        }
+      }
+      transfer: {
+        action: string
+        dialog: {
+          title: string
+          cancel: string
+          action: string
+        }
+        me: string
+        direction: {
+          byme: (value: any) => string
+          tome: (value: any) => string
+        }
+      }
+      transfers: {
+        tobe: {
+          neutral: string
+          positive: string
+          negative: string
+        }
+        done: {
+          paid: (value: any) => string
+          received: (value: any) => string
         }
       }
     }

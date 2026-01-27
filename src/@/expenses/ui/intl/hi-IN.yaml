@@ -1,5 +1,5 @@
 recent:
-  title: खर्चे
+  title: हाल ही में
   empty: >-
     अभी तक कुछ नहीं हुआ है। कुछ खर्च जोड़ें या शुरुआत करने के लिए दोस्तों को
     बुलाएं।
@@ -11,3 +11,37 @@ participants:
     shares: शेयरों के अनुसार
   add:
     label: प्रतिभागी जोड़ें
+transfer:
+  action: स्थानांतरण
+  dialog:
+    title: बकाया चुकाएँ
+    cancel: रद्द करें
+    action: पुष्टि करें
+  me: मैं
+  direction:
+    byme: >-
+      !js
+
+      (gender) => gender === "he" ? "मैंने भुगतान किया" : (gender === "she" ?
+      "मैंने भुगतान की" : "मैंने भुगतान किया")
+    tome: >-
+      !js
+
+      (gender) => gender === "he" ? "मैंने प्राप्त किया" : (gender === "she" ?
+      "मैंने प्राप्त की" : "मैंने प्राप्त किया/की")
+transfers:
+  tobe:
+    neutral: आप पूरी तरह से व्यवस्थित हो जाएंगे
+    positive: आपका बकाया रहेगा
+    negative: आपको देना होगा
+  done:
+    paid: >-
+      !js
+
+      (gender) => gender === "he" ? "तुमने पैसे दे दिए" : gender === "she" ?
+      "तुमने पैसे दे दी" : "तुमने पैसे दे दिए"
+    received: >-
+      !js
+
+      (gender) => gender === "he" ? "तुम्हें मिला है" : gender === "she" ?
+      "तुम्हें मिली है" : "तुम्हें मिला/मिली है"

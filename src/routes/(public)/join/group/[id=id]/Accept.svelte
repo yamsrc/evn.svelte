@@ -7,7 +7,7 @@
   import { Button, buttonVariants } from '$ui/button'
   import { invitations } from '@/groups'
   import { Panel } from '@/groups/ui'
-  import { account } from '@/iam'
+  import { account, named } from '@/iam'
   import type { Props } from './Accept'
 
   let { group, accepted = $bindable(false), error = $bindable(false) }: Props = $props()
@@ -18,6 +18,7 @@
     open = false
 
     await having(account)
+    await named()
 
     const res = await invitations.accept(group.id)
 

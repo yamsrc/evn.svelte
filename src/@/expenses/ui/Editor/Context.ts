@@ -30,7 +30,6 @@ function exact(value: Value): Value {
   return {
     title: value.title,
     location: value.location,
-    date: value.date,
     participants,
     extras: structuredClone(value.extras),
     attachments: structuredClone(value.attachments),
@@ -47,7 +46,6 @@ function blank(): Value {
   return {
     title: '',
     location: '',
-    date: new Date().toISOString().split('T')[0],
     participants,
     extras: [],
     attachments: [],
@@ -67,7 +65,6 @@ export interface Context {
 export interface Value {
   title: string
   location?: string
-  date: string
   participants: Record<string, Participant>
   extras: Extra[]
   attachments: string[]

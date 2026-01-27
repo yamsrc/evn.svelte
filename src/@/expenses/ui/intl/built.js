@@ -4,7 +4,7 @@
 export const dictionaries = {
   "ar-SA": {
     "recent": {
-      "title": "المصروفات",
+      "title": "مؤخرًا",
       "empty": "لم يحدث شيء بعد. أضف بعض المصروفات أو ادعُ أصدقاءك لبدء النشاط."
     },
     "payer": {
@@ -18,11 +18,35 @@ export const dictionaries = {
       "add": {
         "label": "إضافة مشاركين"
       }
+    },
+    "transfer": {
+      "action": "تحويل",
+      "dialog": {
+        "title": "تسوية الحساب",
+        "cancel": "إلغاء",
+        "action": "تأكيد"
+      },
+      "me": "أنا",
+      "direction": {
+        "byme": (gender) => gender === "he" ? "لقد دفعت" : (gender === "she" ? "لقد دفعتِ" : "لقد دفعت"),
+        "tome": (gender) => gender === "he" ? "لقد استلمت" : (gender === "she" ? "لقد استلمتِ" : "لقد استلمت")
+      }
+    },
+    "transfers": {
+      "tobe": {
+        "neutral": "ستكون قد استقررت تمامًا",
+        "positive": "سيكون لك دين",
+        "negative": "سَتَدِين"
+      },
+      "done": {
+        "paid": (gender) => gender === "he" ? "لقد دفعتَ" : gender === "she" ? "لقد دفعتِ" : "لقد دفعت",
+        "received": (gender) => gender === "he" ? "لقد استلمتَ" : gender === "she" ? "لقد استلمتِ" : "لقد استلمت"
+      }
     }
   },
   "de-DE": {
     "recent": {
-      "title": "Ausgaben",
+      "title": "Kürzlich",
       "empty": "Es ist noch nichts passiert. Füge Ausgaben hinzu oder lade Freunde ein, um loszulegen."
     },
     "payer": {
@@ -36,11 +60,35 @@ export const dictionaries = {
       "add": {
         "label": "Teilnehmer hinzufügen"
       }
+    },
+    "transfer": {
+      "action": "Überweisung",
+      "dialog": {
+        "title": "Ausgleichen",
+        "cancel": "Abbrechen",
+        "action": "Bestätigen"
+      },
+      "me": "Ich",
+      "direction": {
+        "byme": (gender) => gender === "he" ? "Ich habe bezahlt" : (gender === "she" ? "Ich habe bezahlt" : "Ich habe bezahlt"),
+        "tome": (gender) => gender === "he" ? "Ich habe erhalten" : (gender === "she" ? "Ich habe erhalten" : "Ich habe erhalten")
+      }
+    },
+    "transfers": {
+      "tobe": {
+        "neutral": "Du wirst ganz angekommen sein",
+        "positive": "Es wird dir geschuldet",
+        "negative": "Du hast eine offene Forderung"
+      },
+      "done": {
+        "paid": (gender) => gender === "he" ? "Du hast bezahlt" : gender === "she" ? "Du hast bezahlt" : "Du hast bezahlt",
+        "received": (gender) => gender === "he" ? "Du hast bekommen" : gender === "she" ? "Du hast bekommen" : "Du hast bekommen"
+      }
     }
   },
   "en-US": {
     "recent": {
-      "title": "Expenses",
+      "title": "Recently",
       "empty": "Nothing happened yet. Add some spending or invite friends to get things started."
     },
     "payer": {
@@ -54,11 +102,35 @@ export const dictionaries = {
       "add": {
         "label": "Add participants"
       }
+    },
+    "transfer": {
+      "action": "Transfer",
+      "dialog": {
+        "title": "Settle Up",
+        "cancel": "Cancel",
+        "action": "Confirm"
+      },
+      "me": "Me",
+      "direction": {
+        "byme": (gender) => "I paid",
+        "tome": (gender) => "I received"
+      }
+    },
+    "transfers": {
+      "tobe": {
+        "neutral": "You’ll be all settled",
+        "positive": "You'll be owed",
+        "negative": "You’ll owe"
+      },
+      "done": {
+        "paid": (gender) => "You’ve paid",
+        "received": (gender) => gender === "he" ? "You've received" : gender === "she" ? "You've received" : "You've received"
+      }
     }
   },
   "es-ES": {
     "recent": {
-      "title": "Gastos",
+      "title": "Recientemente",
       "empty": "Aún no ha pasado nada. Añade algún gasto o invita a tus amigos para poner esto en marcha."
     },
     "payer": {
@@ -72,11 +144,35 @@ export const dictionaries = {
       "add": {
         "label": "Agregar participantes"
       }
+    },
+    "transfer": {
+      "action": "Transferencia",
+      "dialog": {
+        "title": "Pagar la cuenta",
+        "cancel": "Cancelar",
+        "action": "Confirmar"
+      },
+      "me": "Yo",
+      "direction": {
+        "byme": (gender) => gender === "he" ? "He pagado" : (gender === "she" ? "He pagado" : "He pagado"),
+        "tome": (gender) => gender === "he" ? "He recibido" : (gender === "she" ? "He recibido" : "He recibido")
+      }
+    },
+    "transfers": {
+      "tobe": {
+        "neutral": "Estarás completamente instalado",
+        "positive": "Te lo deberán",
+        "negative": "Tendrás una deuda"
+      },
+      "done": {
+        "paid": (gender) => gender === "he" ? "Has pagado" : gender === "she" ? "Has pagado" : "Has pagado",
+        "received": (gender) => gender === "he" ? "Has recibido" : gender === "she" ? "Has recibido" : "Has recibido"
+      }
     }
   },
   "fr-FR": {
     "recent": {
-      "title": "Dépenses",
+      "title": "Récemment",
       "empty": "Rien ne s'est encore passé. Ajoutez des dépenses ou invitez des amis pour lancer les choses."
     },
     "payer": {
@@ -90,11 +186,35 @@ export const dictionaries = {
       "add": {
         "label": "Ajouter des participants"
       }
+    },
+    "transfer": {
+      "action": "Virement",
+      "dialog": {
+        "title": "Régler le solde",
+        "cancel": "Annuler",
+        "action": "Confirmer"
+      },
+      "me": "Moi",
+      "direction": {
+        "byme": (gender) => "J'ai payé",
+        "tome": (gender) => gender === "he" ? "J'ai reçu" : (gender === "she" ? "J'ai reçu" : "J'ai reçu")
+      }
+    },
+    "transfers": {
+      "tobe": {
+        "neutral": "Tu seras bien installé",
+        "positive": "On te devra quelque chose",
+        "negative": "Vous devrez"
+      },
+      "done": {
+        "paid": (gender) => gender === "he" ? "Tu as payé" : gender === "she" ? "Tu as payé" : "Tu as payé",
+        "received": (gender) => gender === "he" ? "Tu as reçu" : gender === "she" ? "Tu as reçu" : "Tu as reçu"
+      }
     }
   },
   "hi-IN": {
     "recent": {
-      "title": "खर्चे",
+      "title": "हाल ही में",
       "empty": "अभी तक कुछ नहीं हुआ है। कुछ खर्च जोड़ें या शुरुआत करने के लिए दोस्तों को बुलाएं।"
     },
     "payer": {
@@ -108,11 +228,35 @@ export const dictionaries = {
       "add": {
         "label": "प्रतिभागी जोड़ें"
       }
+    },
+    "transfer": {
+      "action": "स्थानांतरण",
+      "dialog": {
+        "title": "बकाया चुकाएँ",
+        "cancel": "रद्द करें",
+        "action": "पुष्टि करें"
+      },
+      "me": "मैं",
+      "direction": {
+        "byme": (gender) => gender === "he" ? "मैंने भुगतान किया" : (gender === "she" ? "मैंने भुगतान की" : "मैंने भुगतान किया"),
+        "tome": (gender) => gender === "he" ? "मैंने प्राप्त किया" : (gender === "she" ? "मैंने प्राप्त की" : "मैंने प्राप्त किया/की")
+      }
+    },
+    "transfers": {
+      "tobe": {
+        "neutral": "आप पूरी तरह से व्यवस्थित हो जाएंगे",
+        "positive": "आपका बकाया रहेगा",
+        "negative": "आपको देना होगा"
+      },
+      "done": {
+        "paid": (gender) => gender === "he" ? "तुमने पैसे दे दिए" : gender === "she" ? "तुमने पैसे दे दी" : "तुमने पैसे दे दिए",
+        "received": (gender) => gender === "he" ? "तुम्हें मिला है" : gender === "she" ? "तुम्हें मिली है" : "तुम्हें मिला/मिली है"
+      }
     }
   },
   "it-IT": {
     "recent": {
-      "title": "Spese",
+      "title": "Recentemente",
       "empty": "Non è ancora successo nulla. Aggiungi qualche spesa o invita amici per iniziare."
     },
     "payer": {
@@ -126,11 +270,35 @@ export const dictionaries = {
       "add": {
         "label": "Aggiungi partecipanti"
       }
+    },
+    "transfer": {
+      "action": "Trasferimento",
+      "dialog": {
+        "title": "Salda il conto",
+        "cancel": "Annulla",
+        "action": "Conferma"
+      },
+      "me": "Io",
+      "direction": {
+        "byme": (gender) => "Ho pagato",
+        "tome": (gender) => gender === "he" ? "Ho ricevuto" : (gender === "she" ? "Ho ricevuto" : "Ho ricevuto")
+      }
+    },
+    "transfers": {
+      "tobe": {
+        "neutral": "Sarai completamente sistemato",
+        "positive": "Ti sarà dovuto",
+        "negative": "Avrai un debito"
+      },
+      "done": {
+        "paid": (gender) => "Hai pagato",
+        "received": (gender) => "Hai ricevuto"
+      }
     }
   },
   "ja-JP": {
     "recent": {
-      "title": "経費",
+      "title": "最近",
       "empty": "まだ何も起きていません。支出を追加したり、友達を招待して始めてみましょう。"
     },
     "payer": {
@@ -144,11 +312,35 @@ export const dictionaries = {
       "add": {
         "label": "参加者を追加"
       }
+    },
+    "transfer": {
+      "action": "送金",
+      "dialog": {
+        "title": "精算する",
+        "cancel": "キャンセル",
+        "action": "確認"
+      },
+      "me": "私",
+      "direction": {
+        "byme": (gender) => "支払いました",
+        "tome": (gender) => "受け取りました"
+      }
+    },
+    "transfers": {
+      "tobe": {
+        "neutral": "すっかり落ち着きますよ",
+        "positive": "あなたは借りができることになります",
+        "negative": "あなたに未払いがあります"
+      },
+      "done": {
+        "paid": (gender) => "支払いが完了しました",
+        "received": (gender) => "受け取ったよ"
+      }
     }
   },
   "ko-KR": {
     "recent": {
-      "title": "지출",
+      "title": "최근에",
       "empty": "아직 아무 일도 일어나지 않았어요. 지출을 추가하거나 친구를 초대해 시작해보세요."
     },
     "payer": {
@@ -162,11 +354,35 @@ export const dictionaries = {
       "add": {
         "label": "참가자 추가"
       }
+    },
+    "transfer": {
+      "action": "송금",
+      "dialog": {
+        "title": "정산하기",
+        "cancel": "취소",
+        "action": "확인"
+      },
+      "me": "나",
+      "direction": {
+        "byme": (gender) => "지불했습니다",
+        "tome": (gender) => "받았습니다"
+      }
+    },
+    "transfers": {
+      "tobe": {
+        "neutral": "완전히 자리 잡을 거예요",
+        "positive": "당신에게 빚이 생길 거예요",
+        "negative": "지불해야 합니다"
+      },
+      "done": {
+        "paid": (gender) => "결제하셨습니다",
+        "received": (gender) => "받았어"
+      }
     }
   },
   "nl-NL": {
     "recent": {
-      "title": "Uitgaven",
+      "title": "Recentelijk",
       "empty": "Er is nog niets gebeurd. Voeg wat uitgaven toe of nodig vrienden uit om op gang te komen."
     },
     "payer": {
@@ -180,11 +396,35 @@ export const dictionaries = {
       "add": {
         "label": "Deelnemers toevoegen"
       }
+    },
+    "transfer": {
+      "action": "Overschrijving",
+      "dialog": {
+        "title": "Afrekenen",
+        "cancel": "Annuleren",
+        "action": "Bevestigen"
+      },
+      "me": "Ik",
+      "direction": {
+        "byme": (gender) => "Ik heb betaald",
+        "tome": (gender) => "Ik heb ontvangen"
+      }
+    },
+    "transfers": {
+      "tobe": {
+        "neutral": "Je bent straks helemaal gesetteld",
+        "positive": "Jij krijgt nog wat tegoed",
+        "negative": "Je zult verschuldigd zijn"
+      },
+      "done": {
+        "paid": (gender) => "Je hebt betaald",
+        "received": (gender) => "Je hebt ontvangen"
+      }
     }
   },
   "ru-RU": {
     "recent": {
-      "title": "Расходы",
+      "title": "Недавно",
       "empty": "Пока ничего не произошло. Добавьте расходы или пригласите друзей, чтобы начать."
     },
     "payer": {
@@ -198,11 +438,35 @@ export const dictionaries = {
       "add": {
         "label": "Добавить участников"
       }
+    },
+    "transfer": {
+      "action": "Перевод",
+      "dialog": {
+        "title": "Рассчитаться",
+        "cancel": "Отмена",
+        "action": "Подтвердить"
+      },
+      "me": "Я",
+      "direction": {
+        "byme": (gender) => gender === "he" ? "Я заплатил" : (gender === "she" ? "Я заплатила" : "Я заплатил(а)"),
+        "tome": (gender) => gender === "he" ? "Я получил" : (gender === "she" ? "Я получила" : "Я получил(а)")
+      }
+    },
+    "transfers": {
+      "tobe": {
+        "neutral": "Ты полностью обустроишься",
+        "positive": "Тебе будут должны",
+        "negative": "Вы будете должны"
+      },
+      "done": {
+        "paid": (gender) => gender === "he" ? "Ты заплатил" : gender === "she" ? "Ты заплатила" : "Ты заплатил(а)",
+        "received": (gender) => gender === "he" ? "Ты получил" : gender === "she" ? "Ты получила" : "Ты получил(а)"
+      }
     }
   },
   "sw-TZ": {
     "recent": {
-      "title": "Matumizi",
+      "title": "Hivi karibuni",
       "empty": "Bado hakuna kilichotokea. Ongeza matumizi au alika marafiki ili mambo yaanze."
     },
     "payer": {
@@ -216,11 +480,35 @@ export const dictionaries = {
       "add": {
         "label": "Ongeza washiriki"
       }
+    },
+    "transfer": {
+      "action": "Uhamisho",
+      "dialog": {
+        "title": "Lipa deni",
+        "cancel": "Ghairi",
+        "action": "Thibitisha"
+      },
+      "me": "Mimi",
+      "direction": {
+        "byme": (gender) => gender === "he" ? "Nimelipa" : (gender === "she" ? "Nimelipa" : "Nimelipa"),
+        "tome": (gender) => gender === "he" ? "Nimepokea" : (gender === "she" ? "Nimepokea" : "Nimepokea")
+      }
+    },
+    "transfers": {
+      "tobe": {
+        "neutral": "Utakua umeshatulia kabisa",
+        "positive": "Utakuwa na deni lako",
+        "negative": "Utakuwa na deni"
+      },
+      "done": {
+        "paid": (gender) => "Umelipa",
+        "received": (gender) => "Umepewa"
+      }
     }
   },
   "tr-TR": {
     "recent": {
-      "title": "Giderler",
+      "title": "Son zamanlarda",
       "empty": "Henüz hiçbir şey olmadı. Biraz harcama ekleyin veya arkadaşlarınızı davet edin, böylece her şey başlasın."
     },
     "payer": {
@@ -234,11 +522,35 @@ export const dictionaries = {
       "add": {
         "label": "Katılımcı ekle"
       }
+    },
+    "transfer": {
+      "action": "Transfer",
+      "dialog": {
+        "title": "Hesap Kapat",
+        "cancel": "İptal",
+        "action": "Onayla"
+      },
+      "me": "Ben",
+      "direction": {
+        "byme": (gender) => "Ödedim",
+        "tome": (gender) => "Aldım"
+      }
+    },
+    "transfers": {
+      "tobe": {
+        "neutral": "Tamamen yerleşmiş olacaksın",
+        "positive": "Sana borçlanılacak",
+        "negative": "Borçlu olacaksın"
+      },
+      "done": {
+        "paid": (gender) => "Ödedin",
+        "received": (gender) => "Aldın"
+      }
     }
   },
   "uk-UA": {
     "recent": {
-      "title": "Витрати",
+      "title": "Нещодавно",
       "empty": "Поки що нічого не сталося. Додайте витрати або запросіть друзів, щоб розпочати."
     },
     "payer": {
@@ -252,11 +564,35 @@ export const dictionaries = {
       "add": {
         "label": "Додати учасників"
       }
+    },
+    "transfer": {
+      "action": "Переказ",
+      "dialog": {
+        "title": "Розрахуватися",
+        "cancel": "Скасувати",
+        "action": "Підтвердити"
+      },
+      "me": "Я",
+      "direction": {
+        "byme": (gender) => gender === "he" ? "Я заплатив" : (gender === "she" ? "Я заплатила" : "Я заплатив(ла)"),
+        "tome": (gender) => gender === "he" ? "Я отримав" : (gender === "she" ? "Я отримала" : "Я отримав(ла)")
+      }
+    },
+    "transfers": {
+      "tobe": {
+        "neutral": "Ти повністю облаштуєшся",
+        "positive": "Тобі будуть винні",
+        "negative": "Ви будете винні"
+      },
+      "done": {
+        "paid": (gender) => gender === "he" ? "Ти заплатив" : gender === "she" ? "Ти заплатила" : "Ти заплатив(ла)",
+        "received": (gender) => gender === "he" ? "Ти отримав" : gender === "she" ? "Ти отримала" : "Ти отримав(ла)"
+      }
     }
   },
   "zh-CN": {
     "recent": {
-      "title": "支出",
+      "title": "最近",
       "empty": "还没有任何活动。添加一些支出或邀请朋友一起开启新体验吧。"
     },
     "payer": {
@@ -269,6 +605,30 @@ export const dictionaries = {
       },
       "add": {
         "label": "添加参与者"
+      }
+    },
+    "transfer": {
+      "action": "转账",
+      "dialog": {
+        "title": "结清账单",
+        "cancel": "取消",
+        "action": "确认"
+      },
+      "me": "我",
+      "direction": {
+        "byme": (gender) => "我付了钱",
+        "tome": (gender) => "我收到了"
+      }
+    },
+    "transfers": {
+      "tobe": {
+        "neutral": "你会完全安顿好的",
+        "positive": "你会被欠下",
+        "negative": "你将欠款"
+      },
+      "done": {
+        "paid": (gender) => "你已付款",
+        "received": (gender) => "你已收到"
       }
     }
   }

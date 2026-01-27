@@ -1,5 +1,5 @@
 recent:
-  title: Витрати
+  title: Нещодавно
   empty: >-
     Поки що нічого не сталося. Додайте витрати або запросіть друзів, щоб
     розпочати.
@@ -11,3 +11,37 @@ participants:
     shares: За частками
   add:
     label: Додати учасників
+transfer:
+  action: Переказ
+  dialog:
+    title: Розрахуватися
+    cancel: Скасувати
+    action: Підтвердити
+  me: Я
+  direction:
+    byme: >-
+      !js
+
+      (gender) => gender === "he" ? "Я заплатив" : (gender === "she" ? "Я
+      заплатила" : "Я заплатив(ла)")
+    tome: >-
+      !js
+
+      (gender) => gender === "he" ? "Я отримав" : (gender === "she" ? "Я
+      отримала" : "Я отримав(ла)")
+transfers:
+  tobe:
+    neutral: Ти повністю облаштуєшся
+    positive: Тобі будуть винні
+    negative: Ви будете винні
+  done:
+    paid: >-
+      !js
+
+      (gender) => gender === "he" ? "Ти заплатив" : gender === "she" ? "Ти
+      заплатила" : "Ти заплатив(ла)"
+    received: >-
+      !js
+
+      (gender) => gender === "he" ? "Ти отримав" : gender === "she" ? "Ти
+      отримала" : "Ти отримав(ла)"

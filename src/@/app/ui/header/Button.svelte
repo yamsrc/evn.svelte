@@ -5,7 +5,7 @@
   const {
     children,
     size = 'icon',
-    variant = 'ghost',
+    variant = 'outline',
     class: classes,
     ...rest
   }: ButtonProps = $props()

@@ -3,16 +3,22 @@ import type { Expense } from './Expense'
 
 const expenses = origin.resource<Expense>('/expenses/', { credentials: 'include' })
 
-export type Editable = Pick<Expense, 'date' | 'title' | 'location' | 'participants' | 'extras' | 'attachments'>
+type Editable = Partial<Pick<Expense, 'date' | 'title' | 'location' | 'extras' | 'attachments'>>
 
 export async function get(identity: string): Promise<Expense[] | Error> {
   return expenses.json(identity)
 }
 
-export async function post(identity: string, body: Editable): Promise<Expense | Error> {
+export interface Post extends Editable {
+  participants: Expense['participants']
+}
+
+export async function post(identity: string, body: Post): Promise<Expense | Error> {
   return expenses.json(identity, { method: 'POST', body })
 }
 
-export async function put(identity: string, id: string, body: Partial<Editable>): Promise<Expense | Error> {
+export type Put = Partial<Pick<Expense, 'date' | 'title' | 'location' | 'participants' | 'extras' | 'attachments'>>
+
+export async function put(identity: string, id: string, body: Put): Promise<Expense | Error> {
   return expenses.json(`${identity}/${id}`, { method: 'PUT', body })
 }

@@ -1,8 +1,9 @@
 import * as net from './net'
 import { method, iam } from './store'
 import { sync } from './sync'
+import type { Echo } from './net'
 
-export async function verify(username: string, password: string): Promise<void | Error> {
+export async function verify(username: string, password: string): Promise<Echo | Error> {
   const credentials = btoa(`${username}:${password}`)
   const echo = await net.get('Basic ' + credentials)
 
@@ -10,6 +11,8 @@ export async function verify(username: string, password: string): Promise<void |
 
   iam(echo)
   method.set('password')
+
+  return echo
 }
 
 export async function create(identity: string, body: net.basic.Basic): Promise<void | Error> {

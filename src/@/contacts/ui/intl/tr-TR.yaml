@@ -2,7 +2,7 @@ totals:
   negative: Arkadaşlarına borçlusun
   positive: Arkadaşların sana borçlu
 tops:
-  title: Arkadaşlar
+  title: Borçlar
   empty: Şu ana kadar kimse sana borçlu değil ve sen de kimseye borçlu değilsin.
   negative: "En çok borçlu olduğunuz kişiler:"
   positive: "Sana en çok borcu olanlar:"
@@ -10,5 +10,7 @@ groups:
   title: Gruplara ait
   empty: Herhangi bir grubun üyesi değilsin.
 expenses:
-  title: Giderler
+  title: Para
   empty: Şu ana kadar paylaşılan bir harcama yok.
+delete:
+  label: Silmek için basılı tutun

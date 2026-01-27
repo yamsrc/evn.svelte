@@ -7,5 +7,6 @@ interface GroupLike extends Pick<Group, 'id' | 'name' | 'identities'> {
 export interface Props {
   group: GroupLike
   selected?: boolean
+  highlighted?: boolean
   onselect?: (id: string, selected: boolean) => void
 }

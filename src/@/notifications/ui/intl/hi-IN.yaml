@@ -1,0 +1,15 @@
+groups:
+  joined:
+    me: |-
+      !js
+      (groupName) => `${groupName} में आप शामिल हो गए हैं`
+    others: >-
+      !js
+
+      (names, groupName) => `${new Intl.ListFormat("hi", { style: "long", type:
+      "conjunction" }).format(names)} ने ${groupName} में जॉइन किया`
+accounts:
+  created:
+    welcome: Evnly में आपका स्वागत है!
+    hint: हटाने के लिए बाएँ स्वाइप करें
+erase: सभी साफ़ करें

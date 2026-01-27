@@ -6,7 +6,7 @@ actions:
   signout: تسجيل الخروج
   close: إغلاق
   cheques:
-    title: المصروفات
+    title: المال
     scan: مسح الشيك
     input: إضافة مصروف
   contacts:
@@ -18,11 +18,12 @@ actions:
   search: بحث
   save: حفظ
   create: إنشاء
+  slide: اسحب
 nav:
   home: الرئيسية
   profile: أنا
   contacts: الأصدقاء
-  expenses: المصاريف
+  expenses: المال
 terms: الشروط والأحكام
 privacy: سياسة الخصوصية
 madeBy: من صنع
@@ -31,6 +32,18 @@ profile:
   language:
     title: اللغة
     description: هذا لا يؤثر على التعرف على الشيك. على أي حال، نحن نفهم معظم اللغات هناك.
+  grammar:
+    title: الصيغة النحوية
+    description: >-
+      في بعض اللغات، تعتمد صياغة الرسائل على الجنس النحوي. نستخدم هذا الإعداد
+      لجعل نصوص الواجهة تبدو طبيعية وصحيحة.
+    example: >-
+      !js
+
+      (name, gender) => gender === "he" ? `${name} أضاف مصروفًا` : gender ===
+      "she" ? `${name} أضافت مصروفًا` : `${name} أضاف(ت) مصروفًا`
+  background:
+    title: الخلفية
 form:
   enterName: أدخل الاسم
 copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
@@ -51,6 +64,7 @@ contacts:
   contact:
     owesYou: مدين لك
     youOwe: أنت مدين
+    even: أنتم متعادلون
   delete:
     confirm:
       title: حذف جهة الاتصال
@@ -89,12 +103,8 @@ groups:
   title: المجموعات
   summary:
     balance:
-      from: |-
-        !js
-        (amount) => `أعضاء هذه المجموعة مدينون لك بـ${amount}`
-      to: |-
-        !js
-        (amount) => `أنت مدين لهم بـ${amount}`
+      from: هم مدينون لك
+      to: أنت مدين لهم
       even: لا أحد مدين لأحد بشيء
   create: إنشاء مجموعة
 invite:
@@ -130,7 +140,7 @@ expenses:
     location:
       placeholder: أين؟ (اختياري)
     save: احفظ وقم بتحديث الأرصدة
-  title: المصروفات
+  title: مال
   balance:
     total: إجمالي الفاتورة
     youAreOwed: لك مستحقات

@@ -3,7 +3,7 @@ import type { Account } from './Account'
 
 const accounts = origin.resource<Account>('/accounts/')
 
-export type Editable = Partial<Pick<Account, 'name' | 'picture' | 'locale'>>
+export type Editable = Partial<Pick<Account, 'name' | 'picture' | 'background' | 'locale' | 'grammar'>>
 
 export async function get(id: string): Promise<Account | Error> {
   return accounts.json(id)

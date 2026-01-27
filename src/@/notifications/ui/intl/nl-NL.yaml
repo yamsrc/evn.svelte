@@ -1,0 +1,16 @@
+groups:
+  joined:
+    me: |-
+      !js
+      (groupName) => `Je bent lid geworden van ${groupName}`
+    others: >-
+      !js
+
+      (names, groupName) => `${new Intl.ListFormat("nl", { style: "long", type:
+      "conjunction" }).format(names)} ${names.length === 1 ? "is" : "zijn"} lid
+      geworden van ${groupName}`
+accounts:
+  created:
+    welcome: Welkom bij Evnly!
+    hint: Veeg naar links om te sluiten
+erase: Alles wissen

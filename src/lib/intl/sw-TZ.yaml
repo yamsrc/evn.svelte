@@ -6,7 +6,7 @@ actions:
   signout: Ondoka
   close: Funga
   cheques:
-    title: Matumizi
+    title: Pesa
     scan: Changanua hundi
     input: Ongeza gharama
   contacts:
@@ -18,11 +18,12 @@ actions:
   search: Tafuta
   save: Hifadhi
   create: Unda
+  slide: Pangusa
 nav:
   home: Mwanzo
   profile: Mimi
   contacts: Marafiki
-  expenses: Matumizi
+  expenses: Pesa
 terms: Vigezo na masharti
 privacy: Sera ya Faragha
 madeBy: Imetengenezwa na
@@ -31,6 +32,19 @@ profile:
   language:
     title: Lugha
     description: Hili haiathiri utambuzi wa hundi. Hata hivyo, tunaelewa lugha nyingi hapo.
+  grammar:
+    title: Umbo wa kisarufi
+    description: >-
+      Katika baadhi ya lugha, uundaji wa ujumbe hutegemea jinsia ya kisarufi.
+      Tunatumia kipimo hiki ili maandishi ya kiolesura yawe ya kawaida na
+      sahihi.
+    example: >-
+      !js
+
+      (name, gender) => gender === "he" ? `${name} ameongeza matumizi` : gender
+      === "she" ? `${name} ameongeza matumizi` : `${name} ameongeza matumizi`
+  background:
+    title: Mandharinyuma
 form:
   enterName: Weka jina
 copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
@@ -51,6 +65,7 @@ contacts:
   contact:
     owesYou: Ana deni lako
     youOwe: Unadaiwa
+    even: Mko sawa
   delete:
     confirm:
       title: Futa mawasiliano
@@ -89,12 +104,8 @@ groups:
   title: Makundi
   summary:
     balance:
-      from: |-
-        !js
-        (amount) => `Wanachama wa kundi hili wanakudai ${amount}`
-      to: |-
-        !js
-        (amount) => `Unawadaiwa ${amount}`
+      from: Wanakudai
+      to: Unawadaiwa
       even: Hakuna anayemdai mwingine chochote
   create: Unda kundi
 invite:
@@ -130,7 +141,7 @@ expenses:
     location:
       placeholder: Wapi? (Hiari)
     save: Hifadhi na sasisha mizania
-  title: Matumizi
+  title: Pesa
   balance:
     total: Jumla ya bili
     youAreOwed: Unadai malipo

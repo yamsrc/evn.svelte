@@ -1,5 +1,5 @@
 recent:
-  title: Matumizi
+  title: Hivi karibuni
   empty: >-
     Bado hakuna kilichotokea. Ongeza matumizi au alika marafiki ili mambo
     yaanze.
@@ -11,3 +11,33 @@ participants:
     shares: Kwa hisa
   add:
     label: Ongeza washiriki
+transfer:
+  action: Uhamisho
+  dialog:
+    title: Lipa deni
+    cancel: Ghairi
+    action: Thibitisha
+  me: Mimi
+  direction:
+    byme: >-
+      !js
+
+      (gender) => gender === "he" ? "Nimelipa" : (gender === "she" ? "Nimelipa"
+      : "Nimelipa")
+    tome: >-
+      !js
+
+      (gender) => gender === "he" ? "Nimepokea" : (gender === "she" ?
+      "Nimepokea" : "Nimepokea")
+transfers:
+  tobe:
+    neutral: Utakua umeshatulia kabisa
+    positive: Utakuwa na deni lako
+    negative: Utakuwa na deni
+  done:
+    paid: |-
+      !js
+      (gender) => "Umelipa"
+    received: |-
+      !js
+      (gender) => "Umepewa"
