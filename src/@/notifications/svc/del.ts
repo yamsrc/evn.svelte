@@ -32,3 +32,11 @@ export async function seen(domain: string, key: string): Promise<void | Error> {
   if (candidates.length > 0)
     return net.seen(me.id, domain, key)
 }
+
+export async function clear(): Promise<void | Error> {
+  const me = ensure(account)
+
+  notifications.replace([])
+
+  return net.clear(me.id)
+}

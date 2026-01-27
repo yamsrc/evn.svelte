@@ -14,3 +14,7 @@ export async function del(identity: string, id: string): Promise<void | Error> {
 export async function seen(identity: string, domain: string, key: string): Promise<void | Error> {
   return notifications.json(`${identity}/${domain}/${key}`, { method: 'DELETE' })
 }
+
+export async function clear(identity: string): Promise<void | Error> {
+  return notifications.json(identity, { method: 'DELETE' })
+}

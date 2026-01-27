@@ -12,13 +12,22 @@
   let dismissing = $state(false)
 
   export async function dismiss() {
-    if (dismissed || !ondismiss) return
+    if (dismissed) return
 
     dismissing = true
     dismissed = true
 
     await new Promise((resolve) => setTimeout(resolve, ANIMATION_DURATION_MS))
-    await ondismiss()
+    await ondismiss?.()
+  }
+
+  export async function remove() {
+    if (dismissed) return
+
+    dismissing = true
+    dismissed = true
+
+    await new Promise((resolve) => setTimeout(resolve, ANIMATION_DURATION_MS))
   }
 
   onMount(() => {
