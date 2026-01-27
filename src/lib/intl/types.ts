@@ -205,4 +205,5 @@ export type Dictionary = {
       search: {
         empty: string
       }
+      dir: string
     }

@@ -265,6 +265,8 @@ inputs:
   search:
     empty:
       input: No results found
+  dir:
+    input: ltr
 mounts:
   iam: ../../@/iam/ui/intl
   feedback: ../../@/feedback/ui/intl

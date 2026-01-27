@@ -43,7 +43,7 @@
 
   <Separator class="mt-5" />
 
-  <Section class="flex flex-col gap-6 flex-1 [&_p]:text-muted-foreground">
+  <Section class="flex flex-col gap-4 flex-1 [&_p]:text-muted-foreground">
     <div class="flex flex-col gap-2">
       <h2>{$dict.profile.language.title}</h2>
       <p>{$dict.profile.language.description}</p>

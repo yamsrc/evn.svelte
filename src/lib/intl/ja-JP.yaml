@@ -152,3 +152,4 @@ home:
     (name) => `${name}さん、こんにちは！`
 search:
   empty: 結果が見つかりませんでした
+dir: ltr

@@ -152,3 +152,4 @@ home:
     (name) => `${name}，你好！`
 search:
   empty: 未找到结果
+dir: ltr

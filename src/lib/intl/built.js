@@ -198,7 +198,8 @@ export const dictionaries = {
     },
     "search": {
       "empty": "لم يتم العثور على نتائج"
-    }
+    },
+    "dir": "rtl"
   },
   "de-DE": {
     "native": "Deutsch",
@@ -396,7 +397,8 @@ export const dictionaries = {
     },
     "search": {
       "empty": "Keine Ergebnisse gefunden"
-    }
+    },
+    "dir": "ltr"
   },
   "en-US": {
     "native": "English",
@@ -594,7 +596,8 @@ export const dictionaries = {
     },
     "search": {
       "empty": "No results found"
-    }
+    },
+    "dir": "ltr"
   },
   "es-ES": {
     "native": "Español",
@@ -792,7 +795,8 @@ export const dictionaries = {
     },
     "search": {
       "empty": "No se encontraron resultados"
-    }
+    },
+    "dir": "ltr"
   },
   "fr-FR": {
     "native": "Français",
@@ -990,7 +994,8 @@ export const dictionaries = {
     },
     "search": {
       "empty": "Aucun résultat trouvé"
-    }
+    },
+    "dir": "ltr"
   },
   "hi-IN": {
     "native": "हिन्दी",
@@ -1188,7 +1193,8 @@ export const dictionaries = {
     },
     "search": {
       "empty": "कोई परिणाम नहीं मिला"
-    }
+    },
+    "dir": "ltr"
   },
   "it-IT": {
     "native": "Italiano",
@@ -1386,7 +1392,8 @@ export const dictionaries = {
     },
     "search": {
       "empty": "Nessun risultato trovato"
-    }
+    },
+    "dir": "ltr"
   },
   "ja-JP": {
     "native": "日本語",
@@ -1584,7 +1591,8 @@ export const dictionaries = {
     },
     "search": {
       "empty": "結果が見つかりませんでした"
-    }
+    },
+    "dir": "ltr"
   },
   "ko-KR": {
     "native": "한국어",
@@ -1782,7 +1790,8 @@ export const dictionaries = {
     },
     "search": {
       "empty": "결과를 찾을 수 없습니다"
-    }
+    },
+    "dir": "ltr"
   },
   "nl-NL": {
     "native": "Nederlands",
@@ -1980,7 +1989,8 @@ export const dictionaries = {
     },
     "search": {
       "empty": "Geen resultaten gevonden"
-    }
+    },
+    "dir": "ltr"
   },
   "ru-RU": {
     "native": "Русский",
@@ -2178,7 +2188,8 @@ export const dictionaries = {
     },
     "search": {
       "empty": "Результаты не найдены"
-    }
+    },
+    "dir": "ltr"
   },
   "sw-TZ": {
     "native": "Kiswahili",
@@ -2376,7 +2387,8 @@ export const dictionaries = {
     },
     "search": {
       "empty": "Hakuna matokeo yaliyopatikana"
-    }
+    },
+    "dir": "ltr"
   },
   "tr-TR": {
     "native": "Türkçe",
@@ -2574,7 +2586,8 @@ export const dictionaries = {
     },
     "search": {
       "empty": "Sonuç bulunamadı"
-    }
+    },
+    "dir": "ltr"
   },
   "uk-UA": {
     "native": "Українська",
@@ -2772,7 +2785,8 @@ export const dictionaries = {
     },
     "search": {
       "empty": "Результатів не знайдено"
-    }
+    },
+    "dir": "ltr"
   },
   "zh-CN": {
     "native": "中文",
@@ -2970,7 +2984,8 @@ export const dictionaries = {
     },
     "search": {
       "empty": "未找到结果"
-    }
+    },
+    "dir": "ltr"
   }
 };
 
