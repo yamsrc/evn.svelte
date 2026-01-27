@@ -50,6 +50,4 @@
 </svelte:head>
 
 <Background class="fixed inset-0 -z-50 pointer-events-none" />
-<div class="max-w-2xl mx-auto relative z-10">
-  {@render children()}
-</div>
+{@render children()}
