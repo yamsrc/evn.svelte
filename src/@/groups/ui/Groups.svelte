@@ -13,12 +13,7 @@
 
   const selectable = $derived(selection !== undefined)
 
-  const unseen = (id: string) =>
-    notifications !== undefined && notifications.some((n) => n.key === id)
-
-  const sorted = $derived(
-    [...groups].sort((lhs, rhs) => Number(unseen(rhs.id)) - Number(unseen(lhs.id))),
-  )
+  const unseen = (id: string) => notifications?.some((n) => n.key === id) ?? false
 
   function onselect(id: string, selected: boolean) {
     if (!selection) return
@@ -28,7 +23,7 @@
   }
 </script>
 
-{#if sorted.length}
+{#if groups.length}
   <Section>
     <Collapsible.Root bind:open class="flex flex-col gap-1.5">
       {#if title}
@@ -48,7 +43,7 @@
         </div>
       {/if}
       <Collapsible.Content class="flex flex-col gap-1.5">
-        {#each sorted as group (group.id)}
+        {#each groups as group (group.id)}
           {@const selected = selection?.has(group.id)}
           {@const highlighted = unseen(group.id)}
           {#if selectable}
