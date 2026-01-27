@@ -36,7 +36,7 @@
   <Async store={combined(accounts.get(identity), contacts)}>
     {#snippet awaited([account, contacts])}
       {@const contact = contacts.find((c) => c.identity === identity)}
-      <Panel href={`/contacts/${contact?.id}/`}>
+      <Panel href={`/contacts/${contact?.id}/`} class="bg-constructive/20 border-constructive/30">
         {#snippet left()}
           <div class="flex items-center gap-3">
             <Avatar {account} />
