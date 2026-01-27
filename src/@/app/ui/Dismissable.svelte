@@ -39,7 +39,7 @@
 
         if (entry?.isIntersecting && !dismissed) {
           dismissed = true
-          ondismiss()
+          void ondismiss()
         }
       },
       { root: container, threshold: 1 },
