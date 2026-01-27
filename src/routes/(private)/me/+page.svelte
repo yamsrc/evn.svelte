@@ -63,15 +63,20 @@
     </div>
   </Section>
 
-  <Section>
+  <Section class="flex justify-center">
     <Feedback />
   </Section>
 
   <Section>
     <Separator class="mb-4" />
-    <footer class="text-muted-foreground text-sm text-center">
-      <p>{$dict.copyright(Date.now())}</p>
-      <p>v{version}</p>
+    <footer class="text-muted-foreground text-sm flex justify-between items-start">
+      <div>
+        <p>v{version}</p>
+        <p>
+          &copy; <a href="https://seed.me" target="_blank">seed.me</a>
+          2025–{new Date().getFullYear()}
+        </p>
+      </div>
       <Delete class="py-0 underline underline-offset-3 font-normal" ondelete={getout} />
     </footer>
   </Section>

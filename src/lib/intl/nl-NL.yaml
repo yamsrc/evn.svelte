@@ -31,26 +31,17 @@ profile:
   title: Mijn profiel
   language:
     title: Taal
-    description: >-
-      Dit heeft geen invloed op de chequedetectie. We begrijpen daar toch de
-      meeste talen.
+    description: Dit heeft geen invloed op de chequedetectie. We begrijpen daar toch de meeste talen.
   grammar:
     title: Grammaticale vorm
-    description: >-
-      In sommige talen is de formulering van berichten afhankelijk van de
-      grammaticale gender. We gebruiken deze instelling om de teksten in de
-      interface natuurlijk en correct te laten klinken.
-    example: >-
+    description: In sommige talen is de formulering van berichten afhankelijk van de grammaticale gender. We gebruiken deze instelling om de teksten in de interface natuurlijk en correct te laten klinken.
+    example: |-
       !js
-
-      (name, gender) => gender === "he" ? `${name} heeft een uitgave toegevoegd`
-      : gender === "she" ? `${name} heeft een uitgave toegevoegd` : `${name}
-      heeft een uitgave toegevoegd`
+      (name, gender) => gender === "he" ? `${name} heeft een uitgave toegevoegd` : gender === "she" ? `${name} heeft een uitgave toegevoegd` : `${name} heeft een uitgave toegevoegd`
   background:
     title: Achtergrond
 form:
   enterName: Naam invoeren
-copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
 onboarding:
   name:
     title: Persoonlijk tintje
@@ -76,9 +67,7 @@ contacts:
       confirm: Verwijderen
   add:
     label: Contact toevoegen
-    description: >-
-      Later kun je dit account overdragen aan de eigenaar, zodat die zijn of
-      haar inloggegevens kan instellen en het account kan overnemen.
+    description: Later kun je dit account overdragen aan de eigenaar, zodat die zijn of haar inloggegevens kan instellen en het account kan overnemen.
   share:
     invite:
       link: Uitnodigen voor evn
@@ -86,15 +75,11 @@ contacts:
       description: De uitnodiging verloopt over 5 minuten
 join:
   app:
-    description: >-
-      De slimme manier om samen met vrienden bij te houden wie wat aan wie
-      verschuldigd is.
+    description: De slimme manier om samen met vrienden bij te houden wie wat aan wie verschuldigd is.
   inviter:
-    description: >-
+    description: |-
       !js
-
-      (name) => `Je bent uitgenodigd door ${name}. Registreer je of log in, en
-      je bent klaar om te beginnen`
+      (name) => `Je bent uitgenodigd door ${name}. Registreer je of log in, en je bent klaar om te beginnen`
   accept: Evnly gebruiken starten
 groups:
   leave: Vasthouden om te verlaten
@@ -123,9 +108,7 @@ account:
   delete:
     button: Account verwijderen
     title: Account verwijderen
-    description: >-
-      We verwijderen je account en alle bijbehorende informatie permanent. Deze
-      actie kan niet ongedaan worden gemaakt.
+    description: We verwijderen je account en alle bijbehorende informatie permanent. Deze actie kan niet ongedaan worden gemaakt.
     sorry: Het spijt ons zeer om je te zien gaan.
     hold: Houd vast om te bevestigen
     link: Account verwijderen

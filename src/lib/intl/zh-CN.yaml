@@ -42,7 +42,6 @@ profile:
     title: 背景
 form:
   enterName: 输入姓名
-copyright: "!js (timestamp) => `© seed.me，2025–${new Date(timestamp).getFullYear()}`"
 onboarding:
   name:
     title: 个性化体验

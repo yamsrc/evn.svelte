@@ -54,7 +54,6 @@ export const dictionaries = {
     "form": {
       "enterName": "أدخل الاسم"
     },
-    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
     "onboarding": {
       "name": {
         "title": "لمسة شخصية",
@@ -253,7 +252,6 @@ export const dictionaries = {
     "form": {
       "enterName": "Name eingeben"
     },
-    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
     "onboarding": {
       "name": {
         "title": "Persönliche Note",
@@ -452,7 +450,6 @@ export const dictionaries = {
     "form": {
       "enterName": "Enter name"
     },
-    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
     "onboarding": {
       "name": {
         "title": "Personal Touch",
@@ -651,7 +648,6 @@ export const dictionaries = {
     "form": {
       "enterName": "Introduce el nombre"
     },
-    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
     "onboarding": {
       "name": {
         "title": "Toque personal",
@@ -850,7 +846,6 @@ export const dictionaries = {
     "form": {
       "enterName": "Saisissez le nom"
     },
-    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
     "onboarding": {
       "name": {
         "title": "Touche personnelle",
@@ -1049,7 +1044,6 @@ export const dictionaries = {
     "form": {
       "enterName": "नाम दर्ज करें"
     },
-    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
     "onboarding": {
       "name": {
         "title": "व्यक्तिगत स्पर्श",
@@ -1248,7 +1242,6 @@ export const dictionaries = {
     "form": {
       "enterName": "Inserisci il nome"
     },
-    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
     "onboarding": {
       "name": {
         "title": "Tocco personale",
@@ -1447,7 +1440,6 @@ export const dictionaries = {
     "form": {
       "enterName": "名前を入力してください"
     },
-    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
     "onboarding": {
       "name": {
         "title": "パーソナルタッチ",
@@ -1646,7 +1638,6 @@ export const dictionaries = {
     "form": {
       "enterName": "이름을 입력하세요"
     },
-    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
     "onboarding": {
       "name": {
         "title": "개인적인 터치",
@@ -1845,7 +1836,6 @@ export const dictionaries = {
     "form": {
       "enterName": "Naam invoeren"
     },
-    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
     "onboarding": {
       "name": {
         "title": "Persoonlijk tintje",
@@ -2044,7 +2034,6 @@ export const dictionaries = {
     "form": {
       "enterName": "Введите имя"
     },
-    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
     "onboarding": {
       "name": {
         "title": "Личный штрих",
@@ -2243,7 +2232,6 @@ export const dictionaries = {
     "form": {
       "enterName": "Weka jina"
     },
-    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
     "onboarding": {
       "name": {
         "title": "Mguso wa kibinafsi",
@@ -2442,7 +2430,6 @@ export const dictionaries = {
     "form": {
       "enterName": "İsim girin"
     },
-    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
     "onboarding": {
       "name": {
         "title": "Kişisel dokunuş",
@@ -2641,7 +2628,6 @@ export const dictionaries = {
     "form": {
       "enterName": "Введіть ім’я"
     },
-    "copyright": (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`,
     "onboarding": {
       "name": {
         "title": "Особистий штрих",
@@ -2840,7 +2826,6 @@ export const dictionaries = {
     "form": {
       "enterName": "输入姓名"
     },
-    "copyright": (timestamp) => `© seed.me，2025–${new Date(timestamp).getFullYear()}`,
     "onboarding": {
       "name": {
         "title": "个性化体验",

@@ -79,8 +79,6 @@ inputs:
   form:
     enterName:
       input: Enter name
-  copyright:
-    input: © Seed.me, 2024-2025
   onboarding:
     name:
       title:
