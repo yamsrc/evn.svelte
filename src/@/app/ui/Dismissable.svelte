@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { onMount } from 'svelte'
   import type { Props } from './Dismissable'
 
   const { children, ondismiss }: Props = $props()
@@ -6,6 +7,7 @@
   const ANIMATION_DURATION_MS = 300
 
   let container: HTMLDivElement | undefined = $state()
+  let sentinel: HTMLDivElement | undefined = $state()
   let dismissed = $state(false)
   let dismissing = $state(false)
 
@@ -19,28 +21,33 @@
     await ondismiss()
   }
 
-  async function onscrollend() {
-    if (!container || dismissed || !ondismiss) return
+  onMount(() => {
+    if (!sentinel || dismissed || !ondismiss) return
 
-    const width = container.scrollWidth - container.clientWidth
-    const gone = container.scrollLeft >= width
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0]
 
-    if (gone) {
-      dismissed = true
-      await ondismiss()
-    }
-  }
+        if (entry?.isIntersecting && !dismissed) {
+          dismissed = true
+          ondismiss()
+        }
+      },
+      { root: container, threshold: 1 },
+    )
+
+    observer.observe(sentinel)
+
+    return () => observer.disconnect()
+  })
 </script>
 
 <div class="relative" class:dismissing>
-  <div
-    bind:this={container}
-    class="flex w-full overflow-x-auto snap-x snap-mandatory no-scrollbar"
-    {onscrollend}>
+  <div bind:this={container} class="flex w-full overflow-x-auto snap-x snap-mandatory no-scrollbar">
     <div class="w-full shrink-0 px-5 snap-center">
       {@render children()}
     </div>
-    <div class="w-full shrink-0 snap-center"></div>
+    <div bind:this={sentinel} class="w-full shrink-0 snap-center"></div>
   </div>
 </div>
 
