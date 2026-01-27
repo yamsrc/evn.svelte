@@ -40,6 +40,7 @@
       </Section>
 
       <Favorites title={$dict.favorites.title} favorites={filteredFavorites} />
+
       <Groups
         title={$dict.groups.title}
         groups={filteredGroups}
