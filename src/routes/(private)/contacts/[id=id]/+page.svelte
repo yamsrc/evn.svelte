@@ -8,7 +8,7 @@
   import { Spinner } from '$ui/spinner'
   import { Grammar } from '@/accounts/ui'
   import { Cosmetics } from '@/accounts/ui'
-  import { Section } from '@/app/ui'
+  import { BackgroundOverride, Section } from '@/app/ui'
   import { Header } from '@/app/ui'
   import { contacts } from '@/contacts'
   import { Balance, Share, Groups, Expenses, Favorite } from '@/contacts/ui'
@@ -45,6 +45,9 @@
   {#snippet awaited([contacts, groups, expenses])}
     {@const contact = contacts.find((contact) => contact.id === id)}
     {#if contact?.account && ok(contact.account)}
+      {#if contact.account.background}
+        <BackgroundOverride id={contact.account.background} />
+      {/if}
       <Section>
         <div class="flex flex-col gap-4">
           <Cosmetics account={contact.account} editable={contact.managed} managed />

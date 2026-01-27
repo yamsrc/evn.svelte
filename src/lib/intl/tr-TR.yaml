@@ -18,6 +18,7 @@ actions:
   search: Ara
   save: Kaydet
   create: Oluştur
+  slide: Kaydır
 nav:
   home: Ana Sayfa
   profile: Ben
@@ -39,6 +40,8 @@ profile:
     example: |-
       !js
       (name, gender) => `${name} bir harcama ekledi`
+  background:
+    title: Arka plan
 form:
   enterName: İsim girin
 copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
@@ -59,6 +62,7 @@ contacts:
   contact:
     owesYou: Sana borçlu
     youOwe: Borçlusun
+    even: Artık ödeşmiş oldunuz
   delete:
     confirm:
       title: Kişiyi sil

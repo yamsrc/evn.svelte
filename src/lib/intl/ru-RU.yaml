@@ -18,6 +18,7 @@ actions:
   search: Поиск
   save: Сохранить
   create: Создать
+  slide: Смахни
 nav:
   home: Главная
   profile: Я
@@ -44,6 +45,8 @@ profile:
 
       (name, gender) => gender === "he" ? `${name} добавил расход` : gender ===
       "she" ? `${name} добавила расход` : `${name} добавил(а) расход`
+  background:
+    title: Фон
 form:
   enterName: Введите имя
 copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
@@ -64,6 +67,7 @@ contacts:
   contact:
     owesYou: Должен тебе
     youOwe: Вы должны
+    even: Вы в расчёте
   delete:
     confirm:
       title: Удалить контакт

@@ -40,6 +40,8 @@ inputs:
       input: Save
     create:
       input: Create
+    slide:
+      input: Смахни
   nav:
     home:
       input: Home
@@ -71,6 +73,9 @@ inputs:
         input: In some languages, message wording depends on grammatical gender. We use this setting to make interface texts sound natural and correct.
       example:
         input: "{name} добавил(а) расход"
+    background:
+      title:
+        input: Background
   form:
     enterName:
       input: Enter name
@@ -106,6 +111,9 @@ inputs:
         input: Owes you
       youOwe:
         input: You owe
+      even:
+        input: You're even
+        context: no one owes nothing
     delete:
       confirm:
         title:

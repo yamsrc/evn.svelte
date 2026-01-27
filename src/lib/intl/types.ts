@@ -31,6 +31,7 @@ export type Dictionary = {
         search: string
         save: string
         create: string
+        slide: string
       }
       nav: {
         home: string
@@ -51,6 +52,9 @@ export type Dictionary = {
           title: string
           description: string
           example: (...args: [any, any]) => string
+        }
+        background: {
+          title: string
         }
       }
       form: {
@@ -78,6 +82,7 @@ export type Dictionary = {
         contact: {
           owesYou: string
           youOwe: string
+          even: string
         }
         delete: {
           confirm: {

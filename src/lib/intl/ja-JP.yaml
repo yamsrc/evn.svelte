@@ -18,6 +18,7 @@ actions:
   search: 検索
   save: 保存
   create: 作成
+  slide: スワイプ
 nav:
   home: ホーム
   profile: 私
@@ -37,6 +38,8 @@ profile:
     example: |-
       !js
       (name, gender) => `${name} さんが支出を追加しました`
+  background:
+    title: 背景
 form:
   enterName: 名前を入力してください
 copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
@@ -57,6 +60,7 @@ contacts:
   contact:
     owesYou: あなたに借りがある
     youOwe: あなたが支払うべきです
+    even: これでおあいこです
   delete:
     confirm:
       title: 連絡先を削除

@@ -18,6 +18,7 @@ actions:
   search: بحث
   save: حفظ
   create: إنشاء
+  slide: اسحب
 nav:
   home: الرئيسية
   profile: أنا
@@ -41,6 +42,8 @@ profile:
 
       (name, gender) => gender === "he" ? `${name} أضاف مصروفًا` : gender ===
       "she" ? `${name} أضافت مصروفًا` : `${name} أضاف(ت) مصروفًا`
+  background:
+    title: الخلفية
 form:
   enterName: أدخل الاسم
 copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
@@ -61,6 +64,7 @@ contacts:
   contact:
     owesYou: مدين لك
     youOwe: أنت مدين
+    even: أنتم متعادلون
   delete:
     confirm:
       title: حذف جهة الاتصال

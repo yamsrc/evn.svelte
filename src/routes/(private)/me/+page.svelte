@@ -8,6 +8,7 @@
   import { Cosmetics, Delete, Grammar, Language } from '@/accounts/ui'
   import { Section } from '@/app/ui'
   import { Header } from '@/app/ui'
+  import { Background } from '@/app/ui'
   import { Feedback } from '@/feedback/ui'
   import { logout } from '@/iam'
   import { account } from '@/iam'
@@ -52,6 +53,13 @@
       <h3>{$dict.profile.grammar.title}</h3>
       <p>{$dict.profile.grammar.description}</p>
       <Grammar account={$account} />
+    </div>
+  </Section>
+
+  <Section class="space-y-2">
+    <h2>{$dict.profile.background.title}</h2>
+    <div class="border h-40 rounded-lg bg-background">
+      <Background scrollable />
     </div>
   </Section>
 

@@ -24,7 +24,8 @@ export const dictionaries = {
       "cancel": "إلغاء",
       "search": "بحث",
       "save": "حفظ",
-      "create": "إنشاء"
+      "create": "إنشاء",
+      "slide": "اسحب"
     },
     "nav": {
       "home": "الرئيسية",
@@ -45,6 +46,9 @@ export const dictionaries = {
         "title": "الصيغة النحوية",
         "description": "في بعض اللغات، تعتمد صياغة الرسائل على الجنس النحوي. نستخدم هذا الإعداد لجعل نصوص الواجهة تبدو طبيعية وصحيحة.",
         "example": (name, gender) => gender === "he" ? `${name} أضاف مصروفًا` : gender === "she" ? `${name} أضافت مصروفًا` : `${name} أضاف(ت) مصروفًا`
+      },
+      "background": {
+        "title": "الخلفية"
       }
     },
     "form": {
@@ -71,7 +75,8 @@ export const dictionaries = {
       "all": "جميع الأصدقاء",
       "contact": {
         "owesYou": "مدين لك",
-        "youOwe": "أنت مدين"
+        "youOwe": "أنت مدين",
+        "even": "أنتم متعادلون"
       },
       "delete": {
         "confirm": {
@@ -218,7 +223,8 @@ export const dictionaries = {
       "cancel": "Abbrechen",
       "search": "Suchen",
       "save": "Speichern",
-      "create": "Erstellen"
+      "create": "Erstellen",
+      "slide": "Wischen"
     },
     "nav": {
       "home": "Startseite",
@@ -239,6 +245,9 @@ export const dictionaries = {
         "title": "Grammatische Form",
         "description": "In einigen Sprachen hängt die Formulierung von Nachrichten vom grammatischen Geschlecht ab. Diese Einstellung sorgt dafür, dass die Texte der Benutzeroberfläche natürlich und korrekt klingen.",
         "example": (name, gender) => gender === "he" ? `${name} hat eine Ausgabe hinzugefügt` : gender === "she" ? `${name} hat eine Ausgabe hinzugefügt` : `${name} hat eine Ausgabe hinzugefügt`
+      },
+      "background": {
+        "title": "Hintergrund"
       }
     },
     "form": {
@@ -265,7 +274,8 @@ export const dictionaries = {
       "all": "Alle Freunde",
       "contact": {
         "owesYou": "Schuldet dir",
-        "youOwe": "Du schuldest"
+        "youOwe": "Du schuldest",
+        "even": "Ihr seid quitt"
       },
       "delete": {
         "confirm": {
@@ -412,7 +422,8 @@ export const dictionaries = {
       "cancel": "Cancel",
       "search": "Search",
       "save": "Save",
-      "create": "Create"
+      "create": "Create",
+      "slide": "Swipe"
     },
     "nav": {
       "home": "Home",
@@ -433,6 +444,9 @@ export const dictionaries = {
         "title": "Grammatical Form",
         "description": "In some languages, message wording depends on grammatical gender. We use this setting to make interface texts sound natural and correct.",
         "example": (name, gender) => gender === "he" ? `${name} added an expense` : gender === "she" ? `${name} added an expense` : `${name} added an expense`
+      },
+      "background": {
+        "title": "Background"
       }
     },
     "form": {
@@ -459,7 +473,8 @@ export const dictionaries = {
       "all": "All friends",
       "contact": {
         "owesYou": "Owes you",
-        "youOwe": "You owe"
+        "youOwe": "You owe",
+        "even": "You’re even"
       },
       "delete": {
         "confirm": {
@@ -606,7 +621,8 @@ export const dictionaries = {
       "cancel": "Cancelar",
       "search": "Buscar",
       "save": "Guardar",
-      "create": "Crear"
+      "create": "Crear",
+      "slide": "Desliza"
     },
     "nav": {
       "home": "Inicio",
@@ -627,6 +643,9 @@ export const dictionaries = {
         "title": "Forma gramatical",
         "description": "En algunos idiomas, la redacción de los mensajes depende del género gramatical. Usamos este ajuste para que los textos de la interfaz suenen naturales y correctos.",
         "example": (name, gender) => gender === "he" ? `${name} añadió un gasto` : gender === "she" ? `${name} añadió un gasto` : `${name} añadió un gasto`
+      },
+      "background": {
+        "title": "Fondo"
       }
     },
     "form": {
@@ -653,7 +672,8 @@ export const dictionaries = {
       "all": "Todos los amigos",
       "contact": {
         "owesYou": "Te debe",
-        "youOwe": "Debes"
+        "youOwe": "Debes",
+        "even": "Están a mano"
       },
       "delete": {
         "confirm": {
@@ -800,7 +820,8 @@ export const dictionaries = {
       "cancel": "Annuler",
       "search": "Rechercher",
       "save": "Enregistrer",
-      "create": "Créer"
+      "create": "Créer",
+      "slide": "Balaye"
     },
     "nav": {
       "home": "Accueil",
@@ -821,6 +842,9 @@ export const dictionaries = {
         "title": "Forme grammaticale",
         "description": "Dans certaines langues, la formulation des messages dépend du genre grammatical. Nous utilisons ce réglage pour que les textes de l’interface soient naturels et corrects.",
         "example": (name, gender) => gender === "he" ? `${name} a ajouté une dépense` : gender === "she" ? `${name} a ajouté une dépense` : `${name} a ajouté une dépense`
+      },
+      "background": {
+        "title": "Arrière-plan"
       }
     },
     "form": {
@@ -847,7 +871,8 @@ export const dictionaries = {
       "all": "Tous les amis",
       "contact": {
         "owesYou": "Te doit",
-        "youOwe": "Vous devez"
+        "youOwe": "Vous devez",
+        "even": "Vous êtes quittes"
       },
       "delete": {
         "confirm": {
@@ -994,7 +1019,8 @@ export const dictionaries = {
       "cancel": "रद्द करें",
       "search": "खोजें",
       "save": "सहेजें",
-      "create": "सृजन करें"
+      "create": "सृजन करें",
+      "slide": "स्वाइप करें"
     },
     "nav": {
       "home": "मुख्य पृष्ठ",
@@ -1015,6 +1041,9 @@ export const dictionaries = {
         "title": "व्याकरणिक रूप",
         "description": "कुछ भाषाओं में संदेशों की भाषा व्याकरणिक लिंग पर निर्भर करती है। हम इस सेटिंग का उपयोग करते हैं ताकि इंटरफ़ेस के सभी पाठ स्वाभाविक और सही लगें।",
         "example": (name, gender) => gender === "he" ? `${name} ने खर्च जोड़ा` : gender === "she" ? `${name} ने खर्च जोड़ी` : `${name} ने खर्च जोड़ा(जोड़ी)`
+      },
+      "background": {
+        "title": "पृष्ठभूमि"
       }
     },
     "form": {
@@ -1041,7 +1070,8 @@ export const dictionaries = {
       "all": "सभी मित्र",
       "contact": {
         "owesYou": "आपका कर्ज़दार है",
-        "youOwe": "आपको देना है"
+        "youOwe": "आपको देना है",
+        "even": "आप दोनों बराबर हैं"
       },
       "delete": {
         "confirm": {
@@ -1188,7 +1218,8 @@ export const dictionaries = {
       "cancel": "Annulla",
       "search": "Cerca",
       "save": "Salva",
-      "create": "Crea"
+      "create": "Crea",
+      "slide": "Scorri"
     },
     "nav": {
       "home": "Home",
@@ -1209,6 +1240,9 @@ export const dictionaries = {
         "title": "Forma grammaticale",
         "description": "In alcune lingue, la formulazione dei messaggi dipende dal genere grammaticale. Usiamo questa impostazione per rendere i testi dell’interfaccia naturali e corretti.",
         "example": (name, gender) => gender === "he" ? `${name} ha aggiunto una spesa` : gender === "she" ? `${name} ha aggiunto una spesa` : `${name} ha aggiunto una spesa`
+      },
+      "background": {
+        "title": "Sfondo"
       }
     },
     "form": {
@@ -1235,7 +1269,8 @@ export const dictionaries = {
       "all": "Tutti gli amici",
       "contact": {
         "owesYou": "Ti deve",
-        "youOwe": "Devi"
+        "youOwe": "Devi",
+        "even": "Siete pari"
       },
       "delete": {
         "confirm": {
@@ -1382,7 +1417,8 @@ export const dictionaries = {
       "cancel": "キャンセル",
       "search": "検索",
       "save": "保存",
-      "create": "作成"
+      "create": "作成",
+      "slide": "スワイプ"
     },
     "nav": {
       "home": "ホーム",
@@ -1403,6 +1439,9 @@ export const dictionaries = {
         "title": "文法形式",
         "description": "言語によっては、メッセージの表現に文法上の性別が関係します。この設定によって、インターフェースの文言が自然で正確になるようにしています。",
         "example": (name, gender) => `${name} さんが支出を追加しました`
+      },
+      "background": {
+        "title": "背景"
       }
     },
     "form": {
@@ -1429,7 +1468,8 @@ export const dictionaries = {
       "all": "すべての友達",
       "contact": {
         "owesYou": "あなたに借りがある",
-        "youOwe": "あなたが支払うべきです"
+        "youOwe": "あなたが支払うべきです",
+        "even": "これでおあいこです"
       },
       "delete": {
         "confirm": {
@@ -1576,7 +1616,8 @@ export const dictionaries = {
       "cancel": "취소",
       "search": "검색",
       "save": "저장",
-      "create": "생성"
+      "create": "생성",
+      "slide": "스와이프"
     },
     "nav": {
       "home": "홈",
@@ -1597,6 +1638,9 @@ export const dictionaries = {
         "title": "문법 형태",
         "description": "일부 언어에서는 메시지 문구가 문법적 성별에 따라 달라집니다. 이 설정을 통해 인터페이스의 텍스트가 자연스럽고 올바르게 표시되도록 합니다.",
         "example": (name, gender) => `${name}님이 지출을 추가했습니다`
+      },
+      "background": {
+        "title": "배경"
       }
     },
     "form": {
@@ -1623,7 +1667,8 @@ export const dictionaries = {
       "all": "모든 친구",
       "contact": {
         "owesYou": "당신에게 빚졌어요",
-        "youOwe": "당신이 빚졌습니다"
+        "youOwe": "당신이 빚졌습니다",
+        "even": "두 분은 이제 비겼어요"
       },
       "delete": {
         "confirm": {
@@ -1770,7 +1815,8 @@ export const dictionaries = {
       "cancel": "Annuleren",
       "search": "Zoeken",
       "save": "Opslaan",
-      "create": "Aanmaken"
+      "create": "Aanmaken",
+      "slide": "Veeg"
     },
     "nav": {
       "home": "Home",
@@ -1791,6 +1837,9 @@ export const dictionaries = {
         "title": "Grammaticale vorm",
         "description": "In sommige talen is de formulering van berichten afhankelijk van de grammaticale gender. We gebruiken deze instelling om de teksten in de interface natuurlijk en correct te laten klinken.",
         "example": (name, gender) => gender === "he" ? `${name} heeft een uitgave toegevoegd` : gender === "she" ? `${name} heeft een uitgave toegevoegd` : `${name} heeft een uitgave toegevoegd`
+      },
+      "background": {
+        "title": "Achtergrond"
       }
     },
     "form": {
@@ -1817,7 +1866,8 @@ export const dictionaries = {
       "all": "Alle vrienden",
       "contact": {
         "owesYou": "Is jou iets verschuldigd",
-        "youOwe": "Je bent verschuldigd"
+        "youOwe": "Je bent verschuldigd",
+        "even": "Jullie staan quitte"
       },
       "delete": {
         "confirm": {
@@ -1964,7 +2014,8 @@ export const dictionaries = {
       "cancel": "Отмена",
       "search": "Поиск",
       "save": "Сохранить",
-      "create": "Создать"
+      "create": "Создать",
+      "slide": "Смахни"
     },
     "nav": {
       "home": "Главная",
@@ -1985,6 +2036,9 @@ export const dictionaries = {
         "title": "Грамматическая форма",
         "description": "В некоторых языках формулировка сообщений зависит от грамматического рода. Эта настройка помогает сделать тексты интерфейса естественными и правильными.",
         "example": (name, gender) => gender === "he" ? `${name} добавил расход` : gender === "she" ? `${name} добавила расход` : `${name} добавил(а) расход`
+      },
+      "background": {
+        "title": "Фон"
       }
     },
     "form": {
@@ -2011,7 +2065,8 @@ export const dictionaries = {
       "all": "Все друзья",
       "contact": {
         "owesYou": "Должен тебе",
-        "youOwe": "Вы должны"
+        "youOwe": "Вы должны",
+        "even": "Вы в расчёте"
       },
       "delete": {
         "confirm": {
@@ -2158,7 +2213,8 @@ export const dictionaries = {
       "cancel": "Ghairi",
       "search": "Tafuta",
       "save": "Hifadhi",
-      "create": "Unda"
+      "create": "Unda",
+      "slide": "Pangusa"
     },
     "nav": {
       "home": "Mwanzo",
@@ -2179,6 +2235,9 @@ export const dictionaries = {
         "title": "Umbo wa kisarufi",
         "description": "Katika baadhi ya lugha, uundaji wa ujumbe hutegemea jinsia ya kisarufi. Tunatumia kipimo hiki ili maandishi ya kiolesura yawe ya kawaida na sahihi.",
         "example": (name, gender) => gender === "he" ? `${name} ameongeza matumizi` : gender === "she" ? `${name} ameongeza matumizi` : `${name} ameongeza matumizi`
+      },
+      "background": {
+        "title": "Mandharinyuma"
       }
     },
     "form": {
@@ -2205,7 +2264,8 @@ export const dictionaries = {
       "all": "Marafiki wote",
       "contact": {
         "owesYou": "Ana deni lako",
-        "youOwe": "Unadaiwa"
+        "youOwe": "Unadaiwa",
+        "even": "Mko sawa"
       },
       "delete": {
         "confirm": {
@@ -2352,7 +2412,8 @@ export const dictionaries = {
       "cancel": "İptal",
       "search": "Ara",
       "save": "Kaydet",
-      "create": "Oluştur"
+      "create": "Oluştur",
+      "slide": "Kaydır"
     },
     "nav": {
       "home": "Ana Sayfa",
@@ -2373,6 +2434,9 @@ export const dictionaries = {
         "title": "Dilbilgisel biçim",
         "description": "Bazı dillerde mesajın ifadesi dilbilgisel cinsiyete bağlıdır. Arayüz metinlerinin doğal ve doğru olması için bu ayarı kullanıyoruz.",
         "example": (name, gender) => `${name} bir harcama ekledi`
+      },
+      "background": {
+        "title": "Arka plan"
       }
     },
     "form": {
@@ -2399,7 +2463,8 @@ export const dictionaries = {
       "all": "Tüm arkadaşlar",
       "contact": {
         "owesYou": "Sana borçlu",
-        "youOwe": "Borçlusun"
+        "youOwe": "Borçlusun",
+        "even": "Artık ödeşmiş oldunuz"
       },
       "delete": {
         "confirm": {
@@ -2546,7 +2611,8 @@ export const dictionaries = {
       "cancel": "Скасувати",
       "search": "Пошук",
       "save": "Зберегти",
-      "create": "Створити"
+      "create": "Створити",
+      "slide": "Змахни"
     },
     "nav": {
       "home": "Головна",
@@ -2567,6 +2633,9 @@ export const dictionaries = {
         "title": "Граматична форма",
         "description": "У деяких мовах формулювання повідомлень залежить від граматичного роду. Ми використовуємо цей параметр, щоб текст інтерфейсу звучав природно та правильно.",
         "example": (name, gender) => gender === "he" ? `${name} додав витрату` : gender === "she" ? `${name} додала витрату` : `${name} додав(ла) витрату`
+      },
+      "background": {
+        "title": "Тло"
       }
     },
     "form": {
@@ -2593,7 +2662,8 @@ export const dictionaries = {
       "all": "Усі друзі",
       "contact": {
         "owesYou": "Винен тобі",
-        "youOwe": "Ви винні"
+        "youOwe": "Ви винні",
+        "even": "Ви квити"
       },
       "delete": {
         "confirm": {
@@ -2740,7 +2810,8 @@ export const dictionaries = {
       "cancel": "取消",
       "search": "搜索",
       "save": "保存",
-      "create": "创建"
+      "create": "创建",
+      "slide": "滑动"
     },
     "nav": {
       "home": "首页",
@@ -2761,6 +2832,9 @@ export const dictionaries = {
         "title": "语法形式",
         "description": "在某些语言中，消息的措辞取决于语法性别。我们使用此设置以使界面文本更自然、更准确。",
         "example": (name, gender) => `${name} 添加了一笔支出`
+      },
+      "background": {
+        "title": "背景"
       }
     },
     "form": {
@@ -2787,7 +2861,8 @@ export const dictionaries = {
       "all": "所有好友",
       "contact": {
         "owesYou": "欠你的",
-        "youOwe": "你欠"
+        "youOwe": "你欠",
+        "even": "你们扯平了"
       },
       "delete": {
         "confirm": {
