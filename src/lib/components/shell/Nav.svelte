@@ -7,6 +7,7 @@
   import { cn } from '$lib/utils'
   import { Button } from '$ui/button'
   import * as ButtonGroup from '$ui/button-group'
+  import Attention from './Attention.svelte'
   import { exact, href, match, nested, type Props, type Section } from './Nav'
   import { actions, returns } from './store'
 
@@ -52,7 +53,7 @@
         rounded,
       )}
       style="view-transition-name: shell-nav;">
-      {#each sections as section, i (section.href)}
+      {#each sections as section (section.href)}
         {@const active = match(section.href, page.url.pathname)}
         {@const hidden = !visible.includes(section)}
         {@const ret = $returns.at(-1)}
@@ -76,11 +77,16 @@
               )}
               style={active ? 'view-transition-name: shell-nav-active;' : ''}>
             </div>
+            {#if section.unseen && !ret}
+              <Attention
+                id={`shell-nav-notify-${section.id}`}
+                class="absolute top-2.5 right-2.5 z-10" />
+            {/if}
             <div
               class={cn(
                 "flex flex-col items-center gap-0.5 z-10 relative font-bold [&_svg:not([class*='size-'])]:size-5",
               )}
-              style="view-transition-name: shell-nav-item-{i};">
+              style="view-transition-name: shell-nav-item-{section.id};">
               {#if ret}
                 {#if ret.children}
                   {@render ret.children()}

@@ -1,11 +1,13 @@
 <script lang="ts">
   import { CircleArrowLeft, CircleArrowRight } from '@lucide/svelte'
-  import { Async } from 'svas'
+  import { Async, combined } from 'svas'
+  import { Panel } from '$com/panel'
   import { grammar } from '$lib/intl'
   import { locale } from '$lib/intl'
   import { accounts } from '@/accounts'
   import { Avatar } from '@/accounts/ui'
   import Coins from '@/app/ui/Coins.svelte'
+  import { contacts } from '@/contacts'
   import { account } from '@/iam'
   import { dict } from '../intl'
   import type { Props } from './Props'
@@ -31,32 +33,36 @@
 </script>
 
 {#if identity !== undefined}
-  <div
-    class="px-4 py-3 border border-constructive/30 bg-constructive/20 rounded-lg flex justify-between items-center">
-    <div class="flex items-center gap-3">
-      <Async store={accounts.get(identity)}>
-        {#snippet awaited(contact)}
-          <Avatar account={contact} />
-          <div class="flex flex-col">
-            <span>{contact.name}</span>
-            <span class="text-sm text-muted-foreground">
-              {date}
-            </span>
+  <Async store={combined(accounts.get(identity), contacts)}>
+    {#snippet awaited([account, contacts])}
+      {@const contact = contacts.find((c) => c.identity === identity)}
+      <Panel href={`/contacts/${contact?.id}/`} class="bg-constructive/20 border-constructive/30">
+        {#snippet left()}
+          <div class="flex items-center gap-3">
+            <Avatar {account} />
+            <div class="flex flex-col text-left">
+              <span>{account.name}</span>
+              <span class="text-sm text-muted-foreground">
+                {date}
+              </span>
+            </div>
           </div>
         {/snippet}
-      </Async>
-    </div>
-    <div class="flex items-center gap-2 [&_svg]:size-4">
-      <span class="flex items-center gap-1 text-sm text-muted-foreground">
-        {#if received}
-          <CircleArrowRight color="black" fill="currentColor" class="text-constructive" />
-          {$dict.transfers.done.received($grammar)}
-        {:else}
-          <CircleArrowLeft color="black" fill="currentColor" class="text-primary" />
-          {$dict.transfers.done.paid($grammar)}
-        {/if}
-      </span>
-      <Coins {amount} sign="neutral" />
-    </div>
-  </div>
+        {#snippet right()}
+          <div class="flex items-center gap-2 [&_svg]:size-4">
+            <span class="flex items-center gap-1 text-sm text-muted-foreground">
+              {#if received}
+                <CircleArrowRight color="black" fill="currentColor" class="text-constructive" />
+                {$dict.transfers.done.received($grammar)}
+              {:else}
+                <CircleArrowLeft color="black" fill="currentColor" class="text-primary" />
+                {$dict.transfers.done.paid($grammar)}
+              {/if}
+            </span>
+            <Coins {amount} sign="neutral" />
+          </div>
+        {/snippet}
+      </Panel>
+    {/snippet}
+  </Async>
 {/if}

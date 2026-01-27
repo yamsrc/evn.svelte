@@ -11,6 +11,7 @@ export interface Section {
   href: string
   label: string
   Icon: typeof Icon
+  unseen?: boolean
 }
 
 export function match(path: string | string[], current: string): boolean {

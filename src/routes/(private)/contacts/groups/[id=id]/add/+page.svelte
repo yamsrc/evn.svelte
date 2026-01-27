@@ -52,7 +52,7 @@
           <Header.Title>{group.name}</Header.Title>
         </Header.Root>
       </Section>
-      <Section>
+      <Section class="space-y-2">
         <h1>{$dict.groups.members.addMembers}</h1>
         <Input type="text" placeholder={$dict.actions.search} bind:value={search} />
       </Section>

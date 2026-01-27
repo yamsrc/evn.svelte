@@ -39,6 +39,24 @@ When working with Svelte code:
 
 - **Use `$effect` only as a last resort** - Having `$effect` in code indicates a bad architectural solution that leads to bugs and unexpected behaviors. Always prefer reactive declarations (`$:`), proper state management, and declarative patterns over `$effect`. If you find yourself reaching for `$effect`, reconsider the architecture and find a more declarative solution.
 
+### Class Merging with Array Syntax
+
+Use Svelte array syntax for conditional classes (NOT cn utility):
+
+```svelte
+<!-- ✅ Preferred: Array syntax -->
+<Button class={['w-full', isActive && 'bg-primary']}>
+    Click me
+</Button>
+
+<div class={['flex items-center', expanded && 'bg-muted', className]}>
+    Content
+</div>
+
+<!-- ❌ Avoid: cn utility (older pattern) -->
+<Button class={cn('w-full', isActive && 'bg-primary')}>
+```
+
 ## Testing
 
 This project uses **Playwright BDD** with Gherkin feature files for end-to-end testing.

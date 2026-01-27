@@ -1,6 +1,8 @@
 <script lang="ts">
   import { Trash2 } from '@lucide/svelte'
+  import { delay } from '$lib/tools'
   import { Button } from '$ui/button'
+  import { clear } from '@/notifications'
   import { dict } from '@/notifications/ui/intl'
   import Notification from './Notification.svelte'
   import { pick } from './components'
@@ -12,12 +14,18 @@
     component: NotificationComponentFor<NotificationWithComponent>
   }
 
+  type Ref = { remove: () => Promise<void> | void }
+
   const { notifications, limit = 5 }: Props = $props()
 
-  const refs = $state<Array<{ dismiss: () => Promise<void> | void } | undefined>>([])
+  const refs = $state<Array<Ref | undefined>>([])
 
-  function onclick() {
-    refs.forEach((ref, i) => setTimeout(() => ref?.dismiss(), i * 50))
+  async function onclick() {
+    const removed = refs.map((ref, i) => delay(() => ref?.remove(), i * 50))
+
+    await Promise.all(removed)
+
+    void clear()
   }
 
   const renderable = $derived(
