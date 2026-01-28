@@ -1,4 +1,4 @@
-import type { Extra, Participant } from '@/expenses'
+import type { Expense } from '@/expenses'
 
 interface BaseNotification<D extends string, E extends string, P> {
   id: string
@@ -21,8 +21,8 @@ type NotificationMap = {
     expense: {
       title: string
       location?: string
-      participants: Participant[]
-      extras: Extra[]
+      participants: Expense['participants']
+      extras: Expense['extras']
     }
   }
   contacts: {
