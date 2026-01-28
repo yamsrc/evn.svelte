@@ -26,9 +26,6 @@
   variant="outline"
   size="lg"
   class="px-4 py-3 h-fit flex flex-col gap-3 relative">
-  {#if highlighted}
-    <Attention class="absolute top-2 right-2 z-10" />
-  {/if}
   <div class="w-full flex justify-between items-start">
     <div class="flex flex-col items-start">
       <div class="flex items-center gap-1">
@@ -68,4 +65,7 @@
       balance={owe(expense.participants, expense.extras, $account?.id)}
       class="flex-col-reverse items-end" />
   </div>
+  {#if highlighted}
+    <Attention class="absolute top-2 right-2 z-10" />
+  {/if}
 </Button>

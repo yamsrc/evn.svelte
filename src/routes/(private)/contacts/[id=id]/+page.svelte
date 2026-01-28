@@ -32,6 +32,8 @@
 
   $effect(() => {
     if (contact?.identity) void seen('contacts', contact?.identity)
+
+    if (contact?.account) void seen('accounts', contact.identity)
   })
 </script>
 

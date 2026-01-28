@@ -4,6 +4,7 @@
   import { buttonVariants } from '$ui/button'
   import * as Collapsible from '$ui/collapsible'
   import { Section } from '@/app/ui'
+  import { unseen } from '@/groups'
   import Group from './Panel.svelte'
   import type { Props } from './Groups'
 
@@ -12,8 +13,6 @@
   let open = $state(true)
 
   const selectable = $derived(selection !== undefined)
-
-  const unseen = (id: string) => notifications?.some((n) => n.key === id) ?? false
 
   function onselect(id: string, selected: boolean) {
     if (!selection) return
@@ -45,7 +44,7 @@
       <Collapsible.Content class="flex flex-col gap-1.5">
         {#each groups as group (group.id)}
           {@const selected = selection?.has(group.id)}
-          {@const highlighted = unseen(group.id)}
+          {@const highlighted = unseen(group, notifications ?? [])}
           {#if selectable}
             <Group {group} {selected} {highlighted} {onselect} />
           {:else}

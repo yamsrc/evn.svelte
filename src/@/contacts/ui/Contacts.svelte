@@ -1,19 +1,12 @@
 <script lang="ts">
-  import { ok } from 'svas'
   import { Section } from '@/app/ui'
+  import { unseen } from '@/contacts'
   import Panel from './Panel.svelte'
   import type { Props } from './Contacts'
 
   let { contacts, title, actionable, selection = $bindable(), notifications }: Props = $props()
 
   const selectable = $derived(selection !== undefined)
-
-  const unseen = (id: string, identity?: string) =>
-    notifications?.some(
-      (n) =>
-        (n.domain === 'contacts' && n.key === id) ||
-        (n.domain === 'accounts' && n.event === 'unchained' && n.key === identity),
-    ) ?? false
 
   function onselect(identity: string, selected: boolean) {
     if (!selection) return
@@ -35,8 +28,7 @@
     <div id="contacts-list-content" class="flex flex-col gap-1.5">
       {#each contacts as contact (contact.id)}
         {@const selected = selection?.has(contact.identity)}
-        {@const account = ok(contact.account) ? contact.account : null}
-        {@const highlighted = unseen(contact.id, account?.id)}
+        {@const highlighted = unseen(contact, notifications ?? [])}
         {@const selectedProps = selectable ? { selected, onselect } : undefined}
         <Panel {contact} {actionable} {highlighted} {...selectedProps} />
       {/each}

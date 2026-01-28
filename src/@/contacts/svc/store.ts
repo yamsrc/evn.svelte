@@ -3,9 +3,11 @@ import { values } from 'svas'
 import { derived } from 'svelte/store'
 import { accounts } from '@/accounts'
 import { account } from '@/iam'
+import { notifications } from '@/notifications'
 import { events } from '@/realtime'
 import { get } from './get'
 import { map } from './map'
+import { sort } from './unseen'
 import type { Contact } from './Contact'
 
 export const internal = collection({
@@ -18,14 +20,16 @@ export const internal = collection({
 
 events.on('default.contacts.sync', (contact) => sync(internal, contact))
 
-export const contacts = derived<[typeof internal, typeof account], Maybe<Contact[]>>([internal, account], ([$contacts, $me], set, update) => {
+export const contacts = derived<[typeof internal, typeof account, typeof notifications], Maybe<Contact[]>>([internal, account, notifications], ([$contacts, $me, $notifications], set, update) => {
   if (!ok($contacts))
     return set($contacts)
 
   if (!ok($me))
     return set($me)
 
-  const values = $contacts.map((contact) => map(contact, $me.id))
+  const values = $contacts
+    .map((contact) => map(contact, $me.id))
+    .sort(sort(ok($notifications) ? $notifications : []))
 
   set(values)
 

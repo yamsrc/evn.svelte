@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { unseen } from '@/expenses'
   import { Expense } from '@/expenses/ui'
   import { dict } from './intl'
   import type { Props } from './Expenses'
@@ -8,8 +9,6 @@
   const common = $derived(
     expenses.filter((expense) => Object.keys(expense.participants).includes(contact.identity)),
   )
-
-  const unseen = (id: string) => notifications?.some((n) => n.domain === 'expenses' && n.key === id) ?? false
 </script>
 
 <div class="space-y-2">
@@ -19,7 +18,7 @@
   {:else}
     <ul class="space-y-2">
       {#each common as expense (expense.id)}
-        {@const highlighted = unseen(expense.id)}
+        {@const highlighted = unseen(expense, notifications ?? [])}
         <li>
           <Expense {expense} {highlighted} />
         </li>
