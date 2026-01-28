@@ -7,11 +7,15 @@ import { events } from '@/realtime'
 import { balance } from './balance'
 import { get } from './get'
 import type * as net from './net'
+import type { Account } from '@/accounts'
+import type { Contact } from '@/contacts'
 import type { Notification } from '@/notifications'
 import type { Readable } from 'svelte/store'
 
 export interface Group extends net.Group {
   balance: number
+  label: string
+  emoji?: string
 }
 
 export const internal = collection<net.Group>({
@@ -33,13 +37,28 @@ export const groups: Readable<Group[]> = derived([internal, contacts, account, n
   if (!ok($groups) || !ok($contacts) || !ok($account)) return []
 
   return $groups
-    .map((group) => ({
-      ...group,
-      balance: balance(group, $contacts, $account),
-    }))
+    .map((group) => map(group, $contacts, $account))
     .sort((lhs, rhs) => {
       if (!ok($notifications)) return 0
 
       return Number(unseen(rhs, $notifications)) - Number(unseen(lhs, $notifications))
     })
 })
+
+function map(group: net.Group, contacts: Contact[], account: Account): Group {
+  // extract first emoji from the group name
+  const { emoji, label } = extractEmoji(group.name)
+
+  return {
+    ...group,
+    label,
+    emoji,
+    balance: balance(group, contacts, account),
+  }
+}
+
+function extractEmoji(name: string): { emoji: string | undefined, label: string } {
+  const emoji = name.match(/\p{Extended_Pictographic}/u)?.[0]
+
+  return { emoji, label: emoji === undefined ? name : name.replace(emoji, '').trim() }
+}

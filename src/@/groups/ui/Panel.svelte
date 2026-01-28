@@ -31,8 +31,12 @@
   {#snippet left()}
     <div class="flex flex-col items-start gap-1">
       <div class="flex items-center gap-2">
-        <Users class="size-4" />
-        <span class="font-bold">{group.name}</span>
+        {#if group.emoji}
+          <span class="font-bold">{group.emoji}</span>
+        {:else}
+          <Users class="size-4" />
+        {/if}
+        <span class="font-bold">{group.label}</span>
       </div>
       <div class="flex flex-nowrap gap-1 items-center py-1">
         {#each members.slice(0, 5) as identity (identity)}
