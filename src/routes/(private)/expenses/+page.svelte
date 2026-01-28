@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Async, combined } from 'svas'
+  import { Async } from 'svas'
   import { dict } from '$lib/intl'
   import { Input } from '$ui/input'
   import { Section } from '@/app/ui'
@@ -22,8 +22,8 @@
   </Header.Root>
 </Section>
 
-<Async store={combined(expenses)}>
-  {#snippet awaited([expenses])}
+<Async store={expenses}>
+  {#snippet awaited(expenses)}
     {@const filteredExpenses = filter(expenses, search)}
     {@const empty = filteredExpenses.length === 0}
 
