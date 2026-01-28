@@ -69,13 +69,11 @@
       </Section>
 
       <Actions>
-        {#if contact.balance !== 0}
-          <Async store={account}>
-            {#snippet awaited(account)}
-              <Transfer {account} {contact} />
-            {/snippet}
-          </Async>
-        {/if}
+        <Async store={account}>
+          {#snippet awaited(account)}
+            <Transfer {account} {contact} />
+          {/snippet}
+        </Async>
         <Favorite {contact} />
       </Actions>
     {:else}
