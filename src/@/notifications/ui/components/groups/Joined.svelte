@@ -1,10 +1,10 @@
 <script lang="ts">
   import { Async, combined } from 'svas'
-  import { Button } from '$ui/button'
   import { accounts } from '@/accounts'
   import { groups } from '@/groups'
   import { account } from '@/iam'
   import { dict } from '@/notifications/ui/intl'
+  import Base from '../Base.svelte'
   import type { Props } from './Joined'
   import type { Account } from '@/accounts'
 
@@ -20,19 +20,14 @@
     {@const group = groups.find((g) => g.id === notification.key)}
     {#if group}
       {@const me = newbies.find(({ id }) => id === account.id)}
-      <Button
-        href={`/contacts/groups/${group.id}`}
-        class="w-full p-4 items-start h-fit font-normal"
-        variant="ghost">
-        <span class="text-start w-full text-pretty whitespace-normal">
-          {#if me}
-            {$dict.groups.joined.me(group.name)}
-          {:else}
-            {@const names = newbies.map((account) => (account as Account).name)}
-            {$dict.groups.joined.others(names, group.name)}
-          {/if}
-        </span>
-      </Button>
+      <Base href={`/contacts/groups/${group.id}`}>
+        {#if me}
+          {$dict.groups.joined.me(group.name)}
+        {:else}
+          {@const names = newbies.map((account) => (account as Account).name)}
+          {$dict.groups.joined.others(names, group.name)}
+        {/if}
+      </Base>
     {/if}
   {/snippet}
 </Async>

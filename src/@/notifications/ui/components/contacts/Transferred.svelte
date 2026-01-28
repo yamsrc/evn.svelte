@@ -2,9 +2,9 @@
   import { Async } from 'svas'
   import { locale } from '$lib/intl'
   import { currency } from '$lib/tools'
-  import { Button } from '$ui/button'
   import { contacts } from '@/contacts'
   import { account } from '@/iam'
+  import Base from '../Base.svelte'
   import type { Props } from './Transferred'
 
   const { notification }: Props = $props()
@@ -19,18 +19,13 @@
   {#snippet awaited(contacts)}
     {@const contact = contacts.find((c) => c.identity === notification.key)}
     {#if contact}
-      <Button
-        href={`/contacts/${contact.id}`}
-        class="w-full p-4 items-start h-fit font-normal"
-        variant="ghost">
-        <span class="text-start w-full text-pretty whitespace-normal">
-          {#if received}
-            You've received {delta} from {contact.account?.name}. Balance: {balance}
-          {:else}
-            You've paid {delta} to {contact.account?.name}. Balance: {balance}
-          {/if}
-        </span>
-      </Button>
+      <Base href={`/contacts/${contact.id}`}>
+        {#if received}
+          You've received {delta} from {contact.account?.name}. Balance: {balance}
+        {:else}
+          You've paid {delta} to {contact.account?.name}. Balance: {balance}
+        {/if}
+      </Base>
     {/if}
   {/snippet}
 </Async>
