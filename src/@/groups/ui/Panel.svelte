@@ -36,7 +36,7 @@
         {:else}
           <Users class="size-4" />
         {/if}
-        <span class="font-bold">{group.label}</span>
+        <span class="font-bold">{group.title}</span>
       </div>
       <div class="flex flex-nowrap gap-1 items-center py-1">
         {#each members.slice(0, 5) as identity (identity)}

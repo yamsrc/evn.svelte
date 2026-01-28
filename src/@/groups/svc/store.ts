@@ -14,7 +14,7 @@ import type { Readable } from 'svelte/store'
 
 export interface Group extends net.Group {
   balance: number
-  label: string
+  title: string
   emoji?: string
 }
 
@@ -51,7 +51,7 @@ function map(group: net.Group, contacts: Contact[], account: Account): Group {
 
   return {
     ...group,
-    label,
+    title: label,
     emoji,
     balance: balance(group, contacts, account),
   }

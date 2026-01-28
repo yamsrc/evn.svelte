@@ -56,7 +56,14 @@
       class="min-h-32" />
   </Field.Field>
   <Field.Field>
-    <Input bind:value={input.email} type="email" placeholder={$dict.form.email.placeholder} />
+    <Input
+      bind:value={input.email}
+      type="email"
+      inputmode="email"
+      autocomplete="email"
+      autocorrect="off"
+      spellcheck="false"
+      placeholder={$dict.form.email.placeholder} />
     <Field.Description>
       {$dict.form.email.description}
     </Field.Description>
