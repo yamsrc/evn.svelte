@@ -131,9 +131,8 @@
 
 <Section>
   <Header.Root>
-    <Header.Title>Notification Examples</Header.Title>
+    <Header.Title>Notifications</Header.Title>
   </Header.Root>
-  <p>To see notifications, you need to be logged in and have some contacts and expenses.</p>
 </Section>
 
 <Section class="px-0">

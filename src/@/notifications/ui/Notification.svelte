@@ -32,7 +32,7 @@
   <div
     class={[
       'w-full shrink-0 snap-center ',
-      'bg-accent border border-muted-foreground/20 rounded-lg',
+      'bg-muted border border-muted-foreground/20 rounded-lg',
       'text-sm font-normal',
       classes,
     ]}>
