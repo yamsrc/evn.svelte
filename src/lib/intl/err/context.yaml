@@ -1,0 +1,8 @@
+context: Mount 'err' context
+inputs:
+  message:
+    input: Something you clicked on is broken
+  action:
+    input: Continue
+  background:
+    input: At least the background looks nice
