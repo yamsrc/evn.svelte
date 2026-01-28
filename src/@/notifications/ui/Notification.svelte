@@ -3,7 +3,12 @@
   import { del } from '@/notifications'
   import type { Props } from './Notification'
 
-  const { notification, component: Component, ondismiss: ondismissCb }: Props = $props()
+  const {
+    notification,
+    component: Component,
+    ondismiss: ondismissCb,
+    class: classes,
+  }: Props = $props()
 
   let dismissable:
     | { dismiss: () => Promise<void> | void; remove: () => Promise<void> | void }
@@ -24,7 +29,13 @@
 </script>
 
 <Dismissable bind:this={dismissable} {ondismiss}>
-  <div class="w-full shrink-0 snap-center bg-accent rounded-lg text-sm font-normal">
+  <div
+    class={[
+      'w-full shrink-0 snap-center ',
+      'bg-accent border border-muted-foreground/20 rounded-lg',
+      'text-sm font-normal',
+      classes,
+    ]}>
     <Component {notification} />
   </div>
 </Dismissable>

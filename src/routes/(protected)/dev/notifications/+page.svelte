@@ -119,18 +119,20 @@
     return result
   })
 
-  const dismissedIds = $state<Set<string>>(new Set())
+  const dismissed = $state<Set<string>>(new Set())
 
-  const notifications = $derived(baseNotifications.filter((n) => !dismissedIds.has(n.id)))
+  const notifications = $derived(baseNotifications.filter((n) => !dismissed.has(n.id)))
 
   const ondismiss = (id: string) => {
-    dismissedIds.add(id)
+    dismissed.add(id)
   }
 
   const onclear = () => {
-    for (const notification of notifications) dismissedIds.add(notification.id)
+    for (const notification of notifications) dismissed.add(notification.id)
   }
 </script>
+
+<a href="/">Home</a>
 
 <Section>
   <Header.Root>
