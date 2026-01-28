@@ -11,7 +11,7 @@
 
   const delta = $derived(currency(Math.abs(notification.payload.delta), $locale))
   const balance = $derived(currency(notification.payload.balance, $locale))
-  const payer = $derived(notification.payload.delta > 0 ? notification.key : $account?.id)
+  const payer = $derived(notification.payload.delta < 0 ? notification.key : $account?.id)
   const received = $derived(payer !== $account?.id)
 </script>
 
@@ -25,9 +25,9 @@
         variant="ghost">
         <span class="text-start w-full text-pretty whitespace-normal">
           {#if received}
-            You've paid {delta} to {contact.account?.name}. Balance: {balance}
-          {:else}
             You've received {delta} from {contact.account?.name}. Balance: {balance}
+          {:else}
+            You've paid {delta} to {contact.account?.name}. Balance: {balance}
           {/if}
         </span>
       </Button>
