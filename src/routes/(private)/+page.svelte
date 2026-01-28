@@ -41,7 +41,7 @@
     </Section>
 
     <Section>
-      <Recent {expenses} />
+      <Recent {expenses} notifications={notifications.filter((n) => n.domain === 'expenses')} />
     </Section>
   {/snippet}
 </Async>

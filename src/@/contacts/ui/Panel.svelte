@@ -9,10 +9,23 @@
   import * as contacts from '@/contacts'
   import * as favorites from '@/favorites'
   import { favorites as store } from '@/favorites'
+  import { notifications } from '@/notifications'
   import type { Action } from '$com/panel'
   import type { Props } from './Panel'
 
-  const { contact, selected = $bindable(), actionable = false, onselect }: Props = $props()
+  const { contact, selected = $bindable(), actionable = false, highlighted, onselect }: Props = $props()
+
+  const accountHighlighted = $derived.by(() => {
+    if (!ok($notifications) || !ok(contact.account)) return false
+
+    const account = contact.account
+
+    return $notifications.some(
+      (n) => n.domain === 'accounts' && n.event === 'unchained' && n.key === account.id,
+    )
+  })
+
+  const combinedHighlighted = $derived(highlighted || accountHighlighted)
 
   let confirmDelete = $state(false)
 
@@ -49,6 +62,7 @@
     account={contact.account}
     balance={contact.balance}
     {selected}
+    highlighted={combinedHighlighted}
     {onselect}
     actions={actionable ? actions : []}
     class={cn(contact.managed && 'text-muted-foreground', 'contacts-panel')}>

@@ -12,7 +12,7 @@
   import { dict } from '../intl'
   import type { Props } from './Props'
 
-  const { expense }: Props = $props()
+  const { expense, highlighted }: Props = $props()
 
   const payer = $derived(
     Object.keys(expense.participants).find((id) => expense.participants[id].paid !== undefined),
@@ -36,7 +36,10 @@
   <Async store={combined(accounts.get(identity), contacts)}>
     {#snippet awaited([account, contacts])}
       {@const contact = contacts.find((c) => c.identity === identity)}
-      <Panel href={`/contacts/${contact?.id}/`} class="bg-constructive/20 border-constructive/30">
+      <Panel
+        href={`/contacts/${contact?.id}/`}
+        class="bg-constructive/20 border-constructive/30"
+        {highlighted}>
         {#snippet left()}
           <div class="flex items-center gap-3">
             <Avatar {account} />

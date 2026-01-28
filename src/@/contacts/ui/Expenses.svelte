@@ -3,11 +3,13 @@
   import { dict } from './intl'
   import type { Props } from './Expenses'
 
-  const { contact, expenses }: Props = $props()
+  const { contact, expenses, notifications }: Props = $props()
 
   const common = $derived(
     expenses.filter((expense) => Object.keys(expense.participants).includes(contact.identity)),
   )
+
+  const unseen = (id: string) => notifications?.some((n) => n.domain === 'expenses' && n.key === id) ?? false
 </script>
 
 <div class="space-y-2">
@@ -17,8 +19,9 @@
   {:else}
     <ul class="space-y-2">
       {#each common as expense (expense.id)}
+        {@const highlighted = unseen(expense.id)}
         <li>
-          <Expense {expense} />
+          <Expense {expense} {highlighted} />
         </li>
       {/each}
     </ul>

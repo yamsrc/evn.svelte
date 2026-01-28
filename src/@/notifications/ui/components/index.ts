@@ -1,9 +1,11 @@
 import { accounts } from './accounts'
+import { contacts } from './contacts'
+import { expenses } from './expenses'
 import { groups } from './groups'
 import type { Notification } from '@/notifications'
 import type { Component } from 'svelte'
 
-export const components = { accounts, groups } as const
+export const components = { accounts, groups, expenses, contacts } as const
 
 type Components = typeof components
 type EventsOf<D extends keyof Components> = Extract<keyof Components[D], string>

@@ -17,12 +17,18 @@
   import { Transfer } from '@/expenses/ui'
   import { groups } from '@/groups'
   import { account } from '@/iam'
+  import { notifications } from '@/notifications'
+  import { seen } from '@/notifications'
 
   const id = $derived(page.params.id) as string
 
   function ondelete() {
     void goto('..')
   }
+
+  $effect(() => {
+    if (id) void seen('contacts', id)
+  })
 </script>
 
 <Section>
@@ -41,9 +47,10 @@
   </Header.Root>
 </Section>
 
-<Async store={combined(contacts, groups, expenses)}>
-  {#snippet awaited([contacts, groups, expenses])}
+<Async store={combined(contacts, groups, expenses, notifications)}>
+  {#snippet awaited([contacts, groups, expenses, notifications])}
     {@const contact = contacts.find((contact) => contact.id === id)}
+    {@const expensesNotifications = notifications.filter((n) => n.domain === 'expenses')}
     {#if contact?.account && ok(contact.account)}
       {#if contact.account.background}
         <BackgroundOverride id={contact.account.background} />
@@ -65,7 +72,7 @@
       </Section>
       <Section class="space-y-4">
         <Groups {contact} {groups} />
-        <Expenses {contact} {expenses} />
+        <Expenses {contact} {expenses} notifications={expensesNotifications} />
       </Section>
 
       <Actions>

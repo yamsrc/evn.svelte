@@ -10,9 +10,24 @@ interface BaseNotification<D extends string, E extends string, P> {
 type NotificationMap = {
   accounts: {
     created: never
+    unchained: never
   }
   groups: {
     joined: { identities: string[] }
+  }
+  expenses: {
+    expense: {
+      title: string
+      location?: string
+      participants: Record<string, number>
+      extras: Record<string, number>
+    }
+  }
+  contacts: {
+    transferred: {
+      delta: number
+      balance: number
+    }
   }
 }
 
@@ -34,9 +49,24 @@ export type AccountCreatedNotification = Extract<
   { domain: 'accounts'; event: 'created' }
 >
 
+export type AccountUnchainedNotification = Extract<
+  NotificationData,
+  { domain: 'accounts'; event: 'unchained' }
+>
+
 export type GroupJoinedNotification = Extract<
   NotificationData,
   { domain: 'groups'; event: 'joined' }
+>
+
+export type ExpenseNotification = Extract<
+  NotificationData,
+  { domain: 'expenses'; event: 'expense' }
+>
+
+export type ContactTransferredNotification = Extract<
+  NotificationData,
+  { domain: 'contacts'; event: 'transferred' }
 >
 
 export type Notification = NotificationData & {

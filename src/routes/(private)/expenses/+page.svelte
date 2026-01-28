@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Async } from 'svas'
+  import { Async, combined } from 'svas'
   import { dict } from '$lib/intl'
   import { Input } from '$ui/input'
   import { Section } from '@/app/ui'
@@ -7,6 +7,7 @@
   import { expenses, filter } from '@/expenses'
   import { Actions, Expenses, Create } from '@/expenses/ui'
   import { account } from '@/iam'
+  import { notifications } from '@/notifications'
 
   let search = $state('')
 </script>
@@ -17,16 +18,19 @@
   </Header.Root>
 </Section>
 
-<Async store={expenses}>
-  {#snippet awaited(expenses)}
+<Async store={combined(expenses, notifications)}>
+  {#snippet awaited([expenses, notifications])}
     {@const filteredExpenses = filter(expenses, search)}
     {@const empty = filteredExpenses.length === 0}
+    {@const expensesNotifications = notifications.filter(
+      (n) => n.domain === 'expenses' || (n.domain === 'contacts' && n.event === 'transferred'),
+    )}
 
     {#if expenses.length}
       <Section>
         <Input type="text" placeholder={$dict.actions.search} bind:value={search} />
       </Section>
-      <Expenses {expenses} {search} />
+      <Expenses {expenses} {search} notifications={expensesNotifications} />
       {#if search && empty}
         <Section>
           <p class="text-muted-foreground text-center">{$dict.search.empty}</p>

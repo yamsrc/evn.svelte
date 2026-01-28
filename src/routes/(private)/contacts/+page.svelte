@@ -16,6 +16,7 @@
   let search = $state('')
 
   const groupsNotifications = scope('groups')
+  const contactsNotifications = scope('contacts')
 </script>
 
 <Section>
@@ -44,7 +45,7 @@
         title={$dict.groups.title}
         groups={filteredGroups}
         notifications={$groupsNotifications} />
-      <Contacts title={$dict.contacts.all} contacts={filteredContacts} />
+      <Contacts title={$dict.contacts.all} contacts={filteredContacts} notifications={$contactsNotifications} />
 
       {#if search && empty}
         <Section>

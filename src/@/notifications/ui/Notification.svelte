@@ -3,13 +3,14 @@
   import { del } from '@/notifications'
   import type { Props } from './Notification'
 
-  const { notification, component: Component }: Props = $props()
+  const { notification, component: Component, ondismiss: ondismissCb }: Props = $props()
 
   let dismissable:
     | { dismiss: () => Promise<void> | void; remove: () => Promise<void> | void }
     | undefined = $state()
 
   async function ondismiss() {
+    ondismissCb?.(notification.id)
     await del(notification.id)
   }
 

@@ -3,8 +3,10 @@
   import { dict } from './intl'
   import type { Props } from './Recent'
 
-  const { expenses }: Props = $props()
+  const { expenses, notifications }: Props = $props()
   const LIMIT = 3
+
+  const unseen = (id: string) => notifications?.some((n) => n.domain === 'expenses' && n.key === id) ?? false
 </script>
 
 <div class="space-y-2">
@@ -14,8 +16,9 @@
   {:else}
     <ul class="space-y-2">
       {#each expenses.slice(0, LIMIT) as expense (expense.id)}
+        {@const highlighted = unseen(expense.id)}
         <li>
-          <Expense {expense} />
+          <Expense {expense} {highlighted} />
         </li>
       {/each}
     </ul>

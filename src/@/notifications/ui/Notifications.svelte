@@ -16,7 +16,7 @@
 
   type Ref = { remove: () => Promise<void> | void }
 
-  const { notifications, limit = 5 }: Props = $props()
+  const { notifications, limit = 5, ondismiss: ondismissCb, onclear }: Props = $props()
 
   const refs = $state<Array<Ref | undefined>>([])
 
@@ -25,6 +25,7 @@
 
     await Promise.all(removed)
 
+    onclear?.()
     void clear()
   }
 
@@ -43,13 +44,17 @@
   const visible = $derived(renderable.slice(0, limit))
 
   const MIN_CLEARABLE_NOTIFICATIONS = 3
+
+  const ondismiss = (id: string) => {
+    ondismissCb?.(id)
+  }
 </script>
 
 <div class="space-y-2">
   {#if renderable.length > 0}
     <div class="flex flex-col gap-2">
       {#each visible as { notification, component }, i (notification.id)}
-        <Notification bind:this={refs[i]} {notification} {component} />
+        <Notification bind:this={refs[i]} {notification} {component} {ondismiss} />
       {/each}
     </div>
     {#if renderable.length > MIN_CLEARABLE_NOTIFICATIONS}
