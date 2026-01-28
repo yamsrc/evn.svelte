@@ -31,7 +31,7 @@ profile:
   title: 내 프로필
   language:
     title: 언어
-    description: 이는 수표 인식에 영향을 주지 않습니다. 어차피 저희는 대부분의 언어를 이해합니다.
+    description: 이것은 영수증 스캔에 영향을 주지 않습니다 — 대부분의 언어로 어차피 읽을 수 있습니다.
   grammar:
     title: 문법 형태
     description: >-

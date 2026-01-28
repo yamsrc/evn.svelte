@@ -31,7 +31,7 @@ profile:
   title: 我的个人资料
   language:
     title: 语言
-    description: 这不会影响支票识别。反正我们在那里大多数语言都能理解。
+    description: 这不会影响收据扫描——我们本来就能用大多数语言读取。
   grammar:
     title: 语法形式
     description: 在某些语言中，消息的措辞取决于语法性别。我们使用此设置以使界面文本更自然、更准确。

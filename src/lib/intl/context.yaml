@@ -64,7 +64,7 @@ inputs:
       title:
         input: Language
       description:
-        input: "Does not affect the cheque recognition. We\_understand most languages there anyway."
+        input: This does not affect receipt scanning — we can read them in most languages anyway.
     grammar:
       title:
         input: Grammatical form

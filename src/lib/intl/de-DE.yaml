@@ -32,8 +32,8 @@ profile:
   language:
     title: Sprache
     description: >-
-      Das beeinflusst die Scheck-Erkennung nicht. Wir verstehen dort ohnehin die
-      meisten Sprachen.
+      Das beeinflusst das Einscannen von Kassenbons nicht – wir können sie
+      ohnehin in den meisten Sprachen lesen.
   grammar:
     title: Grammatische Form
     description: >-

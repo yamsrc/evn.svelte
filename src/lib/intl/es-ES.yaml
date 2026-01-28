@@ -32,8 +32,8 @@ profile:
   language:
     title: Idioma
     description: >-
-      Esto no afecta al reconocimiento de cheques. De todas formas, entendemos
-      la mayoría de los idiomas allí.
+      Esto no afecta al escaneo de recibos — podemos leerlos en la mayoría de
+      los idiomas de todas formas.
   grammar:
     title: Forma gramatical
     description: >-
