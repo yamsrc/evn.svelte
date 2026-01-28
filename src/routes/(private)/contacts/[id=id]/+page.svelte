@@ -17,7 +17,6 @@
   import { Transfer } from '@/expenses/ui'
   import { groups } from '@/groups'
   import { account } from '@/iam'
-  import { notifications } from '@/notifications'
   import { seen } from '@/notifications'
 
   const id = $derived(page.params.id) as string
@@ -31,9 +30,10 @@
   }
 
   $effect(() => {
-    if (contact?.identity) void seen('contacts', contact?.identity)
+    if (!contact) return
 
-    if (contact?.account) void seen('accounts', contact.identity)
+    void seen('contacts', contact.identity)
+    void seen('accounts', contact.identity)
   })
 </script>
 
@@ -48,9 +48,8 @@
   </Header.Root>
 </Section>
 
-<Async store={combined(groups, expenses, notifications)}>
-  {#snippet awaited([groups, expenses, notifications])}
-    {@const expensesNotifications = notifications.filter((n) => n.domain === 'expenses')}
+<Async store={combined(groups, expenses)}>
+  {#snippet awaited([groups, expenses])}
     {#if contact?.account && ok(contact.account)}
       {#if contact.account.background}
         <BackgroundOverride id={contact.account.background} />
@@ -72,7 +71,7 @@
       </Section>
       <Section class="space-y-4">
         <Groups {contact} {groups} />
-        <Expenses {contact} {expenses} notifications={expensesNotifications} />
+        <Expenses {contact} {expenses} />
       </Section>
 
       <Actions>
