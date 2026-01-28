@@ -3,7 +3,7 @@
 </script>
 
 <script lang="ts">
-  import { UserPlus2 } from '@lucide/svelte'
+  import { UserPlus } from '@lucide/svelte'
   import { Share } from '$com/buttons'
   import { QR } from '$com/qr'
   import { Separator } from '$com/separator'
@@ -16,16 +16,15 @@
 </script>
 
 <div class="w-full flex flex-col items-center justify-center gap-2">
-  <Share
-    variant="secondary"
-    {...rest}
-    data={invitation}
-    label={$dict.contacts.empty.invite.share}
-  />
+  <Share {...rest} data={invitation} label={$dict.contacts.empty.invite.share} />
   <QR variant="secondary" {...rest} text={invitation.url} label={$dict.contacts.empty.invite.qr} />
-  <Separator class="p-2 font-bold">{$dict.etc.or}</Separator>
-  <Button id="contacts-invite-manual-button" href="/contacts/new/managed/" {...rest}>
-    <UserPlus2 />
+  <Separator class="p-2 font-bold text-muted-foreground">{$dict.etc.or}</Separator>
+  <Button
+    variant="secondary"
+    id="contacts-invite-manual-button"
+    href="/contacts/new/managed/"
+    {...rest}>
+    <UserPlus />
     {$dict.contacts.empty.invite.manual}
   </Button>
 </div>
