@@ -107,7 +107,7 @@
   <Header.Root>
     <Header.Title>Notification Examples</Header.Title>
   </Header.Root>
-  <p>Notifications arn't real, so dismissing them won't remove them from the list.</p>
+  <p>To see notifications, you need to be logged in and have some contacts and expenses.</p>
 </Section>
 
 <Section class="px-0">
