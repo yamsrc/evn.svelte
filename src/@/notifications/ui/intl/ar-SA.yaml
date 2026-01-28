@@ -12,5 +12,5 @@ groups:
 accounts:
   created:
     welcome: مرحبًا بك في Evnly!
-    hint: اسحب لليسار لإزالة
+    hint: اسحب للإزالة
 erase: مسح الكل

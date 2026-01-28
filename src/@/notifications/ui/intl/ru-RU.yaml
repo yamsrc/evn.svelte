@@ -12,5 +12,5 @@ groups:
 accounts:
   created:
     welcome: Добро пожаловать в Evnly!
-    hint: Проведите влево, чтобы закрыть
+    hint: Смахните для удаления
 erase: Очистить все

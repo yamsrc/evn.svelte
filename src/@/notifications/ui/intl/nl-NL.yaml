@@ -12,5 +12,5 @@ groups:
 accounts:
   created:
     welcome: Welkom bij Evnly!
-    hint: Veeg naar links om te sluiten
+    hint: Veeg om te verwijderen
 erase: Alles wissen

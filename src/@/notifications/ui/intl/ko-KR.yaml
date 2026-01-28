@@ -11,5 +11,5 @@ groups:
 accounts:
   created:
     welcome: Evnly에 오신 것을 환영합니다!
-    hint: 왼쪽으로 밀어서 닫기
+    hint: 밀어서 제거
 erase: 모두 지우기

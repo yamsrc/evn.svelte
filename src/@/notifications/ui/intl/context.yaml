@@ -11,7 +11,7 @@ inputs:
   accounts:
     created:
       hint:
-        input: Swipe left to dismiss
+        input: Slide to remove
   erase:
     input: Clear all
     context: button label (clears all notifications)

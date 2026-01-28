@@ -11,5 +11,5 @@ groups:
 accounts:
   created:
     welcome: Welcome to Evnly!
-    hint: Swipe left to dismiss
+    hint: Slide to remove
 erase: Clear all

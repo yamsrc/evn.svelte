@@ -12,5 +12,5 @@ groups:
 accounts:
   created:
     welcome: Willkommen bei Evnly!
-    hint: Nach links wischen zum Ausblenden
+    hint: Zum Entfernen wischen
 erase: Alle löschen

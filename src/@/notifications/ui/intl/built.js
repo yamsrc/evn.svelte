@@ -12,7 +12,7 @@ export const dictionaries = {
     "accounts": {
       "created": {
         "welcome": "مرحبًا بك في Evnly!",
-        "hint": "اسحب لليسار لإزالة"
+        "hint": "اسحب للإزالة"
       }
     },
     "erase": "مسح الكل"
@@ -27,7 +27,7 @@ export const dictionaries = {
     "accounts": {
       "created": {
         "welcome": "Willkommen bei Evnly!",
-        "hint": "Nach links wischen zum Ausblenden"
+        "hint": "Zum Entfernen wischen"
       }
     },
     "erase": "Alle löschen"
@@ -42,7 +42,7 @@ export const dictionaries = {
     "accounts": {
       "created": {
         "welcome": "Welcome to Evnly!",
-        "hint": "Swipe left to dismiss"
+        "hint": "Slide to remove"
       }
     },
     "erase": "Clear all"
@@ -57,7 +57,7 @@ export const dictionaries = {
     "accounts": {
       "created": {
         "welcome": "¡Bienvenido a Evnly!",
-        "hint": "Desliza a la izquierda para descartar"
+        "hint": "Desliza para eliminar"
       }
     },
     "erase": "Borrar todo"
@@ -72,7 +72,7 @@ export const dictionaries = {
     "accounts": {
       "created": {
         "welcome": "Bienvenue chez Evnly !",
-        "hint": "Faites glisser vers la gauche pour ignorer"
+        "hint": "Faites glisser pour supprimer"
       }
     },
     "erase": "Tout effacer"
@@ -87,7 +87,7 @@ export const dictionaries = {
     "accounts": {
       "created": {
         "welcome": "Evnly में आपका स्वागत है!",
-        "hint": "हटाने के लिए बाएँ स्वाइप करें"
+        "hint": "हटाने के लिए स्लाइड करें"
       }
     },
     "erase": "सभी साफ़ करें"
@@ -102,7 +102,7 @@ export const dictionaries = {
     "accounts": {
       "created": {
         "welcome": "Benvenuto su Evnly!",
-        "hint": "Scorri verso sinistra per rimuovere"
+        "hint": "Scorri per rimuovere"
       }
     },
     "erase": "Cancella tutto"
@@ -117,7 +117,7 @@ export const dictionaries = {
     "accounts": {
       "created": {
         "welcome": "Evnlyへようこそ！",
-        "hint": "左にスワイプして閉じる"
+        "hint": "スライドして削除"
       }
     },
     "erase": "すべてクリア"
@@ -132,7 +132,7 @@ export const dictionaries = {
     "accounts": {
       "created": {
         "welcome": "Evnly에 오신 것을 환영합니다!",
-        "hint": "왼쪽으로 밀어서 닫기"
+        "hint": "밀어서 제거"
       }
     },
     "erase": "모두 지우기"
@@ -147,7 +147,7 @@ export const dictionaries = {
     "accounts": {
       "created": {
         "welcome": "Welkom bij Evnly!",
-        "hint": "Veeg naar links om te sluiten"
+        "hint": "Veeg om te verwijderen"
       }
     },
     "erase": "Alles wissen"
@@ -162,7 +162,7 @@ export const dictionaries = {
     "accounts": {
       "created": {
         "welcome": "Добро пожаловать в Evnly!",
-        "hint": "Проведите влево, чтобы закрыть"
+        "hint": "Смахните для удаления"
       }
     },
     "erase": "Очистить все"
@@ -177,7 +177,7 @@ export const dictionaries = {
     "accounts": {
       "created": {
         "welcome": "Karibu kwenye Evnly!",
-        "hint": "Sogeza kushoto kuondoa"
+        "hint": "Telezesha kuondoa"
       }
     },
     "erase": "Futa zote"
@@ -192,7 +192,7 @@ export const dictionaries = {
     "accounts": {
       "created": {
         "welcome": "Evnly'e hoş geldiniz!",
-        "hint": "Kapatmak için sola kaydır"
+        "hint": "Kaldırmak için kaydırın"
       }
     },
     "erase": "Tümünü temizle"
@@ -207,7 +207,7 @@ export const dictionaries = {
     "accounts": {
       "created": {
         "welcome": "Ласкаво просимо до Evnly!",
-        "hint": "Проведіть вліво, щоб закрити"
+        "hint": "Проведіть, щоб видалити"
       }
     },
     "erase": "Очистити все"
@@ -222,7 +222,7 @@ export const dictionaries = {
     "accounts": {
       "created": {
         "welcome": "欢迎来到 Evnly！",
-        "hint": "向左滑动以关闭"
+        "hint": "滑动移除"
       }
     },
     "erase": "全部清除"

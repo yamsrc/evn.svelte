@@ -11,5 +11,5 @@ groups:
 accounts:
   created:
     welcome: Evnly'e hoş geldiniz!
-    hint: Kapatmak için sola kaydır
+    hint: Kaldırmak için kaydırın
 erase: Tümünü temizle

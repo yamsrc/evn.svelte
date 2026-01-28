@@ -12,5 +12,5 @@ groups:
 accounts:
   created:
     welcome: Ласкаво просимо до Evnly!
-    hint: Проведіть вліво, щоб закрити
+    hint: Проведіть, щоб видалити
 erase: Очистити все

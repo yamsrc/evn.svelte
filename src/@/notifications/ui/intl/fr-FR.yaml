@@ -12,5 +12,5 @@ groups:
 accounts:
   created:
     welcome: Bienvenue chez Evnly !
-    hint: Faites glisser vers la gauche pour ignorer
+    hint: Faites glisser pour supprimer
 erase: Tout effacer

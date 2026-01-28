@@ -11,5 +11,5 @@ groups:
 accounts:
   created:
     welcome: Evnlyへようこそ！
-    hint: 左にスワイプして閉じる
+    hint: スライドして削除
 erase: すべてクリア

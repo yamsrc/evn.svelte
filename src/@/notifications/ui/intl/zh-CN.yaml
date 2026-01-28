@@ -11,5 +11,5 @@ groups:
 accounts:
   created:
     welcome: 欢迎来到 Evnly！
-    hint: 向左滑动以关闭
+    hint: 滑动移除
 erase: 全部清除

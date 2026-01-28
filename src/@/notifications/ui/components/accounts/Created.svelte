@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { ArrowLeft } from '@lucide/svelte'
+  import { ChevronLeft } from '@lucide/svelte'
   import { dict } from '@/notifications/ui/intl'
   import type { Props } from './Created'
 
@@ -11,9 +11,12 @@
 
 <div class="p-4 flex items-center justify-between gap-4">
   <span>{$dict.accounts.created.welcome}</span>
-  <div class="flex items-center justify-end gap-1 shrink-0 text-muted-foreground text-sm max-w-1/3">
-    <div class="h-8 pl-1 flex items-center">
-      <ArrowLeft size={16} />
+  <div class="flex items-center justify-end gap-1 shrink-0 text-muted-foreground text-sm max-w-2/5">
+    <div class="h-8 pl-1 flex items-center -space-x-2.5">
+      <ChevronLeft size={16} class="text-muted-foreground rtl:rotate-180" />
+      <ChevronLeft size={16} class="text-muted-foreground/75 rtl:rotate-180" />
+      <ChevronLeft size={16} class="text-muted-foreground/50 rtl:rotate-180" />
+      <ChevronLeft size={16} class="text-muted-foreground/25 rtl:rotate-180" />
     </div>
     <span class="text-balance">{$dict.accounts.created.hint}</span>
   </div>
