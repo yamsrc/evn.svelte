@@ -7,9 +7,13 @@
   import { expenses, filter } from '@/expenses'
   import { Actions, Expenses, Create } from '@/expenses/ui'
   import { account } from '@/iam'
-  import { notifications } from '@/notifications'
+  import { scope } from '@/notifications'
 
   let search = $state('')
+
+  const expensesNotifications = scope({ domain: 'expenses' })
+  const transfersNotifications = scope({ domain: 'contacts', event: 'transferred' })
+  const notifications = $derived([...$expensesNotifications, ...$transfersNotifications])
 </script>
 
 <Section>
@@ -18,19 +22,16 @@
   </Header.Root>
 </Section>
 
-<Async store={combined(expenses, notifications)}>
-  {#snippet awaited([expenses, notifications])}
+<Async store={combined(expenses)}>
+  {#snippet awaited([expenses])}
     {@const filteredExpenses = filter(expenses, search)}
     {@const empty = filteredExpenses.length === 0}
-    {@const expensesNotifications = notifications.filter(
-      (n) => n.domain === 'expenses' || (n.domain === 'contacts' && n.event === 'transferred'),
-    )}
 
     {#if expenses.length}
       <Section>
         <Input type="text" placeholder={$dict.actions.search} bind:value={search} />
       </Section>
-      <Expenses {expenses} {search} notifications={expensesNotifications} />
+      <Expenses {expenses} {search} {notifications} />
       {#if search && empty}
         <Section>
           <p class="text-muted-foreground text-center">{$dict.search.empty}</p>

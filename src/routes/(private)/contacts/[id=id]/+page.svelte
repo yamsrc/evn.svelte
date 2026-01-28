@@ -22,12 +22,16 @@
 
   const id = $derived(page.params.id) as string
 
+  const contact = $derived(
+    ok($contacts) ? $contacts.find((contact) => contact.id === id) : undefined,
+  )
+
   function ondelete() {
     void goto('..')
   }
 
   $effect(() => {
-    if (id) void seen('contacts', id)
+    if (contact?.identity) void seen('contacts', contact?.identity)
   })
 </script>
 
@@ -35,21 +39,15 @@
   <Header.Root>
     <Header.Title>{$dict.contacts.title}</Header.Title>
     <Header.Actions>
-      <Async store={contacts}>
-        {#snippet awaited(contacts)}
-          {@const contact = contacts.find((contact) => contact.id === id)}
-          {#if contact}
-            <Delete {contact} {ondelete} />
-          {/if}
-        {/snippet}
-      </Async>
+      {#if contact}
+        <Delete {contact} {ondelete} />
+      {/if}
     </Header.Actions>
   </Header.Root>
 </Section>
 
-<Async store={combined(contacts, groups, expenses, notifications)}>
-  {#snippet awaited([contacts, groups, expenses, notifications])}
-    {@const contact = contacts.find((contact) => contact.id === id)}
+<Async store={combined(groups, expenses, notifications)}>
+  {#snippet awaited([groups, expenses, notifications])}
     {@const expensesNotifications = notifications.filter((n) => n.domain === 'expenses')}
     {#if contact?.account && ok(contact.account)}
       {#if contact.account.background}

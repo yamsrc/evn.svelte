@@ -3,10 +3,15 @@ import { derived, type Readable } from 'svelte/store'
 import { notifications } from './store'
 import type { Notification } from './net'
 
-export function scope(domain: Notification['domain'], key?: Notification['key']): Readable<Notification[]> {
+type Scope = Partial<Pick<Notification, 'domain' | 'event' | 'key'>>
+
+export function scope({ domain, event, key }: Scope): Readable<Notification[]> {
   return derived(notifications, ($n) =>
     ok($n)
-      ? $n.filter((n) => n.domain === domain && (key === undefined || n.key === key))
+      ? $n.filter((n) =>
+        (domain === undefined || n.domain === domain) &&
+        (event === undefined || n.event === event) &&
+        (key === undefined || n.key === key))
       : [],
   )
 }

@@ -25,6 +25,7 @@ type NotificationMap = {
   }
   contacts: {
     transferred: {
+      expense: string
       delta: number
       balance: number
     }
