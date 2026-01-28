@@ -1,3 +1,5 @@
+import type { Extra, Participant } from '@/expenses'
+
 interface BaseNotification<D extends string, E extends string, P> {
   id: string
   identity: string
@@ -19,8 +21,8 @@ type NotificationMap = {
     expense: {
       title: string
       location?: string
-      participants: Record<string, number>
-      extras: Record<string, number>
+      participants: Participant[]
+      extras: Extra[]
     }
   }
   contacts: {

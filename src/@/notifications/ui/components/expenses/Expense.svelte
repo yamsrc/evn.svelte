@@ -16,7 +16,7 @@
         class="w-full p-4 items-start h-fit font-normal"
         variant="ghost">
         <span class="text-start w-full text-pretty whitespace-normal">
-          New expense: {notification.payload.title}
+          Spending {notification.payload.title} updated
         </span>
       </Button>
     {/if}
