@@ -7,28 +7,23 @@
   import { account } from '@/iam'
   import { Notifications } from '@/notifications/ui'
   import type { Expense } from '@/expenses'
-  import type { Notification } from '@/notifications'
+  import type { Notification, Of, PayloadOf } from '@/notifications'
 
   const VERSION = 1
   const MAX_IDENTITIES = 3
 
-  function create<
-    D extends Notification['domain'],
-    E extends Extract<Notification, { domain: D }>['event'],
-    N extends Extract<Notification, { domain: D; event: E }>,
-    P extends N['payload'],
-  >(id: string, identity: string, domain: D, event: E, key: string, payload?: P): N {
-    const base = {
-      id,
-      identity,
-      domain,
-      event,
-      key,
-      _created: Date.now(),
-      _version: VERSION,
-    }
+  function create<D extends Notification['domain'], E extends Of<D>['event']>(
+    id: string,
+    identity: string,
+    domain: D,
+    event: E,
+    key: string,
+    ...args: [PayloadOf<D, E>] extends [never] ? [] : [PayloadOf<D, E>]
+  ): Of<D, E> {
+    const base = { id, identity, domain, event, key, _created: Date.now(), _version: VERSION }
+    const payload = args[0]
 
-    return (payload ? { ...base, payload } : base) as N
+    return (payload ? { ...base, payload } : base) as Of<D, E>
   }
 
   const baseNotifications = $derived.by(() => {

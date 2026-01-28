@@ -7,11 +7,11 @@
   import Notification from './Notification.svelte'
   import { pick } from './components'
   import type { Props } from './Notifications'
-  import type { NotificationComponentFor, NotificationWithComponent } from './components'
+  import type { ComponentFor, WithComponent } from './components'
 
   type Renderable = {
-    notification: NotificationWithComponent
-    component: NotificationComponentFor<NotificationWithComponent>
+    notification: WithComponent
+    component: ComponentFor<WithComponent>
   }
 
   type Ref = { remove: () => Promise<void> | void }

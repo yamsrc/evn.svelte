@@ -1,5 +1,3 @@
-import type { ContactTransferredNotification } from '@/notifications'
+import type { Of } from '@/notifications'
 
-export type Props = {
-  notification: ContactTransferredNotification
-}
+export type Props = { notification: Of<'contacts', 'transferred'> }

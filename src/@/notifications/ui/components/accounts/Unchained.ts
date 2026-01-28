@@ -1,5 +1,3 @@
-import type { AccountUnchainedNotification } from '@/notifications'
+import type { Of } from '@/notifications'
 
-export type Props = {
-  notification: AccountUnchainedNotification
-}
+export type Props = { notification: Of<'accounts', 'unchained'> }

@@ -1,17 +1,20 @@
 import { ok } from 'svas'
 import { derived, type Readable } from 'svelte/store'
 import { notifications } from './store'
-import type { Notification } from './net'
+import type { Notification, Of } from './net'
 
-type Scope = Partial<Pick<Notification, 'domain' | 'event' | 'key'>>
+type Domain = Notification['domain']
+type Event<D extends Domain> = Of<D>['event']
 
-export function scope({ domain, event, key }: Scope): Readable<Notification[]> {
+export function scope<D extends Domain, E extends Event<D> | undefined = undefined>(
+  { domain, event, key }: { domain: D; event?: E; key?: string },
+): Readable<(undefined extends E ? Of<D> : Of<D, E & Event<D>>)[]> {
   return derived(notifications, ($n) =>
     ok($n)
       ? $n.filter((n) =>
-        (domain === undefined || n.domain === domain) &&
+        n.domain === domain &&
         (event === undefined || n.event === event) &&
         (key === undefined || n.key === key))
       : [],
-  )
+  ) as Readable<Of<D, E & Event<D>>[]>
 }
