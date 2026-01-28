@@ -15,7 +15,7 @@
 
 <Screen>
   <Authenticated {oidc} oncreate={welcome}>
-    <div class="w-full max-w-2xl mx-auto space-y-5">
+    <div class="w-full max-w-2xl mx-auto space-y-5 m-auto">
       {@render children()}
       <Nav position="start" sections={sections($dict, $notifications)} class="z-1000" />
     </div>
