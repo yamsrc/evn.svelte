@@ -1,126 +1,91 @@
-<script lang="ts" generics="T">
-  import type { StackContext } from './Stack'
-  import type { Snippet } from 'svelte'
+<script lang="ts">
+  import { transit } from '$lib/tools/svt'
+  import type { Props } from './Stack'
 
-  interface Props {
-    items: T[]
-    key: (item: T) => string | number
-    children: Snippet<[T, StackContext]>
-    expanded?: boolean
-    min?: number
-    class?: string
-  }
+  let { children, expanded = $bindable(false), min = 3, class: classes }: Props = $props()
 
-  let {
-    items,
-    key,
-    children,
-    expanded = $bindable(false),
-    min = 3,
-    class: className,
-  }: Props = $props()
+  let count = $state(0)
 
-  const count = $derived(items.length)
   const stacked = $derived(count >= min)
+  const collapsed = $derived(stacked && !expanded)
 
-  function withTransition(fn: () => void) {
-    if (!document.startViewTransition) return fn()
+  function stackItems(node: HTMLElement) {
+    const update = () => {
+      const items = node.children
 
-    document.startViewTransition(fn)
+      count = items.length
+
+      for (let i = 0; i < count; i++) {
+        const child = items[i] as HTMLElement
+
+        child.style.viewTransitionName = `stack-${i}`
+        child.style.viewTransitionClass = 'stack-item'
+        child.style.zIndex = String(count - i)
+      }
+    }
+
+    update()
+
+    const observer = new MutationObserver(update)
+
+    observer.observe(node, { childList: true })
+
+    return { destroy: () => observer.disconnect() }
   }
 
   export function toggle() {
-    withTransition(() => (expanded = !expanded))
+    transit(() => (expanded = !expanded))
   }
 
   export function expand() {
-    withTransition(() => (expanded = true))
+    transit(() => (expanded = true))
   }
 
   export function collapse() {
-    withTransition(() => (expanded = false))
+    transit(() => (expanded = false))
   }
 </script>
 
-{#if stacked}
-  <div class={['stack', expanded && 'stack--expanded', className]}>
-    {#each items as item, i (key(item))}
-      {@const hidden = !expanded && i > 2}
-      <div
-        class={['stack__item', i === 0 && 'stack__item--front', hidden && 'stack__hidden']}
-        style:view-transition-name="stack-{key(item)}"
-        style:z-index={count - i}>
-        {@render children(item, { index: i, collapsed: !expanded && i > 0, hidden })}
-      </div>
-    {/each}
-  </div>
-{:else}
-  <div class={['stack-flat', className]}>
-    {#each items as item, i (key(item))}
-      <div style:view-transition-name="stack-{key(item)}">
-        {@render children(item, { index: i, collapsed: false, hidden: false })}
-      </div>
-    {/each}
-  </div>
-{/if}
+<div use:stackItems class={['flex flex-col gap-2', collapsed && 'collapsed', classes]}>
+  {@render children()}
+</div>
 
 <style>
-  .stack {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .stack:not(.stack--expanded) {
+  .collapsed {
     position: relative;
     overflow: hidden;
-    padding-bottom: 16px;
+    padding-bottom: calc(var(--spacing) * 4);
     pointer-events: none;
   }
 
-  .stack__item {
-    transform-origin: bottom center;
-  }
-
-  .stack__item--front {
+  .collapsed > :global(*:first-child) {
     position: relative;
   }
 
-  .stack:not(.stack--expanded) > .stack__item:not(:first-child) {
+  .collapsed > :global(*:not(:first-child)) {
     position: absolute;
-    bottom: 16px;
-    left: 0;
-    right: 0;
+    inset: auto 0 calc(var(--spacing) * 4);
   }
 
-  .stack:not(.stack--expanded) > .stack__item:nth-child(2) {
-    transform: translateY(8px) scale(0.95);
-    clip-path: inset(calc(100% - 8px) 0 0 0);
+  .collapsed > :global(*:nth-child(2)) {
+    transform: translateY(calc(var(--spacing) * 2)) scale(0.95);
+    transform-origin: bottom center;
+    clip-path: inset(calc(100% - var(--spacing) * 2) 0 0 0);
   }
 
-  .stack:not(.stack--expanded) > .stack__item:nth-child(3) {
-    transform: translateY(16px) scale(0.9);
-    clip-path: inset(calc(100% - 16px) 0 0 0);
+  .collapsed > :global(*:nth-child(3)) {
+    transform: translateY(calc(var(--spacing) * 4)) scale(0.9);
+    transform-origin: bottom center;
+    clip-path: inset(calc(100% - var(--spacing) * 4) 0 0 0);
   }
 
-  .stack__hidden {
+  .collapsed > :global(*:nth-child(n + 4)) {
     opacity: 0;
     pointer-events: none;
   }
 
-  .stack-flat {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  :global(::view-transition-old(stack-*)),
-  :global(::view-transition-new(stack-*)) {
+  :global(::view-transition-group(*.stack-item)) {
     animation-duration: 300ms;
     animation-timing-function: ease-out;
-  }
-
-  :global(::view-transition-group(stack-*)) {
-    z-index: auto;
   }
 </style>

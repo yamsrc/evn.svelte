@@ -67,10 +67,10 @@
   tabindex="0"
   aria-label="Expand notifications">
   {#if renderable.length > 0}
-    <Stack bind:this={stack} items={visible} key={(item) => item.notification.id} bind:expanded min={3}>
-      {#snippet children({ notification, component }, { index })}
-        <Notification bind:this={refs[index]} {notification} {component} {ondismiss} />
-      {/snippet}
+    <Stack bind:this={stack} bind:expanded min={3}>
+      {#each visible as { notification, component }, i (notification.id)}
+        <Notification bind:this={refs[i]} {notification} {component} {ondismiss} />
+      {/each}
     </Stack>
     {#if renderable.length > MIN_CLEARABLE_NOTIFICATIONS && expanded}
       <div class="flex justify-center">
