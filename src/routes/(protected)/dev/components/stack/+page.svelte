@@ -4,7 +4,7 @@
   import { Button } from '$lib/components/ui/button'
   import { delay } from '$lib/tools'
   import { transit } from '$lib/tools/svt'
-  import { Dismissable, Section, Header } from '@/app/ui'
+  import { Section, Header } from '@/app/ui'
 
   type Item = { id: string; color: string; height: number }
   type Ref = { remove: () => Promise<void> | void }
@@ -16,7 +16,9 @@
   let expanded = $state(false)
   const refs = $state<Array<Ref | undefined>>([])
 
-  let items = $state<Item[]>(COLORS.map((color, i) => ({ id: `item-${i}`, color, height: randHeight() })))
+  let items = $state<Item[]>(
+    COLORS.map((color, i) => ({ id: `item-${i}`, color, height: randHeight() })),
+  )
 
   function removeItem(id: string) {
     transit(() => (items = items.filter((i) => i.id !== id)))
@@ -39,18 +41,18 @@
   </Header.Root>
 </Section>
 
-<Section class="px-0">
+<Section>
   <Stack.Root bind:this={stack} bind:expanded>
     {#each items as item, i (item.id)}
       <Stack.Item id={item.id}>
-        <Dismissable bind:this={refs[i]} ondismiss={() => removeItem(item.id)}>
-          <div
-            class="rounded-lg flex items-center justify-center"
-            style:background-color={item.color}
-            style:height="{item.height}px">
-            <span class="text-white font-medium">{item.id}</span>
-          </div>
-        </Dismissable>
+        <div
+          role="presentation"
+          onclick={() => removeItem(item.id)}
+          class="rounded-lg flex items-center justify-center"
+          style:background-color={item.color}
+          style:height="{item.height}px">
+          <span class="text-white font-medium">{item.id}</span>
+        </div>
       </Stack.Item>
     {/each}
     <Stack.Footer>

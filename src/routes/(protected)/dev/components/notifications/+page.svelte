@@ -127,8 +127,6 @@
   }
 </script>
 
-<a href="/">Home</a>
-
 <Section>
   <Header.Root>
     <Header.Title>Notifications</Header.Title>
