@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { transit } from '$lib/tools/svt'
   import { Dismissable } from '@/app/ui'
   import { del } from '@/notifications'
   import type { Props } from './Notification'
@@ -16,7 +17,7 @@
 
   async function ondismiss() {
     ondismissCb?.(notification.id)
-    await del(notification.id)
+    await transit(() => del(notification.id))
   }
 
   export function dismiss() {

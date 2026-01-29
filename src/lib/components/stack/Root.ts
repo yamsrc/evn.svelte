@@ -7,3 +7,10 @@ export interface Props {
   min?: number
   class?: ClassValue
 }
+
+export type StackContext = {
+  increment: () => void
+  decrement: () => void
+}
+
+export const STACK_CTX = Symbol('stack')

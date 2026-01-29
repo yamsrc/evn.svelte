@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Trash2 } from '@lucide/svelte'
-  import { Stack } from '$lib/components/stack'
+  import * as Stack from '$lib/components/stack'
   import { delay } from '$lib/tools'
   import { Button } from '$ui/button'
   import { clear } from '@/notifications'
@@ -23,7 +23,7 @@
 
   const refs = $state<Array<Ref | undefined>>([])
   let expanded = $state(false)
-  let stack: ReturnType<typeof Stack> | undefined = $state()
+  let stack: ReturnType<typeof Stack.Root> | undefined = $state()
 
   async function onclearClick(e: MouseEvent) {
     e.stopPropagation()
@@ -67,11 +67,13 @@
   tabindex="0"
   aria-label="Expand notifications">
   {#if renderable.length > 0}
-    <Stack bind:this={stack} bind:expanded min={3}>
+    <Stack.Root bind:this={stack} bind:expanded min={3}>
       {#each visible as { notification, component }, i (notification.id)}
-        <Notification bind:this={refs[i]} {notification} {component} {ondismiss} />
+        <Stack.Item id={notification.id}>
+          <Notification bind:this={refs[i]} {notification} {component} {ondismiss} />
+        </Stack.Item>
       {/each}
-    </Stack>
+    </Stack.Root>
     {#if renderable.length > MIN_CLEARABLE_NOTIFICATIONS && expanded}
       <div class="flex justify-center">
         <Button variant="ghost" size="sm" onclick={onclearClick} class="text-muted-foreground">
