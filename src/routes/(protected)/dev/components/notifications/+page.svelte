@@ -135,5 +135,5 @@
 </Section>
 
 <Section class="px-0">
-  <Notifications {notifications} limit={notifications.length} {ondismiss} {onclear} />
+  <Notifications {notifications} max={notifications.length} {ondismiss} {onclear} />
 </Section>

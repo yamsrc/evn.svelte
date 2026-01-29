@@ -17,9 +17,7 @@
 
   type Ref = { remove: () => Promise<void> | void }
 
-  const MIN_CLEARABLE_NOTIFICATIONS = 3
-
-  const { notifications, limit = 5, ondismiss, onclear }: Props = $props()
+  const { notifications, min = 3, max = 20, ondismiss, onclear }: Props = $props()
 
   const refs = $state<Array<Ref | undefined>>([])
   let expanded = $state(false)
@@ -47,12 +45,12 @@
       .filter((item): item is Renderable => item !== null),
   )
 
-  const visible = $derived(renderable.slice(0, limit))
+  const visible = $derived(renderable.slice(0, max))
 </script>
 
 <div class="space-y-2">
   {#if renderable.length > 0}
-    <Stack.Root bind:expanded min={MIN_CLEARABLE_NOTIFICATIONS}>
+    <Stack.Root bind:expanded {min}>
       {#each visible as { notification, component }, i (notification.id)}
         <Stack.Item id={notification.id}>
           <Notification bind:this={refs[i]} {notification} {component} {ondismiss} />
