@@ -23,7 +23,6 @@
 
   const refs = $state<Array<Ref | undefined>>([])
   let expanded = $state(false)
-  let stack: ReturnType<typeof Stack.Root> | undefined = $state()
 
   async function onclearClick(e: MouseEvent) {
     e.stopPropagation()
@@ -34,13 +33,6 @@
 
     onclear?.()
     void clear()
-  }
-
-  function onexpand(e: MouseEvent | KeyboardEvent) {
-    if (e instanceof KeyboardEvent && e.key !== 'Enter' && e.key !== ' ') return
-
-    if (e.target instanceof HTMLElement && e.target.dataset.slot === 'notifications')
-      stack?.toggle()
   }
 
   const renderable = $derived(
@@ -58,16 +50,9 @@
   const visible = $derived(renderable.slice(0, limit))
 </script>
 
-<div
-  data-slot="notifications"
-  class="space-y-2"
-  onclick={onexpand}
-  onkeydown={onexpand}
-  role="button"
-  tabindex="0"
-  aria-label="Expand notifications">
+<div data-slot="notifications" class="space-y-2">
   {#if renderable.length > 0}
-    <Stack.Root bind:this={stack} bind:expanded min={3}>
+    <Stack.Root bind:expanded min={3}>
       {#each visible as { notification, component }, i (notification.id)}
         <Stack.Item id={notification.id}>
           <Notification bind:this={refs[i]} {notification} {component} {ondismiss} />

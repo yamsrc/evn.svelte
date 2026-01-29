@@ -26,9 +26,25 @@
   export function collapse() {
     transit(() => (expanded = false))
   }
+
+  function onclick(e: MouseEvent) {
+    if (e.target instanceof HTMLElement && e.target.closest('[data-stack]')) toggle()
+  }
+
+  function onkeydown(e: KeyboardEvent) {
+    if (e.key !== 'Enter' && e.key !== ' ') return
+
+    if (e.target instanceof HTMLElement && e.target.closest('[data-stack]')) toggle()
+  }
 </script>
 
-<div class={['stack flex flex-col gap-2', collapsed && 'collapsed', stacked && 'stacked', classes]}>
+<div
+  data-stack
+  role="button"
+  tabindex={0}
+  class={['stack flex flex-col gap-2', collapsed && 'collapsed', stacked && 'stacked', classes]}
+  {onclick}
+  {onkeydown}>
   {@render children()}
 </div>
 
@@ -54,6 +70,10 @@
     position: relative;
     overflow: hidden;
     padding-bottom: calc(var(--spacing) * 4);
+    cursor: pointer;
+  }
+
+  :global(.stack.collapsed.stacked > *) {
     pointer-events: none;
   }
 
