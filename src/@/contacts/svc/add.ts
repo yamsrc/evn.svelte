@@ -1,3 +1,4 @@
+import { track } from '@vercel/analytics'
 import { ensure, sync } from 'svas'
 import { account } from '@/iam'
 import * as net from './net'
@@ -11,6 +12,7 @@ export async function add(body: net.Post): Promise<net.Contact | Error> {
     return res
 
   sync(internal, res)
+  track('Contact')
 
   return res
 }

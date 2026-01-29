@@ -1,3 +1,4 @@
+import { track } from '@vercel/analytics'
 import { having } from 'svas'
 import { sync } from 'svas'
 import { account } from '@/iam'
@@ -12,6 +13,7 @@ export async function add(id: string, identities: string[]): Promise<net.Group |
   if (res instanceof Error) return res
 
   sync(internal, res)
+  track('Group')
 
   return res
 }
