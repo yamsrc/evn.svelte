@@ -1,5 +1,6 @@
 <script lang="ts">
   import { ok } from 'svas'
+  import { dict } from '$lib/intl/dev'
   import { Section, Header } from '@/app/ui'
   import { contacts } from '@/contacts'
   import { expenses } from '@/expenses'
@@ -129,7 +130,7 @@
 
 <Section>
   <Header.Root>
-    <Header.Title>Notifications</Header.Title>
+    <Header.Title>{$dict.components.notifications.title}</Header.Title>
   </Header.Root>
 </Section>
 

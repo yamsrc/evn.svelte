@@ -1,0 +1,9 @@
+components:
+  title: Componentes
+  hold:
+    title: Hold
+  stack:
+    title: Stack
+    collapse: Colapsar
+  notifications:
+    title: Notifications

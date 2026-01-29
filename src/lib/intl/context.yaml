@@ -274,3 +274,4 @@ mounts:
   contacts: ../../@/contacts/ui/intl
   expenses: ../../@/expenses/ui/intl
   notifications: ../../@/notifications/ui/intl
+  dev: dev

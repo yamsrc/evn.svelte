@@ -1,0 +1,9 @@
+components:
+  title: 组件
+  hold:
+    title: Hold
+  stack:
+    title: Stack
+    collapse: 收起
+  notifications:
+    title: Notifications

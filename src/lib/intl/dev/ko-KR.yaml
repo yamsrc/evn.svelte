@@ -1,0 +1,9 @@
+components:
+  title: 구성 요소
+  hold:
+    title: Hold
+  stack:
+    title: Stack
+    collapse: 접기
+  notifications:
+    title: Notifications

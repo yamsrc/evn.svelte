@@ -1,0 +1,9 @@
+components:
+  title: コンポーネント
+  hold:
+    title: Hold
+  stack:
+    title: Stack
+    collapse: 折りたたむ
+  notifications:
+    title: Notifications

@@ -1,0 +1,9 @@
+components:
+  title: Компоненты
+  hold:
+    title: Hold
+  stack:
+    title: Stack
+    collapse: Свернуть
+  notifications:
+    title: Notifications

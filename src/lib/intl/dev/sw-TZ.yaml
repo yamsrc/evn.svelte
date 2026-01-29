@@ -1,0 +1,9 @@
+components:
+  title: Vipengele
+  hold:
+    title: Hold
+  stack:
+    title: Stack
+    collapse: Ficha
+  notifications:
+    title: Notifications
