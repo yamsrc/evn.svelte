@@ -24,12 +24,10 @@
 
   const refs = $state<Array<Ref | undefined>>([])
   let expanded = $state(false)
-  let clearing = $state(false)
   const heightsById = $state<Record<string, number>>({})
 
   async function onclearClick(e: MouseEvent) {
     e.stopPropagation()
-    clearing = true
 
     const removed = refs.map((ref, i) => delay(() => ref?.remove(), i * 50))
 
@@ -37,7 +35,6 @@
 
     onclear?.()
     void clear()
-    clearing = false
   }
 
   function onexpand(e: MouseEvent | KeyboardEvent) {
@@ -84,7 +81,7 @@
     <div
       class={[
         'relative overflow-hidden',
-        expanded && !clearing && 'transition-[height] duration-300',
+        expanded && 'transition-[height] duration-300',
         !expanded && 'pointer-events-none',
       ]}
       style:height={`${containerHeight}px`}>
@@ -94,7 +91,7 @@
         <div
           class={[
             'absolute inset-x-0 origin-bottom',
-            expanded && !clearing && 'transition-[top,transform] duration-300 ease-out',
+            expanded && 'transition-[top,transform] duration-300 ease-out',
             hidden && 'opacity-0 pointer-events-none',
           ]}
           style:z-index={visible.length - i}
