@@ -11,10 +11,6 @@
     class?: string
   }
 
-  const GAP = 8
-  const PEEK = 8
-  const SCALE_STEP = 0.05
-
   let {
     items,
     key,
@@ -24,93 +20,87 @@
     class: className,
   }: Props = $props()
 
-  const heightsByKey = $state<Record<string | number, number>>({})
-
   const count = $derived(items.length)
   const stacked = $derived(count >= min)
-  const peekCount = $derived(Math.min(2, count - 1))
 
-  const heights = $derived(items.map((item) => heightsByKey[key(item)] || 0))
-  const frontHeight = $derived(heights[0] || 0)
-  const tops = $derived(heights.map((_, i) => heights.slice(0, i).reduce((s, h) => s + h + GAP, 0)))
+  function withTransition(fn: () => void) {
+    if (!document.startViewTransition) return fn()
 
-  const containerHeight = $derived(
-    expanded
-      ? Math.max(0, heights.reduce((s, h) => s + h + GAP, 0) - GAP)
-      : frontHeight + PEEK * peekCount,
-  )
-
-  function getTransform(i: number): string | undefined {
-    if (expanded || i === 0) return undefined
-
-    return `translateY(${frontHeight - heights[i] + i * PEEK}px) scale(${1 - i * SCALE_STEP})`
-  }
-
-  function getContext(i: number): StackContext {
-    return {
-      index: i,
-      collapsed: stacked && !expanded && i > 0,
-      hidden: stacked && !expanded && i > 2,
-    }
+    document.startViewTransition(fn)
   }
 
   export function toggle() {
-    expanded = !expanded
+    withTransition(() => (expanded = !expanded))
   }
 
   export function expand() {
-    expanded = true
+    withTransition(() => (expanded = true))
   }
 
   export function collapse() {
-    expanded = false
+    withTransition(() => (expanded = false))
   }
 </script>
 
 {#if stacked}
-  <div
-    class={['stack', expanded && 'stack--expanded', className]}
-    style:height="{containerHeight}px">
+  <div class={['stack', expanded && 'stack--expanded', className]}>
     {#each items as item, i (key(item))}
-      {@const ctx = getContext(i)}
+      {@const hidden = !expanded && i > 2}
       <div
-        class={['stack__item', ctx.hidden && 'stack__hidden']}
-        style:z-index={count - i}
-        style:top={expanded ? `${tops[i]}px` : '0'}
-        style:transform={stacked && !expanded ? getTransform(i) : undefined}
-        role="presentation">
-        <div bind:clientHeight={heightsByKey[key(item)]}>
-          {@render children(item, ctx)}
-        </div>
+        class={['stack__item', i === 0 && 'stack__item--front', hidden && 'stack__hidden']}
+        style:view-transition-name="stack-{key(item)}"
+        style:z-index={count - i}>
+        {@render children(item, { index: i, collapsed: !expanded && i > 0, hidden })}
       </div>
     {/each}
   </div>
 {:else}
   <div class={['stack-flat', className]}>
     {#each items as item, i (key(item))}
-      {@render children(item, getContext(i))}
+      <div style:view-transition-name="stack-{key(item)}">
+        {@render children(item, { index: i, collapsed: false, hidden: false })}
+      </div>
     {/each}
   </div>
 {/if}
 
 <style>
   .stack {
-    position: relative;
-    overflow: hidden;
-    transition: height 300ms;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
   }
 
   .stack:not(.stack--expanded) {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 16px;
     pointer-events: none;
   }
 
   .stack__item {
-    position: absolute;
-    inset-inline: 0;
     transform-origin: bottom center;
-    transition:
-      top 300ms ease-out,
-      transform 300ms ease-out;
+  }
+
+  .stack__item--front {
+    position: relative;
+  }
+
+  .stack:not(.stack--expanded) > .stack__item:not(:first-child) {
+    position: absolute;
+    bottom: 16px;
+    left: 0;
+    right: 0;
+  }
+
+  .stack:not(.stack--expanded) > .stack__item:nth-child(2) {
+    transform: translateY(8px) scale(0.95);
+    clip-path: inset(calc(100% - 8px) 0 0 0);
+  }
+
+  .stack:not(.stack--expanded) > .stack__item:nth-child(3) {
+    transform: translateY(16px) scale(0.9);
+    clip-path: inset(calc(100% - 16px) 0 0 0);
   }
 
   .stack__hidden {
@@ -122,5 +112,15 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
+  }
+
+  :global(::view-transition-old(stack-*)),
+  :global(::view-transition-new(stack-*)) {
+    animation-duration: 300ms;
+    animation-timing-function: ease-out;
+  }
+
+  :global(::view-transition-group(stack-*)) {
+    z-index: auto;
   }
 </style>
