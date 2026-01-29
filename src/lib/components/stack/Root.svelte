@@ -13,6 +13,12 @@
   setContext<StackContext>(STACK_CTX, {
     increment: () => count++,
     decrement: () => count--,
+    get expanded() {
+      return expanded
+    },
+    get stacked() {
+      return stacked
+    },
   })
 
   export function toggle() {
@@ -28,18 +34,17 @@
   }
 
   function onclick(e: MouseEvent) {
-    if (e.target instanceof HTMLElement && e.target.closest('[data-stack]')) toggle()
+    if (e.target === e.currentTarget) toggle()
   }
 
   function onkeydown(e: KeyboardEvent) {
     if (e.key !== 'Enter' && e.key !== ' ') return
 
-    if (e.target instanceof HTMLElement && e.target.closest('[data-stack]')) toggle()
+    if (e.target === e.currentTarget) toggle()
   }
 </script>
 
 <div
-  data-stack
   role="button"
   tabindex={0}
   class={['stack flex flex-col gap-2', collapsed && 'collapsed', stacked && 'stacked', classes]}
@@ -49,6 +54,13 @@
 </div>
 
 <style>
+  /* faster clip/opacity transition than move */
+  :global(.stack > *:not(:first-child)) {
+    transition:
+      clip-path 100ms ease-out,
+      opacity 100ms ease-out;
+  }
+
   /* z-index always set for view transition */
   :global(.stack > *:nth-child(1)) {
     z-index: 5;
@@ -99,11 +111,15 @@
   }
 
   :global(.stack.collapsed.stacked > *:nth-child(n + 4)) {
+    transform: translateY(calc(var(--spacing) * 4)) scale(0.85);
+    transform-origin: bottom center;
+    clip-path: inset(calc(100% - var(--spacing) * 4) 0 0 0);
     opacity: 0;
     pointer-events: none;
   }
 
-  :global(::view-transition-group(*.stack-item)) {
+  :global(::view-transition-group(*.stack-item)),
+  :global(::view-transition-group(stack-footer)) {
     animation-duration: 300ms;
     animation-timing-function: ease-out;
   }

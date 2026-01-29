@@ -50,22 +50,20 @@
   const visible = $derived(renderable.slice(0, limit))
 </script>
 
-<div data-slot="notifications" class="space-y-2">
+<div class="space-y-2">
   {#if renderable.length > 0}
-    <Stack.Root bind:expanded min={3}>
+    <Stack.Root bind:expanded min={MIN_CLEARABLE_NOTIFICATIONS}>
       {#each visible as { notification, component }, i (notification.id)}
         <Stack.Item id={notification.id}>
           <Notification bind:this={refs[i]} {notification} {component} {ondismiss} />
         </Stack.Item>
       {/each}
-    </Stack.Root>
-    {#if renderable.length > MIN_CLEARABLE_NOTIFICATIONS && expanded}
-      <div class="flex justify-center">
+      <Stack.Footer class="flex justify-center">
         <Button variant="ghost" size="sm" onclick={onclearClick} class="text-muted-foreground">
           <Trash2 size={16} />
           {$dict.erase}
         </Button>
-      </div>
-    {/if}
+      </Stack.Footer>
+    </Stack.Root>
   {/if}
 </div>

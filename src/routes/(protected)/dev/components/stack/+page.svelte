@@ -6,16 +6,17 @@
   import { transit } from '$lib/tools/svt'
   import { Dismissable, Section, Header } from '@/app/ui'
 
-  type Item = { id: string; color: string }
+  type Item = { id: string; color: string; height: number }
   type Ref = { remove: () => Promise<void> | void }
 
   const COLORS = ['#ef4444', '#f97316', '#eab308', '#22c55e', '#3b82f6', '#8b5cf6', '#ec4899']
+  const randHeight = () => Math.floor(Math.random() * (120 - 56) + 56)
 
   let stack: ReturnType<typeof Stack.Root> | undefined = $state()
   let expanded = $state(false)
   const refs = $state<Array<Ref | undefined>>([])
 
-  let items = $state<Item[]>(COLORS.map((color, i) => ({ id: `item-${i}`, color })))
+  let items = $state<Item[]>(COLORS.map((color, i) => ({ id: `item-${i}`, color, height: randHeight() })))
 
   function removeItem(id: string) {
     transit(() => (items = items.filter((i) => i.id !== id)))
@@ -44,29 +45,29 @@
       <Stack.Item id={item.id}>
         <Dismissable bind:this={refs[i]} ondismiss={() => removeItem(item.id)}>
           <div
-            class="h-24 rounded-lg flex items-center justify-center"
-            style:background-color={item.color}>
+            class="rounded-lg flex items-center justify-center"
+            style:background-color={item.color}
+            style:height="{item.height}px">
             <span class="text-white font-medium">{item.id}</span>
           </div>
         </Dismissable>
       </Stack.Item>
     {/each}
+    <Stack.Footer>
+      <Section class="flex justify-between">
+        <Button
+          variant="ghost"
+          size="sm"
+          class="text-muted-foreground"
+          onclick={() => stack?.collapse()}>
+          <ChevronsDownUp size={16} />
+          Collapse
+        </Button>
+        <Button variant="ghost" size="sm" class="text-muted-foreground" onclick={clearAll}>
+          <Trash2 size={16} />
+          Clear all
+        </Button>
+      </Section>
+    </Stack.Footer>
   </Stack.Root>
 </Section>
-
-{#if expanded && items.length > 0}
-  <Section class="flex justify-between">
-    <Button
-      variant="ghost"
-      size="sm"
-      class="text-muted-foreground"
-      onclick={() => stack?.collapse()}>
-      <ChevronsDownUp size={16} />
-      Collapse
-    </Button>
-    <Button variant="ghost" size="sm" class="text-muted-foreground" onclick={clearAll}>
-      <Trash2 size={16} />
-      Clear all
-    </Button>
-  </Section>
-{/if}

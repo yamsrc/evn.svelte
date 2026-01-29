@@ -11,6 +11,8 @@ export interface Props {
 export type StackContext = {
   increment: () => void
   decrement: () => void
+  get expanded(): boolean
+  get stacked(): boolean
 }
 
 export const STACK_CTX = Symbol('stack')
