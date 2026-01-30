@@ -3,12 +3,12 @@
 /// <reference lib="webworker" />
 /// <reference types="@sveltejs/kit" />
 
-import { build, version } from '$service-worker'
+import { build, files, version } from '$service-worker'
 
 const app = globalThis.self as unknown as ServiceWorkerGlobalScope
 
 const CACHE = `cache-${version}`
-const ASSETS = [...build]
+const ASSETS = [...build, ...files]
 
 app.addEventListener('install', (event) => {
   async function install() {
@@ -37,35 +37,17 @@ app.addEventListener('activate', (event) => {
 app.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return
 
+  const url = new URL(event.request.url)
+
+  if (!ASSETS.includes(url.pathname)) return
+
   async function respond() {
-    const url = new URL(event.request.url)
     const cache = await caches.open(CACHE)
+    const response = await cache.match(url.pathname)
 
-    if (ASSETS.includes(url.pathname)) {
-      const response = await cache.match(url.pathname)
+    if (response) return response
 
-      if (response !== undefined)
-        return response
-    }
-
-    try {
-      const response = await fetch(event.request)
-
-      if (!(response instanceof Response))
-        throw new Error('invalid response from fetch')
-
-      if (response.status === 200)
-        cache.put(event.request, response.clone())
-
-      return response
-    } catch (err) {
-      const response = await cache.match(event.request)
-
-      if (response !== undefined)
-        return response
-
-      throw err
-    }
+    return fetch(event.request)
   }
 
   event.respondWith(respond())
