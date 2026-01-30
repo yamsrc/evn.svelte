@@ -23,7 +23,7 @@
     {#if contact && ok(contact.account)}
       {@const { name, grammar } = contact.account}
       <Base href={`/contacts/${contact.identity}`}>
-        <dvi>
+        <div>
           {#if received}
             {$dict.contacts.transferred.received(name, amount, grammar)}
           {:else}
@@ -38,7 +38,7 @@
               {$dict.contacts.transferred.balance.owe(name, remainder)}
             {/if}
           </p>
-        </dvi>
+        </div>
       </Base>
     {/if}
   {/snippet}
