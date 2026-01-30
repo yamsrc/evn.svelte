@@ -11,7 +11,7 @@
   {#snippet awaited(contacts)}
     {@const contact = contacts.find((c) => c.identity === notification.key)}
     {#if contact}
-      <Base href={`/contacts/${contact.id}`}>
+      <Base href={`/contacts/${contact.identity}`}>
         {contact.account?.name} has taken account
       </Base>
     {/if}

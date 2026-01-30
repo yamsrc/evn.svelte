@@ -51,7 +51,7 @@
 
 {#if ok(contact.account)}
   <Panel
-    href={`/contacts/${contact.id}/`}
+    href={`/contacts/${contact.identity}/`}
     account={contact.account}
     balance={contact.balance}
     {selected}

@@ -37,7 +37,7 @@
     {#snippet awaited([account, contacts])}
       {@const contact = contacts.find((c) => c.identity === identity)}
       <Panel
-        href={`/contacts/${contact?.id}/`}
+        href={contact ? `/contacts/${contact.identity}/` : undefined}
         class="bg-constructive/20 border-constructive/30"
         {highlighted}>
         {#snippet left()}

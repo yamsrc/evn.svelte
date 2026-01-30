@@ -11,8 +11,8 @@
   {#snippet awaited(contacts)}
     {@const contact = contacts.find((c) => c.identity === notification.key)}
     {#if contact}
-      <Base href={`/contacts/${contact.id}`}>
-        {contact.account?.name} has accepted your invitation
+      <Base href={`/contacts/${contact.identity}`}>
+        You are now friends with {contact.account?.name}
       </Base>
     {/if}
   {/snippet}

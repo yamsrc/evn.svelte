@@ -21,68 +21,70 @@
 
   const id = $derived(page.params.id) as string
 
-  const contact = $derived(
-    ok($contacts) ? $contacts.find((contact) => contact.id === id) : undefined,
-  )
-
   function ondelete() {
     void goto('..')
   }
 
   $effect(() => {
-    if (contact) void seen('contacts', contact.identity)
+    void seen('contacts', id)
   })
 </script>
 
-<Section>
-  <Header.Root>
-    <Header.Title>{$dict.contacts.title}</Header.Title>
-    <Header.Actions>
-      {#if contact}
-        <Delete {contact} {ondelete} />
-      {/if}
-    </Header.Actions>
-  </Header.Root>
-</Section>
+<Async store={contacts}>
+  {#snippet awaited(contacts)}
+    {@const contact = contacts.find((c) => c.identity === id)}
 
-<Async store={combined(groups, expenses)}>
-  {#snippet awaited([groups, expenses])}
-    {#if contact?.account && ok(contact.account)}
-      {#if contact.account.background}
-        <BackgroundOverride id={contact.account.background} />
-      {/if}
-      <Section>
-        <div class="flex flex-col gap-4">
-          <Cosmetics account={contact.account} editable={contact.managed} managed />
-          {#if contact.managed}
-            <Grammar account={contact.account} managed class="items-center" />
-            <Share {contact} />
+    <Section>
+      <Header.Root>
+        <Header.Title>{$dict.contacts.title}</Header.Title>
+        <Header.Actions>
+          {#if contact}
+            <Delete {contact} {ondelete} />
           {/if}
-        </div>
-      </Section>
+        </Header.Actions>
+      </Header.Root>
+    </Section>
 
-      <Separator />
+    <Async store={combined(groups, expenses)}>
+      {#snippet awaited([groups, expenses])}
+        {#if contact?.account && ok(contact.account)}
+          {#if contact.account.background}
+            <BackgroundOverride id={contact.account.background} />
+          {/if}
+          <Section>
+            <div class="flex flex-col gap-4">
+              <Cosmetics account={contact.account} editable={contact.managed} managed />
+              {#if contact.managed}
+                <Grammar account={contact.account} managed class="items-center" />
+                <Share {contact} />
+              {/if}
+            </div>
+          </Section>
 
-      <Section>
-        <Balance {contact} class="justify-center" />
-      </Section>
-      <Section class="space-y-4">
-        <Groups {contact} {groups} />
-        <Expenses {contact} {expenses} />
-      </Section>
+          <Separator />
 
-      <Actions>
-        {#if contact.balance !== 0}
-          <Async store={account}>
-            {#snippet awaited(account)}
-              <Transfer {account} {contact} />
-            {/snippet}
-          </Async>
+          <Section>
+            <Balance {contact} class="justify-center" />
+          </Section>
+          <Section class="space-y-4">
+            <Groups {contact} {groups} />
+            <Expenses {contact} {expenses} />
+          </Section>
+
+          <Actions>
+            {#if contact.balance !== 0}
+              <Async store={account}>
+                {#snippet awaited(account)}
+                  <Transfer {account} {contact} />
+                {/snippet}
+              </Async>
+            {/if}
+            <Favorite {contact} />
+          </Actions>
+        {:else}
+          <Spinner class="m-auto" />
         {/if}
-        <Favorite {contact} />
-      </Actions>
-    {:else}
-      <Spinner class="m-auto" />
-    {/if}
+      {/snippet}
+    </Async>
   {/snippet}
 </Async>
