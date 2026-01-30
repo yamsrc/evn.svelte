@@ -7,3 +7,6 @@ components:
     collapse: 접기
   notifications:
     title: Notifications
+    display: |-
+      !js
+      (count) => `${count}개 표시`

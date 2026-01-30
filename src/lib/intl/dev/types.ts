@@ -20,6 +20,7 @@ export type Dictionary = {
         }
         notifications: {
           title: string
+          display: (value: any) => string
         }
       }
     }

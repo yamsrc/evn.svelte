@@ -7,3 +7,6 @@ components:
     collapse: Colapsar
   notifications:
     title: Notifications
+    display: |-
+      !js
+      (count) => `Mostrar: ${count}`

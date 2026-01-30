@@ -7,3 +7,6 @@ components:
     collapse: 折りたたむ
   notifications:
     title: Notifications
+    display: |-
+      !js
+      (count) => `${count}件を表示`

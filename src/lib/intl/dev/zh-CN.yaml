@@ -7,3 +7,6 @@ components:
     collapse: 收起
   notifications:
     title: Notifications
+    display: |-
+      !js
+      (count) => `显示：${count}`

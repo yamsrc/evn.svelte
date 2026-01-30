@@ -7,3 +7,6 @@ components:
     collapse: Свернуть
   notifications:
     title: Notifications
+    display: |-
+      !js
+      (count) => `Показать: ${count}`

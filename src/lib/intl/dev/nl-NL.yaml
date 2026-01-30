@@ -7,3 +7,6 @@ components:
     collapse: Inklappen
   notifications:
     title: Notifications
+    display: |-
+      !js
+      (count) => `Tonen: ${count}`

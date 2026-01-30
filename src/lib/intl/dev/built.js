@@ -13,7 +13,8 @@ export const dictionaries = {
         "collapse": "طيّ"
       },
       "notifications": {
-        "title": "Notifications"
+        "title": "Notifications",
+        "display": (count) => `عرض: ${count}`
       }
     }
   },
@@ -28,7 +29,8 @@ export const dictionaries = {
         "collapse": "Einklappen"
       },
       "notifications": {
-        "title": "Notifications"
+        "title": "Notifications",
+        "display": (count) => `Anzeigen: ${count}`
       }
     }
   },
@@ -43,7 +45,8 @@ export const dictionaries = {
         "collapse": "Collapse"
       },
       "notifications": {
-        "title": "Notifications"
+        "title": "Notifications",
+        "display": (count) => `Show: ${count}`
       }
     }
   },
@@ -58,7 +61,8 @@ export const dictionaries = {
         "collapse": "Colapsar"
       },
       "notifications": {
-        "title": "Notifications"
+        "title": "Notifications",
+        "display": (count) => `Mostrar: ${count}`
       }
     }
   },
@@ -73,7 +77,8 @@ export const dictionaries = {
         "collapse": "Réduire"
       },
       "notifications": {
-        "title": "Notifications"
+        "title": "Notifications",
+        "display": (count) => `Afficher : ${count}`
       }
     }
   },
@@ -88,7 +93,8 @@ export const dictionaries = {
         "collapse": "संकुचित करें"
       },
       "notifications": {
-        "title": "Notifications"
+        "title": "Notifications",
+        "display": (count) => `${count} दिखाएं`
       }
     }
   },
@@ -103,7 +109,8 @@ export const dictionaries = {
         "collapse": "Comprimi"
       },
       "notifications": {
-        "title": "Notifications"
+        "title": "Notifications",
+        "display": (count) => `Mostra: ${count}`
       }
     }
   },
@@ -118,7 +125,8 @@ export const dictionaries = {
         "collapse": "折りたたむ"
       },
       "notifications": {
-        "title": "Notifications"
+        "title": "Notifications",
+        "display": (count) => `${count}件を表示`
       }
     }
   },
@@ -133,7 +141,8 @@ export const dictionaries = {
         "collapse": "접기"
       },
       "notifications": {
-        "title": "Notifications"
+        "title": "Notifications",
+        "display": (count) => `${count}개 표시`
       }
     }
   },
@@ -148,7 +157,8 @@ export const dictionaries = {
         "collapse": "Inklappen"
       },
       "notifications": {
-        "title": "Notifications"
+        "title": "Notifications",
+        "display": (count) => `Tonen: ${count}`
       }
     }
   },
@@ -163,7 +173,8 @@ export const dictionaries = {
         "collapse": "Свернуть"
       },
       "notifications": {
-        "title": "Notifications"
+        "title": "Notifications",
+        "display": (count) => `Показать: ${count}`
       }
     }
   },
@@ -178,7 +189,8 @@ export const dictionaries = {
         "collapse": "Ficha"
       },
       "notifications": {
-        "title": "Notifications"
+        "title": "Notifications",
+        "display": (count) => `Onyesha: ${count}`
       }
     }
   },
@@ -193,7 +205,8 @@ export const dictionaries = {
         "collapse": "Daralt"
       },
       "notifications": {
-        "title": "Notifications"
+        "title": "Notifications",
+        "display": (count) => `${count} göster`
       }
     }
   },
@@ -208,7 +221,8 @@ export const dictionaries = {
         "collapse": "Згорнути"
       },
       "notifications": {
-        "title": "Notifications"
+        "title": "Notifications",
+        "display": (count) => `Показати: ${count}`
       }
     }
   },
@@ -223,7 +237,8 @@ export const dictionaries = {
         "collapse": "收起"
       },
       "notifications": {
-        "title": "Notifications"
+        "title": "Notifications",
+        "display": (count) => `显示：${count}`
       }
     }
   }

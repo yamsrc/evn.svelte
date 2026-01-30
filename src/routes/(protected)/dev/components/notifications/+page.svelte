@@ -113,9 +113,12 @@
     return result
   })
 
+  // svelte-ignore state_referenced_locally
+  let display = $state(baseNotifications.length)
   const dismissed = $state<Set<string>>(new Set())
 
-  const notifications = $derived(baseNotifications.filter((n) => !dismissed.has(n.id)))
+  const filteredNotifications = $derived(baseNotifications.filter((n) => !dismissed.has(n.id)))
+  const notifications = $derived(display === 0 ? [] : filteredNotifications.slice(-display))
 
   const ondismiss = (id: string) => {
     dismissed.add(id)
@@ -132,6 +135,18 @@
   </Header.Root>
 </Section>
 
-<Section class="px-0">
+<Section class="px-0 space-y-2">
+  <div class="flex items-center gap-4 px-5 py-2">
+    <label for="notification-count" class="text-sm text-muted-foreground">
+      {$dict.components.notifications.display(notifications.length)}
+    </label>
+    <input
+      id="notification-count"
+      type="range"
+      min="0"
+      max={baseNotifications.length}
+      bind:value={display}
+      class="flex-1 h-2 bg-input rounded-lg appearance-none cursor-pointer accent-primary" />
+  </div>
   <Notifications {notifications} max={notifications.length} {ondismiss} {onclear} />
 </Section>

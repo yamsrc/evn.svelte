@@ -15,3 +15,5 @@ inputs:
     notifications:
       title:
         input: Notifications
+      display:
+        input: "Show: {count}"

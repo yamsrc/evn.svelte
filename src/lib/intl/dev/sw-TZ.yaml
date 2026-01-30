@@ -7,3 +7,6 @@ components:
     collapse: Ficha
   notifications:
     title: Notifications
+    display: |-
+      !js
+      (count) => `Onyesha: ${count}`
