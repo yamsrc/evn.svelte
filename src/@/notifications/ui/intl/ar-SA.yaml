@@ -51,7 +51,7 @@ contacts:
         (balance) => `لا يزال مستحقًا لك ${balance}`
       owe: |-
         !js
-        (name, balance) => `أنت مدين لـ${name} بمبلغ ${balance} الآن.`
+        (name, balance) => `أنت مدين لـ${name} بمبلغ ${balance} الآن`
 expenses:
   created: |-
     !js

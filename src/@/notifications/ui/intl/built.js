@@ -34,7 +34,7 @@ export const dictionaries = {
         "balance": {
           "even": "أنتما متعادلان الآن",
           "owed": (balance) => `لا يزال مستحقًا لك ${balance}`,
-          "owe": (name, balance) => `أنت مدين لـ${name} بمبلغ ${balance} الآن.`
+          "owe": (name, balance) => `أنت مدين لـ${name} بمبلغ ${balance} الآن`
         }
       }
     },
@@ -71,8 +71,8 @@ export const dictionaries = {
 },
         "balance": {
           "even": "Ihr seid jetzt quitt",
-          "owed": (balance) => `Dir stehen noch ${balance} zu.`,
-          "owe": (name, balance) => `Du schuldest ${name} jetzt ${balance}.`
+          "owed": (balance) => `Dir stehen noch ${balance} zu`,
+          "owe": (name, balance) => `Du schuldest ${name} jetzt ${balance}`
         }
       }
     },
@@ -105,8 +105,8 @@ export const dictionaries = {
         "received": (name, amount, gender) => `${name} paid you ${amount}`,
         "balance": {
           "even": "You are even now",
-          "owed": (balance) => `You're still owed ${balance}.`,
-          "owe": (name, balance) => `You owe ${name} ${balance} now.`
+          "owed": (balance) => `You're still owed ${balance}`,
+          "owe": (name, balance) => `You owe ${name} ${balance} now`
         }
       }
     },
@@ -145,8 +145,8 @@ export const dictionaries = {
 },
         "balance": {
           "even": "Ahora están a mano",
-          "owed": (balance) => `Aún te deben ${balance}.`,
-          "owe": (name, balance) => `Ahora le debes ${balance} a ${name}.`
+          "owed": (balance) => `Aún te deben ${balance}`,
+          "owe": (name, balance) => `Ahora le debes ${balance} a ${name}`
         }
       }
     },
@@ -185,8 +185,8 @@ export const dictionaries = {
 },
         "balance": {
           "even": "Vous êtes quittes maintenant",
-          "owed": (balance) => `Il te reste ${balance} à recevoir.`,
-          "owe": (name, balance) => `Vous devez ${balance} à ${name} maintenant.`
+          "owed": (balance) => `Il vous reste à recevoir ${balance}`,
+          "owe": (name, balance) => `Vous devez ${balance} à ${name} maintenant`
         }
       }
     },
@@ -225,8 +225,8 @@ export const dictionaries = {
 },
         "balance": {
           "even": "अब आप बराबर हैं",
-          "owed": (balance) => `आपको अभी भी ${balance} बकाया है।`,
-          "owe": (name, balance) => `आपको अभी ${name} को ${balance} देना है।`
+          "owed": (balance) => `आपको अभी भी ${balance} दिया जाना बाकी है`,
+          "owe": (name, balance) => `आपको अभी ${name} को ${balance} देना है`
         }
       }
     },
@@ -265,8 +265,8 @@ export const dictionaries = {
 },
         "balance": {
           "even": "Ora siete pari",
-          "owed": (balance) => `Devi ancora ricevere ${balance}.`,
-          "owe": (name, balance) => `Adesso devi ${balance} a ${name}.`
+          "owed": (balance) => `Ti devono ancora ${balance}`,
+          "owe": (name, balance) => `Ora devi ${balance} a ${name}`
         }
       }
     },
@@ -299,13 +299,13 @@ export const dictionaries = {
         "received": (name, amount, gender) => `${name}さんがあなたに${amount}を支払いました`,
         "balance": {
           "even": "これであなたたちは今、互いにイーブンです",
-          "owed": (balance) => `あなたにはまだ${balance}の未払いがあります。`,
-          "owe": (name, balance) => `${name}に今すぐ${balance}を支払う必要があります。`
+          "owed": (balance) => `まだ${balance}の支払いがあります`,
+          "owe": (name, balance) => `${name}さんに今${balance}を支払う必要があります`
         }
       }
     },
     "expenses": {
-      "created": (name) => `${name} によって支払われました`
+      "created": (name) => `${name} により支払い済み`
     }
   },
   "ko-KR": {
@@ -333,8 +333,8 @@ export const dictionaries = {
         "received": (name, amount, gender) => `${name}님이 당신에게 ${amount}을(를) 보냈습니다`,
         "balance": {
           "even": "이제 당신들은 서로 비겼습니다",
-          "owed": (balance) => `아직 ${balance}을(를) 받아야 합니다.`,
-          "owe": (name, balance) => `지금 ${name}에게 ${balance}을(를) 갚아야 합니다.`
+          "owed": (balance) => `아직 받을 금액이 ${balance}입니다`,
+          "owe": (name, balance) => `지금 ${name}에게 ${balance}를 갚아야 합니다`
         }
       }
     },
@@ -367,8 +367,8 @@ export const dictionaries = {
         "received": (name, amount, gender) => `${name} heeft je ${amount} betaald`,
         "balance": {
           "even": "Jullie staan nu gelijk",
-          "owed": (balance) => `Je hebt nog ${balance} tegoed.`,
-          "owe": (name, balance) => `Je bent ${name} nu ${balance} verschuldigd.`
+          "owed": (balance) => `Je krijgt nog ${balance}`,
+          "owe": (name, balance) => `Je bent ${name} nu ${balance} verschuldigd`
         }
       }
     },
@@ -407,8 +407,8 @@ export const dictionaries = {
 },
         "balance": {
           "even": "Теперь вы в расчёте",
-          "owed": (balance) => `Вам всё ещё должны ${balance}.`,
-          "owe": (name, balance) => `Сейчас вы должны ${name} ${balance}.`
+          "owed": (balance) => `Вам всё еще должны ${balance}`,
+          "owe": (name, balance) => `Вы должны ${name} сейчас ${balance}`
         }
       }
     },
@@ -441,8 +441,8 @@ export const dictionaries = {
         "received": (name, amount, gender) => `${name} amekulipa ${amount}`,
         "balance": {
           "even": "Sasa ninyi mko sawa",
-          "owed": (balance) => `Bado unadai ${balance}.`,
-          "owe": (name, balance) => `Unamdai ${name} ${balance} sasa.`
+          "owed": (balance) => `Bado unaidai ${balance}`,
+          "owe": (name, balance) => `Unadaiwa ${name} ${balance} sasa`
         }
       }
     },
@@ -475,8 +475,8 @@ export const dictionaries = {
         "received": (name, amount, gender) => `${name} sana ${amount} ödedi`,
         "balance": {
           "even": "Artık başa başsınız",
-          "owed": (balance) => `Hâlâ ${balance} alacağınız var.`,
-          "owe": (name, balance) => `Şu anda ${name}'ye ${balance} borçlusun.`
+          "owed": (balance) => `Hâlâ ${balance} alacağınız var`,
+          "owe": (name, balance) => `Şu anda ${name}'a ${balance} borçlusun`
         }
       }
     },
@@ -515,13 +515,13 @@ export const dictionaries = {
 },
         "balance": {
           "even": "Тепер ви квити",
-          "owed": (balance) => `Вам ще винні ${balance}.`,
-          "owe": (name, balance) => `Ви зараз винні ${name} ${balance}.`
+          "owed": (balance) => `Вам ще винні ${balance}`,
+          "owe": (name, balance) => `Ви зараз винні ${name} ${balance}`
         }
       }
     },
     "expenses": {
-      "created": (name) => `Сплачено: ${name}`
+      "created": (name) => `Оплачено ${name}`
     }
   },
   "zh-CN": {
@@ -549,8 +549,8 @@ export const dictionaries = {
         "received": (name, amount, gender) => `${name}已向你支付了${amount}`,
         "balance": {
           "even": "你们现在扯平了",
-          "owed": (balance) => `你还有${balance}未收到。`,
-          "owe": (name, balance) => `你现在欠${name} ${balance}。`
+          "owed": (balance) => `你仍然有${balance}未收到`,
+          "owe": (name, balance) => `你现在欠${name}${balance}`
         }
       }
     },

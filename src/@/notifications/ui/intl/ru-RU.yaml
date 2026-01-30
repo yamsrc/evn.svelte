@@ -49,10 +49,10 @@ contacts:
       even: Теперь вы в расчёте
       owed: |-
         !js
-        (balance) => `Вам всё ещё должны ${balance}.`
+        (balance) => `Вам всё еще должны ${balance}`
       owe: |-
         !js
-        (name, balance) => `Сейчас вы должны ${name} ${balance}.`
+        (name, balance) => `Вы должны ${name} сейчас ${balance}`
 expenses:
   created: |-
     !js

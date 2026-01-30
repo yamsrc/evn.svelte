@@ -36,11 +36,11 @@ contacts:
       even: これであなたたちは今、互いにイーブンです
       owed: |-
         !js
-        (balance) => `あなたにはまだ${balance}の未払いがあります。`
+        (balance) => `まだ${balance}の支払いがあります`
       owe: |-
         !js
-        (name, balance) => `${name}に今すぐ${balance}を支払う必要があります。`
+        (name, balance) => `${name}さんに今${balance}を支払う必要があります`
 expenses:
   created: |-
     !js
-    (name) => `${name} によって支払われました`
+    (name) => `${name} により支払い済み`

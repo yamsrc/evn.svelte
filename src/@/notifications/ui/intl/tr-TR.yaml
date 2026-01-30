@@ -36,10 +36,10 @@ contacts:
       even: Artık başa başsınız
       owed: |-
         !js
-        (balance) => `Hâlâ ${balance} alacağınız var.`
+        (balance) => `Hâlâ ${balance} alacağınız var`
       owe: |-
         !js
-        (name, balance) => `Şu anda ${name}'ye ${balance} borçlusun.`
+        (name, balance) => `Şu anda ${name}'a ${balance} borçlusun`
 expenses:
   created: |-
     !js

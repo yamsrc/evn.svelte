@@ -37,10 +37,10 @@ contacts:
       even: Jullie staan nu gelijk
       owed: |-
         !js
-        (balance) => `Je hebt nog ${balance} tegoed.`
+        (balance) => `Je krijgt nog ${balance}`
       owe: |-
         !js
-        (name, balance) => `Je bent ${name} nu ${balance} verschuldigd.`
+        (name, balance) => `Je bent ${name} nu ${balance} verschuldigd`
 expenses:
   created: |-
     !js

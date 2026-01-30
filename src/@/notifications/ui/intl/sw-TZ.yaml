@@ -36,10 +36,10 @@ contacts:
       even: Sasa ninyi mko sawa
       owed: |-
         !js
-        (balance) => `Bado unadai ${balance}.`
+        (balance) => `Bado unaidai ${balance}`
       owe: |-
         !js
-        (name, balance) => `Unamdai ${name} ${balance} sasa.`
+        (name, balance) => `Unadaiwa ${name} ${balance} sasa`
 expenses:
   created: |-
     !js

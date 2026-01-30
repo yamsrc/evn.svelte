@@ -48,10 +48,10 @@ contacts:
       even: Ahora están a mano
       owed: |-
         !js
-        (balance) => `Aún te deben ${balance}.`
+        (balance) => `Aún te deben ${balance}`
       owe: |-
         !js
-        (name, balance) => `Ahora le debes ${balance} a ${name}.`
+        (name, balance) => `Ahora le debes ${balance} a ${name}`
 expenses:
   created: |-
     !js

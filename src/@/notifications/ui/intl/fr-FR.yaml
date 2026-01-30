@@ -48,10 +48,10 @@ contacts:
       even: Vous êtes quittes maintenant
       owed: |-
         !js
-        (balance) => `Il te reste ${balance} à recevoir.`
+        (balance) => `Il vous reste à recevoir ${balance}`
       owe: |-
         !js
-        (name, balance) => `Vous devez ${balance} à ${name} maintenant.`
+        (name, balance) => `Vous devez ${balance} à ${name} maintenant`
 expenses:
   created: |-
     !js

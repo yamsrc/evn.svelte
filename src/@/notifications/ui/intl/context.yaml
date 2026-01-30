@@ -35,9 +35,9 @@ inputs:
         even:
           input: You are even now
         owed:
-          input: You're still owed {balance}.
+          input: You're still owed {balance}
         owe:
-          input: You owe {name} {balance} now.
+          input: You owe {name} {balance} now
   expenses:
     created:
-      input: Paid by {name}.
+      input: Paid by {name}

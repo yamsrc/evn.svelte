@@ -47,10 +47,10 @@ contacts:
       even: अब आप बराबर हैं
       owed: |-
         !js
-        (balance) => `आपको अभी भी ${balance} बकाया है।`
+        (balance) => `आपको अभी भी ${balance} दिया जाना बाकी है`
       owe: |-
         !js
-        (name, balance) => `आपको अभी ${name} को ${balance} देना है।`
+        (name, balance) => `आपको अभी ${name} को ${balance} देना है`
 expenses:
   created: |-
     !js

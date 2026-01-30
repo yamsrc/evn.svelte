@@ -50,11 +50,11 @@ contacts:
       even: Тепер ви квити
       owed: |-
         !js
-        (balance) => `Вам ще винні ${balance}.`
+        (balance) => `Вам ще винні ${balance}`
       owe: |-
         !js
-        (name, balance) => `Ви зараз винні ${name} ${balance}.`
+        (name, balance) => `Ви зараз винні ${name} ${balance}`
 expenses:
   created: |-
     !js
-    (name) => `Сплачено: ${name}`
+    (name) => `Оплачено ${name}`

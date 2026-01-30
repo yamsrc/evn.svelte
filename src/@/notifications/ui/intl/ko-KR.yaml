@@ -36,10 +36,10 @@ contacts:
       even: 이제 당신들은 서로 비겼습니다
       owed: |-
         !js
-        (balance) => `아직 ${balance}을(를) 받아야 합니다.`
+        (balance) => `아직 받을 금액이 ${balance}입니다`
       owe: |-
         !js
-        (name, balance) => `지금 ${name}에게 ${balance}을(를) 갚아야 합니다.`
+        (name, balance) => `지금 ${name}에게 ${balance}를 갚아야 합니다`
 expenses:
   created: |-
     !js

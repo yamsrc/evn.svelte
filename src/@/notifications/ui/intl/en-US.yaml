@@ -36,10 +36,10 @@ contacts:
       even: You are even now
       owed: |-
         !js
-        (balance) => `You're still owed ${balance}.`
+        (balance) => `You're still owed ${balance}`
       owe: |-
         !js
-        (name, balance) => `You owe ${name} ${balance} now.`
+        (name, balance) => `You owe ${name} ${balance} now`
 expenses:
   created: |-
     !js
