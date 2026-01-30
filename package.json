@@ -45,7 +45,7 @@
 		"neostandard": "0.12.2",
 		"playwright-bdd": "8.4.2",
 		"sharp-cli": "5.2.0",
-		"svas": "1.3.0",
+		"svas": "1.4.0",
 		"svelte": "5.48.0",
 		"svelte-check": "4.3.5",
 		"svintl": "1.8.0",
