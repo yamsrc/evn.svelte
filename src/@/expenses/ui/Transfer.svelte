@@ -102,7 +102,7 @@
               {$dict.transfer.direction.byme($grammar)}
             {/if}
           </div>
-          <CoinsInput bind:value class="max-w-1/2" inputClass="text-3xl font-bold" />
+          <CoinsInput bind:value class="max-w-1/2" inputClass="text-3xl font-bold" autofocus />
         </div>
       </div>
       <AlertDialog.Footer class="flex-row [&_button]:w-1/2">

@@ -32,8 +32,8 @@ profile:
   language:
     title: Language
     description: >-
-      This does not affect cheque recognition. We understand most languages
-      there anyway.
+      This does not affect receipt scanning — we can read them in most languages
+      anyway.
   grammar:
     title: Grammatical Form
     description: >-

@@ -32,8 +32,8 @@ profile:
   language:
     title: Taal
     description: >-
-      Dit heeft geen invloed op de chequedetectie. We begrijpen daar toch de
-      meeste talen.
+      Dit heeft geen invloed op het scannen van bonnetjes — we kunnen ze sowieso
+      in de meeste talen lezen.
   grammar:
     title: Grammaticale vorm
     description: >-

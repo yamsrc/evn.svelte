@@ -22,12 +22,12 @@
   },
   "shortcuts": [
     {
-      "name": "Friends",
-      "url": "/contacts/"
+      "name": "Add Expense",
+      "url": "/expenses/editor/"
     },
     {
-      "name": "Expenses",
-      "url": "/expenses/"
+      "name": "Invite Friend",
+      "url": "/contacts/new/"
     }
   ],
   "icons": [

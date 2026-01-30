@@ -140,7 +140,7 @@
   </Actions>
   <!-- TODO: add history -->
 {:else}
-  <Section class="flex flex-col gap-2 items-center">
+  <Section class="flex flex-col gap-2 items-center my-auto">
     <Cosmetics />
   </Section>
 {/if}

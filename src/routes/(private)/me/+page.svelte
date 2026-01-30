@@ -1,7 +1,7 @@
 <script lang="ts">
   import { LogOut } from '@lucide/svelte'
   import { goto } from '$app/navigation'
-  import { Hold } from '$com/buttons'
+  import { Clipboard, Hold } from '$com/buttons'
   import { Separator } from '$com/separator'
   import { version } from '$config'
   import { dict } from '$lib/intl'
@@ -67,17 +67,25 @@
     <Feedback />
   </Section>
 
-  <Section>
-    <Separator class="mb-4" />
-    <footer class="text-muted-foreground text-sm flex justify-between items-start">
-      <div>
+  <Section class="space-y-2 mt-4">
+    <Separator />
+    <footer class="text-muted-foreground text-sm">
+      <div class="flex justify-between items-start">
+        <Delete class="py-0 underline underline-offset-3 font-normal" ondelete={getout} />
+        <Clipboard
+          text={$account.id}
+          variant="ghost"
+          size="sm"
+          label={$account.id.slice(0, 8)}
+          class="flex-row-reverse" />
+      </div>
+      <div class="px-3">
         <p>v{version}</p>
         <p>
           &copy; <a href="https://seed.me" target="_blank">seed.me</a>
           2025–{new Date().getFullYear()}
         </p>
       </div>
-      <Delete class="py-0 underline underline-offset-3 font-normal" ondelete={getout} />
     </footer>
   </Section>
 {/if}

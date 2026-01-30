@@ -7,12 +7,13 @@
   import type { Props } from './CoinsInput'
 
   let {
+    id,
     value = $bindable(),
     placeholder = '0',
+    autofocus,
     oninput: callback,
     class: classes,
     inputClass,
-    id,
   }: Props = $props()
 
   function oninput(e: Event) {
@@ -29,6 +30,7 @@
   <InputGroup.Input
     {id}
     {placeholder}
+    {autofocus}
     type="number"
     value={value !== undefined && value > 0 ? currency(value, $locale) : null}
     {oninput}

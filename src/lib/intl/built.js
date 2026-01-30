@@ -40,7 +40,7 @@ export const dictionaries = {
       "title": "ملفي الشخصي",
       "language": {
         "title": "اللغة",
-        "description": "هذا لا يؤثر على التعرف على الشيك. على أي حال، نحن نفهم معظم اللغات هناك."
+        "description": "هذا لا يؤثر على مسح الإيصالات — يمكننا قراءتها بلغات معظمها على أي حال."
       },
       "grammar": {
         "title": "الصيغة النحوية",
@@ -239,7 +239,7 @@ export const dictionaries = {
       "title": "Mein Profil",
       "language": {
         "title": "Sprache",
-        "description": "Das beeinflusst die Scheck-Erkennung nicht. Wir verstehen dort ohnehin die meisten Sprachen."
+        "description": "Das beeinflusst das Einscannen von Kassenbons nicht – wir können sie ohnehin in den meisten Sprachen lesen."
       },
       "grammar": {
         "title": "Grammatische Form",
@@ -438,7 +438,7 @@ export const dictionaries = {
       "title": "My Profile",
       "language": {
         "title": "Language",
-        "description": "This does not affect cheque recognition. We understand most languages there anyway."
+        "description": "This does not affect receipt scanning — we can read them in most languages anyway."
       },
       "grammar": {
         "title": "Grammatical Form",
@@ -637,7 +637,7 @@ export const dictionaries = {
       "title": "Mi perfil",
       "language": {
         "title": "Idioma",
-        "description": "Esto no afecta al reconocimiento de cheques. De todas formas, entendemos la mayoría de los idiomas allí."
+        "description": "Esto no afecta al escaneo de recibos — podemos leerlos en la mayoría de los idiomas de todas formas."
       },
       "grammar": {
         "title": "Forma gramatical",
@@ -836,7 +836,7 @@ export const dictionaries = {
       "title": "Mon profil",
       "language": {
         "title": "Langue",
-        "description": "Cela n’affecte pas la reconnaissance des chèques. Nous comprenons de toute façon la plupart des langues là-bas."
+        "description": "Cela n’affecte pas la numérisation des reçus — nous pouvons de toute façon les lire dans la plupart des langues."
       },
       "grammar": {
         "title": "Forme grammaticale",
@@ -1035,7 +1035,7 @@ export const dictionaries = {
       "title": "मेरा प्रोफ़ाइल",
       "language": {
         "title": "भाषा",
-        "description": "यह चेक की पहचान को प्रभावित नहीं करता है। वैसे भी, हम वहां अधिकांश भाषाओं को समझते हैं।"
+        "description": "यह रसीद स्कैनिंग को प्रभावित नहीं करता — हम वैसे भी अधिकांश भाषाओं में इन्हें पढ़ सकते हैं।"
       },
       "grammar": {
         "title": "व्याकरणिक रूप",
@@ -1234,7 +1234,7 @@ export const dictionaries = {
       "title": "Il mio profilo",
       "language": {
         "title": "Lingua",
-        "description": "Questo non influisce sul riconoscimento dell'assegno. Comunque, lì capiamo la maggior parte delle lingue."
+        "description": "Questo non influisce sulla scansione delle ricevute — possiamo comunque leggerle nella maggior parte delle lingue."
       },
       "grammar": {
         "title": "Forma grammaticale",
@@ -1433,7 +1433,7 @@ export const dictionaries = {
       "title": "マイプロフィール",
       "language": {
         "title": "言語",
-        "description": "これは小切手の認識には影響しません。そもそも、私たちはほとんどの言語を理解しています。"
+        "description": "これはレシートのスキャンには影響しません。どのみち、ほとんどの言語で読み取れます。"
       },
       "grammar": {
         "title": "文法形式",
@@ -1632,7 +1632,7 @@ export const dictionaries = {
       "title": "내 프로필",
       "language": {
         "title": "언어",
-        "description": "이는 수표 인식에 영향을 주지 않습니다. 어차피 저희는 대부분의 언어를 이해합니다."
+        "description": "이것은 영수증 스캔에 영향을 주지 않습니다 — 대부분의 언어로 어차피 읽을 수 있습니다."
       },
       "grammar": {
         "title": "문법 형태",
@@ -1831,7 +1831,7 @@ export const dictionaries = {
       "title": "Mijn profiel",
       "language": {
         "title": "Taal",
-        "description": "Dit heeft geen invloed op de chequedetectie. We begrijpen daar toch de meeste talen."
+        "description": "Dit heeft geen invloed op het scannen van bonnetjes — we kunnen ze sowieso in de meeste talen lezen."
       },
       "grammar": {
         "title": "Grammaticale vorm",
@@ -2030,7 +2030,7 @@ export const dictionaries = {
       "title": "Мой профиль",
       "language": {
         "title": "Язык",
-        "description": "Это не влияет на распознавание чеков. Мы и так понимаем там большинство языков."
+        "description": "Это не влияет на сканирование чеков — мы всё равно можем читать их на большинстве языков."
       },
       "grammar": {
         "title": "Грамматическая форма",
@@ -2229,7 +2229,7 @@ export const dictionaries = {
       "title": "Wasifu wangu",
       "language": {
         "title": "Lugha",
-        "description": "Hili haiathiri utambuzi wa hundi. Hata hivyo, tunaelewa lugha nyingi hapo."
+        "description": "Hii haiathiri uchanganuzi wa risiti — tunaweza kuzisoma katika lugha nyingi hata hivyo."
       },
       "grammar": {
         "title": "Umbo wa kisarufi",
@@ -2428,7 +2428,7 @@ export const dictionaries = {
       "title": "Profilim",
       "language": {
         "title": "Dil",
-        "description": "Bu, çek tanımayı etkilemez. Zaten oradaki dillerin çoğunu anlıyoruz."
+        "description": "Bu, fiş taramayı etkilemez — zaten çoğu dilde okuyabiliyoruz."
       },
       "grammar": {
         "title": "Dilbilgisel biçim",
@@ -2627,7 +2627,7 @@ export const dictionaries = {
       "title": "Мій профіль",
       "language": {
         "title": "Мова",
-        "description": "Це не впливає на розпізнавання чеків. Ми й так розуміємо там більшість мов."
+        "description": "Це не впливає на сканування чеків — ми й так можемо їх читати більшістю мов."
       },
       "grammar": {
         "title": "Граматична форма",
@@ -2826,7 +2826,7 @@ export const dictionaries = {
       "title": "我的个人资料",
       "language": {
         "title": "语言",
-        "description": "这不会影响支票识别。反正我们在那里大多数语言都能理解。"
+        "description": "这不会影响收据扫描——我们本来就能用大多数语言读取。"
       },
       "grammar": {
         "title": "语法形式",

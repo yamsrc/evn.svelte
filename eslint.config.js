@@ -120,6 +120,7 @@ export default [
   },
   {
     files: ['src/**/*.ts', 'features/**/*.ts'],
+    ignores: ['src/service-worker.ts'],
     languageOptions: {
       parserOptions: {
         project: './tsconfig.json',

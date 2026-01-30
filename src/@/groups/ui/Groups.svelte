@@ -1,16 +1,10 @@
 <script lang="ts">
-  import { ChevronUp, ChevronDown } from '@lucide/svelte'
-  import { cn } from '$lib/utils'
-  import { buttonVariants } from '$ui/button'
-  import * as Collapsible from '$ui/collapsible'
   import { Section } from '@/app/ui'
   import { unseen } from '@/groups'
   import Group from './Panel.svelte'
   import type { Props } from './Groups'
 
   let { groups, notifications, title, selection = $bindable() }: Props = $props()
-
-  let open = $state(true)
 
   const selectable = $derived(selection !== undefined)
 
@@ -24,24 +18,11 @@
 
 {#if groups.length}
   <Section>
-    <Collapsible.Root bind:open class="flex flex-col gap-1.5">
+    <div class="flex flex-col gap-1.5">
       {#if title}
-        <div class="flex items-center justify-between">
-          <h2>{title}</h2>
-          <Collapsible.Trigger
-            class={cn(
-              buttonVariants({ variant: 'secondary', size: 'icon' }),
-              'rounded-full size-6',
-            )}>
-            {#if open}
-              <ChevronUp class="size-4" />
-            {:else}
-              <ChevronDown class="size-4" />
-            {/if}
-          </Collapsible.Trigger>
-        </div>
+        <h2>{title}</h2>
       {/if}
-      <Collapsible.Content class="flex flex-col gap-1.5">
+      <div class="flex flex-col gap-1.5">
         {#each groups as group (group.id)}
           {@const selected = selection?.has(group.id)}
           {@const highlighted = unseen(group, notifications ?? [])}
@@ -51,7 +32,7 @@
             <Group {group} {highlighted} />
           {/if}
         {/each}
-      </Collapsible.Content>
-    </Collapsible.Root>
+      </div>
+    </div>
   </Section>
 {/if}

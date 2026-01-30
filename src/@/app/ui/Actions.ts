@@ -24,7 +24,7 @@ export const actions = (dict: Dictionary): ActionGroup[] => ([
         name: dict.actions.cheques.input,
         icon: PencilLine,
         onSelect: () => {
-          goto('/expenses/editor/participants/')
+          goto('/expenses/editor/')
         },
       },
     ],
