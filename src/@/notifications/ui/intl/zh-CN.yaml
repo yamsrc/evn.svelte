@@ -39,8 +39,10 @@ contacts:
         (balance) => `你仍然有${balance}未收到`
       owe: |-
         !js
-        (name, balance) => `你现在欠${name}${balance}`
+        (balance) => `您现在需支付${balance}`
 expenses:
   created: |-
     !js
-    (name, gender) => `${name}已付款`
+    (name, gender) => {
+      return `由${name}支付`;
+    }

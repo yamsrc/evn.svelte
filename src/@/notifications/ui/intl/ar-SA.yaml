@@ -51,10 +51,12 @@ contacts:
         (balance) => `لا يزال مستحقًا لك ${balance}`
       owe: |-
         !js
-        (name, balance) => `أنت مدين لـ${name} بمبلغ ${balance} الآن`
+        (balance) => `أنت مدين الآن بمبلغ ${balance}`
 expenses:
-  created: >-
+  created: |-
     !js
-
-    (name, gender) => { if (gender === "he") return `دفعها ${name}`; if (gender
-    === "she") return `دفعتها ${name}`; return `تم الدفع بواسطة ${name}`; }
+    (name, gender) => {
+      if (gender === "he") return `دفعها ${name}`;
+      if (gender === "she") return `دفعتها ${name}`;
+      return `تم الدفع بواسطة ${name}`;
+    }

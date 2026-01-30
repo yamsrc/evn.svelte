@@ -52,10 +52,12 @@ contacts:
         (balance) => `Вам всё еще должны ${balance}`
       owe: |-
         !js
-        (name, balance) => `Вы должны ${name} сейчас ${balance}`
+        (balance) => `Сейчас вы должны ${balance}`
 expenses:
-  created: >-
+  created: |-
     !js
-
-    (name, gender) => { if (gender === "he") return `Оплачено ${name}`; if
-    (gender === "she") return `Оплачено ${name}`; return `Оплачено ${name}`; }
+    (name, gender) => {
+      if (gender === "he") return `оплачено ${name}`;
+      if (gender === "she") return `оплачено ${name}`;
+      return `оплачено ${name}`;
+    }

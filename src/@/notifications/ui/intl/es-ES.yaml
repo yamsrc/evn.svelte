@@ -51,11 +51,12 @@ contacts:
         (balance) => `Aún te deben ${balance}`
       owe: |-
         !js
-        (name, balance) => `Ahora le debes ${balance} a ${name}`
+        (balance) => `Ahora debes ${balance}`
 expenses:
-  created: >-
+  created: |-
     !js
-
-    (name, gender) => { if (gender === "he") return `Pagado por ${name}`; if
-    (gender === "she") return `Pagado por ${name}`; return `Pagado por ${name}`;
+    (name, gender) => {
+      if (gender === "he") return `pagado por ${name}`;
+      if (gender === "she") return `pagada por ${name}`;
+      return `pagado por ${name}`;
     }

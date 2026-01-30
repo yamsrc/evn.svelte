@@ -39,8 +39,10 @@ contacts:
         (balance) => `Hâlâ ${balance} alacağınız var`
       owe: |-
         !js
-        (name, balance) => `Şu anda ${name}'a ${balance} borçlusun`
+        (balance) => `Şu anda ${balance} borcunuz var`
 expenses:
   created: |-
     !js
-    (name, gender) => `${name} tarafından ödendi`
+    (name, gender) => {
+      return `${name} tarafından ödendi`;
+    }

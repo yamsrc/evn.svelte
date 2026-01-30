@@ -32,7 +32,7 @@ export type Dictionary = {
           balance: {
             even: string
             owed: (value: any) => string
-            owe: (...args: [any, any]) => string
+            owe: (value: any) => string
           }
         }
       }

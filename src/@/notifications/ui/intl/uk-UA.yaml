@@ -53,10 +53,12 @@ contacts:
         (balance) => `Вам ще винні ${balance}`
       owe: |-
         !js
-        (name, balance) => `Ви зараз винні ${name} ${balance}`
+        (balance) => `Зараз ви винні ${balance}`
 expenses:
-  created: >-
+  created: |-
     !js
-
-    (name, gender) => { if (gender === "he") return `Сплачено ${name}`; if
-    (gender === "she") return `Сплачено ${name}`; return `Сплачено ${name}`; }
+    (name, gender) => {
+      if (gender === "he") return `сплачено ${name}`;
+      if (gender === "she") return `сплачено ${name}`;
+      return `сплачено ${name}`;
+    }

@@ -35,7 +35,7 @@
             {:else if balance > 0}
               {$dict.contacts.transferred.balance.owed(remainder)}
             {:else}
-              {$dict.contacts.transferred.balance.owe(name, remainder)}
+              {$dict.contacts.transferred.balance.owe(remainder)}
             {/if}
           </p>
         </div>

@@ -40,8 +40,10 @@ contacts:
         (balance) => `Je krijgt nog ${balance}`
       owe: |-
         !js
-        (name, balance) => `Je bent ${name} nu ${balance} verschuldigd`
+        (balance) => `Je moet nu ${balance} betalen`
 expenses:
   created: |-
     !js
-    (name, gender) => `Betaald door ${name}`
+    (name, gender) => {
+      return `betaald door ${name}`;
+    }

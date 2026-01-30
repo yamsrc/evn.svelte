@@ -37,8 +37,8 @@ inputs:
         owed:
           input: You're still owed {balance}
         owe:
-          input: You owe {name} {balance} now
+          input: You owe {balance} now
   expenses:
     created:
-      input: Paid by {name}
-      context: use gender
+      input: paid by {name}
+      context: part of sentence, use gender

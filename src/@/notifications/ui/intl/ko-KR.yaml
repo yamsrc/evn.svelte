@@ -39,8 +39,10 @@ contacts:
         (balance) => `아직 받을 금액이 ${balance}입니다`
       owe: |-
         !js
-        (name, balance) => `지금 ${name}에게 ${balance}를 갚아야 합니다`
+        (balance) => `현재 ${balance}을(를) 지불해야 합니다`
 expenses:
   created: |-
     !js
-    (name, gender) => `${name}가 결제함`
+    (name, gender) => {
+      return `${name}님이 결제함`;
+    }

@@ -39,8 +39,10 @@ contacts:
         (balance) => `まだ${balance}の支払いがあります`
       owe: |-
         !js
-        (name, balance) => `${name}さんに今${balance}を支払う必要があります`
+        (balance) => `現在のお支払い額は${balance}です`
 expenses:
   created: |-
     !js
-    (name, gender) => `${name}によって支払われました`
+    (name, gender) => {
+      return `${name}が支払いました`;
+    }

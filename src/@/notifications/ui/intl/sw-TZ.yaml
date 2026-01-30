@@ -39,8 +39,10 @@ contacts:
         (balance) => `Bado unaidai ${balance}`
       owe: |-
         !js
-        (name, balance) => `Unadaiwa ${name} ${balance} sasa`
+        (balance) => `Unadaiwa ${balance} sasa`
 expenses:
   created: |-
     !js
-    (name, gender) => `Lilipwa na ${name}`
+    (name, gender) => {
+      return `lilipwa na ${name}`;
+    }

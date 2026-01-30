@@ -50,11 +50,12 @@ contacts:
         (balance) => `आपको अभी भी ${balance} दिया जाना बाकी है`
       owe: |-
         !js
-        (name, balance) => `आपको अभी ${name} को ${balance} देना है`
+        (balance) => `आपको अभी ${balance} देना है`
 expenses:
-  created: >-
+  created: |-
     !js
-
-    (name, gender) => { if (gender === "he") return `${name} द्वारा भुगतान किया
-    गया`; if (gender === "she") return `${name} द्वारा भुगतान की गई`; return
-    `${name} द्वारा भुगतान किया गया(की गई)`; }
+    (name, gender) => {
+      if (gender === "he") return `${name} द्वारा भुगतान किया गया`;
+      if (gender === "she") return `${name} द्वारा भुगतान की गई`;
+      return `${name} द्वारा भुगतान किया गया/की गई`;
+    }
