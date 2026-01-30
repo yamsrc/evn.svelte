@@ -276,3 +276,4 @@ mounts:
   notifications: ../../@/notifications/ui/intl
   dev: dev
   err: err
+  accounts: ../../@/accounts/ui/intl

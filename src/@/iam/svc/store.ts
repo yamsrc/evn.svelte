@@ -16,11 +16,11 @@ const method = value<Method>({
   persist: 'auth:method',
 })
 
-const authenticated = derived([challenge, account],
-  ([$challenge, $account]) => $challenge !== null && $account !== null)
-
 const processing = writable(false)
 const greeting = writable(false)
+
+const authenticated = derived([challenge, account, processing],
+  ([$challenge, $account, $processing]) => $challenge !== null && $account !== null && $processing === false)
 
 function iam(value: Echo) {
   if (account.extract()?.id !== value.id)
