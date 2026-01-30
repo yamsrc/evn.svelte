@@ -14,3 +14,40 @@ accounts:
     welcome: Ласкаво просимо до Evnly!
     hint: Проведіть, щоб видалити
 erase: Очистити все
+contacts:
+  connected: |-
+    !js
+    (name) => `Ви тепер друзі з ${name}`
+  unchained: >-
+    !js
+
+    (name, gender) => gender === "he" ? `${name} прийняв обліковий запис` :
+    gender === "she" ? `${name} прийняла обліковий запис` : `${name} прийняв(ла)
+    обліковий запис`
+  transferred:
+    paid: |-
+      !js
+      (name, amount, gender) => {
+        if (gender === "he") return `${name} отримав ${amount} від вас`;
+        if (gender === "she") return `${name} отримала ${amount} від вас`;
+        return `${name} отримав(ла) ${amount} від вас`;
+      }
+    received: |-
+      !js
+      (name, amount, gender) => {
+        if (gender === "he") return `${name} заплатив вам ${amount}`;
+        if (gender === "she") return `${name} заплатила вам ${amount}`;
+        return `${name} заплатив(ла) вам ${amount}`;
+      }
+    balance:
+      even: Тепер ви квити
+      owed: |-
+        !js
+        (balance) => `Вам ще винні ${balance}.`
+      owe: |-
+        !js
+        (name, balance) => `Ви зараз винні ${name} ${balance}.`
+expenses:
+  created: |-
+    !js
+    (name) => `Сплачено: ${name}`

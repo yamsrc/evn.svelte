@@ -14,3 +14,31 @@ accounts:
     welcome: Welkom bij Evnly!
     hint: Veeg om te verwijderen
 erase: Alles wissen
+contacts:
+  connected: |-
+    !js
+    (name) => `Je bent nu bevriend met ${name}`
+  unchained: |-
+    !js
+    (name, gender) => `${name} heeft het account geaccepteerd`
+  transferred:
+    paid: |-
+      !js
+      (name, amount, gender) => {
+        return `${name} heeft ${amount} van je ontvangen`;
+      }
+    received: |-
+      !js
+      (name, amount, gender) => `${name} heeft je ${amount} betaald`
+    balance:
+      even: Jullie staan nu gelijk
+      owed: |-
+        !js
+        (balance) => `Je hebt nog ${balance} tegoed.`
+      owe: |-
+        !js
+        (name, balance) => `Je bent ${name} nu ${balance} verschuldigd.`
+expenses:
+  created: |-
+    !js
+    (name) => `Betaald door ${name}`

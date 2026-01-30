@@ -1,6 +1,7 @@
 <script lang="ts">
   import { Async, combined } from 'svas'
   import { accounts } from '@/accounts'
+  import { Picture } from '@/accounts/ui'
   import { groups } from '@/groups'
   import { account } from '@/iam'
   import { dict } from '@/notifications/ui/intl'
@@ -21,12 +22,17 @@
     {#if group}
       {@const me = newbies.find(({ id }) => id === account.id)}
       <Base href={`/contacts/groups/${group.id}`}>
-        {#if me}
-          {$dict.groups.joined.me(group.name)}
-        {:else}
-          {@const names = newbies.map((account) => (account as Account).name)}
-          {$dict.groups.joined.others(names, group.name)}
-        {/if}
+        <div class="flex items-center gap-2">
+          {#if me}
+            {$dict.groups.joined.me(group.name)}
+          {:else}
+            {@const names = newbies.map((account) => (account as Account).name)}
+            {#if names.length === 1}
+              <Picture account={(newbies as Account[])[0]} size={32} />
+            {/if}
+            {$dict.groups.joined.others(names, group.name)}
+          {/if}
+        </div>
       </Base>
     {/if}
   {/snippet}

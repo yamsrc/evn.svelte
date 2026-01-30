@@ -10,7 +10,7 @@ type Payloads = {
     }
   }
   expenses: {
-    expense: {
+    created: {
       title: string
       location?: string
       participants: Expense['participants']

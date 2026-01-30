@@ -13,3 +13,31 @@ accounts:
     welcome: 欢迎来到 Evnly！
     hint: 滑动移除
 erase: 全部清除
+contacts:
+  connected: |-
+    !js
+    (name) => `你现在和${name}是好友了`
+  unchained: |-
+    !js
+    (name, gender) => `${name}已接受该账户`
+  transferred:
+    paid: |-
+      !js
+      (name, amount, gender) => {
+        return `${name}已收到你转来的${amount}`;
+      }
+    received: |-
+      !js
+      (name, amount, gender) => `${name}已向你支付了${amount}`
+    balance:
+      even: 你们现在扯平了
+      owed: |-
+        !js
+        (balance) => `你还有${balance}未收到。`
+      owe: |-
+        !js
+        (name, balance) => `你现在欠${name} ${balance}。`
+expenses:
+  created: |-
+    !js
+    (name) => `由${name}支付`

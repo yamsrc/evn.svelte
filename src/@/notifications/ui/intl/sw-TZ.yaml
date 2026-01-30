@@ -13,3 +13,31 @@ accounts:
     welcome: Karibu kwenye Evnly!
     hint: Telezesha kuondoa
 erase: Futa zote
+contacts:
+  connected: |-
+    !js
+    (name) => `Sasa umefanya urafiki na ${name}`
+  unchained: |-
+    !js
+    (name, gender) => `${name} amekubali akaunti`
+  transferred:
+    paid: |-
+      !js
+      (name, amount, gender) => {
+        return `${name} amepokea ${amount} kutoka kwako`;
+      }
+    received: |-
+      !js
+      (name, amount, gender) => `${name} amekulipa ${amount}`
+    balance:
+      even: Sasa ninyi mko sawa
+      owed: |-
+        !js
+        (balance) => `Bado unadai ${balance}.`
+      owe: |-
+        !js
+        (name, balance) => `Unamdai ${name} ${balance} sasa.`
+expenses:
+  created: |-
+    !js
+    (name) => `Imelipwa na ${name}`

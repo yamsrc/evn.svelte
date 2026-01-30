@@ -14,3 +14,38 @@ accounts:
     welcome: Willkommen bei Evnly!
     hint: Zum Entfernen wischen
 erase: Alle löschen
+contacts:
+  connected: |-
+    !js
+    (name) => `Du bist jetzt mit ${name} befreundet`
+  unchained: >-
+    !js
+
+    (name, gender) => gender === "he" ? `${name} hat das Konto akzeptiert` :
+    gender === "she" ? `${name} hat das Konto akzeptiert` : `${name} hat das
+    Konto akzeptiert`
+  transferred:
+    paid: |-
+      !js
+      (name, amount, gender) => {
+        return `${name} hat ${amount} von dir erhalten`;
+      }
+    received: |-
+      !js
+      (name, amount, gender) => {
+        if (gender === "he") return `${name} hat dir ${amount} bezahlt`;
+        if (gender === "she") return `${name} hat dir ${amount} bezahlt`;
+        return `${name} hat dir ${amount} bezahlt`;
+      }
+    balance:
+      even: Ihr seid jetzt quitt
+      owed: |-
+        !js
+        (balance) => `Dir stehen noch ${balance} zu.`
+      owe: |-
+        !js
+        (name, balance) => `Du schuldest ${name} jetzt ${balance}.`
+expenses:
+  created: |-
+    !js
+    (name) => `Bezahlt von ${name}`

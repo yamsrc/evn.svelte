@@ -13,3 +13,31 @@ accounts:
     welcome: Evnly에 오신 것을 환영합니다!
     hint: 밀어서 제거
 erase: 모두 지우기
+contacts:
+  connected: |-
+    !js
+    (name) => `${name}님과 친구가 되었습니다`
+  unchained: |-
+    !js
+    (name, gender) => `${name}님이 계정을 승인했습니다`
+  transferred:
+    paid: |-
+      !js
+      (name, amount, gender) => {
+        return `${name}님이 당신에게서 ${amount}을(를) 받았습니다`;
+      }
+    received: |-
+      !js
+      (name, amount, gender) => `${name}님이 당신에게 ${amount}을(를) 보냈습니다`
+    balance:
+      even: 이제 당신들은 서로 비겼습니다
+      owed: |-
+        !js
+        (balance) => `아직 ${balance}을(를) 받아야 합니다.`
+      owe: |-
+        !js
+        (name, balance) => `지금 ${name}에게 ${balance}을(를) 갚아야 합니다.`
+expenses:
+  created: |-
+    !js
+    (name) => `${name}님이 결제함`

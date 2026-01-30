@@ -22,4 +22,20 @@ export type Dictionary = {
         }
       }
       erase: string
+      contacts: {
+        connected: (value: any) => string
+        unchained: (...args: [any, any]) => string
+        transferred: {
+          paid: (...args: [any, any, any]) => string
+          received: (...args: [any, any, any]) => string
+          balance: {
+            even: string
+            owed: (value: any) => string
+            owe: (...args: [any, any]) => string
+          }
+        }
+      }
+      expenses: {
+        created: (value: any) => string
+      }
     }

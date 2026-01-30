@@ -14,7 +14,7 @@
   const MAX_IDENTITIES = 3
 
   function create<D extends Notification['domain'], E extends Of<D>['event']>(
-    id: string,
+    id: number | string,
     identity: string,
     domain: D,
     event: E,
@@ -28,6 +28,7 @@
   }
 
   const baseNotifications = $derived.by(() => {
+    let i = 0
     const acc = $account
     const contactsList = $contacts
     const expensesList = $expenses
@@ -37,83 +38,76 @@
 
     const contact = contactsList[0]
     const expense = expensesList[0]
-    const group = groupsList[0]
+    const group = groupsList.find((g) => g.identities.length > 2)
     const result: Notification[] = []
 
     // Accounts: created
-    result.unshift(create('1', acc.id, 'accounts', 'created', acc.id))
+    result.unshift(create(i++, acc.id, 'accounts', 'created', acc.id))
 
     // Contacts: connected
-    if (contact)
-      result.unshift(create('2', acc.id, 'contacts', 'connected', contact.identity))
+    if (contact) result.unshift(create(i++, acc.id, 'contacts', 'connected', contact.identity))
 
     // Accounts: unchained
     const unchainedKey = contact?.identity ?? acc.id
 
-    result.unshift(create('3', acc.id, 'contacts', 'unchained', unchainedKey))
+    result.unshift(create(i++, acc.id, 'contacts', 'unchained', unchainedKey))
 
-    // Groups: joined - single identity
-    if (group && group.identities.length > 0)
+    // Groups: me joined
+    if (group) {
       result.unshift(
-        create('4', acc.id, 'groups', 'joined', group.id, {
-          identities: [group.identities[0]],
+        create(i++, acc.id, 'groups', 'joined', group.id, {
+          identities: [acc.id],
         }),
       )
 
-    // Groups: joined - multiple identities
-    if (group)
+      // Groups: others joined
       result.unshift(
-        create('5', acc.id, 'groups', 'joined', group.id, {
-          identities: group.identities.slice(0, MAX_IDENTITIES),
+        create(i++, acc.id, 'groups', 'joined', group.id, {
+          identities: group.identities.filter((id) => id !== acc.id).slice(0, MAX_IDENTITIES),
         }),
       )
+
+      // Groups: single joined
+      result.unshift(
+        create(i++, acc.id, 'groups', 'joined', group.id, {
+          identities: group.identities.filter((id) => id !== acc.id).slice(0, 1),
+        }),
+      )
+    }
 
     // Expenses
     if (expense) {
       const participants: Expense['participants'] = Object.fromEntries(
-        Object.entries(expense.participants).map(([id, p]) => [id, { amount: p.amount }]),
+        Object.entries(expense.participants).map(([id, p]) => [
+          id,
+          { amount: p.amount, paid: p.paid },
+        ]),
       )
 
       const extras: Expense['extras'] = expense.extras.map((extra) => ({ amount: extra.amount }))
 
       result.unshift(
-        create('6', acc.id, 'expenses', 'expense', expense.id, {
+        create(i++, acc.id, 'expenses', 'created', expense.id, {
           title: expense.title ?? 'Sample Expense',
           location: expense.location,
           participants,
           extras,
         }),
       )
-
-      result.unshift(
-        create('7', acc.id, 'expenses', 'expense', expense.id, {
-          title: 'Expense Without Location',
-          participants,
-          extras: [],
-        }),
-      )
-
-      result.unshift(
-        create('8', acc.id, 'expenses', 'expense', expense.id, {
-          title: 'Simple Expense',
-          participants,
-          extras: [],
-        }),
-      )
     }
 
     // Contacts: transferred
     if (contact && ok(contact.account) && expense) {
-      const transfer = (id: string, delta: number, balance: number) =>
-        create(id, acc.id, 'contacts', 'transferred', contact.identity, {
+      const transfer = (delta: number, balance: number) =>
+        create(i++, acc.id, 'contacts', 'transferred', contact.identity, {
           expense: expense.id,
           delta,
           balance,
         })
 
-      result.unshift(transfer('9', 2500, contact.balance ?? 5000))
-      result.unshift(transfer('10', -1500, contact.balance ?? -2000))
-      result.unshift(transfer('11', 1000, 0))
+      result.unshift(transfer(2500, 5000))
+      result.unshift(transfer(-1500, -2000))
+      result.unshift(transfer(1000, 0))
     }
 
     return result

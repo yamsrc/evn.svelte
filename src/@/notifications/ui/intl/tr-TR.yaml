@@ -13,3 +13,31 @@ accounts:
     welcome: Evnly'e hoş geldiniz!
     hint: Kaldırmak için kaydırın
 erase: Tümünü temizle
+contacts:
+  connected: |-
+    !js
+    (name) => `Artık ${name} ile arkadaşsın`
+  unchained: |-
+    !js
+    (name, gender) => `${name} hesabı kabul etti`
+  transferred:
+    paid: |-
+      !js
+      (name, amount, gender) => {
+        return `${name}, senden ${amount} aldı`;
+      }
+    received: |-
+      !js
+      (name, amount, gender) => `${name} sana ${amount} ödedi`
+    balance:
+      even: Artık başa başsınız
+      owed: |-
+        !js
+        (balance) => `Hâlâ ${balance} alacağınız var.`
+      owe: |-
+        !js
+        (name, balance) => `Şu anda ${name}'ye ${balance} borçlusun.`
+expenses:
+  created: |-
+    !js
+    (name) => `${name} tarafından ödendi`

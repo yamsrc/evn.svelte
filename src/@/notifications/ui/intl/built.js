@@ -15,7 +15,31 @@ export const dictionaries = {
         "hint": "اسحب للإزالة"
       }
     },
-    "erase": "مسح الكل"
+    "erase": "مسح الكل",
+    "contacts": {
+      "connected": (name) => `أنت الآن صديق مع ${name}`,
+      "unchained": (name, gender) => gender === "he" ? `${name} قَبِل الحساب` : gender === "she" ? `${name} قَبِلَت الحساب` : `${name} قَبِل(ت) الحساب`,
+      "transferred": {
+        "paid": (name, amount, gender) => {
+  if (gender === "he") return `${name} استلم ${amount} منك`;
+  if (gender === "she") return `${name} استلمت ${amount} منك`;
+  return `${name} استلم/استلمت ${amount} منك`;
+},
+        "received": (name, amount, gender) => {
+  if (gender === "he") return `${name} دفع لك ${amount}`;
+  if (gender === "she") return `${name} دفعت لك ${amount}`;
+  return `${name} دفع(ت) لك ${amount}`;
+},
+        "balance": {
+          "even": "أنتما متعادلان الآن",
+          "owed": (balance) => `لا يزال مستحقًا لك ${balance}`,
+          "owe": (name, balance) => `أنت مدين لـ${name} بمبلغ ${balance} الآن.`
+        }
+      }
+    },
+    "expenses": {
+      "created": (name) => `مدفوع بواسطة ${name}`
+    }
   },
   "de-DE": {
     "groups": {
@@ -30,7 +54,29 @@ export const dictionaries = {
         "hint": "Zum Entfernen wischen"
       }
     },
-    "erase": "Alle löschen"
+    "erase": "Alle löschen",
+    "contacts": {
+      "connected": (name) => `Du bist jetzt mit ${name} befreundet`,
+      "unchained": (name, gender) => gender === "he" ? `${name} hat das Konto akzeptiert` : gender === "she" ? `${name} hat das Konto akzeptiert` : `${name} hat das Konto akzeptiert`,
+      "transferred": {
+        "paid": (name, amount, gender) => {
+  return `${name} hat ${amount} von dir erhalten`;
+},
+        "received": (name, amount, gender) => {
+  if (gender === "he") return `${name} hat dir ${amount} bezahlt`;
+  if (gender === "she") return `${name} hat dir ${amount} bezahlt`;
+  return `${name} hat dir ${amount} bezahlt`;
+},
+        "balance": {
+          "even": "Ihr seid jetzt quitt",
+          "owed": (balance) => `Dir stehen noch ${balance} zu.`,
+          "owe": (name, balance) => `Du schuldest ${name} jetzt ${balance}.`
+        }
+      }
+    },
+    "expenses": {
+      "created": (name) => `Bezahlt von ${name}`
+    }
   },
   "en-US": {
     "groups": {
@@ -45,7 +91,25 @@ export const dictionaries = {
         "hint": "Slide to remove"
       }
     },
-    "erase": "Clear all"
+    "erase": "Clear all",
+    "contacts": {
+      "connected": (name) => `You are now friends with ${name}`,
+      "unchained": (name, gender) => `${name} accepted the account`,
+      "transferred": {
+        "paid": (name, amount, gender) => {
+  return `${name} received ${amount} from you`;
+},
+        "received": (name, amount, gender) => `${name} paid you ${amount}`,
+        "balance": {
+          "even": "You are even now",
+          "owed": (balance) => `You're still owed ${balance}.`,
+          "owe": (name, balance) => `You owe ${name} ${balance} now.`
+        }
+      }
+    },
+    "expenses": {
+      "created": (name) => `Paid by ${name}`
+    }
   },
   "es-ES": {
     "groups": {
@@ -60,7 +124,31 @@ export const dictionaries = {
         "hint": "Desliza para eliminar"
       }
     },
-    "erase": "Borrar todo"
+    "erase": "Borrar todo",
+    "contacts": {
+      "connected": (name) => `Ahora eres amigo de ${name}`,
+      "unchained": (name, gender) => gender === "he" ? `${name} aceptó la cuenta` : gender === "she" ? `${name} aceptó la cuenta` : `${name} aceptó la cuenta`,
+      "transferred": {
+        "paid": (name, amount, gender) => {
+  if (gender === "he") return `${name} recibió ${amount} de ti`;
+  if (gender === "she") return `${name} recibió ${amount} de ti`;
+  return `${name} recibió ${amount} de ti`;
+},
+        "received": (name, amount, gender) => {
+  if (gender === "he") return `${name} te pagó ${amount}`;
+  if (gender === "she") return `${name} te pagó ${amount}`;
+  return `${name} te pagó ${amount}`;
+},
+        "balance": {
+          "even": "Ahora están a mano",
+          "owed": (balance) => `Aún te deben ${balance}.`,
+          "owe": (name, balance) => `Ahora le debes ${balance} a ${name}.`
+        }
+      }
+    },
+    "expenses": {
+      "created": (name) => `Pagado por ${name}`
+    }
   },
   "fr-FR": {
     "groups": {
@@ -75,7 +163,31 @@ export const dictionaries = {
         "hint": "Faites glisser pour supprimer"
       }
     },
-    "erase": "Tout effacer"
+    "erase": "Tout effacer",
+    "contacts": {
+      "connected": (name) => `Vous êtes maintenant ami(e) avec ${name}`,
+      "unchained": (name, gender) => gender === "he" ? `${name} a accepté le compte` : gender === "she" ? `${name} a accepté le compte` : `${name} a accepté le compte`,
+      "transferred": {
+        "paid": (name, amount, gender) => {
+  if (gender === "he") return `${name} a reçu ${amount} de votre part`;
+  if (gender === "she") return `${name} a reçu ${amount} de votre part`;
+  return `${name} a reçu ${amount} de votre part`;
+},
+        "received": (name, amount, gender) => {
+  if (gender === "he") return `${name} vous a payé ${amount}`;
+  if (gender === "she") return `${name} vous a payé ${amount}`;
+  return `${name} vous a payé ${amount}`;
+},
+        "balance": {
+          "even": "Vous êtes quittes maintenant",
+          "owed": (balance) => `Il te reste ${balance} à recevoir.`,
+          "owe": (name, balance) => `Vous devez ${balance} à ${name} maintenant.`
+        }
+      }
+    },
+    "expenses": {
+      "created": (name) => `Payé par ${name}`
+    }
   },
   "hi-IN": {
     "groups": {
@@ -90,7 +202,31 @@ export const dictionaries = {
         "hint": "हटाने के लिए स्लाइड करें"
       }
     },
-    "erase": "सभी साफ़ करें"
+    "erase": "सभी साफ़ करें",
+    "contacts": {
+      "connected": (name) => `${name} अब आपका मित्र है`,
+      "unchained": (name, gender) => gender === "he" ? `${name} ने खाता स्वीकार किया` : gender === "she" ? `${name} ने खाता स्वीकार किया` : `${name} ने खाता स्वीकार किया`,
+      "transferred": {
+        "paid": (name, amount, gender) => {
+  if (gender === "he") return `${name} ने आपसे ${amount} प्राप्त किया`;
+  if (gender === "she") return `${name} ने आपसे ${amount} प्राप्त की`;
+  return `${name} ने आपसे ${amount} प्राप्त किया/की`;
+},
+        "received": (name, amount, gender) => {
+  if (gender === "he") return `${name} ने आपको ${amount} भुगतान किया`;
+  if (gender === "she") return `${name} ने आपको ${amount} भुगतान किया`;
+  return `${name} ने आपको ${amount} भुगतान किया`;
+},
+        "balance": {
+          "even": "अब आप बराबर हैं",
+          "owed": (balance) => `आपको अभी भी ${balance} बकाया है।`,
+          "owe": (name, balance) => `आपको अभी ${name} को ${balance} देना है।`
+        }
+      }
+    },
+    "expenses": {
+      "created": (name) => `${name} द्वारा भुगतान किया गया`
+    }
   },
   "it-IT": {
     "groups": {
@@ -105,7 +241,31 @@ export const dictionaries = {
         "hint": "Scorri per rimuovere"
       }
     },
-    "erase": "Cancella tutto"
+    "erase": "Cancella tutto",
+    "contacts": {
+      "connected": (name) => `Ora sei amico di ${name}`,
+      "unchained": (name, gender) => gender === "he" ? `${name} ha accettato l'account` : gender === "she" ? `${name} ha accettato l'account` : `${name} ha accettato l'account`,
+      "transferred": {
+        "paid": (name, amount, gender) => {
+  if (gender === "he") return `${name} ha ricevuto ${amount} da te`;
+  if (gender === "she") return `${name} ha ricevuta ${amount} da te`;
+  return `${name} ha ricevuto/ricevuta ${amount} da te`;
+},
+        "received": (name, amount, gender) => {
+  if (gender === "he") return `${name} ti ha pagato ${amount}`;
+  if (gender === "she") return `${name} ti ha pagata ${amount}`;
+  return `${name} ti ha pagato/a ${amount}`;
+},
+        "balance": {
+          "even": "Ora siete pari",
+          "owed": (balance) => `Devi ancora ricevere ${balance}.`,
+          "owe": (name, balance) => `Adesso devi ${balance} a ${name}.`
+        }
+      }
+    },
+    "expenses": {
+      "created": (name) => `Pagato da ${name}`
+    }
   },
   "ja-JP": {
     "groups": {
@@ -120,7 +280,25 @@ export const dictionaries = {
         "hint": "スライドして削除"
       }
     },
-    "erase": "すべてクリア"
+    "erase": "すべてクリア",
+    "contacts": {
+      "connected": (name) => `${name}さんと友達になりました`,
+      "unchained": (name, gender) => `${name}がアカウントを承認しました`,
+      "transferred": {
+        "paid": (name, amount, gender) => {
+  return `${name}があなたから${amount}を受け取りました`;
+},
+        "received": (name, amount, gender) => `${name}さんがあなたに${amount}を支払いました`,
+        "balance": {
+          "even": "これであなたたちは今、互いにイーブンです",
+          "owed": (balance) => `あなたにはまだ${balance}の未払いがあります。`,
+          "owe": (name, balance) => `${name}に今すぐ${balance}を支払う必要があります。`
+        }
+      }
+    },
+    "expenses": {
+      "created": (name) => `${name} によって支払われました`
+    }
   },
   "ko-KR": {
     "groups": {
@@ -135,7 +313,25 @@ export const dictionaries = {
         "hint": "밀어서 제거"
       }
     },
-    "erase": "모두 지우기"
+    "erase": "모두 지우기",
+    "contacts": {
+      "connected": (name) => `${name}님과 친구가 되었습니다`,
+      "unchained": (name, gender) => `${name}님이 계정을 승인했습니다`,
+      "transferred": {
+        "paid": (name, amount, gender) => {
+  return `${name}님이 당신에게서 ${amount}을(를) 받았습니다`;
+},
+        "received": (name, amount, gender) => `${name}님이 당신에게 ${amount}을(를) 보냈습니다`,
+        "balance": {
+          "even": "이제 당신들은 서로 비겼습니다",
+          "owed": (balance) => `아직 ${balance}을(를) 받아야 합니다.`,
+          "owe": (name, balance) => `지금 ${name}에게 ${balance}을(를) 갚아야 합니다.`
+        }
+      }
+    },
+    "expenses": {
+      "created": (name) => `${name}님이 결제함`
+    }
   },
   "nl-NL": {
     "groups": {
@@ -150,7 +346,25 @@ export const dictionaries = {
         "hint": "Veeg om te verwijderen"
       }
     },
-    "erase": "Alles wissen"
+    "erase": "Alles wissen",
+    "contacts": {
+      "connected": (name) => `Je bent nu bevriend met ${name}`,
+      "unchained": (name, gender) => `${name} heeft het account geaccepteerd`,
+      "transferred": {
+        "paid": (name, amount, gender) => {
+  return `${name} heeft ${amount} van je ontvangen`;
+},
+        "received": (name, amount, gender) => `${name} heeft je ${amount} betaald`,
+        "balance": {
+          "even": "Jullie staan nu gelijk",
+          "owed": (balance) => `Je hebt nog ${balance} tegoed.`,
+          "owe": (name, balance) => `Je bent ${name} nu ${balance} verschuldigd.`
+        }
+      }
+    },
+    "expenses": {
+      "created": (name) => `Betaald door ${name}`
+    }
   },
   "ru-RU": {
     "groups": {
@@ -165,7 +379,31 @@ export const dictionaries = {
         "hint": "Смахните для удаления"
       }
     },
-    "erase": "Очистить все"
+    "erase": "Очистить все",
+    "contacts": {
+      "connected": (name) => `Вы теперь друзья с ${name}`,
+      "unchained": (name, gender) => gender === "he" ? `${name} принял аккаунт` : gender === "she" ? `${name} приняла аккаунт` : `${name} принял(а) аккаунт`,
+      "transferred": {
+        "paid": (name, amount, gender) => {
+  if (gender === "he") return `${name} получил ${amount} от вас`;
+  if (gender === "she") return `${name} получила ${amount} от вас`;
+  return `${name} получил(а) ${amount} от вас`;
+},
+        "received": (name, amount, gender) => {
+  if (gender === "he") return `${name} заплатил вам ${amount}`;
+  if (gender === "she") return `${name} заплатила вам ${amount}`;
+  return `${name} заплатил(а) вам ${amount}`;
+},
+        "balance": {
+          "even": "Теперь вы в расчёте",
+          "owed": (balance) => `Вам всё ещё должны ${balance}.`,
+          "owe": (name, balance) => `Сейчас вы должны ${name} ${balance}.`
+        }
+      }
+    },
+    "expenses": {
+      "created": (name) => `Оплачено: ${name}`
+    }
   },
   "sw-TZ": {
     "groups": {
@@ -180,7 +418,25 @@ export const dictionaries = {
         "hint": "Telezesha kuondoa"
       }
     },
-    "erase": "Futa zote"
+    "erase": "Futa zote",
+    "contacts": {
+      "connected": (name) => `Sasa umefanya urafiki na ${name}`,
+      "unchained": (name, gender) => `${name} amekubali akaunti`,
+      "transferred": {
+        "paid": (name, amount, gender) => {
+  return `${name} amepokea ${amount} kutoka kwako`;
+},
+        "received": (name, amount, gender) => `${name} amekulipa ${amount}`,
+        "balance": {
+          "even": "Sasa ninyi mko sawa",
+          "owed": (balance) => `Bado unadai ${balance}.`,
+          "owe": (name, balance) => `Unamdai ${name} ${balance} sasa.`
+        }
+      }
+    },
+    "expenses": {
+      "created": (name) => `Imelipwa na ${name}`
+    }
   },
   "tr-TR": {
     "groups": {
@@ -195,7 +451,25 @@ export const dictionaries = {
         "hint": "Kaldırmak için kaydırın"
       }
     },
-    "erase": "Tümünü temizle"
+    "erase": "Tümünü temizle",
+    "contacts": {
+      "connected": (name) => `Artık ${name} ile arkadaşsın`,
+      "unchained": (name, gender) => `${name} hesabı kabul etti`,
+      "transferred": {
+        "paid": (name, amount, gender) => {
+  return `${name}, senden ${amount} aldı`;
+},
+        "received": (name, amount, gender) => `${name} sana ${amount} ödedi`,
+        "balance": {
+          "even": "Artık başa başsınız",
+          "owed": (balance) => `Hâlâ ${balance} alacağınız var.`,
+          "owe": (name, balance) => `Şu anda ${name}'ye ${balance} borçlusun.`
+        }
+      }
+    },
+    "expenses": {
+      "created": (name) => `${name} tarafından ödendi`
+    }
   },
   "uk-UA": {
     "groups": {
@@ -210,7 +484,31 @@ export const dictionaries = {
         "hint": "Проведіть, щоб видалити"
       }
     },
-    "erase": "Очистити все"
+    "erase": "Очистити все",
+    "contacts": {
+      "connected": (name) => `Ви тепер друзі з ${name}`,
+      "unchained": (name, gender) => gender === "he" ? `${name} прийняв обліковий запис` : gender === "she" ? `${name} прийняла обліковий запис` : `${name} прийняв(ла) обліковий запис`,
+      "transferred": {
+        "paid": (name, amount, gender) => {
+  if (gender === "he") return `${name} отримав ${amount} від вас`;
+  if (gender === "she") return `${name} отримала ${amount} від вас`;
+  return `${name} отримав(ла) ${amount} від вас`;
+},
+        "received": (name, amount, gender) => {
+  if (gender === "he") return `${name} заплатив вам ${amount}`;
+  if (gender === "she") return `${name} заплатила вам ${amount}`;
+  return `${name} заплатив(ла) вам ${amount}`;
+},
+        "balance": {
+          "even": "Тепер ви квити",
+          "owed": (balance) => `Вам ще винні ${balance}.`,
+          "owe": (name, balance) => `Ви зараз винні ${name} ${balance}.`
+        }
+      }
+    },
+    "expenses": {
+      "created": (name) => `Сплачено: ${name}`
+    }
   },
   "zh-CN": {
     "groups": {
@@ -225,7 +523,25 @@ export const dictionaries = {
         "hint": "滑动移除"
       }
     },
-    "erase": "全部清除"
+    "erase": "全部清除",
+    "contacts": {
+      "connected": (name) => `你现在和${name}是好友了`,
+      "unchained": (name, gender) => `${name}已接受该账户`,
+      "transferred": {
+        "paid": (name, amount, gender) => {
+  return `${name}已收到你转来的${amount}`;
+},
+        "received": (name, amount, gender) => `${name}已向你支付了${amount}`,
+        "balance": {
+          "even": "你们现在扯平了",
+          "owed": (balance) => `你还有${balance}未收到。`,
+          "owe": (name, balance) => `你现在欠${name} ${balance}。`
+        }
+      }
+    },
+    "expenses": {
+      "created": (name) => `由${name}支付`
+    }
   }
 };
 

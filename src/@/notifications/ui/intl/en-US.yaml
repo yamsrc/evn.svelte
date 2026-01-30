@@ -13,3 +13,31 @@ accounts:
     welcome: Welcome to Evnly!
     hint: Slide to remove
 erase: Clear all
+contacts:
+  connected: |-
+    !js
+    (name) => `You are now friends with ${name}`
+  unchained: |-
+    !js
+    (name, gender) => `${name} accepted the account`
+  transferred:
+    paid: |-
+      !js
+      (name, amount, gender) => {
+        return `${name} received ${amount} from you`;
+      }
+    received: |-
+      !js
+      (name, amount, gender) => `${name} paid you ${amount}`
+    balance:
+      even: You are even now
+      owed: |-
+        !js
+        (balance) => `You're still owed ${balance}.`
+      owe: |-
+        !js
+        (name, balance) => `You owe ${name} ${balance} now.`
+expenses:
+  created: |-
+    !js
+    (name) => `Paid by ${name}`

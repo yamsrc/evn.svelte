@@ -1,6 +1,7 @@
 <script lang="ts">
-  import { Async } from 'svas'
+  import { Async, ok } from 'svas'
   import { contacts } from '@/contacts'
+  import { dict } from '@/notifications/ui/intl'
   import Base from '../Base.svelte'
   import type { Props } from './Unchained'
 
@@ -10,9 +11,9 @@
 <Async store={contacts}>
   {#snippet awaited(contacts)}
     {@const contact = contacts.find((c) => c.identity === notification.key)}
-    {#if contact}
+    {#if contact && ok(contact?.account)}
       <Base href={`/contacts/${contact.identity}`}>
-        {contact.account?.name} has taken account
+        {$dict.contacts.unchained(contact.account.name, contact.account.grammar)}
       </Base>
     {/if}
   {/snippet}

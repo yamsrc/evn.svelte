@@ -14,3 +14,39 @@ accounts:
     welcome: مرحبًا بك في Evnly!
     hint: اسحب للإزالة
 erase: مسح الكل
+contacts:
+  connected: |-
+    !js
+    (name) => `أنت الآن صديق مع ${name}`
+  unchained: >-
+    !js
+
+    (name, gender) => gender === "he" ? `${name} قَبِل الحساب` : gender ===
+    "she" ? `${name} قَبِلَت الحساب` : `${name} قَبِل(ت) الحساب`
+  transferred:
+    paid: |-
+      !js
+      (name, amount, gender) => {
+        if (gender === "he") return `${name} استلم ${amount} منك`;
+        if (gender === "she") return `${name} استلمت ${amount} منك`;
+        return `${name} استلم/استلمت ${amount} منك`;
+      }
+    received: |-
+      !js
+      (name, amount, gender) => {
+        if (gender === "he") return `${name} دفع لك ${amount}`;
+        if (gender === "she") return `${name} دفعت لك ${amount}`;
+        return `${name} دفع(ت) لك ${amount}`;
+      }
+    balance:
+      even: أنتما متعادلان الآن
+      owed: |-
+        !js
+        (balance) => `لا يزال مستحقًا لك ${balance}`
+      owe: |-
+        !js
+        (name, balance) => `أنت مدين لـ${name} بمبلغ ${balance} الآن.`
+expenses:
+  created: |-
+    !js
+    (name) => `مدفوع بواسطة ${name}`

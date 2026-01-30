@@ -15,3 +15,26 @@ inputs:
   erase:
     input: Clear all
     context: button label (clears all notifications)
+  contacts:
+    connected:
+      input: You are now friends with {name}
+    unchained:
+      input: "{name} accepted the account"
+      context: Use gender
+    transferred:
+      paid:
+        input: "{name} received {amount} from you"
+        context: use gender
+      received:
+        input: "{name} paid you {amount}"
+        context: use gender
+      balance:
+        even:
+          input: You are even now
+        owed:
+          input: You're still owed {balance}.
+        owe:
+          input: You owe {name} {balance} now.
+  expenses:
+    created:
+      input: Paid by {name}.

@@ -1,6 +1,8 @@
 <script lang="ts">
-  import { Async } from 'svas'
+  import { Async, ok } from 'svas'
+  import { Picture } from '@/accounts/ui'
   import { contacts } from '@/contacts'
+  import { dict } from '@/notifications/ui/intl'
   import Base from '../Base.svelte'
   import type { Props } from './Connected'
 
@@ -12,7 +14,12 @@
     {@const contact = contacts.find((c) => c.identity === notification.key)}
     {#if contact}
       <Base href={`/contacts/${contact.identity}`}>
-        You are now friends with {contact.account?.name}
+        <div class="flex items-center gap-2">
+          {#if ok(contact.account)}
+            <Picture account={contact.account} size={32} />
+          {/if}
+          {$dict.contacts.connected(contact.account?.name)}
+        </div>
       </Base>
     {/if}
   {/snippet}
