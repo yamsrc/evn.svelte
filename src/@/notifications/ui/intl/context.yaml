@@ -40,5 +40,5 @@ inputs:
           input: You owe {balance} now
   expenses:
     created:
-      input: paid by {name}
-      context: part of sentence, use gender
+      input: "{amount} paid by {name}"
+      context: use gender

@@ -1,15 +1,15 @@
 <script lang="ts">
   import { Async } from 'svas'
+  import { currency } from '$lib/tools'
   import { accounts } from '@/accounts'
-  import Coins from '@/app/ui/Coins.svelte'
   import { numbers } from '@/expenses'
-  import { dict } from '@/notifications/ui/intl'
+  import { dict, locale } from '@/notifications/ui/intl'
   import Base from '../Base.svelte'
   import type { Props } from './Created'
 
   const { notification }: Props = $props()
 
-  const amount = $derived(numbers.total(notification.payload))
+  const amount = $derived(currency(numbers.total(notification.payload), $locale))
 
   const payer = $derived(
     Object.keys(notification.payload.participants).find(
@@ -25,8 +25,7 @@
         <div>
           {notification.payload.title}
           <p class="text-muted-foreground">
-            <Coins {amount} sign="neutral" class="gap-1 inline-flex" />
-            {$dict.expenses.created(account.name, account.grammar)}
+            {$dict.expenses.created(amount, account.name, account.grammar)}
           </p>
         </div>
       </Base>

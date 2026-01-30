@@ -53,10 +53,9 @@ contacts:
         !js
         (balance) => `Vous devez maintenant ${balance}`
 expenses:
-  created: |-
+  created: >-
     !js
-    (name, gender) => {
-      if (gender === "he") return `payé par ${name}`;
-      if (gender === "she") return `payée par ${name}`;
-      return `payé(e) par ${name}`;
-    }
+
+    (amount, name, gender) => gender === "he" ? `${amount} payé par ${name}` :
+    gender === "she" ? `${amount} payée par ${name}` : `${amount} payé(e) par
+    ${name}`

@@ -44,6 +44,4 @@ contacts:
 expenses:
   created: |-
     !js
-    (name, gender) => {
-      return `betaald door ${name}`;
-    }
+    (amount, name, gender) => `${amount} betaald door ${name}`

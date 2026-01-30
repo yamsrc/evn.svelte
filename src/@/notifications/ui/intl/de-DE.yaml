@@ -55,8 +55,4 @@ contacts:
 expenses:
   created: |-
     !js
-    (name, gender) => {
-      if (gender === "he") return `bezahlt von ${name}`;
-      if (gender === "she") return `bezahlt von ${name}`;
-      return `bezahlt von ${name}`;
-    }
+    (amount, name, gender) => `${amount} von ${name} bezahlt`

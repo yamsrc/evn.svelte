@@ -53,10 +53,9 @@ contacts:
         !js
         (balance) => `أنت مدين الآن بمبلغ ${balance}`
 expenses:
-  created: |-
+  created: >-
     !js
-    (name, gender) => {
-      if (gender === "he") return `دفعها ${name}`;
-      if (gender === "she") return `دفعتها ${name}`;
-      return `تم الدفع بواسطة ${name}`;
-    }
+
+    (amount, name, gender) => gender === "he" ? `${amount} تم دفعها بواسطة
+    ${name}` : gender === "she" ? `${amount} تم دفعها بواسطة ${name}` :
+    `${amount} تم دفعها بواسطة ${name}`
