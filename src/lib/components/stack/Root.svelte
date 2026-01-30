@@ -1,20 +1,18 @@
 <script lang="ts">
-  import { setContext } from 'svelte'
   import { transit } from '$lib/tools/svt'
-  import { STACK_CTX, type Props, type StackContext } from './Root'
+  import { setContext } from './Context'
+  import type { Props } from './Root'
 
-  let { children, expanded = $bindable(false), min = 3, class: classes }: Props = $props()
+  let { children, collapsed = $bindable(true), min = 3, class: classes }: Props = $props()
 
   let count = $state(0)
-
-  const collapsed = $derived(!expanded)
   const stacked = $derived(count >= min)
 
-  setContext<StackContext>(STACK_CTX, {
+  setContext({
     increment: () => count++,
     decrement: () => count--,
-    get expanded() {
-      return expanded
+    get collapsed() {
+      return collapsed
     },
     get stacked() {
       return stacked
@@ -22,15 +20,15 @@
   })
 
   export function toggle() {
-    transit(() => (expanded = !expanded))
+    transit(() => (collapsed = !collapsed))
   }
 
   export function expand() {
-    transit(() => (expanded = true))
+    transit(() => (collapsed = false))
   }
 
   export function collapse() {
-    transit(() => (expanded = false))
+    transit(() => (collapsed = true))
   }
 
   function onclick(e: MouseEvent) {

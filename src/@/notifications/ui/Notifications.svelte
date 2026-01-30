@@ -20,7 +20,6 @@
   const { notifications, min = 3, max = 20, ondismiss, onclear }: Props = $props()
 
   const refs = $state<Array<Ref | undefined>>([])
-  let expanded = $state(false)
 
   async function onclearClick(e: MouseEvent) {
     e.stopPropagation()
@@ -50,7 +49,7 @@
 
 <div class="space-y-2">
   {#if renderable.length > 0}
-    <Stack.Root bind:expanded {min}>
+    <Stack.Root {min}>
       {#each visible as { notification, component }, i (notification.id)}
         <Stack.Item id={notification.id}>
           <Notification bind:this={refs[i]} {notification} {component} {ondismiss} />

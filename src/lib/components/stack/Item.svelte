@@ -1,15 +1,15 @@
 <script lang="ts">
-  import { getContext, onMount } from 'svelte'
-  import { STACK_CTX, type StackContext } from './Root'
+  import { onMount } from 'svelte'
+  import { getContext } from './Context'
   import type { Props } from './Item'
 
   const { children, id }: Props = $props()
-  const { increment, decrement } = getContext<StackContext>(STACK_CTX)
+  const ctx = getContext()
 
   onMount(() => {
-    increment()
+    ctx.increment()
 
-    return decrement
+    return ctx.decrement
   })
 </script>
 

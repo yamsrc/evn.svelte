@@ -12,7 +12,6 @@
   const randHeight = () => Math.floor(Math.random() * (120 - 56) + 56)
 
   let stack: ReturnType<typeof Stack.Root> | undefined = $state()
-  let expanded = $state(false)
 
   let items = $state<Item[]>(
     COLORS.map((color, i) => ({ id: `item-${i}`, color, height: randHeight() })),
@@ -30,7 +29,7 @@
 </Section>
 
 <Section>
-  <Stack.Root bind:this={stack} bind:expanded>
+  <Stack.Root bind:this={stack}>
     {#each items as item, i (item.id)}
       <Stack.Item id={item.id}>
         <div
