@@ -12,7 +12,13 @@
   import type { Action } from '$com/panel'
   import type { Props } from './Panel'
 
-  const { contact, selected = $bindable(), actionable = false, onselect }: Props = $props()
+  const {
+    contact,
+    selected = $bindable(),
+    actionable = false,
+    highlighted,
+    onselect,
+  }: Props = $props()
 
   let confirmDelete = $state(false)
 
@@ -45,10 +51,11 @@
 
 {#if ok(contact.account)}
   <Panel
-    href={`/contacts/${contact.id}/`}
+    href={`/contacts/${contact.identity}/`}
     account={contact.account}
     balance={contact.balance}
     {selected}
+    {highlighted}
     {onselect}
     actions={actionable ? actions : []}
     class={cn(contact.managed && 'text-muted-foreground', 'contacts-panel')}>

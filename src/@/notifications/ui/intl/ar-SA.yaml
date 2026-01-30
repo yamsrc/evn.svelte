@@ -9,8 +9,53 @@ groups:
       (names, groupName) => `${new Intl.ListFormat("ar", { style: "long", type:
       "conjunction" }).format(names)} انضم${names.length === 1 ? "ت" : "وا"} إلى
       ${groupName}`
+    other: >-
+      !js
+
+      (name, groupName, gender) => { if (gender === "he") return `${name} انضم
+      إلى ${groupName}`; if (gender === "she") return `${name} انضمت إلى
+      ${groupName}`; return `${name} انضم(ت) إلى ${groupName}`; }
 accounts:
   created:
     welcome: مرحبًا بك في Evnly!
-    hint: اسحب لليسار لإزالة
+    hint: اسحب للإزالة
 erase: مسح الكل
+contacts:
+  connected: |-
+    !js
+    (name) => `أنت الآن صديق مع ${name}`
+  unchained: >-
+    !js
+
+    (name, gender) => gender === "he" ? `${name} قَبِل الحساب` : gender ===
+    "she" ? `${name} قَبِلَت الحساب` : `${name} قَبِل(ت) الحساب`
+  transferred:
+    paid: |-
+      !js
+      (name, amount, gender) => {
+        if (gender === "he") return `${name} استلم ${amount} منك`;
+        if (gender === "she") return `${name} استلمت ${amount} منك`;
+        return `${name} استلم/استلمت ${amount} منك`;
+      }
+    received: |-
+      !js
+      (name, amount, gender) => {
+        if (gender === "he") return `${name} دفع لك ${amount}`;
+        if (gender === "she") return `${name} دفعت لك ${amount}`;
+        return `${name} دفع(ت) لك ${amount}`;
+      }
+    balance:
+      even: أنتما متعادلان الآن
+      owed: |-
+        !js
+        (balance) => `لا يزال مستحقًا لك ${balance}`
+      owe: |-
+        !js
+        (balance) => `أنت مدين الآن بمبلغ ${balance}`
+expenses:
+  created: >-
+    !js
+
+    (amount, name, gender) => gender === "he" ? `${amount} تم دفعها بواسطة
+    ${name}` : gender === "she" ? `${amount} تم دفعها بواسطة ${name}` :
+    `${amount} تم دفعها بواسطة ${name}`

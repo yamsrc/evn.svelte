@@ -1,5 +1,6 @@
 <script lang="ts">
   import { Panel } from '$com/panel'
+  import { Attention } from '$com/shell'
   import { dict } from '$lib/intl'
   import { cn } from '$lib/utils'
   import { Picture } from '@/accounts/ui'
@@ -10,6 +11,7 @@
     account,
     balance,
     selected = $bindable(),
+    highlighted,
     onselect,
     action,
     actions,
@@ -45,6 +47,9 @@
   {#snippet right()}
     {#if balance}
       <Balance {balance} youAreOwed={$dict.contacts.contact.owesYou} />
+    {/if}
+    {#if highlighted}
+      <Attention class="absolute top-2 right-2 z-10" />
     {/if}
   {/snippet}
 </Panel>

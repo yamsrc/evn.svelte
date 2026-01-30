@@ -1,6 +1,7 @@
 import type { Snippet } from 'svelte'
+import type { ClassValue } from 'tailwind-variants'
 
 export interface Props {
   children: Snippet
-  ondismiss?: () => Promise<void>
+  class?: ClassValue
 }

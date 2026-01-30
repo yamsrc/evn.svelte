@@ -9,8 +9,39 @@ groups:
       (names, groupName) => `${new Intl.ListFormat("nl", { style: "long", type:
       "conjunction" }).format(names)} ${names.length === 1 ? "is" : "zijn"} lid
       geworden van ${groupName}`
+    other: |-
+      !js
+      (name, groupName, gender) => `${name} is lid geworden van ${groupName}`
 accounts:
   created:
     welcome: Welkom bij Evnly!
-    hint: Veeg naar links om te sluiten
+    hint: Veeg om te verwijderen
 erase: Alles wissen
+contacts:
+  connected: |-
+    !js
+    (name) => `Je bent nu bevriend met ${name}`
+  unchained: |-
+    !js
+    (name, gender) => `${name} heeft het account geaccepteerd`
+  transferred:
+    paid: |-
+      !js
+      (name, amount, gender) => {
+        return `${name} heeft ${amount} van je ontvangen`;
+      }
+    received: |-
+      !js
+      (name, amount, gender) => `${name} heeft je ${amount} betaald`
+    balance:
+      even: Jullie staan nu gelijk
+      owed: |-
+        !js
+        (balance) => `Je krijgt nog ${balance}`
+      owe: |-
+        !js
+        (balance) => `Je moet nu ${balance} betalen`
+expenses:
+  created: |-
+    !js
+    (amount, name, gender) => `${amount} betaald door ${name}`

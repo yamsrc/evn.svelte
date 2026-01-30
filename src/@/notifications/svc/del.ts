@@ -11,7 +11,7 @@ export async function del(id: string): Promise<void | Error> {
   // optimistic
   notifications.delete(id)
 
-  const res = await net.del(me.id, id)
+  const res = await net.items.del(me.id, id)
 
   if (res instanceof Error) {
     if (current !== null) notifications.add(current)
@@ -30,7 +30,7 @@ export async function seen(domain: string, key: string): Promise<void | Error> {
     notifications.delete(candidate.id)
 
   if (candidates.length > 0)
-    return net.seen(me.id, domain, key)
+    return net.scopes.del(me.id, domain, key)
 }
 
 export async function clear(): Promise<void | Error> {

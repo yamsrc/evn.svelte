@@ -9,8 +9,53 @@ groups:
       (names, groupName) => `${new Intl.ListFormat("fr", { style: "long", type:
       "conjunction" }).format(names)} a${names.length === 1 ? "" : "nt"} rejoint
       ${groupName}`
+    other: >-
+      !js
+
+      (name, groupName, gender) => { if (gender === "he") return `${name} a
+      rejoint ${groupName}`; if (gender === "she") return `${name} a rejointe
+      ${groupName}`; return `${name} a rejoint(e) ${groupName}`; }
 accounts:
   created:
     welcome: Bienvenue chez Evnly !
-    hint: Faites glisser vers la gauche pour ignorer
+    hint: Faites glisser pour supprimer
 erase: Tout effacer
+contacts:
+  connected: |-
+    !js
+    (name) => `Vous êtes maintenant ami(e) avec ${name}`
+  unchained: >-
+    !js
+
+    (name, gender) => gender === "he" ? `${name} a accepté le compte` : gender
+    === "she" ? `${name} a accepté le compte` : `${name} a accepté le compte`
+  transferred:
+    paid: |-
+      !js
+      (name, amount, gender) => {
+        if (gender === "he") return `${name} a reçu ${amount} de votre part`;
+        if (gender === "she") return `${name} a reçu ${amount} de votre part`;
+        return `${name} a reçu ${amount} de votre part`;
+      }
+    received: |-
+      !js
+      (name, amount, gender) => {
+        if (gender === "he") return `${name} vous a payé ${amount}`;
+        if (gender === "she") return `${name} vous a payé ${amount}`;
+        return `${name} vous a payé ${amount}`;
+      }
+    balance:
+      even: Vous êtes quittes maintenant
+      owed: |-
+        !js
+        (balance) => `Il vous reste à recevoir ${balance}`
+      owe: |-
+        !js
+        (balance) => `Vous devez maintenant ${balance}`
+expenses:
+  created: >-
+    !js
+
+    (amount, name, gender) => gender === "he" ? `${amount} payé par ${name}` :
+    gender === "she" ? `${amount} payée par ${name}` : `${amount} payé(e) par
+    ${name}`

@@ -1,5 +1,6 @@
 <script lang="ts">
   import { goto } from '$app/navigation'
+  import { Attention } from '$com/shell'
   import { cn } from '$lib/utils'
   import { Button } from '$ui/button'
   import type { Props, Action } from './Panel'
@@ -16,6 +17,7 @@
     action,
     class: classes,
     variant = 'outline',
+    highlighted,
     ...props
   }: Props = $props()
 
@@ -81,6 +83,9 @@
           </button>
         {/each}
       </div>
+    {/if}
+    {#if highlighted}
+      <Attention class="absolute top-2 right-2 z-10" />
     {/if}
   </div>
 </div>

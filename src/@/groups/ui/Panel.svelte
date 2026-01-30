@@ -60,7 +60,7 @@
       <Balance balance={group.balance} />
     {/if}
     {#if highlighted}
-      <Attention id={`groups-notify-${group.id}`} class="absolute top-2 right-2 z-10" />
+      <Attention class="absolute top-2 right-2 z-10" />
     {/if}
   {/snippet}
 </Panel>

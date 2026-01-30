@@ -9,8 +9,15 @@
   import { expenses } from '@/expenses'
   import { Recent } from '@/expenses/ui'
   import { account } from '@/iam'
-  import { notifications } from '@/notifications'
+  import { notifications, scope } from '@/notifications'
   import { Notifications } from '@/notifications/ui'
+
+  const expensesOnlyNotifications = scope({ domain: 'expenses' })
+  const transfersNotifications = scope({ domain: 'contacts', event: 'transferred' })
+  const expensesNotifications = $derived([
+    ...$expensesOnlyNotifications,
+    ...$transfersNotifications,
+  ])
 </script>
 
 <Async store={combined(account, contacts, expenses, notifications)}>
@@ -41,7 +48,7 @@
     </Section>
 
     <Section>
-      <Recent {expenses} />
+      <Recent {expenses} notifications={expensesNotifications} />
     </Section>
   {/snippet}
 </Async>

@@ -8,8 +8,39 @@ groups:
 
       (names, groupName) => `${new Intl.ListFormat("ja", { style: "long", type:
       "conjunction" }).format(names)}が${groupName}に参加しました`
+    other: |-
+      !js
+      (name, groupName, gender) => `${name}が${groupName}に参加しました`
 accounts:
   created:
     welcome: Evnlyへようこそ！
-    hint: 左にスワイプして閉じる
+    hint: スライドして削除
 erase: すべてクリア
+contacts:
+  connected: |-
+    !js
+    (name) => `${name}さんと友達になりました`
+  unchained: |-
+    !js
+    (name, gender) => `${name}がアカウントを承認しました`
+  transferred:
+    paid: |-
+      !js
+      (name, amount, gender) => {
+        return `${name}があなたから${amount}を受け取りました`;
+      }
+    received: |-
+      !js
+      (name, amount, gender) => `${name}さんがあなたに${amount}を支払いました`
+    balance:
+      even: これであなたたちは今、互いにイーブンです
+      owed: |-
+        !js
+        (balance) => `まだ${balance}の支払いがあります`
+      owe: |-
+        !js
+        (balance) => `現在のお支払い額は${balance}です`
+expenses:
+  created: |-
+    !js
+    (amount, name, gender) => `${name}が支払った金額：${amount}`

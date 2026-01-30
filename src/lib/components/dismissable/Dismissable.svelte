@@ -53,7 +53,7 @@
 
 <div class="relative" class:dismissing>
   <div bind:this={container} class="flex w-full overflow-x-auto snap-x snap-mandatory no-scrollbar">
-    <div class="w-full shrink-0 px-5 snap-center">
+    <div class="w-full shrink-0 snap-center">
       {@render children()}
     </div>
     <div bind:this={sentinel} class="w-full shrink-0 snap-center"></div>

@@ -1,45 +1,53 @@
-interface BaseNotification<D extends string, E extends string, P> {
+import type { Expense } from '@/expenses'
+
+type Payloads = {
+  accounts: {
+    created: never
+  }
+  groups: {
+    joined: {
+      identities: string[]
+    }
+  }
+  expenses: {
+    created: {
+      title: string
+      location?: string
+      participants: Expense['participants']
+      extras: Expense['extras']
+    }
+  }
+  contacts: {
+    connected: never
+    unchained: never
+    transferred: {
+      expense: string
+      delta: number
+      balance: number
+    }
+  }
+}
+
+type Domain = keyof Payloads
+type Event<D extends Domain> = keyof Payloads[D]
+type Payload<D extends Domain, E extends Event<D>> = Payloads[D][E]
+type Expand<T> = { [K in keyof T]: T[K] } & {}
+
+type Base<D extends Domain, E extends Event<D>> = {
   id: string
   identity: string
   domain: D
   event: E
   key: string
-  payload?: P
-}
-
-type NotificationMap = {
-  accounts: {
-    created: never
-  }
-  groups: {
-    joined: { identities: string[] }
-  }
-}
-
-type NotificationEntry<D extends string, E extends string, P> = BaseNotification<D, E, P> &
-  ([P] extends [never] ? {} : { payload: P })
-
-type NotificationData = {
-  [D in keyof NotificationMap]: {
-    [E in keyof NotificationMap[D]]: NotificationEntry<
-      Extract<D, string>,
-      Extract<E, string>,
-      NotificationMap[D][E]
-    >
-  }[keyof NotificationMap[D]]
-}[keyof NotificationMap]
-
-export type AccountCreatedNotification = Extract<
-  NotificationData,
-  { domain: 'accounts'; event: 'created' }
->
-
-export type GroupJoinedNotification = Extract<
-  NotificationData,
-  { domain: 'groups'; event: 'joined' }
->
-
-export type Notification = NotificationData & {
   _created: number
   _version: number
 }
+
+type Entry<D extends Domain, E extends Event<D>> = Expand<
+  [Payload<D, E>] extends [never] ? Base<D, E> : Base<D, E> & { payload: Payload<D, E> }
+>
+
+export type Notification = { [D in Domain]: { [E in Event<D>]: Entry<D, E> }[Event<D>] }[Domain]
+
+export type Of<D extends Domain, E extends Event<D> = Event<D>> = Entry<D, E>
+export type PayloadOf<D extends Domain, E extends Event<D>> = Payload<D, E>

@@ -1,14 +1,15 @@
 <script lang="ts">
   import { Section } from '@/app/ui'
-  import { filter } from '@/expenses'
+  import { filter, unseen } from '@/expenses'
   import { Expense } from '@/expenses/ui'
   import type { Props } from './Expenses'
 
-  const { expenses, search }: Props = $props()
+  const { expenses, search, notifications }: Props = $props()
 </script>
 
 <Section id="expenses-list" class="flex flex-col gap-1.5">
   {#each filter(expenses, search) as expense (expense.id)}
-    <Expense {expense} />
+    {@const highlighted = unseen(expense, notifications ?? [])}
+    <Expense {expense} {highlighted} />
   {/each}
 </Section>

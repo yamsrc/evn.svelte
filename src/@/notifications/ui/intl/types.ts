@@ -13,6 +13,7 @@ export type Dictionary = {
         joined: {
           me: (value: any) => string
           others: (...args: [any, any]) => string
+          other: (...args: [any, any, any]) => string
         }
       }
       accounts: {
@@ -22,4 +23,20 @@ export type Dictionary = {
         }
       }
       erase: string
+      contacts: {
+        connected: (value: any) => string
+        unchained: (...args: [any, any]) => string
+        transferred: {
+          paid: (...args: [any, any, any]) => string
+          received: (...args: [any, any, any]) => string
+          balance: {
+            even: string
+            owed: (value: any) => string
+            owe: (value: any) => string
+          }
+        }
+      }
+      expenses: {
+        created: (...args: [any, any, any]) => string
+      }
     }

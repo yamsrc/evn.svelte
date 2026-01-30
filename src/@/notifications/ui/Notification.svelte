@@ -1,16 +1,23 @@
 <script lang="ts">
-  import { Dismissable } from '@/app/ui'
+  import { Dismissable } from '$com/dismissable'
+  import { transit } from '$lib/tools/svt'
   import { del } from '@/notifications'
   import type { Props } from './Notification'
 
-  const { notification, component: Component }: Props = $props()
+  const {
+    notification,
+    component: Component,
+    ondismiss: ondismissCb,
+    class: classes,
+  }: Props = $props()
 
   let dismissable:
     | { dismiss: () => Promise<void> | void; remove: () => Promise<void> | void }
     | undefined = $state()
 
   async function ondismiss() {
-    await del(notification.id)
+    ondismissCb?.(notification.id)
+    await transit(() => del(notification.id))
   }
 
   export function dismiss() {
@@ -23,7 +30,15 @@
 </script>
 
 <Dismissable bind:this={dismissable} {ondismiss}>
-  <div class="w-full shrink-0 snap-center bg-accent rounded-lg text-sm font-normal">
-    <Component {notification} />
+  <div class="px-5">
+    <div
+      class={[
+        'w-full shrink-0 snap-center',
+        'bg-muted border border-muted-foreground/20 rounded-lg',
+        'text-sm font-normal',
+        classes,
+      ]}>
+      <Component {notification} />
+    </div>
   </div>
 </Dismissable>
