@@ -9,6 +9,12 @@ groups:
       (names, groupName) => `${new Intl.ListFormat("es", { style: "long", type:
       "conjunction" }).format(names)} se ha${names.length === 1 ? "" : "n"}
       unido a ${groupName}`
+    other: >-
+      !js
+
+      (name, groupName, gender) => { if (gender === "he") return `${name} se
+      unió a ${groupName}`; if (gender === "she") return `${name} se unió a
+      ${groupName}`; return `${name} se unió a ${groupName}`; }
 accounts:
   created:
     welcome: ¡Bienvenido a Evnly!

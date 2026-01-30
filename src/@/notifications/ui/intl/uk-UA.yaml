@@ -9,6 +9,13 @@ groups:
       (names, groupName) => `${new Intl.ListFormat("uk", { style: "long", type:
       "conjunction" }).format(names)} ${names.length === 1 ? "приєднався" :
       "приєдналися"} до ${groupName}`
+    other: >-
+      !js
+
+      (name, groupName, gender) => { if (gender === "he") return `${name}
+      приєднався до ${groupName}`; if (gender === "she") return `${name}
+      приєдналася до ${groupName}`; return `${name} приєднався(лася) до
+      ${groupName}`; }
 accounts:
   created:
     welcome: Ласкаво просимо до Evnly!

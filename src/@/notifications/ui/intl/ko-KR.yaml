@@ -8,6 +8,9 @@ groups:
 
       (names, groupName) => `${new Intl.ListFormat("ko", { style: "long", type:
       "conjunction" }).format(names)}님이(가) ${groupName}에 가입했어요`
+    other: |-
+      !js
+      (name, groupName, gender) => `${name}님이 ${groupName}에 참여했습니다`
 accounts:
   created:
     welcome: Evnly에 오신 것을 환영합니다!

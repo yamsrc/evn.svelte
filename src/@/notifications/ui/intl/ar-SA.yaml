@@ -9,6 +9,12 @@ groups:
       (names, groupName) => `${new Intl.ListFormat("ar", { style: "long", type:
       "conjunction" }).format(names)} انضم${names.length === 1 ? "ت" : "وا"} إلى
       ${groupName}`
+    other: >-
+      !js
+
+      (name, groupName, gender) => { if (gender === "he") return `${name} انضم
+      إلى ${groupName}`; if (gender === "she") return `${name} انضمت إلى
+      ${groupName}`; return `${name} انضم(ت) إلى ${groupName}`; }
 accounts:
   created:
     welcome: مرحبًا بك في Evnly!

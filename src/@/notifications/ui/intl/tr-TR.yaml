@@ -8,6 +8,9 @@ groups:
 
       (names, groupName) => `${new Intl.ListFormat("tr", { style: "long", type:
       "conjunction" }).format(names)} ${groupName} grubuna katıldı`
+    other: |-
+      !js
+      (name, groupName, gender) => `${name}, ${groupName} grubuna katıldı`
 accounts:
   created:
     welcome: Evnly'e hoş geldiniz!

@@ -9,6 +9,12 @@ groups:
       (names, groupName) => `${new Intl.ListFormat("fr", { style: "long", type:
       "conjunction" }).format(names)} a${names.length === 1 ? "" : "nt"} rejoint
       ${groupName}`
+    other: >-
+      !js
+
+      (name, groupName, gender) => { if (gender === "he") return `${name} a
+      rejoint ${groupName}`; if (gender === "she") return `${name} a rejointe
+      ${groupName}`; return `${name} a rejoint(e) ${groupName}`; }
 accounts:
   created:
     welcome: Bienvenue chez Evnly !

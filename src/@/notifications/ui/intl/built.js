@@ -6,7 +6,8 @@ export const dictionaries = {
     "groups": {
       "joined": {
         "me": (groupName) => `لقد انضممت إلى ${groupName}`,
-        "others": (names, groupName) => `${new Intl.ListFormat("ar", { style: "long", type: "conjunction" }).format(names)} انضم${names.length === 1 ? "ت" : "وا"} إلى ${groupName}`
+        "others": (names, groupName) => `${new Intl.ListFormat("ar", { style: "long", type: "conjunction" }).format(names)} انضم${names.length === 1 ? "ت" : "وا"} إلى ${groupName}`,
+        "other": (name, groupName, gender) => { if (gender === "he") return `${name} انضم إلى ${groupName}`; if (gender === "she") return `${name} انضمت إلى ${groupName}`; return `${name} انضم(ت) إلى ${groupName}`; }
       }
     },
     "accounts": {
@@ -45,7 +46,8 @@ export const dictionaries = {
     "groups": {
       "joined": {
         "me": (groupName) => `Du bist ${groupName} beigetreten`,
-        "others": (names, groupName) => `${new Intl.ListFormat("de", { style: "long", type: "conjunction" }).format(names)} ${names.length === 1 ? "ist" : "sind"} ${groupName} beigetreten`
+        "others": (names, groupName) => `${new Intl.ListFormat("de", { style: "long", type: "conjunction" }).format(names)} ${names.length === 1 ? "ist" : "sind"} ${groupName} beigetreten`,
+        "other": (name, groupName, gender) => { if (gender === "he") return `${name} ist ${groupName} beigetreten`; if (gender === "she") return `${name} ist ${groupName} beigetreten`; return `${name} ist ${groupName} beigetreten`; }
       }
     },
     "accounts": {
@@ -82,7 +84,8 @@ export const dictionaries = {
     "groups": {
       "joined": {
         "me": (groupName) => `You have joined ${groupName}`,
-        "others": (names, groupName) => `${new Intl.ListFormat("en", { style: "long", type: "conjunction" }).format(names)} joined ${groupName}`
+        "others": (names, groupName) => `${new Intl.ListFormat("en", { style: "long", type: "conjunction" }).format(names)} joined ${groupName}`,
+        "other": (name, groupName, gender) => `${name} joined ${groupName}`
       }
     },
     "accounts": {
@@ -115,7 +118,8 @@ export const dictionaries = {
     "groups": {
       "joined": {
         "me": (groupName) => `Te has unido a ${groupName}`,
-        "others": (names, groupName) => `${new Intl.ListFormat("es", { style: "long", type: "conjunction" }).format(names)} se ha${names.length === 1 ? "" : "n"} unido a ${groupName}`
+        "others": (names, groupName) => `${new Intl.ListFormat("es", { style: "long", type: "conjunction" }).format(names)} se ha${names.length === 1 ? "" : "n"} unido a ${groupName}`,
+        "other": (name, groupName, gender) => { if (gender === "he") return `${name} se unió a ${groupName}`; if (gender === "she") return `${name} se unió a ${groupName}`; return `${name} se unió a ${groupName}`; }
       }
     },
     "accounts": {
@@ -154,7 +158,8 @@ export const dictionaries = {
     "groups": {
       "joined": {
         "me": (groupName) => `Vous avez rejoint ${groupName}`,
-        "others": (names, groupName) => `${new Intl.ListFormat("fr", { style: "long", type: "conjunction" }).format(names)} a${names.length === 1 ? "" : "nt"} rejoint ${groupName}`
+        "others": (names, groupName) => `${new Intl.ListFormat("fr", { style: "long", type: "conjunction" }).format(names)} a${names.length === 1 ? "" : "nt"} rejoint ${groupName}`,
+        "other": (name, groupName, gender) => { if (gender === "he") return `${name} a rejoint ${groupName}`; if (gender === "she") return `${name} a rejointe ${groupName}`; return `${name} a rejoint(e) ${groupName}`; }
       }
     },
     "accounts": {
@@ -193,7 +198,8 @@ export const dictionaries = {
     "groups": {
       "joined": {
         "me": (groupName) => `${groupName} में आप शामिल हो गए हैं`,
-        "others": (names, groupName) => `${new Intl.ListFormat("hi", { style: "long", type: "conjunction" }).format(names)} ने ${groupName} में जॉइन किया`
+        "others": (names, groupName) => `${new Intl.ListFormat("hi", { style: "long", type: "conjunction" }).format(names)} ने ${groupName} में जॉइन किया`,
+        "other": (name, groupName, gender) => { if (gender === "he") return `${name} ने ${groupName} जॉइन किया`; if (gender === "she") return `${name} ने ${groupName} जॉइन की`; return `${name} ने ${groupName} जॉइन किया/की`; }
       }
     },
     "accounts": {
@@ -232,7 +238,8 @@ export const dictionaries = {
     "groups": {
       "joined": {
         "me": (groupName) => `Sei entrato in ${groupName}`,
-        "others": (names, groupName) => `${new Intl.ListFormat("it", { style: "long", type: "conjunction" }).format(names)} ha${names.length === 1 ? "" : "nno"} aderito a ${groupName}`
+        "others": (names, groupName) => `${new Intl.ListFormat("it", { style: "long", type: "conjunction" }).format(names)} ha${names.length === 1 ? "" : "nno"} aderito a ${groupName}`,
+        "other": (name, groupName, gender) => { if (gender === "he") return `${name} si è unito a ${groupName}`; if (gender === "she") return `${name} si è unita a ${groupName}`; return `${name} si è unito/a a ${groupName}`; }
       }
     },
     "accounts": {
@@ -271,7 +278,8 @@ export const dictionaries = {
     "groups": {
       "joined": {
         "me": (groupName) => `${groupName} に参加しました`,
-        "others": (names, groupName) => `${new Intl.ListFormat("ja", { style: "long", type: "conjunction" }).format(names)}が${groupName}に参加しました`
+        "others": (names, groupName) => `${new Intl.ListFormat("ja", { style: "long", type: "conjunction" }).format(names)}が${groupName}に参加しました`,
+        "other": (name, groupName, gender) => `${name}が${groupName}に参加しました`
       }
     },
     "accounts": {
@@ -304,7 +312,8 @@ export const dictionaries = {
     "groups": {
       "joined": {
         "me": (groupName) => `${groupName}에 참가하셨습니다`,
-        "others": (names, groupName) => `${new Intl.ListFormat("ko", { style: "long", type: "conjunction" }).format(names)}님이(가) ${groupName}에 가입했어요`
+        "others": (names, groupName) => `${new Intl.ListFormat("ko", { style: "long", type: "conjunction" }).format(names)}님이(가) ${groupName}에 가입했어요`,
+        "other": (name, groupName, gender) => `${name}님이 ${groupName}에 참여했습니다`
       }
     },
     "accounts": {
@@ -337,7 +346,8 @@ export const dictionaries = {
     "groups": {
       "joined": {
         "me": (groupName) => `Je bent lid geworden van ${groupName}`,
-        "others": (names, groupName) => `${new Intl.ListFormat("nl", { style: "long", type: "conjunction" }).format(names)} ${names.length === 1 ? "is" : "zijn"} lid geworden van ${groupName}`
+        "others": (names, groupName) => `${new Intl.ListFormat("nl", { style: "long", type: "conjunction" }).format(names)} ${names.length === 1 ? "is" : "zijn"} lid geworden van ${groupName}`,
+        "other": (name, groupName, gender) => `${name} is lid geworden van ${groupName}`
       }
     },
     "accounts": {
@@ -370,7 +380,8 @@ export const dictionaries = {
     "groups": {
       "joined": {
         "me": (groupName) => `Вы присоединились к группе ${groupName}`,
-        "others": (names, groupName) => `${new Intl.ListFormat("ru", { style: "long", type: "conjunction" }).format(names)} ${names.length === 1 ? "присоединился" : "присоединились"} к группе ${groupName}`
+        "others": (names, groupName) => `${new Intl.ListFormat("ru", { style: "long", type: "conjunction" }).format(names)} ${names.length === 1 ? "присоединился" : "присоединились"} к группе ${groupName}`,
+        "other": (name, groupName, gender) => { if (gender === "he") return `${name} присоединился к группе ${groupName}`; if (gender === "she") return `${name} присоединилась к группе ${groupName}`; return `${name} присоединился(лась) к группе ${groupName}`; }
       }
     },
     "accounts": {
@@ -409,7 +420,8 @@ export const dictionaries = {
     "groups": {
       "joined": {
         "me": (groupName) => `Umejiunga na ${groupName}`,
-        "others": (names, groupName) => `${new Intl.ListFormat("sw", { style: "long", type: "conjunction" }).format(names)} amejiunga na ${groupName}`
+        "others": (names, groupName) => `${new Intl.ListFormat("sw", { style: "long", type: "conjunction" }).format(names)} amejiunga na ${groupName}`,
+        "other": (name, groupName, gender) => `${name} amejiunga na ${groupName}`
       }
     },
     "accounts": {
@@ -442,7 +454,8 @@ export const dictionaries = {
     "groups": {
       "joined": {
         "me": (groupName) => `${groupName} grubuna katıldınız`,
-        "others": (names, groupName) => `${new Intl.ListFormat("tr", { style: "long", type: "conjunction" }).format(names)} ${groupName} grubuna katıldı`
+        "others": (names, groupName) => `${new Intl.ListFormat("tr", { style: "long", type: "conjunction" }).format(names)} ${groupName} grubuna katıldı`,
+        "other": (name, groupName, gender) => `${name}, ${groupName} grubuna katıldı`
       }
     },
     "accounts": {
@@ -475,7 +488,8 @@ export const dictionaries = {
     "groups": {
       "joined": {
         "me": (groupName) => `Ви приєдналися до ${groupName}`,
-        "others": (names, groupName) => `${new Intl.ListFormat("uk", { style: "long", type: "conjunction" }).format(names)} ${names.length === 1 ? "приєднався" : "приєдналися"} до ${groupName}`
+        "others": (names, groupName) => `${new Intl.ListFormat("uk", { style: "long", type: "conjunction" }).format(names)} ${names.length === 1 ? "приєднався" : "приєдналися"} до ${groupName}`,
+        "other": (name, groupName, gender) => { if (gender === "he") return `${name} приєднався до ${groupName}`; if (gender === "she") return `${name} приєдналася до ${groupName}`; return `${name} приєднався(лася) до ${groupName}`; }
       }
     },
     "accounts": {
@@ -514,7 +528,8 @@ export const dictionaries = {
     "groups": {
       "joined": {
         "me": (groupName) => `您已加入${groupName}`,
-        "others": (names, groupName) => `${new Intl.ListFormat("zh", { style: "long", type: "conjunction" }).format(names)}已加入${groupName}`
+        "others": (names, groupName) => `${new Intl.ListFormat("zh", { style: "long", type: "conjunction" }).format(names)}已加入${groupName}`,
+        "other": (name, groupName, gender) => `${name}加入了${groupName}`
       }
     },
     "accounts": {

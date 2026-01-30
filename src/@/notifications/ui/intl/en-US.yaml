@@ -8,6 +8,9 @@ groups:
 
       (names, groupName) => `${new Intl.ListFormat("en", { style: "long", type:
       "conjunction" }).format(names)} joined ${groupName}`
+    other: |-
+      !js
+      (name, groupName, gender) => `${name} joined ${groupName}`
 accounts:
   created:
     welcome: Welcome to Evnly!

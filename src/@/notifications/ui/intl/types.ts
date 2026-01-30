@@ -13,6 +13,7 @@ export type Dictionary = {
         joined: {
           me: (value: any) => string
           others: (...args: [any, any]) => string
+          other: (...args: [any, any, any]) => string
         }
       }
       accounts: {

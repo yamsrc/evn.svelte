@@ -9,6 +9,9 @@ groups:
       (names, groupName) => `${new Intl.ListFormat("nl", { style: "long", type:
       "conjunction" }).format(names)} ${names.length === 1 ? "is" : "zijn"} lid
       geworden van ${groupName}`
+    other: |-
+      !js
+      (name, groupName, gender) => `${name} is lid geworden van ${groupName}`
 accounts:
   created:
     welcome: Welkom bij Evnly!

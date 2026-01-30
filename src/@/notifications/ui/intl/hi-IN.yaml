@@ -8,6 +8,12 @@ groups:
 
       (names, groupName) => `${new Intl.ListFormat("hi", { style: "long", type:
       "conjunction" }).format(names)} ने ${groupName} में जॉइन किया`
+    other: >-
+      !js
+
+      (name, groupName, gender) => { if (gender === "he") return `${name} ने
+      ${groupName} जॉइन किया`; if (gender === "she") return `${name} ने
+      ${groupName} जॉइन की`; return `${name} ने ${groupName} जॉइन किया/की`; }
 accounts:
   created:
     welcome: Evnly में आपका स्वागत है!

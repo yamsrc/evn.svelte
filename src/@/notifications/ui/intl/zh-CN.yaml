@@ -8,6 +8,9 @@ groups:
 
       (names, groupName) => `${new Intl.ListFormat("zh", { style: "long", type:
       "conjunction" }).format(names)}已加入${groupName}`
+    other: |-
+      !js
+      (name, groupName, gender) => `${name}加入了${groupName}`
 accounts:
   created:
     welcome: 欢迎来到 Evnly！

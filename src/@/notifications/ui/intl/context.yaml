@@ -8,6 +8,9 @@ inputs:
       others:
         input: "{...names} joined {groupName}"
         context: make a function, that accepts array of names (one or more) and a group name. list is formatted using Intl.ListFormat
+      other:
+        input: "{name} joined {groupName}"
+        context: use gender
   accounts:
     created:
       hint:
