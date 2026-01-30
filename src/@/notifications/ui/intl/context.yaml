@@ -41,3 +41,4 @@ inputs:
   expenses:
     created:
       input: Paid by {name}
+      context: use gender

@@ -43,4 +43,4 @@ contacts:
 expenses:
   created: |-
     !js
-    (name) => `${name} tarafından ödendi`
+    (name, gender) => `${name} tarafından ödendi`

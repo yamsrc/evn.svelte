@@ -39,7 +39,7 @@ export const dictionaries = {
       }
     },
     "expenses": {
-      "created": (name) => `مدفوع بواسطة ${name}`
+      "created": (name, gender) => { if (gender === "he") return `دفعها ${name}`; if (gender === "she") return `دفعتها ${name}`; return `تم الدفع بواسطة ${name}`; }
     }
   },
   "de-DE": {
@@ -77,7 +77,7 @@ export const dictionaries = {
       }
     },
     "expenses": {
-      "created": (name) => `Bezahlt von ${name}`
+      "created": (name, gender) => { if (gender === "he") return `Bezahlt von ${name}`; if (gender === "she") return `Bezahlt von ${name}`; return `Bezahlt von ${name}`; }
     }
   },
   "en-US": {
@@ -111,7 +111,7 @@ export const dictionaries = {
       }
     },
     "expenses": {
-      "created": (name) => `Paid by ${name}`
+      "created": (name, gender) => `Paid by ${name}`
     }
   },
   "es-ES": {
@@ -151,7 +151,7 @@ export const dictionaries = {
       }
     },
     "expenses": {
-      "created": (name) => `Pagado por ${name}`
+      "created": (name, gender) => { if (gender === "he") return `Pagado por ${name}`; if (gender === "she") return `Pagado por ${name}`; return `Pagado por ${name}`; }
     }
   },
   "fr-FR": {
@@ -191,7 +191,7 @@ export const dictionaries = {
       }
     },
     "expenses": {
-      "created": (name) => `Payé par ${name}`
+      "created": (name, gender) => { if (gender === "he") return `Payé par ${name}`; if (gender === "she") return `Payée par ${name}`; return `Payé(e) par ${name}`; }
     }
   },
   "hi-IN": {
@@ -231,7 +231,7 @@ export const dictionaries = {
       }
     },
     "expenses": {
-      "created": (name) => `${name} द्वारा भुगतान किया गया`
+      "created": (name, gender) => { if (gender === "he") return `${name} द्वारा भुगतान किया गया`; if (gender === "she") return `${name} द्वारा भुगतान की गई`; return `${name} द्वारा भुगतान किया गया(की गई)`; }
     }
   },
   "it-IT": {
@@ -271,7 +271,7 @@ export const dictionaries = {
       }
     },
     "expenses": {
-      "created": (name) => `Pagato da ${name}`
+      "created": (name, gender) => { if (gender === "he") return `Pagato da ${name}`; if (gender === "she") return `Pagata da ${name}`; return `Pagato/a da ${name}`; }
     }
   },
   "ja-JP": {
@@ -305,7 +305,7 @@ export const dictionaries = {
       }
     },
     "expenses": {
-      "created": (name) => `${name} により支払い済み`
+      "created": (name, gender) => `${name}によって支払われました`
     }
   },
   "ko-KR": {
@@ -339,7 +339,7 @@ export const dictionaries = {
       }
     },
     "expenses": {
-      "created": (name) => `${name}님이 결제함`
+      "created": (name, gender) => `${name}가 결제함`
     }
   },
   "nl-NL": {
@@ -373,7 +373,7 @@ export const dictionaries = {
       }
     },
     "expenses": {
-      "created": (name) => `Betaald door ${name}`
+      "created": (name, gender) => `Betaald door ${name}`
     }
   },
   "ru-RU": {
@@ -413,7 +413,7 @@ export const dictionaries = {
       }
     },
     "expenses": {
-      "created": (name) => `Оплачено: ${name}`
+      "created": (name, gender) => { if (gender === "he") return `Оплачено ${name}`; if (gender === "she") return `Оплачено ${name}`; return `Оплачено ${name}`; }
     }
   },
   "sw-TZ": {
@@ -447,7 +447,7 @@ export const dictionaries = {
       }
     },
     "expenses": {
-      "created": (name) => `Imelipwa na ${name}`
+      "created": (name, gender) => `Lilipwa na ${name}`
     }
   },
   "tr-TR": {
@@ -481,7 +481,7 @@ export const dictionaries = {
       }
     },
     "expenses": {
-      "created": (name) => `${name} tarafından ödendi`
+      "created": (name, gender) => `${name} tarafından ödendi`
     }
   },
   "uk-UA": {
@@ -521,7 +521,7 @@ export const dictionaries = {
       }
     },
     "expenses": {
-      "created": (name) => `Оплачено ${name}`
+      "created": (name, gender) => { if (gender === "he") return `Сплачено ${name}`; if (gender === "she") return `Сплачено ${name}`; return `Сплачено ${name}`; }
     }
   },
   "zh-CN": {
@@ -555,7 +555,7 @@ export const dictionaries = {
       }
     },
     "expenses": {
-      "created": (name) => `由${name}支付`
+      "created": (name, gender) => `${name}已付款`
     }
   }
 };

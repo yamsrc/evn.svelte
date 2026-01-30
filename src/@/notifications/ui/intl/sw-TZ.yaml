@@ -43,4 +43,4 @@ contacts:
 expenses:
   created: |-
     !js
-    (name) => `Imelipwa na ${name}`
+    (name, gender) => `Lilipwa na ${name}`

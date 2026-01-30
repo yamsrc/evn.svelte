@@ -44,4 +44,4 @@ contacts:
 expenses:
   created: |-
     !js
-    (name) => `Betaald door ${name}`
+    (name, gender) => `Betaald door ${name}`

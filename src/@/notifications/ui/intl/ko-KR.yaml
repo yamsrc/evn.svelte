@@ -43,4 +43,4 @@ contacts:
 expenses:
   created: |-
     !js
-    (name) => `${name}님이 결제함`
+    (name, gender) => `${name}가 결제함`

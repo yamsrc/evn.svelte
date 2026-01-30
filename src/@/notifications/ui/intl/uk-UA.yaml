@@ -55,6 +55,8 @@ contacts:
         !js
         (name, balance) => `Ви зараз винні ${name} ${balance}`
 expenses:
-  created: |-
+  created: >-
     !js
-    (name) => `Оплачено ${name}`
+
+    (name, gender) => { if (gender === "he") return `Сплачено ${name}`; if
+    (gender === "she") return `Сплачено ${name}`; return `Сплачено ${name}`; }

@@ -53,6 +53,8 @@ contacts:
         !js
         (name, balance) => `أنت مدين لـ${name} بمبلغ ${balance} الآن`
 expenses:
-  created: |-
+  created: >-
     !js
-    (name) => `مدفوع بواسطة ${name}`
+
+    (name, gender) => { if (gender === "he") return `دفعها ${name}`; if (gender
+    === "she") return `دفعتها ${name}`; return `تم الدفع بواسطة ${name}`; }

@@ -37,6 +37,6 @@ export type Dictionary = {
         }
       }
       expenses: {
-        created: (value: any) => string
+        created: (...args: [any, any]) => string
       }
     }

@@ -53,6 +53,9 @@ contacts:
         !js
         (name, balance) => `Du schuldest ${name} jetzt ${balance}`
 expenses:
-  created: |-
+  created: >-
     !js
-    (name) => `Bezahlt von ${name}`
+
+    (name, gender) => { if (gender === "he") return `Bezahlt von ${name}`; if
+    (gender === "she") return `Bezahlt von ${name}`; return `Bezahlt von
+    ${name}`; }

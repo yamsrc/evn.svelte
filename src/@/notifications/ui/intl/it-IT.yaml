@@ -54,6 +54,9 @@ contacts:
         !js
         (name, balance) => `Ora devi ${balance} a ${name}`
 expenses:
-  created: |-
+  created: >-
     !js
-    (name) => `Pagato da ${name}`
+
+    (name, gender) => { if (gender === "he") return `Pagato da ${name}`; if
+    (gender === "she") return `Pagata da ${name}`; return `Pagato/a da ${name}`;
+    }

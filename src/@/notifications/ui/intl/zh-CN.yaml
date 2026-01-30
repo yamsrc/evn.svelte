@@ -43,4 +43,4 @@ contacts:
 expenses:
   created: |-
     !js
-    (name) => `由${name}支付`
+    (name, gender) => `${name}已付款`

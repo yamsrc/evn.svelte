@@ -2,6 +2,7 @@
   import { Async } from 'svas'
   import { currency } from '$lib/tools'
   import { accounts } from '@/accounts'
+  import Coins from '@/app/ui/Coins.svelte'
   import { numbers } from '@/expenses'
   import { dict, locale } from '@/notifications/ui/intl'
   import Base from '../Base.svelte'
@@ -24,8 +25,8 @@
       <Base href={`/expenses/editor/${notification.key}`}>
         <div>
           {notification.payload.title} &bull; {total}
-          <p class="text-muted-foreground">
-            {$dict.expenses.created(account.name)}
+          <p class="text-muted-foreground flex items-center gap-1">
+            <Coins />{$dict.expenses.created(account.name, account.grammar)}
           </p>
         </div>
       </Base>
