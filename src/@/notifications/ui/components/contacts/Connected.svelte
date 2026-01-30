@@ -12,13 +12,11 @@
 <Async store={contacts}>
   {#snippet awaited(contacts)}
     {@const contact = contacts.find((c) => c.identity === notification.key)}
-    {#if contact}
+    {#if contact && ok(contact.account)}
       <Base href={`/contacts/${contact.identity}`}>
         <div class="flex items-center gap-2">
-          {#if ok(contact.account)}
-            <Picture account={contact.account} size={32} />
-          {/if}
-          {$dict.contacts.connected(contact.account?.name)}
+          <Picture account={contact.account} size={32} />
+          {$dict.contacts.connected(contact.account.name)}
         </div>
       </Base>
     {/if}
