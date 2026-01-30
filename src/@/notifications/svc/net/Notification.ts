@@ -2,8 +2,7 @@ import type { Expense } from '@/expenses'
 
 type Payloads = {
   accounts: {
-    created: never;
-    unchained: never
+    created: never
   }
   groups: {
     joined: {
@@ -18,7 +17,15 @@ type Payloads = {
       extras: Expense['extras']
     }
   }
-  contacts: { transferred: { expense: string; delta: number; balance: number } }
+  contacts: {
+    connected: never
+    unchained: never
+    transferred: {
+      expense: string
+      delta: number
+      balance: number
+    }
+  }
 }
 
 type Domain = keyof Payloads

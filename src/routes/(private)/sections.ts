@@ -18,8 +18,8 @@ export const sections = (dict: Dictionary, notifications: Notification[]): Secti
     unseen: notifications.some(
       (n) =>
         n.domain === 'groups' ||
-        n.domain === 'contacts' ||
-        (n.domain === 'accounts' && n.event === 'unchained'),
+        (n.domain === 'contacts' && n.event === 'connected') ||
+        (n.domain === 'contacts' && n.event === 'unchained'),
     ),
   },
   {

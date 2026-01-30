@@ -39,7 +39,7 @@
   }
 
   $effect(() => {
-    if (id) seen('expenses', id)
+    if (id) void seen('expenses', id)
   })
 </script>
 

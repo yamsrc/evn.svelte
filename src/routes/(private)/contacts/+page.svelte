@@ -16,12 +16,7 @@
   let search = $state('')
 
   const groupsNotifications = scope({ domain: 'groups' })
-  const contactsOnlyNotifications = scope({ domain: 'contacts' })
-  const unchainedNotifications = scope({ domain: 'accounts', event: 'unchained' })
-  const contactsNotifications = $derived([
-    ...$contactsOnlyNotifications,
-    ...$unchainedNotifications,
-  ])
+  const contactsNotifications = scope({ domain: 'contacts' })
 </script>
 
 <Section>
@@ -53,7 +48,7 @@
       <Contacts
         title={$dict.contacts.all}
         contacts={filteredContacts}
-        notifications={contactsNotifications} />
+        notifications={$contactsNotifications} />
 
       {#if search && empty}
         <Section>

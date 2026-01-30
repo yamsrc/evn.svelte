@@ -43,15 +43,19 @@
     // Accounts: created
     result.unshift(create('1', acc.id, 'accounts', 'created', acc.id))
 
+    // Contacts: connected
+    if (contact)
+      result.unshift(create('2', acc.id, 'contacts', 'connected', contact.identity))
+
     // Accounts: unchained
     const unchainedKey = contact?.identity ?? acc.id
 
-    result.unshift(create('2', acc.id, 'accounts', 'unchained', unchainedKey))
+    result.unshift(create('3', acc.id, 'contacts', 'unchained', unchainedKey))
 
     // Groups: joined - single identity
     if (group && group.identities.length > 0)
       result.unshift(
-        create('3', acc.id, 'groups', 'joined', group.id, {
+        create('4', acc.id, 'groups', 'joined', group.id, {
           identities: [group.identities[0]],
         }),
       )
@@ -59,7 +63,7 @@
     // Groups: joined - multiple identities
     if (group)
       result.unshift(
-        create('4', acc.id, 'groups', 'joined', group.id, {
+        create('5', acc.id, 'groups', 'joined', group.id, {
           identities: group.identities.slice(0, MAX_IDENTITIES),
         }),
       )
@@ -73,7 +77,7 @@
       const extras: Expense['extras'] = expense.extras.map((extra) => ({ amount: extra.amount }))
 
       result.unshift(
-        create('5', acc.id, 'expenses', 'expense', expense.id, {
+        create('6', acc.id, 'expenses', 'expense', expense.id, {
           title: expense.title ?? 'Sample Expense',
           location: expense.location,
           participants,
@@ -82,7 +86,7 @@
       )
 
       result.unshift(
-        create('6', acc.id, 'expenses', 'expense', expense.id, {
+        create('7', acc.id, 'expenses', 'expense', expense.id, {
           title: 'Expense Without Location',
           participants,
           extras: [],
@@ -90,7 +94,7 @@
       )
 
       result.unshift(
-        create('7', acc.id, 'expenses', 'expense', expense.id, {
+        create('8', acc.id, 'expenses', 'expense', expense.id, {
           title: 'Simple Expense',
           participants,
           extras: [],
@@ -107,9 +111,9 @@
           balance,
         })
 
-      result.unshift(transfer('8', 2500, contact.balance ?? 5000))
-      result.unshift(transfer('9', -1500, contact.balance ?? -2000))
-      result.unshift(transfer('10', 1000, 0))
+      result.unshift(transfer('9', 2500, contact.balance ?? 5000))
+      result.unshift(transfer('10', -1500, contact.balance ?? -2000))
+      result.unshift(transfer('11', 1000, 0))
     }
 
     return result

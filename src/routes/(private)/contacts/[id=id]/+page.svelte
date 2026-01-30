@@ -30,10 +30,7 @@
   }
 
   $effect(() => {
-    if (!contact) return
-
-    void seen('contacts', contact.identity)
-    void seen('accounts', contact.identity)
+    if (contact) void seen('contacts', contact.identity)
   })
 </script>
 
