@@ -42,7 +42,7 @@
         </div>
       </Stack.Item>
     {/each}
-    <Stack.Footer>
+    <Stack.Toolbar>
       <Section class="flex justify-center">
         <Button
           variant="ghost"
@@ -53,6 +53,6 @@
           {$dict.components.stack.collapse}
         </Button>
       </Section>
-    </Stack.Footer>
+    </Stack.Toolbar>
   </Stack.Root>
 </Section>

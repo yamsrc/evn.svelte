@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Trash2 } from '@lucide/svelte'
+  import { ChevronsDownUp, Trash2 } from '@lucide/svelte'
   import * as Stack from '$lib/components/stack'
   import { delay } from '$lib/tools'
   import { Button } from '$ui/button'
@@ -45,22 +45,27 @@
   )
 
   const visible = $derived(renderable.slice(0, max))
+
+  let stack = $state<ReturnType<typeof Stack.Root> | undefined>()
 </script>
 
 <div class="space-y-2">
   {#if renderable.length > 0}
-    <Stack.Root {min}>
+    <Stack.Root bind:this={stack} {min}>
+      <Stack.Toolbar class="flex justify-between text-muted-foreground px-5">
+        <Button variant="ghost" size="sm" onclick={onclearClick}>
+          <Trash2 />
+          {$dict.erase}
+        </Button>
+        <Button variant="ghost" size="sm" onclick={() => stack?.collapse()}>
+          <ChevronsDownUp />
+        </Button>
+      </Stack.Toolbar>
       {#each visible as { notification, component }, i (notification.id)}
         <Stack.Item id={notification.id}>
           <Notification bind:this={refs[i]} {notification} {component} {ondismiss} />
         </Stack.Item>
       {/each}
-      <Stack.Footer class="flex justify-center">
-        <Button variant="ghost" size="sm" onclick={onclearClick} class="text-muted-foreground">
-          <Trash2 size={16} />
-          {$dict.erase}
-        </Button>
-      </Stack.Footer>
     </Stack.Root>
   {/if}
 </div>
