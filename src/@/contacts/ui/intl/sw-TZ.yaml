@@ -10,7 +10,7 @@ groups:
   title: Anahusishwa na vikundi
   empty: Sio mwanachama wa kundi lolote.
 expenses:
-  title: Pesa
+  title: Matukio
   empty: Hakuna gharama za pamoja hadi sasa.
 delete:
   label: Shikilia ili ufute

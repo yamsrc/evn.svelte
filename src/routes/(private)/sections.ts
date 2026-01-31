@@ -1,4 +1,4 @@
-import { LayoutGrid, PiggyBankIcon, Users } from '@lucide/svelte'
+import { Activity, LayoutGrid, Users } from '@lucide/svelte'
 import type { Section } from '$com/shell'
 import type { Dictionary } from '$lib/intl'
 import type { Notification } from '@/notifications'
@@ -26,7 +26,7 @@ export const sections = (dict: Dictionary, notifications: Notification[]): Secti
     id: 'expenses',
     href: '/expenses/',
     label: dict.nav.expenses,
-    Icon: PiggyBankIcon,
+    Icon: Activity,
     unseen: notifications.some(
       (n) =>
         n.domain === 'expenses' ||

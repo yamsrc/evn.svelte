@@ -6,7 +6,7 @@ actions:
   signout: サインアウト
   close: 閉じる
   cheques:
-    title: お金
+    title: イベント
     scan: 小切手をスキャン
     input: 支出を追加
   contacts:
@@ -23,7 +23,7 @@ nav:
   home: ホーム
   profile: 私
   contacts: 友だち
-  expenses: お金
+  expenses: イベント
 terms: 利用規約
 privacy: プライバシーポリシー
 madeBy: 作成者
@@ -129,7 +129,7 @@ expenses:
     location:
       placeholder: どこですか？（任意）
     save: 保存して残高を更新
-  title: お金
+  title: イベント
   balance:
     total: 合計金額
     youAreOwed: あなたには支払いが残っています

@@ -6,7 +6,7 @@ actions:
   signout: Abmelden
   close: Schließen
   cheques:
-    title: Geld
+    title: Veranstaltungen
     scan: Scheck scannen
     input: Ausgabe hinzufügen
   contacts:
@@ -23,7 +23,7 @@ nav:
   home: Startseite
   profile: Ich
   contacts: Freunde
-  expenses: Geld
+  expenses: Veranstaltungen
 terms: Allgemeine Geschäftsbedingungen
 privacy: Datenschutzrichtlinie
 madeBy: Erstellt von
@@ -147,7 +147,7 @@ expenses:
     location:
       placeholder: Wo? (optional)
     save: Speichern und Salden aktualisieren
-  title: Geld
+  title: Veranstaltungen
   balance:
     total: Gesamtrechnung
     youAreOwed: Dir steht etwas zu

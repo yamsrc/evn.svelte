@@ -6,7 +6,7 @@ actions:
   signout: साइन आउट करें
   close: बंद करें
   cheques:
-    title: पैसे
+    title: आयोजन
     scan: चेक स्कैन करें
     input: खर्च जोड़ें
   contacts:
@@ -23,7 +23,7 @@ nav:
   home: मुख्य पृष्ठ
   profile: मैं
   contacts: मित्र
-  expenses: पैसा
+  expenses: इवेंट्स
 terms: नियम व शर्तें
 privacy: गोपनीयता नीति
 madeBy: द्वारा निर्मित
@@ -141,7 +141,7 @@ expenses:
     location:
       placeholder: कहाँ? (वैकल्पिक)
     save: सहेजें और बैलेंस अपडेट करें
-  title: पैसे
+  title: आयोजन
   balance:
     total: कुल बिल
     youAreOwed: आपको कुछ मिलना बाकी है
