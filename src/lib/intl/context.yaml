@@ -64,7 +64,7 @@ inputs:
       title:
         input: Language
       description:
-        input: "Does not affect the cheque recognition. We\_understand most languages there anyway."
+        input: This does not affect receipt scanning — we can read them in most languages anyway.
     grammar:
       title:
         input: Grammatical form
@@ -79,8 +79,6 @@ inputs:
   form:
     enterName:
       input: Enter name
-  copyright:
-    input: © Seed.me, 2024-2025
   onboarding:
     name:
       title:
@@ -267,6 +265,8 @@ inputs:
   search:
     empty:
       input: No results found
+  dir:
+    input: ltr
 mounts:
   iam: ../../@/iam/ui/intl
   feedback: ../../@/feedback/ui/intl
@@ -274,3 +274,6 @@ mounts:
   contacts: ../../@/contacts/ui/intl
   expenses: ../../@/expenses/ui/intl
   notifications: ../../@/notifications/ui/intl
+  dev: dev
+  err: err
+  accounts: ../../@/accounts/ui/intl

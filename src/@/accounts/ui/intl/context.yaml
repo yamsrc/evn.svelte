@@ -1,0 +1,5 @@
+context: Mount 'accounts' context
+inputs:
+  demo:
+    button:
+      input: Demo

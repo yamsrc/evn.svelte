@@ -31,7 +31,7 @@ profile:
   title: ملفي الشخصي
   language:
     title: اللغة
-    description: هذا لا يؤثر على التعرف على الشيك. على أي حال، نحن نفهم معظم اللغات هناك.
+    description: هذا لا يؤثر على مسح الإيصالات — يمكننا قراءتها بلغات معظمها على أي حال.
   grammar:
     title: الصيغة النحوية
     description: >-
@@ -46,7 +46,6 @@ profile:
     title: الخلفية
 form:
   enterName: أدخل الاسم
-copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
 onboarding:
   name:
     title: لمسة شخصية
@@ -163,3 +162,4 @@ home:
     (name) => `مرحبًا ${name}!`
 search:
   empty: لم يتم العثور على نتائج
+dir: rtl

@@ -1,5 +1,3 @@
-import type { GroupJoinedNotification } from '@/notifications'
+import type { Of } from '@/notifications'
 
-export type Props = {
-  notification: GroupJoinedNotification
-}
+export type Props = { notification: Of<'groups', 'joined'> }

@@ -15,12 +15,22 @@ export const sections = (dict: Dictionary, notifications: Notification[]): Secti
     href: '/contacts/',
     label: dict.nav.contacts,
     Icon: Users,
-    unseen: notifications.some((n) => n.domain === 'groups'),
+    unseen: notifications.some(
+      (n) =>
+        n.domain === 'groups' ||
+        (n.domain === 'contacts' && n.event === 'connected') ||
+        (n.domain === 'contacts' && n.event === 'unchained'),
+    ),
   },
   {
     id: 'expenses',
     href: '/expenses/',
     label: dict.nav.expenses,
     Icon: PiggyBankIcon,
+    unseen: notifications.some(
+      (n) =>
+        n.domain === 'expenses' ||
+        (n.domain === 'contacts' && n.event === 'transferred'),
+    ),
   },
 ]

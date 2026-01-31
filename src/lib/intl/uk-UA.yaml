@@ -32,7 +32,7 @@ profile:
   language:
     title: Мова
     description: >-
-      Це не впливає на розпізнавання чеків. Ми й так розуміємо там більшість
+      Це не впливає на сканування чеків — ми й так можемо їх читати більшістю
       мов.
   grammar:
     title: Граматична форма
@@ -49,7 +49,6 @@ profile:
     title: Тло
 form:
   enterName: Введіть ім’я
-copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
 onboarding:
   name:
     title: Особистий штрих
@@ -168,3 +167,4 @@ home:
     (name) => `Привіт, ${name}!`
 search:
   empty: Результатів не знайдено
+dir: ltr

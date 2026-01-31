@@ -8,10 +8,37 @@ inputs:
       others:
         input: "{...names} joined {groupName}"
         context: make a function, that accepts array of names (one or more) and a group name. list is formatted using Intl.ListFormat
+      other:
+        input: "{name} joined {groupName}"
+        context: use gender
   accounts:
     created:
       hint:
-        input: Swipe left to dismiss
+        input: Slide to remove
   erase:
     input: Clear all
     context: button label (clears all notifications)
+  contacts:
+    connected:
+      input: You and {name} are now friends
+    unchained:
+      input: "{name} accepted the account"
+      context: Use gender
+    transferred:
+      paid:
+        input: "{name} received {amount} from you"
+        context: use gender
+      received:
+        input: "{name} paid you {amount}"
+        context: use gender
+      balance:
+        even:
+          input: You are even now
+        owed:
+          input: You're still owed {balance}
+        owe:
+          input: You owe {balance} now
+  expenses:
+    created:
+      input: "{amount} paid by {name}"
+      context: use gender

@@ -26,10 +26,9 @@
         'bg-card border border-border min-h-14 w-fit flex-col justify-center gap-0',
         classes,
       )}
-      href={contact ? `/contacts/${contact.id}/` : undefined}
+      href={contact ? `/contacts/${contact.identity}/` : undefined}
       {selected}
-      {onclick}
-    >
+      {onclick}>
       {#snippet left()}
         <div class="flex flex-col items-center gap-2 max-w-30 min-w-0 overflow-hidden">
           <Picture {account} class="size-8" />

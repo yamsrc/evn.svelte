@@ -25,9 +25,11 @@
 <Async store={favorites}>
   {#snippet awaited(favorites)}
     {@const favorite = favorites.find((f) => f.favorite === contact.identity)}
-    {@const on = favorite !== undefined}
-    <Action onclick={() => toggle(favorite)} class={[busy && 'opacity-75']}>
-      <Star fill={on ? 'currentColor' : 'none'} />
+    <Action
+      variant={favorite ? 'default' : 'secondary'}
+      onclick={() => toggle(favorite)}
+      class={[busy && 'opacity-75']}>
+      <Star fill={favorite ? 'currentColor' : 'none'} />
     </Action>
   {/snippet}
 </Async>

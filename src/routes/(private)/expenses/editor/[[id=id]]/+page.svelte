@@ -7,6 +7,7 @@
   import { Header } from '@/app/ui'
   import { attach } from '@/expenses'
   import { Editor } from '@/expenses/ui'
+  import { seen } from '@/notifications'
 
   const id = $derived(page.params.id)
   const ctx = Editor.getContext()
@@ -36,6 +37,10 @@
 
     ctx.value.attachments.push(...ids)
   }
+
+  $effect(() => {
+    if (id) void seen('expenses', id)
+  })
 </script>
 
 <Section>

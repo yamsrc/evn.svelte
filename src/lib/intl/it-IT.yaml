@@ -32,8 +32,8 @@ profile:
   language:
     title: Lingua
     description: >-
-      Questo non influisce sul riconoscimento dell'assegno. Comunque, lì capiamo
-      la maggior parte delle lingue.
+      Questo non influisce sulla scansione delle ricevute — possiamo comunque
+      leggerle nella maggior parte delle lingue.
   grammar:
     title: Forma grammaticale
     description: >-
@@ -50,7 +50,6 @@ profile:
     title: Sfondo
 form:
   enterName: Inserisci il nome
-copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
 onboarding:
   name:
     title: Tocco personale
@@ -171,3 +170,4 @@ home:
     (name) => `Ciao ${name}!`
 search:
   empty: Nessun risultato trovato
+dir: ltr

@@ -32,8 +32,8 @@ profile:
   language:
     title: Язык
     description: >-
-      Это не влияет на распознавание чеков. Мы и так понимаем там большинство
-      языков.
+      Это не влияет на сканирование чеков — мы всё равно можем читать их на
+      большинстве языков.
   grammar:
     title: Грамматическая форма
     description: >-
@@ -49,7 +49,6 @@ profile:
     title: Фон
 form:
   enterName: Введите имя
-copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
 onboarding:
   name:
     title: Личный штрих
@@ -168,3 +167,4 @@ home:
     (name) => `Привет, ${name}!`
 search:
   empty: Результаты не найдены
+dir: ltr

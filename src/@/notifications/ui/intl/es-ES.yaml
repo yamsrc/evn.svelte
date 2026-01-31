@@ -9,8 +9,53 @@ groups:
       (names, groupName) => `${new Intl.ListFormat("es", { style: "long", type:
       "conjunction" }).format(names)} se ha${names.length === 1 ? "" : "n"}
       unido a ${groupName}`
+    other: >-
+      !js
+
+      (name, groupName, gender) => { if (gender === "he") return `${name} se
+      unió a ${groupName}`; if (gender === "she") return `${name} se unió a
+      ${groupName}`; return `${name} se unió a ${groupName}`; }
 accounts:
   created:
     welcome: ¡Bienvenido a Evnly!
-    hint: Desliza a la izquierda para descartar
+    hint: Desliza para eliminar
 erase: Borrar todo
+contacts:
+  connected: |-
+    !js
+    (name) => `Ahora tú y ${name} sois amigos`
+  unchained: >-
+    !js
+
+    (name, gender) => gender === "he" ? `${name} aceptó la cuenta` : gender ===
+    "she" ? `${name} aceptó la cuenta` : `${name} aceptó la cuenta`
+  transferred:
+    paid: |-
+      !js
+      (name, amount, gender) => {
+        if (gender === "he") return `${name} recibió ${amount} de ti`;
+        if (gender === "she") return `${name} recibió ${amount} de ti`;
+        return `${name} recibió ${amount} de ti`;
+      }
+    received: |-
+      !js
+      (name, amount, gender) => {
+        if (gender === "he") return `${name} te pagó ${amount}`;
+        if (gender === "she") return `${name} te pagó ${amount}`;
+        return `${name} te pagó ${amount}`;
+      }
+    balance:
+      even: Ahora están a mano
+      owed: |-
+        !js
+        (balance) => `Aún te deben ${balance}`
+      owe: |-
+        !js
+        (balance) => `Ahora debes ${balance}`
+expenses:
+  created: >-
+    !js
+
+    (amount, name, gender) => gender === "he" ? `${amount} pagado por ${name}` :
+    gender === "she" ? `${amount} pagada por ${name}` : `${amount} pagado/a por
+    ${name}`

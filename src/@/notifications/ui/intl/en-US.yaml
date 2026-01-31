@@ -8,8 +8,39 @@ groups:
 
       (names, groupName) => `${new Intl.ListFormat("en", { style: "long", type:
       "conjunction" }).format(names)} joined ${groupName}`
+    other: |-
+      !js
+      (name, groupName, gender) => `${name} joined ${groupName}`
 accounts:
   created:
     welcome: Welcome to Evnly!
-    hint: Swipe left to dismiss
+    hint: Slide to remove
 erase: Clear all
+contacts:
+  connected: |-
+    !js
+    (name) => `You and ${name} are now friends`
+  unchained: |-
+    !js
+    (name, gender) => `${name} accepted the account`
+  transferred:
+    paid: |-
+      !js
+      (name, amount, gender) => {
+        return `${name} received ${amount} from you`;
+      }
+    received: |-
+      !js
+      (name, amount, gender) => `${name} paid you ${amount}`
+    balance:
+      even: You are even now
+      owed: |-
+        !js
+        (balance) => `You're still owed ${balance}`
+      owe: |-
+        !js
+        (balance) => `You owe ${balance} now`
+expenses:
+  created: |-
+    !js
+    (amount, name, gender) => `${amount} paid by ${name}`

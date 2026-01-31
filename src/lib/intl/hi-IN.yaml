@@ -32,8 +32,8 @@ profile:
   language:
     title: भाषा
     description: >-
-      यह चेक की पहचान को प्रभावित नहीं करता है। वैसे भी, हम वहां अधिकांश भाषाओं
-      को समझते हैं।
+      यह रसीद स्कैनिंग को प्रभावित नहीं करता — हम वैसे भी अधिकांश भाषाओं में
+      इन्हें पढ़ सकते हैं।
   grammar:
     title: व्याकरणिक रूप
     description: >-
@@ -48,7 +48,6 @@ profile:
     title: पृष्ठभूमि
 form:
   enterName: नाम दर्ज करें
-copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
 onboarding:
   name:
     title: व्यक्तिगत स्पर्श
@@ -165,3 +164,4 @@ home:
     (name) => `नमस्ते ${name}!`
 search:
   empty: कोई परिणाम नहीं मिला
+dir: ltr

@@ -35,3 +35,7 @@ export const echo = {
 export const pictures = {
   post: (body: File) => accounts.json('pictures', { method: 'POST', body, credentials: 'include' }),
 }
+
+export const demo = {
+  post: () => accounts.json('demo', { method: 'POST' }),
+}

@@ -31,7 +31,9 @@ profile:
   title: Wasifu wangu
   language:
     title: Lugha
-    description: Hili haiathiri utambuzi wa hundi. Hata hivyo, tunaelewa lugha nyingi hapo.
+    description: >-
+      Hii haiathiri uchanganuzi wa risiti — tunaweza kuzisoma katika lugha
+      nyingi hata hivyo.
   grammar:
     title: Umbo wa kisarufi
     description: >-
@@ -47,7 +49,6 @@ profile:
     title: Mandharinyuma
 form:
   enterName: Weka jina
-copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
 onboarding:
   name:
     title: Mguso wa kibinafsi
@@ -164,3 +165,4 @@ home:
     (name) => `Habari ${name}!`
 search:
   empty: Hakuna matokeo yaliyopatikana
+dir: ltr

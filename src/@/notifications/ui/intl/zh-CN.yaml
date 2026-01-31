@@ -8,8 +8,39 @@ groups:
 
       (names, groupName) => `${new Intl.ListFormat("zh", { style: "long", type:
       "conjunction" }).format(names)}已加入${groupName}`
+    other: |-
+      !js
+      (name, groupName, gender) => `${name}加入了${groupName}`
 accounts:
   created:
     welcome: 欢迎来到 Evnly！
-    hint: 向左滑动以关闭
+    hint: 滑动移除
 erase: 全部清除
+contacts:
+  connected: |-
+    !js
+    (name) => `你和${name}现在是朋友了`
+  unchained: |-
+    !js
+    (name, gender) => `${name}已接受该账户`
+  transferred:
+    paid: |-
+      !js
+      (name, amount, gender) => {
+        return `${name}已收到你转来的${amount}`;
+      }
+    received: |-
+      !js
+      (name, amount, gender) => `${name}已向你支付了${amount}`
+    balance:
+      even: 你们现在扯平了
+      owed: |-
+        !js
+        (balance) => `你仍然有${balance}未收到`
+      owe: |-
+        !js
+        (balance) => `您现在需支付${balance}`
+expenses:
+  created: |-
+    !js
+    (amount, name, gender) => `${name}已支付${amount}`

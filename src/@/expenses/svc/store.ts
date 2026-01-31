@@ -2,8 +2,10 @@ import { collection, ok, sync, type Maybe, values } from 'svas'
 import { derived } from 'svelte/store'
 import { accounts } from '@/accounts'
 import { account } from '@/iam'
+import { notifications } from '@/notifications'
 import { events } from '@/realtime'
 import { get } from './get'
+import { sort } from './unseen'
 import type * as net from './net'
 import type { Account } from '@/accounts'
 
@@ -21,11 +23,13 @@ export const internal = collection<net.Expense>({
 
 events.on('default.expenses.sync', (entry: net.Expense) => sync(internal, entry))
 
-export const expenses = derived<[typeof internal], Maybe<Expense[]>>([internal], ([$expenses], set, update) => {
+export const expenses = derived<[typeof internal, typeof notifications], Maybe<Expense[]>>([internal, notifications], ([$expenses, $notifications], set, update) => {
   if (!ok($expenses))
     return set($expenses)
 
-  const values = $expenses.map((expense) => map(expense))
+  const values = $expenses
+    .map((expense) => map(expense))
+    .sort(sort(ok($notifications) ? $notifications : []))
 
   set(values)
 

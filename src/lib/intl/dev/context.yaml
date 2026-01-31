@@ -1,0 +1,19 @@
+context: Mount 'dev' context
+inputs:
+  components:
+    title:
+      input: Components
+    hold:
+      title:
+        input: Hold
+    stack:
+      title:
+        input: Stack
+      collapse:
+        input: Collapse
+        context: button label
+    notifications:
+      title:
+        input: Notifications
+      display:
+        input: "Show: {count}"

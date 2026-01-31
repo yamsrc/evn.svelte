@@ -1,0 +1,12 @@
+components:
+  title: Компоненти
+  hold:
+    title: Hold
+  stack:
+    title: Stack
+    collapse: Згорнути
+  notifications:
+    title: Notifications
+    display: |-
+      !js
+      (count) => `Показати: ${count}`

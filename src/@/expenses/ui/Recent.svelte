@@ -1,9 +1,10 @@
 <script lang="ts">
+  import { unseen } from '@/expenses'
   import Expense from './Expense.svelte'
   import { dict } from './intl'
   import type { Props } from './Recent'
 
-  const { expenses }: Props = $props()
+  const { expenses, notifications }: Props = $props()
   const LIMIT = 3
 </script>
 
@@ -14,8 +15,9 @@
   {:else}
     <ul class="space-y-2">
       {#each expenses.slice(0, LIMIT) as expense (expense.id)}
+        {@const highlighted = unseen(expense, notifications ?? [])}
         <li>
-          <Expense {expense} />
+          <Expense {expense} {highlighted} />
         </li>
       {/each}
     </ul>

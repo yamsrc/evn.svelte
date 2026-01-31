@@ -32,8 +32,8 @@ profile:
   language:
     title: Sprache
     description: >-
-      Das beeinflusst die Scheck-Erkennung nicht. Wir verstehen dort ohnehin die
-      meisten Sprachen.
+      Das beeinflusst das Einscannen von Kassenbons nicht – wir können sie
+      ohnehin in den meisten Sprachen lesen.
   grammar:
     title: Grammatische Form
     description: >-
@@ -50,7 +50,6 @@ profile:
     title: Hintergrund
 form:
   enterName: Name eingeben
-copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
 onboarding:
   name:
     title: Persönliche Note
@@ -171,3 +170,4 @@ home:
     (name) => `Hallo ${name}!`
 search:
   empty: Keine Ergebnisse gefunden
+dir: ltr

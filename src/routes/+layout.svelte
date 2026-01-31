@@ -5,6 +5,7 @@
   import { page } from '$app/state'
   import { track } from '$com/history'
   import { meta } from '$config'
+  import { dict } from '$lib/intl'
   import { mount, navigate } from '$lib/tools'
   import { Background } from '@/app/ui'
   import '../app.css'
@@ -17,6 +18,10 @@
   onMount(mount)
   onNavigate(navigate)
   afterNavigate(track)
+
+  $effect(() => {
+    document.dir = $dict.dir
+  })
 </script>
 
 <svelte:head>
@@ -45,6 +50,4 @@
 </svelte:head>
 
 <Background class="fixed inset-0 -z-50 pointer-events-none" />
-<div class="max-w-2xl mx-auto relative z-10">
-  {@render children()}
-</div>
+{@render children()}

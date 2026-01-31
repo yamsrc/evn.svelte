@@ -1,9 +1,10 @@
 <script lang="ts">
   import { Section } from '@/app/ui'
+  import { unseen } from '@/contacts'
   import Panel from './Panel.svelte'
   import type { Props } from './Contacts'
 
-  let { contacts, title, actionable, selection = $bindable() }: Props = $props()
+  let { contacts, title, actionable, selection = $bindable(), notifications }: Props = $props()
 
   const selectable = $derived(selection !== undefined)
 
@@ -27,8 +28,9 @@
     <div id="contacts-list-content" class="flex flex-col gap-1.5">
       {#each contacts as contact (contact.id)}
         {@const selected = selection?.has(contact.identity)}
+        {@const highlighted = unseen(contact, notifications ?? [])}
         {@const selectedProps = selectable ? { selected, onselect } : undefined}
-        <Panel {contact} {actionable} {...selectedProps} />
+        <Panel {contact} {actionable} {highlighted} {...selectedProps} />
       {/each}
     </div>
   </Section>

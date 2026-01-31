@@ -1,8 +1,9 @@
 import type { Snippet } from 'svelte'
+import type { ClassValue } from 'svelte/elements'
 
 export interface Props {
   children: Snippet
-  class?: string
+  class?: ClassValue
   /** Do not include safe area. Default is false. */
   unsafe?: boolean
 }

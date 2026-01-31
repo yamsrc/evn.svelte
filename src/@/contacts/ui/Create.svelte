@@ -3,6 +3,7 @@
   import { dict } from '$lib/intl'
   import { Cosmetics, type Value } from '@/app/ui'
   import { add } from '@/contacts'
+  import { account } from '@/iam'
 
   async function onchange(value: Value) {
     const contact = await add({
@@ -12,7 +13,9 @@
 
     if (contact instanceof Error) return
 
-    await goto(`/contacts/${contact.id}/`)
+    const identity = contact.identities.find((id) => id !== $account?.id)
+
+    if (identity) await goto(`/contacts/${identity}/`)
   }
 </script>
 
@@ -20,5 +23,4 @@
   label={$dict.contacts.add.label}
   note={$dict.contacts.add.description}
   {onchange}
-  autofocus
-/>
+  autofocus />

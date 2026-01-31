@@ -3,7 +3,7 @@
   import { Loader } from '$com/loader'
   import { inApp } from '$lib/tools'
   import { cn } from '$lib/utils'
-  import { authenticated, greeting, account as iam, method } from '@/iam'
+  import { authenticated, greeting, account as iam, method, processing } from '@/iam'
   import Authentication from './Authentication.svelte'
   import InApp from './InApp.svelte'
   import Languages from './Languages.svelte'
@@ -29,7 +29,7 @@
 
 {#if browser && $authenticated}
   {@render children()}
-{:else if $greeting || !browser}
+{:else if $greeting || $processing || !browser}
   <div class="flex items-center justify-center h-screen">
     <Loader />
   </div>

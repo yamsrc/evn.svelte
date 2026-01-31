@@ -32,8 +32,8 @@ profile:
   language:
     title: Langue
     description: >-
-      Cela n’affecte pas la reconnaissance des chèques. Nous comprenons de toute
-      façon la plupart des langues là-bas.
+      Cela n’affecte pas la numérisation des reçus — nous pouvons de toute façon
+      les lire dans la plupart des langues.
   grammar:
     title: Forme grammaticale
     description: >-
@@ -50,7 +50,6 @@ profile:
     title: Arrière-plan
 form:
   enterName: Saisissez le nom
-copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
 onboarding:
   name:
     title: Touche personnelle
@@ -171,3 +170,4 @@ home:
     (name) => `Salut ${name} !`
 search:
   empty: Aucun résultat trouvé
+dir: ltr

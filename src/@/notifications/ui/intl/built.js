@@ -6,226 +6,557 @@ export const dictionaries = {
     "groups": {
       "joined": {
         "me": (groupName) => `لقد انضممت إلى ${groupName}`,
-        "others": (names, groupName) => `${new Intl.ListFormat("ar", { style: "long", type: "conjunction" }).format(names)} انضم${names.length === 1 ? "ت" : "وا"} إلى ${groupName}`
+        "others": (names, groupName) => `${new Intl.ListFormat("ar", { style: "long", type: "conjunction" }).format(names)} انضم${names.length === 1 ? "ت" : "وا"} إلى ${groupName}`,
+        "other": (name, groupName, gender) => { if (gender === "he") return `${name} انضم إلى ${groupName}`; if (gender === "she") return `${name} انضمت إلى ${groupName}`; return `${name} انضم(ت) إلى ${groupName}`; }
       }
     },
     "accounts": {
       "created": {
         "welcome": "مرحبًا بك في Evnly!",
-        "hint": "اسحب لليسار لإزالة"
+        "hint": "اسحب للإزالة"
       }
     },
-    "erase": "مسح الكل"
+    "erase": "مسح الكل",
+    "contacts": {
+      "connected": (name) => `أنت و${name} الآن أصدقاء`,
+      "unchained": (name, gender) => gender === "he" ? `${name} قَبِل الحساب` : gender === "she" ? `${name} قَبِلَت الحساب` : `${name} قَبِل(ت) الحساب`,
+      "transferred": {
+        "paid": (name, amount, gender) => {
+  if (gender === "he") return `${name} استلم ${amount} منك`;
+  if (gender === "she") return `${name} استلمت ${amount} منك`;
+  return `${name} استلم/استلمت ${amount} منك`;
+},
+        "received": (name, amount, gender) => {
+  if (gender === "he") return `${name} دفع لك ${amount}`;
+  if (gender === "she") return `${name} دفعت لك ${amount}`;
+  return `${name} دفع(ت) لك ${amount}`;
+},
+        "balance": {
+          "even": "أنتما متعادلان الآن",
+          "owed": (balance) => `لا يزال مستحقًا لك ${balance}`,
+          "owe": (balance) => `أنت مدين الآن بمبلغ ${balance}`
+        }
+      }
+    },
+    "expenses": {
+      "created": (amount, name, gender) => gender === "he" ? `${amount} تم دفعها بواسطة ${name}` : gender === "she" ? `${amount} تم دفعها بواسطة ${name}` : `${amount} تم دفعها بواسطة ${name}`
+    }
   },
   "de-DE": {
     "groups": {
       "joined": {
         "me": (groupName) => `Du bist ${groupName} beigetreten`,
-        "others": (names, groupName) => `${new Intl.ListFormat("de", { style: "long", type: "conjunction" }).format(names)} ${names.length === 1 ? "ist" : "sind"} ${groupName} beigetreten`
+        "others": (names, groupName) => `${new Intl.ListFormat("de", { style: "long", type: "conjunction" }).format(names)} ${names.length === 1 ? "ist" : "sind"} ${groupName} beigetreten`,
+        "other": (name, groupName, gender) => { if (gender === "he") return `${name} ist ${groupName} beigetreten`; if (gender === "she") return `${name} ist ${groupName} beigetreten`; return `${name} ist ${groupName} beigetreten`; }
       }
     },
     "accounts": {
       "created": {
         "welcome": "Willkommen bei Evnly!",
-        "hint": "Nach links wischen zum Ausblenden"
+        "hint": "Zum Entfernen wischen"
       }
     },
-    "erase": "Alle löschen"
+    "erase": "Alle löschen",
+    "contacts": {
+      "connected": (name) => `Du und ${name} seid jetzt befreundet`,
+      "unchained": (name, gender) => gender === "he" ? `${name} hat das Konto akzeptiert` : gender === "she" ? `${name} hat das Konto akzeptiert` : `${name} hat das Konto akzeptiert`,
+      "transferred": {
+        "paid": (name, amount, gender) => {
+  return `${name} hat ${amount} von dir erhalten`;
+},
+        "received": (name, amount, gender) => {
+  if (gender === "he") return `${name} hat dir ${amount} bezahlt`;
+  if (gender === "she") return `${name} hat dir ${amount} bezahlt`;
+  return `${name} hat dir ${amount} bezahlt`;
+},
+        "balance": {
+          "even": "Ihr seid jetzt quitt",
+          "owed": (balance) => `Dir stehen noch ${balance} zu`,
+          "owe": (balance) => `Ihr aktueller Kontostand beträgt ${balance}`
+        }
+      }
+    },
+    "expenses": {
+      "created": (amount, name, gender) => `${amount} von ${name} bezahlt`
+    }
   },
   "en-US": {
     "groups": {
       "joined": {
         "me": (groupName) => `You have joined ${groupName}`,
-        "others": (names, groupName) => `${new Intl.ListFormat("en", { style: "long", type: "conjunction" }).format(names)} joined ${groupName}`
+        "others": (names, groupName) => `${new Intl.ListFormat("en", { style: "long", type: "conjunction" }).format(names)} joined ${groupName}`,
+        "other": (name, groupName, gender) => `${name} joined ${groupName}`
       }
     },
     "accounts": {
       "created": {
         "welcome": "Welcome to Evnly!",
-        "hint": "Swipe left to dismiss"
+        "hint": "Slide to remove"
       }
     },
-    "erase": "Clear all"
+    "erase": "Clear all",
+    "contacts": {
+      "connected": (name) => `You and ${name} are now friends`,
+      "unchained": (name, gender) => `${name} accepted the account`,
+      "transferred": {
+        "paid": (name, amount, gender) => {
+  return `${name} received ${amount} from you`;
+},
+        "received": (name, amount, gender) => `${name} paid you ${amount}`,
+        "balance": {
+          "even": "You are even now",
+          "owed": (balance) => `You're still owed ${balance}`,
+          "owe": (balance) => `You owe ${balance} now`
+        }
+      }
+    },
+    "expenses": {
+      "created": (amount, name, gender) => `${amount} paid by ${name}`
+    }
   },
   "es-ES": {
     "groups": {
       "joined": {
         "me": (groupName) => `Te has unido a ${groupName}`,
-        "others": (names, groupName) => `${new Intl.ListFormat("es", { style: "long", type: "conjunction" }).format(names)} se ha${names.length === 1 ? "" : "n"} unido a ${groupName}`
+        "others": (names, groupName) => `${new Intl.ListFormat("es", { style: "long", type: "conjunction" }).format(names)} se ha${names.length === 1 ? "" : "n"} unido a ${groupName}`,
+        "other": (name, groupName, gender) => { if (gender === "he") return `${name} se unió a ${groupName}`; if (gender === "she") return `${name} se unió a ${groupName}`; return `${name} se unió a ${groupName}`; }
       }
     },
     "accounts": {
       "created": {
         "welcome": "¡Bienvenido a Evnly!",
-        "hint": "Desliza a la izquierda para descartar"
+        "hint": "Desliza para eliminar"
       }
     },
-    "erase": "Borrar todo"
+    "erase": "Borrar todo",
+    "contacts": {
+      "connected": (name) => `Ahora tú y ${name} sois amigos`,
+      "unchained": (name, gender) => gender === "he" ? `${name} aceptó la cuenta` : gender === "she" ? `${name} aceptó la cuenta` : `${name} aceptó la cuenta`,
+      "transferred": {
+        "paid": (name, amount, gender) => {
+  if (gender === "he") return `${name} recibió ${amount} de ti`;
+  if (gender === "she") return `${name} recibió ${amount} de ti`;
+  return `${name} recibió ${amount} de ti`;
+},
+        "received": (name, amount, gender) => {
+  if (gender === "he") return `${name} te pagó ${amount}`;
+  if (gender === "she") return `${name} te pagó ${amount}`;
+  return `${name} te pagó ${amount}`;
+},
+        "balance": {
+          "even": "Ahora están a mano",
+          "owed": (balance) => `Aún te deben ${balance}`,
+          "owe": (balance) => `Ahora debes ${balance}`
+        }
+      }
+    },
+    "expenses": {
+      "created": (amount, name, gender) => gender === "he" ? `${amount} pagado por ${name}` : gender === "she" ? `${amount} pagada por ${name}` : `${amount} pagado/a por ${name}`
+    }
   },
   "fr-FR": {
     "groups": {
       "joined": {
         "me": (groupName) => `Vous avez rejoint ${groupName}`,
-        "others": (names, groupName) => `${new Intl.ListFormat("fr", { style: "long", type: "conjunction" }).format(names)} a${names.length === 1 ? "" : "nt"} rejoint ${groupName}`
+        "others": (names, groupName) => `${new Intl.ListFormat("fr", { style: "long", type: "conjunction" }).format(names)} a${names.length === 1 ? "" : "nt"} rejoint ${groupName}`,
+        "other": (name, groupName, gender) => { if (gender === "he") return `${name} a rejoint ${groupName}`; if (gender === "she") return `${name} a rejointe ${groupName}`; return `${name} a rejoint(e) ${groupName}`; }
       }
     },
     "accounts": {
       "created": {
         "welcome": "Bienvenue chez Evnly !",
-        "hint": "Faites glisser vers la gauche pour ignorer"
+        "hint": "Faites glisser pour supprimer"
       }
     },
-    "erase": "Tout effacer"
+    "erase": "Tout effacer",
+    "contacts": {
+      "connected": (name) => `Vous et ${name} êtes maintenant amis`,
+      "unchained": (name, gender) => gender === "he" ? `${name} a accepté le compte` : gender === "she" ? `${name} a accepté le compte` : `${name} a accepté le compte`,
+      "transferred": {
+        "paid": (name, amount, gender) => {
+  if (gender === "he") return `${name} a reçu ${amount} de votre part`;
+  if (gender === "she") return `${name} a reçu ${amount} de votre part`;
+  return `${name} a reçu ${amount} de votre part`;
+},
+        "received": (name, amount, gender) => {
+  if (gender === "he") return `${name} vous a payé ${amount}`;
+  if (gender === "she") return `${name} vous a payé ${amount}`;
+  return `${name} vous a payé ${amount}`;
+},
+        "balance": {
+          "even": "Vous êtes quittes maintenant",
+          "owed": (balance) => `Il vous reste à recevoir ${balance}`,
+          "owe": (balance) => `Vous devez maintenant ${balance}`
+        }
+      }
+    },
+    "expenses": {
+      "created": (amount, name, gender) => gender === "he" ? `${amount} payé par ${name}` : gender === "she" ? `${amount} payée par ${name}` : `${amount} payé(e) par ${name}`
+    }
   },
   "hi-IN": {
     "groups": {
       "joined": {
         "me": (groupName) => `${groupName} में आप शामिल हो गए हैं`,
-        "others": (names, groupName) => `${new Intl.ListFormat("hi", { style: "long", type: "conjunction" }).format(names)} ने ${groupName} में जॉइन किया`
+        "others": (names, groupName) => `${new Intl.ListFormat("hi", { style: "long", type: "conjunction" }).format(names)} ने ${groupName} में जॉइन किया`,
+        "other": (name, groupName, gender) => { if (gender === "he") return `${name} ने ${groupName} जॉइन किया`; if (gender === "she") return `${name} ने ${groupName} जॉइन की`; return `${name} ने ${groupName} जॉइन किया/की`; }
       }
     },
     "accounts": {
       "created": {
         "welcome": "Evnly में आपका स्वागत है!",
-        "hint": "हटाने के लिए बाएँ स्वाइप करें"
+        "hint": "हटाने के लिए स्लाइड करें"
       }
     },
-    "erase": "सभी साफ़ करें"
+    "erase": "सभी साफ़ करें",
+    "contacts": {
+      "connected": (name) => `अब आप और ${name} दोस्त हैं`,
+      "unchained": (name, gender) => gender === "he" ? `${name} ने खाता स्वीकार किया` : gender === "she" ? `${name} ने खाता स्वीकार किया` : `${name} ने खाता स्वीकार किया`,
+      "transferred": {
+        "paid": (name, amount, gender) => {
+  if (gender === "he") return `${name} ने आपसे ${amount} प्राप्त किया`;
+  if (gender === "she") return `${name} ने आपसे ${amount} प्राप्त की`;
+  return `${name} ने आपसे ${amount} प्राप्त किया/की`;
+},
+        "received": (name, amount, gender) => {
+  if (gender === "he") return `${name} ने आपको ${amount} भुगतान किया`;
+  if (gender === "she") return `${name} ने आपको ${amount} भुगतान किया`;
+  return `${name} ने आपको ${amount} भुगतान किया`;
+},
+        "balance": {
+          "even": "अब आप बराबर हैं",
+          "owed": (balance) => `आपको अभी भी ${balance} दिया जाना बाकी है`,
+          "owe": (balance) => `आपको अभी ${balance} देना है`
+        }
+      }
+    },
+    "expenses": {
+      "created": (amount, name, gender) => `${name} द्वारा ${amount} दिया गया`
+    }
   },
   "it-IT": {
     "groups": {
       "joined": {
         "me": (groupName) => `Sei entrato in ${groupName}`,
-        "others": (names, groupName) => `${new Intl.ListFormat("it", { style: "long", type: "conjunction" }).format(names)} ha${names.length === 1 ? "" : "nno"} aderito a ${groupName}`
+        "others": (names, groupName) => `${new Intl.ListFormat("it", { style: "long", type: "conjunction" }).format(names)} ha${names.length === 1 ? "" : "nno"} aderito a ${groupName}`,
+        "other": (name, groupName, gender) => { if (gender === "he") return `${name} si è unito a ${groupName}`; if (gender === "she") return `${name} si è unita a ${groupName}`; return `${name} si è unito/a a ${groupName}`; }
       }
     },
     "accounts": {
       "created": {
         "welcome": "Benvenuto su Evnly!",
-        "hint": "Scorri verso sinistra per rimuovere"
+        "hint": "Scorri per rimuovere"
       }
     },
-    "erase": "Cancella tutto"
+    "erase": "Cancella tutto",
+    "contacts": {
+      "connected": (name) => `Ora tu e ${name} siete amici`,
+      "unchained": (name, gender) => gender === "he" ? `${name} ha accettato l'account` : gender === "she" ? `${name} ha accettato l'account` : `${name} ha accettato l'account`,
+      "transferred": {
+        "paid": (name, amount, gender) => {
+  if (gender === "he") return `${name} ha ricevuto ${amount} da te`;
+  if (gender === "she") return `${name} ha ricevuta ${amount} da te`;
+  return `${name} ha ricevuto/ricevuta ${amount} da te`;
+},
+        "received": (name, amount, gender) => {
+  if (gender === "he") return `${name} ti ha pagato ${amount}`;
+  if (gender === "she") return `${name} ti ha pagata ${amount}`;
+  return `${name} ti ha pagato/a ${amount}`;
+},
+        "balance": {
+          "even": "Ora siete pari",
+          "owed": (balance) => `Ti devono ancora ${balance}`,
+          "owe": (balance) => `Attualmente devi ${balance}`
+        }
+      }
+    },
+    "expenses": {
+      "created": (amount, name, gender) => gender === "he" ? `${amount} pagato da ${name}` : gender === "she" ? `${amount} pagata da ${name}` : `${amount} pagato/a da ${name}`
+    }
   },
   "ja-JP": {
     "groups": {
       "joined": {
         "me": (groupName) => `${groupName} に参加しました`,
-        "others": (names, groupName) => `${new Intl.ListFormat("ja", { style: "long", type: "conjunction" }).format(names)}が${groupName}に参加しました`
+        "others": (names, groupName) => `${new Intl.ListFormat("ja", { style: "long", type: "conjunction" }).format(names)}が${groupName}に参加しました`,
+        "other": (name, groupName, gender) => `${name}が${groupName}に参加しました`
       }
     },
     "accounts": {
       "created": {
         "welcome": "Evnlyへようこそ！",
-        "hint": "左にスワイプして閉じる"
+        "hint": "スライドして削除"
       }
     },
-    "erase": "すべてクリア"
+    "erase": "すべてクリア",
+    "contacts": {
+      "connected": (name) => `あなたと${name}は友達になりました`,
+      "unchained": (name, gender) => `${name}がアカウントを承認しました`,
+      "transferred": {
+        "paid": (name, amount, gender) => {
+  return `${name}があなたから${amount}を受け取りました`;
+},
+        "received": (name, amount, gender) => `${name}さんがあなたに${amount}を支払いました`,
+        "balance": {
+          "even": "これであなたたちは今、互いにイーブンです",
+          "owed": (balance) => `まだ${balance}の支払いがあります`,
+          "owe": (balance) => `現在のお支払い額は${balance}です`
+        }
+      }
+    },
+    "expenses": {
+      "created": (amount, name, gender) => `${name}が支払った金額：${amount}`
+    }
   },
   "ko-KR": {
     "groups": {
       "joined": {
         "me": (groupName) => `${groupName}에 참가하셨습니다`,
-        "others": (names, groupName) => `${new Intl.ListFormat("ko", { style: "long", type: "conjunction" }).format(names)}님이(가) ${groupName}에 가입했어요`
+        "others": (names, groupName) => `${new Intl.ListFormat("ko", { style: "long", type: "conjunction" }).format(names)}님이(가) ${groupName}에 가입했어요`,
+        "other": (name, groupName, gender) => `${name}님이 ${groupName}에 참여했습니다`
       }
     },
     "accounts": {
       "created": {
         "welcome": "Evnly에 오신 것을 환영합니다!",
-        "hint": "왼쪽으로 밀어서 닫기"
+        "hint": "밀어서 제거"
       }
     },
-    "erase": "모두 지우기"
+    "erase": "모두 지우기",
+    "contacts": {
+      "connected": (name) => `당신과 ${name}님이 이제 친구가 되었습니다`,
+      "unchained": (name, gender) => `${name}님이 계정을 승인했습니다`,
+      "transferred": {
+        "paid": (name, amount, gender) => {
+  return `${name}님이 당신에게서 ${amount}을(를) 받았습니다`;
+},
+        "received": (name, amount, gender) => `${name}님이 당신에게 ${amount}을(를) 보냈습니다`,
+        "balance": {
+          "even": "이제 당신들은 서로 비겼습니다",
+          "owed": (balance) => `아직 받을 금액이 ${balance}입니다`,
+          "owe": (balance) => `현재 ${balance}을(를) 지불해야 합니다`
+        }
+      }
+    },
+    "expenses": {
+      "created": (amount, name, gender) => `${name}님이 결제한 금액: ${amount}`
+    }
   },
   "nl-NL": {
     "groups": {
       "joined": {
         "me": (groupName) => `Je bent lid geworden van ${groupName}`,
-        "others": (names, groupName) => `${new Intl.ListFormat("nl", { style: "long", type: "conjunction" }).format(names)} ${names.length === 1 ? "is" : "zijn"} lid geworden van ${groupName}`
+        "others": (names, groupName) => `${new Intl.ListFormat("nl", { style: "long", type: "conjunction" }).format(names)} ${names.length === 1 ? "is" : "zijn"} lid geworden van ${groupName}`,
+        "other": (name, groupName, gender) => `${name} is lid geworden van ${groupName}`
       }
     },
     "accounts": {
       "created": {
         "welcome": "Welkom bij Evnly!",
-        "hint": "Veeg naar links om te sluiten"
+        "hint": "Veeg om te verwijderen"
       }
     },
-    "erase": "Alles wissen"
+    "erase": "Alles wissen",
+    "contacts": {
+      "connected": (name) => `Jij en ${name} zijn nu vrienden`,
+      "unchained": (name, gender) => `${name} heeft het account geaccepteerd`,
+      "transferred": {
+        "paid": (name, amount, gender) => {
+  return `${name} heeft ${amount} van je ontvangen`;
+},
+        "received": (name, amount, gender) => `${name} heeft je ${amount} betaald`,
+        "balance": {
+          "even": "Jullie staan nu gelijk",
+          "owed": (balance) => `Je krijgt nog ${balance}`,
+          "owe": (balance) => `Je moet nu ${balance} betalen`
+        }
+      }
+    },
+    "expenses": {
+      "created": (amount, name, gender) => `${amount} betaald door ${name}`
+    }
   },
   "ru-RU": {
     "groups": {
       "joined": {
         "me": (groupName) => `Вы присоединились к группе ${groupName}`,
-        "others": (names, groupName) => `${new Intl.ListFormat("ru", { style: "long", type: "conjunction" }).format(names)} ${names.length === 1 ? "присоединился" : "присоединились"} к группе ${groupName}`
+        "others": (names, groupName) => `${new Intl.ListFormat("ru", { style: "long", type: "conjunction" }).format(names)} ${names.length === 1 ? "присоединился" : "присоединились"} к группе ${groupName}`,
+        "other": (name, groupName, gender) => { if (gender === "he") return `${name} присоединился к группе ${groupName}`; if (gender === "she") return `${name} присоединилась к группе ${groupName}`; return `${name} присоединился(лась) к группе ${groupName}`; }
       }
     },
     "accounts": {
       "created": {
         "welcome": "Добро пожаловать в Evnly!",
-        "hint": "Проведите влево, чтобы закрыть"
+        "hint": "Смахните для удаления"
       }
     },
-    "erase": "Очистить все"
+    "erase": "Очистить все",
+    "contacts": {
+      "connected": (name) => `Вы и ${name} теперь друзья`,
+      "unchained": (name, gender) => gender === "he" ? `${name} принял аккаунт` : gender === "she" ? `${name} приняла аккаунт` : `${name} принял(а) аккаунт`,
+      "transferred": {
+        "paid": (name, amount, gender) => {
+  if (gender === "he") return `${name} получил ${amount} от вас`;
+  if (gender === "she") return `${name} получила ${amount} от вас`;
+  return `${name} получил(а) ${amount} от вас`;
+},
+        "received": (name, amount, gender) => {
+  if (gender === "he") return `${name} заплатил вам ${amount}`;
+  if (gender === "she") return `${name} заплатила вам ${amount}`;
+  return `${name} заплатил(а) вам ${amount}`;
+},
+        "balance": {
+          "even": "Теперь вы в расчёте",
+          "owed": (balance) => `Вам всё еще должны ${balance}`,
+          "owe": (balance) => `Сейчас вы должны ${balance}`
+        }
+      }
+    },
+    "expenses": {
+      "created": (amount, name, gender) => gender === "he" ? `${amount} оплачено ${name}` : gender === "she" ? `${amount} оплачено ${name}ой` : `${amount} оплачено ${name}`
+    }
   },
   "sw-TZ": {
     "groups": {
       "joined": {
         "me": (groupName) => `Umejiunga na ${groupName}`,
-        "others": (names, groupName) => `${new Intl.ListFormat("sw", { style: "long", type: "conjunction" }).format(names)} amejiunga na ${groupName}`
+        "others": (names, groupName) => `${new Intl.ListFormat("sw", { style: "long", type: "conjunction" }).format(names)} amejiunga na ${groupName}`,
+        "other": (name, groupName, gender) => `${name} amejiunga na ${groupName}`
       }
     },
     "accounts": {
       "created": {
         "welcome": "Karibu kwenye Evnly!",
-        "hint": "Sogeza kushoto kuondoa"
+        "hint": "Telezesha kuondoa"
       }
     },
-    "erase": "Futa zote"
+    "erase": "Futa zote",
+    "contacts": {
+      "connected": (name) => `Wewe na ${name} sasa ni marafiki`,
+      "unchained": (name, gender) => `${name} amekubali akaunti`,
+      "transferred": {
+        "paid": (name, amount, gender) => {
+  return `${name} amepokea ${amount} kutoka kwako`;
+},
+        "received": (name, amount, gender) => `${name} amekulipa ${amount}`,
+        "balance": {
+          "even": "Sasa ninyi mko sawa",
+          "owed": (balance) => `Bado unaidai ${balance}`,
+          "owe": (balance) => `Unadaiwa ${balance} sasa`
+        }
+      }
+    },
+    "expenses": {
+      "created": (amount, name, gender) => `${amount} imelipwa na ${name}`
+    }
   },
   "tr-TR": {
     "groups": {
       "joined": {
         "me": (groupName) => `${groupName} grubuna katıldınız`,
-        "others": (names, groupName) => `${new Intl.ListFormat("tr", { style: "long", type: "conjunction" }).format(names)} ${groupName} grubuna katıldı`
+        "others": (names, groupName) => `${new Intl.ListFormat("tr", { style: "long", type: "conjunction" }).format(names)} ${groupName} grubuna katıldı`,
+        "other": (name, groupName, gender) => `${name}, ${groupName} grubuna katıldı`
       }
     },
     "accounts": {
       "created": {
         "welcome": "Evnly'e hoş geldiniz!",
-        "hint": "Kapatmak için sola kaydır"
+        "hint": "Kaldırmak için kaydırın"
       }
     },
-    "erase": "Tümünü temizle"
+    "erase": "Tümünü temizle",
+    "contacts": {
+      "connected": (name) => `Sen ve ${name} artık arkadaşsınız`,
+      "unchained": (name, gender) => `${name} hesabı kabul etti`,
+      "transferred": {
+        "paid": (name, amount, gender) => {
+  return `${name}, senden ${amount} aldı`;
+},
+        "received": (name, amount, gender) => `${name} sana ${amount} ödedi`,
+        "balance": {
+          "even": "Artık başa başsınız",
+          "owed": (balance) => `Hâlâ ${balance} alacağınız var`,
+          "owe": (balance) => `Şu anda ${balance} borcunuz var`
+        }
+      }
+    },
+    "expenses": {
+      "created": (amount, name, gender) => `${amount} ${name} tarafından ödendi`
+    }
   },
   "uk-UA": {
     "groups": {
       "joined": {
         "me": (groupName) => `Ви приєдналися до ${groupName}`,
-        "others": (names, groupName) => `${new Intl.ListFormat("uk", { style: "long", type: "conjunction" }).format(names)} ${names.length === 1 ? "приєднався" : "приєдналися"} до ${groupName}`
+        "others": (names, groupName) => `${new Intl.ListFormat("uk", { style: "long", type: "conjunction" }).format(names)} ${names.length === 1 ? "приєднався" : "приєдналися"} до ${groupName}`,
+        "other": (name, groupName, gender) => { if (gender === "he") return `${name} приєднався до ${groupName}`; if (gender === "she") return `${name} приєдналася до ${groupName}`; return `${name} приєднався(лася) до ${groupName}`; }
       }
     },
     "accounts": {
       "created": {
         "welcome": "Ласкаво просимо до Evnly!",
-        "hint": "Проведіть вліво, щоб закрити"
+        "hint": "Проведіть, щоб видалити"
       }
     },
-    "erase": "Очистити все"
+    "erase": "Очистити все",
+    "contacts": {
+      "connected": (name) => `Ви та ${name} тепер друзі`,
+      "unchained": (name, gender) => gender === "he" ? `${name} прийняв обліковий запис` : gender === "she" ? `${name} прийняла обліковий запис` : `${name} прийняв(ла) обліковий запис`,
+      "transferred": {
+        "paid": (name, amount, gender) => {
+  if (gender === "he") return `${name} отримав ${amount} від вас`;
+  if (gender === "she") return `${name} отримала ${amount} від вас`;
+  return `${name} отримав(ла) ${amount} від вас`;
+},
+        "received": (name, amount, gender) => {
+  if (gender === "he") return `${name} заплатив вам ${amount}`;
+  if (gender === "she") return `${name} заплатила вам ${amount}`;
+  return `${name} заплатив(ла) вам ${amount}`;
+},
+        "balance": {
+          "even": "Тепер ви квити",
+          "owed": (balance) => `Вам ще винні ${balance}`,
+          "owe": (balance) => `Зараз ви винні ${balance}`
+        }
+      }
+    },
+    "expenses": {
+      "created": (amount, name, gender) => gender === "he" ? `${amount} сплачено ${name}` : gender === "she" ? `${amount} сплачено ${name}ою` : `${amount} сплачено ${name}`
+    }
   },
   "zh-CN": {
     "groups": {
       "joined": {
         "me": (groupName) => `您已加入${groupName}`,
-        "others": (names, groupName) => `${new Intl.ListFormat("zh", { style: "long", type: "conjunction" }).format(names)}已加入${groupName}`
+        "others": (names, groupName) => `${new Intl.ListFormat("zh", { style: "long", type: "conjunction" }).format(names)}已加入${groupName}`,
+        "other": (name, groupName, gender) => `${name}加入了${groupName}`
       }
     },
     "accounts": {
       "created": {
         "welcome": "欢迎来到 Evnly！",
-        "hint": "向左滑动以关闭"
+        "hint": "滑动移除"
       }
     },
-    "erase": "全部清除"
+    "erase": "全部清除",
+    "contacts": {
+      "connected": (name) => `你和${name}现在是朋友了`,
+      "unchained": (name, gender) => `${name}已接受该账户`,
+      "transferred": {
+        "paid": (name, amount, gender) => {
+  return `${name}已收到你转来的${amount}`;
+},
+        "received": (name, amount, gender) => `${name}已向你支付了${amount}`,
+        "balance": {
+          "even": "你们现在扯平了",
+          "owed": (balance) => `你仍然有${balance}未收到`,
+          "owe": (balance) => `您现在需支付${balance}`
+        }
+      }
+    },
+    "expenses": {
+      "created": (amount, name, gender) => `${name}已支付${amount}`
+    }
   }
 };
 

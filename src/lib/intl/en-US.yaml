@@ -32,8 +32,8 @@ profile:
   language:
     title: Language
     description: >-
-      This does not affect cheque recognition. We understand most languages
-      there anyway.
+      This does not affect receipt scanning — we can read them in most languages
+      anyway.
   grammar:
     title: Grammatical Form
     description: >-
@@ -48,7 +48,6 @@ profile:
     title: Background
 form:
   enterName: Enter name
-copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
 onboarding:
   name:
     title: Personal Touch
@@ -165,3 +164,4 @@ home:
     (name) => `Hi ${name}!`
 search:
   empty: No results found
+dir: ltr
