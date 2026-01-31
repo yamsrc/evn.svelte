@@ -25,7 +25,10 @@
   href={`/expenses/editor/${expense.id}/`}
   variant="outline"
   size="lg"
-  class="px-4 py-3 h-fit flex flex-col gap-3 relative">
+  class={[
+    'px-4 py-3 h-fit flex flex-col gap-3 relative',
+    highlighted && 'ring-inset ring-3 ring-muted',
+  ]}>
   <div class="w-full flex justify-between items-start">
     <div class="flex flex-col items-start">
       <div class="flex items-center gap-1">
@@ -33,6 +36,9 @@
           <Paperclip size={14} class="text-muted-foreground" />
         {/if}
         <span>{expense.title}</span>
+        {#if highlighted}
+          <Attention class="mx-1" />
+        {/if}
       </div>
       <p class="text-sm text-muted-foreground">
         {description}
@@ -65,7 +71,4 @@
       balance={owe(expense.participants, expense.extras, $account?.id)}
       class="flex-col-reverse items-end" />
   </div>
-  {#if highlighted}
-    <Attention class="absolute top-2 right-2 z-10" />
-  {/if}
 </Button>
