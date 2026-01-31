@@ -16,8 +16,8 @@ app.addEventListener('install', (event) => {
 
     await cache.addAll(ASSETS)
 
-    console.log('Assets cached', ASSETS.length)
-    console.log('App installed', version)
+    console.info('Assets cached', ASSETS.length)
+    console.info('App installed', version)
   }
 
   event.waitUntil(install())
@@ -31,7 +31,7 @@ app.addEventListener('activate', (event) => {
 
   event.waitUntil(deleteOldCaches())
 
-  console.log('App activated', version)
+  console.info('App activated', version)
 })
 
 app.addEventListener('fetch', (event) => {
