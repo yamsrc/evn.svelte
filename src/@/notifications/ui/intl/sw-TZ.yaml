@@ -19,7 +19,7 @@ erase: Futa zote
 contacts:
   connected: |-
     !js
-    (name) => `Sasa umefanya urafiki na ${name}`
+    (name) => `Wewe na ${name} sasa ni marafiki`
   unchained: |-
     !js
     (name, gender) => `${name} amekubali akaunti`

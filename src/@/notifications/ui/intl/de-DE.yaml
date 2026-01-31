@@ -24,7 +24,7 @@ erase: Alle löschen
 contacts:
   connected: |-
     !js
-    (name) => `Du bist jetzt mit ${name} befreundet`
+    (name) => `Du und ${name} seid jetzt befreundet`
   unchained: >-
     !js
 

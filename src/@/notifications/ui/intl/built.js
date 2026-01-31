@@ -18,7 +18,7 @@ export const dictionaries = {
     },
     "erase": "مسح الكل",
     "contacts": {
-      "connected": (name) => `أنت الآن صديق مع ${name}`,
+      "connected": (name) => `أنت و${name} الآن أصدقاء`,
       "unchained": (name, gender) => gender === "he" ? `${name} قَبِل الحساب` : gender === "she" ? `${name} قَبِلَت الحساب` : `${name} قَبِل(ت) الحساب`,
       "transferred": {
         "paid": (name, amount, gender) => {
@@ -58,7 +58,7 @@ export const dictionaries = {
     },
     "erase": "Alle löschen",
     "contacts": {
-      "connected": (name) => `Du bist jetzt mit ${name} befreundet`,
+      "connected": (name) => `Du und ${name} seid jetzt befreundet`,
       "unchained": (name, gender) => gender === "he" ? `${name} hat das Konto akzeptiert` : gender === "she" ? `${name} hat das Konto akzeptiert` : `${name} hat das Konto akzeptiert`,
       "transferred": {
         "paid": (name, amount, gender) => {
@@ -96,7 +96,7 @@ export const dictionaries = {
     },
     "erase": "Clear all",
     "contacts": {
-      "connected": (name) => `You are now friends with ${name}`,
+      "connected": (name) => `You and ${name} are now friends`,
       "unchained": (name, gender) => `${name} accepted the account`,
       "transferred": {
         "paid": (name, amount, gender) => {
@@ -130,7 +130,7 @@ export const dictionaries = {
     },
     "erase": "Borrar todo",
     "contacts": {
-      "connected": (name) => `Ahora eres amigo de ${name}`,
+      "connected": (name) => `Ahora tú y ${name} sois amigos`,
       "unchained": (name, gender) => gender === "he" ? `${name} aceptó la cuenta` : gender === "she" ? `${name} aceptó la cuenta` : `${name} aceptó la cuenta`,
       "transferred": {
         "paid": (name, amount, gender) => {
@@ -170,7 +170,7 @@ export const dictionaries = {
     },
     "erase": "Tout effacer",
     "contacts": {
-      "connected": (name) => `Vous êtes maintenant ami(e) avec ${name}`,
+      "connected": (name) => `Vous et ${name} êtes maintenant amis`,
       "unchained": (name, gender) => gender === "he" ? `${name} a accepté le compte` : gender === "she" ? `${name} a accepté le compte` : `${name} a accepté le compte`,
       "transferred": {
         "paid": (name, amount, gender) => {
@@ -210,7 +210,7 @@ export const dictionaries = {
     },
     "erase": "सभी साफ़ करें",
     "contacts": {
-      "connected": (name) => `${name} अब आपका मित्र है`,
+      "connected": (name) => `अब आप और ${name} दोस्त हैं`,
       "unchained": (name, gender) => gender === "he" ? `${name} ने खाता स्वीकार किया` : gender === "she" ? `${name} ने खाता स्वीकार किया` : `${name} ने खाता स्वीकार किया`,
       "transferred": {
         "paid": (name, amount, gender) => {
@@ -250,7 +250,7 @@ export const dictionaries = {
     },
     "erase": "Cancella tutto",
     "contacts": {
-      "connected": (name) => `Ora sei amico di ${name}`,
+      "connected": (name) => `Ora tu e ${name} siete amici`,
       "unchained": (name, gender) => gender === "he" ? `${name} ha accettato l'account` : gender === "she" ? `${name} ha accettato l'account` : `${name} ha accettato l'account`,
       "transferred": {
         "paid": (name, amount, gender) => {
@@ -290,7 +290,7 @@ export const dictionaries = {
     },
     "erase": "すべてクリア",
     "contacts": {
-      "connected": (name) => `${name}さんと友達になりました`,
+      "connected": (name) => `あなたと${name}は友達になりました`,
       "unchained": (name, gender) => `${name}がアカウントを承認しました`,
       "transferred": {
         "paid": (name, amount, gender) => {
@@ -324,7 +324,7 @@ export const dictionaries = {
     },
     "erase": "모두 지우기",
     "contacts": {
-      "connected": (name) => `${name}님과 친구가 되었습니다`,
+      "connected": (name) => `당신과 ${name}님이 이제 친구가 되었습니다`,
       "unchained": (name, gender) => `${name}님이 계정을 승인했습니다`,
       "transferred": {
         "paid": (name, amount, gender) => {
@@ -358,7 +358,7 @@ export const dictionaries = {
     },
     "erase": "Alles wissen",
     "contacts": {
-      "connected": (name) => `Je bent nu bevriend met ${name}`,
+      "connected": (name) => `Jij en ${name} zijn nu vrienden`,
       "unchained": (name, gender) => `${name} heeft het account geaccepteerd`,
       "transferred": {
         "paid": (name, amount, gender) => {
@@ -392,7 +392,7 @@ export const dictionaries = {
     },
     "erase": "Очистить все",
     "contacts": {
-      "connected": (name) => `Вы теперь друзья с ${name}`,
+      "connected": (name) => `Вы и ${name} теперь друзья`,
       "unchained": (name, gender) => gender === "he" ? `${name} принял аккаунт` : gender === "she" ? `${name} приняла аккаунт` : `${name} принял(а) аккаунт`,
       "transferred": {
         "paid": (name, amount, gender) => {
@@ -432,7 +432,7 @@ export const dictionaries = {
     },
     "erase": "Futa zote",
     "contacts": {
-      "connected": (name) => `Sasa umefanya urafiki na ${name}`,
+      "connected": (name) => `Wewe na ${name} sasa ni marafiki`,
       "unchained": (name, gender) => `${name} amekubali akaunti`,
       "transferred": {
         "paid": (name, amount, gender) => {
@@ -466,7 +466,7 @@ export const dictionaries = {
     },
     "erase": "Tümünü temizle",
     "contacts": {
-      "connected": (name) => `Artık ${name} ile arkadaşsın`,
+      "connected": (name) => `Sen ve ${name} artık arkadaşsınız`,
       "unchained": (name, gender) => `${name} hesabı kabul etti`,
       "transferred": {
         "paid": (name, amount, gender) => {
@@ -500,7 +500,7 @@ export const dictionaries = {
     },
     "erase": "Очистити все",
     "contacts": {
-      "connected": (name) => `Ви тепер друзі з ${name}`,
+      "connected": (name) => `Ви та ${name} тепер друзі`,
       "unchained": (name, gender) => gender === "he" ? `${name} прийняв обліковий запис` : gender === "she" ? `${name} прийняла обліковий запис` : `${name} прийняв(ла) обліковий запис`,
       "transferred": {
         "paid": (name, amount, gender) => {
@@ -540,7 +540,7 @@ export const dictionaries = {
     },
     "erase": "全部清除",
     "contacts": {
-      "connected": (name) => `你现在和${name}是好友了`,
+      "connected": (name) => `你和${name}现在是朋友了`,
       "unchained": (name, gender) => `${name}已接受该账户`,
       "transferred": {
         "paid": (name, amount, gender) => {

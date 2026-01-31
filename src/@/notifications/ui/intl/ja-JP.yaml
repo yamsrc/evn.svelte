@@ -19,7 +19,7 @@ erase: すべてクリア
 contacts:
   connected: |-
     !js
-    (name) => `${name}さんと友達になりました`
+    (name) => `あなたと${name}は友達になりました`
   unchained: |-
     !js
     (name, gender) => `${name}がアカウントを承認しました`

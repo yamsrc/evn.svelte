@@ -24,7 +24,7 @@ erase: Очистити все
 contacts:
   connected: |-
     !js
-    (name) => `Ви тепер друзі з ${name}`
+    (name) => `Ви та ${name} тепер друзі`
   unchained: >-
     !js
 

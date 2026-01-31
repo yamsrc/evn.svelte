@@ -19,7 +19,7 @@ erase: Tümünü temizle
 contacts:
   connected: |-
     !js
-    (name) => `Artık ${name} ile arkadaşsın`
+    (name) => `Sen ve ${name} artık arkadaşsınız`
   unchained: |-
     !js
     (name, gender) => `${name} hesabı kabul etti`

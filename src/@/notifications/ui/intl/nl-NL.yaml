@@ -20,7 +20,7 @@ erase: Alles wissen
 contacts:
   connected: |-
     !js
-    (name) => `Je bent nu bevriend met ${name}`
+    (name) => `Jij en ${name} zijn nu vrienden`
   unchained: |-
     !js
     (name, gender) => `${name} heeft het account geaccepteerd`

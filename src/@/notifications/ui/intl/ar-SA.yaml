@@ -23,7 +23,7 @@ erase: مسح الكل
 contacts:
   connected: |-
     !js
-    (name) => `أنت الآن صديق مع ${name}`
+    (name) => `أنت و${name} الآن أصدقاء`
   unchained: >-
     !js
 

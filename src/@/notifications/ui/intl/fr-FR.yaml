@@ -23,7 +23,7 @@ erase: Tout effacer
 contacts:
   connected: |-
     !js
-    (name) => `Vous êtes maintenant ami(e) avec ${name}`
+    (name) => `Vous et ${name} êtes maintenant amis`
   unchained: >-
     !js
 

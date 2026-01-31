@@ -22,7 +22,7 @@ erase: सभी साफ़ करें
 contacts:
   connected: |-
     !js
-    (name) => `${name} अब आपका मित्र है`
+    (name) => `अब आप और ${name} दोस्त हैं`
   unchained: >-
     !js
 

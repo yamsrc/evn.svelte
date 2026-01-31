@@ -19,7 +19,7 @@ erase: 모두 지우기
 contacts:
   connected: |-
     !js
-    (name) => `${name}님과 친구가 되었습니다`
+    (name) => `당신과 ${name}님이 이제 친구가 되었습니다`
   unchained: |-
     !js
     (name, gender) => `${name}님이 계정을 승인했습니다`

@@ -19,7 +19,7 @@ erase: 全部清除
 contacts:
   connected: |-
     !js
-    (name) => `你现在和${name}是好友了`
+    (name) => `你和${name}现在是朋友了`
   unchained: |-
     !js
     (name, gender) => `${name}已接受该账户`

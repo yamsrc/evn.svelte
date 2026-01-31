@@ -19,7 +19,7 @@ erase: Clear all
 contacts:
   connected: |-
     !js
-    (name) => `You are now friends with ${name}`
+    (name) => `You and ${name} are now friends`
   unchained: |-
     !js
     (name, gender) => `${name} accepted the account`

@@ -20,7 +20,7 @@ inputs:
     context: button label (clears all notifications)
   contacts:
     connected:
-      input: You are now friends with {name}
+      input: You and {name} are now friends
     unchained:
       input: "{name} accepted the account"
       context: Use gender
