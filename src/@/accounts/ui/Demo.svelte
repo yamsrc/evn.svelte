@@ -10,13 +10,9 @@
   async function onclick() {
     busy = true
 
-    const account = await demo()
+    await demo()
 
     busy = false
-
-    if (account instanceof Error) return
-
-    console.log(account)
   }
 </script>
 
