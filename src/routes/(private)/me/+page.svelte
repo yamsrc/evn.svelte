@@ -1,14 +1,17 @@
 <script lang="ts">
-  import { LogOut } from '@lucide/svelte'
+  import { CodeXml, LogOut } from '@lucide/svelte'
+  import { dev } from '$app/environment'
   import { goto } from '$app/navigation'
   import { Clipboard, Hold } from '$com/buttons'
   import { Separator } from '$com/separator'
+  import { Actions } from '$com/shell'
   import { version } from '$config'
   import { dict } from '$lib/intl'
   import { Cosmetics, Delete, Grammar, Language } from '@/accounts/ui'
   import { Section } from '@/app/ui'
   import { Header } from '@/app/ui'
   import { Background } from '@/app/ui'
+  import { Action } from '@/app/ui'
   import { Feedback } from '@/feedback/ui'
   import { logout } from '@/iam'
   import { account } from '@/iam'
@@ -88,4 +91,12 @@
       </div>
     </footer>
   </Section>
+{/if}
+
+{#if dev}
+  <Actions>
+    <Action id="me-dev-button" href="/dev/" variant="outline">
+      <CodeXml />
+    </Action>
+  </Actions>
 {/if}
