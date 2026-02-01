@@ -24,7 +24,10 @@
   const rounded = 'rounded-xl'
 
   onMount(() => {
-    for (const section of sections) preloadCode(section.href)
+    for (const section of sections) {
+      preloadCode(section.href)
+      section.nested?.forEach((nested) => preloadCode(nested))
+    }
   })
 
   function link(section: Section) {
