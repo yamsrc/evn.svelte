@@ -27,7 +27,7 @@
   size="lg"
   class={[
     'px-4 py-3 h-fit flex flex-col gap-3 relative',
-    highlighted && 'ring-inset ring-3 ring-muted',
+    highlighted && 'ring-inset ring-2 ring-muted-foreground/50',
   ]}>
   <div class="w-full flex justify-between items-start">
     <div class="flex flex-col items-start">

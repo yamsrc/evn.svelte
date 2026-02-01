@@ -41,7 +41,7 @@
         href={contact ? `/contacts/${contact.identity}/` : undefined}
         class={[
           'bg-constructive/20! border-constructive/30! hover:bg-constructive/25! hover:border-constructive/35!',
-          highlighted && 'ring-inset ring-2 ring-constructive/20',
+          highlighted && 'ring-inset ring-1 ring-constructive/30',
         ]}>
         {#snippet left()}
           <div class="flex items-center gap-3">
