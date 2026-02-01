@@ -48,8 +48,8 @@ export const backgrounds = [
     id: 'spaghetti',
     name: 'Spaghetti',
     filename: 'spaghetti-1.svg',
-    width: 95,
-    height: 95,
+    width: 135,
+    height: 135,
   },
   {
     id: 'bubbles',
@@ -58,13 +58,13 @@ export const backgrounds = [
     width: 25,
     height: 74,
   },
-  {
-    id: 'cubic',
-    name: 'Cubic',
-    filename: 'cubic.svg',
-    width: 435,
-    height: 450,
-  },
+  // {
+  //   id: 'cubic',
+  //   name: 'Cubic',
+  //   filename: 'cubic.svg',
+  //   width: 435,
+  //   height: 450,
+  // },
   {
     id: 'waves',
     name: 'Waves',
