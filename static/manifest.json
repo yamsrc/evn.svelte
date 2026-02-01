@@ -22,7 +22,7 @@
   },
   "shortcuts": [
     {
-      "name": "Add Expense",
+      "name": "Add Event",
       "url": "/expenses/editor/"
     },
     {
