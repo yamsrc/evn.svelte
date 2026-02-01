@@ -7,6 +7,7 @@ export const sections = (dict: Dictionary, notifications: Notification[]): Secti
   {
     id: 'home',
     href: '/',
+    nested: ['/me/'],
     label: dict.nav.home,
     Icon: LayoutGrid,
   },
