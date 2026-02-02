@@ -1,4 +1,5 @@
 import { browser } from '$app/environment'
+import { subscribed } from './store'
 import { get } from './subscription'
 
 export async function unsubscribe(): Promise<void> {
@@ -9,6 +10,7 @@ export async function unsubscribe(): Promise<void> {
     const subscription = await get()
 
     await subscription?.unsubscribe()
+    subscribed.set(false)
   } catch (error) {
     console.warn('Failed to unsubscribe from browser:', error)
   }

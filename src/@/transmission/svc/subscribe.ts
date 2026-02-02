@@ -3,7 +3,7 @@ import { account } from '@/iam'
 import * as net from './net'
 import { getPermission } from './permission'
 import { permission, subscribed } from './store'
-import { get, getOrCreate, extractKeys } from './subscription'
+import { get, create, extractKeys } from './subscription'
 
 async function send(subscription: PushSubscription): Promise<void | Error> {
   const me = account.extract()
@@ -32,7 +32,7 @@ export async function subscribe(): Promise<void | Error> {
     (await Notification.requestPermission()) !== 'granted') return
 
   const registration = await navigator.serviceWorker.ready
-  const subscription = await getOrCreate(registration)
+  const subscription = (await get(registration)) ?? (await create(registration))
 
   if (subscription instanceof Error) return subscription
 

@@ -38,7 +38,7 @@
       <Totals {contacts} />
     </Section>
 
-    {#if !$subscribed}
+    {#if $subscribed === false}
       <Section class="px-0 flex flex-col gap-2">
         {#if notifications.length > 0}
           <Notifications {notifications} />

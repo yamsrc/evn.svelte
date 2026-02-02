@@ -1,10 +1,15 @@
 import { browser } from '$app/environment'
 import { account } from '@/iam'
-import { get, getPermission, permission, subscribe, subscribed, unsubscribe } from './svc'
+import { get, getPermission, permission, request, subscribed, unsubscribe } from './svc'
 
 async function init(): Promise<void> {
-  await subscribe()
-  subscribed.set((await get()) !== null)
+  if ((await get()) !== null) {
+    subscribed.set(true)
+
+    return
+  }
+
+  await request()
 }
 
 export function rc() {
