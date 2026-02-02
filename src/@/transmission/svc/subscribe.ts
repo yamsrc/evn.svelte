@@ -25,6 +25,7 @@ async function send(subscription: PushSubscription): Promise<void | Error> {
   if (result instanceof Error) return result
 }
 
+/** Requests notification permission, gets or creates push subscription, and registers it with the backend. */
 export async function subscribe(): Promise<void | Error> {
   if (!browser) return
 
@@ -39,6 +40,7 @@ export async function subscribe(): Promise<void | Error> {
   return send(subscription)
 }
 
+/** Calls subscribe and updates permission/subscribed store state. */
 export async function request(): Promise<void> {
   await subscribe()
   permission.set(getPermission())

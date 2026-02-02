@@ -1,12 +1,14 @@
 import { arrayBufferToBase64 } from '$lib/tools/convert'
 import { getVapidKey } from './vapid'
 
+/** Returns current push subscription for the given or default service worker registration. */
 export async function get(registration?: ServiceWorkerRegistration): Promise<PushSubscription | null> {
   registration ??= await navigator.serviceWorker.ready
 
   return await registration.pushManager.getSubscription()
 }
 
+/** Creates a new push subscription for the given service worker registration using VAPID key. */
 export async function create(
   registration: ServiceWorkerRegistration,
 ): Promise<PushSubscription | Error> {
@@ -21,6 +23,7 @@ export async function create(
   }
 }
 
+/** Extracts p256dh and auth keys from a PushSubscription as base64 strings. */
 export function extractKeys(subscription: PushSubscription): {
   p256dh: string
   auth: string
