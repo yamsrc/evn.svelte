@@ -3,11 +3,9 @@ groups:
     me: |-
       !js
       (groupName) => `You have joined ${groupName}`
-    others: >-
+    others: |-
       !js
-
-      (names, groupName) => `${new Intl.ListFormat("en", { style: "long", type:
-      "conjunction" }).format(names)} joined ${groupName}`
+      (names, groupName) => `${new Intl.ListFormat("en", { style: "long", type: "conjunction" }).format(names)} joined ${groupName}`
     other: |-
       !js
       (name, groupName, gender) => `${name} joined ${groupName}`
@@ -44,3 +42,6 @@ expenses:
   created: |-
     !js
     (amount, name, gender) => `${amount} paid by ${name}`
+nudge:
+  prompt: Want to see events like this as soon as they happen? Enable notifications to get them right on your device, on time.
+  button: Enable notifications

@@ -3,11 +3,9 @@ groups:
     me: |-
       !js
       (groupName) => `${groupName} grubuna katıldınız`
-    others: >-
+    others: |-
       !js
-
-      (names, groupName) => `${new Intl.ListFormat("tr", { style: "long", type:
-      "conjunction" }).format(names)} ${groupName} grubuna katıldı`
+      (names, groupName) => `${new Intl.ListFormat("tr", { style: "long", type: "conjunction" }).format(names)} ${groupName} grubuna katıldı`
     other: |-
       !js
       (name, groupName, gender) => `${name}, ${groupName} grubuna katıldı`
@@ -44,3 +42,6 @@ expenses:
   created: |-
     !js
     (amount, name, gender) => `${amount} ${name} tarafından ödendi`
+nudge:
+  prompt: Böyle etkinlikleri hemen olur olmaz görmek ister misin? Bildirimleri etkinleştir, zamanında cihazına gelsin.
+  button: Bildirimleri etkinleştir

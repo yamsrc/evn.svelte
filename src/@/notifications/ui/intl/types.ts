@@ -35,4 +35,8 @@ export type Dictionary = {
       expenses: {
         created: (...args: [any, any, any]) => string
       }
+      nudge: {
+        prompt: string
+        button: string
+      }
     }

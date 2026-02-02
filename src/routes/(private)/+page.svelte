@@ -43,7 +43,9 @@
         {#if notifications.length > 0}
           <Notifications {notifications} />
         {/if}
-        <Nudge />
+        <div class="px-5">
+          <Nudge />
+        </div>
       </Section>
     {/if}
 

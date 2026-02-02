@@ -3,17 +3,12 @@ groups:
     me: |-
       !js
       (groupName) => `${groupName} में आप शामिल हो गए हैं`
-    others: >-
+    others: |-
       !js
-
-      (names, groupName) => `${new Intl.ListFormat("hi", { style: "long", type:
-      "conjunction" }).format(names)} ने ${groupName} में जॉइन किया`
-    other: >-
+      (names, groupName) => `${new Intl.ListFormat("hi", { style: "long", type: "conjunction" }).format(names)} ने ${groupName} में जॉइन किया`
+    other: |-
       !js
-
-      (name, groupName, gender) => { if (gender === "he") return `${name} ने
-      ${groupName} जॉइन किया`; if (gender === "she") return `${name} ने
-      ${groupName} जॉइन की`; return `${name} ने ${groupName} जॉइन किया/की`; }
+      (name, groupName, gender) => { if (gender === "he") return `${name} ने ${groupName} जॉइन किया`; if (gender === "she") return `${name} ने ${groupName} जॉइन की`; return `${name} ने ${groupName} जॉइन किया/की`; }
 accounts:
   created:
     welcome: Evnly में आपका स्वागत है!
@@ -23,11 +18,9 @@ contacts:
   connected: |-
     !js
     (name) => `अब आप और ${name} दोस्त हैं`
-  unchained: >-
+  unchained: |-
     !js
-
-    (name, gender) => gender === "he" ? `${name} ने खाता स्वीकार किया` : gender
-    === "she" ? `${name} ने खाता स्वीकार किया` : `${name} ने खाता स्वीकार किया`
+    (name, gender) => gender === "he" ? `${name} ने खाता स्वीकार किया` : gender === "she" ? `${name} ने खाता स्वीकार किया` : `${name} ने खाता स्वीकार किया`
   transferred:
     paid: |-
       !js
@@ -55,3 +48,6 @@ expenses:
   created: |-
     !js
     (amount, name, gender) => `${name} द्वारा ${amount} दिया गया`
+nudge:
+  prompt: ऐसे इवेंट्स को होते ही देखना चाहते हैं? नोटिफिकेशन चालू करें और समय पर अपने डिवाइस पर पाएं।
+  button: नोटिफिकेशन सक्षम करें

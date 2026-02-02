@@ -3,19 +3,12 @@ groups:
     me: |-
       !js
       (groupName) => `Вы присоединились к группе ${groupName}`
-    others: >-
+    others: |-
       !js
-
-      (names, groupName) => `${new Intl.ListFormat("ru", { style: "long", type:
-      "conjunction" }).format(names)} ${names.length === 1 ? "присоединился" :
-      "присоединились"} к группе ${groupName}`
-    other: >-
+      (names, groupName) => `${new Intl.ListFormat("ru", { style: "long", type: "conjunction" }).format(names)} ${names.length === 1 ? "присоединился" : "присоединились"} к группе ${groupName}`
+    other: |-
       !js
-
-      (name, groupName, gender) => { if (gender === "he") return `${name}
-      присоединился к группе ${groupName}`; if (gender === "she") return
-      `${name} присоединилась к группе ${groupName}`; return `${name}
-      присоединился(лась) к группе ${groupName}`; }
+      (name, groupName, gender) => { if (gender === "he") return `${name} присоединился к группе ${groupName}`; if (gender === "she") return `${name} присоединилась к группе ${groupName}`; return `${name} присоединился(лась) к группе ${groupName}`; }
 accounts:
   created:
     welcome: Добро пожаловать в Evnly!
@@ -25,11 +18,9 @@ contacts:
   connected: |-
     !js
     (name) => `Вы и ${name} теперь друзья`
-  unchained: >-
+  unchained: |-
     !js
-
-    (name, gender) => gender === "he" ? `${name} принял аккаунт` : gender ===
-    "she" ? `${name} приняла аккаунт` : `${name} принял(а) аккаунт`
+    (name, gender) => gender === "he" ? `${name} принял аккаунт` : gender === "she" ? `${name} приняла аккаунт` : `${name} принял(а) аккаунт`
   transferred:
     paid: |-
       !js
@@ -54,9 +45,9 @@ contacts:
         !js
         (balance) => `Сейчас вы должны ${balance}`
 expenses:
-  created: >-
+  created: |-
     !js
-
-    (amount, name, gender) => gender === "he" ? `${amount} оплачено ${name}` :
-    gender === "she" ? `${amount} оплачено ${name}ой` : `${amount} оплачено
-    ${name}`
+    (amount, name, gender) => gender === "he" ? `${amount} оплачено ${name}` : gender === "she" ? `${amount} оплачено ${name}ой` : `${amount} оплачено ${name}`
+nudge:
+  prompt: Хотите узнавать о таких событиях сразу, как только они происходят? Включите уведомления — и получайте их вовремя прямо на ваше устройство.
+  button: Включить уведомления

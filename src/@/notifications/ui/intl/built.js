@@ -40,6 +40,10 @@ export const dictionaries = {
     },
     "expenses": {
       "created": (amount, name, gender) => gender === "he" ? `${amount} تم دفعها بواسطة ${name}` : gender === "she" ? `${amount} تم دفعها بواسطة ${name}` : `${amount} تم دفعها بواسطة ${name}`
+    },
+    "nudge": {
+      "prompt": "هل ترغب في متابعة فعاليات مثل هذه فور حدوثها؟ فعّل الإشعارات لتصلك مباشرة على جهازك في الوقت المناسب.",
+      "button": "تفعيل الإشعارات"
     }
   },
   "de-DE": {
@@ -78,6 +82,10 @@ export const dictionaries = {
     },
     "expenses": {
       "created": (amount, name, gender) => `${amount} von ${name} bezahlt`
+    },
+    "nudge": {
+      "prompt": "Möchtest du Veranstaltungen wie diese sofort mitbekommen, wenn sie stattfinden? Aktiviere Benachrichtigungen und erhalte sie pünktlich direkt auf dein Gerät.",
+      "button": "Benachrichtigungen aktivieren"
     }
   },
   "en-US": {
@@ -112,6 +120,10 @@ export const dictionaries = {
     },
     "expenses": {
       "created": (amount, name, gender) => `${amount} paid by ${name}`
+    },
+    "nudge": {
+      "prompt": "Want to see events like this as soon as they happen? Enable notifications to get them right on your device, on time.",
+      "button": "Enable notifications"
     }
   },
   "es-ES": {
@@ -152,6 +164,10 @@ export const dictionaries = {
     },
     "expenses": {
       "created": (amount, name, gender) => gender === "he" ? `${amount} pagado por ${name}` : gender === "she" ? `${amount} pagada por ${name}` : `${amount} pagado/a por ${name}`
+    },
+    "nudge": {
+      "prompt": "¿Quieres ver eventos como este justo cuando suceden? Activa las notificaciones y recíbelas en tu dispositivo a tiempo.",
+      "button": "Activar notificaciones"
     }
   },
   "fr-FR": {
@@ -192,6 +208,10 @@ export const dictionaries = {
     },
     "expenses": {
       "created": (amount, name, gender) => gender === "he" ? `${amount} payé par ${name}` : gender === "she" ? `${amount} payée par ${name}` : `${amount} payé(e) par ${name}`
+    },
+    "nudge": {
+      "prompt": "Envie de voir des événements comme celui-ci dès qu’ils ont lieu ? Activez les notifications pour les recevoir sur votre appareil en temps réel.",
+      "button": "Activer les notifications"
     }
   },
   "hi-IN": {
@@ -232,6 +252,10 @@ export const dictionaries = {
     },
     "expenses": {
       "created": (amount, name, gender) => `${name} द्वारा ${amount} दिया गया`
+    },
+    "nudge": {
+      "prompt": "ऐसे इवेंट्स को होते ही देखना चाहते हैं? नोटिफिकेशन चालू करें और समय पर अपने डिवाइस पर पाएं।",
+      "button": "नोटिफिकेशन सक्षम करें"
     }
   },
   "it-IT": {
@@ -272,6 +296,10 @@ export const dictionaries = {
     },
     "expenses": {
       "created": (amount, name, gender) => gender === "he" ? `${amount} pagato da ${name}` : gender === "she" ? `${amount} pagata da ${name}` : `${amount} pagato/a da ${name}`
+    },
+    "nudge": {
+      "prompt": "Vuoi vedere eventi come questo non appena accadono? Attiva le notifiche e ricevile subito sul tuo dispositivo.",
+      "button": "Attiva le notifiche"
     }
   },
   "ja-JP": {
@@ -306,6 +334,10 @@ export const dictionaries = {
     },
     "expenses": {
       "created": (amount, name, gender) => `${name}が支払った金額：${amount}`
+    },
+    "nudge": {
+      "prompt": "このようなイベントをリアルタイムで見たいですか？ 通知を有効にして、すぐにデバイスで受け取りましょう。",
+      "button": "通知を有効にする"
     }
   },
   "ko-KR": {
@@ -340,6 +372,10 @@ export const dictionaries = {
     },
     "expenses": {
       "created": (amount, name, gender) => `${name}님이 결제한 금액: ${amount}`
+    },
+    "nudge": {
+      "prompt": "이런 이벤트를 바로 확인하고 싶으신가요? 알림을 활성화하면 제때 기기에서 바로 받아볼 수 있어요.",
+      "button": "알림 활성화"
     }
   },
   "nl-NL": {
@@ -374,6 +410,10 @@ export const dictionaries = {
     },
     "expenses": {
       "created": (amount, name, gender) => `${amount} betaald door ${name}`
+    },
+    "nudge": {
+      "prompt": "Wil je evenementen zoals deze direct zien wanneer ze plaatsvinden? Schakel meldingen in en ontvang ze op tijd op je apparaat.",
+      "button": "Meldingen inschakelen"
     }
   },
   "ru-RU": {
@@ -414,6 +454,10 @@ export const dictionaries = {
     },
     "expenses": {
       "created": (amount, name, gender) => gender === "he" ? `${amount} оплачено ${name}` : gender === "she" ? `${amount} оплачено ${name}ой` : `${amount} оплачено ${name}`
+    },
+    "nudge": {
+      "prompt": "Хотите узнавать о таких событиях сразу, как только они происходят? Включите уведомления — и получайте их вовремя прямо на ваше устройство.",
+      "button": "Включить уведомления"
     }
   },
   "sw-TZ": {
@@ -448,6 +492,10 @@ export const dictionaries = {
     },
     "expenses": {
       "created": (amount, name, gender) => `${amount} imelipwa na ${name}`
+    },
+    "nudge": {
+      "prompt": "Unataka kuona matukio kama haya mara tu yanapotokea? Washa arifa upate taarifa hizo kwa wakati kwenye kifaa chako.",
+      "button": "Washa arifa"
     }
   },
   "tr-TR": {
@@ -482,6 +530,10 @@ export const dictionaries = {
     },
     "expenses": {
       "created": (amount, name, gender) => `${amount} ${name} tarafından ödendi`
+    },
+    "nudge": {
+      "prompt": "Böyle etkinlikleri hemen olur olmaz görmek ister misin? Bildirimleri etkinleştir, zamanında cihazına gelsin.",
+      "button": "Bildirimleri etkinleştir"
     }
   },
   "uk-UA": {
@@ -522,6 +574,10 @@ export const dictionaries = {
     },
     "expenses": {
       "created": (amount, name, gender) => gender === "he" ? `${amount} сплачено ${name}` : gender === "she" ? `${amount} сплачено ${name}ою` : `${amount} сплачено ${name}`
+    },
+    "nudge": {
+      "prompt": "Хочете бачити такі події одразу, як тільки вони відбуваються? Увімкніть сповіщення та отримуйте їх вчасно на свій пристрій.",
+      "button": "Увімкнути сповіщення"
     }
   },
   "zh-CN": {
@@ -556,6 +612,10 @@ export const dictionaries = {
     },
     "expenses": {
       "created": (amount, name, gender) => `${name}已支付${amount}`
+    },
+    "nudge": {
+      "prompt": "想第一时间看到这样的活动吗？开启通知，及时在你的设备上收到最新消息。",
+      "button": "启用通知"
     }
   }
 };

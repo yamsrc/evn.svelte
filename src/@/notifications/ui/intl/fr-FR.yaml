@@ -3,18 +3,12 @@ groups:
     me: |-
       !js
       (groupName) => `Vous avez rejoint ${groupName}`
-    others: >-
+    others: |-
       !js
-
-      (names, groupName) => `${new Intl.ListFormat("fr", { style: "long", type:
-      "conjunction" }).format(names)} a${names.length === 1 ? "" : "nt"} rejoint
-      ${groupName}`
-    other: >-
+      (names, groupName) => `${new Intl.ListFormat("fr", { style: "long", type: "conjunction" }).format(names)} a${names.length === 1 ? "" : "nt"} rejoint ${groupName}`
+    other: |-
       !js
-
-      (name, groupName, gender) => { if (gender === "he") return `${name} a
-      rejoint ${groupName}`; if (gender === "she") return `${name} a rejointe
-      ${groupName}`; return `${name} a rejoint(e) ${groupName}`; }
+      (name, groupName, gender) => { if (gender === "he") return `${name} a rejoint ${groupName}`; if (gender === "she") return `${name} a rejointe ${groupName}`; return `${name} a rejoint(e) ${groupName}`; }
 accounts:
   created:
     welcome: Bienvenue chez Evnly !
@@ -24,11 +18,9 @@ contacts:
   connected: |-
     !js
     (name) => `Vous et ${name} êtes maintenant amis`
-  unchained: >-
+  unchained: |-
     !js
-
-    (name, gender) => gender === "he" ? `${name} a accepté le compte` : gender
-    === "she" ? `${name} a accepté le compte` : `${name} a accepté le compte`
+    (name, gender) => gender === "he" ? `${name} a accepté le compte` : gender === "she" ? `${name} a accepté le compte` : `${name} a accepté le compte`
   transferred:
     paid: |-
       !js
@@ -53,9 +45,9 @@ contacts:
         !js
         (balance) => `Vous devez maintenant ${balance}`
 expenses:
-  created: >-
+  created: |-
     !js
-
-    (amount, name, gender) => gender === "he" ? `${amount} payé par ${name}` :
-    gender === "she" ? `${amount} payée par ${name}` : `${amount} payé(e) par
-    ${name}`
+    (amount, name, gender) => gender === "he" ? `${amount} payé par ${name}` : gender === "she" ? `${amount} payée par ${name}` : `${amount} payé(e) par ${name}`
+nudge:
+  prompt: Envie de voir des événements comme celui-ci dès qu’ils ont lieu ? Activez les notifications pour les recevoir sur votre appareil en temps réel.
+  button: Activer les notifications

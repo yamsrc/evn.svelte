@@ -3,18 +3,12 @@ groups:
     me: |-
       !js
       (groupName) => `Sei entrato in ${groupName}`
-    others: >-
+    others: |-
       !js
-
-      (names, groupName) => `${new Intl.ListFormat("it", { style: "long", type:
-      "conjunction" }).format(names)} ha${names.length === 1 ? "" : "nno"}
-      aderito a ${groupName}`
-    other: >-
+      (names, groupName) => `${new Intl.ListFormat("it", { style: "long", type: "conjunction" }).format(names)} ha${names.length === 1 ? "" : "nno"} aderito a ${groupName}`
+    other: |-
       !js
-
-      (name, groupName, gender) => { if (gender === "he") return `${name} si è
-      unito a ${groupName}`; if (gender === "she") return `${name} si è unita a
-      ${groupName}`; return `${name} si è unito/a a ${groupName}`; }
+      (name, groupName, gender) => { if (gender === "he") return `${name} si è unito a ${groupName}`; if (gender === "she") return `${name} si è unita a ${groupName}`; return `${name} si è unito/a a ${groupName}`; }
 accounts:
   created:
     welcome: Benvenuto su Evnly!
@@ -24,12 +18,9 @@ contacts:
   connected: |-
     !js
     (name) => `Ora tu e ${name} siete amici`
-  unchained: >-
+  unchained: |-
     !js
-
-    (name, gender) => gender === "he" ? `${name} ha accettato l'account` :
-    gender === "she" ? `${name} ha accettato l'account` : `${name} ha accettato
-    l'account`
+    (name, gender) => gender === "he" ? `${name} ha accettato l'account` : gender === "she" ? `${name} ha accettato l'account` : `${name} ha accettato l'account`
   transferred:
     paid: |-
       !js
@@ -54,9 +45,9 @@ contacts:
         !js
         (balance) => `Attualmente devi ${balance}`
 expenses:
-  created: >-
+  created: |-
     !js
-
-    (amount, name, gender) => gender === "he" ? `${amount} pagato da ${name}` :
-    gender === "she" ? `${amount} pagata da ${name}` : `${amount} pagato/a da
-    ${name}`
+    (amount, name, gender) => gender === "he" ? `${amount} pagato da ${name}` : gender === "she" ? `${amount} pagata da ${name}` : `${amount} pagato/a da ${name}`
+nudge:
+  prompt: Vuoi vedere eventi come questo non appena accadono? Attiva le notifiche e ricevile subito sul tuo dispositivo.
+  button: Attiva le notifiche
