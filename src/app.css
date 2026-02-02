@@ -251,7 +251,7 @@
 }
 
 @layer transitions {
-  @media (prefers-reduced-motion) {
+  @media (prefers-reduced-motion: reduce) {
     ::view-transition-group(*),
     ::view-transition-old(*),
     ::view-transition-new(*) {
@@ -262,4 +262,9 @@
   :root {
     /* view-transition-name: none; */
   }
+  
+  /* ::view-transition-old(root){animation:.25s ease both zoom-out}
+  ::view-transition-new(root){animation:.25s ease both zoom-in}
+  @keyframes zoom-in{from{transform:scale(.98);opacity:0}to{transform:scale(1);opacity:1}}
+  @keyframes zoom-out{from{transform:scale(1);opacity:1}to{transform:scale(1.02);opacity:0}} */
 }

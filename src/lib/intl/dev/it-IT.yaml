@@ -1,0 +1,12 @@
+components:
+  title: Componenti
+  hold:
+    title: Hold
+  stack:
+    title: Stack
+    collapse: Comprimi
+  notifications:
+    title: Notifications
+    display: |-
+      !js
+      (count) => `Mostra: ${count}`

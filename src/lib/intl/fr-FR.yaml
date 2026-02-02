@@ -6,7 +6,7 @@ actions:
   signout: Se déconnecter
   close: Fermer
   cheques:
-    title: Argent
+    title: Événements
     scan: Scanner le chèque
     input: Ajouter une dépense
   contacts:
@@ -18,11 +18,12 @@ actions:
   search: Rechercher
   save: Enregistrer
   create: Créer
+  slide: Balaye
 nav:
   home: Accueil
   profile: Moi
   contacts: Amis
-  expenses: Argent
+  expenses: Événements
 terms: Conditions générales
 privacy: Politique de confidentialité
 madeBy: Créé par
@@ -31,8 +32,8 @@ profile:
   language:
     title: Langue
     description: >-
-      Cela n’affecte pas la reconnaissance des chèques. Nous comprenons de toute
-      façon la plupart des langues là-bas.
+      Cela n’affecte pas la numérisation des reçus — nous pouvons de toute façon
+      les lire dans la plupart des langues.
   grammar:
     title: Forme grammaticale
     description: >-
@@ -45,9 +46,10 @@ profile:
       (name, gender) => gender === "he" ? `${name} a ajouté une dépense` :
       gender === "she" ? `${name} a ajouté une dépense` : `${name} a ajouté une
       dépense`
+  background:
+    title: Arrière-plan
 form:
   enterName: Saisissez le nom
-copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
 onboarding:
   name:
     title: Touche personnelle
@@ -65,6 +67,7 @@ contacts:
   contact:
     owesYou: Te doit
     youOwe: Vous devez
+    even: Vous êtes quittes
   delete:
     confirm:
       title: Supprimer le contact
@@ -144,7 +147,7 @@ expenses:
     location:
       placeholder: Où ? (facultatif)
     save: Enregistrer et mettre à jour les soldes
-  title: Argent
+  title: Événements
   balance:
     total: Facture totale
     youAreOwed: On te doit
@@ -167,3 +170,4 @@ home:
     (name) => `Salut ${name} !`
 search:
   empty: Aucun résultat trouvé
+dir: ltr

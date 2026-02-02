@@ -6,7 +6,7 @@ actions:
   signout: Esci
   close: Chiudi
   cheques:
-    title: Denaro
+    title: Eventi
     scan: Scansiona assegno
     input: Aggiungi spesa
   contacts:
@@ -18,11 +18,12 @@ actions:
   search: Cerca
   save: Salva
   create: Crea
+  slide: Scorri
 nav:
   home: Home
   profile: Io
   contacts: Amici
-  expenses: Denaro
+  expenses: Eventi
 terms: Termini e condizioni
 privacy: Informativa sulla privacy
 madeBy: Realizzato da
@@ -31,8 +32,8 @@ profile:
   language:
     title: Lingua
     description: >-
-      Questo non influisce sul riconoscimento dell'assegno. Comunque, lì capiamo
-      la maggior parte delle lingue.
+      Questo non influisce sulla scansione delle ricevute — possiamo comunque
+      leggerle nella maggior parte delle lingue.
   grammar:
     title: Forma grammaticale
     description: >-
@@ -45,9 +46,10 @@ profile:
       (name, gender) => gender === "he" ? `${name} ha aggiunto una spesa` :
       gender === "she" ? `${name} ha aggiunto una spesa` : `${name} ha aggiunto
       una spesa`
+  background:
+    title: Sfondo
 form:
   enterName: Inserisci il nome
-copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
 onboarding:
   name:
     title: Tocco personale
@@ -65,6 +67,7 @@ contacts:
   contact:
     owesYou: Ti deve
     youOwe: Devi
+    even: Siete pari
   delete:
     confirm:
       title: Elimina contatto
@@ -144,7 +147,7 @@ expenses:
     location:
       placeholder: Dove? (opzionale)
     save: Salva e aggiorna i saldi
-  title: Denaro
+  title: Eventi
   balance:
     total: Totale conto
     youAreOwed: Ti è dovuto
@@ -167,3 +170,4 @@ home:
     (name) => `Ciao ${name}!`
 search:
   empty: Nessun risultato trovato
+dir: ltr

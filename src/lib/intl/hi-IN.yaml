@@ -6,7 +6,7 @@ actions:
   signout: साइन आउट करें
   close: बंद करें
   cheques:
-    title: पैसे
+    title: आयोजन
     scan: चेक स्कैन करें
     input: खर्च जोड़ें
   contacts:
@@ -18,11 +18,12 @@ actions:
   search: खोजें
   save: सहेजें
   create: सृजन करें
+  slide: स्वाइप करें
 nav:
   home: मुख्य पृष्ठ
   profile: मैं
   contacts: मित्र
-  expenses: पैसा
+  expenses: इवेंट्स
 terms: नियम व शर्तें
 privacy: गोपनीयता नीति
 madeBy: द्वारा निर्मित
@@ -31,8 +32,8 @@ profile:
   language:
     title: भाषा
     description: >-
-      यह चेक की पहचान को प्रभावित नहीं करता है। वैसे भी, हम वहां अधिकांश भाषाओं
-      को समझते हैं।
+      यह रसीद स्कैनिंग को प्रभावित नहीं करता — हम वैसे भी अधिकांश भाषाओं में
+      इन्हें पढ़ सकते हैं।
   grammar:
     title: व्याकरणिक रूप
     description: >-
@@ -43,9 +44,10 @@ profile:
 
       (name, gender) => gender === "he" ? `${name} ने खर्च जोड़ा` : gender ===
       "she" ? `${name} ने खर्च जोड़ी` : `${name} ने खर्च जोड़ा(जोड़ी)`
+  background:
+    title: पृष्ठभूमि
 form:
   enterName: नाम दर्ज करें
-copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
 onboarding:
   name:
     title: व्यक्तिगत स्पर्श
@@ -63,6 +65,7 @@ contacts:
   contact:
     owesYou: आपका कर्ज़दार है
     youOwe: आपको देना है
+    even: आप दोनों बराबर हैं
   delete:
     confirm:
       title: संपर्क हटाएं
@@ -138,7 +141,7 @@ expenses:
     location:
       placeholder: कहाँ? (वैकल्पिक)
     save: सहेजें और बैलेंस अपडेट करें
-  title: पैसे
+  title: आयोजन
   balance:
     total: कुल बिल
     youAreOwed: आपको कुछ मिलना बाकी है
@@ -161,3 +164,4 @@ home:
     (name) => `नमस्ते ${name}!`
 search:
   empty: कोई परिणाम नहीं मिला
+dir: ltr

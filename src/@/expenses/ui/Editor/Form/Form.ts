@@ -9,14 +9,12 @@ export function normalize(value: Value, mode: 'sums' | 'shares'): Value {
 
   const amounts = numbers.amounts(value, shares)
 
-  const participants = mode === 'sums'
-    ? value.participants
-    : Object.fromEntries(Object.entries(value.participants)
-      .map(([id, participant]) => [id, {
-        paid: participant.paid,
-        comment: participant.comment,
-        amount: amounts[id],
-      }]))
+  const participants = Object.fromEntries(Object.entries(value.participants)
+    .map(([id, participant]) => [id, {
+      paid: participant.paid,
+      comment: participant.comment,
+      amount: mode === 'sums' ? participant.amount : amounts[id],
+    }]))
 
   return {
     title: value.title,

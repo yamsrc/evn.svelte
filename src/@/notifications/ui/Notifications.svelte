@@ -1,23 +1,35 @@
 <script lang="ts">
-  import { Trash2 } from '@lucide/svelte'
+  import { ChevronsDownUp, Trash2 } from '@lucide/svelte'
+  import * as Stack from '$lib/components/stack'
+  import { delay } from '$lib/tools'
   import { Button } from '$ui/button'
+  import { clear } from '@/notifications'
   import { dict } from '@/notifications/ui/intl'
   import Notification from './Notification.svelte'
   import { pick } from './components'
   import type { Props } from './Notifications'
-  import type { NotificationComponentFor, NotificationWithComponent } from './components'
+  import type { ComponentFor, WithComponent } from './components'
 
   type Renderable = {
-    notification: NotificationWithComponent
-    component: NotificationComponentFor<NotificationWithComponent>
+    notification: WithComponent
+    component: ComponentFor<WithComponent>
   }
 
-  const { notifications, limit = 5 }: Props = $props()
+  type Ref = { remove: () => Promise<void> | void }
 
-  const refs = $state<Array<{ dismiss: () => Promise<void> | void } | undefined>>([])
+  const { notifications, min = 3, max = 20, ondismiss, onclear }: Props = $props()
 
-  function onclick() {
-    refs.forEach((ref, i) => setTimeout(() => ref?.dismiss(), i * 50))
+  const refs = $state<Array<Ref | undefined>>([])
+
+  async function onclearClick(e: MouseEvent) {
+    e.stopPropagation()
+
+    const removed = refs.map((ref, i) => delay(() => ref?.remove(), i * 50))
+
+    await Promise.all(removed)
+
+    onclear?.()
+    void clear()
   }
 
   const renderable = $derived(
@@ -32,25 +44,28 @@
       .filter((item): item is Renderable => item !== null),
   )
 
-  const visible = $derived(renderable.slice(0, limit))
+  const visible = $derived(renderable.slice(0, max))
 
-  const MIN_CLEARABLE_NOTIFICATIONS = 3
+  let stack = $state<ReturnType<typeof Stack.Root> | undefined>()
 </script>
 
 <div class="space-y-2">
   {#if renderable.length > 0}
-    <div class="flex flex-col gap-2">
-      {#each visible as { notification, component }, i (notification.id)}
-        <Notification bind:this={refs[i]} {notification} {component} />
-      {/each}
-    </div>
-    {#if renderable.length > MIN_CLEARABLE_NOTIFICATIONS}
-      <div class="flex justify-center">
-        <Button variant="ghost" size="sm" {onclick} class="text-muted-foreground">
-          <Trash2 size={16} />
+    <Stack.Root bind:this={stack} {min}>
+      <Stack.Toolbar class="flex justify-between text-muted-foreground px-5">
+        <Button variant="ghost" size="sm" onclick={onclearClick}>
+          <Trash2 />
           {$dict.erase}
         </Button>
-      </div>
-    {/if}
+        <Button variant="ghost" size="sm" onclick={() => stack?.collapse()}>
+          <ChevronsDownUp />
+        </Button>
+      </Stack.Toolbar>
+      {#each visible as { notification, component }, i (notification.id)}
+        <Stack.Item id={notification.id}>
+          <Notification bind:this={refs[i]} {notification} {component} {ondismiss} />
+        </Stack.Item>
+      {/each}
+    </Stack.Root>
   {/if}
 </div>

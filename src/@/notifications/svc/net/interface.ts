@@ -7,6 +7,18 @@ export async function get(identity: string): Promise<Notification[] | Error> {
   return notifications.json(identity)
 }
 
-export async function del(identity: string, id: string): Promise<void | Error> {
-  return notifications.json(`${identity}/${id}`, { method: 'DELETE' })
+export const items = {
+  async del(identity: string, id: string): Promise<void | Error> {
+    return notifications.json(`${identity}/${id}`, { method: 'DELETE' })
+  },
+}
+
+export const scopes = {
+  async del(identity: string, domain: string, key: string): Promise<void | Error> {
+    return notifications.json(`${identity}/${domain}/${key}`, { method: 'DELETE' })
+  },
+}
+
+export async function clear(identity: string): Promise<void | Error> {
+  return notifications.json(identity, { method: 'DELETE' })
 }

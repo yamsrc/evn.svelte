@@ -6,7 +6,7 @@ actions:
   signout: Oturumu kapat
   close: Kapat
   cheques:
-    title: Para
+    title: Etkinlikler
     scan: Çeki tara
     input: Gider ekle
   contacts:
@@ -18,11 +18,12 @@ actions:
   search: Ara
   save: Kaydet
   create: Oluştur
+  slide: Kaydır
 nav:
   home: Ana Sayfa
   profile: Ben
   contacts: Arkadaşlar
-  expenses: Para
+  expenses: Etkinlikler
 terms: Şartlar ve koşullar
 privacy: Gizlilik Politikası
 madeBy: Tarafından yapıldı
@@ -30,7 +31,7 @@ profile:
   title: Profilim
   language:
     title: Dil
-    description: Bu, çek tanımayı etkilemez. Zaten oradaki dillerin çoğunu anlıyoruz.
+    description: Bu, fiş taramayı etkilemez — zaten çoğu dilde okuyabiliyoruz.
   grammar:
     title: Dilbilgisel biçim
     description: >-
@@ -39,9 +40,10 @@ profile:
     example: |-
       !js
       (name, gender) => `${name} bir harcama ekledi`
+  background:
+    title: Arka plan
 form:
   enterName: İsim girin
-copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
 onboarding:
   name:
     title: Kişisel dokunuş
@@ -59,6 +61,7 @@ contacts:
   contact:
     owesYou: Sana borçlu
     youOwe: Borçlusun
+    even: Artık ödeşmiş oldunuz
   delete:
     confirm:
       title: Kişiyi sil
@@ -136,7 +139,7 @@ expenses:
     location:
       placeholder: Nerede? (Opsiyonel)
     save: Bakiyeleri kaydet ve güncelle
-  title: Para
+  title: Etkinlikler
   balance:
     total: Toplam fatura
     youAreOwed: Sana borç var
@@ -159,3 +162,4 @@ home:
     (name) => `Merhaba ${name}!`
 search:
   empty: Sonuç bulunamadı
+dir: ltr

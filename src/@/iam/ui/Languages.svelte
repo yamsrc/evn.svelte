@@ -3,6 +3,9 @@
   import { locale, selected, type Locale } from '$lib/intl'
   import { cn } from '$lib/utils'
   import { options } from '@/accounts/ui/Language'
+  import type { Props } from './Languages'
+
+  const { onselect }: Props = $props()
 
   let scrolling = false
 
@@ -23,7 +26,7 @@
       behavior: 'smooth',
     })
 
-    selected.set(lang)
+    select(lang)
   }
 
   function onscroll(e: Event) {
@@ -41,7 +44,12 @@
 
     if (!central) return
 
-    selected.set(central.dataset.value as Locale)
+    select(central.dataset.value as Locale)
+  }
+
+  function select(lang: Locale) {
+    selected.set(lang)
+    onselect?.(lang)
   }
 
   const scroll = options.findIndex((option) => option.value === $locale)
@@ -55,15 +63,13 @@
         'snap-center px-2 py-1 text-muted-foreground transition-all',
         $locale === option.value && 'pointer-events-none text-foreground bg-muted rounded-md',
       )}
-      data-value={option.value}
-    >
+      data-value={option.value}>
       <span
         class={cn(
           'inline-block min-w-8',
           option.value === 'ja-JP' && 'min-w-12',
           option.value === 'ko-KR' && 'min-w-12',
-        )}
-      >
+        )}>
         {option.label}
       </span>
     </button>

@@ -3,7 +3,7 @@ import type { Account } from './Account'
 
 const accounts = origin.resource<Account>('/accounts/')
 
-export type Editable = Partial<Pick<Account, 'name' | 'picture' | 'locale' | 'grammar'>>
+export type Editable = Partial<Pick<Account, 'name' | 'picture' | 'background' | 'locale' | 'grammar'>>
 
 export async function get(id: string): Promise<Account | Error> {
   return accounts.json(id)
@@ -34,4 +34,8 @@ export const echo = {
 
 export const pictures = {
   post: (body: File) => accounts.json('pictures', { method: 'POST', body, credentials: 'include' }),
+}
+
+export const demo = {
+  post: () => accounts.json('demo', { method: 'POST' }),
 }

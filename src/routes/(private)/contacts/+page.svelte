@@ -11,8 +11,12 @@
   import { groups, filter as filterGroups } from '@/groups'
   import { Groups } from '@/groups/ui'
   import { account } from '@/iam'
+  import { scope } from '@/notifications'
 
   let search = $state('')
+
+  const groupsNotifications = scope({ domain: 'groups' })
+  const contactsNotifications = scope({ domain: 'contacts' })
 </script>
 
 <Section>
@@ -37,8 +41,15 @@
       </Section>
 
       <Favorites title={$dict.favorites.title} favorites={filteredFavorites} />
-      <Groups title={$dict.groups.title} groups={filteredGroups} />
-      <Contacts title={$dict.contacts.all} contacts={filteredContacts} />
+
+      <Groups
+        title={$dict.groups.title}
+        groups={filteredGroups}
+        notifications={$groupsNotifications} />
+      <Contacts
+        title={$dict.contacts.all}
+        contacts={filteredContacts}
+        notifications={$contactsNotifications} />
 
       {#if search && empty}
         <Section>

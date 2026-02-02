@@ -6,4 +6,4 @@ export interface Props extends ButtonProps {
   oncopy?: () => void
 }
 
-export type Retriever = () => Promise<string | null> | string | null
+export type Retriever = (() => Promise<string>) | string

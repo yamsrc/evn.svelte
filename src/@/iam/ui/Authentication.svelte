@@ -42,9 +42,9 @@
     <OIDC {account} apple={oidc?.apple !== false} google={oidc?.google !== false} />
   </div>
   <Tabs.Content value="passkey">
-    <Passkey {account} {oncreate} />
+    <Passkey {account} oncreate={(account) => oncreate?.(account, 'passkey')} />
   </Tabs.Content>
   <Tabs.Content value="password">
-    <Password {account} {oncreate} />
+    <Password {account} oncreate={(account) => oncreate?.(account, 'password')} />
   </Tabs.Content>
 </Tabs.Root>

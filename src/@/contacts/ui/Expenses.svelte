@@ -1,9 +1,10 @@
 <script lang="ts">
+  import { unseen } from '@/expenses'
   import { Expense } from '@/expenses/ui'
   import { dict } from './intl'
   import type { Props } from './Expenses'
 
-  const { contact, expenses }: Props = $props()
+  const { contact, expenses, notifications }: Props = $props()
 
   const common = $derived(
     expenses.filter((expense) => Object.keys(expense.participants).includes(contact.identity)),
@@ -17,8 +18,9 @@
   {:else}
     <ul class="space-y-2">
       {#each common as expense (expense.id)}
+        {@const highlighted = unseen(expense, notifications ?? [])}
         <li>
-          <Expense {expense} />
+          <Expense {expense} {highlighted} />
         </li>
       {/each}
     </ul>

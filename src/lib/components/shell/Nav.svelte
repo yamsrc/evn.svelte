@@ -7,27 +7,33 @@
   import { cn } from '$lib/utils'
   import { Button } from '$ui/button'
   import * as ButtonGroup from '$ui/button-group'
-  import { exact, href, match, nested, type Props, type Section } from './Nav'
+  import Attention from './Attention.svelte'
+  import { exact, match, nested, type Props, type Section } from './Nav'
   import { actions, returns } from './store'
 
   const { sections, position = 'start', class: classes }: Props = $props()
   const action = $derived($actions.at(-1) ?? null)
 
-  const active = $derived(sections.find(({ href }) => match(href, page.url.pathname)))
-  const collapsed = $derived(active ? nested(active.href, page.url.pathname) : false)
+  const active = $derived(sections.find((section) => match(section, page.url.pathname)))
+  const collapsed = $derived(active ? nested(active, page.url.pathname) : false)
 
   const visible = $derived(
-    sections.filter((section) => !collapsed || match(section.href, page.url.pathname)),
+    sections.filter((section) => !collapsed || match(section, page.url.pathname)),
   )
 
   const rounded = 'rounded-xl'
 
   onMount(() => {
-    for (const section of sections) preloadCode(section.href)
+    for (const section of sections) {
+      preloadCode(section.href)
+      section.nested?.forEach((nested) => preloadCode(nested))
+    }
   })
 
   function link(section: Section) {
-    return collapsed ? null : exact(section.href, page.url.pathname) ? null : href(section.href)
+    if (collapsed)
+      return null // use `back()` to enable view transition
+    else return exact(section, page.url.pathname) ? null : section.href
   }
 </script>
 
@@ -42,7 +48,7 @@
   ">
   <div
     class={cn(
-      'flex items-center gap-2 h-21 p-5 pt-0 sm:pb-6 standalone:px-6 standalone:pb-0',
+      'flex items-center gap-2 h-21 p-5 pt-0 sm:pb-6 standalone:h-16 standalone:px-6 standalone:pb-0',
       position === 'center' ? 'justify-center' : 'justify-between',
       position === 'start' ? 'flex-row' : 'flex-row-reverse',
     )}>
@@ -52,8 +58,8 @@
         rounded,
       )}
       style="view-transition-name: shell-nav;">
-      {#each sections as section, i (section.href)}
-        {@const active = match(section.href, page.url.pathname)}
+      {#each sections as section (section.href)}
+        {@const active = match(section, page.url.pathname)}
         {@const hidden = !visible.includes(section)}
         {@const ret = $returns.at(-1)}
         <li>
@@ -76,11 +82,16 @@
               )}
               style={active ? 'view-transition-name: shell-nav-active;' : ''}>
             </div>
+            {#if section.unseen && !ret}
+              <Attention
+                id={`shell-nav-notify-${section.id}`}
+                class="absolute top-2.5 right-2.5 z-10" />
+            {/if}
             <div
               class={cn(
                 "flex flex-col items-center gap-0.5 z-10 relative font-bold [&_svg:not([class*='size-'])]:size-5",
               )}
-              style="view-transition-name: shell-nav-item-{i};">
+              style="view-transition-name: shell-nav-item-{section.id};">
               {#if ret}
                 {#if ret.children}
                   {@render ret.children()}

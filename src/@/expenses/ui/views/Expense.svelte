@@ -2,6 +2,7 @@
   import { Paperclip } from '@lucide/svelte'
   import { Async } from 'svas'
   import { Separator } from '$com/separator'
+  import { Attention } from '$com/shell'
   import { locale, dict } from '$lib/intl'
   import { Button } from '$ui/button'
   import { accounts } from '@/accounts'
@@ -11,7 +12,7 @@
   import { account } from '@/iam'
   import type { Props } from './Props'
 
-  const { expense }: Props = $props()
+  const { expense, highlighted }: Props = $props()
   const participants = $derived(Object.keys(expense.participants))
   const formatter = $derived(new Intl.DateTimeFormat($locale, { month: 'short', day: 'numeric' }))
 
@@ -24,7 +25,10 @@
   href={`/expenses/editor/${expense.id}/`}
   variant="outline"
   size="lg"
-  class="px-4 py-3 h-fit flex flex-col gap-3">
+  class={[
+    'px-4 py-3 h-fit flex flex-col gap-3 relative',
+    highlighted && 'ring-inset ring-2 ring-muted-foreground/50',
+  ]}>
   <div class="w-full flex justify-between items-start">
     <div class="flex flex-col items-start">
       <div class="flex items-center gap-1">
@@ -32,6 +36,9 @@
           <Paperclip size={14} class="text-muted-foreground" />
         {/if}
         <span>{expense.title}</span>
+        {#if highlighted}
+          <Attention class="mx-1" />
+        {/if}
       </div>
       <p class="text-sm text-muted-foreground">
         {description}

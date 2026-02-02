@@ -6,7 +6,7 @@ actions:
   signout: 退出登录
   close: 关闭
   cheques:
-    title: 钱
+    title: 活动
     scan: 扫描支票
     input: 添加支出
   contacts:
@@ -18,11 +18,12 @@ actions:
   search: 搜索
   save: 保存
   create: 创建
+  slide: 滑动
 nav:
   home: 首页
   profile: 我
   contacts: 朋友
-  expenses: 钱
+  expenses: 活动
 terms: 条款和条件
 privacy: 隐私政策
 madeBy: 由...制作
@@ -30,16 +31,17 @@ profile:
   title: 我的个人资料
   language:
     title: 语言
-    description: 这不会影响支票识别。反正我们在那里大多数语言都能理解。
+    description: 这不会影响收据扫描——我们本来就能用大多数语言读取。
   grammar:
     title: 语法形式
     description: 在某些语言中，消息的措辞取决于语法性别。我们使用此设置以使界面文本更自然、更准确。
     example: |-
       !js
       (name, gender) => `${name} 添加了一笔支出`
+  background:
+    title: 背景
 form:
   enterName: 输入姓名
-copyright: "!js (timestamp) => `© seed.me，2025–${new Date(timestamp).getFullYear()}`"
 onboarding:
   name:
     title: 个性化体验
@@ -57,6 +59,7 @@ contacts:
   contact:
     owesYou: 欠你的
     youOwe: 你欠
+    even: 你们扯平了
   delete:
     confirm:
       title: 删除联系人
@@ -126,7 +129,7 @@ expenses:
     location:
       placeholder: 在哪里？（可选）
     save: 保存并更新余额
-  title: 钱
+  title: 活动
   balance:
     total: 总账单
     youAreOwed: 你有应得的
@@ -149,3 +152,4 @@ home:
     (name) => `${name}，你好！`
 search:
   empty: 未找到结果
+dir: ltr

@@ -1,0 +1,12 @@
+components:
+  title: Bileşenler
+  hold:
+    title: Hold
+  stack:
+    title: Stack
+    collapse: Daralt
+  notifications:
+    title: Notifications
+    display: |-
+      !js
+      (count) => `${count} göster`

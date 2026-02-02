@@ -6,7 +6,7 @@ actions:
   signout: تسجيل الخروج
   close: إغلاق
   cheques:
-    title: المال
+    title: الفعاليات
     scan: مسح الشيك
     input: إضافة مصروف
   contacts:
@@ -18,11 +18,12 @@ actions:
   search: بحث
   save: حفظ
   create: إنشاء
+  slide: اسحب
 nav:
   home: الرئيسية
   profile: أنا
   contacts: الأصدقاء
-  expenses: المال
+  expenses: الفعاليات
 terms: الشروط والأحكام
 privacy: سياسة الخصوصية
 madeBy: من صنع
@@ -30,7 +31,7 @@ profile:
   title: ملفي الشخصي
   language:
     title: اللغة
-    description: هذا لا يؤثر على التعرف على الشيك. على أي حال، نحن نفهم معظم اللغات هناك.
+    description: هذا لا يؤثر على مسح الإيصالات — يمكننا قراءتها بلغات معظمها على أي حال.
   grammar:
     title: الصيغة النحوية
     description: >-
@@ -41,9 +42,10 @@ profile:
 
       (name, gender) => gender === "he" ? `${name} أضاف مصروفًا` : gender ===
       "she" ? `${name} أضافت مصروفًا` : `${name} أضاف(ت) مصروفًا`
+  background:
+    title: الخلفية
 form:
   enterName: أدخل الاسم
-copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
 onboarding:
   name:
     title: لمسة شخصية
@@ -61,6 +63,7 @@ contacts:
   contact:
     owesYou: مدين لك
     youOwe: أنت مدين
+    even: أنتم متعادلون
   delete:
     confirm:
       title: حذف جهة الاتصال
@@ -136,7 +139,7 @@ expenses:
     location:
       placeholder: أين؟ (اختياري)
     save: احفظ وقم بتحديث الأرصدة
-  title: مال
+  title: الفعاليات
   balance:
     total: إجمالي الفاتورة
     youAreOwed: لك مستحقات
@@ -159,3 +162,4 @@ home:
     (name) => `مرحبًا ${name}!`
 search:
   empty: لم يتم العثور على نتائج
+dir: rtl

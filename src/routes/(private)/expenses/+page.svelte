@@ -7,8 +7,13 @@
   import { expenses, filter } from '@/expenses'
   import { Actions, Expenses, Create } from '@/expenses/ui'
   import { account } from '@/iam'
+  import { scope } from '@/notifications'
 
   let search = $state('')
+
+  const expensesNotifications = scope({ domain: 'expenses' })
+  const transfersNotifications = scope({ domain: 'contacts', event: 'transferred' })
+  const notifications = $derived([...$expensesNotifications, ...$transfersNotifications])
 </script>
 
 <Section>
@@ -26,7 +31,7 @@
       <Section>
         <Input type="text" placeholder={$dict.actions.search} bind:value={search} />
       </Section>
-      <Expenses {expenses} {search} />
+      <Expenses {expenses} {search} {notifications} />
       {#if search && empty}
         <Section>
           <p class="text-muted-foreground text-center">{$dict.search.empty}</p>

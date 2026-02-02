@@ -10,7 +10,7 @@ groups:
   title: Appartient aux groupes
   empty: Vous n'êtes membre d'aucun groupe.
 expenses:
-  title: Argent
+  title: Événements
   empty: Aucune dépense partagée pour le moment.
 delete:
   label: Maintenir pour supprimer

@@ -2,11 +2,11 @@
   import { Transfer, Expense } from './views'
   import type { Props } from './Expense'
 
-  const { expense }: Props = $props()
+  const { expense, highlighted }: Props = $props()
 </script>
 
 {#if expense.title === undefined}
-  <Transfer {expense} />
+  <Transfer {expense} {highlighted} />
 {:else}
-  <Expense {expense} />
+  <Expense {expense} {highlighted} />
 {/if}

@@ -5,7 +5,9 @@
   import { page } from '$app/state'
   import { track } from '$com/history'
   import { meta } from '$config'
+  import { dict } from '$lib/intl'
   import { mount, navigate } from '$lib/tools'
+  import { Background } from '@/app/ui'
   import '../app.css'
 
   const { children } = $props()
@@ -16,6 +18,10 @@
   onMount(mount)
   onNavigate(navigate)
   afterNavigate(track)
+
+  $effect(() => {
+    document.dir = $dict.dir
+  })
 </script>
 
 <svelte:head>
@@ -43,4 +49,5 @@
   <meta name="twitter:image" content={image.url} />
 </svelte:head>
 
+<Background class="fixed inset-0 -z-50 pointer-events-none" />
 {@render children()}

@@ -6,7 +6,7 @@ actions:
   signout: Afmelden
   close: Sluiten
   cheques:
-    title: Geld
+    title: Evenementen
     scan: Cheque scannen
     input: Uitgave toevoegen
   contacts:
@@ -18,11 +18,12 @@ actions:
   search: Zoeken
   save: Opslaan
   create: Aanmaken
+  slide: Veeg
 nav:
   home: Home
   profile: Ik
   contacts: Vrienden
-  expenses: Geld
+  expenses: Evenementen
 terms: Algemene voorwaarden
 privacy: Privacybeleid
 madeBy: Gemaakt door
@@ -31,8 +32,8 @@ profile:
   language:
     title: Taal
     description: >-
-      Dit heeft geen invloed op de chequedetectie. We begrijpen daar toch de
-      meeste talen.
+      Dit heeft geen invloed op het scannen van bonnetjes — we kunnen ze sowieso
+      in de meeste talen lezen.
   grammar:
     title: Grammaticale vorm
     description: >-
@@ -45,9 +46,10 @@ profile:
       (name, gender) => gender === "he" ? `${name} heeft een uitgave toegevoegd`
       : gender === "she" ? `${name} heeft een uitgave toegevoegd` : `${name}
       heeft een uitgave toegevoegd`
+  background:
+    title: Achtergrond
 form:
   enterName: Naam invoeren
-copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
 onboarding:
   name:
     title: Persoonlijk tintje
@@ -65,6 +67,7 @@ contacts:
   contact:
     owesYou: Is jou iets verschuldigd
     youOwe: Je bent verschuldigd
+    even: Jullie staan quitte
   delete:
     confirm:
       title: Contact verwijderen
@@ -142,7 +145,7 @@ expenses:
     location:
       placeholder: Waar? (optioneel)
     save: Opslaan en saldi bijwerken
-  title: Geld
+  title: Evenementen
   balance:
     total: Totaalrekening
     youAreOwed: Je hebt iets tegoed
@@ -165,3 +168,4 @@ home:
     (name) => `Hoi ${name}!`
 search:
   empty: Geen resultaten gevonden
+dir: ltr

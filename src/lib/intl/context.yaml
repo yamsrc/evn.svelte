@@ -1,5 +1,8 @@
 context: "Tracking shared expenses app. Friendly informal style (ex: ты а не Вы)"
-genders: true
+genders:
+  - he
+  - she
+  - none
 inputs:
   locale:
     input: locale
@@ -18,7 +21,7 @@ inputs:
       input: Close
     cheques:
       title:
-        input: Money
+        input: Events
       scan:
         input: Scan cheque
       input:
@@ -40,6 +43,8 @@ inputs:
       input: Save
     create:
       input: Create
+    slide:
+      input: Смахни
   nav:
     home:
       input: Home
@@ -48,7 +53,7 @@ inputs:
     contacts:
       input: Friends
     expenses:
-      input: Money
+      input: Events
   terms:
     input: Terms & conditions
   privacy:
@@ -62,7 +67,7 @@ inputs:
       title:
         input: Language
       description:
-        input: "Does not affect the cheque recognition. We\_understand most languages there anyway."
+        input: This does not affect receipt scanning — we can read them in most languages anyway.
     grammar:
       title:
         input: Grammatical form
@@ -71,11 +76,12 @@ inputs:
         input: In some languages, message wording depends on grammatical gender. We use this setting to make interface texts sound natural and correct.
       example:
         input: "{name} добавил(а) расход"
+    background:
+      title:
+        input: Background
   form:
     enterName:
       input: Enter name
-  copyright:
-    input: © Seed.me, 2024-2025
   onboarding:
     name:
       title:
@@ -106,6 +112,9 @@ inputs:
         input: Owes you
       youOwe:
         input: You owe
+      even:
+        input: You're even
+        context: no one owes nothing
     delete:
       confirm:
         title:
@@ -225,7 +234,7 @@ inputs:
       save:
         input: Save and update balances
     title:
-      input: Money
+      input: Events
     empty:
       title:
         input: No expenses yet
@@ -259,6 +268,8 @@ inputs:
   search:
     empty:
       input: No results found
+  dir:
+    input: ltr
 mounts:
   iam: ../../@/iam/ui/intl
   feedback: ../../@/feedback/ui/intl
@@ -266,3 +277,6 @@ mounts:
   contacts: ../../@/contacts/ui/intl
   expenses: ../../@/expenses/ui/intl
   notifications: ../../@/notifications/ui/intl
+  dev: dev
+  err: err
+  accounts: ../../@/accounts/ui/intl

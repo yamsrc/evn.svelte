@@ -6,7 +6,7 @@ actions:
   signout: 로그아웃
   close: 닫기
   cheques:
-    title: 돈
+    title: 이벤트
     scan: 수표 스캔
     input: 지출 추가
   contacts:
@@ -18,11 +18,12 @@ actions:
   search: 검색
   save: 저장
   create: 생성
+  slide: 스와이프
 nav:
   home: 홈
   profile: 나
   contacts: 친구
-  expenses: 돈
+  expenses: 이벤트
 terms: 이용 약관
 privacy: 개인정보처리방침
 madeBy: 제작자
@@ -30,7 +31,7 @@ profile:
   title: 내 프로필
   language:
     title: 언어
-    description: 이는 수표 인식에 영향을 주지 않습니다. 어차피 저희는 대부분의 언어를 이해합니다.
+    description: 이것은 영수증 스캔에 영향을 주지 않습니다 — 대부분의 언어로 어차피 읽을 수 있습니다.
   grammar:
     title: 문법 형태
     description: >-
@@ -39,9 +40,10 @@ profile:
     example: |-
       !js
       (name, gender) => `${name}님이 지출을 추가했습니다`
+  background:
+    title: 배경
 form:
   enterName: 이름을 입력하세요
-copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
 onboarding:
   name:
     title: 개인적인 터치
@@ -59,6 +61,7 @@ contacts:
   contact:
     owesYou: 당신에게 빚졌어요
     youOwe: 당신이 빚졌습니다
+    even: 두 분은 이제 비겼어요
   delete:
     confirm:
       title: 연락처 삭제
@@ -128,7 +131,7 @@ expenses:
     location:
       placeholder: 어디인가요? (선택 사항)
     save: 저장하고 잔액 업데이트
-  title: 돈
+  title: 이벤트
   balance:
     total: 총 금액
     youAreOwed: 당신은 받을 돈이 있습니다
@@ -151,3 +154,4 @@ home:
     (name) => `${name}님, 안녕하세요!`
 search:
   empty: 결과를 찾을 수 없습니다
+dir: ltr

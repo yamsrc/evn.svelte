@@ -6,7 +6,7 @@ actions:
   signout: Sign out
   close: Close
   cheques:
-    title: Money
+    title: Events
     scan: Scan cheque
     input: Add expense
   contacts:
@@ -18,11 +18,12 @@ actions:
   search: Search
   save: Save
   create: Create
+  slide: Swipe
 nav:
   home: Home
   profile: Me
   contacts: Friends
-  expenses: Money
+  expenses: Events
 terms: Terms & Conditions
 privacy: Privacy Policy
 madeBy: Made by
@@ -31,8 +32,8 @@ profile:
   language:
     title: Language
     description: >-
-      This does not affect cheque recognition. We understand most languages
-      there anyway.
+      This does not affect receipt scanning — we can read them in most languages
+      anyway.
   grammar:
     title: Grammatical Form
     description: >-
@@ -43,9 +44,10 @@ profile:
 
       (name, gender) => gender === "he" ? `${name} added an expense` : gender
       === "she" ? `${name} added an expense` : `${name} added an expense`
+  background:
+    title: Background
 form:
   enterName: Enter name
-copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
 onboarding:
   name:
     title: Personal Touch
@@ -63,6 +65,7 @@ contacts:
   contact:
     owesYou: Owes you
     youOwe: You owe
+    even: You’re even
   delete:
     confirm:
       title: Delete contact
@@ -138,7 +141,7 @@ expenses:
     location:
       placeholder: Where? (Optional)
     save: Save and update balances
-  title: Money
+  title: Events
   empty:
     title: No expenses yet
     description: Create your first expense to start tracking
@@ -161,3 +164,4 @@ home:
     (name) => `Hi ${name}!`
 search:
   empty: No results found
+dir: ltr

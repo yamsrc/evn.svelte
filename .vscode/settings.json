@@ -43,4 +43,7 @@
     "strings": true,
     "other": true
   },
+  "workbench.editorAssociations": {
+    "*.svg": "default"
+  }
 }

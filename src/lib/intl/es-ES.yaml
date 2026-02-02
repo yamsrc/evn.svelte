@@ -6,7 +6,7 @@ actions:
   signout: Cerrar sesión
   close: Cerrar
   cheques:
-    title: Dinero
+    title: Eventos
     scan: Escanear cheque
     input: Añadir gasto
   contacts:
@@ -18,11 +18,12 @@ actions:
   search: Buscar
   save: Guardar
   create: Crear
+  slide: Desliza
 nav:
   home: Inicio
   profile: Yo
   contacts: Amigos
-  expenses: Dinero
+  expenses: Eventos
 terms: Términos y condiciones
 privacy: Política de privacidad
 madeBy: Hecho por
@@ -31,8 +32,8 @@ profile:
   language:
     title: Idioma
     description: >-
-      Esto no afecta al reconocimiento de cheques. De todas formas, entendemos
-      la mayoría de los idiomas allí.
+      Esto no afecta al escaneo de recibos — podemos leerlos en la mayoría de
+      los idiomas de todas formas.
   grammar:
     title: Forma gramatical
     description: >-
@@ -44,9 +45,10 @@ profile:
 
       (name, gender) => gender === "he" ? `${name} añadió un gasto` : gender ===
       "she" ? `${name} añadió un gasto` : `${name} añadió un gasto`
+  background:
+    title: Fondo
 form:
   enterName: Introduce el nombre
-copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
 onboarding:
   name:
     title: Toque personal
@@ -64,6 +66,7 @@ contacts:
   contact:
     owesYou: Te debe
     youOwe: Debes
+    even: Están a mano
   delete:
     confirm:
       title: Eliminar contacto
@@ -145,7 +148,7 @@ expenses:
     location:
       placeholder: ¿Dónde? (opcional)
     save: Guardar y actualizar saldos
-  title: Dinero
+  title: Eventos
   balance:
     total: Factura total
     youAreOwed: Te deben
@@ -168,3 +171,4 @@ home:
     (name) => `¡Hola ${name}!`
 search:
   empty: No se encontraron resultados
+dir: ltr

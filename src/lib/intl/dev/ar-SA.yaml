@@ -1,0 +1,12 @@
+components:
+  title: المكونات
+  hold:
+    title: Hold
+  stack:
+    title: Stack
+    collapse: طيّ
+  notifications:
+    title: Notifications
+    display: |-
+      !js
+      (count) => `عرض: ${count}`

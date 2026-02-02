@@ -1,0 +1,12 @@
+components:
+  title: घटक
+  hold:
+    title: Hold
+  stack:
+    title: Stack
+    collapse: संकुचित करें
+  notifications:
+    title: Notifications
+    display: |-
+      !js
+      (count) => `${count} दिखाएं`

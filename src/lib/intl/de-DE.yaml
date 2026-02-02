@@ -6,7 +6,7 @@ actions:
   signout: Abmelden
   close: Schließen
   cheques:
-    title: Geld
+    title: Veranstaltungen
     scan: Scheck scannen
     input: Ausgabe hinzufügen
   contacts:
@@ -18,11 +18,12 @@ actions:
   search: Suchen
   save: Speichern
   create: Erstellen
+  slide: Wischen
 nav:
   home: Startseite
   profile: Ich
   contacts: Freunde
-  expenses: Geld
+  expenses: Veranstaltungen
 terms: Allgemeine Geschäftsbedingungen
 privacy: Datenschutzrichtlinie
 madeBy: Erstellt von
@@ -31,8 +32,8 @@ profile:
   language:
     title: Sprache
     description: >-
-      Das beeinflusst die Scheck-Erkennung nicht. Wir verstehen dort ohnehin die
-      meisten Sprachen.
+      Das beeinflusst das Einscannen von Kassenbons nicht – wir können sie
+      ohnehin in den meisten Sprachen lesen.
   grammar:
     title: Grammatische Form
     description: >-
@@ -45,9 +46,10 @@ profile:
       (name, gender) => gender === "he" ? `${name} hat eine Ausgabe hinzugefügt`
       : gender === "she" ? `${name} hat eine Ausgabe hinzugefügt` : `${name} hat
       eine Ausgabe hinzugefügt`
+  background:
+    title: Hintergrund
 form:
   enterName: Name eingeben
-copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
 onboarding:
   name:
     title: Persönliche Note
@@ -65,6 +67,7 @@ contacts:
   contact:
     owesYou: Schuldet dir
     youOwe: Du schuldest
+    even: Ihr seid quitt
   delete:
     confirm:
       title: Kontakt löschen
@@ -144,7 +147,7 @@ expenses:
     location:
       placeholder: Wo? (optional)
     save: Speichern und Salden aktualisieren
-  title: Geld
+  title: Veranstaltungen
   balance:
     total: Gesamtrechnung
     youAreOwed: Dir steht etwas zu
@@ -167,3 +170,4 @@ home:
     (name) => `Hallo ${name}!`
 search:
   empty: Keine Ergebnisse gefunden
+dir: ltr

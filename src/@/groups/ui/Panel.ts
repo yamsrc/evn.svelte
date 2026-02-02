@@ -1,11 +1,13 @@
 import type { Group } from '@/groups'
 
-interface GroupLike extends Pick<Group, 'id' | 'name' | 'identities'> {
+interface GroupLike extends Pick<Group, 'id' | 'identities' | 'name' | 'emoji'> {
+  title?: string
   balance?: number
 }
 
 export interface Props {
   group: GroupLike
   selected?: boolean
+  highlighted?: boolean
   onselect?: (id: string, selected: boolean) => void
 }

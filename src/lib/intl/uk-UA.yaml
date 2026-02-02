@@ -6,7 +6,7 @@ actions:
   signout: Вийти
   close: Закрити
   cheques:
-    title: Гроші
+    title: Події
     scan: Сканувати чек
     input: Додати витрату
   contacts:
@@ -18,11 +18,12 @@ actions:
   search: Пошук
   save: Зберегти
   create: Створити
+  slide: Змахни
 nav:
   home: Головна
   profile: Я
   contacts: Друзі
-  expenses: Гроші
+  expenses: Події
 terms: Умови та положення
 privacy: Політика конфіденційності
 madeBy: Створено
@@ -31,7 +32,7 @@ profile:
   language:
     title: Мова
     description: >-
-      Це не впливає на розпізнавання чеків. Ми й так розуміємо там більшість
+      Це не впливає на сканування чеків — ми й так можемо їх читати більшістю
       мов.
   grammar:
     title: Граматична форма
@@ -44,9 +45,10 @@ profile:
 
       (name, gender) => gender === "he" ? `${name} додав витрату` : gender ===
       "she" ? `${name} додала витрату` : `${name} додав(ла) витрату`
+  background:
+    title: Тло
 form:
   enterName: Введіть ім’я
-copyright: "!js (timestamp) => `© seed.me, 2025–${new Date(timestamp).getFullYear()}`"
 onboarding:
   name:
     title: Особистий штрих
@@ -64,6 +66,7 @@ contacts:
   contact:
     owesYou: Винен тобі
     youOwe: Ви винні
+    even: Ви квити
   delete:
     confirm:
       title: Видалити контакт
@@ -141,7 +144,7 @@ expenses:
     location:
       placeholder: Де? (необов’язково)
     save: Зберегти й оновити баланси
-  title: Гроші
+  title: Події
   balance:
     total: Загальний рахунок
     youAreOwed: Вам винні
@@ -164,3 +167,4 @@ home:
     (name) => `Привіт, ${name}!`
 search:
   empty: Результатів не знайдено
+dir: ltr
