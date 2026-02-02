@@ -100,7 +100,7 @@
     'flex h-full w-full',
     scrollable &&
       'overflow-x-scroll overflow-y-hidden touch-pan-x overscroll-x-contain no-scrollbar snap-x snap-mandatory',
-    scrollable || 'overflow-hidden opacity-20',
+    scrollable || 'overflow-hidden',
     mounted || 'invisible',
     classes,
   ]}
@@ -113,7 +113,9 @@
         class={['h-full w-full shrink-0 ', scrollable && 'snap-center', i === 0 && 'relative']}
         style="background: url('/bg/{background.filename}') 50% 50% / {scale(
           background.width,
-        )}px {scale(background.height)}px repeat;">
+        )}px {scale(background.height)}px repeat; {scrollable
+          ? ''
+          : `opacity: ${background.opacity?.toString() ?? '0.2'}`}">
         {#if scrollable && i === 0 && $account?.background === undefined}
           <Slide class="h-full justify-end p-8">{$dict.actions.slide}</Slide>
         {/if}

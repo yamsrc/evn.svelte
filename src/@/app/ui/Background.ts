@@ -15,7 +15,7 @@ export function override(id: string) {
   }
 }
 
-export const backgrounds = [
+export const backgrounds: Background[] = [
   {
     id: 'pencil',
     name: 'Pencil',
@@ -36,6 +36,7 @@ export const backgrounds = [
     filename: 'worms-1.svg',
     width: 135,
     height: 135,
+    opacity: 0.15,
   },
   {
     id: 'science',
@@ -43,6 +44,7 @@ export const backgrounds = [
     filename: 'science-1.svg',
     width: 95,
     height: 95,
+    opacity: 0.15,
   },
   {
     id: 'spaghetti',
@@ -50,6 +52,7 @@ export const backgrounds = [
     filename: 'spaghetti-1.svg',
     width: 135,
     height: 135,
+    opacity: 0.15,
   },
   {
     id: 'bubbles',
@@ -64,6 +67,7 @@ export const backgrounds = [
     filename: 'cubic-1.svg',
     width: 35,
     height: 49,
+    opacity: 0.1,
   },
   {
     id: 'waves',
@@ -71,6 +75,7 @@ export const backgrounds = [
     filename: 'waves-1.svg',
     width: 26,
     height: 11,
+    opacity: 0.1,
   },
   {
     id: 'dots',
@@ -78,6 +83,7 @@ export const backgrounds = [
     filename: 'dots-1.svg',
     width: 8,
     height: 8,
+    opacity: 0.3,
   },
   {
     id: 'grid',
@@ -85,6 +91,7 @@ export const backgrounds = [
     filename: 'grid-1.svg',
     width: 36,
     height: 36,
+    opacity: 0.1,
   },
   {
     id: 'evnly',
@@ -92,8 +99,9 @@ export const backgrounds = [
     filename: 'evnly-1.svg',
     width: 24,
     height: 24,
+    opacity: 0.05,
   },
-] as const satisfies Background[]
+]
 
 interface Background {
   id: string
@@ -101,4 +109,5 @@ interface Background {
   filename: string
   width: number
   height: number
+  opacity?: number
 }
