@@ -29,6 +29,7 @@ export const backgrounds: Background[] = [
     filename: 'fragments-1.svg',
     width: 240,
     height: 248,
+    opacity: 0.25,
   },
   {
     id: 'worms',
@@ -60,6 +61,7 @@ export const backgrounds: Background[] = [
     filename: 'bubbles-1.svg',
     width: 25,
     height: 74,
+    opacity: 0.15,
   },
   {
     id: 'cubic',
@@ -83,7 +85,7 @@ export const backgrounds: Background[] = [
     filename: 'dots-1.svg',
     width: 8,
     height: 8,
-    opacity: 0.3,
+    opacity: 0.35,
   },
   {
     id: 'grid',
@@ -91,7 +93,7 @@ export const backgrounds: Background[] = [
     filename: 'grid-1.svg',
     width: 36,
     height: 36,
-    opacity: 0.1,
+    opacity: 0.075,
   },
   {
     id: 'evnly',
