@@ -58,13 +58,13 @@ export const backgrounds = [
     width: 25,
     height: 74,
   },
-  // {
-  //   id: 'cubic',
-  //   name: 'Cubic',
-  //   filename: 'cubic.svg',
-  //   width: 435,
-  //   height: 450,
-  // },
+  {
+    id: 'cubic',
+    name: 'Cubic',
+    filename: 'cubic-1.svg',
+    width: 35,
+    height: 49,
+  },
   {
     id: 'waves',
     name: 'Waves',

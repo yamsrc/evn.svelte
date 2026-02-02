@@ -100,7 +100,7 @@
     'flex h-full w-full',
     scrollable &&
       'overflow-x-scroll overflow-y-hidden touch-pan-x overscroll-x-contain no-scrollbar snap-x snap-mandatory',
-    scrollable || 'overflow-hidden',
+    scrollable || 'overflow-hidden opacity-20',
     mounted || 'invisible',
     classes,
   ]}
@@ -110,11 +110,7 @@
       <div
         bind:this={slides[i]}
         data-id={background.id}
-        class={[
-          'h-full w-full shrink-0 ',
-          scrollable ? 'snap-center' : 'opacity-20',
-          i === 0 && 'relative',
-        ]}
+        class={['h-full w-full shrink-0 ', scrollable && 'snap-center', i === 0 && 'relative']}
         style="background: url('/bg/{background.filename}') 50% 50% / {scale(
           background.width,
         )}px {scale(background.height)}px repeat;">
