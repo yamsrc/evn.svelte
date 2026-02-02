@@ -2988,6 +2988,6 @@ export const dictionaries = {
     "dir": "ltr"
   }
 };
-
 /** @type {import("./types").Locale[]} */
 export const locales = ["ar-SA","de-DE","en-US","es-ES","fr-FR","hi-IN","it-IT","ja-JP","ko-KR","nl-NL","ru-RU","sw-TZ","tr-TR","uk-UA","zh-CN"];
+
