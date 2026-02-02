@@ -10,6 +10,23 @@ const app = globalThis.self as unknown as ServiceWorkerGlobalScope
 const CACHE = `cache-${version}`
 const ASSETS = [...build, ...files]
 
+export interface Notification {
+  id: string
+  title?: string
+  badge?: number
+  body?: string
+  action?: string
+  data?: Record<string, unknown>
+  delivery?: Delivery
+}
+
+export interface Delivery {
+  key?: string
+  visibility?: 'alert' | 'data'
+  priority?: 'low' | 'normal' | 'high' | 'time-sensitive'
+  ttl?: number
+}
+
 app.addEventListener('install', (event) => {
   async function install() {
     const cache = await caches.open(CACHE)
@@ -55,19 +72,7 @@ app.addEventListener('fetch', (event) => {
 
 app.addEventListener('push', (event) => {
   async function notify() {
-    let payload: {
-      id?: string
-      title?: string
-      body?: string
-      action?: string
-      data?: Record<string, unknown>
-      delivery?: {
-        key?: string
-        visibility?: 'alert' | 'data'
-        priority?: 'low' | 'normal' | 'high' | 'time-sensitive'
-        ttl?: number
-      }
-    } | null = null
+    let payload: Notification | null = null
 
     try {
       payload = event.data?.json() ?? null
@@ -83,7 +88,10 @@ app.addEventListener('push', (event) => {
       tag: payload?.delivery?.key,
     }
 
-    await app.registration.showNotification(title, options)
+    if (payload?.delivery?.visibility !== 'data')
+      await app.registration.showNotification(title, options)
+
+    await navigator.setAppBadge(payload?.badge ?? 0)
   }
 
   event.waitUntil(notify())

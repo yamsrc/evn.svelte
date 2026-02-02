@@ -21,5 +21,6 @@ export interface PingInput {
 }
 
 export interface PingResponse {
-  n: number
+  sent: number
+  badge: number
 }
