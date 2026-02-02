@@ -10,23 +10,6 @@ const app = globalThis.self as unknown as ServiceWorkerGlobalScope
 const CACHE = `cache-${version}`
 const ASSETS = [...build, ...files]
 
-export interface Notification {
-  id: string
-  title?: string
-  badge?: number
-  body?: string
-  action?: string
-  data?: Record<string, unknown>
-  delivery?: Delivery
-}
-
-export interface Delivery {
-  key?: string
-  visibility?: 'alert' | 'data'
-  priority?: 'low' | 'normal' | 'high' | 'time-sensitive'
-  ttl?: number
-}
-
 app.addEventListener('install', (event) => {
   async function install() {
     const cache = await caches.open(CACHE)
@@ -80,6 +63,8 @@ app.addEventListener('push', (event) => {
       payload = null
     }
 
+    console.debug('Push event', payload)
+
     const title = payload?.title ?? 'Notification'
 
     const options: NotificationOptions = {
@@ -109,3 +94,20 @@ app.addEventListener('notificationclick', (event) => {
     app.clients.openWindow(action).catch(() => undefined),
   )
 })
+
+export interface Notification {
+  id: string
+  title?: string
+  badge?: number
+  body?: string
+  action?: string
+  data?: Record<string, unknown>
+  delivery?: Delivery
+}
+
+export interface Delivery {
+  key?: string
+  visibility?: 'alert' | 'data'
+  priority?: 'low' | 'normal' | 'high' | 'time-sensitive'
+  ttl?: number
+}

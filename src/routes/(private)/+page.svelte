@@ -42,10 +42,10 @@
       <Section class="px-0 flex flex-col gap-2">
         {#if notifications.length > 0}
           <Notifications {notifications} />
+          <div class="px-5">
+            <Nudge />
+          </div>
         {/if}
-        <div class="px-5">
-          <Nudge />
-        </div>
       </Section>
     {/if}
 

@@ -46,10 +46,7 @@
         ? $dict.transmission.permission.label($permission)
         : $dict.transmission.permission.request}
     </Button>
-    <Button
-      id="transmission-ping-button"
-      onclick={sendPing}
-      disabled={busy || $permission !== 'granted'}>
+    <Button id="transmission-ping-button" onclick={sendPing} disabled={busy}>
       {$dict.transmission.ping}
     </Button>
   </div>
