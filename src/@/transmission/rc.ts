@@ -4,7 +4,7 @@ import { subscribe, unsubscribe } from './svc'
 
 const denied = (): boolean => 'Notification' in window && Notification.permission === 'denied'
 
-function rc() {
+export function rc() {
   if (!browser)
     return
 
@@ -13,5 +13,3 @@ function rc() {
     else void subscribe()
   })
 }
-
-export { rc }
