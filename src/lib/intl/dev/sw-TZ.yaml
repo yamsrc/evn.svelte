@@ -13,8 +13,8 @@ components:
 transmission:
   title: Transmission
   permission:
-    label: |-
-      !js
-      (permission) => `Ruhusa: ${permission}`
     request: Omba ruhusa
-  ping: Tuma ping
+    granted: Ruhusa imetolewa
+    denied: Ruhusa imekataliwa
+    unsupported: Haijaungwa mkono
+  ping: Ping

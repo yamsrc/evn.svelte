@@ -13,8 +13,8 @@ components:
 transmission:
   title: Transmission
   permission:
-    label: |-
-      !js
-      (permission) => `الصلاحية: ${permission}`
     request: طلب إذن
-  ping: إرسال بينج
+    granted: تم منح الإذن
+    denied: تم رفض الإذن
+    unsupported: غير مدعوم
+  ping: Ping

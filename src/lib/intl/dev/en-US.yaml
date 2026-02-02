@@ -13,8 +13,8 @@ components:
 transmission:
   title: Transmission
   permission:
-    label: |-
-      !js
-      (permission) => `Permission: ${permission}`
     request: Request permission
-  ping: Send ping
+    granted: Permission granted
+    denied: Permission denied
+    unsupported: Not supported
+  ping: Ping

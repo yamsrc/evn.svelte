@@ -13,8 +13,8 @@ components:
 transmission:
   title: Transmission
   permission:
-    label: |-
-      !js
-      (permission) => `권한: ${permission}`
     request: 권한 요청
-  ping: 핑 보내기
+    granted: 권한이 부여되었습니다
+    denied: 권한이 거부되었습니다
+    unsupported: 지원되지 않음
+  ping: Ping

@@ -36,18 +36,24 @@
 </Section>
 
 <Section>
-  <div class="flex flex-wrap gap-2">
-    <Button
-      id="transmission-permission-button"
-      variant="secondary"
-      onclick={requestPermission}
-      disabled={final}>
-      {final
-        ? $dict.transmission.permission.label($permission)
-        : $dict.transmission.permission.request}
-    </Button>
-    <Button id="transmission-ping-button" onclick={sendPing} disabled={busy}>
-      {$dict.transmission.ping}
-    </Button>
-  </div>
+  {#if typeof Notification === 'undefined'}
+    {$dict.transmission.permission.unsupported}
+  {:else}
+    <div class="flex flex-wrap gap-2">
+      <Button
+        id="transmission-permission-button"
+        variant="secondary"
+        onclick={requestPermission}
+        disabled={final || busy}>
+        {#if final}
+          {$dict.transmission.permission[$permission as keyof typeof $dict.transmission.permission]}
+        {:else}
+          {$dict.transmission.permission.request}
+        {/if}
+      </Button>
+      <Button id="transmission-ping-button" onclick={sendPing} disabled={busy}>
+        {$dict.transmission.ping}
+      </Button>
+    </div>
+  {/if}
 </Section>

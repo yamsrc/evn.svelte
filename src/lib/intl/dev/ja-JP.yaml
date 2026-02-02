@@ -13,8 +13,8 @@ components:
 transmission:
   title: Transmission
   permission:
-    label: |-
-      !js
-      (permission) => `権限: ${permission}`
     request: 許可をリクエスト
-  ping: Pingを送信
+    granted: 許可されました
+    denied: 権限がありません
+    unsupported: サポートされていません
+  ping: Ping
