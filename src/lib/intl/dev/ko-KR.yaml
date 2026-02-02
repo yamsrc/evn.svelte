@@ -10,3 +10,11 @@ components:
     display: |-
       !js
       (count) => `${count}개 표시`
+transmission:
+  title: Transmission
+  permission:
+    label: |-
+      !js
+      (permission) => `권한: ${permission}`
+    request: 권한 요청
+  ping: 핑 보내기

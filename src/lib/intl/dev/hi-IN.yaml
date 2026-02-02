@@ -10,3 +10,11 @@ components:
     display: |-
       !js
       (count) => `${count} दिखाएं`
+transmission:
+  title: Transmission
+  permission:
+    label: |-
+      !js
+      (permission) => `अनुमति: ${permission}`
+    request: अनुमति अनुरोध करें
+  ping: पिंग भेजें

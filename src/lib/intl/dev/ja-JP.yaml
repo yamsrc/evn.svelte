@@ -10,3 +10,11 @@ components:
     display: |-
       !js
       (count) => `${count}件を表示`
+transmission:
+  title: Transmission
+  permission:
+    label: |-
+      !js
+      (permission) => `権限: ${permission}`
+    request: 許可をリクエスト
+  ping: Pingを送信

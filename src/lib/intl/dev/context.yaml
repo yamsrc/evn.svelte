@@ -17,3 +17,13 @@ inputs:
         input: Notifications
       display:
         input: "Show: {count}"
+  transmission:
+    title:
+      input: Transmission
+    permission:
+      label:
+        input: "Permission: {permission}"
+      request:
+        input: Request permission
+    ping:
+      input: Send ping

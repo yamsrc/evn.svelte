@@ -8,5 +8,8 @@
     <li>
       <a href="components/">{$dict.components.title}</a>
     </li>
+    <li>
+      <a href="transmission/">{$dict.transmission.title}</a>
+    </li>
   </ul>
 </Section>

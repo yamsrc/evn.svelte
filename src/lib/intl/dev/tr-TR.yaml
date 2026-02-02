@@ -10,3 +10,11 @@ components:
     display: |-
       !js
       (count) => `${count} göster`
+transmission:
+  title: Transmission
+  permission:
+    label: |-
+      !js
+      (permission) => `İzin: ${permission}`
+    request: İzin iste
+  ping: Ping gönder

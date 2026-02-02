@@ -10,3 +10,11 @@ components:
     display: |-
       !js
       (count) => `Показать: ${count}`
+transmission:
+  title: Transmission
+  permission:
+    label: |-
+      !js
+      (permission) => `Разрешение: ${permission}`
+    request: Запросить разрешение
+  ping: Отправить пинг

@@ -10,3 +10,11 @@ components:
     display: |-
       !js
       (count) => `显示：${count}`
+transmission:
+  title: Transmission
+  permission:
+    label: |-
+      !js
+      (permission) => `权限：${permission}`
+    request: 请求权限
+  ping: 发送 ping

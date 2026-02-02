@@ -10,3 +10,11 @@ components:
     display: |-
       !js
       (count) => `Onyesha: ${count}`
+transmission:
+  title: Transmission
+  permission:
+    label: |-
+      !js
+      (permission) => `Ruhusa: ${permission}`
+    request: Omba ruhusa
+  ping: Tuma ping

@@ -10,3 +10,11 @@ components:
     display: |-
       !js
       (count) => `عرض: ${count}`
+transmission:
+  title: Transmission
+  permission:
+    label: |-
+      !js
+      (permission) => `الصلاحية: ${permission}`
+    request: طلب إذن
+  ping: إرسال بينج

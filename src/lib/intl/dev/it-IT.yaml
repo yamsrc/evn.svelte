@@ -10,3 +10,11 @@ components:
     display: |-
       !js
       (count) => `Mostra: ${count}`
+transmission:
+  title: Transmission
+  permission:
+    label: |-
+      !js
+      (permission) => `Autorizzazione: ${permission}`
+    request: Richiedi autorizzazione
+  ping: Invia ping
