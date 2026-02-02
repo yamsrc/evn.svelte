@@ -48,6 +48,3 @@ expenses:
   created: |-
     !js
     (amount, name, gender) => gender === "he" ? `${amount} pagato da ${name}` : gender === "she" ? `${amount} pagata da ${name}` : `${amount} pagato/a da ${name}`
-nudge:
-  prompt: Vuoi vedere eventi come questo non appena accadono? Attiva le notifiche e ricevile subito sul tuo dispositivo.
-  button: Attiva le notifiche

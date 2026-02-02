@@ -1,0 +1,8 @@
+nudge:
+  prompt: >-
+    Envie de voir ce type d’événements dès qu’ils se produisent ? Activez les
+    notifications pour les recevoir immédiatement sur votre appareil, au bon
+    moment.
+  button: Activer les notifications
+  dismiss: Fermer
+  dismissed: "Pas d’inquiétude\_! Vous pouvez activer les notifications à tout moment dans les paramètres de votre profil."

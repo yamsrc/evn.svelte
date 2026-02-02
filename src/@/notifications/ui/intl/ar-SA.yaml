@@ -48,6 +48,3 @@ expenses:
   created: |-
     !js
     (amount, name, gender) => gender === "he" ? `${amount} تم دفعها بواسطة ${name}` : gender === "she" ? `${amount} تم دفعها بواسطة ${name}` : `${amount} تم دفعها بواسطة ${name}`
-nudge:
-  prompt: هل ترغب في متابعة فعاليات مثل هذه فور حدوثها؟ فعّل الإشعارات لتصلك مباشرة على جهازك في الوقت المناسب.
-  button: تفعيل الإشعارات

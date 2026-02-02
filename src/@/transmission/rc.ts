@@ -1,4 +1,3 @@
-import { browser } from '$app/environment'
 import { account } from '@/iam'
 import { get, getPermission, permission, request, subscribed, unsubscribe } from './svc'
 
@@ -13,9 +12,6 @@ async function init(): Promise<void> {
 }
 
 export function rc() {
-  if (!browser)
-    return
-
   account.subscribe((me) => {
     const status = getPermission()
 

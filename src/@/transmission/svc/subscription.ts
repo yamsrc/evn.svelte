@@ -4,7 +4,7 @@ import { getVapidKey } from './vapid'
 export async function get(registration?: ServiceWorkerRegistration): Promise<PushSubscription | null> {
   registration ??= await navigator.serviceWorker.ready
 
-  return registration.pushManager.getSubscription()
+  return await registration.pushManager.getSubscription()
 }
 
 export async function create(

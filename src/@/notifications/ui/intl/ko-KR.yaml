@@ -42,6 +42,3 @@ expenses:
   created: |-
     !js
     (amount, name, gender) => `${name}님이 결제한 금액: ${amount}`
-nudge:
-  prompt: 이런 이벤트를 바로 확인하고 싶으신가요? 알림을 활성화하면 제때 기기에서 바로 받아볼 수 있어요.
-  button: 알림 활성화

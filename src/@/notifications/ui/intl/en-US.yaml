@@ -42,6 +42,3 @@ expenses:
   created: |-
     !js
     (amount, name, gender) => `${amount} paid by ${name}`
-nudge:
-  prompt: Want to see events like this as soon as they happen? Enable notifications to get them right on your device, on time.
-  button: Enable notifications

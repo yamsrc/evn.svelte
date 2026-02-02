@@ -46,6 +46,3 @@ expenses:
   created: |-
     !js
     (amount, name, gender) => `${amount} von ${name} bezahlt`
-nudge:
-  prompt: Möchtest du Veranstaltungen wie diese sofort mitbekommen, wenn sie stattfinden? Aktiviere Benachrichtigungen und erhalte sie pünktlich direkt auf dein Gerät.
-  button: Benachrichtigungen aktivieren

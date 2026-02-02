@@ -42,6 +42,3 @@ expenses:
   created: |-
     !js
     (amount, name, gender) => `${amount} ${name} tarafından ödendi`
-nudge:
-  prompt: Böyle etkinlikleri hemen olur olmaz görmek ister misin? Bildirimleri etkinleştir, zamanında cihazına gelsin.
-  button: Bildirimleri etkinleştir

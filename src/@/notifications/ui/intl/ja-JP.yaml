@@ -42,6 +42,3 @@ expenses:
   created: |-
     !js
     (amount, name, gender) => `${name}が支払った金額：${amount}`
-nudge:
-  prompt: このようなイベントをリアルタイムで見たいですか？ 通知を有効にして、すぐにデバイスで受け取りましょう。
-  button: 通知を有効にする

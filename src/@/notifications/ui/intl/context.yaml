@@ -42,8 +42,3 @@ inputs:
     created:
       input: "{amount} paid by {name}"
       context: use gender
-  nudge:
-    prompt:
-      input: Want to see events like this right when they happening? Enable notifications and get them right on your device on time.
-    button:
-      input: Enable notifications

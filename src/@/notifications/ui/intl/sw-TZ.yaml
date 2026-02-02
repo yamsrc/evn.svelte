@@ -42,6 +42,3 @@ expenses:
   created: |-
     !js
     (amount, name, gender) => `${amount} imelipwa na ${name}`
-nudge:
-  prompt: Unataka kuona matukio kama haya mara tu yanapotokea? Washa arifa upate taarifa hizo kwa wakati kwenye kifaa chako.
-  button: Washa arifa

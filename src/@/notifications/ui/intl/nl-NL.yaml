@@ -42,6 +42,3 @@ expenses:
   created: |-
     !js
     (amount, name, gender) => `${amount} betaald door ${name}`
-nudge:
-  prompt: Wil je evenementen zoals deze direct zien wanneer ze plaatsvinden? Schakel meldingen in en ontvang ze op tijd op je apparaat.
-  button: Meldingen inschakelen

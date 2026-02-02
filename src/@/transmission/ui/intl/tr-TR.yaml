@@ -1,0 +1,9 @@
+nudge:
+  prompt: >-
+    Bu tür etkinlikleri anında görmek ister misiniz? Bildirimleri
+    etkinleştirerek, onları tam zamanında cihazınızda alın.
+  button: Bildirimleri etkinleştir
+  dismiss: Kapat
+  dismissed: >-
+    Endişelenme — profil ayarlarından bildirimleri istediğin zaman
+    etkinleştirebilirsin.

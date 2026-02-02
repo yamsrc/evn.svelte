@@ -48,6 +48,3 @@ expenses:
   created: |-
     !js
     (amount, name, gender) => gender === "he" ? `${amount} сплачено ${name}` : gender === "she" ? `${amount} сплачено ${name}ою` : `${amount} сплачено ${name}`
-nudge:
-  prompt: Хочете бачити такі події одразу, як тільки вони відбуваються? Увімкніть сповіщення та отримуйте їх вчасно на свій пристрій.
-  button: Увімкнути сповіщення

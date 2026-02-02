@@ -10,8 +10,9 @@
   import { Recent } from '@/expenses/ui'
   import { account } from '@/iam'
   import { notifications, scope } from '@/notifications'
-  import { Notifications, Nudge } from '@/notifications/ui'
+  import { Notifications } from '@/notifications/ui'
   import { subscribed } from '@/transmission'
+  import { Permission } from '@/transmission/ui'
 
   const expensesOnlyNotifications = scope({ domain: 'expenses' })
   const transfersNotifications = scope({ domain: 'contacts', event: 'transferred' })
@@ -38,16 +39,16 @@
       <Totals {contacts} />
     </Section>
 
-    {#if $subscribed === false}
-      <Section class="px-0 flex flex-col gap-2">
-        {#if notifications.length > 0}
-          <Notifications {notifications} />
+    <Section class="px-0 flex flex-col gap-2">
+      {#if notifications.length > 0}
+        <Notifications {notifications} />
+        {#if $subscribed === false}
           <div class="px-5">
-            <Nudge />
+            <Permission />
           </div>
         {/if}
-      </Section>
-    {/if}
+      {/if}
+    </Section>
 
     <Section>
       <Tops {contacts} />

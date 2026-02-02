@@ -42,6 +42,3 @@ expenses:
   created: |-
     !js
     (amount, name, gender) => `${name}已支付${amount}`
-nudge:
-  prompt: 想第一时间看到这样的活动吗？开启通知，及时在你的设备上收到最新消息。
-  button: 启用通知

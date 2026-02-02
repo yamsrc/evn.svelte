@@ -3,7 +3,3 @@ export function getPermission(): NotificationPermission | null {
 
   return Notification.permission
 }
-
-export function denied(): boolean {
-  return getPermission() === 'denied'
-}
