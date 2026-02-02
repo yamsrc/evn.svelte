@@ -90,7 +90,7 @@
   })
 
   function scale(px: number) {
-    return Math.round(scrollable ? px * 1.2 : px)
+    return Math.round(scrollable ? px * 1.4 : px)
   }
 </script>
 
