@@ -1,6 +1,12 @@
 import { arrayBufferToBase64 } from '$lib/tools/convert'
 import { getVapidKey } from './vapid'
 
+export async function get(): Promise<PushSubscription | null> {
+  const registration = await navigator.serviceWorker.ready
+
+  return registration.pushManager.getSubscription()
+}
+
 export async function getOrCreate(
   registration: ServiceWorkerRegistration,
 ): Promise<PushSubscription | Error> {
@@ -8,7 +14,7 @@ export async function getOrCreate(
 
   if (vapidKey instanceof Error) return vapidKey
 
-  const existing = await registration.pushManager.getSubscription()
+  const existing = await get()
 
   if (existing !== null) return existing
 

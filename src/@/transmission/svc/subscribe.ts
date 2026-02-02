@@ -1,7 +1,9 @@
 import { browser } from '$app/environment'
 import { account } from '@/iam'
 import * as net from './net'
-import { getOrCreate, extractKeys } from './subscription'
+import { getPermission } from './permission'
+import { permission, subscribed } from './store'
+import { get, getOrCreate, extractKeys } from './subscription'
 
 async function send(subscription: PushSubscription): Promise<void | Error> {
   const me = account.extract()
@@ -26,7 +28,7 @@ async function send(subscription: PushSubscription): Promise<void | Error> {
 export async function subscribe(): Promise<void | Error> {
   if (!browser) return
 
-  if (Notification.permission === 'default' &&
+  if (getPermission() === 'default' &&
     (await Notification.requestPermission()) !== 'granted') return
 
   const registration = await navigator.serviceWorker.ready
@@ -35,4 +37,10 @@ export async function subscribe(): Promise<void | Error> {
   if (subscription instanceof Error) return subscription
 
   return send(subscription)
+}
+
+export async function request(): Promise<void> {
+  await subscribe()
+  permission.set(getPermission())
+  subscribed.set((await get()) !== null)
 }

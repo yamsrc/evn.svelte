@@ -1,15 +1,22 @@
 import { browser } from '$app/environment'
 import { account } from '@/iam'
-import { subscribe, unsubscribe } from './svc'
+import { get, getPermission, permission, subscribe, subscribed, unsubscribe } from './svc'
 
-const denied = (): boolean => 'Notification' in window && Notification.permission === 'denied'
+async function init(): Promise<void> {
+  await subscribe()
+  subscribed.set((await get()) !== null)
+}
 
 export function rc() {
   if (!browser)
     return
 
   account.subscribe((me) => {
-    if (me === null || denied()) void unsubscribe()
-    else void subscribe()
+    const status = getPermission()
+
+    permission.set(status)
+
+    if (me === null || status !== 'granted') void unsubscribe()
+    else void init()
   })
 }
