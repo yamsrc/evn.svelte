@@ -90,9 +90,26 @@ app.addEventListener('notificationclick', (event) => {
 
   if (typeof action !== 'string' || action.length === 0) return
 
-  event.waitUntil(
-    app.clients.openWindow(action).catch(() => undefined),
-  )
+  const url = new URL(action, app.location.origin)
+
+  async function navigate() {
+    const list = await app.clients.matchAll({
+      type: 'window',
+      includeUncontrolled: true,
+    })
+
+    for (const client of list)
+
+      if (new URL(client.url).origin === url.origin) {
+        await client.focus()
+
+        return client.navigate(url.href)
+      }
+
+    return app.clients.openWindow(url)
+  }
+
+  event.waitUntil(navigate())
 })
 
 export interface Notification {
