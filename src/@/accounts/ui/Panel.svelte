@@ -40,16 +40,16 @@
     <Picture {account} class="size-8" />
   {/snippet}
   {#snippet left()}
-    <div class="overflow-hidden text-ellipsis whitespace-nowrap min-w-0">
+    <div class="overflow-hidden text-ellipsis whitespace-nowrap min-w-0 flex items-center gap-2">
       {account.name}
+      {#if highlighted}
+        <Attention />
+      {/if}
     </div>
   {/snippet}
   {#snippet right()}
     {#if balance}
       <Balance {balance} youAreOwed={$dict.contacts.contact.owesYou} />
-    {/if}
-    {#if highlighted}
-      <Attention class="absolute top-2 right-2 z-10" />
     {/if}
   {/snippet}
 </Panel>
