@@ -1,4 +1,3 @@
-import { resolve } from 'path'
 import tsPlugin from '@typescript-eslint/eslint-plugin'
 import importPlugin from 'eslint-plugin-import'
 import svelte from 'eslint-plugin-svelte'
@@ -38,9 +37,6 @@ export default [
     languageOptions: {
       parserOptions: {
         parser: ts.parser,
-        project: resolve(import.meta.dirname, '.svelte-kit/tsconfig.json'),
-        tsconfigRootDir: import.meta.dirname,
-        extraFileExtensions: ['.svelte'],
         svelteFeatures: {
           experimentalGenerics: true,
         },
