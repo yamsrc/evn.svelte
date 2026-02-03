@@ -18,3 +18,5 @@ transmission:
     denied: 권한이 거부되었습니다
     unsupported: 지원되지 않음
   ping: Ping
+loading:
+  title: 로딩 화면

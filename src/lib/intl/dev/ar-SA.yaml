@@ -18,3 +18,5 @@ transmission:
     denied: تم رفض الإذن
     unsupported: غير مدعوم
   ping: Ping
+loading:
+  title: شاشة التحميل

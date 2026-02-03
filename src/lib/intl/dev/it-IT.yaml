@@ -18,3 +18,5 @@ transmission:
     denied: Autorizzazione negata
     unsupported: Non supportato
   ping: Ping
+loading:
+  title: Schermata di caricamento

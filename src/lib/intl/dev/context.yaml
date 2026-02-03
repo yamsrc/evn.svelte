@@ -31,3 +31,6 @@ inputs:
         input: Not supported
     ping:
       input: Ping
+  loading:
+    title:
+      input: Loading screen

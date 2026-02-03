@@ -18,3 +18,5 @@ transmission:
     denied: Permission denied
     unsupported: Not supported
   ping: Ping
+loading:
+  title: Loading screen

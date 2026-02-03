@@ -18,3 +18,5 @@ transmission:
     denied: Permiso denegado
     unsupported: No compatible
   ping: Ping
+loading:
+  title: Pantalla de carga

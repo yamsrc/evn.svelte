@@ -18,3 +18,5 @@ transmission:
     denied: Zugriff verweigert
     unsupported: Nicht unterstützt
   ping: Ping
+loading:
+  title: Ladebildschirm

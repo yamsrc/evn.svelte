@@ -18,3 +18,5 @@ transmission:
     denied: Toestemming geweigerd
     unsupported: Niet ondersteund
   ping: Ping
+loading:
+  title: Laadscherm

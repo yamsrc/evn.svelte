@@ -18,3 +18,5 @@ transmission:
     denied: İzin reddedildi
     unsupported: Desteklenmiyor
   ping: Ping
+loading:
+  title: Yükleme ekranı

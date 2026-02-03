@@ -18,3 +18,5 @@ transmission:
     denied: Доступ запрещён
     unsupported: Не поддерживается
   ping: Ping
+loading:
+  title: Экран загрузки

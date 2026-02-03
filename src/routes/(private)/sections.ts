@@ -1,4 +1,4 @@
-import { Activity, LayoutGrid, Users } from '@lucide/svelte'
+import { LayoutGrid, Smile, Wallet } from '@lucide/svelte'
 import type { Section } from '$com/shell'
 import type { Dictionary } from '$lib/intl'
 import type { Notification } from '@/notifications'
@@ -15,7 +15,7 @@ export const sections = (dict: Dictionary, notifications: Notification[]): Secti
     id: 'contacts',
     href: '/contacts/',
     label: dict.nav.contacts,
-    Icon: Users,
+    Icon: Smile,
     unseen: notifications.some(
       (n) =>
         n.domain === 'groups' ||
@@ -27,7 +27,7 @@ export const sections = (dict: Dictionary, notifications: Notification[]): Secti
     id: 'expenses',
     href: '/expenses/',
     label: dict.nav.expenses,
-    Icon: Activity,
+    Icon: Wallet,
     unseen: notifications.some(
       (n) =>
         n.domain === 'expenses' ||
