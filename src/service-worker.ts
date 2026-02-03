@@ -21,6 +21,7 @@ const ASSETS = [...build, ...files]
 
 app.addEventListener('install', (event) => {
   async function install() {
+    const start = Date.now()
     const cache = await caches.open(CACHE)
 
     await Promise.all([
@@ -28,8 +29,8 @@ app.addEventListener('install', (event) => {
       cache.addAll(ASSETS),
     ])
 
-    console.info('Assets cached', ASSETS.length)
-    console.info('App installed', version)
+    console.info(`${ASSETS.length} assets cached`)
+    console.info(`App version ${version} installed in ${Date.now() - start}ms`)
   }
 
   event.waitUntil(install())
@@ -52,7 +53,7 @@ app.addEventListener('activate', (event) => {
 
   event.waitUntil(deleteOldCaches())
 
-  console.info('App activated', version)
+  console.info('App activated')
 })
 
 app.addEventListener('fetch', (event) => {
