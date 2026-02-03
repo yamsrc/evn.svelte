@@ -1,6 +1,7 @@
 <script lang="ts">
   import { Panel } from '$com/panel'
   import { Attention } from '$com/shell'
+  import { TextEllipsis } from '$com/text-ellipsis'
   import { dict } from '$lib/intl'
   import { cn } from '$lib/utils'
   import { Picture } from '@/accounts/ui'
@@ -40,8 +41,8 @@
     <Picture {account} class="size-8" />
   {/snippet}
   {#snippet left()}
-    <div class="overflow-hidden text-ellipsis whitespace-nowrap min-w-0 flex items-center gap-2">
-      {account.name}
+    <div class="flex items-center gap-2 min-w-0">
+      <TextEllipsis>{account.name}</TextEllipsis>
       {#if highlighted}
         <Attention />
       {/if}

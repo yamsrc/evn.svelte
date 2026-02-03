@@ -15,11 +15,6 @@ export interface SubscribeResponse {
   id: string
 }
 
-export interface PingInput {
-  identity: string
-  fail?: boolean
-}
-
 export interface PingResponse {
   sent: number
   badge: number
