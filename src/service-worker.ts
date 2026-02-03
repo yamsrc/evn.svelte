@@ -7,14 +7,26 @@ import { build, files, version } from '$service-worker'
 
 const app = globalThis.self as unknown as ServiceWorkerGlobalScope
 
+const IGNORE = [
+  '/screenshots/',
+  '/og/',
+  '.well-known/',
+]
+
 const CACHE = `cache-${version}`
+
+// do not cache files at the top level and ignored paths (and no subpaths)
 const ASSETS = [...build, ...files]
+  .filter((path) => !IGNORE.some((filter) => path.startsWith(filter)) || path.split('/').length === 2)
 
 app.addEventListener('install', (event) => {
   async function install() {
     const cache = await caches.open(CACHE)
 
-    await cache.addAll(ASSETS)
+    await Promise.all([
+      cacheRoot(cache),
+      cache.addAll(ASSETS),
+    ])
 
     console.info('Assets cached', ASSETS.length)
     console.info('App installed', version)
@@ -22,6 +34,15 @@ app.addEventListener('install', (event) => {
 
   event.waitUntil(install())
 })
+
+async function cacheRoot(cache: Cache): Promise<void> {
+  const url = app.location.origin + '/'
+
+  const response = await fetch(url)
+
+  if (response.ok)
+    await cache.put(url, response)
+}
 
 app.addEventListener('activate', (event) => {
   async function deleteOldCaches() {
@@ -39,15 +60,21 @@ app.addEventListener('fetch', (event) => {
 
   const url = new URL(event.request.url)
 
-  if (!ASSETS.includes(url.pathname)) return
+  if (url.origin !== app.location.origin) return
 
   async function respond() {
     const cache = await caches.open(CACHE)
-    const response = await cache.match(url.pathname)
+    const cached = await cache.match(url.pathname)
 
-    if (response) return response
+    if (cached)
+      return cached
 
-    return fetch(event.request)
+    const response = await fetch(event.request)
+
+    if (response.ok)
+      await cache.put(url.pathname, response.clone())
+
+    return response
   }
 
   event.respondWith(respond())
