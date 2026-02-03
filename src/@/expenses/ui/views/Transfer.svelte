@@ -2,6 +2,7 @@
   import { CircleArrowLeft, CircleArrowRight } from '@lucide/svelte'
   import { Async, combined } from 'svas'
   import { Panel } from '$com/panel'
+  import { Attention } from '$com/shell'
   import { grammar } from '$lib/intl'
   import { locale } from '$lib/intl'
   import { accounts } from '@/accounts'
@@ -38,13 +39,20 @@
       {@const contact = contacts.find((c) => c.identity === identity)}
       <Panel
         href={contact ? `/contacts/${contact.identity}/` : undefined}
-        class="bg-constructive/20 border-constructive/30"
-        {highlighted}>
+        class={[
+          'bg-constructive/20! border-constructive/30! hover:bg-constructive/25! hover:border-constructive/35!',
+          highlighted && 'ring-inset ring-1 ring-constructive/30',
+        ]}>
         {#snippet left()}
           <div class="flex items-center gap-3">
             <Avatar {account} />
             <div class="flex flex-col text-left">
-              <span>{account.name}</span>
+              <span class="inline-flex items-center gap-1">
+                <span>{account.name}</span>
+                {#if highlighted}
+                  <Attention class="mx-1" />
+                {/if}
+              </span>
               <span class="text-sm text-muted-foreground">
                 {date}
               </span>

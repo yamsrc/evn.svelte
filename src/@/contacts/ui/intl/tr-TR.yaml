@@ -10,7 +10,7 @@ groups:
   title: Gruplara ait
   empty: Herhangi bir grubun üyesi değilsin.
 expenses:
-  title: Para
+  title: Etkinlikler
   empty: Şu ana kadar paylaşılan bir harcama yok.
 delete:
   label: Silmek için basılı tutun

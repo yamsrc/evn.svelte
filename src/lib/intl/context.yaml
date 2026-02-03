@@ -1,5 +1,8 @@
 context: "Tracking shared expenses app. Friendly informal style (ex: ты а не Вы)"
-genders: true
+genders:
+  - he
+  - she
+  - none
 inputs:
   locale:
     input: locale
@@ -18,7 +21,7 @@ inputs:
       input: Close
     cheques:
       title:
-        input: Money
+        input: Events
       scan:
         input: Scan cheque
       input:
@@ -50,7 +53,7 @@ inputs:
     contacts:
       input: Friends
     expenses:
-      input: Money
+      input: Events
   terms:
     input: Terms & conditions
   privacy:
@@ -231,7 +234,7 @@ inputs:
       save:
         input: Save and update balances
     title:
-      input: Money
+      input: Events
     empty:
       title:
         input: No expenses yet
@@ -277,3 +280,4 @@ mounts:
   dev: dev
   err: err
   accounts: ../../@/accounts/ui/intl
+  transmission: ../../@/transmission/ui/intl

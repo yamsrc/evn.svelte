@@ -10,3 +10,13 @@ components:
     display: |-
       !js
       (count) => `显示：${count}`
+transmission:
+  title: Transmission
+  permission:
+    request: 请求权限
+    granted: 已授予权限
+    denied: 权限被拒绝
+    unsupported: 不受支持
+  ping: Ping
+loading:
+  title: 加载界面

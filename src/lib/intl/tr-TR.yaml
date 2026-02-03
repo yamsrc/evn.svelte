@@ -6,7 +6,7 @@ actions:
   signout: Oturumu kapat
   close: Kapat
   cheques:
-    title: Para
+    title: Etkinlikler
     scan: Çeki tara
     input: Gider ekle
   contacts:
@@ -23,7 +23,7 @@ nav:
   home: Ana Sayfa
   profile: Ben
   contacts: Arkadaşlar
-  expenses: Para
+  expenses: Etkinlikler
 terms: Şartlar ve koşullar
 privacy: Gizlilik Politikası
 madeBy: Tarafından yapıldı
@@ -139,7 +139,7 @@ expenses:
     location:
       placeholder: Nerede? (Opsiyonel)
     save: Bakiyeleri kaydet ve güncelle
-  title: Para
+  title: Etkinlikler
   balance:
     total: Toplam fatura
     youAreOwed: Sana borç var

@@ -10,7 +10,7 @@ groups:
   title: Belongs to groups
   empty: Not a member of any group.
 expenses:
-  title: Money
+  title: Events
   empty: No shared expenses so far.
 delete:
   label: Hold to delete

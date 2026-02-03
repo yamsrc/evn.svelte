@@ -12,7 +12,7 @@ groups:
   title: Behoort tot groepen
   empty: Je bent geen lid van een groep.
 expenses:
-  title: Geld
+  title: Evenementen
   empty: Tot nu toe geen gedeelde uitgaven.
 delete:
   label: Houd vast om te verwijderen

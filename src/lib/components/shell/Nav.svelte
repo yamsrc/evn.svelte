@@ -8,27 +8,32 @@
   import { Button } from '$ui/button'
   import * as ButtonGroup from '$ui/button-group'
   import Attention from './Attention.svelte'
-  import { exact, href, match, nested, type Props, type Section } from './Nav'
+  import { exact, match, nested, type Props, type Section } from './Nav'
   import { actions, returns } from './store'
 
   const { sections, position = 'start', class: classes }: Props = $props()
   const action = $derived($actions.at(-1) ?? null)
 
-  const active = $derived(sections.find(({ href }) => match(href, page.url.pathname)))
-  const collapsed = $derived(active ? nested(active.href, page.url.pathname) : false)
+  const active = $derived(sections.find((section) => match(section, page.url.pathname)))
+  const collapsed = $derived(active ? nested(active, page.url.pathname) : false)
 
   const visible = $derived(
-    sections.filter((section) => !collapsed || match(section.href, page.url.pathname)),
+    sections.filter((section) => !collapsed || match(section, page.url.pathname)),
   )
 
   const rounded = 'rounded-xl'
 
   onMount(() => {
-    for (const section of sections) preloadCode(section.href)
+    for (const section of sections) {
+      preloadCode(section.href)
+      section.nested?.forEach((nested) => preloadCode(nested))
+    }
   })
 
   function link(section: Section) {
-    return collapsed ? null : exact(section.href, page.url.pathname) ? null : href(section.href)
+    if (collapsed)
+      return null // use `back()` to enable view transition
+    else return exact(section, page.url.pathname) ? null : section.href
   }
 </script>
 
@@ -54,7 +59,7 @@
       )}
       style="view-transition-name: shell-nav;">
       {#each sections as section (section.href)}
-        {@const active = match(section.href, page.url.pathname)}
+        {@const active = match(section, page.url.pathname)}
         {@const hidden = !visible.includes(section)}
         {@const ret = $returns.at(-1)}
         <li>

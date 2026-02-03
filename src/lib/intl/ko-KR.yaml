@@ -6,7 +6,7 @@ actions:
   signout: 로그아웃
   close: 닫기
   cheques:
-    title: 돈
+    title: 이벤트
     scan: 수표 스캔
     input: 지출 추가
   contacts:
@@ -23,7 +23,7 @@ nav:
   home: 홈
   profile: 나
   contacts: 친구
-  expenses: 돈
+  expenses: 이벤트
 terms: 이용 약관
 privacy: 개인정보처리방침
 madeBy: 제작자
@@ -131,7 +131,7 @@ expenses:
     location:
       placeholder: 어디인가요? (선택 사항)
     save: 저장하고 잔액 업데이트
-  title: 돈
+  title: 이벤트
   balance:
     total: 총 금액
     youAreOwed: 당신은 받을 돈이 있습니다

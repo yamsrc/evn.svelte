@@ -1,0 +1,7 @@
+nudge:
+  prompt: >-
+    Möchtest du solche Events sofort mitbekommen? Aktiviere Benachrichtigungen,
+    um sie direkt und pünktlich auf deinem Gerät zu erhalten.
+  button: Benachrichtigungen aktivieren
+  dismiss: Schließen
+  dismissed: "Kein Problem\_– du kannst Benachrichtigungen jederzeit in deinen Profileinstellungen aktivieren."

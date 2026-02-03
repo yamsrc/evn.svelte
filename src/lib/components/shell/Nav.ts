@@ -9,29 +9,25 @@ export interface Props {
 export interface Section {
   id: string
   href: string
+  nested?: string[]
   label: string
   Icon: typeof Icon
   unseen?: boolean
 }
 
-export function match(path: string | string[], current: string): boolean {
-  if (typeof path === 'string') return path === '/' ? current === '/' : current.startsWith(path)
-  else return path.some((p) => match(p, current))
+export function match(section: Section, path: string): boolean {
+  if (section.href === '/') // special case for home screen
+    if (path === '/') return true
+    else return section.nested?.some((nested) => path.startsWith(nested)) === true
+
+  return path.startsWith(section.href) || section.nested?.some((nested) => path.startsWith(nested)) === true
 }
 
-export function exact(paths: string | string[], current: string): boolean {
-  if (typeof paths === 'string') return paths === current
-
-  return paths.some((p) => p === current)
+export function exact(section: Section, path: string): boolean {
+  if (section.href === '/') return path === '/'
+  else return path === section.href
 }
 
-export function href(paths: string | string[]): string | null {
-  if (typeof paths === 'string') return paths
-  else return paths[0]
-}
-
-export function nested(href: string, current: string): boolean {
-  if (href === '/') return false
-
-  return match(href, current) && !exact(href, current)
+export function nested(section: Section, path: string): boolean {
+  return match(section, path) && !exact(section, path)
 }

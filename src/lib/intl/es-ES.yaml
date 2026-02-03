@@ -6,7 +6,7 @@ actions:
   signout: Cerrar sesión
   close: Cerrar
   cheques:
-    title: Dinero
+    title: Eventos
     scan: Escanear cheque
     input: Añadir gasto
   contacts:
@@ -23,7 +23,7 @@ nav:
   home: Inicio
   profile: Yo
   contacts: Amigos
-  expenses: Dinero
+  expenses: Eventos
 terms: Términos y condiciones
 privacy: Política de privacidad
 madeBy: Hecho por
@@ -148,7 +148,7 @@ expenses:
     location:
       placeholder: ¿Dónde? (opcional)
     save: Guardar y actualizar saldos
-  title: Dinero
+  title: Eventos
   balance:
     total: Factura total
     youAreOwed: Te deben

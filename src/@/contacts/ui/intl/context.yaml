@@ -24,7 +24,7 @@ inputs:
       input: Not a member of any group.
   expenses:
     title:
-      input: Money
+      input: Events
     empty:
       input: No shared expenses so far.
   delete:

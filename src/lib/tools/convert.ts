@@ -10,8 +10,12 @@ export function stringToUint8Array(str: string): Uint8Array {
   return new TextEncoder().encode(str)
 }
 
-export function bufferToBase64url(buffer: ArrayBuffer): string {
+export function arrayBufferToBase64(buffer: ArrayBuffer): string {
   return btoa(String.fromCharCode(...new Uint8Array(buffer)))
+}
+
+export function bufferToBase64url(buffer: ArrayBuffer): string {
+  return arrayBufferToBase64(buffer)
     .replace(/\+/g, '-')
     .replace(/\//g, '_')
     .replace(/=+$/, '')

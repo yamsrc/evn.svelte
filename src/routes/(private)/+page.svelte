@@ -11,6 +11,8 @@
   import { account } from '@/iam'
   import { notifications, scope } from '@/notifications'
   import { Notifications } from '@/notifications/ui'
+  import { subscribed } from '@/transmission'
+  import { Permission } from '@/transmission/ui'
 
   const expensesOnlyNotifications = scope({ domain: 'expenses' })
   const transfersNotifications = scope({ domain: 'contacts', event: 'transferred' })
@@ -37,11 +39,16 @@
       <Totals {contacts} />
     </Section>
 
-    {#if notifications.length > 0}
-      <Section class="px-0">
+    <Section class="px-0 flex flex-col gap-2">
+      {#if notifications.length > 0}
         <Notifications {notifications} />
-      </Section>
-    {/if}
+        {#if $subscribed === false}
+          <div class="px-5">
+            <Permission />
+          </div>
+        {/if}
+      {/if}
+    </Section>
 
     <Section>
       <Tops {contacts} />

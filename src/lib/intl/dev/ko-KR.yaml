@@ -10,3 +10,13 @@ components:
     display: |-
       !js
       (count) => `${count}개 표시`
+transmission:
+  title: Transmission
+  permission:
+    request: 권한 요청
+    granted: 권한이 부여되었습니다
+    denied: 권한이 거부되었습니다
+    unsupported: 지원되지 않음
+  ping: Ping
+loading:
+  title: 로딩 화면

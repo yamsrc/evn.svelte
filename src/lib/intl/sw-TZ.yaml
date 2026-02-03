@@ -6,7 +6,7 @@ actions:
   signout: Ondoka
   close: Funga
   cheques:
-    title: Pesa
+    title: Matukio
     scan: Changanua hundi
     input: Ongeza gharama
   contacts:
@@ -23,7 +23,7 @@ nav:
   home: Mwanzo
   profile: Mimi
   contacts: Marafiki
-  expenses: Pesa
+  expenses: Matukio
 terms: Vigezo na masharti
 privacy: Sera ya Faragha
 madeBy: Imetengenezwa na
@@ -142,7 +142,7 @@ expenses:
     location:
       placeholder: Wapi? (Hiari)
     save: Hifadhi na sasisha mizania
-  title: Pesa
+  title: Matukio
   balance:
     total: Jumla ya bili
     youAreOwed: Unadai malipo

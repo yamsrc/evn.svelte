@@ -10,3 +10,13 @@ components:
     display: |-
       !js
       (count) => `Показать: ${count}`
+transmission:
+  title: Transmission
+  permission:
+    request: Запросить разрешение
+    granted: Разрешение предоставлено
+    denied: Доступ запрещён
+    unsupported: Не поддерживается
+  ping: Ping
+loading:
+  title: Экран загрузки

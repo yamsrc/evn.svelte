@@ -90,7 +90,7 @@
   })
 
   function scale(px: number) {
-    return scrollable ? px * 2 : px
+    return Math.round(scrollable ? px * 1.4 : px)
   }
 </script>
 
@@ -111,9 +111,11 @@
         bind:this={slides[i]}
         data-id={background.id}
         class={['h-full w-full shrink-0 ', scrollable && 'snap-center', i === 0 && 'relative']}
-        style="background: url('/bg/{background.id}.svg') 50% 50% / {scale(
+        style="background: url('/bg/{background.filename}') 50% 50% / {scale(
           background.width,
-        )}px {scale(background.height)}px repeat;">
+        )}px {scale(background.height)}px repeat; {scrollable
+          ? ''
+          : `opacity: ${background.opacity?.toString() ?? '0.2'}`}">
         {#if scrollable && i === 0 && $account?.background === undefined}
           <Slide class="h-full justify-end p-8">{$dict.actions.slide}</Slide>
         {/if}

@@ -1,0 +1,9 @@
+nudge:
+  prompt: >-
+    Want to see events like this as soon as they happen? Enable notifications to
+    get them on your device, right on time.
+  button: Enable notifications
+  dismiss: Dismiss
+  dismissed: >-
+    No worries — you can enable notifications anytime from your profile
+    settings.

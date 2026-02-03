@@ -6,7 +6,7 @@ actions:
   signout: Вийти
   close: Закрити
   cheques:
-    title: Гроші
+    title: Події
     scan: Сканувати чек
     input: Додати витрату
   contacts:
@@ -23,7 +23,7 @@ nav:
   home: Головна
   profile: Я
   contacts: Друзі
-  expenses: Гроші
+  expenses: Події
 terms: Умови та положення
 privacy: Політика конфіденційності
 madeBy: Створено
@@ -144,7 +144,7 @@ expenses:
     location:
       placeholder: Де? (необов’язково)
     save: Зберегти й оновити баланси
-  title: Гроші
+  title: Події
   balance:
     total: Загальний рахунок
     youAreOwed: Вам винні

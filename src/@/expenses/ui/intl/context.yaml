@@ -1,5 +1,4 @@
 context: Mount 'expenses' context
-genders: true
 inputs:
   recent:
     title:

@@ -1,9 +1,10 @@
 import { locale } from '$lib/intl'
 import { derived } from 'svelte/store'
-import { dictionaries, locales } from './built.js'
-import type { Locale, Dictionary } from './types'
+import { dictionaries } from './built.js'
+import type { Dictionary } from './types'
+import type { Locale } from '$lib/intl'
 
 const dict = derived(locale, ($locale) => dictionaries[$locale])
 
-export { dict, dictionaries, locales, locale }
+export { dict, dictionaries, locale }
 export type { Locale, Dictionary }

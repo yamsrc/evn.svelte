@@ -6,6 +6,6 @@
 
 <div
   {id}
-  class={['size-2 rounded-full bg-constructive', classes]}
+  class={['size-2 rounded-full bg-constructive shrink-0', classes]}
   style={id ? `view-transition-name: ${id};` : undefined}>
 </div>

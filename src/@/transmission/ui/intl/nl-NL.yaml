@@ -1,0 +1,9 @@
+nudge:
+  prompt: >-
+    Wil je dit soort evenementen direct zien zodra ze gebeuren? Zet meldingen
+    aan om ze direct op je apparaat en op tijd te ontvangen.
+  button: Meldingen inschakelen
+  dismiss: Sluiten
+  dismissed: >-
+    Geen zorgen — je kunt meldingen op elk moment inschakelen via je
+    profielinstellingen.

@@ -10,3 +10,13 @@ components:
     display: |-
       !js
       (count) => `Tonen: ${count}`
+transmission:
+  title: Transmission
+  permission:
+    request: Toestemming aanvragen
+    granted: Toestemming verleend
+    denied: Toestemming geweigerd
+    unsupported: Niet ondersteund
+  ping: Ping
+loading:
+  title: Laadscherm

@@ -30,6 +30,8 @@ src/@/{domain}/
 - **`net/interface.ts`**: Defines API interfaces using Resource pattern for HTTP communication
 - **`net/{Model}.ts`**: Contains TypeScript interfaces, types, and constants for domain models
 - **`index.ts`**: Exports public service APIs
+- Service layer MUST NOT export network layer
+- Entity type must be exported from `store.ts` even if is unchanged compared to the network layer
 
 **UI Layer (`ui/`)**:
 

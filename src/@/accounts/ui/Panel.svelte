@@ -1,6 +1,7 @@
 <script lang="ts">
   import { Panel } from '$com/panel'
   import { Attention } from '$com/shell'
+  import { TextEllipsis } from '$com/text-ellipsis'
   import { dict } from '$lib/intl'
   import { cn } from '$lib/utils'
   import { Picture } from '@/accounts/ui'
@@ -40,16 +41,16 @@
     <Picture {account} class="size-8" />
   {/snippet}
   {#snippet left()}
-    <div class="overflow-hidden text-ellipsis whitespace-nowrap min-w-0">
-      {account.name}
+    <div class="flex items-center gap-2 min-w-0">
+      <TextEllipsis>{account.name}</TextEllipsis>
+      {#if highlighted}
+        <Attention />
+      {/if}
     </div>
   {/snippet}
   {#snippet right()}
     {#if balance}
       <Balance {balance} youAreOwed={$dict.contacts.contact.owesYou} />
-    {/if}
-    {#if highlighted}
-      <Attention class="absolute top-2 right-2 z-10" />
     {/if}
   {/snippet}
 </Panel>

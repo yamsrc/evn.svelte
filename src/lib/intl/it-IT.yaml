@@ -6,7 +6,7 @@ actions:
   signout: Esci
   close: Chiudi
   cheques:
-    title: Denaro
+    title: Eventi
     scan: Scansiona assegno
     input: Aggiungi spesa
   contacts:
@@ -23,7 +23,7 @@ nav:
   home: Home
   profile: Io
   contacts: Amici
-  expenses: Denaro
+  expenses: Eventi
 terms: Termini e condizioni
 privacy: Informativa sulla privacy
 madeBy: Realizzato da
@@ -147,7 +147,7 @@ expenses:
     location:
       placeholder: Dove? (opzionale)
     save: Salva e aggiorna i saldi
-  title: Denaro
+  title: Eventi
   balance:
     total: Totale conto
     youAreOwed: Ti è dovuto

@@ -52,3 +52,79 @@ app.addEventListener('fetch', (event) => {
 
   event.respondWith(respond())
 })
+
+app.addEventListener('push', (event) => {
+  async function notify() {
+    let payload: Notification | null = null
+
+    try {
+      payload = event.data?.json() ?? null
+    } catch {
+      payload = null
+    }
+
+    console.debug('Push event', payload)
+
+    const title = payload?.title ?? 'Notification'
+
+    const options: NotificationOptions = {
+      body: payload?.body,
+      data: payload?.data ?? { action: payload?.action },
+      tag: payload?.delivery?.key,
+    }
+
+    if (payload?.delivery?.visibility !== 'data')
+      await app.registration.showNotification(title, options)
+
+    await navigator.setAppBadge(payload?.badge ?? 0)
+  }
+
+  event.waitUntil(notify())
+})
+
+app.addEventListener('notificationclick', (event) => {
+  const notification = event.notification
+  const action = (notification?.data as { action?: string } | undefined)?.action
+
+  notification.close()
+
+  if (typeof action !== 'string' || action.length === 0) return
+
+  const url = new URL(action, app.location.origin)
+
+  async function navigate() {
+    const list = await app.clients.matchAll({
+      type: 'window',
+      includeUncontrolled: true,
+    })
+
+    for (const client of list)
+
+      if (new URL(client.url).origin === url.origin) {
+        await client.focus()
+
+        return client.navigate(url.href)
+      }
+
+    return app.clients.openWindow(url)
+  }
+
+  event.waitUntil(navigate())
+})
+
+export interface Notification {
+  id: string
+  title?: string
+  badge?: number
+  body?: string
+  action?: string
+  data?: Record<string, unknown>
+  delivery?: Delivery
+}
+
+export interface Delivery {
+  key?: string
+  visibility?: 'alert' | 'data'
+  priority?: 'low' | 'normal' | 'high' | 'time-sensitive'
+  ttl?: number
+}

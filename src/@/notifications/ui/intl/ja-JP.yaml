@@ -3,11 +3,9 @@ groups:
     me: |-
       !js
       (groupName) => `${groupName} に参加しました`
-    others: >-
+    others: |-
       !js
-
-      (names, groupName) => `${new Intl.ListFormat("ja", { style: "long", type:
-      "conjunction" }).format(names)}が${groupName}に参加しました`
+      (names, groupName) => `${new Intl.ListFormat("ja", { style: "long", type: "conjunction" }).format(names)}が${groupName}に参加しました`
     other: |-
       !js
       (name, groupName, gender) => `${name}が${groupName}に参加しました`

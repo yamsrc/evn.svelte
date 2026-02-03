@@ -17,3 +17,20 @@ inputs:
         input: Notifications
       display:
         input: "Show: {count}"
+  transmission:
+    title:
+      input: Transmission
+    permission:
+      request:
+        input: Request permission
+      granted:
+        input: Permission granted
+      denied:
+        input: Permission denied
+      unsupported:
+        input: Not supported
+    ping:
+      input: Ping
+  loading:
+    title:
+      input: Loading screen

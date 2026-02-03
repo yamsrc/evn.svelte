@@ -10,3 +10,13 @@ components:
     display: |-
       !js
       (count) => `${count}件を表示`
+transmission:
+  title: Transmission
+  permission:
+    request: 許可をリクエスト
+    granted: 許可されました
+    denied: 権限がありません
+    unsupported: サポートされていません
+  ping: Ping
+loading:
+  title: ロード画面
