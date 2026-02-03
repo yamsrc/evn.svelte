@@ -2,6 +2,14 @@
 
 - In all interactions and commit messages, be extremely concise and sacrifice grammar for the sake of concision.
 
+## Code Review
+
+Before suggesting missing guards or defensive checks:
+
+- **Trace call paths** - Verify callers don't already handle the condition
+- **Check upstream** - Guards in callers may make downstream checks redundant
+- Don't suggest adding guards without verifying call chain first
+
 ## Architecture
 
 Before making any changes to the codebase, **always refer to `architecture.md`** for:
