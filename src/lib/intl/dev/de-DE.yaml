@@ -10,3 +10,5 @@ components:
     display: |-
       !js
       (count) => `Anzeigen: ${count}`
+loading:
+  title: Ladebildschirm

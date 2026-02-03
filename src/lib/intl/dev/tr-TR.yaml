@@ -10,3 +10,5 @@ components:
     display: |-
       !js
       (count) => `${count} göster`
+loading:
+  title: Yükleme ekranı

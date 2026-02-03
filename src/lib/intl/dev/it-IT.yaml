@@ -10,3 +10,5 @@ components:
     display: |-
       !js
       (count) => `Mostra: ${count}`
+loading:
+  title: Schermata di caricamento

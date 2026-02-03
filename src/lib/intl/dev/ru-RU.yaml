@@ -10,3 +10,5 @@ components:
     display: |-
       !js
       (count) => `Показать: ${count}`
+loading:
+  title: Экран загрузки

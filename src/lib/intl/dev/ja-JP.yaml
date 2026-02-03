@@ -10,3 +10,5 @@ components:
     display: |-
       !js
       (count) => `${count}件を表示`
+loading:
+  title: ロード画面

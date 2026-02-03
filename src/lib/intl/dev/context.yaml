@@ -17,3 +17,6 @@ inputs:
         input: Notifications
       display:
         input: "Show: {count}"
+  loading:
+    title:
+      input: Loading screen

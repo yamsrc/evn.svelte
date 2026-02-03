@@ -10,3 +10,5 @@ components:
     display: |-
       !js
       (count) => `显示：${count}`
+loading:
+  title: 加载界面
