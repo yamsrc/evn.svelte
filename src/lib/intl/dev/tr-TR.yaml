@@ -10,5 +10,13 @@ components:
     display: |-
       !js
       (count) => `${count} göster`
+transmission:
+  title: Transmission
+  permission:
+    request: İzin iste
+    granted: İzin verildi
+    denied: İzin reddedildi
+    unsupported: Desteklenmiyor
+  ping: Ping
 loading:
   title: Yükleme ekranı

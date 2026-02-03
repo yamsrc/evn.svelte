@@ -3,11 +3,9 @@ groups:
     me: |-
       !js
       (groupName) => `Umejiunga na ${groupName}`
-    others: >-
+    others: |-
       !js
-
-      (names, groupName) => `${new Intl.ListFormat("sw", { style: "long", type:
-      "conjunction" }).format(names)} amejiunga na ${groupName}`
+      (names, groupName) => `${new Intl.ListFormat("sw", { style: "long", type: "conjunction" }).format(names)} amejiunga na ${groupName}`
     other: |-
       !js
       (name, groupName, gender) => `${name} amejiunga na ${groupName}`

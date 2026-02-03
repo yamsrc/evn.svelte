@@ -10,5 +10,13 @@ components:
     display: |-
       !js
       (count) => `عرض: ${count}`
+transmission:
+  title: Transmission
+  permission:
+    request: طلب إذن
+    granted: تم منح الإذن
+    denied: تم رفض الإذن
+    unsupported: غير مدعوم
+  ping: Ping
 loading:
   title: شاشة التحميل

@@ -3,11 +3,9 @@ groups:
     me: |-
       !js
       (groupName) => `${groupName} grubuna katıldınız`
-    others: >-
+    others: |-
       !js
-
-      (names, groupName) => `${new Intl.ListFormat("tr", { style: "long", type:
-      "conjunction" }).format(names)} ${groupName} grubuna katıldı`
+      (names, groupName) => `${new Intl.ListFormat("tr", { style: "long", type: "conjunction" }).format(names)} ${groupName} grubuna katıldı`
     other: |-
       !js
       (name, groupName, gender) => `${name}, ${groupName} grubuna katıldı`

@@ -10,5 +10,13 @@ components:
     display: |-
       !js
       (count) => `Onyesha: ${count}`
+transmission:
+  title: Transmission
+  permission:
+    request: Omba ruhusa
+    granted: Ruhusa imetolewa
+    denied: Ruhusa imekataliwa
+    unsupported: Haijaungwa mkono
+  ping: Ping
 loading:
   title: Skrini ya kupakia

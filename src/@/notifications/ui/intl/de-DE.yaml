@@ -3,19 +3,12 @@ groups:
     me: |-
       !js
       (groupName) => `Du bist ${groupName} beigetreten`
-    others: >-
+    others: |-
       !js
-
-      (names, groupName) => `${new Intl.ListFormat("de", { style: "long", type:
-      "conjunction" }).format(names)} ${names.length === 1 ? "ist" : "sind"}
-      ${groupName} beigetreten`
-    other: >-
+      (names, groupName) => `${new Intl.ListFormat("de", { style: "long", type: "conjunction" }).format(names)} ${names.length === 1 ? "ist" : "sind"} ${groupName} beigetreten`
+    other: |-
       !js
-
-      (name, groupName, gender) => { if (gender === "he") return `${name} ist
-      ${groupName} beigetreten`; if (gender === "she") return `${name} ist
-      ${groupName} beigetreten`; return `${name} ist ${groupName} beigetreten`;
-      }
+      (name, groupName, gender) => { if (gender === "he") return `${name} ist ${groupName} beigetreten`; if (gender === "she") return `${name} ist ${groupName} beigetreten`; return `${name} ist ${groupName} beigetreten`; }
 accounts:
   created:
     welcome: Willkommen bei Evnly!
@@ -25,12 +18,9 @@ contacts:
   connected: |-
     !js
     (name) => `Du und ${name} seid jetzt befreundet`
-  unchained: >-
+  unchained: |-
     !js
-
-    (name, gender) => gender === "he" ? `${name} hat das Konto akzeptiert` :
-    gender === "she" ? `${name} hat das Konto akzeptiert` : `${name} hat das
-    Konto akzeptiert`
+    (name, gender) => gender === "he" ? `${name} hat das Konto akzeptiert` : gender === "she" ? `${name} hat das Konto akzeptiert` : `${name} hat das Konto akzeptiert`
   transferred:
     paid: |-
       !js

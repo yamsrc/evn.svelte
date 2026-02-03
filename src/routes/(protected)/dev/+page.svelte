@@ -9,6 +9,9 @@
       <a href="components/">{$dict.components.title}</a>
     </li>
     <li>
+      <a href="transmission/">{$dict.transmission.title}</a>
+    </li>
+    <li>
       <a href="loading/">{$dict.loading.title}</a>
     </li>
   </ul>

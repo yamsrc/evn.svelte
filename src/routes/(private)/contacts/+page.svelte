@@ -46,6 +46,7 @@
         title={$dict.groups.title}
         groups={filteredGroups}
         notifications={$groupsNotifications} />
+
       <Contacts
         title={$dict.contacts.all}
         contacts={filteredContacts}

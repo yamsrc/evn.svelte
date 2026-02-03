@@ -1,0 +1,9 @@
+nudge:
+  prompt: >-
+    Vuoi vedere eventi come questo non appena accadono? Attiva le notifiche per
+    riceverli subito sul tuo dispositivo, puntualmente.
+  button: Attiva le notifiche
+  dismiss: Chiudi
+  dismissed: >-
+    Nessun problema — puoi attivare le notifiche in qualsiasi momento dalle
+    impostazioni del tuo profilo.

@@ -10,5 +10,13 @@ components:
     display: |-
       !js
       (count) => `${count} दिखाएं`
+transmission:
+  title: Transmission
+  permission:
+    request: अनुमति अनुरोध करें
+    granted: अनुमति दी गई
+    denied: अनुमति अस्वीकृत
+    unsupported: समर्थित नहीं है
+  ping: Ping
 loading:
   title: लोडिंग स्क्रीन

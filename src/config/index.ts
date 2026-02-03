@@ -1,5 +1,5 @@
 import { dev, version as ver } from '$app/environment'
-import { PUBLIC_API_ORIGIN } from '$env/static/public'
+import { PUBLIC_API_ORIGIN, PUBLIC_VAPID_PUBLIC_KEY } from '$env/static/public'
 import type { oidc as oauth } from '@/iam'
 
 export const defaultLocale = 'en-US'
@@ -72,6 +72,11 @@ export const oidc = {
   apple: false,
   google: false,
 } as const satisfies Record<oauth.IDP, boolean>
+
+// VAPID public key for web push notifications
+// Generate using: cd ../evn.toa && npx cli vapid
+// Should be a URL-safe base64 string
+export const VAPID_PUBLIC_KEY: string = PUBLIC_VAPID_PUBLIC_KEY
 
 const MAJOR_VERSION = '1'
 
