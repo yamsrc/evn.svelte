@@ -41,8 +41,6 @@ app.addEventListener('install', (event) => {
       cache.addAll(ASSETS),
     ])
 
-    console.log(ASSETS)
-    console.log('dev', dev, import.meta.env.VITE_DISABLE_CACHING)
     console.info(`${ASSETS.length} assets cached`)
     console.info(`App version ${version} installed in ${Date.now() - start}ms`)
   }
