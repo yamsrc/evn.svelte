@@ -16,7 +16,7 @@ export async function subscribe(): Promise<void | Error> {
   if (result instanceof Error) return result
 
   permission.set(await channel!.permission())
-  subscribed.set(await channel!.subsscribed())
+  subscribed.set(await channel!.subscribed())
 }
 
 export async function request(): Promise<void> {

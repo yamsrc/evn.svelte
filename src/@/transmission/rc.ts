@@ -3,7 +3,7 @@ import { permission, subscribe, subscribed, unsubscribe } from './svc'
 import { channel, boot } from './svc/channel'
 
 async function autoSubscribe(): Promise<void> {
-  if (await channel!.subsscribed()) {
+  if (await channel!.subscribed()) {
     subscribed.set(true)
 
     return

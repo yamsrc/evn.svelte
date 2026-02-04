@@ -101,7 +101,7 @@ export const fcm: Channel = {
     token.set(null)
   },
 
-  async subsscribed(): Promise<boolean> {
+  async subscribed(): Promise<boolean> {
     return token.extract() !== null
   },
 }

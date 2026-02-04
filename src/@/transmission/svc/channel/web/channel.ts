@@ -39,7 +39,7 @@ export const web: Channel = {
     await subscription?.unsubscribe()
   },
 
-  async subsscribed(): Promise<boolean> {
+  async subscribed(): Promise<boolean> {
     return (await get()) !== null
   },
 }

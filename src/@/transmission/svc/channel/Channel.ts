@@ -6,5 +6,5 @@ export interface Channel {
   request(): Promise<NotificationPermission | null>
   subscribe(): Promise<SubscribeInput | Error>
   unsubscribe(): Promise<void>
-  subsscribed(): Promise<boolean>
+  subscribed(): Promise<boolean>
 }
