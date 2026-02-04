@@ -9,3 +9,24 @@ inputs:
       input: Dismiss
     dismissed:
       input: No worries — you can enable notifications anytime from your profile settings.
+  settings:
+    title:
+      input: Notifications
+      context: block title
+    description:
+      input: We’ll notify you when something important happens
+    contacts:
+      title:
+        input: Friends
+      description:
+        input: Friend requests and connections
+    groups:
+      title:
+        input: Groups
+      description:
+        input: Group invites and joins
+    expenses:
+      description:
+        input: Shared expenses and money activity
+      title:
+        input: Expenses

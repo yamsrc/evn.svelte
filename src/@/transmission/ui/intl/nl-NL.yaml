@@ -7,3 +7,15 @@ nudge:
   dismissed: >-
     Geen zorgen — je kunt meldingen op elk moment inschakelen via je
     profielinstellingen.
+settings:
+  title: Meldingen
+  description: We laten het je weten als er iets belangrijks gebeurt
+  contacts:
+    title: Vrienden
+    description: Vriendschapsverzoeken en connecties
+  groups:
+    title: Groepen
+    description: Groepsuitnodigingen en -deelname
+  expenses:
+    description: Gedeelde uitgaven en geldactiviteiten
+    title: Uitgaven

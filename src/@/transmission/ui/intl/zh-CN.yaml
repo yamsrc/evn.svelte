@@ -3,3 +3,15 @@ nudge:
   button: 启用通知
   dismiss: 关闭
   dismissed: 别担心，您随时可以在个人资料设置中开启通知。
+settings:
+  title: 通知
+  description: 当有重要事项发生时，我们会通知你
+  contacts:
+    title: 朋友
+    description: 好友请求和连接
+  groups:
+    title: 群组
+    description: 群组邀请和加入
+  expenses:
+    description: 共享支出与资金活动
+    title: 支出

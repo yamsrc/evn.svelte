@@ -5,3 +5,15 @@ nudge:
   button: नोटिफिकेशन सक्षम करें
   dismiss: खारिज करें
   dismissed: चिंता न करें — आप कभी भी प्रोफ़ाइल सेटिंग्स से नोटिफिकेशन सक्षम कर सकते हैं।
+settings:
+  title: सूचनाएं
+  description: जब कुछ महत्वपूर्ण होगा, तो हम आपको सूचित करेंगे
+  contacts:
+    title: मित्र
+    description: मित्र अनुरोध और संपर्क
+  groups:
+    title: समूह
+    description: समूह निमंत्रण और जुड़ना
+  expenses:
+    description: साझा खर्च और पैसों की गतिविधि
+    title: खर्चे

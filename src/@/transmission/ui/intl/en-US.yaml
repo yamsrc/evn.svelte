@@ -7,3 +7,15 @@ nudge:
   dismissed: >-
     No worries — you can enable notifications anytime from your profile
     settings.
+settings:
+  title: Notifications
+  description: We’ll notify you when something important happens
+  contacts:
+    title: Friends
+    description: Friend requests and connections
+  groups:
+    title: Groups
+    description: Group invites and joins
+  expenses:
+    description: Shared expenses and money activity
+    title: Expenses

@@ -7,3 +7,15 @@ nudge:
   dismissed: >-
     Usijali — unaweza kuwezesha arifa wakati wowote kwenye mipangilio ya wasifu
     wako.
+settings:
+  title: Taarifa
+  description: Tutakujulisha kunapotokea jambo muhimu
+  contacts:
+    title: Marafiki
+    description: Ombi za urafiki na muunganiko
+  groups:
+    title: Makundi
+    description: Mialiko na ujiungaji wa kikundi
+  expenses:
+    description: Matumizi ya pamoja na shughuli za fedha
+    title: Matumizi

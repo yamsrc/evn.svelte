@@ -7,6 +7,7 @@
   import { groups } from '@/groups'
   import { account } from '@/iam'
   import { Notifications } from '@/notifications/ui'
+  import { Scopes } from '@/transmission/ui'
   import type { Expense } from '@/expenses'
   import type { Notification, Of, PayloadOf } from '@/notifications'
 
@@ -149,4 +150,8 @@
       class="flex-1 h-2 bg-input rounded-lg appearance-none cursor-pointer accent-primary" />
   </div>
   <Notifications {notifications} max={notifications.length} {ondismiss} {onclear} />
+</Section>
+
+<Section>
+  <Scopes />
 </Section>

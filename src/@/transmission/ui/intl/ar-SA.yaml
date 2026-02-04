@@ -5,3 +5,15 @@ nudge:
   button: تفعيل الإشعارات
   dismiss: تجاهل
   dismissed: لا داعي للقلق — يمكنك تفعيل الإشعارات في أي وقت من إعدادات ملفك الشخصي.
+settings:
+  title: الإشعارات
+  description: سنقوم بإبلاغك عندما يحدث أمر مهم
+  contacts:
+    title: الأصدقاء
+    description: طلبات الصداقة والاتصالات
+  groups:
+    title: المجموعات
+    description: دعوات المجموعة والانضمامات
+  expenses:
+    description: النفقات المشتركة وأنشطة المال
+    title: المصروفات

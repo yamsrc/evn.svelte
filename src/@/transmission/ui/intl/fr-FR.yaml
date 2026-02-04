@@ -6,3 +6,15 @@ nudge:
   button: Activer les notifications
   dismiss: Fermer
   dismissed: "Pas d’inquiétude\_! Vous pouvez activer les notifications à tout moment dans les paramètres de votre profil."
+settings:
+  title: Notifications
+  description: Nous vous avertirons si quelque chose d’important se produit
+  contacts:
+    title: Amis
+    description: Invitations et relations
+  groups:
+    title: Groupes
+    description: Invitations et adhésions au groupe
+  expenses:
+    description: Dépenses partagées et activités d’argent
+    title: Dépenses

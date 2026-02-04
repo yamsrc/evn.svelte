@@ -15,6 +15,7 @@
   import { Feedback } from '@/feedback/ui'
   import { logout } from '@/iam'
   import { account } from '@/iam'
+  // import { Scopes } from '@/transmission/ui'
 
   async function getout() {
     logout()
@@ -45,6 +46,10 @@
   </Section>
 
   <Separator class="mt-5" />
+
+  <!-- <Section>
+    <Scopes />
+  </Section> -->
 
   <Section class="flex flex-col gap-4 flex-1 [&_p]:text-muted-foreground">
     <div class="flex flex-col gap-2">

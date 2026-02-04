@@ -3,3 +3,15 @@ nudge:
   button: 通知を有効にする
   dismiss: 閉じる
   dismissed: ご心配なく — 通知はいつでもプロフィール設定から有効にできます。
+settings:
+  title: 通知
+  description: 重要なことが起きたときにお知らせします
+  contacts:
+    title: 友達
+    description: 友達リクエストとつながり
+  groups:
+    title: グループ
+    description: グループの招待と参加
+  expenses:
+    description: 共有の支出とお金の履歴
+    title: 支出
