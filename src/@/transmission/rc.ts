@@ -1,5 +1,5 @@
 import { account } from '@/iam'
-import { getPermission, permission, request, subscribed, unsubscribe } from './svc'
+import { permission, subscribe, subscribed, unsubscribe } from './svc'
 import { channel } from './svc/channel'
 
 async function init(): Promise<void> {
@@ -9,16 +9,18 @@ async function init(): Promise<void> {
     return
   }
 
-  await request()
+  await subscribe()
 }
 
 export function rc() {
   channel.init()
 
-  account.subscribe((me) => {
-    permission.set(getPermission())
+  account.subscribe(async (me) => {
+    const status = await channel.permission()
 
-    if (me === null || getPermission() !== 'granted') void unsubscribe()
+    permission.set(status)
+
+    if (me === null || status !== 'granted') void unsubscribe()
     else void init()
   })
 }

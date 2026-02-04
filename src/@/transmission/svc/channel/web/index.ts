@@ -25,17 +25,21 @@ async function send(): Promise<void | Error> {
 }
 
 export const web: Channel = {
-  init() {},
+  init() { },
 
-  getPermission() {
+  async permission(): Promise<NotificationPermission | null> {
     if (typeof Notification === 'undefined') return null
 
     return Notification.permission
   },
 
-  async subscribe() {
-    if (this.getPermission() === 'default')
-      if ((await Notification.requestPermission()) !== 'granted') return
+  async request(): Promise<NotificationPermission> {
+    return Notification.requestPermission()
+  },
+
+  async subscribe(): Promise<void | Error> {
+    if ((await this.permission()) === 'default')
+      if ((await this.request()) !== 'granted') return
 
     const registration = await navigator.serviceWorker.ready
     const subscription = (await get(registration)) ?? (await create(registration))
@@ -45,13 +49,13 @@ export const web: Channel = {
     return send()
   },
 
-  async unsubscribe() {
+  async unsubscribe(): Promise<void> {
     const subscription = await get()
 
     await subscription?.unsubscribe()
   },
 
-  async isSubscribed() {
+  async isSubscribed(): Promise<boolean> {
     return (await get()) !== null
   },
 }

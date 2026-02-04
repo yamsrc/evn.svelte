@@ -1,4 +1,5 @@
-export { getPermission, supported } from './channel'
+export { supported } from './channel'
+export type { Notification } from './Notification'
 export { ping } from './ping'
 export { request, subscribe } from './subscribe'
 export { unsubscribe } from './unsubscribe'

@@ -1,59 +1,89 @@
+import { ensure, having, once, value } from 'svas'
 import { account } from '@/iam'
 import * as net from '../../net'
 import type { Channel } from '../interface'
+import type { Notification } from '@/transmission'
+
+type Handler = keyof NonNullable<NonNullable<typeof window.webkit>['messageHandlers']>
 
 const mapPermission = (s: string): NotificationPermission =>
   s === 'authorized' ? 'granted' : s === 'notDetermined' ? 'default' : 'denied'
 
-let permission: NotificationPermission | null = null
-let token: string | null = null
-let tokenResolve: ((t: string) => void) | null = null
+const permission = value<NotificationPermission>()
+const token = value<string>()
 
-const waitToken = (): Promise<string> =>
-  token !== null ? Promise.resolve(token) : new Promise((resolve) => { tokenResolve = resolve })
+function postMessage(name: Handler, msg: unknown = {}): boolean {
+  const handler = window.webkit?.messageHandlers?.[name]
+
+  if (handler == null) return false
+
+  handler.postMessage(msg)
+
+  return true
+}
 
 async function send(): Promise<void | Error> {
-  const me = account.extract()
+  const me = ensure(account)
+  const t = await having(token)
 
-  if (me === null) return
+  if (me === null || t === null) return
 
-  if (token === null) return
-
-  const result = await net.subscribe(me.id, { channel: 'fcm', endpoint: token })
+  const result = await net.subscribe(me.id, { channel: 'fcm', endpoint: t })
 
   if (result instanceof Error) return result
 }
 
 export const fcm: Channel = {
   init() {
-    window.addEventListener('push-permission-state', ((e: CustomEvent<string>) => {
-      permission = mapPermission(e.detail)
-    }) as EventListener)
+    window.addEventListener('push-permission-state', (e) => {
+      permission.set(mapPermission(e.detail))
+    })
 
-    window.addEventListener('push-permission-request', ((e: CustomEvent<string>) => {
-      permission = e.detail === 'granted' ? 'granted' : 'denied'
-    }) as EventListener)
+    window.addEventListener('push-permission-request', (e) => {
+      permission.set(e.detail === 'granted' ? 'granted' : 'denied')
+    })
 
-    window.addEventListener('push-token', ((e: CustomEvent<string>) => {
-      token = e.detail
-      tokenResolve?.(token)
-    }) as EventListener)
+    window.addEventListener('push-token', (e) => {
+      token.set(e.detail)
+    })
+
+    window.addEventListener('push-notification-click', (e: CustomEvent<Notification>) => {
+      if (e.detail.action !== undefined && e.detail.action !== '')
+        window.location.href = e.detail.action
+    })
+
+    postMessage('push-permission-state')
   },
 
-  getPermission: () => permission,
+  async permission(): Promise<NotificationPermission | null> {
+    postMessage('push-token')
 
-  async subscribe() {
-    window.webkit?.messageHandlers?.['push-permission-request']?.postMessage({})
-    await waitToken()
+    return Promise.race([
+      having(permission),
+      new Promise<null>((resolve) => setTimeout(() => resolve(null), 5000)),
+    ])
+  },
+
+  async request(): Promise<NotificationPermission | null> {
+    postMessage('push-permission-request')
+
+    return Promise.race([
+      once(permission, (permission) => permission !== 'default'),
+      new Promise<null>((resolve) => setTimeout(() => resolve(null), 5000)),
+    ])
+  },
+
+  async subscribe(): Promise<void | Error> {
+    postMessage('push-permission-request')
 
     return send()
   },
 
-  async unsubscribe() {
-    token = null
+  async unsubscribe(): Promise<void> {
+    token.set(null)
   },
 
-  async isSubscribed() {
-    return token !== null
+  async isSubscribed(): Promise<boolean> {
+    return token.extract() !== null
   },
 }

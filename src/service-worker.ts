@@ -6,6 +6,7 @@
 // @ts-expect-error: wtf
 import { PUBLIC_API_ORIGIN } from '$env/static/public'
 import { build, files, version } from '$service-worker'
+import type { Notification } from './@/transmission'
 
 const app = globalThis.self as unknown as ServiceWorkerGlobalScope
 
@@ -167,20 +168,3 @@ app.addEventListener('notificationclick', (event) => {
 
   event.waitUntil(navigate())
 })
-
-export interface Notification {
-  id: string
-  title?: string
-  badge?: number
-  body?: string
-  action?: string
-  data?: Record<string, unknown>
-  delivery?: Delivery
-}
-
-export interface Delivery {
-  key?: string
-  visibility?: 'alert' | 'data'
-  priority?: 'low' | 'normal' | 'high' | 'time-sensitive'
-  ttl?: number
-}
