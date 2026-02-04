@@ -9,7 +9,9 @@ async function init(): Promise<void> {
     return
   }
 
-  await subscribe()
+  const error = await subscribe()
+
+  if (error instanceof Error) console.error('Automatic subscription failed', error)
 }
 
 export function rc() {

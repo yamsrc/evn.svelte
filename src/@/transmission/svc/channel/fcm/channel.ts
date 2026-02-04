@@ -1,8 +1,11 @@
 import { ensure, having, once, value } from 'svas'
+import { cap } from '$lib/tools'
 import { account } from '@/iam'
 import * as net from '../../net'
 import type { Channel } from '../Channel'
 import type { Notification } from '@/transmission'
+
+const TIMEOUT = 5000
 
 type Handler = keyof NonNullable<NonNullable<typeof window.webkit>['messageHandlers']>
 
@@ -22,11 +25,10 @@ function postMessage(name: Handler, msg: unknown = {}): boolean {
   return true
 }
 
-async function send(): Promise<void | Error> {
+async function send(t: string): Promise<void | Error> {
   const me = ensure(account)
-  const t = await having(token)
 
-  if (me === null || t === null) return
+  if (me === null) return
 
   const result = await net.subscribe(me.id, { channel: 'fcm', endpoint: t })
 
@@ -60,27 +62,25 @@ export const fcm: Channel = {
   },
 
   async permission(): Promise<NotificationPermission | null> {
-    postMessage('push-token')
+    postMessage('push-permission-state')
 
-    return Promise.race([
-      having(permission),
-      new Promise<null>((resolve) => setTimeout(() => resolve(null), 5000)),
-    ])
+    return cap(having(permission), TIMEOUT)
   },
 
   async request(): Promise<NotificationPermission | null> {
     postMessage('push-permission-request')
 
-    return Promise.race([
-      once(permission, (permission) => permission !== 'default'),
-      new Promise<null>((resolve) => setTimeout(() => resolve(null), 5000)),
-    ])
+    return cap(once(permission, (p) => p !== 'default'), TIMEOUT)
   },
 
   async subscribe(): Promise<void | Error> {
     postMessage('push-permission-request')
 
-    return send()
+    const t = await cap(once(token, (t) => t !== null), TIMEOUT)
+
+    if (t === null) return
+
+    return send(t)
   },
 
   async unsubscribe(): Promise<void> {
