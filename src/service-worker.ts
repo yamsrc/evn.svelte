@@ -31,10 +31,7 @@ app.addEventListener('install', (event) => {
     const start = Date.now()
     const cache = await caches.open(CACHE)
 
-    await Promise.all([
-      cacheRoot(cache),
-      cache.addAll(ASSETS),
-    ])
+    await cache.addAll(['/', ...ASSETS])
 
     console.info(`${ASSETS.length} assets cached`)
     console.info(`App version ${version} installed in ${Date.now() - start}ms`)
@@ -42,15 +39,6 @@ app.addEventListener('install', (event) => {
 
   event.waitUntil(install())
 })
-
-async function cacheRoot(cache: Cache): Promise<void> {
-  const url = app.location.origin + '/'
-
-  const response = await fetch(url)
-
-  if (response.ok)
-    await cache.put(url, response)
-}
 
 app.addEventListener('activate', (event) => {
   async function deleteOldCaches() {
