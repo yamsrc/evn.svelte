@@ -16,6 +16,7 @@ declare global {
     'push-permission-state': CustomEvent<string>
     'push-permission-request': CustomEvent<string>
     'push-token': CustomEvent<string>
+    'push-notification': CustomEvent<Notification>
     'push-notification-click': CustomEvent<Notification>
   }
 }
