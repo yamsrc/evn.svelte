@@ -6,7 +6,9 @@ import type { Notification } from '@/transmission'
 
 const TIMEOUT = 5000
 
-type Handler = keyof NonNullable<NonNullable<typeof window.webkit>['messageHandlers']>
+type Handlers = NonNullable<NonNullable<typeof window.webkit>['messageHandlers']>
+type Handler = keyof Handlers
+type Message<H extends Handler> = Parameters<NonNullable<Handlers[H]>['postMessage']>[0]
 
 const mapPermission = (s: string): NotificationPermission =>
   s === 'authorized' ? 'granted' : s === 'notDetermined' ? 'default' : 'denied'
@@ -50,12 +52,12 @@ function init(): void {
   postMessage('push-permission-state')
 }
 
-function postMessage(name: Handler, msg: unknown = {}): boolean {
+function postMessage<H extends Handler>(name: H, msg: Message<H> = {} as Message<H>): boolean {
   const handler = window.webkit?.messageHandlers?.[name]
 
   if (handler == null) return false
 
-  handler.postMessage(msg)
+  handler.postMessage(msg as any)
 
   return true
 }
@@ -99,6 +101,7 @@ export const fcm: Channel = {
 
   async unsubscribe(): Promise<void> {
     token.set(null)
+    postMessage('push-subscribe', { unsubscribe: true })
   },
 
   async subscribed(): Promise<boolean> {

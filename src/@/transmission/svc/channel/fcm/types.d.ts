@@ -4,10 +4,10 @@ declare global {
   interface Window {
     webkit?: {
       messageHandlers?: {
+        'push-subscribe'?: { postMessage: (msg: { topic?: string, unsubscribe?: boolean }) => void }
         'push-permission-state'?: { postMessage: (msg: unknown) => void }
         'push-permission-request'?: { postMessage: (msg: unknown) => void }
         'push-token'?: { postMessage: (msg: unknown) => void }
-        'push-unsubscribe'?: { postMessage: (msg: unknown) => void }
       }
     }
   }
