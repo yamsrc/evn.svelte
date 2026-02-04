@@ -1,7 +1,6 @@
-import { ensure, having, once, value } from 'svas'
+import { having, once, value } from 'svas'
 import { cap } from '$lib/tools'
-import { account } from '@/iam'
-import * as net from '../../net'
+import type { SubscribeInput } from '../../net'
 import type { Channel } from '../Channel'
 import type { Notification } from '@/transmission'
 
@@ -23,16 +22,6 @@ function postMessage(name: Handler, msg: unknown = {}): boolean {
   handler.postMessage(msg)
 
   return true
-}
-
-async function send(t: string): Promise<void | Error> {
-  const me = ensure(account)
-
-  if (me === null) return
-
-  const result = await net.subscribe(me.id, { channel: 'fcm', endpoint: t })
-
-  if (result instanceof Error) return result
 }
 
 export const fcm: Channel = {
@@ -73,21 +62,21 @@ export const fcm: Channel = {
     return cap(once(permission, (p) => p !== 'default'), TIMEOUT)
   },
 
-  async subscribe(): Promise<void | Error> {
+  async subscribe(): Promise<SubscribeInput | Error> {
     postMessage('push-permission-request')
 
     const t = await cap(once(token, (t) => t !== null), TIMEOUT)
 
-    if (t === null) return
+    if (t === null) return new Error('Token timeout')
 
-    return send(t)
+    return { channel: 'fcm', endpoint: t }
   },
 
   async unsubscribe(): Promise<void> {
     token.set(null)
   },
 
-  async isSubscribed(): Promise<boolean> {
+  async subsscribed(): Promise<boolean> {
     return token.extract() !== null
   },
 }

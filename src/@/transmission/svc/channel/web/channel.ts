@@ -1,28 +1,6 @@
-import { account } from '@/iam'
-import * as net from '../../net'
 import { create, extractKeys, get } from './subscription'
+import type { SubscribeInput } from '../../net'
 import type { Channel } from '../Channel'
-
-async function send(): Promise<void | Error> {
-  const me = account.extract()
-
-  if (me === null) return
-
-  const subscription = await get()
-
-  if (subscription === null) return
-
-  const keys = extractKeys(subscription)
-
-  if (keys instanceof Error) return keys
-
-  const result = await net.subscribe(me.id, {
-    channel: 'web',
-    endpoint: { endpoint: subscription.endpoint, keys },
-  })
-
-  if (result instanceof Error) return result
-}
 
 export const web: Channel = {
   init() { },
@@ -37,16 +15,20 @@ export const web: Channel = {
     return Notification.requestPermission()
   },
 
-  async subscribe(): Promise<void | Error> {
+  async subscribe(): Promise<SubscribeInput | Error> {
     if ((await this.permission()) === 'default')
-      if ((await this.request()) !== 'granted') return
+      if ((await this.request()) !== 'granted') return new Error('Permission denied')
 
     const registration = await navigator.serviceWorker.ready
     const subscription = (await get(registration)) ?? (await create(registration))
 
     if (subscription instanceof Error) return subscription
 
-    return send()
+    const keys = extractKeys(subscription)
+
+    if (keys instanceof Error) return keys
+
+    return { channel: 'web', endpoint: { endpoint: subscription.endpoint, keys } }
   },
 
   async unsubscribe(): Promise<void> {
@@ -55,7 +37,7 @@ export const web: Channel = {
     await subscription?.unsubscribe()
   },
 
-  async isSubscribed(): Promise<boolean> {
+  async subsscribed(): Promise<boolean> {
     return (await get()) !== null
   },
 }

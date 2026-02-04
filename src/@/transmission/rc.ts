@@ -3,7 +3,7 @@ import { permission, subscribe, subscribed, unsubscribe } from './svc'
 import { channel } from './svc/channel'
 
 async function init(): Promise<void> {
-  if (await channel.isSubscribed()) {
+  if (await channel.subsscribed()) {
     subscribed.set(true)
 
     return
