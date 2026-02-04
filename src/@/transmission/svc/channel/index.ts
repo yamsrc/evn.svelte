@@ -1,3 +1,3 @@
 export type { Channel } from './interface'
-export { isNative } from './detect'
+export { isNative, supported } from './detect'
 export { channel, getPermission } from './active'

@@ -1,4 +1,4 @@
-export { getPermission } from './channel'
+export { getPermission, supported } from './channel'
 export { ping } from './ping'
 export { request, subscribe } from './subscribe'
 export { unsubscribe } from './unsubscribe'
