@@ -25,6 +25,9 @@ function postMessage(name: Handler, msg: unknown = {}): boolean {
 }
 
 export const fcm: Channel = {
+  available: () =>
+    typeof window !== 'undefined' && Boolean(window.webkit?.messageHandlers?.['push-token']),
+
   init() {
     window.addEventListener('push-permission-state', (e) => {
       permission.set(mapPermission(e.detail))

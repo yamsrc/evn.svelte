@@ -3,6 +3,8 @@ import type { SubscribeInput } from '../../net'
 import type { Channel } from '../Channel'
 
 export const web: Channel = {
+  available: () => typeof Notification !== 'undefined',
+
   init() { },
 
   async permission(): Promise<NotificationPermission | null> {
