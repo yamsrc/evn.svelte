@@ -12,5 +12,6 @@ export async function boot(): Promise<void> {
   else if (await web.available())
     channel = web
 
-  if (channel !== null) supported.set(true)
+  if (channel !== null)
+    supported.set(true)
 }
