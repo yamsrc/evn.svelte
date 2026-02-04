@@ -8,6 +8,8 @@
     checked = $bindable(false),
     ...restProps
   }: WithoutChildrenOrChild<SwitchPrimitive.RootProps> = $props()
+
+  const id = $derived(restProps.id ?? Math.random().toString(36).substring(2, 15))
 </script>
 
 <SwitchPrimitive.Root
@@ -24,5 +26,5 @@
     class={cn(
       'bg-background dark:data-[state=unchecked]:bg-foreground dark:data-[state=checked]:bg-primary-foreground pointer-events-none block size-4 rounded-full ring-0 transition-transform data-[state=checked]:translate-x-[calc(100%-2px)] data-[state=unchecked]:translate-x-0',
     )}
-    style={restProps.id ? `view-transition-name: switch-thumb-${restProps.id};` : undefined} />
+    style={`view-transition-name: switch-thumb-${id};`} />
 </SwitchPrimitive.Root>
