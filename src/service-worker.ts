@@ -3,6 +3,7 @@
 /// <reference lib="webworker" />
 /// <reference types="@sveltejs/kit" />
 
+import { dev } from '$app/environment'
 // @ts-expect-error: wtf
 import { PUBLIC_API_ORIGIN } from '$env/static/public'
 import { build, files, version } from '$service-worker'
@@ -11,10 +12,13 @@ import type { Notification } from './@/transmission'
 const app = globalThis.self as unknown as ServiceWorkerGlobalScope
 
 const EXCLUDE = [
-  '.well-known/',
+  '/.well-known/',
   '/screenshots/',
   '/og/',
 ]
+
+if (dev)
+  EXCLUDE.push('/')
 
 const EXTERNAL = [
   PUBLIC_API_ORIGIN + '/pictures/',
@@ -25,7 +29,7 @@ const STORAGE = 'storage'
 
 // do not cache files at the top level and ignored paths (and no subpaths)
 const ASSETS = [...build, ...files]
-  .filter((path) => !EXCLUDE.some((prefix) => path.startsWith(prefix)) || path.split('/').length === 2)
+  .filter((path) => !EXCLUDE.some((prefix) => path.startsWith(prefix)) && path.split('/').length !== 2)
 
 app.addEventListener('install', (event) => {
   async function install() {
@@ -37,6 +41,7 @@ app.addEventListener('install', (event) => {
       cache.addAll(ASSETS),
     ])
 
+    console.log(ASSETS)
     console.info(`${ASSETS.length} assets cached`)
     console.info(`App version ${version} installed in ${Date.now() - start}ms`)
   }
@@ -90,7 +95,7 @@ app.addEventListener('fetch', (event) => {
 
   const url = new URL(event.request.url)
 
-  if (url.origin !== app.location.origin) return
+  if (dev || url.origin !== app.location.origin) return
 
   async function respond() {
     const cache = await caches.open(CACHE)
