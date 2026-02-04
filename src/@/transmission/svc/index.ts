@@ -1,6 +1,4 @@
-import { channel } from './channel'
-
-export const supported = () => channel.available()
+export { supported } from './channel'
 export type { Notification } from './Notification'
 export { ping } from './ping'
 export { request, subscribe } from './subscribe'

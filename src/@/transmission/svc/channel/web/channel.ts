@@ -3,9 +3,9 @@ import type { SubscribeInput } from '../../net'
 import type { Channel } from '../Channel'
 
 export const web: Channel = {
-  available: () => typeof Notification !== 'undefined',
-
-  init() { },
+  async available(): Promise<boolean> {
+    return typeof Notification !== 'undefined'
+  },
 
   async permission(): Promise<NotificationPermission | null> {
     if (typeof Notification === 'undefined') return null

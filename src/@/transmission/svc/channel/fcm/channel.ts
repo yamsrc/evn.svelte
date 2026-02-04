@@ -14,6 +14,42 @@ const mapPermission = (s: string): NotificationPermission =>
 const permission = value<NotificationPermission>()
 const token = value<string>()
 
+let initialized = false
+
+function init(): void {
+  if (initialized) return
+
+  initialized = true
+
+  window.addEventListener('push-permission-state', (e) => {
+    console.debug('push-permission-state', e.detail)
+    permission.set(mapPermission(e.detail))
+  })
+
+  window.addEventListener('push-permission-request', (e) => {
+    console.debug('push-permission-request', e.detail)
+    permission.set(e.detail === 'granted' ? 'granted' : 'denied')
+  })
+
+  window.addEventListener('push-token', (e) => {
+    console.debug('push-token', e.detail)
+    token.set(e.detail)
+  })
+
+  window.addEventListener('push-notification', (e: CustomEvent<Notification>) => {
+    console.debug('push-notification', e.detail)
+  })
+
+  window.addEventListener('push-notification-click', (e: CustomEvent<Notification>) => {
+    console.debug('push-notification-click', e.detail)
+
+    if (e.detail.action !== undefined && e.detail.action !== '')
+      window.location.href = e.detail.action
+  })
+
+  postMessage('push-permission-state')
+}
+
 function postMessage(name: Handler, msg: unknown = {}): boolean {
   const handler = window.webkit?.messageHandlers?.[name]
 
@@ -25,32 +61,18 @@ function postMessage(name: Handler, msg: unknown = {}): boolean {
 }
 
 export const fcm: Channel = {
-  available: () =>
-    typeof window !== 'undefined' && Boolean(window.webkit?.messageHandlers?.['push-token']),
+  async available(): Promise<boolean> {
+    if (
+      typeof window === 'undefined' ||
+      window.webkit?.messageHandlers?.['push-token'] === undefined
+    ) return false
 
-  init() {
-    window.addEventListener('push-permission-state', (e) => {
-      permission.set(mapPermission(e.detail))
-    })
+    init()
+    postMessage('push-token')
 
-    window.addEventListener('push-permission-request', (e) => {
-      permission.set(e.detail === 'granted' ? 'granted' : 'denied')
-    })
+    const t = await cap(once(token, (t) => t !== null), TIMEOUT)
 
-    window.addEventListener('push-token', (e) => {
-      token.set(e.detail)
-    })
-
-    window.addEventListener('push-notification', (e: CustomEvent<Notification>) => {
-      console.debug('push-notification', e.detail)
-    })
-
-    window.addEventListener('push-notification-click', (e: CustomEvent<Notification>) => {
-      if (e.detail.action !== undefined && e.detail.action !== '')
-        window.location.href = e.detail.action
-    })
-
-    postMessage('push-permission-state')
+    return t !== null && !t.startsWith('ERROR')
   },
 
   async permission(): Promise<NotificationPermission | null> {

@@ -1,9 +1,9 @@
 import { account } from '@/iam'
 import { permission, subscribe, subscribed, unsubscribe } from './svc'
-import { channel } from './svc/channel'
+import { channel, boot } from './svc/channel'
 
-async function init(): Promise<void> {
-  if (await channel.subsscribed()) {
+async function autoSubscribe(): Promise<void> {
+  if (await channel!.subsscribed()) {
     subscribed.set(true)
 
     return
@@ -14,15 +14,17 @@ async function init(): Promise<void> {
   if (error instanceof Error) console.error('Automatic subscription failed', error)
 }
 
-export function rc() {
-  channel.init()
+export async function rc() {
+  await boot()
+
+  if (channel === null) return
 
   account.subscribe(async (me) => {
-    const status = await channel.permission()
+    const status = await channel!.permission()
 
     permission.set(status)
 
     if (me === null || status !== 'granted') void unsubscribe()
-    else void init()
+    else void autoSubscribe()
   })
 }

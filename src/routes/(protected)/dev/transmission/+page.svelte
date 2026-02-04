@@ -36,7 +36,7 @@
 </Section>
 
 <Section>
-  {#if !supported()}
+  {#if !$supported}
     {$dict.transmission.permission.unsupported}
   {:else}
     <div class="flex flex-wrap gap-2">

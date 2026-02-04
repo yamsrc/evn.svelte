@@ -5,7 +5,7 @@ import * as net from './net'
 import { permission, subscribed } from './store'
 
 export async function subscribe(): Promise<void | Error> {
-  const input = await channel.subscribe()
+  const input = await channel!.subscribe()
 
   if (input instanceof Error) return input
 
@@ -15,12 +15,12 @@ export async function subscribe(): Promise<void | Error> {
 
   if (result instanceof Error) return result
 
-  permission.set(await channel.permission())
-  subscribed.set(await channel.subsscribed())
+  permission.set(await channel!.permission())
+  subscribed.set(await channel!.subsscribed())
 }
 
 export async function request(): Promise<void> {
-  const result = await channel.request()
+  const result = await channel!.request()
 
   permission.set(result)
 
