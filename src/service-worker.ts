@@ -3,13 +3,13 @@
 /// <reference lib="webworker" />
 /// <reference types="@sveltejs/kit" />
 
-import { dev } from '$app/environment'
 // @ts-expect-error: wtf
 import { PUBLIC_API_ORIGIN } from '$env/static/public'
 import { build, files, version } from '$service-worker'
 import type { Notification } from './@/transmission'
 
 const app = globalThis.self as unknown as ServiceWorkerGlobalScope
+const dev = import.meta.env.VITE_DISABLE_CACHING === 'true'
 
 const EXCLUDE = [
   '/.well-known/',
@@ -42,6 +42,7 @@ app.addEventListener('install', (event) => {
     ])
 
     console.log(ASSETS)
+    console.log('dev', dev, import.meta.env.VITE_DISABLE_CACHING)
     console.info(`${ASSETS.length} assets cached`)
     console.info(`App version ${version} installed in ${Date.now() - start}ms`)
   }
