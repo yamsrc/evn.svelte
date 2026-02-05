@@ -63,14 +63,14 @@ function init(): void {
   postMessage('push-permission-state')
 }
 
-function postMessage<H extends Handler>(name: H, msg: Message<H> = {} as Message<H>): boolean {
+function postMessage<H extends Handler>(name: H, msg?: Message<H>): boolean {
   console.debug('postMessage', name, msg)
 
   const handler = window.webkit?.messageHandlers?.[name]
 
   if (handler == null) return false
 
-  handler.postMessage((msg !== undefined ? JSON.stringify(msg) : msg) as any)
+  handler.postMessage(msg)
 
   return true
 }
