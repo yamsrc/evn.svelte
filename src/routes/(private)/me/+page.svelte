@@ -23,7 +23,7 @@
     void goto('/')
   }
 
-  const onquicktap = clicks(5, () => goto('/dev/'))
+  const onpress = clicks(5, () => goto('/dev/'))
 </script>
 
 {#if $account}
@@ -34,7 +34,7 @@
         <Hold
           id="me-logout-button"
           onclick={getout}
-          {onquicktap}
+          {onpress}
           variant="ghost"
           size="icon"
           position="left"
