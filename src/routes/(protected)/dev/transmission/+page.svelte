@@ -2,7 +2,7 @@
   import { dict } from '$lib/intl/dev'
   import { Button } from '$ui/button'
   import { Section, Header } from '@/app/ui'
-  import { permission, ping, request } from '@/transmission'
+  import { permission, ping, request, supported } from '@/transmission'
 
   let busy = $state(false)
 
@@ -36,7 +36,7 @@
 </Section>
 
 <Section>
-  {#if typeof Notification === 'undefined'}
+  {#if !$supported}
     {$dict.transmission.permission.unsupported}
   {:else}
     <div class="flex flex-wrap gap-2">

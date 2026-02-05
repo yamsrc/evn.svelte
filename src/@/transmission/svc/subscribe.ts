@@ -1,48 +1,36 @@
-import { browser } from '$app/environment'
+import { meta } from '@toa.io/origin'
+import { ensure } from 'svas'
 import { account } from '@/iam'
+import { channel } from './channel'
 import * as net from './net'
-import { getPermission } from './permission'
 import { permission, subscribed } from './store'
-import { get, create, extractKeys } from './subscription'
 
-async function send(subscription: PushSubscription): Promise<void | Error> {
-  const me = account.extract()
-
-  if (me === null) return
-
-  const keys = extractKeys(subscription)
-
-  if (keys instanceof Error) return keys
-
-  const result = await net.subscribe(me.id, {
-    channel: 'web',
-    endpoint: {
-      endpoint: subscription.endpoint,
-      keys,
-    },
-  })
-
-  if (result instanceof Error) return result
-}
-
-/** Requests notification permission, gets or creates push subscription, and registers it with the backend. */
 export async function subscribe(): Promise<void | Error> {
-  if (!browser) return
+  const input = await channel!.subscribe()
 
-  if (getPermission() === 'default' &&
-    (await Notification.requestPermission()) !== 'granted') return
+  if (input instanceof Error) return input
 
-  const registration = await navigator.serviceWorker.ready
-  const subscription = (await get(registration)) ?? (await create(registration))
+  const me = ensure(account)
 
-  if (subscription instanceof Error) return subscription
+  const result = await net.subscribe(me.id, input)
 
-  return send(subscription)
+  if (result instanceof Error) {
+    const response = meta(result.cause ?? result)
+
+    if (response?.status !== 422)
+      return result
+  }
+
+  permission.set(await channel!.permission())
+  subscribed.set(true)
 }
 
-/** Calls subscribe and updates permission/subscribed store state. */
 export async function request(): Promise<void> {
+  const result = await channel!.request()
+
+  permission.set(result)
+
+  if (result !== 'granted') return
+
   await subscribe()
-  permission.set(getPermission())
-  subscribed.set((await get()) !== null)
 }

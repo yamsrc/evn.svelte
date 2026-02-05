@@ -15,6 +15,7 @@
 
 <Screen>
   <Authenticated {oidc} oncreate={welcome}>
+    <a href="/dev/">dev</a>
     {@render children()}
     <Nav position="start" sections={sections($dict, $notifications)} class="z-1000" />
   </Authenticated>
