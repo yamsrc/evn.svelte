@@ -7,3 +7,15 @@ nudge:
   dismissed: >-
     Nessun problema — puoi attivare le notifiche in qualsiasi momento dalle
     impostazioni del tuo profilo.
+settings:
+  title: Notifiche
+  description: Ti avviseremo quando succederà qualcosa di importante
+  contacts:
+    title: Amici
+    description: Richieste di amicizia e connessioni
+  groups:
+    title: Gruppi
+    description: Inviti e adesioni al gruppo
+  expenses:
+    description: Spese condivise e attività finanziaria
+    title: Spese

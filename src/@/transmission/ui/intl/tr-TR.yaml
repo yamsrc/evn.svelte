@@ -7,3 +7,15 @@ nudge:
   dismissed: >-
     Endişelenme — profil ayarlarından bildirimleri istediğin zaman
     etkinleştirebilirsin.
+settings:
+  title: Bildirimler
+  description: Önemli bir şey olduğunda sana bildiririz
+  contacts:
+    title: Arkadaşlar
+    description: Arkadaşlık istekleri ve bağlantılar
+  groups:
+    title: Gruplar
+    description: Grup davetleri ve katılımlar
+  expenses:
+    description: Paylaşılan harcamalar ve para hareketleri
+    title: Giderler

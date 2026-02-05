@@ -99,7 +99,7 @@
   class={[
     'flex h-full w-full',
     scrollable &&
-      'overflow-x-scroll overflow-y-hidden touch-pan-x overscroll-x-contain no-scrollbar snap-x snap-mandatory',
+      'overflow-x-scroll overflow-y-hidden touch-pan-x overscroll-x-contain no-scrollbar snap-x snap-mandatory bg-input',
     scrollable || 'overflow-hidden',
     mounted || 'invisible',
     classes,

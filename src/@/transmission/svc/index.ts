@@ -1,6 +1,6 @@
-export { getPermission } from './permission'
+export { supported } from './channel'
 export { ping } from './ping'
 export { request, subscribe } from './subscribe'
-export { get, create, extractKeys } from './subscription'
 export { unsubscribe } from './unsubscribe'
 export * from './store'
+export type { Notification } from './Notification'

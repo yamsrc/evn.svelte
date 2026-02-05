@@ -6,14 +6,19 @@
 // @ts-expect-error: wtf
 import { PUBLIC_API_ORIGIN } from '$env/static/public'
 import { build, files, version } from '$service-worker'
+import type { Notification } from './@/transmission'
 
 const app = globalThis.self as unknown as ServiceWorkerGlobalScope
+const dev = import.meta.env.VITE_DISABLE_CACHING === 'true'
 
 const EXCLUDE = [
-  '.well-known/',
+  '/.well-known/',
   '/screenshots/',
   '/og/',
 ]
+
+if (dev)
+  EXCLUDE.push('/')
 
 const EXTERNAL = [
   PUBLIC_API_ORIGIN + '/pictures/',
@@ -24,17 +29,14 @@ const STORAGE = 'storage'
 
 // do not cache files at the top level and ignored paths (and no subpaths)
 const ASSETS = [...build, ...files]
-  .filter((path) => !EXCLUDE.some((prefix) => path.startsWith(prefix)) || path.split('/').length === 2)
+  .filter((path) => !EXCLUDE.some((prefix) => path.startsWith(prefix)) && path.split('/').length !== 2)
 
 app.addEventListener('install', (event) => {
   async function install() {
     const start = Date.now()
     const cache = await caches.open(CACHE)
 
-    await Promise.all([
-      cacheRoot(cache),
-      cache.addAll(ASSETS),
-    ])
+    await cache.addAll(['/', ...ASSETS])
 
     console.info(`${ASSETS.length} assets cached`)
     console.info(`App version ${version} installed in ${Date.now() - start}ms`)
@@ -42,15 +44,6 @@ app.addEventListener('install', (event) => {
 
   event.waitUntil(install())
 })
-
-async function cacheRoot(cache: Cache): Promise<void> {
-  const url = app.location.origin + '/'
-
-  const response = await fetch(url)
-
-  if (response.ok)
-    await cache.put(url, response)
-}
 
 app.addEventListener('activate', (event) => {
   async function deleteOldCaches() {
@@ -89,7 +82,7 @@ app.addEventListener('fetch', (event) => {
 
   const url = new URL(event.request.url)
 
-  if (url.origin !== app.location.origin) return
+  if (dev || url.origin !== app.location.origin) return
 
   async function respond() {
     const cache = await caches.open(CACHE)
@@ -167,20 +160,3 @@ app.addEventListener('notificationclick', (event) => {
 
   event.waitUntil(navigate())
 })
-
-export interface Notification {
-  id: string
-  title?: string
-  badge?: number
-  body?: string
-  action?: string
-  data?: Record<string, unknown>
-  delivery?: Delivery
-}
-
-export interface Delivery {
-  key?: string
-  visibility?: 'alert' | 'data'
-  priority?: 'low' | 'normal' | 'high' | 'time-sensitive'
-  ttl?: number
-}

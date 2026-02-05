@@ -5,3 +5,15 @@ nudge:
   button: Benachrichtigungen aktivieren
   dismiss: Schließen
   dismissed: "Kein Problem\_– du kannst Benachrichtigungen jederzeit in deinen Profileinstellungen aktivieren."
+settings:
+  title: Benachrichtigungen
+  description: Wir benachrichtigen dich, wenn etwas Wichtiges passiert
+  contacts:
+    title: Freunde
+    description: Freundschaftsanfragen und Verbindungen
+  groups:
+    title: Gruppen
+    description: Gruppeneinladungen und Beitritte
+  expenses:
+    description: Geteilte Ausgaben und Zahlungsaktivitäten
+    title: Ausgaben

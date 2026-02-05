@@ -6,10 +6,9 @@ export interface WebPushEndpoint {
   }
 }
 
-export interface SubscribeInput {
-  channel: 'web'
-  endpoint: WebPushEndpoint
-}
+export type SubscribeInput =
+  | { channel: 'web'; endpoint: WebPushEndpoint }
+  | { channel: 'fcm'; endpoint: string }
 
 export interface SubscribeResponse {
   id: string
