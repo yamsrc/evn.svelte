@@ -1,5 +1,7 @@
 import { having, once, value } from 'svas'
+import { get } from 'svelte/store'
 import { cap } from '$lib/tools'
+import { subscribed } from '@/transmission'
 import type { SubscribeInput } from '../../net'
 import type { Channel } from '../Channel'
 import type { Notification } from '@/transmission'
@@ -35,7 +37,16 @@ function init(): void {
 
   window.addEventListener('push-token', (e) => {
     console.debug('push-token', e.detail)
-    token.set(e.detail)
+
+    if (!e.detail.startsWith('ERROR'))
+      token.set(e.detail)
+  })
+
+  window.addEventListener('push-token-deleted', (e) => {
+    console.debug('push-token-deleted', e.detail)
+
+    if (e.detail === 'deleted')
+      token.set(null)
   })
 
   window.addEventListener('push-notification', (e: CustomEvent<Notification>) => {
@@ -53,11 +64,13 @@ function init(): void {
 }
 
 function postMessage<H extends Handler>(name: H, msg: Message<H> = {} as Message<H>): boolean {
+  console.debug('postMessage', name, msg)
+
   const handler = window.webkit?.messageHandlers?.[name]
 
   if (handler == null) return false
 
-  handler.postMessage(msg as any)
+  handler.postMessage((msg !== undefined ? JSON.stringify(msg) : msg) as any)
 
   return true
 }
@@ -70,11 +83,11 @@ export const fcm: Channel = {
     ) return false
 
     init()
-    postMessage('push-token')
+    postMessage('push-permission-state')
 
-    const t = await cap(once(token, (t) => t !== null), TIMEOUT)
+    const perm = await cap(once(permission, (t) => t !== null), TIMEOUT)
 
-    return t !== null && !t.startsWith('ERROR')
+    return perm !== null
   },
 
   async permission(): Promise<NotificationPermission | null> {
@@ -90,7 +103,7 @@ export const fcm: Channel = {
   },
 
   async subscribe(): Promise<SubscribeInput | Error> {
-    postMessage('push-permission-request')
+    postMessage('push-token')
 
     const t = await cap(once(token, (t) => t !== null), TIMEOUT)
 
@@ -100,11 +113,13 @@ export const fcm: Channel = {
   },
 
   async unsubscribe(): Promise<void> {
-    token.set(null)
-    postMessage('push-subscribe', { unsubscribe: true })
+    postMessage('push-token-delete')
+    await cap(once(token, (t) => t === null), TIMEOUT)
   },
 
   async subscribed(): Promise<boolean> {
-    return token.extract() !== null
+    const $subscribed = get(subscribed)
+
+    return token.extract() !== null && $subscribed === true
   },
 }

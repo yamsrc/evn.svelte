@@ -1,3 +1,4 @@
+import { meta } from '@toa.io/origin'
 import { ensure } from 'svas'
 import { account } from '@/iam'
 import { channel } from './channel'
@@ -13,10 +14,15 @@ export async function subscribe(): Promise<void | Error> {
 
   const result = await net.subscribe(me.id, input)
 
-  if (result instanceof Error) return result
+  if (result instanceof Error) {
+    const response = meta(result.cause ?? result)
+
+    if (response?.status !== 422)
+      return result
+  }
 
   permission.set(await channel!.permission())
-  subscribed.set(await channel!.subscribed())
+  subscribed.set(true)
 }
 
 export async function request(): Promise<void> {

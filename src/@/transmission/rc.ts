@@ -2,7 +2,7 @@ import { account } from '@/iam'
 import { permission, subscribe, subscribed, unsubscribe } from './svc'
 import { channel, boot } from './svc/channel'
 
-let last: string | null = null
+let prev: string | null = null
 
 async function autoSubscribe(): Promise<void> {
   if (await channel!.subscribed()) {
@@ -27,10 +27,10 @@ export async function rc() {
     permission.set(status)
 
     if (me === null || status !== 'granted') {
-      last = null
+      prev = null
       void unsubscribe()
-    } else if (last !== me.id) {
-      last = me.id
+    } else if (prev !== me.id) {
+      prev = me.id
       void autoSubscribe()
     }
   })

@@ -8,6 +8,7 @@ declare global {
         'push-permission-state'?: { postMessage: (msg: unknown) => void }
         'push-permission-request'?: { postMessage: (msg: unknown) => void }
         'push-token'?: { postMessage: (msg: unknown) => void }
+        'push-token-delete'?: { postMessage: (msg: unknown) => void }
       }
     }
   }
@@ -16,6 +17,7 @@ declare global {
     'push-permission-state': CustomEvent<string>
     'push-permission-request': CustomEvent<string>
     'push-token': CustomEvent<string>
+    'push-token-deleted': CustomEvent<string>
     'push-notification': CustomEvent<Notification>
     'push-notification-click': CustomEvent<Notification>
   }
