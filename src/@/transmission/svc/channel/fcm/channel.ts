@@ -16,7 +16,7 @@ const mapPermission = (s: string): NotificationPermission =>
   s === 'authorized' ? 'granted' : s === 'notDetermined' ? 'default' : 'denied'
 
 const permission = value<NotificationPermission>()
-const token = value<string>()
+const token = value<string | null>()
 
 let initialized = false
 
