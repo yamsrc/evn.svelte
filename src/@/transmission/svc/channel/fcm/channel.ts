@@ -1,7 +1,5 @@
 import { having, once, value } from 'svas'
-import { get } from 'svelte/store'
 import { cap } from '$lib/tools'
-import { subscribed } from '@/transmission'
 import type { SubscribeInput } from '../../net'
 import type { Channel } from '../Channel'
 import type { Notification } from '@/transmission'
@@ -93,13 +91,13 @@ export const fcm: Channel = {
   async permission(): Promise<NotificationPermission | null> {
     postMessage('push-permission-state')
 
-    return cap(having(permission), TIMEOUT)
+    return await cap(having(permission), TIMEOUT)
   },
 
   async request(): Promise<NotificationPermission | null> {
     postMessage('push-permission-request')
 
-    return cap(once(permission, (p) => p !== 'default'), TIMEOUT)
+    return await cap(once(permission, (p) => p !== 'default'), TIMEOUT)
   },
 
   async subscribe(): Promise<SubscribeInput | Error> {
@@ -118,8 +116,6 @@ export const fcm: Channel = {
   },
 
   async subscribed(): Promise<boolean> {
-    const $subscribed = get(subscribed)
-
-    return token.extract() !== null && $subscribed === true
+    return false
   },
 }
