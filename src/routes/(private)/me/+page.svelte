@@ -7,6 +7,7 @@
   import { Actions } from '$com/shell'
   import { version } from '$config'
   import { dict } from '$lib/intl'
+  import { clicks } from '$lib/tools'
   import { Cosmetics, Delete, Grammar, Language } from '@/accounts/ui'
   import { Section } from '@/app/ui'
   import { Header } from '@/app/ui'
@@ -21,6 +22,8 @@
     logout()
     void goto('/')
   }
+
+  const onquicktap = clicks(5, () => goto('/dev/'))
 </script>
 
 {#if $account}
@@ -31,6 +34,7 @@
         <Hold
           id="me-logout-button"
           onclick={getout}
+          {onquicktap}
           variant="ghost"
           size="icon"
           position="left"

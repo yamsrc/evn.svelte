@@ -15,6 +15,7 @@
     position = 'left',
     align = 'center',
     onclick,
+    onquicktap,
     class: classes,
     containerClass,
     ...props
@@ -44,6 +45,7 @@
   function press() {
     if (pressed) return
 
+    onquicktap?.()
     pressed = true
     shown = true
     countdown = timeout(duration, 60)
