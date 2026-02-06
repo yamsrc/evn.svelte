@@ -6,7 +6,7 @@
   import type { Props } from './Favorite'
   import type { Favorite } from '@/favorites'
 
-  const { contact }: Props = $props()
+  const { group }: Props = $props()
 
   let busy = $state(false)
 
@@ -16,7 +16,7 @@
     busy = true
 
     if (favorite) await del(favorite.id)
-    else await add(contact.identity)
+    else await add(group.id)
 
     busy = false
   }
@@ -24,9 +24,9 @@
 
 <Async store={favorites}>
   {#snippet awaited(favorites)}
-    {@const favorite = favorites.find((f) => f.favorite === contact.identity)}
+    {@const favorite = favorites.find((f) => f.favorite === group.id)}
     <Action
-      id="contacts-favorite-button"
+      id="groups-favorite-button"
       variant={favorite ? 'default' : 'secondary'}
       onclick={() => toggle(favorite)}
       class={[busy && 'opacity-75']}>

@@ -57,8 +57,10 @@
         <Input type="text" placeholder={$dict.actions.search} bind:value={search} />
       </Section>
 
-      {@const availableFavs = favorites.filter((f) => !group.identities.includes(f.favorite))}
-      {@const filteredFavs = filterFavorites(availableFavs, contacts, search)}
+      {@const availableFavs = favorites.filter(
+        ({ favorite }) => group.id !== favorite && !group.identities.includes(favorite),
+      )}
+      {@const filteredFavs = filterFavorites(availableFavs, contacts, groups, search)}
       {@const availableContacts = contacts.filter((c) => !group.identities.includes(c.identity))}
       {@const filteredContacts = filterContacts(availableContacts, search)}
       {@const empty = filteredFavs.length === 0 && filteredContacts.length === 0}
