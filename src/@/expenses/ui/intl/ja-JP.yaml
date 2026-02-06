@@ -25,7 +25,7 @@ transfer:
       (gender) => "受け取りました"
 transfers:
   tobe:
-    neutral: すっかり落ち着きますよ
+    neutral: これで清算完了です
     positive: あなたは借りができることになります
     negative: あなたに未払いがあります
   done:

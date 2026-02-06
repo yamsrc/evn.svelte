@@ -19,9 +19,8 @@ transfer:
     action: Conferma
   me: Io
   direction:
-    byme: >-
+    byme: |-
       !js
-
       (gender) => "Ho pagato"
     tome: >-
       !js
@@ -30,15 +29,13 @@ transfer:
       ricevuto" : "Ho ricevuto")
 transfers:
   tobe:
-    neutral: Sarai completamente sistemato
+    neutral: Sarai a posto con tutto
     positive: Ti sarà dovuto
     negative: Avrai un debito
   done:
-    paid: >-
+    paid: |-
       !js
-
       (gender) => "Hai pagato"
-    received: >-
+    received: |-
       !js
-
       (gender) => "Hai ricevuto"

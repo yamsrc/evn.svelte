@@ -45,6 +45,7 @@ inputs:
     tobe:
       neutral:
         input: You’ll be all settled
+        context: in terms of debts, either paid to you or by you
       positive:
         input: You’ll be owed
       negative:

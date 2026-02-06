@@ -31,7 +31,7 @@ transfer:
       "Nimepokea" : "Nimepokea")
 transfers:
   tobe:
-    neutral: Utakua umeshatulia kabisa
+    neutral: Utakuwa umemaliza mambo yote
     positive: Utakuwa na deni lako
     negative: Utakuwa na deni
   done:

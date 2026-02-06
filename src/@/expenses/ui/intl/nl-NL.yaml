@@ -27,7 +27,7 @@ transfer:
       (gender) => "Ik heb ontvangen"
 transfers:
   tobe:
-    neutral: Je bent straks helemaal gesetteld
+    neutral: Dan ben je helemaal klaar met alles
     positive: Jij krijgt nog wat tegoed
     negative: Je zult verschuldigd zijn
   done:
