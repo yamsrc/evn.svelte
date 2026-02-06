@@ -26,6 +26,7 @@
   {#snippet awaited(favorites)}
     {@const favorite = favorites.find((f) => f.favorite === contact.identity)}
     <Action
+      id="contacts-favorite-button"
       variant={favorite ? 'default' : 'secondary'}
       onclick={() => toggle(favorite)}
       class={[busy && 'opacity-75']}>
