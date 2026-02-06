@@ -8,6 +8,8 @@
   import { account } from '@/iam'
   import type { Props } from './Group'
 
+  const MAX_DISPLAYED_MEMBERS = 3
+
   let { group, selected = $bindable(), onselect, class: classes }: Props = $props()
 
   const members = $derived(group.identities.filter((id) => id !== $account?.id))
@@ -34,12 +36,12 @@
         {:else}
           <Users class="size-4 shrink-0" />
         {/if}
-        <TextEllipsis>{group.title ?? group.name}</TextEllipsis>
+        <TextEllipsis class="font-bold">{group.title ?? group.name}</TextEllipsis>
       </div>
       {#if members.length}
         <div class="flex items-center">
           <div class="flex -space-x-2">
-            {#each members.slice(0, 3) as identity (identity)}
+            {#each members.slice(0, MAX_DISPLAYED_MEMBERS) as identity (identity)}
               <Async store={accounts.get(identity)}>
                 {#snippet awaited(account)}
                   <Picture {account} class="size-8 ring-2 ring-card" />
@@ -47,9 +49,9 @@
               </Async>
             {/each}
           </div>
-          {#if members.length > 3}
+          {#if members.length > MAX_DISPLAYED_MEMBERS}
             <span class="ms-2">
-              +{members.length - 3}
+              +{members.length - MAX_DISPLAYED_MEMBERS}
             </span>
           {/if}
         </div>

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Async, combined, ok } from 'svas'
+  import { Async, combined } from 'svas'
   import { contacts } from '@/contacts'
   import { groups } from '@/groups'
   import Contact from './Contact.svelte'
@@ -10,11 +10,9 @@
 </script>
 
 <Async store={combined(contacts, groups)}>
-  {#snippet awaited([contactsList, groupsList])}
-    {@const group = ok(groupsList) ? groupsList.find((g) => g.id === favorite.favorite) : undefined}
-    {@const contact = !group
-      ? contactsList.find((c) => c.identity === favorite.favorite)
-      : undefined}
+  {#snippet awaited([contacts, groups])}
+    {@const group = groups.find(({ id }) => id === favorite.favorite)}
+    {@const contact = contacts.find(({ identity }) => identity === favorite.favorite)}
 
     {#if group}
       <Group {group} bind:selected {onselect} class={classes} />
