@@ -38,8 +38,8 @@
         {/if}
         <TextEllipsis class="font-bold">{group.title ?? group.name}</TextEllipsis>
       </div>
-      {#if members.length}
-        <div class="flex items-center">
+      <div class="flex items-center min-h-8">
+        {#if members.length}
           <div class="flex -space-x-2">
             {#each members.slice(0, MAX_DISPLAYED_MEMBERS) as identity (identity)}
               <Async store={accounts.get(identity)}>
@@ -54,8 +54,8 @@
               +{members.length - MAX_DISPLAYED_MEMBERS}
             </span>
           {/if}
-        </div>
-      {/if}
+        {/if}
+      </div>
     </div>
   {/snippet}
 </Panel>
