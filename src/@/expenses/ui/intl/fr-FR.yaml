@@ -19,9 +19,8 @@ transfer:
     action: Confirmer
   me: Moi
   direction:
-    byme: >-
+    byme: |-
       !js
-
       (gender) => "J'ai payé"
     tome: >-
       !js
@@ -30,7 +29,7 @@ transfer:
       reçu" : "J'ai reçu")
 transfers:
   tobe:
-    neutral: Tu seras bien installé
+    neutral: Tout sera réglé pour toi
     positive: On te devra quelque chose
     negative: Vous devrez
   done:

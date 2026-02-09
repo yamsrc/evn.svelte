@@ -27,7 +27,7 @@ transfer:
       (gender) => "Aldım"
 transfers:
   tobe:
-    neutral: Tamamen yerleşmiş olacaksın
+    neutral: Her şey tamamen kapanmış olacak
     positive: Sana borçlanılacak
     negative: Borçlu olacaksın
   done:

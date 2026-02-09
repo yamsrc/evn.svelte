@@ -81,11 +81,11 @@ export const fcm: Channel = {
     ) return false
 
     init()
-    postMessage('push-permission-state')
+    postMessage('push-token')
 
-    const perm = await cap(once(permission, (t) => t !== null), TIMEOUT)
+    const t = await cap(once(token, (t) => t !== null), TIMEOUT)
 
-    return perm !== null
+    return t !== null
   },
 
   async permission(): Promise<NotificationPermission | null> {

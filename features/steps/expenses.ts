@@ -6,6 +6,8 @@ Given('new expense', async ({ page, ctx }) => {
   await page.goto('/')
   await page.locator('#nav-actions-button').click()
   await page.locator('#nav-actions-cheqes-input-button').click()
+  await expect(page.locator('#expenses-spendings-add-participants-button')).toBeVisible()
+  await page.locator('#expenses-spendings-add-participants-button').click()
   await expect(page.locator('#expenses-add-participants-add-button')).toBeVisible()
 
   // Create a new participant via CreateDialog

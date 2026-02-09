@@ -29,7 +29,7 @@ transfer:
       استلمتِ" : "لقد استلمت")
 transfers:
   tobe:
-    neutral: ستكون قد استقررت تمامًا
+    neutral: ستكون أمورك المالية مرتبة تمامًا
     positive: سيكون لك دين
     negative: سَتَدِين
   done:

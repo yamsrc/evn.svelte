@@ -31,7 +31,7 @@ transfer:
       "Ich habe erhalten" : "Ich habe erhalten")
 transfers:
   tobe:
-    neutral: Du wirst ganz angekommen sein
+    neutral: Dann bist du schuldenfrei
     positive: Es wird dir geschuldet
     negative: Du hast eine offene Forderung
   done:

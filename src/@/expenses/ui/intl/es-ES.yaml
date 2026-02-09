@@ -31,7 +31,7 @@ transfer:
       recibido" : "He recibido")
 transfers:
   tobe:
-    neutral: Estarás completamente instalado
+    neutral: Estarás completamente al día
     positive: Te lo deberán
     negative: Tendrás una deuda
   done:

@@ -15,6 +15,7 @@
     position = 'left',
     align = 'center',
     onclick,
+    onpress,
     class: classes,
     containerClass,
     ...props
@@ -44,6 +45,7 @@
   function press() {
     if (pressed) return
 
+    onpress?.()
     pressed = true
     shown = true
     countdown = timeout(duration, 60)
@@ -94,8 +96,7 @@
     onpointerup={cancel}
     onpointerleave={cancel}
     onkeyup={cancel}
-    style={`anchor-name: --${name};`}
-  >
+    style={`anchor-name: --${name};`}>
     {@render children?.()}
   </Button>
 
@@ -112,12 +113,10 @@
       },
       shown && 'translate-x-0 translate-y-0 opacity-100 scale-100',
     )}
-    style={`position-anchor: --${name}; position-area: ${position} ${align};`}
-  >
+    style={`position-anchor: --${name}; position-area: ${position} ${align};`}>
     <div class="text-xs text-muted-foreground">{label}</div>
     <Progress
       value={progress}
-      class="h-1 [&_div[data-slot=progress-indicator]]:bg-destructive/90 [&_div[data-slot=progress-indicator]]:transition-none"
-    />
+      class="h-1 [&_div[data-slot=progress-indicator]]:bg-destructive/90 [&_div[data-slot=progress-indicator]]:transition-none" />
   </div>
 </div>

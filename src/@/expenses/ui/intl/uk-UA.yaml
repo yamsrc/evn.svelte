@@ -31,7 +31,7 @@ transfer:
       отримала" : "Я отримав(ла)")
 transfers:
   tobe:
-    neutral: Ти повністю облаштуєшся
+    neutral: Всі рахунки буде врегульовано
     positive: Тобі будуть винні
     negative: Ви будете винні
   done:
