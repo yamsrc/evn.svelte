@@ -25,17 +25,17 @@
   </Header.Root>
 </Section>
 
-<Async store={combined(contacts, favorites)}>
-  {#snippet awaited([contacts, favorites])}
-    {@const filteredGroups = filterGroups($groups, search)}
+<Async store={combined(contacts, favorites, groups)}>
+  {#snippet awaited([contacts, favorites, groupsList])}
+    {@const filteredGroups = filterGroups(groupsList, search)}
     {@const filteredContacts = filterContacts(contacts, search)}
-    {@const filteredFavorites = filterFavorites(favorites, contacts, search)}
+    {@const filteredFavorites = filterFavorites(favorites, contacts, groupsList, search)}
     {@const empty =
       filteredGroups.length === 0 &&
       filteredContacts.length === 0 &&
       filteredFavorites.length === 0}
 
-    {#if $groups.length || contacts.length || favorites.length}
+    {#if groupsList.length || contacts.length || favorites.length}
       <Section>
         <Input type="text" placeholder={$dict.actions.search} bind:value={search} />
       </Section>

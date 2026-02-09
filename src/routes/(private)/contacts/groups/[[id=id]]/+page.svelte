@@ -13,7 +13,7 @@
   import { Header } from '@/app/ui'
   import { contacts } from '@/contacts'
   import { groups, del } from '@/groups'
-  import { Cosmetics } from '@/groups/ui'
+  import { Cosmetics, Favorite } from '@/groups/ui'
   import { account } from '@/iam'
   import { seen } from '@/notifications'
   import type { Group } from '@/groups'
@@ -133,6 +133,7 @@
   </Async>
 
   <Actions>
+    <Favorite {group} />
     <Action href={`/contacts/groups/${id}/add`} disabled={!group}>
       <UserPlus />
       <span>{$dict.groups.members.addMember}</span>
