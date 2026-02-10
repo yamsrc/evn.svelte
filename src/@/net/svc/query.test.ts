@@ -1,5 +1,4 @@
-import assert from 'node:assert/strict'
-import { it } from 'node:test'
+import { it, expect } from 'vitest'
 import { query } from './query.ts'
 
 it('should build criteria', () => {
@@ -10,7 +9,7 @@ it('should build criteria', () => {
 
   const result = query(params)
 
-  assert.equal(result, '?criteria=foo==bar;baz==qux')
+  expect(result).toBe('?criteria=foo==bar;baz==qux')
 })
 
 it('should build empty criteria', () => {
@@ -18,7 +17,7 @@ it('should build empty criteria', () => {
 
   const result = query(params)
 
-  assert.equal(result, '')
+  expect(result).toBe('')
 })
 
 it('should separate known parameters', () => {
@@ -31,7 +30,7 @@ it('should separate known parameters', () => {
 
   const result = query(params)
 
-  assert.equal(result, '?criteria=foo==bar&omit=10&limit=20&search=qux')
+  expect(result).toBe('?criteria=foo==bar&omit=10&limit=20&search=qux')
 })
 
 it('should separate specified parameters', () => {
@@ -42,5 +41,5 @@ it('should separate specified parameters', () => {
 
   const result = query(params, { separate: ['baz'] })
 
-  assert.equal(result, '?criteria=foo==bar&baz=qux')
+  expect(result).toBe('?criteria=foo==bar&baz=qux')
 })
