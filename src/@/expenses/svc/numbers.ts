@@ -5,6 +5,8 @@ import type { Expense } from './store'
 
 type Value = Pick<Expense, 'participants' | 'extras'>
 
+const MAX_SHARE = 5
+
 export function total({ participants, extras }: Value): number {
   const spent = Object.values(participants).reduce((acc, participant) => acc + participant.amount, 0)
   const extra = extras.reduce((acc, extra) => acc + extra.amount, 0)
@@ -102,52 +104,54 @@ export function even(participants: Record<string, Participant>, ids: string[]): 
 }
 
 /**
- * Calculates normalized shares from participant amounts.
- * Normalizes ratios so the smallest share is always 1.
+ * Finds simplest integer shares for participant amounts.
+ * E.g., amounts [200, 100] → shares {a: 2, b: 1}.
  *
- * @param value - The expense value
- * @returns A record mapping participant IDs to their normalized share values
+ * Brute-forces total parts count, checking that candidate shares
+ * reconstruct original amounts via `amounts()`.
  */
 export function shares(value: Value): Record<string, number> {
-  const totalSpent = total(value)
+  const ids = Object.keys(value.participants)
+  const spent = total(value)
+  const zeros = Object.fromEntries(ids.map((id) => [id, 0]))
 
-  if (totalSpent === 0)
-    return Object.fromEntries(Object.keys(value.participants).map((id) => [id, 0]))
+  if (spent === 0) return zeros
 
-  const ratios = share(value)
-  const ratioValues = Object.values(ratios).filter((r) => r > 0)
+  const of = (id: string) => value.participants[id]?.amount ?? 0
 
-  if (ratioValues.length === 0)
-    return Object.fromEntries(Object.keys(value.participants).map((id) => [id, 0]))
+  for (let parts = ids.length; parts <= ids.length * MAX_SHARE; parts++) {
+    const trial = Object.fromEntries(
+      ids.map((id) => [id, Math.round((of(id) / spent) * parts)]),
+    )
 
-  const min = Math.min(...ratioValues)
+    const sum = Object.values(trial).reduce((a, b) => a + b, 0)
 
-  for (let divisor = min; divisor > 0; divisor--)
-    if (ratioValues.every((r) => r % divisor === 0))
-      return Object.fromEntries(
-        Object.entries(ratios).map(([id, ratio]) => [id, ratio / divisor]),
-      )
+    // rounding errors — shares don't add up to parts
+    if (sum !== parts) continue
 
-  return ratios
+    const restored = amounts(value, trial)
+    const exact = ids.every((id) => restored[id] === of(id))
+
+    // shares don't reconstruct original amounts
+    if (!exact) continue
+
+    return reduce(trial)
+  }
+
+  return zeros
 }
 
-/**
- * Calculates the shares of each participant based on their amounts.
- *
- * @param value - The expense value
- * @returns A record mapping participant IDs to their share values
- */
-export function share(value: Value): Record<string, number> {
-  const participants = value.participants
-  const totalSpent = total(value)
+function reduce(record: Record<string, number>): Record<string, number> {
+  const positive = Object.values(record).filter((v) => v > 0)
+  const g = positive.reduce(gcd)
 
-  return Object.fromEntries(
-    Object.keys(participants).map((id) => {
-      const amount = participants[id]?.amount ?? 0
+  return Object.fromEntries(Object.entries(record).map(([k, v]) => [k, v / g]))
+}
 
-      return [id, totalSpent > 0 ? Math.max(0, Math.round((amount / totalSpent) * 10)) : 0]
-    }),
-  )
+function gcd(a: number, b: number): number {
+  while (b !== 0) [a, b] = [b, a % b]
+
+  return a
 }
 
 /**
