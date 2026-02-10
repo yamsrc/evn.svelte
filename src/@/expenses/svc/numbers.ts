@@ -135,13 +135,17 @@ export function shares(value: Value): Record<string, number> {
     // shares don't reconstruct original amounts
     if (!exact) continue
 
-    return reduce(trial)
+    return simplify(trial)
   }
 
   return zeros
 }
 
-function reduce(record: Record<string, number>): Record<string, number> {
+/**
+ * Reduces shares to simplest integer ratio via GCD.
+ * E.g., {a: 4, b: 2} → {a: 2, b: 1}
+ */
+function simplify(record: Record<string, number>): Record<string, number> {
   const positive = Object.values(record).filter((v) => v > 0)
   const g = positive.reduce(gcd)
 
