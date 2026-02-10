@@ -5,7 +5,7 @@ import type { Expense } from './store'
 
 type Value = Pick<Expense, 'participants' | 'extras'>
 
-const MAX_SHARE = 5
+export const MAX_SHARE = 5
 
 export function total({ participants, extras }: Value): number {
   const spent = Object.values(participants).reduce((acc, participant) => acc + participant.amount, 0)
