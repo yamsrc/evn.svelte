@@ -7,7 +7,6 @@ export type NativeMessage =
   | { type: 'push-token'; token: string }
   | { type: 'push-token-deleted' }
   | { type: 'push-permission-state'; state: 'granted' | 'denied' | 'default' }
-  | { type: 'push-permission-result'; result: 'granted' | 'denied' }
   | { type: 'push-notification'; notification: Notification }
   | { type: 'push-notification-click'; notification: { action: string } }
 
@@ -16,6 +15,7 @@ export type WebMessage =
   | { type: 'twa-ping' }
   | { type: 'push-token-request' }
   | { type: 'push-token-delete' }
+  | { type: 'push-permission-state' }
   | { type: 'push-permission-request' }
 
-export {}
+export { }

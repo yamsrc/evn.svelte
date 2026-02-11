@@ -5,6 +5,7 @@ import type { Channel } from '../Channel'
 import type { NativeMessage, WebMessage } from './types'
 
 const TIMEOUT = 3000
+const REQUEST_TIMEOUT = 10_000
 
 const port = value<MessagePort | null>()
 const token = value<string | null>()
@@ -31,9 +32,16 @@ function init(): void {
   initialized = true
 
   window.addEventListener('message', (e) => {
+    console.debug('message', e)
+
     if (e.ports.length === 0) return
 
     setupPort(e.ports[0])
+  })
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible')
+      send({ type: 'push-permission-state' })
   })
 }
 
@@ -76,12 +84,7 @@ function handle(msg: NativeMessage): void {
       break
 
     case 'push-permission-state':
-      permission.set(msg.state as NotificationPermission)
-
-      break
-
-    case 'push-permission-result':
-      permission.set(msg.result === 'granted' ? 'granted' : 'denied')
+      permission.set(msg.state)
 
       break
 
@@ -130,18 +133,21 @@ export const twa: Channel = {
   },
 
   async permission(): Promise<NotificationPermission | null> {
-    send({ type: 'push-permission-request' })
+    permission.set(null)
+    send({ type: 'push-permission-state' })
 
     return await cap(having(permission), TIMEOUT)
   },
 
   async request(): Promise<NotificationPermission | null> {
+    permission.set(null)
     send({ type: 'push-permission-request' })
 
-    return await cap(once(permission, (p) => p !== 'default'), TIMEOUT) ?? null
+    return await cap(once(permission, (p) => p !== null && p !== 'default'), REQUEST_TIMEOUT) ?? null
   },
 
   async subscribe(): Promise<SubscribeInput | Error> {
+    token.set(null)
     send({ type: 'push-token-request' })
 
     const t = await cap(once(token, (t) => t !== null), TIMEOUT)
