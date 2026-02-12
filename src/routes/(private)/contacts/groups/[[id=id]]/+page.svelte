@@ -140,7 +140,10 @@
     <Draft
       value={{
         participants: Object.fromEntries(
-          group.identities.map((id) => [id, { amount: 0, shares: 0 }]),
+          group.identities.map((id) => [
+            id,
+            { amount: 0, shares: 0, paid: $account?.id === id ? 0 : undefined },
+          ]),
         ),
       }} />
     <Action href={`/contacts/groups/${id}/add`} disabled={!group}>
