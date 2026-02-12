@@ -18,6 +18,7 @@
     mode = $bindable<'sums' | 'shares'>(),
     onsubmit: callback,
   }: Props = $props()
+
   let busy = $state(false)
   let error = $state(false)
 
