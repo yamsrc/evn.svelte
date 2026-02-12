@@ -12,14 +12,15 @@
   const { value = $bindable() }: Props = $props()
   const ctx = getContext()
   const total = $derived(ctx.total)
+  const identities = $derived(Object.keys(value.participants))
 
   const payerId = $derived(
-    Object.keys(value.participants).find((id) => value.participants[id].paid !== undefined),
+    identities.find((id) => value.participants[id].paid !== undefined) ?? identities[0],
   )
 
   function onValueChange(id: string | undefined) {
     // Clear all paid values
-    for (const participantId of Object.keys(value.participants))
+    for (const participantId of identities)
       if (value.participants[participantId].paid !== undefined)
         delete value.participants[participantId].paid
 
@@ -51,7 +52,7 @@
       </SelectTrigger>
     {/if}
     <SelectContent collisionPadding={{ top: 64, bottom: 88 }}>
-      {#each Object.keys(value.participants) as id (id)}
+      {#each identities as id (id)}
         <Async store={accounts.get(id)}>
           {#snippet awaited(account)}
             <SelectItem value={id}>

@@ -9,7 +9,7 @@
   const id = $derived(page.params.id)
 
   const value = $derived.by(() => {
-    if (page.state.draft) return page.state.draft
+    if (page.state.expense) return page.state.expense
 
     if (ok($account)) return { participants: { [$account.id]: { amount: 0, paid: 0, shares: 0 } } }
   })

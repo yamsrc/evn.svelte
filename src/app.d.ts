@@ -22,7 +22,7 @@ declare global {
     }
 
     interface PageState {
-      draft?: Partial<ExpenseValue>
+      expense?: Partial<ExpenseValue>
     }
 
     // interface Platform {}

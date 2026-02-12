@@ -7,7 +7,7 @@
   const { value, ...rest }: Props = $props()
 
   function draft() {
-    goto('/expenses/editor/', { state: { draft: value } })
+    goto('/expenses/editor/', { state: { expense: value } })
   }
 </script>
 

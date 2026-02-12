@@ -135,15 +135,14 @@
 
   <!-- TODO: add history -->
 
-  {@const draft = {
-    participants: Object.fromEntries(
-      (group.identities ?? []).map((id) => [id, { amount: 0, shares: 0 }]),
-    ),
-  }}
-
   <Actions>
     <Favorite {group} />
-    <Draft value={draft} disabled={!identities.length} />
+    <Draft
+      value={{
+        participants: Object.fromEntries(
+          group.identities.map((id) => [id, { amount: 0, shares: 0 }]),
+        ),
+      }} />
     <Action href={`/contacts/groups/${id}/add`} disabled={!group}>
       <UserPlus />
       <span>{$dict.groups.members.addMember}</span>
