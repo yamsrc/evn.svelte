@@ -12,6 +12,7 @@
   import { Action, Coins, Section } from '@/app/ui'
   import { Header } from '@/app/ui'
   import { contacts } from '@/contacts'
+  import { Draft } from '@/expenses/ui'
   import { groups, del } from '@/groups'
   import { Cosmetics, Favorite } from '@/groups/ui'
   import { account } from '@/iam'
@@ -132,8 +133,15 @@
     {/snippet}
   </Async>
 
+  {@const draft = {
+    participants: Object.fromEntries(
+      (group.identities ?? []).map((id) => [id, { amount: 0, shares: 0 }]),
+    ),
+  }}
+
   <Actions>
     <Favorite {group} />
+    <Draft value={draft} disabled={!identities.length} />
     <Action href={`/contacts/groups/${id}/add`} disabled={!group}>
       <UserPlus />
       <span>{$dict.groups.members.addMember}</span>

@@ -13,9 +13,9 @@ export function getContext(): Context {
   return svelteGetContext(CONTEXT)
 }
 
-export function createContext(value?: Value): Context {
+export function createContext(value?: Value, draft?: Partial<Value>): Context {
   return {
-    value: value === undefined ? blank() : exact(value),
+    value: value === undefined ? blank(draft) : exact(value),
     mode: 'sums',
   }
 }
@@ -36,24 +36,29 @@ function exact(value: Value): Value {
   }
 }
 
-function blank(): Value {
-  const participants: Record<string, Participant> = {}
+function blank(draft?: Partial<Value>): Value {
   const me = get(account)
+  const participants: Record<string, Participant> = {}
 
   if (me !== null)
     participants[me.id] = { amount: 0, paid: 0, shares: 0 }
 
+  if (draft?.participants !== undefined)
+    for (const [id, p] of Object.entries(draft.participants))
+      if (!(id in participants)) participants[id] = { ...p }
+
   return {
-    title: '',
-    location: '',
+    title: draft?.title ?? '',
+    location: draft?.location ?? '',
     participants,
-    extras: [],
-    attachments: [],
+    extras: draft?.extras ?? [],
+    attachments: draft?.attachments ?? [],
   }
 }
 
 export interface Props {
   value?: Value
+  draft?: Partial<Value>
   children: Snippet
 }
 

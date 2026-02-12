@@ -1,5 +1,7 @@
 // See https://svelte.dev/docs/kit/types#app.d.ts
 // for information about these interfaces
+import type { Value as ExpenseValue } from '@/expenses/ui/Editor/Context'
+
 declare global {
 
   namespace App {
@@ -19,7 +21,10 @@ declare global {
       }
     }
 
-    // interface PageState {}
+    interface PageState {
+      draft?: Partial<ExpenseValue>
+    }
+
     // interface Platform {}
   }
 }

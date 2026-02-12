@@ -6,10 +6,11 @@
 
   const { children } = $props()
   const id = $derived(page.params.id)
+  const draft = $derived(page.state.draft)
 </script>
 
 {#if id === undefined}
-  <Editor.Context>
+  <Editor.Context {draft}>
     {@render children()}
   </Editor.Context>
 {:else}
