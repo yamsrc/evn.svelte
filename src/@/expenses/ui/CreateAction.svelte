@@ -2,7 +2,7 @@
   import { PencilLine } from '@lucide/svelte'
   import { goto } from '$app/navigation'
   import { Action } from '@/app/ui'
-  import type { Props } from './Draft'
+  import type { Props } from './CreateAction'
 
   const { value, ...rest }: Props = $props()
 

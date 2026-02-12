@@ -12,7 +12,7 @@
   import { Action, Coins, Section } from '@/app/ui'
   import { Header } from '@/app/ui'
   import { contacts } from '@/contacts'
-  import { Draft } from '@/expenses/ui'
+  import { CreateAction } from '@/expenses/ui'
   import { groups, del } from '@/groups'
   import { Cosmetics, Favorite } from '@/groups/ui'
   import { account } from '@/iam'
@@ -137,7 +137,7 @@
 
   <Actions>
     <Favorite {group} />
-    <Draft
+    <CreateAction
       value={{
         participants: Object.fromEntries(
           group.identities.map((id) => [
