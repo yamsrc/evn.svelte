@@ -5,9 +5,10 @@
   import { cn } from '$lib/utils'
   import { Button } from '$ui/button'
   import * as ButtonGroup from '$ui/button-group'
+  import { numbers } from '@/expenses'
   import type { Props } from './ShareAmount'
 
-  let { amount = 0, share = $bindable(), min = 0, max = 5, class: classes, id }: Props = $props()
+  let { amount = 0, share = $bindable(), min = 0, max = numbers.MAX_SHARE, class: classes, id }: Props = $props()
 
   function decrement() {
     share = Math.max(min, share - 1)

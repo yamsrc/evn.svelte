@@ -22,7 +22,7 @@
       {#if title}
         <h2>{title}</h2>
       {/if}
-      <div class="flex flex-col gap-1.5">
+      <div id="groups-list-content" class="flex flex-col gap-1.5">
         {#each groups as group (group.id)}
           {@const selected = selection?.has(group.id)}
           {@const highlighted = unseen(group, notifications ?? [])}

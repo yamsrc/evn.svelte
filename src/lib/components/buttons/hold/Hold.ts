@@ -7,4 +7,5 @@ export interface Props extends ButtonProps {
   position?: 'center' | 'left' | 'right' | 'top' | 'bottom'
   align?: 'center' | 'left' | 'right' | 'top' | 'bottom'
   containerClass?: string
+  onpress?: () => void
 }

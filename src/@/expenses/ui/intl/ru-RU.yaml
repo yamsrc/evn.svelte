@@ -31,7 +31,7 @@ transfer:
       получила" : "Я получил(а)")
 transfers:
   tobe:
-    neutral: Ты полностью обустроишься
+    neutral: Все долги будут закрыты
     positive: Тебе будут должны
     negative: Вы будете должны
   done:

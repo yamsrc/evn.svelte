@@ -1,15 +1,20 @@
-import { search } from '$lib/tools'
+import { filter as contactsFilter } from '@/contacts'
+import { filter as groupsFilter } from '@/groups'
 import type { Contact } from '@/contacts'
 import type { Favorite } from '@/favorites'
+import type { Group } from '@/groups'
 
 export function filter(
   favorites: Favorite[],
   contacts: Contact[],
+  groups: Group[],
   query?: string,
 ): Favorite[] {
-  return search(favorites, query, (favorite) => {
-    const contact = contacts.find((c) => c.identity === favorite.favorite)
+  const contactsFiltered = contactsFilter(contacts, query)
+  const groupsFiltered = groupsFilter(groups, query)
 
-    return contact?.account?.name
+  return favorites.filter((favorite) => {
+    return contactsFiltered.some(({ identity }) => identity === favorite.favorite) ||
+      groupsFiltered.some(({ id }) => id === favorite.favorite)
   })
 }
