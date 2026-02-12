@@ -133,6 +133,8 @@
     {/snippet}
   </Async>
 
+  <!-- TODO: add history -->
+
   {@const draft = {
     participants: Object.fromEntries(
       (group.identities ?? []).map((id) => [id, { amount: 0, shares: 0 }]),
@@ -147,7 +149,6 @@
       <span>{$dict.groups.members.addMember}</span>
     </Action>
   </Actions>
-  <!-- TODO: add history -->
 {:else}
   <Section class="flex flex-col gap-2 items-center my-auto">
     <Cosmetics />

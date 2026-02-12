@@ -1,7 +1,5 @@
 import { getContext as svelteGetContext, setContext as svelteSetContext, type Snippet } from 'svelte'
-import { get } from 'svelte/store'
 import { numbers } from '@/expenses'
-import { account } from '@/iam'
 
 const CONTEXT = Symbol('editor')
 
@@ -13,14 +11,15 @@ export function getContext(): Context {
   return svelteGetContext(CONTEXT)
 }
 
-export function createContext(value?: Value, draft?: Partial<Value>): Context {
+export function createContext(value?: Partial<Value>): Context {
   return {
-    value: value === undefined ? blank(draft) : exact(value),
+    value: value === undefined ? blank() : exact(value),
     mode: 'sums',
   }
 }
 
-function exact(value: Value): Value {
+function exact(partial: Partial<Value>): Value {
+  const value = blank(partial)
   const participants = structuredClone(value.participants)
   const shares = numbers.shares(value)
 
@@ -37,28 +36,17 @@ function exact(value: Value): Value {
 }
 
 function blank(draft?: Partial<Value>): Value {
-  const me = get(account)
-  const participants: Record<string, Participant> = {}
-
-  if (me !== null)
-    participants[me.id] = { amount: 0, paid: 0, shares: 0 }
-
-  if (draft?.participants !== undefined)
-    for (const [id, p] of Object.entries(draft.participants))
-      if (!(id in participants)) participants[id] = { ...p }
-
   return {
     title: draft?.title ?? '',
-    location: draft?.location ?? '',
-    participants,
+    location: draft?.location,
+    participants: draft?.participants ?? {},
     extras: draft?.extras ?? [],
     attachments: draft?.attachments ?? [],
   }
 }
 
 export interface Props {
-  value?: Value
-  draft?: Partial<Value>
+  value?: Partial<Value>
   children: Snippet
 }
 

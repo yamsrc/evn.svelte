@@ -1,16 +1,22 @@
 <script lang="ts">
-  import { Async } from 'svas'
+  import { Async, ok } from 'svas'
   import { page } from '$app/state'
   import { expenses } from '@/expenses'
   import { Editor } from '@/expenses/ui'
+  import { account } from '@/iam'
 
   const { children } = $props()
   const id = $derived(page.params.id)
-  const draft = $derived(page.state.draft)
+
+  const value = $derived.by(() => {
+    if (page.state.draft) return page.state.draft
+
+    if (ok($account)) return { participants: { [$account.id]: { amount: 0, paid: 0, shares: 0 } } }
+  })
 </script>
 
 {#if id === undefined}
-  <Editor.Context {draft}>
+  <Editor.Context {value}>
     {@render children()}
   </Editor.Context>
 {:else}
@@ -18,15 +24,9 @@
     {#snippet awaited(expenses)}
       {@const expense = expenses.find((expense) => expense.id === id)}
       {#if expense}
+        <!-- do not ever touch this #key -->
         {#key id}
-          {@const value = {
-            title: expense.title ?? '',
-            location: expense.location,
-            participants: expense.participants,
-            extras: expense.extras,
-            attachments: expense.attachments,
-          }}
-          <Editor.Context {value}>
+          <Editor.Context value={expense}>
             {@render children()}
           </Editor.Context>
         {/key}
