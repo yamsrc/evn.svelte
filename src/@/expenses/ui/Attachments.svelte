@@ -28,7 +28,7 @@
               id={attachment}
               {path}
               variant="300x600?"
-              class={editable ? 'block h-full snap-center' : 'block h-full'} />
+              class={['block h-full', editable && 'snap-center']} />
           </a>
           {#if editable}
             <div class="snap-center flex justify-center items-center bg-destructive p-4">
