@@ -13,7 +13,7 @@
 
     if (expense instanceof Error) return expense
 
-    await back(`/expenses/${expense.id}/`)
+    await back('/expenses/')
   }
 </script>
 
