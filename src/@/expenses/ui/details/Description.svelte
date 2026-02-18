@@ -7,7 +7,7 @@
 </script>
 
 <div class="space-y-2">
-  <div class="text-2xl font-bold">{expense.title ?? ''}</div>
+  <div id="expenses-details-title" class="text-2xl font-bold">{expense.title ?? ''}</div>
   {#if expense.location}
     <div class="text-muted-foreground">{expense.location}</div>
   {/if}

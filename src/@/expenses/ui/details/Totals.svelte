@@ -25,7 +25,7 @@
       </Card.Title>
     </Card.Header>
     <Card.Content class="p-0">
-      <Coins amount={numbers.total(expense)} sign="neutral" class="text-3xl" />
+      <Coins id="expenses-details-total" amount={numbers.total(expense)} sign="neutral" class="text-3xl" />
     </Card.Content>
   </Card.Root>
 
