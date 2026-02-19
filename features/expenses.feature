@@ -4,7 +4,7 @@ Feature: Expenses
     Given new account
     And I tap 'nav-contacts-button'
     And I tap 'nav-expenses-button'
-    And I tap 'nav-action-input'
+    And I tap 'expenses-draft-action'
     And I tap 'expenses-spendings-add-participants-button'
     Then 'expenses-add-participants-add-button' is visible
     When I tap 'expenses-add-participants-create-button'
@@ -27,6 +27,9 @@ Feature: Expenses
     Then input 'expenses-participant-amount-0' contains '50'
     And input 'expenses-participant-amount-1' contains '50'
     And I tap 'expenses-form-save-button'
+    Then 'expenses-details-title' is visible
+    And the page contains that name
+    When I tap 'nav-expenses-button'
     Then 'expenses-list' contains that name
     And 'expenses-list' contains text '100'
 
@@ -34,7 +37,9 @@ Feature: Expenses
     Given new account
     And new managed contact
     And new expense
-    When I tap first item of 'expenses-list'
+    Then 'expenses-details-title' is visible
+    And 'expenses-details-title' contains that name
+    When I tap 'expenses-edit-action'
     Then 'expenses-form-title-input' is visible
     When I tap first visible 'expenses-spendings-add-participants-button'
     Then 'expenses-add-participants-add-button' is visible
@@ -51,13 +56,18 @@ Feature: Expenses
     And I clear 'expenses-participant-amount-2'
     And I type '33'
     When I tap 'expenses-form-save-button'
+    Then 'expenses-details-title' is visible
+    And 'expenses-details-title' contains that name
+    And 'expenses-details-total' contains text '100'
+    When I tap 'nav-expenses-button'
     Then 'expenses-list' contains that name
     And 'expenses-list' contains text '100'
 
   Scenario: Edit expense
     Given new account
     And new expense
-    When I tap first item of 'expenses-list'
+    Then 'expenses-details-title' is visible
+    When I tap 'expenses-edit-action'
     Then 'expenses-form-title-input' is visible
     When I tap 'expenses-form-title-input'
     And I clear 'expenses-form-title-input'
@@ -80,6 +90,10 @@ Feature: Expenses
     And I type '100'
     Then input 'expenses-participant-amount-0' contains '100'
     When I tap 'expenses-form-save-button'
+    Then 'expenses-details-title' is visible
+    And 'expenses-details-title' contains that name
+    And 'expenses-details-total' contains text '200'
+    When I tap 'nav-expenses-button'
     Then 'expenses-list' contains that name
     And 'expenses-list' contains text '200'
 
@@ -87,8 +101,9 @@ Feature: Expenses
     Given new account
     And new managed contact
     And I tap 'nav-contacts-button'
-    And I tap 'nav-expenses-button'
-    And I tap 'nav-action-input'
+    And I tap 'nav-home-button'
+    And I tap 'nav-actions-button'
+    And I tap 'nav-actions-cheqes-input-button'
     And I tap 'expenses-spendings-add-participants-button'
     Then 'expenses-add-participants-add-button' is visible
     When I tap first item of 'contacts-list-content'
@@ -128,6 +143,9 @@ Feature: Expenses
     And input 'expenses-participant-amount-1' contains '50'
     When I tap 'expenses-participants-tabs-shares'
     And I tap 'expenses-form-save-button'
+    Then 'expenses-details-title' is visible
+    And the page contains that name
+    When I tap 'nav-expenses-button'
     Then 'expenses-list' contains that name
     And 'expenses-list' contains text '100'
 
@@ -135,8 +153,9 @@ Feature: Expenses
     Given new account
     And new managed contact
     And I tap 'nav-contacts-button'
-    And I tap 'nav-expenses-button'
-    And I tap 'nav-action-input'
+    And I tap 'nav-home-button'
+    And I tap 'nav-actions-button'
+    And I tap 'nav-actions-cheqes-input-button'
     And I tap 'expenses-spendings-add-participants-button'
     Then 'expenses-add-participants-add-button' is visible
     When I tap first item of 'contacts-list-content'
@@ -159,6 +178,9 @@ Feature: Expenses
     Then 'expenses-participant-amount-0' is visible
     And input 'expenses-participant-amount-0' contains '50'
     And I tap 'expenses-form-save-button'
+    Then 'expenses-details-title' is visible
+    And the page contains that name
+    When I tap 'nav-expenses-button'
     Then 'expenses-list' contains that name
     And 'expenses-list' contains text '100'
 
@@ -166,8 +188,9 @@ Feature: Expenses
     Given new account
     And new managed contact
     And I tap 'nav-contacts-button'
-    And I tap 'nav-expenses-button'
-    And I tap 'nav-action-input'
+    And I tap 'nav-home-button'
+    And I tap 'nav-actions-button'
+    And I tap 'nav-actions-cheqes-input-button'
     And I tap 'expenses-spendings-add-participants-button'
     Then 'expenses-add-participants-add-button' is visible
     When I tap first item of 'contacts-list-content'
@@ -218,13 +241,17 @@ Feature: Expenses
     Then input 'expenses-participant-amount-0' contains '50'
     And input 'expenses-participant-amount-1' contains '50'
     And I tap 'expenses-form-save-button'
+    Then 'expenses-details-title' is visible
+    And the page contains that name
+    When I tap 'nav-expenses-button'
     Then 'expenses-list' contains that name
     And 'expenses-list' contains text '100'
 
   Scenario: Total changes with even split
     Given new account
     And new expense
-    When I tap first item of 'expenses-list'
+    Then 'expenses-details-title' is visible
+    When I tap 'expenses-edit-action'
     Then 'expenses-form-title-input' is visible
     When I tap 'expenses-total-input'
     And I clear 'expenses-total-input'
@@ -237,5 +264,8 @@ Feature: Expenses
     Then input 'expenses-participant-amount-0' contains '100'
     And input 'expenses-participant-amount-1' contains '100'
     And I tap 'expenses-form-save-button'
+    Then 'expenses-details-title' is visible
+    And 'expenses-details-total' contains text '200'
+    When I tap 'nav-expenses-button'
     Then 'expenses-list' contains that name
     And 'expenses-list' contains text '200'

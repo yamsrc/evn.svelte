@@ -4,6 +4,7 @@
   import { Separator } from '$com/separator'
   import { Attention } from '$com/shell'
   import { locale, dict } from '$lib/intl'
+  import { date } from '$lib/tools'
   import { Button } from '$ui/button'
   import { accounts } from '@/accounts'
   import { Picture } from '@/accounts/ui'
@@ -14,15 +15,13 @@
 
   const { expense, highlighted }: Props = $props()
   const participants = $derived(Object.keys(expense.participants))
-  const formatter = $derived(new Intl.DateTimeFormat($locale, { month: 'short', day: 'numeric' }))
-
   const description = $derived(
-    `${formatter.format(new Date(expense.date))}${expense.location ? `, ${expense.location}` : ''}`,
+    `${date(expense.date, $locale)}${expense.location ? `, ${expense.location}` : ''}`,
   )
 </script>
 
 <Button
-  href={`/expenses/editor/${expense.id}/`}
+  href={`/expenses/${expense.id}/`}
   variant="outline"
   size="lg"
   class={[

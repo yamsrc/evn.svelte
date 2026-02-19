@@ -5,7 +5,7 @@
   import { cn } from '$lib/utils'
   import type { Props } from './Coins'
 
-  const { amount, sign, class: classes }: Props = $props()
+  const { id, amount, sign, class: classes }: Props = $props()
 
   const color = $derived.by(() => {
     if (sign === 'neutral' || (sign === undefined && amount === 0)) return 'var(--muted-foreground)'
@@ -20,7 +20,7 @@
   })
 </script>
 
-<div class={cn('flex items-center gap-2', classes)}>
+<div {id} class={cn('flex items-center gap-2', classes)}>
   {#if amount !== undefined}
     <div class="font-bold">{currency(Math.abs(amount), $locale)}</div>
   {/if}

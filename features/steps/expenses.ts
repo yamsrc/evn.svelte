@@ -42,6 +42,9 @@ Given('new expense', async ({ page, ctx }) => {
   await expect(page.locator('#expenses-form-save-button')).toBeEnabled()
   await page.locator('#expenses-form-save-button').click()
   await expect(page).toHaveURL(/\/expenses\/[^/]+\/$/)
+
+  await expect(page.locator('#expenses-details-title')).toContainText(ctx.name)
+  await expect(page.locator('#expenses-edit-action')).toBeVisible()
 })
 
 When('I select payer from dropdown', async ({ page }) => {

@@ -5,6 +5,7 @@
   import { Attention } from '$com/shell'
   import { grammar } from '$lib/intl'
   import { locale } from '$lib/intl'
+  import { date } from '$lib/tools'
   import { accounts } from '@/accounts'
   import { Avatar } from '@/accounts/ui'
   import Coins from '@/app/ui/Coins.svelte'
@@ -28,9 +29,6 @@
   )
 
   const amount = $derived(expense.participants[payer!]?.paid)
-
-  const formatter = $derived(new Intl.DateTimeFormat($locale, { month: 'short', day: 'numeric' }))
-  const date = $derived(formatter.format(new Date(expense.date)))
 </script>
 
 {#if identity !== undefined}
@@ -54,7 +52,7 @@
                 {/if}
               </span>
               <span class="text-sm text-muted-foreground">
-                {date}
+                {date(expense.date, $locale)}
               </span>
             </div>
           </div>
