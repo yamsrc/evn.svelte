@@ -1,13 +1,25 @@
 <script lang="ts">
-  import { transit } from '$lib/tools'
   import { Switch } from '$ui/switch'
-  import { scopes, type Scope } from './Scopes'
+  import { configure, permissions, scopes, key } from '@/transmission'
   import { dict } from './intl'
+  import type { Scope } from '@/transmission'
 
-  let enabled = $state(true)
+  const all = $derived(!scopes.every((s) => $permissions?.[key(s)] === false))
 
-  function toggle(checked: boolean, scope?: Scope) {
-    transit(() => (enabled = checked))
+  function checked(scope: Scope): boolean {
+    return $permissions?.[key(scope)] !== false
+  }
+
+  function toggleAll(value: boolean) {
+    const update = Object.fromEntries(scopes.map((s) => [key(s), value]))
+
+    void configure(update)
+  }
+
+  function toggle(scope: Scope, value: boolean) {
+    const k = key(scope)
+
+    void configure({ [k]: value })
   }
 </script>
 
@@ -17,24 +29,28 @@
       <h2><label for="transmission-settings-switch">{$dict.settings.title}</label></h2>
       <Switch
         id="transmission-settings-switch"
-        checked={enabled}
-        onCheckedChange={toggle}
-        class="border border-border scale-125 me-1" />
+        checked={all}
+        onCheckedChange={toggleAll}
+        class="border border-border" />
     </div>
-    <div>
-      <p class="text-sm text-muted-foreground">{$dict.settings.description}</p>
-    </div>
+    <p class="text-sm text-muted-foreground">{$dict.settings.description}</p>
   </div>
-  {#if enabled}
+  {#if all}
     <ul class="space-y-2 ps-2">
-      {#each scopes as scope (scope)}
+      {#each scopes as scope (scope.domain)}
         <li>
-          <label for={`transmission-settings-${scope}-switch`}>
+          <label for={`transmission-settings-${scope.domain}-switch`}>
             <div class="flex justify-between items-center gap-2">
-              <h3>{$dict.settings[scope].title}</h3>
-              <Switch id={`transmission-settings-${scope}-switch`} class="border border-border" />
+              <h3>{$dict.settings[scope.domain].title}</h3>
+              <Switch
+                id={`transmission-settings-${scope.domain}-switch`}
+                checked={checked(scope)}
+                onCheckedChange={(v) => toggle(scope, v)}
+                class="border border-border" />
             </div>
-            <p class="text-sm text-muted-foreground">{$dict.settings[scope].description}</p>
+            <p class="text-sm text-muted-foreground">
+              {$dict.settings[scope.domain].description}
+            </p>
           </label>
         </li>
       {/each}

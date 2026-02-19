@@ -1,3 +1,5 @@
-export type Scope = 'contacts' | 'groups' | 'expenses'
-
-export const scopes: Scope[] = ['contacts', 'groups', 'expenses']
+export const scopes = [
+  { domain: 'contacts' },
+  { domain: 'groups' },
+  { domain: 'expenses' },
+] as const

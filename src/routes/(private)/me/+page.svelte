@@ -16,7 +16,7 @@
   import { Feedback } from '@/feedback/ui'
   import { logout } from '@/iam'
   import { account } from '@/iam'
-  // import { Scopes } from '@/transmission/ui'
+  import { Scopes } from '@/transmission/ui'
 
   async function getout() {
     logout()
@@ -51,9 +51,9 @@
 
   <Separator class="mt-5" />
 
-  <!-- <Section>
+  <Section>
     <Scopes />
-  </Section> -->
+  </Section>
 
   <Section class="flex flex-col gap-4 flex-1 [&_p]:text-muted-foreground">
     <div class="flex flex-col gap-2">
