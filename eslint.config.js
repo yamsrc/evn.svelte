@@ -47,6 +47,7 @@ export default [
     rules: {
       'no-void': ['error', { allowAsStatement: true }],
       curly: ['error', 'multi'],
+      'no-console': ['error', { allow: ['info', 'debug', 'warn', 'error'] }],
       'no-implicit-coercion': 'error',
       '@stylistic/comma-dangle': ['error', 'always-multiline'],
       '@stylistic/space-before-function-paren': ['error', {

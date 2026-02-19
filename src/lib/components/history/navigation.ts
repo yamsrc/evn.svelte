@@ -21,13 +21,22 @@ export function track(nav: AfterNavigate) {
   })
 }
 
-export async function back(href: string) {
-  const stack = get(history)
-  const previous = stack[stack.length - 2] // [..., prev, current]
-  const target = path(new URL(href, window.location.href))
-  const back = previous === target
+/**
+ * Find the closest match in the stack to the target from end
+ * @param target - The target URL
+ * @returns The closest match index in the stack to the target from end or -1 if not found
+ */
+function closest(target: string): number {
+  const stack = [...get(history)].reverse()
 
-  if (back) window.history.back()
+  return stack.findIndex((url) => url === target)
+}
+
+export async function back(href: string) {
+  const target = path(new URL(href, window.location.href))
+  const index = closest(target)
+
+  if (index > 0 && index <= 42) window.history.go(-index)
   else await goto(href)
 }
 

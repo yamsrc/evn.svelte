@@ -10,7 +10,7 @@ export interface Props {
   variant?: string
   format?: 'jpeg' | 'png' | 'webp'
   alt?: string
-  class?: string
+  class?: HTMLImgAttributes['class']
   style?: string
   loading?: HTMLImgAttributes['loading']
 }

@@ -1,11 +1,8 @@
 <script lang="ts">
-  import { PencilLine } from '@lucide/svelte'
   import { Actions } from '$com/shell'
-  import { Action } from '@/app/ui'
+  import CreateAction from './CreateAction.svelte'
 </script>
 
 <Actions>
-  <Action id="nav-action-input" href="/expenses/editor/" variant="default">
-    <PencilLine />
-  </Action>
+  <CreateAction />
 </Actions>

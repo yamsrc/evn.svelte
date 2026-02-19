@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { url, type Props } from './Pircure'
+  import { url, type Props } from './Picture'
 
   let {
     ref = $bindable(),

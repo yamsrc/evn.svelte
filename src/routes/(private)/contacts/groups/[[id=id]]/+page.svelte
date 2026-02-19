@@ -12,6 +12,7 @@
   import { Action, Coins, Section } from '@/app/ui'
   import { Header } from '@/app/ui'
   import { contacts } from '@/contacts'
+  import { CreateAction } from '@/expenses/ui'
   import { groups, del } from '@/groups'
   import { Cosmetics, Favorite } from '@/groups/ui'
   import { account } from '@/iam'
@@ -132,14 +133,24 @@
     {/snippet}
   </Async>
 
+  <!-- TODO: add history -->
+
   <Actions>
     <Favorite {group} />
+    <CreateAction
+      value={{
+        participants: Object.fromEntries(
+          group.identities.map((id) => [
+            id,
+            { amount: 0, shares: 0, paid: $account?.id === id ? 0 : undefined },
+          ]),
+        ),
+      }} />
     <Action href={`/contacts/groups/${id}/add`} disabled={!group}>
       <UserPlus />
       <span>{$dict.groups.members.addMember}</span>
     </Action>
   </Actions>
-  <!-- TODO: add history -->
 {:else}
   <Section class="flex flex-col gap-2 items-center my-auto">
     <Cosmetics />
