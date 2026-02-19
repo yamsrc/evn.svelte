@@ -1,6 +1,7 @@
 <script lang="ts">
   import { Switch } from '$ui/switch'
-  import { configure, permissions, scopes, key } from '@/transmission'
+  import { configure, permissions, key } from '@/transmission'
+  import { scopes } from './Scopes'
   import { dict } from './intl'
   import type { Scope } from '@/transmission'
 
