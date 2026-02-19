@@ -5,22 +5,27 @@
   import { dict } from './intl'
   import type { Scope } from '@/transmission'
 
+  let busy = $state(false)
   const all = $derived(!scopes.every((s) => $permissions?.[key(s)] === false))
 
   function checked(scope: Scope): boolean {
     return $permissions?.[key(scope)] !== false
   }
 
-  function toggleAll(value: boolean) {
+  async function toggleAll(value: boolean) {
     const update = Object.fromEntries(scopes.map((s) => [key(s), value]))
 
-    void configure(update)
+    busy = true
+    await configure(update)
+    busy = false
   }
 
-  function toggle(scope: Scope, value: boolean) {
+  async function toggle(scope: Scope, value: boolean) {
     const k = key(scope)
 
-    void configure({ [k]: value })
+    busy = true
+    await configure({ [k]: value })
+    busy = false
   }
 </script>
 
@@ -32,7 +37,8 @@
         id="transmission-settings-switch"
         checked={all}
         onCheckedChange={toggleAll}
-        class="border border-border" />
+        class="border border-border"
+        disabled={busy} />
     </div>
     <p class="text-sm text-muted-foreground">{$dict.settings.description}</p>
   </div>
@@ -47,7 +53,8 @@
                 id={`transmission-settings-${scope.domain}-switch`}
                 checked={checked(scope)}
                 onCheckedChange={(v) => toggle(scope, v)}
-                class="border border-border" />
+                class="border border-border"
+                disabled={busy} />
             </div>
             <p class="text-sm text-muted-foreground">
               {$dict.settings[scope.domain].description}
