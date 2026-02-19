@@ -40,6 +40,6 @@ export const web: Channel = {
   },
 
   async subscribed(): Promise<boolean> {
-    return (await get()) !== null
+    return false
   },
 }
