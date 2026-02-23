@@ -1,7 +1,6 @@
 <script lang="ts">
   import { Check } from '@lucide/svelte'
-  import { Async, combined } from 'svas'
-  import { ok } from 'svas'
+  import { Async, combined, ok } from 'svas'
   import { SvelteSet } from 'svelte/reactivity'
   import { goto } from '$app/navigation'
   import { page } from '$app/state'

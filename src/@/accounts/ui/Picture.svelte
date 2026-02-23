@@ -3,7 +3,7 @@
   import { Picture } from '@/media/ui'
   import type { Props } from './Picture'
 
-  const { account, size = 400, class: classes, style }: Props = $props()
+  const { account, size = 400, class: classes, style = '' }: Props = $props()
 </script>
 
 {#if account.deleted}
