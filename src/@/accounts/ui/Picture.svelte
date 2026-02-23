@@ -7,7 +7,9 @@
 </script>
 
 {#if account.deleted}
-  <CircleX class={['text-muted-foreground rounded-full', `size-[${size}px]`, classes]} {style} />
+  <CircleX
+    class={['text-muted-foreground rounded-full', 'size-(--icon-size)', classes]}
+    style={`--icon-size: ${size}px; ${style}`} />
 {:else if account.picture}
   <Picture
     id={account.picture}
