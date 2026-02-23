@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Check } from '@lucide/svelte'
-  import { Async, combined } from 'svas'
+  import { Async, combined, ok } from 'svas'
   import { SvelteSet } from 'svelte/reactivity'
   import { back } from '$com/history'
   import { Actions, Return } from '$com/shell'
@@ -78,7 +78,9 @@
 
     {@const availableGroups = groups.filter(({ identities }) => identities.some(notParticipant))}
     {@const filteredGroups = filterGroups(availableGroups, search)}
-    {@const availableContacts = contacts.filter(({ identity }) => notParticipant(identity))}
+    {@const availableContacts = contacts.filter(
+      ({ identity, account }) => notParticipant(identity) && ok(account) && !account.deleted,
+    )}
     {@const filteredContacts = filterContacts(availableContacts, search)}
     {@const empty = filteredGroups.length === 0 && filteredContacts.length === 0}
 

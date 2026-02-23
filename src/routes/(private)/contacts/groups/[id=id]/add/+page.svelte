@@ -1,6 +1,7 @@
 <script lang="ts">
   import { Check } from '@lucide/svelte'
   import { Async, combined } from 'svas'
+  import { ok } from 'svas'
   import { SvelteSet } from 'svelte/reactivity'
   import { goto } from '$app/navigation'
   import { page } from '$app/state'
@@ -57,11 +58,14 @@
         <Input type="text" placeholder={$dict.actions.search} bind:value={search} />
       </Section>
 
+      {@const aliveContacts = contacts.filter((c) => ok(c.account) && !c.account.deleted)}
       {@const availableFavs = favorites.filter(
         ({ favorite }) => group.id !== favorite && !group.identities.includes(favorite),
       )}
-      {@const filteredFavs = filterFavorites(availableFavs, contacts, groups, search)}
-      {@const availableContacts = contacts.filter((c) => !group.identities.includes(c.identity))}
+      {@const filteredFavs = filterFavorites(availableFavs, aliveContacts, groups, search)}
+      {@const availableContacts = aliveContacts.filter(
+        (c) => !group.identities.includes(c.identity),
+      )}
       {@const filteredContacts = filterContacts(availableContacts, search)}
       {@const empty = filteredFavs.length === 0 && filteredContacts.length === 0}
 
