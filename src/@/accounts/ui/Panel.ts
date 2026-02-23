@@ -1,7 +1,7 @@
 import type { ActionProps } from '$com/panel'
 import type { Account } from '@/accounts'
 
-type AccountLike = Pick<Account, 'id' | 'name' | 'picture'>
+type AccountLike = Pick<Account, 'id' | 'name' | 'picture' | 'deleted'>
 
 export type Props = {
   account: AccountLike

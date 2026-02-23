@@ -1,6 +1,6 @@
-import type { Account } from '@/iam'
+import type { Account } from '@/accounts'
 
-type AccountLike = Pick<Account, 'id' | 'name' | 'picture'>
+type AccountLike = Pick<Account, 'id' | 'name' | 'picture' | 'deleted'>
 
 export interface Props {
   account: AccountLike

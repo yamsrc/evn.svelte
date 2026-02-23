@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { deleted } from '@/accounts'
   import { managed as accounts, upload, update } from '@/accounts'
   import { Cosmetics, type Value } from '@/app/ui'
   import Tombstone from './Tombstone.svelte'
@@ -17,7 +16,7 @@
   }
 </script>
 
-{#if deleted(account)}
+{#if account.deleted}
   <Tombstone />
 {:else}
   <Cosmetics value={account} {onchange} {onupload} {...rest} />

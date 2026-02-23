@@ -1,10 +1,9 @@
-import { ok, values, type Maybe } from 'svas'
+import { values, type Maybe } from 'svas'
 import { derived } from 'svelte/store'
 import { browser } from '$app/environment'
 import { dict } from '$lib/intl'
 import { account, update } from '@/iam'
 import { events } from '@/realtime'
-import { tombstones } from './deleted'
 import { get } from './get'
 import type { Account } from './Account'
 
@@ -19,8 +18,8 @@ export const accounts = Object.create(internal, {
   get: {
     value: (id: string, opts?: Parameters<typeof internal.get>[1]) =>
       derived([internal.get(id, opts), dict], ([$account, $dict]): Maybe<Account> => {
-        if (ok($account) && tombstones.has($account.id))
-          return { ...$account, name: $dict.account.deleted }
+        if ($account instanceof Error && 'code' in $account && $account.code === 404)
+          return { id, name: $dict.account.deleted, picture: '', deleted: true, _created: 0, _version: 0 }
 
         return $account
       }),
