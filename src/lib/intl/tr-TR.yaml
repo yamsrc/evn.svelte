@@ -122,6 +122,7 @@ account:
     sorry: Gitmene çok üzüldük.
     hold: Onaylamak için basılı tutun
     link: Hesabı sil
+  deleted: Silinen hesap
 favorites:
   title: Favoriler
 expenses:

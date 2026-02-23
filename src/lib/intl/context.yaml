@@ -206,6 +206,9 @@ inputs:
       link:
         input: Delete account
         context: link text
+    deleted:
+      input: Deleted account
+      context: shown when the account owner has deleted their account
   favorites:
     title:
       input: Favorites

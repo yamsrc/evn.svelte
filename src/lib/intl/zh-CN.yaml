@@ -112,6 +112,7 @@ account:
     sorry: 很遗憾看到您离开。
     hold: 按住以确认
     link: 删除账户
+  deleted: 已删除账号
 favorites:
   title: 收藏夹
 expenses:

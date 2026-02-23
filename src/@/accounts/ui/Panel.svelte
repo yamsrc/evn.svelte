@@ -3,7 +3,7 @@
   import { Attention } from '$com/shell'
   import { TextEllipsis } from '$com/text-ellipsis'
   import { dict } from '$lib/intl'
-  import { cn } from '$lib/utils'
+  import { deleted } from '@/accounts'
   import { Picture } from '@/accounts/ui'
   import { Balance } from '@/app/ui'
   import type { Props } from './Panel'
@@ -20,6 +20,8 @@
     class: classes,
   }: Props = $props()
 
+  const isDeleted = $derived(deleted(account))
+
   function onclick(event: MouseEvent) {
     if (selected !== undefined && onselect) {
       event.preventDefault()
@@ -34,7 +36,7 @@
 <Panel
   {href}
   {selected}
-  class={cn('bg-card border border-border h-14', classes)}
+  class={['bg-card border border-border h-14', isDeleted && 'text-muted-foreground opacity-60', classes]}
   {onclick}
   {...actionProps}>
   {#snippet icon()}
@@ -49,7 +51,7 @@
     </div>
   {/snippet}
   {#snippet right()}
-    {#if balance}
+    {#if balance && !isDeleted}
       <Balance {balance} youAreOwed={$dict.contacts.contact.owesYou} />
     {/if}
   {/snippet}

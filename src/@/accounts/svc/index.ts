@@ -1,4 +1,5 @@
 export { get } from './get'
+export { deleted } from './deleted'
 export { terminate } from './terminate'
 export { accounts } from './store'
 export { update } from './update'

@@ -130,6 +130,7 @@ account:
     sorry: Ci dispiace molto vederti andare via.
     hold: Tieni premuto per confermare
     link: Elimina account
+  deleted: Account eliminato
 favorites:
   title: Preferiti
 expenses:

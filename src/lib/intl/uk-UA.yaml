@@ -127,6 +127,7 @@ account:
     sorry: Нам дуже шкода, що ви йдете.
     hold: Утримуйте для підтвердження
     link: Видалити акаунт
+  deleted: Видалений акаунт
 favorites:
   title: Улюблене
 expenses:

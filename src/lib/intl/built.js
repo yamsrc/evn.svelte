@@ -143,7 +143,8 @@ export const dictionaries = {
         "sorry": "نأسف جدًا لرؤيتك تغادر.",
         "hold": "اضغط مع الاستمرار للتأكيد",
         "link": "حذف الحساب"
-      }
+      },
+      "deleted": "تم حذف الحساب"
     },
     "favorites": {
       "title": "المفضلة"
@@ -342,7 +343,8 @@ export const dictionaries = {
         "sorry": "Es tut uns sehr leid, zu sehen, dass Sie gehen.",
         "hold": "Zum Bestätigen halten",
         "link": "Konto löschen"
-      }
+      },
+      "deleted": "Konto gelöscht"
     },
     "favorites": {
       "title": "Favoriten"
@@ -541,7 +543,8 @@ export const dictionaries = {
         "sorry": "We're very sorry to see you go.",
         "hold": "Hold to confirm",
         "link": "Delete account"
-      }
+      },
+      "deleted": "Deleted account"
     },
     "favorites": {
       "title": "Favorites"
@@ -740,7 +743,8 @@ export const dictionaries = {
         "sorry": "Lamentamos mucho que te vayas.",
         "hold": "Mantén pulsado para confirmar",
         "link": "Eliminar cuenta"
-      }
+      },
+      "deleted": "Cuenta eliminada"
     },
     "favorites": {
       "title": "Favoritos"
@@ -939,7 +943,8 @@ export const dictionaries = {
         "sorry": "Nous sommes vraiment désolés de vous voir partir.",
         "hold": "Maintenir pour confirmer",
         "link": "Supprimer le compte"
-      }
+      },
+      "deleted": "Compte supprimé"
     },
     "favorites": {
       "title": "Favoris"
@@ -1138,7 +1143,8 @@ export const dictionaries = {
         "sorry": "हमें आपको जाते हुए देखकर बहुत दुख हुआ।",
         "hold": "पुष्टि करने के लिए दबाए रखें",
         "link": "खाता हटाएं"
-      }
+      },
+      "deleted": "खाता हटा दिया गया"
     },
     "favorites": {
       "title": "पसंदीदा"
@@ -1337,7 +1343,8 @@ export const dictionaries = {
         "sorry": "Ci dispiace molto vederti andare via.",
         "hold": "Tieni premuto per confermare",
         "link": "Elimina account"
-      }
+      },
+      "deleted": "Account eliminato"
     },
     "favorites": {
       "title": "Preferiti"
@@ -1536,7 +1543,8 @@ export const dictionaries = {
         "sorry": "ご利用いただけなくなることを大変残念に思います。",
         "hold": "押し続けて確定",
         "link": "アカウントを削除"
-      }
+      },
+      "deleted": "削除されたアカウント"
     },
     "favorites": {
       "title": "お気に入り"
@@ -1735,7 +1743,8 @@ export const dictionaries = {
         "sorry": "떠나신다니 정말 아쉽습니다.",
         "hold": "길게 눌러서 확인",
         "link": "계정 삭제"
-      }
+      },
+      "deleted": "삭제된 계정"
     },
     "favorites": {
       "title": "즐겨찾기"
@@ -1934,7 +1943,8 @@ export const dictionaries = {
         "sorry": "Het spijt ons zeer om je te zien gaan.",
         "hold": "Houd vast om te bevestigen",
         "link": "Account verwijderen"
-      }
+      },
+      "deleted": "Verwijderd account"
     },
     "favorites": {
       "title": "Favorieten"
@@ -2133,7 +2143,8 @@ export const dictionaries = {
         "sorry": "Нам очень жаль, что вы уходите.",
         "hold": "Удерживайте для подтверждения",
         "link": "Удалить аккаунт"
-      }
+      },
+      "deleted": "Удалённый аккаунт"
     },
     "favorites": {
       "title": "Избранное"
@@ -2332,7 +2343,8 @@ export const dictionaries = {
         "sorry": "Tunaomba radhi sana kukuona ukiondoka.",
         "hold": "Shikilia kuthibitisha",
         "link": "Futa akaunti"
-      }
+      },
+      "deleted": "Akaunti imefutwa"
     },
     "favorites": {
       "title": "Vipendwa"
@@ -2531,7 +2543,8 @@ export const dictionaries = {
         "sorry": "Gitmene çok üzüldük.",
         "hold": "Onaylamak için basılı tutun",
         "link": "Hesabı sil"
-      }
+      },
+      "deleted": "Silinen hesap"
     },
     "favorites": {
       "title": "Favoriler"
@@ -2730,7 +2743,8 @@ export const dictionaries = {
         "sorry": "Нам дуже шкода, що ви йдете.",
         "hold": "Утримуйте для підтвердження",
         "link": "Видалити акаунт"
-      }
+      },
+      "deleted": "Видалений акаунт"
     },
     "favorites": {
       "title": "Улюблене"
@@ -2929,7 +2943,8 @@ export const dictionaries = {
         "sorry": "很遗憾看到您离开。",
         "hold": "按住以确认",
         "link": "删除账户"
-      }
+      },
+      "deleted": "已删除账号"
     },
     "favorites": {
       "title": "收藏夹"

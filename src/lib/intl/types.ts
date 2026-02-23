@@ -150,6 +150,7 @@ export type Dictionary = {
           hold: string
           link: string
         }
+        deleted: string
       }
       favorites: {
         title: string

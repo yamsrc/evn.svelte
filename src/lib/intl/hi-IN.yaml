@@ -124,6 +124,7 @@ account:
     sorry: हमें आपको जाते हुए देखकर बहुत दुख हुआ।
     hold: पुष्टि करने के लिए दबाए रखें
     link: खाता हटाएं
+  deleted: खाता हटा दिया गया
 favorites:
   title: पसंदीदा
 expenses:

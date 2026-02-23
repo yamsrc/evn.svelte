@@ -122,6 +122,7 @@ account:
     sorry: نأسف جدًا لرؤيتك تغادر.
     hold: اضغط مع الاستمرار للتأكيد
     link: حذف الحساب
+  deleted: تم حذف الحساب
 favorites:
   title: المفضلة
 expenses:

@@ -130,6 +130,7 @@ account:
     sorry: Es tut uns sehr leid, zu sehen, dass Sie gehen.
     hold: Zum Bestätigen halten
     link: Konto löschen
+  deleted: Konto gelöscht
 favorites:
   title: Favoriten
 expenses:

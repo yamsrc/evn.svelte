@@ -1,6 +1,8 @@
 <script lang="ts">
+  import { deleted } from '@/accounts'
   import { managed as accounts, upload, update } from '@/accounts'
   import { Cosmetics, type Value } from '@/app/ui'
+  import Tombstone from './Tombstone.svelte'
   import type { Props } from './Cosmetics'
 
   const { account, managed, ...rest }: Props = $props()
@@ -15,4 +17,8 @@
   }
 </script>
 
-<Cosmetics value={account} {onchange} {onupload} {...rest} />
+{#if deleted(account)}
+  <Tombstone />
+{:else}
+  <Cosmetics value={account} {onchange} {onupload} {...rest} />
+{/if}
