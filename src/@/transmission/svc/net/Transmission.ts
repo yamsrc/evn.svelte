@@ -14,7 +14,7 @@ export type SubscribeInput =
   | { channel: 'web'; endpoint: WebPushEndpoint }
   | { channel: 'fcm'; endpoint: string }
 
-export interface SubscribeResponse {
+export interface Transmission {
   id: string
   permissions: Permissions
 }

@@ -1,5 +1,6 @@
 export { supported } from './channel'
 export { configure } from './configure'
+export { get } from './get'
 export { ping } from './ping'
 export { request, subscribe } from './subscribe'
 export { unsubscribe } from './unsubscribe'
