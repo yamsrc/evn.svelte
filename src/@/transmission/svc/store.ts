@@ -19,6 +19,7 @@ export const dismissed = value<number>({
 export const permissions = value<Permissions>({
   persist: 'transmission:permissions',
   bind: account,
+  default: {},
 })
 
 events.on('default.transmission.sync', (data) => permissions.set(data.permissions))
