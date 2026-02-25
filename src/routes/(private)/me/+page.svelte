@@ -16,7 +16,7 @@
   import { Feedback } from '@/feedback/ui'
   import { logout } from '@/iam'
   import { account } from '@/iam'
-  // import { Scopes } from '@/transmission/ui'
+  import { Scopes } from '@/transmission/ui'
 
   async function getout() {
     logout()
@@ -51,10 +51,6 @@
 
   <Separator class="mt-5" />
 
-  <!-- <Section>
-    <Scopes />
-  </Section> -->
-
   <Section class="flex flex-col gap-4 flex-1 [&_p]:text-muted-foreground">
     <div class="flex flex-col gap-2">
       <h2>{$dict.profile.language.title}</h2>
@@ -75,12 +71,17 @@
     </div>
   </Section>
 
+  <Section>
+    <Scopes />
+  </Section>
+
+  <Separator />
+
   <Section class="flex justify-center">
     <Feedback />
   </Section>
 
   <Section class="space-y-2 mt-4">
-    <Separator />
     <footer class="text-muted-foreground text-sm">
       <div class="flex justify-between items-start">
         <Delete class="py-0 underline underline-offset-3 font-normal" ondelete={getout} />

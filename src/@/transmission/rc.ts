@@ -1,5 +1,5 @@
 import { account } from '@/iam'
-import { permission, subscribe, subscribed, unsubscribe } from './svc'
+import { get, permission, permissions, subscribe, subscribed, unsubscribe } from './svc'
 import { channel, boot } from './svc/channel'
 
 let prev: string | null = null
@@ -14,6 +14,14 @@ async function autoSubscribe(): Promise<void> {
   const error = await subscribe()
 
   if (error instanceof Error) console.error('Automatic subscription failed', error)
+}
+
+async function hydrate(): Promise<void> {
+  const result = await get()
+
+  if (result instanceof Error) return
+
+  permissions.set(result)
 }
 
 export async function rc() {
@@ -31,6 +39,7 @@ export async function rc() {
       void unsubscribe()
     } else if (prev !== me.id) {
       prev = me.id
+      void hydrate()
       void autoSubscribe()
     }
   })

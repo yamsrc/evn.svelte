@@ -10,11 +10,12 @@
   import { Scopes } from '@/transmission/ui'
   import type { Expense } from '@/expenses'
   import type { Notification, Of, PayloadOf } from '@/notifications'
+  import type { Domain, Event } from '@/transmission'
 
   const VERSION = 1
   const MAX_IDENTITIES = 3
 
-  function create<D extends Notification['domain'], E extends Of<D>['event']>(
+  function create<D extends Domain, E extends Event<D>>(
     id: number | string,
     identity: string,
     domain: D,
