@@ -5,13 +5,15 @@ import type { Events as ExpensesEvents } from '@/expenses/svc/net'
 import type { Events as FavoritesEvents } from '@/favorites/svc/net'
 import type { Events as GroupsEvents } from '@/groups/svc/net'
 import type { Events as NotificationsEvents } from '@/notifications/svc/net'
+import type { Events as TransmissionEvents } from '@/transmission/svc/net'
 
 export type Events = AccountEvents &
   ContactsEvents &
   GroupsEvents &
   ExpensesEvents &
   FavoritesEvents &
-  NotificationsEvents
+  NotificationsEvents &
+  TransmissionEvents
 
 export type Message = {
   [E in keyof Events]: {

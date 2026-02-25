@@ -1,14 +1,14 @@
 import { ok } from 'svas'
 import { derived, type Readable } from 'svelte/store'
 import { notifications } from './store'
-import type { Notification, Of } from './net'
+import type { Of } from './net'
+import type { Scope } from '@/transmission'
 
-type Domain = Notification['domain']
-type Event<D extends Domain> = Of<D>['event']
+type Domain = Scope['domain']
 
-export function scope<D extends Domain, E extends Event<D> | undefined = undefined>(
-  { domain, event, key }: { domain: D; event?: E; key?: string },
-): Readable<(undefined extends E ? Of<D> : Of<D, E & Event<D>>)[]> {
+export function scope<D extends Domain>(
+  { domain, event, key }: Scope & { domain: D },
+): Readable<Of<D>[]> {
   return derived(notifications, ($n) =>
     ok($n)
       ? $n.filter((n) =>
@@ -16,5 +16,5 @@ export function scope<D extends Domain, E extends Event<D> | undefined = undefin
         (event === undefined || n.event === event) &&
         (key === undefined || n.key === key))
       : [],
-  ) as Readable<Of<D, E & Event<D>>[]>
+  ) as Readable<Of<D>[]>
 }

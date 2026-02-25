@@ -5,12 +5,19 @@
 <script lang="ts">
   import { onMount, tick } from 'svelte'
   import { dict } from '$lib/intl'
+  import { android, ios, safari, shell, standalone } from '$lib/tools/mq'
   import { update } from '@/accounts'
   import { account } from '@/iam'
   import { backgrounds, overriden, type Props } from './Background'
   import Slide from './Slide.svelte'
 
   const { scrollable, class: classes }: Props = $props()
+
+  const app = standalone || shell
+  const safariBrowser = ios && safari && !app
+  const androidApp = android && app
+
+  const faded = $derived(!scrollable && (safariBrowser || androidApp))
 
   let container: HTMLDivElement | null = $state(null)
 
@@ -97,11 +104,13 @@
 <div
   bind:this={container}
   class={[
-    'flex h-full w-full',
+    'flex w-full',
+    !scrollable && safariBrowser ? 'h-[calc(100%-10px)]' : 'h-full',
     scrollable &&
       'overflow-x-scroll overflow-y-hidden touch-pan-x overscroll-x-contain no-scrollbar snap-x snap-mandatory bg-input',
     scrollable || 'overflow-hidden',
     mounted || 'invisible',
+    faded && 'fade-edges',
     classes,
   ]}
   onscroll={scrollable ? onscroll : undefined}>
@@ -123,3 +132,16 @@
     {/if}
   {/each}
 </div>
+
+<style>
+  /* vertical fade: transparent top/bottom 32px, opaque middle */
+  .fade-edges {
+    mask-image: linear-gradient(
+      to bottom,
+      transparent,
+      black 32px,
+      black calc(100% - 32px),
+      transparent
+    );
+  }
+</style>

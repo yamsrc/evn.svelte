@@ -1,12 +1,11 @@
 <script lang="ts">
-  import { onMount } from 'svelte'
   import { dev } from '$app/environment'
   import { afterNavigate, onNavigate } from '$app/navigation'
   import { page } from '$app/state'
   import { track } from '$com/history'
   import { meta } from '$config'
   import { dict } from '$lib/intl'
-  import { mount, navigate } from '$lib/tools'
+  import { navigate } from '$lib/tools'
   import { Background } from '@/app/ui'
   import '../app.css'
 
@@ -15,7 +14,6 @@
   const description = $derived(page.data.meta?.description ?? meta.description)
   const image = $derived(page.data.meta?.image ?? meta.image)
 
-  onMount(mount)
   onNavigate(navigate)
   afterNavigate(track)
 
