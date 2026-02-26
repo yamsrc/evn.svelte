@@ -12,9 +12,12 @@ export function getContext(): Context {
 }
 
 export function createContext(value?: Partial<Value>): Context {
+  const created = value === undefined ? blank() : exact(value)
+
   return {
-    value: value === undefined ? blank() : exact(value),
+    value: created,
     mode: 'sums',
+    snapshot: JSON.stringify(created),
   }
 }
 
@@ -53,6 +56,7 @@ export interface Props {
 export interface Context {
   value: Value
   mode: 'sums' | 'shares'
+  snapshot: string
 }
 
 export interface Value {
