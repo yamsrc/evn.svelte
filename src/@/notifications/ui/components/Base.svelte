@@ -18,6 +18,6 @@
     <CircleArrowRight
       color="black"
       fill="currentColor"
-      class="text-muted-foreground rtl:rotate-180" />
+      class="text-muted-foreground/20 dark:text-muted-foreground rtl:rotate-180" />
   {/if}
 </Button>
