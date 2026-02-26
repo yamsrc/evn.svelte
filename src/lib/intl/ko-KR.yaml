@@ -72,7 +72,7 @@ contacts:
     description: 나중에 이 계정을 소유자에게 이전하여, 소유자가 로그인 정보를 설정하고 계정의 소유권을 가질 수 있습니다.
   share:
     invite:
-      link: evn에 초대
+      link: Evnly에 초대
       qr: QR 코드 표시
       description: 초대는 5분 후에 만료됩니다
 join:

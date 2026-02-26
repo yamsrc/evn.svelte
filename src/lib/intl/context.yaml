@@ -131,8 +131,7 @@ inputs:
     share:
       invite:
         link:
-          input: Invite to evn
-          context: button label (evn is the name of the app)
+          input: Invite to Evnly
         qr:
           input: Show QR code
           context: button label

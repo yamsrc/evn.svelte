@@ -80,7 +80,7 @@ contacts:
       puisse définir ses informations de connexion et en prendre possession.
   share:
     invite:
-      link: Inviter sur evn
+      link: Inviter sur Evnly
       qr: Afficher le code QR
       description: L'invitation expirera dans 5 minutes
 join:

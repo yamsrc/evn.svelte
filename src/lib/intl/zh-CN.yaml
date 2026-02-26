@@ -70,7 +70,7 @@ contacts:
     description: 稍后，您可以将此账户转移给所有者，让其设置登录信息并接管账户。
   share:
     invite:
-      link: 邀请加入 evn
+      link: 邀请加入Evnly
       qr: 显示二维码
       description: 邀请将在5分钟后失效
 join:

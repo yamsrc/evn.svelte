@@ -70,7 +70,7 @@ contacts:
     description: 後でこのアカウントを所有者に譲渡できるようになり、所有者がサインイン情報を設定して引き継ぐことができます。
   share:
     invite:
-      link: evnに招待
+      link: Evnlyに招待
       qr: QRコードを表示
       description: 招待は5分後に期限切れになります
 join:

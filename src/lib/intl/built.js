@@ -90,7 +90,7 @@ export const dictionaries = {
       },
       "share": {
         "invite": {
-          "link": "دعوة إلى evn",
+          "link": "دعوة إلى Evnly",
           "qr": "عرض رمز الاستجابة السريعة",
           "description": "ستنتهي صلاحية الدعوة خلال 5 دقائق"
         }
@@ -289,7 +289,7 @@ export const dictionaries = {
       },
       "share": {
         "invite": {
-          "link": "Zu evn einladen",
+          "link": "Zu Evnly einladen",
           "qr": "QR-Code anzeigen",
           "description": "Die Einladung läuft in 5 Minuten ab"
         }
@@ -488,7 +488,7 @@ export const dictionaries = {
       },
       "share": {
         "invite": {
-          "link": "Invite to evn",
+          "link": "Invite to Evnly",
           "qr": "Show QR code",
           "description": "The invitation will expire in 5 minutes"
         }
@@ -687,7 +687,7 @@ export const dictionaries = {
       },
       "share": {
         "invite": {
-          "link": "Invitar a evn",
+          "link": "Invitar a Evnly",
           "qr": "Mostrar código QR",
           "description": "La invitación caducará en 5 minutos"
         }
@@ -886,7 +886,7 @@ export const dictionaries = {
       },
       "share": {
         "invite": {
-          "link": "Inviter sur evn",
+          "link": "Inviter sur Evnly",
           "qr": "Afficher le code QR",
           "description": "L'invitation expirera dans 5 minutes"
         }
@@ -1085,7 +1085,7 @@ export const dictionaries = {
       },
       "share": {
         "invite": {
-          "link": "evn पर आमंत्रित करें",
+          "link": "Evnly पर आमंत्रित करें",
           "qr": "QR कोड दिखाएं",
           "description": "निमंत्रण 5 मिनट में समाप्त हो जाएगा"
         }
@@ -1284,7 +1284,7 @@ export const dictionaries = {
       },
       "share": {
         "invite": {
-          "link": "Invita su evn",
+          "link": "Invita su Evnly",
           "qr": "Mostra codice QR",
           "description": "L'invito scadrà tra 5 minuti"
         }
@@ -1483,7 +1483,7 @@ export const dictionaries = {
       },
       "share": {
         "invite": {
-          "link": "evnに招待",
+          "link": "Evnlyに招待",
           "qr": "QRコードを表示",
           "description": "招待は5分後に期限切れになります"
         }
@@ -1682,7 +1682,7 @@ export const dictionaries = {
       },
       "share": {
         "invite": {
-          "link": "evn에 초대",
+          "link": "Evnly에 초대",
           "qr": "QR 코드 표시",
           "description": "초대는 5분 후에 만료됩니다"
         }
@@ -1881,7 +1881,7 @@ export const dictionaries = {
       },
       "share": {
         "invite": {
-          "link": "Uitnodigen voor evn",
+          "link": "Uitnodigen voor Evnly",
           "qr": "QR-code tonen",
           "description": "De uitnodiging verloopt over 5 minuten"
         }
@@ -2080,7 +2080,7 @@ export const dictionaries = {
       },
       "share": {
         "invite": {
-          "link": "Пригласить в evn",
+          "link": "Пригласить в Evnly",
           "qr": "Показать QR-код",
           "description": "Приглашение истечет через 5 минут"
         }
@@ -2279,7 +2279,7 @@ export const dictionaries = {
       },
       "share": {
         "invite": {
-          "link": "Alika kwenye evn",
+          "link": "Alika kwenye Evnly",
           "qr": "Onyesha msimbo wa QR",
           "description": "Mwaliko utatamatika baada ya dakika 5"
         }
@@ -2478,7 +2478,7 @@ export const dictionaries = {
       },
       "share": {
         "invite": {
-          "link": "evn’e davet et",
+          "link": "Evnly'ye davet et",
           "qr": "QR kodunu göster",
           "description": "Davet 5 dakika içinde sona erecek"
         }
@@ -2677,7 +2677,7 @@ export const dictionaries = {
       },
       "share": {
         "invite": {
-          "link": "Запросити до evn",
+          "link": "Запросити до Evnly",
           "qr": "Показати QR-код",
           "description": "Запрошення втратить чинність через 5 хвилин"
         }
@@ -2876,7 +2876,7 @@ export const dictionaries = {
       },
       "share": {
         "invite": {
-          "link": "邀请加入 evn",
+          "link": "邀请加入Evnly",
           "qr": "显示二维码",
           "description": "邀请将在5分钟后失效"
         }

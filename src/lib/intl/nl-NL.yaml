@@ -80,7 +80,7 @@ contacts:
       haar inloggegevens kan instellen en het account kan overnemen.
   share:
     invite:
-      link: Uitnodigen voor evn
+      link: Uitnodigen voor Evnly
       qr: QR-code tonen
       description: De uitnodiging verloopt over 5 minuten
 join:
