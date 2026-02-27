@@ -37,95 +37,101 @@
   }
 </script>
 
-<div class="h-20 sm:h-24"></div>
-<nav
-  class="
+<div>
+  <div class="h-20 sm:h-24"></div>
+  <nav
+    class="
   fixed max-w-3xl mx-auto
   bottom-[env(safe-area-inset-bottom)] standalone:bottom-[max(env(safe-area-inset-bottom),1rem)]
   left-[env(safe-area-inset-left)] right-[env(safe-area-inset-right)]
   pointer-events-none
   {classes}
   ">
-  <div
-    class={cn(
-      'flex items-center gap-2 h-21 p-5 pt-0 sm:pb-6 standalone:h-16 standalone:px-6 standalone:pb-0',
-      position === 'center' ? 'justify-center' : 'justify-between',
-      position === 'start' ? 'flex-row' : 'flex-row-reverse',
-    )}>
-    <ul
+    <div
       class={cn(
-        'bg-muted backdrop-blur-xs overflow-hidden flex pointer-events-auto sm:ml-4 h-full',
-        rounded,
-      )}
-      style="view-transition-name: shell-nav;">
-      {#each sections as section (section.href)}
-        {@const active = match(section, page.url.pathname)}
-        {@const hidden = !visible.includes(section)}
-        {@const ret = $returns.at(-1)}
-        <li>
-          <Button
-            id={`nav-${section.id}-button`}
-            href={link(section)}
-            onclick={collapsed ? () => back(ret?.href ?? section.href) : null}
-            variant="ghost"
-            class={cn(
-              'relative flex flex-col h-full flex-1 min-w-16 p-3 gap-1 text-sm transition-colors duration-300 hover:bg-accent/25 overflow-hidden',
-              rounded,
-              active && 'text-accent-foreground',
-              hidden && 'hidden',
-              ret && ret.class,
-            )}>
-            <div
-              class={cn(
-                'absolute inset-0 bg-background z-0 rounded-[calc(var(--radius)+2px)] m-1',
-                active || 'hidden',
-              )}
-              style={active ? 'view-transition-name: shell-nav-active;' : ''}>
-            </div>
-            {#if section.unseen && !ret}
-              <Attention
-                id={`shell-nav-notify-${section.id}`}
-                class="absolute top-2.5 right-2.5 z-10" />
-            {/if}
-            <div
-              class={cn(
-                "flex flex-col items-center gap-0.5 z-10 relative font-bold [&_svg:not([class*='size-'])]:size-5",
-              )}
-              style="view-transition-name: shell-nav-item-{section.id};">
-              {#if ret}
-                {#if ret.children}
-                  {@render ret.children()}
-                {:else}
-                  <ChevronLeft />
-                {/if}
-              {:else}
-                <section.Icon color="var(--muted-foreground)" />
-                <span>{section.label}</span>
-              {/if}
-            </div>
-          </Button>
-        </li>
-      {/each}
-    </ul>
-    {#if action}
-      <div
+        'flex items-center gap-2 h-21 p-5 pt-0 sm:pb-6 standalone:h-16 standalone:px-6 standalone:pb-0',
+        position === 'center' ? 'justify-center' : 'justify-between',
+        position === 'start' ? 'flex-row' : 'flex-row-reverse',
+      )}>
+      <ul
         class={cn(
-          'flex h-full py-1',
-          'pointer-events-auto',
-          'sm:mr-4 transition-all duration-300',
-          "[&_svg:not([class*='size-'])]:size-5",
+          'bg-muted backdrop-blur-xs overflow-hidden flex pointer-events-auto sm:ml-4 h-full',
           rounded,
-          action || 'opacity-0',
-          position === 'center' && !action && 'hidden',
         )}
-        style="view-transition-name: shell-actions-{position};">
-        <ButtonGroup.Root class={cn('flex h-full', action?.class)}>
-          {@render action.snippet()}
-        </ButtonGroup.Root>
-      </div>
-    {/if}
-  </div>
-</nav>
+        style="view-transition-name: shell-nav;">
+        {#each sections as section (section.href)}
+          {@const active = match(section, page.url.pathname)}
+          {@const hidden = !visible.includes(section)}
+          {@const ret = $returns.at(-1)}
+          <li>
+            <Button
+              id={`nav-${section.id}-button`}
+              href={link(section)}
+              onclick={collapsed ? () => back(ret?.href ?? section.href) : null}
+              variant="ghost"
+              class={cn(
+                'relative flex flex-col h-full flex-1 min-w-16 p-3 gap-1 text-sm transition-colors duration-300 hover:bg-accent/25 overflow-hidden',
+                rounded,
+                active && 'text-accent-foreground',
+                hidden && 'hidden',
+                ret && ret.class,
+              )}>
+              <div
+                class={cn(
+                  'absolute inset-0 bg-background z-0 rounded-[calc(var(--radius)+2px)] m-1',
+                  active || 'hidden',
+                )}
+                style={active ? 'view-transition-name: shell-nav-active;' : ''}>
+              </div>
+              {#if section.unseen && !ret}
+                <Attention
+                  id={`shell-nav-notify-${section.id}`}
+                  class="absolute top-2.5 right-2.5 z-10" />
+              {/if}
+              <div
+                class={cn(
+                  "flex flex-col items-center gap-0.5 z-10 relative font-bold [&_svg:not([class*='size-'])]:size-5",
+                )}
+                style="view-transition-name: shell-nav-item-{section.id};">
+                {#if ret}
+                  {#if ret.children}
+                    {@render ret.children()}
+                  {:else}
+                    <ChevronLeft />
+                  {/if}
+                {:else}
+                  <section.Icon color="var(--muted-foreground)" />
+                  <span>{section.label}</span>
+                {/if}
+              </div>
+            </Button>
+          </li>
+        {/each}
+      </ul>
+      {#if action}
+        <div
+          class={cn(
+            'flex h-full py-1',
+            'pointer-events-auto',
+            'sm:mr-4 transition-all duration-300',
+            "[&_svg:not([class*='size-'])]:size-5",
+            rounded,
+            action || 'opacity-0',
+            position === 'center' && !action && 'hidden',
+          )}
+          style="view-transition-name: shell-actions-{position};">
+          <ButtonGroup.Root class={cn('flex h-full', action?.class)}>
+            {@render action.snippet()}
+          </ButtonGroup.Root>
+        </div>
+      {/if}
+    </div>
+  </nav>
+
+  {#if action?.additional}
+    {@render action.additional()}
+  {/if}
+</div>
 
 <style>
   ::view-transition-old(shell-nav),
