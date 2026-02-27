@@ -79,7 +79,7 @@ contacts:
       данные для входа и стать его обладателем.
   share:
     invite:
-      link: Пригласить в evn
+      link: Пригласить в Evnly
       qr: Показать QR-код
       description: Приглашение истечет через 5 минут
 join:

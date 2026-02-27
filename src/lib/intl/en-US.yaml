@@ -78,7 +78,7 @@ contacts:
       set up their sign-in details and take ownership.
   share:
     invite:
-      link: Invite to evn
+      link: Invite to Evnly
       qr: Show QR code
       description: The invitation will expire in 5 minutes
 join:

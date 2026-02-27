@@ -4,7 +4,8 @@
 
 @font-face {
   font-family: 'Golos UI VF';
-  src: url('/fonts/golos-ui_vf.woff2') format('woff2'),
+  src:
+    url('/fonts/golos-ui_vf.woff2') format('woff2'),
     url('/fonts/golos-ui_vf.woff') format('woff');
   font-weight: 100 200 300 400 500 600 700 800 900;
   font-style: normal;
@@ -66,63 +67,70 @@
   --spacing: 0.25rem;
 }
 
-.dark {
-  --background: oklch(0.1914 0.0213 62.6491);
-  --foreground: oklch(0.9824 0.0093 62.5888);
-  --card: oklch(0.1549 0.0237 65.9272);
-  --card-foreground: oklch(0.9925 0.0051 67.7654);
-  --popover: oklch(0.1549 0.0237 65.9272);
-  --popover-foreground: oklch(0.9925 0.0051 67.7654);
-  --primary: oklch(0.6461 0.1943 41.1158);
-  --primary-foreground: oklch(0.9824 0.0093 62.5888);
-  --secondary: oklch(0.4124 0.0271 62.5666);
-  --secondary-foreground: oklch(0.9138 0.0216 65.3013);
-  --muted: oklch(0.2662 0.0232 60.8564);
-  --muted-foreground: oklch(0.6677 0.0342 59.4553);
-  --accent: oklch(0.2662 0.0232 60.8564);
-  --accent-foreground: oklch(0.9138 0.0216 65.3013);
-  --destructive: oklch(0.5664 0.1887 24.6729);
-  --destructive-foreground: oklch(0.7106 0.1661 22.2162);
-  --constructive: oklch(0.6637 0.161 150.99);
-  --border: oklch(0.2662 0.0232 60.8564);
-  --input: oklch(0.1549 0.0237 65.9272);
-  --ring: oklch(0.4635 0.0324 59.7403);
-  --chart-1: oklch(0.4878 0.2432 264.4045);
-  --chart-2: oklch(0.7019 0.1577 160.4375);
-  --chart-3: oklch(0.7712 0.1721 65.6848);
-  --chart-4: oklch(0.6217 0.2589 305.309);
-  --chart-5: oklch(0.6435 0.2452 16.501);
-  --sidebar: oklch(0.1914 0.0213 62.6491);
-  --sidebar-foreground: oklch(0.759 0.0439 61.2561);
-  --sidebar-primary: oklch(0.9824 0.0093 62.5888);
-  --sidebar-primary-foreground: oklch(0.2662 0.0232 60.8564);
-  --sidebar-accent: oklch(0.2662 0.0232 60.8564);
-  --sidebar-accent-foreground: oklch(0.9138 0.0216 65.3013);
-  --sidebar-border: oklch(0.4124 0.0271 62.5666);
-  --sidebar-ring: oklch(0.4635 0.0324 59.7403);
-  --font-sans: Golos Text, ui-sans-serif, sans-serif, system-ui;
-  --font-serif: Golos Text, ui-sans-serif, sans-serif, system-ui;
-  --font-mono: Golos Text, ui-sans-serif, sans-serif, system-ui;
-  --radius: 0.5rem;
-  --shadow-x: 0px;
-  --shadow-y: 0px;
-  --shadow-blur: 0px;
-  --shadow-spread: 0px;
-  --shadow-opacity: 0;
-  --shadow-color: #352314;
-  --shadow-2xs: 0px 0px 0px 0px hsl(27.2727 45.2055% 14.3137% / 0);
-  --shadow-xs: 0px 0px 0px 0px hsl(27.2727 45.2055% 14.3137% / 0);
-  --shadow-sm: 0px 0px 0px 0px hsl(27.2727 45.2055% 14.3137% / 0),
-    0px 1px 2px -1px hsl(27.2727 45.2055% 14.3137% / 0);
-  --shadow: 0px 0px 0px 0px hsl(27.2727 45.2055% 14.3137% / 0),
-    0px 1px 2px -1px hsl(27.2727 45.2055% 14.3137% / 0);
-  --shadow-md: 0px 0px 0px 0px hsl(27.2727 45.2055% 14.3137% / 0),
-    0px 2px 4px -1px hsl(27.2727 45.2055% 14.3137% / 0);
-  --shadow-lg: 0px 0px 0px 0px hsl(27.2727 45.2055% 14.3137% / 0),
-    0px 4px 6px -1px hsl(27.2727 45.2055% 14.3137% / 0);
-  --shadow-xl: 0px 0px 0px 0px hsl(27.2727 45.2055% 14.3137% / 0),
-    0px 8px 10px -1px hsl(27.2727 45.2055% 14.3137% / 0);
-  --shadow-2xl: 0px 0px 0px 0px hsl(27.2727 45.2055% 14.3137% / 0);
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: oklch(0.1914 0.0213 62.6491);
+    --foreground: oklch(0.9824 0.0093 62.5888);
+    --card: oklch(0.1549 0.0237 65.9272);
+    --card-foreground: oklch(0.9925 0.0051 67.7654);
+    --popover: oklch(0.1549 0.0237 65.9272);
+    --popover-foreground: oklch(0.9925 0.0051 67.7654);
+    --primary: oklch(0.6461 0.1943 41.1158);
+    --primary-foreground: oklch(0.9824 0.0093 62.5888);
+    --secondary: oklch(0.4124 0.0271 62.5666);
+    --secondary-foreground: oklch(0.9138 0.0216 65.3013);
+    --muted: oklch(0.2662 0.0232 60.8564);
+    --muted-foreground: oklch(0.6677 0.0342 59.4553);
+    --accent: oklch(0.2662 0.0232 60.8564);
+    --accent-foreground: oklch(0.9138 0.0216 65.3013);
+    --destructive: oklch(0.5664 0.1887 24.6729);
+    --destructive-foreground: oklch(0.7106 0.1661 22.2162);
+    --constructive: oklch(0.6637 0.161 150.99);
+    --border: oklch(0.2662 0.0232 60.8564);
+    --input: oklch(0.1549 0.0237 65.9272);
+    --ring: oklch(0.4635 0.0324 59.7403);
+    --chart-1: oklch(0.4878 0.2432 264.4045);
+    --chart-2: oklch(0.7019 0.1577 160.4375);
+    --chart-3: oklch(0.7712 0.1721 65.6848);
+    --chart-4: oklch(0.6217 0.2589 305.309);
+    --chart-5: oklch(0.6435 0.2452 16.501);
+    --sidebar: oklch(0.1914 0.0213 62.6491);
+    --sidebar-foreground: oklch(0.759 0.0439 61.2561);
+    --sidebar-primary: oklch(0.9824 0.0093 62.5888);
+    --sidebar-primary-foreground: oklch(0.2662 0.0232 60.8564);
+    --sidebar-accent: oklch(0.2662 0.0232 60.8564);
+    --sidebar-accent-foreground: oklch(0.9138 0.0216 65.3013);
+    --sidebar-border: oklch(0.4124 0.0271 62.5666);
+    --sidebar-ring: oklch(0.4635 0.0324 59.7403);
+    --font-sans: Golos Text, ui-sans-serif, sans-serif, system-ui;
+    --font-serif: Golos Text, ui-sans-serif, sans-serif, system-ui;
+    --font-mono: Golos Text, ui-sans-serif, sans-serif, system-ui;
+    --radius: 0.5rem;
+    --shadow-x: 0px;
+    --shadow-y: 0px;
+    --shadow-blur: 0px;
+    --shadow-spread: 0px;
+    --shadow-opacity: 0;
+    --shadow-color: #352314;
+    --shadow-2xs: 0px 0px 0px 0px hsl(27.2727 45.2055% 14.3137% / 0);
+    --shadow-xs: 0px 0px 0px 0px hsl(27.2727 45.2055% 14.3137% / 0);
+    --shadow-sm:
+      0px 0px 0px 0px hsl(27.2727 45.2055% 14.3137% / 0),
+      0px 1px 2px -1px hsl(27.2727 45.2055% 14.3137% / 0);
+    --shadow:
+      0px 0px 0px 0px hsl(27.2727 45.2055% 14.3137% / 0),
+      0px 1px 2px -1px hsl(27.2727 45.2055% 14.3137% / 0);
+    --shadow-md:
+      0px 0px 0px 0px hsl(27.2727 45.2055% 14.3137% / 0),
+      0px 2px 4px -1px hsl(27.2727 45.2055% 14.3137% / 0);
+    --shadow-lg:
+      0px 0px 0px 0px hsl(27.2727 45.2055% 14.3137% / 0),
+      0px 4px 6px -1px hsl(27.2727 45.2055% 14.3137% / 0);
+    --shadow-xl:
+      0px 0px 0px 0px hsl(27.2727 45.2055% 14.3137% / 0),
+      0px 8px 10px -1px hsl(27.2727 45.2055% 14.3137% / 0);
+    --shadow-2xl: 0px 0px 0px 0px hsl(27.2727 45.2055% 14.3137% / 0);
+  }
 }
 
 @theme inline {
@@ -262,7 +270,7 @@
   :root {
     /* view-transition-name: none; */
   }
-  
+
   /* ::view-transition-old(root){animation:.25s ease both zoom-out}
   ::view-transition-new(root){animation:.25s ease both zoom-in}
   @keyframes zoom-in{from{transform:scale(.98);opacity:0}to{transform:scale(1);opacity:1}}

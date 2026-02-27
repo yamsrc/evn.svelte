@@ -79,7 +79,7 @@ contacts:
       configure sus datos de acceso y tome el control de la cuenta.
   share:
     invite:
-      link: Invitar a evn
+      link: Invitar a Evnly
       qr: Mostrar código QR
       description: La invitación caducará en 5 minutos
 join:
