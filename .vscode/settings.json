@@ -2,11 +2,9 @@
   "files.associations": {
     "*.css": "tailwindcss"
   },
-  "eslint.validate": [
-    "javascript",
-    "typescript",
-    "svelte"
-  ],
+  "eslint.validate": ["javascript", "typescript", "svelte"],
+  "files.trimFinalNewlines": false,
+  "files.insertFinalNewline": true,
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
@@ -29,11 +27,9 @@
   "peacock.affectTitleBar": false,
   "[gherkin]": {
     "editor.tabSize": 2,
-    "editor.insertSpaces": true,
+    "editor.insertSpaces": true
   },
-  "cucumberautocomplete.steps": [
-    "features/steps/*.{ts,js}"
-  ],
+  "cucumberautocomplete.steps": ["features/steps/*.{ts,js}"],
   "cucumberautocomplete.strictGherkinCompletion": false,
   "cucumberautocomplete.strictGherkinValidation": false,
   "cucumberautocomplete.smartSnippets": true,
