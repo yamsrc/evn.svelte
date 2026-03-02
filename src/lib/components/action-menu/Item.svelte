@@ -23,10 +23,6 @@
   const direction = $derived(getGroupContext()?.direction ?? 'col')
 </script>
 
-<Button
-  {onclick}
-  {variant}
-  class={[itemVariants({ direction }), classes]}
-  {...rest}>
+<Button {onclick} {variant} class={[itemVariants({ direction }), classes]} {...rest}>
   {@render children?.()}
 </Button>

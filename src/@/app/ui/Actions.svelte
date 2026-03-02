@@ -18,7 +18,7 @@
         <ActionMenu.Group direction={group.direction}>
           {#each group.items as item (item.name)}
             <ActionMenu.Item id={item.id} onclick={item.onSelect}>
-              <item.icon size={16} class="text-foreground" />
+              <item.icon size={16} />
               {item.name}
             </ActionMenu.Item>
           {/each}
