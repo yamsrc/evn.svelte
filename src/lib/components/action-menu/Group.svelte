@@ -7,7 +7,7 @@
 <div
   class={[
     'w-full flex gap-1 group text-base font-normal',
-    direction === 'row' ? 'flex-row justify-around py-2.5 text-sm' : 'flex-col',
+    direction === 'row' ? 'flex-row justify-around text-sm' : 'flex-col',
     classes,
   ]}
   data-direction={direction ?? 'col'}>
