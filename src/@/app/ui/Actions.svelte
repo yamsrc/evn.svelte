@@ -20,8 +20,7 @@
             {#each group.items as item (item.name)}
               <ActionMenu.Item
                 id={item.id}
-                onclick={item.onSelect}
-                size={group.direction === 'row' ? 'icon' : 'lg'}>
+                onclick={item.onSelect}>
                 <item.icon size={16} class="text-foreground" />
                 {item.name}
               </ActionMenu.Item>

@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { Props } from './Group'
 
-  const { children, direction, class: classes }: Props = $props()
+  const { children, direction = 'col', class: classes }: Props = $props()
 </script>
 
 <div
@@ -10,6 +10,6 @@
     direction === 'row' ? 'flex-row justify-around text-sm' : 'flex-col',
     classes,
   ]}
-  data-direction={direction ?? 'col'}>
+  data-direction={direction}>
   {@render children()}
 </div>
