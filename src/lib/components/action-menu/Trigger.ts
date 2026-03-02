@@ -1,0 +1,8 @@
+import type { Snippet } from 'svelte'
+
+export interface Props {
+  children: Snippet
+  id?: string
+  class?: string
+  [key: string]: unknown
+}
