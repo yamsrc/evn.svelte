@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Plus } from '@lucide/svelte'
-  import * as ActionMenu from '$com/dropdown'
+  import * as Dropdown from '$com/dropdown'
   import { Actions } from '$com/shell'
   import { dict } from '$lib/intl'
   import { actionVariants } from './Action'
@@ -8,22 +8,22 @@
 </script>
 
 <Actions>
-  <ActionMenu.Root>
-    <ActionMenu.Trigger id="nav-actions-button" class={actionVariants()}>
+  <Dropdown.Root>
+    <Dropdown.Trigger id="nav-actions-button" class={actionVariants()}>
       <Plus />
-    </ActionMenu.Trigger>
-    <ActionMenu.Content>
+    </Dropdown.Trigger>
+    <Dropdown.Content>
       {#each actions($dict) as group (group.name)}
-        <ActionMenu.Separator>{group.name}</ActionMenu.Separator>
-        <ActionMenu.Group direction={group.direction}>
+        <Dropdown.Separator>{group.name}</Dropdown.Separator>
+        <Dropdown.Group direction={group.direction}>
           {#each group.items as item (item.name)}
-            <ActionMenu.Item id={item.id} onclick={item.onSelect}>
+            <Dropdown.Item id={item.id} onclick={item.onSelect}>
               <item.icon size={16} />
               {item.name}
-            </ActionMenu.Item>
+            </Dropdown.Item>
           {/each}
-        </ActionMenu.Group>
+        </Dropdown.Group>
       {/each}
-    </ActionMenu.Content>
-  </ActionMenu.Root>
+    </Dropdown.Content>
+  </Dropdown.Root>
 </Actions>
