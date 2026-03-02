@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Plus } from '@lucide/svelte'
-  import * as ActionMenu from '$com/action-menu'
+  import * as ActionMenu from '$com/dropdown'
   import { Actions } from '$com/shell'
   import { dict } from '$lib/intl'
   import { actionVariants } from './Action'
