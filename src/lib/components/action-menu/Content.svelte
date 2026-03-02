@@ -5,6 +5,12 @@
   const { children, class: classes }: Props = $props()
   const ctx = getContext()
 
+  function portal(node: HTMLElement) {
+    document.body.appendChild(node)
+
+    return { destroy: () => node.remove() }
+  }
+
   function trackRef(node: HTMLDivElement) {
     ctx.setContentRef(node)
 
@@ -14,6 +20,7 @@
 
 {#if ctx.opened}
   <div
+    use:portal
     use:trackRef
     style="position-anchor: --{ctx.id}; view-transition-name: {ctx.id}; view-transition-class: action-menu;"
     class={[

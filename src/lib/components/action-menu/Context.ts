@@ -1,3 +1,5 @@
+import { setContext as svelteSetContext, getContext as svelteGetContext } from 'svelte'
+
 export interface Context {
   get opened(): boolean
   open: () => void
@@ -7,7 +9,7 @@ export interface Context {
   setTriggerRef: (el: HTMLDivElement | undefined) => void
 }
 
-let current: Context | undefined
+const CONTEXT = Symbol('action-menu')
 
-export const getContext = () => current!
-export const setContext = (ctx: Context) => (current = ctx)
+export const getContext = (): Context => svelteGetContext<Context>(CONTEXT)
+export const setContext = (ctx: Context) => svelteSetContext(CONTEXT, ctx)
