@@ -1,9 +1,3 @@
-import type { Snippet } from 'svelte'
-import type { ClassValue } from 'tailwind-variants'
+import type { ButtonProps } from '$ui/button'
 
-export interface Props {
-  children: Snippet
-  onclick: () => void
-  id?: string
-  class?: ClassValue
-}
+export interface Props extends ButtonProps { }

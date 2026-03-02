@@ -13,11 +13,13 @@ type ActionItem = {
 type ActionGroup = {
   name: string
   items: ActionItem[]
+  direction?: 'row' | 'col'
 }
 
 export const actions = (dict: Dictionary): ActionGroup[] => ([
   {
     name: dict.actions.cheques.title,
+    direction: 'col',
     items: [
       {
         id: 'nav-actions-cheqes-input-button',
@@ -31,6 +33,7 @@ export const actions = (dict: Dictionary): ActionGroup[] => ([
   },
   {
     name: dict.actions.contacts.title,
+    direction: 'row',
     items: [
       {
         id: 'nav-actions-contacts-new-button',

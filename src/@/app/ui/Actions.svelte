@@ -16,9 +16,12 @@
       <ActionMenu.Content>
         {#each actions($dict) as group (group.name)}
           <ActionMenu.Separator>{group.name}</ActionMenu.Separator>
-          <ActionMenu.Group>
+          <ActionMenu.Group direction={group.direction}>
             {#each group.items as item (item.name)}
-              <ActionMenu.Item id={item.id} onclick={item.onSelect}>
+              <ActionMenu.Item
+                id={item.id}
+                onclick={item.onSelect}
+                size={group.direction === 'row' ? 'icon' : 'lg'}>
                 <item.icon size={16} class="text-foreground" />
                 {item.name}
               </ActionMenu.Item>

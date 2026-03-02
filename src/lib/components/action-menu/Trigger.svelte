@@ -21,7 +21,7 @@
       style="view-transition-name: {ctx.id}; view-transition-class: action-menu;"
       onclick={() => ctx.open()}
       {...rest}>
-      {@render children()}
+      {@render children?.()}
     </Button>
   {/if}
 </div>

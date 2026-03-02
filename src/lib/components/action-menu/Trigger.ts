@@ -1,8 +1,5 @@
-import type { Snippet } from 'svelte'
+import type { ButtonProps } from '$ui/button'
 
-export interface Props {
-  children: Snippet
+export interface Props extends ButtonProps {
   id?: string
-  class?: string
-  [key: string]: unknown
 }
