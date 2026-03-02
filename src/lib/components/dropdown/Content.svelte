@@ -22,7 +22,7 @@
   <div
     use:portal
     use:trackRef
-    style="position-anchor: --{ctx.id}; view-transition-name: {ctx.id}; view-transition-class: ease-overshoot;"
+    style="position-anchor: --{ctx.id}; view-transition-name: {ctx.id}; view-transition-class: spring;"
     class={[
       'action-menu-content fixed z-1001 flex flex-col',
       'bg-popover border border-border text-popover-foreground rounded-lg',

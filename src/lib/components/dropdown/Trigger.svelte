@@ -18,7 +18,7 @@
     <Button
       {id}
       class={classes}
-      style="view-transition-name: {ctx.id}; view-transition-class: ease-overshoot;"
+      style="view-transition-name: {ctx.id}; view-transition-class: spring;"
       onclick={() => ctx.open()}
       {...rest}>
       {@render children?.()}

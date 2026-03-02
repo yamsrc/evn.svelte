@@ -267,9 +267,9 @@
     }
   }
 
-  ::view-transition-group(*.ease-overshoot),
-  ::view-transition-old(*.ease-overshoot),
-  ::view-transition-new(*.ease-overshoot) {
+  ::view-transition-group(*.spring),
+  ::view-transition-old(*.spring),
+  ::view-transition-new(*.spring) {
     animation-duration: 300ms;
     animation-timing-function: cubic-bezier(0.2, 1.4, 0.4, 1);
   }
