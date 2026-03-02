@@ -22,7 +22,7 @@
   <div
     use:portal
     use:trackRef
-    style="position-anchor: --{ctx.id}; view-transition-name: {ctx.id}; view-transition-class: action-menu;"
+    style="position-anchor: --{ctx.id}; view-transition-name: {ctx.id}; view-transition-class: spring;"
     class={[
       'action-menu-content fixed z-1001 flex flex-col',
       'bg-popover border border-border text-popover-foreground rounded-lg',
@@ -37,10 +37,5 @@
   .action-menu-content {
     position-area: span-x-start span-top;
     position-try-fallbacks: span-x-end span-top;
-  }
-
-  :global(::view-transition-group(*.action-menu)) {
-    animation-duration: 300ms;
-    animation-timing-function: cubic-bezier(0.2, 1.4, 0.4, 1);
   }
 </style>

@@ -115,11 +115,4 @@
     opacity: 0;
     pointer-events: none;
   }
-
-  :global(::view-transition-group(*.stack-item)),
-  :global(::view-transition-group(stack-footer)) {
-    animation-duration: 300ms;
-    /* animation-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1); */
-    animation-timing-function: cubic-bezier(0.2, 1.4, 0.4, 1);
-  }
 </style>
