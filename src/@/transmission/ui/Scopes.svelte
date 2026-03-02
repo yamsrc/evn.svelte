@@ -46,7 +46,7 @@
       <p class="text-sm text-muted-foreground">{$dict.settings.description}</p>
     </div>
     {#if all}
-      {#each scopes as scope, i (scope.domain)}
+      {#each scopes as scope (scope.domain)}
         <Separator />
         <div class="ps-2">
           <label for={`transmission-settings-${scope.domain}-switch`}>
