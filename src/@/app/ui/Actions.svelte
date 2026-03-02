@@ -17,9 +17,7 @@
         <ActionMenu.Separator>{group.name}</ActionMenu.Separator>
         <ActionMenu.Group direction={group.direction}>
           {#each group.items as item (item.name)}
-            <ActionMenu.Item
-              id={item.id}
-              onclick={item.onSelect}>
+            <ActionMenu.Item id={item.id} onclick={item.onSelect}>
               <item.icon size={16} class="text-foreground" />
               {item.name}
             </ActionMenu.Item>
