@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Star } from '@lucide/svelte'
   import { Async } from 'svas'
-  import { Action } from '@/app/ui'
+  import { Button } from '$ui/button'
   import { favorites, add, del } from '@/favorites'
   import type { Props } from './Favorite'
   import type { Favorite } from '@/favorites'
@@ -25,12 +25,13 @@
 <Async store={favorites}>
   {#snippet awaited(favorites)}
     {@const favorite = favorites.find((f) => f.favorite === group.id)}
-    <Action
+    <Button
       id="groups-favorite-button"
-      variant={favorite ? 'default' : 'secondary'}
+      variant="outline"
+      size="icon"
       onclick={() => toggle(favorite)}
-      class={[busy && 'opacity-75']}>
+      disabled={busy}>
       <Star fill={favorite ? 'currentColor' : 'none'} />
-    </Action>
+    </Button>
   {/snippet}
 </Async>

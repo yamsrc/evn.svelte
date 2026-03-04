@@ -66,16 +66,17 @@
 <Section>
   <Header.Root>
     <Header.Title></Header.Title>
-    {#if id}
+    {#if group}
       <Header.Actions>
+        <Favorite {group} />
         <Hold
           onclick={leave}
-          variant="ghost"
-          class="size-12 bg-accent/50 border border-border"
+          variant="outline"
+          size="icon"
           position="left"
           label={$dict.groups.leave}
           disabled={!group}>
-          <LogOut class="size-5" />
+          <LogOut class="size-5 text-destructive" />
         </Hold>
       </Header.Actions>
     {/if}
@@ -143,7 +144,6 @@
   <!-- TODO: add history -->
 
   <Actions>
-    <Favorite {group} />
     <CreateAction
       value={{
         participants: Object.fromEntries(

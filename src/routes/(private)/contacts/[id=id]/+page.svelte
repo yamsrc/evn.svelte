@@ -37,11 +37,12 @@
     <Section>
       <Header.Root>
         <Header.Title>{$dict.contacts.title}</Header.Title>
-        <Header.Actions>
-          {#if contact}
+        {#if contact}
+          <Header.Actions>
+            <Favorite {contact} />
             <Delete {contact} {ondelete} />
-          {/if}
-        </Header.Actions>
+          </Header.Actions>
+        {/if}
       </Header.Root>
     </Section>
 
@@ -77,7 +78,6 @@
                 <Transfer {account} {contact} />
               {/snippet}
             </Async>
-            <Favorite {contact} />
           </Actions>
         {:else}
           <Spinner class="m-auto" />
