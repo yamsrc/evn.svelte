@@ -14,5 +14,8 @@
     <li>
       <a href="notifications/">{$dict.components.notifications.title}</a>
     </li>
+    <li>
+      <a href="graph/">{$dict.components.graph.title}</a>
+    </li>
   </ul>
 </Section>

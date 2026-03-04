@@ -17,6 +17,9 @@ inputs:
         input: Notifications
       display:
         input: "Show: {count}"
+    graph:
+      title:
+        input: Debt Graph
   transmission:
     title:
       input: Transmission
