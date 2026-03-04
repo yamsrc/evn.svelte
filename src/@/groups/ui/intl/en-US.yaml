@@ -1,0 +1,4 @@
+reduction:
+  switch:
+    label: Enable smart debts
+    description: Combine debts to reduce the number of paybacks needed.

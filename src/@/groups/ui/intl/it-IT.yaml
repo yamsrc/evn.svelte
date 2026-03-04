@@ -1,0 +1,4 @@
+reduction:
+  switch:
+    label: Abilita debiti intelligenti
+    description: Unisci i debiti per ridurre il numero di rimborsi necessari.

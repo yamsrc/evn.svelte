@@ -1,0 +1,4 @@
+reduction:
+  switch:
+    label: 스마트 부채 활성화
+    description: 상환 횟수를 줄이기 위해 부채를 통합하세요.

@@ -1,0 +1,4 @@
+reduction:
+  switch:
+    label: 启用智能债务
+    description: 合并债务以减少所需还款次数。

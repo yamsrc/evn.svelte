@@ -1,0 +1,4 @@
+reduction:
+  switch:
+    label: Activer les dettes intelligentes
+    description: Regroupez vos dettes pour réduire le nombre de remboursements nécessaires.

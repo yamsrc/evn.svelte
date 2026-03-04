@@ -1,0 +1,6 @@
+reduction:
+  switch:
+    label: Intelligente Schulden aktivieren
+    description: >-
+      Kombiniere Schulden, um die Anzahl der nötigen Rückzahlungen zu
+      verringern.

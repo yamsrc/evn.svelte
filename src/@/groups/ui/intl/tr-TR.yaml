@@ -1,0 +1,4 @@
+reduction:
+  switch:
+    label: Akıllı borçları etkinleştir
+    description: Gerekli geri ödeme sayısını azaltmak için borçları birleştirin.

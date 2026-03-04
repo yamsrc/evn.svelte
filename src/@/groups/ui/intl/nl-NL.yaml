@@ -1,0 +1,4 @@
+reduction:
+  switch:
+    label: Slimme schulden inschakelen
+    description: Combineer schulden om het aantal benodigde terugbetalingen te verminderen.

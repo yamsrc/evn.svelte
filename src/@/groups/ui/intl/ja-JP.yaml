@@ -1,0 +1,4 @@
+reduction:
+  switch:
+    label: スマート債務を有効にする
+    description: 返済回数を減らすために借金をまとめましょう。

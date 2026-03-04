@@ -14,7 +14,7 @@
   import { contacts } from '@/contacts'
   import { CreateAction } from '@/expenses/ui'
   import { groups, del } from '@/groups'
-  import { Cosmetics, Favorite } from '@/groups/ui'
+  import { Cosmetics, Favorite, Reduction } from '@/groups/ui'
   import { account } from '@/iam'
   import { seen } from '@/notifications'
   import type { Group } from '@/groups'
@@ -58,6 +58,9 @@
 
     return { from, to }
   })
+
+  // svelte-ignore state_referenced_locally
+  const reduction = $state<boolean>(group?.reduction ?? false)
 </script>
 
 <Section>
@@ -81,10 +84,14 @@
 
 {#if group}
   <Section class="flex flex-col gap-2 items-center">
-    <Cosmetics {group} />
+    <Cosmetics {group} reduction={group.reduction} class="w-full" />
   </Section>
 
   <Separator />
+
+  <Section>
+    <Reduction {group} enabled={group.reduction} />
+  </Section>
 
   {#if identities.length > 0}
     <Section class="space-y-2 flex flex-col items-center">
@@ -152,7 +159,7 @@
     </Action>
   </Actions>
 {:else}
-  <Section class="flex flex-col gap-2 items-center my-auto">
-    <Cosmetics />
+  <Section class="flex flex-col gap-2 items-center my-auto space-y-4">
+    <Cosmetics {reduction} class="w-full" />
   </Section>
 {/if}

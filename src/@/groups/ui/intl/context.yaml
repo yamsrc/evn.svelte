@@ -1,0 +1,8 @@
+context: Mount 'groups' context
+inputs:
+  reduction:
+    switch:
+      label:
+        input: Enable smart debts
+      description:
+        input: Combine debts to reduce the&nbsp;number of paybacks needed.
