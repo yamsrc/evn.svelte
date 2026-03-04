@@ -19,7 +19,12 @@
 
 <div class="space-y-2">
   <div class="flex items-center gap-2">
-    <Switch id="reduction-switch" bind:checked={enabled} {onCheckedChange} disabled={busy} />
+    <Switch
+      id="reduction-switch"
+      bind:checked={enabled}
+      {onCheckedChange}
+      disabled={busy}
+      class="border border-border" />
     <label for="reduction-switch">{$dict.reduction.switch.label}</label>
   </div>
   <p class="text-muted-foreground">

@@ -58,15 +58,12 @@
 
     return { from, to }
   })
-
-  // svelte-ignore state_referenced_locally
-  const reduction = $state<boolean>(group?.reduction ?? false)
 </script>
 
-<Section>
-  <Header.Root>
-    <Header.Title></Header.Title>
-    {#if group}
+{#if group}
+  <Section>
+    <Header.Root>
+      <Header.Title>{$dict.groups.title}</Header.Title>
       <Header.Actions>
         <Favorite {group} />
         <Hold
@@ -79,13 +76,11 @@
           <LogOut class="size-5 text-destructive" />
         </Hold>
       </Header.Actions>
-    {/if}
-  </Header.Root>
-</Section>
+    </Header.Root>
+  </Section>
 
-{#if group}
   <Section class="flex flex-col gap-2 items-center">
-    <Cosmetics {group} reduction={group.reduction} class="w-full" />
+    <Cosmetics {group} class="w-full" />
   </Section>
 
   <Separator />
@@ -158,8 +153,4 @@
       <span>{$dict.groups.members.addMember}</span>
     </Action>
   </Actions>
-{:else}
-  <Section class="flex flex-col gap-2 items-center my-auto space-y-4">
-    <Cosmetics {reduction} class="w-full" />
-  </Section>
 {/if}
