@@ -222,10 +222,15 @@
     }
   }
 
-  ::view-transition-group(*.spring),
-  ::view-transition-old(*.spring),
-  ::view-transition-new(*.spring) {
+  ::view-transition-group(*.transition-spring),
+  ::view-transition-old(*.transition-spring),
+  ::view-transition-new(*.transition-spring) {
     animation-duration: 300ms;
     animation-timing-function: cubic-bezier(0.2, 1.4, 0.4, 1);
+  }
+
+  ::view-transition-old(.transition-morph),
+  ::view-transition-new(.transition-morph) {
+    block-size: 100%;
   }
 }

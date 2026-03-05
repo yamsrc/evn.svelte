@@ -22,7 +22,7 @@
   <div
     use:portal
     use:trackRef
-    style="position-anchor: --{ctx.id}; view-transition-name: {ctx.id}; view-transition-class: spring;"
+    style="position-anchor: --{ctx.id}; view-transition-name: {ctx.id}; view-transition-class: transition-spring transition-morph;"
     class={[
       'action-menu-content fixed z-1001 flex flex-col',
       'bg-popover shadow-[0_0_15px_var(--shadow-color)] text-popover-foreground rounded-xl',
