@@ -1,4 +1,4 @@
 reduction:
   switch:
-    label: 启用智能债务
-    description: 合并债务以减少所需还款次数。
+    label: 智能债务
+    description: 合并成员之间的债务，从而减少结算所有账目所需的付款次数。没有人会多付或少付——只是减少了交易笔数。

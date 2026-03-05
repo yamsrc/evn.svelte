@@ -1,5 +1,6 @@
 <script lang="ts">
   import { Switch } from '$ui/switch'
+  import { Panel } from '@/app/ui'
   import { update } from '../svc'
   import { dict } from './intl'
   import type { Props } from './Reduction'
@@ -17,17 +18,19 @@
   }
 </script>
 
-<div class="space-y-2">
-  <div class="flex items-center gap-2">
-    <Switch
-      id="reduction-switch"
-      bind:checked={enabled}
-      {onCheckedChange}
-      disabled={busy}
-      class="border border-border" />
-    <label for="reduction-switch">{$dict.reduction.switch.label}</label>
+<Panel>
+  <div>
+    <h3 class="flex items-center justify-between gap-2">
+      <label for="reduction-switch">{$dict.reduction.switch.label}</label>
+      <Switch
+        id="reduction-switch"
+        bind:checked={enabled}
+        {onCheckedChange}
+        disabled={busy}
+        class="border border-border" />
+    </h3>
+    <p class="text-muted-foreground">
+      {$dict.reduction.switch.description}
+    </p>
   </div>
-  <p class="text-muted-foreground">
-    {$dict.reduction.switch.description}
-  </p>
-</div>
+</Panel>

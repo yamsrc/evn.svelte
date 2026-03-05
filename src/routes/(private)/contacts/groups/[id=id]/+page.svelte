@@ -86,10 +86,6 @@
 
   <Separator />
 
-  <Section>
-    <Reduction {group} enabled={group.reduction} />
-  </Section>
-
   {#if identities.length > 0}
     <Section class="space-y-2 flex flex-col items-center">
       {#if balance.from === 0 && balance.to === 0}
@@ -137,10 +133,14 @@
     {/snippet}
   </Async>
 
+  <Section>
+    <Reduction {group} enabled={group.reduction} />
+  </Section>
   <!-- TODO: add history -->
 
   <Actions>
     <CreateAction
+      variant="secondary"
       value={{
         participants: Object.fromEntries(
           group.identities.map((id) => [

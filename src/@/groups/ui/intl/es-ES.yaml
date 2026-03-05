@@ -1,4 +1,7 @@
 reduction:
   switch:
-    label: Activar deudas inteligentes
-    description: Combina deudas para reducir la cantidad de pagos necesarios.
+    label: Deudas inteligentes
+    description: >-
+      Agrupa las deudas entre los miembros para que se necesiten menos pagos al
+      saldar todo. Nadie paga más ni menos: solo se reduce la cantidad de
+      transacciones.

@@ -11,7 +11,7 @@
   import { create } from '@/groups'
   import { Reduction } from '@/groups/ui'
 
-  let reduction = $state(false)
+  let reduction = $state(true)
   let name = $state('')
   let busy = $state(false)
 
