@@ -25,7 +25,7 @@
     style="position-anchor: --{ctx.id}; view-transition-name: {ctx.id}; view-transition-class: spring;"
     class={[
       'action-menu-content fixed z-1001 flex flex-col',
-      'bg-popover border border-border text-popover-foreground rounded-xl',
+      'bg-popover shadow-[0_0_15px_var(--shadow-color)] text-popover-foreground rounded-xl',
       'p-2',
       classes,
     ]}>
