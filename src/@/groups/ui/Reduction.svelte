@@ -12,7 +12,11 @@
   async function onCheckedChange(checked: boolean) {
     busy = true
 
-    if (group) await update(group.id, { reduction: checked })
+    if (!group) return
+
+    const result = await update(group.id, { reduction: checked })
+
+    if (result instanceof Error) enabled = !checked
 
     busy = false
   }
