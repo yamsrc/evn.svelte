@@ -66,7 +66,7 @@
     classes,
   ]}>
   <div
-    class="absolute -z-1 inset-0 -top-6 pointer-events-none bg-background/20 backdrop-filter backdrop-blur-xs mask-[linear-gradient(to_bottom,transparent_0%,black_30%)]">
+    class="absolute -z-1 inset-0 -top-6 pointer-events-none bg-background/60 backdrop-filter backdrop-blur-xs mask-[linear-gradient(to_bottom,transparent_0%,black_40%)]">
   </div>
   <div
     class={cn(
@@ -78,7 +78,7 @@
       class={cn(
         'bg-muted backdrop-blur-xs overflow-hidden flex pointer-events-auto sm:ml-4 h-full',
         'transition-background-color duration-200',
-        $faded && 'bg-muted/25',
+        // $faded && 'bg-muted/25',
         rounded,
       )}
       style="view-transition-name: shell-nav;">
@@ -102,7 +102,7 @@
             <div
               class={cn(
                 'absolute inset-0 bg-background z-0 rounded-[calc(var(--radius)+2px)] m-1',
-                $faded && 'opacity-25 transition-opacity duration-200',
+                // $faded && 'opacity-25 transition-opacity duration-200',
                 active || 'hidden',
               )}
               style={active ? 'view-transition-name: shell-nav-active;' : ''}>
