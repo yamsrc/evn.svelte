@@ -25,8 +25,8 @@
     style="position-anchor: --{ctx.id}; view-transition-name: {ctx.id}; view-transition-class: spring;"
     class={[
       'action-menu-content fixed z-1001 flex flex-col',
-      'bg-popover border border-border text-popover-foreground rounded-lg',
-      'p-1 px-0.5 pt-2',
+      'bg-popover border border-border text-popover-foreground rounded-xl',
+      'p-2',
       classes,
     ]}>
     {@render children()}

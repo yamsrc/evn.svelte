@@ -10,9 +10,9 @@ actions:
     scan: Scheck scannen
     input: Ausgabe hinzufügen
   contacts:
-    group: Gruppe
+    group: Gruppe hinzufügen
     title: Freunde
-    contact: Freund
+    contact: Freund hinzufügen
   addSelected: Ausgewählte hinzufügen
   cancel: Abbrechen
   search: Suchen

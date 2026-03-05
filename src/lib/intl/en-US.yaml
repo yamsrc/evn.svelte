@@ -10,9 +10,9 @@ actions:
     scan: Scan cheque
     input: Add expense
   contacts:
-    group: Group
+    group: Add Group
     title: Friends
-    contact: Friend
+    contact: Add Friend
   addSelected: Add selected
   cancel: Cancel
   search: Search

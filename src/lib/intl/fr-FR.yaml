@@ -10,9 +10,9 @@ actions:
     scan: Scanner le chèque
     input: Ajouter une dépense
   contacts:
-    group: Groupe
+    group: Ajouter un groupe
     title: Amis
-    contact: Ami
+    contact: Ajouter comme ami
   addSelected: Ajouter la sélection
   cancel: Annuler
   search: Rechercher

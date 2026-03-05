@@ -13,12 +13,14 @@
       <Plus />
     </Dropdown.Trigger>
     <Dropdown.Content>
-      {#each actions($dict) as group (group.name)}
-        <Dropdown.Separator>{group.name}</Dropdown.Separator>
+      {#each actions($dict) as group, index (group.name)}
+        {#if index > 0}
+          <Dropdown.Separator></Dropdown.Separator>
+        {/if}
         <Dropdown.Group direction={group.direction}>
           {#each group.items as item (item.name)}
             <Dropdown.Item id={item.id} onclick={item.onSelect}>
-              <item.icon size={16} />
+              <item.icon />
               {item.name}
             </Dropdown.Item>
           {/each}

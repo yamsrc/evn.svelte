@@ -10,9 +10,9 @@ actions:
     scan: Cheque scannen
     input: Uitgave toevoegen
   contacts:
-    group: Groep
+    group: Groep toevoegen
     title: Vrienden
-    contact: Vriend
+    contact: Vriend toevoegen
   addSelected: Geselecteerde toevoegen
   cancel: Annuleren
   search: Zoeken

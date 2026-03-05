@@ -15,7 +15,7 @@
 
 <div
   class={[
-    'w-full flex gap-1 group text-base font-normal',
+    'w-full flex gap-1 group text-sm font-normal',
     direction === 'row' ? 'flex-row justify-around text-sm' : 'flex-col',
     classes,
   ]}

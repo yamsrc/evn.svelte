@@ -10,9 +10,9 @@ actions:
     scan: Çeki tara
     input: Gider ekle
   contacts:
-    group: Grup
+    group: Grup Ekle
     title: Arkadaşlar
-    contact: Arkadaş
+    contact: Arkadaş ekle
   addSelected: Seçileni ekle
   cancel: İptal
   search: Ara

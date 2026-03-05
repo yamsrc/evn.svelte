@@ -28,11 +28,11 @@ inputs:
         input: Add expense
     contacts:
       group:
-        input: Group
+        input: Add Group
       title:
         input: Friends
       contact:
-        input: Friend
+        input: Add Friend
     addSelected:
       input: Add selected
     cancel:

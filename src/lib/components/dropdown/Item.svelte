@@ -2,11 +2,11 @@
   import { tv } from 'tailwind-variants'
 
   export const itemVariants = tv({
-    base: 'font-normal',
+    base: 'font-bold [&_svg]:text-muted-foreground px-3.5 py-2.5',
     variants: {
       direction: {
-        col: 'text-base w-full justify-start px-3.5 py-2.5',
-        row: 'text-xs flex-col gap-1 p-2 size-14',
+        col: 'text-sm base w-full justify-start',
+        row: 'text-xs flex-col gap-1 h-fit',
       },
     },
     defaultVariants: { direction: 'col' },
