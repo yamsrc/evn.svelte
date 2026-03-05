@@ -25,7 +25,8 @@ inputs:
       scan:
         input: Scan cheque
       input:
-        input: Add expense
+        input: Add Expense
+        context: button label
     contacts:
       group:
         input: Add Group

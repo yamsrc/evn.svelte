@@ -8,7 +8,7 @@ actions:
   cheques:
     title: Etkinlikler
     scan: Çeki tara
-    input: Gider ekle
+    input: Gider Ekle
   contacts:
     group: Grup Ekle
     title: Arkadaşlar

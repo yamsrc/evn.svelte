@@ -411,7 +411,7 @@ export const dictionaries = {
       "cheques": {
         "title": "Events",
         "scan": "Scan cheque",
-        "input": "Add expense"
+        "input": "Add Expense"
       },
       "contacts": {
         "group": "Add Group",
@@ -2401,7 +2401,7 @@ export const dictionaries = {
       "cheques": {
         "title": "Etkinlikler",
         "scan": "Çeki tara",
-        "input": "Gider ekle"
+        "input": "Gider Ekle"
       },
       "contacts": {
         "group": "Grup Ekle",

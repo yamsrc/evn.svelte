@@ -8,7 +8,7 @@ actions:
   cheques:
     title: Events
     scan: Scan cheque
-    input: Add expense
+    input: Add Expense
   contacts:
     group: Add Group
     title: Friends

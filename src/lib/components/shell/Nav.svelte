@@ -63,11 +63,15 @@
     'fixed max-w-3xl mx-auto',
     'bottom-[env(safe-area-inset-bottom)] standalone:bottom-[max(env(safe-area-inset-bottom),1rem)]',
     'left-[env(safe-area-inset-left)] right-[env(safe-area-inset-right)]',
-    'pointer-events-none',
     classes,
   ]}>
   <div
-    class="absolute -z-1 inset-0 -top-6 standalone:-bottom-[max(env(safe-area-inset-bottom),1rem)] pointer-events-none bg-background/60 backdrop-filter backdrop-blur-xs mask-[linear-gradient(to_bottom,transparent_0%,black_40%)]"
+    class={[
+      'absolute -z-1 inset-0 -top-6',
+      'standalone:-bottom-[max(env(safe-area-inset-bottom),1rem)]',
+      'bg-background/60 backdrop-filter backdrop-blur-xs',
+      'mask-[linear-gradient(to_bottom,transparent_0%,black_40%)]',
+    ]}
     class:hidden={ios && safari && !standalone}>
   </div>
   <div
@@ -78,8 +82,8 @@
     )}>
     <ul
       class={cn(
-        'bg-muted backdrop-blur-xs overflow-hidden flex pointer-events-auto sm:ml-4 h-full',
-        // $faded && 'bg-muted/25 transition-colors duration-200',
+        'bg-muted backdrop-blur-xs overflow-hidden flex sm:ml-4 h-full',
+        $faded && 'bg-background',
         rounded,
       )}
       style="view-transition-name: shell-nav;">
@@ -139,7 +143,6 @@
       <div
         class={cn(
           'flex h-full py-1',
-          'pointer-events-auto',
           'sm:mr-4 transition-all duration-300',
           "[&_svg:not([class*='size-'])]:size-5",
           rounded,
