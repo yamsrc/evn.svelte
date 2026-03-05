@@ -18,7 +18,7 @@
     <Dropdown.Content>
       {#each actions($dict) as group, index (group.name)}
         {#if index > 0}
-          <Dropdown.Separator></Dropdown.Separator>
+          <Dropdown.Separator />
         {/if}
         <Dropdown.Group direction={group.direction}>
           {#each group.items as item (item.name)}
