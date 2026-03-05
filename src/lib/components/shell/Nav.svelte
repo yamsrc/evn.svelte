@@ -1,6 +1,7 @@
 <script lang="ts">
   import { ChevronLeft } from '@lucide/svelte'
   import { onMount } from 'svelte'
+  import { derived } from 'svelte/store'
   import { preloadCode } from '$app/navigation'
   import { page } from '$app/state'
   import { back } from '$com/history'
@@ -10,6 +11,24 @@
   import Attention from './Attention.svelte'
   import { exact, match, nested, type Props, type Section } from './Nav'
   import { actions, returns } from './store'
+
+  const faded = derived(
+    actions,
+    ($actions, set) => {
+      const a = $actions.at(-1) ?? null
+
+      if (!a?.active) {
+        set(false)
+
+        return
+      }
+
+      const unsub = a.active.subscribe(set)
+
+      return unsub
+    },
+    false,
+  )
 
   const { sections, position = 'start', class: classes }: Props = $props()
   const action = $derived($actions.at(-1) ?? null)
@@ -58,6 +77,8 @@
     <ul
       class={cn(
         'bg-muted backdrop-blur-xs overflow-hidden flex pointer-events-auto sm:ml-4 h-full',
+        'transition-background-color duration-200',
+        $faded && 'bg-muted/25',
         rounded,
       )}
       style="view-transition-name: shell-nav;">
@@ -81,6 +102,7 @@
             <div
               class={cn(
                 'absolute inset-0 bg-background z-0 rounded-[calc(var(--radius)+2px)] m-1',
+                $faded && 'opacity-25 transition-opacity duration-200',
                 active || 'hidden',
               )}
               style={active ? 'view-transition-name: shell-nav-active;' : ''}>
@@ -93,6 +115,8 @@
             <div
               class={cn(
                 "flex flex-col items-center gap-0.5 z-10 relative font-bold [&_svg:not([class*='size-'])]:size-5",
+                'transition-opacity duration-200',
+                $faded && 'opacity-25',
               )}
               style="view-transition-name: shell-nav-item-{section.id};">
               {#if ret}
@@ -188,4 +212,13 @@
   ::view-transition-new(shell-actions-end):only-child {
     animation: slide-in-right 0.3s ease-out both;
   }
+
+  /* .fadable {
+    opacity: 1;
+    transition: opacity 200ms ease;
+  }
+
+  .faded .fadable {
+    opacity: 0.5;
+  } */
 </style>

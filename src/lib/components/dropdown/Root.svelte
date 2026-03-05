@@ -1,10 +1,10 @@
 <script lang="ts">
-  import { onMount } from 'svelte'
+  import { onDestroy, onMount } from 'svelte'
   import { transit } from '$lib/tools/svt'
   import { setContext } from './Context'
   import type { Props } from './Root'
 
-  const { children }: Props = $props()
+  const { children, onopen }: Props = $props()
 
   const id = `am-${crypto.randomUUID()}`
   let open = $state(false)
@@ -15,8 +15,14 @@
     get opened() {
       return open
     },
-    open: () => transit(() => (open = true)),
-    close: () => transit(() => (open = false)),
+    open: async () => {
+      onopen?.(true)
+      transit(() => (open = true))
+    },
+    close: () => {
+      onopen?.(false)
+      transit(() => (open = false))
+    },
     get id() {
       return id
     },
@@ -32,6 +38,7 @@
 
       if (triggerRef?.contains(target) || contentRef?.contains(target)) return
 
+      onopen?.(false)
       transit(() => (open = false))
     }
 
@@ -39,6 +46,8 @@
 
     return () => document.removeEventListener('click', handle)
   })
+
+  onDestroy(() => onopen?.(false))
 </script>
 
 {@render children()}

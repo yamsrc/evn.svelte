@@ -1,14 +1,17 @@
 <script lang="ts">
   import { Plus } from '@lucide/svelte'
+  import { writable } from 'svelte/store'
   import * as Dropdown from '$com/dropdown'
   import { Actions } from '$com/shell'
   import { dict } from '$lib/intl'
   import { actionVariants } from './Action'
   import { actions } from './Actions'
+
+  const active = writable(false)
 </script>
 
-<Actions>
-  <Dropdown.Root>
+<Actions {active}>
+  <Dropdown.Root onopen={(o) => active.set(o)}>
     <Dropdown.Trigger id="nav-actions-button" class={actionVariants()}>
       <Plus />
     </Dropdown.Trigger>
