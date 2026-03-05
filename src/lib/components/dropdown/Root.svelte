@@ -15,7 +15,7 @@
     get opened() {
       return open
     },
-    open: async () => {
+    open: () => {
       onopen?.(true)
       transit(() => (open = true))
     },

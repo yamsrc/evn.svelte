@@ -214,13 +214,4 @@
   ::view-transition-new(shell-actions-end):only-child {
     animation: slide-in-right 0.3s ease-out both;
   }
-
-  /* .fadable {
-    opacity: 1;
-    transition: opacity 200ms ease;
-  }
-
-  .faded .fadable {
-    opacity: 0.5;
-  } */
 </style>
