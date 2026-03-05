@@ -16,9 +16,9 @@
   let busy = $state(false)
 
   async function submit() {
-    busy = true
-
     if (!name.trim()) return
+
+    busy = true
 
     const group = await create({ name, reduction })
 

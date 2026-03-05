@@ -11,10 +11,11 @@
   import { BackgroundOverride, Section } from '@/app/ui'
   import { Header } from '@/app/ui'
   import { contacts } from '@/contacts'
-  import { Balance, Share, Groups, Expenses, Favorite } from '@/contacts/ui'
+  import { Balance, Share, Groups, Expenses } from '@/contacts/ui'
   import { Delete } from '@/contacts/ui'
   import { expenses } from '@/expenses'
   import { Transfer } from '@/expenses/ui'
+  import { Toggle as Favorite } from '@/favorites/ui'
   import { groups } from '@/groups'
   import { account } from '@/iam'
   import { seen } from '@/notifications'
@@ -39,7 +40,7 @@
         <Header.Title>{$dict.contacts.title}</Header.Title>
         {#if contact}
           <Header.Actions>
-            <Favorite {contact} />
+            <Favorite id={contact.identity} type="contact" />
             <Delete {contact} {ondelete} />
           </Header.Actions>
         {/if}

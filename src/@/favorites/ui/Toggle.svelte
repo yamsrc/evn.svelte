@@ -3,10 +3,11 @@
   import { Async } from 'svas'
   import { Button } from '$ui/button'
   import { favorites, add, del } from '@/favorites'
-  import type { Props } from './Favorite'
+  import { dict } from './intl'
+  import type { Props } from './Toggle'
   import type { Favorite } from '@/favorites'
 
-  const { contact }: Props = $props()
+  const { id, type }: Props = $props()
 
   let busy = $state(false)
 
@@ -16,7 +17,7 @@
     busy = true
 
     if (favorite) await del(favorite.id)
-    else await add(contact.identity)
+    else await add(id)
 
     busy = false
   }
@@ -24,14 +25,15 @@
 
 <Async store={favorites}>
   {#snippet awaited(favorites)}
-    {@const favorite = favorites.find((f) => f.favorite === contact.identity)}
+    {@const favorite = favorites.find((f) => f.favorite === id)}
     <Button
-      id="contacts-favorite-button"
+      id={`${type}-favorite-button`}
       variant="outline"
       size="icon"
       onclick={() => toggle(favorite)}
       disabled={busy}>
       <Star fill={favorite ? 'currentColor' : 'none'} />
+      <span class="sr-only">{$dict.actions.favorite}</span>
     </Button>
   {/snippet}
 </Async>

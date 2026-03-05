@@ -13,8 +13,9 @@
   import { Header } from '@/app/ui'
   import { contacts } from '@/contacts'
   import { CreateAction } from '@/expenses/ui'
+  import { Toggle as Favorite } from '@/favorites/ui'
   import { groups, del } from '@/groups'
-  import { Cosmetics, Favorite, Reduction } from '@/groups/ui'
+  import { Cosmetics, Reduction } from '@/groups/ui'
   import { account } from '@/iam'
   import { seen } from '@/notifications'
   import type { Group } from '@/groups'
@@ -65,7 +66,7 @@
     <Header.Root>
       <Header.Title>{$dict.groups.title}</Header.Title>
       <Header.Actions>
-        <Favorite {group} />
+        <Favorite id={group.id} type="group" />
         <Hold
           onclick={leave}
           variant="outline"
