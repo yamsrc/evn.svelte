@@ -10,6 +10,8 @@ components:
     display: |-
       !js
       (count) => `عرض: ${count}`
+  graph:
+    title: مخطط الديون
 transmission:
   title: Transmission
   permission:

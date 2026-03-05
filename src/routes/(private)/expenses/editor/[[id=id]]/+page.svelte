@@ -54,14 +54,14 @@
           <Paperclip />
         {/if}
       </Header.Button>
-      <input
-        type="file"
-        accept="image/*"
-        bind:this={input}
-        onchange={upload}
-        multiple
-        class="hidden" />
     </Header.Actions>
+    <input
+      type="file"
+      accept="image/*"
+      bind:this={input}
+      onchange={upload}
+      multiple
+      class="hidden" />
   </Header.Root>
 </Section>
 

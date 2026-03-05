@@ -280,3 +280,4 @@ mounts:
   err: err
   accounts: ../../@/accounts/ui/intl
   transmission: ../../@/transmission/ui/intl
+  groups: ../../@/groups/ui/intl

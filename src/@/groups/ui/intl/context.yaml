@@ -1,0 +1,9 @@
+context: Mount 'groups' context
+inputs:
+  reduction:
+    switch:
+      label:
+        input: Smart Debts
+        context: checkbox label (feature name)
+      description:
+        input: Merges debts between members so fewer payments are needed to settle everything. No one pays more or less — it just reduces the number of transactions.

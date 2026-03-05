@@ -10,6 +10,8 @@ components:
     display: |-
       !js
       (count) => `Mostra: ${count}`
+  graph:
+    title: Grafico dei debiti
 transmission:
   title: Transmission
   permission:

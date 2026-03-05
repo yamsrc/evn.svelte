@@ -17,7 +17,6 @@
     onclick,
     onpress,
     class: classes,
-    containerClass,
     ...props
   }: Props = $props()
 
@@ -83,26 +82,33 @@
     e.preventDefault()
     e.stopPropagation()
   }
+
+  function portal(node: HTMLElement) {
+    document.body.appendChild(node)
+
+    return { destroy: () => node.remove() }
+  }
 </script>
 
-<div class={containerClass}>
-  <Button
-    {variant}
-    {...props}
-    class={cn('select-none', classes)}
-    {onpointerdown}
-    {onkeydown}
-    oncontextmenu={swallow}
-    onpointerup={cancel}
-    onpointerleave={cancel}
-    onkeyup={cancel}
-    style={`anchor-name: --${name};`}>
-    {@render children?.()}
-  </Button>
+<Button
+  {variant}
+  {...props}
+  class={cn('select-none', classes)}
+  {onpointerdown}
+  {onkeydown}
+  oncontextmenu={swallow}
+  onpointerup={cancel}
+  onpointerleave={cancel}
+  onkeyup={cancel}
+  style={`anchor-name: --${name};`}>
+  {@render children?.()}
+</Button>
 
+{#if shown}
   <div
+    use:portal
     class={cn(
-      'absolute w-fit min-w-26 transition-all ease-in-out space-y-1',
+      'fixed z-1000 w-fit min-w-26 transition-all ease-in-out space-y-1',
       'bg-background/85 p-2 pt-1 rounded-md',
       'opacity-0 scale-0',
       {
@@ -119,4 +125,4 @@
       value={progress}
       class="h-1 [&_div[data-slot=progress-indicator]]:bg-destructive/90 [&_div[data-slot=progress-indicator]]:transition-none" />
   </div>
-</div>
+{/if}

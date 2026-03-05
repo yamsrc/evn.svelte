@@ -3,7 +3,7 @@ import { account } from '@/iam'
 import * as net from './net'
 import { internal } from './store'
 
-export async function create(properties: net.Editable): Promise<net.Group | Error> {
+export async function create(properties: net.Initial): Promise<net.Group | Error> {
   const me = await having(account)
 
   const group = await net.post(me.id, properties)

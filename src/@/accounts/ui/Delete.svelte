@@ -46,22 +46,20 @@
     <AlertDialog.Footer>
       <fieldset class="mt-8 flex gap-2" disabled={busy}>
         <AlertDialog.Cancel
-          class={cn(buttonVariants({ variant: 'secondary', size: 'lg' }), 'w-1/2')}
-        >
+          class={cn(buttonVariants({ variant: 'secondary', size: 'lg' }), 'w-1/2')}>
           {$dict.actions.cancel}
         </AlertDialog.Cancel>
 
         <Hold
+          name="delete-account"
           variant="destructive"
           size="lg"
-          class="w-full"
-          containerClass="w-1/2"
+          class="w-1/2"
           label={$dict.account.delete.hold}
           duration={5_000}
           position="top"
           align="center"
-          onclick={del}
-        >
+          onclick={del}>
           {#if busy}
             <Spinner />
           {:else}

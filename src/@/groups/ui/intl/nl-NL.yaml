@@ -1,0 +1,7 @@
+reduction:
+  switch:
+    label: Slimme schulden
+    description: >-
+      Voegt schulden tussen leden samen zodat er minder betalingen nodig zijn om
+      alles af te rekenen. Niemand betaalt meer of minder — het vermindert
+      alleen het aantal transacties.

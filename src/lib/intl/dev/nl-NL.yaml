@@ -10,6 +10,8 @@ components:
     display: |-
       !js
       (count) => `Tonen: ${count}`
+  graph:
+    title: Schuldenoverzicht
 transmission:
   title: Transmission
   permission:

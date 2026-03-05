@@ -13,8 +13,9 @@
   import { Header } from '@/app/ui'
   import { contacts } from '@/contacts'
   import { CreateAction } from '@/expenses/ui'
+  import { Toggle as Favorite } from '@/favorites/ui'
   import { groups, del } from '@/groups'
-  import { Cosmetics, Favorite } from '@/groups/ui'
+  import { Cosmetics, Reduction } from '@/groups/ui'
   import { account } from '@/iam'
   import { seen } from '@/notifications'
   import type { Group } from '@/groups'
@@ -60,28 +61,27 @@
   })
 </script>
 
-<Section>
-  <Header.Root>
-    <Header.Title></Header.Title>
-    {#if id}
+{#if group}
+  <Section>
+    <Header.Root>
+      <Header.Title>{$dict.groups.title}</Header.Title>
       <Header.Actions>
+        <Favorite id={group.id} type="group" />
         <Hold
           onclick={leave}
-          variant="ghost"
-          class="size-12 bg-accent/50 border border-border"
+          variant="outline"
+          size="icon"
           position="left"
           label={$dict.groups.leave}
           disabled={!group}>
-          <LogOut class="size-5" />
+          <LogOut class="size-5 text-destructive" />
         </Hold>
       </Header.Actions>
-    {/if}
-  </Header.Root>
-</Section>
+    </Header.Root>
+  </Section>
 
-{#if group}
   <Section class="flex flex-col gap-2 items-center">
-    <Cosmetics {group} />
+    <Cosmetics {group} class="w-full" />
   </Section>
 
   <Separator />
@@ -133,11 +133,14 @@
     {/snippet}
   </Async>
 
+  <Section>
+    <Reduction {group} enabled={group.reduction} />
+  </Section>
   <!-- TODO: add history -->
 
   <Actions>
-    <Favorite {group} />
     <CreateAction
+      variant="secondary"
       value={{
         participants: Object.fromEntries(
           group.identities.map((id) => [
@@ -151,8 +154,4 @@
       <span>{$dict.groups.members.addMember}</span>
     </Action>
   </Actions>
-{:else}
-  <Section class="flex flex-col gap-2 items-center my-auto">
-    <Cosmetics />
-  </Section>
 {/if}

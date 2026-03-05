@@ -33,6 +33,7 @@
       <Header.Actions>
         <Hold
           id="me-logout-button"
+          name="logout"
           onclick={getout}
           {onpress}
           variant="ghost"

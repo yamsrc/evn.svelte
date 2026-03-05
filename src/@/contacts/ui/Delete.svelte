@@ -17,6 +17,7 @@
 </script>
 
 <Hold
+  name="delete-contact"
   variant="outline"
   size="icon"
   position="left"
