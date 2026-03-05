@@ -79,8 +79,7 @@
     <ul
       class={cn(
         'bg-muted backdrop-blur-xs overflow-hidden flex pointer-events-auto sm:ml-4 h-full',
-        'transition-background-color duration-200',
-        // $faded && 'bg-muted/25',
+        // $faded && 'bg-muted/25 transition-colors duration-200',
         rounded,
       )}
       style="view-transition-name: shell-nav;">
