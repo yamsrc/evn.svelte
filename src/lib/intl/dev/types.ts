@@ -18,6 +18,9 @@ export type Dictionary = {
           title: string
           display: (value: any) => string
         }
+        graph: {
+          title: string
+        }
       }
       transmission: {
         title: string

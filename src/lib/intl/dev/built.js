@@ -15,6 +15,9 @@ export const dictionaries = {
       "notifications": {
         "title": "Notifications",
         "display": (count) => `عرض: ${count}`
+      },
+      "graph": {
+        "title": "مخطط الديون"
       }
     },
     "transmission": {
@@ -44,6 +47,9 @@ export const dictionaries = {
       "notifications": {
         "title": "Notifications",
         "display": (count) => `Anzeigen: ${count}`
+      },
+      "graph": {
+        "title": "Schuldenübersicht"
       }
     },
     "transmission": {
@@ -73,6 +79,9 @@ export const dictionaries = {
       "notifications": {
         "title": "Notifications",
         "display": (count) => `Show: ${count}`
+      },
+      "graph": {
+        "title": "Debt Graph"
       }
     },
     "transmission": {
@@ -102,6 +111,9 @@ export const dictionaries = {
       "notifications": {
         "title": "Notifications",
         "display": (count) => `Mostrar: ${count}`
+      },
+      "graph": {
+        "title": "Gráfico de deudas"
       }
     },
     "transmission": {
@@ -131,6 +143,9 @@ export const dictionaries = {
       "notifications": {
         "title": "Notifications",
         "display": (count) => `Afficher : ${count}`
+      },
+      "graph": {
+        "title": "Graphique des dettes"
       }
     },
     "transmission": {
@@ -160,6 +175,9 @@ export const dictionaries = {
       "notifications": {
         "title": "Notifications",
         "display": (count) => `${count} दिखाएं`
+      },
+      "graph": {
+        "title": "ऋण ग्राफ़"
       }
     },
     "transmission": {
@@ -189,6 +207,9 @@ export const dictionaries = {
       "notifications": {
         "title": "Notifications",
         "display": (count) => `Mostra: ${count}`
+      },
+      "graph": {
+        "title": "Grafico dei debiti"
       }
     },
     "transmission": {
@@ -218,6 +239,9 @@ export const dictionaries = {
       "notifications": {
         "title": "Notifications",
         "display": (count) => `${count}件を表示`
+      },
+      "graph": {
+        "title": "債務グラフ"
       }
     },
     "transmission": {
@@ -247,6 +271,9 @@ export const dictionaries = {
       "notifications": {
         "title": "Notifications",
         "display": (count) => `${count}개 표시`
+      },
+      "graph": {
+        "title": "부채 그래프"
       }
     },
     "transmission": {
@@ -276,6 +303,9 @@ export const dictionaries = {
       "notifications": {
         "title": "Notifications",
         "display": (count) => `Tonen: ${count}`
+      },
+      "graph": {
+        "title": "Schuldenoverzicht"
       }
     },
     "transmission": {
@@ -305,6 +335,9 @@ export const dictionaries = {
       "notifications": {
         "title": "Notifications",
         "display": (count) => `Показать: ${count}`
+      },
+      "graph": {
+        "title": "График долгов"
       }
     },
     "transmission": {
@@ -334,6 +367,9 @@ export const dictionaries = {
       "notifications": {
         "title": "Notifications",
         "display": (count) => `Onyesha: ${count}`
+      },
+      "graph": {
+        "title": "Chati ya Madeni"
       }
     },
     "transmission": {
@@ -363,6 +399,9 @@ export const dictionaries = {
       "notifications": {
         "title": "Notifications",
         "display": (count) => `${count} göster`
+      },
+      "graph": {
+        "title": "Borç Grafiği"
       }
     },
     "transmission": {
@@ -392,6 +431,9 @@ export const dictionaries = {
       "notifications": {
         "title": "Notifications",
         "display": (count) => `Показати: ${count}`
+      },
+      "graph": {
+        "title": "Графік боргів"
       }
     },
     "transmission": {
@@ -421,6 +463,9 @@ export const dictionaries = {
       "notifications": {
         "title": "Notifications",
         "display": (count) => `显示：${count}`
+      },
+      "graph": {
+        "title": "债务图表"
       }
     },
     "transmission": {

@@ -1,0 +1,7 @@
+reduction:
+  switch:
+    label: Debiti smart
+    description: >-
+      Unisce i debiti tra i membri così sono necessari meno pagamenti per
+      saldare tutto. Nessuno paga più o meno — si riduce solo il numero di
+      transazioni.

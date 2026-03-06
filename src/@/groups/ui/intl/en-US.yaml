@@ -1,0 +1,7 @@
+reduction:
+  switch:
+    label: Smart Debts
+    description: >-
+      Merges debts between members so fewer payments are needed to settle
+      everything. No one pays more or less — it just reduces the number of
+      transactions.

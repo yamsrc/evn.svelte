@@ -10,6 +10,8 @@ components:
     display: |-
       !js
       (count) => `${count} göster`
+  graph:
+    title: Borç Grafiği
 transmission:
   title: Transmission
   permission:

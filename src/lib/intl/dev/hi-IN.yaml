@@ -10,6 +10,8 @@ components:
     display: |-
       !js
       (count) => `${count} दिखाएं`
+  graph:
+    title: ऋण ग्राफ़
 transmission:
   title: Transmission
   permission:

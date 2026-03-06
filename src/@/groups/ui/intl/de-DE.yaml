@@ -1,0 +1,7 @@
+reduction:
+  switch:
+    label: Intelligente Schulden
+    description: >-
+      Fasst Schulden zwischen Mitgliedern zusammen, sodass weniger Zahlungen
+      nötig sind, um alles auszugleichen. Niemand zahlt mehr oder weniger – es
+      werden einfach weniger Transaktionen nötig.

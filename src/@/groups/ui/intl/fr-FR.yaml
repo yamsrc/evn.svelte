@@ -1,0 +1,7 @@
+reduction:
+  switch:
+    label: Dettes intelligentes
+    description: >-
+      Fusionne les dettes entre membres afin de réduire le nombre de paiements
+      nécessaires pour tout régler. Personne ne paie plus ou moins — cela réduit
+      simplement le nombre de transactions.

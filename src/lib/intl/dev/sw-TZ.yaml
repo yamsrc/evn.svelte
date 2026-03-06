@@ -10,6 +10,8 @@ components:
     display: |-
       !js
       (count) => `Onyesha: ${count}`
+  graph:
+    title: Chati ya Madeni
 transmission:
   title: Transmission
   permission:

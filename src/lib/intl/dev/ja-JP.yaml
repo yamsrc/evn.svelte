@@ -10,6 +10,8 @@ components:
     display: |-
       !js
       (count) => `${count}件を表示`
+  graph:
+    title: 債務グラフ
 transmission:
   title: Transmission
   permission:

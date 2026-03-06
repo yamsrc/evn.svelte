@@ -1,16 +1,16 @@
 <script lang="ts">
   import { cn } from '$lib/utils'
   import type { Snippet } from 'svelte'
-  import type { HTMLAttributes } from 'svelte/elements'
+  import type { ClassValue, HTMLAttributes } from 'svelte/elements'
 
   interface Props extends HTMLAttributes<HTMLDivElement> {
-    class?: string
+    class?: ClassValue
     children: Snippet
   }
 
   const { class: classes, children, ...rest }: Props = $props()
 </script>
 
-<div class={cn('flex flex-col items-center gap-6', classes)} {...rest}>
+<div class={cn('flex flex-col items-center gap-6 w-full', classes)} {...rest}>
   {@render children()}
 </div>

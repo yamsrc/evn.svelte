@@ -4,13 +4,14 @@ import type { Group } from './Group'
 const groups = origin.resource<Group>('/groups/', { credentials: 'include' })
 // const invitations = origin.resource<Group>('/groups/invitations/', { credentials: 'include' })
 
-export type Editable = Pick<Group, 'name'>
+export type Initial = Pick<Group, 'name'> & Partial<Pick<Group, 'reduction'>>
+export type Editable = Partial<Pick<Group, 'name' | 'reduction'>>
 
 export async function get(identity: string): Promise<Group[] | Error> {
   return groups.json(identity)
 }
 
-export async function post(identity: string, body: Editable): Promise<Group | Error> {
+export async function post(identity: string, body: Initial): Promise<Group | Error> {
   return groups.json(identity, { method: 'POST', body })
 }
 

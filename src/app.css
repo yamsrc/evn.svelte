@@ -267,12 +267,10 @@
     }
   }
 
-  :root {
-    /* view-transition-name: none; */
+  ::view-transition-group(*.spring),
+  ::view-transition-old(*.spring),
+  ::view-transition-new(*.spring) {
+    animation-duration: 300ms;
+    animation-timing-function: cubic-bezier(0.2, 1.4, 0.4, 1);
   }
-
-  /* ::view-transition-old(root){animation:.25s ease both zoom-out}
-  ::view-transition-new(root){animation:.25s ease both zoom-in}
-  @keyframes zoom-in{from{transform:scale(.98);opacity:0}to{transform:scale(1);opacity:1}}
-  @keyframes zoom-out{from{transform:scale(1);opacity:1}to{transform:scale(1.02);opacity:0}} */
 }

@@ -10,6 +10,8 @@ components:
     display: |-
       !js
       (count) => `${count}개 표시`
+  graph:
+    title: 부채 그래프
 transmission:
   title: Transmission
   permission:

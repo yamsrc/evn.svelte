@@ -1,0 +1,5 @@
+context: Mount 'favorites' context
+inputs:
+  actions:
+    favorite:
+      input: Favorite

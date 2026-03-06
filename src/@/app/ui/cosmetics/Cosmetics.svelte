@@ -1,6 +1,6 @@
 <script lang="ts">
   import { cn } from '$lib/utils'
-  import Spinner from '$ui/spinner/spinner.svelte'
+  import { Spinner } from '$ui/spinner'
   import { pickpic } from '@/accounts'
   import Actions from './Actions.svelte'
   import Content from './Content.svelte'
@@ -23,6 +23,7 @@
     onchange,
     onupload,
     pictureStyle,
+    children,
   }: Props = $props()
 
   const blank = $derived(editable && label !== undefined)
@@ -91,7 +92,7 @@
     {#if uploadable}
       <input bind:this={uploadEl} type="file" accept="image/*" hidden onchange={onUploadChange} />
     {/if}
-    <div class="space-y-2">
+    <div class="space-y-2 w-full">
       <Name
         bind:value={name}
         bind:busy
@@ -99,11 +100,13 @@
         {autocomplete}
         {placeholder}
         {autofocus}
-        {editable} />
+        {editable}
+        class="w-full" />
       {#if note}
         <Note>{note}</Note>
       {/if}
     </div>
+    {@render children?.()}
   </Content>
   {#if blank && label}
     <Actions {label} {busy} {onclick} />

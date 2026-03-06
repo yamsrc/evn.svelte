@@ -5,7 +5,7 @@
   import * as groups from '@/groups'
   import type { Props } from './Cosmetics'
 
-  const { group }: Props = $props()
+  const { group, class: classes }: Props = $props()
   const value = $derived(group ? { name: group.name } : undefined)
   const note = $derived(group ? undefined : $dict.groups.name.description)
   const label = $derived(group ? undefined : $dict.groups.create)
@@ -30,5 +30,4 @@
   {note}
   {label}
   {onchange}
-  class="**:data-[slot=picture]:hidden"
-/>
+  class={['**:data-[slot=picture]:hidden', classes]} />
