@@ -18,7 +18,7 @@ type ActionGroup = {
 
 function addExpense(dict: Dictionary): ActionItem {
   return {
-    id: 'nav-actions-cheqes-input-button',
+    id: 'nav-actions-cheques-input-button',
     name: dict.actions.cheques.input,
     icon: PencilLine,
     onSelect: () => {

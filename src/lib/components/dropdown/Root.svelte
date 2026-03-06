@@ -38,13 +38,16 @@
 
       if (triggerRef?.contains(target) || contentRef?.contains(target)) return
 
+      e.preventDefault()
+      e.stopPropagation()
+
       onopen?.(false)
       transit(() => (open = false))
     }
 
-    document.addEventListener('click', handle)
+    document.addEventListener('click', handle, { capture: true })
 
-    return () => document.removeEventListener('click', handle)
+    return () => document.removeEventListener('click', handle, { capture: true })
   })
 
   onDestroy(() => onopen?.(false))
