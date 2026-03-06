@@ -79,7 +79,10 @@
   </div>
   <div
     class={cn(
-      'flex items-center gap-2 h-21 p-5 pt-0 sm:pb-6 standalone:h-16 standalone:px-6 standalone:pb-0',
+      'flex items-center gap-2',
+      'h-21 standalone:h-16 p-5 pt-0 sm:pb-6 standalone:px-6 standalone:pb-0',
+      app && 'h-16 pb-0',
+      safariBrowser && 'h-18 pb-2', // min 6px from bottom edge to prevent solid safari navbar background
       position === 'center' ? 'justify-center' : 'justify-between',
       position === 'start' ? 'flex-row' : 'flex-row-reverse',
     )}>
