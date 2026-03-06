@@ -4,7 +4,7 @@
   import SeedMe from './seedme.svg'
 </script>
 
-<footer class="flex flex-col gap-3 p-6 text-muted-foreground text-sm">
+<footer class="flex justify-between items-center gap-3 p-6 text-muted-foreground text-sm">
   <Demo />
   <a href="https://seed.me" target="_blank" class="flex justify-center gap-2">
     {$dict.madeBy}
