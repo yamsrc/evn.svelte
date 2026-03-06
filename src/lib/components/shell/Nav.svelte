@@ -13,6 +13,9 @@
   import { exact, match, nested, type Props, type Section } from './Nav'
   import { actions, returns } from './store'
 
+  const app = standalone || shell
+  const safariBrowser = ios && safari && !app
+
   const faded = derived(
     actions,
     ($actions, set) => {
@@ -69,10 +72,10 @@
     class={[
       'absolute -z-1 inset-0 -top-6',
       '-bottom-[max(env(safe-area-inset-bottom),1rem)]',
-      'bg-background/60 backdrop-filter backdrop-blur-xs',
+      'bg-background/80',
       'mask-[linear-gradient(to_bottom,transparent_0%,black_2rem)]',
     ]}
-    class:hidden={ios && safari && !standalone && !shell}>
+    class:hidden={safariBrowser}>
   </div>
   <div
     class={cn(
@@ -81,11 +84,7 @@
       position === 'start' ? 'flex-row' : 'flex-row-reverse',
     )}>
     <ul
-      class={cn(
-        'bg-muted backdrop-blur-xs overflow-hidden flex sm:ml-4 h-full',
-        $faded && 'bg-background',
-        rounded,
-      )}
+      class={cn('bg-muted overflow-hidden flex sm:ml-4 h-full', $faded && 'bg-background', rounded)}
       style="view-transition-name: shell-nav;">
       {#each sections as section (section.href)}
         {@const active = match(section, page.url.pathname)}
