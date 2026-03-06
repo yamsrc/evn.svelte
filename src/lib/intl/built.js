@@ -16,9 +16,9 @@ export const dictionaries = {
         "input": "إضافة مصروف"
       },
       "contacts": {
-        "group": "مجموعة",
+        "group": "إضافة مجموعة",
         "title": "أصدقاء",
-        "contact": "صديق"
+        "contact": "إضافة كصديق"
       },
       "addSelected": "إضافة المحدد",
       "cancel": "إلغاء",
@@ -215,9 +215,9 @@ export const dictionaries = {
         "input": "Ausgabe hinzufügen"
       },
       "contacts": {
-        "group": "Gruppe",
+        "group": "Gruppe hinzufügen",
         "title": "Freunde",
-        "contact": "Freund"
+        "contact": "Freund hinzufügen"
       },
       "addSelected": "Ausgewählte hinzufügen",
       "cancel": "Abbrechen",
@@ -411,12 +411,12 @@ export const dictionaries = {
       "cheques": {
         "title": "Events",
         "scan": "Scan cheque",
-        "input": "Add expense"
+        "input": "Add Expense"
       },
       "contacts": {
-        "group": "Group",
+        "group": "Add Group",
         "title": "Friends",
-        "contact": "Friend"
+        "contact": "Add Friend"
       },
       "addSelected": "Add selected",
       "cancel": "Cancel",
@@ -613,9 +613,9 @@ export const dictionaries = {
         "input": "Añadir gasto"
       },
       "contacts": {
-        "group": "Grupo",
+        "group": "Agregar grupo",
         "title": "Amigos",
-        "contact": "Amigo"
+        "contact": "Agregar amigo"
       },
       "addSelected": "Agregar seleccionado(s)",
       "cancel": "Cancelar",
@@ -812,9 +812,9 @@ export const dictionaries = {
         "input": "Ajouter une dépense"
       },
       "contacts": {
-        "group": "Groupe",
+        "group": "Ajouter un groupe",
         "title": "Amis",
-        "contact": "Ami"
+        "contact": "Ajouter comme ami"
       },
       "addSelected": "Ajouter la sélection",
       "cancel": "Annuler",
@@ -1011,9 +1011,9 @@ export const dictionaries = {
         "input": "खर्च जोड़ें"
       },
       "contacts": {
-        "group": "समूह",
+        "group": "समूह जोड़ें",
         "title": "मित्र",
-        "contact": "मित्र"
+        "contact": "मित्र जोड़ें"
       },
       "addSelected": "चयनित जोड़ें",
       "cancel": "रद्द करें",
@@ -1210,9 +1210,9 @@ export const dictionaries = {
         "input": "Aggiungi spesa"
       },
       "contacts": {
-        "group": "Gruppo",
+        "group": "Aggiungi gruppo",
         "title": "Amici",
-        "contact": "Amico"
+        "contact": "Aggiungi amico"
       },
       "addSelected": "Aggiungi selezionati",
       "cancel": "Annulla",
@@ -1409,9 +1409,9 @@ export const dictionaries = {
         "input": "支出を追加"
       },
       "contacts": {
-        "group": "グループ",
+        "group": "グループを追加",
         "title": "友達",
-        "contact": "友達"
+        "contact": "友達を追加"
       },
       "addSelected": "選択したものを追加",
       "cancel": "キャンセル",
@@ -1608,9 +1608,9 @@ export const dictionaries = {
         "input": "지출 추가"
       },
       "contacts": {
-        "group": "그룹",
+        "group": "그룹 추가",
         "title": "친구",
-        "contact": "친구"
+        "contact": "친구 추가"
       },
       "addSelected": "선택 항목 추가",
       "cancel": "취소",
@@ -1807,9 +1807,9 @@ export const dictionaries = {
         "input": "Uitgave toevoegen"
       },
       "contacts": {
-        "group": "Groep",
+        "group": "Groep toevoegen",
         "title": "Vrienden",
-        "contact": "Vriend"
+        "contact": "Vriend toevoegen"
       },
       "addSelected": "Geselecteerde toevoegen",
       "cancel": "Annuleren",
@@ -2006,9 +2006,9 @@ export const dictionaries = {
         "input": "Добавить расход"
       },
       "contacts": {
-        "group": "Группа",
+        "group": "Добавить группу",
         "title": "Друзья",
-        "contact": "Друг"
+        "contact": "Добавить в друзья"
       },
       "addSelected": "Добавить выбранные",
       "cancel": "Отмена",
@@ -2205,9 +2205,9 @@ export const dictionaries = {
         "input": "Ongeza gharama"
       },
       "contacts": {
-        "group": "Kikundi",
+        "group": "Ongeza Kikundi",
         "title": "Marafiki",
-        "contact": "Rafiki"
+        "contact": "Ongeza rafiki"
       },
       "addSelected": "Ongeza zilizochaguliwa",
       "cancel": "Ghairi",
@@ -2401,12 +2401,12 @@ export const dictionaries = {
       "cheques": {
         "title": "Etkinlikler",
         "scan": "Çeki tara",
-        "input": "Gider ekle"
+        "input": "Gider Ekle"
       },
       "contacts": {
-        "group": "Grup",
+        "group": "Grup Ekle",
         "title": "Arkadaşlar",
-        "contact": "Arkadaş"
+        "contact": "Arkadaş ekle"
       },
       "addSelected": "Seçileni ekle",
       "cancel": "İptal",
@@ -2603,9 +2603,9 @@ export const dictionaries = {
         "input": "Додати витрату"
       },
       "contacts": {
-        "group": "Група",
+        "group": "Додати групу",
         "title": "Друзі",
-        "contact": "Друг"
+        "contact": "Додати в друзі"
       },
       "addSelected": "Додати вибране",
       "cancel": "Скасувати",
@@ -2802,9 +2802,9 @@ export const dictionaries = {
         "input": "添加支出"
       },
       "contacts": {
-        "group": "群组",
+        "group": "添加群组",
         "title": "朋友",
-        "contact": "朋友"
+        "contact": "添加好友"
       },
       "addSelected": "添加已选项",
       "cancel": "取消",

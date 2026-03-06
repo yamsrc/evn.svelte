@@ -10,9 +10,9 @@ actions:
     scan: Сканировать чек
     input: Добавить расход
   contacts:
-    group: Группа
+    group: Добавить группу
     title: Друзья
-    contact: Друг
+    contact: Добавить в друзья
   addSelected: Добавить выбранные
   cancel: Отмена
   search: Поиск

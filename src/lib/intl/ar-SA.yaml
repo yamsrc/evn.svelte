@@ -10,9 +10,9 @@ actions:
     scan: مسح الشيك
     input: إضافة مصروف
   contacts:
-    group: مجموعة
+    group: إضافة مجموعة
     title: أصدقاء
-    contact: صديق
+    contact: إضافة كصديق
   addSelected: إضافة المحدد
   cancel: إلغاء
   search: بحث

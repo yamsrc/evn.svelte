@@ -16,37 +16,49 @@ type ActionGroup = {
   direction?: 'row' | 'col'
 }
 
+function addExpense(dict: Dictionary): ActionItem {
+  return {
+    id: 'nav-actions-cheques-input-button',
+    name: dict.actions.cheques.input,
+    icon: PencilLine,
+    onSelect: () => {
+      goto('/expenses/editor/')
+    },
+  }
+}
+
+function addContact(dict: Dictionary): ActionItem {
+  return {
+    id: 'nav-actions-contacts-new-button',
+    name: dict.actions.contacts.contact,
+    icon: User,
+    onSelect: () => goto('/contacts/new/'),
+  }
+}
+
+function addContactGroup(dict: Dictionary): ActionItem {
+  return {
+    id: 'nav-actions-contacts-groups-button',
+    name: dict.actions.contacts.group,
+    icon: Users,
+    onSelect: () => goto('/contacts/groups/'),
+  }
+}
+
 export const actions = (dict: Dictionary): ActionGroup[] => ([
   {
     name: dict.actions.cheques.title,
     direction: 'col',
     items: [
-      {
-        id: 'nav-actions-cheqes-input-button',
-        name: dict.actions.cheques.input,
-        icon: PencilLine,
-        onSelect: () => {
-          goto('/expenses/editor/')
-        },
-      },
+      addContactGroup(dict),
     ],
   },
   {
     name: dict.actions.contacts.title,
     direction: 'row',
     items: [
-      {
-        id: 'nav-actions-contacts-new-button',
-        name: dict.actions.contacts.contact,
-        icon: User,
-        onSelect: () => goto('/contacts/new/'),
-      },
-      {
-        id: 'nav-actions-contacts-groups-button',
-        name: dict.actions.contacts.group,
-        icon: Users,
-        onSelect: () => goto('/contacts/groups/'),
-      },
+      addContact(dict),
+      addExpense(dict),
     ],
   },
 ])

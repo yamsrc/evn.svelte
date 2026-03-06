@@ -16,7 +16,7 @@
   }
 </script>
 
-<Button variant="outline" class="w-fit self-center" {onclick} disabled={busy}>
+<Button variant="ghost" class="w-fit self-center" {onclick} disabled={busy}>
   {#if busy}
     <Spinner />
   {:else}

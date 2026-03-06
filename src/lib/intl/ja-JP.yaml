@@ -10,9 +10,9 @@ actions:
     scan: 小切手をスキャン
     input: 支出を追加
   contacts:
-    group: グループ
+    group: グループを追加
     title: 友達
-    contact: 友達
+    contact: 友達を追加
   addSelected: 選択したものを追加
   cancel: キャンセル
   search: 検索

@@ -10,9 +10,9 @@ actions:
     scan: Scansiona assegno
     input: Aggiungi spesa
   contacts:
-    group: Gruppo
+    group: Aggiungi gruppo
     title: Amici
-    contact: Amico
+    contact: Aggiungi amico
   addSelected: Aggiungi selezionati
   cancel: Annulla
   search: Cerca

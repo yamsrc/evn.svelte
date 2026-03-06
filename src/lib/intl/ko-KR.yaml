@@ -10,9 +10,9 @@ actions:
     scan: 수표 스캔
     input: 지출 추가
   contacts:
-    group: 그룹
+    group: 그룹 추가
     title: 친구
-    contact: 친구
+    contact: 친구 추가
   addSelected: 선택 항목 추가
   cancel: 취소
   search: 검색

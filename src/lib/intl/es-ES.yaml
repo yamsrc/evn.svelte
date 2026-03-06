@@ -10,9 +10,9 @@ actions:
     scan: Escanear cheque
     input: Añadir gasto
   contacts:
-    group: Grupo
+    group: Agregar grupo
     title: Amigos
-    contact: Amigo
+    contact: Agregar amigo
   addSelected: Agregar seleccionado(s)
   cancel: Cancelar
   search: Buscar

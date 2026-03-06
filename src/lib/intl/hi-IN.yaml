@@ -10,9 +10,9 @@ actions:
     scan: चेक स्कैन करें
     input: खर्च जोड़ें
   contacts:
-    group: समूह
+    group: समूह जोड़ें
     title: मित्र
-    contact: मित्र
+    contact: मित्र जोड़ें
   addSelected: चयनित जोड़ें
   cancel: रद्द करें
   search: खोजें
