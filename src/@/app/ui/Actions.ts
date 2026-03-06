@@ -47,14 +47,14 @@ function addContactGroup(dict: Dictionary): ActionItem {
 
 export const actions = (dict: Dictionary): ActionGroup[] => ([
   {
-    name: dict.actions.cheques.input,
+    name: dict.actions.cheques.title,
     direction: 'col',
     items: [
       addContactGroup(dict),
     ],
   },
   {
-    name: dict.actions.contacts.contact,
+    name: dict.actions.contacts.title,
     direction: 'row',
     items: [
       addContact(dict),

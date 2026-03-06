@@ -16,7 +16,7 @@
 <div
   class={[
     'w-full flex gap-1 group text-sm font-normal',
-    direction === 'row' ? 'flex-row justify-around text-sm' : 'flex-col',
+    direction === 'row' ? 'flex-row justify-around' : 'flex-col',
     classes,
   ]}
   data-direction={direction}>
