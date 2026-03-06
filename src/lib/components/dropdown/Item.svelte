@@ -5,8 +5,8 @@
     base: 'font-bold [&_svg]:text-muted-foreground px-3.5 py-2.5 dark:hover:bg-muted-foreground/20',
     variants: {
       direction: {
-        col: 'justify-start !pr-4',
-        row: "flex-col gap-1 h-fit [&_svg:not([class*='size-'])]:size-5",
+        col: 'justify-start',
+        row: "flex-col gap-1 h-fit [&_svg:not([class*='size-'])]:size-5 w-min min-w-20 whitespace-normal",
       },
     },
     defaultVariants: { direction: 'col' },
