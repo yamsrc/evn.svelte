@@ -5,7 +5,7 @@
   import { preloadCode } from '$app/navigation'
   import { page } from '$app/state'
   import { back } from '$com/history'
-  import { ios, safari, standalone } from '$lib/tools'
+  import { ios, safari, shell, standalone } from '$lib/tools'
   import { cn } from '$lib/utils'
   import { Button } from '$ui/button'
   import * as ButtonGroup from '$ui/button-group'
@@ -68,11 +68,11 @@
   <div
     class={[
       'absolute -z-1 inset-0 -top-6',
-      'standalone:-bottom-[max(env(safe-area-inset-bottom),1rem)]',
+      '-bottom-[max(env(safe-area-inset-bottom),1rem)]',
       'bg-background/60 backdrop-filter backdrop-blur-xs',
-      'mask-[linear-gradient(to_bottom,transparent_0%,black_40%)]',
+      'mask-[linear-gradient(to_bottom,transparent_0%,black_2rem)]',
     ]}
-    class:hidden={ios && safari && !standalone}>
+    class:hidden={ios && safari && !standalone && !shell}>
   </div>
   <div
     class={cn(
