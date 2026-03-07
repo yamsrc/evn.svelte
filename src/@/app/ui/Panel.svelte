@@ -6,7 +6,7 @@
 </script>
 
 <Card.Root
-  class={['bg-background p-4', classes]}
+  class={['bg-background px-4 py-3', classes]}
   style={name ? `view-transition-name: ${name};` : undefined}>
   <Card.Content class="space-y-2 p-0">
     {@render children()}
