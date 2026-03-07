@@ -84,7 +84,7 @@
       'flex items-center gap-2',
       'h-21 standalone:h-16 p-5 pt-0 sm:pb-6 standalone:px-6 standalone:pb-0',
       app && 'h-16 pb-0',
-      safariBrowser && 'h-18 pb-2', // min 6px from bottom edge to keep safari navbar transparent
+      safariBrowser && 'h-18 pb-[6px]', // min 6px from bottom edge to keep safari navbar transparent
       position === 'center' ? 'justify-center' : 'justify-between',
       position === 'start' ? 'flex-row' : 'flex-row-reverse',
     )}>
