@@ -12,9 +12,11 @@ settings:
     title: Dépenses
 permission:
   prompt: >-
-    Envie de voir ce type d’événements dès qu’ils se produisent ? Activez les
-    notifications pour les recevoir immédiatement sur votre appareil, au bon
-    moment.
+    Recevez des mises à jour en temps réel lorsque vos amis ajoutent des reçus
+    et des dépenses partagés. Activez les notifications sur votre appareil pour
+    ne rien manquer. Nous n'utilisons pas les notifications à des fins
+    marketing.
   button: Activer les notifications
   dismiss: Fermer
-  dismissed: "Pas d’inquiétude\_! Vous pouvez activer les notifications à tout moment dans les paramètres de votre profil."
+  dismissed: Vous pouvez activer les notifications à tout moment dans votre profil.
+  later: Faire plus tard

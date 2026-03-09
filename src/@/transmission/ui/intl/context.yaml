@@ -23,10 +23,12 @@ inputs:
         input: Expenses
   permission:
     prompt:
-      input: Want to see events like this as soon as they happen? Enable notifications to get them right on your device, on time.
+      input: Get real-time updates when friends add shared receipts and expenses. Turn on on-device notifications so you never miss one. We do not use notifications for marketing.
     button:
       input: Enable notifications
     dismiss:
       input: Dismiss
     dismissed:
-      input: No worries — you can enable notifications anytime from your profile settings.
+      input: Enable notifications anytime in your profile.
+    later:
+      input: Do it later

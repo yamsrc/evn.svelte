@@ -12,10 +12,10 @@ settings:
     title: Giderler
 permission:
   prompt: >-
-    Bu tür etkinlikleri anında görmek ister misiniz? Bildirimleri
-    etkinleştirerek, onları tam zamanında cihazınızda alın.
+    Arkadaşlarınız paylaşılan fiş ve harcamalar eklediğinde anlık güncellemeler
+    alın. Hiçbirini kaçırmamak için cihaz bildirimlerini açın. Bildirimleri
+    pazarlama amaçlı kullanmıyoruz.
   button: Bildirimleri etkinleştir
   dismiss: Kapat
-  dismissed: >-
-    Endişelenme — profil ayarlarından bildirimleri istediğin zaman
-    etkinleştirebilirsin.
+  dismissed: Profilinizde istediğiniz zaman bildirimleri etkinleştirebilirsiniz.
+  later: Daha sonra yap

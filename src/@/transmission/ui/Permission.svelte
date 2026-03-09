@@ -12,9 +12,12 @@
 
   let dismissing = $state(false)
 
-  function dismiss() {
+  function later() {
     transit(() => (dismissing = true))
-    setTimeout(() => dismissed.set(Date.now()), 3000)
+  }
+
+  function dismiss() {
+    transit(() => dismissed.set(Date.now()))
   }
 </script>
 
@@ -29,14 +32,15 @@
     style="view-transition-name: transmission-nudge;">
     {#if dismissing}
       <p class="text-sm">{$dict.permission.dismissed}</p>
+      <Button class="w-fit" onclick={dismiss}>{$dict.permission.dismiss}</Button>
     {:else}
       <p class="text-sm">{$dict.permission.prompt}</p>
       <div class="flex gap-2">
         <Button class="w-fit" onclick={request}>
           {$dict.permission.button}
         </Button>
-        <Button variant="secondary" onclick={dismiss}>
-          {$dict.permission.dismiss}
+        <Button variant="secondary" onclick={later}>
+          {$dict.permission.later}
         </Button>
       </div>
     {/if}

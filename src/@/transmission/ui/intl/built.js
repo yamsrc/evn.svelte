@@ -20,10 +20,11 @@ export const dictionaries = {
       }
     },
     "permission": {
-      "prompt": "هل ترغب في مشاهدة أحداث مثل هذه فور وقوعها؟ فعِّل الإشعارات لتصلك مباشرة على جهازك وفي الوقت المناسب.",
+      "prompt": "احصل على تحديثات فورية عندما يضيف الأصدقاء إيصالات ونفقات مشتركة. فعّل الإشعارات على الجهاز حتى لا يفوتك أي شيء. لا نستخدم الإشعارات لأغراض تسويقية.",
       "button": "تفعيل الإشعارات",
       "dismiss": "تجاهل",
-      "dismissed": "لا داعي للقلق — يمكنك تفعيل الإشعارات في أي وقت من إعدادات ملفك الشخصي."
+      "dismissed": "يمكنك تفعيل الإشعارات في ملفك الشخصي في أي وقت.",
+      "later": "افعل ذلك لاحقًا"
     }
   },
   "de-DE": {
@@ -44,10 +45,11 @@ export const dictionaries = {
       }
     },
     "permission": {
-      "prompt": "Möchtest du solche Events sofort mitbekommen? Aktiviere Benachrichtigungen, um sie direkt und pünktlich auf deinem Gerät zu erhalten.",
+      "prompt": "Erhalte Echtzeit-Benachrichtigungen, wenn Freunde gemeinsame Belege und Ausgaben hinzufügen. Aktiviere Benachrichtigungen auf deinem Gerät, damit du nichts verpasst. Wir verwenden Benachrichtigungen nicht für Marketingzwecke.",
       "button": "Benachrichtigungen aktivieren",
       "dismiss": "Schließen",
-      "dismissed": "Kein Problem – du kannst Benachrichtigungen jederzeit in deinen Profileinstellungen aktivieren."
+      "dismissed": "Du kannst Benachrichtigungen jederzeit in deinem Profil aktivieren.",
+      "later": "Später erledigen"
     }
   },
   "en-US": {
@@ -68,10 +70,11 @@ export const dictionaries = {
       }
     },
     "permission": {
-      "prompt": "Want to see events like this as soon as they happen? Enable notifications to get them on your device, right on time.",
+      "prompt": "Get real-time updates when friends add shared receipts and expenses. Turn on on-device notifications so you never miss one. We do not use notifications for marketing.",
       "button": "Enable notifications",
       "dismiss": "Dismiss",
-      "dismissed": "No worries — you can enable notifications anytime from your profile settings."
+      "dismissed": "You can enable notifications anytime in your profile.",
+      "later": "Do it later"
     }
   },
   "es-ES": {
@@ -92,10 +95,11 @@ export const dictionaries = {
       }
     },
     "permission": {
-      "prompt": "¿Quieres ver eventos como este en cuanto sucedan? Activa las notificaciones para recibirlos directamente en tu dispositivo, a tiempo.",
+      "prompt": "Recibe actualizaciones en tiempo real cuando tus amigos añadan recibos o gastos compartidos. Activa las notificaciones en tu dispositivo para no perderte nada. No usamos las notificaciones con fines de marketing.",
       "button": "Activar notificaciones",
       "dismiss": "Descartar",
-      "dismissed": "No te preocupes, puedes activar las notificaciones en cualquier momento desde la configuración de tu perfil."
+      "dismissed": "Puedes activar las notificaciones en tu perfil en cualquier momento.",
+      "later": "Hazlo más tarde"
     }
   },
   "fr-FR": {
@@ -116,10 +120,11 @@ export const dictionaries = {
       }
     },
     "permission": {
-      "prompt": "Envie de voir ce type d’événements dès qu’ils se produisent ? Activez les notifications pour les recevoir immédiatement sur votre appareil, au bon moment.",
+      "prompt": "Recevez des mises à jour en temps réel lorsque vos amis ajoutent des reçus et des dépenses partagés. Activez les notifications sur votre appareil pour ne rien manquer. Nous n'utilisons pas les notifications à des fins marketing.",
       "button": "Activer les notifications",
       "dismiss": "Fermer",
-      "dismissed": "Pas d’inquiétude ! Vous pouvez activer les notifications à tout moment dans les paramètres de votre profil."
+      "dismissed": "Vous pouvez activer les notifications à tout moment dans votre profil.",
+      "later": "Faire plus tard"
     }
   },
   "hi-IN": {
@@ -140,10 +145,11 @@ export const dictionaries = {
       }
     },
     "permission": {
-      "prompt": "ऐसे इवेंट्स को जैसे ही वे हों, देखना चाहते हैं? नोटिफ़िकेशन सक्षम करें ताकि वे समय पर सीधे आपके डिवाइस पर मिल सकें।",
+      "prompt": "दोस्त साझा रसीदें और खर्च जोड़ें तो तुरंत अपडेट पाएं। डिवाइस नोटिफिकेशन चालू करें ताकि आप कोई भी अपडेट न चूकें। हम नोटिफिकेशन का इस्तेमाल मार्केटिंग के लिए नहीं करते।",
       "button": "नोटिफिकेशन सक्षम करें",
       "dismiss": "खारिज करें",
-      "dismissed": "चिंता न करें — आप कभी भी प्रोफ़ाइल सेटिंग्स से नोटिफिकेशन सक्षम कर सकते हैं।"
+      "dismissed": "आप कभी भी अपनी प्रोफ़ाइल में सूचनाएँ चालू कर सकते हैं।",
+      "later": "बाद में करें"
     }
   },
   "it-IT": {
@@ -164,10 +170,11 @@ export const dictionaries = {
       }
     },
     "permission": {
-      "prompt": "Vuoi vedere eventi come questo non appena accadono? Attiva le notifiche per riceverli subito sul tuo dispositivo, puntualmente.",
+      "prompt": "Ricevi aggiornamenti in tempo reale quando gli amici aggiungono ricevute e spese condivise. Attiva le notifiche sul dispositivo per non perderne nessuna. Non usiamo le notifiche per scopi di marketing.",
       "button": "Attiva le notifiche",
       "dismiss": "Chiudi",
-      "dismissed": "Nessun problema — puoi attivare le notifiche in qualsiasi momento dalle impostazioni del tuo profilo."
+      "dismissed": "Puoi attivare le notifiche in qualsiasi momento nel tuo profilo.",
+      "later": "Fallo dopo"
     }
   },
   "ja-JP": {
@@ -188,10 +195,11 @@ export const dictionaries = {
       }
     },
     "permission": {
-      "prompt": "このようなイベントをすぐに知りたいですか？通知を有効にすると、タイムリーに端末に届けられます。",
+      "prompt": "友だちが共有レシートや支出を追加した際、リアルタイムで通知を受け取れます。デバイスの通知をオンにして、見逃しを防ぎましょう。通知はマーケティング目的で使用しません。",
       "button": "通知を有効にする",
       "dismiss": "閉じる",
-      "dismissed": "ご心配なく — 通知はいつでもプロフィール設定から有効にできます。"
+      "dismissed": "通知はいつでもプロフィールで有効にできます。",
+      "later": "後でやる"
     }
   },
   "ko-KR": {
@@ -212,10 +220,11 @@ export const dictionaries = {
       }
     },
     "permission": {
-      "prompt": "이런 이벤트가 발생하자마자 보고 싶으신가요? 알림을 활성화하면 기기에서 바로 받아볼 수 있어요.",
+      "prompt": "친구가 공유 영수증이나 비용을 추가하면 실시간 업데이트를 받아보세요. 기기 알림을 켜 두면 빠뜨리는 일이 없습니다. 알림은 마케팅 목적에 사용되지 않습니다.",
       "button": "알림 활성화",
       "dismiss": "닫기",
-      "dismissed": "걱정하지 마세요 — 프로필 설정에서 언제든지 알림을 활성화할 수 있습니다."
+      "dismissed": "언제든지 프로필에서 알림을 활성화할 수 있습니다.",
+      "later": "나중에 하기"
     }
   },
   "nl-NL": {
@@ -236,10 +245,11 @@ export const dictionaries = {
       }
     },
     "permission": {
-      "prompt": "Wil je dit soort evenementen direct zien zodra ze gebeuren? Zet meldingen aan om ze direct op je apparaat en op tijd te ontvangen.",
+      "prompt": "Ontvang realtime updates wanneer vrienden gedeelde bonnetjes en uitgaven toevoegen. Zet meldingen op je apparaat aan, zodat je er nooit eentje mist. We gebruiken meldingen niet voor marketing.",
       "button": "Meldingen inschakelen",
       "dismiss": "Sluiten",
-      "dismissed": "Geen zorgen — je kunt meldingen op elk moment inschakelen via je profielinstellingen."
+      "dismissed": "Je kunt op elk moment meldingen inschakelen in je profiel.",
+      "later": "Later doen"
     }
   },
   "ru-RU": {
@@ -260,10 +270,11 @@ export const dictionaries = {
       }
     },
     "permission": {
-      "prompt": "Хотите узнавать о таких событиях сразу, как только они происходят? Включите уведомления, чтобы получать их вовремя прямо на устройство.",
+      "prompt": "Получайте обновления в реальном времени, когда друзья добавляют общие чеки и расходы. Включите уведомления на устройстве, чтобы ничего не пропустить. Мы не используем уведомления для маркетинга.",
       "button": "Включить уведомления",
       "dismiss": "Закрыть",
-      "dismissed": "Не переживайте — вы всегда можете включить уведомления в настройках профиля."
+      "dismissed": "Вы можете включить уведомления в своём профиле в любое время.",
+      "later": "Сделать позже"
     }
   },
   "sw-TZ": {
@@ -284,10 +295,11 @@ export const dictionaries = {
       }
     },
     "permission": {
-      "prompt": "Unataka kuona matukio kama haya mara tu yanapotokea? Washa arifa ili uyapate moja kwa moja kwenye kifaa chako, kwa wakati.",
+      "prompt": "Pata masasisho ya papo hapo unapofiwa na marafiki wanapoongeza risiti na gharama za pamoja. Washa arifa kwenye kifaa chako ili usikose hata moja. Hatutumii arifa kwa masuala ya masoko.",
       "button": "Washa arifa",
       "dismiss": "Funga",
-      "dismissed": "Usijali — unaweza kuwezesha arifa wakati wowote kwenye mipangilio ya wasifu wako."
+      "dismissed": "Unaweza kuwasha arifa wakati wowote kwenye wasifu wako.",
+      "later": "Fanya baadaye"
     }
   },
   "tr-TR": {
@@ -308,10 +320,11 @@ export const dictionaries = {
       }
     },
     "permission": {
-      "prompt": "Bu tür etkinlikleri anında görmek ister misiniz? Bildirimleri etkinleştirerek, onları tam zamanında cihazınızda alın.",
+      "prompt": "Arkadaşlarınız paylaşılan fiş ve harcamalar eklediğinde anlık güncellemeler alın. Hiçbirini kaçırmamak için cihaz bildirimlerini açın. Bildirimleri pazarlama amaçlı kullanmıyoruz.",
       "button": "Bildirimleri etkinleştir",
       "dismiss": "Kapat",
-      "dismissed": "Endişelenme — profil ayarlarından bildirimleri istediğin zaman etkinleştirebilirsin."
+      "dismissed": "Profilinizde istediğiniz zaman bildirimleri etkinleştirebilirsiniz.",
+      "later": "Daha sonra yap"
     }
   },
   "uk-UA": {
@@ -332,10 +345,11 @@ export const dictionaries = {
       }
     },
     "permission": {
-      "prompt": "Бажаєте одразу дізнаватися про такі події? Увімкніть сповіщення, щоб отримувати їх вчасно прямо на свій пристрій.",
+      "prompt": "Отримуйте оновлення в реальному часі, коли друзі додають спільні чеки та витрати. Увімкніть сповіщення на пристрої, щоб нічого не пропустити. Ми не використовуємо сповіщення для маркетингу.",
       "button": "Увімкнути сповіщення",
       "dismiss": "Закрити",
-      "dismissed": "Не хвилюйтеся — ви можете ввімкнути сповіщення у налаштуваннях профілю в будь-який час."
+      "dismissed": "Ви можете ввімкнути сповіщення у своєму профілі будь-коли.",
+      "later": "Зробити пізніше"
     }
   },
   "zh-CN": {
@@ -356,10 +370,11 @@ export const dictionaries = {
       }
     },
     "permission": {
-      "prompt": "想在此类活动一发生就及时获取吗？开启通知即可准时在您的设备上收到提醒。",
+      "prompt": "当朋友添加共享收据和支出时，实时获取更新。开启设备通知，及时掌握每一条动态。我们不会将通知用于营销目的。",
       "button": "启用通知",
       "dismiss": "关闭",
-      "dismissed": "别担心，您随时可以在个人资料设置中开启通知。"
+      "dismissed": "你可以随时在个人资料中启用通知。",
+      "later": "稍后再做"
     }
   }
 };

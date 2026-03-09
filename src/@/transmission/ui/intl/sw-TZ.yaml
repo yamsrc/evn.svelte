@@ -12,10 +12,10 @@ settings:
     title: Matumizi
 permission:
   prompt: >-
-    Unataka kuona matukio kama haya mara tu yanapotokea? Washa arifa ili uyapate
-    moja kwa moja kwenye kifaa chako, kwa wakati.
+    Pata masasisho ya papo hapo unapofiwa na marafiki wanapoongeza risiti na
+    gharama za pamoja. Washa arifa kwenye kifaa chako ili usikose hata moja.
+    Hatutumii arifa kwa masuala ya masoko.
   button: Washa arifa
   dismiss: Funga
-  dismissed: >-
-    Usijali — unaweza kuwezesha arifa wakati wowote kwenye mipangilio ya wasifu
-    wako.
+  dismissed: Unaweza kuwasha arifa wakati wowote kwenye wasifu wako.
+  later: Fanya baadaye

@@ -30,5 +30,6 @@ export type Dictionary = {
         button: string
         dismiss: string
         dismissed: string
+        later: string
       }
     }
