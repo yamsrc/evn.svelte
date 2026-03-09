@@ -31,5 +31,6 @@ export type Dictionary = {
         dismiss: string
         dismissed: string
         later: string
+        comment: string
       }
     }

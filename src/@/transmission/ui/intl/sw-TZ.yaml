@@ -12,10 +12,12 @@ settings:
     title: Matumizi
 permission:
   prompt: >-
-    Pata masasisho ya papo hapo unapofiwa na marafiki wanapoongeza risiti na
-    gharama za pamoja. Washa arifa kwenye kifaa chako ili usikose hata moja.
-    Hatutumii arifa kwa masuala ya masoko.
+    Washa arifa ili upate masasisho ya papo hapo kuhusu matumizi, risiti na
+    shughuli nyingine.
   button: Washa arifa
   dismiss: Funga
-  dismissed: Unaweza kuwasha arifa wakati wowote kwenye wasifu wako.
+  dismissed: >-
+    Unaweza kuwasha arifa wakati wowote baadaye katika mipangilio ya akaunti
+    yako.
   later: Fanya baadaye
+  comment: Hatutumii arifa kwa madhumuni ya uuzaji.

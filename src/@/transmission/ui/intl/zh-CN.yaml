@@ -11,8 +11,9 @@ settings:
     description: 共享支出与资金活动
     title: 支出
 permission:
-  prompt: 当朋友添加共享收据和支出时，实时获取更新。开启设备通知，及时掌握每一条动态。我们不会将通知用于营销目的。
+  prompt: 开启通知，第一时间获取有关支出、收据及其他活动的更新。
   button: 启用通知
   dismiss: 关闭
-  dismissed: 你可以随时在个人资料中启用通知。
+  dismissed: 你可以稍后在账户设置中随时开启通知。
   later: 稍后再做
+  comment: 我们不会将通知用于营销目的。

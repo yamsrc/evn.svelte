@@ -12,10 +12,12 @@ settings:
     title: Ausgaben
 permission:
   prompt: >-
-    Erhalte Echtzeit-Benachrichtigungen, wenn Freunde gemeinsame Belege und
-    Ausgaben hinzufügen. Aktiviere Benachrichtigungen auf deinem Gerät, damit du
-    nichts verpasst. Wir verwenden Benachrichtigungen nicht für Marketingzwecke.
+    Aktiviere Benachrichtigungen, um sofort über Ausgaben, Quittungen und andere
+    Aktivitäten informiert zu werden.
   button: Benachrichtigungen aktivieren
   dismiss: Schließen
-  dismissed: Du kannst Benachrichtigungen jederzeit in deinem Profil aktivieren.
+  dismissed: >-
+    Du kannst Benachrichtigungen jederzeit später in deinen Kontoeinstellungen
+    aktivieren.
   later: Später erledigen
+  comment: Wir verwenden Benachrichtigungen nicht für Marketingzwecke.

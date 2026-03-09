@@ -204,7 +204,7 @@
   }
 
   p {
-    @apply leading-relaxed text-pretty;
+    @apply text-pretty;
   }
 
   input {

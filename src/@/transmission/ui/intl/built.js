@@ -20,11 +20,12 @@ export const dictionaries = {
       }
     },
     "permission": {
-      "prompt": "احصل على تحديثات فورية عندما يضيف الأصدقاء إيصالات ونفقات مشتركة. فعّل الإشعارات على الجهاز حتى لا يفوتك أي شيء. لا نستخدم الإشعارات لأغراض تسويقية.",
+      "prompt": "قم بتفعيل الإشعارات للحصول على تحديثات فورية حول النفقات والإيصالات والنشاطات الأخرى.",
       "button": "تفعيل الإشعارات",
       "dismiss": "تجاهل",
-      "dismissed": "يمكنك تفعيل الإشعارات في ملفك الشخصي في أي وقت.",
-      "later": "افعل ذلك لاحقًا"
+      "dismissed": "يمكنك دائمًا تفعيل الإشعارات لاحقًا من إعدادات حسابك.",
+      "later": "افعل ذلك لاحقًا",
+      "comment": "نحن لا نستخدم الإشعارات لأغراض تسويقية."
     }
   },
   "de-DE": {
@@ -45,11 +46,12 @@ export const dictionaries = {
       }
     },
     "permission": {
-      "prompt": "Erhalte Echtzeit-Benachrichtigungen, wenn Freunde gemeinsame Belege und Ausgaben hinzufügen. Aktiviere Benachrichtigungen auf deinem Gerät, damit du nichts verpasst. Wir verwenden Benachrichtigungen nicht für Marketingzwecke.",
+      "prompt": "Aktiviere Benachrichtigungen, um sofort über Ausgaben, Quittungen und andere Aktivitäten informiert zu werden.",
       "button": "Benachrichtigungen aktivieren",
       "dismiss": "Schließen",
-      "dismissed": "Du kannst Benachrichtigungen jederzeit in deinem Profil aktivieren.",
-      "later": "Später erledigen"
+      "dismissed": "Du kannst Benachrichtigungen jederzeit später in deinen Kontoeinstellungen aktivieren.",
+      "later": "Später erledigen",
+      "comment": "Wir verwenden Benachrichtigungen nicht für Marketingzwecke."
     }
   },
   "en-US": {
@@ -70,11 +72,12 @@ export const dictionaries = {
       }
     },
     "permission": {
-      "prompt": "Get real-time updates when friends add shared receipts and expenses. Turn on on-device notifications so you never miss one. We do not use notifications for marketing.",
+      "prompt": "Turn on notifications to get instant updates about expenses, receipts, and other activity.",
       "button": "Enable notifications",
       "dismiss": "Dismiss",
-      "dismissed": "You can enable notifications anytime in your profile.",
-      "later": "Do it later"
+      "dismissed": "You can always enable notifications later in your account settings.",
+      "later": "Do it later",
+      "comment": "We do not use notifications for marketing."
     }
   },
   "es-ES": {
@@ -95,11 +98,12 @@ export const dictionaries = {
       }
     },
     "permission": {
-      "prompt": "Recibe actualizaciones en tiempo real cuando tus amigos añadan recibos o gastos compartidos. Activa las notificaciones en tu dispositivo para no perderte nada. No usamos las notificaciones con fines de marketing.",
+      "prompt": "Activa las notificaciones para recibir actualizaciones instantáneas sobre gastos, recibos y otras actividades.",
       "button": "Activar notificaciones",
       "dismiss": "Descartar",
-      "dismissed": "Puedes activar las notificaciones en tu perfil en cualquier momento.",
-      "later": "Hazlo más tarde"
+      "dismissed": "Siempre puedes activar las notificaciones más tarde en la configuración de tu cuenta.",
+      "later": "Hazlo más tarde",
+      "comment": "No usamos las notificaciones con fines de marketing."
     }
   },
   "fr-FR": {
@@ -120,11 +124,12 @@ export const dictionaries = {
       }
     },
     "permission": {
-      "prompt": "Recevez des mises à jour en temps réel lorsque vos amis ajoutent des reçus et des dépenses partagés. Activez les notifications sur votre appareil pour ne rien manquer. Nous n'utilisons pas les notifications à des fins marketing.",
+      "prompt": "Activez les notifications pour recevoir des mises à jour instantanées sur les dépenses, les reçus et d'autres activités.",
       "button": "Activer les notifications",
       "dismiss": "Fermer",
-      "dismissed": "Vous pouvez activer les notifications à tout moment dans votre profil.",
-      "later": "Faire plus tard"
+      "dismissed": "Vous pourrez toujours activer les notifications plus tard dans les paramètres de votre compte.",
+      "later": "Fais-le plus tard",
+      "comment": "Nous n'utilisons pas les notifications à des fins de marketing."
     }
   },
   "hi-IN": {
@@ -145,11 +150,12 @@ export const dictionaries = {
       }
     },
     "permission": {
-      "prompt": "दोस्त साझा रसीदें और खर्च जोड़ें तो तुरंत अपडेट पाएं। डिवाइस नोटिफिकेशन चालू करें ताकि आप कोई भी अपडेट न चूकें। हम नोटिफिकेशन का इस्तेमाल मार्केटिंग के लिए नहीं करते।",
+      "prompt": "खर्च, रसीदों और अन्य गतिविधियों के बारे में तुरंत अपडेट पाने के लिए नोटिफिकेशन चालू करें।",
       "button": "नोटिफिकेशन सक्षम करें",
       "dismiss": "खारिज करें",
-      "dismissed": "आप कभी भी अपनी प्रोफ़ाइल में सूचनाएँ चालू कर सकते हैं।",
-      "later": "बाद में करें"
+      "dismissed": "आप कभी भी अपने खाते की सेटिंग्स में बाद में सूचनाएं चालू कर सकते हैं।",
+      "later": "इसे बाद में करें",
+      "comment": "हम मार्केटिंग के लिए नोटिफिकेशन का इस्तेमाल नहीं करते हैं।"
     }
   },
   "it-IT": {
@@ -170,11 +176,12 @@ export const dictionaries = {
       }
     },
     "permission": {
-      "prompt": "Ricevi aggiornamenti in tempo reale quando gli amici aggiungono ricevute e spese condivise. Attiva le notifiche sul dispositivo per non perderne nessuna. Non usiamo le notifiche per scopi di marketing.",
+      "prompt": "Attiva le notifiche per ricevere aggiornamenti istantanei su spese, ricevute e altre attività.",
       "button": "Attiva le notifiche",
       "dismiss": "Chiudi",
-      "dismissed": "Puoi attivare le notifiche in qualsiasi momento nel tuo profilo.",
-      "later": "Fallo dopo"
+      "dismissed": "Puoi sempre attivare le notifiche in un secondo momento dalle impostazioni del tuo account.",
+      "later": "Fallo dopo",
+      "comment": "Non utilizziamo le notifiche per scopi di marketing."
     }
   },
   "ja-JP": {
@@ -195,11 +202,12 @@ export const dictionaries = {
       }
     },
     "permission": {
-      "prompt": "友だちが共有レシートや支出を追加した際、リアルタイムで通知を受け取れます。デバイスの通知をオンにして、見逃しを防ぎましょう。通知はマーケティング目的で使用しません。",
+      "prompt": "通知をオンにして、経費、領収書、その他のアクティビティに関する即時アップデートを受け取りましょう。",
       "button": "通知を有効にする",
       "dismiss": "閉じる",
-      "dismissed": "通知はいつでもプロフィールで有効にできます。",
-      "later": "後でやる"
+      "dismissed": "通知は後からアカウント設定でいつでも有効にできます。",
+      "later": "あとでやる",
+      "comment": "通知はマーケティング目的には使用しません。"
     }
   },
   "ko-KR": {
@@ -220,11 +228,12 @@ export const dictionaries = {
       }
     },
     "permission": {
-      "prompt": "친구가 공유 영수증이나 비용을 추가하면 실시간 업데이트를 받아보세요. 기기 알림을 켜 두면 빠뜨리는 일이 없습니다. 알림은 마케팅 목적에 사용되지 않습니다.",
+      "prompt": "알림을 켜서 비용, 영수증 및 기타 활동에 대한 즉각적인 업데이트를 받아보세요.",
       "button": "알림 활성화",
       "dismiss": "닫기",
-      "dismissed": "언제든지 프로필에서 알림을 활성화할 수 있습니다.",
-      "later": "나중에 하기"
+      "dismissed": "알림은 나중에 계정 설정에서 언제든지 활성화할 수 있습니다.",
+      "later": "나중에 하기",
+      "comment": "저희는 마케팅을 위해 알림을 사용하지 않습니다."
     }
   },
   "nl-NL": {
@@ -245,11 +254,12 @@ export const dictionaries = {
       }
     },
     "permission": {
-      "prompt": "Ontvang realtime updates wanneer vrienden gedeelde bonnetjes en uitgaven toevoegen. Zet meldingen op je apparaat aan, zodat je er nooit eentje mist. We gebruiken meldingen niet voor marketing.",
+      "prompt": "Zet meldingen aan om direct updates te krijgen over uitgaven, bonnen en andere activiteiten.",
       "button": "Meldingen inschakelen",
       "dismiss": "Sluiten",
-      "dismissed": "Je kunt op elk moment meldingen inschakelen in je profiel.",
-      "later": "Later doen"
+      "dismissed": "Je kunt meldingen later altijd inschakelen via je accountinstellingen.",
+      "later": "Later doen",
+      "comment": "Wij gebruiken meldingen niet voor marketingdoeleinden."
     }
   },
   "ru-RU": {
@@ -270,11 +280,12 @@ export const dictionaries = {
       }
     },
     "permission": {
-      "prompt": "Получайте обновления в реальном времени, когда друзья добавляют общие чеки и расходы. Включите уведомления на устройстве, чтобы ничего не пропустить. Мы не используем уведомления для маркетинга.",
+      "prompt": "Включите уведомления, чтобы получать мгновенные обновления о расходах, чеках и другой активности.",
       "button": "Включить уведомления",
       "dismiss": "Закрыть",
-      "dismissed": "Вы можете включить уведомления в своём профиле в любое время.",
-      "later": "Сделать позже"
+      "dismissed": "Вы всегда сможете включить уведомления позже в настройках аккаунта.",
+      "later": "Сделать позже",
+      "comment": "Мы не используем уведомления для маркетинга."
     }
   },
   "sw-TZ": {
@@ -295,11 +306,12 @@ export const dictionaries = {
       }
     },
     "permission": {
-      "prompt": "Pata masasisho ya papo hapo unapofiwa na marafiki wanapoongeza risiti na gharama za pamoja. Washa arifa kwenye kifaa chako ili usikose hata moja. Hatutumii arifa kwa masuala ya masoko.",
+      "prompt": "Washa arifa ili upate masasisho ya papo hapo kuhusu matumizi, risiti na shughuli nyingine.",
       "button": "Washa arifa",
       "dismiss": "Funga",
-      "dismissed": "Unaweza kuwasha arifa wakati wowote kwenye wasifu wako.",
-      "later": "Fanya baadaye"
+      "dismissed": "Unaweza kuwasha arifa wakati wowote baadaye katika mipangilio ya akaunti yako.",
+      "later": "Fanya baadaye",
+      "comment": "Hatutumii arifa kwa madhumuni ya uuzaji."
     }
   },
   "tr-TR": {
@@ -320,11 +332,12 @@ export const dictionaries = {
       }
     },
     "permission": {
-      "prompt": "Arkadaşlarınız paylaşılan fiş ve harcamalar eklediğinde anlık güncellemeler alın. Hiçbirini kaçırmamak için cihaz bildirimlerini açın. Bildirimleri pazarlama amaçlı kullanmıyoruz.",
+      "prompt": "Giderler, makbuzlar ve diğer aktivitelerle ilgili anlık güncellemeler almak için bildirimleri açın.",
       "button": "Bildirimleri etkinleştir",
       "dismiss": "Kapat",
-      "dismissed": "Profilinizde istediğiniz zaman bildirimleri etkinleştirebilirsiniz.",
-      "later": "Daha sonra yap"
+      "dismissed": "Bildirimleri dilediğin zaman hesap ayarlarından etkinleştirebilirsin.",
+      "later": "Daha sonra yap",
+      "comment": "Bildirimleri pazarlama amacıyla kullanmıyoruz."
     }
   },
   "uk-UA": {
@@ -345,11 +358,12 @@ export const dictionaries = {
       }
     },
     "permission": {
-      "prompt": "Отримуйте оновлення в реальному часі, коли друзі додають спільні чеки та витрати. Увімкніть сповіщення на пристрої, щоб нічого не пропустити. Ми не використовуємо сповіщення для маркетингу.",
+      "prompt": "Увімкніть сповіщення, щоб миттєво отримувати оновлення про витрати, чеки та іншу активність.",
       "button": "Увімкнути сповіщення",
       "dismiss": "Закрити",
-      "dismissed": "Ви можете ввімкнути сповіщення у своєму профілі будь-коли.",
-      "later": "Зробити пізніше"
+      "dismissed": "Ви завжди зможете ввімкнути сповіщення пізніше в налаштуваннях облікового запису.",
+      "later": "Зробити пізніше",
+      "comment": "Ми не використовуємо сповіщення для маркетингових цілей."
     }
   },
   "zh-CN": {
@@ -370,11 +384,12 @@ export const dictionaries = {
       }
     },
     "permission": {
-      "prompt": "当朋友添加共享收据和支出时，实时获取更新。开启设备通知，及时掌握每一条动态。我们不会将通知用于营销目的。",
+      "prompt": "开启通知，第一时间获取有关支出、收据及其他活动的更新。",
       "button": "启用通知",
       "dismiss": "关闭",
-      "dismissed": "你可以随时在个人资料中启用通知。",
-      "later": "稍后再做"
+      "dismissed": "你可以稍后在账户设置中随时开启通知。",
+      "later": "稍后再做",
+      "comment": "我们不会将通知用于营销目的。"
     }
   }
 };

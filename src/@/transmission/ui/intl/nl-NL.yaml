@@ -12,10 +12,10 @@ settings:
     title: Uitgaven
 permission:
   prompt: >-
-    Ontvang realtime updates wanneer vrienden gedeelde bonnetjes en uitgaven
-    toevoegen. Zet meldingen op je apparaat aan, zodat je er nooit eentje mist.
-    We gebruiken meldingen niet voor marketing.
+    Zet meldingen aan om direct updates te krijgen over uitgaven, bonnen en
+    andere activiteiten.
   button: Meldingen inschakelen
   dismiss: Sluiten
-  dismissed: Je kunt op elk moment meldingen inschakelen in je profiel.
+  dismissed: Je kunt meldingen later altijd inschakelen via je accountinstellingen.
   later: Later doen
+  comment: Wij gebruiken meldingen niet voor marketingdoeleinden.

@@ -12,10 +12,12 @@ settings:
     title: Spese
 permission:
   prompt: >-
-    Ricevi aggiornamenti in tempo reale quando gli amici aggiungono ricevute e
-    spese condivise. Attiva le notifiche sul dispositivo per non perderne
-    nessuna. Non usiamo le notifiche per scopi di marketing.
+    Attiva le notifiche per ricevere aggiornamenti istantanei su spese, ricevute
+    e altre attività.
   button: Attiva le notifiche
   dismiss: Chiudi
-  dismissed: Puoi attivare le notifiche in qualsiasi momento nel tuo profilo.
+  dismissed: >-
+    Puoi sempre attivare le notifiche in un secondo momento dalle impostazioni
+    del tuo account.
   later: Fallo dopo
+  comment: Non utilizziamo le notifiche per scopi di marketing.

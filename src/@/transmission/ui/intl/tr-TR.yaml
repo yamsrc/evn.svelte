@@ -12,10 +12,10 @@ settings:
     title: Giderler
 permission:
   prompt: >-
-    Arkadaşlarınız paylaşılan fiş ve harcamalar eklediğinde anlık güncellemeler
-    alın. Hiçbirini kaçırmamak için cihaz bildirimlerini açın. Bildirimleri
-    pazarlama amaçlı kullanmıyoruz.
+    Giderler, makbuzlar ve diğer aktivitelerle ilgili anlık güncellemeler almak
+    için bildirimleri açın.
   button: Bildirimleri etkinleştir
   dismiss: Kapat
-  dismissed: Profilinizde istediğiniz zaman bildirimleri etkinleştirebilirsiniz.
+  dismissed: Bildirimleri dilediğin zaman hesap ayarlarından etkinleştirebilirsin.
   later: Daha sonra yap
+  comment: Bildirimleri pazarlama amacıyla kullanmıyoruz.

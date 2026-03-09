@@ -12,10 +12,12 @@ settings:
     title: Gastos
 permission:
   prompt: >-
-    Recibe actualizaciones en tiempo real cuando tus amigos añadan recibos o
-    gastos compartidos. Activa las notificaciones en tu dispositivo para no
-    perderte nada. No usamos las notificaciones con fines de marketing.
+    Activa las notificaciones para recibir actualizaciones instantáneas sobre
+    gastos, recibos y otras actividades.
   button: Activar notificaciones
   dismiss: Descartar
-  dismissed: Puedes activar las notificaciones en tu perfil en cualquier momento.
+  dismissed: >-
+    Siempre puedes activar las notificaciones más tarde en la configuración de
+    tu cuenta.
   later: Hazlo más tarde
+  comment: No usamos las notificaciones con fines de marketing.

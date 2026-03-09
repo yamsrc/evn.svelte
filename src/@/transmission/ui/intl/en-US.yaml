@@ -12,10 +12,10 @@ settings:
     title: Expenses
 permission:
   prompt: >-
-    Get real-time updates when friends add shared receipts and expenses. Turn on
-    on-device notifications so you never miss one. We do not use notifications
-    for marketing.
+    Turn on notifications to get instant updates about expenses, receipts, and
+    other activity.
   button: Enable notifications
   dismiss: Dismiss
-  dismissed: You can enable notifications anytime in your profile.
+  dismissed: You can always enable notifications later in your account settings.
   later: Do it later
+  comment: We do not use notifications for marketing.
