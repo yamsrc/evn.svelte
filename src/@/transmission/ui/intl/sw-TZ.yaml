@@ -1,12 +1,3 @@
-nudge:
-  prompt: >-
-    Unataka kuona matukio kama haya mara tu yanapotokea? Washa arifa ili uyapate
-    moja kwa moja kwenye kifaa chako, kwa wakati.
-  button: Washa arifa
-  dismiss: Funga
-  dismissed: >-
-    Usijali — unaweza kuwezesha arifa wakati wowote kwenye mipangilio ya wasifu
-    wako.
 settings:
   title: Taarifa
   description: Tutakujulisha kunapotokea jambo muhimu
@@ -19,3 +10,12 @@ settings:
   expenses:
     description: Matumizi ya pamoja na shughuli za fedha
     title: Matumizi
+permission:
+  prompt: >-
+    Unataka kuona matukio kama haya mara tu yanapotokea? Washa arifa ili uyapate
+    moja kwa moja kwenye kifaa chako, kwa wakati.
+  button: Washa arifa
+  dismiss: Funga
+  dismissed: >-
+    Usijali — unaweza kuwezesha arifa wakati wowote kwenye mipangilio ya wasifu
+    wako.

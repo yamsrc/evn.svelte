@@ -1,8 +1,3 @@
-nudge:
-  prompt: 이런 이벤트가 발생하자마자 보고 싶으신가요? 알림을 활성화하면 기기에서 바로 받아볼 수 있어요.
-  button: 알림 활성화
-  dismiss: 닫기
-  dismissed: 걱정하지 마세요 — 프로필 설정에서 언제든지 알림을 활성화할 수 있습니다.
 settings:
   title: 알림
   description: 중요한 일이 발생하면 알려드리겠습니다
@@ -15,3 +10,8 @@ settings:
   expenses:
     description: 공동 지출 및 금전 활동
     title: 지출
+permission:
+  prompt: 이런 이벤트가 발생하자마자 보고 싶으신가요? 알림을 활성화하면 기기에서 바로 받아볼 수 있어요.
+  button: 알림 활성화
+  dismiss: 닫기
+  dismissed: 걱정하지 마세요 — 프로필 설정에서 언제든지 알림을 활성화할 수 있습니다.

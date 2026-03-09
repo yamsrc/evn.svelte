@@ -1,12 +1,3 @@
-nudge:
-  prompt: >-
-    ¿Quieres ver eventos como este en cuanto sucedan? Activa las notificaciones
-    para recibirlos directamente en tu dispositivo, a tiempo.
-  button: Activar notificaciones
-  dismiss: Descartar
-  dismissed: >-
-    No te preocupes, puedes activar las notificaciones en cualquier momento
-    desde la configuración de tu perfil.
 settings:
   title: Notificaciones
   description: Te avisaremos cuando suceda algo importante
@@ -19,3 +10,12 @@ settings:
   expenses:
     description: Gastos compartidos y actividad de dinero
     title: Gastos
+permission:
+  prompt: >-
+    ¿Quieres ver eventos como este en cuanto sucedan? Activa las notificaciones
+    para recibirlos directamente en tu dispositivo, a tiempo.
+  button: Activar notificaciones
+  dismiss: Descartar
+  dismissed: >-
+    No te preocupes, puedes activar las notificaciones en cualquier momento
+    desde la configuración de tu perfil.

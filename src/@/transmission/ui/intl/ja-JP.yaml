@@ -1,8 +1,3 @@
-nudge:
-  prompt: このようなイベントをすぐに知りたいですか？通知を有効にすると、タイムリーに端末に届けられます。
-  button: 通知を有効にする
-  dismiss: 閉じる
-  dismissed: ご心配なく — 通知はいつでもプロフィール設定から有効にできます。
 settings:
   title: 通知
   description: 重要なことが起きたときにお知らせします
@@ -15,3 +10,8 @@ settings:
   expenses:
     description: 共有の支出とお金の履歴
     title: 支出
+permission:
+  prompt: このようなイベントをすぐに知りたいですか？通知を有効にすると、タイムリーに端末に届けられます。
+  button: 通知を有効にする
+  dismiss: 閉じる
+  dismissed: ご心配なく — 通知はいつでもプロフィール設定から有効にできます。

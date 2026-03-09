@@ -28,15 +28,15 @@
     ]}
     style="view-transition-name: transmission-nudge;">
     {#if dismissing}
-      <p class="text-sm">{$dict.nudge.dismissed}</p>
+      <p class="text-sm">{$dict.permission.dismissed}</p>
     {:else}
-      <p class="text-sm">{$dict.nudge.prompt}</p>
+      <p class="text-sm">{$dict.permission.prompt}</p>
       <div class="flex gap-2">
         <Button class="w-fit" onclick={request}>
-          {$dict.nudge.button}
+          {$dict.permission.button}
         </Button>
         <Button variant="secondary" onclick={dismiss}>
-          {$dict.nudge.dismiss}
+          {$dict.permission.dismiss}
         </Button>
       </div>
     {/if}
