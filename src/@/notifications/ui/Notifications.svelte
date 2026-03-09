@@ -48,6 +48,7 @@
   )
 
   const visible = $derived(renderable.slice(0, max))
+  const stacked = $derived(renderable.length >= min)
 
   let stack = $state<ReturnType<typeof Stack.Root> | undefined>()
 </script>
@@ -73,7 +74,7 @@
 
 <div class="space-y-2">
   {#if renderable.length > 0}
-    {#if collapsed}
+    {#if collapsed && stacked}
       <Dismissable ondismiss={clearAll}>
         {@render content()}
       </Dismissable>
