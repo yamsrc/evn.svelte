@@ -1,12 +1,3 @@
-nudge:
-  prompt: >-
-    Bu tür etkinlikleri anında görmek ister misiniz? Bildirimleri
-    etkinleştirerek, onları tam zamanında cihazınızda alın.
-  button: Bildirimleri etkinleştir
-  dismiss: Kapat
-  dismissed: >-
-    Endişelenme — profil ayarlarından bildirimleri istediğin zaman
-    etkinleştirebilirsin.
 settings:
   title: Bildirimler
   description: Önemli bir şey olduğunda sana bildiririz
@@ -19,3 +10,12 @@ settings:
   expenses:
     description: Paylaşılan harcamalar ve para hareketleri
     title: Giderler
+permission:
+  prompt: >-
+    Giderler, makbuzlar ve diğer aktivitelerle ilgili anlık güncellemeler almak
+    için bildirimleri açın.
+  button: Bildirimleri etkinleştir
+  dismiss: Kapat
+  dismissed: Bildirimleri dilediğin zaman hesap ayarlarından etkinleştirebilirsin.
+  later: Daha sonra yap
+  comment: Bildirimleri pazarlama amacıyla kullanmıyoruz.

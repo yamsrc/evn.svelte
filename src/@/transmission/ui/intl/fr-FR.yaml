@@ -1,11 +1,3 @@
-nudge:
-  prompt: >-
-    Envie de voir ce type d’événements dès qu’ils se produisent ? Activez les
-    notifications pour les recevoir immédiatement sur votre appareil, au bon
-    moment.
-  button: Activer les notifications
-  dismiss: Fermer
-  dismissed: "Pas d’inquiétude\_! Vous pouvez activer les notifications à tout moment dans les paramètres de votre profil."
 settings:
   title: Notifications
   description: Nous vous avertirons si quelque chose d’important se produit
@@ -18,3 +10,14 @@ settings:
   expenses:
     description: Dépenses partagées et activités d’argent
     title: Dépenses
+permission:
+  prompt: >-
+    Activez les notifications pour recevoir des mises à jour instantanées sur
+    les dépenses, les reçus et d'autres activités.
+  button: Activer les notifications
+  dismiss: Fermer
+  dismissed: >-
+    Vous pourrez toujours activer les notifications plus tard dans les
+    paramètres de votre compte.
+  later: Fais-le plus tard
+  comment: Nous n'utilisons pas les notifications à des fins de marketing.

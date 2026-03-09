@@ -1,14 +1,5 @@
 context: Mount 'transmission' context
 inputs:
-  nudge:
-    prompt:
-      input: Want to see events like this as soon as they happen? Enable notifications to get them right on your device, on time.
-    button:
-      input: Enable notifications
-    dismiss:
-      input: Dismiss
-    dismissed:
-      input: No worries — you can enable notifications anytime from your profile settings.
   settings:
     title:
       input: Notifications
@@ -30,3 +21,16 @@ inputs:
         input: Shared expenses and money activity
       title:
         input: Expenses
+  permission:
+    prompt:
+      input: Turn on notifications to get instant updates about expenses, receipts, and other activity.
+    button:
+      input: Enable notifications
+    dismiss:
+      input: Dismiss
+    dismissed:
+      input: You can always enable notifications later in your account settings.
+    later:
+      input: Do it later
+    comment:
+      input: We do not use notifications for marketing.

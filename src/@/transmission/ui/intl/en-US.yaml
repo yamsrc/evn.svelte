@@ -1,12 +1,3 @@
-nudge:
-  prompt: >-
-    Want to see events like this as soon as they happen? Enable notifications to
-    get them on your device, right on time.
-  button: Enable notifications
-  dismiss: Dismiss
-  dismissed: >-
-    No worries — you can enable notifications anytime from your profile
-    settings.
 settings:
   title: Notifications
   description: We’ll notify you when something important happens
@@ -19,3 +10,12 @@ settings:
   expenses:
     description: Shared expenses and money activity
     title: Expenses
+permission:
+  prompt: >-
+    Turn on notifications to get instant updates about expenses, receipts, and
+    other activity.
+  button: Enable notifications
+  dismiss: Dismiss
+  dismissed: You can always enable notifications later in your account settings.
+  later: Do it later
+  comment: We do not use notifications for marketing.

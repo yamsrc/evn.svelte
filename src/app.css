@@ -204,7 +204,7 @@
   }
 
   p {
-    @apply leading-relaxed text-pretty;
+    @apply text-pretty;
   }
 
   input {
@@ -231,6 +231,7 @@
 
   ::view-transition-old(.transition-morph),
   ::view-transition-new(.transition-morph) {
+    animation-duration: 300ms;
     block-size: 100%;
   }
 }
