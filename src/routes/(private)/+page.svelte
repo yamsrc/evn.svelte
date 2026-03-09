@@ -40,13 +40,13 @@
     </Section>
 
     <Section class="px-0 flex flex-col gap-2">
+      {#if $subscribed === false}
+        <div class="px-5">
+          <Permission />
+        </div>
+      {/if}
       {#if notifications.length > 0}
         <Notifications {notifications} />
-        {#if $subscribed === false}
-          <div class="px-5">
-            <Permission />
-          </div>
-        {/if}
       {/if}
     </Section>
 
