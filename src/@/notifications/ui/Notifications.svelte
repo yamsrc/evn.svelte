@@ -48,7 +48,7 @@
   )
 
   const visible = $derived(renderable.slice(0, max))
-  const stacked = $derived(renderable.length >= min)
+  const stacked = $derived(visible.length >= min)
 
   let stack = $state<ReturnType<typeof Stack.Root> | undefined>()
 </script>
