@@ -42,7 +42,7 @@
     <Section class="px-0 flex flex-col gap-2">
       {#if $subscribed === false}
         <div class="px-5">
-          <Permission />
+          <Permission dismissable />
         </div>
       {/if}
       {#if notifications.length > 0}

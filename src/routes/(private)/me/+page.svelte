@@ -16,7 +16,8 @@
   import { Feedback } from '@/feedback/ui'
   import { logout } from '@/iam'
   import { account } from '@/iam'
-  import { Scopes } from '@/transmission/ui'
+  import { subscribed } from '@/transmission'
+  import { Permission, Scopes } from '@/transmission/ui'
 
   async function getout() {
     logout()
@@ -73,7 +74,11 @@
   </Section>
 
   <Section>
-    <Scopes />
+    {#if $subscribed === false}
+      <Permission name="transmission-settings" class="transmission-settings-morph" />
+    {:else}
+      <Scopes class="transmission-settings-morph" />
+    {/if}
   </Section>
 
   <Separator />
@@ -111,3 +116,9 @@
     </Action>
   </Actions>
 {/if}
+
+<style>
+  :global(.transmission-settings-morph) {
+    view-transition-class: transition-morph;
+  }
+</style>
