@@ -282,3 +282,4 @@ mounts:
   accounts: ../../@/accounts/ui/intl
   transmission: ../../@/transmission/ui/intl
   groups: ../../@/groups/ui/intl
+  adventures: ../../@/adventures/ui/intl

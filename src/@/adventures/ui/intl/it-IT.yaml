@@ -1,0 +1,24 @@
+members:
+  title: Membri
+  add: Aggiungi membri
+  empty: Non c'è ancora nessuno qui. Aggiungi dei membri per iniziare l'avventura.
+  me: Io
+editor:
+  cover: Copertina
+  upload: Scegli il tuo
+  name: Nome dell’avventura
+  note: Tutti i membri vedranno questo nome
+  info: >-
+    Le avventure sono per chi vuole dividere le spese in modo equo, che si
+    tratti di un viaggio insieme, di un conto al bar o delle semplici spese
+    domestiche comuni. I debiti in un’avventura non sono tra utenti singoli, ma
+    tra tutti i partecipanti, così da mantenere i conti in pari per tutti.
+  settings: Impostazioni
+  title: Nuova avventura
+finish:
+  title: Termina l’avventura
+  description: >-
+    L'archiviazione dell'avventura la rimuoverà dalla schermata delle nuove
+    spese e la sposterà in fondo alla tua lista di avventure.
+  button: Avventura nell’archivio
+  delete: Elimina avventura

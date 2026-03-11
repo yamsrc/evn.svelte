@@ -1,0 +1,25 @@
+members:
+  title: Mitglieder
+  add: Mitglieder hinzufügen
+  empty: Hier ist noch niemand. Füge Mitglieder hinzu, um das Abenteuer zu starten.
+  me: Ich
+editor:
+  cover: Titelbild
+  upload: Wähle selbst
+  name: Abenteuername
+  note: Alle Mitglieder sehen diesen Namen
+  info: >-
+    Abenteuer sind für diejenigen, die die Ausgaben gleichmäßig teilen möchten –
+    egal ob gemeinsame Reise, Bar-Rechnung oder einfach Haushaltskosten. Die
+    Schulden innerhalb eines Abenteuers bestehen nicht zwischen einzelnen
+    Nutzern, sondern gegenüber allen Mitgliedern, sodass alle Ausgaben fair
+    abgerechnet werden.
+  settings: Einstellungen
+  title: Neues Abenteuer
+finish:
+  title: Beende das Abenteuer
+  description: >-
+    Durch das Archivieren des Abenteuers wird es aus dem Bildschirm für neue
+    Ausgaben entfernt und ans Ende deiner Abenteuerliste verschoben.
+  button: Abenteuer im Archiv
+  delete: Abenteuer löschen

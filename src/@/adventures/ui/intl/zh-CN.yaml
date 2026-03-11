@@ -1,0 +1,18 @@
+members:
+  title: 成员
+  add: 添加成员
+  empty: 这里还没有人。添加一些成员，开启冒险之旅吧。
+  me: 我
+editor:
+  cover: 封面
+  upload: 自行选择
+  name: 冒险名称
+  note: 所有成员都能看到此名字
+  info: 冒险适合那些希望平等分担花费的人，无论是一起旅行、共同买单还是家庭开支。冒险中的债务不是个人之间的，而是所有成员共同分担，确保每个人的账目都公平。
+  settings: 设置
+  title: 新冒险
+finish:
+  title: 完成冒险
+  description: 归档该冒险后，它将从新的支出界面中移除，并被放到你的冒险列表最后。
+  button: 档案冒险
+  delete: 删除冒险

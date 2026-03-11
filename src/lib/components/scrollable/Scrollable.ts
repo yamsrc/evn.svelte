@@ -11,6 +11,24 @@ export interface Props {
   onscroll?: (e: Event) => void
 }
 
+export function scrollable(options: Options, mounted: boolean): Attachment {
+  if (options.enabled) return infinity(options)
+
+  return finite(options, mounted)
+}
+
+function finite(options: Options, mounted: boolean): Attachment {
+  if (options.scroll < 0) return () => undefined
+
+  return (root) => {
+    const el = root.children[options.scroll] as HTMLElement | undefined
+
+    if (el === undefined) return
+
+    el.scrollIntoView({ behavior: mounted ? 'smooth' : 'instant', inline: options.align, block: 'nearest' })
+  }
+}
+
 export function infinity(options: Options): Attachment {
   if (!options.enabled) return () => undefined
 
@@ -51,6 +69,6 @@ const HALF = (INFINITY - 1) / 2
 
 interface Options {
   enabled: boolean
-  align: 'start' | 'center'
+  align: 'start' | 'center' | 'end'
   scroll: number
 }

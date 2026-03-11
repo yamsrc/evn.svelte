@@ -1,6 +1,7 @@
 <script lang="ts">
+  import { onMount } from 'svelte'
   import { cn } from '$lib/utils'
-  import { infinity, INFINITY, type Props } from './Scrollable'
+  import { scrollable, INFINITY, type Props } from './Scrollable'
 
   const {
     children,
@@ -11,14 +12,20 @@
     scroll = 0,
     onscroll,
   }: Props = $props()
+
+  let mounted = $state(false)
+
+  onMount(() => {
+    mounted = true
+  })
 </script>
 
 <div {dir}>
   <div
-    {@attach infinity({ enabled: infinite, align, scroll })}
+    {@attach scrollable({ enabled: infinite, align, scroll }, mounted)}
     {onscroll}
     class={cn(
-      'px-4 flex overflow-x-auto no-scrollbar snap-x snap-mandatory overscroll-x-contain',
+      'flex overflow-x-auto no-scrollbar snap-x snap-mandatory overscroll-x-contain',
       classes,
     )}
   >

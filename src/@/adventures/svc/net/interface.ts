@@ -50,7 +50,8 @@ export async function expose(identity: string, id: string): Promise<Contact[] | 
 
 export const pictures = {
   resource: origin.resource<{ id: string }>('/adventures/pictures'),
-  post: (body: File): Promise<{ id: string } | Error> => pictures.resource.json('', { method: 'POST', body }),
+  post: (body: File): Promise<{ id: string } | Error> =>
+    pictures.resource.json('', { method: 'POST', body, credentials: 'include' }),
 }
 
 export const invitations = {

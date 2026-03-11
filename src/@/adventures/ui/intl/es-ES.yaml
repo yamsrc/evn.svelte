@@ -1,0 +1,24 @@
+members:
+  title: Miembros
+  add: Agregar miembros
+  empty: Todavía no hay nadie aquí. Añade algunos miembros para comenzar la aventura.
+  me: Yo
+editor:
+  cover: Portada
+  upload: Elige el tuyo
+  name: Nombre de la aventura
+  note: Todos los miembros verán este nombre
+  info: >-
+    Las aventuras son para quienes desean compartir los gastos por igual, ya sea
+    un viaje juntos, una cuenta de bar o simplemente los gastos comunes del
+    hogar. Las deudas en una aventura no son entre usuarios individuales, sino
+    entre todos los miembros, para mantener cuentas equitativas.
+  settings: Configuración
+  title: Nueva aventura
+finish:
+  title: Termina la aventura
+  description: >-
+    Archivar la aventura la eliminará de la pantalla de nuevos gastos y la
+    pondrá al final de tu lista de aventuras.
+  button: Aventura en el archivo
+  delete: Eliminar aventura

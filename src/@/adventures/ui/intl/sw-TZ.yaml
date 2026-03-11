@@ -1,0 +1,24 @@
+members:
+  title: Wanachama
+  add: Ongeza wanachama
+  empty: Hakuna mtu hapa bado. Ongeza wanachama kuanza safari ya kichumbakazi.
+  me: Mimi
+editor:
+  cover: Jalada
+  upload: Chagua yako mwenyewe
+  name: Jina la tukio
+  note: Wanachama wote wataona jina hili
+  info: >-
+    Matukio ni kwa wale wanaotaka kugawana gharama sawa, iwe ni safari pamoja,
+    bili ya baa, au matumizi ya kawaida ya nyumbani. Madeni kwenye tukio
+    hayawekwi kati ya watumiaji mmoja mmoja, bali kati ya wanachama wote
+    wanaosaidia kuweka usawa kwenye matumizi.
+  settings: Mipangilio
+  title: Ndoto Mpya
+finish:
+  title: Maliza safari hii
+  description: >-
+    Ukiihifadhi tukio, litaondolewa kwenye skrini ya matumizi mapya na kuwekwa
+    mwisho wa orodha ya matukio yako.
+  button: Maandishi ya Matukio
+  delete: Futa tukio

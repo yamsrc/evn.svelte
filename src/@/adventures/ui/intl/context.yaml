@@ -1,0 +1,35 @@
+context: Mount 'adventures' context
+inputs:
+  members:
+    title:
+      input: Members
+    add:
+      input: Add members
+    empty:
+      input: Nobody here yet. Add some members to start the adventure.
+    me:
+      input: Me
+  editor:
+    cover:
+      input: Cover
+    upload:
+      input: Choose your own
+    name:
+      input: Adventure name
+    note:
+      input: All members will see this name
+    info:
+      input: Adventures are for those who want to spend equally, be it a voyage together, bar tab or just a common household spendings. The debts in adventure are not between individual users, but to each fellow member helping keep equal tabs.
+    settings:
+      input: Settings
+    title:
+      input: New Adventure
+  finish:
+    title:
+      input: Finish the adventure
+    description:
+      input: Archiving the adventure will remove it from the new expense screen and put it at the back of your adventure.
+    button:
+      input: Archive adventure
+    delete:
+      input: Delete adventure
