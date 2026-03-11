@@ -89,21 +89,21 @@
 
   <Section class="space-y-2 mt-4">
     <footer class="text-muted-foreground text-sm">
-      <div class="flex justify-between items-start">
-        <Delete class="py-0 underline underline-offset-3 font-normal" ondelete={getout} />
+      <div class="flex justify-between">
+        <div class="py-1.5 px-2">
+          <p>v{version}</p>
+        </div>
+        <!-- <p>
+          &copy; <a href="https://seed.me" target="_blank">seed.me</a>
+          2025–{new Date().getFullYear()}
+        </p> -->
         <Clipboard
           text={$account.id}
           variant="ghost"
           size="sm"
           label={$account.id.slice(0, 8)}
           class="flex-row-reverse" />
-      </div>
-      <div class="px-3">
-        <p>v{version}</p>
-        <p>
-          &copy; <a href="https://seed.me" target="_blank">seed.me</a>
-          2025–{new Date().getFullYear()}
-        </p>
+        <Delete class="py-0 underline underline-offset-3 font-normal" ondelete={getout} />
       </div>
     </footer>
   </Section>
