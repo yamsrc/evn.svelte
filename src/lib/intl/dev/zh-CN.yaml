@@ -12,6 +12,10 @@ components:
       (count) => `显示：${count}`
   graph:
     title: 债务图表
+  receipts:
+    title: 小票
+    upload:
+      label: 上传
 transmission:
   title: Transmission
   permission:
@@ -22,3 +26,5 @@ transmission:
   ping: Ping
 loading:
   title: 加载界面
+receipts:
+  upload: {}

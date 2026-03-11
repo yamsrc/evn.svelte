@@ -12,6 +12,10 @@ components:
       (count) => `${count}件を表示`
   graph:
     title: 債務グラフ
+  receipts:
+    title: レシート
+    upload:
+      label: アップロード
 transmission:
   title: Transmission
   permission:
@@ -22,3 +26,5 @@ transmission:
   ping: Ping
 loading:
   title: ロード画面
+receipts:
+  upload: {}

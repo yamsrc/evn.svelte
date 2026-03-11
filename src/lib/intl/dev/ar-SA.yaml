@@ -12,6 +12,10 @@ components:
       (count) => `عرض: ${count}`
   graph:
     title: مخطط الديون
+  receipts:
+    title: الإيصالات
+    upload:
+      label: تحميل
 transmission:
   title: Transmission
   permission:
@@ -22,3 +26,5 @@ transmission:
   ping: Ping
 loading:
   title: شاشة التحميل
+receipts:
+  upload: {}

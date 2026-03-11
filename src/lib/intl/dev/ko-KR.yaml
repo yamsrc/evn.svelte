@@ -12,6 +12,10 @@ components:
       (count) => `${count}개 표시`
   graph:
     title: 부채 그래프
+  receipts:
+    title: 영수증
+    upload:
+      label: 업로드
 transmission:
   title: Transmission
   permission:
@@ -22,3 +26,5 @@ transmission:
   ping: Ping
 loading:
   title: 로딩 화면
+receipts:
+  upload: {}

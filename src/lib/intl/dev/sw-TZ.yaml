@@ -12,6 +12,10 @@ components:
       (count) => `Onyesha: ${count}`
   graph:
     title: Chati ya Madeni
+  receipts:
+    title: Risiti
+    upload:
+      label: Pakia
 transmission:
   title: Transmission
   permission:
@@ -22,3 +26,5 @@ transmission:
   ping: Ping
 loading:
   title: Skrini ya kupakia
+receipts:
+  upload: {}

@@ -12,6 +12,10 @@ components:
       (count) => `${count} göster`
   graph:
     title: Borç Grafiği
+  receipts:
+    title: Fişler
+    upload:
+      label: Yükle
 transmission:
   title: Transmission
   permission:
@@ -22,3 +26,5 @@ transmission:
   ping: Ping
 loading:
   title: Yükleme ekranı
+receipts:
+  upload: {}

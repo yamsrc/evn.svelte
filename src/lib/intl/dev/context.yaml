@@ -20,6 +20,13 @@ inputs:
     graph:
       title:
         input: Debt Graph
+    receipts:
+      title:
+        input: Receipts
+        context: cafe bills, invoces, etc.
+      upload:
+        label:
+          input: Upload
   transmission:
     title:
       input: Transmission

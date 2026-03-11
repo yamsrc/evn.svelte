@@ -12,6 +12,10 @@ components:
       (count) => `${count} दिखाएं`
   graph:
     title: ऋण ग्राफ़
+  receipts:
+    title: रसीदें
+    upload:
+      label: अपलोड करें
 transmission:
   title: Transmission
   permission:
@@ -22,3 +26,5 @@ transmission:
   ping: Ping
 loading:
   title: लोडिंग स्क्रीन
+receipts:
+  upload: {}

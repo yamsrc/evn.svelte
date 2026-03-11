@@ -12,6 +12,10 @@ components:
       (count) => `Mostrar: ${count}`
   graph:
     title: Gráfico de deudas
+  receipts:
+    title: Recibos
+    upload:
+      label: Subir
 transmission:
   title: Transmission
   permission:
@@ -22,3 +26,5 @@ transmission:
   ping: Ping
 loading:
   title: Pantalla de carga
+receipts:
+  upload: {}
