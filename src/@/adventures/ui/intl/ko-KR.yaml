@@ -24,3 +24,5 @@ spending:
   yours: 내 지출
   total: 총 지출
 me: 나
+selector:
+  regular: 정기 지출

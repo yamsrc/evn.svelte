@@ -1,5 +1,6 @@
 <script lang="ts">
   import { back } from '$com/history'
+  import { Selector } from '@/adventures/ui'
   import { add, update } from '@/expenses'
   import Attachments from '../Attachments.svelte'
   import { getContext } from './Context'
@@ -21,6 +22,13 @@
     await back('/expenses/')
   }
 </script>
+
+<Selector
+  draft={{
+    title: ctx.value.title,
+    location: ctx.value.location,
+    attachments: [...ctx.value.attachments],
+  }} />
 
 <Attachments bind:attachments={value.attachments} />
 <Form bind:value bind:mode {onsubmit} />

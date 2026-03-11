@@ -4,7 +4,7 @@ import { events } from '@/realtime'
 import { get } from './get'
 import type * as net from './net'
 
-export type { Adventure } from './net'
+export type { Adventure, Expense } from './net'
 
 export const adventures = collection<net.Adventure>({
   get,

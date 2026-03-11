@@ -24,3 +24,5 @@ spending:
   yours: あなたの支出
   total: 合計支出
 me: 私
+selector:
+  regular: 定期的な支出

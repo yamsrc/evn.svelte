@@ -1,6 +1,7 @@
-import type { net } from '@/adventures'
+import type { Expense } from '@/adventures'
 
 export interface Props {
+  adventure: string
   title: string
-  expense: net.Expense
+  expense: Expense
 }

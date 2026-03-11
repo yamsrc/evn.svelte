@@ -24,3 +24,5 @@ spending:
   yours: Harcamalarınız
   total: Toplam harcama
 me: Ben
+selector:
+  regular: Düzenli harcamalar

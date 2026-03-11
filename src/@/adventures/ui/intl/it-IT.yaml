@@ -24,3 +24,5 @@ spending:
   yours: Le tue spese
   total: Totale speso
 me: Io
+selector:
+  regular: Spese regolari

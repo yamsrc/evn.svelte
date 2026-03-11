@@ -24,3 +24,5 @@ spending:
   yours: Ваші витрати
   total: Всього витрачено
 me: Я
+selector:
+  regular: Регулярні витрати

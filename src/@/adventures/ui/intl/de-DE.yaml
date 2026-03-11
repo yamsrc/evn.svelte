@@ -24,3 +24,5 @@ spending:
   yours: Ihre Ausgaben
   total: Gesamtausgaben
 me: Ich
+selector:
+  regular: Regelmäßige Ausgaben

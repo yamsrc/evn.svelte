@@ -33,7 +33,10 @@ export const dictionaries = {
       "yours": "إنفاقك",
       "total": "إجمالي الإنفاق"
     },
-    "me": "أنا"
+    "me": "أنا",
+    "selector": {
+      "regular": "الإنفاق المنتظم"
+    }
   },
   "de-DE": {
     "members": {
@@ -66,7 +69,10 @@ export const dictionaries = {
       "yours": "Ihre Ausgaben",
       "total": "Gesamtausgaben"
     },
-    "me": "Ich"
+    "me": "Ich",
+    "selector": {
+      "regular": "Regelmäßige Ausgaben"
+    }
   },
   "en-US": {
     "members": {
@@ -99,7 +105,10 @@ export const dictionaries = {
       "yours": "Your spending",
       "total": "Total spent"
     },
-    "me": "Me"
+    "me": "Me",
+    "selector": {
+      "regular": "Regular spending"
+    }
   },
   "es-ES": {
     "members": {
@@ -132,7 +141,10 @@ export const dictionaries = {
       "yours": "Tus gastos",
       "total": "Total gastado"
     },
-    "me": "Yo"
+    "me": "Yo",
+    "selector": {
+      "regular": "Gastos habituales"
+    }
   },
   "fr-FR": {
     "members": {
@@ -165,7 +177,10 @@ export const dictionaries = {
       "yours": "Vos dépenses",
       "total": "Total dépensé"
     },
-    "me": "Moi"
+    "me": "Moi",
+    "selector": {
+      "regular": "Dépenses régulières"
+    }
   },
   "hi-IN": {
     "members": {
@@ -198,7 +213,10 @@ export const dictionaries = {
       "yours": "आपके खर्च",
       "total": "कुल खर्च"
     },
-    "me": "मैं"
+    "me": "मैं",
+    "selector": {
+      "regular": "नियमित खर्च"
+    }
   },
   "it-IT": {
     "members": {
@@ -231,7 +249,10 @@ export const dictionaries = {
       "yours": "Le tue spese",
       "total": "Totale speso"
     },
-    "me": "Io"
+    "me": "Io",
+    "selector": {
+      "regular": "Spese regolari"
+    }
   },
   "ja-JP": {
     "members": {
@@ -264,7 +285,10 @@ export const dictionaries = {
       "yours": "あなたの支出",
       "total": "合計支出"
     },
-    "me": "私"
+    "me": "私",
+    "selector": {
+      "regular": "定期的な支出"
+    }
   },
   "ko-KR": {
     "members": {
@@ -297,7 +321,10 @@ export const dictionaries = {
       "yours": "내 지출",
       "total": "총 지출"
     },
-    "me": "나"
+    "me": "나",
+    "selector": {
+      "regular": "정기 지출"
+    }
   },
   "nl-NL": {
     "members": {
@@ -330,7 +357,10 @@ export const dictionaries = {
       "yours": "Jouw uitgaven",
       "total": "Totaal uitgegeven"
     },
-    "me": "Ik"
+    "me": "Ik",
+    "selector": {
+      "regular": "Regelmatige uitgaven"
+    }
   },
   "ru-RU": {
     "members": {
@@ -363,7 +393,10 @@ export const dictionaries = {
       "yours": "Ваши расходы",
       "total": "Всего потрачено"
     },
-    "me": "Я"
+    "me": "Я",
+    "selector": {
+      "regular": "Регулярные расходы"
+    }
   },
   "sw-TZ": {
     "members": {
@@ -396,7 +429,10 @@ export const dictionaries = {
       "yours": "Matumizi yako",
       "total": "Jumla iliyotumika"
     },
-    "me": "Mimi"
+    "me": "Mimi",
+    "selector": {
+      "regular": "Matumizi ya kawaida"
+    }
   },
   "tr-TR": {
     "members": {
@@ -429,7 +465,10 @@ export const dictionaries = {
       "yours": "Harcamalarınız",
       "total": "Toplam harcama"
     },
-    "me": "Ben"
+    "me": "Ben",
+    "selector": {
+      "regular": "Düzenli harcamalar"
+    }
   },
   "uk-UA": {
     "members": {
@@ -462,7 +501,10 @@ export const dictionaries = {
       "yours": "Ваші витрати",
       "total": "Всього витрачено"
     },
-    "me": "Я"
+    "me": "Я",
+    "selector": {
+      "regular": "Регулярні витрати"
+    }
   },
   "zh-CN": {
     "members": {
@@ -495,7 +537,10 @@ export const dictionaries = {
       "yours": "你的支出",
       "total": "总支出"
     },
-    "me": "我"
+    "me": "我",
+    "selector": {
+      "regular": "定期支出"
+    }
   }
 };
 /** @type {import("./types").Locale[]} */

@@ -1,4 +1,3 @@
-export * as net from './net'
 export * from './store'
 export { get } from './get'
 export { create } from './create'

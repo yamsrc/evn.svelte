@@ -29,7 +29,7 @@
   const picked = $derived(pickable && ctx.state.chosen === id)
 </script>
 
-<div class={['h-full transition-all rounded-lg', picked && 'outline-muted-foreground/50 outline-2']}>
+<div class={['rounded-lg', picked && 'outline-muted-foreground/50 outline-2']}>
   <Button
     {...rest}
     data-picked={picked ? '' : undefined}

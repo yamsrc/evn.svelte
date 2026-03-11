@@ -40,4 +40,7 @@ export type Dictionary = {
         total: string
       }
       me: string
+      selector: {
+        regular: string
+      }
     }

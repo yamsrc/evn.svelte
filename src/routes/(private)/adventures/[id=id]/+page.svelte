@@ -53,14 +53,14 @@
       </Section>
 
       <Section>
-        <Expenses expenses={adventure.expenses} title={adventure.title} />
+        <Expenses adventure={adventure.id} expenses={adventure.expenses} title={adventure.title} />
       </Section>
 
       {#if !adventure.archived}
         <Actions>
           <Action
             id="adventures-view-create-action"
-            href={`/expenses/editor/?adventure=${adventure.id}`}>
+            href={`/adventures/${adventure.id}/expenses/editor/`}>
             <Plus />
             <span>{$common.actions.create}</span>
           </Action>

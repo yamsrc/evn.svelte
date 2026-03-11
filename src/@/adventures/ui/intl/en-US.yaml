@@ -24,3 +24,5 @@ spending:
   yours: Your spending
   total: Total spent
 me: Me
+selector:
+  regular: Regular spending

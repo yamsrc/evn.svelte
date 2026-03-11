@@ -47,3 +47,6 @@ inputs:
       input: Total spent
   me:
     input: Me
+  selector:
+    regular:
+      input: Regular spending

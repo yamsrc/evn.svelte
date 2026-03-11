@@ -24,3 +24,5 @@ spending:
   yours: 你的支出
   total: 总支出
 me: 我
+selector:
+  regular: 定期支出
