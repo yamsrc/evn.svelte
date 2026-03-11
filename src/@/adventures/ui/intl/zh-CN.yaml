@@ -2,7 +2,6 @@ members:
   title: 成员
   add: 添加成员
   empty: 这里还没有人。添加一些成员，开启冒险之旅吧。
-  me: 我
 editor:
   cover: 封面
   upload: 自行选择
@@ -16,3 +15,12 @@ finish:
   description: 归档该冒险后，它将从新的支出界面中移除，并被放到你的冒险列表最后。
   button: 档案冒险
   delete: 删除冒险
+expenses:
+  title: 支出
+  total: 总账单
+  paidBy: 由...支付
+  paid: 已支付
+spending:
+  yours: 你的支出
+  total: 总支出
+me: 我

@@ -13,7 +13,6 @@ export type Dictionary = {
         title: string
         add: string
         empty: string
-        me: string
       }
       editor: {
         cover: string
@@ -30,4 +29,15 @@ export type Dictionary = {
         button: string
         delete: string
       }
+      expenses: {
+        title: string
+        total: string
+        paidBy: string
+        paid: string
+      }
+      spending: {
+        yours: string
+        total: string
+      }
+      me: string
     }

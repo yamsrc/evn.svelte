@@ -7,8 +7,6 @@ inputs:
       input: Add members
     empty:
       input: Nobody here yet. Add some members to start the adventure.
-    me:
-      input: Me
   editor:
     cover:
       input: Cover
@@ -33,3 +31,19 @@ inputs:
       input: Archive adventure
     delete:
       input: Delete adventure
+  expenses:
+    title:
+      input: Expenses
+    total:
+      input: Total bill
+    paidBy:
+      input: Paid by
+    paid:
+      input: Paid
+  spending:
+    yours:
+      input: Your spending
+    total:
+      input: Total spent
+  me:
+    input: Me

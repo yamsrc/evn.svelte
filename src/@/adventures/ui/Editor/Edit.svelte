@@ -18,13 +18,11 @@
 
     const snapshot = JSON.parse(ctx.snapshot) as typeof ctx.value
 
-    const changed = JSON.stringify(body) !== JSON.stringify({
-      title: snapshot.title,
-      picture: snapshot.picture,
-    })
+    const changed =
+      JSON.stringify(body) !== JSON.stringify({ title: snapshot.title, picture: snapshot.picture })
 
     if (!changed) {
-      await back('/expenses/')
+      await back(id === undefined ? '/expenses/' : `/adventures/${id}/`)
 
       return
     }
@@ -33,7 +31,7 @@
 
     if (result instanceof Error) return
 
-    await back('/expenses/')
+    await back(`/adventures/${result.id}/`)
   }
 </script>
 

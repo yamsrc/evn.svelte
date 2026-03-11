@@ -6,8 +6,7 @@ export const dictionaries = {
     "members": {
       "title": "الأعضاء",
       "add": "إضافة أعضاء",
-      "empty": "لا يوجد أحد هنا بعد. أضِف بعض الأعضاء لبدء المغامرة.",
-      "me": "أنا"
+      "empty": "لا يوجد أحد هنا بعد. أضِف بعض الأعضاء لبدء المغامرة."
     },
     "editor": {
       "cover": "غلاف",
@@ -23,14 +22,24 @@ export const dictionaries = {
       "description": "أرشفة المغامرة ستزيلها من شاشة النفقات الجديدة وتضعها في نهاية قائمة مغامراتك.",
       "button": "مغامرة الأرشيف",
       "delete": "حذف المغامرة"
-    }
+    },
+    "expenses": {
+      "title": "النفقات",
+      "total": "إجمالي الفاتورة",
+      "paidBy": "دفع بواسطة",
+      "paid": "دفع"
+    },
+    "spending": {
+      "yours": "إنفاقك",
+      "total": "إجمالي الإنفاق"
+    },
+    "me": "أنا"
   },
   "de-DE": {
     "members": {
       "title": "Mitglieder",
       "add": "Mitglieder hinzufügen",
-      "empty": "Hier ist noch niemand. Füge Mitglieder hinzu, um das Abenteuer zu starten.",
-      "me": "Ich"
+      "empty": "Hier ist noch niemand. Füge Mitglieder hinzu, um das Abenteuer zu starten."
     },
     "editor": {
       "cover": "Titelbild",
@@ -46,14 +55,24 @@ export const dictionaries = {
       "description": "Durch das Archivieren des Abenteuers wird es aus dem Bildschirm für neue Ausgaben entfernt und ans Ende deiner Abenteuerliste verschoben.",
       "button": "Abenteuer im Archiv",
       "delete": "Abenteuer löschen"
-    }
+    },
+    "expenses": {
+      "title": "Ausgaben",
+      "total": "Gesamtrechnung",
+      "paidBy": "Bezahlt von",
+      "paid": "Bezahlt"
+    },
+    "spending": {
+      "yours": "Ihre Ausgaben",
+      "total": "Gesamtausgaben"
+    },
+    "me": "Ich"
   },
   "en-US": {
     "members": {
       "title": "Members",
       "add": "Add members",
-      "empty": "Nobody here yet. Add some members to start the adventure.",
-      "me": "Me"
+      "empty": "Nobody here yet. Add some members to start the adventure."
     },
     "editor": {
       "cover": "Cover",
@@ -69,14 +88,24 @@ export const dictionaries = {
       "description": "Archiving the adventure will remove it from the new expense screen and move it to the back of your adventure list.",
       "button": "Archive Adventure",
       "delete": "Delete adventure"
-    }
+    },
+    "expenses": {
+      "title": "Expenses",
+      "total": "Total bill",
+      "paidBy": "Paid by",
+      "paid": "Paid"
+    },
+    "spending": {
+      "yours": "Your spending",
+      "total": "Total spent"
+    },
+    "me": "Me"
   },
   "es-ES": {
     "members": {
       "title": "Miembros",
       "add": "Agregar miembros",
-      "empty": "Todavía no hay nadie aquí. Añade algunos miembros para comenzar la aventura.",
-      "me": "Yo"
+      "empty": "Todavía no hay nadie aquí. Añade algunos miembros para comenzar la aventura."
     },
     "editor": {
       "cover": "Portada",
@@ -92,14 +121,24 @@ export const dictionaries = {
       "description": "Archivar la aventura la eliminará de la pantalla de nuevos gastos y la pondrá al final de tu lista de aventuras.",
       "button": "Aventura en el archivo",
       "delete": "Eliminar aventura"
-    }
+    },
+    "expenses": {
+      "title": "Gastos",
+      "total": "Factura total",
+      "paidBy": "Pagado por",
+      "paid": "Pagado"
+    },
+    "spending": {
+      "yours": "Tus gastos",
+      "total": "Total gastado"
+    },
+    "me": "Yo"
   },
   "fr-FR": {
     "members": {
       "title": "Membres",
       "add": "Ajouter des membres",
-      "empty": "Personne n'est encore là. Ajoutez des membres pour commencer l'aventure.",
-      "me": "Moi"
+      "empty": "Personne n'est encore là. Ajoutez des membres pour commencer l'aventure."
     },
     "editor": {
       "cover": "Couverture",
@@ -115,14 +154,24 @@ export const dictionaries = {
       "description": "L’archivage de l’aventure la retirera de l’écran des nouvelles dépenses et la placera à la fin de votre liste d’aventures.",
       "button": "Aventure d’archive",
       "delete": "Supprimer l’aventure"
-    }
+    },
+    "expenses": {
+      "title": "Dépenses",
+      "total": "Total de la facture",
+      "paidBy": "Payé par",
+      "paid": "Payé"
+    },
+    "spending": {
+      "yours": "Vos dépenses",
+      "total": "Total dépensé"
+    },
+    "me": "Moi"
   },
   "hi-IN": {
     "members": {
       "title": "सदस्य",
       "add": "सदस्य जोड़ें",
-      "empty": "अभी यहाँ कोई नहीं है। साहसिक यात्रा शुरू करने के लिए कुछ सदस्य जोड़ें।",
-      "me": "मैं"
+      "empty": "अभी यहाँ कोई नहीं है। साहसिक यात्रा शुरू करने के लिए कुछ सदस्य जोड़ें।"
     },
     "editor": {
       "cover": "कवर",
@@ -138,14 +187,24 @@ export const dictionaries = {
       "description": "साहसिक यात्रा को आर्काइव करने से यह नए खर्च स्क्रीन से हट जाएगी और आपकी साहसिक यात्राओं की सूची के अंत में आ जाएगी।",
       "button": "आर्काइव एडवेंचर",
       "delete": "एडवेंचर हटाएँ"
-    }
+    },
+    "expenses": {
+      "title": "खर्चे",
+      "total": "कुल बिल",
+      "paidBy": "द्वारा भुगतान किया गया",
+      "paid": "भुगतान किया गया"
+    },
+    "spending": {
+      "yours": "आपके खर्च",
+      "total": "कुल खर्च"
+    },
+    "me": "मैं"
   },
   "it-IT": {
     "members": {
       "title": "Membri",
       "add": "Aggiungi membri",
-      "empty": "Non c'è ancora nessuno qui. Aggiungi dei membri per iniziare l'avventura.",
-      "me": "Io"
+      "empty": "Non c'è ancora nessuno qui. Aggiungi dei membri per iniziare l'avventura."
     },
     "editor": {
       "cover": "Copertina",
@@ -161,14 +220,24 @@ export const dictionaries = {
       "description": "L'archiviazione dell'avventura la rimuoverà dalla schermata delle nuove spese e la sposterà in fondo alla tua lista di avventure.",
       "button": "Avventura nell’archivio",
       "delete": "Elimina avventura"
-    }
+    },
+    "expenses": {
+      "title": "Spese",
+      "total": "Totale fattura",
+      "paidBy": "Pagato da",
+      "paid": "Pagato"
+    },
+    "spending": {
+      "yours": "Le tue spese",
+      "total": "Totale speso"
+    },
+    "me": "Io"
   },
   "ja-JP": {
     "members": {
       "title": "メンバー",
       "add": "メンバーを追加",
-      "empty": "まだ誰もいません。冒険を始めるためにメンバーを追加しましょう。",
-      "me": "私"
+      "empty": "まだ誰もいません。冒険を始めるためにメンバーを追加しましょう。"
     },
     "editor": {
       "cover": "カバー",
@@ -184,14 +253,24 @@ export const dictionaries = {
       "description": "冒険をアーカイブすると、新しい支出画面から削除され、あなたの冒険リストの最後に移動します。",
       "button": "アーカイブアドベンチャー",
       "delete": "冒険を削除"
-    }
+    },
+    "expenses": {
+      "title": "経費",
+      "total": "合計金額",
+      "paidBy": "支払者",
+      "paid": "支払い済み"
+    },
+    "spending": {
+      "yours": "あなたの支出",
+      "total": "合計支出"
+    },
+    "me": "私"
   },
   "ko-KR": {
     "members": {
       "title": "구성원",
       "add": "구성원 추가",
-      "empty": "아직 아무도 없습니다. 모험을 시작하려면 멤버를 추가하세요.",
-      "me": "나"
+      "empty": "아직 아무도 없습니다. 모험을 시작하려면 멤버를 추가하세요."
     },
     "editor": {
       "cover": "커버",
@@ -207,14 +286,24 @@ export const dictionaries = {
       "description": "모험을 보관하면 새 지출 화면에서 제거되고 내 모험 목록의 맨 뒤로 이동합니다.",
       "button": "아카이브 어드벤처",
       "delete": "모험 삭제"
-    }
+    },
+    "expenses": {
+      "title": "지출",
+      "total": "총 청구서",
+      "paidBy": "결제자",
+      "paid": "결제 완료"
+    },
+    "spending": {
+      "yours": "내 지출",
+      "total": "총 지출"
+    },
+    "me": "나"
   },
   "nl-NL": {
     "members": {
       "title": "Leden",
       "add": "Leden toevoegen",
-      "empty": "Hier is nog niemand. Voeg leden toe om het avontuur te beginnen.",
-      "me": "Ik"
+      "empty": "Hier is nog niemand. Voeg leden toe om het avontuur te beginnen."
     },
     "editor": {
       "cover": "Omslag",
@@ -230,14 +319,24 @@ export const dictionaries = {
       "description": "Als je het avontuur archiveert, wordt het verwijderd van het nieuwe uitgavenscherm en naar het einde van je avonturenlijst verplaatst.",
       "button": "Archiefavontuur",
       "delete": "Avontuur verwijderen"
-    }
+    },
+    "expenses": {
+      "title": "Uitgaven",
+      "total": "Totaalrekening",
+      "paidBy": "Betaald door",
+      "paid": "Betaald"
+    },
+    "spending": {
+      "yours": "Jouw uitgaven",
+      "total": "Totaal uitgegeven"
+    },
+    "me": "Ik"
   },
   "ru-RU": {
     "members": {
       "title": "Участники",
       "add": "Добавить участников",
-      "empty": "Здесь пока никого нет. Добавьте участников, чтобы начать приключение.",
-      "me": "Я"
+      "empty": "Здесь пока никого нет. Добавьте участников, чтобы начать приключение."
     },
     "editor": {
       "cover": "Обложка",
@@ -253,14 +352,24 @@ export const dictionaries = {
       "description": "Архивирование приключения удалит его из экрана новых расходов и переместит в конец списка ваших приключений.",
       "button": "Архивное приключение",
       "delete": "Удалить приключение"
-    }
+    },
+    "expenses": {
+      "title": "Расходы",
+      "total": "Итоговый счет",
+      "paidBy": "Оплачено",
+      "paid": "Оплачено"
+    },
+    "spending": {
+      "yours": "Ваши расходы",
+      "total": "Всего потрачено"
+    },
+    "me": "Я"
   },
   "sw-TZ": {
     "members": {
       "title": "Wanachama",
       "add": "Ongeza wanachama",
-      "empty": "Hakuna mtu hapa bado. Ongeza wanachama kuanza safari ya kichumbakazi.",
-      "me": "Mimi"
+      "empty": "Hakuna mtu hapa bado. Ongeza wanachama kuanza safari ya kichumbakazi."
     },
     "editor": {
       "cover": "Jalada",
@@ -276,14 +385,24 @@ export const dictionaries = {
       "description": "Ukiihifadhi tukio, litaondolewa kwenye skrini ya matumizi mapya na kuwekwa mwisho wa orodha ya matukio yako.",
       "button": "Maandishi ya Matukio",
       "delete": "Futa tukio"
-    }
+    },
+    "expenses": {
+      "title": "Matumizi",
+      "total": "Jumla ya bili",
+      "paidBy": "Imelipiwa na",
+      "paid": "Imelipwa"
+    },
+    "spending": {
+      "yours": "Matumizi yako",
+      "total": "Jumla iliyotumika"
+    },
+    "me": "Mimi"
   },
   "tr-TR": {
     "members": {
       "title": "Üyeler",
       "add": "Üye ekle",
-      "empty": "Henüz burada kimse yok. Maceraya başlamak için birkaç üye ekle.",
-      "me": "Ben"
+      "empty": "Henüz burada kimse yok. Maceraya başlamak için birkaç üye ekle."
     },
     "editor": {
       "cover": "Kapak",
@@ -299,14 +418,24 @@ export const dictionaries = {
       "description": "Macera arşivlendiğinde, yeni harcama ekranından kaldırılır ve macera listenizin en sonuna taşınır.",
       "button": "Arşiv macerası",
       "delete": "Macera sil"
-    }
+    },
+    "expenses": {
+      "title": "Giderler",
+      "total": "Toplam fatura",
+      "paidBy": "Ödeyen",
+      "paid": "Ödendi"
+    },
+    "spending": {
+      "yours": "Harcamalarınız",
+      "total": "Toplam harcama"
+    },
+    "me": "Ben"
   },
   "uk-UA": {
     "members": {
       "title": "Учасники",
       "add": "Додати учасників",
-      "empty": "Тут поки нікого немає. Додайте учасників, щоб розпочати пригоду.",
-      "me": "Я"
+      "empty": "Тут поки нікого немає. Додайте учасників, щоб розпочати пригоду."
     },
     "editor": {
       "cover": "Обкладинка",
@@ -322,14 +451,24 @@ export const dictionaries = {
       "description": "Архівування пригоди видалить її з екрана нових витрат і перемістить у кінець вашого списку пригод.",
       "button": "Архівна пригода",
       "delete": "Видалити пригоду"
-    }
+    },
+    "expenses": {
+      "title": "Витрати",
+      "total": "Загальний рахунок",
+      "paidBy": "Сплачено",
+      "paid": "Оплачено"
+    },
+    "spending": {
+      "yours": "Ваші витрати",
+      "total": "Всього витрачено"
+    },
+    "me": "Я"
   },
   "zh-CN": {
     "members": {
       "title": "成员",
       "add": "添加成员",
-      "empty": "这里还没有人。添加一些成员，开启冒险之旅吧。",
-      "me": "我"
+      "empty": "这里还没有人。添加一些成员，开启冒险之旅吧。"
     },
     "editor": {
       "cover": "封面",
@@ -345,7 +484,18 @@ export const dictionaries = {
       "description": "归档该冒险后，它将从新的支出界面中移除，并被放到你的冒险列表最后。",
       "button": "档案冒险",
       "delete": "删除冒险"
-    }
+    },
+    "expenses": {
+      "title": "支出",
+      "total": "总账单",
+      "paidBy": "由...支付",
+      "paid": "已支付"
+    },
+    "spending": {
+      "yours": "你的支出",
+      "total": "总支出"
+    },
+    "me": "我"
   }
 };
 /** @type {import("./types").Locale[]} */

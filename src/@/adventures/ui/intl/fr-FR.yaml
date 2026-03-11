@@ -2,24 +2,25 @@ members:
   title: Membres
   add: Ajouter des membres
   empty: Personne n'est encore là. Ajoutez des membres pour commencer l'aventure.
-  me: Moi
 editor:
   cover: Couverture
   upload: Choisissez le vôtre
   name: Nom de l’aventure
   note: Tous les membres verront ce nom
-  info: >-
-    Les aventures sont faites pour ceux qui veulent partager les dépenses de
-    manière égale, que ce soit un voyage ensemble, une addition de bar ou
-    simplement des frais ménagers communs. Les dettes lors d’une aventure ne
-    sont pas entre individus, mais entre tous les membres pour garder un
-    équilibre équitable.
+  info: Les aventures sont faites pour ceux qui veulent partager les dépenses de manière égale, que ce soit un voyage ensemble, une addition de bar ou simplement des frais ménagers communs. Les dettes lors d’une aventure ne sont pas entre individus, mais entre tous les membres pour garder un équilibre équitable.
   settings: Paramètres
   title: Nouvelle aventure
 finish:
   title: Terminer l’aventure
-  description: >-
-    L’archivage de l’aventure la retirera de l’écran des nouvelles dépenses et
-    la placera à la fin de votre liste d’aventures.
+  description: L’archivage de l’aventure la retirera de l’écran des nouvelles dépenses et la placera à la fin de votre liste d’aventures.
   button: Aventure d’archive
   delete: Supprimer l’aventure
+expenses:
+  title: Dépenses
+  total: Total de la facture
+  paidBy: Payé par
+  paid: Payé
+spending:
+  yours: Vos dépenses
+  total: Total dépensé
+me: Moi

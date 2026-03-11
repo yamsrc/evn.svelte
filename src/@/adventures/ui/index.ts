@@ -1,4 +1,7 @@
 export { default as Members } from './Members.svelte'
 export { default as Cover } from './Cover.svelte'
 export { default as Archive } from './Archive.svelte'
+export { default as Totals } from './Totals.svelte'
+export { default as Expense } from './Expense.svelte'
+export { default as Expenses } from './Expenses.svelte'
 export * as Editor from './Editor'

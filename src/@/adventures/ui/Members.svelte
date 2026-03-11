@@ -10,7 +10,7 @@
     identities.map((id) => ({
       id,
       value: participants[id] ?? 0,
-      name: id === $me?.id ? $dict.members.me : undefined,
+      name: id === $me?.id ? $dict.me : undefined,
     })),
   )
 </script>

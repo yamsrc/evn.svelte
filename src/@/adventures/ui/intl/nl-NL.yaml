@@ -2,23 +2,25 @@ members:
   title: Leden
   add: Leden toevoegen
   empty: Hier is nog niemand. Voeg leden toe om het avontuur te beginnen.
-  me: Ik
 editor:
   cover: Omslag
   upload: Kies zelf
   name: Naam van het avontuur
   note: Alle leden zien deze naam
-  info: >-
-    Avonturen zijn er voor mensen die de kosten gelijk willen delen, of het nu
-    om samen reizen, een gezamenlijke barrekening of gewoon huishoudelijke
-    uitgaven gaat. De schulden binnen een avontuur zijn niet tussen losse
-    gebruikers, maar onder alle leden om het eerlijk bij te houden.
+  info: Avonturen zijn er voor mensen die de kosten gelijk willen delen, of het nu om samen reizen, een gezamenlijke barrekening of gewoon huishoudelijke uitgaven gaat. De schulden binnen een avontuur zijn niet tussen losse gebruikers, maar onder alle leden om het eerlijk bij te houden.
   settings: Instellingen
   title: Nieuw avontuur
 finish:
   title: Maak het avontuur af
-  description: >-
-    Als je het avontuur archiveert, wordt het verwijderd van het nieuwe
-    uitgavenscherm en naar het einde van je avonturenlijst verplaatst.
+  description: Als je het avontuur archiveert, wordt het verwijderd van het nieuwe uitgavenscherm en naar het einde van je avonturenlijst verplaatst.
   button: Archiefavontuur
   delete: Avontuur verwijderen
+expenses:
+  title: Uitgaven
+  total: Totaalrekening
+  paidBy: Betaald door
+  paid: Betaald
+spending:
+  yours: Jouw uitgaven
+  total: Totaal uitgegeven
+me: Ik
