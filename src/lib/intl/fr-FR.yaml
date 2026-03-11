@@ -48,6 +48,8 @@ profile:
       dépense`
   background:
     title: Arrière-plan
+  notifications:
+    title: Notifications
 form:
   enterName: Saisissez le nom
 onboarding:

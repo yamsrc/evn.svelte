@@ -80,6 +80,10 @@ inputs:
     background:
       title:
         input: Background
+    notifications:
+      title:
+        input: Notifications
+        context: section title
   form:
     enterName:
       input: Enter name

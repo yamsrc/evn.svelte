@@ -36,7 +36,9 @@
 <Panel name="transmission-settings" class={classes}>
   <div class="space-y-1">
     <div class="flex justify-between items-center gap-2">
-      <h2><label for="transmission-settings-switch">{$dict.settings.title}</label></h2>
+      <h2 style="view-transition-name: me-notifications-title;">
+        <label for="transmission-settings-switch">{$dict.settings.title}</label>
+      </h2>
       <Switch
         id="transmission-settings-switch"
         checked={all}

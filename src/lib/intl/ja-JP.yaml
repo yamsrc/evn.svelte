@@ -40,6 +40,8 @@ profile:
       (name, gender) => `${name} さんが支出を追加しました`
   background:
     title: 背景
+  notifications:
+    title: 通知
 form:
   enterName: 名前を入力してください
 onboarding:

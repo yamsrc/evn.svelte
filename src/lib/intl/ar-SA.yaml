@@ -44,6 +44,8 @@ profile:
       "she" ? `${name} أضافت مصروفًا` : `${name} أضاف(ت) مصروفًا`
   background:
     title: الخلفية
+  notifications:
+    title: الإشعارات
 form:
   enterName: أدخل الاسم
 onboarding:

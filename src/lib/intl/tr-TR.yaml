@@ -42,6 +42,8 @@ profile:
       (name, gender) => `${name} bir harcama ekledi`
   background:
     title: Arka plan
+  notifications:
+    title: Bildirimler
 form:
   enterName: İsim girin
 onboarding:

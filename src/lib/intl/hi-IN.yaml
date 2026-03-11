@@ -46,6 +46,8 @@ profile:
       "she" ? `${name} ने खर्च जोड़ी` : `${name} ने खर्च जोड़ा(जोड़ी)`
   background:
     title: पृष्ठभूमि
+  notifications:
+    title: सूचनाएँ
 form:
   enterName: नाम दर्ज करें
 onboarding:

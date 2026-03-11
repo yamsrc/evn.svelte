@@ -48,6 +48,8 @@ profile:
       heeft een uitgave toegevoegd`
   background:
     title: Achtergrond
+  notifications:
+    title: Meldingen
 form:
   enterName: Naam invoeren
 onboarding:

@@ -46,6 +46,8 @@ profile:
       === "she" ? `${name} added an expense` : `${name} added an expense`
   background:
     title: Background
+  notifications:
+    title: Notifications
 form:
   enterName: Enter name
 onboarding:

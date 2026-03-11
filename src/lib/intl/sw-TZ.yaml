@@ -47,6 +47,8 @@ profile:
       === "she" ? `${name} ameongeza matumizi` : `${name} ameongeza matumizi`
   background:
     title: Mandharinyuma
+  notifications:
+    title: Arifa
 form:
   enterName: Weka jina
 onboarding:

@@ -40,6 +40,8 @@ profile:
       (name, gender) => `${name} 添加了一笔支出`
   background:
     title: 背景
+  notifications:
+    title: 通知
 form:
   enterName: 输入姓名
 onboarding:

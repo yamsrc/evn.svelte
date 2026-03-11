@@ -48,6 +48,8 @@ profile:
       eine Ausgabe hinzugefügt`
   background:
     title: Hintergrund
+  notifications:
+    title: Benachrichtigungen
 form:
   enterName: Name eingeben
 onboarding:

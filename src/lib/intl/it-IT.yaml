@@ -48,6 +48,8 @@ profile:
       una spesa`
   background:
     title: Sfondo
+  notifications:
+    title: Notifiche
 form:
   enterName: Inserisci il nome
 onboarding:

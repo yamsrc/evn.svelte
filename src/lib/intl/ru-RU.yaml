@@ -47,6 +47,8 @@ profile:
       "she" ? `${name} добавила расход` : `${name} добавил(а) расход`
   background:
     title: Фон
+  notifications:
+    title: Уведомления
 form:
   enterName: Введите имя
 onboarding:

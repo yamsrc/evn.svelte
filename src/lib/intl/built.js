@@ -49,6 +49,9 @@ export const dictionaries = {
       },
       "background": {
         "title": "الخلفية"
+      },
+      "notifications": {
+        "title": "الإشعارات"
       }
     },
     "form": {
@@ -248,6 +251,9 @@ export const dictionaries = {
       },
       "background": {
         "title": "Hintergrund"
+      },
+      "notifications": {
+        "title": "Benachrichtigungen"
       }
     },
     "form": {
@@ -447,6 +453,9 @@ export const dictionaries = {
       },
       "background": {
         "title": "Background"
+      },
+      "notifications": {
+        "title": "Notifications"
       }
     },
     "form": {
@@ -646,6 +655,9 @@ export const dictionaries = {
       },
       "background": {
         "title": "Fondo"
+      },
+      "notifications": {
+        "title": "Notificaciones"
       }
     },
     "form": {
@@ -845,6 +857,9 @@ export const dictionaries = {
       },
       "background": {
         "title": "Arrière-plan"
+      },
+      "notifications": {
+        "title": "Notifications"
       }
     },
     "form": {
@@ -1044,6 +1059,9 @@ export const dictionaries = {
       },
       "background": {
         "title": "पृष्ठभूमि"
+      },
+      "notifications": {
+        "title": "सूचनाएँ"
       }
     },
     "form": {
@@ -1243,6 +1261,9 @@ export const dictionaries = {
       },
       "background": {
         "title": "Sfondo"
+      },
+      "notifications": {
+        "title": "Notifiche"
       }
     },
     "form": {
@@ -1442,6 +1463,9 @@ export const dictionaries = {
       },
       "background": {
         "title": "背景"
+      },
+      "notifications": {
+        "title": "通知"
       }
     },
     "form": {
@@ -1641,6 +1665,9 @@ export const dictionaries = {
       },
       "background": {
         "title": "배경"
+      },
+      "notifications": {
+        "title": "알림"
       }
     },
     "form": {
@@ -1840,6 +1867,9 @@ export const dictionaries = {
       },
       "background": {
         "title": "Achtergrond"
+      },
+      "notifications": {
+        "title": "Meldingen"
       }
     },
     "form": {
@@ -2039,6 +2069,9 @@ export const dictionaries = {
       },
       "background": {
         "title": "Фон"
+      },
+      "notifications": {
+        "title": "Уведомления"
       }
     },
     "form": {
@@ -2238,6 +2271,9 @@ export const dictionaries = {
       },
       "background": {
         "title": "Mandharinyuma"
+      },
+      "notifications": {
+        "title": "Arifa"
       }
     },
     "form": {
@@ -2437,6 +2473,9 @@ export const dictionaries = {
       },
       "background": {
         "title": "Arka plan"
+      },
+      "notifications": {
+        "title": "Bildirimler"
       }
     },
     "form": {
@@ -2636,6 +2675,9 @@ export const dictionaries = {
       },
       "background": {
         "title": "Тло"
+      },
+      "notifications": {
+        "title": "Сповіщення"
       }
     },
     "form": {
@@ -2835,6 +2877,9 @@ export const dictionaries = {
       },
       "background": {
         "title": "背景"
+      },
+      "notifications": {
+        "title": "通知"
       }
     },
     "form": {

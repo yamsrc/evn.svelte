@@ -40,7 +40,8 @@
           variant="ghost"
           size="icon"
           position="left"
-          label={$dict.actions.holdToLogout}>
+          label={$dict.actions.holdToLogout}
+          class="text-destructive">
           <LogOut class="size-5" />
         </Hold>
       </Header.Actions>
@@ -73,8 +74,11 @@
     </div>
   </Section>
 
-  <Section>
+  <Section class="space-y-2">
     {#if $subscribed === false}
+      <h2 style="view-transition-name: me-notifications-title;">
+        {$dict.profile.notifications.title}
+      </h2>
       <Permission name="transmission-settings" class="transmission-settings-morph" />
     {:else}
       <Scopes class="transmission-settings-morph" />

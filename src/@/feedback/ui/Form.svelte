@@ -71,7 +71,6 @@
   <div class="flex justify-center">
     <Button
       type="submit"
-      size="lg"
       class="w-full md:w-auto"
       disabled={busy}
       style="view-transition-name: feedback-button;">

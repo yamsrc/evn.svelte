@@ -56,6 +56,9 @@ export type Dictionary = {
         background: {
           title: string
         }
+        notifications: {
+          title: string
+        }
       }
       form: {
         enterName: string

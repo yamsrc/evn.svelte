@@ -27,7 +27,7 @@
 </script>
 
 {#if open}
-  <Card.Root class="bg-muted pt-4 relative" bind:ref={card}>
+  <Card.Root class="bg-muted pt-4 relative w-full" bind:ref={card}>
     <Button
       variant="ghost"
       size="icon"
@@ -36,12 +36,12 @@
       <ChevronUp />
     </Button>
     <Card.Header>
-      <Card.Title class="flex justify-center">
+      <Card.Title>
         <h2>
           {$dict.title}
         </h2>
       </Card.Title>
-      <Card.Description class="text-center">
+      <Card.Description>
         {$dict.description}
       </Card.Description>
     </Card.Header>

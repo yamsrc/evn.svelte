@@ -47,6 +47,8 @@ profile:
       "she" ? `${name} añadió un gasto` : `${name} añadió un gasto`
   background:
     title: Fondo
+  notifications:
+    title: Notificaciones
 form:
   enterName: Introduce el nombre
 onboarding:
