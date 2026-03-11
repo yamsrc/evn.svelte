@@ -23,6 +23,20 @@ export const dictionaries = {
         "title": "الإيصالات",
         "upload": {
           "label": "تحميل"
+        },
+        "progress": {
+          "uploading": {
+            "title": "جارٍ الرفع",
+            "comment": "يستغرق الأمر عادة بضع لحظات"
+          },
+          "processing": {
+            "comment": "تمسك جيدًا، أوشكنا على الوصول",
+            "title": "جارٍ المعالجة"
+          },
+          "ready": {
+            "title": "جاهز",
+            "comment": (ms) => `تم في ${(ms / 1000).toFixed(1)} ثانية`
+          }
         }
       }
     },
@@ -43,6 +57,9 @@ export const dictionaries = {
       "upload": {
 
       }
+    },
+    "actions": {
+      "continue": "متابعة"
     }
   },
   "de-DE": {
@@ -66,6 +83,20 @@ export const dictionaries = {
         "title": "Quittungen",
         "upload": {
           "label": "Hochladen"
+        },
+        "progress": {
+          "uploading": {
+            "title": "Wird hochgeladen",
+            "comment": "Dauert normalerweise nur wenige Augenblicke"
+          },
+          "processing": {
+            "comment": "Halte durch, gleich sind wir da",
+            "title": "Wird verarbeitet"
+          },
+          "ready": {
+            "title": "Bereit",
+            "comment": (ms) => `Fertig in ${(ms / 1000).toFixed(1)} Sekunden`
+          }
         }
       }
     },
@@ -86,6 +117,9 @@ export const dictionaries = {
       "upload": {
 
       }
+    },
+    "actions": {
+      "continue": "Weiter"
     }
   },
   "en-US": {
@@ -109,6 +143,20 @@ export const dictionaries = {
         "title": "Receipts",
         "upload": {
           "label": "Upload"
+        },
+        "progress": {
+          "uploading": {
+            "title": "Uploading",
+            "comment": "Usually takes a few moments"
+          },
+          "processing": {
+            "comment": "Hang tight, almost there",
+            "title": "Processing"
+          },
+          "ready": {
+            "title": "Ready",
+            "comment": (ms) => `Done in ${(ms / 1000).toFixed(1)} seconds`
+          }
         }
       }
     },
@@ -129,6 +177,9 @@ export const dictionaries = {
       "upload": {
 
       }
+    },
+    "actions": {
+      "continue": "Continue"
     }
   },
   "es-ES": {
@@ -152,6 +203,20 @@ export const dictionaries = {
         "title": "Recibos",
         "upload": {
           "label": "Subir"
+        },
+        "progress": {
+          "uploading": {
+            "title": "Subiendo",
+            "comment": "Normalmente tarda unos momentos"
+          },
+          "processing": {
+            "comment": "Aguanta, ya casi llegamos",
+            "title": "Procesando"
+          },
+          "ready": {
+            "title": "Listo",
+            "comment": (ms) => `Listo en ${(ms / 1000).toFixed(1)} segundos`
+          }
         }
       }
     },
@@ -172,6 +237,9 @@ export const dictionaries = {
       "upload": {
 
       }
+    },
+    "actions": {
+      "continue": "Continuar"
     }
   },
   "fr-FR": {
@@ -195,6 +263,20 @@ export const dictionaries = {
         "title": "Reçus",
         "upload": {
           "label": "Téléverser"
+        },
+        "progress": {
+          "uploading": {
+            "title": "Téléchargement en cours",
+            "comment": "Cela prend généralement quelques instants"
+          },
+          "processing": {
+            "comment": "Accroche-toi, on y est presque",
+            "title": "Traitement en cours"
+          },
+          "ready": {
+            "title": "Prêt",
+            "comment": (ms) => `Terminé en ${(ms / 1000).toFixed(1)} secondes`
+          }
         }
       }
     },
@@ -215,6 +297,9 @@ export const dictionaries = {
       "upload": {
 
       }
+    },
+    "actions": {
+      "continue": "Continuer"
     }
   },
   "hi-IN": {
@@ -238,6 +323,20 @@ export const dictionaries = {
         "title": "रसीदें",
         "upload": {
           "label": "अपलोड करें"
+        },
+        "progress": {
+          "uploading": {
+            "title": "अपलोड किया जा रहा है",
+            "comment": "आम तौर पर कुछ क्षण लगते हैं"
+          },
+          "processing": {
+            "comment": "बस थोड़ा रुकिए, हम लगभग पहुँच गए हैं",
+            "title": "प्रोसेस हो रहा है"
+          },
+          "ready": {
+            "title": "तैयार",
+            "comment": (ms) => `${(ms / 1000).toFixed(1)} सेकंड में पूरा हुआ`
+          }
         }
       }
     },
@@ -258,6 +357,9 @@ export const dictionaries = {
       "upload": {
 
       }
+    },
+    "actions": {
+      "continue": "जारी रखें"
     }
   },
   "it-IT": {
@@ -281,6 +383,20 @@ export const dictionaries = {
         "title": "Scontrini",
         "upload": {
           "label": "Carica"
+        },
+        "progress": {
+          "uploading": {
+            "title": "Caricamento in corso",
+            "comment": "Di solito ci vogliono pochi istanti"
+          },
+          "processing": {
+            "comment": "Resisti, ci siamo quasi",
+            "title": "Elaborazione in corso"
+          },
+          "ready": {
+            "title": "Pronto",
+            "comment": (ms) => `Fatto in ${(ms / 1000).toFixed(1)} secondi`
+          }
         }
       }
     },
@@ -301,6 +417,9 @@ export const dictionaries = {
       "upload": {
 
       }
+    },
+    "actions": {
+      "continue": "Continua"
     }
   },
   "ja-JP": {
@@ -324,6 +443,20 @@ export const dictionaries = {
         "title": "レシート",
         "upload": {
           "label": "アップロード"
+        },
+        "progress": {
+          "uploading": {
+            "title": "アップロード中",
+            "comment": "通常は数瞬で完了します"
+          },
+          "processing": {
+            "comment": "もう少しで到着です、頑張ってください",
+            "title": "処理中"
+          },
+          "ready": {
+            "title": "準備完了",
+            "comment": (ms) => `${(ms / 1000).toFixed(1)}秒で完了`
+          }
         }
       }
     },
@@ -344,6 +477,9 @@ export const dictionaries = {
       "upload": {
 
       }
+    },
+    "actions": {
+      "continue": "続行"
     }
   },
   "ko-KR": {
@@ -367,6 +503,20 @@ export const dictionaries = {
         "title": "영수증",
         "upload": {
           "label": "업로드"
+        },
+        "progress": {
+          "uploading": {
+            "title": "업로드 중",
+            "comment": "보통 잠시만 걸립니다"
+          },
+          "processing": {
+            "comment": "조금만 참아 주세요, 거의 다 왔어요",
+            "title": "처리 중"
+          },
+          "ready": {
+            "title": "준비 완료",
+            "comment": (ms) => `${(ms / 1000).toFixed(1)}초 만에 완료됨`
+          }
         }
       }
     },
@@ -387,6 +537,9 @@ export const dictionaries = {
       "upload": {
 
       }
+    },
+    "actions": {
+      "continue": "계속"
     }
   },
   "nl-NL": {
@@ -410,6 +563,20 @@ export const dictionaries = {
         "title": "Bonnetjes",
         "upload": {
           "label": "Uploaden"
+        },
+        "progress": {
+          "uploading": {
+            "title": "Bezig met uploaden",
+            "comment": "Duurt meestal slechts een paar momenten"
+          },
+          "processing": {
+            "comment": "Hou vol, we zijn er bijna",
+            "title": "Bezig met verwerken"
+          },
+          "ready": {
+            "title": "Klaar",
+            "comment": (ms) => `Klaar in ${(ms / 1000).toFixed(1)} seconden`
+          }
         }
       }
     },
@@ -430,6 +597,9 @@ export const dictionaries = {
       "upload": {
 
       }
+    },
+    "actions": {
+      "continue": "Doorgaan"
     }
   },
   "ru-RU": {
@@ -453,6 +623,20 @@ export const dictionaries = {
         "title": "Чеки",
         "upload": {
           "label": "Загрузить"
+        },
+        "progress": {
+          "uploading": {
+            "title": "Загрузка",
+            "comment": "Обычно занимает несколько секунд"
+          },
+          "processing": {
+            "comment": "Потерпи, почти пришли",
+            "title": "Обработка"
+          },
+          "ready": {
+            "title": "Готово",
+            "comment": (ms) => `Готово за ${(ms / 1000).toFixed(1)} секунд(ы)`
+          }
         }
       }
     },
@@ -473,6 +657,9 @@ export const dictionaries = {
       "upload": {
 
       }
+    },
+    "actions": {
+      "continue": "Продолжить"
     }
   },
   "sw-TZ": {
@@ -496,6 +683,20 @@ export const dictionaries = {
         "title": "Risiti",
         "upload": {
           "label": "Pakia"
+        },
+        "progress": {
+          "uploading": {
+            "title": "Inapakia",
+            "comment": "Kwa kawaida huchukua muda mfupi tu"
+          },
+          "processing": {
+            "comment": "Shikilia, tumebakiza kidogo tu",
+            "title": "Inashughulikiwa"
+          },
+          "ready": {
+            "title": "Tayari",
+            "comment": (ms) => `Imekamilika kwa sekunde ${(ms / 1000).toFixed(1)}`
+          }
         }
       }
     },
@@ -516,6 +717,9 @@ export const dictionaries = {
       "upload": {
 
       }
+    },
+    "actions": {
+      "continue": "Endelea"
     }
   },
   "tr-TR": {
@@ -539,6 +743,20 @@ export const dictionaries = {
         "title": "Fişler",
         "upload": {
           "label": "Yükle"
+        },
+        "progress": {
+          "uploading": {
+            "title": "Yükleniyor",
+            "comment": "Genellikle birkaç saniye sürer"
+          },
+          "processing": {
+            "comment": "Biraz daha sabret, neredeyse geldik",
+            "title": "İşleniyor"
+          },
+          "ready": {
+            "title": "Hazır",
+            "comment": (ms) => `${(ms / 1000).toFixed(1)} saniyede tamamlandı`
+          }
         }
       }
     },
@@ -559,6 +777,9 @@ export const dictionaries = {
       "upload": {
 
       }
+    },
+    "actions": {
+      "continue": "Devam et"
     }
   },
   "uk-UA": {
@@ -582,6 +803,20 @@ export const dictionaries = {
         "title": "Чеки",
         "upload": {
           "label": "Завантажити"
+        },
+        "progress": {
+          "uploading": {
+            "title": "Завантаження",
+            "comment": "Зазвичай це займає кілька секунд"
+          },
+          "processing": {
+            "comment": "Тримайся, вже майже на місці",
+            "title": "Обробка"
+          },
+          "ready": {
+            "title": "Готово",
+            "comment": (ms) => `Виконано за ${(ms / 1000).toFixed(1)} секунд(и)`
+          }
         }
       }
     },
@@ -602,6 +837,9 @@ export const dictionaries = {
       "upload": {
 
       }
+    },
+    "actions": {
+      "continue": "Продовжити"
     }
   },
   "zh-CN": {
@@ -625,6 +863,20 @@ export const dictionaries = {
         "title": "小票",
         "upload": {
           "label": "上传"
+        },
+        "progress": {
+          "uploading": {
+            "title": "正在上传",
+            "comment": "通常只需几秒钟"
+          },
+          "processing": {
+            "comment": "坚持一下，马上就到了",
+            "title": "处理中"
+          },
+          "ready": {
+            "title": "已准备好",
+            "comment": (ms) => `${(ms / 1000).toFixed(1)} 秒内完成`
+          }
         }
       }
     },
@@ -645,6 +897,9 @@ export const dictionaries = {
       "upload": {
 
       }
+    },
+    "actions": {
+      "continue": "继续"
     }
   }
 };

@@ -22,5 +22,8 @@
   }
 </script>
 
-<Attachments bind:attachments={value.attachments} />
+{#if value.attachments.length > 0}
+  <Attachments bind:attachments={value.attachments} editable={true} />
+{/if}
+
 <Form bind:value bind:mode {onsubmit} />

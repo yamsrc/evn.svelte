@@ -16,6 +16,18 @@ components:
     title: レシート
     upload:
       label: アップロード
+    progress:
+      uploading:
+        title: アップロード中
+        comment: 通常は数瞬で完了します
+      processing:
+        comment: もう少しで到着です、頑張ってください
+        title: 処理中
+      ready:
+        title: 準備完了
+        comment: |-
+          !js
+          (ms) => `${(ms / 1000).toFixed(1)}秒で完了`
 transmission:
   title: Transmission
   permission:
@@ -28,3 +40,5 @@ loading:
   title: ロード画面
 receipts:
   upload: {}
+actions:
+  continue: 続行

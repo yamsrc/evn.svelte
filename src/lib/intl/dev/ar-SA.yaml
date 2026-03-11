@@ -16,6 +16,18 @@ components:
     title: الإيصالات
     upload:
       label: تحميل
+    progress:
+      uploading:
+        title: جارٍ الرفع
+        comment: يستغرق الأمر عادة بضع لحظات
+      processing:
+        comment: تمسك جيدًا، أوشكنا على الوصول
+        title: جارٍ المعالجة
+      ready:
+        title: جاهز
+        comment: |-
+          !js
+          (ms) => `تم في ${(ms / 1000).toFixed(1)} ثانية`
 transmission:
   title: Transmission
   permission:
@@ -28,3 +40,5 @@ loading:
   title: شاشة التحميل
 receipts:
   upload: {}
+actions:
+  continue: متابعة

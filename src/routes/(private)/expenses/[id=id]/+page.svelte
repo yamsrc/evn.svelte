@@ -28,7 +28,9 @@
         </Header.Root>
       </Section>
 
-      <Attachments attachments={expense.attachments} editable={false} />
+      {#if expense.attachments.length > 0}
+        <Attachments attachments={expense.attachments} />
+      {/if}
 
       <Section>
         <Details.Description {expense} />

@@ -16,6 +16,18 @@ components:
     title: Bonnetjes
     upload:
       label: Uploaden
+    progress:
+      uploading:
+        title: Bezig met uploaden
+        comment: Duurt meestal slechts een paar momenten
+      processing:
+        comment: Hou vol, we zijn er bijna
+        title: Bezig met verwerken
+      ready:
+        title: Klaar
+        comment: |-
+          !js
+          (ms) => `Klaar in ${(ms / 1000).toFixed(1)} seconden`
 transmission:
   title: Transmission
   permission:
@@ -28,3 +40,5 @@ loading:
   title: Laadscherm
 receipts:
   upload: {}
+actions:
+  continue: Doorgaan

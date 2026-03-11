@@ -16,6 +16,18 @@ components:
     title: Scontrini
     upload:
       label: Carica
+    progress:
+      uploading:
+        title: Caricamento in corso
+        comment: Di solito ci vogliono pochi istanti
+      processing:
+        comment: Resisti, ci siamo quasi
+        title: Elaborazione in corso
+      ready:
+        title: Pronto
+        comment: |-
+          !js
+          (ms) => `Fatto in ${(ms / 1000).toFixed(1)} secondi`
 transmission:
   title: Transmission
   permission:
@@ -28,3 +40,5 @@ loading:
   title: Schermata di caricamento
 receipts:
   upload: {}
+actions:
+  continue: Continua

@@ -16,6 +16,18 @@ components:
     title: 영수증
     upload:
       label: 업로드
+    progress:
+      uploading:
+        title: 업로드 중
+        comment: 보통 잠시만 걸립니다
+      processing:
+        comment: 조금만 참아 주세요, 거의 다 왔어요
+        title: 처리 중
+      ready:
+        title: 준비 완료
+        comment: |-
+          !js
+          (ms) => `${(ms / 1000).toFixed(1)}초 만에 완료됨`
 transmission:
   title: Transmission
   permission:
@@ -28,3 +40,5 @@ loading:
   title: 로딩 화면
 receipts:
   upload: {}
+actions:
+  continue: 계속

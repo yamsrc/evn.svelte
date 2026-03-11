@@ -16,6 +16,18 @@ components:
     title: Quittungen
     upload:
       label: Hochladen
+    progress:
+      uploading:
+        title: Wird hochgeladen
+        comment: Dauert normalerweise nur wenige Augenblicke
+      processing:
+        comment: Halte durch, gleich sind wir da
+        title: Wird verarbeitet
+      ready:
+        title: Bereit
+        comment: |-
+          !js
+          (ms) => `Fertig in ${(ms / 1000).toFixed(1)} Sekunden`
 transmission:
   title: Transmission
   permission:
@@ -28,3 +40,5 @@ loading:
   title: Ladebildschirm
 receipts:
   upload: {}
+actions:
+  continue: Weiter

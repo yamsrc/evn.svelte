@@ -30,6 +30,20 @@ export type Dictionary = {
           upload: {
             label: string
           }
+          progress: {
+            uploading: {
+              title: string
+              comment: string
+            }
+            processing: {
+              comment: string
+              title: string
+            }
+            ready: {
+              title: string
+              comment: (value: any) => string
+            }
+          }
         }
       }
       transmission: {
@@ -49,5 +63,8 @@ export type Dictionary = {
         upload: {
 
         }
+      }
+      actions: {
+        continue: string
       }
     }

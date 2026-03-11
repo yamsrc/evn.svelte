@@ -16,6 +16,18 @@ components:
     title: Reçus
     upload:
       label: Téléverser
+    progress:
+      uploading:
+        title: Téléchargement en cours
+        comment: Cela prend généralement quelques instants
+      processing:
+        comment: Accroche-toi, on y est presque
+        title: Traitement en cours
+      ready:
+        title: Prêt
+        comment: |-
+          !js
+          (ms) => `Terminé en ${(ms / 1000).toFixed(1)} secondes`
 transmission:
   title: Transmission
   permission:
@@ -28,3 +40,5 @@ loading:
   title: Écran de chargement
 receipts:
   upload: {}
+actions:
+  continue: Continuer

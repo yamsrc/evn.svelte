@@ -27,6 +27,23 @@ inputs:
       upload:
         label:
           input: Upload
+      progress:
+        uploading:
+          title:
+            input: Uploading
+          comment:
+            input: Usually takes a few moments
+        processing:
+          comment:
+            input: Hang tight, almost there
+          title:
+            input: Processing
+        ready:
+          title:
+            input: Ready
+          comment:
+            input: Done in {n} seconds
+            context: "Make it a function accepting ms: number (milliseconds) and using phrase with seconds .toFixed(1)"
   transmission:
     title:
       input: Transmission
@@ -44,3 +61,6 @@ inputs:
   loading:
     title:
       input: Loading screen
+  actions:
+    continue:
+      input: Continue

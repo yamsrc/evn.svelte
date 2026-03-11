@@ -1,14 +1,14 @@
 # Receipts
 
-## Flow
-
-- [ ] Upload (1–2s)
-- [ ] Instantly go to Lobby screen
-  - [ ] Pending image
-  - [ ] Pending processing
-  - [ ] Add participants
-  - [ ] Ready (Continue)
+- [ ] dev navigation
+- [x] Upload
+- [x] Pending image
+- [x] Pending processing
+- [x] Ready (Continue)
+- [ ] Pending state
+- [ ] Error state
 - [ ] Receipt screen
+  TODO
 
 ## Routes
 

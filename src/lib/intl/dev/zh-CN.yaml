@@ -16,6 +16,18 @@ components:
     title: 小票
     upload:
       label: 上传
+    progress:
+      uploading:
+        title: 正在上传
+        comment: 通常只需几秒钟
+      processing:
+        comment: 坚持一下，马上就到了
+        title: 处理中
+      ready:
+        title: 已准备好
+        comment: |-
+          !js
+          (ms) => `${(ms / 1000).toFixed(1)} 秒内完成`
 transmission:
   title: Transmission
   permission:
@@ -28,3 +40,5 @@ loading:
   title: 加载界面
 receipts:
   upload: {}
+actions:
+  continue: 继续

@@ -16,6 +16,18 @@ components:
     title: Recibos
     upload:
       label: Subir
+    progress:
+      uploading:
+        title: Subiendo
+        comment: Normalmente tarda unos momentos
+      processing:
+        comment: Aguanta, ya casi llegamos
+        title: Procesando
+      ready:
+        title: Listo
+        comment: |-
+          !js
+          (ms) => `Listo en ${(ms / 1000).toFixed(1)} segundos`
 transmission:
   title: Transmission
   permission:
@@ -28,3 +40,5 @@ loading:
   title: Pantalla de carga
 receipts:
   upload: {}
+actions:
+  continue: Continuar

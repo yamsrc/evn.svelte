@@ -14,6 +14,7 @@ export const receipts = collection<Receipt>({
   bind: account,
   stale: true,
   values: values<Receipt>({
+    stale: true,
     get,
   }),
 })

@@ -16,6 +16,18 @@ components:
     title: Risiti
     upload:
       label: Pakia
+    progress:
+      uploading:
+        title: Inapakia
+        comment: Kwa kawaida huchukua muda mfupi tu
+      processing:
+        comment: Shikilia, tumebakiza kidogo tu
+        title: Inashughulikiwa
+      ready:
+        title: Tayari
+        comment: |-
+          !js
+          (ms) => `Imekamilika kwa sekunde ${(ms / 1000).toFixed(1)}`
 transmission:
   title: Transmission
   permission:
@@ -28,3 +40,5 @@ loading:
   title: Skrini ya kupakia
 receipts:
   upload: {}
+actions:
+  continue: Endelea

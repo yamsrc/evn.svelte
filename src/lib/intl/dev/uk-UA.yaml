@@ -16,6 +16,18 @@ components:
     title: Чеки
     upload:
       label: Завантажити
+    progress:
+      uploading:
+        title: Завантаження
+        comment: Зазвичай це займає кілька секунд
+      processing:
+        comment: Тримайся, вже майже на місці
+        title: Обробка
+      ready:
+        title: Готово
+        comment: |-
+          !js
+          (ms) => `Виконано за ${(ms / 1000).toFixed(1)} секунд(и)`
 transmission:
   title: Transmission
   permission:
@@ -28,3 +40,5 @@ loading:
   title: Екран завантаження
 receipts:
   upload: {}
+actions:
+  continue: Продовжити
