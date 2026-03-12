@@ -1,6 +1,7 @@
 <script lang="ts">
   import { Async } from 'svas'
   import { page } from '$app/state'
+  import { Return } from '$com/shell'
   import { Header, Section } from '@/app/ui'
   import { receipts } from '@/receipts'
   import { Attachments, Splitter } from '@/receipts/ui'
@@ -30,3 +31,5 @@
     </Section>
   {/snippet}
 </Async>
+
+<Return />

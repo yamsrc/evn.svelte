@@ -42,3 +42,7 @@ receipts:
   upload: {}
 actions:
   continue: Doorgaan
+nav:
+  home: Startpagina
+  components: Componenten
+  transmission: Transmissie

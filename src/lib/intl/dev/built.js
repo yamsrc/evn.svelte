@@ -60,6 +60,11 @@ export const dictionaries = {
     },
     "actions": {
       "continue": "متابعة"
+    },
+    "nav": {
+      "home": "الرئيسية",
+      "components": "المكوّنات",
+      "transmission": "ناقل الحركة"
     }
   },
   "de-DE": {
@@ -120,6 +125,11 @@ export const dictionaries = {
     },
     "actions": {
       "continue": "Weiter"
+    },
+    "nav": {
+      "home": "Startseite",
+      "components": "Komponenten",
+      "transmission": "Getriebe"
     }
   },
   "en-US": {
@@ -180,6 +190,11 @@ export const dictionaries = {
     },
     "actions": {
       "continue": "Continue"
+    },
+    "nav": {
+      "home": "Home",
+      "components": "Components",
+      "transmission": "Transmission"
     }
   },
   "es-ES": {
@@ -240,6 +255,11 @@ export const dictionaries = {
     },
     "actions": {
       "continue": "Continuar"
+    },
+    "nav": {
+      "home": "Inicio",
+      "components": "Componentes",
+      "transmission": "Transmisión"
     }
   },
   "fr-FR": {
@@ -300,6 +320,11 @@ export const dictionaries = {
     },
     "actions": {
       "continue": "Continuer"
+    },
+    "nav": {
+      "home": "Accueil",
+      "components": "Composants",
+      "transmission": "Transmission"
     }
   },
   "hi-IN": {
@@ -360,6 +385,11 @@ export const dictionaries = {
     },
     "actions": {
       "continue": "जारी रखें"
+    },
+    "nav": {
+      "home": "होम",
+      "components": "कॉम्पोनेंट्स",
+      "transmission": "ट्रांसमिशन"
     }
   },
   "it-IT": {
@@ -420,6 +450,11 @@ export const dictionaries = {
     },
     "actions": {
       "continue": "Continua"
+    },
+    "nav": {
+      "home": "Home",
+      "components": "Componenti",
+      "transmission": "Trasmissione"
     }
   },
   "ja-JP": {
@@ -480,6 +515,11 @@ export const dictionaries = {
     },
     "actions": {
       "continue": "続行"
+    },
+    "nav": {
+      "home": "ホーム",
+      "components": "コンポーネント",
+      "transmission": "トランスミッション"
     }
   },
   "ko-KR": {
@@ -540,6 +580,11 @@ export const dictionaries = {
     },
     "actions": {
       "continue": "계속"
+    },
+    "nav": {
+      "home": "홈",
+      "components": "컴포넌트",
+      "transmission": "변속기"
     }
   },
   "nl-NL": {
@@ -600,6 +645,11 @@ export const dictionaries = {
     },
     "actions": {
       "continue": "Doorgaan"
+    },
+    "nav": {
+      "home": "Startpagina",
+      "components": "Componenten",
+      "transmission": "Transmissie"
     }
   },
   "ru-RU": {
@@ -660,6 +710,11 @@ export const dictionaries = {
     },
     "actions": {
       "continue": "Продолжить"
+    },
+    "nav": {
+      "home": "Главная",
+      "components": "Компоненты",
+      "transmission": "Трансмиссия"
     }
   },
   "sw-TZ": {
@@ -720,6 +775,11 @@ export const dictionaries = {
     },
     "actions": {
       "continue": "Endelea"
+    },
+    "nav": {
+      "home": "Mwanzo",
+      "components": "Vijenzi",
+      "transmission": "Gia"
     }
   },
   "tr-TR": {
@@ -780,6 +840,11 @@ export const dictionaries = {
     },
     "actions": {
       "continue": "Devam et"
+    },
+    "nav": {
+      "home": "Ana Sayfa",
+      "components": "Bileşenler",
+      "transmission": "Şanzıman"
     }
   },
   "uk-UA": {
@@ -840,6 +905,11 @@ export const dictionaries = {
     },
     "actions": {
       "continue": "Продовжити"
+    },
+    "nav": {
+      "home": "Головна",
+      "components": "Компоненти",
+      "transmission": "Трансмісія"
     }
   },
   "zh-CN": {
@@ -900,6 +970,11 @@ export const dictionaries = {
     },
     "actions": {
       "continue": "继续"
+    },
+    "nav": {
+      "home": "首页",
+      "components": "组件",
+      "transmission": "变速器"
     }
   }
 };

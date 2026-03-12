@@ -42,3 +42,7 @@ receipts:
   upload: {}
 actions:
   continue: Продовжити
+nav:
+  home: Головна
+  components: Компоненти
+  transmission: Трансмісія

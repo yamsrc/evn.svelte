@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Check, CircleDashed } from '@lucide/svelte'
+  import { Check, CircleDashed, Share2 } from '@lucide/svelte'
   import { Actions } from '$com/shell'
   import * as Item from '$ui/item'
   import { Coins } from '@/app/ui'
@@ -32,6 +32,9 @@
 </div>
 
 <Actions>
+  <Action id="nav-action-receipt-share" variant="secondary">
+    <Share2 />
+  </Action>
   <Action id="nav-action-receipt-split">
     <Check />
   </Action>

@@ -42,3 +42,7 @@ receipts:
   upload: {}
 actions:
   continue: Devam et
+nav:
+  home: Ana Sayfa
+  components: Bileşenler
+  transmission: Şanzıman

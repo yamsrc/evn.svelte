@@ -64,3 +64,12 @@ inputs:
   actions:
     continue:
       input: Continue
+  nav:
+    home:
+      input: Home
+      context: App navigation tab
+    components:
+      input: Components
+      context: App navigation tab
+    transmission:
+      input: Transmission

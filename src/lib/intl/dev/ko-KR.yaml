@@ -42,3 +42,7 @@ receipts:
   upload: {}
 actions:
   continue: 계속
+nav:
+  home: 홈
+  components: 컴포넌트
+  transmission: 변속기

@@ -42,3 +42,7 @@ receipts:
   upload: {}
 actions:
   continue: متابعة
+nav:
+  home: الرئيسية
+  components: المكوّنات
+  transmission: ناقل الحركة

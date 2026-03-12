@@ -42,3 +42,7 @@ receipts:
   upload: {}
 actions:
   continue: जारी रखें
+nav:
+  home: होम
+  components: कॉम्पोनेंट्स
+  transmission: ट्रांसमिशन

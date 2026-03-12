@@ -42,3 +42,7 @@ receipts:
   upload: {}
 actions:
   continue: Endelea
+nav:
+  home: Mwanzo
+  components: Vijenzi
+  transmission: Gia

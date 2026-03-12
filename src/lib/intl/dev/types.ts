@@ -67,4 +67,9 @@ export type Dictionary = {
       actions: {
         continue: string
       }
+      nav: {
+        home: string
+        components: string
+        transmission: string
+      }
     }

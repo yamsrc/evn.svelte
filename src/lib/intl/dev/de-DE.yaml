@@ -42,3 +42,7 @@ receipts:
   upload: {}
 actions:
   continue: Weiter
+nav:
+  home: Startseite
+  components: Komponenten
+  transmission: Getriebe

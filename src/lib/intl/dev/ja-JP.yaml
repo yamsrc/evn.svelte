@@ -42,3 +42,7 @@ receipts:
   upload: {}
 actions:
   continue: 続行
+nav:
+  home: ホーム
+  components: コンポーネント
+  transmission: トランスミッション
