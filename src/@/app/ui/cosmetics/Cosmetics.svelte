@@ -1,13 +1,13 @@
 <script lang="ts">
-  import { cn } from '$lib/utils'
-  import { Spinner } from '$ui/spinner'
   import { pickpic } from '@/accounts'
-  import Actions from './Actions.svelte'
-  import Content from './Content.svelte'
-  import Name from './Name.svelte'
-  import Note from './Note.svelte'
-  import Picture from './Picture.svelte'
+  import { Spinner } from '$ui/spinner'
+  import { cn } from '$lib/utils'
   import Root from './Root.svelte'
+  import Picture from './Picture.svelte'
+  import Note from './Note.svelte'
+  import Name from './Name.svelte'
+  import Content from './Content.svelte'
+  import Actions from './Actions.svelte'
   import type { Props, Value } from './Cosmetics'
 
   // Default implementation for backward compatibility

@@ -1,17 +1,17 @@
 <script lang="ts">
   import { Check } from '@lucide/svelte'
-  import { Actions } from '$com/shell'
-  import { dict } from '$lib/intl'
-  import { onsubmit } from '$lib/tools'
-  import { Action, Section } from '@/app/ui'
   import { numbers } from '@/expenses'
-  import { setContext } from './Context'
-  import Description from './Description.svelte'
+  import { Action, Section } from '@/app/ui'
+  import { onsubmit } from '$lib/tools'
+  import { dict } from '$lib/intl'
+  import { Actions } from '$com/shell'
+  import Total from './Total.svelte'
+  import PayerSelect from './PayerSelect.svelte'
+  import Participants from './Participants.svelte'
   import { normalize, type Props, type Value } from './Form'
   import { autoeffects } from './Form'
-  import Participants from './Participants.svelte'
-  import PayerSelect from './PayerSelect.svelte'
-  import Total from './Total.svelte'
+  import Description from './Description.svelte'
+  import { setContext } from './Context'
 
   let {
     value = $bindable<Value>(),

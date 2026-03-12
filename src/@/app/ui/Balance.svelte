@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { dict } from '$lib/intl'
   import { cn } from '$lib/utils'
+  import { dict } from '$lib/intl'
   import Coins from './Coins.svelte'
   import type { Props } from './Balance'
 

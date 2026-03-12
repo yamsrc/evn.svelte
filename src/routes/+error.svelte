@@ -1,6 +1,6 @@
 <script>
-  import { dict } from '$lib/intl/err'
   import { Button } from '$ui/button'
+  import { dict } from '$lib/intl/err'
 </script>
 
 <div class="min-h-screen flex flex-col items-center justify-center gap-4 p-8">

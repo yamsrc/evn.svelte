@@ -1,9 +1,9 @@
-import { track } from '@vercel/analytics'
 import { having, sync } from 'svas'
+import { track } from '@vercel/analytics'
 import { account } from '@/iam'
-import * as net from './net'
-import { total } from './numbers'
 import { internal } from './store'
+import { total } from './numbers'
+import * as net from './net'
 
 export async function add(properties: Input): Promise<net.Expense | Error> {
   const me = await having(account)

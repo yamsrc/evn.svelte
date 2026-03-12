@@ -1,6 +1,6 @@
-import type { AccountLike } from './AccountLike'
 import type { oidc } from '@/iam'
 import type { Method } from '@/iam'
+import type { AccountLike } from './AccountLike'
 
 export interface Props {
   account?: AccountLike

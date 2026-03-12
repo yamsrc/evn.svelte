@@ -1,13 +1,13 @@
 <script lang="ts">
-  import { LogOut } from '@lucide/svelte'
   import { onMount } from 'svelte'
-  import { Button } from '$ui/button'
-  import { logout, type Method } from '@/iam'
+  import { LogOut } from '@lucide/svelte'
   import { dict } from '@/iam/ui/intl'
-  import Card from './Card.svelte'
-  import { Refresh as OIDCRefresh } from './oidc'
-  import { Refresh as PasskeyRefresh } from './passkey'
+  import { logout, type Method } from '@/iam'
+  import { Button } from '$ui/button'
   import { Refresh as PasswordRefresh } from './password'
+  import { Refresh as PasskeyRefresh } from './passkey'
+  import { Refresh as OIDCRefresh } from './oidc'
+  import Card from './Card.svelte'
   import type { AccountLike } from './AccountLike'
 
   const { account, method }: { account: AccountLike; method: Method | null } = $props()

@@ -1,10 +1,10 @@
-import * as net from '../net'
-import { method, iam } from '../store'
 import { sync } from '../sync'
-import { apple } from './apple'
-import { google } from './google'
-import { providers, type Descriptor, type IDP } from './providers'
+import { method, iam } from '../store'
+import * as net from '../net'
 import { standard } from './standard'
+import { providers, type Descriptor, type IDP } from './providers'
+import { google } from './google'
+import { apple } from './apple'
 
 const vendors = { apple, google } as const
 

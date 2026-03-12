@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { goto } from '$app/navigation'
-  import { cn } from '$lib/utils'
   import { Button } from '$ui/button'
+  import { cn } from '$lib/utils'
+  import { goto } from '$app/navigation'
   import type { Props, Action } from './Panel'
 
   const {

@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { transit } from '$lib/tools'
-  import { Button } from '$ui/button'
-  import { Panel } from '@/app/ui'
   import { permission, request, dismissed } from '@/transmission'
+  import { Panel } from '@/app/ui'
+  import { Button } from '$ui/button'
+  import { transit } from '$lib/tools'
   import { dict } from './intl'
   import type { Props } from './Permission'
 

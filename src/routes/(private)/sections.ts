@@ -1,7 +1,7 @@
 import { LayoutGrid, Smile, Wallet } from '@lucide/svelte'
-import type { Section } from '$com/shell'
-import type { Dictionary } from '$lib/intl'
 import type { Notification } from '@/notifications'
+import type { Dictionary } from '$lib/intl'
+import type { Section } from '$com/shell'
 
 export const sections = (dict: Dictionary, notifications: Notification[]): Section[] => [
   {

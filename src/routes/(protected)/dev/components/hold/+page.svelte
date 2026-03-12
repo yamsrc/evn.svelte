@@ -1,7 +1,7 @@
 <script lang="ts">
   import { LogOut } from '@lucide/svelte'
-  import { Hold } from '$com/buttons/hold'
   import { dict } from '$lib/intl'
+  import { Hold } from '$com/buttons/hold'
 
   // prettier-ignore
   const positions = [

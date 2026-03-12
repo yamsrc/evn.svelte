@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { dict } from '$lib/intl'
-  import { cn } from '$lib/utils'
   import { Coins } from '@/app/ui'
+  import { cn } from '$lib/utils'
+  import { dict } from '$lib/intl'
   import type { Props } from './Balance'
 
   const { contact, class: classes }: Props = $props()

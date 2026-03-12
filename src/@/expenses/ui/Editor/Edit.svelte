@@ -1,11 +1,11 @@
 <script lang="ts">
-  import { back } from '$com/history'
   import { add, update } from '@/expenses'
+  import { back } from '$com/history'
   import Attachments from '../Attachments.svelte'
-  import { getContext } from './Context'
   import { Form } from './Form'
-  import type { Value } from './Context'
+  import { getContext } from './Context'
   import type { Props } from './Edit'
+  import type { Value } from './Context'
 
   let { id, value = $bindable(), mode = $bindable<'sums' | 'shares'>('sums') }: Props = $props()
 

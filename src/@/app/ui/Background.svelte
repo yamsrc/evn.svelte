@@ -4,12 +4,12 @@
 
 <script lang="ts">
   import { onMount, tick } from 'svelte'
-  import { dict } from '$lib/intl'
-  import { ios, safari, shell, standalone } from '$lib/tools/mq'
-  import { update } from '@/accounts'
   import { account } from '@/iam'
-  import { backgrounds, overriden, type Props } from './Background'
+  import { update } from '@/accounts'
+  import { ios, safari, shell, standalone } from '$lib/tools/mq'
+  import { dict } from '$lib/intl'
   import Slide from './Slide.svelte'
+  import { backgrounds, overriden, type Props } from './Background'
 
   const { scrollable, class: classes }: Props = $props()
 

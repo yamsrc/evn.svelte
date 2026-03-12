@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { Section } from '@/app/ui'
-  import { filter, unseen } from '@/expenses'
   import { Expense } from '@/expenses/ui'
+  import { filter, unseen } from '@/expenses'
+  import { Section } from '@/app/ui'
   import type { Props } from './Expenses'
 
   const { expenses, search, notifications }: Props = $props()

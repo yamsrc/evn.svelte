@@ -1,5 +1,5 @@
-import type { Snippet } from 'svelte'
 import type { Attachment } from 'svelte/attachments'
+import type { Snippet } from 'svelte'
 
 export interface Props {
   children: Snippet

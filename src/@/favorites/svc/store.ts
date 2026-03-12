@@ -1,6 +1,6 @@
 import { collection, sync, values } from 'svas'
-import { account } from '@/iam'
 import { events } from '@/realtime'
+import { account } from '@/iam'
 import { get } from './get'
 import type { Favorite } from './net'
 

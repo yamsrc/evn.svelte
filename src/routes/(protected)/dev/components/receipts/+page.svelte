@@ -1,9 +1,9 @@
 <script lang="ts">
   import { UploadIcon } from '@lucide/svelte'
-  import { goto } from '$app/navigation'
-  import { dict } from '$lib/intl/dev'
-  import { Section, Header } from '@/app/ui'
   import { Upload } from '@/receipts/ui'
+  import { Section, Header } from '@/app/ui'
+  import { dict } from '$lib/intl/dev'
+  import { goto } from '$app/navigation'
 
   function onstart() {
     void goto('./pending/')

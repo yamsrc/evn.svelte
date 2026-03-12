@@ -1,8 +1,8 @@
 <script lang="ts">
   import { ok } from 'svas'
-  import { page } from '$app/state'
-  import { oidc } from '$config'
   import { Screen, Authenticated, Goto } from '@/app/ui'
+  import { oidc } from '$config'
+  import { page } from '$app/state'
   import Accept from './Accept.svelte'
   import type { PageData } from './$types.js'
 

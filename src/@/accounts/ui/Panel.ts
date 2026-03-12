@@ -1,5 +1,5 @@
-import type { ActionProps } from '$com/panel'
 import type { Account } from '@/accounts'
+import type { ActionProps } from '$com/panel'
 
 type AccountLike = Pick<Account, 'id' | 'name' | 'picture'>
 

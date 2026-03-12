@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { standalone, safari } from '$lib/tools/mq'
   import { cn } from '$lib/utils'
+  import { standalone, safari } from '$lib/tools/mq'
   import type { Props } from './Screen'
 
   const { children, unsafe = false, class: classes }: Props = $props()

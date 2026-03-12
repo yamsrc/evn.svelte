@@ -1,12 +1,12 @@
 <script lang="ts">
-  import { TextEllipsis } from '$com/text-ellipsis'
-  import { Panel } from '$lib/components/panel'
-  import { dict } from '$lib/intl'
-  import * as Item from '$ui/item'
-  import { Picture } from '@/accounts/ui'
+  import { account as me } from '@/iam'
   import { Balance } from '@/app/ui'
   import { CoinsInput } from '@/app/ui'
-  import { account as me } from '@/iam'
+  import { Picture } from '@/accounts/ui'
+  import * as Item from '$ui/item'
+  import { dict } from '$lib/intl'
+  import { Panel } from '$lib/components/panel'
+  import { TextEllipsis } from '$com/text-ellipsis'
   import { getContext } from './Context'
   import type { Props } from './Payer'
 

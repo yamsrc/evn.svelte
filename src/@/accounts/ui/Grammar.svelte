@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { dict, type Grammar } from '$lib/intl'
-  import { cn } from '$lib/utils'
-  import * as ToggleGroup from '$ui/toggle-group'
   import { update, managed as contacts } from '@/accounts'
+  import * as ToggleGroup from '$ui/toggle-group'
+  import { cn } from '$lib/utils'
+  import { dict, type Grammar } from '$lib/intl'
   import { options, type Props, type Value } from './Grammar'
 
   const { account, managed, class: classes }: Props = $props()

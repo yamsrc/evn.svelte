@@ -1,6 +1,6 @@
-import type { Contact } from '@/contacts/svc'
-import type { Notification } from '@/notifications'
 import type { SvelteSet } from 'svelte/reactivity'
+import type { Notification } from '@/notifications'
+import type { Contact } from '@/contacts/svc'
 
 export interface Props {
   contacts: Contact[]

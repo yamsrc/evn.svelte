@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Async, ok } from 'svas'
-  import { contacts } from '@/contacts'
   import { dict } from '@/notifications/ui/intl'
+  import { contacts } from '@/contacts'
   import Base from '../Base.svelte'
   import type { Props } from './Unchained'
 

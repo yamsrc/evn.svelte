@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { cn } from '$lib/utils'
   import { Progress } from '$ui/progress'
-  import Panel from './Panel.svelte'
+  import { cn } from '$lib/utils'
   import { dict } from './intl'
+  import Panel from './Panel.svelte'
   import type { Contact, Props, Sign } from './Tops'
 
   const { contacts }: Props = $props()

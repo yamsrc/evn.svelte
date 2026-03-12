@@ -1,9 +1,9 @@
 <script lang="ts">
   import { onMount } from 'svelte'
-  import { inAppPopOut } from '$lib/tools'
   import { Button } from '$ui/button'
-  import Card from './Card.svelte'
+  import { inAppPopOut } from '$lib/tools'
   import { dict } from './intl'
+  import Card from './Card.svelte'
 
   onMount(inAppPopOut)
 </script>

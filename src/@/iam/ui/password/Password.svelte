@@ -1,9 +1,9 @@
 <script lang="ts">
   import { REGEXP_ONLY_DIGITS } from 'bits-ui'
-  import { cn } from '$lib/utils'
-  import { Input } from '$ui/input'
-  import * as InputOTP from '$ui/input-otp'
   import { dict } from '@/iam/ui/intl'
+  import * as InputOTP from '$ui/input-otp'
+  import { Input } from '$ui/input'
+  import { cn } from '$lib/utils'
   import type { Props } from './Password'
 
   let {

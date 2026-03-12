@@ -4,11 +4,11 @@
 
 <script lang="ts">
   import { UserPlus } from '@lucide/svelte'
-  import { Share } from '$com/buttons'
-  import { QR } from '$com/qr'
-  import { Separator } from '$com/separator'
-  import { dict } from '$lib/intl'
   import { Button } from '$ui/button'
+  import { dict } from '$lib/intl'
+  import { Separator } from '$com/separator'
+  import { QR } from '$com/qr'
+  import { Share } from '$com/buttons'
   import type { Props } from './Invite'
 
   const { id }: Props = $props()

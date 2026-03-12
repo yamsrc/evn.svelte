@@ -1,10 +1,10 @@
 <script lang="ts">
   import { Check, ChevronUp, Send } from '@lucide/svelte'
-  import { transit } from '$lib/tools'
-  import { Button } from '$ui/button'
   import * as Card from '$ui/card'
-  import Form from './Form.svelte'
+  import { Button } from '$ui/button'
+  import { transit } from '$lib/tools'
   import { dict } from './intl'
+  import Form from './Form.svelte'
 
   let open = $state(false)
   let card = $state<HTMLDivElement | null>(null)

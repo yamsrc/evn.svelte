@@ -1,11 +1,11 @@
 <script lang="ts">
-  import { Panel } from '$com/panel'
-  import { Attention } from '$com/shell'
-  import { TextEllipsis } from '$com/text-ellipsis'
-  import { dict } from '$lib/intl'
-  import { cn } from '$lib/utils'
-  import { Picture } from '@/accounts/ui'
   import { Balance } from '@/app/ui'
+  import { Picture } from '@/accounts/ui'
+  import { cn } from '$lib/utils'
+  import { dict } from '$lib/intl'
+  import { TextEllipsis } from '$com/text-ellipsis'
+  import { Attention } from '$com/shell'
+  import { Panel } from '$com/panel'
   import type { Props } from './Panel'
 
   let {

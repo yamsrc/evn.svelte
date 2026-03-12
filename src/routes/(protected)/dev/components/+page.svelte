@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { dict } from '$lib/intl/dev'
   import { Section } from '@/app/ui'
+  import { dict } from '$lib/intl/dev'
 </script>
 
 <Section class="py-4">

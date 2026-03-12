@@ -1,5 +1,5 @@
-import type { ButtonProps } from '$ui/button'
 import type { Snippet } from 'svelte'
+import type { ButtonProps } from '$ui/button'
 
 export type Props = {
   left: Snippet

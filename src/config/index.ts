@@ -1,5 +1,5 @@
-import { dev, version as ver } from '$app/environment'
 import { PUBLIC_API_ORIGIN, PUBLIC_VAPID_PUBLIC_KEY } from '$env/static/public'
+import { dev, version as ver } from '$app/environment'
 import type { oidc as oauth } from '@/iam'
 
 export const defaultLocale = 'en-US'

@@ -1,7 +1,7 @@
 <script lang="ts">
   import { HeartCrack } from '@lucide/svelte'
-  import { Hold } from '$com/buttons'
   import { del } from '@/contacts'
+  import { Hold } from '$com/buttons'
   import { dict } from './intl'
   import type { Props } from './Delete'
 

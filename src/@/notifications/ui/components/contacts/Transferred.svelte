@@ -1,9 +1,9 @@
 <script lang="ts">
   import { Async, ok } from 'svas'
-  import { currency } from '$lib/tools'
-  import { contacts } from '@/contacts'
-  import { account } from '@/iam'
   import { dict, locale } from '@/notifications/ui/intl'
+  import { account } from '@/iam'
+  import { contacts } from '@/contacts'
+  import { currency } from '$lib/tools'
   import Base from '../Base.svelte'
   import type { Props } from './Transferred'
 

@@ -1,10 +1,10 @@
 <script lang="ts">
   import { Share2 } from '@lucide/svelte'
-  import { browser } from '$app/environment'
-  import { Clipboard } from '$com/buttons'
-  import { Loader } from '$com/loader'
-  import { cn } from '$lib/utils'
   import { Button } from '$ui/button'
+  import { cn } from '$lib/utils'
+  import { Loader } from '$com/loader'
+  import { Clipboard } from '$com/buttons'
+  import { browser } from '$app/environment'
   import type { Props, Retriever } from './Share'
 
   const { children, data, label, disabled, onshare, class: classes, ...rest }: Props = $props()

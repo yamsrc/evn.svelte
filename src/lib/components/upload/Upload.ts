@@ -1,5 +1,5 @@
-import type { ButtonProps } from '$ui/button'
 import type { HTMLInputAttributes } from 'svelte/elements'
+import type { ButtonProps } from '$ui/button'
 
 export interface Props extends Omit<ButtonProps, 'onclick'> {
   accept?: HTMLInputAttributes['accept']

@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { dict } from '$lib/intl'
+  import { Create } from '@/contacts/ui'
   import { Section } from '@/app/ui'
   import { Header } from '@/app/ui'
-  import { Create } from '@/contacts/ui'
+  import { dict } from '$lib/intl'
 </script>
 
 <Section>

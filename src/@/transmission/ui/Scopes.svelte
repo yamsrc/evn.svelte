@@ -1,10 +1,10 @@
 <script lang="ts">
-  import { Separator } from '$com/separator'
-  import { Switch } from '$ui/switch'
-  import { Panel } from '@/app/ui'
   import { configure, permissions, key } from '@/transmission'
-  import { scopes } from './Scopes'
+  import { Panel } from '@/app/ui'
+  import { Switch } from '$ui/switch'
+  import { Separator } from '$com/separator'
   import { dict } from './intl'
+  import { scopes } from './Scopes'
   import type { Scope } from '@/transmission'
 
   const { class: classes }: { class?: string } = $props()

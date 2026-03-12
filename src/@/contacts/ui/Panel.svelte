@@ -1,16 +1,16 @@
 <script lang="ts">
+  import { ok } from 'svas'
   import { Star, Trash2 } from '@lucide/svelte'
   import { Pencil } from '@lucide/svelte'
-  import { ok } from 'svas'
-  import { dict } from '$lib/intl'
-  import { cn } from '$lib/utils'
-  import { Panel } from '@/accounts/ui'
-  import { Confirm } from '@/app/ui'
-  import * as contacts from '@/contacts'
   import * as favorites from '@/favorites'
   import { favorites as store } from '@/favorites'
-  import type { Action } from '$com/panel'
+  import * as contacts from '@/contacts'
+  import { Confirm } from '@/app/ui'
+  import { Panel } from '@/accounts/ui'
+  import { cn } from '$lib/utils'
+  import { dict } from '$lib/intl'
   import type { Props } from './Panel'
+  import type { Action } from '$com/panel'
 
   const {
     contact,

@@ -1,9 +1,9 @@
 <script lang="ts">
-  import { goto } from '$app/navigation'
-  import { dict } from '$lib/intl'
-  import { Cosmetics, type Value } from '@/app/ui'
-  import { add } from '@/contacts'
   import { account } from '@/iam'
+  import { add } from '@/contacts'
+  import { Cosmetics, type Value } from '@/app/ui'
+  import { dict } from '$lib/intl'
+  import { goto } from '$app/navigation'
 
   async function onchange(value: Value) {
     const contact = await add({

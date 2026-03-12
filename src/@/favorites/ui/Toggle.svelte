@@ -1,11 +1,11 @@
 <script lang="ts">
-  import { Star } from '@lucide/svelte'
   import { Async } from 'svas'
-  import { Button } from '$ui/button'
+  import { Star } from '@lucide/svelte'
   import { favorites, add, del } from '@/favorites'
+  import { Button } from '$ui/button'
   import { dict } from './intl'
-  import type { Props } from './Toggle'
   import type { Favorite } from '@/favorites'
+  import type { Props } from './Toggle'
 
   const { id, type }: Props = $props()
 

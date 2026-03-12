@@ -1,12 +1,12 @@
 <script lang="ts">
-  import { Users } from '@lucide/svelte'
   import { Async } from 'svas'
-  import { Panel } from '$com/panel'
-  import { Attention } from '$com/shell'
-  import { accounts } from '@/accounts'
-  import { Picture } from '@/accounts/ui'
-  import { Balance } from '@/app/ui'
+  import { Users } from '@lucide/svelte'
   import { account } from '@/iam'
+  import { Balance } from '@/app/ui'
+  import { Picture } from '@/accounts/ui'
+  import { accounts } from '@/accounts'
+  import { Attention } from '$com/shell'
+  import { Panel } from '$com/panel'
   import type { Props } from './Panel'
 
   let { group, selected = $bindable(), highlighted, onselect }: Props = $props()

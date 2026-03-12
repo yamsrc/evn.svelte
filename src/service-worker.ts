@@ -4,8 +4,8 @@
 /// <reference types="@sveltejs/kit" />
 
 // @ts-expect-error: wtf
-import { PUBLIC_API_ORIGIN } from '$env/static/public'
 import { build, files, version } from '$service-worker'
+import { PUBLIC_API_ORIGIN } from '$env/static/public'
 import type { Notification } from './@/transmission'
 
 const app = globalThis.self as unknown as ServiceWorkerGlobalScope

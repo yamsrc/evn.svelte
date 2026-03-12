@@ -1,10 +1,10 @@
 <script lang="ts">
   import { Async } from 'svas'
-  import { page } from '$app/state'
-  import { Return } from '$com/shell'
-  import { Header, Section } from '@/app/ui'
-  import { receipts } from '@/receipts'
   import { Attachments, Splitter } from '@/receipts/ui'
+  import { receipts } from '@/receipts'
+  import { Header, Section } from '@/app/ui'
+  import { Return } from '$com/shell'
+  import { page } from '$app/state'
 
   const id = $derived(page.params.id) as string
 </script>

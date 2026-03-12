@@ -1,13 +1,13 @@
 <script lang="ts">
   import { Paperclip } from '@lucide/svelte'
-  import { page } from '$app/state'
-  import { dict } from '$lib/intl'
-  import { Spinner } from '$ui/spinner'
+  import { seen } from '@/notifications'
+  import { Editor } from '@/expenses/ui'
+  import { attach } from '@/expenses'
   import { Section } from '@/app/ui'
   import { Header } from '@/app/ui'
-  import { attach } from '@/expenses'
-  import { Editor } from '@/expenses/ui'
-  import { seen } from '@/notifications'
+  import { Spinner } from '$ui/spinner'
+  import { dict } from '$lib/intl'
+  import { page } from '$app/state'
 
   const id = $derived(page.params.id)
   const ctx = Editor.getContext()

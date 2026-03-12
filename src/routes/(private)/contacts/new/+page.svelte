@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { Section } from '@/app/ui'
-  import { Invite } from '@/contacts/ui'
   import { account } from '@/iam'
+  import { Invite } from '@/contacts/ui'
+  import { Section } from '@/app/ui'
 </script>
 
 {#if $account}

@@ -1,7 +1,7 @@
 <script lang="ts">
   import { unseen } from '@/expenses'
-  import Expense from './Expense.svelte'
   import { dict } from './intl'
+  import Expense from './Expense.svelte'
   import type { Props } from './Recent'
 
   const { expenses, notifications }: Props = $props()

@@ -1,13 +1,13 @@
 <script lang="ts">
-  import { ok } from 'svas'
   import { derived } from 'svelte/store'
-  import { Nav } from '$com/shell'
-  import { oidc } from '$config'
-  import { dict } from '$lib/intl'
-  import { Screen, Authenticated } from '@/app/ui'
+  import { ok } from 'svas'
   import { notifications as store } from '@/notifications'
-  import { sections } from './sections'
+  import { Screen, Authenticated } from '@/app/ui'
+  import { dict } from '$lib/intl'
+  import { oidc } from '$config'
+  import { Nav } from '$com/shell'
   import { welcome } from './welcome'
+  import { sections } from './sections'
 
   const { children } = $props()
   const notifications = derived(store, ($n) => (ok($n) ? $n : []))

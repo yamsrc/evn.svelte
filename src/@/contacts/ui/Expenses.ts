@@ -1,6 +1,6 @@
-import type { Contact } from '@/contacts'
-import type { Expense } from '@/expenses'
 import type { Notification } from '@/notifications'
+import type { Expense } from '@/expenses'
+import type { Contact } from '@/contacts'
 
 export interface Props {
   contact: Contact

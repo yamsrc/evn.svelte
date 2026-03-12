@@ -1,12 +1,12 @@
 <script lang="ts">
-  import { goto } from '$app/navigation'
-  import { dict } from '$lib/intl/join'
-  import { cn } from '$lib/utils'
-  import * as AlertDialog from '$ui/alert-dialog'
-  import { Button, buttonVariants } from '$ui/button'
-  import { codes } from '@/accounts'
-  import { Cosmetics } from '@/accounts/ui'
   import { authenticated, account as iam, logout } from '@/iam'
+  import { Cosmetics } from '@/accounts/ui'
+  import { codes } from '@/accounts'
+  import { Button, buttonVariants } from '$ui/button'
+  import * as AlertDialog from '$ui/alert-dialog'
+  import { cn } from '$lib/utils'
+  import { dict } from '$lib/intl/join'
+  import { goto } from '$app/navigation'
   import type { Props } from './Accept'
 
   let { account, code, accepted = $bindable(false), error = $bindable(false) }: Props = $props()

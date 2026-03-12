@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Trash2 } from '@lucide/svelte'
-  import Button from '$ui/button/button.svelte'
   import { Picture, url } from '@/media/ui'
+  import Button from '$ui/button/button.svelte'
   import type { Props } from './Attachments'
 
   let { attachments = $bindable([]), path = '/expenses/attachments/', editable }: Props = $props()

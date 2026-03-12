@@ -1,17 +1,17 @@
 <script lang="ts">
-  import { ChevronLeft } from '@lucide/svelte'
-  import { onMount } from 'svelte'
   import { derived } from 'svelte/store'
-  import { preloadCode } from '$app/navigation'
-  import { page } from '$app/state'
-  import { back } from '$com/history'
-  import { ios, safari, shell, standalone } from '$lib/tools'
-  import { cn } from '$lib/utils'
-  import { Button } from '$ui/button'
+  import { onMount } from 'svelte'
+  import { ChevronLeft } from '@lucide/svelte'
   import * as ButtonGroup from '$ui/button-group'
-  import Attention from './Attention.svelte'
-  import { exact, match, nested, type Props, type Section } from './Nav'
+  import { Button } from '$ui/button'
+  import { cn } from '$lib/utils'
+  import { ios, safari, shell, standalone } from '$lib/tools'
+  import { back } from '$com/history'
+  import { page } from '$app/state'
+  import { preloadCode } from '$app/navigation'
   import { actions, returns } from './store'
+  import { exact, match, nested, type Props, type Section } from './Nav'
+  import Attention from './Attention.svelte'
 
   const app = standalone || shell
   const safariBrowser = ios && safari && !app

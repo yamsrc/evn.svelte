@@ -1,9 +1,9 @@
 <script lang="ts">
-  import { forceSimulation, forceLink, forceManyBody, forceCenter } from 'd3-force'
   import { ok } from 'svas'
-  import { locale } from '$lib/intl'
-  import { currency } from '$lib/tools'
+  import { forceSimulation, forceLink, forceManyBody, forceCenter } from 'd3-force'
   import { url } from '@/media/ui/Picture'
+  import { currency } from '$lib/tools'
+  import { locale } from '$lib/intl'
   import type { Props } from './Graph'
 
   const { group, account, contacts, class: classes }: Props = $props()

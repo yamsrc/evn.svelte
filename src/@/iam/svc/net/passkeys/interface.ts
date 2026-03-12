@@ -1,6 +1,6 @@
 import { origin } from '@/net'
-import type { Account } from '@/iam'
 import type { CreationResponse, RequestResponse } from '@/passkeys/svc/net'
+import type { Account } from '@/iam'
 
 const passkeys = origin.resource('/accounts/passkeys/')
 

@@ -1,5 +1,5 @@
-import type { Contact } from './Contact'
 import type { Notification } from '@/notifications'
+import type { Contact } from './Contact'
 
 export function unseen(contact: Contact, notifications: Notification[]) {
   return notifications.some((n) => n.domain === 'contacts' && n.key === contact.identity)

@@ -1,15 +1,15 @@
 <script lang="ts">
   import { ChevronsDownUp, Trash2 } from '@lucide/svelte'
-  import { Dismissable } from '$com/dismissable'
-  import * as Stack from '$lib/components/stack'
-  import { delay } from '$lib/tools'
-  import { Button } from '$ui/button'
-  import { clear } from '@/notifications'
   import { dict } from '@/notifications/ui/intl'
-  import Notification from './Notification.svelte'
+  import { clear } from '@/notifications'
+  import { Button } from '$ui/button'
+  import { delay } from '$lib/tools'
+  import * as Stack from '$lib/components/stack'
+  import { Dismissable } from '$com/dismissable'
   import { pick } from './components'
-  import type { Props } from './Notifications'
+  import Notification from './Notification.svelte'
   import type { ComponentFor, WithComponent } from './components'
+  import type { Props } from './Notifications'
 
   type Renderable = {
     notification: WithComponent

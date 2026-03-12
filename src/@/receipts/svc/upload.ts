@@ -1,9 +1,9 @@
 import { ensure, ok, once } from 'svas'
 import { account } from '@/iam'
-import * as net from './net'
 import { progress, receipts } from './store'
-import type { Progress } from './Progress'
+import * as net from './net'
 import type { Receipt } from './Receipt'
+import type { Progress } from './Progress'
 
 export async function upload(file: File) {
   const thread = crypto.randomUUID()

@@ -1,8 +1,8 @@
 <script lang="ts">
   import { Coins } from '@lucide/svelte'
-  import { locale } from '$lib/intl'
-  import { currency } from '$lib/tools'
   import { cn } from '$lib/utils'
+  import { currency } from '$lib/tools'
+  import { locale } from '$lib/intl'
   import type { Props } from './Coins'
 
   const { id, amount, prefix, sign, class: classes }: Props = $props()

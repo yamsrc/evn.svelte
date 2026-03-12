@@ -1,5 +1,5 @@
-import type { Expense } from '@/expenses'
 import type { Domain, Event } from '@/transmission'
+import type { Expense } from '@/expenses'
 
 type Constrain<T extends { [D in Domain]: Record<Event<D>, unknown> } & Record<Exclude<keyof T, Domain>, never>> = T
 

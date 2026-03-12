@@ -1,17 +1,17 @@
 <script lang="ts">
-  import { ArrowLeftRight, ArrowRight, ArrowLeft } from '@lucide/svelte'
   import { ok } from 'svas'
-  import { grammar } from '$lib/intl'
-  import { transit } from '$lib/tools'
-  import * as AlertDialog from '$ui/alert-dialog'
-  import { Button } from '$ui/button'
-  import { Spinner } from '$ui/spinner'
-  import { Avatar } from '@/accounts/ui'
-  import { Action, Coins, CoinsInput } from '@/app/ui'
+  import { ArrowLeftRight, ArrowRight, ArrowLeft } from '@lucide/svelte'
   import { add, type Expense } from '@/expenses'
+  import { Action, Coins, CoinsInput } from '@/app/ui'
+  import { Avatar } from '@/accounts/ui'
+  import { Spinner } from '$ui/spinner'
+  import { Button } from '$ui/button'
+  import * as AlertDialog from '$ui/alert-dialog'
+  import { transit } from '$lib/tools'
+  import { grammar } from '$lib/intl'
   import { dict } from './intl'
-  import type { Props } from './Transfer'
   import type { Account } from '@/accounts'
+  import type { Props } from './Transfer'
 
   const { account, contact }: Props = $props()
 

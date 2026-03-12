@@ -1,5 +1,5 @@
-import type { Snippet } from 'svelte'
 import type { Writable } from 'svelte/store'
+import type { Snippet } from 'svelte'
 
 export interface Props {
   children: Snippet

@@ -1,7 +1,7 @@
 import { PencilLine, User, Users } from '@lucide/svelte'
 import { goto } from '$app/navigation'
-import type { Dictionary } from '$lib/intl'
 import type { Icon } from '@lucide/svelte'
+import type { Dictionary } from '$lib/intl'
 
 type ActionItem = {
   id: string

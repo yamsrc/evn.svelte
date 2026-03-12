@@ -1,8 +1,8 @@
-import { track } from '@vercel/analytics'
 import { ensure } from 'svas'
+import { track } from '@vercel/analytics'
 import { account, update as updateMe } from '@/iam'
-import * as net from './net'
 import { accounts } from './store'
+import * as net from './net'
 
 export async function update(identity: string, properties: net.Editable): Promise<void | Error> {
   const res = await net.patch(identity, properties)

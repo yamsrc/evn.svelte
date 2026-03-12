@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { Switch } from '$ui/switch'
   import { Panel } from '@/app/ui'
+  import { Switch } from '$ui/switch'
   import { update } from '../svc'
   import { dict } from './intl'
   import type { Props } from './Reduction'

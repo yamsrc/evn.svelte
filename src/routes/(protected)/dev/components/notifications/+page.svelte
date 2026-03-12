@@ -1,16 +1,16 @@
 <script lang="ts">
   import { ok } from 'svas'
-  import { dict } from '$lib/intl/dev'
-  import { Section, Header } from '@/app/ui'
-  import { contacts } from '@/contacts'
-  import { expenses } from '@/expenses'
-  import { groups } from '@/groups'
-  import { account } from '@/iam'
-  import { Notifications } from '@/notifications/ui'
   import { Scopes } from '@/transmission/ui'
-  import type { Expense } from '@/expenses'
-  import type { Notification, Of, PayloadOf } from '@/notifications'
+  import { Notifications } from '@/notifications/ui'
+  import { account } from '@/iam'
+  import { groups } from '@/groups'
+  import { expenses } from '@/expenses'
+  import { contacts } from '@/contacts'
+  import { Section, Header } from '@/app/ui'
+  import { dict } from '$lib/intl/dev'
   import type { Domain, Event } from '@/transmission'
+  import type { Notification, Of, PayloadOf } from '@/notifications'
+  import type { Expense } from '@/expenses'
 
   const VERSION = 1
   const MAX_IDENTITIES = 3

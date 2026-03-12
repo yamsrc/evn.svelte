@@ -1,11 +1,11 @@
 <script lang="ts">
-  import { Plus } from '@lucide/svelte'
   import { writable } from 'svelte/store'
-  import * as Dropdown from '$com/dropdown'
-  import { Actions } from '$com/shell'
+  import { Plus } from '@lucide/svelte'
   import { dict } from '$lib/intl'
-  import { actionVariants } from './Action'
+  import { Actions } from '$com/shell'
+  import * as Dropdown from '$com/dropdown'
   import { actions } from './Actions'
+  import { actionVariants } from './Action'
 
   const active = writable(false)
 </script>

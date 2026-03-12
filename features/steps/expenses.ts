@@ -1,5 +1,5 @@
-import { faker } from '@faker-js/faker'
 import { expect } from '@playwright/test'
+import { faker } from '@faker-js/faker'
 import { Given, When } from './fixtures'
 
 Given('new expense', async ({ page, ctx }) => {

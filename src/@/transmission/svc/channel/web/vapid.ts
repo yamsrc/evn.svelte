@@ -1,5 +1,5 @@
-import { VAPID_PUBLIC_KEY } from '$config'
 import { convert } from '$lib/tools'
+import { VAPID_PUBLIC_KEY } from '$config'
 
 /** Returns VAPID public key as BufferSource for push subscription, or Error if not configured. */
 export function getVapidKey(): BufferSource | Error {

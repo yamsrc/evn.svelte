@@ -1,6 +1,6 @@
 import { get } from 'svelte/store'
-import { numbers } from '@/expenses'
 import { account } from '@/iam'
+import { numbers } from '@/expenses'
 import type { Value } from '../Context'
 
 export function normalize(value: Value, mode: 'sums' | 'shares'): Value {

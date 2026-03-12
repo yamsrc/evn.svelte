@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { cn } from '$lib/utils'
   import { Button, type ButtonProps } from '$ui/button'
+  import { cn } from '$lib/utils'
 
   const {
     children,

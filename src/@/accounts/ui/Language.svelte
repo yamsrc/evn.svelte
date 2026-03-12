@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { locale } from '$lib/intl'
-  import { Select, SelectTrigger, SelectContent, SelectItem } from '$ui/select'
   import { me } from '@/accounts'
+  import { Select, SelectTrigger, SelectContent, SelectItem } from '$ui/select'
+  import { locale } from '$lib/intl'
   import { options } from './Language'
 
   function change(locale: string) {

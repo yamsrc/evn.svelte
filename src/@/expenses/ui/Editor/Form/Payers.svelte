@@ -1,14 +1,14 @@
 <script lang="ts">
   import { Async } from 'svas'
-  import { dict, locale } from '$lib/intl'
-  import { currency } from '$lib/tools'
-  import { cn } from '$lib/utils'
-  import { Progress } from '$ui/progress'
-  import { accounts } from '@/accounts'
-  import { Section } from '@/app/ui'
   import { contacts } from '@/contacts'
-  import { getContext } from './Context'
+  import { Section } from '@/app/ui'
+  import { accounts } from '@/accounts'
+  import { Progress } from '$ui/progress'
+  import { cn } from '$lib/utils'
+  import { currency } from '$lib/tools'
+  import { dict, locale } from '$lib/intl'
   import Payer from './Payer.svelte'
+  import { getContext } from './Context'
   import type { Props } from './Payers'
 
   const { value = $bindable() }: Props = $props()

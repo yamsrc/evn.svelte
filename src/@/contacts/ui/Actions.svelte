@@ -1,7 +1,7 @@
 <script lang="ts">
   import { UserPlus, Users } from '@lucide/svelte'
-  import { Actions } from '$com/shell'
   import { Action } from '@/app/ui'
+  import { Actions } from '$com/shell'
 </script>
 
 <Actions>

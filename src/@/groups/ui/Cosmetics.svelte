@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { goto } from '$app/navigation'
-  import { dict } from '$lib/intl'
-  import { Cosmetics, type Value } from '@/app/ui'
   import * as groups from '@/groups'
+  import { Cosmetics, type Value } from '@/app/ui'
+  import { dict } from '$lib/intl'
+  import { goto } from '$app/navigation'
   import type { Props } from './Cosmetics'
 
   const { group, class: classes }: Props = $props()

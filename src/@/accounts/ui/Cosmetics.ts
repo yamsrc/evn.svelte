@@ -1,5 +1,5 @@
-import type { Account } from '@/accounts'
 import type { Props as CosmeticsProps } from '@/app/ui/cosmetics'
+import type { Account } from '@/accounts'
 
 type AccountLike = Pick<Account, 'id' | 'name' | 'picture'>
 

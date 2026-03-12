@@ -1,12 +1,12 @@
 <script lang="ts">
   import { UserPlus } from '@lucide/svelte'
-  import * as Dialog from '$com/ui/dialog'
-  import { dict } from '$lib/intl'
+  import { add } from '@/contacts'
+  import * as Cosmetics from '@/app/ui/cosmetics'
+  import { pickpic } from '@/accounts'
   import { buttonVariants } from '$ui/button'
   import { Button } from '$ui/button'
-  import { pickpic } from '@/accounts'
-  import * as Cosmetics from '@/app/ui/cosmetics'
-  import { add } from '@/contacts'
+  import { dict } from '$lib/intl'
+  import * as Dialog from '$com/ui/dialog'
   import type { Props } from './CreateDialog'
 
   const { oncreate, class: classes }: Props = $props()

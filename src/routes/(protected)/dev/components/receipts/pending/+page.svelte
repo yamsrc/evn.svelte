@@ -1,12 +1,12 @@
 <script lang="ts">
   import { Check } from '@lucide/svelte'
-  import { dict } from '$lib/intl/dev'
-  import { Button } from '$ui/button'
-  import { Spinner } from '$ui/spinner'
+  import { Attachments } from '@/receipts/ui'
+  import { progress } from '@/receipts'
   import { Section } from '@/app/ui'
   import { Goto } from '@/app/ui'
-  import { progress } from '@/receipts'
-  import { Attachments } from '@/receipts/ui'
+  import { Spinner } from '$ui/spinner'
+  import { Button } from '$ui/button'
+  import { dict } from '$lib/intl/dev'
 </script>
 
 <Section class="space-y-4">

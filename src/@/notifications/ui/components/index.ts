@@ -1,9 +1,9 @@
-import { accounts } from './accounts'
-import { contacts } from './contacts'
-import { expenses } from './expenses'
 import { groups } from './groups'
-import type { Notification } from '@/notifications'
+import { expenses } from './expenses'
+import { contacts } from './contacts'
+import { accounts } from './accounts'
 import type { Component } from 'svelte'
+import type { Notification } from '@/notifications'
 
 export const components = { accounts, groups, expenses, contacts } as const
 

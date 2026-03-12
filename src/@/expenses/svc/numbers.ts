@@ -1,7 +1,7 @@
 import { get } from 'svelte/store'
 import { account } from '@/iam'
-import type { Participant } from './net'
 import type { Expense } from './store'
+import type { Participant } from './net'
 
 type Value = Pick<Expense, 'participants' | 'extras'>
 

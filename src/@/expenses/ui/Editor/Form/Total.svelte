@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { dict } from '$lib/intl'
-  import { CoinsInput } from '@/app/ui'
   import { numbers } from '@/expenses'
+  import { CoinsInput } from '@/app/ui'
+  import { dict } from '$lib/intl'
   import type { Props } from './Total'
 
   let { value = $bindable(), total = $bindable() }: Props = $props()

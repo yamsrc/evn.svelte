@@ -1,8 +1,8 @@
-import { ensure } from 'svas'
 import { get } from 'svelte/store'
+import { ensure } from 'svas'
 import { account } from '@/iam'
-import * as net from './net'
 import { permissions } from './store'
+import * as net from './net'
 import type { Permissions } from './net/Transmission'
 
 export async function configure(update: Permissions): Promise<void | Error> {

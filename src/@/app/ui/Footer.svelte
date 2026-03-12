@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { dict } from '$lib/intl'
   import { Demo } from '@/accounts/ui'
+  import { dict } from '$lib/intl'
   import SeedMe from './seedme.svg'
 </script>
 

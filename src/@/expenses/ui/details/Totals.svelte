@@ -1,13 +1,13 @@
 <script lang="ts">
   import { Async } from 'svas'
-  import { TextEllipsis } from '$com/text-ellipsis'
-  import { dict } from '$lib/intl'
-  import * as Card from '$ui/card'
-  import { accounts } from '@/accounts'
-  import { Picture } from '@/accounts/ui'
-  import { Coins } from '@/app/ui'
-  import { numbers } from '@/expenses'
   import { account as me } from '@/iam'
+  import { numbers } from '@/expenses'
+  import { Coins } from '@/app/ui'
+  import { Picture } from '@/accounts/ui'
+  import { accounts } from '@/accounts'
+  import * as Card from '$ui/card'
+  import { dict } from '$lib/intl'
+  import { TextEllipsis } from '$com/text-ellipsis'
   import type { Props } from './Totals'
 
   const { expense }: Props = $props()

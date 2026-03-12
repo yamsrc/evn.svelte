@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { cn } from '$lib/utils'
   import { Picture } from '@/media/ui'
+  import { cn } from '$lib/utils'
   import type { Props } from './Picture'
 
   const { account, size = 400, class: classes, style }: Props = $props()

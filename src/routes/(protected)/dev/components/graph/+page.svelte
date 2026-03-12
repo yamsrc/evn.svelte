@@ -1,11 +1,11 @@
 <script lang="ts">
   import { Async, combined } from 'svas'
-  import { dict } from '$lib/intl/dev'
-  import { Section, Header } from '@/app/ui'
-  import { contacts } from '@/contacts'
-  import { groups } from '@/groups'
-  import { Graph } from '@/groups/ui'
   import { account } from '@/iam'
+  import { Graph } from '@/groups/ui'
+  import { groups } from '@/groups'
+  import { contacts } from '@/contacts'
+  import { Section, Header } from '@/app/ui'
+  import { dict } from '$lib/intl/dev'
 </script>
 
 <Async store={combined(account, contacts, groups)}>

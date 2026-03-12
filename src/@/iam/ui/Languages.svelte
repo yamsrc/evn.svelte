@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { Scrollable } from '$com/scrollable'
-  import { locale, selected, type Locale } from '$lib/intl'
-  import { cn } from '$lib/utils'
   import { options } from '@/accounts/ui/Language'
+  import { cn } from '$lib/utils'
+  import { locale, selected, type Locale } from '$lib/intl'
+  import { Scrollable } from '$com/scrollable'
   import type { Props } from './Languages'
 
   const { onselect }: Props = $props()

@@ -1,5 +1,5 @@
-import type { Icon } from '@lucide/svelte'
 import type { Snippet } from 'svelte'
+import type { Icon } from '@lucide/svelte'
 
 export interface Props<T extends string = string> {
   name: string

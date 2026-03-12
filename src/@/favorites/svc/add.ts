@@ -1,7 +1,7 @@
 import { ensure, sync } from 'svas'
 import { account } from '@/iam'
-import * as net from './net'
 import { favorites } from './store'
+import * as net from './net'
 
 export async function add(favorite: string): Promise<net.Favorite | Error> {
   const me = ensure(account)

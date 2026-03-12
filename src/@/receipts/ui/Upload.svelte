@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { Upload } from '$com/upload'
   import { upload } from '@/receipts'
+  import { Upload } from '$com/upload'
   import type { Props } from './Upload'
 
   const { children, accept = 'image/*', onstart, ...rest }: Props = $props()

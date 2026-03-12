@@ -1,6 +1,6 @@
 import { Antenna, Puzzle } from '@lucide/svelte'
-import type { Section } from '$com/shell'
 import type { Dictionary } from '$lib/intl/dev'
+import type { Section } from '$com/shell'
 
 export const sections = (dict: Dictionary): Section[] => [
   {

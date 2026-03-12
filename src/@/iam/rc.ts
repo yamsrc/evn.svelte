@@ -1,9 +1,9 @@
 import { get } from 'svelte/store'
-import { locale } from '$lib/intl'
-import { update } from '@/accounts'
 import { origin } from '@/net'
-import { account, challenge } from './svc/store'
+import { update } from '@/accounts'
+import { locale } from '$lib/intl'
 import { sync } from './svc/sync'
+import { account, challenge } from './svc/store'
 
 function rc() {
   origin.events.on('challenge', (value) => challenge.set(value))

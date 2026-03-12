@@ -1,7 +1,7 @@
 import { having } from 'svas'
 import { account } from '@/iam'
-import * as net from './net'
 import { internal } from './store'
+import * as net from './net'
 
 export async function del(id: string): Promise<void | Error> {
   const me = await having(account)

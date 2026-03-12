@@ -1,11 +1,11 @@
 <script lang="ts">
   import { Async } from 'svas'
-  import { dict } from '$lib/intl'
-  import { Select, SelectTrigger, SelectContent, SelectItem } from '$ui/select'
-  import { accounts } from '@/accounts'
-  import { Picture } from '@/accounts/ui'
-  import { dict as expensesDict } from '@/expenses/ui/intl'
   import { account as me } from '@/iam'
+  import { dict as expensesDict } from '@/expenses/ui/intl'
+  import { Picture } from '@/accounts/ui'
+  import { accounts } from '@/accounts'
+  import { Select, SelectTrigger, SelectContent, SelectItem } from '$ui/select'
+  import { dict } from '$lib/intl'
   import { getContext } from './Context'
   import type { Props } from './PayerSelect'
 

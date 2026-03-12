@@ -1,5 +1,5 @@
-import { base64urlToArrayBuffer } from './convert'
 import { key } from './key'
+import { base64urlToArrayBuffer } from './convert'
 import type { RequestOptions } from '../net/challenges'
 
 export async function get(options: RequestOptions): Promise<PublicKeyCredential | null> {

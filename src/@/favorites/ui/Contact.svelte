@@ -1,9 +1,9 @@
 <script lang="ts">
   import { Async } from 'svas'
-  import { Panel } from '$com/panel'
-  import { TextEllipsis } from '$com/text-ellipsis'
-  import { accounts } from '@/accounts'
   import { Picture } from '@/accounts/ui'
+  import { accounts } from '@/accounts'
+  import { TextEllipsis } from '$com/text-ellipsis'
+  import { Panel } from '$com/panel'
   import type { Props } from './Contact'
 
   let { contact, selected = $bindable(), onselect, class: classes }: Props = $props()

@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { locale } from '$lib/intl'
   import { date } from '$lib/tools'
+  import { locale } from '$lib/intl'
   import type { Props } from './Description'
 
   const { expense }: Props = $props()

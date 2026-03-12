@@ -1,7 +1,7 @@
 import { origin } from '@/net'
-import type { CreationResponse } from './CreationResponse'
-import type { Passkey } from './Passkey'
 import type { RequestResponse } from './RequestResponse'
+import type { Passkey } from './Passkey'
+import type { CreationResponse } from './CreationResponse'
 
 const passkeys = origin.resource('/identity/passkeys/')
 

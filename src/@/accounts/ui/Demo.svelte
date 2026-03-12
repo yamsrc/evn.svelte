@@ -1,8 +1,8 @@
 <script lang="ts">
   import { ClockFading } from '@lucide/svelte'
-  import { Button } from '$ui/button'
-  import { Spinner } from '$ui/spinner'
   import { demo } from '@/accounts/svc/demo'
+  import { Spinner } from '$ui/spinner'
+  import { Button } from '$ui/button'
   import { dict } from './intl'
 
   let busy = $state(false)

@@ -1,12 +1,12 @@
 <script lang="ts">
   import { UserPlus } from '@lucide/svelte'
-  import { cn } from '$lib/utils'
-  import { Button } from '$ui/button'
-  import * as Card from '$ui/card'
-  import * as Tabs from '$ui/tabs'
   import { dict } from '@/expenses/ui/intl'
-  import ByShare from './ByShare.svelte'
+  import * as Tabs from '$ui/tabs'
+  import * as Card from '$ui/card'
+  import { Button } from '$ui/button'
+  import { cn } from '$lib/utils'
   import BySum from './BySum.svelte'
+  import ByShare from './ByShare.svelte'
   import type { Props } from './Participants'
 
   let { value = $bindable(), error = $bindable(false), mode = $bindable('sums') }: Props = $props()

@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Button } from '$ui/button'
-  import type { Snippet } from 'svelte'
   import type { ClassValue } from 'svelte/elements'
+  import type { Snippet } from 'svelte'
 
   interface Props {
     label?: string

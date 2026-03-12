@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { managed as accounts, upload, update } from '@/accounts'
   import { Cosmetics, type Value } from '@/app/ui'
+  import { managed as accounts, upload, update } from '@/accounts'
   import type { Props } from './Cosmetics'
 
   const { account, managed, ...rest }: Props = $props()

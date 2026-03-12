@@ -1,10 +1,10 @@
 <script lang="ts">
   import { ChevronsDownUp } from '@lucide/svelte'
-  import * as Stack from '$com/stack'
-  import { dict } from '$lib/intl/dev'
-  import { transit } from '$lib/tools/svt'
-  import { Button } from '$ui/button'
   import { Section, Header } from '@/app/ui'
+  import { Button } from '$ui/button'
+  import { transit } from '$lib/tools/svt'
+  import { dict } from '$lib/intl/dev'
+  import * as Stack from '$com/stack'
 
   type Item = { id: string; color: string; height: number }
 

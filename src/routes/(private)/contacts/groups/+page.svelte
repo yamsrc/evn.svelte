@@ -1,15 +1,15 @@
 <script lang="ts">
   import { CircleCheckBig } from '@lucide/svelte'
-  import { goto } from '$app/navigation'
-  import { Separator } from '$com/separator'
-  import { Actions } from '$com/shell'
-  import { dict } from '$lib/intl'
+  import { Reduction } from '@/groups/ui'
+  import { create } from '@/groups'
+  import * as Cosmetics from '@/app/ui/cosmetics'
   import { Section } from '@/app/ui'
   import { Header } from '@/app/ui'
   import { Action } from '@/app/ui'
-  import * as Cosmetics from '@/app/ui/cosmetics'
-  import { create } from '@/groups'
-  import { Reduction } from '@/groups/ui'
+  import { dict } from '$lib/intl'
+  import { Actions } from '$com/shell'
+  import { Separator } from '$com/separator'
+  import { goto } from '$app/navigation'
 
   let reduction = $state(true)
   let name = $state('')

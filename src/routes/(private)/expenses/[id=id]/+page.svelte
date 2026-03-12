@@ -1,14 +1,14 @@
 <script lang="ts">
-  import { Pencil } from '@lucide/svelte'
   import { Async } from 'svas'
-  import { page } from '$app/state'
-  import { Actions } from '$com/shell'
-  import { dict } from '$lib/intl'
+  import { Pencil } from '@lucide/svelte'
+  import { seen } from '@/notifications'
+  import { Attachments, Details } from '@/expenses/ui'
+  import { expenses } from '@/expenses'
   import { Action, Section } from '@/app/ui'
   import { Header } from '@/app/ui'
-  import { expenses } from '@/expenses'
-  import { Attachments, Details } from '@/expenses/ui'
-  import { seen } from '@/notifications'
+  import { dict } from '$lib/intl'
+  import { Actions } from '$com/shell'
+  import { page } from '$app/state'
 
   const id = $derived(page.params.id) as string
 
