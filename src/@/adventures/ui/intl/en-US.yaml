@@ -7,17 +7,23 @@ editor:
   upload: Choose your own
   name: Adventure name
   note: All members will see this name
-  info: Adventures are for those who want to split expenses equally, whether it's a trip together, a bar tab, or just shared household costs. Debts in an adventure aren't between individual users but among all members, keeping everyone’s share balanced.
+  info: >-
+    Adventures are for those who want to split expenses equally, whether it's a
+    trip together, a bar tab, or just shared household costs. Debts in an
+    adventure aren't between individual users but among all members, keeping
+    everyone’s share balanced.
   settings: Settings
   title: New Adventure
 finish:
   title: Finish the adventure
-  description: Archiving the adventure will remove it from the new expense screen and move it to the back of your adventure list.
+  description: >-
+    Archiving the adventure will remove it from the new expense screen and move
+    it to the back of your adventure list.
   button: Archive Adventure
   delete: Delete adventure
 expenses:
   title: Expenses
-  total: Total bill
+  total: Total
   paidBy: Paid by
   paid: Paid
 spending:

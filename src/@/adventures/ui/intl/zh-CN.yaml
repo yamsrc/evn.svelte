@@ -17,7 +17,7 @@ finish:
   delete: 删除冒险
 expenses:
   title: 支出
-  total: 总账单
+  total: 总计
   paidBy: 由...支付
   paid: 已支付
 spending:

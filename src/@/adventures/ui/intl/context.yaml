@@ -35,7 +35,7 @@ inputs:
     title:
       input: Expenses
     total:
-      input: Total bill
+      input: Total
     paidBy:
       input: Paid by
     paid:

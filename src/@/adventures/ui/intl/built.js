@@ -25,7 +25,7 @@ export const dictionaries = {
     },
     "expenses": {
       "title": "النفقات",
-      "total": "إجمالي الفاتورة",
+      "total": "الإجمالي",
       "paidBy": "دفع بواسطة",
       "paid": "دفع"
     },
@@ -61,7 +61,7 @@ export const dictionaries = {
     },
     "expenses": {
       "title": "Ausgaben",
-      "total": "Gesamtrechnung",
+      "total": "Gesamt",
       "paidBy": "Bezahlt von",
       "paid": "Bezahlt"
     },
@@ -97,7 +97,7 @@ export const dictionaries = {
     },
     "expenses": {
       "title": "Expenses",
-      "total": "Total bill",
+      "total": "Total",
       "paidBy": "Paid by",
       "paid": "Paid"
     },
@@ -133,7 +133,7 @@ export const dictionaries = {
     },
     "expenses": {
       "title": "Gastos",
-      "total": "Factura total",
+      "total": "Total",
       "paidBy": "Pagado por",
       "paid": "Pagado"
     },
@@ -169,7 +169,7 @@ export const dictionaries = {
     },
     "expenses": {
       "title": "Dépenses",
-      "total": "Total de la facture",
+      "total": "Total",
       "paidBy": "Payé par",
       "paid": "Payé"
     },
@@ -205,7 +205,7 @@ export const dictionaries = {
     },
     "expenses": {
       "title": "खर्चे",
-      "total": "कुल बिल",
+      "total": "कुल",
       "paidBy": "द्वारा भुगतान किया गया",
       "paid": "भुगतान किया गया"
     },
@@ -241,7 +241,7 @@ export const dictionaries = {
     },
     "expenses": {
       "title": "Spese",
-      "total": "Totale fattura",
+      "total": "Totale",
       "paidBy": "Pagato da",
       "paid": "Pagato"
     },
@@ -277,7 +277,7 @@ export const dictionaries = {
     },
     "expenses": {
       "title": "経費",
-      "total": "合計金額",
+      "total": "合計",
       "paidBy": "支払者",
       "paid": "支払い済み"
     },
@@ -313,7 +313,7 @@ export const dictionaries = {
     },
     "expenses": {
       "title": "지출",
-      "total": "총 청구서",
+      "total": "합계",
       "paidBy": "결제자",
       "paid": "결제 완료"
     },
@@ -349,7 +349,7 @@ export const dictionaries = {
     },
     "expenses": {
       "title": "Uitgaven",
-      "total": "Totaalrekening",
+      "total": "Totaal",
       "paidBy": "Betaald door",
       "paid": "Betaald"
     },
@@ -385,7 +385,7 @@ export const dictionaries = {
     },
     "expenses": {
       "title": "Расходы",
-      "total": "Итоговый счет",
+      "total": "Итого",
       "paidBy": "Оплачено",
       "paid": "Оплачено"
     },
@@ -421,7 +421,7 @@ export const dictionaries = {
     },
     "expenses": {
       "title": "Matumizi",
-      "total": "Jumla ya bili",
+      "total": "Jumla",
       "paidBy": "Imelipiwa na",
       "paid": "Imelipwa"
     },
@@ -457,7 +457,7 @@ export const dictionaries = {
     },
     "expenses": {
       "title": "Giderler",
-      "total": "Toplam fatura",
+      "total": "Toplam",
       "paidBy": "Ödeyen",
       "paid": "Ödendi"
     },
@@ -493,7 +493,7 @@ export const dictionaries = {
     },
     "expenses": {
       "title": "Витрати",
-      "total": "Загальний рахунок",
+      "total": "Всього",
       "paidBy": "Сплачено",
       "paid": "Оплачено"
     },
@@ -529,7 +529,7 @@ export const dictionaries = {
     },
     "expenses": {
       "title": "支出",
-      "total": "总账单",
+      "total": "总计",
       "paidBy": "由...支付",
       "paid": "已支付"
     },
