@@ -5,7 +5,7 @@
   import { Actions } from '$com/shell'
   import { dict as common } from '$lib/intl'
   import { adventures } from '@/adventures'
-  import { Expenses, Members, Totals } from '@/adventures/ui'
+  import { Archived, Expenses, Members, Totals } from '@/adventures/ui'
   import { Action, Header, Section } from '@/app/ui'
   import { account } from '@/iam'
   import { Picture } from '@/media/ui'
@@ -36,6 +36,12 @@
           {/if}
         </Header.Root>
       </Section>
+
+      {#if adventure.archived && adventure.archivedAt}
+        <Section>
+          <Archived at={adventure.archivedAt} />
+        </Section>
+      {/if}
 
       <Section>
         <Picture

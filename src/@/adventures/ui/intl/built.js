@@ -18,10 +18,16 @@ export const dictionaries = {
       "title": "مغامرة جديدة"
     },
     "finish": {
-      "title": "أنه المغامرة",
-      "description": "أرشفة المغامرة ستزيلها من شاشة النفقات الجديدة وتضعها في نهاية قائمة مغامراتك.",
-      "button": "مغامرة الأرشيف",
-      "delete": "حذف المغامرة"
+      "archive": {
+        "title": "أنهِ المغامرة",
+        "description": "أرشفة المغامرة ستزيلها من شاشة المصاريف الجديدة وتنقلها إلى نهاية قائمة مغامراتك.",
+        "button": "أرشفة المغامرة"
+      },
+      "delete": {
+        "title": "حذف المغامرة",
+        "description": "لم يحدث أي شيء بعد. ادعُ بعض الأصدقاء وأضِف بعض المصروفات لتبدأ الأمور.",
+        "button": (title) => `حذف ${title}`
+      }
     },
     "expenses": {
       "title": "النفقات",
@@ -36,7 +42,21 @@ export const dictionaries = {
     "me": "أنا",
     "selector": {
       "regular": "الإنفاق المنتظم"
-    }
+    },
+    "archive": {
+      "header": (title, empty) => empty ? `يتم حذف ${title}` : `يتم أرشفة ${title}`,
+      "delete": {
+        "description": "هذه المغامرة ليس لديها أي نفقات وسيتم حذفها",
+        "button": "حذف المغامرة"
+      },
+      "warning": "أرشفة المغامرة إجراء دائم ولا يمكن التراجع عنه."
+    },
+    "balance": {
+      "header": "عند أرشفة هذه المغامرة:",
+      "merge": "انقل الديون إلى ديون الأعضاء العاديين",
+      "keep": "ترك الديون/الأرصدة في المغامرة"
+    },
+    "archived": "مؤرشف"
   },
   "de-DE": {
     "members": {
@@ -54,10 +74,16 @@ export const dictionaries = {
       "title": "Neues Abenteuer"
     },
     "finish": {
-      "title": "Beende das Abenteuer",
-      "description": "Durch das Archivieren des Abenteuers wird es aus dem Bildschirm für neue Ausgaben entfernt und ans Ende deiner Abenteuerliste verschoben.",
-      "button": "Abenteuer im Archiv",
-      "delete": "Abenteuer löschen"
+      "archive": {
+        "title": "Abenteuer abschließen",
+        "description": "Wenn du das Abenteuer archivierst, wird es vom Bildschirm für neue Ausgaben entfernt und ans Ende deiner Abenteuerliste verschoben.",
+        "button": "Abenteuer archivieren"
+      },
+      "delete": {
+        "title": "Abenteuer löschen",
+        "description": "Bisher ist noch nichts passiert. Lade ein paar Freunde ein und füge Ausgaben hinzu, um loszulegen.",
+        "button": (title) => `"${title}" löschen`
+      }
     },
     "expenses": {
       "title": "Ausgaben",
@@ -72,7 +98,21 @@ export const dictionaries = {
     "me": "Ich",
     "selector": {
       "regular": "Regelmäßige Ausgaben"
-    }
+    },
+    "archive": {
+      "header": (title, empty) => empty ? `${title} wird gelöscht` : `${title} wird archiviert`,
+      "delete": {
+        "description": "Dieses Abenteuer hat keine Ausgaben und wird gelöscht",
+        "button": "Abenteuer löschen"
+      },
+      "warning": "Das Archivieren des Abenteuers ist dauerhaft und kann nicht rückgängig gemacht werden."
+    },
+    "balance": {
+      "header": "Beim Archivieren dieses Abenteuers:",
+      "merge": "Schulden zu den regulären Mitgliedsschulden übertragen",
+      "keep": "Schulden/Salden im Abenteuer belassen"
+    },
+    "archived": "Archiviert"
   },
   "en-US": {
     "members": {
@@ -90,10 +130,16 @@ export const dictionaries = {
       "title": "New Adventure"
     },
     "finish": {
-      "title": "Finish the adventure",
-      "description": "Archiving the adventure will remove it from the new expense screen and move it to the back of your adventure list.",
-      "button": "Archive Adventure",
-      "delete": "Delete adventure"
+      "archive": {
+        "title": "Finish the adventure",
+        "description": "Archiving the adventure will remove it from the new expense screen and move it to the back of your adventure list.",
+        "button": "Archive adventure"
+      },
+      "delete": {
+        "title": "Delete adventure",
+        "description": "Nothing's happened yet. Invite some friends and add some expenses to get started.",
+        "button": (title) => `Delete ${title}`
+      }
     },
     "expenses": {
       "title": "Expenses",
@@ -108,7 +154,21 @@ export const dictionaries = {
     "me": "Me",
     "selector": {
       "regular": "Regular spending"
-    }
+    },
+    "archive": {
+      "header": (title, empty) => empty ? `Deleting ${title}` : `Archiving ${title}`,
+      "delete": {
+        "description": "This adventure has no expenses and will be deleted",
+        "button": "Delete adventure"
+      },
+      "warning": "Archiving the adventure is permanent and cannot be undone."
+    },
+    "balance": {
+      "header": "When archiving this adventure:",
+      "merge": "Move debts to the regular member debts",
+      "keep": "Leave debts/balances in adventure"
+    },
+    "archived": "Archived"
   },
   "es-ES": {
     "members": {
@@ -126,10 +186,16 @@ export const dictionaries = {
       "title": "Nueva aventura"
     },
     "finish": {
-      "title": "Termina la aventura",
-      "description": "Archivar la aventura la eliminará de la pantalla de nuevos gastos y la pondrá al final de tu lista de aventuras.",
-      "button": "Aventura en el archivo",
-      "delete": "Eliminar aventura"
+      "archive": {
+        "title": "Finalizar la aventura",
+        "description": "Archivar la aventura la eliminará de la pantalla de nuevos gastos y la moverá al final de tu lista de aventuras.",
+        "button": "Archivar aventura"
+      },
+      "delete": {
+        "title": "Eliminar aventura",
+        "description": "Todavía no ha pasado nada. Invita a algunos amigos y añade algunos gastos para poner esto en marcha.",
+        "button": (title) => `Eliminar ${title}`
+      }
     },
     "expenses": {
       "title": "Gastos",
@@ -144,7 +210,21 @@ export const dictionaries = {
     "me": "Yo",
     "selector": {
       "regular": "Gastos habituales"
-    }
+    },
+    "archive": {
+      "header": (title, empty) => empty ? `Eliminando ${title}` : `Archivando ${title}`,
+      "delete": {
+        "description": "Esta aventura no tiene gastos y será eliminada",
+        "button": "Eliminar aventura"
+      },
+      "warning": "Archivar la aventura es una acción permanente y no se puede deshacer."
+    },
+    "balance": {
+      "header": "Al archivar esta aventura:",
+      "merge": "Mover deudas a las deudas de miembros regulares",
+      "keep": "Dejar deudas/saldos en la aventura"
+    },
+    "archived": "Archivado"
   },
   "fr-FR": {
     "members": {
@@ -162,10 +242,16 @@ export const dictionaries = {
       "title": "Nouvelle aventure"
     },
     "finish": {
-      "title": "Terminer l’aventure",
-      "description": "L’archivage de l’aventure la retirera de l’écran des nouvelles dépenses et la placera à la fin de votre liste d’aventures.",
-      "button": "Aventure d’archive",
-      "delete": "Supprimer l’aventure"
+      "archive": {
+        "title": "Terminer l’aventure",
+        "description": "Archiver l’aventure la retirera de l’écran des nouvelles dépenses et la placera à la fin de ta liste d’aventures.",
+        "button": "Archiver l’aventure"
+      },
+      "delete": {
+        "title": "Supprimer l’aventure",
+        "description": "Rien ne s'est encore passé. Invitez des amis et ajoutez des dépenses pour lancer les choses.",
+        "button": (title) => `Supprimer ${title}`
+      }
     },
     "expenses": {
       "title": "Dépenses",
@@ -180,7 +266,21 @@ export const dictionaries = {
     "me": "Moi",
     "selector": {
       "regular": "Dépenses régulières"
-    }
+    },
+    "archive": {
+      "header": (title, empty) => empty ? `Suppression de ${title}` : `Archivage de ${title}`,
+      "delete": {
+        "description": "Cette aventure n'a aucune dépense et sera supprimée",
+        "button": "Supprimer l’aventure"
+      },
+      "warning": "L’archivage de l’aventure est définitif et ne peut pas être annulé."
+    },
+    "balance": {
+      "header": "Lors de l’archivage de cette aventure :",
+      "merge": "Transférer les dettes vers les dettes des membres réguliers",
+      "keep": "Laisser les dettes/soldes dans l’aventure"
+    },
+    "archived": "Archivé"
   },
   "hi-IN": {
     "members": {
@@ -198,10 +298,16 @@ export const dictionaries = {
       "title": "नई रोमांचक यात्रा"
     },
     "finish": {
-      "title": "साहसिक कार्य समाप्त करें",
-      "description": "साहसिक यात्रा को आर्काइव करने से यह नए खर्च स्क्रीन से हट जाएगी और आपकी साहसिक यात्राओं की सूची के अंत में आ जाएगी।",
-      "button": "आर्काइव एडवेंचर",
-      "delete": "एडवेंचर हटाएँ"
+      "archive": {
+        "title": "साहसिक कार्य समाप्त करें",
+        "description": "एडवेंचर को आर्काइव करने से यह नए खर्च स्क्रीन से हट जाएगा और आपकी एडवेंचर सूची के अंत में चला जाएगा।",
+        "button": "एडवेंचर को संग्रहित करें"
+      },
+      "delete": {
+        "title": "साहसिक कार्य हटाएं",
+        "description": "अभी तक कुछ भी नहीं हुआ है। दोस्तों को बुलाएँ और कुछ खर्च जोड़ें ताकि शुरुआत हो सके।",
+        "button": (title) => `${title} हटाएँ`
+      }
     },
     "expenses": {
       "title": "खर्चे",
@@ -216,7 +322,21 @@ export const dictionaries = {
     "me": "मैं",
     "selector": {
       "regular": "नियमित खर्च"
-    }
+    },
+    "archive": {
+      "header": (title, empty) => empty ? `${title} को हटाया जा रहा है` : `${title} को संग्रहित किया जा रहा है`,
+      "delete": {
+        "description": "इस साहसिक यात्रा में कोई खर्च नहीं है और इसे हटाया जाएगा",
+        "button": "एडवेंचर हटाएँ"
+      },
+      "warning": "एडवेंचर को आर्काइव करना स्थायी है और इसे वापस नहीं लिया जा सकता।"
+    },
+    "balance": {
+      "header": "इस साहसिक कार्य को संग्रहित करते समय:",
+      "merge": "ऋणों को नियमित सदस्य के ऋणों में स्थानांतरित करें",
+      "keep": "ऋण/शेष राशि को साहसिक यात्रा में ही रखें"
+    },
+    "archived": "संग्रहीत"
   },
   "it-IT": {
     "members": {
@@ -234,10 +354,16 @@ export const dictionaries = {
       "title": "Nuova avventura"
     },
     "finish": {
-      "title": "Termina l’avventura",
-      "description": "L'archiviazione dell'avventura la rimuoverà dalla schermata delle nuove spese e la sposterà in fondo alla tua lista di avventure.",
-      "button": "Avventura nell’archivio",
-      "delete": "Elimina avventura"
+      "archive": {
+        "title": "Concludi l’avventura",
+        "description": "Archiviare l’avventura la rimuoverà dalla schermata delle nuove spese e la sposterà in fondo alla tua lista di avventure.",
+        "button": "Archivia avventura"
+      },
+      "delete": {
+        "title": "Elimina avventura",
+        "description": "Non è ancora successo nulla. Invita qualche amico e aggiungi delle spese per iniziare.",
+        "button": (title) => `Elimina ${title}`
+      }
     },
     "expenses": {
       "title": "Spese",
@@ -252,7 +378,21 @@ export const dictionaries = {
     "me": "Io",
     "selector": {
       "regular": "Spese regolari"
-    }
+    },
+    "archive": {
+      "header": (title, empty) => empty ? `Eliminazione di ${title}` : `Archiviazione di ${title}`,
+      "delete": {
+        "description": "Questa avventura non ha spese e verrà eliminata",
+        "button": "Elimina avventura"
+      },
+      "warning": "L’archiviazione dell’avventura è permanente e non può essere annullata."
+    },
+    "balance": {
+      "header": "Durante l’archiviazione di questa avventura:",
+      "merge": "Sposta i debiti nei debiti dei membri regolari",
+      "keep": "Lascia debiti/saldi nell’avventura"
+    },
+    "archived": "Archiviato"
   },
   "ja-JP": {
     "members": {
@@ -270,10 +410,16 @@ export const dictionaries = {
       "title": "新しい冒険"
     },
     "finish": {
-      "title": "冒険を終える",
-      "description": "冒険をアーカイブすると、新しい支出画面から削除され、あなたの冒険リストの最後に移動します。",
-      "button": "アーカイブアドベンチャー",
-      "delete": "冒険を削除"
+      "archive": {
+        "title": "冒険を完了する",
+        "description": "冒険をアーカイブすると、新しい支出画面から削除され、あなたの冒険リストの最後に移動します。",
+        "button": "冒険をアーカイブ"
+      },
+      "delete": {
+        "title": "冒険を削除",
+        "description": "まだ何も起きていません。友達を招待して、支出を追加してみましょう。",
+        "button": (title) => `${title}を削除`
+      }
     },
     "expenses": {
       "title": "経費",
@@ -288,7 +434,21 @@ export const dictionaries = {
     "me": "私",
     "selector": {
       "regular": "定期的な支出"
-    }
+    },
+    "archive": {
+      "header": (title, empty) => empty ? `${title}を削除中` : `${title}をアーカイブ中`,
+      "delete": {
+        "description": "このアドベンチャーには費用がかからず、削除されます",
+        "button": "冒険を削除"
+      },
+      "warning": "冒険のアーカイブは永久的で元に戻せません。"
+    },
+    "balance": {
+      "header": "この冒険をアーカイブする際：",
+      "merge": "債務を通常メンバーの債務に移動する",
+      "keep": "借金／残高を冒険内に残す"
+    },
+    "archived": "アーカイブ済み"
   },
   "ko-KR": {
     "members": {
@@ -306,10 +466,16 @@ export const dictionaries = {
       "title": "새로운 모험"
     },
     "finish": {
-      "title": "모험을 끝내기",
-      "description": "모험을 보관하면 새 지출 화면에서 제거되고 내 모험 목록의 맨 뒤로 이동합니다.",
-      "button": "아카이브 어드벤처",
-      "delete": "모험 삭제"
+      "archive": {
+        "title": "모험 마무리하기",
+        "description": "모험을 보관하면 새로운 지출 화면에서 제거되고 모험 목록의 맨 뒤로 이동합니다.",
+        "button": "모험 보관하기"
+      },
+      "delete": {
+        "title": "모험 삭제",
+        "description": "아직 아무 일도 일어나지 않았어요. 친구들을 초대하고 지출을 추가해 시작해보세요.",
+        "button": (title) => `${title} 삭제`
+      }
     },
     "expenses": {
       "title": "지출",
@@ -324,7 +490,21 @@ export const dictionaries = {
     "me": "나",
     "selector": {
       "regular": "정기 지출"
-    }
+    },
+    "archive": {
+      "header": (title, empty) => empty ? `${title} 삭제 중` : `${title} 보관 중`,
+      "delete": {
+        "description": "이 모험에는 비용이 없으며 삭제됩니다",
+        "button": "모험 삭제"
+      },
+      "warning": "이 모험을 보관하면 영구적으로 삭제되며 되돌릴 수 없습니다."
+    },
+    "balance": {
+      "header": "이 모험을 보관할 때:",
+      "merge": "부채를 일반 회원 부채로 이동",
+      "keep": "모험 내에 부채/잔액 남기기"
+    },
+    "archived": "보관됨"
   },
   "nl-NL": {
     "members": {
@@ -342,10 +522,16 @@ export const dictionaries = {
       "title": "Nieuw avontuur"
     },
     "finish": {
-      "title": "Maak het avontuur af",
-      "description": "Als je het avontuur archiveert, wordt het verwijderd van het nieuwe uitgavenscherm en naar het einde van je avonturenlijst verplaatst.",
-      "button": "Archiefavontuur",
-      "delete": "Avontuur verwijderen"
+      "archive": {
+        "title": "Avontuur afronden",
+        "description": "Als je het avontuur archiveert, wordt het van het nieuwe onkostenscherm verwijderd en naar het einde van je avonturenlijst verplaatst.",
+        "button": "Avontuur archiveren"
+      },
+      "delete": {
+        "title": "Avontuur verwijderen",
+        "description": "Er is nog niets gebeurd. Nodig wat vrienden uit en voeg uitgaven toe om te beginnen.",
+        "button": (title) => `${title} verwijderen`
+      }
     },
     "expenses": {
       "title": "Uitgaven",
@@ -360,7 +546,21 @@ export const dictionaries = {
     "me": "Ik",
     "selector": {
       "regular": "Regelmatige uitgaven"
-    }
+    },
+    "archive": {
+      "header": (title, empty) => empty ? `${title} wordt verwijderd` : `${title} wordt gearchiveerd`,
+      "delete": {
+        "description": "Dit avontuur heeft geen uitgaven en wordt verwijderd",
+        "button": "Avontuur verwijderen"
+      },
+      "warning": "Het archiveren van het avontuur is permanent en kan niet ongedaan worden gemaakt."
+    },
+    "balance": {
+      "header": "Bij het archiveren van dit avontuur:",
+      "merge": "Verplaats schulden naar de gewone leden-schulden",
+      "keep": "Schulden/saldi in het avontuur laten"
+    },
+    "archived": "Gearchiveerd"
   },
   "ru-RU": {
     "members": {
@@ -378,10 +578,16 @@ export const dictionaries = {
       "title": "Новое приключение"
     },
     "finish": {
-      "title": "Завершить приключение",
-      "description": "Архивирование приключения удалит его из экрана новых расходов и переместит в конец списка ваших приключений.",
-      "button": "Архивное приключение",
-      "delete": "Удалить приключение"
+      "archive": {
+        "title": "Завершить приключение",
+        "description": "Архивация приключения удалит его с экрана новых расходов и переместит в конец вашего списка приключений.",
+        "button": "Архивировать приключение"
+      },
+      "delete": {
+        "title": "Удалить приключение",
+        "description": "Пока ничего не произошло. Пригласите друзей и добавьте расходы, чтобы начать.",
+        "button": (title) => `Удалить «${title}»`
+      }
     },
     "expenses": {
       "title": "Расходы",
@@ -396,7 +602,21 @@ export const dictionaries = {
     "me": "Я",
     "selector": {
       "regular": "Регулярные расходы"
-    }
+    },
+    "archive": {
+      "header": (title, empty) => empty ? `Удаление ${title}` : `Архивирование ${title}`,
+      "delete": {
+        "description": "У этого приключения нет расходов, и оно будет удалено",
+        "button": "Удалить приключение"
+      },
+      "warning": "Архивирование приключения — это необратимое действие и не может быть отменено."
+    },
+    "balance": {
+      "header": "При архивировании этого приключения:",
+      "merge": "Перенести долги в долги обычных участников",
+      "keep": "Оставить долги/балансы в приключении"
+    },
+    "archived": "Архивировано"
   },
   "sw-TZ": {
     "members": {
@@ -414,10 +634,16 @@ export const dictionaries = {
       "title": "Ndoto Mpya"
     },
     "finish": {
-      "title": "Maliza safari hii",
-      "description": "Ukiihifadhi tukio, litaondolewa kwenye skrini ya matumizi mapya na kuwekwa mwisho wa orodha ya matukio yako.",
-      "button": "Maandishi ya Matukio",
-      "delete": "Futa tukio"
+      "archive": {
+        "title": "Kamata safari",
+        "description": "Kuhifadhi tukio hili kutaliondoa kwenye skrini ya matumizi mapya na kulipeleka mwisho wa orodha yako ya matukio.",
+        "button": "Hifadhi adventure"
+      },
+      "delete": {
+        "title": "Futa tukio",
+        "description": "Hakuna kilichotokea bado. Karibu marafiki zako na ongeza matumizi ili uanze mambo.",
+        "button": (title) => `Futa ${title}`
+      }
     },
     "expenses": {
       "title": "Matumizi",
@@ -432,7 +658,21 @@ export const dictionaries = {
     "me": "Mimi",
     "selector": {
       "regular": "Matumizi ya kawaida"
-    }
+    },
+    "archive": {
+      "header": (title, empty) => empty ? `Inaondoa ${title}` : `Inaweka ${title} kwenye kumbukumbu`,
+      "delete": {
+        "description": "Safari hii haina matumizi na itafutwa",
+        "button": "Futa tukio"
+      },
+      "warning": "Kuhifadhi tukio hili ni la kudumu na haliwezi kubatilishwa."
+    },
+    "balance": {
+      "header": "Unapohifadhi tukio hili kwenye kumbukumbu:",
+      "merge": "Hamisha madeni kwa madeni ya wanachama wa kawaida",
+      "keep": "Acha madeni/saldo ndani ya tukio la冒险"
+    },
+    "archived": "Imehifadhiwa"
   },
   "tr-TR": {
     "members": {
@@ -450,10 +690,16 @@ export const dictionaries = {
       "title": "Yeni Macera"
     },
     "finish": {
-      "title": "Macerayı bitir",
-      "description": "Macera arşivlendiğinde, yeni harcama ekranından kaldırılır ve macera listenizin en sonuna taşınır.",
-      "button": "Arşiv macerası",
-      "delete": "Macera sil"
+      "archive": {
+        "title": "Macerayı bitir",
+        "description": "Macera arşivlendiğinde yeni harcama ekranından kaldırılır ve macera listenizin sonuna taşınır.",
+        "button": "Macera arşivle"
+      },
+      "delete": {
+        "title": "Macera sil",
+        "description": "Henüz hiçbir şey olmadı. Birkaç arkadaşını davet et ve harcamalar ekleyerek işleri başlat.",
+        "button": (title) => `${title} Sil`
+      }
     },
     "expenses": {
       "title": "Giderler",
@@ -468,7 +714,21 @@ export const dictionaries = {
     "me": "Ben",
     "selector": {
       "regular": "Düzenli harcamalar"
-    }
+    },
+    "archive": {
+      "header": (title, empty) => empty ? `${title} siliniyor` : `${title} arşivleniyor`,
+      "delete": {
+        "description": "Bu maceranın gideri yok ve silinecek",
+        "button": "Macera sil"
+      },
+      "warning": "Macera arşivlendiğinde bu işlem kalıcıdır ve geri alınamaz."
+    },
+    "balance": {
+      "header": "Bu macera arşivlenirken:",
+      "merge": "Borçları normal üye borçlarına taşı",
+      "keep": "Borçları/bakiyeleri macerada bırak"
+    },
+    "archived": "Arşivlendi"
   },
   "uk-UA": {
     "members": {
@@ -486,10 +746,16 @@ export const dictionaries = {
       "title": "Нова пригода"
     },
     "finish": {
-      "title": "Завершити пригоду",
-      "description": "Архівування пригоди видалить її з екрана нових витрат і перемістить у кінець вашого списку пригод.",
-      "button": "Архівна пригода",
-      "delete": "Видалити пригоду"
+      "archive": {
+        "title": "Завершити пригоду",
+        "description": "Архівування пригоди видалить її з екрана нових витрат і перемістить у кінець вашого списку пригод.",
+        "button": "Архівувати пригоду"
+      },
+      "delete": {
+        "title": "Видалити пригоду",
+        "description": "Поки що нічого не сталося. Запросіть друзів і додайте витрати, щоб розпочати.",
+        "button": (title) => `Видалити «${title}»`
+      }
     },
     "expenses": {
       "title": "Витрати",
@@ -504,7 +770,21 @@ export const dictionaries = {
     "me": "Я",
     "selector": {
       "regular": "Регулярні витрати"
-    }
+    },
+    "archive": {
+      "header": (title, empty) => empty ? `Видалення ${title}` : `Архівування ${title}`,
+      "delete": {
+        "description": "У цій пригоді немає витрат, і вона буде видалена",
+        "button": "Видалити пригоду"
+      },
+      "warning": "Архівування пригоди є остаточним і не може бути скасоване."
+    },
+    "balance": {
+      "header": "Під час архівування цієї пригоди:",
+      "merge": "Перемістити борги до боргів звичайних учасників",
+      "keep": "Залишити борги/баланси в пригоді"
+    },
+    "archived": "Заархівовано"
   },
   "zh-CN": {
     "members": {
@@ -522,10 +802,16 @@ export const dictionaries = {
       "title": "新冒险"
     },
     "finish": {
-      "title": "完成冒险",
-      "description": "归档该冒险后，它将从新的支出界面中移除，并被放到你的冒险列表最后。",
-      "button": "档案冒险",
-      "delete": "删除冒险"
+      "archive": {
+        "title": "完成冒险",
+        "description": "将冒险归档后，它会从新增支出页面移除，并被移到你的冒险列表末尾。",
+        "button": "归档冒险"
+      },
+      "delete": {
+        "title": "删除冒险",
+        "description": "还没有任何活动。快邀请朋友并添加一些支出，让一切开始运转吧。",
+        "button": (title) => `删除${title}`
+      }
     },
     "expenses": {
       "title": "支出",
@@ -540,7 +826,21 @@ export const dictionaries = {
     "me": "我",
     "selector": {
       "regular": "定期支出"
-    }
+    },
+    "archive": {
+      "header": (title, empty) => empty ? `正在删除${title}` : `正在归档${title}`,
+      "delete": {
+        "description": "该冒险没有任何费用，并将被删除",
+        "button": "删除冒险"
+      },
+      "warning": "归档此冒险将是永久性的，无法撤销。"
+    },
+    "balance": {
+      "header": "归档此冒险时：",
+      "merge": "将债务移至普通成员债务",
+      "keep": "将债务/余额保留在冒险中"
+    },
+    "archived": "已归档"
   }
 };
 /** @type {import("./types").Locale[]} */

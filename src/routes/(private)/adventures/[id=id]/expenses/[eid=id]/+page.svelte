@@ -2,7 +2,7 @@
   import { Pencil } from '@lucide/svelte'
   import { Async } from 'svas'
   import { page } from '$app/state'
-  import { Actions } from '$com/shell'
+  import { Actions, Return } from '$com/shell'
   import { adventures } from '@/adventures'
   import { ExpenseDetails } from '@/adventures/ui'
   import { Action, Header, Section } from '@/app/ui'
@@ -11,6 +11,8 @@
   const id = $derived(page.params.id) as string
   const eid = $derived(page.params.eid) as string
 </script>
+
+<Return href="/adventures/{id}/" />
 
 <Async store={adventures}>
   {#snippet awaited(adventures)}

@@ -22,15 +22,6 @@ inputs:
       input: Settings
     title:
       input: New Adventure
-  finish:
-    title:
-      input: Finish the adventure
-    description:
-      input: Archiving the adventure will remove it from the new expense screen and put it at the back of your adventure.
-    button:
-      input: Archive adventure
-    delete:
-      input: Delete adventure
   expenses:
     title:
       input: Expenses
@@ -50,3 +41,50 @@ inputs:
   selector:
     regular:
       input: Regular spending
+  archive:
+    header:
+      input: "(title, empty) => empty ? `Deleting ${title}` : `Archiving ${title}`"
+    delete:
+      description:
+        input: This adventure has no expenses and will be deleted
+        context: description for delete mode
+      button:
+        input: Delete adventure
+        context: hold button for delete
+    warning:
+      input: Archiving the adventure is permanent and can not be undone.
+      context: warning shown on archive confirmation screen
+  balance:
+    header:
+      input: "When archiving this adventure:"
+      context: header above radio options for debt handling
+    merge:
+      input: Move debts to the regular member debts
+      context: "radio option: merge adventure debts into regular contacts"
+    keep:
+      input: Leave debts/balances in adventure
+      context: "radio option: keep debts inside the adventure"
+  archived:
+    input: Archived
+    context: label prefix for archived adventure date
+  finish:
+    archive:
+      title:
+        input: Finish the adventure
+        context: heading for archive section in adventure editor
+      description:
+        input: Archiving the adventure will remove it from the new expense screen and move it to the back of your adventure list.
+        context: description for archive section
+      button:
+        input: Archive adventure
+        context: archive button label
+    delete:
+      title:
+        input: Delete adventure
+        context: heading for delete section when adventure has no expenses
+      description:
+        input: Nothing happened yet. Bring some friends and add some spendings to start things rolling.
+        context: description for delete section, shared with view page empty expenses
+      button:
+        input: \!js (title) => `Delete ${title}`
+        context: delete button label with adventure title

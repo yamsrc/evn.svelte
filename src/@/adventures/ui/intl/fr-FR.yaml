@@ -16,12 +16,20 @@ editor:
   settings: Paramètres
   title: Nouvelle aventure
 finish:
-  title: Terminer l’aventure
-  description: >-
-    L’archivage de l’aventure la retirera de l’écran des nouvelles dépenses et
-    la placera à la fin de votre liste d’aventures.
-  button: Aventure d’archive
-  delete: Supprimer l’aventure
+  archive:
+    title: Terminer l’aventure
+    description: >-
+      Archiver l’aventure la retirera de l’écran des nouvelles dépenses et la
+      placera à la fin de ta liste d’aventures.
+    button: Archiver l’aventure
+  delete:
+    title: Supprimer l’aventure
+    description: >-
+      Rien ne s'est encore passé. Invitez des amis et ajoutez des dépenses pour
+      lancer les choses.
+    button: |-
+      !js
+      (title) => `Supprimer ${title}`
 expenses:
   title: Dépenses
   total: Total
@@ -33,3 +41,18 @@ spending:
 me: Moi
 selector:
   regular: Dépenses régulières
+archive:
+  header: >-
+    !js
+
+    (title, empty) => empty ? `Suppression de ${title}` : `Archivage de
+    ${title}`
+  delete:
+    description: Cette aventure n'a aucune dépense et sera supprimée
+    button: Supprimer l’aventure
+  warning: L’archivage de l’aventure est définitif et ne peut pas être annulé.
+balance:
+  header: "Lors de l’archivage de cette aventure :"
+  merge: Transférer les dettes vers les dettes des membres réguliers
+  keep: Laisser les dettes/soldes dans l’aventure
+archived: Archivé

@@ -11,10 +11,16 @@ editor:
   settings: 设置
   title: 新冒险
 finish:
-  title: 完成冒险
-  description: 归档该冒险后，它将从新的支出界面中移除，并被放到你的冒险列表最后。
-  button: 档案冒险
-  delete: 删除冒险
+  archive:
+    title: 完成冒险
+    description: 将冒险归档后，它会从新增支出页面移除，并被移到你的冒险列表末尾。
+    button: 归档冒险
+  delete:
+    title: 删除冒险
+    description: 还没有任何活动。快邀请朋友并添加一些支出，让一切开始运转吧。
+    button: |-
+      !js
+      (title) => `删除${title}`
 expenses:
   title: 支出
   total: 总计
@@ -26,3 +32,16 @@ spending:
 me: 我
 selector:
   regular: 定期支出
+archive:
+  header: |-
+    !js
+    (title, empty) => empty ? `正在删除${title}` : `正在归档${title}`
+  delete:
+    description: 该冒险没有任何费用，并将被删除
+    button: 删除冒险
+  warning: 归档此冒险将是永久性的，无法撤销。
+balance:
+  header: 归档此冒险时：
+  merge: 将债务移至普通成员债务
+  keep: 将债务/余额保留在冒险中
+archived: 已归档

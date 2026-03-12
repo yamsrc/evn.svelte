@@ -15,12 +15,20 @@ editor:
   settings: Configuración
   title: Nueva aventura
 finish:
-  title: Termina la aventura
-  description: >-
-    Archivar la aventura la eliminará de la pantalla de nuevos gastos y la
-    pondrá al final de tu lista de aventuras.
-  button: Aventura en el archivo
-  delete: Eliminar aventura
+  archive:
+    title: Finalizar la aventura
+    description: >-
+      Archivar la aventura la eliminará de la pantalla de nuevos gastos y la
+      moverá al final de tu lista de aventuras.
+    button: Archivar aventura
+  delete:
+    title: Eliminar aventura
+    description: >-
+      Todavía no ha pasado nada. Invita a algunos amigos y añade algunos gastos
+      para poner esto en marcha.
+    button: |-
+      !js
+      (title) => `Eliminar ${title}`
 expenses:
   title: Gastos
   total: Total
@@ -32,3 +40,16 @@ spending:
 me: Yo
 selector:
   regular: Gastos habituales
+archive:
+  header: |-
+    !js
+    (title, empty) => empty ? `Eliminando ${title}` : `Archivando ${title}`
+  delete:
+    description: Esta aventura no tiene gastos y será eliminada
+    button: Eliminar aventura
+  warning: Archivar la aventura es una acción permanente y no se puede deshacer.
+balance:
+  header: "Al archivar esta aventura:"
+  merge: Mover deudas a las deudas de miembros regulares
+  keep: Dejar deudas/saldos en la aventura
+archived: Archivado

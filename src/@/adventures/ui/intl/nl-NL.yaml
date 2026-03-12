@@ -15,12 +15,20 @@ editor:
   settings: Instellingen
   title: Nieuw avontuur
 finish:
-  title: Maak het avontuur af
-  description: >-
-    Als je het avontuur archiveert, wordt het verwijderd van het nieuwe
-    uitgavenscherm en naar het einde van je avonturenlijst verplaatst.
-  button: Archiefavontuur
-  delete: Avontuur verwijderen
+  archive:
+    title: Avontuur afronden
+    description: >-
+      Als je het avontuur archiveert, wordt het van het nieuwe onkostenscherm
+      verwijderd en naar het einde van je avonturenlijst verplaatst.
+    button: Avontuur archiveren
+  delete:
+    title: Avontuur verwijderen
+    description: >-
+      Er is nog niets gebeurd. Nodig wat vrienden uit en voeg uitgaven toe om te
+      beginnen.
+    button: |-
+      !js
+      (title) => `${title} verwijderen`
 expenses:
   title: Uitgaven
   total: Totaal
@@ -32,3 +40,20 @@ spending:
 me: Ik
 selector:
   regular: Regelmatige uitgaven
+archive:
+  header: >-
+    !js
+
+    (title, empty) => empty ? `${title} wordt verwijderd` : `${title} wordt
+    gearchiveerd`
+  delete:
+    description: Dit avontuur heeft geen uitgaven en wordt verwijderd
+    button: Avontuur verwijderen
+  warning: >-
+    Het archiveren van het avontuur is permanent en kan niet ongedaan worden
+    gemaakt.
+balance:
+  header: "Bij het archiveren van dit avontuur:"
+  merge: Verplaats schulden naar de gewone leden-schulden
+  keep: Schulden/saldi in het avontuur laten
+archived: Gearchiveerd

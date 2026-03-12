@@ -15,12 +15,20 @@ editor:
   settings: Ayarlar
   title: Yeni Macera
 finish:
-  title: Macerayı bitir
-  description: >-
-    Macera arşivlendiğinde, yeni harcama ekranından kaldırılır ve macera
-    listenizin en sonuna taşınır.
-  button: Arşiv macerası
-  delete: Macera sil
+  archive:
+    title: Macerayı bitir
+    description: >-
+      Macera arşivlendiğinde yeni harcama ekranından kaldırılır ve macera
+      listenizin sonuna taşınır.
+    button: Macera arşivle
+  delete:
+    title: Macera sil
+    description: >-
+      Henüz hiçbir şey olmadı. Birkaç arkadaşını davet et ve harcamalar
+      ekleyerek işleri başlat.
+    button: |-
+      !js
+      (title) => `${title} Sil`
 expenses:
   title: Giderler
   total: Toplam
@@ -32,3 +40,16 @@ spending:
 me: Ben
 selector:
   regular: Düzenli harcamalar
+archive:
+  header: |-
+    !js
+    (title, empty) => empty ? `${title} siliniyor` : `${title} arşivleniyor`
+  delete:
+    description: Bu maceranın gideri yok ve silinecek
+    button: Macera sil
+  warning: Macera arşivlendiğinde bu işlem kalıcıdır ve geri alınamaz.
+balance:
+  header: "Bu macera arşivlenirken:"
+  merge: Borçları normal üye borçlarına taşı
+  keep: Borçları/bakiyeleri macerada bırak
+archived: Arşivlendi

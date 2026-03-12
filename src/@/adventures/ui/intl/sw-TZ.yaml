@@ -15,12 +15,20 @@ editor:
   settings: Mipangilio
   title: Ndoto Mpya
 finish:
-  title: Maliza safari hii
-  description: >-
-    Ukiihifadhi tukio, litaondolewa kwenye skrini ya matumizi mapya na kuwekwa
-    mwisho wa orodha ya matukio yako.
-  button: Maandishi ya Matukio
-  delete: Futa tukio
+  archive:
+    title: Kamata safari
+    description: >-
+      Kuhifadhi tukio hili kutaliondoa kwenye skrini ya matumizi mapya na
+      kulipeleka mwisho wa orodha yako ya matukio.
+    button: Hifadhi adventure
+  delete:
+    title: Futa tukio
+    description: >-
+      Hakuna kilichotokea bado. Karibu marafiki zako na ongeza matumizi ili
+      uanze mambo.
+    button: |-
+      !js
+      (title) => `Futa ${title}`
 expenses:
   title: Matumizi
   total: Jumla
@@ -32,3 +40,18 @@ spending:
 me: Mimi
 selector:
   regular: Matumizi ya kawaida
+archive:
+  header: >-
+    !js
+
+    (title, empty) => empty ? `Inaondoa ${title}` : `Inaweka ${title} kwenye
+    kumbukumbu`
+  delete:
+    description: Safari hii haina matumizi na itafutwa
+    button: Futa tukio
+  warning: Kuhifadhi tukio hili ni la kudumu na haliwezi kubatilishwa.
+balance:
+  header: "Unapohifadhi tukio hili kwenye kumbukumbu:"
+  merge: Hamisha madeni kwa madeni ya wanachama wa kawaida
+  keep: Acha madeni/saldo ndani ya tukio la冒险
+archived: Imehifadhiwa

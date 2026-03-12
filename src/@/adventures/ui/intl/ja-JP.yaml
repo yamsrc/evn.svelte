@@ -12,10 +12,16 @@ editor:
   settings: 設定
   title: 新しい冒険
 finish:
-  title: 冒険を終える
-  description: 冒険をアーカイブすると、新しい支出画面から削除され、あなたの冒険リストの最後に移動します。
-  button: アーカイブアドベンチャー
-  delete: 冒険を削除
+  archive:
+    title: 冒険を完了する
+    description: 冒険をアーカイブすると、新しい支出画面から削除され、あなたの冒険リストの最後に移動します。
+    button: 冒険をアーカイブ
+  delete:
+    title: 冒険を削除
+    description: まだ何も起きていません。友達を招待して、支出を追加してみましょう。
+    button: |-
+      !js
+      (title) => `${title}を削除`
 expenses:
   title: 経費
   total: 合計
@@ -27,3 +33,16 @@ spending:
 me: 私
 selector:
   regular: 定期的な支出
+archive:
+  header: |-
+    !js
+    (title, empty) => empty ? `${title}を削除中` : `${title}をアーカイブ中`
+  delete:
+    description: このアドベンチャーには費用がかからず、削除されます
+    button: 冒険を削除
+  warning: 冒険のアーカイブは永久的で元に戻せません。
+balance:
+  header: この冒険をアーカイブする際：
+  merge: 債務を通常メンバーの債務に移動する
+  keep: 借金／残高を冒険内に残す
+archived: アーカイブ済み

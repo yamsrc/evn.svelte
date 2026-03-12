@@ -15,12 +15,20 @@ editor:
   settings: Impostazioni
   title: Nuova avventura
 finish:
-  title: Termina l’avventura
-  description: >-
-    L'archiviazione dell'avventura la rimuoverà dalla schermata delle nuove
-    spese e la sposterà in fondo alla tua lista di avventure.
-  button: Avventura nell’archivio
-  delete: Elimina avventura
+  archive:
+    title: Concludi l’avventura
+    description: >-
+      Archiviare l’avventura la rimuoverà dalla schermata delle nuove spese e la
+      sposterà in fondo alla tua lista di avventure.
+    button: Archivia avventura
+  delete:
+    title: Elimina avventura
+    description: >-
+      Non è ancora successo nulla. Invita qualche amico e aggiungi delle spese
+      per iniziare.
+    button: |-
+      !js
+      (title) => `Elimina ${title}`
 expenses:
   title: Spese
   total: Totale
@@ -32,3 +40,18 @@ spending:
 me: Io
 selector:
   regular: Spese regolari
+archive:
+  header: >-
+    !js
+
+    (title, empty) => empty ? `Eliminazione di ${title}` : `Archiviazione di
+    ${title}`
+  delete:
+    description: Questa avventura non ha spese e verrà eliminata
+    button: Elimina avventura
+  warning: L’archiviazione dell’avventura è permanente e non può essere annullata.
+balance:
+  header: "Durante l’archiviazione di questa avventura:"
+  merge: Sposta i debiti nei debiti dei membri regolari
+  keep: Lascia debiti/saldi nell’avventura
+archived: Archiviato

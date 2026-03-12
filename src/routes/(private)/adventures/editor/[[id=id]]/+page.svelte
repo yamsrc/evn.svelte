@@ -3,6 +3,7 @@
   import { goto } from '$app/navigation'
   import { page } from '$app/state'
   import { Hold } from '$com/buttons'
+  import { Return } from '$com/shell'
   import { dict as common } from '$lib/intl'
   import { leave } from '@/adventures'
   import { Editor } from '@/adventures/ui'
@@ -30,6 +31,10 @@
   }
 </script>
 
+{#if id}
+  <Return href="/adventures/{id}/" />
+{/if}
+
 <Section>
   {#if id === undefined}
     <Header.Root>
@@ -54,10 +59,12 @@
   {/if}
 </Section>
 
-<Section>
-  <Panel>
-    <p class="text-sm">{$dict.editor.info}</p>
-  </Panel>
-</Section>
+{#if id === undefined}
+  <Section>
+    <Panel>
+      <p class="text-sm">{$dict.editor.info}</p>
+    </Panel>
+  </Section>
+{/if}
 
 <Editor.Edit {id} bind:value={ctx.value} bind:busy />

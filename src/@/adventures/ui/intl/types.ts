@@ -24,10 +24,16 @@ export type Dictionary = {
         title: string
       }
       finish: {
-        title: string
-        description: string
-        button: string
-        delete: string
+        archive: {
+          title: string
+          description: string
+          button: string
+        }
+        delete: {
+          title: string
+          description: string
+          button: (value: any) => string
+        }
       }
       expenses: {
         title: string
@@ -43,4 +49,18 @@ export type Dictionary = {
       selector: {
         regular: string
       }
+      archive: {
+        header: (...args: [any, any]) => string
+        delete: {
+          description: string
+          button: string
+        }
+        warning: string
+      }
+      balance: {
+        header: string
+        merge: string
+        keep: string
+      }
+      archived: string
     }

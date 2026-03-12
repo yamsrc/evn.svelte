@@ -2,6 +2,7 @@
   import { Paperclip } from '@lucide/svelte'
   import { Async } from 'svas'
   import { page } from '$app/state'
+  import { Return } from '$com/shell'
   import { Spinner } from '$ui/spinner'
   import { adventures } from '@/adventures'
   import { Selector } from '@/adventures/ui'
@@ -37,6 +38,8 @@
     form?.attach(...ids)
   }
 </script>
+
+<Return href="/adventures/{id}/" />
 
 <Async store={adventures}>
   {#snippet awaited(adventures)}
