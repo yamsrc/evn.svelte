@@ -1,2 +1,3 @@
-# zh-CN dictionary
-# Add your translations here
+splitter:
+  stack:
+    claim: 全部领取

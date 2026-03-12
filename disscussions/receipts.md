@@ -17,11 +17,9 @@ Receipt: `/events/receipts/{id}/`
 
 ## Data model
 
-Line item:
+Transition groups:
 
 ```yaml
-ids: string[]
-name: string
-price: number
-claimedBy: string[]
+id: string # random uuid
+items: Item[] # line items with single unit or one multi-unit item
 ```

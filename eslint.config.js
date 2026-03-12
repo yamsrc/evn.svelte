@@ -1,9 +1,9 @@
-import tsPlugin from '@typescript-eslint/eslint-plugin'
-import importPlugin from 'eslint-plugin-import'
-import svelte from 'eslint-plugin-svelte'
-import globals from 'globals'
-import neostandard from 'neostandard'
 import ts from 'typescript-eslint'
+import neostandard from 'neostandard'
+import globals from 'globals'
+import svelte from 'eslint-plugin-svelte'
+import importPlugin from 'eslint-plugin-import'
+import tsPlugin from '@typescript-eslint/eslint-plugin'
 
 export default [
   ...neostandard({
@@ -107,7 +107,7 @@ export default [
       'import/order': ['error', {
         groups: ['builtin', 'external', 'internal', 'unknown', 'parent', 'sibling', 'index', 'type'],
         alphabetize: {
-          order: 'asc',
+          order: 'desc',
         },
       }],
       'import-x/no-duplicates': 'off', // stupid shit doesn't work

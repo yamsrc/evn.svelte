@@ -1,2 +1,3 @@
-# es-ES dictionary
-# Add your translations here
+splitter:
+  stack:
+    claim: Reclamar todo

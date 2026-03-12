@@ -1,2 +1,3 @@
-# en-US dictionary
-# Add your translations here
+splitter:
+  stack:
+    claim: Claim all

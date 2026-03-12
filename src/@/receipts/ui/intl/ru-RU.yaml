@@ -1,2 +1,3 @@
-# ru-RU dictionary
-# Add your translations here
+splitter:
+  stack:
+    claim: Забрать всё

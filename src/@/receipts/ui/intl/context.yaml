@@ -1,2 +1,6 @@
 context: Mount 'receipts' context
-inputs: {}
+inputs:
+  splitter:
+    stack:
+      claim:
+        input: Claim all

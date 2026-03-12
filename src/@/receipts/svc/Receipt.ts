@@ -1,1 +1,1 @@
-export type { Receipt } from './net'
+export type { Receipt, Link, Merchant, Item, Extra } from './net'

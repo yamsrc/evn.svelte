@@ -1,2 +1,3 @@
-# nl-NL dictionary
-# Add your translations here
+splitter:
+  stack:
+    claim: Alles claimen
