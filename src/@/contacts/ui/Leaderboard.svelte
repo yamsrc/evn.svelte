@@ -5,19 +5,26 @@
   import { Panel } from '@/accounts/ui'
   import type { Props } from './Leaderboard'
 
-  const { entries, sign = 'negative' }: Props = $props()
-  const total = $derived(entries.reduce((sum, entry) => sum + Math.abs(entry.value), 0))
+  const { entries, sign = 'negative', neutral }: Props = $props()
+
+  const sorted = $derived(
+    [...entries].sort((a, b) =>
+      sign === 'negative' ? a.value - b.value : b.value - a.value,
+    ),
+  )
+  const total = $derived(sorted.reduce((sum, entry) => sum + Math.abs(entry.value), 0))
 </script>
 
 <ul class="space-y-2">
-  {#each entries as entry (entry.id)}
+  {#each sorted as entry (entry.id)}
     <li>
       <Async store={accounts.get(entry.id)}>
         {#snippet awaited(account)}
           <Panel
             account={{ ...account, name: entry.name ?? account.name }}
             balance={entry.value}
-            href={entry.href} />
+            href={entry.href}
+            {neutral} />
         {/snippet}
       </Async>
       {#if entries.length > 1}

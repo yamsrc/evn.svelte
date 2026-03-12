@@ -17,7 +17,6 @@
   const negative = $derived(
     contacts
       .filter((contact) => contact.balance < 0)
-      .sort((a, b) => a.balance - b.balance)
       .slice(0, LIMIT)
       .map(entry),
   )
@@ -25,7 +24,6 @@
   const positive = $derived(
     contacts
       .filter((contact) => contact.balance > 0)
-      .sort((a, b) => b.balance - a.balance)
       .slice(0, LIMIT)
       .map(entry),
   )

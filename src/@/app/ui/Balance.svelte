@@ -10,6 +10,7 @@
     totalLabel = $dict.expenses.balance.total,
     youOwe = $dict.expenses.balance.youOwe,
     youAreOwed = $dict.expenses.balance.youAreOwed,
+    sign,
     class: classes,
   }: Props = $props()
 
@@ -17,14 +18,16 @@
 </script>
 
 <div class={cn('flex items-center justify-end gap-2', classes)}>
-  <p class="text-muted-foreground text-sm text-nowrap">
-    {#if total !== undefined}
-      {totalLabel}
-    {:else if balance !== undefined && balance > 0}
-      {youAreOwed}
-    {:else if balance !== undefined && balance < 0}
-      {youOwe}
-    {/if}
-  </p>
-  <Coins {amount} />
+  {#if sign !== 'neutral'}
+    <p class="text-muted-foreground text-sm text-nowrap">
+      {#if total !== undefined}
+        {totalLabel}
+      {:else if balance !== undefined && balance > 0}
+        {youAreOwed}
+      {:else if balance !== undefined && balance < 0}
+        {youOwe}
+      {/if}
+    </p>
+  {/if}
+  <Coins {amount} {sign} />
 </div>

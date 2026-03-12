@@ -20,6 +20,6 @@
   {#if entries.length === 0}
     <p class="text-sm text-muted-foreground">{$dict.members.empty}</p>
   {:else}
-    <Leaderboard {entries} sign="positive" />
+    <Leaderboard {entries} sign="positive" neutral />
   {/if}
 </div>

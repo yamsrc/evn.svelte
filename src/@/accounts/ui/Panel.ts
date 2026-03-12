@@ -8,6 +8,7 @@ export type Props = {
   balance?: number
   selected?: boolean
   highlighted?: boolean
+  neutral?: boolean
   href?: string
   class?: string
   onselect?: (id: string, selected: boolean) => void
