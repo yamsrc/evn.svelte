@@ -3,8 +3,6 @@ import { setContext as set, getContext as get } from 'svelte'
 export interface Entry {
   id: symbol
   pickable: () => boolean
-  order?: () => number
-  rank?: number
 }
 
 export interface Context {

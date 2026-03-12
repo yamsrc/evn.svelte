@@ -1,7 +1,7 @@
 <script lang="ts">
   import { ImageUp } from '@lucide/svelte'
+  import { Loader } from '$com/loader'
   import * as Picker from '$com/picker'
-  import { Spinner } from '$ui/spinner'
   import { presets, upload } from '@/adventures'
   import { url } from '@/media/ui/Picture'
   import { dict } from './intl'
@@ -55,25 +55,24 @@
       <Picker.Root {picked} {scroll} {onpick} snap="center" class="gap-2 px-5 py-1">
         <Picker.Option
           id="adventures-cover-upload-button"
-          order={0}
           pickable={false}
           variant="outline"
           onclick={() => input?.click()}
           disabled={uploading}
           class={[card, 'flex-col items-center justify-center gap-2 text-muted-foreground']}>
           {#if uploading}
-            <Spinner class="size-6" />
+            <Loader />
           {:else}
             <ImageUp class="size-6" />
           {/if}
           <span class={['text-xs', uploading && 'hidden']}>{$dict.editor.upload}</span>
         </Picker.Option>
 
-        {#each all as id, index (id)}
+        {#each all as id (id)}
+          {@const cover = url({ id, path: '/pictures/', variant: '600x400!', format: 'webp' })}
           <Picker.Option
-            order={index + 1}
             class={[card, 'bg-cover bg-center']}
-            style={`background-image: url(${url({ id, path: '/pictures/', variant: '600x400!' })})`} />
+            style="background-image: url({cover})" />
         {/each}
       </Picker.Root>
     {/key}

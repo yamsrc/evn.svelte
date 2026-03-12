@@ -11,15 +11,13 @@
   } as const
 
   const ctx = getContext()
-  const { pickable = true, order, onclick, class: classes, children, ...rest }: Props = $props()
+  const { pickable = true, onclick, class: classes, children, ...rest }: Props = $props()
 
   const id = Symbol('picker.option')
 
-  // svelte-ignore state_referenced_locally
   ctx.register({
     id,
     pickable: () => pickable,
-    order: order === undefined ? undefined : () => order,
   })
 
   onDestroy(() => {

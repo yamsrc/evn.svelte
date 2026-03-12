@@ -13,28 +13,17 @@
   }: Props = $props()
 
   let entries: Entry[] = $state([])
-  let rank = 0
 
   const ui: { chosen?: symbol; snap: 'start' | 'center' | 'end' } = $state({
     chosen: undefined,
     snap: 'start',
   })
 
-  function ordered(entries: Entry[]): Entry[] {
-    return [...entries].sort((a, b) => {
-      const left = a.order?.() ?? a.rank ?? 0
-      const right = b.order?.() ?? b.rank ?? 0
-
-      return left - right
-    })
-  }
-
-  const list = $derived(ordered(entries))
-  const picks = $derived(list.filter((entry) => entry.pickable()))
+  const picks = $derived(entries.filter((entry) => entry.pickable()))
   const chosen = $derived(picked >= 0 && picked < picks.length ? picks[picked].id : undefined)
   const scroll = $derived(
     target >= 0 && target < picks.length
-      ? list.findIndex((entry) => entry.id === picks[target].id)
+      ? entries.findIndex((entry) => entry.id === picks[target].id)
       : -1,
   )
 
@@ -50,7 +39,7 @@
 
       if (index >= 0) onpick(index)
     },
-    register: (entry) => entries.push({ ...entry, rank: rank++ }),
+    register: (entry) => entries.push(entry),
     unregister: (id) => {
       entries = entries.filter((entry) => entry.id !== id)
     },
