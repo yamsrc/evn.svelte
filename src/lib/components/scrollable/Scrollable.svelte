@@ -22,13 +22,12 @@
 
 <div {dir}>
   <div
-    {@attach scrollable({ enabled: infinite, align, scroll }, mounted)}
+    {@attach scrollable({ infinite, align, scroll }, mounted)}
     {onscroll}
     class={cn(
-      'flex overflow-x-auto no-scrollbar snap-x snap-mandatory overscroll-x-contain',
+      'px-4 flex overflow-x-auto no-scrollbar snap-x snap-mandatory overscroll-x-contain [&_.snap]:shrink-0',
       classes,
-    )}
-  >
+    )}>
     {@render children?.()}
     {#if infinite}
       {#each { length: INFINITY - 1 }}

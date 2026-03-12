@@ -3,7 +3,7 @@ import type { Attachment } from 'svelte/attachments'
 
 export interface Props {
   children: Snippet
-  infinite?: Options['enabled']
+  infinite?: Options['infinite']
   align?: Options['align']
   class?: string
   dir?: 'ltr' | 'rtl'
@@ -12,26 +12,21 @@ export interface Props {
 }
 
 export function scrollable(options: Options, mounted: boolean): Attachment {
-  if (options.enabled) return infinity(options)
-
-  return finite(options, mounted)
+  if (options.infinite) return infinite(options)
+  else return finite(options, mounted)
 }
 
 function finite(options: Options, mounted: boolean): Attachment {
   if (options.scroll < 0) return () => undefined
 
   return (root) => {
-    const el = root.children[options.scroll] as HTMLElement | undefined
-
-    if (el === undefined) return
+    const el = root.children[options.scroll] as HTMLElement
 
     el.scrollIntoView({ behavior: mounted ? 'smooth' : 'instant', inline: options.align, block: 'nearest' })
   }
 }
 
-export function infinity(options: Options): Attachment {
-  if (!options.enabled) return () => undefined
-
+function infinite(options: Options): Attachment {
   return (root) => {
     const length = root.children.length / INFINITY
 
@@ -68,7 +63,7 @@ export const INFINITY = 11
 const HALF = (INFINITY - 1) / 2
 
 interface Options {
-  enabled: boolean
-  align: 'start' | 'center' | 'end'
+  infinite: boolean
+  align: 'start' | 'center'
   scroll: number
 }

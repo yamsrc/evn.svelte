@@ -14,7 +14,9 @@
   let uploaded = $state<string | null>(null)
   let scrolled = $state(false)
 
-  const custom = $derived(uploaded ?? (presets.includes(picture) ? null : picture || null))
+  // svelte-ignore state_referenced_locally
+  const saved = !presets.includes(picture) && picture ? picture : null
+  const custom = $derived(uploaded ?? saved)
   const all = $derived(custom ? [custom, ...presets] : presets)
   const current = $derived(picture)
   const picked = $derived(all.indexOf(current))
