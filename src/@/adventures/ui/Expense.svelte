@@ -28,16 +28,17 @@
         </div>
       {/snippet}
     </Async>
-    <Card.Metric amount={expense.amount} label={$dict.expenses.paid}>
-      {#if expense.attachments.length > 0}
-        <Paperclip class="size-4 text-muted-foreground" />
-      {/if}
-    </Card.Metric>
+    <Card.Metric amount={expense.amount} label={$dict.expenses.paid} />
   </Card.Row>
   <Separator />
   <Card.Row>
     <Card.Side class="flex-1">
-      <span>{expense.title}</span>
+      <div class="flex items-center gap-1">
+        {#if expense.attachments.length > 0}
+          <Paperclip size={14} class="text-muted-foreground" />
+        {/if}
+        <span>{expense.title}</span>
+      </div>
       <p class="text-sm text-muted-foreground">{description}</p>
     </Card.Side>
     <Card.Side align="end">
