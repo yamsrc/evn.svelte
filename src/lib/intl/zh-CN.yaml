@@ -19,6 +19,8 @@ actions:
   save: 保存
   create: 创建
   slide: 滑动
+  adventures:
+    adventure: 添加冒险
 nav:
   home: 首页
   profile: 我

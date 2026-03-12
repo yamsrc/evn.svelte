@@ -19,6 +19,8 @@ actions:
   save: Зберегти
   create: Створити
   slide: Змахни
+  adventures:
+    adventure: Додати пригоду
 nav:
   home: Головна
   profile: Я

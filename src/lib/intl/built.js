@@ -25,7 +25,10 @@ export const dictionaries = {
       "search": "بحث",
       "save": "حفظ",
       "create": "إنشاء",
-      "slide": "اسحب"
+      "slide": "اسحب",
+      "adventures": {
+        "adventure": "أضف مغامرة"
+      }
     },
     "nav": {
       "home": "الرئيسية",
@@ -224,7 +227,10 @@ export const dictionaries = {
       "search": "Suchen",
       "save": "Speichern",
       "create": "Erstellen",
-      "slide": "Wischen"
+      "slide": "Wischen",
+      "adventures": {
+        "adventure": "Abenteuer hinzufügen"
+      }
     },
     "nav": {
       "home": "Startseite",
@@ -423,7 +429,10 @@ export const dictionaries = {
       "search": "Search",
       "save": "Save",
       "create": "Create",
-      "slide": "Swipe"
+      "slide": "Swipe",
+      "adventures": {
+        "adventure": "Add Adventure"
+      }
     },
     "nav": {
       "home": "Home",
@@ -622,7 +631,10 @@ export const dictionaries = {
       "search": "Buscar",
       "save": "Guardar",
       "create": "Crear",
-      "slide": "Desliza"
+      "slide": "Desliza",
+      "adventures": {
+        "adventure": "Agregar aventura"
+      }
     },
     "nav": {
       "home": "Inicio",
@@ -821,7 +833,10 @@ export const dictionaries = {
       "search": "Rechercher",
       "save": "Enregistrer",
       "create": "Créer",
-      "slide": "Balaye"
+      "slide": "Balaye",
+      "adventures": {
+        "adventure": "Ajouter une aventure"
+      }
     },
     "nav": {
       "home": "Accueil",
@@ -1020,7 +1035,10 @@ export const dictionaries = {
       "search": "खोजें",
       "save": "सहेजें",
       "create": "सृजन करें",
-      "slide": "स्वाइप करें"
+      "slide": "स्वाइप करें",
+      "adventures": {
+        "adventure": "एडवेंचर जोड़ें"
+      }
     },
     "nav": {
       "home": "मुख्य पृष्ठ",
@@ -1219,7 +1237,10 @@ export const dictionaries = {
       "search": "Cerca",
       "save": "Salva",
       "create": "Crea",
-      "slide": "Scorri"
+      "slide": "Scorri",
+      "adventures": {
+        "adventure": "Aggiungi avventura"
+      }
     },
     "nav": {
       "home": "Home",
@@ -1418,7 +1439,10 @@ export const dictionaries = {
       "search": "検索",
       "save": "保存",
       "create": "作成",
-      "slide": "スワイプ"
+      "slide": "スワイプ",
+      "adventures": {
+        "adventure": "アドベンチャーを追加"
+      }
     },
     "nav": {
       "home": "ホーム",
@@ -1617,7 +1641,10 @@ export const dictionaries = {
       "search": "검색",
       "save": "저장",
       "create": "생성",
-      "slide": "스와이프"
+      "slide": "스와이프",
+      "adventures": {
+        "adventure": "모험 추가"
+      }
     },
     "nav": {
       "home": "홈",
@@ -1816,7 +1843,10 @@ export const dictionaries = {
       "search": "Zoeken",
       "save": "Opslaan",
       "create": "Aanmaken",
-      "slide": "Veeg"
+      "slide": "Veeg",
+      "adventures": {
+        "adventure": "Avontuur toevoegen"
+      }
     },
     "nav": {
       "home": "Home",
@@ -2015,7 +2045,10 @@ export const dictionaries = {
       "search": "Поиск",
       "save": "Сохранить",
       "create": "Создать",
-      "slide": "Смахни"
+      "slide": "Смахни",
+      "adventures": {
+        "adventure": "Добавить приключение"
+      }
     },
     "nav": {
       "home": "Главная",
@@ -2214,7 +2247,10 @@ export const dictionaries = {
       "search": "Tafuta",
       "save": "Hifadhi",
       "create": "Unda",
-      "slide": "Pangusa"
+      "slide": "Pangusa",
+      "adventures": {
+        "adventure": "Ongeza tukio la kusisimua"
+      }
     },
     "nav": {
       "home": "Mwanzo",
@@ -2413,7 +2449,10 @@ export const dictionaries = {
       "search": "Ara",
       "save": "Kaydet",
       "create": "Oluştur",
-      "slide": "Kaydır"
+      "slide": "Kaydır",
+      "adventures": {
+        "adventure": "Macera Ekle"
+      }
     },
     "nav": {
       "home": "Ana Sayfa",
@@ -2612,7 +2651,10 @@ export const dictionaries = {
       "search": "Пошук",
       "save": "Зберегти",
       "create": "Створити",
-      "slide": "Змахни"
+      "slide": "Змахни",
+      "adventures": {
+        "adventure": "Додати пригоду"
+      }
     },
     "nav": {
       "home": "Головна",
@@ -2811,7 +2853,10 @@ export const dictionaries = {
       "search": "搜索",
       "save": "保存",
       "create": "创建",
-      "slide": "滑动"
+      "slide": "滑动",
+      "adventures": {
+        "adventure": "添加冒险"
+      }
     },
     "nav": {
       "home": "首页",

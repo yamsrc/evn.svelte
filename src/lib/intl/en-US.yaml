@@ -19,6 +19,8 @@ actions:
   save: Save
   create: Create
   slide: Swipe
+  adventures:
+    adventure: Add Adventure
 nav:
   home: Home
   profile: Me

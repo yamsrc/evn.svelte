@@ -19,6 +19,8 @@ actions:
   save: Enregistrer
   create: Créer
   slide: Balaye
+  adventures:
+    adventure: Ajouter une aventure
 nav:
   home: Accueil
   profile: Moi

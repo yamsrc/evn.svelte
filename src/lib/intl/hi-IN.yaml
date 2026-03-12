@@ -19,6 +19,8 @@ actions:
   save: सहेजें
   create: सृजन करें
   slide: स्वाइप करें
+  adventures:
+    adventure: एडवेंचर जोड़ें
 nav:
   home: मुख्य पृष्ठ
   profile: मैं

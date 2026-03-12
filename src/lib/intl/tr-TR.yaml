@@ -19,6 +19,8 @@ actions:
   save: Kaydet
   create: Oluştur
   slide: Kaydır
+  adventures:
+    adventure: Macera Ekle
 nav:
   home: Ana Sayfa
   profile: Ben

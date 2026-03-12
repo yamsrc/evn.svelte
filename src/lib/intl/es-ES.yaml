@@ -19,6 +19,8 @@ actions:
   save: Guardar
   create: Crear
   slide: Desliza
+  adventures:
+    adventure: Agregar aventura
 nav:
   home: Inicio
   profile: Yo

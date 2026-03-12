@@ -32,6 +32,9 @@ export type Dictionary = {
         save: string
         create: string
         slide: string
+        adventures: {
+          adventure: string
+        }
       }
       nav: {
         home: string

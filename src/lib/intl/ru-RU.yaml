@@ -19,6 +19,8 @@ actions:
   save: Сохранить
   create: Создать
   slide: Смахни
+  adventures:
+    adventure: Добавить приключение
 nav:
   home: Главная
   profile: Я

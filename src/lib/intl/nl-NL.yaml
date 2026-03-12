@@ -19,6 +19,8 @@ actions:
   save: Opslaan
   create: Aanmaken
   slide: Veeg
+  adventures:
+    adventure: Avontuur toevoegen
 nav:
   home: Home
   profile: Ik

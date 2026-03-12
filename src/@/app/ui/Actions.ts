@@ -1,4 +1,4 @@
-import { PencilLine, User, Users } from '@lucide/svelte'
+import { PencilLine, Plus, User, Users } from '@lucide/svelte'
 import { goto } from '$app/navigation'
 import type { Dictionary } from '$lib/intl'
 import type { Icon } from '@lucide/svelte'
@@ -45,6 +45,15 @@ function addContactGroup(dict: Dictionary): ActionItem {
   }
 }
 
+function addAdventure(dict: Dictionary): ActionItem {
+  return {
+    id: 'nav-actions-adventures-new-button',
+    name: dict.actions.adventures.adventure,
+    icon: Plus,
+    onSelect: () => goto('/adventures/editor/'),
+  }
+}
+
 export const actions = (dict: Dictionary): ActionGroup[] => ([
   {
     name: dict.actions.cheques.title,
@@ -59,6 +68,7 @@ export const actions = (dict: Dictionary): ActionGroup[] => ([
     items: [
       addContact(dict),
       addExpense(dict),
+      addAdventure(dict),
     ],
   },
 ])

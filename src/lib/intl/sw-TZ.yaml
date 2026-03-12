@@ -19,6 +19,8 @@ actions:
   save: Hifadhi
   create: Unda
   slide: Pangusa
+  adventures:
+    adventure: Ongeza tukio la kusisimua
 nav:
   home: Mwanzo
   profile: Mimi

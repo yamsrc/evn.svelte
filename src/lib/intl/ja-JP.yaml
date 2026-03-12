@@ -19,6 +19,8 @@ actions:
   save: 保存
   create: 作成
   slide: スワイプ
+  adventures:
+    adventure: アドベンチャーを追加
 nav:
   home: ホーム
   profile: 私

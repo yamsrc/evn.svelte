@@ -46,6 +46,9 @@ inputs:
       input: Create
     slide:
       input: Смахни
+    adventures:
+      adventure:
+        input: Add Adventure
   nav:
     home:
       input: Home

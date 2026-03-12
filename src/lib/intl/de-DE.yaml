@@ -19,6 +19,8 @@ actions:
   save: Speichern
   create: Erstellen
   slide: Wischen
+  adventures:
+    adventure: Abenteuer hinzufügen
 nav:
   home: Startseite
   profile: Ich
