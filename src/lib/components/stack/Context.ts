@@ -1,6 +1,7 @@
 import { setContext as svelteSetContext, getContext as svelteGetContext } from 'svelte'
 
 export interface Context {
+  id: string
   increment: () => void
   decrement: () => void
   get collapsed(): boolean

@@ -13,6 +13,8 @@
   })
 </script>
 
-<div style:view-transition-name="stack-{id}" style:view-transition-class="transition-spring">
+<div
+  style:view-transition-name="stack-{ctx.id}-{id}"
+  style:view-transition-class="transition-spring">
   {@render children()}
 </div>
