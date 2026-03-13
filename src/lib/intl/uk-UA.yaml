@@ -163,6 +163,8 @@ expenses:
     title: Поки що немає витрат
     description: Створіть свою першу витрату, щоб почати відстеження
     create: Створити витрату
+  expenses:
+    title: Evns
 home:
   title: |-
     !js

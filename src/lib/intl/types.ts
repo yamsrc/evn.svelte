@@ -201,6 +201,9 @@ export type Dictionary = {
           description: string
           create: string
         }
+        expenses: {
+          title: string
+        }
       }
       home: {
         title: (value: any) => string

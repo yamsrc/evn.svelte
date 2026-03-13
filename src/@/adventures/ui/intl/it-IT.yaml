@@ -7,25 +7,17 @@ editor:
   upload: Scegli il tuo
   name: Nome dell’avventura
   note: Tutti i membri vedranno questo nome
-  info: >-
-    Le avventure sono per chi vuole dividere le spese in modo equo, che si
-    tratti di un viaggio insieme, di un conto al bar o delle semplici spese
-    domestiche comuni. I debiti in un’avventura non sono tra utenti singoli, ma
-    tra tutti i partecipanti, così da mantenere i conti in pari per tutti.
+  info: Le avventure sono per chi vuole dividere le spese in modo equo, che si tratti di un viaggio insieme, di un conto al bar o delle semplici spese domestiche comuni. I debiti in un’avventura non sono tra utenti singoli, ma tra tutti i partecipanti, così da mantenere i conti in pari per tutti.
   settings: Impostazioni
   title: Nuova avventura
 finish:
   archive:
     title: Concludi l’avventura
-    description: >-
-      Archiviare l’avventura la rimuoverà dalla schermata delle nuove spese e la
-      sposterà in fondo alla tua lista di avventure.
+    description: Archiviare l’avventura la rimuoverà dalla schermata delle nuove spese e la sposterà in fondo alla tua lista di avventure.
     button: Archivia avventura
   delete:
     title: Elimina avventura
-    description: >-
-      Non è ancora successo nulla. Invita qualche amico e aggiungi delle spese
-      per iniziare.
+    description: Non è ancora successo nulla. Invita qualche amico e aggiungi delle spese per iniziare.
     button: |-
       !js
       (title) => `Elimina ${title}`
@@ -41,11 +33,9 @@ me: Io
 selector:
   regular: Spese regolari
 archive:
-  header: >-
+  header: |-
     !js
-
-    (title, empty) => empty ? `Eliminazione di ${title}` : `Archiviazione di
-    ${title}`
+    (title, empty) => empty ? `Eliminazione di ${title}` : `Archiviazione di ${title}`
   delete:
     description: Questa avventura non ha spese e verrà eliminata
     button: Elimina avventura
@@ -55,3 +45,10 @@ balance:
   merge: Sposta i debiti nei debiti dei membri regolari
   keep: Lascia debiti/saldi nell’avventura
 archived: Archiviato
+hint:
+  action: Inizia la tua prima avventura
+  dismiss: Ignora
+  dismissed: Puoi creare una nuova avventura in qualsiasi momento tramite il menu + in fondo allo schermo.
+title: Avventure
+panel:
+  total: Totale

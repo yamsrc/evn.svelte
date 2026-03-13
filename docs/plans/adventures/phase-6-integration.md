@@ -676,18 +676,18 @@ export { default as Adventures } from './Adventures.svelte'
 
 Agent opens app in browser and verifies:
 
-- [ ] Home page: "Adventures" section visible with horizontal scroll of adventure cards (cover bg + title + avatars + balance)
-- [ ] Expenses page: active adventures → adventures section present
-- [ ] Expenses page: no active adventures → hint panel with info icon, info text, "Start your first adventure" button, "Dismiss" button
-- [ ] Hint dismiss → transitions to second panel with [+] menu guidance + "Dismiss" button
-- [ ] Final hint dismiss → permanently hidden (survives page reload)
-- [ ] Active adventures: normal opacity, tap → navigates to view
-- [ ] Archived adventures: reduced opacity, appear after active in scroll
-- [ ] No "Create Adventure" button in adventures section
-- [ ] Main dropdown: first item is adventure expense shortcut with cover image background → tapping navigates to adventure expense editor
-- [ ] Adventure shortcut not shown when no active adventures
-- [ ] Permission hint on home page still works (7-day re-show)
-- [ ] Permission on me page (non-dismissable) still works
+- [x] Home page: "Adventures" section visible with horizontal scroll of adventure cards (cover bg + title + avatars + balance)
+- [x] Expenses page: active adventures → adventures section present
+- [x] Expenses page: no active adventures → hint panel with info icon, info text, "Start your first adventure" button, "Dismiss" button
+- [x] Hint dismiss → transitions to second panel with [+] menu guidance + "Dismiss" button
+- [x] Final hint dismiss → permanently hidden (survives page reload)
+- [x] Active adventures: normal opacity, tap → navigates to view
+- [x] Archived adventures: reduced opacity, appear after active in scroll
+- [x] No "Create Adventure" button in adventures section
+- [x] Main dropdown: first item is adventure expense shortcut with cover image background → tapping navigates to adventure expense editor
+- [x] Adventure shortcut not shown when no active adventures *(code-verified)*
+- [x] Permission hint on home page still works (7-day re-show)
+- [x] Permission on me page (non-dismissable) still works
 
 ---
 

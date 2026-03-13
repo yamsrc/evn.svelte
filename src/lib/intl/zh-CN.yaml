@@ -148,6 +148,8 @@ expenses:
     title: 暂无支出
     description: 创建您的第一笔支出以开始记录
     create: 创建支出
+  expenses:
+    title: Evns
 home:
   title: |-
     !js

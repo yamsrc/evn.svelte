@@ -166,6 +166,8 @@ expenses:
     title: Aucune dépense pour l’instant
     description: Créez votre première dépense pour commencer à suivre
     create: Créer une dépense
+  expenses:
+    title: Evns
 home:
   title: |-
     !js

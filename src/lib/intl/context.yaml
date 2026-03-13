@@ -264,6 +264,9 @@ inputs:
         input: Add participants
     me:
       input: Me
+    expenses:
+      title:
+        input: Evns
   home:
     title:
       input: Hi {name}!

@@ -56,7 +56,16 @@ export const dictionaries = {
       "merge": "انقل الديون إلى ديون الأعضاء العاديين",
       "keep": "ترك الديون/الأرصدة في المغامرة"
     },
-    "archived": "مؤرشف"
+    "archived": "مؤرشف",
+    "hint": {
+      "action": "ابدأ مغامرتك الأولى",
+      "dismiss": "تجاهل",
+      "dismissed": "يمكنك إنشاء مغامرة جديدة في أي وقت من خلال قائمة + في أسفل الشاشة."
+    },
+    "title": "المغامرات",
+    "panel": {
+      "total": "الإجمالي"
+    }
   },
   "de-DE": {
     "members": {
@@ -112,7 +121,16 @@ export const dictionaries = {
       "merge": "Schulden zu den regulären Mitgliedsschulden übertragen",
       "keep": "Schulden/Salden im Abenteuer belassen"
     },
-    "archived": "Archiviert"
+    "archived": "Archiviert",
+    "hint": {
+      "action": "Starte dein erstes Abenteuer",
+      "dismiss": "Schließen",
+      "dismissed": "Du kannst jederzeit ein neues Abenteuer über das +-Menü unten auf dem Bildschirm erstellen."
+    },
+    "title": "Abenteuer",
+    "panel": {
+      "total": "Gesamtsumme"
+    }
   },
   "en-US": {
     "members": {
@@ -168,7 +186,16 @@ export const dictionaries = {
       "merge": "Move debts to the regular member debts",
       "keep": "Leave debts/balances in adventure"
     },
-    "archived": "Archived"
+    "archived": "Archived",
+    "hint": {
+      "action": "Start your first adventure",
+      "dismiss": "Dismiss",
+      "dismissed": "You can create a new adventure anytime through the + menu at the bottom of the screen."
+    },
+    "title": "Adventures",
+    "panel": {
+      "total": "Total"
+    }
   },
   "es-ES": {
     "members": {
@@ -224,7 +251,16 @@ export const dictionaries = {
       "merge": "Mover deudas a las deudas de miembros regulares",
       "keep": "Dejar deudas/saldos en la aventura"
     },
-    "archived": "Archivado"
+    "archived": "Archivado",
+    "hint": {
+      "action": "Comienza tu primera aventura",
+      "dismiss": "Descartar",
+      "dismissed": "Puedes crear una nueva aventura en cualquier momento desde el menú + en la parte inferior de la pantalla."
+    },
+    "title": "Aventuras",
+    "panel": {
+      "total": "Total"
+    }
   },
   "fr-FR": {
     "members": {
@@ -280,7 +316,16 @@ export const dictionaries = {
       "merge": "Transférer les dettes vers les dettes des membres réguliers",
       "keep": "Laisser les dettes/soldes dans l’aventure"
     },
-    "archived": "Archivé"
+    "archived": "Archivé",
+    "hint": {
+      "action": "Commence ta première aventure",
+      "dismiss": "Ignorer",
+      "dismissed": "Vous pouvez créer une nouvelle aventure à tout moment via le menu + en bas de l'écran."
+    },
+    "title": "Aventures",
+    "panel": {
+      "total": "Total"
+    }
   },
   "hi-IN": {
     "members": {
@@ -336,7 +381,16 @@ export const dictionaries = {
       "merge": "ऋणों को नियमित सदस्य के ऋणों में स्थानांतरित करें",
       "keep": "ऋण/शेष राशि को साहसिक यात्रा में ही रखें"
     },
-    "archived": "संग्रहीत"
+    "archived": "संग्रहीत",
+    "hint": {
+      "action": "अपना पहला रोमांच शुरू करें",
+      "dismiss": "खारिज करें",
+      "dismissed": "आप स्क्रीन के नीचे दिए गए + मेनू से कभी भी नया साहसिक शुरू कर सकते हैं।"
+    },
+    "title": "रोमांच",
+    "panel": {
+      "total": "कुल राशि"
+    }
   },
   "it-IT": {
     "members": {
@@ -392,7 +446,16 @@ export const dictionaries = {
       "merge": "Sposta i debiti nei debiti dei membri regolari",
       "keep": "Lascia debiti/saldi nell’avventura"
     },
-    "archived": "Archiviato"
+    "archived": "Archiviato",
+    "hint": {
+      "action": "Inizia la tua prima avventura",
+      "dismiss": "Ignora",
+      "dismissed": "Puoi creare una nuova avventura in qualsiasi momento tramite il menu + in fondo allo schermo."
+    },
+    "title": "Avventure",
+    "panel": {
+      "total": "Totale"
+    }
   },
   "ja-JP": {
     "members": {
@@ -448,7 +511,16 @@ export const dictionaries = {
       "merge": "債務を通常メンバーの債務に移動する",
       "keep": "借金／残高を冒険内に残す"
     },
-    "archived": "アーカイブ済み"
+    "archived": "アーカイブ済み",
+    "hint": {
+      "action": "最初の冒険を始めよう",
+      "dismiss": "閉じる",
+      "dismissed": "画面下部の「+」メニューから、いつでも新しい冒険を作成できます。"
+    },
+    "title": "冒険",
+    "panel": {
+      "total": "合計"
+    }
   },
   "ko-KR": {
     "members": {
@@ -504,7 +576,16 @@ export const dictionaries = {
       "merge": "부채를 일반 회원 부채로 이동",
       "keep": "모험 내에 부채/잔액 남기기"
     },
-    "archived": "보관됨"
+    "archived": "보관됨",
+    "hint": {
+      "action": "첫 번째 모험을 시작하세요",
+      "dismiss": "닫기",
+      "dismissed": "화면 하단의 + 메뉴를 통해 언제든지 새로운 모험을 만들 수 있습니다."
+    },
+    "title": "모험",
+    "panel": {
+      "total": "총액"
+    }
   },
   "nl-NL": {
     "members": {
@@ -560,7 +641,16 @@ export const dictionaries = {
       "merge": "Verplaats schulden naar de gewone leden-schulden",
       "keep": "Schulden/saldi in het avontuur laten"
     },
-    "archived": "Gearchiveerd"
+    "archived": "Gearchiveerd",
+    "hint": {
+      "action": "Begin aan je eerste avontuur",
+      "dismiss": "Sluiten",
+      "dismissed": "Je kunt altijd een nieuw avontuur starten via het + menu onderaan het scherm."
+    },
+    "title": "Avonturen",
+    "panel": {
+      "total": "Totaal"
+    }
   },
   "ru-RU": {
     "members": {
@@ -616,7 +706,16 @@ export const dictionaries = {
       "merge": "Перенести долги в долги обычных участников",
       "keep": "Оставить долги/балансы в приключении"
     },
-    "archived": "Архивировано"
+    "archived": "Архивировано",
+    "hint": {
+      "action": "Начни своё первое приключение",
+      "dismiss": "Закрыть",
+      "dismissed": "Вы можете создать новое приключение в любое время через меню «+» внизу экрана."
+    },
+    "title": "Приключения",
+    "panel": {
+      "total": "Итого"
+    }
   },
   "sw-TZ": {
     "members": {
@@ -672,7 +771,16 @@ export const dictionaries = {
       "merge": "Hamisha madeni kwa madeni ya wanachama wa kawaida",
       "keep": "Acha madeni/saldo ndani ya tukio la冒险"
     },
-    "archived": "Imehifadhiwa"
+    "archived": "Imehifadhiwa",
+    "hint": {
+      "action": "Anza safari yako ya kwanza",
+      "dismiss": "Funga",
+      "dismissed": "Unaweza kuunda tukio jipya wakati wowote kupitia menyu ya + chini ya skrini."
+    },
+    "title": "Matukio",
+    "panel": {
+      "total": "Jumla"
+    }
   },
   "tr-TR": {
     "members": {
@@ -728,7 +836,16 @@ export const dictionaries = {
       "merge": "Borçları normal üye borçlarına taşı",
       "keep": "Borçları/bakiyeleri macerada bırak"
     },
-    "archived": "Arşivlendi"
+    "archived": "Arşivlendi",
+    "hint": {
+      "action": "İlk macerana başla",
+      "dismiss": "Kapat",
+      "dismissed": "Ekranın altındaki + menüsünden istediğin zaman yeni bir macera oluşturabilirsin."
+    },
+    "title": "Macera",
+    "panel": {
+      "total": "Toplam"
+    }
   },
   "uk-UA": {
     "members": {
@@ -784,7 +901,16 @@ export const dictionaries = {
       "merge": "Перемістити борги до боргів звичайних учасників",
       "keep": "Залишити борги/баланси в пригоді"
     },
-    "archived": "Заархівовано"
+    "archived": "Заархівовано",
+    "hint": {
+      "action": "Почни свою першу пригоду",
+      "dismiss": "Закрити",
+      "dismissed": "Ви можете створити нову пригоду будь-коли через меню «+» внизу екрана."
+    },
+    "title": "Пригоди",
+    "panel": {
+      "total": "Разом"
+    }
   },
   "zh-CN": {
     "members": {
@@ -840,6 +966,15 @@ export const dictionaries = {
       "merge": "将债务移至普通成员债务",
       "keep": "将债务/余额保留在冒险中"
     },
-    "archived": "已归档"
+    "archived": "已归档",
+    "hint": {
+      "action": "开启你的第一次冒险",
+      "dismiss": "关闭",
+      "dismissed": "你可以随时通过屏幕底部的 + 菜单创建新的冒险。"
+    },
+    "title": "冒险",
+    "panel": {
+      "total": "总计"
+    }
   }
 };

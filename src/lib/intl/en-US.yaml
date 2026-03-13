@@ -160,6 +160,8 @@ expenses:
     title: Add participants
     add: {}
   me: Me
+  expenses:
+    title: Evns
 home:
   title: |-
     !js

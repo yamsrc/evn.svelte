@@ -7,25 +7,17 @@ editor:
   upload: Kies zelf
   name: Naam van het avontuur
   note: Alle leden zien deze naam
-  info: >-
-    Avonturen zijn er voor mensen die de kosten gelijk willen delen, of het nu
-    om samen reizen, een gezamenlijke barrekening of gewoon huishoudelijke
-    uitgaven gaat. De schulden binnen een avontuur zijn niet tussen losse
-    gebruikers, maar onder alle leden om het eerlijk bij te houden.
+  info: Avonturen zijn er voor mensen die de kosten gelijk willen delen, of het nu om samen reizen, een gezamenlijke barrekening of gewoon huishoudelijke uitgaven gaat. De schulden binnen een avontuur zijn niet tussen losse gebruikers, maar onder alle leden om het eerlijk bij te houden.
   settings: Instellingen
   title: Nieuw avontuur
 finish:
   archive:
     title: Avontuur afronden
-    description: >-
-      Als je het avontuur archiveert, wordt het van het nieuwe onkostenscherm
-      verwijderd en naar het einde van je avonturenlijst verplaatst.
+    description: Als je het avontuur archiveert, wordt het van het nieuwe onkostenscherm verwijderd en naar het einde van je avonturenlijst verplaatst.
     button: Avontuur archiveren
   delete:
     title: Avontuur verwijderen
-    description: >-
-      Er is nog niets gebeurd. Nodig wat vrienden uit en voeg uitgaven toe om te
-      beginnen.
+    description: Er is nog niets gebeurd. Nodig wat vrienden uit en voeg uitgaven toe om te beginnen.
     button: |-
       !js
       (title) => `${title} verwijderen`
@@ -41,19 +33,22 @@ me: Ik
 selector:
   regular: Regelmatige uitgaven
 archive:
-  header: >-
+  header: |-
     !js
-
-    (title, empty) => empty ? `${title} wordt verwijderd` : `${title} wordt
-    gearchiveerd`
+    (title, empty) => empty ? `${title} wordt verwijderd` : `${title} wordt gearchiveerd`
   delete:
     description: Dit avontuur heeft geen uitgaven en wordt verwijderd
     button: Avontuur verwijderen
-  warning: >-
-    Het archiveren van het avontuur is permanent en kan niet ongedaan worden
-    gemaakt.
+  warning: Het archiveren van het avontuur is permanent en kan niet ongedaan worden gemaakt.
 balance:
   header: "Bij het archiveren van dit avontuur:"
   merge: Verplaats schulden naar de gewone leden-schulden
   keep: Schulden/saldi in het avontuur laten
 archived: Gearchiveerd
+hint:
+  action: Begin aan je eerste avontuur
+  dismiss: Sluiten
+  dismissed: Je kunt altijd een nieuw avontuur starten via het + menu onderaan het scherm.
+title: Avonturen
+panel:
+  total: Totaal

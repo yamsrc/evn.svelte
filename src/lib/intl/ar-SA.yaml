@@ -158,6 +158,8 @@ expenses:
     title: لا توجد مصروفات بعد
     description: أنشئ أول مصروفك لبدء التتبع
     create: إنشاء مصروف
+  expenses:
+    title: Evns
 home:
   title: |-
     !js

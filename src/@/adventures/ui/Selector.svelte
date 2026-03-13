@@ -47,9 +47,10 @@
 
     {#each active as adv (adv.id)}
       <Picker.Option
+        variant="outline"
         class={[
           card,
-          'cover relative isolate bg-cover bg-center flex-col items-start justify-end px-4 py-3',
+          'cover relative isolate bg-cover bg-center flex-col items-start justify-end px-4 py-3 text-foreground',
         ]}
         style="background-image: url({url({
           id: adv.picture,
@@ -70,7 +71,8 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: rgb(0 0 0 / 55%);
+    background: var(--background);
+    opacity: 0.7;
     backdrop-filter: blur(0.5px);
   }
 </style>

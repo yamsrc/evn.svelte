@@ -59,4 +59,13 @@ export type Dictionary = {
         keep: string
       }
       archived: string
+      hint: {
+        action: string
+        dismiss: string
+        dismissed: string
+      }
+      title: string
+      panel: {
+        total: string
+      }
     }

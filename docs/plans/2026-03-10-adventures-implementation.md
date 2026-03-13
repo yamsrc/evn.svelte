@@ -87,14 +87,14 @@
 
 ### [Phase 6: Integration](adventures/phase-6-integration.md)
 
-- [ ] **Task 1:** Hint Compound Component — `@/app/ui/hint/` (Root, Content, Dismissing, Actions, Action, Later, Dismiss + persistent store)
-- [ ] **Task 2:** Refactor Permission → Hint
-- [ ] **Task 3:** Adventures Hint — `@/adventures/ui/Hint.svelte` (no active adventures → info panel on expenses page)
-- [ ] **Task 4:** Adventures Panel (Card) — cover background + title
-- [ ] **Task 5:** Adventures Section (Horizontal Scroll) — no create button
-- [ ] **Task 6:** Adventure Expense Shortcut in Dropdown — first item in menu
-- [ ] **Task 7:** Adventures Section on Pages — home + expenses pages, Hint on expenses
-- [ ] **Task 8:** Update UI Exports
+- [x] **Task 1:** Hint Compound Component — `@/app/ui/hint/` (Root, Content, Dismissing, Actions, Action, Later, Dismiss + persistent store)
+- [x] **Task 2:** Refactor Permission → Hint
+- [x] **Task 3:** Adventures Hint — `@/adventures/ui/Hint.svelte` (no active adventures → info panel on expenses page)
+- [x] **Task 4:** Adventures Panel (Card) — cover background + title
+- [x] **Task 5:** Adventures Section (Horizontal Scroll) — no create button
+- [x] **Task 6:** Adventure Expense Shortcut in Dropdown — first item in menu
+- [x] **Task 7:** Adventures Section on Pages — home + expenses pages, Hint on expenses
+- [x] **Task 8:** Update UI Exports
 
 ### [Phase 7: Invitations](adventures/phase-7-invitations.md)
 

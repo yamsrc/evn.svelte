@@ -3,7 +3,6 @@
   import { writable } from 'svelte/store'
   import * as Dropdown from '$com/dropdown'
   import { Actions } from '$com/shell'
-  import { dict } from '$lib/intl'
   import { actionVariants } from './Action'
   import { actions } from './Actions'
 
@@ -16,7 +15,7 @@
       <Plus />
     </Dropdown.Trigger>
     <Dropdown.Content>
-      {#each actions($dict) as group, index (group.name)}
+      {#each $actions as group, index (group.name)}
         {#if index > 0}
           <Dropdown.Separator />
         {/if}

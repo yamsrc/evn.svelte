@@ -45,3 +45,10 @@ balance:
   merge: 将债务移至普通成员债务
   keep: 将债务/余额保留在冒险中
 archived: 已归档
+hint:
+  action: 开启你的第一次冒险
+  dismiss: 关闭
+  dismissed: 你可以随时通过屏幕底部的 + 菜单创建新的冒险。
+title: 冒险
+panel:
+  total: 总计

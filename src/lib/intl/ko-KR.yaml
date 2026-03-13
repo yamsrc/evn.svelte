@@ -150,6 +150,8 @@ expenses:
     title: 아직 지출이 없습니다
     description: 첫 번째 지출을 추가하여 추적을 시작하세요
     create: 지출 생성
+  expenses:
+    title: Evns
 home:
   title: |-
     !js

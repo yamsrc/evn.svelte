@@ -88,3 +88,16 @@ inputs:
       button:
         input: \!js (title) => `Delete ${title}`
         context: delete button label with adventure title
+  hint:
+    action:
+      input: Start your first adventure
+    dismiss:
+      input: Dismiss
+    dismissed:
+      input: You can create a new adventure anytime through the + menu at the bottom of the screen.
+  title:
+    input: Adventures
+  panel:
+    total:
+      input: Total
+      context: short label for total spending on adventure card

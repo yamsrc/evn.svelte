@@ -7,26 +7,17 @@ editor:
   upload: Choisissez le vôtre
   name: Nom de l’aventure
   note: Tous les membres verront ce nom
-  info: >-
-    Les aventures sont faites pour ceux qui veulent partager les dépenses de
-    manière égale, que ce soit un voyage ensemble, une addition de bar ou
-    simplement des frais ménagers communs. Les dettes lors d’une aventure ne
-    sont pas entre individus, mais entre tous les membres pour garder un
-    équilibre équitable.
+  info: Les aventures sont faites pour ceux qui veulent partager les dépenses de manière égale, que ce soit un voyage ensemble, une addition de bar ou simplement des frais ménagers communs. Les dettes lors d’une aventure ne sont pas entre individus, mais entre tous les membres pour garder un équilibre équitable.
   settings: Paramètres
   title: Nouvelle aventure
 finish:
   archive:
     title: Terminer l’aventure
-    description: >-
-      Archiver l’aventure la retirera de l’écran des nouvelles dépenses et la
-      placera à la fin de ta liste d’aventures.
+    description: Archiver l’aventure la retirera de l’écran des nouvelles dépenses et la placera à la fin de ta liste d’aventures.
     button: Archiver l’aventure
   delete:
     title: Supprimer l’aventure
-    description: >-
-      Rien ne s'est encore passé. Invitez des amis et ajoutez des dépenses pour
-      lancer les choses.
+    description: Rien ne s'est encore passé. Invitez des amis et ajoutez des dépenses pour lancer les choses.
     button: |-
       !js
       (title) => `Supprimer ${title}`
@@ -42,11 +33,9 @@ me: Moi
 selector:
   regular: Dépenses régulières
 archive:
-  header: >-
+  header: |-
     !js
-
-    (title, empty) => empty ? `Suppression de ${title}` : `Archivage de
-    ${title}`
+    (title, empty) => empty ? `Suppression de ${title}` : `Archivage de ${title}`
   delete:
     description: Cette aventure n'a aucune dépense et sera supprimée
     button: Supprimer l’aventure
@@ -56,3 +45,10 @@ balance:
   merge: Transférer les dettes vers les dettes des membres réguliers
   keep: Laisser les dettes/soldes dans l’aventure
 archived: Archivé
+hint:
+  action: Commence ta première aventure
+  dismiss: Ignorer
+  dismissed: Vous pouvez créer une nouvelle aventure à tout moment via le menu + en bas de l'écran.
+title: Aventures
+panel:
+  total: Total

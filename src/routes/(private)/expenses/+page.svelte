@@ -1,7 +1,9 @@
 <script lang="ts">
-  import { Async } from 'svas'
+  import { Async, combined } from 'svas'
   import { dict } from '$lib/intl'
   import { Input } from '$ui/input'
+  import { adventures } from '@/adventures'
+  import Adventures from '@/adventures/ui/Adventures.svelte'
   import { Section } from '@/app/ui'
   import { Header } from '@/app/ui'
   import { expenses, filter } from '@/expenses'
@@ -22,13 +24,18 @@
   </Header.Root>
 </Section>
 
-<Async store={expenses}>
-  {#snippet awaited(expenses)}
+<Async store={combined(expenses, adventures)}>
+  {#snippet awaited([expenses, adventures])}
     {@const filteredExpenses = filter(expenses, search)}
     {@const empty = filteredExpenses.length === 0}
 
+    <Section class="space-y-2">
+      <Adventures {adventures} />
+    </Section>
+
     {#if expenses.length}
-      <Section>
+      <Section class="space-y-2">
+        <h2>{$dict.expenses.expenses.title}</h2>
         <Input type="text" placeholder={$dict.actions.search} bind:value={search} />
       </Section>
       <Expenses {expenses} {search} {notifications} />

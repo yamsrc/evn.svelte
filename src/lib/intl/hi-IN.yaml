@@ -160,6 +160,8 @@ expenses:
     title: अभी तक कोई खर्च नहीं
     description: ट्रैकिंग शुरू करने के लिए अपना पहला खर्च दर्ज करें
     create: व्यय बनाएं
+  expenses:
+    title: Evns
 home:
   title: |-
     !js

@@ -194,6 +194,9 @@ export const dictionaries = {
         "title": "لا توجد مصروفات بعد",
         "description": "أنشئ أول مصروفك لبدء التتبع",
         "create": "إنشاء مصروف"
+      },
+      "expenses": {
+        "title": "Evns"
       }
     },
     "home": {
@@ -396,6 +399,9 @@ export const dictionaries = {
         "title": "Noch keine Ausgaben",
         "description": "Erstelle deine erste Ausgabe, um mit dem Verfolgen zu beginnen",
         "create": "Ausgabe erstellen"
+      },
+      "expenses": {
+        "title": "Evns"
       }
     },
     "home": {
@@ -598,7 +604,10 @@ export const dictionaries = {
 
         }
       },
-      "me": "Me"
+      "me": "Me",
+      "expenses": {
+        "title": "Evns"
+      }
     },
     "home": {
       "title": (name) => `Hi ${name}!`
@@ -800,6 +809,9 @@ export const dictionaries = {
         "title": "Aún no hay gastos",
         "description": "Crea tu primer gasto para empezar a realizar un seguimiento",
         "create": "Crear gasto"
+      },
+      "expenses": {
+        "title": "Evns"
       }
     },
     "home": {
@@ -1002,6 +1014,9 @@ export const dictionaries = {
         "title": "Aucune dépense pour l’instant",
         "description": "Créez votre première dépense pour commencer à suivre",
         "create": "Créer une dépense"
+      },
+      "expenses": {
+        "title": "Evns"
       }
     },
     "home": {
@@ -1204,6 +1219,9 @@ export const dictionaries = {
         "title": "अभी तक कोई खर्च नहीं",
         "description": "ट्रैकिंग शुरू करने के लिए अपना पहला खर्च दर्ज करें",
         "create": "व्यय बनाएं"
+      },
+      "expenses": {
+        "title": "Evns"
       }
     },
     "home": {
@@ -1406,6 +1424,9 @@ export const dictionaries = {
         "title": "Nessuna spesa ancora",
         "description": "Crea la tua prima spesa per iniziare a tenere traccia",
         "create": "Crea spesa"
+      },
+      "expenses": {
+        "title": "Evns"
       }
     },
     "home": {
@@ -1608,6 +1629,9 @@ export const dictionaries = {
         "title": "まだ支出がありません",
         "description": "最初の支出を作成して、記録を始めましょう",
         "create": "支出を作成"
+      },
+      "expenses": {
+        "title": "Evns"
       }
     },
     "home": {
@@ -1810,6 +1834,9 @@ export const dictionaries = {
         "title": "아직 지출이 없습니다",
         "description": "첫 번째 지출을 추가하여 추적을 시작하세요",
         "create": "지출 생성"
+      },
+      "expenses": {
+        "title": "Evns"
       }
     },
     "home": {
@@ -2012,6 +2039,9 @@ export const dictionaries = {
         "title": "Nog geen uitgaven",
         "description": "Maak je eerste uitgave aan om het bijhouden te starten",
         "create": "Uitgave aanmaken"
+      },
+      "expenses": {
+        "title": "Evns"
       }
     },
     "home": {
@@ -2214,6 +2244,9 @@ export const dictionaries = {
         "title": "Пока нет расходов",
         "description": "Создайте первый расход, чтобы начать отслеживание",
         "create": "Создать расход"
+      },
+      "expenses": {
+        "title": "Evns"
       }
     },
     "home": {
@@ -2416,6 +2449,9 @@ export const dictionaries = {
         "title": "Hakuna matumizi bado",
         "description": "Unda matumizi yako ya kwanza ili kuanza kufuatilia",
         "create": "Unda gharama"
+      },
+      "expenses": {
+        "title": "Evns"
       }
     },
     "home": {
@@ -2618,6 +2654,9 @@ export const dictionaries = {
         "title": "Henüz gider yok",
         "description": "Takibe başlamak için ilk giderini oluştur",
         "create": "Gider oluştur"
+      },
+      "expenses": {
+        "title": "Evns"
       }
     },
     "home": {
@@ -2820,6 +2859,9 @@ export const dictionaries = {
         "title": "Поки що немає витрат",
         "description": "Створіть свою першу витрату, щоб почати відстеження",
         "create": "Створити витрату"
+      },
+      "expenses": {
+        "title": "Evns"
       }
     },
     "home": {
@@ -3022,6 +3064,9 @@ export const dictionaries = {
         "title": "暂无支出",
         "description": "创建您的第一笔支出以开始记录",
         "create": "创建支出"
+      },
+      "expenses": {
+        "title": "Evns"
       }
     },
     "home": {

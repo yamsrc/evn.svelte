@@ -7,25 +7,17 @@ editor:
   upload: Choose your own
   name: Adventure name
   note: All members will see this name
-  info: >-
-    Adventures are for those who want to split expenses equally, whether it's a
-    trip together, a bar tab, or just shared household costs. Debts in an
-    adventure aren't between individual users but among all members, keeping
-    everyone’s share balanced.
+  info: Adventures are for those who want to split expenses equally, whether it's a trip together, a bar tab, or just shared household costs. Debts in an adventure aren't between individual users but among all members, keeping everyone’s share balanced.
   settings: Settings
   title: New Adventure
 finish:
   archive:
     title: Finish the adventure
-    description: >-
-      Archiving the adventure will remove it from the new expense screen and
-      move it to the back of your adventure list.
+    description: Archiving the adventure will remove it from the new expense screen and move it to the back of your adventure list.
     button: Archive adventure
   delete:
     title: Delete adventure
-    description: >-
-      Nothing's happened yet. Invite some friends and add some expenses to get
-      started.
+    description: Nothing's happened yet. Invite some friends and add some expenses to get started.
     button: |-
       !js
       (title) => `Delete ${title}`
@@ -53,3 +45,10 @@ balance:
   merge: Move debts to the regular member debts
   keep: Leave debts/balances in adventure
 archived: Archived
+hint:
+  action: Start your first adventure
+  dismiss: Dismiss
+  dismissed: You can create a new adventure anytime through the + menu at the bottom of the screen.
+title: Adventures
+panel:
+  total: Total
