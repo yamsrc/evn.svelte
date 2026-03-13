@@ -3,7 +3,7 @@ import { collection, sync, values } from 'svas'
 import { events } from '@/realtime'
 import { account } from '@/iam'
 import { get, list } from './get'
-import type { Receipt } from './Receipt'
+import type { Receipt } from './net'
 import type { Progress } from './Progress'
 
 export const progress = writable<Progress | null>(null)

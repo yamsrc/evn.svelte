@@ -176,6 +176,10 @@
     @apply text-primary underline underline-offset-3;
   }
 
+  button:not([disabled]) {
+    @apply cursor-pointer;
+  }
+
   button:active {
     scale: 0.98;
   }

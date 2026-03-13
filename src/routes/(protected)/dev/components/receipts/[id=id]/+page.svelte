@@ -1,7 +1,8 @@
 <script lang="ts">
-  import { Async } from 'svas'
+  import { Async, combined } from 'svas'
   import { Attachments, Splitter } from '@/receipts/ui'
   import { receipts } from '@/receipts'
+  import { account } from '@/iam'
   import { Header, Section } from '@/app/ui'
   import { Return } from '$com/shell'
   import { page } from '$app/state'
@@ -9,8 +10,8 @@
   const id = $derived(page.params.id) as string
 </script>
 
-<Async store={receipts.get(id)}>
-  {#snippet awaited(receipt)}
+<Async store={combined(account, receipts.get(id))}>
+  {#snippet awaited([account, receipt])}
     {#if receipt.merchant?.display}
       <Section>
         <Header.Root>
@@ -27,7 +28,7 @@
     <Attachments attachments={receipt.attachments} />
 
     <Section>
-      <Splitter {receipt} />
+      <Splitter {receipt} actor={account} />
     </Section>
   {/snippet}
 </Async>

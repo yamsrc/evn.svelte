@@ -3,5 +3,5 @@ import type { Unit } from './Splitter'
 
 export interface Props {
   units: Unit[]
-  child: Snippet<[unit: Unit, collapsed: boolean]>
+  child: Snippet<[unit: Unit, index: number, collapsed: boolean]>
 }

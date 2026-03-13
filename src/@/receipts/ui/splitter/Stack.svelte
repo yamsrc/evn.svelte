@@ -2,8 +2,8 @@
   import { ChevronsDownUp, Hand } from '@lucide/svelte'
   import { Button } from '$ui/button'
   import * as Stack from '$lib/components/stack'
-  import { dict } from './intl'
-  import type { Props } from './SplitterStack'
+  import { dict } from '../intl'
+  import type { Props } from './Stack'
 
   const { units, child }: Props = $props()
 
@@ -23,7 +23,7 @@
   </Stack.Toolbar>
   {#each units as unit, i (i)}
     <Stack.Item id={i.toString()}>
-      {@render child(unit, collapsed)}
+      {@render child(unit, i, collapsed)}
     </Stack.Item>
   {/each}
 </Stack.Root>

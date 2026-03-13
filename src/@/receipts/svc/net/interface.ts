@@ -22,6 +22,21 @@ export const receipt = {
   get: async (identity: string, id: string): Promise<Receipt | Error> => {
     return await receipts.json<Receipt>(`${identity}/${id}`)
   },
+
+  put: async (identity: string, id: string, body: ReceiptPut): Promise<Receipt | Error> => {
+    return await receipts.json<Receipt>(`${identity}/${id}`, {
+      method: 'PUT',
+      body,
+    })
+  },
+}
+
+export type ClaimsChangeset = Record<string, Array<boolean | null>>
+
+export interface ReceiptPut {
+  identity: string
+  claims: ClaimsChangeset
+  done?: boolean
 }
 
 type Workflow = Faulty<{ create: { id: string, picture: string } }>

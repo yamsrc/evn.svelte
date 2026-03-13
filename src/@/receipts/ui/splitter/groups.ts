@@ -1,8 +1,4 @@
-import type { Receipt, Item } from '@/receipts'
-
-export interface Props {
-  receipt: Receipt
-}
+import type { Item } from '@/receipts'
 
 export interface Unit {
   item: string
@@ -23,7 +19,7 @@ interface MultiUnitGroup {
   units: Unit[]
 }
 
-type Group = SingleUnitsGroup | MultiUnitGroup
+export type Group = SingleUnitsGroup | MultiUnitGroup
 
 export function group(items: Item[]): Group[] {
   const groups: Group[] = []
