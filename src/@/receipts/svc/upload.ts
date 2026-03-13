@@ -2,7 +2,6 @@ import { ensure, ok, once } from 'svas'
 import { account } from '@/iam'
 import { progress, receipts } from './store'
 import * as net from './net'
-import type { Receipt } from './Receipt'
 import type { Progress } from './Progress'
 
 export async function upload(file: File) {
@@ -57,7 +56,7 @@ function error(error: Error) {
   return error
 }
 
-function done(receipts: Receipt[], id: string): boolean {
+function done(receipts: net.Receipt[], id: string): boolean {
   const receipt = receipts.find((r) => r.id === id)
 
   return receipt !== undefined && receipt.status !== 'pending'

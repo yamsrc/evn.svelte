@@ -1,5 +1,5 @@
 import type { Snippet } from 'svelte'
-import type { Unit } from './Splitter'
+import type { Unit } from './groups'
 
 export interface Props {
   units: Unit[]
