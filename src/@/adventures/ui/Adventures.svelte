@@ -18,14 +18,14 @@
 {#if visible}
   <h2>{$dict.title}</h2>
   {#if active.length > 0}
-    <Scrollable bleed class={`gap-1.5 py-2 -my-2 ${classes ?? ''}`}>
+    <Scrollable bleed class={['[--gap:calc(var(--spacing)*1.5)] gap-(--gap) py-2 -my-2', classes]}>
       {#each active as adventure (adventure.id)}
         {@const highlighted = unseen(adventure, notifications ?? [])}
-        <Panel {adventure} link {highlighted} />
+        <Panel {adventure} link {highlighted} class="w-[calc(50cqi-var(--gap)/2)] max-w-64" />
       {/each}
       {#each archived as adventure (adventure.id)}
         {@const highlighted = unseen(adventure, notifications ?? [])}
-        <Panel {adventure} link {highlighted} />
+        <Panel {adventure} link {highlighted} class="w-[calc(50cqi-var(--gap)/2)] max-w-64" />
       {/each}
     </Scrollable>
   {:else}
