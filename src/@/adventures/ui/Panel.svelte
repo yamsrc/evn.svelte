@@ -28,7 +28,8 @@
       : undefined,
   )
 
-  const base = 'adventure-cover relative isolate overflow-hidden rounded-lg bg-cover bg-center p-3'
+  const base =
+    'adventure-cover relative isolate overflow-hidden rounded-lg bg-cover bg-center px-3 py-2'
 </script>
 
 {#snippet content()}
@@ -62,7 +63,7 @@
     size="lg"
     class={[
       base,
-      'w-44 h-auto shrink-0 flex-col items-start gap-0 p-3 text-foreground',
+      'w-44 h-auto shrink-0 flex-col items-start gap-0 text-foreground',
       full?.archived && 'opacity-70',
       classes,
     ]}
