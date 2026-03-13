@@ -1,6 +1,7 @@
-import type { Adventure } from '@/adventures'
+import type { Adventure, Invitation } from '@/adventures/svc/net'
 
 export interface Props {
-  adventure: Adventure
+  adventure: Adventure | Invitation
+  link?: boolean
   class?: string
 }

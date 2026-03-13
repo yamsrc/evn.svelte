@@ -7,9 +7,8 @@
   import { Button, buttonVariants } from '$ui/button'
   import { Picture } from '@/accounts/ui'
   import { invitations } from '@/adventures'
-  import { Avatars } from '@/app/ui'
+  import { Panel } from '@/adventures/ui'
   import { account, named } from '@/iam'
-  import { url } from '@/media/ui/Picture'
   import type { Props } from './Accept'
 
   let {
@@ -20,14 +19,6 @@
   }: Props = $props()
 
   let open = $state(true)
-
-  // svelte-ignore state_referenced_locally
-  const cover = url({
-    id: adventure.picture,
-    path: '/pictures/',
-    variant: '600x400!',
-    format: 'jpeg',
-  })
 
   async function onclick() {
     open = false
@@ -60,15 +51,7 @@
       </div>
     {/if}
 
-    <div
-      class="relative isolate overflow-hidden rounded-lg bg-cover bg-center p-3"
-      style="background-image: url({cover})">
-      <div class="relative z-10 flex flex-col gap-1.5">
-        <span class="font-bold">{adventure.title}</span>
-        <Avatars identities={adventure.identities} />
-      </div>
-      <div class="absolute inset-0 bg-background/70 backdrop-blur-[0.5px]"></div>
-    </div>
+    <Panel {adventure} />
 
     <AlertDialog.Footer class="flex-row">
       <AlertDialog.Cancel

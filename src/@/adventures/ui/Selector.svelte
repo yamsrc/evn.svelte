@@ -3,10 +3,8 @@
   import { ok } from 'svas'
   import { goto, replaceState } from '$app/navigation'
   import * as Picker from '$com/picker'
-  import TextEllipsis from '$com/text-ellipsis/TextEllipsis.svelte'
   import { adventures } from '@/adventures'
-  import { Avatars } from '@/app/ui'
-  import { url } from '@/media/ui/Picture'
+  import Panel from './Panel.svelte'
   import { dict } from './intl'
   import type { Props } from './Selector'
 
@@ -46,33 +44,9 @@
     </Picker.Option>
 
     {#each active as adv (adv.id)}
-      <Picker.Option
-        variant="outline"
-        class={[
-          card,
-          'cover relative isolate bg-cover bg-center flex-col items-start justify-end px-4 py-3 text-foreground',
-        ]}
-        style="background-image: url({url({
-          id: adv.picture,
-          path: '/pictures/',
-          variant: '600x400!',
-        })})">
-        <div class="relative z-10 flex flex-col items-start gap-1 w-full">
-          <TextEllipsis>{adv.title}</TextEllipsis>
-          <Avatars identities={Object.keys(adv.participants)} max={4} />
-        </div>
+      <Picker.Option variant="outline" class={[card, 'p-0']}>
+        <Panel adventure={adv} class="size-full" />
       </Picker.Option>
     {/each}
   </Picker.Root>
 {/if}
-
-<style>
-  :global(.cover)::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: var(--background);
-    opacity: 0.7;
-    backdrop-filter: blur(0.5px);
-  }
-</style>
