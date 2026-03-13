@@ -1,3 +1,19 @@
+/*
+We treat item claims as a small CRDT-like layer so the UI can update immediately
+when a user toggles a claim, without waiting for the server round-trip.
+
+`persistent` stores the last confirmed state received from the backend.
+`transient` stores local optimistic changes that may still be in flight.
+
+When fresh receipt data arrives, we merge it with local transient changes:
+- if server state matches a local change, that transient change becomes settled
+- if a transient change was already settled, it can be replaced by newer server data
+- if a local change is still unresolved, we keep showing it in the UI
+
+This allows claims to converge eventually while keeping the interface responsive
+and avoiding hard blocking on network latency or concurrent updates.
+*/
+
 import { get, writable, type Writable } from 'svelte/store'
 import * as receipts from '@/receipts'
 
