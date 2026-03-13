@@ -3,7 +3,7 @@
   import { Loader } from '$com/loader'
   import * as Picker from '$com/picker'
   import { presets, upload } from '@/adventures'
-  import { url } from '@/media/ui/Picture'
+  import { bg } from '@/media/ui/Picture'
   import { dict } from './intl'
   import type { Props } from './Cover'
 
@@ -21,7 +21,8 @@
   const current = $derived(picture)
   const picked = $derived(all.indexOf(current))
   const scroll = $derived(scrolled || picked > 0 ? picked : -1)
-  const card = 'w-44 aspect-[17/12] shrink-0 overflow-hidden rounded-lg'
+  const card =
+    'w-[calc(50cqi-var(--gap)/2)] max-w-64 aspect-[17/12] shrink-0 overflow-hidden rounded-lg'
 
   function onpick(index: number) {
     scrolled = true
@@ -53,7 +54,13 @@
   <input type="file" accept="image/*" bind:this={input} onchange={handleUpload} class="hidden" />
 
   {#key custom}
-    <Picker.Root {picked} {scroll} {onpick} bleed align="center" class="gap-2 py-1">
+    <Picker.Root
+      {picked}
+      {scroll}
+      {onpick}
+      bleed
+      align="center"
+      class="[--gap:calc(var(--spacing)*1.5)] gap-(--gap) py-1">
       <Picker.Option
         id="adventures-cover-upload-button"
         pickable={false}
@@ -70,10 +77,14 @@
       </Picker.Option>
 
       {#each all as id (id)}
-        {@const cover = url({ id, path: '/pictures/', variant: '600x400!', format: 'webp' })}
         <Picker.Option
           class={[card, 'bg-cover bg-center']}
-          style="background-image: url({cover})" />
+          style="background-image: {bg({
+            id,
+            path: '/pictures/',
+            variant: '260x180!',
+            format: 'webp',
+          })}" />
       {/each}
     </Picker.Root>
   {/key}

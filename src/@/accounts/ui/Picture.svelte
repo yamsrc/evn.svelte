@@ -3,14 +3,14 @@
   import { Picture } from '@/media/ui'
   import type { Props } from './Picture'
 
-  const { account, size = 400, class: classes, style }: Props = $props()
+  const { account, size = 400, variant = '300x300!', class: classes, style }: Props = $props()
 </script>
 
 {#if account.picture}
   <Picture
     id={account.picture}
     alt={account.name}
-    variant="300x300!"
+    {variant}
     width={size}
     height={size}
     class={cn('rounded-full', classes)}

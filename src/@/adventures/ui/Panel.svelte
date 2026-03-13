@@ -4,12 +4,12 @@
   import { Button } from '$ui/button'
   import { Avatars, Coins } from '@/app/ui'
   import { account } from '@/iam'
-  import { url } from '@/media/ui/Picture'
+  import { bg } from '@/media/ui/Picture'
   import Archived from './Archived.svelte'
   import { dict } from './intl'
   import type { Props } from './Panel'
 
-  const { adventure, link, highlighted, class: classes }: Props = $props()
+  const { adventure, link, highlighted, class: classes, variant = '260x140!' }: Props = $props()
 
   const full = $derived('participants' in adventure ? adventure : null)
 
@@ -24,7 +24,7 @@
 
   const background = $derived(
     adventure.picture
-      ? `background-image: url(${url({ id: adventure.picture, path: '/pictures/', variant: '600x400!' })})`
+      ? `background-image: ${bg({ id: adventure.picture, path: '/pictures/', variant })}`
       : undefined,
   )
 

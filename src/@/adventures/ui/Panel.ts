@@ -5,4 +5,5 @@ export interface Props {
   link?: boolean
   highlighted?: boolean
   class?: string
+  variant?: string
 }

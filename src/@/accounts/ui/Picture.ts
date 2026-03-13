@@ -7,4 +7,5 @@ export interface Props {
   size?: number
   class?: string
   style?: string
+  variant?: string
 }
