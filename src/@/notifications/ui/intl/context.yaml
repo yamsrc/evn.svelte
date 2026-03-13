@@ -42,3 +42,17 @@ inputs:
     created:
       input: "{amount} paid by {name}"
       context: use gender
+  adventures:
+    joined:
+      me:
+        input: You've been added to {title}
+      other:
+        input: "{name} joined {title}"
+      others:
+        input: "{...names} joined {title}"
+        context: accepts array of names and a title, list formatted using Intl.ListFormat
+    expense:
+      title:
+        input: "{title} · {amount}"
+      body:
+        input: Expense added to {title}

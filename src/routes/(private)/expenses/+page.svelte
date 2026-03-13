@@ -15,6 +15,7 @@
 
   const expensesNotifications = scope({ domain: 'expenses' })
   const transfersNotifications = scope({ domain: 'contacts', event: 'transferred' })
+  const adventuresNotifications = scope({ domain: 'adventures' })
   const notifications = $derived([...$expensesNotifications, ...$transfersNotifications])
 </script>
 
@@ -30,7 +31,7 @@
     {@const empty = filteredExpenses.length === 0}
 
     <Section class="space-y-2">
-      <Adventures {adventures} />
+      <Adventures {adventures} notifications={$adventuresNotifications} />
     </Section>
 
     {#if expenses.length}

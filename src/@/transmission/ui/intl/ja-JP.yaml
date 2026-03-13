@@ -10,6 +10,9 @@ settings:
   expenses:
     description: 共有の支出とお金の履歴
     title: 支出
+  adventures:
+    title: 冒険
+    description: 冒険の費用とメンバー
 permission:
   prompt: 通知をオンにして、経費、領収書、その他のアクティビティに関する即時アップデートを受け取りましょう。
   button: 通知を有効にする

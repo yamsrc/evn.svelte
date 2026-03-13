@@ -10,6 +10,9 @@ settings:
   expenses:
     description: Matumizi ya pamoja na shughuli za fedha
     title: Matumizi
+  adventures:
+    title: Matukio
+    description: Gharama za safari na wanachama
 permission:
   prompt: >-
     Washa arifa ili upate masasisho ya papo hapo kuhusu matumizi, risiti na

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { Attention } from '$com/shell'
   import { TextEllipsis } from '$com/text-ellipsis'
   import { Button } from '$ui/button'
   import { Avatars, Coins } from '@/app/ui'
@@ -8,7 +9,7 @@
   import { dict } from './intl'
   import type { Props } from './Panel'
 
-  const { adventure, link, class: classes }: Props = $props()
+  const { adventure, link, highlighted, class: classes }: Props = $props()
 
   const full = $derived('participants' in adventure ? adventure : null)
 
@@ -33,6 +34,9 @@
 {#snippet content()}
   <div class="relative z-10 flex h-full flex-col items-start gap-1.5 w-full justify-between">
     <TextEllipsis class="font-bold text-base">{adventure.title}</TextEllipsis>
+    {#if highlighted}
+      <Attention class="absolute top-0 end-0 z-10" />
+    {/if}
 
     {#if link && full}
       {#if full.archived && full.archivedAt}

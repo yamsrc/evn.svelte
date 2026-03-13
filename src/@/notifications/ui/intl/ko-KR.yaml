@@ -3,9 +3,11 @@ groups:
     me: |-
       !js
       (groupName) => `${groupName}에 참가하셨습니다`
-    others: |-
+    others: >-
       !js
-      (names, groupName) => `${new Intl.ListFormat("ko", { style: "long", type: "conjunction" }).format(names)}님이(가) ${groupName}에 가입했어요`
+
+      (names, groupName) => `${new Intl.ListFormat("ko", { style: "long", type:
+      "conjunction" }).format(names)}님이(가) ${groupName}에 가입했어요`
     other: |-
       !js
       (name, groupName, gender) => `${name}님이 ${groupName}에 참여했습니다`
@@ -42,3 +44,24 @@ expenses:
   created: |-
     !js
     (amount, name, gender) => `${name}님이 결제한 금액: ${amount}`
+adventures:
+  joined:
+    me: |-
+      !js
+      (title, gender) => `${title}에 추가되었습니다`
+    other: |-
+      !js
+      (name, title, gender) => { return `${name}님이 ${title}에 참가했습니다`; }
+    others: |-
+      !js
+      (names, title, grammar) => {
+        const list = new Intl.ListFormat("ko", { style: "long", type: "conjunction" }).format(names);
+        return `${list}님이 ${title}에 참가했습니다`;
+      }
+  expense:
+    title: |-
+      !js
+      (title, amount) => `${title} · ${amount}`
+    body: |-
+      !js
+      (title) => `${title}에 지출이 추가되었습니다`

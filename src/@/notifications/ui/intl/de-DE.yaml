@@ -3,12 +3,19 @@ groups:
     me: |-
       !js
       (groupName) => `Du bist ${groupName} beigetreten`
-    others: |-
+    others: >-
       !js
-      (names, groupName) => `${new Intl.ListFormat("de", { style: "long", type: "conjunction" }).format(names)} ${names.length === 1 ? "ist" : "sind"} ${groupName} beigetreten`
-    other: |-
+
+      (names, groupName) => `${new Intl.ListFormat("de", { style: "long", type:
+      "conjunction" }).format(names)} ${names.length === 1 ? "ist" : "sind"}
+      ${groupName} beigetreten`
+    other: >-
       !js
-      (name, groupName, gender) => { if (gender === "he") return `${name} ist ${groupName} beigetreten`; if (gender === "she") return `${name} ist ${groupName} beigetreten`; return `${name} ist ${groupName} beigetreten`; }
+
+      (name, groupName, gender) => { if (gender === "he") return `${name} ist
+      ${groupName} beigetreten`; if (gender === "she") return `${name} ist
+      ${groupName} beigetreten`; return `${name} ist ${groupName} beigetreten`;
+      }
 accounts:
   created:
     welcome: Willkommen bei Evnly!
@@ -18,9 +25,12 @@ contacts:
   connected: |-
     !js
     (name) => `Du und ${name} seid jetzt befreundet`
-  unchained: |-
+  unchained: >-
     !js
-    (name, gender) => gender === "he" ? `${name} hat das Konto akzeptiert` : gender === "she" ? `${name} hat das Konto akzeptiert` : `${name} hat das Konto akzeptiert`
+
+    (name, gender) => gender === "he" ? `${name} hat das Konto akzeptiert` :
+    gender === "she" ? `${name} hat das Konto akzeptiert` : `${name} hat das
+    Konto akzeptiert`
   transferred:
     paid: |-
       !js
@@ -46,3 +56,24 @@ expenses:
   created: |-
     !js
     (amount, name, gender) => `${amount} von ${name} bezahlt`
+adventures:
+  joined:
+    me: |-
+      !js
+      (title, gender) => `Du wurdest zu ${title} hinzugefügt`
+    other: |-
+      !js
+      (name, title, gender) => { return `${name} ist ${title} beigetreten`; }
+    others: |-
+      !js
+      (names, title, grammar) => {
+        const list = new Intl.ListFormat("de", { style: "long", type: "conjunction" }).format(names);
+        return names.length === 1 ? `${list} ist ${title} beigetreten` : `${list} sind ${title} beigetreten`;
+      }
+  expense:
+    title: |-
+      !js
+      (title, amount) => `${title} · ${amount}`
+    body: |-
+      !js
+      (title) => `Ausgabe zu ${title} hinzugefügt`

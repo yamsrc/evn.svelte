@@ -3,9 +3,11 @@ groups:
     me: |-
       !js
       (groupName) => `${groupName} に参加しました`
-    others: |-
+    others: >-
       !js
-      (names, groupName) => `${new Intl.ListFormat("ja", { style: "long", type: "conjunction" }).format(names)}が${groupName}に参加しました`
+
+      (names, groupName) => `${new Intl.ListFormat("ja", { style: "long", type:
+      "conjunction" }).format(names)}が${groupName}に参加しました`
     other: |-
       !js
       (name, groupName, gender) => `${name}が${groupName}に参加しました`
@@ -42,3 +44,24 @@ expenses:
   created: |-
     !js
     (amount, name, gender) => `${name}が支払った金額：${amount}`
+adventures:
+  joined:
+    me: |-
+      !js
+      (title, gender) => `${title}に追加されました`
+    other: |-
+      !js
+      (name, title, gender) => { return `${name}が${title}に参加しました`; }
+    others: |-
+      !js
+      (names, title, grammar) => {
+        const list = new Intl.ListFormat("ja", { style: "long", type: "conjunction" }).format(names);
+        return `${list}が${title}に参加しました`;
+      }
+  expense:
+    title: |-
+      !js
+      (title, amount) => `${title} · ${amount}`
+    body: |-
+      !js
+      (title) => `${title} に経費を追加しました`

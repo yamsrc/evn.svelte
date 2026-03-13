@@ -3,9 +3,11 @@ groups:
     me: |-
       !js
       (groupName) => `您已加入${groupName}`
-    others: |-
+    others: >-
       !js
-      (names, groupName) => `${new Intl.ListFormat("zh", { style: "long", type: "conjunction" }).format(names)}已加入${groupName}`
+
+      (names, groupName) => `${new Intl.ListFormat("zh", { style: "long", type:
+      "conjunction" }).format(names)}已加入${groupName}`
     other: |-
       !js
       (name, groupName, gender) => `${name}加入了${groupName}`
@@ -42,3 +44,24 @@ expenses:
   created: |-
     !js
     (amount, name, gender) => `${name}已支付${amount}`
+adventures:
+  joined:
+    me: |-
+      !js
+      (title, gender) => `你已被添加到${title}`
+    other: |-
+      !js
+      (name, title, gender) => { return `${name}已加入${title}`; }
+    others: |-
+      !js
+      (names, title, grammar) => {
+        const list = new Intl.ListFormat("zh-CN", { style: "long", type: "conjunction" }).format(names);
+        return `${list}已加入${title}`;
+      }
+  expense:
+    title: |-
+      !js
+      (title, amount) => `${title} · ${amount}`
+    body: |-
+      !js
+      (title) => `已将支出添加到${title}`

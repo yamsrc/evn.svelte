@@ -10,6 +10,9 @@ settings:
   expenses:
     description: 共享支出与资金活动
     title: 支出
+  adventures:
+    title: 冒险
+    description: 冒险支出与成员
 permission:
   prompt: 开启通知，第一时间获取有关支出、收据及其他活动的更新。
   button: 启用通知

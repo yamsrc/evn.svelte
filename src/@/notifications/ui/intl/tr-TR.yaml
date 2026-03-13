@@ -3,9 +3,11 @@ groups:
     me: |-
       !js
       (groupName) => `${groupName} grubuna katıldınız`
-    others: |-
+    others: >-
       !js
-      (names, groupName) => `${new Intl.ListFormat("tr", { style: "long", type: "conjunction" }).format(names)} ${groupName} grubuna katıldı`
+
+      (names, groupName) => `${new Intl.ListFormat("tr", { style: "long", type:
+      "conjunction" }).format(names)} ${groupName} grubuna katıldı`
     other: |-
       !js
       (name, groupName, gender) => `${name}, ${groupName} grubuna katıldı`
@@ -42,3 +44,26 @@ expenses:
   created: |-
     !js
     (amount, name, gender) => `${amount} ${name} tarafından ödendi`
+adventures:
+  joined:
+    me: >-
+      !js
+
+      (title, gender) => gender === "he" || gender === "she" ? `${title} grubuna
+      eklendin` : `${title} grubuna eklendiniz`
+    other: |-
+      !js
+      (name, title, gender) => { return `${name}, ${title} grubuna katıldı`; }
+    others: |-
+      !js
+      (names, title, grammar) => {
+        const list = new Intl.ListFormat("tr", { style: "long", type: "conjunction" }).format(names);
+        return names.length === 1 ? `${list} ${title} grubuna katıldı` : `${list} ${title} grubuna katıldılar`;
+      }
+  expense:
+    title: |-
+      !js
+      (title, amount) => `${title} · ${amount}`
+    body: |-
+      !js
+      (title) => `${title} için harcama eklendi`

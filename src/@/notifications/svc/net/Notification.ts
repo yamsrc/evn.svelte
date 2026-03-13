@@ -29,6 +29,24 @@ type Payloads = Constrain<{
       balance: number
     }
   }
+  adventures: {
+    joined: {
+      title: string
+      identities: string[]
+    }
+    expense: {
+      title: string
+      expense: {
+        id: string
+        title: string
+        location?: string
+        date: string
+        amount: number
+        payer: string
+        attachments: string[]
+      }
+    }
+  }
 }>
 
 type Payload<D extends Domain, E extends Event<D>> = Payloads[D][E & keyof Payloads[D]]

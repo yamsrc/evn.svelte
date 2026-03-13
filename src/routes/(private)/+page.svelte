@@ -18,6 +18,7 @@
 
   const expensesOnlyNotifications = scope({ domain: 'expenses' })
   const transfersNotifications = scope({ domain: 'contacts', event: 'transferred' })
+  const adventuresNotifications = scope({ domain: 'adventures' })
   const expensesNotifications = $derived([
     ...$expensesOnlyNotifications,
     ...$transfersNotifications,
@@ -58,7 +59,7 @@
 
     {#if adventures.length > 0}
       <Section>
-        <Adventures {adventures} />
+        <Adventures {adventures} notifications={$adventuresNotifications} />
       </Section>
     {/if}
 

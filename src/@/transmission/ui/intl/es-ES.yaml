@@ -10,6 +10,9 @@ settings:
   expenses:
     description: Gastos compartidos y actividad de dinero
     title: Gastos
+  adventures:
+    title: Aventuras
+    description: Gastos de aventura y miembros
 permission:
   prompt: >-
     Activa las notificaciones para recibir actualizaciones instantáneas sobre

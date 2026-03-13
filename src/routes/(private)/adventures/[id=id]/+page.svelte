@@ -9,8 +9,13 @@
   import { Action, Header, Section } from '@/app/ui'
   import { account } from '@/iam'
   import { Picture } from '@/media/ui'
+  import { seen } from '@/notifications'
 
   const id = $derived(page.params.id) as string
+
+  $effect(() => {
+    void seen('adventures', id)
+  })
 </script>
 
 <Async store={adventures}>

@@ -102,17 +102,17 @@
 
 ### [Phase 8: Notifications](adventures/phase-8-notifications.md)
 
-- [ ] **Task 1:** Add `adventures` to Transmission Scope Types
-- [ ] **Task 2:** Add Adventure Notification Payloads
-- [ ] **Task 3:** Adventure Notification Components — Joined
-- [ ] **Task 4:** Adventure Notification Components — Expense
-- [ ] **Task 5:** Register Adventure Components
-- [ ] **Task 6:** i18n — Notification Strings
-- [ ] **Task 7:** i18n — Transmission Settings Strings
-- [ ] **Task 8:** Add Adventures to Transmission Scopes
-- [ ] **Task 9:** Navigation Badge — Adventures Notifications
-- [ ] **Task 10:** Dev Page — Adventure Notification Mocks
-- [ ] **Task 11:** Verification & Commit
+- [x] **Task 1:** Add `adventures` to Transmission Scope Types
+- [x] **Task 2:** Add Adventure Notification Payloads
+- [x] **Task 3:** Adventure Notification Components — Joined
+- [x] **Task 4:** Adventure Notification Components — Expense
+- [x] **Task 5:** Register Adventure Components
+- [x] **Task 6:** i18n — Notification Strings
+- [x] **Task 7:** i18n — Transmission Settings Strings
+- [x] **Task 8:** Add Adventures to Transmission Scopes
+- [x] **Task 9:** Navigation Badge — Adventures Notifications
+- [x] **Task 10:** Dev Page — Adventure Notification Mocks
+- [x] **Task 11:** Verification & Commit
 
 ### [Phase 9: Verification](adventures/phase-9-verification.md)
 

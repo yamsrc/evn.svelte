@@ -367,10 +367,10 @@ if (ok(adventuresList)) {
 
 ### Task 11: Verification & Commit
 
-- [ ] `npm run check && npm run lint` passes
-- [ ] Open dev page `/dev/components/notifications/` — adventure notifications render
-- [ ] Scopes settings show "Adventures" toggle
-- [ ] Navigation badge triggers on adventure notifications
+- [x] `npm run check && npm run lint` passes
+- [x] Open dev page `/dev/components/notifications/` — adventure notifications render
+- [x] Scopes settings show "Adventures" toggle
+- [x] Navigation badge triggers on adventure notifications
 
 **Commit:**
 

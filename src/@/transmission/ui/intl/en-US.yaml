@@ -10,6 +10,9 @@ settings:
   expenses:
     description: Shared expenses and money activity
     title: Expenses
+  adventures:
+    title: Adventures
+    description: Adventure expenses and members
 permission:
   prompt: >-
     Turn on notifications to get instant updates about expenses, receipts, and
