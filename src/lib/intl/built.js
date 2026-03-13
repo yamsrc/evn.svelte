@@ -184,10 +184,7 @@ export const dictionaries = {
         "create": {
           "title": "إنشاء مشارك جديد"
         },
-        "title": "إضافة مشاركين",
-        "add": {
-
-        }
+        "title": "إضافة مشاركين"
       },
       "me": "أنا",
       "empty": {
@@ -389,10 +386,7 @@ export const dictionaries = {
         "create": {
           "title": "Neuen Teilnehmer erstellen"
         },
-        "title": "Teilnehmer hinzufügen",
-        "add": {
-
-        }
+        "title": "Teilnehmer hinzufügen"
       },
       "me": "Ich",
       "empty": {
@@ -599,10 +593,7 @@ export const dictionaries = {
         "create": {
           "title": "Create a new participant"
         },
-        "title": "Add participants",
-        "add": {
-
-        }
+        "title": "Add participants"
       },
       "me": "Me",
       "expenses": {
@@ -799,10 +790,7 @@ export const dictionaries = {
         "create": {
           "title": "Crear un nuevo participante"
         },
-        "title": "Agregar participantes",
-        "add": {
-
-        }
+        "title": "Agregar participantes"
       },
       "me": "Yo",
       "empty": {
@@ -1004,10 +992,7 @@ export const dictionaries = {
         "create": {
           "title": "Créer un nouveau participant"
         },
-        "title": "Ajouter des participants",
-        "add": {
-
-        }
+        "title": "Ajouter des participants"
       },
       "me": "Moi",
       "empty": {
@@ -1209,10 +1194,7 @@ export const dictionaries = {
         "create": {
           "title": "नया प्रतिभागी बनाएँ"
         },
-        "title": "प्रतिभागी जोड़ें",
-        "add": {
-
-        }
+        "title": "प्रतिभागी जोड़ें"
       },
       "me": "मैं",
       "empty": {
@@ -1414,10 +1396,7 @@ export const dictionaries = {
         "create": {
           "title": "Crea un nuovo partecipante"
         },
-        "title": "Aggiungi partecipanti",
-        "add": {
-
-        }
+        "title": "Aggiungi partecipanti"
       },
       "me": "Io",
       "empty": {
@@ -1619,10 +1598,7 @@ export const dictionaries = {
         "create": {
           "title": "新しい参加者を作成"
         },
-        "title": "参加者を追加",
-        "add": {
-
-        }
+        "title": "参加者を追加"
       },
       "me": "私",
       "empty": {
@@ -1824,10 +1800,7 @@ export const dictionaries = {
         "create": {
           "title": "새 참가자 생성"
         },
-        "title": "참가자 추가",
-        "add": {
-
-        }
+        "title": "참가자 추가"
       },
       "me": "나",
       "empty": {
@@ -2029,10 +2002,7 @@ export const dictionaries = {
         "create": {
           "title": "Nieuwe deelnemer aanmaken"
         },
-        "title": "Deelnemers toevoegen",
-        "add": {
-
-        }
+        "title": "Deelnemers toevoegen"
       },
       "me": "Ik",
       "empty": {
@@ -2234,10 +2204,7 @@ export const dictionaries = {
         "create": {
           "title": "Создать нового участника"
         },
-        "title": "Добавить участников",
-        "add": {
-
-        }
+        "title": "Добавить участников"
       },
       "me": "Я",
       "empty": {
@@ -2439,10 +2406,7 @@ export const dictionaries = {
         "create": {
           "title": "Unda mshiriki mpya"
         },
-        "title": "Ongeza washiriki",
-        "add": {
-
-        }
+        "title": "Ongeza washiriki"
       },
       "me": "Mimi",
       "empty": {
@@ -2644,10 +2608,7 @@ export const dictionaries = {
         "create": {
           "title": "Yeni katılımcı oluştur"
         },
-        "title": "Katılımcı ekle",
-        "add": {
-
-        }
+        "title": "Katılımcı ekle"
       },
       "me": "Ben",
       "empty": {
@@ -2849,10 +2810,7 @@ export const dictionaries = {
         "create": {
           "title": "Створити нового учасника"
         },
-        "title": "Додати учасників",
-        "add": {
-
-        }
+        "title": "Додати учасників"
       },
       "me": "Я",
       "empty": {
@@ -3054,10 +3012,7 @@ export const dictionaries = {
         "create": {
           "title": "创建新参与者"
         },
-        "title": "添加参与者",
-        "add": {
-
-        }
+        "title": "添加参与者"
       },
       "me": "我",
       "empty": {

@@ -36,9 +36,7 @@ profile:
     description: 이것은 영수증 스캔에 영향을 주지 않습니다 — 대부분의 언어로 어차피 읽을 수 있습니다.
   grammar:
     title: 문법 형태
-    description: >-
-      일부 언어에서는 메시지 문구가 문법적 성별에 따라 달라집니다. 이 설정을 통해 인터페이스의 텍스트가 자연스럽고 올바르게 표시되도록
-      합니다.
+    description: 일부 언어에서는 메시지 문구가 문법적 성별에 따라 달라집니다. 이 설정을 통해 인터페이스의 텍스트가 자연스럽고 올바르게 표시되도록 합니다.
     example: |-
       !js
       (name, gender) => `${name}님이 지출을 추가했습니다`
@@ -144,7 +142,6 @@ expenses:
     create:
       title: 새 참가자 생성
     title: 참가자 추가
-    add: {}
   me: 나
   empty:
     title: 아직 지출이 없습니다

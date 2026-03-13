@@ -33,21 +33,13 @@ profile:
   title: Mein Profil
   language:
     title: Sprache
-    description: >-
-      Das beeinflusst das Einscannen von Kassenbons nicht – wir können sie
-      ohnehin in den meisten Sprachen lesen.
+    description: Das beeinflusst das Einscannen von Kassenbons nicht – wir können sie ohnehin in den meisten Sprachen lesen.
   grammar:
     title: Grammatische Form
-    description: >-
-      In einigen Sprachen hängt die Formulierung von Nachrichten vom
-      grammatischen Geschlecht ab. Diese Einstellung sorgt dafür, dass die Texte
-      der Benutzeroberfläche natürlich und korrekt klingen.
-    example: >-
+    description: In einigen Sprachen hängt die Formulierung von Nachrichten vom grammatischen Geschlecht ab. Diese Einstellung sorgt dafür, dass die Texte der Benutzeroberfläche natürlich und korrekt klingen.
+    example: |-
       !js
-
-      (name, gender) => gender === "he" ? `${name} hat eine Ausgabe hinzugefügt`
-      : gender === "she" ? `${name} hat eine Ausgabe hinzugefügt` : `${name} hat
-      eine Ausgabe hinzugefügt`
+      (name, gender) => gender === "he" ? `${name} hat eine Ausgabe hinzugefügt` : gender === "she" ? `${name} hat eine Ausgabe hinzugefügt` : `${name} hat eine Ausgabe hinzugefügt`
   background:
     title: Hintergrund
 form:
@@ -77,9 +69,7 @@ contacts:
       confirm: Löschen
   add:
     label: Kontakt hinzufügen
-    description: >-
-      Später kannst du dieses Konto an den Eigentümer übertragen, damit er seine
-      Anmeldedaten einrichten und die Inhaberschaft übernehmen kann.
+    description: Später kannst du dieses Konto an den Eigentümer übertragen, damit er seine Anmeldedaten einrichten und die Inhaberschaft übernehmen kann.
   share:
     invite:
       link: Zu Evnly einladen
@@ -87,15 +77,11 @@ contacts:
       description: Die Einladung läuft in 5 Minuten ab
 join:
   app:
-    description: >-
-      Die clevere Art, gemeinsam mit Freunden den Überblick zu behalten, wer wem
-      etwas schuldet.
+    description: Die clevere Art, gemeinsam mit Freunden den Überblick zu behalten, wer wem etwas schuldet.
   inviter:
-    description: >-
+    description: |-
       !js
-
-      (name) => `${name} hat dich eingeladen. Registriere dich einfach oder
-      melde dich an, und schon kann es losgehen`
+      (name) => `${name} hat dich eingeladen. Registriere dich einfach oder melde dich an, und schon kann es losgehen`
   accept: Jetzt mit Evnly starten
 groups:
   leave: Gedrückt halten zum Verlassen
@@ -106,9 +92,7 @@ groups:
     title: Mitglieder
     addMembers: Mitglieder hinzufügen
     addMember: Mitglied hinzufügen
-    empty: >-
-      Hier ist noch niemand. Füge einige Mitglieder hinzu, um mit dieser Gruppe
-      zu starten.
+    empty: Hier ist noch niemand. Füge einige Mitglieder hinzu, um mit dieser Gruppe zu starten.
   title: Gruppen
   summary:
     balance:
@@ -126,9 +110,7 @@ account:
   delete:
     button: Konto löschen
     title: Konto löschen
-    description: >-
-      Wir werden Ihr Konto und alle zugehörigen Informationen dauerhaft löschen.
-      Diese Aktion kann nicht rückgängig gemacht werden.
+    description: Wir werden Ihr Konto und alle zugehörigen Informationen dauerhaft löschen. Diese Aktion kann nicht rückgängig gemacht werden.
     sorry: Es tut uns sehr leid, zu sehen, dass Sie gehen.
     hold: Zum Bestätigen halten
     link: Konto löschen
@@ -160,7 +142,6 @@ expenses:
     create:
       title: Neuen Teilnehmer erstellen
     title: Teilnehmer hinzufügen
-    add: {}
   me: Ich
   empty:
     title: Noch keine Ausgaben
