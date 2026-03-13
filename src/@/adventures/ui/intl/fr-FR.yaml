@@ -16,8 +16,6 @@ finish:
     description: Archiver l’aventure la retirera de l’écran des nouvelles dépenses et la placera à la fin de ta liste d’aventures.
     button: Archiver l’aventure
   delete:
-    title: Supprimer l’aventure
-    description: Rien ne s'est encore passé. Invitez des amis et ajoutez des dépenses pour lancer les choses.
     button: |-
       !js
       (title) => `Supprimer ${title}`
@@ -33,9 +31,7 @@ me: Moi
 selector:
   regular: Dépenses régulières
 archive:
-  header: |-
-    !js
-    (title, empty) => empty ? `Suppression de ${title}` : `Archivage de ${title}`
+  header: "!js\n(title) => `Archivage de «\_${title}\_»`"
   delete:
     description: Cette aventure n'a aucune dépense et sera supprimée
     button: Supprimer l’aventure

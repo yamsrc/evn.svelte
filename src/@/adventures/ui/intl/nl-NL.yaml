@@ -16,8 +16,6 @@ finish:
     description: Als je het avontuur archiveert, wordt het van het nieuwe onkostenscherm verwijderd en naar het einde van je avonturenlijst verplaatst.
     button: Avontuur archiveren
   delete:
-    title: Avontuur verwijderen
-    description: Er is nog niets gebeurd. Nodig wat vrienden uit en voeg uitgaven toe om te beginnen.
     button: |-
       !js
       (title) => `${title} verwijderen`
@@ -35,7 +33,7 @@ selector:
 archive:
   header: |-
     !js
-    (title, empty) => empty ? `${title} wordt verwijderd` : `${title} wordt gearchiveerd`
+    (title) => `"${title}" wordt gearchiveerd`
   delete:
     description: Dit avontuur heeft geen uitgaven en wordt verwijderd
     button: Avontuur verwijderen

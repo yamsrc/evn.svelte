@@ -43,7 +43,7 @@ inputs:
       input: Regular spending
   archive:
     header:
-      input: "(title, empty) => empty ? `Deleting ${title}` : `Archiving ${title}`"
+      input: Archiving {title}
     delete:
       description:
         input: This adventure has no expenses and will be deleted
@@ -79,12 +79,6 @@ inputs:
         input: Archive adventure
         context: archive button label
     delete:
-      title:
-        input: Delete adventure
-        context: heading for delete section when adventure has no expenses
-      description:
-        input: Nothing happened yet. Bring some friends and add some spendings to start things rolling.
-        context: description for delete section, shared with view page empty expenses
       button:
         input: \!js (title) => `Delete ${title}`
         context: delete button label with adventure title

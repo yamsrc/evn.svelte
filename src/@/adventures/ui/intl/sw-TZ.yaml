@@ -16,8 +16,6 @@ finish:
     description: Kuhifadhi tukio hili kutaliondoa kwenye skrini ya matumizi mapya na kulipeleka mwisho wa orodha yako ya matukio.
     button: Hifadhi adventure
   delete:
-    title: Futa tukio
-    description: Hakuna kilichotokea bado. Karibu marafiki zako na ongeza matumizi ili uanze mambo.
     button: |-
       !js
       (title) => `Futa ${title}`
@@ -35,7 +33,7 @@ selector:
 archive:
   header: |-
     !js
-    (title, empty) => empty ? `Inaondoa ${title}` : `Inaweka ${title} kwenye kumbukumbu`
+    (title) => `Inahifadhiwa kwenye kumbukumbu: "${title}"`
   delete:
     description: Safari hii haina matumizi na itafutwa
     button: Futa tukio

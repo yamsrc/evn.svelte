@@ -16,8 +16,6 @@ finish:
     description: Macera arşivlendiğinde yeni harcama ekranından kaldırılır ve macera listenizin sonuna taşınır.
     button: Macera arşivle
   delete:
-    title: Macera sil
-    description: Henüz hiçbir şey olmadı. Birkaç arkadaşını davet et ve harcamalar ekleyerek işleri başlat.
     button: |-
       !js
       (title) => `${title} Sil`
@@ -35,7 +33,7 @@ selector:
 archive:
   header: |-
     !js
-    (title, empty) => empty ? `${title} siliniyor` : `${title} arşivleniyor`
+    (title) => `"${title}" arşivleniyor`
   delete:
     description: Bu maceranın gideri yok ve silinecek
     button: Macera sil

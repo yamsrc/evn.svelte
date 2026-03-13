@@ -16,8 +16,6 @@ finish:
     description: 冒険をアーカイブすると、新しい支出画面から削除され、あなたの冒険リストの最後に移動します。
     button: 冒険をアーカイブ
   delete:
-    title: 冒険を削除
-    description: まだ何も起きていません。友達を招待して、支出を追加してみましょう。
     button: |-
       !js
       (title) => `${title}を削除`
@@ -35,7 +33,7 @@ selector:
 archive:
   header: |-
     !js
-    (title, empty) => empty ? `${title}を削除中` : `${title}をアーカイブ中`
+    (title) => `"${title}" をアーカイブしています`
   delete:
     description: このアドベンチャーには費用がかからず、削除されます
     button: 冒険を削除

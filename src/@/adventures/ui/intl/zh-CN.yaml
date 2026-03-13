@@ -16,8 +16,6 @@ finish:
     description: 将冒险归档后，它会从新增支出页面移除，并被移到你的冒险列表末尾。
     button: 归档冒险
   delete:
-    title: 删除冒险
-    description: 还没有任何活动。快邀请朋友并添加一些支出，让一切开始运转吧。
     button: |-
       !js
       (title) => `删除${title}`
@@ -35,7 +33,7 @@ selector:
 archive:
   header: |-
     !js
-    (title, empty) => empty ? `正在删除${title}` : `正在归档${title}`
+    (title) => `正在归档“${title}”`
   delete:
     description: 该冒险没有任何费用，并将被删除
     button: 删除冒险

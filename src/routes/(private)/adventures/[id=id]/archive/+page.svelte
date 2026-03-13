@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Archive as ArchiveIcon, Info, Trash2 } from '@lucide/svelte'
+  import { Archive as ArchiveIcon, Info } from '@lucide/svelte'
   import { ok, Async, combined } from 'svas'
   import { goto } from '$app/navigation'
   import { page } from '$app/state'
@@ -20,8 +20,6 @@
     ok($adventures) ? $adventures.find((a) => a.id === id) : undefined,
   )
 
-  const empty = $derived(adventure ? adventure.expenses.length === 0 : true)
-
   let merge = $state(true)
   let busy = $state(false)
 
@@ -30,13 +28,13 @@
 
     busy = true
 
-    const result = await archive(id, empty ? undefined : merge)
+    const result = await archive(id, merge)
 
     busy = false
 
     if (result instanceof Error) return
 
-    goto(empty ? '/' : `/adventures/${id}/`)
+    goto(`/adventures/${id}/`)
   }
 </script>
 
@@ -46,27 +44,11 @@
   <Section>
     <Header.Root>
       <Header.Title>
-        {$dict.archive.header(adventure.title, empty)}
+        {$dict.archive.header(adventure.title)}
       </Header.Title>
     </Header.Root>
   </Section>
 
-  {#if empty}
-    <Section>
-      <p class="text-muted-foreground">{$dict.archive.delete.description}</p>
-    </Section>
-
-    <Actions>
-      <Hold
-        onclick={submit}
-        disabled={busy}
-        label={$dict.archive.delete.button}
-        class={actionVariants({ variant: 'destructive' })}>
-        <Trash2 />
-        <span class="sr-only">{$dict.archive.delete.button}</span>
-      </Hold>
-    </Actions>
-  {:else}
     <Section>
       <Panel>
         <div class="flex items-start gap-2">
@@ -116,11 +98,10 @@
       <Hold
         onclick={submit}
         disabled={busy}
-        label={$dict.archive.header(adventure.title, empty)}
+        label={$dict.archive.header(adventure.title)}
         class={actionVariants({ variant: 'destructive' })}>
         <ArchiveIcon />
         <span class="sr-only">{$dict.finish.archive.button}</span>
       </Hold>
     </Actions>
-  {/if}
 {/if}

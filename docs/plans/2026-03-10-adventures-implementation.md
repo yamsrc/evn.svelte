@@ -116,8 +116,8 @@
 
 ### [Phase 9: Verification](adventures/phase-9-verification.md)
 
-- [ ] **Task 1:** Build & Type Check
-- [ ] **Task 2:** Manual Testing
+- [x] **Task 1:** Build & Type Check
+- [x] **Task 2:** Manual Testing
 
 ---
 

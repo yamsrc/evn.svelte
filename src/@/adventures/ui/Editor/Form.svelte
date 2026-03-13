@@ -66,7 +66,7 @@
     </div>
 
     {#if id !== undefined}
-      <Archive {id} empty={value.expenses.length === 0} title={value.title} />
+      <Archive {id} empty={value.expenses.length === 0} />
     {/if}
 
     <button bind:this={submitButton} type="submit" class="sr-only">

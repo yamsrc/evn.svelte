@@ -16,8 +16,6 @@ finish:
     description: أرشفة المغامرة ستزيلها من شاشة المصاريف الجديدة وتنقلها إلى نهاية قائمة مغامراتك.
     button: أرشفة المغامرة
   delete:
-    title: حذف المغامرة
-    description: لم يحدث أي شيء بعد. ادعُ بعض الأصدقاء وأضِف بعض المصروفات لتبدأ الأمور.
     button: |-
       !js
       (title) => `حذف ${title}`
@@ -35,7 +33,7 @@ selector:
 archive:
   header: |-
     !js
-    (title, empty) => empty ? `يتم حذف ${title}` : `يتم أرشفة ${title}`
+    (title) => `يتم أرشفة "${title}"`
   delete:
     description: هذه المغامرة ليس لديها أي نفقات وسيتم حذفها
     button: حذف المغامرة

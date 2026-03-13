@@ -16,8 +16,6 @@ finish:
     description: Archivar la aventura la eliminará de la pantalla de nuevos gastos y la moverá al final de tu lista de aventuras.
     button: Archivar aventura
   delete:
-    title: Eliminar aventura
-    description: Todavía no ha pasado nada. Invita a algunos amigos y añade algunos gastos para poner esto en marcha.
     button: |-
       !js
       (title) => `Eliminar ${title}`
@@ -35,7 +33,7 @@ selector:
 archive:
   header: |-
     !js
-    (title, empty) => empty ? `Eliminando ${title}` : `Archivando ${title}`
+    (title) => `Archivando "${title}"`
   delete:
     description: Esta aventura no tiene gastos y será eliminada
     button: Eliminar aventura

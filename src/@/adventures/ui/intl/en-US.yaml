@@ -16,8 +16,6 @@ finish:
     description: Archiving the adventure will remove it from the new expense screen and move it to the back of your adventure list.
     button: Archive adventure
   delete:
-    title: Delete adventure
-    description: Nothing's happened yet. Invite some friends and add some expenses to get started.
     button: |-
       !js
       (title) => `Delete ${title}`
@@ -35,7 +33,7 @@ selector:
 archive:
   header: |-
     !js
-    (title, empty) => empty ? `Deleting ${title}` : `Archiving ${title}`
+    (title) => `Archiving "${title}"`
   delete:
     description: This adventure has no expenses and will be deleted
     button: Delete adventure

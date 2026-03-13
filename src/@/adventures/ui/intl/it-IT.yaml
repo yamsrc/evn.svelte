@@ -16,8 +16,6 @@ finish:
     description: Archiviare l’avventura la rimuoverà dalla schermata delle nuove spese e la sposterà in fondo alla tua lista di avventure.
     button: Archivia avventura
   delete:
-    title: Elimina avventura
-    description: Non è ancora successo nulla. Invita qualche amico e aggiungi delle spese per iniziare.
     button: |-
       !js
       (title) => `Elimina ${title}`
@@ -35,7 +33,7 @@ selector:
 archive:
   header: |-
     !js
-    (title, empty) => empty ? `Eliminazione di ${title}` : `Archiviazione di ${title}`
+    (title) => `Archiviazione di "${title}"`
   delete:
     description: Questa avventura non ha spese e verrà eliminata
     button: Elimina avventura

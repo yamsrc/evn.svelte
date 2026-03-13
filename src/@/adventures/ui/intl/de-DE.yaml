@@ -16,8 +16,6 @@ finish:
     description: Wenn du das Abenteuer archivierst, wird es vom Bildschirm für neue Ausgaben entfernt und ans Ende deiner Abenteuerliste verschoben.
     button: Abenteuer archivieren
   delete:
-    title: Abenteuer löschen
-    description: Bisher ist noch nichts passiert. Lade ein paar Freunde ein und füge Ausgaben hinzu, um loszulegen.
     button: |-
       !js
       (title) => `"${title}" löschen`
@@ -35,7 +33,7 @@ selector:
 archive:
   header: |-
     !js
-    (title, empty) => empty ? `${title} wird gelöscht` : `${title} wird archiviert`
+    (title) => `"${title}" wird archiviert`
   delete:
     description: Dieses Abenteuer hat keine Ausgaben und wird gelöscht
     button: Abenteuer löschen
