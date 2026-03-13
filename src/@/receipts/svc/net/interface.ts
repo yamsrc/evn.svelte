@@ -1,6 +1,7 @@
 import { origin, type OctetsEntry, type Faulty } from '@/net'
 import type { Emitter } from 'mitt'
 import type { Receipt } from './Receipt'
+import type { Invitation } from './Invitation'
 
 const receipts = origin.resource<Receipt>('/receipts/', { credentials: 'include' })
 
@@ -40,3 +41,10 @@ export interface ReceiptPut {
 }
 
 type Workflow = Faulty<{ create: { id: string, picture: string } }>
+
+export const invitations = {
+  resource: origin.resource<Invitation>('/receipts/invitations/'),
+  get: (id: string) => invitations.resource.json(id),
+  del: (id: string) =>
+    invitations.resource.json(id, { method: 'DELETE', credentials: 'include' }),
+}
