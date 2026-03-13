@@ -6,7 +6,6 @@
   import type { Contact } from '@/contacts'
 
   const { contacts }: Props = $props()
-  const LIMIT = 3
 
   const entry = (contact: Contact): Entry => ({
     id: contact.identity,
@@ -14,19 +13,8 @@
     href: `/contacts/${contact.identity}/`,
   })
 
-  const negative = $derived(
-    contacts
-      .filter((contact) => contact.balance < 0)
-      .slice(0, LIMIT)
-      .map(entry),
-  )
-
-  const positive = $derived(
-    contacts
-      .filter((contact) => contact.balance > 0)
-      .slice(0, LIMIT)
-      .map(entry),
-  )
+  const negative = $derived(contacts.filter((contact) => contact.balance < 0).map(entry))
+  const positive = $derived(contacts.filter((contact) => contact.balance > 0).map(entry))
 </script>
 
 <div class="space-y-2">
@@ -39,13 +27,13 @@
       {#if negative.length > 0}
         <div class="space-y-1">
           <p>{$dict.tops.negative}</p>
-          <Leaderboard entries={negative} />
+          <Leaderboard entries={negative} top={3} />
         </div>
       {/if}
       {#if positive.length > 0}
         <div class="space-y-1">
           <p>{$dict.tops.positive}</p>
-          <Leaderboard entries={positive} sign="positive" />
+          <Leaderboard entries={positive} sign="positive" top={3} />
         </div>
       {/if}
     </div>

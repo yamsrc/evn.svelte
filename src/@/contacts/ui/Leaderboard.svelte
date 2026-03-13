@@ -5,18 +5,15 @@
   import { Panel } from '@/accounts/ui'
   import type { Props } from './Leaderboard'
 
-  const { entries, sign = 'negative', neutral }: Props = $props()
+  const { entries, sign = 'negative', neutral, top }: Props = $props()
 
-  const sorted = $derived(
-    [...entries].sort((a, b) =>
-      sign === 'negative' ? a.value - b.value : b.value - a.value,
-    ),
-  )
-  const total = $derived(sorted.reduce((sum, entry) => sum + Math.abs(entry.value), 0))
+  const sorted = $derived([...entries].sort((a, b) => Math.abs(b.value) - Math.abs(a.value)))
+  const visible = $derived(top ? sorted.slice(0, top) : sorted)
+  const total = $derived(visible.reduce((sum, entry) => sum + Math.abs(entry.value), 0))
 </script>
 
 <ul class="space-y-2">
-  {#each sorted as entry (entry.id)}
+  {#each visible as entry (entry.id)}
     <li>
       <Async store={accounts.get(entry.id)}>
         {#snippet awaited(account)}

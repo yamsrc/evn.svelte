@@ -1,4 +1,4 @@
-# Phase 8: Verification
+# Phase 9: Verification
 
 [← Back to Plan](../2026-03-10-adventures-implementation.md)
 

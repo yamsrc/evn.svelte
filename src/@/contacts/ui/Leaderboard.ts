@@ -9,4 +9,5 @@ export interface Props {
   entries: Entry[]
   sign?: 'positive' | 'negative'
   neutral?: boolean
+  top?: number
 }
