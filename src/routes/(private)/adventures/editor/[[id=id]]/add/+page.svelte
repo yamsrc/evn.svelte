@@ -28,7 +28,7 @@
   const ctx = Editor.getContext()
   const id = $derived(page.params.id)
   const invitation = $derived(
-    id === undefined ? undefined : { url: `${window.location.origin}/join/adventure/${id}/` },
+    id === undefined ? undefined : { url: `${window.location.origin}/join/adventures/${id}/` },
   )
 
   let search = $state('')

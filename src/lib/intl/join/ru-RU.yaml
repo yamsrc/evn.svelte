@@ -73,3 +73,23 @@ group:
       (groupname) => `Присоединиться к ${groupname}`
     join: Присоединиться
     decline: Отклонить
+adventures:
+  og:
+    title: |-
+      !js
+      (title) => `Присоединяйтесь к «${title}» на Evnly`
+    description: Делите расходы на приключения и ведите счет вместе — в Evnly.
+  dialog:
+    title: |-
+      !js
+      (title) => `Присоединиться к ${title}`
+    join: Присоединиться
+    decline: Игнорировать
+    description: >-
+      !js
+
+      (name, gender) => gender === "he" ? `${name} приглашает тебя
+      присоединиться к приключению` : gender === "she" ? `${name} приглашает
+      тебя присоединиться к приключению` : `${name} приглашает тебя
+      присоединиться к приключению`
+    heading: Приглашение в приключение

@@ -98,7 +98,7 @@
 
 ### [Phase 7: Invitations](adventures/phase-7-invitations.md)
 
-- [ ] **Task 1:** Join Route — public invitation page (share/QR origin already done in Phase 2)
+- [x] **Task 1:** Join Route — public invitation page (share/QR origin already done in Phase 2)
 
 ### [Phase 8: Notifications](adventures/phase-8-notifications.md)
 

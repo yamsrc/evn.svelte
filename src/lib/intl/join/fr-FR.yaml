@@ -77,3 +77,24 @@ group:
       (groupname) => `Rejoindre ${groupname}`
     join: Rejoindre
     decline: Refuser
+adventures:
+  og:
+    title: |-
+      !js
+      (title) => `Rejoignez ${title} sur Evnly`
+    description: >-
+      Partagez les frais d’aventure et gardez un suivi équitable — ensemble sur
+      Evnly.
+  dialog:
+    title: |-
+      !js
+      (title) => `Rejoindre ${title}`
+    join: Rejoindre
+    decline: Ignorer
+    description: >-
+      !js
+
+      (name, gender) => gender === "he" ? `${name} t’invite à rejoindre
+      l’aventure` : gender === "she" ? `${name} t’invite à rejoindre l’aventure`
+      : `${name} t’invite à rejoindre l’aventure`
+    heading: Invitation à l’aventure

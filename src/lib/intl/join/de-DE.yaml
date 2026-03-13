@@ -78,3 +78,21 @@ group:
       (groupname) => `Tritt ${groupname} bei`
     join: Beitreten
     decline: Ablehnen
+adventures:
+  og:
+    title: |-
+      !js
+      (title) => `Tritt ${title} auf Evnly bei`
+    description: >-
+      Teilt eure Abenteuerkosten und behaltet den Überblick – gemeinsam auf
+      Evnly.
+  dialog:
+    title: |-
+      !js
+      (title) => `Tritt ${title} bei`
+    join: Beitreten
+    decline: Ignorieren
+    description: |-
+      !js
+      (name, gender) => `${name} lädt dich zum Abenteuer ein`
+    heading: Einladung zum Abenteuer

@@ -147,10 +147,10 @@ AlertDialog with adventure cover + title. On confirm: `having(account)` → `nam
 
 Agent opens app in browser and verifies:
 
-- [ ] Open `/join/adventures/{id}/` (logged out) — page renders with adventure cover + title in dialog
-- [ ] "Join" button → triggers auth flow → after auth, adventure accepted, redirects to home
-- [ ] "Decline" button → dialog closes
-- [ ] Invalid invitation ID → redirects to `/`
+- [x] Open `/join/adventures/{id}/` (logged out) — page renders with adventure cover + title in dialog
+- [x] "Join" button → triggers auth flow → after auth, adventure accepted, redirects to home
+- [x] "Decline" button → dialog closes
+- [x] Invalid invitation ID → redirects to `/`
 
 ---
 

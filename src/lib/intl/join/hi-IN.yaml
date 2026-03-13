@@ -75,3 +75,23 @@ group:
       (groupname) => `${groupname} से जुड़ें`
     join: जुड़ें
     decline: अस्वीकृत करें
+adventures:
+  og:
+    title: |-
+      !js
+      (title) => `Evnly पर ${title} से जुड़ें`
+    description: एडवेंचर के खर्च साझा करें और बराबर हिसाब रखें — Evnly पर एक साथ।
+  dialog:
+    title: |-
+      !js
+      (title) => `${title} से जुड़ें`
+    join: शामिल हों
+    decline: अनदेखा करें
+    description: >-
+      !js
+
+      (name, gender) => gender === "he" ? `${name} आपको रोमांच में शामिल होने के
+      लिए आमंत्रित करता है` : gender === "she" ? `${name} आपको रोमांच में शामिल
+      होने के लिए आमंत्रित करती है` : `${name} आपको रोमांच में शामिल होने के लिए
+      आमंत्रित करता/करती है`
+    heading: साहसिक यात्रा के लिए निमंत्रण
