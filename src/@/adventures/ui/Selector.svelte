@@ -35,7 +35,7 @@
 </script>
 
 {#if active.length > 0}
-  <Picker.Root {picked} scroll={picked} {onpick} snap="start" bleed class="gap-2 py-1">
+  <Picker.Root {picked} scroll={picked} {onpick} align="start" bleed class="gap-2 py-1">
     <Picker.Option
       variant="outline"
       class={[card, 'flex-col gap-1.5 items-center justify-center text-muted-foreground']}>

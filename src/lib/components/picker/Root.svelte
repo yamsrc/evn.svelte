@@ -7,10 +7,10 @@
     picked,
     scroll: target = picked,
     onpick,
-    snap = 'start',
-    bleed = false,
+    align = 'start',
     children,
     class: classes,
+    ...rest
   }: Props = $props()
 
   let entries: Entry[] = $state([])
@@ -30,7 +30,7 @@
 
   $effect(() => {
     ui.chosen = chosen
-    ui.snap = snap
+    ui.snap = align
   })
 
   setContext({
@@ -47,6 +47,6 @@
   })
 </script>
 
-<Scrollable {scroll} {bleed} align={snap} class={classes}>
+<Scrollable {scroll} {align} class={classes} {...rest}>
   {@render children()}
 </Scrollable>

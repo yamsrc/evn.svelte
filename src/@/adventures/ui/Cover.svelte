@@ -53,7 +53,7 @@
   <input type="file" accept="image/*" bind:this={input} onchange={handleUpload} class="hidden" />
 
   {#key custom}
-    <Picker.Root {picked} {scroll} {onpick} bleed snap="center" class="gap-2 py-1">
+    <Picker.Root {picked} {scroll} {onpick} bleed align="center" class="gap-2 py-1">
       <Picker.Option
         id="adventures-cover-upload-button"
         pickable={false}

@@ -1,6 +1,5 @@
 <script lang="ts">
   import { onMount } from 'svelte'
-  import { cn } from '$lib/utils'
   import { scrollable, INFINITY, type Props } from './Scrollable'
 
   const {
@@ -29,11 +28,11 @@
     {id}
     {@attach scrollable({ infinite, align, scroll }, mounted)}
     {onscroll}
-    class={cn(
+    class={[
       'px-4 flex overflow-x-auto no-scrollbar snap-x snap-mandatory overscroll-x-contain *:shrink-0',
       bleed && BLEED,
       classes,
-    )}>
+    ]}>
     {@render children?.()}
     {#if infinite}
       {#each { length: INFINITY - 1 }}

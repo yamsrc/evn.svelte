@@ -1,12 +1,13 @@
 import type { Snippet } from 'svelte'
 import type { Attachment } from 'svelte/attachments'
+import type { ClassValue } from 'tailwind-variants'
 
 export interface Props {
   children: Snippet
   infinite?: Options['infinite']
   align?: Options['align']
   bleed?: boolean
-  class?: string
+  class?: ClassValue
   id?: string
   dir?: 'ltr' | 'rtl'
   scroll?: number

@@ -1,11 +1,9 @@
+import type { ScrollableProps } from '$com/scrollable'
 import type { Snippet } from 'svelte'
 
-export interface Props {
+export interface Props extends Omit<ScrollableProps, 'scroll' | 'children'> {
   picked: number
   scroll?: number
   onpick: (index: number) => void
-  snap?: 'start' | 'center'
-  bleed?: boolean
   children: Snippet
-  class?: string
 }
