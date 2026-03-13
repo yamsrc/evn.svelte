@@ -5,7 +5,9 @@ export interface Props {
   children: Snippet
   infinite?: Options['infinite']
   align?: Options['align']
+  bleed?: boolean
   class?: string
+  id?: string
   dir?: 'ltr' | 'rtl'
   scroll?: number
   onscroll?: (e: Event) => void

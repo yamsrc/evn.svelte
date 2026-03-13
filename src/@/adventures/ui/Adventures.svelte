@@ -18,7 +18,7 @@
 {#if visible}
   <h2>{$dict.title}</h2>
   {#if active.length > 0}
-    <Scrollable class={`-mx-5 px-5 scroll-px-5 gap-1.5 py-2 -my-2 ${classes ?? ''}`}>
+    <Scrollable bleed class={`gap-1.5 py-2 -my-2 ${classes ?? ''}`}>
       {#each active as adventure (adventure.id)}
         {@const highlighted = unseen(adventure, notifications ?? [])}
         <Panel {adventure} link {highlighted} />

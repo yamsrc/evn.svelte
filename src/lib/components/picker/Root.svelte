@@ -8,6 +8,7 @@
     scroll: target = picked,
     onpick,
     snap = 'start',
+    bleed = false,
     children,
     class: classes,
   }: Props = $props()
@@ -46,6 +47,6 @@
   })
 </script>
 
-<Scrollable {scroll} align={snap} class={classes}>
+<Scrollable {scroll} {bleed} align={snap} class={classes}>
   {@render children()}
 </Scrollable>

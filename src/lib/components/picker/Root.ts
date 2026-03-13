@@ -5,6 +5,7 @@ export interface Props {
   scroll?: number
   onpick: (index: number) => void
   snap?: 'start' | 'center'
+  bleed?: boolean
   children: Snippet
   class?: string
 }

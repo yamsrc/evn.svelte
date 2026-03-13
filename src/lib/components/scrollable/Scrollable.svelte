@@ -7,11 +7,15 @@
     children,
     infinite = false,
     align = 'start',
+    bleed = false,
     class: classes,
+    id,
     dir,
     scroll = 0,
     onscroll,
   }: Props = $props()
+
+  const BLEED = 'mx-[calc(-50vw+50%)] px-[calc(50vw-50%)] scroll-px-[calc(50vw-50cqi)]'
 
   let mounted = $state(false)
 
@@ -20,12 +24,14 @@
   })
 </script>
 
-<div {dir}>
+<div {dir} class="@container">
   <div
+    {id}
     {@attach scrollable({ infinite, align, scroll }, mounted)}
     {onscroll}
     class={cn(
-      'px-4 flex overflow-x-auto no-scrollbar snap-x snap-mandatory overscroll-x-contain [&_.snap]:shrink-0',
+      'px-4 flex overflow-x-auto no-scrollbar snap-x snap-mandatory overscroll-x-contain *:shrink-0',
+      bleed && BLEED,
       classes,
     )}>
     {@render children?.()}

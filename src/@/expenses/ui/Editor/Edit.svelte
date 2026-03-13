@@ -1,6 +1,7 @@
 <script lang="ts">
   import { back } from '$com/history'
   import { Selector } from '@/adventures/ui'
+  import { Section } from '@/app/ui'
   import { add, update } from '@/expenses'
   import Attachments from '../Attachments.svelte'
   import { getContext } from './Context'
@@ -24,12 +25,14 @@
 </script>
 
 {#if !id}
-  <Selector
-    draft={{
-      title: ctx.value.title,
-      location: ctx.value.location,
-      attachments: [...ctx.value.attachments],
-    }} />
+  <Section class="overflow-visible">
+    <Selector
+      draft={{
+        title: ctx.value.title,
+        location: ctx.value.location,
+        attachments: [...ctx.value.attachments],
+      }} />
+  </Section>
 {/if}
 
 <Attachments bind:attachments={value.attachments} />

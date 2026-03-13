@@ -69,12 +69,14 @@
       </Section>
 
       {#if !eid}
-        <Selector
-          {id}
-          draft={form?.draft() ?? { title: '', attachments: [] }}
-          onchange={(v) => {
-            id = v
-          }} />
+        <Section>
+          <Selector
+            {id}
+            draft={form?.draft() ?? { title: '', attachments: [] }}
+            onchange={(v) => {
+              id = v
+            }} />
+        </Section>
       {/if}
 
       <Attachments attachments={form?.draft()?.attachments ?? []} />

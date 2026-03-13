@@ -58,7 +58,7 @@
     </Section>
 
     {#if adventures.length > 0}
-      <Section>
+      <Section class="space-y-2">
         <Adventures {adventures} notifications={$adventuresNotifications} />
       </Section>
     {/if}
