@@ -23,12 +23,14 @@
   }
 </script>
 
-<Selector
-  draft={{
-    title: ctx.value.title,
-    location: ctx.value.location,
-    attachments: [...ctx.value.attachments],
-  }} />
+{#if !id}
+  <Selector
+    draft={{
+      title: ctx.value.title,
+      location: ctx.value.location,
+      attachments: [...ctx.value.attachments],
+    }} />
+{/if}
 
 <Attachments bind:attachments={value.attachments} />
 <Form bind:value bind:mode {onsubmit} />

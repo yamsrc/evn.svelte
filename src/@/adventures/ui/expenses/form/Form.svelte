@@ -21,6 +21,7 @@
     const members = Object.keys(adventure.participants)
 
     return {
+      id: e.id,
       title: e.title ?? '',
       location: e.location,
       attachments: [...(e.attachments ?? [])],
@@ -29,8 +30,12 @@
     }
   }
 
+  const sorted = (v: unknown) => JSON.stringify(v, Object.keys(v as object).sort())
+
   // svelte-ignore state_referenced_locally
   const form = $state(seed(expense, $me?.id))
+  // svelte-ignore state_referenced_locally
+  const snapshot = sorted(seed(expense, $me?.id))
 
   let busy = $state(false)
   let submitButton = $state<HTMLButtonElement | null>(null)
@@ -38,6 +43,7 @@
   const payload = $derived(
     form.title.trim().length > 0 && form.amount > 0 && form.payer !== undefined
       ? {
+          id: form.id,
           title: form.title,
           amount: form.amount,
           payer: form.payer,
@@ -64,6 +70,8 @@
   async function submit() {
     if (!payload) return
 
+    if (form.id && sorted(payload) === snapshot) return back(`/adventures/${adventure.id}/`)
+
     busy = true
 
     const result = await adventures.expense(adventure.id, [payload])
@@ -89,7 +97,10 @@
 </Section>
 
 <Actions>
-  <Action id="adventures-expense-save-button" disabled={busy || !payload} onclick={() => submitButton?.click()}>
+  <Action
+    id="adventures-expense-save-button"
+    disabled={busy || !payload}
+    onclick={() => submitButton?.click()}>
     <Check />
     <span>{$common.expenses.form.save}</span>
   </Action>

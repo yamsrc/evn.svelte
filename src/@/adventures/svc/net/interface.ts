@@ -21,7 +21,7 @@ export async function patch(identity: string, id: string, body: Assign): Promise
 }
 
 export type ExpenseInput = Pick<Expense, 'title' | 'amount' | 'payer'> &
-  Partial<Pick<Expense, 'location' | 'date' | 'attachments'>>
+  Partial<Pick<Expense, 'id' | 'location' | 'date' | 'attachments'>>
 
 export interface Add {
   participants?: string[]
