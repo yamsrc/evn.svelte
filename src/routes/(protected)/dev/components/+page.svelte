@@ -20,5 +20,9 @@
     <li>
       <a href="receipts/">{$dict.components.receipts.title}</a>
     </li>
+    <li>
+      <!-- TODO: i18n -->
+      <a href="joins/">Invitations</a>
+    </li>
   </ul>
 </Section>
