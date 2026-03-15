@@ -3,8 +3,8 @@
 /// <reference lib="webworker" />
 /// <reference types="@sveltejs/kit" />
 
-// @ts-expect-error: wtf
 import { build, files, version } from '$service-worker'
+// @ts-expect-error: wtf
 import { PUBLIC_API_ORIGIN } from '$env/static/public'
 import type { Notification } from './@/transmission'
 
