@@ -39,7 +39,7 @@ spending:
   total: Gesamtausgaben
 me: Ich
 selector:
-  regular: Regelmäßige Ausgaben
+  regular: Aufteilen
 archive:
   header: |-
     !js

@@ -42,7 +42,8 @@ inputs:
     input: Me
   selector:
     regular:
-      input: Regular spending
+      input: Split
+      context: split expense/receipt etc
   archive:
     header:
       input: Archiving {title}

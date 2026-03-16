@@ -1,4 +1,4 @@
-import { PencilLine, Plus, User, Users } from '@lucide/svelte'
+import { ChartPie, Coins, Fan, UserPlus, Users } from '@lucide/svelte'
 import { ok } from 'svas'
 import { derived } from 'svelte/store'
 import { goto } from '$app/navigation'
@@ -25,7 +25,7 @@ function addAdventureExpense(dict: Dictionary, adventure: Adventure): ActionItem
   return {
     id: 'nav-actions-adventure-expense-button',
     name: adventure.title,
-    icon: PencilLine,
+    icon: Coins,
     onSelect: () => goto(`/adventures/${adventure.id}/expenses/editor/`),
   }
 }
@@ -33,8 +33,8 @@ function addAdventureExpense(dict: Dictionary, adventure: Adventure): ActionItem
 function addExpense(dict: Dictionary): ActionItem {
   return {
     id: 'nav-actions-cheques-input-button',
-    name: dict.actions.cheques.input,
-    icon: PencilLine,
+    name: dict.actions.expenses.split,
+    icon: ChartPie,
     onSelect: () => goto('/expenses/editor/'),
   }
 }
@@ -43,7 +43,7 @@ function addContact(dict: Dictionary): ActionItem {
   return {
     id: 'nav-actions-contacts-new-button',
     name: dict.actions.contacts.contact,
-    icon: User,
+    icon: UserPlus,
     onSelect: () => goto('/contacts/new/'),
   }
 }
@@ -61,7 +61,7 @@ function addAdventure(dict: Dictionary): ActionItem {
   return {
     id: 'nav-actions-adventures-new-button',
     name: dict.actions.adventures.adventure,
-    icon: Plus,
+    icon: Fan,
     onSelect: () => goto('/adventures/editor/'),
   }
 }
@@ -73,27 +73,27 @@ function latest(adventures: Adventure[]): Adventure | undefined {
 }
 
 export const actions = derived([dict, adventures], ([$dict, $adventures]) => {
-  const adventure = latest(ok($adventures) ? $adventures : [])
-
-  return [
-    ...(adventure !== undefined
-      ? [
-          {
-            name: 'adventure',
-            direction: 'col' as const,
-            items: [addAdventureExpense($dict, adventure)],
-          },
-        ]
-      : []),
+  const actions = [
     {
       name: $dict.actions.cheques.title,
       direction: 'col' as const,
-      items: [addContactGroup($dict)],
+      items: [addContactGroup($dict), addAdventure($dict)],
     },
     {
       name: $dict.actions.contacts.title,
       direction: 'row' as const,
-      items: [addContact($dict), addExpense($dict), addAdventure($dict)],
+      items: [addContact($dict), addExpense($dict)],
     },
   ] satisfies ActionGroup[]
+
+  const adventure = ok($adventures) ? latest($adventures) : undefined
+
+  if (adventure !== undefined)
+    actions.unshift({
+      name: $dict.actions.adventures.adventure,
+      direction: 'col' as const,
+      items: [addAdventureExpense($dict, adventure)],
+    })
+
+  return actions
 })

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Pencil } from '@lucide/svelte'
+  import { ChartPie } from '@lucide/svelte'
   import { ok } from 'svas'
   import { goto, replaceState } from '$app/navigation'
   import * as Picker from '$com/picker'
@@ -31,20 +31,20 @@
     } else goto(path, { replaceState: true, state })
   }
 
-  const card = 'w-40 shrink-0 overflow-hidden rounded-lg'
+  const card = 'shrink-0 overflow-hidden rounded-lg'
 </script>
 
 {#if active.length > 0}
   <Picker.Root {picked} scroll={picked} {onpick} align="start" bleed class="gap-2 py-1">
     <Picker.Option
       variant="outline"
-      class={[card, 'flex-col gap-1.5 items-center justify-center text-muted-foreground']}>
-      <Pencil />
+      class={[card, 'w-20 flex-col gap-1.5 items-center justify-center text-muted-foreground']}>
+      <ChartPie />
       <span class="text-sm">{$dict.selector.regular}</span>
     </Picker.Option>
 
     {#each active as adv (adv.id)}
-      <Picker.Option variant="outline" class={[card, 'p-0']}>
+      <Picker.Option variant="outline" class={[card, 'w-40 p-0']}>
         <Panel adventure={adv} class="size-full" />
       </Picker.Option>
     {/each}

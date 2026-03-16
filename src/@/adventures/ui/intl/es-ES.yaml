@@ -38,7 +38,7 @@ spending:
   total: Total gastado
 me: Yo
 selector:
-  regular: Gastos habituales
+  regular: Dividir
 archive:
   header: |-
     !js

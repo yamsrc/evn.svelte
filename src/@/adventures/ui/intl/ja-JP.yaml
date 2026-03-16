@@ -31,7 +31,7 @@ spending:
   total: 合計支出
 me: 私
 selector:
-  regular: 定期的な支出
+  regular: 割り勘
 archive:
   header: |-
     !js

@@ -12,7 +12,7 @@ actions:
   contacts:
     group: 添加群组
     title: 朋友
-    contact: 添加好友
+    contact: 朋友
   addSelected: 添加已选项
   cancel: 取消
   search: 搜索
@@ -21,6 +21,8 @@ actions:
   slide: 滑动
   adventures:
     adventure: 添加冒险
+  expenses:
+    split: 分摊
 nav:
   home: 首页
   profile: 我

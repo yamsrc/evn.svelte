@@ -38,7 +38,7 @@ spending:
   total: Totaal uitgegeven
 me: Ik
 selector:
-  regular: Regelmatige uitgaven
+  regular: Splitsen
 archive:
   header: |-
     !js

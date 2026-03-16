@@ -40,7 +40,7 @@ export const dictionaries = {
     },
     "me": "أنا",
     "selector": {
-      "regular": "الإنفاق المنتظم"
+      "regular": "تقسيم"
     },
     "archive": {
       "header": (title) => `يتم أرشفة "${title}"`,
@@ -100,7 +100,7 @@ export const dictionaries = {
     },
     "me": "Ich",
     "selector": {
-      "regular": "Regelmäßige Ausgaben"
+      "regular": "Aufteilen"
     },
     "archive": {
       "header": (title) => `"${title}" wird archiviert`,
@@ -160,7 +160,7 @@ export const dictionaries = {
     },
     "me": "Me",
     "selector": {
-      "regular": "Regular spending"
+      "regular": "Split"
     },
     "archive": {
       "header": (title) => `Archiving "${title}"`,
@@ -220,7 +220,7 @@ export const dictionaries = {
     },
     "me": "Yo",
     "selector": {
-      "regular": "Gastos habituales"
+      "regular": "Dividir"
     },
     "archive": {
       "header": (title) => `Archivando "${title}"`,
@@ -280,7 +280,7 @@ export const dictionaries = {
     },
     "me": "Moi",
     "selector": {
-      "regular": "Dépenses régulières"
+      "regular": "Partager"
     },
     "archive": {
       "header": (title) => `Archivage de « ${title} »`,
@@ -340,7 +340,7 @@ export const dictionaries = {
     },
     "me": "मैं",
     "selector": {
-      "regular": "नियमित खर्च"
+      "regular": "विभाजित करें"
     },
     "archive": {
       "header": (title) => `"${title}" को संग्रहित किया जा रहा है`,
@@ -400,7 +400,7 @@ export const dictionaries = {
     },
     "me": "Io",
     "selector": {
-      "regular": "Spese regolari"
+      "regular": "Dividi"
     },
     "archive": {
       "header": (title) => `Archiviazione di "${title}"`,
@@ -460,7 +460,7 @@ export const dictionaries = {
     },
     "me": "私",
     "selector": {
-      "regular": "定期的な支出"
+      "regular": "割り勘"
     },
     "archive": {
       "header": (title) => `"${title}" をアーカイブしています`,
@@ -520,7 +520,7 @@ export const dictionaries = {
     },
     "me": "나",
     "selector": {
-      "regular": "정기 지출"
+      "regular": "분할"
     },
     "archive": {
       "header": (title) => `"${title}"를 보관 중입니다`,
@@ -580,7 +580,7 @@ export const dictionaries = {
     },
     "me": "Ik",
     "selector": {
-      "regular": "Regelmatige uitgaven"
+      "regular": "Splitsen"
     },
     "archive": {
       "header": (title) => `"${title}" wordt gearchiveerd`,
@@ -640,7 +640,7 @@ export const dictionaries = {
     },
     "me": "Я",
     "selector": {
-      "regular": "Регулярные расходы"
+      "regular": "Разделить"
     },
     "archive": {
       "header": (title) => `Архивирование «${title}»`,
@@ -700,7 +700,7 @@ export const dictionaries = {
     },
     "me": "Mimi",
     "selector": {
-      "regular": "Matumizi ya kawaida"
+      "regular": "Gawanya"
     },
     "archive": {
       "header": (title) => `Inahifadhiwa kwenye kumbukumbu: "${title}"`,
@@ -760,7 +760,7 @@ export const dictionaries = {
     },
     "me": "Ben",
     "selector": {
-      "regular": "Düzenli harcamalar"
+      "regular": "Böl"
     },
     "archive": {
       "header": (title) => `"${title}" arşivleniyor`,
@@ -820,7 +820,7 @@ export const dictionaries = {
     },
     "me": "Я",
     "selector": {
-      "regular": "Регулярні витрати"
+      "regular": "Розділити"
     },
     "archive": {
       "header": (title) => `Архівування «${title}»`,
@@ -880,7 +880,7 @@ export const dictionaries = {
     },
     "me": "我",
     "selector": {
-      "regular": "定期支出"
+      "regular": "分摊"
     },
     "archive": {
       "header": (title) => `正在归档“${title}”`,

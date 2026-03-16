@@ -35,7 +35,7 @@ spending:
   total: إجمالي الإنفاق
 me: أنا
 selector:
-  regular: الإنفاق المنتظم
+  regular: تقسيم
 archive:
   header: |-
     !js

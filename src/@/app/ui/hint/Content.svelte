@@ -1,11 +1,13 @@
 <script lang="ts">
   import { getContext } from './Context'
-  import type { Snippet } from 'svelte'
+  import type { Props } from './Content'
 
-  const { children }: { children: Snippet } = $props()
+  const { children, class: classes, ...props }: Props = $props()
   const ctx = getContext()
 </script>
 
 {#if !ctx.dismissing}
-  {@render children()}
+  <div class={['space-y-4', classes]} {...props}>
+    {@render children()}
+  </div>
 {/if}

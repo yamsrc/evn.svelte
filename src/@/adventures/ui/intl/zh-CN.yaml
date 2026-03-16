@@ -30,7 +30,7 @@ spending:
   total: 总支出
 me: 我
 selector:
-  regular: 定期支出
+  regular: 分摊
 archive:
   header: |-
     !js

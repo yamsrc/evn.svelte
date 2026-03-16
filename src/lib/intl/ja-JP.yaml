@@ -12,7 +12,7 @@ actions:
   contacts:
     group: グループを追加
     title: 友達
-    contact: 友達を追加
+    contact: 友達
   addSelected: 選択したものを追加
   cancel: キャンセル
   search: 検索
@@ -21,6 +21,8 @@ actions:
   slide: スワイプ
   adventures:
     adventure: アドベンチャーを追加
+  expenses:
+    split: 割り勘
 nav:
   home: ホーム
   profile: 私

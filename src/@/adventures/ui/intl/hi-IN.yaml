@@ -38,7 +38,7 @@ spending:
   total: कुल खर्च
 me: मैं
 selector:
-  regular: नियमित खर्च
+  regular: विभाजित करें
 archive:
   header: |-
     !js

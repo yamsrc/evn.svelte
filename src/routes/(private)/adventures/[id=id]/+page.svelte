@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Plus, Settings } from '@lucide/svelte'
+  import { Coins, Settings } from '@lucide/svelte'
   import { Async } from 'svas'
   import { page } from '$app/state'
   import { Actions } from '$com/shell'
@@ -73,7 +73,7 @@
           <Action
             id="adventures-view-create-action"
             href={`/adventures/${adventure.id}/expenses/editor/`}>
-            <Plus />
+            <Coins />
             <span>{$common.actions.create}</span>
           </Action>
         </Actions>

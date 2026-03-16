@@ -39,7 +39,7 @@ spending:
   total: Total dépensé
 me: Moi
 selector:
-  regular: Dépenses régulières
+  regular: Partager
 archive:
   header: "!js\n(title) => `Archivage de «\_${title}\_»`"
   warning: L’archivage de l’aventure est définitif et ne peut pas être annulé.

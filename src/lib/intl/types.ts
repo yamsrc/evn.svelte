@@ -35,6 +35,9 @@ export type Dictionary = {
         adventures: {
           adventure: string
         }
+        expenses: {
+          split: string
+        }
       }
       nav: {
         home: string

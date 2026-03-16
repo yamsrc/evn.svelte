@@ -38,7 +38,7 @@ spending:
   total: Toplam harcama
 me: Ben
 selector:
-  regular: Düzenli harcamalar
+  regular: Böl
 archive:
   header: |-
     !js

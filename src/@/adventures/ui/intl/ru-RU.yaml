@@ -38,7 +38,7 @@ spending:
   total: Всего потрачено
 me: Я
 selector:
-  regular: Регулярные расходы
+  regular: Разделить
 archive:
   header: |-
     !js

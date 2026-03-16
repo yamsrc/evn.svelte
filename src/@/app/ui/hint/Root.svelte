@@ -27,7 +27,7 @@
   <Panel
     {name}
     class={[
-      'w-full h-fit p-4 flex flex-col gap-3',
+      'w-full h-fit flex flex-col gap-3',
       'bg-muted border border-muted-foreground/20 rounded-lg',
       classes,
     ]}>

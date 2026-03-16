@@ -33,7 +33,8 @@ inputs:
       title:
         input: Friends
       contact:
-        input: Add Friend
+        input: Friend
+        context: without gender forms
     addSelected:
       input: Add selected
     cancel:
@@ -49,6 +50,10 @@ inputs:
     adventures:
       adventure:
         input: Add Adventure
+    expenses:
+      split:
+        input: Split
+        context: split expense/receipt etc
   nav:
     home:
       input: Home

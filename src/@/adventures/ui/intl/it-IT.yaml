@@ -38,7 +38,7 @@ spending:
   total: Totale speso
 me: Io
 selector:
-  regular: Spese regolari
+  regular: Dividi
 archive:
   header: |-
     !js
