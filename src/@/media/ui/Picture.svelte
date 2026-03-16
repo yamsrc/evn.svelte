@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { url, sources, type Props } from './Picture'
+  import { url, srcSet, type Props } from './Picture'
 
   let {
     ref = $bindable(),
@@ -20,7 +20,7 @@
 <img
   bind:this={ref}
   src={url({ id, path, variant, format })}
-  srcset={variant ? sources({ id, path, variant, format }, densities) : undefined}
+  srcset={variant ? srcSet({ id, path, variant, format }, densities) : undefined}
   alt={alt ?? id}
   {width}
   {height}

@@ -3,7 +3,7 @@
   import { Loader } from '$com/loader'
   import * as Picker from '$com/picker'
   import { presets, upload } from '@/adventures'
-  import { bg } from '@/media/ui/Picture'
+  import { imageSet } from '@/media/ui/Picture'
   import { dict } from './intl'
   import type { Props } from './Cover'
 
@@ -77,7 +77,7 @@
       </Picker.Option>
 
       {#each all as id (id)}
-        {@const image = bg({ id, path: '/pictures/', variant: '700x500!', format: 'webp' })}
+        {@const image = imageSet({ id, path: '/pictures/', variant: '700x500', format: 'webp' })}
         {@const vt =
           id === current
             ? 'view-transition-name: adventure-cover; view-transition-class: transition-morph;'

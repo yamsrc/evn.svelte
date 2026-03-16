@@ -11,5 +11,5 @@
 </Section>
 
 <Section>
-  <Picture id="31ab0842c23bf715e5530121f906e8d1" variant="300x300!" />
+  <Picture id="31ab0842c23bf715e5530121f906e8d1" variant="700x500" />
 </Section>

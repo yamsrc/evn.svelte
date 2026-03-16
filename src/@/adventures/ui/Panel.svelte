@@ -4,7 +4,7 @@
   import { Button } from '$ui/button'
   import { Avatars, Coins } from '@/app/ui'
   import { account } from '@/iam'
-  import { bg } from '@/media/ui/Picture'
+  import { imageSet } from '@/media/ui/Picture'
   import Archived from './Archived.svelte'
   import { dict } from './intl'
   import type { Props } from './Panel'
@@ -24,7 +24,7 @@
 
   const background = $derived(
     adventure.picture
-      ? `background-image: ${bg({ id: adventure.picture, path: '/pictures/', variant })}`
+      ? `background-image: ${imageSet({ id: adventure.picture, path: '/pictures/', variant })}`
       : undefined,
   )
 
