@@ -64,12 +64,12 @@
     <Hint.Root key="adventures">
       <Hint.Content>
         <p class="text-sm">{$dict.editor.info}</p>
+        <Hint.Actions>
+          <Hint.Dismiss>
+            {$dict.hint.dismiss}
+          </Hint.Dismiss>
+        </Hint.Actions>
       </Hint.Content>
-      <Hint.Actions>
-        <Hint.Dismiss>
-          {$dict.hint.dismiss}
-        </Hint.Dismiss>
-      </Hint.Actions>
     </Hint.Root>
   </Section>
 {/if}
