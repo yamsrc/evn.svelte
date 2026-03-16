@@ -5,7 +5,7 @@
   import { numbers } from '@/expenses'
   import { dict, locale } from '@/notifications/ui/intl'
   import Base from '../Base.svelte'
-  import type { Props } from './Created'
+  import type { Props } from './Expense'
 
   const { notification }: Props = $props()
 
@@ -23,9 +23,9 @@
     {#snippet awaited(account)}
       <Base href={`/expenses/editor/${notification.key}`}>
         <div>
-          {notification.payload.title}
+          {notification.payload.title} &bull; {amount}
           <p class="text-muted-foreground">
-            {$dict.expenses.created(amount, account.name, account.grammar)}
+            {$dict.expenses.expense([account.name])}
           </p>
         </div>
       </Base>

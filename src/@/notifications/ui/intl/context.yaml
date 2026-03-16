@@ -39,6 +39,6 @@ inputs:
         owe:
           input: You owe {balance} now
   expenses:
-    created:
-      input: "{amount} paid by {name}"
-      context: use gender
+    expense:
+      input: Paid by {...names}
+      context: "names - formatted list"
