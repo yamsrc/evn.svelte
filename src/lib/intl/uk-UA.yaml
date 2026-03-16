@@ -10,7 +10,7 @@ actions:
     scan: Сканувати чек
     input: Додати витрату
   contacts:
-    group: Додати групу
+    group: Створити групу
     title: Друзі
     contact: Друг
   addSelected: Додати вибране
@@ -20,7 +20,7 @@ actions:
   create: Створити
   slide: Змахни
   adventures:
-    adventure: Додати пригоду
+    adventure: Розпочати пригоду
   expenses:
     split: Розділити
 nav:

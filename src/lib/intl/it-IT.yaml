@@ -10,7 +10,7 @@ actions:
     scan: Scansiona assegno
     input: Aggiungi spesa
   contacts:
-    group: Aggiungi gruppo
+    group: Crea gruppo
     title: Amici
     contact: Amico
   addSelected: Aggiungi selezionati
@@ -20,7 +20,7 @@ actions:
   create: Crea
   slide: Scorri
   adventures:
-    adventure: Aggiungi avventura
+    adventure: Inizia l’avventura
   expenses:
     split: Dividi
 nav:

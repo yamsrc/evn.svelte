@@ -10,7 +10,7 @@ actions:
     scan: चेक स्कैन करें
     input: खर्च जोड़ें
   contacts:
-    group: समूह जोड़ें
+    group: समूह बनाएँ
     title: मित्र
     contact: मित्र
   addSelected: चयनित जोड़ें
@@ -20,7 +20,7 @@ actions:
   create: सृजन करें
   slide: स्वाइप करें
   adventures:
-    adventure: एडवेंचर जोड़ें
+    adventure: साहसिक यात्रा शुरू करें
   expenses:
     split: विभाजित करें
 nav:

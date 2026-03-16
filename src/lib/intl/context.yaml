@@ -29,7 +29,8 @@ inputs:
         context: button label
     contacts:
       group:
-        input: Add Group
+        input: Create Group
+        context: Button label
       title:
         input: Friends
       contact:
@@ -49,7 +50,8 @@ inputs:
       input: Смахни
     adventures:
       adventure:
-        input: Add Adventure
+        input: Start Adventure
+        context: Button label
     expenses:
       split:
         input: Split

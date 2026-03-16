@@ -10,7 +10,7 @@ actions:
     scan: Escanear cheque
     input: Añadir gasto
   contacts:
-    group: Agregar grupo
+    group: Crear grupo
     title: Amigos
     contact: Amigo
   addSelected: Agregar seleccionado(s)
@@ -20,7 +20,7 @@ actions:
   create: Crear
   slide: Desliza
   adventures:
-    adventure: Agregar aventura
+    adventure: Comenzar aventura
   expenses:
     split: Dividir
 nav:

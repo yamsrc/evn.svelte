@@ -10,7 +10,7 @@ actions:
     scan: Changanua hundi
     input: Ongeza gharama
   contacts:
-    group: Ongeza Kikundi
+    group: Unda Kikundi
     title: Marafiki
     contact: Rafiki
   addSelected: Ongeza zilizochaguliwa
@@ -20,7 +20,7 @@ actions:
   create: Unda
   slide: Pangusa
   adventures:
-    adventure: Ongeza tukio la kusisimua
+    adventure: Anza safari
   expenses:
     split: Gawanya
 nav:

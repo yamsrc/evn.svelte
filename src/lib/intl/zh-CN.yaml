@@ -10,7 +10,7 @@ actions:
     scan: 扫描支票
     input: 添加支出
   contacts:
-    group: 添加群组
+    group: 创建群组
     title: 朋友
     contact: 朋友
   addSelected: 添加已选项
@@ -20,7 +20,7 @@ actions:
   create: 创建
   slide: 滑动
   adventures:
-    adventure: 添加冒险
+    adventure: 开始冒险
   expenses:
     split: 分摊
 nav:

@@ -10,7 +10,7 @@ actions:
     scan: Çeki tara
     input: Gider Ekle
   contacts:
-    group: Grup Ekle
+    group: Grup Oluştur
     title: Arkadaşlar
     contact: Arkadaş
   addSelected: Seçileni ekle
@@ -20,7 +20,7 @@ actions:
   create: Oluştur
   slide: Kaydır
   adventures:
-    adventure: Macera Ekle
+    adventure: Macera Başlat
   expenses:
     split: Böl
 nav:

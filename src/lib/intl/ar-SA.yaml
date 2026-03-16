@@ -10,7 +10,7 @@ actions:
     scan: مسح الشيك
     input: إضافة مصروف
   contacts:
-    group: إضافة مجموعة
+    group: إنشاء مجموعة
     title: أصدقاء
     contact: صديق
   addSelected: إضافة المحدد
@@ -20,7 +20,7 @@ actions:
   create: إنشاء
   slide: اسحب
   adventures:
-    adventure: أضف مغامرة
+    adventure: ابدأ المغامرة
   expenses:
     split: تقسيم
 nav:

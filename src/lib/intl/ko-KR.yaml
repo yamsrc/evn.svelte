@@ -10,7 +10,7 @@ actions:
     scan: 수표 스캔
     input: 지출 추가
   contacts:
-    group: 그룹 추가
+    group: 그룹 만들기
     title: 친구
     contact: 친구
   addSelected: 선택 항목 추가
@@ -20,7 +20,7 @@ actions:
   create: 생성
   slide: 스와이프
   adventures:
-    adventure: 모험 추가
+    adventure: 모험 시작하기
   expenses:
     split: 나누기
 nav:

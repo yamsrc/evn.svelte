@@ -10,7 +10,7 @@ actions:
     scan: Cheque scannen
     input: Uitgave toevoegen
   contacts:
-    group: Groep toevoegen
+    group: Groep aanmaken
     title: Vrienden
     contact: Vriend
   addSelected: Geselecteerde toevoegen
@@ -20,7 +20,7 @@ actions:
   create: Aanmaken
   slide: Veeg
   adventures:
-    adventure: Avontuur toevoegen
+    adventure: Avontuur starten
   expenses:
     split: Splitsen
 nav:

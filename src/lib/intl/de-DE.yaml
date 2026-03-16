@@ -10,7 +10,7 @@ actions:
     scan: Scheck scannen
     input: Ausgabe hinzufügen
   contacts:
-    group: Gruppe hinzufügen
+    group: Gruppe erstellen
     title: Freunde
     contact: Freund
   addSelected: Ausgewählte hinzufügen
@@ -20,7 +20,7 @@ actions:
   create: Erstellen
   slide: Wischen
   adventures:
-    adventure: Abenteuer hinzufügen
+    adventure: Abenteuer starten
   expenses:
     split: Aufteilen
 nav:

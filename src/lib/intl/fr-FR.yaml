@@ -10,7 +10,7 @@ actions:
     scan: Scanner le chèque
     input: Ajouter une dépense
   contacts:
-    group: Ajouter un groupe
+    group: Créer un groupe
     title: Amis
     contact: Ami
   addSelected: Ajouter la sélection
@@ -20,7 +20,7 @@ actions:
   create: Créer
   slide: Balaye
   adventures:
-    adventure: Ajouter une aventure
+    adventure: Commencer l’aventure
   expenses:
     split: Partager
 nav:

@@ -10,7 +10,7 @@ actions:
     scan: Scan cheque
     input: Add Expense
   contacts:
-    group: Add Group
+    group: Create Group
     title: Friends
     contact: Friend
   addSelected: Add selected
@@ -20,7 +20,7 @@ actions:
   create: Create
   slide: Swipe
   adventures:
-    adventure: Add Adventure
+    adventure: Start Adventure
   expenses:
     split: Split
 nav:

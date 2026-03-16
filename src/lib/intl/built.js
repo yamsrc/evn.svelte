@@ -16,7 +16,7 @@ export const dictionaries = {
         "input": "إضافة مصروف"
       },
       "contacts": {
-        "group": "إضافة مجموعة",
+        "group": "إنشاء مجموعة",
         "title": "أصدقاء",
         "contact": "صديق"
       },
@@ -27,7 +27,7 @@ export const dictionaries = {
       "create": "إنشاء",
       "slide": "اسحب",
       "adventures": {
-        "adventure": "أضف مغامرة"
+        "adventure": "ابدأ المغامرة"
       },
       "expenses": {
         "split": "تقسيم"
@@ -221,7 +221,7 @@ export const dictionaries = {
         "input": "Ausgabe hinzufügen"
       },
       "contacts": {
-        "group": "Gruppe hinzufügen",
+        "group": "Gruppe erstellen",
         "title": "Freunde",
         "contact": "Freund"
       },
@@ -232,7 +232,7 @@ export const dictionaries = {
       "create": "Erstellen",
       "slide": "Wischen",
       "adventures": {
-        "adventure": "Abenteuer hinzufügen"
+        "adventure": "Abenteuer starten"
       },
       "expenses": {
         "split": "Aufteilen"
@@ -426,7 +426,7 @@ export const dictionaries = {
         "input": "Add Expense"
       },
       "contacts": {
-        "group": "Add Group",
+        "group": "Create Group",
         "title": "Friends",
         "contact": "Friend"
       },
@@ -437,7 +437,7 @@ export const dictionaries = {
       "create": "Create",
       "slide": "Swipe",
       "adventures": {
-        "adventure": "Add Adventure"
+        "adventure": "Start Adventure"
       },
       "expenses": {
         "split": "Split"
@@ -631,7 +631,7 @@ export const dictionaries = {
         "input": "Añadir gasto"
       },
       "contacts": {
-        "group": "Agregar grupo",
+        "group": "Crear grupo",
         "title": "Amigos",
         "contact": "Amigo"
       },
@@ -642,7 +642,7 @@ export const dictionaries = {
       "create": "Crear",
       "slide": "Desliza",
       "adventures": {
-        "adventure": "Agregar aventura"
+        "adventure": "Comenzar aventura"
       },
       "expenses": {
         "split": "Dividir"
@@ -836,7 +836,7 @@ export const dictionaries = {
         "input": "Ajouter une dépense"
       },
       "contacts": {
-        "group": "Ajouter un groupe",
+        "group": "Créer un groupe",
         "title": "Amis",
         "contact": "Ami"
       },
@@ -847,7 +847,7 @@ export const dictionaries = {
       "create": "Créer",
       "slide": "Balaye",
       "adventures": {
-        "adventure": "Ajouter une aventure"
+        "adventure": "Commencer l’aventure"
       },
       "expenses": {
         "split": "Partager"
@@ -1041,7 +1041,7 @@ export const dictionaries = {
         "input": "खर्च जोड़ें"
       },
       "contacts": {
-        "group": "समूह जोड़ें",
+        "group": "समूह बनाएँ",
         "title": "मित्र",
         "contact": "मित्र"
       },
@@ -1052,7 +1052,7 @@ export const dictionaries = {
       "create": "सृजन करें",
       "slide": "स्वाइप करें",
       "adventures": {
-        "adventure": "एडवेंचर जोड़ें"
+        "adventure": "साहसिक यात्रा शुरू करें"
       },
       "expenses": {
         "split": "विभाजित करें"
@@ -1246,7 +1246,7 @@ export const dictionaries = {
         "input": "Aggiungi spesa"
       },
       "contacts": {
-        "group": "Aggiungi gruppo",
+        "group": "Crea gruppo",
         "title": "Amici",
         "contact": "Amico"
       },
@@ -1257,7 +1257,7 @@ export const dictionaries = {
       "create": "Crea",
       "slide": "Scorri",
       "adventures": {
-        "adventure": "Aggiungi avventura"
+        "adventure": "Inizia l’avventura"
       },
       "expenses": {
         "split": "Dividi"
@@ -1451,7 +1451,7 @@ export const dictionaries = {
         "input": "支出を追加"
       },
       "contacts": {
-        "group": "グループを追加",
+        "group": "グループを作成",
         "title": "友達",
         "contact": "友達"
       },
@@ -1462,7 +1462,7 @@ export const dictionaries = {
       "create": "作成",
       "slide": "スワイプ",
       "adventures": {
-        "adventure": "アドベンチャーを追加"
+        "adventure": "冒険を始める"
       },
       "expenses": {
         "split": "割り勘"
@@ -1656,7 +1656,7 @@ export const dictionaries = {
         "input": "지출 추가"
       },
       "contacts": {
-        "group": "그룹 추가",
+        "group": "그룹 만들기",
         "title": "친구",
         "contact": "친구"
       },
@@ -1667,7 +1667,7 @@ export const dictionaries = {
       "create": "생성",
       "slide": "스와이프",
       "adventures": {
-        "adventure": "모험 추가"
+        "adventure": "모험 시작하기"
       },
       "expenses": {
         "split": "나누기"
@@ -1861,7 +1861,7 @@ export const dictionaries = {
         "input": "Uitgave toevoegen"
       },
       "contacts": {
-        "group": "Groep toevoegen",
+        "group": "Groep aanmaken",
         "title": "Vrienden",
         "contact": "Vriend"
       },
@@ -1872,7 +1872,7 @@ export const dictionaries = {
       "create": "Aanmaken",
       "slide": "Veeg",
       "adventures": {
-        "adventure": "Avontuur toevoegen"
+        "adventure": "Avontuur starten"
       },
       "expenses": {
         "split": "Splitsen"
@@ -2066,7 +2066,7 @@ export const dictionaries = {
         "input": "Добавить расход"
       },
       "contacts": {
-        "group": "Добавить группу",
+        "group": "Создать группу",
         "title": "Друзья",
         "contact": "Друг"
       },
@@ -2077,7 +2077,7 @@ export const dictionaries = {
       "create": "Создать",
       "slide": "Смахни",
       "adventures": {
-        "adventure": "Добавить приключение"
+        "adventure": "Начать приключение"
       },
       "expenses": {
         "split": "Разделить"
@@ -2271,7 +2271,7 @@ export const dictionaries = {
         "input": "Ongeza gharama"
       },
       "contacts": {
-        "group": "Ongeza Kikundi",
+        "group": "Unda Kikundi",
         "title": "Marafiki",
         "contact": "Rafiki"
       },
@@ -2282,7 +2282,7 @@ export const dictionaries = {
       "create": "Unda",
       "slide": "Pangusa",
       "adventures": {
-        "adventure": "Ongeza tukio la kusisimua"
+        "adventure": "Anza safari"
       },
       "expenses": {
         "split": "Gawanya"
@@ -2476,7 +2476,7 @@ export const dictionaries = {
         "input": "Gider Ekle"
       },
       "contacts": {
-        "group": "Grup Ekle",
+        "group": "Grup Oluştur",
         "title": "Arkadaşlar",
         "contact": "Arkadaş"
       },
@@ -2487,7 +2487,7 @@ export const dictionaries = {
       "create": "Oluştur",
       "slide": "Kaydır",
       "adventures": {
-        "adventure": "Macera Ekle"
+        "adventure": "Macera Başlat"
       },
       "expenses": {
         "split": "Böl"
@@ -2681,7 +2681,7 @@ export const dictionaries = {
         "input": "Додати витрату"
       },
       "contacts": {
-        "group": "Додати групу",
+        "group": "Створити групу",
         "title": "Друзі",
         "contact": "Друг"
       },
@@ -2692,7 +2692,7 @@ export const dictionaries = {
       "create": "Створити",
       "slide": "Змахни",
       "adventures": {
-        "adventure": "Додати пригоду"
+        "adventure": "Розпочати пригоду"
       },
       "expenses": {
         "split": "Розділити"
@@ -2886,7 +2886,7 @@ export const dictionaries = {
         "input": "添加支出"
       },
       "contacts": {
-        "group": "添加群组",
+        "group": "创建群组",
         "title": "朋友",
         "contact": "朋友"
       },
@@ -2897,7 +2897,7 @@ export const dictionaries = {
       "create": "创建",
       "slide": "滑动",
       "adventures": {
-        "adventure": "添加冒险"
+        "adventure": "开始冒险"
       },
       "expenses": {
         "split": "分摊"

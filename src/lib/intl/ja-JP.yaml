@@ -10,7 +10,7 @@ actions:
     scan: 小切手をスキャン
     input: 支出を追加
   contacts:
-    group: グループを追加
+    group: グループを作成
     title: 友達
     contact: 友達
   addSelected: 選択したものを追加
@@ -20,7 +20,7 @@ actions:
   create: 作成
   slide: スワイプ
   adventures:
-    adventure: アドベンチャーを追加
+    adventure: 冒険を始める
   expenses:
     split: 割り勘
 nav:
