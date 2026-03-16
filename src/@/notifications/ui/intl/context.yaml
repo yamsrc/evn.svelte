@@ -40,5 +40,5 @@ inputs:
           input: You owe {balance} now
   expenses:
     expense:
-      input: Paid by [names]
-      context: "[names] - formatted list"
+      input: Paid by {...names}
+      context: "names - formatted list"
