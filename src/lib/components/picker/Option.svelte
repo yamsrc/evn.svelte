@@ -21,7 +21,7 @@
     data-picked={picked ? '' : undefined}
     class={['h-full', SNAP[ctx.state.snap], classes]}
     onclick={(event) => {
-      if (index) ctx.pick(index)
+      if (index !== undefined) ctx.pick(index)
 
       onclick?.(event)
     }}>
