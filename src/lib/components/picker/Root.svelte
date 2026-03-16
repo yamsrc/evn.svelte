@@ -1,52 +1,26 @@
 <script lang="ts">
   import { Scrollable } from '$com/scrollable'
-  import { setContext, type Entry } from './Context'
+  import { setContext, type Context } from './Context'
   import type { Props } from './Root'
 
-  const {
-    picked,
-    scroll: target = picked,
-    onpick,
-    align = 'start',
-    children,
-    class: classes,
-    ...rest
-  }: Props = $props()
+  const { picked, onpick, align = 'start', children, class: classes, ...rest }: Props = $props()
 
-  let entries: Entry[] = $state([])
-
-  const ui: { chosen?: symbol; snap: 'start' | 'center' | 'end' } = $state({
+  const ui: Context['state'] = $state({
     chosen: undefined,
     snap: 'start',
   })
 
-  const picks = $derived(entries.filter((entry) => entry.pickable()))
-  const chosen = $derived(picked >= 0 && picked < picks.length ? picks[picked].id : undefined)
-  const scroll = $derived(
-    target >= 0 && target < picks.length
-      ? entries.findIndex((entry) => entry.id === picks[target].id)
-      : -1,
-  )
-
   $effect(() => {
-    ui.chosen = chosen
+    ui.chosen = picked
     ui.snap = align
   })
 
   setContext({
     state: ui,
-    pick: (id) => {
-      const index = picks.findIndex((entry) => entry.id === id)
-
-      if (index >= 0) onpick(index)
-    },
-    register: (entry) => entries.push(entry),
-    unregister: (id) => {
-      entries = entries.filter((entry) => entry.id !== id)
-    },
+    pick: (index) => onpick(index),
   })
 </script>
 
-<Scrollable {scroll} {align} class={classes} {...rest}>
+<Scrollable scroll={ui.chosen} {align} class={classes} {...rest}>
   {@render children()}
 </Scrollable>

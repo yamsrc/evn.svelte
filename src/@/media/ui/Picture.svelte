@@ -15,6 +15,8 @@
     style,
     loading,
   }: Props = $props()
+
+  let loaded = $state(false)
 </script>
 
 <img
@@ -24,6 +26,7 @@
   alt={alt ?? id}
   {width}
   {height}
-  class={classes}
+  onload={() => (loaded = true)}
+  class={[!loaded && 'bg-muted animate-pulse', classes]}
   {style}
   {loading} />

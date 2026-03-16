@@ -2,31 +2,30 @@
   import { ImageUp } from '@lucide/svelte'
   import { Loader } from '$com/loader'
   import * as Picker from '$com/picker'
+  import { buttonVariants } from '$ui/button'
   import { presets, upload } from '@/adventures'
-  import { imageSet } from '@/media/ui/Picture'
+  import { Picture } from '@/media/ui'
   import { dict } from './intl'
   import type { Props } from './Cover'
 
-  const { picture, onchange }: Props = $props()
+  const UPLOAD = 1
+
+  let { picture = $bindable(), onchange }: Props = $props()
 
   let input = $state<HTMLInputElement | null>(null)
   let uploading = $state(false)
-  let uploaded = $state<string | null>(null)
-  let scrolled = $state(false)
 
-  // svelte-ignore state_referenced_locally
-  const saved = !presets.includes(picture) && picture ? picture : null
-  const custom = $derived(uploaded ?? saved)
-  const all = $derived(custom ? [custom, ...presets] : presets)
-  const current = $derived(picture)
-  const picked = $derived(all.indexOf(current))
-  const scroll = $derived(scrolled || picked > 0 ? picked : -1)
+  let uploaded = $state<string | null>(picture && !presets.includes(picture) ? picture : null)
+
+  const options = $derived(uploaded ? [uploaded, ...presets] : presets)
+  const picked = $derived(picture ? options.indexOf(picture) + UPLOAD : undefined)
+
   const card =
     'w-[calc(50cqi-var(--gap)/2)] max-w-64 aspect-[1.4] shrink-0 overflow-hidden rounded-lg'
 
   function onpick(index: number) {
-    scrolled = true
-    onchange(all[index])
+    picture = options[index - UPLOAD]
+    onchange?.(picture)
   }
 
   async function handleUpload(event: Event) {
@@ -36,16 +35,16 @@
 
     uploading = true
 
-    const result = await upload(target.files[0])
+    const entry = await upload(target.files[0])
 
     uploading = false
     target.value = ''
 
-    if (result instanceof Error) return
+    if (entry instanceof Error) return
 
-    scrolled = true
-    uploaded = result.id
-    onchange(result.id)
+    uploaded = entry.id
+    picture = entry.id
+    onchange?.(entry.id)
   }
 </script>
 
@@ -53,39 +52,39 @@
   <h2>{$dict.editor.cover}</h2>
   <input type="file" accept="image/*" bind:this={input} onchange={handleUpload} class="hidden" />
 
-  {#key custom}
-    <Picker.Root
-      {picked}
-      {scroll}
-      {onpick}
-      bleed
-      align="center"
-      class="[--gap:calc(var(--spacing)*1.5)] gap-(--gap) py-1">
-      <Picker.Option
-        id="adventures-cover-upload-button"
-        pickable={false}
-        variant="outline"
-        onclick={() => input?.click()}
-        disabled={uploading}
-        class={[card, 'flex-col items-center justify-center gap-2 text-muted-foreground']}>
-        {#if uploading}
-          <Loader />
-        {:else}
-          <ImageUp class="size-6" />
-        {/if}
-        <span class={['text-xs', uploading && 'hidden']}>{$dict.editor.upload}</span>
-      </Picker.Option>
+  {uploaded}
+  <Picker.Root
+    {picked}
+    {onpick}
+    bleed
+    align="center"
+    class="[--gap:calc(var(--spacing)*1.5)] gap-(--gap) py-1">
+    <Picker.Option
+      id="adventures-cover-upload-button"
+      variant="outline"
+      onclick={() => input?.click()}
+      disabled={uploading}
+      class={[
+        buttonVariants({ variant: 'outline' }),
+        card,
+        'flex-col items-center justify-center gap-2 text-muted-foreground',
+      ]}>
+      {#if uploading}
+        <Loader />
+      {:else}
+        <ImageUp class="size-6" />
+      {/if}
+      <span class={['text-xs', uploading && 'hidden']}>{$dict.editor.upload}</span>
+    </Picker.Option>
 
-      {#each all as id (id)}
-        {@const image = imageSet({ id, path: '/pictures/', variant: '700x500', format: 'webp' })}
-        {@const vt =
-          id === current
-            ? 'view-transition-name: adventure-cover; view-transition-class: transition-morph;'
-            : ''}
-        <Picker.Option
-          class={[card, 'bg-cover bg-center']}
-          style="background-image: {image}; {vt}" />
-      {/each}
-    </Picker.Root>
-  {/key}
+    {#each options as id, index (id)}
+      {@const vt =
+        id === picture
+          ? 'view-transition-name: adventure-cover; view-transition-class: transition-morph;'
+          : ''}
+      <Picker.Option class={card} index={index + UPLOAD}>
+        <Picture {id} variant="700x500" class="h-full w-full object-cover" style={vt} />
+      </Picker.Option>
+    {/each}
+  </Picker.Root>
 </div>

@@ -1,19 +1,12 @@
 import { setContext as set, getContext as get } from 'svelte'
 
-export interface Entry {
-  id: symbol
-  pickable: () => boolean
-}
-
 export interface Context {
   state: State
-  pick: (id: symbol) => void
-  register: (entry: Entry) => void
-  unregister: (id: symbol) => void
+  pick: (index: number) => void
 }
 
 export interface State {
-  chosen?: symbol
+  chosen?: number
   snap: 'start' | 'center' | 'end'
 }
 
