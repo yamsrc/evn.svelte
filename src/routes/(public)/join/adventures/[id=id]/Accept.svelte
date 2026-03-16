@@ -44,14 +44,14 @@
 
     {#if inviter}
       <div class="flex flex-col items-center gap-3">
-        <Picture account={inviter} class="size-24" variant="96x96!" />
+        <Picture account={inviter} class="size-24" />
         <p class="text-center text-muted-foreground">
           {$dict.adventures.dialog.description(inviter.name, inviter.grammar)}
         </p>
       </div>
     {/if}
 
-    <Panel {adventure} variant="470x100!" />
+    <Panel {adventure} />
 
     <AlertDialog.Footer class="flex-row">
       <AlertDialog.Cancel

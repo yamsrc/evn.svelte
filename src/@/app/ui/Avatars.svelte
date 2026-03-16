@@ -16,7 +16,7 @@
       {#each visible as identity (identity)}
         <Async store={accounts.get(identity)}>
           {#snippet awaited(account)}
-            <Picture {account} variant="32x32!" class="size-8 ring-2 ring-card shrink-0" />
+            <Picture {account} class="size-8 ring-2 ring-card shrink-0" />
           {/snippet}
         </Async>
       {/each}

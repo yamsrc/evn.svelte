@@ -77,7 +77,7 @@
       </Picker.Option>
 
       {#each all as id (id)}
-        {@const image = bg({ id, path: '/pictures/', variant: '260x180!', format: 'webp' })}
+        {@const image = bg({ id, path: '/pictures/', variant: '700x500!', format: 'webp' })}
         {@const vt =
           id === current
             ? 'view-transition-name: adventure-cover; view-transition-class: transition-morph;'
