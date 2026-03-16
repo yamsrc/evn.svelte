@@ -24,6 +24,7 @@ expenses:
   total: Toplam
   paidBy: Ödeyen
   paid: Ödendi
+  empty: Henüz hiçbir şey olmadı. Birkaç arkadaşını davet et ve harcamalar ekleyerek işleri başlat.
 spending:
   yours: Harcamalarınız
   total: Toplam harcama
@@ -34,9 +35,6 @@ archive:
   header: |-
     !js
     (title) => `"${title}" arşivleniyor`
-  delete:
-    description: Bu maceranın gideri yok ve silinecek
-    button: Macera sil
   warning: Macera arşivlendiğinde bu işlem kalıcıdır ve geri alınamaz.
 balance:
   header: "Bu macera arşivlenirken:"

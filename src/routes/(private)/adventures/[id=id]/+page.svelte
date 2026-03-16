@@ -64,7 +64,7 @@
       </Section>
 
       <Section>
-        <Expenses adventure={adventure.id} expenses={adventure.expenses} title={adventure.title} />
+        <Expenses {adventure} />
       </Section>
 
       {#if !adventure.archived}

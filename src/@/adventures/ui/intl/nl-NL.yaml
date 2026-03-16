@@ -24,6 +24,7 @@ expenses:
   total: Totaal
   paidBy: Betaald door
   paid: Betaald
+  empty: Er is nog niks gebeurd. Nodig wat vrienden uit en voeg uitgaven toe om op gang te komen.
 spending:
   yours: Jouw uitgaven
   total: Totaal uitgegeven
@@ -34,9 +35,6 @@ archive:
   header: |-
     !js
     (title) => `"${title}" wordt gearchiveerd`
-  delete:
-    description: Dit avontuur heeft geen uitgaven en wordt verwijderd
-    button: Avontuur verwijderen
   warning: Het archiveren van het avontuur is permanent en kan niet ongedaan worden gemaakt.
 balance:
   header: "Bij het archiveren van dit avontuur:"

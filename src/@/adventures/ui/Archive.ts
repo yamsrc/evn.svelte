@@ -1,4 +1,6 @@
+import type { Value } from './Editor/Context'
+
 export interface Props {
   id: string
-  empty: boolean
+  value: Value
 }

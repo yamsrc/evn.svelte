@@ -4,6 +4,10 @@
  * @author copilot
  */
 
+export type Locale = 'ar-SA' | 'de-DE' | 'en-US' | 'es-ES' | 'fr-FR' | 'hi-IN' | 'it-IT' | 'ja-JP' | 'ko-KR' | 'nl-NL' | 'ru-RU' | 'sw-TZ' | 'tr-TR' | 'uk-UA' | 'zh-CN'
+
+export type Grammar = string
+
 export type Dictionary = {
       members: {
         title: string
@@ -34,6 +38,7 @@ export type Dictionary = {
         total: string
         paidBy: string
         paid: string
+        empty: string
       }
       spending: {
         yours: string
@@ -45,10 +50,6 @@ export type Dictionary = {
       }
       archive: {
         header: (value: any) => string
-        delete: {
-          description: string
-          button: string
-        }
         warning: string
       }
       balance: {

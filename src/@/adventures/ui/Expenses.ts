@@ -1,7 +1,5 @@
-import type { Expense } from '@/adventures'
+import type { Adventure } from '@/adventures'
 
 export interface Props {
-  adventure: string
-  title: string
-  expenses: Expense[]
+  adventure: Adventure
 }

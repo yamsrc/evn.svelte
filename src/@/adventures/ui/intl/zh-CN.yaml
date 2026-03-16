@@ -24,6 +24,7 @@ expenses:
   total: 总计
   paidBy: 由...支付
   paid: 已支付
+  empty: 还没有任何活动。邀请一些朋友并添加花费，让事情开始运转吧。
 spending:
   yours: 你的支出
   total: 总支出
@@ -34,9 +35,6 @@ archive:
   header: |-
     !js
     (title) => `正在归档“${title}”`
-  delete:
-    description: 该冒险没有任何费用，并将被删除
-    button: 删除冒险
   warning: 归档此冒险将是永久性的，无法撤销。
 balance:
   header: 归档此冒险时：

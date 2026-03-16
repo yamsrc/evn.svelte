@@ -24,6 +24,7 @@ expenses:
   total: 合計
   paidBy: 支払者
   paid: 支払い済み
+  empty: まだ何も起きていません。友達を招待して、支出を追加してみましょう。
 spending:
   yours: あなたの支出
   total: 合計支出
@@ -34,9 +35,6 @@ archive:
   header: |-
     !js
     (title) => `"${title}" をアーカイブしています`
-  delete:
-    description: このアドベンチャーには費用がかからず、削除されます
-    button: 冒険を削除
   warning: 冒険のアーカイブは永久的で元に戻せません。
 balance:
   header: この冒険をアーカイブする際：

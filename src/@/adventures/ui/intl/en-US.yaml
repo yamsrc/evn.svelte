@@ -24,6 +24,7 @@ expenses:
   total: Total
   paidBy: Paid by
   paid: Paid
+  empty: Nothing happened yet. Invite some friends and add some spendings to get things started.
 spending:
   yours: Your spending
   total: Total spent
@@ -34,9 +35,6 @@ archive:
   header: |-
     !js
     (title) => `Archiving "${title}"`
-  delete:
-    description: This adventure has no expenses and will be deleted
-    button: Delete adventure
   warning: Archiving the adventure is permanent and cannot be undone.
 balance:
   header: "When archiving this adventure:"

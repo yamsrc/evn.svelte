@@ -31,6 +31,8 @@ inputs:
       input: Paid by
     paid:
       input: Paid
+    empty:
+      input: Nothing happened yet. Bring some friends and add some spendings to start things rolling.
   spending:
     yours:
       input: Your spending
@@ -44,13 +46,6 @@ inputs:
   archive:
     header:
       input: Archiving {title}
-    delete:
-      description:
-        input: This adventure has no expenses and will be deleted
-        context: description for delete mode
-      button:
-        input: Delete adventure
-        context: hold button for delete
     warning:
       input: Archiving the adventure is permanent and can not be undone.
       context: warning shown on archive confirmation screen

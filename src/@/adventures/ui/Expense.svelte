@@ -11,14 +11,14 @@
   import { dict } from './intl'
   import type { Props } from './Expense'
 
-  const { adventure, expense, title }: Props = $props()
+  const { adventure, expense }: Props = $props()
 
   const description = $derived(
     `${date(expense.date, $locale)}${expense.location ? `, ${expense.location}` : ''}`,
   )
 </script>
 
-<Card.Root href={`/adventures/${adventure}/expenses/${expense.id}`} class="w-full">
+<Card.Root href={`/adventures/${adventure.id}/expenses/${expense.id}`} class="w-full">
   <Card.Row>
     <Async store={accounts.get(expense.payer)}>
       {#snippet awaited(account)}
@@ -42,7 +42,7 @@
       <p class="text-sm text-muted-foreground">{description}</p>
     </Card.Side>
     <Card.Side align="end">
-      <span class="font-normal text-muted-foreground">{title}</span>
+      <span class="font-normal text-muted-foreground">{adventure.title}</span>
     </Card.Side>
   </Card.Row>
 </Card.Root>

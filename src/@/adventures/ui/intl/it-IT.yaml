@@ -24,6 +24,7 @@ expenses:
   total: Totale
   paidBy: Pagato da
   paid: Pagato
+  empty: Non è ancora successo nulla. Invita degli amici e aggiungi delle spese per far partire tutto.
 spending:
   yours: Le tue spese
   total: Totale speso
@@ -34,9 +35,6 @@ archive:
   header: |-
     !js
     (title) => `Archiviazione di "${title}"`
-  delete:
-    description: Questa avventura non ha spese e verrà eliminata
-    button: Elimina avventura
   warning: L’archiviazione dell’avventura è permanente e non può essere annullata.
 balance:
   header: "Durante l’archiviazione di questa avventura:"

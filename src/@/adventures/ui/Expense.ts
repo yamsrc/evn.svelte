@@ -1,7 +1,8 @@
-import type { Expense } from '@/adventures'
+import type { Adventure, Expense } from '@/adventures'
+
+type AdventureLike = Pick<Adventure, 'id' | 'title'>
 
 export interface Props {
-  adventure: string
-  title: string
+  adventure: AdventureLike
   expense: Expense
 }

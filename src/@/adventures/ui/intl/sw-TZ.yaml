@@ -24,6 +24,7 @@ expenses:
   total: Jumla
   paidBy: Imelipiwa na
   paid: Imelipwa
+  empty: Hakuna kilichotokea bado. Alika marafiki na ongeza matumizi ili mambo yaanze.
 spending:
   yours: Matumizi yako
   total: Jumla iliyotumika
@@ -34,9 +35,6 @@ archive:
   header: |-
     !js
     (title) => `Inahifadhiwa kwenye kumbukumbu: "${title}"`
-  delete:
-    description: Safari hii haina matumizi na itafutwa
-    button: Futa tukio
   warning: Kuhifadhi tukio hili ni la kudumu na haliwezi kubatilishwa.
 balance:
   header: "Unapohifadhi tukio hili kwenye kumbukumbu:"
