@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { CircleCheckBig, UserRoundPlus } from '@lucide/svelte'
+  import { Check, UserRoundPlus } from '@lucide/svelte'
   import { Actions } from '$com/shell'
   import { dict as common } from '$lib/intl'
   import { onsubmit as submitter } from '$lib/tools'
@@ -80,7 +80,7 @@
     id="adventures-editor-save-button"
     disabled={busy || !value.title.trim()}
     onclick={() => submitButton?.click()}>
-    <CircleCheckBig />
+    <Check />
     <span>{$common.actions.save}</span>
   </Action>
 </Actions>
