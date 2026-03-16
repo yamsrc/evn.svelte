@@ -7,16 +7,16 @@
   import { dict } from './intl'
   import type { Props } from './Archive'
 
-  const { id, value }: Props = $props()
+  const { adventure }: Props = $props()
 
-  const empty = $derived(value.title === 'FIX_ME')
+  const empty = $derived(adventure.expenses.length === 0)
 
   let busy = $state(false)
 
   async function remove() {
     busy = true
 
-    const result = await archive(id, undefined)
+    const result = await archive(adventure.id, undefined)
 
     busy = false
 
@@ -34,17 +34,21 @@
       name="adventures-delete"
       onclick={remove}
       disabled={busy}
-      label={$dict.finish.delete.button(value.title)}
+      label={$dict.finish.delete.button(adventure.title)}
       variant="destructive"
       position="top"
       duration={2_000}
       class="w-full">
       <Trash2 />
-      {$dict.finish.delete.button(value.title)}
+      {$dict.finish.delete.button(adventure.title)}
     </Hold>
   {:else}
     <p class="text-sm text-muted-foreground">{$dict.finish.archive.description}</p>
-    <Button variant="secondary" size="lg" class="w-full" href={`/adventures/${id}/archive/`}>
+    <Button
+      variant="secondary"
+      size="lg"
+      class="w-full"
+      href={`/adventures/${adventure.id}/archive/`}>
       <ArchiveIcon />
       {$dict.finish.archive.button}
     </Button>

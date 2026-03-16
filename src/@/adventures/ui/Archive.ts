@@ -1,6 +1,7 @@
-import type { Value } from './Editor/Context'
+import type { Adventure } from '@/adventures'
+
+type AdventureLike = Pick<Adventure, 'id' | 'title' | 'expenses'>
 
 export interface Props {
-  id: string
-  value: Value
+  adventure: AdventureLike
 }

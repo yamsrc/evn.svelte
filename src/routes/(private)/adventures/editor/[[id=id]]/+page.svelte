@@ -1,12 +1,14 @@
 <script lang="ts">
   import { LogOut } from '@lucide/svelte'
+  import { Async } from 'svas'
   import { goto } from '$app/navigation'
   import { page } from '$app/state'
   import { Hold } from '$com/buttons'
   import { Return } from '$com/shell'
   import { dict as common } from '$lib/intl'
-  import { leave } from '@/adventures'
+  import { leave, adventures } from '@/adventures'
   import { Editor } from '@/adventures/ui'
+  import { Archive } from '@/adventures/ui'
   import { dict } from '@/adventures/ui/intl'
   import { Header, Section, Hint } from '@/app/ui'
 
@@ -75,3 +77,16 @@
 {/if}
 
 <Editor.Edit {id} bind:value={ctx.value} bind:busy />
+
+{#if id !== undefined}
+  <Async store={adventures}>
+    {#snippet awaited(adventures)}
+      {@const adventure = adventures.find((entry) => entry.id === id)}
+      {#if adventure}
+        <Section>
+          <Archive {adventure} />
+        </Section>
+      {/if}
+    {/snippet}
+  </Async>
+{/if}
