@@ -48,7 +48,7 @@
       </Cosmetics.Content>
     </Cosmetics.Root>
 
-    <Cover picture={value.picture} onchange={(picture) => (value.picture = picture)} />
+    <Cover bind:picture={value.picture} />
 
     <div class="space-y-2">
       {#if showMembers}

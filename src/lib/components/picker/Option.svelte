@@ -16,6 +16,7 @@
 
 <div class={['rounded-lg', picked && 'ring-2 ring-muted-foreground transition-all']}>
   <button
+    type="button"
     {...rest}
     data-picked={picked ? '' : undefined}
     class={['h-full', SNAP[ctx.state.snap], classes]}
