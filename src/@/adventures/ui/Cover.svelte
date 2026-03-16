@@ -22,7 +22,7 @@
   const picked = $derived(all.indexOf(current))
   const scroll = $derived(scrolled || picked > 0 ? picked : -1)
   const card =
-    'w-[calc(50cqi-var(--gap)/2)] max-w-64 aspect-[17/12] shrink-0 overflow-hidden rounded-lg'
+    'w-[calc(50cqi-var(--gap)/2)] max-w-64 aspect-[1.4] shrink-0 overflow-hidden rounded-lg'
 
   function onpick(index: number) {
     scrolled = true
