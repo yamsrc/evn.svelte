@@ -12,6 +12,8 @@ components:
       (count) => `${count} दिखाएं`
   graph:
     title: ऋण ग्राफ़
+  picture:
+    title: Picture
 transmission:
   title: Transmission
   permission:
