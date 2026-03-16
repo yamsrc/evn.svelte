@@ -118,6 +118,7 @@
         '-translate-y-1/2': position === 'bottom',
       },
       shown && 'translate-x-0 translate-y-0 opacity-100 scale-100',
+      align === 'center' && 'text-center',
     )}
     style={`position-anchor: --${name}; position-area: ${position} ${align};`}>
     <div class="text-xs text-muted-foreground">{label}</div>
