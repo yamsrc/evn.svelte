@@ -8,7 +8,7 @@
   import { leave } from '@/adventures'
   import { Editor } from '@/adventures/ui'
   import { dict } from '@/adventures/ui/intl'
-  import { Header, Panel, Section } from '@/app/ui'
+  import { Header, Section, Hint } from '@/app/ui'
 
   const ctx = Editor.getContext()
   const id = $derived(page.params.id)
@@ -61,9 +61,16 @@
 
 {#if id === undefined}
   <Section>
-    <Panel>
-      <p class="text-sm">{$dict.editor.info}</p>
-    </Panel>
+    <Hint.Root key="adventures">
+      <Hint.Content>
+        <p class="text-sm">{$dict.editor.info}</p>
+      </Hint.Content>
+      <Hint.Actions>
+        <Hint.Dismiss>
+          {$dict.hint.dismiss}
+        </Hint.Dismiss>
+      </Hint.Actions>
+    </Hint.Root>
   </Section>
 {/if}
 
