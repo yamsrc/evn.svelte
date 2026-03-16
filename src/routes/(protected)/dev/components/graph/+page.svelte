@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Async, combined, ok } from 'svas'
+  import { Async, combined } from 'svas'
   import { Loader } from '$com/loader'
   import { dict } from '$lib/intl/dev'
   import { Select, SelectTrigger, SelectContent, SelectItem } from '$ui/select'
@@ -9,13 +9,12 @@
   import { groups, expose } from '@/groups'
 
   let selected = $state<string | undefined>(undefined)
-
-  const all = $derived(ok($groups) ? $groups : [])
-  const id = $derived(selected ?? all[0]?.id)
 </script>
 
 <Async store={groups}>
-  {#snippet awaited()}
+  {#snippet awaited(groups)}
+    {@const all = groups.length > 0 ? groups : []}
+    {@const id = selected ?? all[0]?.id}
     <Section>
       <Header.Root>
         <Header.Title>{$dict.components.graph.title}</Header.Title>
