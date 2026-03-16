@@ -7,13 +7,19 @@ editor:
   upload: Chagua yako mwenyewe
   name: Jina la tukio
   note: Wanachama wote wataona jina hili
-  info: Matukio ni kwa wale wanaotaka kugawana gharama sawa, iwe ni safari pamoja, bili ya baa, au matumizi ya kawaida ya nyumbani. Madeni kwenye tukio hayawekwi kati ya watumiaji mmoja mmoja, bali kati ya wanachama wote wanaosaidia kuweka usawa kwenye matumizi.
+  info: >-
+    Matukio ni kwa wale wanaotaka kugawana gharama sawa, iwe ni safari pamoja,
+    bili ya baa, au matumizi ya kawaida ya nyumbani. Madeni kwenye tukio
+    hayawekwi kati ya watumiaji mmoja mmoja, bali kati ya wanachama wote
+    wanaosaidia kuweka usawa kwenye matumizi.
   settings: Mipangilio
   title: Ndoto Mpya
 finish:
   archive:
     title: Kamata safari
-    description: Kuhifadhi tukio hili kutaliondoa kwenye skrini ya matumizi mapya na kulipeleka mwisho wa orodha yako ya matukio.
+    description: >-
+      Kuhifadhi tukio hili kutaliondoa kwenye skrini ya matumizi mapya na
+      kulipeleka mwisho wa orodha yako ya matukio.
     button: Hifadhi adventure
   delete:
     button: |-
@@ -24,7 +30,9 @@ expenses:
   total: Jumla
   paidBy: Imelipiwa na
   paid: Imelipwa
-  empty: Hakuna kilichotokea bado. Alika marafiki na ongeza matumizi ili mambo yaanze.
+  empty: >-
+    Hakuna kilichotokea bado. Alika marafiki na ongeza matumizi ili mambo
+    yaanze.
 spending:
   yours: Matumizi yako
   total: Jumla iliyotumika
@@ -39,7 +47,7 @@ archive:
 balance:
   header: "Unapohifadhi tukio hili kwenye kumbukumbu:"
   merge: Hamisha madeni kwa madeni ya wanachama wa kawaida
-  keep: Acha madeni/saldo ndani ya tukio la冒险
+  keep: Acha madeni/saldo kwenye safari ya kusisimua
 archived: Imehifadhiwa
 hint:
   action: Anza safari yako ya kwanza

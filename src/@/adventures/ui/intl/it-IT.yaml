@@ -7,13 +7,19 @@ editor:
   upload: Scegli il tuo
   name: Nome dell’avventura
   note: Tutti i membri vedranno questo nome
-  info: Le avventure sono per chi vuole dividere le spese in modo equo, che si tratti di un viaggio insieme, di un conto al bar o delle semplici spese domestiche comuni. I debiti in un’avventura non sono tra utenti singoli, ma tra tutti i partecipanti, così da mantenere i conti in pari per tutti.
+  info: >-
+    Le avventure sono per chi vuole dividere le spese in modo equo, che si
+    tratti di un viaggio insieme, di un conto al bar o delle semplici spese
+    domestiche comuni. I debiti in un’avventura non sono tra utenti singoli, ma
+    tra tutti i partecipanti, così da mantenere i conti in pari per tutti.
   settings: Impostazioni
   title: Nuova avventura
 finish:
   archive:
     title: Concludi l’avventura
-    description: Archiviare l’avventura la rimuoverà dalla schermata delle nuove spese e la sposterà in fondo alla tua lista di avventure.
+    description: >-
+      Archiviare l’avventura la rimuoverà dalla schermata delle nuove spese e la
+      sposterà in fondo alla tua lista di avventure.
     button: Archivia avventura
   delete:
     button: |-
@@ -24,7 +30,9 @@ expenses:
   total: Totale
   paidBy: Pagato da
   paid: Pagato
-  empty: Non è ancora successo nulla. Invita degli amici e aggiungi delle spese per far partire tutto.
+  empty: >-
+    Non è ancora successo nulla. Invita degli amici e aggiungi delle spese per
+    far partire tutto.
 spending:
   yours: Le tue spese
   total: Totale speso
@@ -44,7 +52,9 @@ archived: Archiviato
 hint:
   action: Inizia la tua prima avventura
   dismiss: Ignora
-  dismissed: Puoi creare una nuova avventura in qualsiasi momento tramite il menu + in fondo allo schermo.
+  dismissed: >-
+    Puoi creare una nuova avventura in qualsiasi momento tramite il menu + in
+    fondo allo schermo.
 title: Avventure
 panel:
   total: Totale

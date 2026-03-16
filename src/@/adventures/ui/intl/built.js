@@ -49,7 +49,7 @@ export const dictionaries = {
     "balance": {
       "header": "عند أرشفة هذه المغامرة:",
       "merge": "انقل الديون إلى ديون الأعضاء العاديين",
-      "keep": "ترك الديون/الأرصدة في المغامرة"
+      "keep": "اترك الديون/الأرصدة في المغامرة"
     },
     "archived": "مؤرشف",
     "hint": {
@@ -109,7 +109,7 @@ export const dictionaries = {
     "balance": {
       "header": "Beim Archivieren dieses Abenteuers:",
       "merge": "Schulden zu den regulären Mitgliedsschulden übertragen",
-      "keep": "Schulden/Salden im Abenteuer belassen"
+      "keep": "Schulden/Restbeträge im Abenteuer belassen"
     },
     "archived": "Archiviert",
     "hint": {
@@ -229,7 +229,7 @@ export const dictionaries = {
     "balance": {
       "header": "Al archivar esta aventura:",
       "merge": "Mover deudas a las deudas de miembros regulares",
-      "keep": "Dejar deudas/saldos en la aventura"
+      "keep": "Dejar las deudas/saldos en la aventura"
     },
     "archived": "Archivado",
     "hint": {
@@ -349,7 +349,7 @@ export const dictionaries = {
     "balance": {
       "header": "इस साहसिक कार्य को संग्रहित करते समय:",
       "merge": "ऋणों को नियमित सदस्य के ऋणों में स्थानांतरित करें",
-      "keep": "ऋण/शेष राशि को साहसिक यात्रा में ही रखें"
+      "keep": "एडवेंचर में ऋण/बैलेंस छोड़ें"
     },
     "archived": "संग्रहीत",
     "hint": {
@@ -469,7 +469,7 @@ export const dictionaries = {
     "balance": {
       "header": "この冒険をアーカイブする際：",
       "merge": "債務を通常メンバーの債務に移動する",
-      "keep": "借金／残高を冒険内に残す"
+      "keep": "冒険に借金／残高を残す"
     },
     "archived": "アーカイブ済み",
     "hint": {
@@ -529,7 +529,7 @@ export const dictionaries = {
     "balance": {
       "header": "이 모험을 보관할 때:",
       "merge": "부채를 일반 회원 부채로 이동",
-      "keep": "모험 내에 부채/잔액 남기기"
+      "keep": "모험에서 부채/잔액 남기기"
     },
     "archived": "보관됨",
     "hint": {
@@ -589,7 +589,7 @@ export const dictionaries = {
     "balance": {
       "header": "Bij het archiveren van dit avontuur:",
       "merge": "Verplaats schulden naar de gewone leden-schulden",
-      "keep": "Schulden/saldi in het avontuur laten"
+      "keep": "Schulden/saldi achterlaten in het avontuur"
     },
     "archived": "Gearchiveerd",
     "hint": {
@@ -709,7 +709,7 @@ export const dictionaries = {
     "balance": {
       "header": "Unapohifadhi tukio hili kwenye kumbukumbu:",
       "merge": "Hamisha madeni kwa madeni ya wanachama wa kawaida",
-      "keep": "Acha madeni/saldo ndani ya tukio la冒险"
+      "keep": "Acha madeni/saldo kwenye safari ya kusisimua"
     },
     "archived": "Imehifadhiwa",
     "hint": {
@@ -769,7 +769,7 @@ export const dictionaries = {
     "balance": {
       "header": "Bu macera arşivlenirken:",
       "merge": "Borçları normal üye borçlarına taşı",
-      "keep": "Borçları/bakiyeleri macerada bırak"
+      "keep": "Macera sırasında borçları/bakiyeleri bırak"
     },
     "archived": "Arşivlendi",
     "hint": {
@@ -829,7 +829,7 @@ export const dictionaries = {
     "balance": {
       "header": "Під час архівування цієї пригоди:",
       "merge": "Перемістити борги до боргів звичайних учасників",
-      "keep": "Залишити борги/баланси в пригоді"
+      "keep": "Залишити борги/баланс у пригоді"
     },
     "archived": "Заархівовано",
     "hint": {
@@ -889,7 +889,7 @@ export const dictionaries = {
     "balance": {
       "header": "归档此冒险时：",
       "merge": "将债务移至普通成员债务",
-      "keep": "将债务/余额保留在冒险中"
+      "keep": "在冒险中留下债务/余额"
     },
     "archived": "已归档",
     "hint": {

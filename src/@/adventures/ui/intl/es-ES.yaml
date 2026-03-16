@@ -7,13 +7,19 @@ editor:
   upload: Elige el tuyo
   name: Nombre de la aventura
   note: Todos los miembros verán este nombre
-  info: Las aventuras son para quienes desean compartir los gastos por igual, ya sea un viaje juntos, una cuenta de bar o simplemente los gastos comunes del hogar. Las deudas en una aventura no son entre usuarios individuales, sino entre todos los miembros, para mantener cuentas equitativas.
+  info: >-
+    Las aventuras son para quienes desean compartir los gastos por igual, ya sea
+    un viaje juntos, una cuenta de bar o simplemente los gastos comunes del
+    hogar. Las deudas en una aventura no son entre usuarios individuales, sino
+    entre todos los miembros, para mantener cuentas equitativas.
   settings: Configuración
   title: Nueva aventura
 finish:
   archive:
     title: Finalizar la aventura
-    description: Archivar la aventura la eliminará de la pantalla de nuevos gastos y la moverá al final de tu lista de aventuras.
+    description: >-
+      Archivar la aventura la eliminará de la pantalla de nuevos gastos y la
+      moverá al final de tu lista de aventuras.
     button: Archivar aventura
   delete:
     button: |-
@@ -24,7 +30,9 @@ expenses:
   total: Total
   paidBy: Pagado por
   paid: Pagado
-  empty: Aún no ha pasado nada. Invita a algunos amigos y añade algunos gastos para poner todo en marcha.
+  empty: >-
+    Aún no ha pasado nada. Invita a algunos amigos y añade algunos gastos para
+    poner todo en marcha.
 spending:
   yours: Tus gastos
   total: Total gastado
@@ -39,12 +47,14 @@ archive:
 balance:
   header: "Al archivar esta aventura:"
   merge: Mover deudas a las deudas de miembros regulares
-  keep: Dejar deudas/saldos en la aventura
+  keep: Dejar las deudas/saldos en la aventura
 archived: Archivado
 hint:
   action: Comienza tu primera aventura
   dismiss: Descartar
-  dismissed: Puedes crear una nueva aventura en cualquier momento desde el menú + en la parte inferior de la pantalla.
+  dismissed: >-
+    Puedes crear una nueva aventura en cualquier momento desde el menú + en la
+    parte inferior de la pantalla.
 title: Aventuras
 panel:
   total: Total

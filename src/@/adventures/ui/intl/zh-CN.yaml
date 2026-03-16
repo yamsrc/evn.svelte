@@ -39,7 +39,7 @@ archive:
 balance:
   header: 归档此冒险时：
   merge: 将债务移至普通成员债务
-  keep: 将债务/余额保留在冒险中
+  keep: 在冒险中留下债务/余额
 archived: 已归档
 hint:
   action: 开启你的第一次冒险
