@@ -89,7 +89,7 @@
       const extras: Expense['extras'] = expense.extras.map((extra) => ({ amount: extra.amount }))
 
       result.unshift(
-        create(i++, acc.id, 'expenses', 'created', expense.id, {
+        create(i++, acc.id, 'expenses', 'expense', expense.id, {
           title: expense.title ?? 'Sample Expense',
           location: expense.location,
           participants,

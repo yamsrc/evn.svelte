@@ -4,7 +4,7 @@ export type EventMap = {
   accounts: 'created'
   contacts: 'connected' | 'transferred' | 'unchained'
   groups: 'joined'
-  expenses: 'created'
+  expenses: 'expense'
 }
 
 export type Event<D extends Domain> = EventMap[D]

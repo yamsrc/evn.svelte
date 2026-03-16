@@ -3,12 +3,18 @@ groups:
     me: |-
       !js
       (groupName) => `Te has unido a ${groupName}`
-    others: |-
+    others: >-
       !js
-      (names, groupName) => `${new Intl.ListFormat("es", { style: "long", type: "conjunction" }).format(names)} se ha${names.length === 1 ? "" : "n"} unido a ${groupName}`
-    other: |-
+
+      (names, groupName) => `${new Intl.ListFormat("es", { style: "long", type:
+      "conjunction" }).format(names)} se ha${names.length === 1 ? "" : "n"}
+      unido a ${groupName}`
+    other: >-
       !js
-      (name, groupName, gender) => { if (gender === "he") return `${name} se unió a ${groupName}`; if (gender === "she") return `${name} se unió a ${groupName}`; return `${name} se unió a ${groupName}`; }
+
+      (name, groupName, gender) => { if (gender === "he") return `${name} se
+      unió a ${groupName}`; if (gender === "she") return `${name} se unió a
+      ${groupName}`; return `${name} se unió a ${groupName}`; }
 accounts:
   created:
     welcome: ¡Bienvenido a Evnly!
@@ -18,9 +24,11 @@ contacts:
   connected: |-
     !js
     (name) => `Ahora tú y ${name} sois amigos`
-  unchained: |-
+  unchained: >-
     !js
-    (name, gender) => gender === "he" ? `${name} aceptó la cuenta` : gender === "she" ? `${name} aceptó la cuenta` : `${name} aceptó la cuenta`
+
+    (name, gender) => gender === "he" ? `${name} aceptó la cuenta` : gender ===
+    "she" ? `${name} aceptó la cuenta` : `${name} aceptó la cuenta`
   transferred:
     paid: |-
       !js
@@ -45,6 +53,8 @@ contacts:
         !js
         (balance) => `Ahora debes ${balance}`
 expenses:
-  created: |-
+  expense: >-
     !js
-    (amount, name, gender) => gender === "he" ? `${amount} pagado por ${name}` : gender === "she" ? `${amount} pagada por ${name}` : `${amount} pagado/a por ${name}`
+
+    (names) => { const list = new Intl.ListFormat("es", { style: "long", type:
+    "conjunction" }).format(names); return `Pagado por ${list}`; }
