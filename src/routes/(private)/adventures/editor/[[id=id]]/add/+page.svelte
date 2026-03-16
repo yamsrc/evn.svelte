@@ -122,7 +122,6 @@
     if (adventure instanceof Error) return
 
     ctx.value.participants = adventure.participants
-    ctx.value.expenses = adventure.expenses
 
     await back(`/adventures/editor/${id}/`)
   }

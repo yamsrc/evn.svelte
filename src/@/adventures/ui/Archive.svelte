@@ -9,7 +9,7 @@
 
   const { id, value }: Props = $props()
 
-  const empty = $derived(value.expenses.length === 0)
+  const empty = $derived(value.title === 'FIX_ME')
 
   let busy = $state(false)
 
