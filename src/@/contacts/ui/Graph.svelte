@@ -1,5 +1,11 @@
 <script lang="ts">
-  import { forceSimulation, forceLink, forceManyBody, forceCenter } from 'd3-force'
+  import {
+    forceSimulation,
+    forceLink,
+    forceManyBody,
+    forceCenter,
+    forceCollide,
+  } from 'd3-force'
   import { locale } from '$lib/intl'
   import { currency } from '$lib/tools'
   import { url } from '@/media/ui/Picture'
@@ -57,12 +63,24 @@
           .id((d: any) => d.id)
           .distance(150),
       )
-      .force('charge', forceManyBody().strength(-400))
+      .force('charge', forceManyBody().strength(-800))
+      .force('collide', forceCollide(R * 3).iterations(5))
       .force('center', forceCenter(W / 2, H / 2))
       .stop()
       .tick(300)
 
     fitBounds(nodes)
+
+    // fitBounds rescales positions — run collide again to fix overlaps
+    forceSimulation(nodes as any)
+      .force('collide', forceCollide(R * 3).iterations(10))
+      .stop()
+      .tick(50)
+
+    for (const n of nodes) {
+      n.x = Math.max(PAD, Math.min(W - PAD, n.x))
+      n.y = Math.max(PAD, Math.min(H - PAD, n.y))
+    }
 
     const byId = new Map(nodes.map((n) => [n.id, n]))
     const resolve = (ref: any): Node => byId.get(ref.id ?? ref)!
