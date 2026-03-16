@@ -51,7 +51,7 @@
       <Section>
         <Picture
           id={adventure.picture}
-          variant="700x500!"
+          variant="700x500"
           class="w-full h-64 object-cover rounded-xl"
           style="view-transition-name: adventure-cover; view-transition-class: transition-morph;" />
       </Section>

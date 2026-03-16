@@ -9,7 +9,7 @@
   import { dict } from './intl'
   import type { Props } from './Panel'
 
-  const { adventure, link, highlighted, class: classes, variant = '700x500!' }: Props = $props()
+  const { adventure, link, highlighted, class: classes, variant = '700x500' }: Props = $props()
 
   const full = $derived('participants' in adventure ? adventure : null)
 

@@ -4,7 +4,7 @@
   import { dict as common } from '$lib/intl'
   import { onsubmit as submitter } from '$lib/tools'
   import { Button } from '$ui/button'
-  import { Archive, Cover, Members } from '@/adventures/ui'
+  import { Cover, Members } from '@/adventures/ui'
   import { dict } from '@/adventures/ui/intl'
   import { Action, Section } from '@/app/ui'
   import * as Cosmetics from '@/app/ui/cosmetics'
@@ -66,10 +66,6 @@
         <span>{$dict.members.add}</span>
       </Button>
     </div>
-
-    {#if id !== undefined}
-      <Archive {id} {value} />
-    {/if}
 
     <button bind:this={submitButton} type="submit" class="sr-only">
       {$common.actions.save}
