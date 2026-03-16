@@ -26,6 +26,8 @@ finish:
     button: |-
       !js
       (title) => `"${title}" löschen`
+    hold: Zum Löschen halten
+    label: Löschen
 expenses:
   title: Ausgaben
   total: Gesamt

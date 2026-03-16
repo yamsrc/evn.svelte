@@ -25,6 +25,8 @@ finish:
     button: |-
       !js
       (title) => `${title} Sil`
+    hold: Silmek için basılı tutun
+    label: Sil
 expenses:
   title: Giderler
   total: Toplam

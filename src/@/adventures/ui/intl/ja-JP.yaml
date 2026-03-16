@@ -20,6 +20,8 @@ finish:
     button: |-
       !js
       (title) => `${title}を削除`
+    hold: 長押しで削除
+    label: 削除
 expenses:
   title: 経費
   total: 合計

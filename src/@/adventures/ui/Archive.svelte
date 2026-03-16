@@ -3,6 +3,7 @@
   import { goto } from '$app/navigation'
   import { Hold } from '$com/buttons'
   import { Button } from '$ui/button'
+  import { Spinner } from '$ui/spinner'
   import { archive } from '@/adventures'
   import { dict } from './intl'
   import type { Props } from './Archive'
@@ -22,7 +23,7 @@
 
     if (result instanceof Error) return
 
-    goto('/')
+    goto('/expenses/')
   }
 </script>
 
@@ -34,12 +35,16 @@
       name="adventures-delete"
       onclick={remove}
       disabled={busy}
-      label={$dict.finish.delete.button(adventure.title)}
+      label={$dict.finish.delete.hold}
       variant="destructive"
       position="top"
       duration={2_000}
       class="w-full">
-      <Trash2 />
+      {#if busy}
+        <Spinner />
+      {:else}
+        <Trash2 />
+      {/if}
       {$dict.finish.delete.button(adventure.title)}
     </Hold>
   {:else}

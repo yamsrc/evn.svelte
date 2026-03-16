@@ -78,6 +78,12 @@ inputs:
       button:
         input: \!js (title) => `Delete ${title}`
         context: delete button label with adventure title
+      hold:
+        input: Hold to delete
+        context: button label
+      label:
+        input: Delete
+        context: button label
   hint:
     action:
       input: Start your first adventure

@@ -19,6 +19,8 @@ finish:
     button: |-
       !js
       (title) => `删除${title}`
+    hold: 按住删除
+    label: 删除
 expenses:
   title: 支出
   total: 总计

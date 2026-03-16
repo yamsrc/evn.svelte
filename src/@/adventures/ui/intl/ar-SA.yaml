@@ -24,6 +24,8 @@ finish:
     button: |-
       !js
       (title) => `حذف ${title}`
+    hold: اضغط مع الاستمرار للحذف
+    label: حذف
 expenses:
   title: النفقات
   total: الإجمالي

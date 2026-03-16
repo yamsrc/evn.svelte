@@ -25,6 +25,8 @@ finish:
     button: |-
       !js
       (title) => `Delete ${title}`
+    hold: Hold to delete
+    label: Delete
 expenses:
   title: Expenses
   total: Total

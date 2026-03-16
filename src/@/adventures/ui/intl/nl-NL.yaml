@@ -25,6 +25,8 @@ finish:
     button: |-
       !js
       (title) => `${title} verwijderen`
+    hold: Vasthouden om te verwijderen
+    label: Verwijderen
 expenses:
   title: Uitgaven
   total: Totaal

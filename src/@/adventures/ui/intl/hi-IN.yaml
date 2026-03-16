@@ -25,6 +25,8 @@ finish:
     button: |-
       !js
       (title) => `${title} हटाएँ`
+    hold: हटाने के लिए दबाए रखें
+    label: हटाएँ
 expenses:
   title: खर्चे
   total: कुल

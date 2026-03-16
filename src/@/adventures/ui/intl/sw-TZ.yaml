@@ -25,6 +25,8 @@ finish:
     button: |-
       !js
       (title) => `Futa ${title}`
+    hold: Shikilia kufuta
+    label: Futa
 expenses:
   title: Matumizi
   total: Jumla

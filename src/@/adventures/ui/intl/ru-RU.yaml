@@ -25,6 +25,8 @@ finish:
     button: |-
       !js
       (title) => `Удалить «${title}»`
+    hold: Удерживайте для удаления
+    label: Удалить
 expenses:
   title: Расходы
   total: Итого

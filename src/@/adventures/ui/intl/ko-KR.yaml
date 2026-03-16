@@ -21,6 +21,8 @@ finish:
     button: |-
       !js
       (title) => `${title} 삭제`
+    hold: 길게 눌러 삭제
+    label: 삭제
 expenses:
   title: 지출
   total: 합계
