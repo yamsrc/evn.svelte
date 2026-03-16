@@ -77,14 +77,14 @@
       </Picker.Option>
 
       {#each all as id (id)}
+        {@const image = bg({ id, path: '/pictures/', variant: '260x180!', format: 'webp' })}
+        {@const vt =
+          id === current
+            ? 'view-transition-name: adventure-cover; view-transition-class: transition-morph;'
+            : ''}
         <Picker.Option
           class={[card, 'bg-cover bg-center']}
-          style="background-image: {bg({
-            id,
-            path: '/pictures/',
-            variant: '260x180!',
-            format: 'webp',
-          })}" />
+          style="background-image: {image}; {vt}" />
       {/each}
     </Picker.Root>
   {/key}

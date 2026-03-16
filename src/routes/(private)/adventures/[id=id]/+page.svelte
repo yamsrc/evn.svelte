@@ -52,7 +52,8 @@
         <Picture
           id={adventure.picture}
           variant="650x200!"
-          class="w-full h-48 object-cover rounded-xl" />
+          class="w-full h-48 object-cover rounded-xl"
+          style="view-transition-name: adventure-cover; view-transition-class: transition-morph;" />
       </Section>
 
       <Section>
