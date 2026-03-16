@@ -1,6 +1,4 @@
 import { getContext as svelteGetContext, setContext as svelteSetContext, type Snippet } from 'svelte'
-import { presets } from '@/adventures'
-import type { Adventure } from '@/adventures'
 
 const KEY = Symbol('adventures.editor')
 
@@ -28,16 +26,14 @@ function exact(partial: Partial<Value>): Value {
     title: value.title,
     picture: value.picture,
     participants: structuredClone(value.participants),
-    expenses: structuredClone(value.expenses),
   }
 }
 
 function blank(draft?: Partial<Value>): Value {
   return {
     title: draft?.title ?? '',
-    picture: draft?.picture ?? presets[0],
+    picture: draft?.picture ?? '',
     participants: draft?.participants ?? {},
-    expenses: draft?.expenses ?? [],
   }
 }
 
@@ -55,5 +51,4 @@ export interface Value {
   title: string
   picture: string
   participants: Record<string, number>
-  expenses: Adventure['expenses']
 }

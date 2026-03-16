@@ -27,14 +27,16 @@
   let submitButton = $state<HTMLButtonElement | null>(null)
 
   async function submit() {
-    const title = value.title.trim()
+    if (!valid) return
 
-    if (!title) return
+    const title = value.title.trim()
 
     busy = true
     await callback?.({ ...value, title })
     busy = false
   }
+
+  const valid = $derived(value.title.trim() && value.picture !== '')
 </script>
 
 <Section>
@@ -78,7 +80,7 @@
 <Actions>
   <Action
     id="adventures-editor-save-button"
-    disabled={busy || !value.title.trim()}
+    disabled={busy || !valid}
     onclick={() => submitButton?.click()}>
     <Check />
     <span>{$common.actions.save}</span>

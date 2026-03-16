@@ -10,7 +10,7 @@
 
   const UPLOAD = 1
 
-  let { picture = $bindable(), onchange }: Props = $props()
+  let { picture = $bindable(''), onchange }: Props = $props()
 
   let input = $state<HTMLInputElement | null>(null)
   let uploading = $state(false)
@@ -52,7 +52,6 @@
   <h2>{$dict.editor.cover}</h2>
   <input type="file" accept="image/*" bind:this={input} onchange={handleUpload} class="hidden" />
 
-  {uploaded}
   <Picker.Root
     {picked}
     {onpick}

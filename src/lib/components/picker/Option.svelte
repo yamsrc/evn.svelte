@@ -11,7 +11,7 @@
   const ctx = getContext()
   const { index, onclick, class: classes, children, ...rest }: Props = $props()
 
-  const picked = $derived(index === ctx.state.chosen)
+  const picked = $derived(index !== undefined && index === ctx.state.chosen)
 </script>
 
 <div class={['rounded-lg', picked && 'ring-2 ring-muted-foreground transition-all']}>
