@@ -283,6 +283,9 @@ inputs:
       input: No results found
   dir:
     input: ltr
+  adventures:
+    title:
+      input: Adventures
 mounts:
   iam: ../../@/iam/ui/intl
   feedback: ../../@/feedback/ui/intl

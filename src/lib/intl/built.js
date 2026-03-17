@@ -205,7 +205,10 @@ export const dictionaries = {
     "search": {
       "empty": "لم يتم العثور على نتائج"
     },
-    "dir": "rtl"
+    "dir": "rtl",
+    "adventures": {
+      "title": "مغامرات"
+    }
   },
   "de-DE": {
     "native": "Deutsch",
@@ -410,7 +413,10 @@ export const dictionaries = {
     "search": {
       "empty": "Keine Ergebnisse gefunden"
     },
-    "dir": "ltr"
+    "dir": "ltr",
+    "adventures": {
+      "title": "Abenteuer"
+    }
   },
   "en-US": {
     "native": "English",
@@ -615,7 +621,10 @@ export const dictionaries = {
     "search": {
       "empty": "No results found"
     },
-    "dir": "ltr"
+    "dir": "ltr",
+    "adventures": {
+      "title": "Adventures"
+    }
   },
   "es-ES": {
     "native": "Español",
@@ -820,7 +829,10 @@ export const dictionaries = {
     "search": {
       "empty": "No se encontraron resultados"
     },
-    "dir": "ltr"
+    "dir": "ltr",
+    "adventures": {
+      "title": "Aventuras"
+    }
   },
   "fr-FR": {
     "native": "Français",
@@ -1025,7 +1037,10 @@ export const dictionaries = {
     "search": {
       "empty": "Aucun résultat trouvé"
     },
-    "dir": "ltr"
+    "dir": "ltr",
+    "adventures": {
+      "title": "Aventures"
+    }
   },
   "hi-IN": {
     "native": "हिन्दी",
@@ -1230,7 +1245,10 @@ export const dictionaries = {
     "search": {
       "empty": "कोई परिणाम नहीं मिला"
     },
-    "dir": "ltr"
+    "dir": "ltr",
+    "adventures": {
+      "title": "साहसिक यात्राएँ"
+    }
   },
   "it-IT": {
     "native": "Italiano",
@@ -1435,7 +1453,10 @@ export const dictionaries = {
     "search": {
       "empty": "Nessun risultato trovato"
     },
-    "dir": "ltr"
+    "dir": "ltr",
+    "adventures": {
+      "title": "Avventure"
+    }
   },
   "ja-JP": {
     "native": "日本語",
@@ -1640,7 +1661,10 @@ export const dictionaries = {
     "search": {
       "empty": "結果が見つかりませんでした"
     },
-    "dir": "ltr"
+    "dir": "ltr",
+    "adventures": {
+      "title": "冒険"
+    }
   },
   "ko-KR": {
     "native": "한국어",
@@ -1845,7 +1869,10 @@ export const dictionaries = {
     "search": {
       "empty": "결과를 찾을 수 없습니다"
     },
-    "dir": "ltr"
+    "dir": "ltr",
+    "adventures": {
+      "title": "모험"
+    }
   },
   "nl-NL": {
     "native": "Nederlands",
@@ -2050,7 +2077,10 @@ export const dictionaries = {
     "search": {
       "empty": "Geen resultaten gevonden"
     },
-    "dir": "ltr"
+    "dir": "ltr",
+    "adventures": {
+      "title": "Avonturen"
+    }
   },
   "ru-RU": {
     "native": "Русский",
@@ -2255,7 +2285,10 @@ export const dictionaries = {
     "search": {
       "empty": "Результаты не найдены"
     },
-    "dir": "ltr"
+    "dir": "ltr",
+    "adventures": {
+      "title": "Приключения"
+    }
   },
   "sw-TZ": {
     "native": "Kiswahili",
@@ -2460,7 +2493,10 @@ export const dictionaries = {
     "search": {
       "empty": "Hakuna matokeo yaliyopatikana"
     },
-    "dir": "ltr"
+    "dir": "ltr",
+    "adventures": {
+      "title": "Matukio"
+    }
   },
   "tr-TR": {
     "native": "Türkçe",
@@ -2665,7 +2701,10 @@ export const dictionaries = {
     "search": {
       "empty": "Sonuç bulunamadı"
     },
-    "dir": "ltr"
+    "dir": "ltr",
+    "adventures": {
+      "title": "Macera"
+    }
   },
   "uk-UA": {
     "native": "Українська",
@@ -2870,7 +2909,10 @@ export const dictionaries = {
     "search": {
       "empty": "Результатів не знайдено"
     },
-    "dir": "ltr"
+    "dir": "ltr",
+    "adventures": {
+      "title": "Пригоди"
+    }
   },
   "zh-CN": {
     "native": "中文",
@@ -3075,7 +3117,10 @@ export const dictionaries = {
     "search": {
       "empty": "未找到结果"
     },
-    "dir": "ltr"
+    "dir": "ltr",
+    "adventures": {
+      "title": "冒险"
+    }
   }
 };
 /** @type {import("./types").Locale[]} */

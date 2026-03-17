@@ -173,3 +173,5 @@ home:
 search:
   empty: Результаты не найдены
 dir: ltr
+adventures:
+  title: Приключения

@@ -212,4 +212,7 @@ export type Dictionary = {
         empty: string
       }
       dir: string
+      adventures: {
+        title: string
+      }
     }
