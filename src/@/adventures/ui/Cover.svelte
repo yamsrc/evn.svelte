@@ -4,8 +4,8 @@
   import * as Picker from '$com/picker'
   import { buttonVariants } from '$ui/button'
   import { presets, upload } from '@/adventures'
-  import { Picture } from '@/media/ui'
   import List from './List.svelte'
+  import Picture from './Picture.svelte'
   import { dict } from './intl'
   import type { Props } from './Cover'
 
@@ -77,7 +77,7 @@
           ? 'view-transition-name: adventure-cover; view-transition-class: transition-morph;'
           : ''}
       <Picker.Option class={card} index={index + UPLOAD}>
-        <Picture {id} variant="700x500" class="h-full w-full object-cover" style={vt} />
+        <Picture adventure={{ title: id, picture: id }} class="size-full object-cover" style={vt} />
       </Picker.Option>
     {/each}
   </List>

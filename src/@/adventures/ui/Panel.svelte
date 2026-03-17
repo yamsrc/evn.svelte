@@ -4,12 +4,12 @@
   import { Button } from '$ui/button'
   import { Avatars, Coins } from '@/app/ui'
   import { account } from '@/iam'
-  import { imageSet } from '@/media/ui/Picture'
   import Archived from './Archived.svelte'
+  import Picture from './Picture.svelte'
   import { dict } from './intl'
   import type { Props } from './Panel'
 
-  const { adventure, link, highlighted, class: classes, variant = '700x500' }: Props = $props()
+  const { adventure, link, highlighted, class: classes }: Props = $props()
 
   const full = $derived('participants' in adventure ? adventure : null)
 
@@ -22,17 +22,13 @@
   const balance = $derived(full?.participants[$account?.id ?? ''] ?? 0)
   const total = $derived(full?.expenses.reduce((sum, e) => sum + e.amount, 0) ?? 0)
 
-  const background = $derived(
-    adventure.picture
-      ? `background-image: ${imageSet({ id: adventure.picture, path: '/pictures/', variant })}`
-      : undefined,
-  )
-
   const base =
     'adventure-cover relative isolate overflow-hidden rounded-lg bg-cover bg-center px-3 py-2'
 </script>
 
 {#snippet content()}
+  <Picture {adventure} class="absolute size-full inset-0 -z-1 object-cover" />
+
   <div class="relative z-10 flex h-full flex-col items-start gap-1.5 w-full justify-between">
     <TextEllipsis class="font-bold text-base">{adventure.title}</TextEllipsis>
     {#if highlighted}
@@ -66,12 +62,11 @@
       'h-auto shrink-0 flex-col items-start gap-0 text-foreground',
       full?.archived && 'opacity-70',
       classes,
-    ]}
-    style={background}>
+    ]}>
     {@render content()}
   </Button>
 {:else}
-  <div class={[base, 'text-foreground', classes]} style={background}>
+  <div class={[base, 'text-foreground', classes]}>
     {@render content()}
   </div>
 {/if}

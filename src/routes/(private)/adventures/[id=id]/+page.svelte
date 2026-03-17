@@ -6,9 +6,9 @@
   import { dict as common } from '$lib/intl'
   import { adventures } from '@/adventures'
   import { Archived, Expenses, Members, Totals } from '@/adventures/ui'
+  import { Picture } from '@/adventures/ui'
   import { Action, Header, Section } from '@/app/ui'
   import { account } from '@/iam'
-  import { Picture } from '@/media/ui'
   import { seen } from '@/notifications'
 
   const id = $derived(page.params.id) as string
@@ -50,8 +50,7 @@
 
       <Section>
         <Picture
-          id={adventure.picture}
-          variant="700x500"
+          {adventure}
           class="w-full h-64 object-cover rounded-xl"
           style="view-transition-name: adventure-cover; view-transition-class: transition-morph;" />
       </Section>

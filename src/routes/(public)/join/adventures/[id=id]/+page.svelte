@@ -21,7 +21,7 @@
   <Screen>
     <Authenticated {oidc}>
       {#if accepted}
-        <Goto href="/" />
+        <Goto href={accepted ? `/adventures/${adventure.id}/` : '/'} />
       {/if}
     </Authenticated>
   </Screen>
