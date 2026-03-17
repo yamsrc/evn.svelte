@@ -18,7 +18,7 @@
   )
 </script>
 
-<Card.Root href={`/adventures/${adventure.id}/expenses/${expense.id}`} class="w-full">
+<Card.Root href={`/adventures/${adventure.id}/expenses/${expense.id}/`} class="w-full">
   <Card.Row>
     <Async store={accounts.get(expense.payer)}>
       {#snippet awaited(account)}
