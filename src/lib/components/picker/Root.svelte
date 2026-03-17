@@ -5,8 +5,9 @@
 
   const { picked, onpick, align = 'start', children, class: classes, ...rest }: Props = $props()
 
+  // svelte-ignore state_referenced_locally
   const ui: Context['state'] = $state({
-    chosen: undefined,
+    chosen: picked,
     snap: 'start',
   })
 
