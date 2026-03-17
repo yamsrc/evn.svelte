@@ -43,9 +43,7 @@ me: Ich
 selector:
   regular: Aufteilen
 archive:
-  header: |-
-    !js
-    (title) => `"${title}" wird archiviert`
+  header: Archiv
   warning: >-
     Das Archivieren des Abenteuers ist dauerhaft und kann nicht rückgängig
     gemacht werden.

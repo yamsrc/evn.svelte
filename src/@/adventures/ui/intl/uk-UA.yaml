@@ -42,9 +42,7 @@ me: Я
 selector:
   regular: Розділити
 archive:
-  header: |-
-    !js
-    (title) => `Архівування «${title}»`
+  header: Архів
   warning: Архівування пригоди є остаточним і не може бути скасоване.
 balance:
   header: "Під час архівування цієї пригоди:"

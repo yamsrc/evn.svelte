@@ -35,9 +35,7 @@ me: 私
 selector:
   regular: 割り勘
 archive:
-  header: |-
-    !js
-    (title) => `"${title}" をアーカイブしています`
+  header: アーカイブ
   warning: 冒険のアーカイブは永久的で元に戻せません。
 balance:
   header: この冒険をアーカイブする際：

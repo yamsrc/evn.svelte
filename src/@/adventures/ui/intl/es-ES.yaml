@@ -42,9 +42,7 @@ me: Yo
 selector:
   regular: Dividir
 archive:
-  header: |-
-    !js
-    (title) => `Archivando "${title}"`
+  header: Archivo
   warning: Archivar la aventura es una acción permanente y no se puede deshacer.
 balance:
   header: "Al archivar esta aventura:"

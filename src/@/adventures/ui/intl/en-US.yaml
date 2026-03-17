@@ -42,9 +42,7 @@ me: Me
 selector:
   regular: Split
 archive:
-  header: |-
-    !js
-    (title) => `Archiving "${title}"`
+  header: Archive
   warning: Archiving the adventure is permanent and cannot be undone.
 balance:
   header: "When archiving this adventure:"

@@ -39,9 +39,7 @@ me: أنا
 selector:
   regular: تقسيم
 archive:
-  header: |-
-    !js
-    (title) => `يتم أرشفة "${title}"`
+  header: الأرشيف
   warning: أرشفة المغامرة إجراء دائم ولا يمكن التراجع عنه.
 balance:
   header: "عند أرشفة هذه المغامرة:"

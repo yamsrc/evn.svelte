@@ -46,7 +46,7 @@ inputs:
       context: split expense/receipt etc
   archive:
     header:
-      input: Archiving {title}
+      input: Archive
     warning:
       input: Archiving the adventure is permanent and can not be undone.
       context: warning shown on archive confirmation screen

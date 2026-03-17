@@ -42,9 +42,7 @@ me: Ben
 selector:
   regular: Böl
 archive:
-  header: |-
-    !js
-    (title) => `"${title}" arşivleniyor`
+  header: Arşiv
   warning: Macera arşivlendiğinde bu işlem kalıcıdır ve geri alınamaz.
 balance:
   header: "Bu macera arşivlenirken:"

@@ -43,7 +43,7 @@ me: Moi
 selector:
   regular: Partager
 archive:
-  header: "!js\n(title) => `Archivage de «\_${title}\_»`"
+  header: Archive
   warning: L’archivage de l’aventure est définitif et ne peut pas être annulé.
 balance:
   header: "Lors de l’archivage de cette aventure :"

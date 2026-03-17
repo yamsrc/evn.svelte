@@ -42,9 +42,7 @@ me: Mimi
 selector:
   regular: Gawanya
 archive:
-  header: |-
-    !js
-    (title) => `Inahifadhiwa kwenye kumbukumbu: "${title}"`
+  header: Kumbukumbu
   warning: Kuhifadhi tukio hili ni la kudumu na haliwezi kubatilishwa.
 balance:
   header: "Unapohifadhi tukio hili kwenye kumbukumbu:"

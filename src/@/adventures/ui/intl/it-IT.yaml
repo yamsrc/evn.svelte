@@ -42,9 +42,7 @@ me: Io
 selector:
   regular: Dividi
 archive:
-  header: |-
-    !js
-    (title) => `Archiviazione di "${title}"`
+  header: Archivio
   warning: L’archiviazione dell’avventura è permanente e non può essere annullata.
 balance:
   header: "Durante l’archiviazione di questa avventura:"

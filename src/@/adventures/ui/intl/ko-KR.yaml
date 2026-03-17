@@ -36,9 +36,7 @@ me: 나
 selector:
   regular: 분할
 archive:
-  header: |-
-    !js
-    (title) => `"${title}"를 보관 중입니다`
+  header: 아카이브
   warning: 이 모험을 보관하면 영구적으로 삭제되며 되돌릴 수 없습니다.
 balance:
   header: "이 모험을 보관할 때:"

@@ -42,9 +42,7 @@ me: Ik
 selector:
   regular: Splitsen
 archive:
-  header: |-
-    !js
-    (title) => `"${title}" wordt gearchiveerd`
+  header: Archief
   warning: >-
     Het archiveren van het avontuur is permanent en kan niet ongedaan worden
     gemaakt.
