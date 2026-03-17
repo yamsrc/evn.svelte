@@ -14,7 +14,7 @@
   <div>
     {$dict.adventures.expense.title(expense.title, amount)}
     <p class="text-muted-foreground">
-      {$dict.adventures.expense.body(notification.payload.title)}
+      {notification.payload.title}
     </p>
   </div>
 </Base>

@@ -6,7 +6,7 @@
 </script>
 
 <Picker.Root
-  class={['adventure-list gap-gap', classes]}
+  class={['adventure-list gap-2', classes]}
   onpick={onpick ?? (() => {})}
   bleed
   {...rest}>
@@ -16,7 +16,7 @@
 <style>
   @layer components {
     :global(.adventure-list > *) {
-      width: calc(50cqi - var(--spacing-gap) / 2);
+      width: calc(100% / 2 - var(--spacing));
       max-width: 16rem;
       flex-shrink: 0;
     }
