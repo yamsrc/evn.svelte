@@ -14,9 +14,5 @@
     <li>
       <a href="loading/">{$dict.loading.title}</a>
     </li>
-    <li>
-      <!-- TODO: i18n -->
-      <a href="components/joins/">Invitations</a>
-    </li>
   </ul>
 </Section>
