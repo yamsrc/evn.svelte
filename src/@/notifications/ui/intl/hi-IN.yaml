@@ -52,9 +52,11 @@ contacts:
         !js
         (balance) => `आपको अभी ${balance} देना है`
 expenses:
-  created: |-
+  expense: >-
     !js
-    (amount, name, gender) => `${name} द्वारा ${amount} दिया गया`
+
+    (names) => { const list = new Intl.ListFormat("hi", { style: "long", type:
+    "conjunction" }).format(names); return `${list} द्वारा भुगतान किया गया`; }
 adventures:
   joined:
     me: >-

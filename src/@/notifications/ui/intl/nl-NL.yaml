@@ -42,9 +42,11 @@ contacts:
         !js
         (balance) => `Je moet nu ${balance} betalen`
 expenses:
-  created: |-
+  expense: >-
     !js
-    (amount, name, gender) => `${amount} betaald door ${name}`
+
+    (names) => { const list = new Intl.ListFormat("nl", { style: "long", type:
+    "conjunction" }).format(names); return `Betaald door ${list}`; }
 adventures:
   joined:
     me: |-

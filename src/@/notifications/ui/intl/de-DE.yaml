@@ -53,9 +53,11 @@ contacts:
         !js
         (balance) => `Ihr aktueller Kontostand beträgt ${balance}`
 expenses:
-  created: |-
+  expense: >-
     !js
-    (amount, name, gender) => `${amount} von ${name} bezahlt`
+
+    (names) => { const list = new Intl.ListFormat("de", { style: "long", type:
+    "conjunction" }).format(names); return `Bezahlt von ${list}`; }
 adventures:
   joined:
     me: |-

@@ -4,7 +4,7 @@ export type EventMap = {
   accounts: 'created'
   contacts: 'connected' | 'transferred' | 'unchained'
   groups: 'joined'
-  expenses: 'created'
+  expenses: 'expense'
   adventures: 'joined' | 'expense'
 }
 

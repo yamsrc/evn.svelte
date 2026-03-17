@@ -33,7 +33,7 @@ export type Dictionary = {
         }
       }
       expenses: {
-        created: (...args: [any, any, any]) => string
+        expense: (value: any) => string
       }
       adventures: {
         joined: {

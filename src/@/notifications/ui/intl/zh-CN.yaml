@@ -41,9 +41,11 @@ contacts:
         !js
         (balance) => `您现在需支付${balance}`
 expenses:
-  created: |-
+  expense: >-
     !js
-    (amount, name, gender) => `${name}已支付${amount}`
+
+    (names) => { const list = new Intl.ListFormat("zh-CN", { style: "long",
+    type: "conjunction" }).format(names); return `由${list}付款`; }
 adventures:
   joined:
     me: |-

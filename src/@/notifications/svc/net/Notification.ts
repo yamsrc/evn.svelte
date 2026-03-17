@@ -13,7 +13,7 @@ type Payloads = Constrain<{
     }
   }
   expenses: {
-    created: {
+    expense: {
       title: string
       location?: string
       participants: Expense['participants']

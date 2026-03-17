@@ -41,9 +41,11 @@ contacts:
         !js
         (balance) => `Şu anda ${balance} borcunuz var`
 expenses:
-  created: |-
+  expense: >-
     !js
-    (amount, name, gender) => `${amount} ${name} tarafından ödendi`
+
+    (names) => { const list = new Intl.ListFormat("tr", { style: "long", type:
+    "conjunction" }).format(names); return `${list} tarafından ödendi`; }
 adventures:
   joined:
     me: >-

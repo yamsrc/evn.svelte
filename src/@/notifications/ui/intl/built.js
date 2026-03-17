@@ -39,7 +39,7 @@ export const dictionaries = {
       }
     },
     "expenses": {
-      "created": (amount, name, gender) => gender === "he" ? `${amount} تم دفعها بواسطة ${name}` : gender === "she" ? `${amount} تم دفعها بواسطة ${name}` : `${amount} تم دفعها بواسطة ${name}`
+      "expense": (names) => { const list = new Intl.ListFormat("ar", { style: "long", type: "conjunction" }).format(names); return `تم الدفع بواسطة ${list}`; }
     },
     "adventures": {
       "joined": {
@@ -96,7 +96,7 @@ export const dictionaries = {
       }
     },
     "expenses": {
-      "created": (amount, name, gender) => `${amount} von ${name} bezahlt`
+      "expense": (names) => { const list = new Intl.ListFormat("de", { style: "long", type: "conjunction" }).format(names); return `Bezahlt von ${list}`; }
     },
     "adventures": {
       "joined": {
@@ -144,7 +144,7 @@ export const dictionaries = {
       }
     },
     "expenses": {
-      "created": (amount, name, gender) => `${amount} paid by ${name}`
+      "expense": (names) => { const list = new Intl.ListFormat("en", { style: "long", type: "conjunction" }).format(names); return `Paid by ${list}`; }
     },
     "adventures": {
       "joined": {
@@ -198,7 +198,7 @@ export const dictionaries = {
       }
     },
     "expenses": {
-      "created": (amount, name, gender) => gender === "he" ? `${amount} pagado por ${name}` : gender === "she" ? `${amount} pagada por ${name}` : `${amount} pagado/a por ${name}`
+      "expense": (names) => { const list = new Intl.ListFormat("es", { style: "long", type: "conjunction" }).format(names); return `Pagado por ${list}`; }
     },
     "adventures": {
       "joined": {
@@ -257,7 +257,7 @@ export const dictionaries = {
       }
     },
     "expenses": {
-      "created": (amount, name, gender) => gender === "he" ? `${amount} payé par ${name}` : gender === "she" ? `${amount} payée par ${name}` : `${amount} payé(e) par ${name}`
+      "expense": (names) => { const list = new Intl.ListFormat("fr", { style: "long", type: "conjunction" }).format(names); return `Payé par ${list}`; }
     },
     "adventures": {
       "joined": {
@@ -316,7 +316,7 @@ export const dictionaries = {
       }
     },
     "expenses": {
-      "created": (amount, name, gender) => `${name} द्वारा ${amount} दिया गया`
+      "expense": (names) => { const list = new Intl.ListFormat("hi", { style: "long", type: "conjunction" }).format(names); return `${list} द्वारा भुगतान किया गया`; }
     },
     "adventures": {
       "joined": {
@@ -376,7 +376,7 @@ export const dictionaries = {
       }
     },
     "expenses": {
-      "created": (amount, name, gender) => gender === "he" ? `${amount} pagato da ${name}` : gender === "she" ? `${amount} pagata da ${name}` : `${amount} pagato/a da ${name}`
+      "expense": (names) => { const list = new Intl.ListFormat("it", { style: "long", type: "conjunction" }).format(names); return `Pagato da ${list}`; }
     },
     "adventures": {
       "joined": {
@@ -429,7 +429,7 @@ export const dictionaries = {
       }
     },
     "expenses": {
-      "created": (amount, name, gender) => `${name}が支払った金額：${amount}`
+      "expense": (names) => { const list = new Intl.ListFormat("ja", { style: "long", type: "conjunction" }).format(names); return `${list}によって支払われました`; }
     },
     "adventures": {
       "joined": {
@@ -477,7 +477,7 @@ export const dictionaries = {
       }
     },
     "expenses": {
-      "created": (amount, name, gender) => `${name}님이 결제한 금액: ${amount}`
+      "expense": (names) => { const list = new Intl.ListFormat("ko", { style: "long", type: "conjunction" }).format(names); return `${list}님이 결제함`; }
     },
     "adventures": {
       "joined": {
@@ -525,7 +525,7 @@ export const dictionaries = {
       }
     },
     "expenses": {
-      "created": (amount, name, gender) => `${amount} betaald door ${name}`
+      "expense": (names) => { const list = new Intl.ListFormat("nl", { style: "long", type: "conjunction" }).format(names); return `Betaald door ${list}`; }
     },
     "adventures": {
       "joined": {
@@ -579,7 +579,7 @@ export const dictionaries = {
       }
     },
     "expenses": {
-      "created": (amount, name, gender) => gender === "he" ? `${amount} оплачено ${name}` : gender === "she" ? `${amount} оплачено ${name}ой` : `${amount} оплачено ${name}`
+      "expense": (names) => { const list = new Intl.ListFormat("ru", { style: "long", type: "conjunction" }).format(names); return `Оплачено: ${list}`; }
     },
     "adventures": {
       "joined": {
@@ -632,7 +632,7 @@ export const dictionaries = {
       }
     },
     "expenses": {
-      "created": (amount, name, gender) => `${amount} imelipwa na ${name}`
+      "expense": (names) => { const list = new Intl.ListFormat("sw", { style: "long", type: "conjunction" }).format(names); return `Imelipwa na ${list}`; }
     },
     "adventures": {
       "joined": {
@@ -680,7 +680,7 @@ export const dictionaries = {
       }
     },
     "expenses": {
-      "created": (amount, name, gender) => `${amount} ${name} tarafından ödendi`
+      "expense": (names) => { const list = new Intl.ListFormat("tr", { style: "long", type: "conjunction" }).format(names); return `${list} tarafından ödendi`; }
     },
     "adventures": {
       "joined": {
@@ -734,7 +734,7 @@ export const dictionaries = {
       }
     },
     "expenses": {
-      "created": (amount, name, gender) => gender === "he" ? `${amount} сплачено ${name}` : gender === "she" ? `${amount} сплачено ${name}ою` : `${amount} сплачено ${name}`
+      "expense": (names) => { const list = new Intl.ListFormat("uk", { style: "long", type: "conjunction" }).format(names); return `Оплачено: ${list}`; }
     },
     "adventures": {
       "joined": {
@@ -787,7 +787,7 @@ export const dictionaries = {
       }
     },
     "expenses": {
-      "created": (amount, name, gender) => `${name}已支付${amount}`
+      "expense": (names) => { const list = new Intl.ListFormat("zh-CN", { style: "long", type: "conjunction" }).format(names); return `由${list}付款`; }
     },
     "adventures": {
       "joined": {

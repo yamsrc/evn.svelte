@@ -41,9 +41,11 @@ contacts:
         !js
         (balance) => `現在のお支払い額は${balance}です`
 expenses:
-  created: |-
+  expense: >-
     !js
-    (amount, name, gender) => `${name}が支払った金額：${amount}`
+
+    (names) => { const list = new Intl.ListFormat("ja", { style: "long", type:
+    "conjunction" }).format(names); return `${list}によって支払われました`; }
 adventures:
   joined:
     me: |-

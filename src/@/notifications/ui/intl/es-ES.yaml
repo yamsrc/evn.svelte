@@ -53,12 +53,11 @@ contacts:
         !js
         (balance) => `Ahora debes ${balance}`
 expenses:
-  created: >-
+  expense: >-
     !js
 
-    (amount, name, gender) => gender === "he" ? `${amount} pagado por ${name}` :
-    gender === "she" ? `${amount} pagada por ${name}` : `${amount} pagado/a por
-    ${name}`
+    (names) => { const list = new Intl.ListFormat("es", { style: "long", type:
+    "conjunction" }).format(names); return `Pagado por ${list}`; }
 adventures:
   joined:
     me: >-
