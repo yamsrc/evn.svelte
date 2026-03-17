@@ -50,6 +50,11 @@ inputs:
     warning:
       input: Archiving the adventure is permanent and can not be undone.
       context: warning shown on archive confirmation screen
+    merge:
+      label:
+        input: Transfer balances
+      description:
+        input: When this adventure is archived, outstanding balances will be converted into regular debts between members.
   balance:
     header:
       input: "When archiving this adventure:"

@@ -47,6 +47,11 @@ archive:
   warning: >-
     Das Archivieren des Abenteuers ist dauerhaft und kann nicht rückgängig
     gemacht werden.
+  merge:
+    label: Guthaben übertragen
+    description: >-
+      Wenn dieses Abenteuer archiviert wird, werden ausstehende Beträge in
+      reguläre Schulden zwischen den Mitgliedern umgewandelt.
 balance:
   header: "Beim Archivieren dieses Abenteuers:"
   merge: Schulden zu den regulären Mitgliedsschulden übertragen

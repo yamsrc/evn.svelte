@@ -44,6 +44,11 @@ selector:
 archive:
   header: Archivo
   warning: Archivar la aventura es una acción permanente y no se puede deshacer.
+  merge:
+    label: Transferir saldos
+    description: >-
+      Cuando se archive esta aventura, los saldos pendientes se convertirán en
+      deudas habituales entre los miembros.
 balance:
   header: "Al archivar esta aventura:"
   merge: Mover deudas a las deudas de miembros regulares

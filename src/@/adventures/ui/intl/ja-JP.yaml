@@ -37,6 +37,9 @@ selector:
 archive:
   header: アーカイブ
   warning: 冒険のアーカイブは永久的で元に戻せません。
+  merge:
+    label: 残高を移行
+    description: このアドベンチャーがアーカイブされると、未清算の残高はメンバー間の通常の借金に変換されます。
 balance:
   header: この冒険をアーカイブする際：
   merge: 債務を通常メンバーの債務に移動する

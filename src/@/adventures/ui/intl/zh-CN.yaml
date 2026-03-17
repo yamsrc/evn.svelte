@@ -36,6 +36,9 @@ selector:
 archive:
   header: 归档
   warning: 归档此冒险将是永久性的，无法撤销。
+  merge:
+    label: 转移余额
+    description: 当此冒险被归档时，未结清的余额将转换为成员之间的常规债务。
 balance:
   header: 归档此冒险时：
   merge: 将债务移至普通成员债务

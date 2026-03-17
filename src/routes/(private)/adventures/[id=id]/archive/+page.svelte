@@ -6,11 +6,10 @@
   import { Hold } from '$com/buttons'
   import { Loader } from '$com/loader'
   import { Actions, Return } from '$com/shell'
-  import * as RadioGroup from '$ui/radio-group'
   import { accounts } from '@/accounts'
   import { adventures, archive, expose } from '@/adventures'
   import { dict } from '@/adventures/ui/intl'
-  import { actionVariants, Section, Header, Panel } from '@/app/ui'
+  import { actionVariants, Section, Header, Panel, Toggle } from '@/app/ui'
   import { Graph } from '@/contacts/ui'
   import type { Adventure } from '@/adventures'
 
@@ -37,8 +36,6 @@
     goto(`/adventures/${id}/`)
   }
 </script>
-
-<Return />
 
 {#if adventure}
   <Section>
@@ -67,22 +64,9 @@
   </Section>
 
   <Section>
-    <Panel>
-      <p class="font-semibold">{$dict.balance.header}</p>
-      <RadioGroup.Root
-        value={merge ? 'merge' : 'keep'}
-        onValueChange={(v) => (merge = v === 'merge')}
-        disabled={busy}>
-        <div class="flex items-center gap-2">
-          <RadioGroup.Item value="merge" id="archive-merge" />
-          <label for="archive-merge">{$dict.balance.merge}</label>
-        </div>
-        <div class="flex items-center gap-2">
-          <RadioGroup.Item value="keep" id="archive-keep" />
-          <label for="archive-keep">{$dict.balance.keep}</label>
-        </div>
-      </RadioGroup.Root>
-    </Panel>
+    <Toggle id="archive-merge-switch" label={$dict.archive.merge.label} bind:checked={merge}>
+      <p class="text-muted-foreground">{$dict.archive.merge.description}</p>
+    </Toggle>
   </Section>
 
   <Section>
@@ -105,3 +89,5 @@
     </Hold>
   </Actions>
 {/if}
+
+<Return href={`/adventures/editor/${id}/`} />

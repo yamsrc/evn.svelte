@@ -46,7 +46,11 @@ export const dictionaries = {
     },
     "archive": {
       "header": "الأرشيف",
-      "warning": "أرشفة المغامرة إجراء دائم ولا يمكن التراجع عنه."
+      "warning": "أرشفة المغامرة إجراء دائم ولا يمكن التراجع عنه.",
+      "merge": {
+        "label": "تحويل الأرصدة",
+        "description": "عند أرشفة هذه المغامرة، سيتم تحويل الأرصدة المستحقة إلى ديون عادية بين الأعضاء."
+      }
     },
     "balance": {
       "header": "عند أرشفة هذه المغامرة:",
@@ -108,7 +112,11 @@ export const dictionaries = {
     },
     "archive": {
       "header": "Archiv",
-      "warning": "Das Archivieren des Abenteuers ist dauerhaft und kann nicht rückgängig gemacht werden."
+      "warning": "Das Archivieren des Abenteuers ist dauerhaft und kann nicht rückgängig gemacht werden.",
+      "merge": {
+        "label": "Guthaben übertragen",
+        "description": "Wenn dieses Abenteuer archiviert wird, werden ausstehende Beträge in reguläre Schulden zwischen den Mitgliedern umgewandelt."
+      }
     },
     "balance": {
       "header": "Beim Archivieren dieses Abenteuers:",
@@ -170,7 +178,11 @@ export const dictionaries = {
     },
     "archive": {
       "header": "Archive",
-      "warning": "Archiving the adventure is permanent and cannot be undone."
+      "warning": "Archiving the adventure is permanent and cannot be undone.",
+      "merge": {
+        "label": "Transfer balances",
+        "description": "When this adventure is archived, outstanding balances will be converted into regular debts between members."
+      }
     },
     "balance": {
       "header": "When archiving this adventure:",
@@ -232,7 +244,11 @@ export const dictionaries = {
     },
     "archive": {
       "header": "Archivo",
-      "warning": "Archivar la aventura es una acción permanente y no se puede deshacer."
+      "warning": "Archivar la aventura es una acción permanente y no se puede deshacer.",
+      "merge": {
+        "label": "Transferir saldos",
+        "description": "Cuando se archive esta aventura, los saldos pendientes se convertirán en deudas habituales entre los miembros."
+      }
     },
     "balance": {
       "header": "Al archivar esta aventura:",
@@ -294,7 +310,11 @@ export const dictionaries = {
     },
     "archive": {
       "header": "Archive",
-      "warning": "L’archivage de l’aventure est définitif et ne peut pas être annulé."
+      "warning": "L’archivage de l’aventure est définitif et ne peut pas être annulé.",
+      "merge": {
+        "label": "Transférer les soldes",
+        "description": "Lorsque cette aventure sera archivée, les soldes en attente seront convertis en dettes classiques entre les membres."
+      }
     },
     "balance": {
       "header": "Lors de l’archivage de cette aventure :",
@@ -356,7 +376,11 @@ export const dictionaries = {
     },
     "archive": {
       "header": "आर्काइव",
-      "warning": "एडवेंचर को आर्काइव करना स्थायी है और इसे वापस नहीं लिया जा सकता।"
+      "warning": "एडवेंचर को आर्काइव करना स्थायी है और इसे वापस नहीं लिया जा सकता।",
+      "merge": {
+        "label": "बैलेंस ट्रांसफर करें",
+        "description": "जब इस एडवेंचर को आर्काइव किया जाएगा, तो लंबित बकाया राशियाँ सदस्यों के बीच सामान्य ऋण में बदल जाएंगी।"
+      }
     },
     "balance": {
       "header": "इस साहसिक कार्य को संग्रहित करते समय:",
@@ -418,7 +442,11 @@ export const dictionaries = {
     },
     "archive": {
       "header": "Archivio",
-      "warning": "L’archiviazione dell’avventura è permanente e non può essere annullata."
+      "warning": "L’archiviazione dell’avventura è permanente e non può essere annullata.",
+      "merge": {
+        "label": "Trasferisci saldi",
+        "description": "Quando questa avventura verrà archiviata, i saldi in sospeso saranno convertiti in debiti ordinari tra i membri."
+      }
     },
     "balance": {
       "header": "Durante l’archiviazione di questa avventura:",
@@ -480,7 +508,11 @@ export const dictionaries = {
     },
     "archive": {
       "header": "アーカイブ",
-      "warning": "冒険のアーカイブは永久的で元に戻せません。"
+      "warning": "冒険のアーカイブは永久的で元に戻せません。",
+      "merge": {
+        "label": "残高を移行",
+        "description": "このアドベンチャーがアーカイブされると、未清算の残高はメンバー間の通常の借金に変換されます。"
+      }
     },
     "balance": {
       "header": "この冒険をアーカイブする際：",
@@ -542,7 +574,11 @@ export const dictionaries = {
     },
     "archive": {
       "header": "아카이브",
-      "warning": "이 모험을 보관하면 영구적으로 삭제되며 되돌릴 수 없습니다."
+      "warning": "이 모험을 보관하면 영구적으로 삭제되며 되돌릴 수 없습니다.",
+      "merge": {
+        "label": "잔액 이체",
+        "description": "이 모험이 보관되면 미결제 잔액은 멤버들 간의 일반적인 부채로 전환됩니다."
+      }
     },
     "balance": {
       "header": "이 모험을 보관할 때:",
@@ -604,7 +640,11 @@ export const dictionaries = {
     },
     "archive": {
       "header": "Archief",
-      "warning": "Het archiveren van het avontuur is permanent en kan niet ongedaan worden gemaakt."
+      "warning": "Het archiveren van het avontuur is permanent en kan niet ongedaan worden gemaakt.",
+      "merge": {
+        "label": "Saldi overzetten",
+        "description": "Wanneer dit avontuur wordt gearchiveerd, worden openstaande saldi omgezet in gewone schulden tussen de leden."
+      }
     },
     "balance": {
       "header": "Bij het archiveren van dit avontuur:",
@@ -666,7 +706,11 @@ export const dictionaries = {
     },
     "archive": {
       "header": "Архив",
-      "warning": "Архивирование приключения — это необратимое действие и не может быть отменено."
+      "warning": "Архивирование приключения — это необратимое действие и не может быть отменено.",
+      "merge": {
+        "label": "Перевести балансы",
+        "description": "Когда это приключение будет архивировано, все непогашенные балансы будут превращены в обычные долги между участниками."
+      }
     },
     "balance": {
       "header": "При архивировании этого приключения:",
@@ -728,7 +772,11 @@ export const dictionaries = {
     },
     "archive": {
       "header": "Kumbukumbu",
-      "warning": "Kuhifadhi tukio hili ni la kudumu na haliwezi kubatilishwa."
+      "warning": "Kuhifadhi tukio hili ni la kudumu na haliwezi kubatilishwa.",
+      "merge": {
+        "label": "Hamisha salio",
+        "description": "Safari hii itakapohifadhiwa, salio lolote lililobaki litageuzwa kuwa deni la kawaida kati ya wanachama."
+      }
     },
     "balance": {
       "header": "Unapohifadhi tukio hili kwenye kumbukumbu:",
@@ -790,7 +838,11 @@ export const dictionaries = {
     },
     "archive": {
       "header": "Arşiv",
-      "warning": "Macera arşivlendiğinde bu işlem kalıcıdır ve geri alınamaz."
+      "warning": "Macera arşivlendiğinde bu işlem kalıcıdır ve geri alınamaz.",
+      "merge": {
+        "label": "Bakiyeleri aktar",
+        "description": "Bu macera arşivlendiğinde, açık bakiyeler üyeler arasındaki normal borçlara dönüştürülecektir."
+      }
     },
     "balance": {
       "header": "Bu macera arşivlenirken:",
@@ -852,7 +904,11 @@ export const dictionaries = {
     },
     "archive": {
       "header": "Архів",
-      "warning": "Архівування пригоди є остаточним і не може бути скасоване."
+      "warning": "Архівування пригоди є остаточним і не може бути скасоване.",
+      "merge": {
+        "label": "Перенести баланси",
+        "description": "Коли цю пригоду буде заархівовано, невиплачені залишки перетворяться на звичайні борги між учасниками."
+      }
     },
     "balance": {
       "header": "Під час архівування цієї пригоди:",
@@ -914,7 +970,11 @@ export const dictionaries = {
     },
     "archive": {
       "header": "归档",
-      "warning": "归档此冒险将是永久性的，无法撤销。"
+      "warning": "归档此冒险将是永久性的，无法撤销。",
+      "merge": {
+        "label": "转移余额",
+        "description": "当此冒险被归档时，未结清的余额将转换为成员之间的常规债务。"
+      }
     },
     "balance": {
       "header": "归档此冒险时：",

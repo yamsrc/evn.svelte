@@ -44,6 +44,11 @@ selector:
 archive:
   header: Archivio
   warning: L’archiviazione dell’avventura è permanente e non può essere annullata.
+  merge:
+    label: Trasferisci saldi
+    description: >-
+      Quando questa avventura verrà archiviata, i saldi in sospeso saranno
+      convertiti in debiti ordinari tra i membri.
 balance:
   header: "Durante l’archiviazione di questa avventura:"
   merge: Sposta i debiti nei debiti dei membri regolari

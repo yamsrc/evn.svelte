@@ -44,6 +44,11 @@ selector:
 archive:
   header: Archive
   warning: Archiving the adventure is permanent and cannot be undone.
+  merge:
+    label: Transfer balances
+    description: >-
+      When this adventure is archived, outstanding balances will be converted
+      into regular debts between members.
 balance:
   header: "When archiving this adventure:"
   merge: Move debts to the regular member debts

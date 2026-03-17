@@ -46,6 +46,11 @@ archive:
   warning: >-
     Het archiveren van het avontuur is permanent en kan niet ongedaan worden
     gemaakt.
+  merge:
+    label: Saldi overzetten
+    description: >-
+      Wanneer dit avontuur wordt gearchiveerd, worden openstaande saldi omgezet
+      in gewone schulden tussen de leden.
 balance:
   header: "Bij het archiveren van dit avontuur:"
   merge: Verplaats schulden naar de gewone leden-schulden

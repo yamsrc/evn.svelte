@@ -53,6 +53,10 @@ export type Dictionary = {
       archive: {
         header: string
         warning: string
+        merge: {
+          label: string
+          description: string
+        }
       }
       balance: {
         header: string

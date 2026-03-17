@@ -45,6 +45,11 @@ selector:
 archive:
   header: Archive
   warning: L’archivage de l’aventure est définitif et ne peut pas être annulé.
+  merge:
+    label: Transférer les soldes
+    description: >-
+      Lorsque cette aventure sera archivée, les soldes en attente seront
+      convertis en dettes classiques entre les membres.
 balance:
   header: "Lors de l’archivage de cette aventure :"
   merge: Transférer les dettes vers les dettes des membres réguliers

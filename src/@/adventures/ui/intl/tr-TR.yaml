@@ -44,6 +44,11 @@ selector:
 archive:
   header: Arşiv
   warning: Macera arşivlendiğinde bu işlem kalıcıdır ve geri alınamaz.
+  merge:
+    label: Bakiyeleri aktar
+    description: >-
+      Bu macera arşivlendiğinde, açık bakiyeler üyeler arasındaki normal
+      borçlara dönüştürülecektir.
 balance:
   header: "Bu macera arşivlenirken:"
   merge: Borçları normal üye borçlarına taşı

@@ -44,6 +44,11 @@ selector:
 archive:
   header: Kumbukumbu
   warning: Kuhifadhi tukio hili ni la kudumu na haliwezi kubatilishwa.
+  merge:
+    label: Hamisha salio
+    description: >-
+      Safari hii itakapohifadhiwa, salio lolote lililobaki litageuzwa kuwa deni
+      la kawaida kati ya wanachama.
 balance:
   header: "Unapohifadhi tukio hili kwenye kumbukumbu:"
   merge: Hamisha madeni kwa madeni ya wanachama wa kawaida

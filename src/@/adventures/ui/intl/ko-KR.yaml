@@ -38,6 +38,9 @@ selector:
 archive:
   header: 아카이브
   warning: 이 모험을 보관하면 영구적으로 삭제되며 되돌릴 수 없습니다.
+  merge:
+    label: 잔액 이체
+    description: 이 모험이 보관되면 미결제 잔액은 멤버들 간의 일반적인 부채로 전환됩니다.
 balance:
   header: "이 모험을 보관할 때:"
   merge: 부채를 일반 회원 부채로 이동
