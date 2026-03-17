@@ -1,22 +1,19 @@
 <script lang="ts">
   import { unseen } from '@/adventures'
-  import List from './List.svelte'
   import Panel from './Panel.svelte'
+  import * as List from './list'
   import type { Props } from './Adventures'
 
   const { adventures, notifications, class: classes }: Props = $props()
 
-  const active = $derived(adventures.filter((a) => !a.archived))
-  const archived = $derived(adventures.filter((a) => a.archived))
+  const sorted = $derived(adventures.sort((a, b) => Number(a.archived) - Number(b.archived)))
 </script>
 
-<List class={classes}>
-  {#each active as adventure (adventure.id)}
+<List.Root class={classes}>
+  {#each sorted as adventure (adventure.id)}
     {@const highlighted = unseen(adventure, notifications ?? [])}
-    <Panel {adventure} link {highlighted} />
+    <List.Option>
+      <Panel {adventure} link {highlighted} class="size-full" />
+    </List.Option>
   {/each}
-  {#each archived as adventure (adventure.id)}
-    {@const highlighted = unseen(adventure, notifications ?? [])}
-    <Panel {adventure} link {highlighted} />
-  {/each}
-</List>
+</List.Root>

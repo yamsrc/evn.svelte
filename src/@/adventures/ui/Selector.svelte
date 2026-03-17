@@ -2,12 +2,11 @@
   import { ChartPie } from '@lucide/svelte'
   import { ok } from 'svas'
   import { goto, replaceState } from '$app/navigation'
-  import * as Picker from '$com/picker'
   import { buttonVariants } from '$ui/button'
   import { adventures } from '@/adventures'
-  import List from './List.svelte'
   import Panel from './Panel.svelte'
   import { dict } from './intl'
+  import * as List from './list'
   import type { Props } from './Selector'
 
   const { id, draft, onchange }: Props = $props()
@@ -37,22 +36,22 @@
 </script>
 
 {#if active.length > 0}
-  <List {picked} {onpick} align="start" class="py-1 -my-1">
-    <Picker.Option
+  <List.Root {picked} {onpick} align="start" class="py-1 -my-1">
+    <List.Option
       index={0}
       class={[
         buttonVariants({ variant: 'outline' }),
         card,
-        'w-20 flex-col gap-gap items-center justify-center text-muted-foreground',
+        'w-20! flex-col items-center justify-center text-muted-foreground',
       ]}>
       <ChartPie />
       <span class="text-sm">{$dict.selector.regular}</span>
-    </Picker.Option>
+    </List.Option>
 
     {#each active as adventure, index (adventure.id)}
-      <Picker.Option variant="outline" class={[card, 'p-0']} index={index + 1}>
+      <List.Option variant="outline" class={[card, 'p-0']} index={index + 1}>
         <Panel {adventure} class="size-full" />
-      </Picker.Option>
+      </List.Option>
     {/each}
-  </List>
+  </List.Root>
 {/if}

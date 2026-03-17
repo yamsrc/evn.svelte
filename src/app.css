@@ -147,8 +147,6 @@
   --tracking-wide: calc(var(--tracking-normal) + 0.025em);
   --tracking-wider: calc(var(--tracking-normal) + 0.05em);
   --tracking-widest: calc(var(--tracking-normal) + 0.1em);
-
-  --spacing-gap: calc(var(--spacing) * 1.5);
 }
 
 @layer base {
@@ -214,7 +212,6 @@
     @apply pt-[calc(var(--spacing)*1-0.2em)];
   }
 }
-
 
 @layer transitions {
   @media (prefers-reduced-motion: reduce) {

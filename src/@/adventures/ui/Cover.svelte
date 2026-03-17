@@ -1,12 +1,11 @@
 <script lang="ts">
   import { ImageUp } from '@lucide/svelte'
   import { Loader } from '$com/loader'
-  import * as Picker from '$com/picker'
   import { buttonVariants } from '$ui/button'
   import { presets, upload } from '@/adventures'
-  import List from './List.svelte'
   import Picture from './Picture.svelte'
   import { dict } from './intl'
+  import * as List from './list'
   import type { Props } from './Cover'
 
   const UPLOAD = 1
@@ -52,8 +51,8 @@
   <h2>{$dict.editor.cover}</h2>
   <input type="file" accept="image/*" bind:this={input} onchange={handleUpload} class="hidden" />
 
-  <List {picked} {onpick} align="center" class="py-1 -my-1">
-    <Picker.Option
+  <List.Root {picked} {onpick} align="center" class="py-1 -my-1">
+    <List.Option
       id="adventures-cover-upload-button"
       variant="outline"
       onclick={() => input?.click()}
@@ -69,16 +68,16 @@
         <ImageUp class="size-6" />
       {/if}
       <span class={['text-xs', uploading && 'hidden']}>{$dict.editor.upload}</span>
-    </Picker.Option>
+    </List.Option>
 
     {#each options as id, index (id)}
       {@const vt =
         id === picture
           ? 'view-transition-name: adventure-cover; view-transition-class: transition-morph;'
           : ''}
-      <Picker.Option class={card} index={index + UPLOAD}>
+      <List.Option class={card} index={index + UPLOAD}>
         <Picture adventure={{ title: id, picture: id }} class="size-full object-cover" style={vt} />
-      </Picker.Option>
+      </List.Option>
     {/each}
-  </List>
+  </List.Root>
 </div>
