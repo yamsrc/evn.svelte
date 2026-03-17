@@ -63,7 +63,7 @@
     size="lg"
     class={[
       base,
-      'w-44 h-auto shrink-0 flex-col items-start gap-0 text-foreground',
+      'h-auto shrink-0 flex-col items-start gap-0 text-foreground',
       full?.archived && 'opacity-70',
       classes,
     ]}

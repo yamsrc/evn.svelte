@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { Scrollable } from '$com/scrollable'
   import { unseen } from '@/adventures'
   import { hints } from '@/app/ui/hint/store'
   import Hint from './Hint.svelte'
+  import List from './List.svelte'
   import Panel from './Panel.svelte'
   import { dict } from './intl'
   import type { Props } from './Adventures'
@@ -18,16 +18,16 @@
 {#if visible}
   <h2>{$dict.title}</h2>
   {#if active.length > 0}
-    <Scrollable bleed class={['[--gap:calc(var(--spacing)*1.5)] gap-(--gap) py-2 -my-2', classes]}>
+    <List class={classes}>
       {#each active as adventure (adventure.id)}
         {@const highlighted = unseen(adventure, notifications ?? [])}
-        <Panel {adventure} link {highlighted} class="w-[calc(50cqi-var(--gap)/2)] max-w-64" />
+        <Panel {adventure} link {highlighted} />
       {/each}
       {#each archived as adventure (adventure.id)}
         {@const highlighted = unseen(adventure, notifications ?? [])}
-        <Panel {adventure} link {highlighted} class="w-[calc(50cqi-var(--gap)/2)] max-w-64" />
+        <Panel {adventure} link {highlighted} />
       {/each}
-    </Scrollable>
+    </List>
   {:else}
     <Hint />
   {/if}

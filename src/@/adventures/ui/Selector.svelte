@@ -5,6 +5,7 @@
   import * as Picker from '$com/picker'
   import { buttonVariants } from '$ui/button'
   import { adventures } from '@/adventures'
+  import List from './List.svelte'
   import Panel from './Panel.svelte'
   import { dict } from './intl'
   import type { Props } from './Selector'
@@ -36,22 +37,22 @@
 </script>
 
 {#if active.length > 0}
-  <Picker.Root {picked} {onpick} align="start" bleed class="gap-2 py-1">
+  <List {picked} {onpick} align="start" class="py-1 -my-1">
     <Picker.Option
       index={0}
       class={[
         buttonVariants({ variant: 'outline' }),
         card,
-        'w-20 flex-col gap-1.5 items-center justify-center text-muted-foreground',
+        'w-20 flex-col gap-gap items-center justify-center text-muted-foreground',
       ]}>
       <ChartPie />
       <span class="text-sm">{$dict.selector.regular}</span>
     </Picker.Option>
 
     {#each active as adventure, index (adventure.id)}
-      <Picker.Option variant="outline" class={[card, 'w-40 p-0']} index={index + 1}>
+      <Picker.Option variant="outline" class={[card, 'p-0']} index={index + 1}>
         <Panel {adventure} class="size-full" />
       </Picker.Option>
     {/each}
-  </Picker.Root>
+  </List>
 {/if}

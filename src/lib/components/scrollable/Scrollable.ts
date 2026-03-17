@@ -6,6 +6,7 @@ export interface Props {
   children: Snippet
   infinite?: Options['infinite']
   align?: Options['align']
+  /** Extend scroll area to full viewport width, breaking out of parent padding */
   bleed?: boolean
   class?: ClassValue
   id?: string

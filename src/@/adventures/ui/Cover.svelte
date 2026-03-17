@@ -5,6 +5,7 @@
   import { buttonVariants } from '$ui/button'
   import { presets, upload } from '@/adventures'
   import { Picture } from '@/media/ui'
+  import List from './List.svelte'
   import { dict } from './intl'
   import type { Props } from './Cover'
 
@@ -20,8 +21,7 @@
   const options = $derived(uploaded ? [uploaded, ...presets] : presets)
   const picked = $derived(picture ? options.indexOf(picture) + UPLOAD : undefined)
 
-  const card =
-    'w-[calc(50cqi-var(--gap)/2)] max-w-64 aspect-[1.4] shrink-0 overflow-hidden rounded-lg'
+  const card = 'aspect-[1.4] overflow-hidden rounded-lg'
 
   function onpick(index: number) {
     picture = options[index - UPLOAD]
@@ -48,16 +48,11 @@
   }
 </script>
 
-<div>
+<div class="space-y-2">
   <h2>{$dict.editor.cover}</h2>
   <input type="file" accept="image/*" bind:this={input} onchange={handleUpload} class="hidden" />
 
-  <Picker.Root
-    {picked}
-    {onpick}
-    bleed
-    align="center"
-    class="[--gap:calc(var(--spacing)*1.5)] gap-(--gap) py-1">
+  <List {picked} {onpick} align="center" class="py-1 -my-1">
     <Picker.Option
       id="adventures-cover-upload-button"
       variant="outline"
@@ -85,5 +80,5 @@
         <Picture {id} variant="700x500" class="h-full w-full object-cover" style={vt} />
       </Picker.Option>
     {/each}
-  </Picker.Root>
+  </List>
 </div>
