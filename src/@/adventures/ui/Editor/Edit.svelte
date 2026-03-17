@@ -14,12 +14,18 @@
     const body = {
       title: value.title,
       picture: value.picture,
+      participants: value.participants,
     }
 
     const snapshot = JSON.parse(ctx.snapshot) as typeof ctx.value
 
     const changed =
-      JSON.stringify(body) !== JSON.stringify({ title: snapshot.title, picture: snapshot.picture })
+      JSON.stringify(body) !==
+      JSON.stringify({
+        title: snapshot.title,
+        picture: snapshot.picture,
+        participants: snapshot.participants,
+      })
 
     if (!changed) {
       await back(id === undefined ? '/expenses/' : `/adventures/${id}/`)
@@ -35,4 +41,4 @@
   }
 </script>
 
-<Form {id} bind:value bind:busy {onsubmit} />
+<Form bind:value bind:busy {onsubmit} />

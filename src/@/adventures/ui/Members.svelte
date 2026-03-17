@@ -4,12 +4,12 @@
   import { dict } from './intl'
   import type { Props } from './Members'
 
-  const { identities, participants, class: classes }: Props = $props()
+  const { participants, class: classes }: Props = $props()
 
   const entries = $derived(
-    identities.map((id) => ({
+    Object.entries(participants).map(([id, value]) => ({
       id,
-      value: participants[id] ?? 0,
+      value: value ?? 0,
       name: id === $me?.id ? $dict.me : undefined,
     })),
   )

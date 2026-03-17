@@ -11,18 +11,13 @@
   import { account as me } from '@/iam'
   import type { Props, Value } from './Form'
 
-  let {
-    id,
-    value = $bindable<Value>(),
-    busy = $bindable(false),
-    onsubmit: callback,
-  }: Props = $props()
-
-  const identities = $derived(Object.keys(value.participants))
+  let { value = $bindable<Value>(), busy = $bindable(false), onsubmit: callback }: Props = $props()
 
   const showMembers = $derived(
-    $me?.id === undefined || identities.length !== 1 || identities[0] !== $me.id,
+    $me?.id === undefined || value.participants.length > 1 || value.participants[0] !== $me.id,
   )
+
+  const participants = $derived(Object.fromEntries(value.participants.map((id) => [id, 0])))
 
   let submitButton = $state<HTMLButtonElement | null>(null)
 
@@ -52,13 +47,13 @@
 
     <div class="space-y-2">
       {#if showMembers}
-        <Members {identities} participants={value.participants} />
+        <Members {participants} />
       {/if}
 
       <Button
         id="adventures-editor-members-button"
         href="add/"
-        disabled={busy || id === undefined}
+        disabled={busy}
         variant="secondary"
         size="lg"
         class="w-full">

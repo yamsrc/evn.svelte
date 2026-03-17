@@ -23,7 +23,6 @@
     {@const adventure = adventures.find((adventure) => adventure.id === id)}
 
     {#if adventure}
-      {@const identities = Object.keys(adventure.participants)}
       {@const balance = adventure.participants[$account?.id ?? ''] ?? 0}
       {@const total = adventure.expenses.reduce((sum, expense) => sum + expense.amount, 0) ?? 0}
 
@@ -60,7 +59,7 @@
       </Section>
 
       <Section>
-        <Members {identities} participants={adventure.participants} />
+        <Members participants={adventure.participants} />
       </Section>
 
       <Section>

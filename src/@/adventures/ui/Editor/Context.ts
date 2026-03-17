@@ -25,7 +25,7 @@ function exact(partial: Partial<Value>): Value {
   return {
     title: value.title,
     picture: value.picture,
-    participants: structuredClone(value.participants),
+    participants: value.participants,
   }
 }
 
@@ -33,7 +33,7 @@ function blank(draft?: Partial<Value>): Value {
   return {
     title: draft?.title ?? '',
     picture: draft?.picture ?? '',
-    participants: draft?.participants ?? {},
+    participants: draft?.participants ?? [],
   }
 }
 
@@ -50,5 +50,5 @@ export interface Context {
 export interface Value {
   title: string
   picture: string
-  participants: Record<string, number>
+  participants: string[]
 }

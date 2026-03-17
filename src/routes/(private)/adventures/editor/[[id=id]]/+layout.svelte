@@ -8,7 +8,7 @@
   const { children } = $props()
   const id = $derived(page.params.id)
   const value = $derived.by(() => {
-    if (ok($account)) return { participants: { [$account.id]: 0 } }
+    if (ok($account)) return { participants: [$account.id] }
   })
 </script>
 
@@ -22,8 +22,10 @@
       {#if ok(adventures)}
         {@const adventure = adventures.find((entry) => entry.id === id)}
         {#if adventure}
+          {@const identities = Object.keys(adventure?.participants ?? {})}
+          {@const value = { ...adventure, participants: identities }}
           {#key id}
-            <Editor.Context value={adventure}>
+            <Editor.Context {value}>
               {@render children()}
             </Editor.Context>
           {/key}

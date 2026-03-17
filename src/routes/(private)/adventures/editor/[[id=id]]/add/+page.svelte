@@ -40,7 +40,7 @@
   let groupSelection = new SvelteSet<string>()
   let busy = $state(false)
 
-  const notMember = (identity: string) => ctx.value.participants[identity] === undefined
+  const notMember = (identity: string) => !ctx.value.participants.includes(identity)
 
   const selected = $derived(
     contactsSelection.size > 0 || favoritesSelection.size > 0 || groupSelection.size > 0,
@@ -104,10 +104,7 @@
     busy = true
 
     if (id === undefined) {
-      ctx.value.participants = {
-        ...ctx.value.participants,
-        ...Object.fromEntries(identities.map((identity) => [identity, 0])),
-      }
+      ctx.value.participants = [...ctx.value.participants, ...identities]
 
       busy = false
       await back('/adventures/editor/')
@@ -121,7 +118,7 @@
 
     if (adventure instanceof Error) return
 
-    ctx.value.participants = adventure.participants
+    ctx.value.participants = [...ctx.value.participants, ...identities]
 
     await back(`/adventures/editor/${id}/`)
   }
