@@ -1,9 +1,11 @@
 <script lang="ts">
   import { ChevronLeft } from '@lucide/svelte'
   import { onMount } from 'svelte'
+  import { derived } from 'svelte/store'
   import { preloadCode } from '$app/navigation'
   import { page } from '$app/state'
   import { back } from '$com/history'
+  import { ios, safari, shell, standalone } from '$lib/tools'
   import { cn } from '$lib/utils'
   import { Button } from '$ui/button'
   import * as ButtonGroup from '$ui/button-group'
@@ -11,7 +13,28 @@
   import { exact, match, nested, type Props, type Section } from './Nav'
   import { actions, returns } from './store'
 
-  const { sections, position = 'start', class: classes }: Props = $props()
+  const app = standalone || shell
+  const safariBrowser = ios && safari && !app
+
+  const faded = derived(
+    actions,
+    ($actions, set) => {
+      const a = $actions.at(-1) ?? null
+
+      if (!a?.active) {
+        set(false)
+
+        return
+      }
+
+      const unsub = a.active.subscribe(set)
+
+      return unsub
+    },
+    false,
+  )
+
+  const { sections, position = 'start', underlay = false, class: classes }: Props = $props()
   const action = $derived($actions.at(-1) ?? null)
 
   const active = $derived(sections.find((section) => match(section, page.url.pathname)))
@@ -39,24 +62,34 @@
 
 <div class="h-20 sm:h-24"></div>
 <nav
-  class="
-  fixed max-w-3xl mx-auto
-  bottom-[env(safe-area-inset-bottom)] standalone:bottom-[max(env(safe-area-inset-bottom),1rem)]
-  left-[env(safe-area-inset-left)] right-[env(safe-area-inset-right)]
-  pointer-events-none
-  {classes}
-  ">
+  class={[
+    'fixed max-w-3xl mx-auto',
+    'bottom-[env(safe-area-inset-bottom)] standalone:bottom-[max(env(safe-area-inset-bottom),1rem)]',
+    'left-[env(safe-area-inset-left)] right-[env(safe-area-inset-right)]',
+    classes,
+  ]}>
+  {#if underlay}
+    <div
+      class={[
+        'absolute -z-1 inset-0 -top-6',
+        '-bottom-[max(env(safe-area-inset-bottom),1rem)]',
+        'bg-background/80',
+        'mask-[linear-gradient(to_bottom,transparent_0%,black_2rem)]',
+      ]}
+      class:hidden={safariBrowser}>
+    </div>
+  {/if}
   <div
     class={cn(
-      'flex items-center gap-2 h-21 p-5 pt-0 sm:pb-6 standalone:h-16 standalone:px-6 standalone:pb-0',
+      'flex items-center gap-2',
+      'h-21 standalone:h-16 p-5 pt-0 sm:pb-6 standalone:px-6 standalone:pb-0',
+      app && 'h-16 pb-0',
+      safariBrowser && 'h-18 pb-[6px]', // min 6px from bottom edge to keep safari navbar transparent
       position === 'center' ? 'justify-center' : 'justify-between',
       position === 'start' ? 'flex-row' : 'flex-row-reverse',
     )}>
     <ul
-      class={cn(
-        'bg-muted backdrop-blur-xs overflow-hidden flex pointer-events-auto sm:ml-4 h-full',
-        rounded,
-      )}
+      class={cn('bg-muted overflow-hidden flex sm:ml-4 h-full', $faded && 'bg-background', rounded)}
       style="view-transition-name: shell-nav;">
       {#each sections as section (section.href)}
         {@const active = match(section, page.url.pathname)}
@@ -78,6 +111,7 @@
             <div
               class={cn(
                 'absolute inset-0 bg-background z-0 rounded-[calc(var(--radius)+2px)] m-1',
+                // $faded && 'opacity-25 transition-opacity duration-200',
                 active || 'hidden',
               )}
               style={active ? 'view-transition-name: shell-nav-active;' : ''}>
@@ -90,6 +124,8 @@
             <div
               class={cn(
                 "flex flex-col items-center gap-0.5 z-10 relative font-bold [&_svg:not([class*='size-'])]:size-5",
+                'transition-opacity duration-200',
+                $faded && 'opacity-25',
               )}
               style="view-transition-name: shell-nav-item-{section.id};">
               {#if ret}
@@ -111,7 +147,6 @@
       <div
         class={cn(
           'flex h-full py-1',
-          'pointer-events-auto',
           'sm:mr-4 transition-all duration-300',
           "[&_svg:not([class*='size-'])]:size-5",
           rounded,

@@ -8,9 +8,9 @@ actions:
   cheques:
     title: Etkinlikler
     scan: Çeki tara
-    input: Gider ekle
+    input: Gider Ekle
   contacts:
-    group: Grup
+    group: Grup Oluştur
     title: Arkadaşlar
     contact: Arkadaş
   addSelected: Seçileni ekle
@@ -19,6 +19,10 @@ actions:
   save: Kaydet
   create: Oluştur
   slide: Kaydır
+  adventures:
+    adventure: Macera Başlat
+  expenses:
+    split: Böl
 nav:
   home: Ana Sayfa
   profile: Ben
@@ -150,12 +154,13 @@ expenses:
     create:
       title: Yeni katılımcı oluştur
     title: Katılımcı ekle
-    add: {}
   me: Ben
   empty:
     title: Henüz gider yok
     description: Takibe başlamak için ilk giderini oluştur
     create: Gider oluştur
+  expenses:
+    title: Evns
 home:
   title: |-
     !js
@@ -163,3 +168,5 @@ home:
 search:
   empty: Sonuç bulunamadı
 dir: ltr
+adventures:
+  title: Macera

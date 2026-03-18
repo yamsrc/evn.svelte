@@ -1,6 +1,7 @@
 <script lang="ts">
   import { ok } from 'svas'
   import { dict } from '$lib/intl/dev'
+  import { adventures } from '@/adventures'
   import { Section, Header } from '@/app/ui'
   import { contacts } from '@/contacts'
   import { expenses } from '@/expenses'
@@ -77,6 +78,46 @@
       )
     }
 
+    // Adventures
+    const adventuresList = $adventures
+
+    if (ok(adventuresList)) {
+      const adventure = adventuresList[0]
+
+      if (adventure) {
+        result.unshift(
+          create(i++, acc.id, 'adventures', 'joined', adventure.id, {
+            title: adventure.title,
+            identities: [acc.id],
+          }),
+        )
+
+        const others = Object.keys(adventure.participants).filter((id) => id !== acc.id)
+
+        if (others.length > 0)
+          result.unshift(
+            create(i++, acc.id, 'adventures', 'joined', adventure.id, {
+              title: adventure.title,
+              identities: others.slice(0, MAX_IDENTITIES),
+            }),
+          )
+
+        result.unshift(
+          create(i++, acc.id, 'adventures', 'expense', adventure.id, {
+            title: adventure.title,
+            expense: {
+              id: 'mock-expense-id',
+              title: 'Sample Adventure Expense',
+              date: new Date().toISOString(),
+              amount: 4500,
+              payer: acc.id,
+              attachments: [],
+            },
+          }),
+        )
+      }
+    }
+
     // Expenses
     if (expense) {
       const participants: Expense['participants'] = Object.fromEntries(
@@ -89,7 +130,7 @@
       const extras: Expense['extras'] = expense.extras.map((extra) => ({ amount: extra.amount }))
 
       result.unshift(
-        create(i++, acc.id, 'expenses', 'created', expense.id, {
+        create(i++, acc.id, 'expenses', 'expense', expense.id, {
           title: expense.title ?? 'Sample Expense',
           location: expense.location,
           participants,

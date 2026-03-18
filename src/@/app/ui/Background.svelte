@@ -5,7 +5,7 @@
 <script lang="ts">
   import { onMount, tick } from 'svelte'
   import { dict } from '$lib/intl'
-  import { android, ios, safari, shell, standalone } from '$lib/tools/mq'
+  import { ios, safari, shell, standalone } from '$lib/tools/mq'
   import { update } from '@/accounts'
   import { account } from '@/iam'
   import { backgrounds, overriden, type Props } from './Background'
@@ -15,9 +15,8 @@
 
   const app = standalone || shell
   const safariBrowser = ios && safari && !app
-  const androidApp = android && app
 
-  const faded = $derived(!scrollable && (safariBrowser || androidApp))
+  const faded = $derived(!scrollable && safariBrowser)
 
   let container: HTMLDivElement | null = $state(null)
 

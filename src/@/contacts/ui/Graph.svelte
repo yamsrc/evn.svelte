@@ -1,12 +1,17 @@
 <script lang="ts">
-  import { forceSimulation, forceLink, forceManyBody, forceCenter } from 'd3-force'
-  import { ok } from 'svas'
+  import {
+    forceSimulation,
+    forceLink,
+    forceManyBody,
+    forceCenter,
+    forceCollide,
+  } from 'd3-force'
   import { locale } from '$lib/intl'
   import { currency } from '$lib/tools'
   import { url } from '@/media/ui/Picture'
   import type { Props } from './Graph'
 
-  const { group, account, contacts, class: classes }: Props = $props()
+  const { contacts, accounts, class: classes }: Props = $props()
 
   type Node = { id: string; name: string; picture?: string; x: number; y: number }
   type Edge = { src: Node; tgt: Node; amount: number; curve: number }
@@ -16,29 +21,24 @@
   const R = 22
   const PAD = R + 20
 
-  const identities = $derived(contacts.filter((c) => group.identities.includes(c.identity)))
-  const me = $derived({ id: account.id, name: account.name, picture: account.picture })
+  const byId = $derived(new Map(accounts.map((a) => [a.id, a])))
 
-  const others = $derived(
-    identities.map((c) => {
-      const a = ok(c.account) ? c.account : undefined
+  const members = $derived(
+    [...new Set(contacts.flatMap((c) => c.identities))].map((id) => {
+      const a = byId.get(id)
 
-      return {
-        id: c.identity,
-        name: a?.name ?? c.identity,
-        picture: a?.picture,
-      }
+      return { id, name: a?.name ?? id, picture: a?.picture }
     }),
   )
 
-  const members = $derived([me, ...others])
-
   const debts = $derived(
-    identities.map((c) => ({
-      from: c.balance > 0 ? c.identity : account.id,
-      to: c.balance > 0 ? account.id : c.identity,
-      amount: Math.abs(c.balance),
-    })),
+    contacts
+      .filter((c) => c.balance !== 0)
+      .map((c) => ({
+        from: c.balance > 0 ? c.identities[0] : c.identities[1],
+        to: c.balance > 0 ? c.identities[1] : c.identities[0],
+        amount: Math.abs(c.balance),
+      })),
   )
 
   const graph = $derived.by(() => {
@@ -50,7 +50,6 @@
       y: 0,
     }))
 
-    // d3 links — source/target as string IDs, mutated to node refs after tick
     const links = debts.map((d) => ({
       source: d.from,
       target: d.to,
@@ -64,14 +63,25 @@
           .id((d: any) => d.id)
           .distance(150),
       )
-      .force('charge', forceManyBody().strength(-400))
+      .force('charge', forceManyBody().strength(-800))
+      .force('collide', forceCollide(R * 3).iterations(5))
       .force('center', forceCenter(W / 2, H / 2))
       .stop()
       .tick(300)
 
     fitBounds(nodes)
 
-    // Resolve d3-mutated refs → typed Edge objects
+    // fitBounds rescales positions — run collide again to fix overlaps
+    forceSimulation(nodes as any)
+      .force('collide', forceCollide(R * 3).iterations(10))
+      .stop()
+      .tick(50)
+
+    for (const n of nodes) {
+      n.x = Math.max(PAD, Math.min(W - PAD, n.x))
+      n.y = Math.max(PAD, Math.min(H - PAD, n.y))
+    }
+
     const byId = new Map(nodes.map((n) => [n.id, n]))
     const resolve = (ref: any): Node => byId.get(ref.id ?? ref)!
 
@@ -82,7 +92,6 @@
       curve: 0,
     }))
 
-    // Curve edges passing near non-endpoint nodes
     const margin = R + 14
 
     for (const e of edges)
@@ -97,7 +106,6 @@
     return { nodes, edges: edges.filter((e) => e.amount > 0) }
   })
 
-  /** Scale node positions to fill viewBox */
   function fitBounds(nodes: Node[]) {
     let minX = Infinity
     let maxX = -Infinity
@@ -121,7 +129,6 @@
     }
   }
 
-  /** Distance from point to line segment */
   function distToSeg(p: Node, a: Node, b: Node): number {
     const dx = b.x - a.x
     const dy = b.y - a.y
@@ -134,7 +141,6 @@
     return Math.hypot(p.x - (a.x + t * dx), p.y - (a.y + t * dy))
   }
 
-  /** Clipped endpoints and control point for edge between two nodes */
   function geom(src: Node, tgt: Node, curve: number) {
     const dx = tgt.x - src.x
     const dy = tgt.y - src.y
@@ -164,7 +170,7 @@
   }
 </script>
 
-<svg width="100%" viewBox="0 0 {W} {H}" class={['rounded-lg border border-border', classes]}>
+<svg width="100%" height="100%" viewBox="0 0 {W} {H}" class={classes}>
   <defs>
     <marker
       id="arrow"

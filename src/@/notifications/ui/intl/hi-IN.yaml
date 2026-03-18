@@ -3,12 +3,17 @@ groups:
     me: |-
       !js
       (groupName) => `${groupName} में आप शामिल हो गए हैं`
-    others: |-
+    others: >-
       !js
-      (names, groupName) => `${new Intl.ListFormat("hi", { style: "long", type: "conjunction" }).format(names)} ने ${groupName} में जॉइन किया`
-    other: |-
+
+      (names, groupName) => `${new Intl.ListFormat("hi", { style: "long", type:
+      "conjunction" }).format(names)} ने ${groupName} में जॉइन किया`
+    other: >-
       !js
-      (name, groupName, gender) => { if (gender === "he") return `${name} ने ${groupName} जॉइन किया`; if (gender === "she") return `${name} ने ${groupName} जॉइन की`; return `${name} ने ${groupName} जॉइन किया/की`; }
+
+      (name, groupName, gender) => { if (gender === "he") return `${name} ने
+      ${groupName} जॉइन किया`; if (gender === "she") return `${name} ने
+      ${groupName} जॉइन की`; return `${name} ने ${groupName} जॉइन किया/की`; }
 accounts:
   created:
     welcome: Evnly में आपका स्वागत है!
@@ -18,9 +23,11 @@ contacts:
   connected: |-
     !js
     (name) => `अब आप और ${name} दोस्त हैं`
-  unchained: |-
+  unchained: >-
     !js
-    (name, gender) => gender === "he" ? `${name} ने खाता स्वीकार किया` : gender === "she" ? `${name} ने खाता स्वीकार किया` : `${name} ने खाता स्वीकार किया`
+
+    (name, gender) => gender === "he" ? `${name} ने खाता स्वीकार किया` : gender
+    === "she" ? `${name} ने खाता स्वीकार किया` : `${name} ने खाता स्वीकार किया`
   transferred:
     paid: |-
       !js
@@ -45,6 +52,42 @@ contacts:
         !js
         (balance) => `आपको अभी ${balance} देना है`
 expenses:
-  created: |-
+  expense: >-
     !js
-    (amount, name, gender) => `${name} द्वारा ${amount} दिया गया`
+
+    (names) => { const list = new Intl.ListFormat("hi", { style: "long", type:
+    "conjunction" }).format(names); return `${list} द्वारा भुगतान किया गया`; }
+adventures:
+  joined:
+    me: >-
+      !js
+
+      (title, gender) => gender === "he" ? `${title} में आपको जोड़ा गया है` :
+      (gender === "she" ? `${title} में आपको जोड़ी गई हैं` : `${title} में आपको
+      जोड़ा/जोड़ी गया/गई है`)
+    other: >-
+      !js
+
+      (name, title, gender) => { if (gender === "he") return `${name} ने
+      ${title} में शामिल हो गया`; if (gender === "she") return `${name} ने
+      ${title} में शामिल हो गई`; return `${name} ने ${title} में शामिल हो
+      गया/गई`; }
+    others: |-
+      !js
+      (names, title, grammar) => {
+        const list = new Intl.ListFormat("hi", { style: "long", type: "conjunction" }).format(names);
+        if (names.length === 1) {
+          if (grammar && grammar.gender === "he") return `${list} ने ${title} जॉइन किया`;
+          if (grammar && grammar.gender === "she") return `${list} ने ${title} जॉइन की`;
+          return `${list} ने ${title} जॉइन किया/की`;
+        } else {
+          return `${list} ने ${title} जॉइन किया`;
+        }
+      }
+  expense:
+    title: |-
+      !js
+      (title, amount) => `${title} · ${amount}`
+    body: |-
+      !js
+      (title) => `${title} में खर्च जोड़ा गया`

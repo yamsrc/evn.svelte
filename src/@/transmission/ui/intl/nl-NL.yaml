@@ -1,12 +1,3 @@
-nudge:
-  prompt: >-
-    Wil je dit soort evenementen direct zien zodra ze gebeuren? Zet meldingen
-    aan om ze direct op je apparaat en op tijd te ontvangen.
-  button: Meldingen inschakelen
-  dismiss: Sluiten
-  dismissed: >-
-    Geen zorgen — je kunt meldingen op elk moment inschakelen via je
-    profielinstellingen.
 settings:
   title: Meldingen
   description: We laten het je weten als er iets belangrijks gebeurt
@@ -19,3 +10,15 @@ settings:
   expenses:
     description: Gedeelde uitgaven en geldactiviteiten
     title: Uitgaven
+  adventures:
+    title: Avonturen
+    description: Avontuurlijke uitgaven en leden
+permission:
+  prompt: >-
+    Zet meldingen aan om direct updates te krijgen over uitgaven, bonnen en
+    andere activiteiten.
+  button: Meldingen inschakelen
+  dismiss: Sluiten
+  dismissed: Je kunt meldingen later altijd inschakelen via je accountinstellingen.
+  later: Later doen
+  comment: Wij gebruiken meldingen niet voor marketingdoeleinden.

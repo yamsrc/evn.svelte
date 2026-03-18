@@ -5,4 +5,3 @@ export interface Props {
 }
 
 export type { Sign } from './Totals'
-export type { Contact }

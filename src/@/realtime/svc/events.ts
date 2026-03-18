@@ -1,5 +1,6 @@
 import mitt from 'mitt'
 import type { Events as AccountEvents } from '@/accounts/svc/net'
+import type { Events as AdventuresEvents } from '@/adventures/svc/net'
 import type { Events as ContactsEvents } from '@/contacts/svc/net'
 import type { Events as ExpensesEvents } from '@/expenses/svc/net'
 import type { Events as FavoritesEvents } from '@/favorites/svc/net'
@@ -8,6 +9,7 @@ import type { Events as NotificationsEvents } from '@/notifications/svc/net'
 import type { Events as TransmissionEvents } from '@/transmission/svc/net'
 
 export type Events = AccountEvents &
+  AdventuresEvents &
   ContactsEvents &
   GroupsEvents &
   ExpensesEvents &

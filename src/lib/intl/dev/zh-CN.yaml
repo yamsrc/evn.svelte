@@ -12,6 +12,8 @@ components:
       (count) => `显示：${count}`
   graph:
     title: 债务图表
+  picture:
+    title: Picture
 transmission:
   title: Transmission
   permission:

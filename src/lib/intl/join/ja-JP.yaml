@@ -61,3 +61,19 @@ group:
       (groupname) => `${groupname}に参加する`
     join: 参加する
     decline: 辞退する
+adventures:
+  og:
+    title: |-
+      !js
+      (title) => `Evnlyで${title}に参加しよう`
+    description: 冒険の費用をみんなで分けて、公平に管理しよう — Evnlyで一緒に。
+  dialog:
+    title: |-
+      !js
+      (title) => `${title}に参加`
+    join: 参加
+    decline: 無視
+    description: |-
+      !js
+      (name, gender) => `${name}が冒険にあなたを招待しています`
+    heading: 冒険への招待

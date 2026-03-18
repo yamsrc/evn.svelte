@@ -3,9 +3,12 @@ groups:
     me: |-
       !js
       (groupName) => `Je bent lid geworden van ${groupName}`
-    others: |-
+    others: >-
       !js
-      (names, groupName) => `${new Intl.ListFormat("nl", { style: "long", type: "conjunction" }).format(names)} ${names.length === 1 ? "is" : "zijn"} lid geworden van ${groupName}`
+
+      (names, groupName) => `${new Intl.ListFormat("nl", { style: "long", type:
+      "conjunction" }).format(names)} ${names.length === 1 ? "is" : "zijn"} lid
+      geworden van ${groupName}`
     other: |-
       !js
       (name, groupName, gender) => `${name} is lid geworden van ${groupName}`
@@ -39,6 +42,31 @@ contacts:
         !js
         (balance) => `Je moet nu ${balance} betalen`
 expenses:
-  created: |-
+  expense: >-
     !js
-    (amount, name, gender) => `${amount} betaald door ${name}`
+
+    (names) => { const list = new Intl.ListFormat("nl", { style: "long", type:
+    "conjunction" }).format(names); return `Betaald door ${list}`; }
+adventures:
+  joined:
+    me: |-
+      !js
+      (title, gender) => `Je bent toegevoegd aan ${title}`
+    other: >-
+      !js
+
+      (name, title, gender) => { return `${name} is lid geworden van ${title}`;
+      }
+    others: |-
+      !js
+      (names, title, grammar) => {
+        const list = new Intl.ListFormat("nl", { style: "long", type: "conjunction" }).format(names);
+        return names.length === 1 ? `${list} is lid geworden van ${title}` : `${list} zijn lid geworden van ${title}`;
+      }
+  expense:
+    title: |-
+      !js
+      (title, amount) => `${title} · ${amount}`
+    body: |-
+      !js
+      (title) => `Uitgave toegevoegd aan ${title}`

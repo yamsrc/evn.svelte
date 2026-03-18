@@ -1,12 +1,3 @@
-nudge:
-  prompt: >-
-    Vuoi vedere eventi come questo non appena accadono? Attiva le notifiche per
-    riceverli subito sul tuo dispositivo, puntualmente.
-  button: Attiva le notifiche
-  dismiss: Chiudi
-  dismissed: >-
-    Nessun problema — puoi attivare le notifiche in qualsiasi momento dalle
-    impostazioni del tuo profilo.
 settings:
   title: Notifiche
   description: Ti avviseremo quando succederà qualcosa di importante
@@ -19,3 +10,17 @@ settings:
   expenses:
     description: Spese condivise e attività finanziaria
     title: Spese
+  adventures:
+    title: Avventure
+    description: Spese dell’avventura e membri
+permission:
+  prompt: >-
+    Attiva le notifiche per ricevere aggiornamenti istantanei su spese, ricevute
+    e altre attività.
+  button: Attiva le notifiche
+  dismiss: Chiudi
+  dismissed: >-
+    Puoi sempre attivare le notifiche in un secondo momento dalle impostazioni
+    del tuo account.
+  later: Fallo dopo
+  comment: Non utilizziamo le notifiche per scopi di marketing.

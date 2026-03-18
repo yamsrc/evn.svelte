@@ -49,22 +49,9 @@
   --font-serif: Golos Text, ui-sans-serif, sans-serif, system-ui;
   --font-mono: Golos Text, ui-sans-serif, sans-serif, system-ui;
   --radius: 0.5rem;
-  --shadow-x: 0px;
-  --shadow-y: 0px;
-  --shadow-blur: 0px;
-  --shadow-spread: 0px;
-  --shadow-opacity: 0;
-  --shadow-color: hsl(20 18% 51% / 0.4);
-  --shadow-2xs: 0px 0px 0px 0px hsl(20 18% 51% / 0);
-  --shadow-xs: 0px 0px 0px 0px hsl(20 18% 51% / 0);
-  --shadow-sm: 0px 0px 0px 0px hsl(20 18% 51% / 0), 0px 1px 2px -1px hsl(20 18% 51% / 0);
-  --shadow: 0px 0px 0px 0px hsl(20 18% 51% / 0), 0px 1px 2px -1px hsl(20 18% 51% / 0);
-  --shadow-md: 0px 0px 0px 0px hsl(20 18% 51% / 0), 0px 2px 4px -1px hsl(20 18% 51% / 0);
-  --shadow-lg: 0px 0px 0px 0px hsl(20 18% 51% / 0), 0px 4px 6px -1px hsl(20 18% 51% / 0);
-  --shadow-xl: 0px 0px 0px 0px hsl(20 18% 51% / 0), 0px 8px 10px -1px hsl(20 18% 51% / 0);
-  --shadow-2xl: 0px 0px 0px 0px hsl(20 18% 51% / 0);
   --tracking-normal: -0.025em;
   --spacing: 0.25rem;
+  --shadow-color: rgb(0 0 0 / 0.1);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -73,7 +60,7 @@
     --foreground: oklch(0.9824 0.0093 62.5888);
     --card: oklch(0.1549 0.0237 65.9272);
     --card-foreground: oklch(0.9925 0.0051 67.7654);
-    --popover: oklch(0.1549 0.0237 65.9272);
+    --popover: oklch(0.2662 0.0232 60.8564);
     --popover-foreground: oklch(0.9925 0.0051 67.7654);
     --primary: oklch(0.6461 0.1943 41.1158);
     --primary-foreground: oklch(0.9824 0.0093 62.5888);
@@ -106,30 +93,7 @@
     --font-serif: Golos Text, ui-sans-serif, sans-serif, system-ui;
     --font-mono: Golos Text, ui-sans-serif, sans-serif, system-ui;
     --radius: 0.5rem;
-    --shadow-x: 0px;
-    --shadow-y: 0px;
-    --shadow-blur: 0px;
-    --shadow-spread: 0px;
-    --shadow-opacity: 0;
-    --shadow-color: #352314;
-    --shadow-2xs: 0px 0px 0px 0px hsl(27.2727 45.2055% 14.3137% / 0);
-    --shadow-xs: 0px 0px 0px 0px hsl(27.2727 45.2055% 14.3137% / 0);
-    --shadow-sm:
-      0px 0px 0px 0px hsl(27.2727 45.2055% 14.3137% / 0),
-      0px 1px 2px -1px hsl(27.2727 45.2055% 14.3137% / 0);
-    --shadow:
-      0px 0px 0px 0px hsl(27.2727 45.2055% 14.3137% / 0),
-      0px 1px 2px -1px hsl(27.2727 45.2055% 14.3137% / 0);
-    --shadow-md:
-      0px 0px 0px 0px hsl(27.2727 45.2055% 14.3137% / 0),
-      0px 2px 4px -1px hsl(27.2727 45.2055% 14.3137% / 0);
-    --shadow-lg:
-      0px 0px 0px 0px hsl(27.2727 45.2055% 14.3137% / 0),
-      0px 4px 6px -1px hsl(27.2727 45.2055% 14.3137% / 0);
-    --shadow-xl:
-      0px 0px 0px 0px hsl(27.2727 45.2055% 14.3137% / 0),
-      0px 8px 10px -1px hsl(27.2727 45.2055% 14.3137% / 0);
-    --shadow-2xl: 0px 0px 0px 0px hsl(27.2727 45.2055% 14.3137% / 0);
+    --shadow-color: rgba(53, 35, 20, 0.1);
   }
 }
 
@@ -176,15 +140,6 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-
-  --shadow-2xs: var(--shadow-2xs);
-  --shadow-xs: var(--shadow-xs);
-  --shadow-sm: var(--shadow-sm);
-  --shadow: var(--shadow);
-  --shadow-md: var(--shadow-md);
-  --shadow-lg: var(--shadow-lg);
-  --shadow-xl: var(--shadow-xl);
-  --shadow-2xl: var(--shadow-2xl);
 
   --tracking-tighter: calc(var(--tracking-normal) - 0.05em);
   --tracking-tight: calc(var(--tracking-normal) - 0.025em);
@@ -249,7 +204,7 @@
   }
 
   p {
-    @apply leading-relaxed text-pretty;
+    @apply text-pretty;
   }
 
   input {
@@ -267,10 +222,16 @@
     }
   }
 
-  ::view-transition-group(*.spring),
-  ::view-transition-old(*.spring),
-  ::view-transition-new(*.spring) {
+  ::view-transition-group(*.transition-spring),
+  ::view-transition-old(*.transition-spring),
+  ::view-transition-new(*.transition-spring) {
     animation-duration: 300ms;
     animation-timing-function: cubic-bezier(0.2, 1.4, 0.4, 1);
+  }
+
+  ::view-transition-old(.transition-morph),
+  ::view-transition-new(.transition-morph) {
+    animation-duration: 300ms;
+    block-size: 100%;
   }
 }

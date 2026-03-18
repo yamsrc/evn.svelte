@@ -1,5 +1,6 @@
 <script lang="ts">
   import { ChevronsDownUp, Trash2 } from '@lucide/svelte'
+  import { Dismissable } from '$com/dismissable'
   import * as Stack from '$lib/components/stack'
   import { delay } from '$lib/tools'
   import { Button } from '$ui/button'
@@ -19,10 +20,12 @@
 
   const { notifications, min = 3, max = 20, ondismiss, onclear }: Props = $props()
 
+  let collapsed = $state(true)
+
   const refs = $state<Array<Ref | undefined>>([])
 
-  async function onclearClick(e: MouseEvent) {
-    e.stopPropagation()
+  async function clearAll(e?: MouseEvent) {
+    e?.stopPropagation()
 
     const removed = refs.map((ref, i) => delay(() => ref?.remove(), i * 50))
 
@@ -45,27 +48,38 @@
   )
 
   const visible = $derived(renderable.slice(0, max))
+  const stacked = $derived(visible.length >= min)
 
   let stack = $state<ReturnType<typeof Stack.Root> | undefined>()
 </script>
 
+{#snippet content()}
+  <Stack.Root bind:this={stack} {min} bind:collapsed>
+    <Stack.Toolbar class="flex justify-between text-muted-foreground px-5">
+      <Button variant="ghost" size="sm" onclick={clearAll}>
+        <Trash2 />
+        {$dict.erase}
+      </Button>
+      <Button variant="ghost" size="sm" onclick={() => stack?.collapse()}>
+        <ChevronsDownUp />
+      </Button>
+    </Stack.Toolbar>
+    {#each visible as { notification, component }, i (notification.id)}
+      <Stack.Item id={notification.id}>
+        <Notification bind:this={refs[i]} {notification} {component} {ondismiss} />
+      </Stack.Item>
+    {/each}
+  </Stack.Root>
+{/snippet}
+
 <div class="space-y-2">
   {#if renderable.length > 0}
-    <Stack.Root bind:this={stack} {min}>
-      <Stack.Toolbar class="flex justify-between text-muted-foreground px-5">
-        <Button variant="ghost" size="sm" onclick={onclearClick}>
-          <Trash2 />
-          {$dict.erase}
-        </Button>
-        <Button variant="ghost" size="sm" onclick={() => stack?.collapse()}>
-          <ChevronsDownUp />
-        </Button>
-      </Stack.Toolbar>
-      {#each visible as { notification, component }, i (notification.id)}
-        <Stack.Item id={notification.id}>
-          <Notification bind:this={refs[i]} {notification} {component} {ondismiss} />
-        </Stack.Item>
-      {/each}
-    </Stack.Root>
+    {#if collapsed && stacked}
+      <Dismissable ondismiss={clearAll}>
+        {@render content()}
+      </Dismissable>
+    {:else}
+      {@render content()}
+    {/if}
   {/if}
 </div>

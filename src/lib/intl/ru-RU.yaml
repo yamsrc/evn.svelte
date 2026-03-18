@@ -10,7 +10,7 @@ actions:
     scan: Сканировать чек
     input: Добавить расход
   contacts:
-    group: Группа
+    group: Создать группу
     title: Друзья
     contact: Друг
   addSelected: Добавить выбранные
@@ -19,6 +19,10 @@ actions:
   save: Сохранить
   create: Создать
   slide: Смахни
+  adventures:
+    adventure: Начать приключение
+  expenses:
+    split: Разделить
 nav:
   home: Главная
   profile: Я
@@ -155,12 +159,13 @@ expenses:
     create:
       title: Создать нового участника
     title: Добавить участников
-    add: {}
   me: Я
   empty:
     title: Пока нет расходов
     description: Создайте первый расход, чтобы начать отслеживание
     create: Создать расход
+  expenses:
+    title: Evns
 home:
   title: |-
     !js
@@ -168,3 +173,5 @@ home:
 search:
   empty: Результаты не найдены
 dir: ltr
+adventures:
+  title: Приключения

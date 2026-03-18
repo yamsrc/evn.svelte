@@ -59,3 +59,19 @@ group:
       (groupname) => `${groupname}에 가입하기`
     join: 참여하기
     decline: 거절
+adventures:
+  og:
+    title: |-
+      !js
+      (title) => `Evnly에서 ${title}에 참여하세요`
+    description: 모험 경비를 함께 나누고 공평하게 정산하세요 — Evnly에서 함께해요.
+  dialog:
+    title: |-
+      !js
+      (title) => `${title} 참가하기`
+    join: 참여하기
+    decline: 무시
+    description: |-
+      !js
+      (name, gender) => `${name}님이 모험에 초대합니다`
+    heading: 모험으로의 초대

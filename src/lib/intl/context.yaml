@@ -25,14 +25,17 @@ inputs:
       scan:
         input: Scan cheque
       input:
-        input: Add expense
+        input: Add Expense
+        context: button label
     contacts:
       group:
-        input: Group
+        input: Create Group
+        context: Button label
       title:
         input: Friends
       contact:
         input: Friend
+        context: without gender forms
     addSelected:
       input: Add selected
     cancel:
@@ -45,6 +48,14 @@ inputs:
       input: Create
     slide:
       input: Смахни
+    adventures:
+      adventure:
+        input: Start Adventure
+        context: Button label
+    expenses:
+      split:
+        input: Split
+        context: split expense/receipt etc
   nav:
     home:
       input: Home
@@ -260,6 +271,9 @@ inputs:
         input: Add participants
     me:
       input: Me
+    expenses:
+      title:
+        input: Evns
   home:
     title:
       input: Hi {name}!
@@ -269,6 +283,9 @@ inputs:
       input: No results found
   dir:
     input: ltr
+  adventures:
+    title:
+      input: Adventures
 mounts:
   iam: ../../@/iam/ui/intl
   feedback: ../../@/feedback/ui/intl
@@ -281,3 +298,4 @@ mounts:
   accounts: ../../@/accounts/ui/intl
   transmission: ../../@/transmission/ui/intl
   groups: ../../@/groups/ui/intl
+  adventures: ../../@/adventures/ui/intl

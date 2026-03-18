@@ -8,9 +8,9 @@ actions:
   cheques:
     title: Events
     scan: Scan cheque
-    input: Add expense
+    input: Add Expense
   contacts:
-    group: Group
+    group: Create Group
     title: Friends
     contact: Friend
   addSelected: Add selected
@@ -19,6 +19,10 @@ actions:
   save: Save
   create: Create
   slide: Swipe
+  adventures:
+    adventure: Start Adventure
+  expenses:
+    split: Split
 nav:
   home: Home
   profile: Me
@@ -156,8 +160,9 @@ expenses:
     create:
       title: Create a new participant
     title: Add participants
-    add: {}
   me: Me
+  expenses:
+    title: Evns
 home:
   title: |-
     !js
@@ -165,3 +170,5 @@ home:
 search:
   empty: No results found
 dir: ltr
+adventures:
+  title: Adventures

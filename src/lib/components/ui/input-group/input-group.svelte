@@ -15,7 +15,7 @@
   data-slot="input-group"
   role="group"
   class={cn(
-    'group/input-group border-input dark:bg-input/30 relative flex w-full items-center rounded-lg border shadow-xs transition-[color,box-shadow] outline-none',
+    'group/input-group border-input dark:bg-input/30 relative flex w-full items-center rounded-lg border transition-[color,box-shadow] outline-none',
     'h-9 has-[>textarea]:h-auto',
 
     // Variants based on alignment.
@@ -32,7 +32,6 @@
 
     className,
   )}
-  {...props}
->
+  {...props}>
   {@render children?.()}
 </div>

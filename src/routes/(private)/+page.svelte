@@ -2,6 +2,8 @@
   import { Async, combined } from 'svas'
   import { dict } from '$lib/intl'
   import { Avatar } from '@/accounts/ui'
+  import { adventures } from '@/adventures'
+  import Adventures from '@/adventures/ui/Adventures.svelte'
   import { Header, Section } from '@/app/ui'
   import { Actions } from '@/app/ui'
   import { contacts } from '@/contacts'
@@ -16,14 +18,15 @@
 
   const expensesOnlyNotifications = scope({ domain: 'expenses' })
   const transfersNotifications = scope({ domain: 'contacts', event: 'transferred' })
+  const adventuresNotifications = scope({ domain: 'adventures' })
   const expensesNotifications = $derived([
     ...$expensesOnlyNotifications,
     ...$transfersNotifications,
   ])
 </script>
 
-<Async store={combined(account, contacts, expenses, notifications)}>
-  {#snippet awaited([account, contacts, expenses, notifications])}
+<Async store={combined(account, contacts, expenses, notifications, adventures)}>
+  {#snippet awaited([account, contacts, expenses, notifications, adventures])}
     <Section>
       <Header.Root>
         <Header.Title>{$dict.home.title(account.name)}</Header.Title>
@@ -40,19 +43,25 @@
     </Section>
 
     <Section class="px-0 flex flex-col gap-2">
+      {#if $subscribed === false}
+        <div class="px-5">
+          <Permission dismissable />
+        </div>
+      {/if}
       {#if notifications.length > 0}
         <Notifications {notifications} />
-        {#if $subscribed === false}
-          <div class="px-5">
-            <Permission />
-          </div>
-        {/if}
       {/if}
     </Section>
 
     <Section>
       <Tops {contacts} />
     </Section>
+
+    {#if adventures.length > 0}
+      <Section class="space-y-2">
+        <Adventures {adventures} notifications={$adventuresNotifications} />
+      </Section>
+    {/if}
 
     <Section>
       <Recent {expenses} notifications={expensesNotifications} />

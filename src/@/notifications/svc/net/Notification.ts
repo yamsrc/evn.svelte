@@ -13,7 +13,7 @@ type Payloads = Constrain<{
     }
   }
   expenses: {
-    created: {
+    expense: {
       title: string
       location?: string
       participants: Expense['participants']
@@ -27,6 +27,24 @@ type Payloads = Constrain<{
       expense: string
       delta: number
       balance: number
+    }
+  }
+  adventures: {
+    joined: {
+      title: string
+      identities: string[]
+    }
+    expense: {
+      title: string
+      expense: {
+        id: string
+        title: string
+        location?: string
+        date: string
+        amount: number
+        payer: string
+        attachments: string[]
+      }
     }
   }
 }>

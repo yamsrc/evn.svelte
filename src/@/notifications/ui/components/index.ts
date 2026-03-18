@@ -1,11 +1,12 @@
 import { accounts } from './accounts'
+import { adventures } from './adventures'
 import { contacts } from './contacts'
 import { expenses } from './expenses'
 import { groups } from './groups'
 import type { Notification } from '@/notifications'
 import type { Component } from 'svelte'
 
-export const components = { accounts, groups, expenses, contacts } as const
+export const components = { accounts, groups, expenses, contacts, adventures } as const
 
 type Map = typeof components
 type Domain = keyof Map

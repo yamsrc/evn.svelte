@@ -5,12 +5,6 @@
  */
 
 export type Dictionary = {
-      nudge: {
-        prompt: string
-        button: string
-        dismiss: string
-        dismissed: string
-      }
       settings: {
         title: string
         description: string
@@ -26,5 +20,17 @@ export type Dictionary = {
           description: string
           title: string
         }
+        adventures: {
+          title: string
+          description: string
+        }
+      }
+      permission: {
+        prompt: string
+        button: string
+        dismiss: string
+        dismissed: string
+        later: string
+        comment: string
       }
     }

@@ -1,5 +1,6 @@
 import { origin } from '@/net'
 import type { Group } from './Group'
+import type { Contact } from '@/contacts/svc/net'
 
 const groups = origin.resource<Group>('/groups/', { credentials: 'include' })
 // const invitations = origin.resource<Group>('/groups/invitations/', { credentials: 'include' })
@@ -25,6 +26,10 @@ export async function patch(identity: string, group: string, body: Editable): Pr
 
 export async function del(identity: string, group: string): Promise<void | Error> {
   return groups.json(`${identity}/${group}`, { method: 'DELETE' })
+}
+
+export async function expose(identity: string, id: string): Promise<Contact[] | Error> {
+  return groups.json(`${identity}/${id}/contacts/`)
 }
 
 export const invitations = {

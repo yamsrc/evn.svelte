@@ -1,0 +1,65 @@
+members:
+  title: Membri
+  add: Aggiungi membri
+  empty: Non c'è ancora nessuno qui. Aggiungi dei membri per iniziare l'avventura.
+editor:
+  cover: Copertina
+  upload: Scegli il tuo
+  name: Nome dell’avventura
+  note: Tutti i membri vedranno questo nome
+  info: >-
+    Le avventure sono per chi vuole dividere le spese in modo equo, che si
+    tratti di un viaggio insieme, di un conto al bar o delle semplici spese
+    domestiche comuni. I debiti in un’avventura non sono tra utenti singoli, ma
+    tra tutti i partecipanti, così da mantenere i conti in pari per tutti.
+  settings: Impostazioni
+  title: Nuova avventura
+finish:
+  archive:
+    title: Concludi l’avventura
+    description: >-
+      Archiviare l’avventura la rimuoverà dalla schermata delle nuove spese e la
+      sposterà in fondo alla tua lista di avventure.
+    button: Archivia avventura
+  delete:
+    button: |-
+      !js
+      (title) => `Elimina ${title}`
+    hold: Tieni premuto per eliminare
+    label: Elimina
+expenses:
+  title: Spese
+  total: Totale
+  paidBy: Pagato da
+  paid: Pagato
+  empty: >-
+    Non è ancora successo nulla. Invita degli amici e aggiungi delle spese per
+    far partire tutto.
+spending:
+  yours: Le tue spese
+  total: Totale speso
+me: Io
+selector:
+  regular: Dividi
+archive:
+  header: Archivio
+  warning: L’archiviazione dell’avventura è permanente e non può essere annullata.
+  merge:
+    label: Trasferisci saldi
+    description: >-
+      Quando questa avventura verrà archiviata, i saldi in sospeso saranno
+      convertiti in debiti ordinari tra i membri.
+balance:
+  header: "Durante l’archiviazione di questa avventura:"
+  merge: Sposta i debiti nei debiti dei membri regolari
+  keep: Lascia debiti/saldi nell’avventura
+archived: Archiviato
+hint:
+  action: Inizia la tua prima avventura
+  dismiss: Ignora
+  dismissed: >-
+    Puoi creare una nuova avventura in qualsiasi momento tramite il menu + in
+    fondo allo schermo.
+title: Avventure
+panel:
+  total: Totale

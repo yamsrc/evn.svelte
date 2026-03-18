@@ -1,11 +1,8 @@
 <script lang="ts">
   import { Users } from '@lucide/svelte'
-  import { Async } from 'svas'
   import { Panel } from '$com/panel'
   import { Attention } from '$com/shell'
-  import { accounts } from '@/accounts'
-  import { Picture } from '@/accounts/ui'
-  import { Balance } from '@/app/ui'
+  import { Avatars, Balance } from '@/app/ui'
   import { account } from '@/iam'
   import type { Props } from './Panel'
 
@@ -37,22 +34,7 @@
         {/if}
         <span class="font-bold">{group.title ?? group.name}</span>
       </div>
-      <div class="flex flex-nowrap gap-1 items-center py-1">
-        {#each members.slice(0, 5) as identity (identity)}
-          <Async store={accounts.get(identity)}>
-            {#snippet awaited(account)}
-              <div class="not-first:-ml-3 shrink-0">
-                <Picture {account} class="size-8" />
-              </div>
-            {/snippet}
-          </Async>
-        {/each}
-        {#if members.length > 5}
-          <div class="ml-2">
-            +{members.length - 5}
-          </div>
-        {/if}
-      </div>
+      <Avatars identities={members} max={5} class="py-1" />
     </div>
   {/snippet}
   {#snippet right()}

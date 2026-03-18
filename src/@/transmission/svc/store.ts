@@ -11,11 +11,6 @@ export const subscribed = value<boolean | null>({
   default: null,
 })
 
-export const dismissed = value<number>({
-  persist: 'transmission:dismissed',
-  default: 0,
-})
-
 export const permissions = value<Permissions>({
   persist: 'transmission:permissions',
   bind: account,

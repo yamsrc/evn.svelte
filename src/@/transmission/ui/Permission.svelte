@@ -1,44 +1,33 @@
 <script lang="ts">
-  import { transit } from '$lib/tools'
-  import { Button } from '$ui/button'
-  import { permission, request, dismissed } from '@/transmission'
+  import { Hint } from '@/app/ui'
+  import { permission, request } from '@/transmission'
   import { dict } from './intl'
   import type { Props } from './Permission'
 
-  const { class: classes }: Props = $props()
+  const { class: classes, name = 'transmission-permission', dismissable = false }: Props = $props()
 
   const DELAY = 7 * 24 * 60 * 60 * 1000
-  const hidden = $derived(Date.now() - $dismissed! < DELAY)
 
-  let dismissing = $state(false)
-
-  function dismiss() {
-    transit(() => (dismissing = true))
-    setTimeout(() => dismissed.set(Date.now()), 3000)
+  function subscribe() {
+    void request()
   }
 </script>
 
-{#if $permission === 'default' && !hidden}
-  <div
-    class={[
-      'w-full',
-      'bg-muted border border-muted-foreground/20 rounded-lg',
-      'p-4 flex flex-col gap-3 h-fit',
-      classes,
-    ]}
-    style="view-transition-name: transmission-nudge;">
-    {#if dismissing}
-      <p class="text-sm">{$dict.nudge.dismissed}</p>
-    {:else}
-      <p class="text-sm">{$dict.nudge.prompt}</p>
-      <div class="flex gap-2">
-        <Button class="w-fit" onclick={request}>
-          {$dict.nudge.button}
-        </Button>
-        <Button variant="secondary" onclick={dismiss}>
-          {$dict.nudge.dismiss}
-        </Button>
-      </div>
-    {/if}
-  </div>
+{#if $permission === 'default'}
+  <Hint.Root key="permission" delay={dismissable ? DELAY : undefined} {name} class={classes}>
+    <Hint.Content>
+      <p>{$dict.permission.prompt}</p>
+      <p class="text-sm text-muted-foreground">{$dict.permission.comment}</p>
+      <Hint.Actions>
+        <Hint.Action onclick={subscribe}>{$dict.permission.button}</Hint.Action>
+        {#if dismissable}
+          <Hint.Later>{$dict.permission.later}</Hint.Later>
+        {/if}
+      </Hint.Actions>
+    </Hint.Content>
+    <Hint.Dismissing>
+      <p>{$dict.permission.dismissed}</p>
+      <Hint.Dismiss>{$dict.permission.dismiss}</Hint.Dismiss>
+    </Hint.Dismissing>
+  </Hint.Root>
 {/if}

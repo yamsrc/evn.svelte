@@ -1,10 +1,3 @@
-nudge:
-  prompt: >-
-    Möchtest du solche Events sofort mitbekommen? Aktiviere Benachrichtigungen,
-    um sie direkt und pünktlich auf deinem Gerät zu erhalten.
-  button: Benachrichtigungen aktivieren
-  dismiss: Schließen
-  dismissed: "Kein Problem\_– du kannst Benachrichtigungen jederzeit in deinen Profileinstellungen aktivieren."
 settings:
   title: Benachrichtigungen
   description: Wir benachrichtigen dich, wenn etwas Wichtiges passiert
@@ -17,3 +10,17 @@ settings:
   expenses:
     description: Geteilte Ausgaben und Zahlungsaktivitäten
     title: Ausgaben
+  adventures:
+    title: Abenteuer
+    description: Abenteuerkosten und Mitglieder
+permission:
+  prompt: >-
+    Aktiviere Benachrichtigungen, um sofort über Ausgaben, Quittungen und andere
+    Aktivitäten informiert zu werden.
+  button: Benachrichtigungen aktivieren
+  dismiss: Schließen
+  dismissed: >-
+    Du kannst Benachrichtigungen jederzeit später in deinen Kontoeinstellungen
+    aktivieren.
+  later: Später erledigen
+  comment: Wir verwenden Benachrichtigungen nicht für Marketingzwecke.

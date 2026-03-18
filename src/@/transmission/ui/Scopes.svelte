@@ -7,6 +7,8 @@
   import { dict } from './intl'
   import type { Scope } from '@/transmission'
 
+  const { class: classes }: { class?: string } = $props()
+
   let busy = $state(false)
   const all = $derived(!scopes.every((s) => $permissions?.[key(s)] === false))
 
@@ -31,7 +33,7 @@
   }
 </script>
 
-<Panel name="transmission-settings">
+<Panel name="transmission-settings" class={classes}>
   <div class="space-y-1">
     <div class="flex justify-between items-center gap-2">
       <h2><label for="transmission-settings-switch">{$dict.settings.title}</label></h2>

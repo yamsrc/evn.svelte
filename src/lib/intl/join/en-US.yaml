@@ -71,3 +71,19 @@ group:
       (groupname) => `Join ${groupname}`
     join: Join
     decline: Decline
+adventures:
+  og:
+    title: |-
+      !js
+      (title) => `Join ${title} on Evnly`
+    description: Share adventure expenses and keep equal tabs — together on Evnly.
+  dialog:
+    title: |-
+      !js
+      (title) => `Join ${title}`
+    join: Join
+    decline: Ignore
+    description: |-
+      !js
+      (name, gender) => `${name} invites you to join the adventure`
+    heading: Invitation to the adventure

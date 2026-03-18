@@ -10,7 +10,7 @@ actions:
     scan: 扫描支票
     input: 添加支出
   contacts:
-    group: 群组
+    group: 创建群组
     title: 朋友
     contact: 朋友
   addSelected: 添加已选项
@@ -19,6 +19,10 @@ actions:
   save: 保存
   create: 创建
   slide: 滑动
+  adventures:
+    adventure: 开始冒险
+  expenses:
+    split: 分摊
 nav:
   home: 首页
   profile: 我
@@ -140,12 +144,13 @@ expenses:
     create:
       title: 创建新参与者
     title: 添加参与者
-    add: {}
   me: 我
   empty:
     title: 暂无支出
     description: 创建您的第一笔支出以开始记录
     create: 创建支出
+  expenses:
+    title: Evns
 home:
   title: |-
     !js
@@ -153,3 +158,5 @@ home:
 search:
   empty: 未找到结果
 dir: ltr
+adventures:
+  title: 冒险

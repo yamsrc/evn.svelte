@@ -3,12 +3,18 @@ groups:
     me: |-
       !js
       (groupName) => `Vous avez rejoint ${groupName}`
-    others: |-
+    others: >-
       !js
-      (names, groupName) => `${new Intl.ListFormat("fr", { style: "long", type: "conjunction" }).format(names)} a${names.length === 1 ? "" : "nt"} rejoint ${groupName}`
-    other: |-
+
+      (names, groupName) => `${new Intl.ListFormat("fr", { style: "long", type:
+      "conjunction" }).format(names)} a${names.length === 1 ? "" : "nt"} rejoint
+      ${groupName}`
+    other: >-
       !js
-      (name, groupName, gender) => { if (gender === "he") return `${name} a rejoint ${groupName}`; if (gender === "she") return `${name} a rejointe ${groupName}`; return `${name} a rejoint(e) ${groupName}`; }
+
+      (name, groupName, gender) => { if (gender === "he") return `${name} a
+      rejoint ${groupName}`; if (gender === "she") return `${name} a rejointe
+      ${groupName}`; return `${name} a rejoint(e) ${groupName}`; }
 accounts:
   created:
     welcome: Bienvenue chez Evnly !
@@ -18,9 +24,11 @@ contacts:
   connected: |-
     !js
     (name) => `Vous et ${name} êtes maintenant amis`
-  unchained: |-
+  unchained: >-
     !js
-    (name, gender) => gender === "he" ? `${name} a accepté le compte` : gender === "she" ? `${name} a accepté le compte` : `${name} a accepté le compte`
+
+    (name, gender) => gender === "he" ? `${name} a accepté le compte` : gender
+    === "she" ? `${name} a accepté le compte` : `${name} a accepté le compte`
   transferred:
     paid: |-
       !js
@@ -45,6 +53,40 @@ contacts:
         !js
         (balance) => `Vous devez maintenant ${balance}`
 expenses:
-  created: |-
+  expense: >-
     !js
-    (amount, name, gender) => gender === "he" ? `${amount} payé par ${name}` : gender === "she" ? `${amount} payée par ${name}` : `${amount} payé(e) par ${name}`
+
+    (names) => { const list = new Intl.ListFormat("fr", { style: "long", type:
+    "conjunction" }).format(names); return `Payé par ${list}`; }
+adventures:
+  joined:
+    me: >-
+      !js
+
+      (title, gender) => gender === "he" ? `Vous avez été ajouté à ${title}` :
+      (gender === "she" ? `Vous avez été ajoutée à ${title}` : `Vous avez été
+      ajouté(e) à ${title}`)
+    other: >-
+      !js
+
+      (name, title, gender) => { if (gender === "he") return `${name} a rejoint
+      ${title}`; if (gender === "she") return `${name} a rejointe ${title}`;
+      return `${name} a rejoint(e) ${title}`; }
+    others: |-
+      !js
+      (names, title, grammar) => {
+        const list = new Intl.ListFormat("fr", { style: "long", type: "conjunction" }).format(names);
+        if (names.length === 1) {
+          if (grammar && grammar.gender === "he") return `${list} a rejoint ${title}`;
+          if (grammar && grammar.gender === "she") return `${list} a rejoint ${title}e`;
+          return `${list} a rejoint(e) ${title}`;
+        }
+        return `${list} ont rejoint ${title}`;
+      }
+  expense:
+    title: |-
+      !js
+      (title, amount) => `${title} · ${amount}`
+    body: |-
+      !js
+      (title) => `Dépense ajoutée à ${title}`

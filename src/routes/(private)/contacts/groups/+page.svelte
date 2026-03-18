@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { CircleCheckBig } from '@lucide/svelte'
+  import { Check } from '@lucide/svelte'
   import { goto } from '$app/navigation'
   import { Separator } from '$com/separator'
   import { Actions } from '$com/shell'
@@ -53,6 +53,6 @@
 
 <Actions>
   <Action id="nav-actions-groups-create-button" onclick={submit} disabled={busy || !name.trim()}>
-    <CircleCheckBig />
+    <Check />
   </Action>
 </Actions>

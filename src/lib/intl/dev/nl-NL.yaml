@@ -12,6 +12,8 @@ components:
       (count) => `Tonen: ${count}`
   graph:
     title: Schuldenoverzicht
+  picture:
+    title: Picture
 transmission:
   title: Transmission
   permission:
