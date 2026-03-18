@@ -1,3 +1,4 @@
 splitter:
   stack:
     claim: Reclamar todo
+    release: Soltar

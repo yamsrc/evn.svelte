@@ -1,3 +1,4 @@
 splitter:
   stack:
     claim: Забрать всё
+    release: Отпустить

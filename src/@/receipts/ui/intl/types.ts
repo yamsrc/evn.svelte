@@ -12,6 +12,7 @@ export type Dictionary = {
       splitter: {
         stack: {
           claim: string
+          release: string
         }
       }
     }

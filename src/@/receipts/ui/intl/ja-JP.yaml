@@ -1,3 +1,4 @@
 splitter:
   stack:
     claim: すべて受け取る
+    release: 離す

@@ -1,3 +1,4 @@
 splitter:
   stack:
     claim: 모두 받기
+    release: 놓기

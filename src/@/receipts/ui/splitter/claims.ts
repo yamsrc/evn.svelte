@@ -46,6 +46,22 @@ export function claimed(state: State, identity: string, item: string, index: num
   return transient?.value ?? persistent === true
 }
 
+export function allClaimed(state: State, identity: string, item: string): boolean {
+  const quantity = state.items[item]?.quantity
+
+  if (quantity === undefined)
+    return false
+
+  const transient = state.transient[identity]?.[item]
+  const persistent = state.persistent[identity]?.[item]
+
+  for (let i = 0; i < quantity; i++)
+    if (transient?.[i] === undefined ? persistent?.[i].value !== true : transient[i].value !== true)
+      return false
+
+  return true
+}
+
 export function toggle(identity: string, item: string, index: number): void {
   store.update((state) => {
     const transient = ensure(state.transient, identity, state.items[item])[index]
@@ -53,6 +69,24 @@ export function toggle(identity: string, item: string, index: number): void {
 
     transient.value = transient.value === null ? !persistent : !transient.value
     transient.settled = false
+
+    void claim(state, identity)
+
+    return state
+  })
+}
+
+export function toggleAll(identity: string, item: string, on: boolean): void {
+  store.update((state) => {
+    const transient = ensure(state.transient, identity, state.items[item])
+
+    for (const claim of transient) {
+      if (claim.value === on)
+        continue
+
+      claim.value = on
+      claim.settled = false
+    }
 
     void claim(state, identity)
 

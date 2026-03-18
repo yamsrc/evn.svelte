@@ -5,105 +5,120 @@ export const dictionaries = {
   "ar-SA": {
     "splitter": {
       "stack": {
-        "claim": "المطالبة بالجميع"
+        "claim": "المطالبة بالجميع",
+        "release": "إفلات"
       }
     }
   },
   "de-DE": {
     "splitter": {
       "stack": {
-        "claim": "Alles einfordern"
+        "claim": "Alles einfordern",
+        "release": "Loslassen"
       }
     }
   },
   "en-US": {
     "splitter": {
       "stack": {
-        "claim": "Claim all"
+        "claim": "Claim all",
+        "release": "Release"
       }
     }
   },
   "es-ES": {
     "splitter": {
       "stack": {
-        "claim": "Reclamar todo"
+        "claim": "Reclamar todo",
+        "release": "Soltar"
       }
     }
   },
   "fr-FR": {
     "splitter": {
       "stack": {
-        "claim": "Tout récupérer"
+        "claim": "Tout récupérer",
+        "release": "Relâcher"
       }
     }
   },
   "hi-IN": {
     "splitter": {
       "stack": {
-        "claim": "सभी प्राप्त करें"
+        "claim": "सभी प्राप्त करें",
+        "release": "छोड़ें"
       }
     }
   },
   "it-IT": {
     "splitter": {
       "stack": {
-        "claim": "Riscuoti tutto"
+        "claim": "Riscuoti tutto",
+        "release": "Rilascia"
       }
     }
   },
   "ja-JP": {
     "splitter": {
       "stack": {
-        "claim": "すべて受け取る"
+        "claim": "すべて受け取る",
+        "release": "離す"
       }
     }
   },
   "ko-KR": {
     "splitter": {
       "stack": {
-        "claim": "모두 받기"
+        "claim": "모두 받기",
+        "release": "놓기"
       }
     }
   },
   "nl-NL": {
     "splitter": {
       "stack": {
-        "claim": "Alles claimen"
+        "claim": "Alles claimen",
+        "release": "Loslaten"
       }
     }
   },
   "ru-RU": {
     "splitter": {
       "stack": {
-        "claim": "Забрать всё"
+        "claim": "Забрать всё",
+        "release": "Отпустить"
       }
     }
   },
   "sw-TZ": {
     "splitter": {
       "stack": {
-        "claim": "Dai zote"
+        "claim": "Dai zote",
+        "release": "Achia"
       }
     }
   },
   "tr-TR": {
     "splitter": {
       "stack": {
-        "claim": "Hepsini al"
+        "claim": "Hepsini al",
+        "release": "Bırak"
       }
     }
   },
   "uk-UA": {
     "splitter": {
       "stack": {
-        "claim": "Забрати все"
+        "claim": "Забрати все",
+        "release": "Відпустити"
       }
     }
   },
   "zh-CN": {
     "splitter": {
       "stack": {
-        "claim": "全部领取"
+        "claim": "全部领取",
+        "release": "释放"
       }
     }
   }

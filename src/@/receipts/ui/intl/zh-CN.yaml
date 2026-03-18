@@ -1,3 +1,4 @@
 splitter:
   stack:
     claim: 全部领取
+    release: 释放

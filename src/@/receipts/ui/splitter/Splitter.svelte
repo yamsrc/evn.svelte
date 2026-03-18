@@ -13,7 +13,7 @@
   import * as Item from '$ui/item'
   import { Actions } from '$com/shell'
   import { group, type Unit } from './groups'
-  import { store, sync, toggle, identities } from './claims'
+  import { store, sync, toggle, identities, toggleAll, allClaimed } from './claims'
   import Stack from './Stack.svelte'
   import type { Props } from './Splitter'
 
@@ -54,7 +54,8 @@
 <div class="flex flex-col gap-2">
   {#each groups as group, i (group.id)}
     {#if group.outcast}
-      <Stack {group}>
+      {@const claimed = allClaimed($store, actor.id, group.id)}
+      <Stack {group} {claimed} ontoggle={() => toggleAll(actor.id, group.id, !claimed)}>
         {#snippet child(unit, index, collapsed)}
           {@render card(unit, index, collapsed ? group.units.length : undefined)}
         {/snippet}

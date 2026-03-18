@@ -4,3 +4,6 @@ inputs:
     stack:
       claim:
         input: Claim all
+      release:
+        input: Release
+        context: button label, release something being holded
