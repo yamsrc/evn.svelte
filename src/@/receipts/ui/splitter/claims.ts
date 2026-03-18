@@ -20,9 +20,9 @@ import * as receipts from '@/receipts'
 export const store: Writable<State> = writable({ id: '', version: 0, identities: [], items: {}, persistent: {}, transient: {} })
 
 export function sync(receipt: receipts.Receipt): void {
-  const value = get(store)
+  const stored = get(store)
 
-  if (value.id !== receipt.id)
+  if (stored.id !== receipt.id)
     store.set({
       id: receipt.id,
       version: receipt._version,
@@ -31,7 +31,7 @@ export function sync(receipt: receipts.Receipt): void {
       persistent: toClaims(receipt.items),
       transient: {},
     })
-  else if (value.version !== receipt._version)
+  else if (stored.version < receipt._version)
     store.update((state) => {
       merge(state, receipt)
 
@@ -54,13 +54,42 @@ export function toggle(identity: string, item: string, index: number): void {
     transient.value = transient.value === null ? !persistent : !transient.value
     transient.settled = false
 
-    void receipts.claim(state.id, {
-      identity,
-      claims: extract(state, identity),
-    })
+    void claim(state, identity)
 
     return state
   })
+}
+
+let pending = false
+
+const MAX_ITERATIONS = 5
+
+async function claim(state: State, identity: string, iteration = 0): Promise<void> {
+  if (pending && iteration === 0)
+    return
+
+  if (iteration === MAX_ITERATIONS) {
+    console.warn('Infinite loop protection triggered', { state, identity })
+    pending = false
+
+    return
+  }
+
+  pending = true
+
+  await receipts.claim(state.id, {
+    identity,
+    claims: extract(state, identity),
+  })
+
+  // receipts store got updated in the `receipts.claim` call
+  const updated = get(store)
+  const drifted = drift(updated, identity)
+
+  if (drifted)
+    claim(updated, identity, iteration + 1)
+  else
+    pending = false
 }
 
 function ensure(
@@ -101,11 +130,6 @@ export function identities(state: State, identity: string, item: string, index: 
 
 /**
  * Merge a receipt into the store
- * - update identities
- * - update items
- * - update persistent claims
- * - settle matching transient claims
- * - update those that are already settled
  */
 function merge(state: State, receipt: receipts.Receipt): void {
   state.version = receipt._version
@@ -116,7 +140,7 @@ function merge(state: State, receipt: receipts.Receipt): void {
   for (const [identity, items] of Object.entries(state.transient))
     for (const [item, claims] of Object.entries(items))
       claims.forEach((claim, index) => {
-        const persistent = state.persistent[identity]?.[item]?.[index]?.value
+        const persistent = state.persistent[identity]?.[item]?.[index]?.value ?? false
 
         if (claim.value === persistent)
           claim.settled = true
@@ -140,6 +164,18 @@ function extract(state: State, identity: string): receipts.ClaimChangeset {
   }
 
   return patch
+}
+
+/**
+ * Detect drift between the local state and the server state
+ */
+function drift(state: State, identity: string): boolean {
+  for (const claims of Object.values(state.transient[identity]))
+    for (const claim of claims)
+      if (!claim.settled)
+        return true
+
+  return false
 }
 
 interface State {

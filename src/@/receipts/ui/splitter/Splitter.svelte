@@ -6,7 +6,7 @@
 </script>
 
 <script lang="ts">
-  import { Check, ChevronsUpDown, CircleDashed, Share2 } from '@lucide/svelte'
+  import { Check, ChevronsUpDown, CircleDashed, UserPlus } from '@lucide/svelte'
   import { Coins } from '@/app/ui'
   import { Action } from '@/app/ui'
   import { Asyvatar } from '@/accounts/ui'
@@ -73,10 +73,14 @@
 </div>
 
 <Actions>
-  <Action id="nav-action-receipt-share" variant="secondary">
-    <Share2 />
+  <Action
+    id="nav-action-receipt-share"
+    variant={receipt.identities.length === 1 ? 'default' : 'secondary'}>
+    <UserPlus />
   </Action>
-  <Action id="nav-action-receipt-split">
+  <Action
+    id="nav-action-receipt-split"
+    variant={receipt.identities.length === 1 ? 'secondary' : 'default'}>
     <Check />
   </Action>
 </Actions>

@@ -6,8 +6,8 @@
 - [x] Pending processing
 - [x] Ready (Continue)
 - [ ] Receipt screen
-  - [ ] CRDT
-  - [ ] Tail merging (diffs)
+  - [x] CRDT
+  - [x] Tail merging (diffs)
 - [ ] Pending state screen
 - [ ] Error state screen
 
