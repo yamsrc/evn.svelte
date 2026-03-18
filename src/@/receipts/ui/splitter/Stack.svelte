@@ -5,7 +5,7 @@
   import { dict } from '../intl'
   import type { Props } from './Stack'
 
-  const { units, child }: Props = $props()
+  const { group, child }: Props = $props()
 
   let collapsed = $state(true)
   let stack = $state<ReturnType<typeof Stack.Root> | undefined>()
@@ -21,7 +21,7 @@
       <ChevronsDownUp />
     </Button>
   </Stack.Toolbar>
-  {#each units as unit, i (i)}
+  {#each group.units as unit, i (i)}
     <Stack.Item id={i.toString()}>
       {@render child(unit, i, collapsed)}
     </Stack.Item>

@@ -13,7 +13,7 @@ interface SingleUnitsGroup {
   units: Unit[]
 }
 
-interface MultiUnitGroup {
+export interface MultiUnitGroup {
   id: string
   outcast: true
   units: Unit[]
@@ -25,16 +25,19 @@ export function group(items: Item[]): Group[] {
   const groups: Group[] = []
 
   let singles: SingleUnitsGroup | null = null
+  let i = 0
 
   for (const item of items) {
+    i++
+
     const units = toUnits(item)
 
     if (units.length > 1) {
       singles = null // close current group
-      groups.push({ id: id(), outcast: true, units })
+      groups.push({ id: item.id, outcast: true, units })
     } else {
       if (singles === null) {
-        singles = { id: id(), outcast: false, units: [] }
+        singles = { id: 'single-' + i.toString(), outcast: false, units: [] }
         groups.push(singles)
       }
 
@@ -43,10 +46,6 @@ export function group(items: Item[]): Group[] {
   }
 
   return groups
-}
-
-function id(): string {
-  return crypto.randomUUID().slice(0, 8)
 }
 
 function toUnits(item: Item): Unit[] {

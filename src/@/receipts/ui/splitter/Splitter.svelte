@@ -54,7 +54,7 @@
 <div class="flex flex-col gap-2">
   {#each groups as group, i (group.id)}
     {#if group.outcast}
-      <Stack units={group.units}>
+      <Stack {group}>
         {#snippet child(unit, index, collapsed)}
           {@render card(unit, index, collapsed ? group.units.length : undefined)}
         {/snippet}
