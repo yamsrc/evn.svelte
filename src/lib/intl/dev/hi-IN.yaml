@@ -14,6 +14,10 @@ components:
     title: ऋण ग्राफ़
   picture:
     title: Picture
+  participants:
+    title: प्रतिभागी
+    managedContactsCreation: प्रबंधित संपर्क निर्माण बटन दिखाएं
+    shareUrl: URL साझा करें
 transmission:
   title: Transmission
   permission:

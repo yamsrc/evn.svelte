@@ -160,3 +160,6 @@ search:
 dir: ltr
 adventures:
   title: 冒险
+participants:
+  add:
+    button: 添加参与者

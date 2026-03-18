@@ -14,6 +14,10 @@ components:
     title: Debt Graph
   picture:
     title: Picture
+  participants:
+    title: Participants
+    managedContactsCreation: Show managed contacts creation button
+    shareUrl: Share URL
 transmission:
   title: Transmission
   permission:

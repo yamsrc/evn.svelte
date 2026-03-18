@@ -208,6 +208,11 @@ export const dictionaries = {
     "dir": "rtl",
     "adventures": {
       "title": "مغامرات"
+    },
+    "participants": {
+      "add": {
+        "button": "إضافة المشاركين"
+      }
     }
   },
   "de-DE": {
@@ -416,6 +421,11 @@ export const dictionaries = {
     "dir": "ltr",
     "adventures": {
       "title": "Abenteuer"
+    },
+    "participants": {
+      "add": {
+        "button": "Teilnehmende hinzufügen"
+      }
     }
   },
   "en-US": {
@@ -624,6 +634,11 @@ export const dictionaries = {
     "dir": "ltr",
     "adventures": {
       "title": "Adventures"
+    },
+    "participants": {
+      "add": {
+        "button": "Add participants"
+      }
     }
   },
   "es-ES": {
@@ -832,6 +847,11 @@ export const dictionaries = {
     "dir": "ltr",
     "adventures": {
       "title": "Aventuras"
+    },
+    "participants": {
+      "add": {
+        "button": "Agregar participantes"
+      }
     }
   },
   "fr-FR": {
@@ -1040,6 +1060,11 @@ export const dictionaries = {
     "dir": "ltr",
     "adventures": {
       "title": "Aventures"
+    },
+    "participants": {
+      "add": {
+        "button": "Ajouter des participants"
+      }
     }
   },
   "hi-IN": {
@@ -1248,6 +1273,11 @@ export const dictionaries = {
     "dir": "ltr",
     "adventures": {
       "title": "साहसिक यात्राएँ"
+    },
+    "participants": {
+      "add": {
+        "button": "प्रतिभागी जोड़ें"
+      }
     }
   },
   "it-IT": {
@@ -1456,6 +1486,11 @@ export const dictionaries = {
     "dir": "ltr",
     "adventures": {
       "title": "Avventure"
+    },
+    "participants": {
+      "add": {
+        "button": "Aggiungi partecipanti"
+      }
     }
   },
   "ja-JP": {
@@ -1664,6 +1699,11 @@ export const dictionaries = {
     "dir": "ltr",
     "adventures": {
       "title": "冒険"
+    },
+    "participants": {
+      "add": {
+        "button": "参加者を追加"
+      }
     }
   },
   "ko-KR": {
@@ -1872,6 +1912,11 @@ export const dictionaries = {
     "dir": "ltr",
     "adventures": {
       "title": "모험"
+    },
+    "participants": {
+      "add": {
+        "button": "참가자 추가"
+      }
     }
   },
   "nl-NL": {
@@ -2080,6 +2125,11 @@ export const dictionaries = {
     "dir": "ltr",
     "adventures": {
       "title": "Avonturen"
+    },
+    "participants": {
+      "add": {
+        "button": "Deelnemers toevoegen"
+      }
     }
   },
   "ru-RU": {
@@ -2288,6 +2338,11 @@ export const dictionaries = {
     "dir": "ltr",
     "adventures": {
       "title": "Приключения"
+    },
+    "participants": {
+      "add": {
+        "button": "Добавить участников"
+      }
     }
   },
   "sw-TZ": {
@@ -2496,6 +2551,11 @@ export const dictionaries = {
     "dir": "ltr",
     "adventures": {
       "title": "Matukio"
+    },
+    "participants": {
+      "add": {
+        "button": "Ongeza washiriki"
+      }
     }
   },
   "tr-TR": {
@@ -2704,6 +2764,11 @@ export const dictionaries = {
     "dir": "ltr",
     "adventures": {
       "title": "Macera"
+    },
+    "participants": {
+      "add": {
+        "button": "Katılımcı ekle"
+      }
     }
   },
   "uk-UA": {
@@ -2912,6 +2977,11 @@ export const dictionaries = {
     "dir": "ltr",
     "adventures": {
       "title": "Пригоди"
+    },
+    "participants": {
+      "add": {
+        "button": "Додати учасників"
+      }
     }
   },
   "zh-CN": {
@@ -3120,6 +3190,11 @@ export const dictionaries = {
     "dir": "ltr",
     "adventures": {
       "title": "冒险"
+    },
+    "participants": {
+      "add": {
+        "button": "添加参与者"
+      }
     }
   }
 };

@@ -14,6 +14,10 @@ components:
     title: 債務グラフ
   picture:
     title: Picture
+  participants:
+    title: 参加者
+    managedContactsCreation: 管理対象の連絡先作成ボタンを表示
+    shareUrl: URLを共有
 transmission:
   title: Transmission
   permission:

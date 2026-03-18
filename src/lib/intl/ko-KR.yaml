@@ -162,3 +162,6 @@ search:
 dir: ltr
 adventures:
   title: 모험
+participants:
+  add:
+    button: 참가자 추가

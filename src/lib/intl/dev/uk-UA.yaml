@@ -14,6 +14,10 @@ components:
     title: Графік боргів
   picture:
     title: Picture
+  participants:
+    title: Учасники
+    managedContactsCreation: Показати кнопку створення керованих контактів
+    shareUrl: Поділитися посиланням
 transmission:
   title: Transmission
   permission:

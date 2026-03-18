@@ -175,3 +175,6 @@ search:
 dir: ltr
 adventures:
   title: Пригоди
+participants:
+  add:
+    button: Додати учасників
