@@ -10,6 +10,9 @@ settings:
   expenses:
     description: Paylaşılan harcamalar ve para hareketleri
     title: Giderler
+  adventures:
+    title: Macera
+    description: Macera harcamaları ve üyeler
 permission:
   prompt: >-
     Giderler, makbuzlar ve diğer aktivitelerle ilgili anlık güncellemeler almak

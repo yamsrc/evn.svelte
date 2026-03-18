@@ -32,6 +32,12 @@ export type Dictionary = {
         save: string
         create: string
         slide: string
+        adventures: {
+          adventure: string
+        }
+        expenses: {
+          split: string
+        }
       }
       nav: {
         home: string
@@ -188,15 +194,15 @@ export type Dictionary = {
             title: string
           }
           title: string
-          add: {
-
-          }
         }
         me: string
         empty: {
           title: string
           description: string
           create: string
+        }
+        expenses: {
+          title: string
         }
       }
       home: {
@@ -206,4 +212,7 @@ export type Dictionary = {
         empty: string
       }
       dir: string
+      adventures: {
+        title: string
+      }
     }

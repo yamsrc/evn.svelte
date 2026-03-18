@@ -20,6 +20,9 @@ inputs:
     graph:
       title:
         input: Debt Graph
+    picture:
+      title:
+        input: Picture
   transmission:
     title:
       input: Transmission

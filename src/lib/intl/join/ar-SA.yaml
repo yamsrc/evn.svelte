@@ -67,3 +67,22 @@ group:
       (groupname) => `انضم إلى ${groupname}`
     join: انضم
     decline: رفض
+adventures:
+  og:
+    title: |-
+      !js
+      (title) => `انضم إلى ${title} عبر Evnly`
+    description: شارك مصاريف المغامرة وتابع الحسابات بالتساوي — معًا على Evnly.
+  dialog:
+    title: |-
+      !js
+      (title) => `انضم إلى ${title}`
+    join: انضمام
+    decline: تجاهل
+    description: >-
+      !js
+
+      (name, gender) => gender === "he" ? `${name} يدعوك للانضمام إلى المغامرة`
+      : gender === "she" ? `${name} تدعوك للانضمام إلى المغامرة` : `${name}
+      يدعوك/تدعوك للانضمام إلى المغامرة`
+    heading: دعوة إلى المغامرة

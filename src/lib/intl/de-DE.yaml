@@ -10,15 +10,19 @@ actions:
     scan: Scheck scannen
     input: Ausgabe hinzufügen
   contacts:
-    group: Gruppe hinzufügen
+    group: Gruppe erstellen
     title: Freunde
-    contact: Freund hinzufügen
+    contact: Freund
   addSelected: Ausgewählte hinzufügen
   cancel: Abbrechen
   search: Suchen
   save: Speichern
   create: Erstellen
   slide: Wischen
+  adventures:
+    adventure: Abenteuer starten
+  expenses:
+    split: Aufteilen
 nav:
   home: Startseite
   profile: Ich
@@ -158,12 +162,13 @@ expenses:
     create:
       title: Neuen Teilnehmer erstellen
     title: Teilnehmer hinzufügen
-    add: {}
   me: Ich
   empty:
     title: Noch keine Ausgaben
     description: Erstelle deine erste Ausgabe, um mit dem Verfolgen zu beginnen
     create: Ausgabe erstellen
+  expenses:
+    title: Evns
 home:
   title: |-
     !js
@@ -171,3 +176,5 @@ home:
 search:
   empty: Keine Ergebnisse gefunden
 dir: ltr
+adventures:
+  title: Abenteuer

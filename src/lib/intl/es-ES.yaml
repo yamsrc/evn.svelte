@@ -10,15 +10,19 @@ actions:
     scan: Escanear cheque
     input: Añadir gasto
   contacts:
-    group: Agregar grupo
+    group: Crear grupo
     title: Amigos
-    contact: Agregar amigo
+    contact: Amigo
   addSelected: Agregar seleccionado(s)
   cancel: Cancelar
   search: Buscar
   save: Guardar
   create: Crear
   slide: Desliza
+  adventures:
+    adventure: Comenzar aventura
+  expenses:
+    split: Dividir
 nav:
   home: Inicio
   profile: Yo
@@ -159,12 +163,13 @@ expenses:
     create:
       title: Crear un nuevo participante
     title: Agregar participantes
-    add: {}
   me: Yo
   empty:
     title: Aún no hay gastos
     description: Crea tu primer gasto para empezar a realizar un seguimiento
     create: Crear gasto
+  expenses:
+    title: Evns
 home:
   title: |-
     !js
@@ -172,3 +177,5 @@ home:
 search:
   empty: No se encontraron resultados
 dir: ltr
+adventures:
+  title: Aventuras

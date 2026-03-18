@@ -1,45 +1,26 @@
 <script lang="ts">
-  import { Switch } from '$ui/switch'
-  import { Panel } from '@/app/ui'
+  import { Toggle } from '@/app/ui'
   import { update } from '../svc'
   import { dict } from './intl'
   import type { Props } from './Reduction'
 
   let { group, enabled = $bindable(false) }: Props = $props()
 
-  let busy = $state(false)
-
-  async function toggle(e: MouseEvent) {
-    e.preventDefault()
-
-    enabled = !enabled
-
-    busy = true
-
+  async function onchange() {
     if (!group) return
 
-    const result = await update(group.id, { reduction: enabled })
+    const updated = await update(group.id, { reduction: enabled })
 
-    if (result instanceof Error) enabled = !enabled
-
-    busy = false
+    if (updated instanceof Error) enabled = !enabled
   }
 </script>
 
-<button class="text-left" onclick={toggle}>
-  <Panel>
-    <div class="space-y-1">
-      <h3 class="flex items-center justify-between gap-2">
-        <label for="reduction-switch">{$dict.reduction.switch.label}</label>
-        <Switch
-          id="reduction-switch"
-          checked={enabled}
-          disabled={busy}
-          class="border border-border" />
-      </h3>
-      <p class="text-muted-foreground leading-normal!">
-        {$dict.reduction.switch.description}
-      </p>
-    </div>
-  </Panel>
-</button>
+<Toggle
+  id="reduction-switch"
+  label={$dict.reduction.switch.label}
+  bind:checked={enabled}
+  {onchange}>
+  <p class="text-muted-foreground leading-normal!">
+    {$dict.reduction.switch.description}
+  </p>
+</Toggle>

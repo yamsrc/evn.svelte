@@ -10,15 +10,19 @@ actions:
     scan: مسح الشيك
     input: إضافة مصروف
   contacts:
-    group: إضافة مجموعة
+    group: إنشاء مجموعة
     title: أصدقاء
-    contact: إضافة كصديق
+    contact: صديق
   addSelected: إضافة المحدد
   cancel: إلغاء
   search: بحث
   save: حفظ
   create: إنشاء
   slide: اسحب
+  adventures:
+    adventure: ابدأ المغامرة
+  expenses:
+    split: تقسيم
 nav:
   home: الرئيسية
   profile: أنا
@@ -150,12 +154,13 @@ expenses:
     create:
       title: إنشاء مشارك جديد
     title: إضافة مشاركين
-    add: {}
   me: أنا
   empty:
     title: لا توجد مصروفات بعد
     description: أنشئ أول مصروفك لبدء التتبع
     create: إنشاء مصروف
+  expenses:
+    title: Evns
 home:
   title: |-
     !js
@@ -163,3 +168,5 @@ home:
 search:
   empty: لم يتم العثور على نتائج
 dir: rtl
+adventures:
+  title: مغامرات

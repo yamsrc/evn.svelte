@@ -60,3 +60,35 @@ expenses:
 
     (names) => { const list = new Intl.ListFormat("uk", { style: "long", type:
     "conjunction" }).format(names); return `Оплачено: ${list}`; }
+adventures:
+  joined:
+    me: >-
+      !js
+
+      (title, gender) => gender === "he" ? `Вас додано до ${title}` : (gender
+      === "she" ? `Вас додано до ${title}`.replace("о", "а") : `Вас додано(а) до
+      ${title}`)
+    other: >-
+      !js
+
+      (name, title, gender) => { if (gender === "he") return `${name} приєднався
+      до ${title}`; if (gender === "she") return `${name} приєдналася до
+      ${title}`; return `${name} приєднався/приєдналася до ${title}`; }
+    others: |-
+      !js
+      (names, title, grammar) => {
+        const list = new Intl.ListFormat("uk", { style: "long", type: "conjunction" }).format(names);
+        if (names.length === 1) {
+          if (grammar && grammar.gender === "he") return `${list} приєднався до ${title}`;
+          if (grammar && grammar.gender === "she") return `${list} приєдналася до ${title}`;
+          return `${list} приєднався(лася) до ${title}`;
+        }
+        return `${list} приєдналися до ${title}`;
+      }
+  expense:
+    title: |-
+      !js
+      (title, amount) => `${title} · ${amount}`
+    body: |-
+      !js
+      (title) => `Витрату додано до ${title}`

@@ -21,6 +21,9 @@ export type Dictionary = {
         graph: {
           title: string
         }
+        picture: {
+          title: string
+        }
       }
       transmission: {
         title: string

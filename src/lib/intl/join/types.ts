@@ -61,4 +61,17 @@ export type Dictionary = {
           decline: string
         }
       }
+      adventures: {
+        og: {
+          title: (value: any) => string
+          description: string
+        }
+        dialog: {
+          title: (value: any) => string
+          join: string
+          decline: string
+          description: (...args: [any, any]) => string
+          heading: string
+        }
+      }
     }

@@ -59,3 +59,35 @@ expenses:
 
     (names) => { const list = new Intl.ListFormat("it", { style: "long", type:
     "conjunction" }).format(names); return `Pagato da ${list}`; }
+adventures:
+  joined:
+    me: >-
+      !js
+
+      (title, gender) => gender === "he" ? `Sei stato aggiunto a ${title}` :
+      (gender === "she" ? `Sei stata aggiunta a ${title}` : `Sei statə aggiuntə
+      a ${title}`)
+    other: >-
+      !js
+
+      (name, title, gender) => { if (gender === "he") return `${name} si è unito
+      a ${title}`; if (gender === "she") return `${name} si è unita a ${title}`;
+      return `${name} si è unito/a a ${title}`; }
+    others: |-
+      !js
+      (names, title, grammar) => {
+        const list = new Intl.ListFormat("it", { style: "long", type: "conjunction" }).format(names);
+        if (names.length === 1) {
+          if (grammar && grammar.gender === "he") return `${list} si è unito a ${title}`;
+          if (grammar && grammar.gender === "she") return `${list} si è unita a ${title}`;
+          return `${list} si è unit* a ${title}`;
+        }
+        return `${list} si sono uniti a ${title}`;
+      }
+  expense:
+    title: |-
+      !js
+      (title, amount) => `${title} · ${amount}`
+    body: |-
+      !js
+      (title) => `Spesa aggiunta a ${title}`

@@ -10,15 +10,19 @@ actions:
     scan: चेक स्कैन करें
     input: खर्च जोड़ें
   contacts:
-    group: समूह जोड़ें
+    group: समूह बनाएँ
     title: मित्र
-    contact: मित्र जोड़ें
+    contact: मित्र
   addSelected: चयनित जोड़ें
   cancel: रद्द करें
   search: खोजें
   save: सहेजें
   create: सृजन करें
   slide: स्वाइप करें
+  adventures:
+    adventure: साहसिक यात्रा शुरू करें
+  expenses:
+    split: विभाजित करें
 nav:
   home: मुख्य पृष्ठ
   profile: मैं
@@ -152,12 +156,13 @@ expenses:
     create:
       title: नया प्रतिभागी बनाएँ
     title: प्रतिभागी जोड़ें
-    add: {}
   me: मैं
   empty:
     title: अभी तक कोई खर्च नहीं
     description: ट्रैकिंग शुरू करने के लिए अपना पहला खर्च दर्ज करें
     create: व्यय बनाएं
+  expenses:
+    title: Evns
 home:
   title: |-
     !js
@@ -165,3 +170,5 @@ home:
 search:
   empty: कोई परिणाम नहीं मिला
 dir: ltr
+adventures:
+  title: साहसिक यात्राएँ

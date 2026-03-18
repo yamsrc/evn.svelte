@@ -58,3 +58,24 @@ expenses:
 
     (names) => { const list = new Intl.ListFormat("de", { style: "long", type:
     "conjunction" }).format(names); return `Bezahlt von ${list}`; }
+adventures:
+  joined:
+    me: |-
+      !js
+      (title, gender) => `Du wurdest zu ${title} hinzugefügt`
+    other: |-
+      !js
+      (name, title, gender) => { return `${name} ist ${title} beigetreten`; }
+    others: |-
+      !js
+      (names, title, grammar) => {
+        const list = new Intl.ListFormat("de", { style: "long", type: "conjunction" }).format(names);
+        return names.length === 1 ? `${list} ist ${title} beigetreten` : `${list} sind ${title} beigetreten`;
+      }
+  expense:
+    title: |-
+      !js
+      (title, amount) => `${title} · ${amount}`
+    body: |-
+      !js
+      (title) => `Ausgabe zu ${title} hinzugefügt`

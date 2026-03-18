@@ -10,6 +10,9 @@ settings:
   expenses:
     description: Spese condivise e attività finanziaria
     title: Spese
+  adventures:
+    title: Avventure
+    description: Spese dell’avventura e membri
 permission:
   prompt: >-
     Attiva le notifiche per ricevere aggiornamenti istantanei su spese, ricevute

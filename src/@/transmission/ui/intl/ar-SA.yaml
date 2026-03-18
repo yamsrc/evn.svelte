@@ -10,6 +10,9 @@ settings:
   expenses:
     description: النفقات المشتركة وأنشطة المال
     title: المصروفات
+  adventures:
+    title: المغامرات
+    description: مصاريف المغامرة والأعضاء
 permission:
   prompt: >-
     قم بتفعيل الإشعارات للحصول على تحديثات فورية حول النفقات والإيصالات

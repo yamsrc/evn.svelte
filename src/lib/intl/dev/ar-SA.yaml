@@ -12,6 +12,8 @@ components:
       (count) => `عرض: ${count}`
   graph:
     title: مخطط الديون
+  picture:
+    title: Picture
 transmission:
   title: Transmission
   permission:

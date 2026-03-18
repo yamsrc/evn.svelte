@@ -71,3 +71,19 @@ group:
       (groupname) => `Jiunge na ${groupname}`
     join: Jiunge
     decline: Kataa
+adventures:
+  og:
+    title: |-
+      !js
+      (title) => `Jiunge na ${title} kwenye Evnly`
+    description: Gawana gharama za adventure na fuatilia kwa usawa — pamoja kwenye Evnly.
+  dialog:
+    title: |-
+      !js
+      (title) => `Jiunge na ${title}`
+    join: Jiunge
+    decline: Puuza
+    description: |-
+      !js
+      (name, gender) => `${name} anakualika ujiunge na tukio hili la kusisimua`
+    heading: Mwaliko wa kuingia kwenye adventure

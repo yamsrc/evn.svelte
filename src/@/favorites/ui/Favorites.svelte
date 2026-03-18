@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { Scrollable } from '$com/scrollable'
   import { Section } from '@/app/ui'
   import Panel from './Panel.svelte'
   import type { Props } from './Favorites'
@@ -20,14 +21,12 @@
     {#if title}
       <h2>{title}</h2>
     {/if}
-    <div class="overflow-x-auto -mx-5 py-2 -my-2 no-scrollbar">
-      <div id="favorites-list-content" class="w-fit flex gap-1.5 mx-5">
-        {#each favorites as favorite (favorite.id)}
-          {@const selected = selection?.has(favorite.favorite)}
-          {@const selectedProps = selectable ? { selected, onselect } : undefined}
-          <Panel {favorite} {...selectedProps} />
-        {/each}
-      </div>
-    </div>
+    <Scrollable bleed id="favorites-list-content" class="gap-1.5 py-2 -my-2">
+      {#each favorites as favorite (favorite.id)}
+        {@const selected = selection?.has(favorite.favorite)}
+        {@const selectedProps = selectable ? { selected, onselect } : undefined}
+        <Panel {favorite} {...selectedProps} />
+      {/each}
+    </Scrollable>
   </Section>
 {/if}

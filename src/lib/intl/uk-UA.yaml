@@ -10,15 +10,19 @@ actions:
     scan: Сканувати чек
     input: Додати витрату
   contacts:
-    group: Додати групу
+    group: Створити групу
     title: Друзі
-    contact: Додати в друзі
+    contact: Друг
   addSelected: Додати вибране
   cancel: Скасувати
   search: Пошук
   save: Зберегти
   create: Створити
   slide: Змахни
+  adventures:
+    adventure: Розпочати пригоду
+  expenses:
+    split: Розділити
 nav:
   home: Головна
   profile: Я
@@ -155,12 +159,13 @@ expenses:
     create:
       title: Створити нового учасника
     title: Додати учасників
-    add: {}
   me: Я
   empty:
     title: Поки що немає витрат
     description: Створіть свою першу витрату, щоб почати відстеження
     create: Створити витрату
+  expenses:
+    title: Evns
 home:
   title: |-
     !js
@@ -168,3 +173,5 @@ home:
 search:
   empty: Результатів не знайдено
 dir: ltr
+adventures:
+  title: Пригоди

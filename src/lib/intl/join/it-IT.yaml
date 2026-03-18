@@ -75,3 +75,19 @@ group:
       (groupname) => `Unisciti a ${groupname}`
     join: Unisciti
     decline: Rifiuta
+adventures:
+  og:
+    title: |-
+      !js
+      (title) => `Unisciti a ${title} su Evnly`
+    description: Dividi le spese d’avventura e tieni i conti in pari — insieme su Evnly.
+  dialog:
+    title: |-
+      !js
+      (title) => `Unisciti a ${title}`
+    join: Partecipa
+    decline: Ignora
+    description: |-
+      !js
+      (name, gender) => `${name} ti invita a unirti all’avventura`
+    heading: Invito all’avventura

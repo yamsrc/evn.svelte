@@ -26,11 +26,13 @@ export const sections = (dict: Dictionary, notifications: Notification[]): Secti
   {
     id: 'expenses',
     href: '/expenses/',
+    nested: ['/adventures/'],
     label: dict.nav.expenses,
     Icon: Wallet,
     unseen: notifications.some(
       (n) =>
         n.domain === 'expenses' ||
+        n.domain === 'adventures' ||
         (n.domain === 'contacts' && n.event === 'transferred'),
     ),
   },

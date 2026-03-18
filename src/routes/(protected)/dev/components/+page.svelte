@@ -17,5 +17,8 @@
     <li>
       <a href="graph/">{$dict.components.graph.title}</a>
     </li>
+    <li>
+      <a href="picture/">{$dict.components.picture.title}</a>
+    </li>
   </ul>
 </Section>

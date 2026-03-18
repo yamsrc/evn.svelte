@@ -10,15 +10,19 @@ actions:
     scan: Scansiona assegno
     input: Aggiungi spesa
   contacts:
-    group: Aggiungi gruppo
+    group: Crea gruppo
     title: Amici
-    contact: Aggiungi amico
+    contact: Amico
   addSelected: Aggiungi selezionati
   cancel: Annulla
   search: Cerca
   save: Salva
   create: Crea
   slide: Scorri
+  adventures:
+    adventure: Inizia l’avventura
+  expenses:
+    split: Dividi
 nav:
   home: Home
   profile: Io
@@ -158,12 +162,13 @@ expenses:
     create:
       title: Crea un nuovo partecipante
     title: Aggiungi partecipanti
-    add: {}
   me: Io
   empty:
     title: Nessuna spesa ancora
     description: Crea la tua prima spesa per iniziare a tenere traccia
     create: Crea spesa
+  expenses:
+    title: Evns
 home:
   title: |-
     !js
@@ -171,3 +176,5 @@ home:
 search:
   empty: Nessun risultato trovato
 dir: ltr
+adventures:
+  title: Avventure

@@ -12,6 +12,8 @@ components:
       (count) => `Show: ${count}`
   graph:
     title: Debt Graph
+  picture:
+    title: Picture
 transmission:
   title: Transmission
   permission:

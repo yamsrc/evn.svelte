@@ -12,6 +12,8 @@ components:
       (count) => `${count}件を表示`
   graph:
     title: 債務グラフ
+  picture:
+    title: Picture
 transmission:
   title: Transmission
   permission:

@@ -10,6 +10,9 @@ settings:
   expenses:
     description: साझा खर्च और पैसों की गतिविधि
     title: खर्चे
+  adventures:
+    title: रोमांच
+    description: एडवेंचर खर्च और सदस्य
 permission:
   prompt: >-
     खर्च, रसीदों और अन्य गतिविधियों के बारे में तुरंत अपडेट पाने के लिए

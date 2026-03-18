@@ -21,6 +21,11 @@ inputs:
         input: Shared expenses and money activity
       title:
         input: Expenses
+    adventures:
+      title:
+        input: Adventures
+      description:
+        input: Adventure expenses and members
   permission:
     prompt:
       input: Turn on notifications to get instant updates about expenses, receipts, and other activity.

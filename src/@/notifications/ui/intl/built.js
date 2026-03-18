@@ -40,6 +40,25 @@ export const dictionaries = {
     },
     "expenses": {
       "expense": (names) => { const list = new Intl.ListFormat("ar", { style: "long", type: "conjunction" }).format(names); return `تم الدفع بواسطة ${list}`; }
+    },
+    "adventures": {
+      "joined": {
+        "me": (title, gender) => gender === "he" ? `تمت إضافتك إلى ${title}` : (gender === "she" ? `تمت إضافتكِ إلى ${title}` : `تمت إضافتك/إضافتكِ إلى ${title}`),
+        "other": (name, title, gender) => { if (gender === "he") return `${name} انضم إلى ${title}`; if (gender === "she") return `${name} انضمت إلى ${title}`; return `${name} انضم(ت) إلى ${title}`; },
+        "others": (names, title, grammar) => {
+  const list = new Intl.ListFormat("ar", { style: "long", type: "conjunction" }).format(names);
+  if (names.length === 1) {
+    if (grammar && grammar.gender === "he") return `${list} انضم إلى ${title}`;
+    if (grammar && grammar.gender === "she") return `${list} انضمت إلى ${title}`;
+    return `${list} انضم(ت) إلى ${title}`;
+  }
+  return `${list} انضموا إلى ${title}`;
+}
+      },
+      "expense": {
+        "title": (title, amount) => `${title} · ${amount}`,
+        "body": (title) => `تمت إضافة مصروف إلى ${title}`
+      }
     }
   },
   "de-DE": {
@@ -78,6 +97,20 @@ export const dictionaries = {
     },
     "expenses": {
       "expense": (names) => { const list = new Intl.ListFormat("de", { style: "long", type: "conjunction" }).format(names); return `Bezahlt von ${list}`; }
+    },
+    "adventures": {
+      "joined": {
+        "me": (title, gender) => `Du wurdest zu ${title} hinzugefügt`,
+        "other": (name, title, gender) => { return `${name} ist ${title} beigetreten`; },
+        "others": (names, title, grammar) => {
+  const list = new Intl.ListFormat("de", { style: "long", type: "conjunction" }).format(names);
+  return names.length === 1 ? `${list} ist ${title} beigetreten` : `${list} sind ${title} beigetreten`;
+}
+      },
+      "expense": {
+        "title": (title, amount) => `${title} · ${amount}`,
+        "body": (title) => `Ausgabe zu ${title} hinzugefügt`
+      }
     }
   },
   "en-US": {
@@ -112,6 +145,20 @@ export const dictionaries = {
     },
     "expenses": {
       "expense": (names) => { const list = new Intl.ListFormat("en", { style: "long", type: "conjunction" }).format(names); return `Paid by ${list}`; }
+    },
+    "adventures": {
+      "joined": {
+        "me": (title, gender) => `You've been added to ${title}`,
+        "other": (name, title, gender) => { return `${name} joined ${title}`; },
+        "others": (names, title, grammar) => {
+  const list = new Intl.ListFormat("en", { style: "long", type: "conjunction" }).format(names);
+  return names.length === 1 ? `${list} joined ${title}` : `${list} joined ${title}`;
+}
+      },
+      "expense": {
+        "title": (title, amount) => `${title} · ${amount}`,
+        "body": (title) => `Expense added to ${title}`
+      }
     }
   },
   "es-ES": {
@@ -152,6 +199,25 @@ export const dictionaries = {
     },
     "expenses": {
       "expense": (names) => { const list = new Intl.ListFormat("es", { style: "long", type: "conjunction" }).format(names); return `Pagado por ${list}`; }
+    },
+    "adventures": {
+      "joined": {
+        "me": (title, gender) => gender === "he" ? `Has sido añadido a ${title}` : (gender === "she" ? `Has sido añadida a ${title}` : `Has sido añadido/a a ${title}`),
+        "other": (name, title, gender) => { return `${name} se unió a ${title}`; },
+        "others": (names, title, grammar) => {
+  const list = new Intl.ListFormat("es", { style: "long", type: "conjunction" }).format(names);
+  if (names.length === 1) {
+    if (grammar && grammar.gender === "he") return `${list} se unió a ${title}`;
+    if (grammar && grammar.gender === "she") return `${list} se unió a ${title}`;
+    return `${list} se unió a ${title}`;
+  }
+  return `${list} se unieron a ${title}`;
+}
+      },
+      "expense": {
+        "title": (title, amount) => `${title} · ${amount}`,
+        "body": (title) => `Gasto añadido a ${title}`
+      }
     }
   },
   "fr-FR": {
@@ -192,6 +258,25 @@ export const dictionaries = {
     },
     "expenses": {
       "expense": (names) => { const list = new Intl.ListFormat("fr", { style: "long", type: "conjunction" }).format(names); return `Payé par ${list}`; }
+    },
+    "adventures": {
+      "joined": {
+        "me": (title, gender) => gender === "he" ? `Vous avez été ajouté à ${title}` : (gender === "she" ? `Vous avez été ajoutée à ${title}` : `Vous avez été ajouté(e) à ${title}`),
+        "other": (name, title, gender) => { if (gender === "he") return `${name} a rejoint ${title}`; if (gender === "she") return `${name} a rejointe ${title}`; return `${name} a rejoint(e) ${title}`; },
+        "others": (names, title, grammar) => {
+  const list = new Intl.ListFormat("fr", { style: "long", type: "conjunction" }).format(names);
+  if (names.length === 1) {
+    if (grammar && grammar.gender === "he") return `${list} a rejoint ${title}`;
+    if (grammar && grammar.gender === "she") return `${list} a rejoint ${title}e`;
+    return `${list} a rejoint(e) ${title}`;
+  }
+  return `${list} ont rejoint ${title}`;
+}
+      },
+      "expense": {
+        "title": (title, amount) => `${title} · ${amount}`,
+        "body": (title) => `Dépense ajoutée à ${title}`
+      }
     }
   },
   "hi-IN": {
@@ -231,8 +316,27 @@ export const dictionaries = {
       }
     },
     "expenses": {
-      "expense": (names) => { const list = new Intl.ListFormat("hi", { style: "long", type: "conjunction" }).format(names); return `${list} द्वारा भुगतान किया गया`;
+      "expense": (names) => { const list = new Intl.ListFormat("hi", { style: "long", type: "conjunction" }).format(names); return `${list} द्वारा भुगतान किया गया`; }
+    },
+    "adventures": {
+      "joined": {
+        "me": (title, gender) => gender === "he" ? `${title} में आपको जोड़ा गया है` : (gender === "she" ? `${title} में आपको जोड़ी गई हैं` : `${title} में आपको जोड़ा/जोड़ी गया/गई है`),
+        "other": (name, title, gender) => { if (gender === "he") return `${name} ने ${title} में शामिल हो गया`; if (gender === "she") return `${name} ने ${title} में शामिल हो गई`; return `${name} ने ${title} में शामिल हो गया/गई`; },
+        "others": (names, title, grammar) => {
+  const list = new Intl.ListFormat("hi", { style: "long", type: "conjunction" }).format(names);
+  if (names.length === 1) {
+    if (grammar && grammar.gender === "he") return `${list} ने ${title} जॉइन किया`;
+    if (grammar && grammar.gender === "she") return `${list} ने ${title} जॉइन की`;
+    return `${list} ने ${title} जॉइन किया/की`;
+  } else {
+    return `${list} ने ${title} जॉइन किया`;
+  }
 }
+      },
+      "expense": {
+        "title": (title, amount) => `${title} · ${amount}`,
+        "body": (title) => `${title} में खर्च जोड़ा गया`
+      }
     }
   },
   "it-IT": {
@@ -273,6 +377,25 @@ export const dictionaries = {
     },
     "expenses": {
       "expense": (names) => { const list = new Intl.ListFormat("it", { style: "long", type: "conjunction" }).format(names); return `Pagato da ${list}`; }
+    },
+    "adventures": {
+      "joined": {
+        "me": (title, gender) => gender === "he" ? `Sei stato aggiunto a ${title}` : (gender === "she" ? `Sei stata aggiunta a ${title}` : `Sei statə aggiuntə a ${title}`),
+        "other": (name, title, gender) => { if (gender === "he") return `${name} si è unito a ${title}`; if (gender === "she") return `${name} si è unita a ${title}`; return `${name} si è unito/a a ${title}`; },
+        "others": (names, title, grammar) => {
+  const list = new Intl.ListFormat("it", { style: "long", type: "conjunction" }).format(names);
+  if (names.length === 1) {
+    if (grammar && grammar.gender === "he") return `${list} si è unito a ${title}`;
+    if (grammar && grammar.gender === "she") return `${list} si è unita a ${title}`;
+    return `${list} si è unit* a ${title}`;
+  }
+  return `${list} si sono uniti a ${title}`;
+}
+      },
+      "expense": {
+        "title": (title, amount) => `${title} · ${amount}`,
+        "body": (title) => `Spesa aggiunta a ${title}`
+      }
     }
   },
   "ja-JP": {
@@ -307,6 +430,20 @@ export const dictionaries = {
     },
     "expenses": {
       "expense": (names) => { const list = new Intl.ListFormat("ja", { style: "long", type: "conjunction" }).format(names); return `${list}によって支払われました`; }
+    },
+    "adventures": {
+      "joined": {
+        "me": (title, gender) => `${title}に追加されました`,
+        "other": (name, title, gender) => { return `${name}が${title}に参加しました`; },
+        "others": (names, title, grammar) => {
+  const list = new Intl.ListFormat("ja", { style: "long", type: "conjunction" }).format(names);
+  return `${list}が${title}に参加しました`;
+}
+      },
+      "expense": {
+        "title": (title, amount) => `${title} · ${amount}`,
+        "body": (title) => `${title} に経費を追加しました`
+      }
     }
   },
   "ko-KR": {
@@ -341,6 +478,20 @@ export const dictionaries = {
     },
     "expenses": {
       "expense": (names) => { const list = new Intl.ListFormat("ko", { style: "long", type: "conjunction" }).format(names); return `${list}님이 결제함`; }
+    },
+    "adventures": {
+      "joined": {
+        "me": (title, gender) => `${title}에 추가되었습니다`,
+        "other": (name, title, gender) => { return `${name}님이 ${title}에 참가했습니다`; },
+        "others": (names, title, grammar) => {
+  const list = new Intl.ListFormat("ko", { style: "long", type: "conjunction" }).format(names);
+  return `${list}님이 ${title}에 참가했습니다`;
+}
+      },
+      "expense": {
+        "title": (title, amount) => `${title} · ${amount}`,
+        "body": (title) => `${title}에 지출이 추가되었습니다`
+      }
     }
   },
   "nl-NL": {
@@ -375,6 +526,20 @@ export const dictionaries = {
     },
     "expenses": {
       "expense": (names) => { const list = new Intl.ListFormat("nl", { style: "long", type: "conjunction" }).format(names); return `Betaald door ${list}`; }
+    },
+    "adventures": {
+      "joined": {
+        "me": (title, gender) => `Je bent toegevoegd aan ${title}`,
+        "other": (name, title, gender) => { return `${name} is lid geworden van ${title}`; },
+        "others": (names, title, grammar) => {
+  const list = new Intl.ListFormat("nl", { style: "long", type: "conjunction" }).format(names);
+  return names.length === 1 ? `${list} is lid geworden van ${title}` : `${list} zijn lid geworden van ${title}`;
+}
+      },
+      "expense": {
+        "title": (title, amount) => `${title} · ${amount}`,
+        "body": (title) => `Uitgave toegevoegd aan ${title}`
+      }
     }
   },
   "ru-RU": {
@@ -415,6 +580,25 @@ export const dictionaries = {
     },
     "expenses": {
       "expense": (names) => { const list = new Intl.ListFormat("ru", { style: "long", type: "conjunction" }).format(names); return `Оплачено: ${list}`; }
+    },
+    "adventures": {
+      "joined": {
+        "me": (title, gender) => gender === "he" ? `Вы были добавлены в ${title}` : (gender === "she" ? `Вы были добавлены в ${title}`.replace("ы", "а") : `Вы были добавлен(ы/а) в ${title}`),
+        "other": (name, title, gender) => { if (gender === "he") return `${name} присоединился к ${title}`; if (gender === "she") return `${name} присоединилась к ${title}`; return `${name} присоединил(ся/ась) к ${title}`; },
+        "others": (names, title, grammar) => {
+  const list = new Intl.ListFormat("ru", { style: "long", type: "conjunction" }).format(names);
+  if (names.length === 1) {
+    if (grammar && grammar.gender === "he") return `${list} присоединился к ${title}`;
+    if (grammar && grammar.gender === "she") return `${list} присоединилась к ${title}`;
+    return `${list} присоединил(ась)ся к ${title}`;
+  }
+  return `${list} присоединились к ${title}`;
+}
+      },
+      "expense": {
+        "title": (title, amount) => `${title} · ${amount}`,
+        "body": (title) => `Расход добавлен в ${title}`
+      }
     }
   },
   "sw-TZ": {
@@ -449,6 +633,20 @@ export const dictionaries = {
     },
     "expenses": {
       "expense": (names) => { const list = new Intl.ListFormat("sw", { style: "long", type: "conjunction" }).format(names); return `Imelipwa na ${list}`; }
+    },
+    "adventures": {
+      "joined": {
+        "me": (title, gender) => `Umeongezwa kwenye ${title}`,
+        "other": (name, title, gender) => { return `${name} amejiunga na ${title}`; },
+        "others": (names, title, grammar) => {
+  const list = new Intl.ListFormat("sw", { style: "long", type: "conjunction" }).format(names);
+  return names.length === 1 ? `${list} amejiunga na ${title}` : `${list} wamejiunga na ${title}`;
+}
+      },
+      "expense": {
+        "title": (title, amount) => `${title} · ${amount}`,
+        "body": (title) => `Gharama imeongezwa kwa ${title}`
+      }
     }
   },
   "tr-TR": {
@@ -483,6 +681,20 @@ export const dictionaries = {
     },
     "expenses": {
       "expense": (names) => { const list = new Intl.ListFormat("tr", { style: "long", type: "conjunction" }).format(names); return `${list} tarafından ödendi`; }
+    },
+    "adventures": {
+      "joined": {
+        "me": (title, gender) => gender === "he" || gender === "she" ? `${title} grubuna eklendin` : `${title} grubuna eklendiniz`,
+        "other": (name, title, gender) => { return `${name}, ${title} grubuna katıldı`; },
+        "others": (names, title, grammar) => {
+  const list = new Intl.ListFormat("tr", { style: "long", type: "conjunction" }).format(names);
+  return names.length === 1 ? `${list} ${title} grubuna katıldı` : `${list} ${title} grubuna katıldılar`;
+}
+      },
+      "expense": {
+        "title": (title, amount) => `${title} · ${amount}`,
+        "body": (title) => `${title} için harcama eklendi`
+      }
     }
   },
   "uk-UA": {
@@ -523,6 +735,25 @@ export const dictionaries = {
     },
     "expenses": {
       "expense": (names) => { const list = new Intl.ListFormat("uk", { style: "long", type: "conjunction" }).format(names); return `Оплачено: ${list}`; }
+    },
+    "adventures": {
+      "joined": {
+        "me": (title, gender) => gender === "he" ? `Вас додано до ${title}` : (gender === "she" ? `Вас додано до ${title}`.replace("о", "а") : `Вас додано(а) до ${title}`),
+        "other": (name, title, gender) => { if (gender === "he") return `${name} приєднався до ${title}`; if (gender === "she") return `${name} приєдналася до ${title}`; return `${name} приєднався/приєдналася до ${title}`; },
+        "others": (names, title, grammar) => {
+  const list = new Intl.ListFormat("uk", { style: "long", type: "conjunction" }).format(names);
+  if (names.length === 1) {
+    if (grammar && grammar.gender === "he") return `${list} приєднався до ${title}`;
+    if (grammar && grammar.gender === "she") return `${list} приєдналася до ${title}`;
+    return `${list} приєднався(лася) до ${title}`;
+  }
+  return `${list} приєдналися до ${title}`;
+}
+      },
+      "expense": {
+        "title": (title, amount) => `${title} · ${amount}`,
+        "body": (title) => `Витрату додано до ${title}`
+      }
     }
   },
   "zh-CN": {
@@ -557,6 +788,20 @@ export const dictionaries = {
     },
     "expenses": {
       "expense": (names) => { const list = new Intl.ListFormat("zh-CN", { style: "long", type: "conjunction" }).format(names); return `由${list}付款`; }
+    },
+    "adventures": {
+      "joined": {
+        "me": (title, gender) => `你已被添加到${title}`,
+        "other": (name, title, gender) => { return `${name}已加入${title}`; },
+        "others": (names, title, grammar) => {
+  const list = new Intl.ListFormat("zh-CN", { style: "long", type: "conjunction" }).format(names);
+  return `${list}已加入${title}`;
+}
+      },
+      "expense": {
+        "title": (title, amount) => `${title} · ${amount}`,
+        "body": (title) => `已将支出添加到${title}`
+      }
     }
   }
 };

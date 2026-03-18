@@ -46,3 +46,24 @@ expenses:
 
     (names) => { const list = new Intl.ListFormat("zh-CN", { style: "long",
     type: "conjunction" }).format(names); return `由${list}付款`; }
+adventures:
+  joined:
+    me: |-
+      !js
+      (title, gender) => `你已被添加到${title}`
+    other: |-
+      !js
+      (name, title, gender) => { return `${name}已加入${title}`; }
+    others: |-
+      !js
+      (names, title, grammar) => {
+        const list = new Intl.ListFormat("zh-CN", { style: "long", type: "conjunction" }).format(names);
+        return `${list}已加入${title}`;
+      }
+  expense:
+    title: |-
+      !js
+      (title, amount) => `${title} · ${amount}`
+    body: |-
+      !js
+      (title) => `已将支出添加到${title}`

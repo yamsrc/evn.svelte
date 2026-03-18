@@ -10,15 +10,19 @@ actions:
     scan: 小切手をスキャン
     input: 支出を追加
   contacts:
-    group: グループを追加
+    group: グループを作成
     title: 友達
-    contact: 友達を追加
+    contact: 友達
   addSelected: 選択したものを追加
   cancel: キャンセル
   search: 検索
   save: 保存
   create: 作成
   slide: スワイプ
+  adventures:
+    adventure: 冒険を始める
+  expenses:
+    split: 割り勘
 nav:
   home: ホーム
   profile: 私
@@ -140,12 +144,13 @@ expenses:
     create:
       title: 新しい参加者を作成
     title: 参加者を追加
-    add: {}
   me: 私
   empty:
     title: まだ支出がありません
     description: 最初の支出を作成して、記録を始めましょう
     create: 支出を作成
+  expenses:
+    title: Evns
 home:
   title: |-
     !js
@@ -153,3 +158,5 @@ home:
 search:
   empty: 結果が見つかりませんでした
 dir: ltr
+adventures:
+  title: 冒険

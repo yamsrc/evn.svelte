@@ -18,6 +18,9 @@ export const dictionaries = {
       },
       "graph": {
         "title": "مخطط الديون"
+      },
+      "picture": {
+        "title": "Picture"
       }
     },
     "transmission": {
@@ -50,6 +53,9 @@ export const dictionaries = {
       },
       "graph": {
         "title": "Schuldenübersicht"
+      },
+      "picture": {
+        "title": "Picture"
       }
     },
     "transmission": {
@@ -82,6 +88,9 @@ export const dictionaries = {
       },
       "graph": {
         "title": "Debt Graph"
+      },
+      "picture": {
+        "title": "Picture"
       }
     },
     "transmission": {
@@ -114,6 +123,9 @@ export const dictionaries = {
       },
       "graph": {
         "title": "Gráfico de deudas"
+      },
+      "picture": {
+        "title": "Picture"
       }
     },
     "transmission": {
@@ -146,6 +158,9 @@ export const dictionaries = {
       },
       "graph": {
         "title": "Graphique des dettes"
+      },
+      "picture": {
+        "title": "Picture"
       }
     },
     "transmission": {
@@ -178,6 +193,9 @@ export const dictionaries = {
       },
       "graph": {
         "title": "ऋण ग्राफ़"
+      },
+      "picture": {
+        "title": "Picture"
       }
     },
     "transmission": {
@@ -210,6 +228,9 @@ export const dictionaries = {
       },
       "graph": {
         "title": "Grafico dei debiti"
+      },
+      "picture": {
+        "title": "Picture"
       }
     },
     "transmission": {
@@ -242,6 +263,9 @@ export const dictionaries = {
       },
       "graph": {
         "title": "債務グラフ"
+      },
+      "picture": {
+        "title": "Picture"
       }
     },
     "transmission": {
@@ -274,6 +298,9 @@ export const dictionaries = {
       },
       "graph": {
         "title": "부채 그래프"
+      },
+      "picture": {
+        "title": "Picture"
       }
     },
     "transmission": {
@@ -306,6 +333,9 @@ export const dictionaries = {
       },
       "graph": {
         "title": "Schuldenoverzicht"
+      },
+      "picture": {
+        "title": "Picture"
       }
     },
     "transmission": {
@@ -338,6 +368,9 @@ export const dictionaries = {
       },
       "graph": {
         "title": "График долгов"
+      },
+      "picture": {
+        "title": "Picture"
       }
     },
     "transmission": {
@@ -370,6 +403,9 @@ export const dictionaries = {
       },
       "graph": {
         "title": "Chati ya Madeni"
+      },
+      "picture": {
+        "title": "Picture"
       }
     },
     "transmission": {
@@ -402,6 +438,9 @@ export const dictionaries = {
       },
       "graph": {
         "title": "Borç Grafiği"
+      },
+      "picture": {
+        "title": "Picture"
       }
     },
     "transmission": {
@@ -434,6 +473,9 @@ export const dictionaries = {
       },
       "graph": {
         "title": "Графік боргів"
+      },
+      "picture": {
+        "title": "Picture"
       }
     },
     "transmission": {
@@ -466,6 +508,9 @@ export const dictionaries = {
       },
       "graph": {
         "title": "债务图表"
+      },
+      "picture": {
+        "title": "Picture"
       }
     },
     "transmission": {

@@ -46,3 +46,24 @@ expenses:
 
     (names) => { const list = new Intl.ListFormat("ko", { style: "long", type:
     "conjunction" }).format(names); return `${list}님이 결제함`; }
+adventures:
+  joined:
+    me: |-
+      !js
+      (title, gender) => `${title}에 추가되었습니다`
+    other: |-
+      !js
+      (name, title, gender) => { return `${name}님이 ${title}에 참가했습니다`; }
+    others: |-
+      !js
+      (names, title, grammar) => {
+        const list = new Intl.ListFormat("ko", { style: "long", type: "conjunction" }).format(names);
+        return `${list}님이 ${title}에 참가했습니다`;
+      }
+  expense:
+    title: |-
+      !js
+      (title, amount) => `${title} · ${amount}`
+    body: |-
+      !js
+      (title) => `${title}에 지출이 추가되었습니다`

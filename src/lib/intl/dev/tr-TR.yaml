@@ -12,6 +12,8 @@ components:
       (count) => `${count} göster`
   graph:
     title: Borç Grafiği
+  picture:
+    title: Picture
 transmission:
   title: Transmission
   permission:
