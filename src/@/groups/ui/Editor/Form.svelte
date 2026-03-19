@@ -39,21 +39,17 @@
   }
 
   async function onadd(identities: string[]) {
-    if (ctx.id === undefined) {
-      value.identities = [...value.identities, ...identities]
+    if (ctx.id !== undefined) {
+      busy = true
 
-      return
+      const result = await add(ctx.id, identities)
+
+      busy = false
+
+      if (result instanceof Error) return
     }
 
-    busy = true
-
-    const result = await add(ctx.id, identities)
-
-    busy = false
-
-    if (result instanceof Error) return
-
-    value.identities = [...value.identities, ...identities]
+    value.identities = Array.from(new Set([...value.identities, ...identities]))
   }
 </script>
 

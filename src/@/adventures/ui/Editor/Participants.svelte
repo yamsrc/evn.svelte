@@ -25,21 +25,17 @@
   )
 
   async function onadd(identities: string[]) {
-    if (ctx.id === undefined) {
-      value.participants = [...value.participants, ...identities]
+    if (ctx.id !== undefined) {
+      busy = true
 
-      return
+      const adventure = await add(ctx.id, identities)
+
+      busy = false
+
+      if (adventure instanceof Error) return
     }
 
-    busy = true
-
-    const adventure = await add(ctx.id, identities)
-
-    busy = false
-
-    if (adventure instanceof Error) return
-
-    value.participants = [...value.participants, ...identities]
+    value.participants = Array.from(new Set([...value.participants, ...identities]))
   }
 </script>
 
