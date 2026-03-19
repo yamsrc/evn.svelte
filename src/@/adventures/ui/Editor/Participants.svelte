@@ -44,9 +44,9 @@
 </script>
 
 <div class={['space-y-2', classes]}>
-  <h2>{$dict.members.title}</h2>
+  <h2>{$dict.participants.title}</h2>
   {#if empty}
-    <p class="text-sm text-muted-foreground">{$dict.members.empty}</p>
+    <p class="text-sm text-muted-foreground">{$dict.participants.empty}</p>
   {:else}
     {#each entries as entry (entry.id)}
       <Async store={accounts.get(entry.id)}>

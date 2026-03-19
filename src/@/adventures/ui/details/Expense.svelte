@@ -8,7 +8,7 @@
   import { Picture } from '@/accounts/ui'
   import { Card } from '@/expenses/ui/views'
   import { account as me } from '@/iam'
-  import { dict } from './intl'
+  import { dict } from '../intl'
   import type { Props } from './Expense'
 
   const { adventure, expense }: Props = $props()

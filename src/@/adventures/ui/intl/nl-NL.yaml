@@ -1,7 +1,3 @@
-members:
-  title: Leden
-  add: Leden toevoegen
-  empty: Hier is nog niemand. Voeg leden toe om het avontuur te beginnen.
 editor:
   cover: Omslag
   upload: Kies zelf
@@ -65,3 +61,7 @@ hint:
 title: Avonturen
 panel:
   total: Totaal
+participants:
+  title: Leden
+  add: Leden toevoegen
+  empty: Hier is nog niemand. Voeg leden toe om het avontuur te beginnen.

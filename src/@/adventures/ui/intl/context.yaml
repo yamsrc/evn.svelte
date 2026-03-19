@@ -1,12 +1,5 @@
 context: Mount 'adventures' context
 inputs:
-  members:
-    title:
-      input: Members
-    add:
-      input: Add members
-    empty:
-      input: Nobody here yet. Add some members to start the adventure.
   editor:
     cover:
       input: Cover
@@ -102,3 +95,10 @@ inputs:
     total:
       input: Total
       context: short label for total spending on adventure card
+  participants:
+    title:
+      input: Members
+    add:
+      input: Add members
+    empty:
+      input: Nobody here yet. Add some members to start the adventure.

@@ -1,7 +1,7 @@
 <script lang="ts">
   import * as Card from '$ui/card'
   import { Coins } from '@/app/ui'
-  import { dict } from './intl'
+  import { dict } from '../intl'
   import type { Props } from './Totals'
 
   const { balance, total }: Props = $props()

@@ -5,7 +5,7 @@
   import { Actions } from '$com/shell'
   import { dict as common } from '$lib/intl'
   import { adventures } from '@/adventures'
-  import { Archived, Expenses, Participants, Totals } from '@/adventures/ui'
+  import { Archived, Details } from '@/adventures/ui'
   import { Picture } from '@/adventures/ui'
   import { Action, Header, Section } from '@/app/ui'
   import { account } from '@/iam'
@@ -55,15 +55,15 @@
       </Section>
 
       <Section>
-        <Totals {balance} {total} />
+        <Details.Totals {balance} {total} />
       </Section>
 
       <Section>
-        <Participants participants={adventure.participants} />
+        <Details.Participants participants={adventure.participants} />
       </Section>
 
       <Section>
-        <Expenses {adventure} />
+        <Details.Expenses {adventure} />
       </Section>
 
       {#if !adventure.archived}
