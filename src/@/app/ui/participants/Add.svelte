@@ -1,11 +1,10 @@
 <script lang="ts">
   import { UserPlus } from '@lucide/svelte'
   import { onMount } from 'svelte'
-  import { get } from 'svelte/store'
   import { goto } from '$app/navigation'
   import { dict } from '$lib/intl'
   import { Button } from '$ui/button'
-  import { identities as store } from './store'
+  import { identities } from './identities'
   import type { Props } from './Add'
 
   const { exclude, onadd, options, ...props }: Props = $props()
@@ -22,12 +21,10 @@
   }
 
   onMount(() => {
-    const identities = get(store)
-
     if (identities.length === 0) return
 
     onadd(identities)
-    store.set([])
+    identities.length = 0
   })
 </script>
 

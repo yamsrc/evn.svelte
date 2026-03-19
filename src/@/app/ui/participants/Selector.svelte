@@ -16,7 +16,7 @@
   import { Favorites } from '@/favorites/ui'
   import { groups, filter as filterGroups } from '@/groups'
   import { Groups } from '@/groups/ui'
-  import { identities as store } from './store'
+  import { identities } from './identities'
   import type { Props } from './Selector'
   import type { Contact } from '@/contacts'
   import type { Favorite } from '@/favorites'
@@ -95,11 +95,11 @@
 
   async function addMembers() {
     const map = ok($groups) ? groupsById($groups) : new Map<string, Group>()
-    const identities = Array.from(new Set(picked(map).filter(notMember)))
+    const selected = Array.from(new Set(picked(map).filter(notMember)))
 
-    if (identities.length === 0) return
+    if (selected.length === 0) return
 
-    store.set(identities)
+    identities.push(...selected)
     await back('..')
   }
 </script>
