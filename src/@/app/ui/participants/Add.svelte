@@ -33,5 +33,5 @@
 
 <Button size="lg" variant="secondary" {onclick} {...props}>
   <UserPlus />
-  {$dict.participants.add.button}
+  <span>{$dict.participants.add.button}</span>
 </Button>
