@@ -4,10 +4,9 @@
   import { Actions } from '$com/shell'
   import { dict } from '$lib/intl'
   import { onsubmit as submitter } from '$lib/tools'
-  import { Action, actionVariants, Section } from '@/app/ui'
-  import { Participants as ParticipantsUI } from '@/app/ui'
+  import { Action, Section } from '@/app/ui'
   import { CreateAction } from '@/expenses/ui'
-  import { add, update } from '@/groups'
+  import { update } from '@/groups'
   import { Cosmetics, Reduction } from '@/groups/ui'
   import { account } from '@/iam'
   import Balance from './Balance.svelte'
@@ -37,20 +36,6 @@
   function onreduction(reduction: boolean) {
     if (ctx.id) update(ctx.id, { reduction })
   }
-
-  async function onadd(identities: string[]) {
-    if (ctx.id !== undefined) {
-      busy = true
-
-      const result = await add(ctx.id, identities)
-
-      busy = false
-
-      if (result instanceof Error) return
-    }
-
-    value.identities = Array.from(new Set([...value.identities, ...identities]))
-  }
 </script>
 
 <form onsubmit={submitter(submit)} class="space-y-5">
@@ -67,16 +52,7 @@
   {/if}
 
   <Section>
-    <Participants identities={value.identities} />
-
-    {#if ctx.id === undefined}
-      <ParticipantsUI.Add
-        id="groups-editor-members-button"
-        exclude={value.identities}
-        {onadd}
-        disabled={busy}
-        class="w-full" />
-    {/if}
+    <Participants bind:identities={value.identities} bind:busy />
   </Section>
 
   <Section>
@@ -103,7 +79,6 @@
 {:else}
   <Actions>
     <CreateAction
-      variant="secondary"
       value={{
         participants: Object.fromEntries(
           value.identities.map((id) => [
@@ -112,11 +87,5 @@
           ]),
         ),
       }} />
-    <ParticipantsUI.Add
-      id="groups-editor-add-member-action"
-      class={[actionVariants(), '[&_span]:sr-only']}
-      exclude={value.identities}
-      {onadd}
-      disabled={busy} />
   </Actions>
 {/if}
