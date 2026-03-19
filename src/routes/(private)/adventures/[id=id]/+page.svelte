@@ -5,7 +5,7 @@
   import { Actions } from '$com/shell'
   import { dict as common } from '$lib/intl'
   import { adventures } from '@/adventures'
-  import { Archived, Expenses, Members, Totals } from '@/adventures/ui'
+  import { Archived, Expenses, Participants, Totals } from '@/adventures/ui'
   import { Picture } from '@/adventures/ui'
   import { Action, Header, Section } from '@/app/ui'
   import { account } from '@/iam'
@@ -59,7 +59,7 @@
       </Section>
 
       <Section>
-        <Members participants={adventure.participants} />
+        <Participants participants={adventure.participants} />
       </Section>
 
       <Section>

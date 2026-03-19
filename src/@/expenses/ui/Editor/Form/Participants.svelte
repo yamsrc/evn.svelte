@@ -1,18 +1,39 @@
 <script lang="ts">
-  import { UserPlus } from '@lucide/svelte'
-  import { cn } from '$lib/utils'
-  import { Button } from '$ui/button'
   import * as Card from '$ui/card'
   import * as Tabs from '$ui/tabs'
+  import { Participants } from '@/app/ui'
+  import { numbers, type Participant } from '@/expenses'
   import { dict } from '@/expenses/ui/intl'
   import ByShare from './ByShare.svelte'
   import BySum from './BySum.svelte'
   import type { Props } from './Participants'
 
   let { value = $bindable(), error = $bindable(false), mode = $bindable('sums') }: Props = $props()
+
+  const exclude = $derived(Object.keys(value.participants))
+
+  function onadd(identities: string[]) {
+    const existing = Object.keys(value.participants)
+    const even = existing.length > 0 && numbers.even(value.participants, existing)
+    const total = numbers.total(value)
+
+    const added: Record<string, Participant> = Object.fromEntries(
+      identities
+        .filter((id) => !(id in value.participants))
+        .map((id) => [id, { amount: 0, shares: 0 }]),
+    )
+
+    value.participants = { ...value.participants, ...added }
+
+    if (even && total > 0) {
+      const split = numbers.split(total, Object.keys(value.participants))
+
+      for (const [id, amount] of Object.entries(split)) value.participants[id].amount = amount
+    }
+  }
 </script>
 
-<Card.Root class={cn('bg-background p-4 relative', { shake: error })}>
+<Card.Root class={['bg-background p-4 relative', { shake: error }]}>
   <Card.Content class="space-y-4 p-0">
     <Tabs.Root bind:value={mode} class="w-full">
       <Tabs.List class="w-full h-12">
@@ -30,15 +51,12 @@
         <ByShare bind:value />
       </Tabs.Content>
     </Tabs.Root>
-    <Button
+    <Participants.Add
       id="expenses-spendings-add-participants-button"
-      size="lg"
-      variant="secondary"
-      class="w-full"
-      href="participants/">
-      <UserPlus />
-      {$dict.participants.add.label}
-    </Button>
+      {exclude}
+      {onadd}
+      options={{ managedContactsCreation: true }}
+      class="w-full" />
   </Card.Content>
 </Card.Root>
 

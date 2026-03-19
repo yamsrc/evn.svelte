@@ -25,7 +25,7 @@
           {@const identities = Object.keys(adventure?.participants ?? {})}
           {@const value = { ...adventure, participants: identities }}
           {#key id}
-            <Editor.Context {value}>
+            <Editor.Context {id} {value}>
               {@render children()}
             </Editor.Context>
           {/key}
