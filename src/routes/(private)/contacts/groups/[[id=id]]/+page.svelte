@@ -1,15 +1,17 @@
 <script lang="ts">
   import { LogOut } from '@lucide/svelte'
-  import { ok } from 'svas'
+  import { Async, ok } from 'svas'
   import { goto } from '$app/navigation'
   import { page } from '$app/state'
   import { Hold } from '$com/buttons'
   import { Return } from '$com/shell'
   import { dict } from '$lib/intl'
-  import { Header, Section } from '@/app/ui'
+  import { Section } from '@/app/ui'
+  import { Header } from '@/app/ui'
+  import { expenses } from '@/expenses'
   import { Toggle as Favorite } from '@/favorites/ui'
   import { groups, del } from '@/groups'
-  import { Editor } from '@/groups/ui'
+  import { Editor, Expenses } from '@/groups/ui'
   import { seen } from '@/notifications'
 
   const ctx = Editor.getContext()
@@ -60,3 +62,13 @@
 </Section>
 
 <Editor.Edit bind:value={ctx.value} bind:busy />
+
+{#if id}
+  <Async store={expenses}>
+    {#snippet awaited(expenses)}
+      <Section>
+        <Expenses identities={ctx.value.identities} {expenses} />
+      </Section>
+    {/snippet}
+  </Async>
+{/if}

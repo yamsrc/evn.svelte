@@ -5,3 +5,6 @@ reduction:
       Fasst Schulden zwischen Mitgliedern zusammen, sodass weniger Zahlungen
       nötig sind, um alles auszugleichen. Niemand zahlt mehr oder weniger – es
       werden einfach weniger Transaktionen nötig.
+expenses:
+  title: Veranstaltungen
+  empty: Bisher keine geteilten Ausgaben.

@@ -7,3 +7,10 @@ inputs:
         context: checkbox label (feature name)
       description:
         input: Merges debts between members so fewer payments are needed to settle everything. No one pays more or less — it just reduces the number of transactions.
+  expenses:
+    title:
+      input: Events
+      context: Section header for group expenses list
+    empty:
+      input: No shared expenses so far.
+      context: Empty state for group expenses list

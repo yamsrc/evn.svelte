@@ -2,3 +2,6 @@ reduction:
   switch:
     label: 智能债务
     description: 合并成员之间的债务，从而减少结算所有账目所需的付款次数。没有人会多付或少付——只是减少了交易笔数。
+expenses:
+  title: 活动
+  empty: 目前还没有共享支出。

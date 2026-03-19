@@ -5,3 +5,6 @@ reduction:
       Fusionne les dettes entre membres afin de réduire le nombre de paiements
       nécessaires pour tout régler. Personne ne paie plus ou moins — cela réduit
       simplement le nombre de transactions.
+expenses:
+  title: Événements
+  empty: Aucune dépense partagée pour le moment.

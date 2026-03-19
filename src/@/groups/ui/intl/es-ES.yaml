@@ -5,3 +5,6 @@ reduction:
       Agrupa las deudas entre los miembros para que se necesiten menos pagos al
       saldar todo. Nadie paga más ni menos: solo se reduce la cantidad de
       transacciones.
+expenses:
+  title: Eventos
+  empty: Aún no hay gastos compartidos.
