@@ -5,7 +5,7 @@
   import { track } from '$com/history'
   import { meta } from '$config'
   import { dict } from '$lib/intl'
-  import { navigate } from '$lib/tools'
+  import { navigate, suppressContextMenu } from '$lib/tools'
   import { Background } from '@/app/ui'
   import '../app.css'
 
@@ -47,7 +47,7 @@
   <meta name="twitter:image" content={image.url} />
 </svelte:head>
 
-<svelte:body oncontextmenu={(e) => dev || e.preventDefault()} />
+<svelte:body oncontextmenu={suppressContextMenu} />
 
 <Background class="fixed inset-0 -z-50 pointer-events-none" />
 {@render children()}
