@@ -1,7 +1,3 @@
-members:
-  title: 成员
-  add: 添加成员
-  empty: 这里还没有人。添加一些成员，开启冒险之旅吧。
 editor:
   cover: 封面
   upload: 自行选择
@@ -51,3 +47,7 @@ hint:
 title: 冒险
 panel:
   total: 总计
+participants:
+  title: 成员
+  add: 添加成员
+  empty: 这里还没有人。添加一些成员，开启冒险之旅吧。

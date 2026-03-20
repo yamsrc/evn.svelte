@@ -1,7 +1,3 @@
-members:
-  title: Wanachama
-  add: Ongeza wanachama
-  empty: Hakuna mtu hapa bado. Ongeza wanachama kuanza safari ya kichumbakazi.
 editor:
   cover: Jalada
   upload: Chagua yako mwenyewe
@@ -61,3 +57,7 @@ hint:
 title: Matukio
 panel:
   total: Jumla
+participants:
+  title: Wanachama
+  add: Ongeza wanachama
+  empty: Hakuna mtu hapa bado. Ongeza wanachama kuanza safari ya kichumbakazi.

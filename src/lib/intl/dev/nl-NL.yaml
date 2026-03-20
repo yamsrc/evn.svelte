@@ -14,6 +14,10 @@ components:
     title: Schuldenoverzicht
   picture:
     title: Picture
+  participants:
+    title: Deelnemers
+    managedContactsCreation: Knop voor het aanmaken van beheerde contacten tonen
+    shareUrl: URL delen
 transmission:
   title: Transmission
   permission:

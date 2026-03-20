@@ -14,6 +14,10 @@ components:
     title: 债务图表
   picture:
     title: Picture
+  participants:
+    title: 参与者
+    managedContactsCreation: 显示托管联系人创建按钮
+    shareUrl: 分享链接
 transmission:
   title: Transmission
   permission:

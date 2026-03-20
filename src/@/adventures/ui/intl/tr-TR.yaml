@@ -1,7 +1,3 @@
-members:
-  title: Üyeler
-  add: Üye ekle
-  empty: Henüz burada kimse yok. Maceraya başlamak için birkaç üye ekle.
 editor:
   cover: Kapak
   upload: Kendi seçimini yap
@@ -63,3 +59,7 @@ hint:
 title: Macera
 panel:
   total: Toplam
+participants:
+  title: Üyeler
+  add: Üye ekle
+  empty: Henüz burada kimse yok. Maceraya başlamak için birkaç üye ekle.

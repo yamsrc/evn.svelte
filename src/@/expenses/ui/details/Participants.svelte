@@ -3,6 +3,7 @@
   import { Separator } from '$com/separator'
   import { TextEllipsis } from '$com/text-ellipsis'
   import { dict } from '$lib/intl'
+  import { Button } from '$ui/button'
   import * as Card from '$ui/card'
   import { accounts } from '@/accounts'
   import { Picture } from '@/accounts/ui'
@@ -15,13 +16,16 @@
   const participants = $derived(Object.keys(expense.participants))
 </script>
 
-<Card.Root class="bg-background p-4">
+<Card.Root class="bg-background p-2">
   <Card.Content class="space-y-2 p-0">
     {#each participants as participant, i (participant)}
       {#if i > 0}
-        <Separator />
+        <Separator class="mx-2" />
       {/if}
-      <div class="flex flex-nowrap items-center justify-between gap-2 min-h-13">
+      <Button
+        variant="ghost"
+        href={participant === $me?.id ? '/me/' : `/contacts/${participant}/`}
+        class="flex flex-nowrap items-center justify-between gap-2 min-h-13 px-2">
         <div class="flex items-center gap-2 overflow-hidden flex-1">
           <Async store={accounts.get(participant)}>
             {#snippet awaited(account)}
@@ -36,7 +40,7 @@
           </Async>
         </div>
         <Coins amount={expense.participants[participant].amount} sign="neutral" />
-      </div>
+      </Button>
     {/each}
 
     {#each expense.extras as extra, i (i)}

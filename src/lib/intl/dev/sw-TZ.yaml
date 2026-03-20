@@ -14,6 +14,10 @@ components:
     title: Chati ya Madeni
   picture:
     title: Picture
+  participants:
+    title: Washiriki
+    managedContactsCreation: Onyesha kitufe cha kuunda mawasiliano yanayosimamiwa
+    shareUrl: Shiriki URL
 transmission:
   title: Transmission
   permission:

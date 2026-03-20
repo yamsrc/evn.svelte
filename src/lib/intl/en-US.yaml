@@ -172,3 +172,6 @@ search:
 dir: ltr
 adventures:
   title: Adventures
+participants:
+  add:
+    button: Add participants

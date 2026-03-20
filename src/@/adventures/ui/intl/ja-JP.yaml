@@ -1,7 +1,3 @@
-members:
-  title: メンバー
-  add: メンバーを追加
-  empty: まだ誰もいません。冒険を始めるためにメンバーを追加しましょう。
 editor:
   cover: カバー
   upload: 自分で選ぶ
@@ -52,3 +48,7 @@ hint:
 title: 冒険
 panel:
   total: 合計
+participants:
+  title: メンバー
+  add: メンバーを追加
+  empty: まだ誰もいません。冒険を始めるためにメンバーを追加しましょう。

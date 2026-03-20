@@ -170,3 +170,6 @@ search:
 dir: ltr
 adventures:
   title: Macera
+participants:
+  add:
+    button: Katılımcı ekle

@@ -173,3 +173,6 @@ search:
 dir: ltr
 adventures:
   title: Matukio
+participants:
+  add:
+    button: Ongeza washiriki

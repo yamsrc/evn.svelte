@@ -286,6 +286,10 @@ inputs:
   adventures:
     title:
       input: Adventures
+  participants:
+    add:
+      button:
+        input: Add participants
 mounts:
   iam: ../../@/iam/ui/intl
   feedback: ../../@/feedback/ui/intl

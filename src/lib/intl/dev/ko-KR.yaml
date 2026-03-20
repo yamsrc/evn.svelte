@@ -14,6 +14,10 @@ components:
     title: 부채 그래프
   picture:
     title: Picture
+  participants:
+    title: 참가자
+    managedContactsCreation: 관리되는 연락처 생성 버튼 표시
+    shareUrl: URL 공유
 transmission:
   title: Transmission
   permission:

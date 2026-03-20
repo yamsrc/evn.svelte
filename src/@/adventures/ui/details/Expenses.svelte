@@ -1,6 +1,6 @@
 <script lang="ts">
+  import { dict } from '../intl'
   import Expense from './Expense.svelte'
-  import { dict } from './intl'
   import type { Props } from './Expenses'
 
   const { adventure }: Props = $props()
