@@ -23,8 +23,7 @@
   onMount(() => {
     if (identities.length === 0) return
 
-    onadd(identities)
-    identities.length = 0
+    onadd(identities.splice(0))
   })
 </script>
 

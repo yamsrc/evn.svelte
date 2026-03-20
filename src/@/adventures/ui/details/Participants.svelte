@@ -11,6 +11,7 @@
       id,
       value: value ?? 0,
       name: id === $account?.id ? $dict.me : undefined,
+      href: id === $account?.id ? '/me/' : `/contacts/${id}/`,
     })),
   )
 

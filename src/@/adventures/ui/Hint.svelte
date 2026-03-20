@@ -14,7 +14,7 @@
     </Hint.Actions>
   </Hint.Content>
   <Hint.Dismissing>
-    <p class="text-sm">{$dict.hint.dismissed}</p>
+    <p>{$dict.hint.dismissed}</p>
     <Hint.Dismiss>{$dict.hint.dismiss}</Hint.Dismiss>
   </Hint.Dismissing>
 </Hint.Root>
