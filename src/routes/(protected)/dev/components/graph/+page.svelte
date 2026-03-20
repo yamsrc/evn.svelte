@@ -36,7 +36,7 @@
 
     {#if id}
       <Section>
-        <Panel class="aspect-3/2" contentClass="flex items-center justify-center">
+        <Panel class="aspect-square p-0" contentClass="flex items-center justify-center p-0">
           {#await expose(id)}
             <Loader />
           {:then contacts}
