@@ -44,6 +44,16 @@ inputs:
           comment:
             input: Done in {n} seconds
             context: "Make it a function accepting ms: number (milliseconds) and using phrase with seconds .toFixed(1)"
+    picture:
+      title:
+        input: Picture
+    participants:
+      title:
+        input: Participants
+      managedContactsCreation:
+        input: Show managed contacts creation button
+      shareUrl:
+        input: Share URL
   transmission:
     title:
       input: Transmission

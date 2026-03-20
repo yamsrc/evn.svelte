@@ -3,9 +3,11 @@ groups:
     me: |-
       !js
       (groupName) => `You have joined ${groupName}`
-    others: |-
+    others: >-
       !js
-      (names, groupName) => `${new Intl.ListFormat("en", { style: "long", type: "conjunction" }).format(names)} joined ${groupName}`
+
+      (names, groupName) => `${new Intl.ListFormat("en", { style: "long", type:
+      "conjunction" }).format(names)} joined ${groupName}`
     other: |-
       !js
       (name, groupName, gender) => `${name} joined ${groupName}`
@@ -39,6 +41,29 @@ contacts:
         !js
         (balance) => `You owe ${balance} now`
 expenses:
-  created: |-
+  expense: >-
     !js
-    (amount, name, gender) => `${amount} paid by ${name}`
+
+    (names) => { const list = new Intl.ListFormat("en", { style: "long", type:
+    "conjunction" }).format(names); return `Paid by ${list}`; }
+adventures:
+  joined:
+    me: |-
+      !js
+      (title, gender) => `You've been added to ${title}`
+    other: |-
+      !js
+      (name, title, gender) => { return `${name} joined ${title}`; }
+    others: |-
+      !js
+      (names, title, grammar) => {
+        const list = new Intl.ListFormat("en", { style: "long", type: "conjunction" }).format(names);
+        return names.length === 1 ? `${list} joined ${title}` : `${list} joined ${title}`;
+      }
+  expense:
+    title: |-
+      !js
+      (title, amount) => `${title} · ${amount}`
+    body: |-
+      !js
+      (title) => `Expense added to ${title}`

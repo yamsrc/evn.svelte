@@ -28,6 +28,12 @@ components:
         comment: |-
           !js
           (ms) => `Klaar in ${(ms / 1000).toFixed(1)} seconden`
+  picture:
+    title: Picture
+  participants:
+    title: Deelnemers
+    managedContactsCreation: Knop voor het aanmaken van beheerde contacten tonen
+    shareUrl: URL delen
 transmission:
   title: Transmission
   permission:

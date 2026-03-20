@@ -10,6 +10,9 @@ settings:
   expenses:
     description: Geteilte Ausgaben und Zahlungsaktivitäten
     title: Ausgaben
+  adventures:
+    title: Abenteuer
+    description: Abenteuerkosten und Mitglieder
 permission:
   prompt: >-
     Aktiviere Benachrichtigungen, um sofort über Ausgaben, Quittungen und andere

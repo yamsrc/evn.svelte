@@ -1,0 +1,104 @@
+context: Mount 'adventures' context
+inputs:
+  editor:
+    cover:
+      input: Cover
+    upload:
+      input: Choose your own
+    name:
+      input: Adventure name
+    note:
+      input: All members will see this name
+    info:
+      input: Adventures are for those who want to spend equally, be it a voyage together, bar tab or just a common household spendings. The debts in adventure are not between individual users, but to each fellow member helping keep equal tabs.
+    settings:
+      input: Settings
+    title:
+      input: New Adventure
+  expenses:
+    title:
+      input: Expenses
+    total:
+      input: Total
+    paidBy:
+      input: Paid by
+    paid:
+      input: Paid
+    empty:
+      input: Nothing happened yet. Bring some friends and add some spendings to start things rolling.
+  spending:
+    yours:
+      input: Your spending
+    total:
+      input: Total spent
+  me:
+    input: Me
+  selector:
+    regular:
+      input: Split
+      context: split expense/receipt etc
+  archive:
+    header:
+      input: Archive
+    warning:
+      input: Archiving the adventure is permanent and can not be undone.
+      context: warning shown on archive confirmation screen
+    merge:
+      label:
+        input: Transfer balances
+      description:
+        input: When this adventure is archived, outstanding balances will be converted into regular debts between members.
+  balance:
+    header:
+      input: "When archiving this adventure:"
+      context: header above radio options for debt handling
+    merge:
+      input: Move debts to the regular member debts
+      context: "radio option: merge adventure debts into regular contacts"
+    keep:
+      input: Leave debts/balances in adventure
+      context: "radio option: keep debts inside the adventure"
+  archived:
+    input: Archived
+    context: label prefix for archived adventure date
+  finish:
+    archive:
+      title:
+        input: Finish the adventure
+        context: heading for archive section in adventure editor
+      description:
+        input: Archiving the adventure will remove it from the new expense screen and move it to the back of your adventure list.
+        context: description for archive section
+      button:
+        input: Archive adventure
+        context: archive button label
+    delete:
+      button:
+        input: \!js (title) => `Delete ${title}`
+        context: delete button label with adventure title
+      hold:
+        input: Hold to delete
+        context: button label
+      label:
+        input: Delete
+        context: button label
+  hint:
+    action:
+      input: Start your first adventure
+    dismiss:
+      input: Dismiss
+    dismissed:
+      input: You can create a new adventure anytime through the + menu at the bottom of the screen.
+  title:
+    input: Adventures
+  panel:
+    total:
+      input: Total
+      context: short label for total spending on adventure card
+  participants:
+    title:
+      input: Members
+    add:
+      input: Add members
+    empty:
+      input: Nobody here yet. Add some members to start the adventure.

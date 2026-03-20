@@ -28,6 +28,12 @@ components:
         comment: |-
           !js
           (ms) => `${(ms / 1000).toFixed(1)} 秒内完成`
+  picture:
+    title: Picture
+  participants:
+    title: 参与者
+    managedContactsCreation: 显示托管联系人创建按钮
+    shareUrl: 分享链接
 transmission:
   title: Transmission
   permission:

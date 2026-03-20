@@ -1,0 +1,66 @@
+editor:
+  cover: Couverture
+  upload: Choisissez le vôtre
+  name: Nom de l’aventure
+  note: Tous les membres verront ce nom
+  info: >-
+    Les aventures sont faites pour ceux qui veulent partager les dépenses de
+    manière égale, que ce soit un voyage ensemble, une addition de bar ou
+    simplement des frais ménagers communs. Les dettes lors d’une aventure ne
+    sont pas entre individus, mais entre tous les membres pour garder un
+    équilibre équitable.
+  settings: Paramètres
+  title: Nouvelle aventure
+finish:
+  archive:
+    title: Terminer l’aventure
+    description: >-
+      Archiver l’aventure la retirera de l’écran des nouvelles dépenses et la
+      placera à la fin de ta liste d’aventures.
+    button: Archiver l’aventure
+  delete:
+    button: |-
+      !js
+      (title) => `Supprimer ${title}`
+    hold: Maintenir pour supprimer
+    label: Supprimer
+expenses:
+  title: Dépenses
+  total: Total
+  paidBy: Payé par
+  paid: Payé
+  empty: >-
+    Rien ne s'est encore passé. Invite des amis et ajoute des dépenses pour
+    lancer les choses.
+spending:
+  yours: Vos dépenses
+  total: Total dépensé
+me: Moi
+selector:
+  regular: Partager
+archive:
+  header: Archive
+  warning: L’archivage de l’aventure est définitif et ne peut pas être annulé.
+  merge:
+    label: Transférer les soldes
+    description: >-
+      Lorsque cette aventure sera archivée, les soldes en attente seront
+      convertis en dettes classiques entre les membres.
+balance:
+  header: "Lors de l’archivage de cette aventure :"
+  merge: Transférer les dettes vers les dettes des membres réguliers
+  keep: Laisser les dettes/soldes dans l’aventure
+archived: Archivé
+hint:
+  action: Commence ta première aventure
+  dismiss: Ignorer
+  dismissed: >-
+    Vous pouvez créer une nouvelle aventure à tout moment via le menu + en bas
+    de l'écran.
+title: Aventures
+panel:
+  total: Total
+participants:
+  title: Membres
+  add: Ajouter des membres
+  empty: Personne n'est encore là. Ajoutez des membres pour commencer l'aventure.

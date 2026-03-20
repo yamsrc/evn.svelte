@@ -16,16 +16,22 @@ export const dictionaries = {
         "input": "إضافة مصروف"
       },
       "contacts": {
-        "group": "إضافة مجموعة",
+        "group": "إنشاء مجموعة",
         "title": "أصدقاء",
-        "contact": "إضافة كصديق"
+        "contact": "صديق"
       },
       "addSelected": "إضافة المحدد",
       "cancel": "إلغاء",
       "search": "بحث",
       "save": "حفظ",
       "create": "إنشاء",
-      "slide": "اسحب"
+      "slide": "اسحب",
+      "adventures": {
+        "adventure": "ابدأ المغامرة"
+      },
+      "expenses": {
+        "split": "تقسيم"
+      }
     },
     "nav": {
       "home": "الرئيسية",
@@ -184,16 +190,16 @@ export const dictionaries = {
         "create": {
           "title": "إنشاء مشارك جديد"
         },
-        "title": "إضافة مشاركين",
-        "add": {
-
-        }
+        "title": "إضافة مشاركين"
       },
       "me": "أنا",
       "empty": {
         "title": "لا توجد مصروفات بعد",
         "description": "أنشئ أول مصروفك لبدء التتبع",
         "create": "إنشاء مصروف"
+      },
+      "expenses": {
+        "title": "Evns"
       }
     },
     "home": {
@@ -202,7 +208,15 @@ export const dictionaries = {
     "search": {
       "empty": "لم يتم العثور على نتائج"
     },
-    "dir": "rtl"
+    "dir": "rtl",
+    "adventures": {
+      "title": "مغامرات"
+    },
+    "participants": {
+      "add": {
+        "button": "إضافة المشاركين"
+      }
+    }
   },
   "de-DE": {
     "native": "Deutsch",
@@ -218,16 +232,22 @@ export const dictionaries = {
         "input": "Ausgabe hinzufügen"
       },
       "contacts": {
-        "group": "Gruppe hinzufügen",
+        "group": "Gruppe erstellen",
         "title": "Freunde",
-        "contact": "Freund hinzufügen"
+        "contact": "Freund"
       },
       "addSelected": "Ausgewählte hinzufügen",
       "cancel": "Abbrechen",
       "search": "Suchen",
       "save": "Speichern",
       "create": "Erstellen",
-      "slide": "Wischen"
+      "slide": "Wischen",
+      "adventures": {
+        "adventure": "Abenteuer starten"
+      },
+      "expenses": {
+        "split": "Aufteilen"
+      }
     },
     "nav": {
       "home": "Startseite",
@@ -386,16 +406,16 @@ export const dictionaries = {
         "create": {
           "title": "Neuen Teilnehmer erstellen"
         },
-        "title": "Teilnehmer hinzufügen",
-        "add": {
-
-        }
+        "title": "Teilnehmer hinzufügen"
       },
       "me": "Ich",
       "empty": {
         "title": "Noch keine Ausgaben",
         "description": "Erstelle deine erste Ausgabe, um mit dem Verfolgen zu beginnen",
         "create": "Ausgabe erstellen"
+      },
+      "expenses": {
+        "title": "Evns"
       }
     },
     "home": {
@@ -404,7 +424,15 @@ export const dictionaries = {
     "search": {
       "empty": "Keine Ergebnisse gefunden"
     },
-    "dir": "ltr"
+    "dir": "ltr",
+    "adventures": {
+      "title": "Abenteuer"
+    },
+    "participants": {
+      "add": {
+        "button": "Teilnehmende hinzufügen"
+      }
+    }
   },
   "en-US": {
     "native": "English",
@@ -420,16 +448,22 @@ export const dictionaries = {
         "input": "Add Expense"
       },
       "contacts": {
-        "group": "Add Group",
+        "group": "Create Group",
         "title": "Friends",
-        "contact": "Add Friend"
+        "contact": "Friend"
       },
       "addSelected": "Add selected",
       "cancel": "Cancel",
       "search": "Search",
       "save": "Save",
       "create": "Create",
-      "slide": "Swipe"
+      "slide": "Swipe",
+      "adventures": {
+        "adventure": "Start Adventure"
+      },
+      "expenses": {
+        "split": "Split"
+      }
     },
     "nav": {
       "home": "Home",
@@ -593,12 +627,12 @@ export const dictionaries = {
         "create": {
           "title": "Create a new participant"
         },
-        "title": "Add participants",
-        "add": {
-
-        }
+        "title": "Add participants"
       },
-      "me": "Me"
+      "me": "Me",
+      "expenses": {
+        "title": "Evns"
+      }
     },
     "home": {
       "title": (name) => `Hi ${name}!`
@@ -606,7 +640,15 @@ export const dictionaries = {
     "search": {
       "empty": "No results found"
     },
-    "dir": "ltr"
+    "dir": "ltr",
+    "adventures": {
+      "title": "Adventures"
+    },
+    "participants": {
+      "add": {
+        "button": "Add participants"
+      }
+    }
   },
   "es-ES": {
     "native": "Español",
@@ -622,16 +664,22 @@ export const dictionaries = {
         "input": "Añadir gasto"
       },
       "contacts": {
-        "group": "Agregar grupo",
+        "group": "Crear grupo",
         "title": "Amigos",
-        "contact": "Agregar amigo"
+        "contact": "Amigo"
       },
       "addSelected": "Agregar seleccionado(s)",
       "cancel": "Cancelar",
       "search": "Buscar",
       "save": "Guardar",
       "create": "Crear",
-      "slide": "Desliza"
+      "slide": "Desliza",
+      "adventures": {
+        "adventure": "Comenzar aventura"
+      },
+      "expenses": {
+        "split": "Dividir"
+      }
     },
     "nav": {
       "home": "Inicio",
@@ -790,16 +838,16 @@ export const dictionaries = {
         "create": {
           "title": "Crear un nuevo participante"
         },
-        "title": "Agregar participantes",
-        "add": {
-
-        }
+        "title": "Agregar participantes"
       },
       "me": "Yo",
       "empty": {
         "title": "Aún no hay gastos",
         "description": "Crea tu primer gasto para empezar a realizar un seguimiento",
         "create": "Crear gasto"
+      },
+      "expenses": {
+        "title": "Evns"
       }
     },
     "home": {
@@ -808,7 +856,15 @@ export const dictionaries = {
     "search": {
       "empty": "No se encontraron resultados"
     },
-    "dir": "ltr"
+    "dir": "ltr",
+    "adventures": {
+      "title": "Aventuras"
+    },
+    "participants": {
+      "add": {
+        "button": "Agregar participantes"
+      }
+    }
   },
   "fr-FR": {
     "native": "Français",
@@ -824,16 +880,22 @@ export const dictionaries = {
         "input": "Ajouter une dépense"
       },
       "contacts": {
-        "group": "Ajouter un groupe",
+        "group": "Créer un groupe",
         "title": "Amis",
-        "contact": "Ajouter comme ami"
+        "contact": "Ami"
       },
       "addSelected": "Ajouter la sélection",
       "cancel": "Annuler",
       "search": "Rechercher",
       "save": "Enregistrer",
       "create": "Créer",
-      "slide": "Balaye"
+      "slide": "Balaye",
+      "adventures": {
+        "adventure": "Commencer l’aventure"
+      },
+      "expenses": {
+        "split": "Partager"
+      }
     },
     "nav": {
       "home": "Accueil",
@@ -992,16 +1054,16 @@ export const dictionaries = {
         "create": {
           "title": "Créer un nouveau participant"
         },
-        "title": "Ajouter des participants",
-        "add": {
-
-        }
+        "title": "Ajouter des participants"
       },
       "me": "Moi",
       "empty": {
         "title": "Aucune dépense pour l’instant",
         "description": "Créez votre première dépense pour commencer à suivre",
         "create": "Créer une dépense"
+      },
+      "expenses": {
+        "title": "Evns"
       }
     },
     "home": {
@@ -1010,7 +1072,15 @@ export const dictionaries = {
     "search": {
       "empty": "Aucun résultat trouvé"
     },
-    "dir": "ltr"
+    "dir": "ltr",
+    "adventures": {
+      "title": "Aventures"
+    },
+    "participants": {
+      "add": {
+        "button": "Ajouter des participants"
+      }
+    }
   },
   "hi-IN": {
     "native": "हिन्दी",
@@ -1026,16 +1096,22 @@ export const dictionaries = {
         "input": "खर्च जोड़ें"
       },
       "contacts": {
-        "group": "समूह जोड़ें",
+        "group": "समूह बनाएँ",
         "title": "मित्र",
-        "contact": "मित्र जोड़ें"
+        "contact": "मित्र"
       },
       "addSelected": "चयनित जोड़ें",
       "cancel": "रद्द करें",
       "search": "खोजें",
       "save": "सहेजें",
       "create": "सृजन करें",
-      "slide": "स्वाइप करें"
+      "slide": "स्वाइप करें",
+      "adventures": {
+        "adventure": "साहसिक यात्रा शुरू करें"
+      },
+      "expenses": {
+        "split": "विभाजित करें"
+      }
     },
     "nav": {
       "home": "मुख्य पृष्ठ",
@@ -1194,16 +1270,16 @@ export const dictionaries = {
         "create": {
           "title": "नया प्रतिभागी बनाएँ"
         },
-        "title": "प्रतिभागी जोड़ें",
-        "add": {
-
-        }
+        "title": "प्रतिभागी जोड़ें"
       },
       "me": "मैं",
       "empty": {
         "title": "अभी तक कोई खर्च नहीं",
         "description": "ट्रैकिंग शुरू करने के लिए अपना पहला खर्च दर्ज करें",
         "create": "व्यय बनाएं"
+      },
+      "expenses": {
+        "title": "Evns"
       }
     },
     "home": {
@@ -1212,7 +1288,15 @@ export const dictionaries = {
     "search": {
       "empty": "कोई परिणाम नहीं मिला"
     },
-    "dir": "ltr"
+    "dir": "ltr",
+    "adventures": {
+      "title": "साहसिक यात्राएँ"
+    },
+    "participants": {
+      "add": {
+        "button": "प्रतिभागी जोड़ें"
+      }
+    }
   },
   "it-IT": {
     "native": "Italiano",
@@ -1228,16 +1312,22 @@ export const dictionaries = {
         "input": "Aggiungi spesa"
       },
       "contacts": {
-        "group": "Aggiungi gruppo",
+        "group": "Crea gruppo",
         "title": "Amici",
-        "contact": "Aggiungi amico"
+        "contact": "Amico"
       },
       "addSelected": "Aggiungi selezionati",
       "cancel": "Annulla",
       "search": "Cerca",
       "save": "Salva",
       "create": "Crea",
-      "slide": "Scorri"
+      "slide": "Scorri",
+      "adventures": {
+        "adventure": "Inizia l’avventura"
+      },
+      "expenses": {
+        "split": "Dividi"
+      }
     },
     "nav": {
       "home": "Home",
@@ -1396,16 +1486,16 @@ export const dictionaries = {
         "create": {
           "title": "Crea un nuovo partecipante"
         },
-        "title": "Aggiungi partecipanti",
-        "add": {
-
-        }
+        "title": "Aggiungi partecipanti"
       },
       "me": "Io",
       "empty": {
         "title": "Nessuna spesa ancora",
         "description": "Crea la tua prima spesa per iniziare a tenere traccia",
         "create": "Crea spesa"
+      },
+      "expenses": {
+        "title": "Evns"
       }
     },
     "home": {
@@ -1414,7 +1504,15 @@ export const dictionaries = {
     "search": {
       "empty": "Nessun risultato trovato"
     },
-    "dir": "ltr"
+    "dir": "ltr",
+    "adventures": {
+      "title": "Avventure"
+    },
+    "participants": {
+      "add": {
+        "button": "Aggiungi partecipanti"
+      }
+    }
   },
   "ja-JP": {
     "native": "日本語",
@@ -1430,16 +1528,22 @@ export const dictionaries = {
         "input": "支出を追加"
       },
       "contacts": {
-        "group": "グループを追加",
+        "group": "グループを作成",
         "title": "友達",
-        "contact": "友達を追加"
+        "contact": "友達"
       },
       "addSelected": "選択したものを追加",
       "cancel": "キャンセル",
       "search": "検索",
       "save": "保存",
       "create": "作成",
-      "slide": "スワイプ"
+      "slide": "スワイプ",
+      "adventures": {
+        "adventure": "冒険を始める"
+      },
+      "expenses": {
+        "split": "割り勘"
+      }
     },
     "nav": {
       "home": "ホーム",
@@ -1598,16 +1702,16 @@ export const dictionaries = {
         "create": {
           "title": "新しい参加者を作成"
         },
-        "title": "参加者を追加",
-        "add": {
-
-        }
+        "title": "参加者を追加"
       },
       "me": "私",
       "empty": {
         "title": "まだ支出がありません",
         "description": "最初の支出を作成して、記録を始めましょう",
         "create": "支出を作成"
+      },
+      "expenses": {
+        "title": "Evns"
       }
     },
     "home": {
@@ -1616,7 +1720,15 @@ export const dictionaries = {
     "search": {
       "empty": "結果が見つかりませんでした"
     },
-    "dir": "ltr"
+    "dir": "ltr",
+    "adventures": {
+      "title": "冒険"
+    },
+    "participants": {
+      "add": {
+        "button": "参加者を追加"
+      }
+    }
   },
   "ko-KR": {
     "native": "한국어",
@@ -1632,16 +1744,22 @@ export const dictionaries = {
         "input": "지출 추가"
       },
       "contacts": {
-        "group": "그룹 추가",
+        "group": "그룹 만들기",
         "title": "친구",
-        "contact": "친구 추가"
+        "contact": "친구"
       },
       "addSelected": "선택 항목 추가",
       "cancel": "취소",
       "search": "검색",
       "save": "저장",
       "create": "생성",
-      "slide": "스와이프"
+      "slide": "스와이프",
+      "adventures": {
+        "adventure": "모험 시작하기"
+      },
+      "expenses": {
+        "split": "나누기"
+      }
     },
     "nav": {
       "home": "홈",
@@ -1800,16 +1918,16 @@ export const dictionaries = {
         "create": {
           "title": "새 참가자 생성"
         },
-        "title": "참가자 추가",
-        "add": {
-
-        }
+        "title": "참가자 추가"
       },
       "me": "나",
       "empty": {
         "title": "아직 지출이 없습니다",
         "description": "첫 번째 지출을 추가하여 추적을 시작하세요",
         "create": "지출 생성"
+      },
+      "expenses": {
+        "title": "Evns"
       }
     },
     "home": {
@@ -1818,7 +1936,15 @@ export const dictionaries = {
     "search": {
       "empty": "결과를 찾을 수 없습니다"
     },
-    "dir": "ltr"
+    "dir": "ltr",
+    "adventures": {
+      "title": "모험"
+    },
+    "participants": {
+      "add": {
+        "button": "참가자 추가"
+      }
+    }
   },
   "nl-NL": {
     "native": "Nederlands",
@@ -1834,16 +1960,22 @@ export const dictionaries = {
         "input": "Uitgave toevoegen"
       },
       "contacts": {
-        "group": "Groep toevoegen",
+        "group": "Groep aanmaken",
         "title": "Vrienden",
-        "contact": "Vriend toevoegen"
+        "contact": "Vriend"
       },
       "addSelected": "Geselecteerde toevoegen",
       "cancel": "Annuleren",
       "search": "Zoeken",
       "save": "Opslaan",
       "create": "Aanmaken",
-      "slide": "Veeg"
+      "slide": "Veeg",
+      "adventures": {
+        "adventure": "Avontuur starten"
+      },
+      "expenses": {
+        "split": "Splitsen"
+      }
     },
     "nav": {
       "home": "Home",
@@ -2002,16 +2134,16 @@ export const dictionaries = {
         "create": {
           "title": "Nieuwe deelnemer aanmaken"
         },
-        "title": "Deelnemers toevoegen",
-        "add": {
-
-        }
+        "title": "Deelnemers toevoegen"
       },
       "me": "Ik",
       "empty": {
         "title": "Nog geen uitgaven",
         "description": "Maak je eerste uitgave aan om het bijhouden te starten",
         "create": "Uitgave aanmaken"
+      },
+      "expenses": {
+        "title": "Evns"
       }
     },
     "home": {
@@ -2020,7 +2152,15 @@ export const dictionaries = {
     "search": {
       "empty": "Geen resultaten gevonden"
     },
-    "dir": "ltr"
+    "dir": "ltr",
+    "adventures": {
+      "title": "Avonturen"
+    },
+    "participants": {
+      "add": {
+        "button": "Deelnemers toevoegen"
+      }
+    }
   },
   "ru-RU": {
     "native": "Русский",
@@ -2036,16 +2176,22 @@ export const dictionaries = {
         "input": "Добавить расход"
       },
       "contacts": {
-        "group": "Добавить группу",
+        "group": "Создать группу",
         "title": "Друзья",
-        "contact": "Добавить в друзья"
+        "contact": "Друг"
       },
       "addSelected": "Добавить выбранные",
       "cancel": "Отмена",
       "search": "Поиск",
       "save": "Сохранить",
       "create": "Создать",
-      "slide": "Смахни"
+      "slide": "Смахни",
+      "adventures": {
+        "adventure": "Начать приключение"
+      },
+      "expenses": {
+        "split": "Разделить"
+      }
     },
     "nav": {
       "home": "Главная",
@@ -2204,16 +2350,16 @@ export const dictionaries = {
         "create": {
           "title": "Создать нового участника"
         },
-        "title": "Добавить участников",
-        "add": {
-
-        }
+        "title": "Добавить участников"
       },
       "me": "Я",
       "empty": {
         "title": "Пока нет расходов",
         "description": "Создайте первый расход, чтобы начать отслеживание",
         "create": "Создать расход"
+      },
+      "expenses": {
+        "title": "Evns"
       }
     },
     "home": {
@@ -2222,7 +2368,15 @@ export const dictionaries = {
     "search": {
       "empty": "Результаты не найдены"
     },
-    "dir": "ltr"
+    "dir": "ltr",
+    "adventures": {
+      "title": "Приключения"
+    },
+    "participants": {
+      "add": {
+        "button": "Добавить участников"
+      }
+    }
   },
   "sw-TZ": {
     "native": "Kiswahili",
@@ -2238,16 +2392,22 @@ export const dictionaries = {
         "input": "Ongeza gharama"
       },
       "contacts": {
-        "group": "Ongeza Kikundi",
+        "group": "Unda Kikundi",
         "title": "Marafiki",
-        "contact": "Ongeza rafiki"
+        "contact": "Rafiki"
       },
       "addSelected": "Ongeza zilizochaguliwa",
       "cancel": "Ghairi",
       "search": "Tafuta",
       "save": "Hifadhi",
       "create": "Unda",
-      "slide": "Pangusa"
+      "slide": "Pangusa",
+      "adventures": {
+        "adventure": "Anza safari"
+      },
+      "expenses": {
+        "split": "Gawanya"
+      }
     },
     "nav": {
       "home": "Mwanzo",
@@ -2406,16 +2566,16 @@ export const dictionaries = {
         "create": {
           "title": "Unda mshiriki mpya"
         },
-        "title": "Ongeza washiriki",
-        "add": {
-
-        }
+        "title": "Ongeza washiriki"
       },
       "me": "Mimi",
       "empty": {
         "title": "Hakuna matumizi bado",
         "description": "Unda matumizi yako ya kwanza ili kuanza kufuatilia",
         "create": "Unda gharama"
+      },
+      "expenses": {
+        "title": "Evns"
       }
     },
     "home": {
@@ -2424,7 +2584,15 @@ export const dictionaries = {
     "search": {
       "empty": "Hakuna matokeo yaliyopatikana"
     },
-    "dir": "ltr"
+    "dir": "ltr",
+    "adventures": {
+      "title": "Matukio"
+    },
+    "participants": {
+      "add": {
+        "button": "Ongeza washiriki"
+      }
+    }
   },
   "tr-TR": {
     "native": "Türkçe",
@@ -2440,16 +2608,22 @@ export const dictionaries = {
         "input": "Gider Ekle"
       },
       "contacts": {
-        "group": "Grup Ekle",
+        "group": "Grup Oluştur",
         "title": "Arkadaşlar",
-        "contact": "Arkadaş ekle"
+        "contact": "Arkadaş"
       },
       "addSelected": "Seçileni ekle",
       "cancel": "İptal",
       "search": "Ara",
       "save": "Kaydet",
       "create": "Oluştur",
-      "slide": "Kaydır"
+      "slide": "Kaydır",
+      "adventures": {
+        "adventure": "Macera Başlat"
+      },
+      "expenses": {
+        "split": "Böl"
+      }
     },
     "nav": {
       "home": "Ana Sayfa",
@@ -2608,16 +2782,16 @@ export const dictionaries = {
         "create": {
           "title": "Yeni katılımcı oluştur"
         },
-        "title": "Katılımcı ekle",
-        "add": {
-
-        }
+        "title": "Katılımcı ekle"
       },
       "me": "Ben",
       "empty": {
         "title": "Henüz gider yok",
         "description": "Takibe başlamak için ilk giderini oluştur",
         "create": "Gider oluştur"
+      },
+      "expenses": {
+        "title": "Evns"
       }
     },
     "home": {
@@ -2626,7 +2800,15 @@ export const dictionaries = {
     "search": {
       "empty": "Sonuç bulunamadı"
     },
-    "dir": "ltr"
+    "dir": "ltr",
+    "adventures": {
+      "title": "Macera"
+    },
+    "participants": {
+      "add": {
+        "button": "Katılımcı ekle"
+      }
+    }
   },
   "uk-UA": {
     "native": "Українська",
@@ -2642,16 +2824,22 @@ export const dictionaries = {
         "input": "Додати витрату"
       },
       "contacts": {
-        "group": "Додати групу",
+        "group": "Створити групу",
         "title": "Друзі",
-        "contact": "Додати в друзі"
+        "contact": "Друг"
       },
       "addSelected": "Додати вибране",
       "cancel": "Скасувати",
       "search": "Пошук",
       "save": "Зберегти",
       "create": "Створити",
-      "slide": "Змахни"
+      "slide": "Змахни",
+      "adventures": {
+        "adventure": "Розпочати пригоду"
+      },
+      "expenses": {
+        "split": "Розділити"
+      }
     },
     "nav": {
       "home": "Головна",
@@ -2810,16 +2998,16 @@ export const dictionaries = {
         "create": {
           "title": "Створити нового учасника"
         },
-        "title": "Додати учасників",
-        "add": {
-
-        }
+        "title": "Додати учасників"
       },
       "me": "Я",
       "empty": {
         "title": "Поки що немає витрат",
         "description": "Створіть свою першу витрату, щоб почати відстеження",
         "create": "Створити витрату"
+      },
+      "expenses": {
+        "title": "Evns"
       }
     },
     "home": {
@@ -2828,7 +3016,15 @@ export const dictionaries = {
     "search": {
       "empty": "Результатів не знайдено"
     },
-    "dir": "ltr"
+    "dir": "ltr",
+    "adventures": {
+      "title": "Пригоди"
+    },
+    "participants": {
+      "add": {
+        "button": "Додати учасників"
+      }
+    }
   },
   "zh-CN": {
     "native": "中文",
@@ -2844,16 +3040,22 @@ export const dictionaries = {
         "input": "添加支出"
       },
       "contacts": {
-        "group": "添加群组",
+        "group": "创建群组",
         "title": "朋友",
-        "contact": "添加好友"
+        "contact": "朋友"
       },
       "addSelected": "添加已选项",
       "cancel": "取消",
       "search": "搜索",
       "save": "保存",
       "create": "创建",
-      "slide": "滑动"
+      "slide": "滑动",
+      "adventures": {
+        "adventure": "开始冒险"
+      },
+      "expenses": {
+        "split": "分摊"
+      }
     },
     "nav": {
       "home": "首页",
@@ -3012,16 +3214,16 @@ export const dictionaries = {
         "create": {
           "title": "创建新参与者"
         },
-        "title": "添加参与者",
-        "add": {
-
-        }
+        "title": "添加参与者"
       },
       "me": "我",
       "empty": {
         "title": "暂无支出",
         "description": "创建您的第一笔支出以开始记录",
         "create": "创建支出"
+      },
+      "expenses": {
+        "title": "Evns"
       }
     },
     "home": {
@@ -3030,7 +3232,15 @@ export const dictionaries = {
     "search": {
       "empty": "未找到结果"
     },
-    "dir": "ltr"
+    "dir": "ltr",
+    "adventures": {
+      "title": "冒险"
+    },
+    "participants": {
+      "add": {
+        "button": "添加参与者"
+      }
+    }
   }
 };
 /** @type {import("./types").Locale[]} */

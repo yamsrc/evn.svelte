@@ -4,10 +4,6 @@
  * @author copilot
  */
 
-export type Locale = 'ar-SA' | 'de-DE' | 'en-US' | 'es-ES' | 'fr-FR' | 'hi-IN' | 'it-IT' | 'ja-JP' | 'ko-KR' | 'nl-NL' | 'ru-RU' | 'sw-TZ' | 'tr-TR' | 'uk-UA' | 'zh-CN'
-
-export type Grammar = 'he' | 'she' | 'none'
-
 export type Dictionary = {
       components: {
         title: string
@@ -44,6 +40,14 @@ export type Dictionary = {
               comment: (value: any) => string
             }
           }
+        }
+        picture: {
+          title: string
+        }
+        participants: {
+          title: string
+          managedContactsCreation: string
+          shareUrl: string
         }
       }
       transmission: {

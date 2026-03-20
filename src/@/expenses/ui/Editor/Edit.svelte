@@ -1,5 +1,7 @@
 <script lang="ts">
   import { add, update } from '@/expenses'
+  import { Section } from '@/app/ui'
+  import { Selector } from '@/adventures/ui'
   import { back } from '$com/history'
   import Attachments from '../Attachments.svelte'
   import { Form } from './Form'
@@ -22,8 +24,16 @@
   }
 </script>
 
-{#if value.attachments.length > 0}
-  <Attachments bind:attachments={value.attachments} editable={true} />
+{#if !id}
+  <Section class="overflow-visible">
+    <Selector
+      draft={{
+        title: ctx.value.title,
+        location: ctx.value.location,
+        attachments: [...ctx.value.attachments],
+      }} />
+  </Section>
 {/if}
 
+<Attachments bind:attachments={value.attachments} editable={true} />
 <Form bind:value bind:mode {onsubmit} />

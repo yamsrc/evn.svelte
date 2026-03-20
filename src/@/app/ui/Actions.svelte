@@ -1,7 +1,6 @@
 <script lang="ts">
   import { writable } from 'svelte/store'
   import { Plus } from '@lucide/svelte'
-  import { dict } from '$lib/intl'
   import { Actions } from '$com/shell'
   import * as Dropdown from '$com/dropdown'
   import { actions } from './Actions'
@@ -16,7 +15,7 @@
       <Plus />
     </Dropdown.Trigger>
     <Dropdown.Content>
-      {#each actions($dict) as group, index (group.name)}
+      {#each $actions as group, index (group.name)}
         {#if index > 0}
           <Dropdown.Separator />
         {/if}

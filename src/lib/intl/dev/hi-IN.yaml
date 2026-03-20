@@ -28,6 +28,12 @@ components:
         comment: |-
           !js
           (ms) => `${(ms / 1000).toFixed(1)} सेकंड में पूरा हुआ`
+  picture:
+    title: Picture
+  participants:
+    title: प्रतिभागी
+    managedContactsCreation: प्रबंधित संपर्क निर्माण बटन दिखाएं
+    shareUrl: URL साझा करें
 transmission:
   title: Transmission
   permission:

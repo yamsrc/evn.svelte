@@ -28,6 +28,12 @@ components:
         comment: |-
           !js
           (ms) => `Done in ${(ms / 1000).toFixed(1)} seconds`
+  picture:
+    title: Picture
+  participants:
+    title: Participants
+    managedContactsCreation: Show managed contacts creation button
+    shareUrl: Share URL
 transmission:
   title: Transmission
   permission:

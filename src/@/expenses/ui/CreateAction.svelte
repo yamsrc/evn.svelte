@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { PencilLine } from '@lucide/svelte'
+  import { ChartPie } from '@lucide/svelte'
   import { Action } from '@/app/ui'
   import { goto } from '$app/navigation'
   import type { Props } from './CreateAction'
@@ -12,5 +12,5 @@
 </script>
 
 <Action id="expenses-draft-action" onclick={draft} {...rest}>
-  <PencilLine />
+  <ChartPie />
 </Action>

@@ -28,6 +28,12 @@ components:
         comment: |-
           !js
           (ms) => `Готово за ${(ms / 1000).toFixed(1)} секунд(ы)`
+  picture:
+    title: Picture
+  participants:
+    title: Участники
+    managedContactsCreation: Показать кнопку создания управляемых контактов
+    shareUrl: Поделиться ссылкой
 transmission:
   title: Transmission
   permission:

@@ -1,0 +1,63 @@
+editor:
+  cover: Jalada
+  upload: Chagua yako mwenyewe
+  name: Jina la tukio
+  note: Wanachama wote wataona jina hili
+  info: >-
+    Matukio ni kwa wale wanaotaka kugawana gharama sawa, iwe ni safari pamoja,
+    bili ya baa, au matumizi ya kawaida ya nyumbani. Madeni kwenye tukio
+    hayawekwi kati ya watumiaji mmoja mmoja, bali kati ya wanachama wote
+    wanaosaidia kuweka usawa kwenye matumizi.
+  settings: Mipangilio
+  title: Ndoto Mpya
+finish:
+  archive:
+    title: Kamata safari
+    description: >-
+      Kuhifadhi tukio hili kutaliondoa kwenye skrini ya matumizi mapya na
+      kulipeleka mwisho wa orodha yako ya matukio.
+    button: Hifadhi adventure
+  delete:
+    button: |-
+      !js
+      (title) => `Futa ${title}`
+    hold: Shikilia kufuta
+    label: Futa
+expenses:
+  title: Matumizi
+  total: Jumla
+  paidBy: Imelipiwa na
+  paid: Imelipwa
+  empty: >-
+    Hakuna kilichotokea bado. Alika marafiki na ongeza matumizi ili mambo
+    yaanze.
+spending:
+  yours: Matumizi yako
+  total: Jumla iliyotumika
+me: Mimi
+selector:
+  regular: Gawanya
+archive:
+  header: Kumbukumbu
+  warning: Kuhifadhi tukio hili ni la kudumu na haliwezi kubatilishwa.
+  merge:
+    label: Hamisha salio
+    description: >-
+      Safari hii itakapohifadhiwa, salio lolote lililobaki litageuzwa kuwa deni
+      la kawaida kati ya wanachama.
+balance:
+  header: "Unapohifadhi tukio hili kwenye kumbukumbu:"
+  merge: Hamisha madeni kwa madeni ya wanachama wa kawaida
+  keep: Acha madeni/saldo kwenye safari ya kusisimua
+archived: Imehifadhiwa
+hint:
+  action: Anza safari yako ya kwanza
+  dismiss: Funga
+  dismissed: Unaweza kuunda tukio jipya wakati wowote kupitia menyu ya + chini ya skrini.
+title: Matukio
+panel:
+  total: Jumla
+participants:
+  title: Wanachama
+  add: Ongeza wanachama
+  empty: Hakuna mtu hapa bado. Ongeza wanachama kuanza safari ya kichumbakazi.

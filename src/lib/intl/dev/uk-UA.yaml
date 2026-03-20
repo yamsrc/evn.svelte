@@ -28,6 +28,12 @@ components:
         comment: |-
           !js
           (ms) => `Виконано за ${(ms / 1000).toFixed(1)} секунд(и)`
+  picture:
+    title: Picture
+  participants:
+    title: Учасники
+    managedContactsCreation: Показати кнопку створення керованих контактів
+    shareUrl: Поділитися посиланням
 transmission:
   title: Transmission
   permission:

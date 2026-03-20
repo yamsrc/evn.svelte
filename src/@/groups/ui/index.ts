@@ -1,5 +1,6 @@
+export { default as Expenses } from './Expenses.svelte'
 export { default as Groups } from './Groups.svelte'
 export { default as Panel } from './Panel.svelte'
 export { default as Cosmetics } from './Cosmetics.svelte'
 export { default as Reduction } from './Reduction.svelte'
-export { default as Graph } from './Graph.svelte'
+export * as Editor from './Editor'

@@ -10,15 +10,19 @@ actions:
     scan: 수표 스캔
     input: 지출 추가
   contacts:
-    group: 그룹 추가
+    group: 그룹 만들기
     title: 친구
-    contact: 친구 추가
+    contact: 친구
   addSelected: 선택 항목 추가
   cancel: 취소
   search: 검색
   save: 저장
   create: 생성
   slide: 스와이프
+  adventures:
+    adventure: 모험 시작하기
+  expenses:
+    split: 나누기
 nav:
   home: 홈
   profile: 나
@@ -144,12 +148,13 @@ expenses:
     create:
       title: 새 참가자 생성
     title: 참가자 추가
-    add: {}
   me: 나
   empty:
     title: 아직 지출이 없습니다
     description: 첫 번째 지출을 추가하여 추적을 시작하세요
     create: 지출 생성
+  expenses:
+    title: Evns
 home:
   title: |-
     !js
@@ -157,3 +162,8 @@ home:
 search:
   empty: 결과를 찾을 수 없습니다
 dir: ltr
+adventures:
+  title: 모험
+participants:
+  add:
+    button: 참가자 추가

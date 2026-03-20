@@ -1,9 +1,7 @@
 <script lang="ts">
-  import { Async } from 'svas'
   import { Users } from '@lucide/svelte'
   import { account } from '@/iam'
-  import { Picture } from '@/accounts/ui'
-  import { accounts } from '@/accounts'
+  import { Avatars } from '@/app/ui'
   import { TextEllipsis } from '$com/text-ellipsis'
   import { Panel } from '$com/panel'
   import type { Props } from './Group'
@@ -38,24 +36,7 @@
         {/if}
         <TextEllipsis class="font-bold">{group.title ?? group.name}</TextEllipsis>
       </div>
-      <div class="flex items-center min-h-8">
-        {#if members.length}
-          <div class="flex -space-x-2">
-            {#each members.slice(0, MAX_DISPLAYED_MEMBERS) as identity (identity)}
-              <Async store={accounts.get(identity)}>
-                {#snippet awaited(account)}
-                  <Picture {account} class="size-8 ring-2 ring-card" />
-                {/snippet}
-              </Async>
-            {/each}
-          </div>
-          {#if members.length > MAX_DISPLAYED_MEMBERS}
-            <span class="ms-2">
-              +{members.length - MAX_DISPLAYED_MEMBERS}
-            </span>
-          {/if}
-        {/if}
-      </div>
+      <Avatars identities={members} max={MAX_DISPLAYED_MEMBERS} />
     </div>
   {/snippet}
 </Panel>

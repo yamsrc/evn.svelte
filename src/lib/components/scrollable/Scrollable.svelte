@@ -1,27 +1,38 @@
 <script lang="ts">
-  import { cn } from '$lib/utils'
-  import { infinity, INFINITY, type Props } from './Scrollable'
+  import { onMount } from 'svelte'
+  import { scrollable, INFINITY, type Props } from './Scrollable'
 
   const {
     children,
     infinite = false,
     align = 'start',
+    bleed = false,
     class: classes,
+    id,
     dir,
     scroll = 0,
     onscroll,
   }: Props = $props()
+
+  const BLEED = 'mx-[calc(-50vw+50%)] px-[calc(50vw-50%)] scroll-px-[calc(50vw-50cqi)]'
+
+  let mounted = $state(false)
+
+  onMount(() => {
+    mounted = true
+  })
 </script>
 
-<div {dir}>
+<div {dir} class="@container">
   <div
-    {@attach infinity({ enabled: infinite, align, scroll })}
+    {id}
+    {@attach scrollable({ infinite, align, scroll }, mounted)}
     {onscroll}
-    class={cn(
-      'px-4 flex overflow-x-auto no-scrollbar snap-x snap-mandatory overscroll-x-contain',
+    class={[
+      'px-4 flex overflow-x-auto no-scrollbar snap-x snap-mandatory overscroll-x-contain *:shrink-0',
+      bleed && BLEED,
       classes,
-    )}
-  >
+    ]}>
     {@render children?.()}
     {#if infinite}
       {#each { length: INFINITY - 1 }}

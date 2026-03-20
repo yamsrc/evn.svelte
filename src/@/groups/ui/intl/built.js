@@ -8,6 +8,10 @@ export const dictionaries = {
         "label": "الديون الذكية",
         "description": "يُدمج الديون بين الأعضاء حتى تقل الحاجة لعدد المدفوعات لتسوية كل شيء. لا يدفع أحد أكثر أو أقل — هذا فقط يقلل من عدد المعاملات."
       }
+    },
+    "expenses": {
+      "title": "الفعاليات",
+      "empty": "لا توجد مصروفات مشتركة حتى الآن."
     }
   },
   "de-DE": {
@@ -16,6 +20,10 @@ export const dictionaries = {
         "label": "Intelligente Schulden",
         "description": "Fasst Schulden zwischen Mitgliedern zusammen, sodass weniger Zahlungen nötig sind, um alles auszugleichen. Niemand zahlt mehr oder weniger – es werden einfach weniger Transaktionen nötig."
       }
+    },
+    "expenses": {
+      "title": "Veranstaltungen",
+      "empty": "Bisher keine geteilten Ausgaben."
     }
   },
   "en-US": {
@@ -24,6 +32,10 @@ export const dictionaries = {
         "label": "Smart Debts",
         "description": "Merges debts between members so fewer payments are needed to settle everything. No one pays more or less — it just reduces the number of transactions."
       }
+    },
+    "expenses": {
+      "title": "Events",
+      "empty": "No shared expenses so far."
     }
   },
   "es-ES": {
@@ -32,6 +44,10 @@ export const dictionaries = {
         "label": "Deudas inteligentes",
         "description": "Agrupa las deudas entre los miembros para que se necesiten menos pagos al saldar todo. Nadie paga más ni menos: solo se reduce la cantidad de transacciones."
       }
+    },
+    "expenses": {
+      "title": "Eventos",
+      "empty": "Aún no hay gastos compartidos."
     }
   },
   "fr-FR": {
@@ -40,6 +56,10 @@ export const dictionaries = {
         "label": "Dettes intelligentes",
         "description": "Fusionne les dettes entre membres afin de réduire le nombre de paiements nécessaires pour tout régler. Personne ne paie plus ou moins — cela réduit simplement le nombre de transactions."
       }
+    },
+    "expenses": {
+      "title": "Événements",
+      "empty": "Aucune dépense partagée pour le moment."
     }
   },
   "hi-IN": {
@@ -48,6 +68,10 @@ export const dictionaries = {
         "label": "स्मार्ट कर्ज",
         "description": "सदस्यों के बीच कर्ज को एकीकृत करता है ताकि सब कुछ चुकाने के लिए कम भुगतान करने पड़ें। कोई ज्यादा या कम नहीं देता — इससे सिर्फ लेन-देन की संख्या घटती है।"
       }
+    },
+    "expenses": {
+      "title": "इवेंट्स",
+      "empty": "अभी तक कोई साझा खर्च नहीं हैं।"
     }
   },
   "it-IT": {
@@ -56,6 +80,10 @@ export const dictionaries = {
         "label": "Debiti smart",
         "description": "Unisce i debiti tra i membri così sono necessari meno pagamenti per saldare tutto. Nessuno paga più o meno — si riduce solo il numero di transazioni."
       }
+    },
+    "expenses": {
+      "title": "Eventi",
+      "empty": "Nessuna spesa condivisa finora."
     }
   },
   "ja-JP": {
@@ -64,6 +92,10 @@ export const dictionaries = {
         "label": "スマート債務",
         "description": "メンバー間の借金をまとめて、すべてを精算するために必要な支払い回数を減らします。誰かが多く払ったり少なく払ったりすることはなく、単に取引の数が減るだけです。"
       }
+    },
+    "expenses": {
+      "title": "イベント",
+      "empty": "まだ共有された支出はありません。"
     }
   },
   "ko-KR": {
@@ -72,6 +104,10 @@ export const dictionaries = {
         "label": "스마트 부채",
         "description": "회원 간의 빚을 합쳐서 모든 정산에 필요한 결제 횟수를 줄여줍니다. 누구도 더 많이 내거나 덜 내지 않으며, 단순히 거래 횟수가 줄어듭니다."
       }
+    },
+    "expenses": {
+      "title": "이벤트",
+      "empty": "아직 공동 지출이 없습니다."
     }
   },
   "nl-NL": {
@@ -80,6 +116,10 @@ export const dictionaries = {
         "label": "Slimme schulden",
         "description": "Voegt schulden tussen leden samen zodat er minder betalingen nodig zijn om alles af te rekenen. Niemand betaalt meer of minder — het vermindert alleen het aantal transacties."
       }
+    },
+    "expenses": {
+      "title": "Evenementen",
+      "empty": "Nog geen gedeelde uitgaven."
     }
   },
   "ru-RU": {
@@ -88,6 +128,10 @@ export const dictionaries = {
         "label": "Умные долги",
         "description": "Объединяет долги между участниками, чтобы для полного расчёта требовалось меньше платежей. Никто не платит больше или меньше — просто сокращается количество транзакций."
       }
+    },
+    "expenses": {
+      "title": "События",
+      "empty": "Пока нет общих расходов."
     }
   },
   "sw-TZ": {
@@ -96,6 +140,10 @@ export const dictionaries = {
         "label": "Mikopo mahiri",
         "description": "Inaunganisha madeni kati ya wanachama ili malipo machache yahitajike kumaliza kila kitu. Hakuna anayelipa zaidi au pungufu — inapunguza tu idadi ya miamala."
       }
+    },
+    "expenses": {
+      "title": "Matukio",
+      "empty": "Hakuna gharama zilizoshirikiwa hadi sasa."
     }
   },
   "tr-TR": {
@@ -104,6 +152,10 @@ export const dictionaries = {
         "label": "Akıllı Borçlar",
         "description": "Üyeler arasındaki borçları birleştirir, böylece her şeyi kapatmak için daha az ödeme gerekir. Kimse daha fazla ya da daha az ödemez — sadece işlem sayısı azalır."
       }
+    },
+    "expenses": {
+      "title": "Etkinlikler",
+      "empty": "Henüz paylaşılan bir harcama yok."
     }
   },
   "uk-UA": {
@@ -112,6 +164,10 @@ export const dictionaries = {
         "label": "Розумні борги",
         "description": "Об’єднує борги між учасниками, щоб для врегулювання всього потрібно було менше платежів. Ніхто не платить більше чи менше — це лише скорочує кількість транзакцій."
       }
+    },
+    "expenses": {
+      "title": "Події",
+      "empty": "Поки що немає спільних витрат."
     }
   },
   "zh-CN": {
@@ -120,6 +176,10 @@ export const dictionaries = {
         "label": "智能债务",
         "description": "合并成员之间的债务，从而减少结算所有账目所需的付款次数。没有人会多付或少付——只是减少了交易笔数。"
       }
+    },
+    "expenses": {
+      "title": "活动",
+      "empty": "目前还没有共享支出。"
     }
   }
 };

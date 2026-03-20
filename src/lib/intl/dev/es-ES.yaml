@@ -28,6 +28,12 @@ components:
         comment: |-
           !js
           (ms) => `Listo en ${(ms / 1000).toFixed(1)} segundos`
+  picture:
+    title: Picture
+  participants:
+    title: Participantes
+    managedContactsCreation: Mostrar botón para crear contactos gestionados
+    shareUrl: Compartir URL
 transmission:
   title: Transmission
   permission:

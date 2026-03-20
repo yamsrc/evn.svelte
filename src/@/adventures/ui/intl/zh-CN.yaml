@@ -1,0 +1,53 @@
+editor:
+  cover: 封面
+  upload: 自行选择
+  name: 冒险名称
+  note: 所有成员都能看到此名字
+  info: 冒险适合那些希望平等分担花费的人，无论是一起旅行、共同买单还是家庭开支。冒险中的债务不是个人之间的，而是所有成员共同分担，确保每个人的账目都公平。
+  settings: 设置
+  title: 新冒险
+finish:
+  archive:
+    title: 完成冒险
+    description: 将冒险归档后，它会从新增支出页面移除，并被移到你的冒险列表末尾。
+    button: 归档冒险
+  delete:
+    button: |-
+      !js
+      (title) => `删除${title}`
+    hold: 按住删除
+    label: 删除
+expenses:
+  title: 支出
+  total: 总计
+  paidBy: 由...支付
+  paid: 已支付
+  empty: 还没有任何活动。邀请一些朋友并添加花费，让事情开始运转吧。
+spending:
+  yours: 你的支出
+  total: 总支出
+me: 我
+selector:
+  regular: 分摊
+archive:
+  header: 归档
+  warning: 归档此冒险将是永久性的，无法撤销。
+  merge:
+    label: 转移余额
+    description: 当此冒险被归档时，未结清的余额将转换为成员之间的常规债务。
+balance:
+  header: 归档此冒险时：
+  merge: 将债务移至普通成员债务
+  keep: 在冒险中留下债务/余额
+archived: 已归档
+hint:
+  action: 开启你的第一次冒险
+  dismiss: 关闭
+  dismissed: 你可以随时通过屏幕底部的 + 菜单创建新的冒险。
+title: 冒险
+panel:
+  total: 总计
+participants:
+  title: 成员
+  add: 添加成员
+  empty: 这里还没有人。添加一些成员，开启冒险之旅吧。

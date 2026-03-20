@@ -1,0 +1,65 @@
+editor:
+  cover: Kapak
+  upload: Kendi seçimini yap
+  name: Macera adı
+  note: Tüm üyeler bu ismi görecek
+  info: >-
+    Macera, masrafları eşit şekilde paylaşmak isteyenler içindir; ister birlikte
+    bir seyahat, ister bar hesabı ya da sadece ortak ev harcamaları olsun.
+    Maceradaki borçlar bireysel kullanıcılar arasında değil, tüm üyeler arasında
+    eşit şekilde tutulur.
+  settings: Ayarlar
+  title: Yeni Macera
+finish:
+  archive:
+    title: Macerayı bitir
+    description: >-
+      Macera arşivlendiğinde yeni harcama ekranından kaldırılır ve macera
+      listenizin sonuna taşınır.
+    button: Macera arşivle
+  delete:
+    button: |-
+      !js
+      (title) => `${title} Sil`
+    hold: Silmek için basılı tutun
+    label: Sil
+expenses:
+  title: Giderler
+  total: Toplam
+  paidBy: Ödeyen
+  paid: Ödendi
+  empty: >-
+    Henüz hiçbir şey olmadı. Birkaç arkadaşını davet et ve harcamalar ekleyerek
+    işleri başlat.
+spending:
+  yours: Harcamalarınız
+  total: Toplam harcama
+me: Ben
+selector:
+  regular: Böl
+archive:
+  header: Arşiv
+  warning: Macera arşivlendiğinde bu işlem kalıcıdır ve geri alınamaz.
+  merge:
+    label: Bakiyeleri aktar
+    description: >-
+      Bu macera arşivlendiğinde, açık bakiyeler üyeler arasındaki normal
+      borçlara dönüştürülecektir.
+balance:
+  header: "Bu macera arşivlenirken:"
+  merge: Borçları normal üye borçlarına taşı
+  keep: Macera sırasında borçları/bakiyeleri bırak
+archived: Arşivlendi
+hint:
+  action: İlk macerana başla
+  dismiss: Kapat
+  dismissed: >-
+    Ekranın altındaki + menüsünden istediğin zaman yeni bir macera
+    oluşturabilirsin.
+title: Macera
+panel:
+  total: Toplam
+participants:
+  title: Üyeler
+  add: Üye ekle
+  empty: Henüz burada kimse yok. Maceraya başlamak için birkaç üye ekle.

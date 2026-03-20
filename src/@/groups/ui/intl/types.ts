@@ -11,4 +11,8 @@ export type Dictionary = {
           description: string
         }
       }
+      expenses: {
+        title: string
+        empty: string
+      }
     }

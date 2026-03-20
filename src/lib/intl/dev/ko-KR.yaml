@@ -28,6 +28,12 @@ components:
         comment: |-
           !js
           (ms) => `${(ms / 1000).toFixed(1)}초 만에 완료됨`
+  picture:
+    title: Picture
+  participants:
+    title: 참가자
+    managedContactsCreation: 관리되는 연락처 생성 버튼 표시
+    shareUrl: URL 공유
 transmission:
   title: Transmission
   permission:

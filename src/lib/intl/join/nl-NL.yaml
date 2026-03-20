@@ -77,3 +77,19 @@ group:
       (groupname) => `Word lid van ${groupname}`
     join: Meedoen
     decline: Weigeren
+adventures:
+  og:
+    title: |-
+      !js
+      (title) => `Word lid van ${title} op Evnly`
+    description: Deel de kosten van avonturen en houd samen eerlijk bij — op Evnly.
+  dialog:
+    title: |-
+      !js
+      (title) => `Word lid van ${title}`
+    join: Deelnemen
+    decline: Negeren
+    description: |-
+      !js
+      (name, gender) => `${name} nodigt je uit voor het avontuur`
+    heading: Uitnodiging voor het avontuur

@@ -59,3 +59,19 @@ group:
       (groupname) => `加入${groupname}`
     join: 加入
     decline: 拒绝
+adventures:
+  og:
+    title: |-
+      !js
+      (title) => `在Evnly加入${title}`
+    description: 一起在 Evnly 平分冒险开支，轻松公平记账。
+  dialog:
+    title: |-
+      !js
+      (title) => `加入${title}`
+    join: 加入
+    decline: 忽略
+    description: |-
+      !js
+      (name, gender) => `${name}邀请你加入冒险`
+    heading: 冒险邀请函

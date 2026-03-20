@@ -10,6 +10,9 @@ settings:
   expenses:
     description: 공동 지출 및 금전 활동
     title: 지출
+  adventures:
+    title: 모험
+    description: 모험 경비 및 구성원
 permission:
   prompt: 알림을 켜서 비용, 영수증 및 기타 활동에 대한 즉각적인 업데이트를 받아보세요.
   button: 알림 활성화

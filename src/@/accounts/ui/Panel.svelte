@@ -11,6 +11,7 @@
   let {
     account,
     balance,
+    neutral,
     selected = $bindable(),
     highlighted,
     onselect,
@@ -50,7 +51,10 @@
   {/snippet}
   {#snippet right()}
     {#if balance}
-      <Balance {balance} youAreOwed={$dict.contacts.contact.owesYou} />
+      <Balance
+        {balance}
+        youAreOwed={$dict.contacts.contact.owesYou}
+        sign={neutral ? 'neutral' : undefined} />
     {/if}
   {/snippet}
 </Panel>

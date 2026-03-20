@@ -28,6 +28,12 @@ components:
         comment: |-
           !js
           (ms) => `${(ms / 1000).toFixed(1)}秒で完了`
+  picture:
+    title: Picture
+  participants:
+    title: 参加者
+    managedContactsCreation: 管理対象の連絡先作成ボタンを表示
+    shareUrl: URLを共有
 transmission:
   title: Transmission
   permission:

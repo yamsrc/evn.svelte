@@ -7,6 +7,7 @@
   import { expenses } from '@/expenses'
   import { contacts } from '@/contacts'
   import { Section, Header } from '@/app/ui'
+  import { adventures } from '@/adventures'
   import { dict } from '$lib/intl/dev'
   import type { Domain, Event } from '@/transmission'
   import type { Notification, Of, PayloadOf } from '@/notifications'
@@ -77,6 +78,46 @@
       )
     }
 
+    // Adventures
+    const adventuresList = $adventures
+
+    if (ok(adventuresList)) {
+      const adventure = adventuresList[0]
+
+      if (adventure) {
+        result.unshift(
+          create(i++, acc.id, 'adventures', 'joined', adventure.id, {
+            title: adventure.title,
+            identities: [acc.id],
+          }),
+        )
+
+        const others = Object.keys(adventure.participants).filter((id) => id !== acc.id)
+
+        if (others.length > 0)
+          result.unshift(
+            create(i++, acc.id, 'adventures', 'joined', adventure.id, {
+              title: adventure.title,
+              identities: others.slice(0, MAX_IDENTITIES),
+            }),
+          )
+
+        result.unshift(
+          create(i++, acc.id, 'adventures', 'expense', adventure.id, {
+            title: adventure.title,
+            expense: {
+              id: 'mock-expense-id',
+              title: 'Sample Adventure Expense',
+              date: new Date().toISOString(),
+              amount: 4500,
+              payer: acc.id,
+              attachments: [],
+            },
+          }),
+        )
+      }
+    }
+
     // Expenses
     if (expense) {
       const participants: Expense['participants'] = Object.fromEntries(
@@ -89,7 +130,7 @@
       const extras: Expense['extras'] = expense.extras.map((extra) => ({ amount: extra.amount }))
 
       result.unshift(
-        create(i++, acc.id, 'expenses', 'created', expense.id, {
+        create(i++, acc.id, 'expenses', 'expense', expense.id, {
           title: expense.title ?? 'Sample Expense',
           location: expense.location,
           participants,

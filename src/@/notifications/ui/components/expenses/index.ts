@@ -1,5 +1,5 @@
-import Created from './Created.svelte'
+import Expense from './Expense.svelte'
 
 export const expenses = {
-  created: Created,
+  expense: Expense,
 }

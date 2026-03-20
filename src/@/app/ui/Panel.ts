@@ -5,4 +5,5 @@ export type Props = {
   children: Snippet
   name?: string
   class?: ClassValue
+  contentClass?: ClassValue
 }

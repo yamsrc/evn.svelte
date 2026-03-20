@@ -28,6 +28,12 @@ components:
         comment: |-
           !js
           (ms) => `${(ms / 1000).toFixed(1)} saniyede tamamlandı`
+  picture:
+    title: Picture
+  participants:
+    title: Katılımcılar
+    managedContactsCreation: Yönetilen kişiler oluşturma butonunu göster
+    shareUrl: URL’yi paylaş
 transmission:
   title: Transmission
   permission:

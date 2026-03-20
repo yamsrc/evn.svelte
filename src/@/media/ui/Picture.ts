@@ -8,6 +8,7 @@ export interface Props {
   width?: number
   height?: number
   variant?: string
+  densities?: number[]
   format?: 'jpeg' | 'png' | 'webp'
   alt?: string
   class?: HTMLImgAttributes['class']
@@ -15,13 +16,40 @@ export interface Props {
   loading?: HTMLImgAttributes['loading']
 }
 
-export function url(image: Image): string {
-  return `${origin}${image.path}${image.id}${image.variant === undefined ? '' : '.' + image.variant}.${image.format ?? 'webp'}`
-}
-
 interface Image {
   path: string
   id: string
   variant?: string
   format?: 'jpeg' | 'png' | 'webp'
+}
+
+export function url(image: Image): string {
+  return `${origin}${image.path}${image.id}${image.variant === undefined ? '' : '.' + image.variant}.${image.format ?? 'webp'}`
+}
+
+export function scale(variant: string, density: number): string {
+  if (density === 1) return variant
+
+  return variant.replace(/^(\d*)x(\d*)/, (_, w, h) =>
+    `${multiply(w, density)}x${multiply(h, density)}`)
+}
+
+function multiply(value: string, density: number): string {
+  if (value === '') return ''
+
+  return `${Math.round(parseInt(value) * density)}`
+}
+
+export function srcSet(image: Image & { variant: string }, densities: number[] = [1, 2]): string {
+  return densities
+    .map((d) => `${url({ ...image, variant: scale(image.variant, d) })} ${d}x`)
+    .join(', ')
+}
+
+export function imageSet(image: Image & { variant: string }, densities: number[] = [1, 2]): string {
+  const entries = densities
+    .map((d) => `url("${url({ ...image, variant: scale(image.variant, d) })}") ${d}x`)
+    .join(', ')
+
+  return `image-set(${entries})`
 }

@@ -58,6 +58,19 @@ export const dictionaries = {
         "join": "انضم",
         "decline": "رفض"
       }
+    },
+    "adventures": {
+      "og": {
+        "title": (title) => `انضم إلى ${title} عبر Evnly`,
+        "description": "شارك مصاريف المغامرة وتابع الحسابات بالتساوي — معًا على Evnly."
+      },
+      "dialog": {
+        "title": (title) => `انضم إلى ${title}`,
+        "join": "انضمام",
+        "decline": "تجاهل",
+        "description": (name, gender) => gender === "he" ? `${name} يدعوك للانضمام إلى المغامرة` : gender === "she" ? `${name} تدعوك للانضمام إلى المغامرة` : `${name} يدعوك/تدعوك للانضمام إلى المغامرة`,
+        "heading": "دعوة إلى المغامرة"
+      }
     }
   },
   "de-DE": {
@@ -115,6 +128,19 @@ export const dictionaries = {
         "title": (groupname) => `Tritt ${groupname} bei`,
         "join": "Beitreten",
         "decline": "Ablehnen"
+      }
+    },
+    "adventures": {
+      "og": {
+        "title": (title) => `Tritt ${title} auf Evnly bei`,
+        "description": "Teilt eure Abenteuerkosten und behaltet den Überblick – gemeinsam auf Evnly."
+      },
+      "dialog": {
+        "title": (title) => `Tritt ${title} bei`,
+        "join": "Beitreten",
+        "decline": "Ignorieren",
+        "description": (name, gender) => `${name} lädt dich zum Abenteuer ein`,
+        "heading": "Einladung zum Abenteuer"
       }
     }
   },
@@ -174,6 +200,19 @@ export const dictionaries = {
         "join": "Join",
         "decline": "Decline"
       }
+    },
+    "adventures": {
+      "og": {
+        "title": (title) => `Join ${title} on Evnly`,
+        "description": "Share adventure expenses and keep equal tabs — together on Evnly."
+      },
+      "dialog": {
+        "title": (title) => `Join ${title}`,
+        "join": "Join",
+        "decline": "Ignore",
+        "description": (name, gender) => `${name} invites you to join the adventure`,
+        "heading": "Invitation to the adventure"
+      }
     }
   },
   "es-ES": {
@@ -231,6 +270,19 @@ export const dictionaries = {
         "title": (groupname) => `Únete a ${groupname}`,
         "join": "Unirse",
         "decline": "Rechazar"
+      }
+    },
+    "adventures": {
+      "og": {
+        "title": (title) => `Únete a ${title} en Evnly`,
+        "description": "Comparte los gastos de aventura y lleva cuentas iguales — juntos en Evnly."
+      },
+      "dialog": {
+        "title": (title) => `Unirse a ${title}`,
+        "join": "Unirse",
+        "decline": "Ignorar",
+        "description": (name, gender) => `${name} te invita a unirte a la aventura`,
+        "heading": "Invitación a la aventura"
       }
     }
   },
@@ -290,6 +342,19 @@ export const dictionaries = {
         "join": "Rejoindre",
         "decline": "Refuser"
       }
+    },
+    "adventures": {
+      "og": {
+        "title": (title) => `Rejoignez ${title} sur Evnly`,
+        "description": "Partagez les frais d’aventure et gardez un suivi équitable — ensemble sur Evnly."
+      },
+      "dialog": {
+        "title": (title) => `Rejoindre ${title}`,
+        "join": "Rejoindre",
+        "decline": "Ignorer",
+        "description": (name, gender) => gender === "he" ? `${name} t’invite à rejoindre l’aventure` : gender === "she" ? `${name} t’invite à rejoindre l’aventure` : `${name} t’invite à rejoindre l’aventure`,
+        "heading": "Invitation à l’aventure"
+      }
     }
   },
   "hi-IN": {
@@ -347,6 +412,19 @@ export const dictionaries = {
         "title": (groupname) => `${groupname} से जुड़ें`,
         "join": "जुड़ें",
         "decline": "अस्वीकृत करें"
+      }
+    },
+    "adventures": {
+      "og": {
+        "title": (title) => `Evnly पर ${title} से जुड़ें`,
+        "description": "एडवेंचर के खर्च साझा करें और बराबर हिसाब रखें — Evnly पर एक साथ।"
+      },
+      "dialog": {
+        "title": (title) => `${title} से जुड़ें`,
+        "join": "शामिल हों",
+        "decline": "अनदेखा करें",
+        "description": (name, gender) => gender === "he" ? `${name} आपको रोमांच में शामिल होने के लिए आमंत्रित करता है` : gender === "she" ? `${name} आपको रोमांच में शामिल होने के लिए आमंत्रित करती है` : `${name} आपको रोमांच में शामिल होने के लिए आमंत्रित करता/करती है`,
+        "heading": "साहसिक यात्रा के लिए निमंत्रण"
       }
     }
   },
@@ -406,6 +484,19 @@ export const dictionaries = {
         "join": "Unisciti",
         "decline": "Rifiuta"
       }
+    },
+    "adventures": {
+      "og": {
+        "title": (title) => `Unisciti a ${title} su Evnly`,
+        "description": "Dividi le spese d’avventura e tieni i conti in pari — insieme su Evnly."
+      },
+      "dialog": {
+        "title": (title) => `Unisciti a ${title}`,
+        "join": "Partecipa",
+        "decline": "Ignora",
+        "description": (name, gender) => `${name} ti invita a unirti all’avventura`,
+        "heading": "Invito all’avventura"
+      }
     }
   },
   "ja-JP": {
@@ -463,6 +554,19 @@ export const dictionaries = {
         "title": (groupname) => `${groupname}に参加する`,
         "join": "参加する",
         "decline": "辞退する"
+      }
+    },
+    "adventures": {
+      "og": {
+        "title": (title) => `Evnlyで${title}に参加しよう`,
+        "description": "冒険の費用をみんなで分けて、公平に管理しよう — Evnlyで一緒に。"
+      },
+      "dialog": {
+        "title": (title) => `${title}に参加`,
+        "join": "参加",
+        "decline": "無視",
+        "description": (name, gender) => `${name}が冒険にあなたを招待しています`,
+        "heading": "冒険への招待"
       }
     }
   },
@@ -522,6 +626,19 @@ export const dictionaries = {
         "join": "참여하기",
         "decline": "거절"
       }
+    },
+    "adventures": {
+      "og": {
+        "title": (title) => `Evnly에서 ${title}에 참여하세요`,
+        "description": "모험 경비를 함께 나누고 공평하게 정산하세요 — Evnly에서 함께해요."
+      },
+      "dialog": {
+        "title": (title) => `${title} 참가하기`,
+        "join": "참여하기",
+        "decline": "무시",
+        "description": (name, gender) => `${name}님이 모험에 초대합니다`,
+        "heading": "모험으로의 초대"
+      }
     }
   },
   "nl-NL": {
@@ -579,6 +696,19 @@ export const dictionaries = {
         "title": (groupname) => `Word lid van ${groupname}`,
         "join": "Meedoen",
         "decline": "Weigeren"
+      }
+    },
+    "adventures": {
+      "og": {
+        "title": (title) => `Word lid van ${title} op Evnly`,
+        "description": "Deel de kosten van avonturen en houd samen eerlijk bij — op Evnly."
+      },
+      "dialog": {
+        "title": (title) => `Word lid van ${title}`,
+        "join": "Deelnemen",
+        "decline": "Negeren",
+        "description": (name, gender) => `${name} nodigt je uit voor het avontuur`,
+        "heading": "Uitnodiging voor het avontuur"
       }
     }
   },
@@ -638,6 +768,19 @@ export const dictionaries = {
         "join": "Присоединиться",
         "decline": "Отклонить"
       }
+    },
+    "adventures": {
+      "og": {
+        "title": (title) => `Присоединяйтесь к «${title}» на Evnly`,
+        "description": "Делите расходы на приключения и ведите счет вместе — в Evnly."
+      },
+      "dialog": {
+        "title": (title) => `Присоединиться к ${title}`,
+        "join": "Присоединиться",
+        "decline": "Игнорировать",
+        "description": (name, gender) => gender === "he" ? `${name} приглашает тебя присоединиться к приключению` : gender === "she" ? `${name} приглашает тебя присоединиться к приключению` : `${name} приглашает тебя присоединиться к приключению`,
+        "heading": "Приглашение в приключение"
+      }
     }
   },
   "sw-TZ": {
@@ -695,6 +838,19 @@ export const dictionaries = {
         "title": (groupname) => `Jiunge na ${groupname}`,
         "join": "Jiunge",
         "decline": "Kataa"
+      }
+    },
+    "adventures": {
+      "og": {
+        "title": (title) => `Jiunge na ${title} kwenye Evnly`,
+        "description": "Gawana gharama za adventure na fuatilia kwa usawa — pamoja kwenye Evnly."
+      },
+      "dialog": {
+        "title": (title) => `Jiunge na ${title}`,
+        "join": "Jiunge",
+        "decline": "Puuza",
+        "description": (name, gender) => `${name} anakualika ujiunge na tukio hili la kusisimua`,
+        "heading": "Mwaliko wa kuingia kwenye adventure"
       }
     }
   },
@@ -754,6 +910,19 @@ export const dictionaries = {
         "join": "Katıl",
         "decline": "Reddet"
       }
+    },
+    "adventures": {
+      "og": {
+        "title": (title) => `Evnly'de ${title}’a katıl`,
+        "description": "Macera masraflarını paylaşın ve eşit olarak takip edin — Evnly'de birlikte."
+      },
+      "dialog": {
+        "title": (title) => `${title}'a katıl`,
+        "join": "Katıl",
+        "decline": "Yoksay",
+        "description": (name, gender) => `${name} seni maceraya davet ediyor`,
+        "heading": "Macera davetiyesi"
+      }
     }
   },
   "uk-UA": {
@@ -812,6 +981,19 @@ export const dictionaries = {
         "join": "Приєднатися",
         "decline": "Відхилити"
       }
+    },
+    "adventures": {
+      "og": {
+        "title": (title) => `Приєднуйтесь до «${title}» на Evnly`,
+        "description": "Діліться витратами на пригоди та ведіть рахунок порівну — разом в Evnly."
+      },
+      "dialog": {
+        "title": (title) => `Приєднатися до ${title}`,
+        "join": "Приєднатися",
+        "decline": "Ігнорувати",
+        "description": (name, gender) => gender === "he" ? `${name} запрошує вас приєднатися до пригоди` : gender === "she" ? `${name} запрошує вас приєднатися до пригоди` : `${name} запрошує вас приєднатися до пригоди`,
+        "heading": "Запрошення до пригоди"
+      }
     }
   },
   "zh-CN": {
@@ -869,6 +1051,19 @@ export const dictionaries = {
         "title": (groupname) => `加入${groupname}`,
         "join": "加入",
         "decline": "拒绝"
+      }
+    },
+    "adventures": {
+      "og": {
+        "title": (title) => `在Evnly加入${title}`,
+        "description": "一起在 Evnly 平分冒险开支，轻松公平记账。"
+      },
+      "dialog": {
+        "title": (title) => `加入${title}`,
+        "join": "加入",
+        "decline": "忽略",
+        "description": (name, gender) => `${name}邀请你加入冒险`,
+        "heading": "冒险邀请函"
       }
     }
   }

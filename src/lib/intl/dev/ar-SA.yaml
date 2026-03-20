@@ -28,6 +28,12 @@ components:
         comment: |-
           !js
           (ms) => `تم في ${(ms / 1000).toFixed(1)} ثانية`
+  picture:
+    title: Picture
+  participants:
+    title: المشاركون
+    managedContactsCreation: عرض زر إنشاء جهات الاتصال المُدارة
+    shareUrl: مشاركة الرابط
 transmission:
   title: Transmission
   permission:

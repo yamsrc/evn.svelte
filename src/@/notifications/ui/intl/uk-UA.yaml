@@ -3,12 +3,19 @@ groups:
     me: |-
       !js
       (groupName) => `Ви приєдналися до ${groupName}`
-    others: |-
+    others: >-
       !js
-      (names, groupName) => `${new Intl.ListFormat("uk", { style: "long", type: "conjunction" }).format(names)} ${names.length === 1 ? "приєднався" : "приєдналися"} до ${groupName}`
-    other: |-
+
+      (names, groupName) => `${new Intl.ListFormat("uk", { style: "long", type:
+      "conjunction" }).format(names)} ${names.length === 1 ? "приєднався" :
+      "приєдналися"} до ${groupName}`
+    other: >-
       !js
-      (name, groupName, gender) => { if (gender === "he") return `${name} приєднався до ${groupName}`; if (gender === "she") return `${name} приєдналася до ${groupName}`; return `${name} приєднався(лася) до ${groupName}`; }
+
+      (name, groupName, gender) => { if (gender === "he") return `${name}
+      приєднався до ${groupName}`; if (gender === "she") return `${name}
+      приєдналася до ${groupName}`; return `${name} приєднався(лася) до
+      ${groupName}`; }
 accounts:
   created:
     welcome: Ласкаво просимо до Evnly!
@@ -18,9 +25,12 @@ contacts:
   connected: |-
     !js
     (name) => `Ви та ${name} тепер друзі`
-  unchained: |-
+  unchained: >-
     !js
-    (name, gender) => gender === "he" ? `${name} прийняв обліковий запис` : gender === "she" ? `${name} прийняла обліковий запис` : `${name} прийняв(ла) обліковий запис`
+
+    (name, gender) => gender === "he" ? `${name} прийняв обліковий запис` :
+    gender === "she" ? `${name} прийняла обліковий запис` : `${name} прийняв(ла)
+    обліковий запис`
   transferred:
     paid: |-
       !js
@@ -45,6 +55,40 @@ contacts:
         !js
         (balance) => `Зараз ви винні ${balance}`
 expenses:
-  created: |-
+  expense: >-
     !js
-    (amount, name, gender) => gender === "he" ? `${amount} сплачено ${name}` : gender === "she" ? `${amount} сплачено ${name}ою` : `${amount} сплачено ${name}`
+
+    (names) => { const list = new Intl.ListFormat("uk", { style: "long", type:
+    "conjunction" }).format(names); return `Оплачено: ${list}`; }
+adventures:
+  joined:
+    me: >-
+      !js
+
+      (title, gender) => gender === "he" ? `Вас додано до ${title}` : (gender
+      === "she" ? `Вас додано до ${title}`.replace("о", "а") : `Вас додано(а) до
+      ${title}`)
+    other: >-
+      !js
+
+      (name, title, gender) => { if (gender === "he") return `${name} приєднався
+      до ${title}`; if (gender === "she") return `${name} приєдналася до
+      ${title}`; return `${name} приєднався/приєдналася до ${title}`; }
+    others: |-
+      !js
+      (names, title, grammar) => {
+        const list = new Intl.ListFormat("uk", { style: "long", type: "conjunction" }).format(names);
+        if (names.length === 1) {
+          if (grammar && grammar.gender === "he") return `${list} приєднався до ${title}`;
+          if (grammar && grammar.gender === "she") return `${list} приєдналася до ${title}`;
+          return `${list} приєднався(лася) до ${title}`;
+        }
+        return `${list} приєдналися до ${title}`;
+      }
+  expense:
+    title: |-
+      !js
+      (title, amount) => `${title} · ${amount}`
+    body: |-
+      !js
+      (title) => `Витрату додано до ${title}`

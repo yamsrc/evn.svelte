@@ -1,0 +1,54 @@
+editor:
+  cover: カバー
+  upload: 自分で選ぶ
+  name: 冒険の名前
+  note: すべてのメンバーがこの名前を表示します
+  info: >-
+    冒険は、旅行や飲み代、または日々の共同出費など、すべてを平等に分担したい人たちのためのものです。冒険での債務は個々のユーザー間で発生するものではなく、全メンバー間で均等に精算されます。
+  settings: 設定
+  title: 新しい冒険
+finish:
+  archive:
+    title: 冒険を完了する
+    description: 冒険をアーカイブすると、新しい支出画面から削除され、あなたの冒険リストの最後に移動します。
+    button: 冒険をアーカイブ
+  delete:
+    button: |-
+      !js
+      (title) => `${title}を削除`
+    hold: 長押しで削除
+    label: 削除
+expenses:
+  title: 経費
+  total: 合計
+  paidBy: 支払者
+  paid: 支払い済み
+  empty: まだ何も起きていません。友達を招待して、支出を追加してみましょう。
+spending:
+  yours: あなたの支出
+  total: 合計支出
+me: 私
+selector:
+  regular: 割り勘
+archive:
+  header: アーカイブ
+  warning: 冒険のアーカイブは永久的で元に戻せません。
+  merge:
+    label: 残高を移行
+    description: このアドベンチャーがアーカイブされると、未清算の残高はメンバー間の通常の借金に変換されます。
+balance:
+  header: この冒険をアーカイブする際：
+  merge: 債務を通常メンバーの債務に移動する
+  keep: 冒険に借金／残高を残す
+archived: アーカイブ済み
+hint:
+  action: 最初の冒険を始めよう
+  dismiss: 閉じる
+  dismissed: 画面下部の「+」メニューから、いつでも新しい冒険を作成できます。
+title: 冒険
+panel:
+  total: 合計
+participants:
+  title: メンバー
+  add: メンバーを追加
+  empty: まだ誰もいません。冒険を始めるためにメンバーを追加しましょう。

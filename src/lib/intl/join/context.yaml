@@ -90,3 +90,20 @@ inputs:
       decline:
         input: Decline
         context: button label
+  adventures:
+    og:
+      title:
+        input: \!js (title) => `Join ${title} on Evnly`
+      description:
+        input: Share adventure expenses and keep equal tabs — together on Evnly.
+    dialog:
+      title:
+        input: \!js (title) => `Join ${title}`
+      join:
+        input: Join
+      decline:
+        input: Ignore
+      description:
+        input: "{name} invites you to join the adventure."
+      heading:
+        input: Invitation to the adventure

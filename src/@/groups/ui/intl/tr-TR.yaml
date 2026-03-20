@@ -5,3 +5,6 @@ reduction:
       Üyeler arasındaki borçları birleştirir, böylece her şeyi kapatmak için
       daha az ödeme gerekir. Kimse daha fazla ya da daha az ödemez — sadece
       işlem sayısı azalır.
+expenses:
+  title: Etkinlikler
+  empty: Henüz paylaşılan bir harcama yok.

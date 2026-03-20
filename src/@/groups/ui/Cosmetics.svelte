@@ -1,33 +1,18 @@
 <script lang="ts">
-  import * as groups from '@/groups'
-  import { Cosmetics, type Value } from '@/app/ui'
+  import * as Cosmetics from '@/app/ui/cosmetics'
   import { dict } from '$lib/intl'
-  import { goto } from '$app/navigation'
   import type { Props } from './Cosmetics'
 
-  const { group, class: classes }: Props = $props()
-  const value = $derived(group ? { name: group.name } : undefined)
-  const note = $derived(group ? undefined : $dict.groups.name.description)
-  const label = $derived(group ? undefined : $dict.groups.create)
-
-  async function onchange(value: Value) {
-    if (group === undefined) await create(value)
-    else await groups.update(group.id, { name: value.name })
-  }
-
-  async function create(value: Value) {
-    const created = await groups.create({ name: value.name })
-
-    if (created instanceof Error) return
-
-    goto(`/contacts/groups/${created.id}`)
-  }
+  let { value = $bindable(), onchange, class: classes }: Props = $props()
 </script>
 
-<Cosmetics
-  {value}
-  placeholder={$dict.groups.name.placeholder}
-  {note}
-  {label}
-  {onchange}
-  class={['**:data-[slot=picture]:hidden', classes]} />
+<Cosmetics.Root class={['w-full', classes]}>
+  <Cosmetics.Content class="items-stretch gap-2 w-full">
+    <Cosmetics.Name
+      class="w-full"
+      bind:value={value.name}
+      onchange={() => onchange?.(value.name)}
+      placeholder={$dict.groups.name.placeholder} />
+    <Cosmetics.Note>{$dict.groups.name.description}</Cosmetics.Note>
+  </Cosmetics.Content>
+</Cosmetics.Root>

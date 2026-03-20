@@ -10,15 +10,19 @@ actions:
     scan: Cheque scannen
     input: Uitgave toevoegen
   contacts:
-    group: Groep toevoegen
+    group: Groep aanmaken
     title: Vrienden
-    contact: Vriend toevoegen
+    contact: Vriend
   addSelected: Geselecteerde toevoegen
   cancel: Annuleren
   search: Zoeken
   save: Opslaan
   create: Aanmaken
   slide: Veeg
+  adventures:
+    adventure: Avontuur starten
+  expenses:
+    split: Splitsen
 nav:
   home: Home
   profile: Ik
@@ -158,12 +162,13 @@ expenses:
     create:
       title: Nieuwe deelnemer aanmaken
     title: Deelnemers toevoegen
-    add: {}
   me: Ik
   empty:
     title: Nog geen uitgaven
     description: Maak je eerste uitgave aan om het bijhouden te starten
     create: Uitgave aanmaken
+  expenses:
+    title: Evns
 home:
   title: |-
     !js
@@ -171,3 +176,8 @@ home:
 search:
   empty: Geen resultaten gevonden
 dir: ltr
+adventures:
+  title: Avonturen
+participants:
+  add:
+    button: Deelnemers toevoegen

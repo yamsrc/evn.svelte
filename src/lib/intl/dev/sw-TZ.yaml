@@ -28,6 +28,12 @@ components:
         comment: |-
           !js
           (ms) => `Imekamilika kwa sekunde ${(ms / 1000).toFixed(1)}`
+  picture:
+    title: Picture
+  participants:
+    title: Washiriki
+    managedContactsCreation: Onyesha kitufe cha kuunda mawasiliano yanayosimamiwa
+    shareUrl: Shiriki URL
 transmission:
   title: Transmission
   permission:

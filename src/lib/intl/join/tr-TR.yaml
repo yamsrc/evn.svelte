@@ -71,3 +71,21 @@ group:
       (groupname) => `${groupname}’e Katıl`
     join: Katıl
     decline: Reddet
+adventures:
+  og:
+    title: |-
+      !js
+      (title) => `Evnly'de ${title}’a katıl`
+    description: >-
+      Macera masraflarını paylaşın ve eşit olarak takip edin — Evnly'de
+      birlikte.
+  dialog:
+    title: |-
+      !js
+      (title) => `${title}'a katıl`
+    join: Katıl
+    decline: Yoksay
+    description: |-
+      !js
+      (name, gender) => `${name} seni maceraya davet ediyor`
+    heading: Macera davetiyesi

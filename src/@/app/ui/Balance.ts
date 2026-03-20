@@ -5,4 +5,5 @@ export interface Props {
   totalLabel?: string
   youOwe?: string
   youAreOwed?: string
+  sign?: 'positive' | 'negative' | 'neutral'
 }

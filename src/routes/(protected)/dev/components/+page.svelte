@@ -24,5 +24,11 @@
       <!-- TODO: i18n -->
       <a href="joins/">Invitations</a>
     </li>
+    <li>
+      <a href="picture/">{$dict.components.picture.title}</a>
+    </li>
+    <li>
+      <a href="participants/">{$dict.components.participants.title}</a>
+    </li>
   </ul>
 </Section>

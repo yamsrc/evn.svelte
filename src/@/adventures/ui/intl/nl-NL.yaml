@@ -1,0 +1,67 @@
+editor:
+  cover: Omslag
+  upload: Kies zelf
+  name: Naam van het avontuur
+  note: Alle leden zien deze naam
+  info: >-
+    Avonturen zijn er voor mensen die de kosten gelijk willen delen, of het nu
+    om samen reizen, een gezamenlijke barrekening of gewoon huishoudelijke
+    uitgaven gaat. De schulden binnen een avontuur zijn niet tussen losse
+    gebruikers, maar onder alle leden om het eerlijk bij te houden.
+  settings: Instellingen
+  title: Nieuw avontuur
+finish:
+  archive:
+    title: Avontuur afronden
+    description: >-
+      Als je het avontuur archiveert, wordt het van het nieuwe onkostenscherm
+      verwijderd en naar het einde van je avonturenlijst verplaatst.
+    button: Avontuur archiveren
+  delete:
+    button: |-
+      !js
+      (title) => `${title} verwijderen`
+    hold: Vasthouden om te verwijderen
+    label: Verwijderen
+expenses:
+  title: Uitgaven
+  total: Totaal
+  paidBy: Betaald door
+  paid: Betaald
+  empty: >-
+    Er is nog niks gebeurd. Nodig wat vrienden uit en voeg uitgaven toe om op
+    gang te komen.
+spending:
+  yours: Jouw uitgaven
+  total: Totaal uitgegeven
+me: Ik
+selector:
+  regular: Splitsen
+archive:
+  header: Archief
+  warning: >-
+    Het archiveren van het avontuur is permanent en kan niet ongedaan worden
+    gemaakt.
+  merge:
+    label: Saldi overzetten
+    description: >-
+      Wanneer dit avontuur wordt gearchiveerd, worden openstaande saldi omgezet
+      in gewone schulden tussen de leden.
+balance:
+  header: "Bij het archiveren van dit avontuur:"
+  merge: Verplaats schulden naar de gewone leden-schulden
+  keep: Schulden/saldi achterlaten in het avontuur
+archived: Gearchiveerd
+hint:
+  action: Begin aan je eerste avontuur
+  dismiss: Sluiten
+  dismissed: >-
+    Je kunt altijd een nieuw avontuur starten via het + menu onderaan het
+    scherm.
+title: Avonturen
+panel:
+  total: Totaal
+participants:
+  title: Leden
+  add: Leden toevoegen
+  empty: Hier is nog niemand. Voeg leden toe om het avontuur te beginnen.

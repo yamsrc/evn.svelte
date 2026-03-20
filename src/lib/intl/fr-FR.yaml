@@ -10,15 +10,19 @@ actions:
     scan: Scanner le chèque
     input: Ajouter une dépense
   contacts:
-    group: Ajouter un groupe
+    group: Créer un groupe
     title: Amis
-    contact: Ajouter comme ami
+    contact: Ami
   addSelected: Ajouter la sélection
   cancel: Annuler
   search: Rechercher
   save: Enregistrer
   create: Créer
   slide: Balaye
+  adventures:
+    adventure: Commencer l’aventure
+  expenses:
+    split: Partager
 nav:
   home: Accueil
   profile: Moi
@@ -160,12 +164,13 @@ expenses:
     create:
       title: Créer un nouveau participant
     title: Ajouter des participants
-    add: {}
   me: Moi
   empty:
     title: Aucune dépense pour l’instant
     description: Créez votre première dépense pour commencer à suivre
     create: Créer une dépense
+  expenses:
+    title: Evns
 home:
   title: |-
     !js
@@ -173,3 +178,8 @@ home:
 search:
   empty: Aucun résultat trouvé
 dir: ltr
+adventures:
+  title: Aventures
+participants:
+  add:
+    button: Ajouter des participants

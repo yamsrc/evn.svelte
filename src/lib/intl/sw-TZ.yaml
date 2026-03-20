@@ -10,15 +10,19 @@ actions:
     scan: Changanua hundi
     input: Ongeza gharama
   contacts:
-    group: Ongeza Kikundi
+    group: Unda Kikundi
     title: Marafiki
-    contact: Ongeza rafiki
+    contact: Rafiki
   addSelected: Ongeza zilizochaguliwa
   cancel: Ghairi
   search: Tafuta
   save: Hifadhi
   create: Unda
   slide: Pangusa
+  adventures:
+    adventure: Anza safari
+  expenses:
+    split: Gawanya
 nav:
   home: Mwanzo
   profile: Mimi
@@ -155,12 +159,13 @@ expenses:
     create:
       title: Unda mshiriki mpya
     title: Ongeza washiriki
-    add: {}
   me: Mimi
   empty:
     title: Hakuna matumizi bado
     description: Unda matumizi yako ya kwanza ili kuanza kufuatilia
     create: Unda gharama
+  expenses:
+    title: Evns
 home:
   title: |-
     !js
@@ -168,3 +173,8 @@ home:
 search:
   empty: Hakuna matokeo yaliyopatikana
 dir: ltr
+adventures:
+  title: Matukio
+participants:
+  add:
+    button: Ongeza washiriki

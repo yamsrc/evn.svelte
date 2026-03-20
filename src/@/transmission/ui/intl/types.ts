@@ -20,6 +20,10 @@ export type Dictionary = {
           description: string
           title: string
         }
+        adventures: {
+          title: string
+          description: string
+        }
       }
       permission: {
         prompt: string

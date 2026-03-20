@@ -10,6 +10,9 @@ settings:
   expenses:
     description: Gedeelde uitgaven en geldactiviteiten
     title: Uitgaven
+  adventures:
+    title: Avonturen
+    description: Avontuurlijke uitgaven en leden
 permission:
   prompt: >-
     Zet meldingen aan om direct updates te krijgen over uitgaven, bonnen en
