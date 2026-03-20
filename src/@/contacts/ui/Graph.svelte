@@ -1,35 +1,38 @@
 <script lang="ts">
-  import {
-    forceSimulation,
-    forceLink,
-    forceManyBody,
-    forceCenter,
-    forceCollide,
-  } from 'd3-force'
-  import { locale } from '$lib/intl'
-  import { currency } from '$lib/tools'
-  import { url } from '@/media/ui/Picture'
+  import { ok } from 'svas'
+  import { Picture } from '@/accounts/ui'
+  import { Coins } from '@/app/ui'
+  import { account } from '@/iam'
+  import { layout, toUnit } from './graph-layout'
   import type { Props } from './Graph'
 
   const { contacts, accounts, class: classes }: Props = $props()
 
-  type Node = { id: string; name: string; picture?: string; x: number; y: number }
-  type Edge = { src: Node; tgt: Node; amount: number; curve: number }
+  const me = $derived(ok($account) ? $account.id : undefined)
 
-  const W = 600
-  const H = 400
-  const R = 22
-  const PAD = R + 20
+  const GAP = 5
+  const R = 16
+  const D = R * 2
+  const ARM = 6
+  const AH = ARM * Math.SQRT1_2 // arm projection — gives 90° between arms
+  const RECT_H = 30
+  const FONT = 16
+  const STROKE_W = 1.5
+  const NAME_Y = 16
+  const PAD = 28
 
-  const byId = $derived(new Map(accounts.map((a) => [a.id, a])))
+  const memberMap = $derived.by(() => {
+    const byId = new Map(accounts.map((a) => [a.id, a]))
+    const ids = new Set(contacts.flatMap((c) => c.identities))
 
-  const members = $derived(
-    [...new Set(contacts.flatMap((c) => c.identities))].map((id) => {
-      const a = byId.get(id)
+    return new Map(
+      [...ids].map((id) => {
+        const a = byId.get(id)
 
-      return { id, name: a?.name ?? id, picture: a?.picture }
-    }),
-  )
+        return [id, { id, name: a?.name ?? id, picture: a?.picture }] as const
+      }),
+    )
+  })
 
   const debts = $derived(
     contacts
@@ -41,197 +44,144 @@
       })),
   )
 
-  const graph = $derived.by(() => {
-    const nodes: Node[] = members.map((m) => ({
-      id: m.id,
-      name: m.name,
-      picture: m.picture,
-      x: 0,
-      y: 0,
-    }))
+  const grid = $derived(layout(debts, [...memberMap.keys()]))
 
-    const links = debts.map((d) => ({
-      source: d.from,
-      target: d.to,
-      amount: d.amount,
-    }))
+  const nodeMap = $derived(new Map(grid.nodes.map((n) => [n.id, n])))
 
-    forceSimulation(nodes as any)
-      .force(
-        'link',
-        forceLink(links as any)
-          .id((d: any) => d.id)
-          .distance(150),
-      )
-      .force('charge', forceManyBody().strength(-800))
-      .force('collide', forceCollide(R * 3).iterations(5))
-      .force('center', forceCenter(W / 2, H / 2))
-      .stop()
-      .tick(300)
-
-    fitBounds(nodes)
-
-    // fitBounds rescales positions — run collide again to fix overlaps
-    forceSimulation(nodes as any)
-      .force('collide', forceCollide(R * 3).iterations(10))
-      .stop()
-      .tick(50)
-
-    for (const n of nodes) {
-      n.x = Math.max(PAD, Math.min(W - PAD, n.x))
-      n.y = Math.max(PAD, Math.min(H - PAD, n.y))
-    }
-
-    const byId = new Map(nodes.map((n) => [n.id, n]))
-    const resolve = (ref: any): Node => byId.get(ref.id ?? ref)!
-
-    const edges: Edge[] = links.map((l) => ({
-      src: resolve(l.source),
-      tgt: resolve(l.target),
-      amount: l.amount,
-      curve: 0,
-    }))
-
-    const margin = R + 14
-
-    for (const e of edges)
-      for (const n of nodes) {
-        if (n === e.src || n === e.tgt) continue
-
-        const d = distToSeg(n, e.src, e.tgt)
-
-        if (d < margin) e.curve = Math.max(e.curve, 30, margin - d + 20)
+  const viewport = $derived.by(() => {
+    if (grid.nodes.length === 0)
+      return {
+        W: PAD * 2,
+        H: PAD * 2 + NAME_Y + FONT,
+        step: 55,
+        x: () => PAD,
+        y: () => PAD,
       }
 
-    return { nodes, edges: edges.filter((e) => e.amount > 0) }
+    const units = grid.nodes.map((n) => toUnit(n.col, n.row))
+    const xs = units.map((u) => u[0])
+    const ys = units.map((u) => u[1])
+    const minX = Math.min(...xs)
+    const minY = Math.min(...ys)
+    const rangeX = Math.max(...xs) - minX
+    const rangeY = Math.max(...ys) - minY
+
+    const step = Math.min((600 - PAD * 2) / (rangeX || 1), (400 - PAD * 2) / (rangeY || 1), 80)
+    const offX = -minX * step + PAD
+    const offY = -minY * step + PAD
+
+    return {
+      W: rangeX * step + PAD * 2,
+      H: rangeY * step + PAD * 2 + NAME_Y + FONT,
+      step,
+      x: (col: number, row: number) => toUnit(col, row)[0] * step + offX,
+      y: (col: number, row: number) => toUnit(col, row)[1] * step + offY,
+    }
   })
 
-  function fitBounds(nodes: Node[]) {
-    let minX = Infinity
-    let maxX = -Infinity
-    let minY = Infinity
-    let maxY = -Infinity
+  function arrow(fromId: string, toId: string) {
+    const fn = nodeMap.get(fromId)!
+    const tn = nodeMap.get(toId)!
+    const x1 = viewport.x(fn.col, fn.row)
+    const y1 = viewport.y(fn.col, fn.row)
+    const x2 = viewport.x(tn.col, tn.row)
+    const y2 = viewport.y(tn.col, tn.row)
+    const len = Math.hypot(x2 - x1, y2 - y1) || 1
+    const dx = (x2 - x1) / len
+    const dy = (y2 - y1) / len
+    const gap = R + GAP
 
-    for (const n of nodes) {
-      minX = Math.min(minX, n.x)
-      maxX = Math.max(maxX, n.x)
-      minY = Math.min(minY, n.y)
-      maxY = Math.max(maxY, n.y)
-    }
-
-    const rangeX = maxX - minX || 1
-    const rangeY = maxY - minY || 1
-    const scale = Math.min((W - PAD * 2) / rangeX, (H - PAD * 2) / rangeY)
-
-    for (const n of nodes) {
-      n.x = PAD + (n.x - minX) * scale + (W - PAD * 2 - rangeX * scale) / 2
-      n.y = PAD + (n.y - minY) * scale + (H - PAD * 2 - rangeY * scale) / 2
-    }
+    return { sx: x1 + dx * gap, sy: y1 + dy * gap, tx: x2 - dx * gap, ty: y2 - dy * gap }
   }
 
-  function distToSeg(p: Node, a: Node, b: Node): number {
-    const dx = b.x - a.x
-    const dy = b.y - a.y
-    const lenSq = dx * dx + dy * dy
-
-    if (lenSq === 0) return Math.hypot(p.x - a.x, p.y - a.y)
-
-    const t = Math.max(0, Math.min(1, ((p.x - a.x) * dx + (p.y - a.y) * dy) / lenSq))
-
-    return Math.hypot(p.x - (a.x + t * dx), p.y - (a.y + t * dy))
-  }
-
-  function geom(src: Node, tgt: Node, curve: number) {
-    const dx = tgt.x - src.x
-    const dy = tgt.y - src.y
-    const len = Math.hypot(dx, dy) || 1
-    const ux = dx / len
-    const uy = dy / len
-    const sx = src.x + ux * R
-    const sy = src.y + uy * R
-    const tx = tgt.x - ux * R
-    const ty = tgt.y - uy * R
-    const cx = (sx + tx) / 2 + uy * curve
-    const cy = (sy + ty) / 2 - ux * curve
-
-    return { sx, sy, tx, ty, cx, cy }
-  }
-
-  function path(src: Node, tgt: Node, curve: number): string {
-    const { sx, sy, tx, ty, cx, cy } = geom(src, tgt, curve)
-
-    return curve === 0 ? `M${sx},${sy}L${tx},${ty}` : `M${sx},${sy}Q${cx},${cy} ${tx},${ty}`
-  }
-
-  function mid(src: Node, tgt: Node, curve: number): { x: number; y: number } {
-    const { sx, sy, tx, ty, cx, cy } = geom(src, tgt, curve)
-
-    return { x: 0.25 * sx + 0.5 * cx + 0.25 * tx, y: 0.25 * sy + 0.5 * cy + 0.25 * ty }
-  }
+  const DEBT_BOX = $derived(viewport.step * 2)
 </script>
 
-<svg width="100%" height="100%" viewBox="0 0 {W} {H}" class={classes}>
+<svg width="100%" height="100%" viewBox="0 0 {viewport.W} {viewport.H}" class={classes}>
   <defs>
     <marker
       id="arrow"
-      viewBox="0 -5 10 10"
-      refX="10"
-      refY="0"
-      markerWidth="6"
-      markerHeight="6"
-      orient="auto">
-      <path d="M0,-5L10,0L0,5" class="fill-muted-foreground" />
+      markerWidth={AH}
+      markerHeight={AH * 2}
+      refX={AH}
+      refY={AH}
+      markerUnits="userSpaceOnUse"
+      orient="auto-start-reverse"
+      overflow="visible">
+      <path
+        d="M0,0 L{AH},{AH} L0,{AH * 2}"
+        fill="none"
+        stroke-width={STROKE_W}
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="stroke-muted-foreground" />
     </marker>
-    {#each graph.nodes as node (node.id)}
-      <clipPath id="clip-{node.id}">
-        <circle cx={node.x} cy={node.y} r={R} />
-      </clipPath>
-    {/each}
   </defs>
 
-  {#each graph.edges as edge (`${edge.src.id}-${edge.tgt.id}`)}
-    {@const m = mid(edge.src, edge.tgt, edge.curve)}
-    <path
-      d={path(edge.src, edge.tgt, edge.curve)}
-      fill="none"
-      stroke-width="1.5"
+  <!-- Edges -->
+  {#each grid.edges as edge (`${edge.from}-${edge.to}`)}
+    {@const a = arrow(edge.from, edge.to)}
+    <line
+      x1={a.sx}
+      y1={a.sy}
+      x2={a.tx}
+      y2={a.ty}
+      stroke-width={STROKE_W}
+      stroke-linecap="round"
       marker-end="url(#arrow)"
       class="stroke-muted-foreground" />
-    <text
-      x={m.x}
-      y={m.y}
-      text-anchor="middle"
-      dominant-baseline="central"
-      class="fill-foreground stroke-background"
-      paint-order="stroke"
-      stroke-width="3">
-      {currency(edge.amount, $locale)}
-    </text>
   {/each}
 
-  {#each graph.nodes as node (node.id)}
-    {#if node.picture}
-      <image
-        href={url({ id: node.picture, path: '/pictures/', variant: '300x300!' })}
-        x={node.x - R}
-        y={node.y - R}
-        width={R * 2}
-        height={R * 2}
-        clip-path="url(#clip-{node.id})" />
-    {:else}
-      <circle cx={node.x} cy={node.y} r={R} class="fill-muted stroke-border" />
-      <text x={node.x} y={node.y + 5} text-anchor="middle" class="fill-muted-foreground">
-        {node.name[0]}
-      </text>
+  <!-- Debt labels -->
+  {#each grid.edges as edge (`debt-${edge.from}-${edge.to}`)}
+    {@const mx = viewport.x(edge.midCol, edge.midRow)}
+    {@const my = viewport.y(edge.midCol, edge.midRow)}
+    {@const sign = edge.from === me ? 'negative' : edge.to === me ? 'positive' : 'neutral'}
+    <foreignObject x={mx - DEBT_BOX / 2} y={my - RECT_H / 2} width={DEBT_BOX} height={RECT_H}>
+      <div class="flex items-center justify-center h-full">
+        <div
+          class="flex items-center px-2 rounded-md bg-background"
+          style="border: {STROKE_W}px solid var(--muted-foreground);">
+          <Coins amount={edge.amount} {sign} class="text-base font-bold" />
+        </div>
+      </div>
+    </foreignObject>
+  {/each}
+
+  <!-- Nodes -->
+  {#each grid.nodes as node (node.id)}
+    {@const nx = viewport.x(node.col, node.row)}
+    {@const ny = viewport.y(node.col, node.row)}
+    {@const member = memberMap.get(node.id)}
+    {@const isMe = me !== undefined && node.id === me}
+
+    {#if isMe}
+      <circle cx={nx} cy={ny} r={R + 2} fill="none" stroke-width="2" class="stroke-primary" />
     {/if}
+
+    <foreignObject x={nx - R} y={ny - R} width={D} height={D}>
+      {#if member?.picture}
+        <Picture account={{ ...member, picture: member.picture }} size={D} class="w-full h-full" />
+      {:else}
+        <div
+          class="flex items-center justify-center w-full h-full rounded-full bg-muted text-muted-foreground"
+          style="font-size: {FONT * 0.7}px;">
+          {member?.name[0] ?? '?'}
+        </div>
+      {/if}
+    </foreignObject>
+
     <text
-      x={node.x}
-      y={node.y + R + 14}
+      x={nx}
+      y={ny + R + NAME_Y}
       text-anchor="middle"
-      class="fill-foreground stroke-background"
-      paint-order="stroke"
-      stroke-width="3">
-      {node.name.split(' ')[0]}
+      font-size={FONT}
+      font-weight="bold"
+      class="fill-foreground"
+      stroke="var(--background)"
+      stroke-width="4"
+      paint-order="stroke">
+      {member?.name.split(' ')[0] ?? ''}
     </text>
   {/each}
 </svg>
