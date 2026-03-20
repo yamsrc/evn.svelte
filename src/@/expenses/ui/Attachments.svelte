@@ -15,13 +15,13 @@
 
 {#if attachments.length > 0}
   <div
-    class="bg-accent flex justify-center p-4 overflow-x-auto overscroll-x-contain touch-pan-x no-scrollbar">
+    class="bg-accent flex justify-center p-4 overflow-x-auto overscroll-x-contain no-scrollbar">
     <div class="flex gap-3">
       {#each attachments as attachment (attachment)}
         <div
           class={[
             'shrink-0 border h-[300px] no-scrollbar rounded-md',
-            editable && 'overflow-y-auto overscroll-y-contain touch-pan-y snap-y snap-mandatory',
+            editable && 'overflow-y-auto overscroll-y-contain snap-y snap-mandatory',
           ]}>
           <a href={url({ id: attachment, path })} target="_blank">
             <Picture
