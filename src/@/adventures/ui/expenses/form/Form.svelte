@@ -13,28 +13,33 @@
   import type { Props } from './Form'
   import type { Expense } from '@/adventures'
 
-  const { adventure, expense }: Props = $props()
+  const {
+    adventure,
+    expense,
+    attachments = $bindable([...(expense.attachments ?? [])]),
+  }: Props = $props()
 
-  const members = $derived(Object.keys(adventure.participants))
+  const participants = $derived(Object.keys(adventure.participants))
 
   function seed(e: Partial<Expense>, me?: string) {
-    const members = Object.keys(adventure.participants)
+    const participants = Object.keys(adventure.participants)
 
     return {
       title: e.title ?? '',
       location: e.location,
       attachments: [...(e.attachments ?? [])],
       amount: e.amount ?? 0,
-      payer: e.payer ?? (me && members.includes(me) ? me : undefined),
+      payer: e.payer ?? (me && participants.includes(me) ? me : undefined),
     }
   }
 
   const sorted = (v: unknown) => JSON.stringify(v, Object.keys(v as object).sort())
 
   // svelte-ignore state_referenced_locally
-  const form = $state(seed(expense, $me?.id))
-  // svelte-ignore state_referenced_locally
-  const snapshot = sorted(seed(expense, $me?.id))
+  const initial = seed(expense, $me?.id)
+  const snapshot = sorted(initial)
+  const { attachments: _seedAttachments, ...rest } = initial
+  const form = $state(rest)
 
   let busy = $state(false)
   let submitButton = $state<HTMLButtonElement | null>(null)
@@ -46,7 +51,7 @@
           amount: form.amount,
           payer: form.payer,
           location: form.location,
-          attachments: form.attachments,
+          attachments,
         }
       : null,
   )
@@ -54,7 +59,7 @@
   const _draft = $derived({
     title: form.title,
     location: form.location,
-    attachments: form.attachments,
+    attachments,
   })
 
   export function draft() {
@@ -62,7 +67,7 @@
   }
 
   export function attach(...ids: string[]) {
-    form.attachments.push(...ids)
+    attachments.push(...ids)
   }
 
   async function submit() {
@@ -88,7 +93,7 @@
   <form onsubmit={onsubmit(submit)} class="space-y-5">
     <Description bind:title={form.title} bind:location={form.location} />
     <Total bind:amount={form.amount} />
-    <PayerSelect bind:payer={form.payer} {members} />
+    <PayerSelect bind:payer={form.payer} {participants} />
 
     <button bind:this={submitButton} type="submit" class="sr-only">
       {$common.expenses.form.save}
