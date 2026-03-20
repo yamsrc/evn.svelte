@@ -47,5 +47,7 @@
   <meta name="twitter:image" content={image.url} />
 </svelte:head>
 
+<svelte:body oncontextmenu={(e) => dev || e.preventDefault()} />
+
 <Background class="fixed inset-0 -z-50 pointer-events-none" />
 {@render children()}
