@@ -7,7 +7,6 @@
  *   y = j * step * √3 / 2
  */
 
-// 6 isometric neighbor directions
 const DIRS: [number, number][] = [
   [1, 0],
   [-1, 0],
@@ -29,7 +28,7 @@ function ring(center: Pos, maxDist: number): Pos[] {
 }
 
 /** True when a→b lies along one of 3 isometric axes at an even step distance. */
-function valid(a: Pos, b: Pos): boolean {
+function aligned(a: Pos, b: Pos): boolean {
   const di = a[0] - b[0]
   const dj = a[1] - b[1]
   const onAxis = dj === 0 || di === 0 || di === -dj
@@ -38,6 +37,22 @@ function valid(a: Pos, b: Pos): boolean {
 }
 
 type Pos = [number, number]
+
+const posKey = (c: number, r: number) => `${c},${r}`
+const mid = (a: number, b: number) => (a + b) / 2
+
+/** Deduplicate positions by grid key, sort by Manhattan distance to origin. */
+function nearest(candidates: Pos[]): Pos[] {
+  const unique = [
+    ...new Map(candidates.map((c) => [posKey(c[0], c[1]), c])).values(),
+  ]
+
+  unique.sort(
+    (a, b) => Math.abs(a[0]) + Math.abs(a[1]) - Math.abs(b[0]) - Math.abs(b[1]),
+  )
+
+  return unique
+}
 
 export interface GridNode {
   id: string
@@ -85,23 +100,63 @@ export function layout(
   }
 
   const components = findComponents(memberIds, adj)
+  const connected = components.filter((c) => c.length > 1)
+  const orphans = components.filter((c) => c.length === 1).map((c) => c[0])
+
   const allNodes: GridNode[] = []
+  const occupied = new Set<string>()
+
+  const place = (id: string, col: number, row: number) => {
+    allNodes.push({ id, col, row })
+    occupied.add(posKey(col, row))
+  }
+
   let colOffset = 0
 
-  for (const comp of components) {
+  for (const comp of connected) {
     const nodes = solveComponent(comp, adj)
-    const minCol = Math.min(...nodes.map((n) => n[1][0]))
-    const minRow = Math.min(...nodes.map((n) => n[1][1]))
+    const cols = nodes.map((n) => n[1][0])
+    const rows = nodes.map((n) => n[1][1])
+    const minCol = Math.min(...cols)
+    const minRow = Math.min(...rows)
 
     for (const [id, [c, r]] of nodes)
-      allNodes.push({ id, col: c - minCol + colOffset, row: r - minRow })
+      place(id, c - minCol + colOffset, r - minRow)
 
-    const maxCol = Math.max(...nodes.map((n) => n[1][0])) - minCol
+    const maxCol = Math.max(...cols) - minCol
 
     colOffset += maxCol + 3
   }
 
+  // mark edge midpoints as occupied
   const posMap = new Map(allNodes.map((n) => [n.id, n]))
+
+  for (const d of debts) {
+    const f = posMap.get(d.from)!
+    const t = posMap.get(d.to)!
+
+    occupied.add(posKey(mid(f.col, t.col), mid(f.row, t.row)))
+  }
+
+  // place orphans in nearest available grid cells
+  for (const id of orphans) {
+    if (allNodes.length === 0) {
+      place(id, 0, 0)
+
+      continue
+    }
+
+    const candidates = nearest(
+      allNodes.flatMap((n) => ring([n.col, n.row], 6)),
+    )
+
+    for (const [c, r] of candidates)
+      if (!occupied.has(posKey(c, r))) {
+        place(id, c, r)
+
+        break
+      }
+  }
 
   const edges: GridEdge[] = debts.map((d) => {
     const f = posMap.get(d.from)!
@@ -111,8 +166,8 @@ export function layout(
       from: d.from,
       to: d.to,
       amount: d.amount,
-      midCol: (f.col + t.col) / 2,
-      midRow: (f.row + t.row) / 2,
+      midCol: mid(f.col, t.col),
+      midRow: mid(f.row, t.row),
     }
   })
 
@@ -159,35 +214,33 @@ function solveComponent(
 
   const positions = new Map<string, Pos>()
   const occupied = new Set<string>()
-  const key = (c: number, r: number) => `${c},${r}`
 
-  function place(index: number): boolean {
+  function candidatesFor(neighbors: string[]): Pos[] {
+    if (neighbors.length > 0)
+      return ring(positions.get(neighbors[0])!, 6).filter((c) =>
+        neighbors.every((n) => aligned(c, positions.get(n)!)),
+      )
+
+    if (positions.size === 0) return [[0, 0]]
+
+    return [...positions.values()].flatMap((p) => ring(p, 4))
+  }
+
+  function solve(index: number): boolean {
     if (index >= sorted.length) return true
 
     const id = sorted[index]
     const neighbors = [...(adj.get(id) ?? [])].filter((n) => positions.has(n))
 
-    const candidates =
-      neighbors.length > 0
-        ? ring(positions.get(neighbors[0])!, 6)
-          .filter((c) => neighbors.every((n) => valid(c, positions.get(n)!)))
-        : positions.size === 0
-          ? ([[0, 0]] as Pos[])
-          : [...positions.values()].flatMap((p) => ring(p, 4))
-
-    const unique = [...new Map(candidates.map((c) => [key(c[0], c[1]), c])).values()]
-
-    unique.sort((a, b) => Math.abs(a[0]) + Math.abs(a[1]) - Math.abs(b[0]) - Math.abs(b[1]))
-
-    for (const cand of unique) {
-      const k = key(cand[0], cand[1])
+    for (const cand of nearest(candidatesFor(neighbors))) {
+      const k = posKey(cand[0], cand[1])
 
       if (occupied.has(k)) continue
 
       const mids = neighbors.map((n) => {
         const p = positions.get(n)!
 
-        return key((cand[0] + p[0]) / 2, (cand[1] + p[1]) / 2)
+        return posKey(mid(cand[0], p[0]), mid(cand[1], p[1]))
       })
 
       if (mids.some((m) => occupied.has(m))) continue
@@ -197,7 +250,7 @@ function solveComponent(
 
       for (const m of mids) occupied.add(m)
 
-      if (place(index + 1)) return true
+      if (solve(index + 1)) return true
 
       positions.delete(id)
       occupied.delete(k)
@@ -208,7 +261,7 @@ function solveComponent(
     return false
   }
 
-  place(0)
+  solve(0)
 
   return sorted.map((id) => [id, positions.get(id) ?? [0, 0]])
 }

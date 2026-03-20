@@ -1,4 +1,5 @@
 import type { Account } from '@/accounts'
+
 import type { Contact } from '@/contacts'
 
 export type AccountLike = Pick<Account, 'id' | 'name' | 'picture'>
@@ -9,3 +10,5 @@ export interface Props {
   accounts: AccountLike[]
   class?: string
 }
+
+export const PAD = 28
