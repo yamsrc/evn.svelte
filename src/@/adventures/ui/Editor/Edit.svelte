@@ -1,39 +1,16 @@
 <script lang="ts">
   import { back } from '$com/history'
-  import { assign, create } from '@/adventures'
-  import { getContext } from './Context'
+  import { create } from '@/adventures'
   import Form from './Form.svelte'
   import type { Value } from './Context'
   import type { Props } from './Edit'
 
   let { id, value = $bindable(), busy = $bindable(false) }: Props = $props()
 
-  const ctx = getContext()
-
   async function onsubmit(value: Value) {
-    const body = {
-      title: value.title,
-      picture: value.picture,
-      participants: value.participants,
-    }
+    if (id !== undefined) return back(`/adventures/${id}/`)
 
-    const snapshot = JSON.parse(ctx.snapshot) as typeof ctx.value
-
-    const changed =
-      JSON.stringify(body) !==
-      JSON.stringify({
-        title: snapshot.title,
-        picture: snapshot.picture,
-        participants: snapshot.participants,
-      })
-
-    if (!changed) {
-      await back(id === undefined ? '/expenses/' : `/adventures/${id}/`)
-
-      return
-    }
-
-    const result = id === undefined ? await create(body) : await assign(id, body)
+    const result = await create(value)
 
     if (result instanceof Error) return
 

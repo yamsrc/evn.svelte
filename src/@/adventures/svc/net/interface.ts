@@ -14,7 +14,7 @@ export async function post(identity: string, body: Create): Promise<Adventure | 
   return adventures.json(identity, { method: 'POST', body })
 }
 
-export type Assign = Partial<Pick<Adventure, 'title' | 'picture'>>
+export type Assign = Partial<Pick<Adventure, 'title' | 'picture'>> & { participants?: never }
 
 export async function patch(identity: string, id: string, body: Assign): Promise<Adventure | Error> {
   return adventures.json(`${identity}/${id}`, { method: 'PATCH', body })
