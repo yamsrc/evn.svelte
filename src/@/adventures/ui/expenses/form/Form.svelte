@@ -4,7 +4,7 @@
   import { Actions } from '$com/shell'
   import { dict as common } from '$lib/intl'
   import { onsubmit } from '$lib/tools'
-  import * as adventures from '@/adventures'
+  import { expenses } from '@/adventures'
   import { Action, Section } from '@/app/ui'
   import { account as me } from '@/iam'
   import Description from './Description.svelte'
@@ -21,7 +21,6 @@
     const members = Object.keys(adventure.participants)
 
     return {
-      id: e.id,
       title: e.title ?? '',
       location: e.location,
       attachments: [...(e.attachments ?? [])],
@@ -43,7 +42,6 @@
   const payload = $derived(
     form.title.trim().length > 0 && form.amount > 0 && form.payer !== undefined
       ? {
-          id: form.id,
           title: form.title,
           amount: form.amount,
           payer: form.payer,
@@ -70,11 +68,13 @@
   async function submit() {
     if (!payload) return
 
-    if (form.id && sorted(payload) === snapshot) return back(`/adventures/${adventure.id}/`)
+    if (expense.id && sorted(payload) === snapshot) return back(`/adventures/${adventure.id}/`)
 
     busy = true
 
-    const result = await adventures.expense(adventure.id, [payload])
+    const result = expense.id
+      ? await expenses.update(adventure.id, expense.id, payload)
+      : await expenses.create(adventure.id, payload)
 
     busy = false
 
