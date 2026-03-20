@@ -14,7 +14,7 @@ export async function create(id: string, input: net.ExpenseInput): Promise<net.A
   return adventure
 }
 
-export async function update(adventureId: string, id: string, input: net.ExpenseInput): Promise<net.Adventure | Error> {
+export async function update(adventureId: string, id: string, input: Partial<net.ExpenseInput>): Promise<net.Adventure | Error> {
   const me = await having(account)
   const adventure = await net.expenses.update(me.id, adventureId, id, input)
 
