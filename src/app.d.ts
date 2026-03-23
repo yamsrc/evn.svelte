@@ -25,7 +25,6 @@ declare global {
     interface PageState {
       expense?: Partial<ExpenseValue>
       participants?: ParticipantsState
-      __replace?: true
     }
 
     // interface Platform {}
