@@ -20,7 +20,7 @@
   })
 </script>
 
-<div {id} class={cn('flex items-center gap-2', classes)}>
+<div {id} class={cn('flex items-center gap-1', classes)}>
   {#if amount !== undefined}
     <div class="font-bold">{currency(Math.abs(amount), $locale)}</div>
   {/if}
