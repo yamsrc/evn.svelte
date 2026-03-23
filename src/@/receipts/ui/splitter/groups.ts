@@ -5,6 +5,8 @@ export interface Unit {
   display: string
   identities: string[]
   price: number
+  index: number
+  quantity: number
 }
 
 interface SingleUnitsGroup {
@@ -49,10 +51,12 @@ export function group(items: Item[]): Group[] {
 }
 
 function toUnits(item: Item): Unit[] {
-  return item.claims.map((claim) => ({
+  return item.claims.map((claim, index) => ({
     item: item.id,
     display: item.display,
     identities: claim,
     price: item.price,
+    index,
+    quantity: item.quantity,
   }))
 }

@@ -12,6 +12,8 @@ When fresh receipt data arrives, we merge it with local transient changes:
 
 This allows claims to converge eventually while keeping the interface responsive
 and avoiding hard blocking on network latency or concurrent updates.
+
+Have fun.
 */
 
 import { get, writable, type Writable } from 'svelte/store'
@@ -39,14 +41,14 @@ export function sync(receipt: receipts.Receipt): void {
     })
 }
 
-export function claimed(state: State, identity: string, item: string, index: number): boolean {
+export function itemClaimedBy(state: State, identity: string, item: string, index: number): boolean {
   const transient = state.transient[identity]?.[item]?.[index]
   const persistent = state.persistent[identity]?.[item]?.[index]?.value
 
   return transient?.value ?? persistent === true
 }
 
-export function allClaimed(state: State, identity: string, item: string): boolean {
+export function groupClaimedBy(state: State, identity: string, item: string): boolean {
   const quantity = state.items[item]?.quantity
 
   if (quantity === undefined)
@@ -62,6 +64,9 @@ export function allClaimed(state: State, identity: string, item: string): boolea
   return true
 }
 
+/**
+ * Toggle a claim for an item
+ */
 export function toggle(identity: string, item: string, index: number): void {
   store.update((state) => {
     const transient = ensure(state.transient, identity, state.items[item])[index]
@@ -76,6 +81,9 @@ export function toggle(identity: string, item: string, index: number): void {
   })
 }
 
+/**
+ * Toggle all claims for an item
+ */
 export function toggleAll(identity: string, item: string, on: boolean): void {
   store.update((state) => {
     const transient = ensure(state.transient, identity, state.items[item])
@@ -92,6 +100,31 @@ export function toggleAll(identity: string, item: string, on: boolean): void {
 
     return state
   })
+}
+
+/**
+ * Check if a unit is claimed by anyone
+ */
+export function unitClaimed(state: State, item: string, index: number): boolean {
+  return state.identities.some((identity) => itemClaimedBy(state, identity, item, index))
+}
+
+/**
+ * Get the number of claimed units for an item
+ */
+export function claimedUnits(state: State, item: string): number {
+  const quantity = state.items[item]?.quantity
+
+  if (quantity === undefined)
+    return 0
+
+  let count = 0
+
+  for (let index = 0; index < quantity; index++)
+    if (unitClaimed(state, item, index))
+      count++
+
+  return count
 }
 
 let pending = false
@@ -153,13 +186,20 @@ function toMap(items: receipts.Item[]): Record<string, receipts.Item> {
   return Object.fromEntries(items.map((item) => [item.id, item]))
 }
 
+/**
+ * Get the claiming identities for an item
+ */
 export function identities(state: State, identity: string, item: string, index: number): Identities {
-  const identities = state.identities.filter((identity) => claimed(state, identity, item, index))
+  const identities = state.identities.filter((identity) => itemClaimedBy(state, identity, item, index))
 
   const me = identities.find((i) => i === identity)
 
   if (me === undefined) return { hero: identities[0], crowd: identities.slice(1) }
   else return { hero: me, crowd: identities.filter((identity) => identity !== me) }
+}
+
+export function assigned(state: State, item: string, index: number): 0 | 1 | 2 {
+  return 0
 }
 
 /**
@@ -212,7 +252,7 @@ function drift(state: State, identity: string): boolean {
   return false
 }
 
-interface State {
+export interface State {
   id: string
   version: number
   identities: string[]

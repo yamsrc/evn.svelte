@@ -16,6 +16,9 @@
     if (sign === 'negative' || (sign === undefined && amount !== undefined && amount < 0))
       return 'var(--destructive)'
 
+    if (sign === 'highlight' || (sign === undefined && amount !== undefined && amount > 0))
+      return 'var(--warning)'
+
     return 'var(--muted-foreground)'
   })
 </script>
@@ -25,6 +28,6 @@
     <div class="font-bold">{prefix ? `${prefix} ` : ''}{currency(Math.abs(amount), $locale)}</div>
   {/if}
   <div>
-    <Coins size={16} {color} />
+    <Coins size={16} {color} class="transition-colors" />
   </div>
 </div>

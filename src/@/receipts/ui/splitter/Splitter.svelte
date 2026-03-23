@@ -13,9 +13,9 @@
   import * as Item from '$ui/item'
   import { Actions } from '$com/shell'
   import { group, type Unit } from './groups'
-  import { store, sync, toggle, identities, toggleAll, allClaimed } from './claims'
+  import { store, sync, toggle, identities, toggleAll, groupClaimedBy } from './claims'
   import Stack from './Stack.svelte'
-  import type { Props } from './Splitter'
+  import { sign, type Props } from './Splitter'
 
   const { receipt, actor }: Props = $props()
   const groups = $derived(group(receipt.items))
@@ -44,7 +44,10 @@
           <Item.Title>{unit.display}</Item.Title>
         </Item.Content>
         <Item.Actions>
-          <Coins amount={unit.price} prefix={quantity ? `${quantity} ×` : undefined} />
+          <Coins
+            amount={unit.price}
+            prefix={quantity ? `${quantity} ×` : undefined}
+            sign={sign($store, unit, quantity === undefined ? index : undefined)} />
         </Item.Actions>
       </button>
     {/snippet}
@@ -54,7 +57,7 @@
 <div class="flex flex-col gap-2">
   {#each groups as group, i (group.id)}
     {#if group.outcast}
-      {@const claimed = allClaimed($store, actor.id, group.id)}
+      {@const claimed = groupClaimedBy($store, actor.id, group.id)}
       <Stack {group} {claimed} ontoggle={() => toggleAll(actor.id, group.id, !claimed)}>
         {#snippet child(unit, index, collapsed)}
           {@render card(unit, index, collapsed ? group.units.length : undefined)}
