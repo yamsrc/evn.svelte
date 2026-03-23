@@ -47,11 +47,7 @@ export function buildScene(grid: GridLayout): Scene {
   const rangeX = Math.max(...xs) - minX
   const rangeY = Math.max(...ys) - minY
 
-  const step = Math.min(
-    (MAX_W - PAD * 2) / (rangeX === 0 ? 1 : rangeX),
-    (MAX_H - PAD * 2) / (rangeY === 0 ? 1 : rangeY),
-    MAX_STEP,
-  )
+  const step = MAX_STEP
 
   const offX = -minX * step + PAD
   const offY = -minY * step + PAD
