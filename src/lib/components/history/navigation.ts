@@ -4,7 +4,7 @@ import type { AfterNavigate } from '@sveltejs/kit'
 
 const history = writable<string[]>([])
 
-export function track(nav: AfterNavigate) {
+export function track(nav: AfterNavigate, state?: App.PageState) {
   history.update((stack) => {
     if (nav.to === null) return stack
 
@@ -12,10 +12,12 @@ export function track(nav: AfterNavigate) {
 
     const delta = nav.delta ?? 1
 
-    if (delta >= 0)
-      stack.push(url)
-    else
+    if (delta < 0)
       stack.splice(delta)
+    else if (state?.__replace)
+      stack[stack.length - 1] = url
+    else
+      stack.push(url)
 
     return stack
   })
@@ -32,6 +34,10 @@ function closest(target: string): number {
   return stack.findIndex((url) => url === target)
 }
 
+function path(url: URL): string {
+  return url.pathname + url.search + url.hash
+}
+
 export async function back(href: string) {
   const target = path(new URL(href, window.location.href))
   const index = closest(target)
@@ -40,6 +46,6 @@ export async function back(href: string) {
   else await goto(href)
 }
 
-function path(url: URL): string {
-  return url.pathname + url.search + url.hash
+export async function replace(href: string, state?: App.PageState) {
+  await goto(href, { replaceState: true, state: { ...state, __replace: true } })
 }

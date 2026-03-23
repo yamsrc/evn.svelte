@@ -15,8 +15,6 @@
   let editor = $state<ReturnType<typeof ExpenseForm.Edit>>()
 </script>
 
-<Return href="/adventures/{id}/" />
-
 <Async store={adventures}>
   {#snippet awaited(adventures)}
     {@const adventure = adventures.find((a) => a.id === id)}
@@ -51,6 +49,7 @@
 
       {#key `${id}-${eid}`}
         <ExpenseForm.Edit bind:this={editor} {adventure} {expense} />
+        <Return href="/adventures/{id}/" />
       {/key}
     {/if}
   {/snippet}
