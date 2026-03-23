@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Async, combined } from 'svas'
-  import { Attachments, Splitter } from '@/receipts/ui'
+  import { Splitter } from '@/receipts/ui'
   import { receipts } from '@/receipts'
   import { account } from '@/iam'
   import { Header, Section } from '@/app/ui'
@@ -24,8 +24,6 @@
         </Header.Root>
       </Section>
     {/if}
-
-    <Attachments attachments={receipt.attachments} />
 
     <Section>
       <Splitter {receipt} actor={account} />
