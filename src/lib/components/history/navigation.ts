@@ -57,3 +57,9 @@ function replaced(state: App.PageState): boolean {
 }
 
 const REPLACE = Symbol('replace')
+
+if (typeof window !== 'undefined')
+  window.history.replaceState = (_, __, url?: string | URL | null) => {
+    if (url instanceof URL) // assume always true for SvelteKit
+      history[history.length - 1] = path(url)
+  }
