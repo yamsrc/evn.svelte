@@ -11,15 +11,13 @@
   {@const member = members.get(node.id)}
   {@const isMe = me !== undefined && node.id === me}
 
-  {#if isMe}
-    <circle
-      cx={node.px}
-      cy={node.py}
-      r={R + 2}
-      fill="none"
-      stroke-width="2"
-      class="stroke-primary" />
-  {/if}
+  <circle
+    cx={node.px}
+    cy={node.py}
+    r={R + 2}
+    fill="none"
+    stroke-width="2"
+    class={isMe ? 'stroke-primary' : 'stroke-muted-foreground/50'} />
 
   <foreignObject x={node.px - R} y={node.py - R} width={D} height={D}>
     {#if member?.picture}

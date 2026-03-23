@@ -13,7 +13,7 @@
     <div class="flex items-center justify-center h-full">
       <div
         class="flex items-center px-2 rounded-md bg-background"
-        style="border: {STROKE_W}px solid var(--muted-foreground);">
+        style="border: {STROKE_W}px solid var(--muted);">
         <Coins amount={edge.amount} {sign} class="text-base font-bold" />
       </div>
     </div>
