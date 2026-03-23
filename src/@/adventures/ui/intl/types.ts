@@ -4,12 +4,11 @@
  * @author copilot
  */
 
+export type Locale = 'ar-SA' | 'de-DE' | 'en-US' | 'es-ES' | 'fr-FR' | 'hi-IN' | 'it-IT' | 'ja-JP' | 'ko-KR' | 'nl-NL' | 'ru-RU' | 'sw-TZ' | 'tr-TR' | 'uk-UA' | 'zh-CN'
+
+export type Grammar = string
+
 export type Dictionary = {
-      members: {
-        title: string
-        add: string
-        empty: string
-      }
       editor: {
         cover: string
         upload: string
@@ -68,5 +67,10 @@ export type Dictionary = {
       title: string
       panel: {
         total: string
+      }
+      participants: {
+        title: string
+        add: string
+        empty: string
       }
     }

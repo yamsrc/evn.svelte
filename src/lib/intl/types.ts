@@ -215,4 +215,9 @@ export type Dictionary = {
       adventures: {
         title: string
       }
+      participants: {
+        add: {
+          button: string
+        }
+      }
     }

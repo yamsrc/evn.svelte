@@ -1,7 +1,3 @@
-members:
-  title: Miembros
-  add: Agregar miembros
-  empty: Todavía no hay nadie aquí. Añade algunos miembros para comenzar la aventura.
 editor:
   cover: Portada
   upload: Elige el tuyo
@@ -63,3 +59,7 @@ hint:
 title: Aventuras
 panel:
   total: Total
+participants:
+  title: Miembros
+  add: Agregar miembros
+  empty: Todavía no hay nadie aquí. Añade algunos miembros para comenzar la aventura.

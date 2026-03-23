@@ -176,3 +176,6 @@ search:
 dir: ltr
 adventures:
   title: Avonturen
+participants:
+  add:
+    button: Deelnemers toevoegen

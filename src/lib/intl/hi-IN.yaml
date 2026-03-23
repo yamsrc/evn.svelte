@@ -172,3 +172,6 @@ search:
 dir: ltr
 adventures:
   title: साहसिक यात्राएँ
+participants:
+  add:
+    button: प्रतिभागी जोड़ें

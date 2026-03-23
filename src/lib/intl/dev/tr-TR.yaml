@@ -14,6 +14,10 @@ components:
     title: Borç Grafiği
   picture:
     title: Picture
+  participants:
+    title: Katılımcılar
+    managedContactsCreation: Yönetilen kişiler oluşturma butonunu göster
+    shareUrl: URL’yi paylaş
 transmission:
   title: Transmission
   permission:

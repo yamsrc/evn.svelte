@@ -170,3 +170,6 @@ search:
 dir: rtl
 adventures:
   title: مغامرات
+participants:
+  add:
+    button: إضافة المشاركين

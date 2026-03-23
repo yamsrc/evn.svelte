@@ -7,7 +7,7 @@
   import { account as me } from '@/iam'
   import type { Props } from './PayerSelect'
 
-  let { payer = $bindable(), members }: Props = $props()
+  let { payer = $bindable(), participants }: Props = $props()
 </script>
 
 <div class="space-y-2">
@@ -33,14 +33,14 @@
       </SelectTrigger>
     {/if}
     <SelectContent collisionPadding={{ top: 64, bottom: 88 }}>
-      {#each members as mid (mid)}
-        <Async store={accounts.get(mid)}>
+      {#each participants as id (id)}
+        <Async store={accounts.get(id)}>
           {#snippet awaited(account)}
-            <SelectItem value={mid}>
+            <SelectItem value={id}>
               <div class="flex items-center gap-2">
                 <Picture {account} class="size-6" />
                 <span>
-                  {mid === $me?.id ? $dict.me : account.name}
+                  {id === $me?.id ? $dict.me : account.name}
                 </span>
               </div>
             </SelectItem>

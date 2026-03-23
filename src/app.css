@@ -169,7 +169,14 @@
   html,
   body {
     touch-action: pan-y;
+    -webkit-user-select: none;
     user-select: none;
+    -webkit-touch-callout: none;
+  }
+
+  a,
+  img {
+    -webkit-user-drag: none;
   }
 
   p a {

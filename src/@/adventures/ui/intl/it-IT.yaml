@@ -1,7 +1,3 @@
-members:
-  title: Membri
-  add: Aggiungi membri
-  empty: Non c'è ancora nessuno qui. Aggiungi dei membri per iniziare l'avventura.
 editor:
   cover: Copertina
   upload: Scegli il tuo
@@ -63,3 +59,7 @@ hint:
 title: Avventure
 panel:
   total: Totale
+participants:
+  title: Membri
+  add: Aggiungi membri
+  empty: Non c'è ancora nessuno qui. Aggiungi dei membri per iniziare l'avventura.

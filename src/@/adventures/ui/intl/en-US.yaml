@@ -1,7 +1,3 @@
-members:
-  title: Members
-  add: Add members
-  empty: Nobody here yet. Add some members to start the adventure.
 editor:
   cover: Cover
   upload: Choose your own
@@ -63,3 +59,7 @@ hint:
 title: Adventures
 panel:
   total: Total
+participants:
+  title: Members
+  add: Add members
+  empty: Nobody here yet. Add some members to start the adventure.

@@ -1,9 +1,8 @@
-import type { Group } from '@/groups'
+import type { Value } from './Editor/Context'
 import type { ClassValue } from 'svelte/elements'
 
-type GroupLike = Pick<Group, 'id' | 'name'>
-
 export interface Props {
-  group?: GroupLike
+  value: Value
+  onchange?: (name: string) => void
   class?: ClassValue
 }

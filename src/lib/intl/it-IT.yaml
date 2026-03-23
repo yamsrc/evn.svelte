@@ -178,3 +178,6 @@ search:
 dir: ltr
 adventures:
   title: Avventure
+participants:
+  add:
+    button: Aggiungi partecipanti

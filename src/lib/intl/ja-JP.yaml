@@ -160,3 +160,6 @@ search:
 dir: ltr
 adventures:
   title: 冒険
+participants:
+  add:
+    button: 参加者を追加

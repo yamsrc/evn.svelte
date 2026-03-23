@@ -10,10 +10,11 @@ export function getContext(): Context {
   return svelteGetContext(KEY)
 }
 
-export function createContext(value?: Partial<Value>): Context {
+export function createContext(id?: string, value?: Partial<Value>): Context {
   const created = value === undefined ? blank() : exact(value)
 
   return {
+    id,
     value: created,
     snapshot: JSON.stringify(created),
   }
@@ -38,11 +39,13 @@ function blank(draft?: Partial<Value>): Value {
 }
 
 export interface Props {
+  id?: string
   value?: Partial<Value>
   children: Snippet
 }
 
 export interface Context {
+  id?: string
   value: Value
   snapshot: string
 }

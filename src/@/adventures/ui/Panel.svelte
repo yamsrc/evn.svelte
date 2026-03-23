@@ -32,7 +32,7 @@
   <div class="relative z-10 flex h-full flex-col items-start gap-1.5 w-full justify-between">
     <Trim class={['font-bold text-base', textEllipsis()]}>{adventure.title}</Trim>
     {#if highlighted}
-      <Attention class="absolute top-0 end-0 z-10" />
+      <Attention class="absolute top-0 inset-e-0 z-10" />
     {/if}
 
     {#if link && full}

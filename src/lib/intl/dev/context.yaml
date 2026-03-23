@@ -23,6 +23,13 @@ inputs:
     picture:
       title:
         input: Picture
+    participants:
+      title:
+        input: Participants
+      managedContactsCreation:
+        input: Show managed contacts creation button
+      shareUrl:
+        input: Share URL
   transmission:
     title:
       input: Transmission
