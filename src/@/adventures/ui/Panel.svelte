@@ -30,7 +30,7 @@
   <Picture {adventure} class="absolute size-full inset-0 -z-1 object-cover" />
 
   <div class="relative z-10 flex h-full flex-col items-start gap-1.5 w-full justify-between">
-    <TextEllipsis class={['font-bold text-base leading-6']}>{adventure.title}</TextEllipsis>
+    <TextEllipsis class={['font-bold text-lg leading-6']}>{adventure.title}</TextEllipsis>
     {#if highlighted}
       <Attention class="absolute top-0 inset-e-0 z-10" />
     {/if}
@@ -40,8 +40,8 @@
         <Archived at={full.archivedAt} />
       {:else}
         <div class="grid grid-cols-2 gap-x-3 w-full text-start">
-          <span class="text-xs font-bold">{$dict.me}</span>
-          <span class="text-xs font-bold">{$dict.panel.total}</span>
+          <span class="text-sm font-bold">{$dict.me}</span>
+          <span class="text-sm font-bold">{$dict.panel.total}</span>
           <Coins amount={balance} sign="neutral" />
           <Coins amount={total} sign="neutral" />
         </div>

@@ -15,7 +15,7 @@
   const image = $derived(page.data.meta?.image ?? meta.image)
 
   onNavigate(navigate)
-  afterNavigate(track)
+  afterNavigate((nav) => track(nav, page.state))
 
   $effect(() => {
     document.dir = $dict.dir
