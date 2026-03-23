@@ -35,7 +35,6 @@
     "@sveltejs/vite-plugin-svelte": "6.2.4",
     "@tailwindcss/vite": "4.2.1",
     "@toa.io/origin": "1.18.0",
-    "@types/d3-force": "3.0.10",
     "@types/google.accounts": "0.0.18",
     "@types/negotiator": "0.6.4",
     "@types/node": "^24",

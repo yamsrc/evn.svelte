@@ -106,7 +106,7 @@
       return
     }
 
-    if (!dragging) return
+    if (!dragging || containerW <= 0 || containerH <= 0) return
 
     const dx = ((e.clientX - dragStart.x) / containerW) * (baseW / zoom)
     const dy = ((e.clientY - dragStart.y) / containerH) * (baseH / zoom)

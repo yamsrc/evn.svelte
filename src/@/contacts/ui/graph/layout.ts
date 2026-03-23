@@ -11,6 +11,7 @@ const CONNECTED_RADIUS = 6
 const ISOLATED_RADIUS = 4
 const COMPONENT_GAP = 3
 const MIN_ROW_WIDTH = 12
+const MAX_FALLBACK_RADIUS = 50
 
 const DIRS: Pos[] = [
   [1, 0],
@@ -87,6 +88,25 @@ function nearest(candidates: Pos[], ref: Pos = [0, 0]): Pos[] {
   unique.sort((a, b) => manhattan(a, ref) - manhattan(b, ref))
 
   return unique
+}
+
+/** Find nearest free slot in expanding rings around centers. */
+function freeSlot(
+  centers: Pos[],
+  occupied: Set<string>,
+  ref: Pos = [0, 0],
+  startRadius = CONNECTED_RADIUS,
+): Pos | undefined {
+  for (let r = startRadius; r <= MAX_FALLBACK_RADIUS; r += NODE_STEP) {
+    const slot = nearest(
+      centers.flatMap((c) => ring(c, r)),
+      ref,
+    ).find(([c, row]) => !occupied.has(posKey(c, row)))
+
+    if (slot !== undefined) return slot
+  }
+
+  return undefined
 }
 
 function centroid(nodes: GridNode[]): Pos {
@@ -185,12 +205,8 @@ export function layout(
       continue
     }
 
-    const center = centroid(allNodes)
-
-    const slot = nearest(
-      allNodes.flatMap((n) => ring([n.col, n.row], CONNECTED_RADIUS)),
-      center,
-    ).find(([c, r]) => !occupied.has(posKey(c, r)))
+    const centers: Pos[] = allNodes.map((n) => [n.col, n.row])
+    const slot = freeSlot(centers, occupied, centroid(allNodes))
 
     if (slot !== undefined) place(id, slot[0], slot[1])
   }
@@ -289,5 +305,17 @@ function solveComponent(
       if (place(id, cand, neighbors)) break
   }
 
-  return sorted.map((id) => [id, positions.get(id) ?? [0, 0]])
+  // fallback: place unresolved nodes at expanding distance from origin
+  for (const id of sorted) {
+    if (positions.has(id)) continue
+
+    const slot = freeSlot([[0, 0]], occupied, [0, 0], NODE_STEP)
+
+    if (slot !== undefined) {
+      positions.set(id, slot)
+      occupied.add(posKey(slot[0], slot[1]))
+    }
+  }
+
+  return sorted.map((id) => [id, positions.get(id)!])
 }
