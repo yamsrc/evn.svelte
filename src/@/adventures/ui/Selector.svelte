@@ -1,7 +1,8 @@
 <script lang="ts">
   import { ChartPie } from '@lucide/svelte'
   import { ok } from 'svas'
-  import { replaceState, goto } from '$app/navigation'
+  import { replaceState } from '$app/navigation'
+  import { replace } from '$com/history'
   import { buttonVariants } from '$ui/button'
   import { adventures } from '@/adventures'
   import Panel from './Panel.svelte'
@@ -22,7 +23,7 @@
     const state = { expense: { ...draft, attachments: [...draft.attachments] } }
 
     // if (index === 0) return replace('/expenses/editor/', state)
-    if (index === 0) return goto('/expenses/editor/', { replaceState: true, state })
+    if (index === 0) return replace('/expenses/editor/', state)
 
     const path = `/adventures/${active[index - 1].id}/expenses/editor/`
 
@@ -30,7 +31,7 @@
       replaceState(path, state)
       picked = index
       onchange?.(active[index - 1].id)
-    } else goto(path, { replaceState: true, state })
+    } else replace(path, state)
   }
 
   const card = 'shrink-0 overflow-hidden rounded-lg'
