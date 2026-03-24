@@ -13,5 +13,5 @@
 <svg width="100%" height="100%" {viewBox}>
   <Arrows {edges} {nodeMap} />
   <Debts {edges} {me} {debtBox} />
-  <Nodes {nodes} {members} {me} />
+  <Nodes {nodes} {members} {me} showNames={false} />
 </svg>

@@ -4,7 +4,7 @@
   import { D, FONT, NAME_Y } from './Nodes'
   import type { Props } from './Nodes'
 
-  const { nodes, members, me }: Props = $props()
+  const { nodes, members, me, showNames = true }: Props = $props()
 </script>
 
 {#each nodes as node (node.id)}
@@ -31,16 +31,18 @@
     {/if}
   </foreignObject>
 
-  <text
-    x={node.px}
-    y={node.py + R + NAME_Y}
-    text-anchor="middle"
-    font-size={FONT}
-    font-weight="bold"
-    class="fill-foreground"
-    stroke="var(--background)"
-    stroke-width="4"
-    paint-order="stroke">
-    {member?.name.split(' ')[0] ?? ''}
-  </text>
+  {#if showNames}
+    <text
+      x={node.px}
+      y={node.py + R + NAME_Y}
+      text-anchor="middle"
+      font-size={FONT}
+      font-weight="bold"
+      class="fill-foreground"
+      stroke="var(--background)"
+      stroke-width="4"
+      paint-order="stroke">
+      {member?.name.split(' ')[0] ?? ''}
+    </text>
+  {/if}
 {/each}

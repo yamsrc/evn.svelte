@@ -5,6 +5,7 @@ export interface Props {
   nodes: NodeView[]
   members: Map<string, Member>
   me?: string
+  showNames?: boolean
 }
 
 export const D = R * 2

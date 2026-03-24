@@ -94,7 +94,7 @@
 
     const accounts: AccountLike[] = Array.from({ length: count }, (_, i) => ({
       id: `r-${i}`,
-      name: `P${i + 1}`,
+      name: String(i + 1),
       picture: '',
     }))
 
