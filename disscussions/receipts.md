@@ -5,11 +5,13 @@
 - [x] Pending image
 - [x] Pending processing
 - [x] Ready (Continue)
-- [ ] Receipt screen
-  - [x] CRDT
-  - [x] Tail merging (diffs)
+- [x] CRDT
+- [x] Tail merging (diffs)
 - [ ] Pending state screen
 - [ ] Error state screen
+- [ ] Participants list
+- [ ] Add participants
+- [ ] Shared items (and item groups)
 
 ## Routes
 

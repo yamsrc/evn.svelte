@@ -127,6 +127,18 @@ export function claimedUnits(state: State, item: string): number {
   return count
 }
 
+/**
+ * Get the claiming identities for an item
+ */
+export function identities(state: State, identity: string, item: string, index: number): Identities {
+  const identities = state.identities.filter((identity) => itemClaimedBy(state, identity, item, index))
+
+  const me = identities.find((i) => i === identity)
+
+  if (me === undefined) return { hero: identities[0], crowd: identities.slice(1) }
+  else return { hero: me, crowd: identities.filter((identity) => identity !== me) }
+}
+
 let pending = false
 
 const MAX_ITERATIONS = 5
@@ -184,22 +196,6 @@ function toClaims(items: receipts.Item[]): Record<string, Claims> {
 
 function toMap(items: receipts.Item[]): Record<string, receipts.Item> {
   return Object.fromEntries(items.map((item) => [item.id, item]))
-}
-
-/**
- * Get the claiming identities for an item
- */
-export function identities(state: State, identity: string, item: string, index: number): Identities {
-  const identities = state.identities.filter((identity) => itemClaimedBy(state, identity, item, index))
-
-  const me = identities.find((i) => i === identity)
-
-  if (me === undefined) return { hero: identities[0], crowd: identities.slice(1) }
-  else return { hero: me, crowd: identities.filter((identity) => identity !== me) }
-}
-
-export function assigned(state: State, item: string, index: number): 0 | 1 | 2 {
-  return 0
 }
 
 /**
