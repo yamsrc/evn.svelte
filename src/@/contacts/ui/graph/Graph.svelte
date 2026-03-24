@@ -8,7 +8,7 @@
   import type { Member } from './Canvas'
   import type { Props } from './Graph'
 
-  const { contacts, accounts, class: classes }: Props = $props()
+  const { contacts, accounts, class: classes, showNames = false }: Props = $props()
 
   const me = $derived(ok($account) ? $account.id : undefined)
 
@@ -42,5 +42,12 @@
 </script>
 
 <Zoom contentW={scene.W} contentH={scene.H} pad={PAD} bind:viewBox class={classes}>
-  <Canvas {viewBox} nodes={scene.nodes} edges={scene.edges} {members} {me} step={scene.step} />
+  <Canvas
+    {viewBox}
+    nodes={scene.nodes}
+    edges={scene.edges}
+    {members}
+    {me}
+    step={scene.step}
+    {showNames} />
 </Zoom>

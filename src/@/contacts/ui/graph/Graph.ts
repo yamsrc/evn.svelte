@@ -12,6 +12,7 @@ export interface Props {
   contacts: ContactLike[]
   accounts: AccountLike[]
   class?: string
+  showNames?: boolean
 }
 
 export const PAD = 28
