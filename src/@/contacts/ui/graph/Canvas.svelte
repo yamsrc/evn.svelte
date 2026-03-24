@@ -4,7 +4,7 @@
   import Nodes from './Nodes.svelte'
   import type { Props } from './Canvas'
 
-  const { viewBox, nodes, edges, members, me, step }: Props = $props()
+  const { viewBox, nodes, edges, members, me, step, showNames = false }: Props = $props()
 
   const nodeMap = $derived(new Map(nodes.map((n) => [n.id, n])))
   const debtBox = $derived(step * 2)
@@ -13,5 +13,5 @@
 <svg width="100%" height="100%" {viewBox}>
   <Arrows {edges} {nodeMap} />
   <Debts {edges} {me} {debtBox} />
-  <Nodes {nodes} {members} {me} />
+  <Nodes {nodes} {members} {me} {showNames} />
 </svg>

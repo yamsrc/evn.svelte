@@ -25,6 +25,7 @@ export interface Props {
   members: Map<string, Member>
   me?: string
   step: number
+  showNames?: boolean
 }
 
 export const R = 16
