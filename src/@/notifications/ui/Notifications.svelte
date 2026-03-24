@@ -53,33 +53,25 @@
   let stack = $state<ReturnType<typeof Stack.Root> | undefined>()
 </script>
 
-{#snippet content()}
-  <Stack.Root bind:this={stack} {min} bind:collapsed>
-    <Stack.Toolbar class="flex justify-between text-muted-foreground px-5">
-      <Button variant="ghost" size="sm" onclick={clearAll}>
-        <Trash2 />
-        {$dict.erase}
-      </Button>
-      <Button variant="ghost" size="sm" onclick={() => stack?.collapse()}>
-        <ChevronsDownUp />
-      </Button>
-    </Stack.Toolbar>
-    {#each visible as { notification, component }, i (notification.id)}
-      <Stack.Item id={notification.id}>
-        <Notification bind:this={refs[i]} {notification} {component} {ondismiss} />
-      </Stack.Item>
-    {/each}
-  </Stack.Root>
-{/snippet}
-
 <div class="space-y-2">
   {#if renderable.length > 0}
-    {#if collapsed && stacked}
-      <Dismissable ondismiss={clearAll}>
-        {@render content()}
-      </Dismissable>
-    {:else}
-      {@render content()}
-    {/if}
+    <Dismissable ondismiss={clearAll} dismissable={collapsed && stacked}>
+      <Stack.Root bind:this={stack} {min} bind:collapsed>
+        <Stack.Toolbar class="flex justify-between text-muted-foreground px-5">
+          <Button variant="ghost" size="sm" onclick={clearAll}>
+            <Trash2 />
+            {$dict.erase}
+          </Button>
+          <Button variant="ghost" size="sm" onclick={() => stack?.collapse()}>
+            <ChevronsDownUp />
+          </Button>
+        </Stack.Toolbar>
+        {#each visible as { notification, component }, i (notification.id)}
+          <Stack.Item id={notification.id}>
+            <Notification bind:this={refs[i]} {notification} {component} {ondismiss} />
+          </Stack.Item>
+        {/each}
+      </Stack.Root>
+    </Dismissable>
   {/if}
 </div>
