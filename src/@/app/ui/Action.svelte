@@ -1,11 +1,10 @@
 <script lang="ts">
   import { Button } from '$ui/button'
-  import { cn } from '$lib/utils'
-  import { defaults, type Props } from './Action'
+  import { actionVariants, type Props } from './Action'
 
-  const { children, size = defaults.size, class: classes, ...props }: Props = $props()
+  const { children, ...props }: Props = $props()
 </script>
 
-<Button {size} class={cn('[&_span]:sr-only', defaults.class, classes)} {...props}>
+<Button class={actionVariants(props)}>
   {@render children?.()}
 </Button>
