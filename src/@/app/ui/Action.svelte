@@ -1,10 +1,10 @@
 <script lang="ts">
   import { Button } from '$ui/button'
-  import { actionVariants, type Props } from './Action'
+  import { defaults, type Props } from './Action'
 
-  const { children, ...props }: Props = $props()
+  const { children, class: classes, ...props }: Props = $props()
 </script>
 
-<Button class={actionVariants(props)}>
+<Button class={[defaults.class, classes]} {...props}>
   {@render children?.()}
 </Button>
