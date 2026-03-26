@@ -6,12 +6,20 @@
 </script>
 
 <script lang="ts">
-  import { ChevronsUpDown, CircleDashed } from '@lucide/svelte'
+  import { ChevronsUpDown, CircleCheckBig, CircleDashed } from '@lucide/svelte'
   import { Coins } from '@/app/ui'
   import { Asyvatar } from '@/accounts/ui'
   import * as Item from '$ui/item'
   import { group, type Unit } from './groups'
-  import { store, sync, toggle, identities, toggleAll, groupClaimedBy } from './claims'
+  import {
+    store,
+    sync,
+    toggle,
+    unitIdentities,
+    itemIdentities,
+    toggleAll,
+    groupClaimedBy,
+  } from './claims'
   import Stack from './Stack.svelte'
   import { sign, type Props } from './Items'
 
@@ -24,22 +32,32 @@
 {#snippet card(unit: Unit, index = 0, quantity?: number)}
   <Item.Root class="w-full">
     {#snippet child({ props: { class: classes, ...rest } })}
-      {@const faces = identities($store, actor, unit.item, index)}
+      {@const faces =
+        quantity === undefined
+          ? unitIdentities($store, unit.item, index)
+          : itemIdentities($store, unit)}
       <button
         {...rest}
-        class={['text-start', classes]}
+        class={['text-start hover:bg-accent', classes]}
         onclick={() => toggle(actor, unit.item, index)}>
         <Item.Media class="w-5">
           {#if quantity}
             <ChevronsUpDown {...iconProps} />
-          {:else if faces.hero}
-            <Asyvatar identity={faces.hero} size={24} />
+          {:else if faces.length > 0}
+            <CircleCheckBig size={16} class="text-constructive" />
           {:else}
             <CircleDashed {...iconProps} />
           {/if}
         </Item.Media>
-        <Item.Content>
+        <Item.Content class="flex flex-row flex-wrap items-center gap-2">
           <Item.Title>{unit.display}</Item.Title>
+          {#if faces.length > 0}
+            <div class="flex flex-row flex-nowrap items-center [&>*:not(:last-child)]:-mr-[8px]">
+              {#each faces as identity (identity)}
+                <Asyvatar {identity} size={24} class="ring-1 ring-accent-foreground/50" />
+              {/each}
+            </div>
+          {/if}
         </Item.Content>
         <Item.Actions>
           <Coins

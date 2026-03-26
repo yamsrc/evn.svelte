@@ -9,8 +9,10 @@
 - [x] Tail merging (diffs)
 - [ ] Pending state screen
 - [ ] Error state screen
-- [ ] Participants list
-- [ ] Add participants
+- [x] Participants list
+- [x] Add participants
+- [ ] Leave receipt
+- [ ] Select actor
 - [ ] Shared items (and item groups)
 
 ## Routes

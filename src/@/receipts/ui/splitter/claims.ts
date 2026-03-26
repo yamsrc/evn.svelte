@@ -18,6 +18,7 @@ Have fun.
 
 import { get, writable, type Writable } from 'svelte/store'
 import * as receipts from '@/receipts'
+import type { Unit } from './groups'
 
 export const store: Writable<State> = writable({ id: '', version: 0, identities: [], items: {}, persistent: {}, transient: {} })
 
@@ -130,13 +131,21 @@ export function claimedUnits(state: State, item: string): number {
 /**
  * Get the claiming identities for an item
  */
-export function identities(state: State, identity: string, item: string, index: number): Identities {
-  const identities = state.identities.filter((identity) => itemClaimedBy(state, identity, item, index))
+export function itemIdentities(state: State, item: Unit): string[] {
+  return state.identities.filter((identity) => {
+    for (let i = 0; i < item.quantity; i++)
+      if (itemClaimedBy(state, identity, item.item, i))
+        return true
 
-  const me = identities.find((i) => i === identity)
+    return false
+  })
+}
 
-  if (me === undefined) return { hero: identities[0], crowd: identities.slice(1) }
-  else return { hero: me, crowd: identities.filter((identity) => identity !== me) }
+/**
+ * Get the claiming identities for an item
+ */
+export function unitIdentities(state: State, item: string, index: number): string[] {
+  return state.identities.filter((identity) => itemClaimedBy(state, identity, item, index))
 }
 
 let pending = false
@@ -267,9 +276,4 @@ export interface Claims {
 interface Claim {
   value: boolean | null
   settled: boolean
-}
-
-interface Identities {
-  hero: string
-  crowd: string[]
 }
