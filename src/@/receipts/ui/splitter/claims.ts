@@ -157,7 +157,7 @@ async function claim(state: State, identity: string, iteration = 0): Promise<voi
     return
 
   if (iteration === MAX_ITERATIONS) {
-    console.warn('Infinite loop protection triggered', { state, identity })
+    console.warn('Infinite loop protection', { state, identity })
     pending = false
 
     return
@@ -165,10 +165,16 @@ async function claim(state: State, identity: string, iteration = 0): Promise<voi
 
   pending = true
 
-  await receipts.claim(state.id, {
+  const result = await receipts.claim(state.id, {
     identity,
     claims: extract(state, identity),
   })
+
+  if (result instanceof Error) {
+    pending = false
+
+    return
+  }
 
   // receipts store got updated in the `receipts.claim` call
   const updated = get(store)
