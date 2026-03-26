@@ -1,10 +1,8 @@
 <script lang="ts">
-  import { Editor } from '@/expenses/ui'
   import { Participants } from '@/app/ui'
-
-  const ctx = Editor.getContext()
+  import { dict } from '$lib/intl'
 </script>
 
 <Participants.Selector
-  title={ctx.value.title}
+  title={$dict.expenses.participants.title}
   options={{ managedContactsCreation: true }} />
