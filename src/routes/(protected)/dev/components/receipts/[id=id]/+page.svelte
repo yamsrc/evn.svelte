@@ -25,8 +25,8 @@
       </Section>
     {/if}
 
-    <Section>
-      <Splitter {receipt} actor={account} />
+    <Section class="overflow-visible">
+      <Splitter {receipt} {account} />
     </Section>
   {/snippet}
 </Async>
