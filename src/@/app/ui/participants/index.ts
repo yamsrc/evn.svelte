@@ -13,7 +13,9 @@
  *
  * Store = one-shot message bus between routes.
  */
+
 export { default as Add } from './Add.svelte'
+export { default as Button } from './Button.svelte'
 export { default as Selector } from './Selector.svelte'
 import type { ParticipantsOptions } from './Selector'
 

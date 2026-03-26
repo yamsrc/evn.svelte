@@ -5,6 +5,8 @@ import type { Invitation } from './Invitation'
 
 const receipts = origin.resource<Receipt>('/receipts/', { credentials: 'include' })
 
+type Workflow = Faulty<{ create: { id: string, picture: string } }>
+
 export async function post(
   identity: string,
   file: File,
@@ -19,6 +21,16 @@ export async function get(identity: string): Promise<Receipt[] | Error> {
   return await receipts.json<Receipt[]>(identity)
 }
 
+export interface ReceiptPut {
+  identity: string
+  claims: ClaimsChangeset
+  done?: boolean
+}
+
+export interface ReceiptPost {
+  participants: string[]
+}
+
 export const receipt = {
   get: async (identity: string, id: string): Promise<Receipt | Error> => {
     return await receipts.json<Receipt>(`${identity}/${id}`)
@@ -30,17 +42,16 @@ export const receipt = {
       body,
     })
   },
+
+  post: async (identity: string, id: string, body: ReceiptPost): Promise<Receipt | Error> => {
+    return await receipts.json<Receipt>(`${identity}/${id}`, {
+      method: 'POST',
+      body,
+    })
+  },
 }
 
 export type ClaimsChangeset = Record<string, Array<boolean | null>>
-
-export interface ReceiptPut {
-  identity: string
-  claims: ClaimsChangeset
-  done?: boolean
-}
-
-type Workflow = Faulty<{ create: { id: string, picture: string } }>
 
 export const invitations = {
   resource: origin.resource<Invitation>('/receipts/invitations/'),

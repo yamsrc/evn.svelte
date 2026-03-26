@@ -22,6 +22,7 @@
         'min-w-20 max-w-32 h-20 flex flex-col items-center justify-center',
         'disabled:opacity-100',
         selected && 'bg-accent ring-2 ring-muted-foreground/50',
+        'starting:opacity-0 duration-200',
       ]}
       disabled={identity === actor}>
       <Async store={accounts.get(identity)}>
