@@ -1,6 +1,7 @@
 import ts from 'typescript-eslint'
 import neostandard from 'neostandard'
 import globals from 'globals'
+import unusedImports from 'eslint-plugin-unused-imports'
 import svelte from 'eslint-plugin-svelte'
 import importPlugin from 'eslint-plugin-import'
 import tsPlugin from '@typescript-eslint/eslint-plugin'
@@ -20,6 +21,7 @@ export default [
     plugins: {
       import: importPlugin,
       '@typescript-eslint': tsPlugin,
+      'unused-imports': unusedImports,
     },
   },
   ...svelte.configs['flat/recommended'],
@@ -56,6 +58,16 @@ export default [
         anonymous: 'never',
       }],
       'arrow-parens': ['error', 'always'],
+      'no-unused-vars': 'off',
+      'unused-imports/no-unused-imports': 'error',
+      'unused-imports/no-unused-vars': [
+        'warn',
+        {
+          vars: 'all',
+          varsIgnorePattern: '^_',
+          args: 'after-used',
+          argsIgnorePattern: '^_',
+        }],
       '@stylistic/padding-line-between-statements': [
         'error',
         {
