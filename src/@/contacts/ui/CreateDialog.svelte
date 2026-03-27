@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { UserPlus } from '@lucide/svelte'
+  import { UserPen } from '@lucide/svelte'
   import { add } from '@/contacts'
   import * as Cosmetics from '@/app/ui/cosmetics'
   import { pickpic } from '@/accounts'
@@ -46,7 +46,7 @@
 
 <Dialog.Root bind:open>
   <Dialog.Trigger id="expenses-add-participants-create-button" class={classes}>
-    <UserPlus />
+    <UserPen />
     <span>{$dict.actions.create}</span>
   </Dialog.Trigger>
   <Dialog.Content>

@@ -13,8 +13,7 @@
     unsafe ||
       'pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)] pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)]',
     classes,
-  )}
->
+  )}>
   <div class="flex-1 flex flex-col space-y-5 pt-2">
     {@render children()}
   </div>

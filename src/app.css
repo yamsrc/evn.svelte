@@ -162,8 +162,15 @@
     letter-spacing: var(--tracking-normal);
   }
 }
+
 @custom-variant standalone {
   @media (display-mode: standalone) {
+    @slot;
+  }
+}
+
+@custom-variant tim {
+  @supports (-webkit-touch-callout: none) and (not (hover: hover)) {
     @slot;
   }
 }

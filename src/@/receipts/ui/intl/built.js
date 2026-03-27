@@ -14,7 +14,8 @@ export const dictionaries = {
     },
     "delete": {
       "label": "اضغط مطولاً للحذف"
-    }
+    },
+    "me": "أنا"
   },
   "de-DE": {
     "splitter": {
@@ -28,7 +29,8 @@ export const dictionaries = {
     },
     "delete": {
       "label": "Zum Löschen halten"
-    }
+    },
+    "me": "Ich"
   },
   "en-US": {
     "splitter": {
@@ -42,7 +44,8 @@ export const dictionaries = {
     },
     "delete": {
       "label": "Hold to delete"
-    }
+    },
+    "me": "Me"
   },
   "es-ES": {
     "splitter": {
@@ -56,7 +59,8 @@ export const dictionaries = {
     },
     "delete": {
       "label": "Mantener para eliminar"
-    }
+    },
+    "me": "Yo"
   },
   "fr-FR": {
     "splitter": {
@@ -70,7 +74,8 @@ export const dictionaries = {
     },
     "delete": {
       "label": "Maintenir pour supprimer"
-    }
+    },
+    "me": "Moi"
   },
   "hi-IN": {
     "splitter": {
@@ -84,7 +89,8 @@ export const dictionaries = {
     },
     "delete": {
       "label": "हटाने के लिए दबाकर रखें"
-    }
+    },
+    "me": "मैं"
   },
   "it-IT": {
     "splitter": {
@@ -98,7 +104,8 @@ export const dictionaries = {
     },
     "delete": {
       "label": "Tieni premuto per eliminare"
-    }
+    },
+    "me": "Me"
   },
   "ja-JP": {
     "splitter": {
@@ -112,7 +119,8 @@ export const dictionaries = {
     },
     "delete": {
       "label": "長押しで削除"
-    }
+    },
+    "me": "私"
   },
   "ko-KR": {
     "splitter": {
@@ -126,7 +134,8 @@ export const dictionaries = {
     },
     "delete": {
       "label": "길게 눌러서 삭제"
-    }
+    },
+    "me": "나"
   },
   "nl-NL": {
     "splitter": {
@@ -140,7 +149,8 @@ export const dictionaries = {
     },
     "delete": {
       "label": "Vasthouden om te verwijderen"
-    }
+    },
+    "me": "Ik"
   },
   "ru-RU": {
     "splitter": {
@@ -154,7 +164,8 @@ export const dictionaries = {
     },
     "delete": {
       "label": "Удерживайте для удаления"
-    }
+    },
+    "me": "Я"
   },
   "sw-TZ": {
     "splitter": {
@@ -168,7 +179,8 @@ export const dictionaries = {
     },
     "delete": {
       "label": "Shikilia kufuta"
-    }
+    },
+    "me": "Mimi"
   },
   "tr-TR": {
     "splitter": {
@@ -182,7 +194,8 @@ export const dictionaries = {
     },
     "delete": {
       "label": "Silmek için basılı tutun"
-    }
+    },
+    "me": "Ben"
   },
   "uk-UA": {
     "splitter": {
@@ -196,7 +209,8 @@ export const dictionaries = {
     },
     "delete": {
       "label": "Утримуйте для видалення"
-    }
+    },
+    "me": "Я"
   },
   "zh-CN": {
     "splitter": {
@@ -210,7 +224,8 @@ export const dictionaries = {
     },
     "delete": {
       "label": "长按删除"
-    }
+    },
+    "me": "我"
   }
 };
 /** @type {import("./types").Locale[]} */

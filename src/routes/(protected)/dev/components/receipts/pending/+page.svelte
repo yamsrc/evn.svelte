@@ -13,11 +13,11 @@
   {#if $progress === null}
     <Goto href=".." />
   {:else}
-    {#if $progress.status === 'uploading' || $progress.status === 'creating'}
-      <Attachments />
-    {:else if $progress.status === 'processing' || $progress.status === 'ready'}
-      <Attachments attachments={[$progress.picture]} />
-    {/if}
+    {@const attachments =
+      $progress.status === 'uploading' || $progress.status === 'creating'
+        ? undefined
+        : [$progress.picture]}
+    <Attachments {attachments} class="rounded-md overflow-clip" />
     <div class="flex justify-center items-center">
       {#if $progress.status === 'ready'}
         <Check class="size-4 text-constructive" />

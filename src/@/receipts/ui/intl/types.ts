@@ -21,4 +21,5 @@ export type Dictionary = {
       delete: {
         label: string
       }
+      me: string
     }

@@ -15,3 +15,5 @@ inputs:
     label:
       input: Hold to delete
       context: button label, if it's too long, then just Delete
+  me:
+    input: Me

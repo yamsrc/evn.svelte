@@ -146,13 +146,11 @@
     <Share class={actionVariants({ variant: 'secondary', class: 'flex-1' })} data={invitation} />
     <QR class={actionVariants({ variant: 'secondary', class: 'flex-1' })} text={invitation.url} />
   {/if}
-  {#if options.managedContactsCreation}
-    <CreateDialog
-      class={actionVariants({
-        variant: 'secondary',
-        class: 'flex-1 [&_span]:hidden',
-      })} />
-  {/if}
+  <CreateDialog
+    class={actionVariants({
+      variant: 'secondary',
+      class: 'flex-1 [&_span]:hidden',
+    })} />
   <Action id="participants-selector-add-button" disabled={!selected} onclick={addMembers}>
     <Check />
     <span>{$dict.actions.addSelected}</span>

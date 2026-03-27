@@ -17,11 +17,11 @@
 export { default as Add } from './Add.svelte'
 export { default as Button } from './Button.svelte'
 export { default as Selector } from './Selector.svelte'
-import type { ParticipantsOptions } from './Selector'
+import type { Options } from './Selector'
 
 export interface ParticipantsState {
   identities: string[]
-  options?: ParticipantsOptions
+  options?: Options
 }
 
-export type { ParticipantsOptions } from './Selector'
+export type { Options as ParticipantsOptions } from './Selector'

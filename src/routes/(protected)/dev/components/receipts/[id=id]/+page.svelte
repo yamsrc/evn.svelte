@@ -37,7 +37,7 @@
       </Section>
     {/if}
 
-    <Section class="overflow-visible">
+    <Section>
       <Splitter bind:this={splitter} {receipt} {account} />
     </Section>
   {/snippet}

@@ -8,12 +8,13 @@
   import { Button } from '$ui/button'
   import { TextEllipsis } from '$com/text-ellipsis'
   import { Scrollable } from '$com/scrollable'
+  import { dict } from '../intl'
   import type { Props } from './Participants'
 
   let { receipt, account, actor = $bindable(''), class: classes }: Props = $props()
 
   // current user first
-  const identities = $derived(receipt.identities.toSorted((a, b) => (a === account.id ? -1 : 1)))
+  const identities = $derived(receipt.identities.toSorted((a) => (a === account.id ? -1 : 1)))
 
   function select(identity: string) {
     actor = identity
@@ -54,9 +55,15 @@
       disabled={identity === actor}
       onclick={() => select(identity)}>
       <Async store={accounts.get(identity)}>
-        {#snippet awaited(account)}
-          <Avatar {account} />
-          <TextEllipsis>{account.name}</TextEllipsis>
+        {#snippet awaited(participant)}
+          <Avatar account={participant} />
+          <TextEllipsis>
+            {#if identity === account.id}
+              {$dict.me}
+            {:else}
+              {participant.name}
+            {/if}
+          </TextEllipsis>
         {/snippet}
       </Async>
     </Button>

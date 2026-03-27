@@ -4,7 +4,12 @@
   import Button from '$ui/button/button.svelte'
   import type { Props } from './Attachments'
 
-  let { attachments = $bindable([]), path = '/expenses/attachments/', editable }: Props = $props()
+  let {
+    attachments = $bindable([]),
+    path = '/expenses/attachments/',
+    editable,
+    class: classes,
+  }: Props = $props()
 
   function filter(id: string) {
     attachments = attachments.filter((attachment) => attachment !== id)
@@ -12,7 +17,10 @@
 </script>
 
 <div
-  class="bg-accent flex justify-center p-4 overflow-x-auto overscroll-x-contain touch-pan-x no-scrollbar">
+  class={[
+    'bg-accent flex justify-center p-4 overflow-x-auto overscroll-x-contain touch-pan-x no-scrollbar',
+    classes,
+  ]}>
   <div class="flex gap-3 h-[300px]">
     {#each attachments as attachment (attachment)}
       <div
