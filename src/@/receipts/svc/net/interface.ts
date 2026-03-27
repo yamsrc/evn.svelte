@@ -49,6 +49,12 @@ export const receipt = {
       body,
     })
   },
+
+  del: async (identity: string, id: string, actor: string): Promise<Receipt | Error> => {
+    return await receipts.json<Receipt>(`${identity}/${id}/${actor}`, {
+      method: 'DELETE',
+    })
+  },
 }
 
 export type ClaimsChangeset = Record<string, Array<boolean | null>>

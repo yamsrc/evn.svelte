@@ -2,3 +2,7 @@ splitter:
   stack:
     claim: المطالبة بالجميع
     release: إفلات
+leave:
+  label: اضغط مطولًا للمغادرة
+delete:
+  label: اضغط مطولاً للحذف

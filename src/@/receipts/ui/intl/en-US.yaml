@@ -2,3 +2,7 @@ splitter:
   stack:
     claim: Claim all
     release: Release
+leave:
+  label: Hold to leave
+delete:
+  label: Hold to delete

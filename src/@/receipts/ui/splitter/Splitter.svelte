@@ -8,10 +8,16 @@
 
   // svelte-ignore state_referenced_locally
   let actor = $state(account.id)
+
+  export function leave() {
+    return participants?.remove()
+  }
+
+  let participants = $state<Participants | undefined>(undefined)
 </script>
 
 <div class="space-y-4">
-  <Participants {receipt} {account} bind:actor />
+  <Participants bind:this={participants} {receipt} {account} bind:actor />
   <Items {receipt} {actor} />
 </div>
 

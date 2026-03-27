@@ -7,3 +7,11 @@ inputs:
       release:
         input: Release
         context: button label, release something being holded
+  leave:
+    label:
+      input: Hold to leave
+      context: button label, if it's too long, then just Leave
+  delete:
+    label:
+      input: Hold to delete
+      context: button label, if it's too long, then just Delete

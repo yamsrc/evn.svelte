@@ -1,4 +1,4 @@
-import type { ClassValue } from 'tailwind-variants'
+import type { ClassValue } from 'svelte/elements'
 import type { Attachment } from 'svelte/attachments'
 import type { Snippet } from 'svelte'
 

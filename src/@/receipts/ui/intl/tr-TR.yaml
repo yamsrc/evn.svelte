@@ -2,3 +2,7 @@ splitter:
   stack:
     claim: Hepsini al
     release: Bırak
+leave:
+  label: Ayrılmak için basılı tut
+delete:
+  label: Silmek için basılı tutun

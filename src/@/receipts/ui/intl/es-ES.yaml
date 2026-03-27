@@ -2,3 +2,7 @@ splitter:
   stack:
     claim: Reclamar todo
     release: Soltar
+leave:
+  label: Mantén pulsado para salir
+delete:
+  label: Mantener para eliminar

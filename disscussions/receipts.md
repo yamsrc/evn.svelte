@@ -8,7 +8,7 @@
 - [x] CRDT
 - [x] Tail merging (diffs)
 - [ ] Pending state screen
-- [ ] Error state screen
+- [ ] Error state screen (+non-receipts)
 - [x] Participants list
 - [x] Add participants
 - [ ] Leave receipt

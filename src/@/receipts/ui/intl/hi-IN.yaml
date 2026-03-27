@@ -2,3 +2,7 @@ splitter:
   stack:
     claim: सभी प्राप्त करें
     release: छोड़ें
+leave:
+  label: छोड़ने के लिए दबाए रखें
+delete:
+  label: हटाने के लिए दबाकर रखें

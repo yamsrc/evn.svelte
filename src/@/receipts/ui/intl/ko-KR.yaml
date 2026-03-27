@@ -2,3 +2,7 @@ splitter:
   stack:
     claim: 모두 받기
     release: 놓기
+leave:
+  label: 길게 눌러 나가기
+delete:
+  label: 길게 눌러서 삭제

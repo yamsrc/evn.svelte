@@ -2,3 +2,7 @@ splitter:
   stack:
     claim: すべて受け取る
     release: 離す
+leave:
+  label: 長押しで退出
+delete:
+  label: 長押しで削除
