@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { sync } from './store'
   import Progress from './Progress.svelte'
   import Participants from './Participants.svelte'
   import Items from './Items.svelte'
@@ -15,6 +16,8 @@
   }
 
   let participants = $state<Participants | undefined>(undefined)
+
+  $effect(() => sync(receipt))
 </script>
 
 <div class="space-y-4">

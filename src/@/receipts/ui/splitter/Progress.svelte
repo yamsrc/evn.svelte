@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Progress } from '$ui/progress'
-  import { store } from './claims'
+  import { store } from './store'
   import { progress } from './Progress'
 
   const value = $derived(progress($store))

@@ -1,4 +1,5 @@
-import { claimedUnits, type State } from './claims'
+import { claimedUnits } from './claims'
+import type { State } from './store'
 
 export function progress(state: State): number {
   const items = Object.values(state.items)

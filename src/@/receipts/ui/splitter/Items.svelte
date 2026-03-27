@@ -10,23 +10,14 @@
   import { Coins } from '@/app/ui'
   import { Asyvatar } from '@/accounts/ui'
   import * as Item from '$ui/item'
+  import { store } from './store'
   import { group, type Unit } from './groups'
-  import {
-    store,
-    sync,
-    toggle,
-    unitIdentities,
-    itemIdentities,
-    toggleAll,
-    groupClaimedBy,
-  } from './claims'
+  import { toggle, unitIdentities, itemIdentities, toggleAll, groupClaimedBy } from './claims'
   import Stack from './Stack.svelte'
   import { sign, type Props } from './Items'
 
   const { receipt, actor }: Props = $props()
   const groups = $derived(group(receipt.items))
-
-  $effect(() => sync(receipt))
 </script>
 
 {#snippet card(unit: Unit, index = 0, quantity?: number)}
