@@ -42,7 +42,7 @@
           position="left"
           label={$dict.actions.holdToLogout}
           class="text-destructive">
-          <LogOut class="size-5" />
+          <LogOut />
         </Hold>
       </Header.Actions>
     </Header.Root>

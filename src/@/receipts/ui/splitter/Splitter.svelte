@@ -17,10 +17,14 @@
 
   let participants = $state<Participants | undefined>(undefined)
 
-  $effect(() => sync(receipt))
+  $effect(() => {
+    sync(receipt)
+
+    if (!receipt.identities.includes(actor)) actor = account.id
+  })
 </script>
 
-<div class="space-y-4">
+<div class="space-y-2">
   <div
     class={['z-10 sticky top-4 tim:top-[env(safe-area-inset-top)]', 'space-y-2']}
     style="view-transition-name: splitter-header;">

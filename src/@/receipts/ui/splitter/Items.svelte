@@ -6,6 +6,7 @@
 </script>
 
 <script lang="ts">
+  import { onMount } from 'svelte'
   import { ChevronsUpDown, CircleCheckBig, CircleDashed } from '@lucide/svelte'
   import { Coins } from '@/app/ui'
   import { Asyvatar } from '@/accounts/ui'
@@ -18,6 +19,10 @@
 
   const { receipt, actor }: Props = $props()
   const groups = $derived(group(receipt.items))
+
+  let mounted = $state(false)
+
+  onMount(() => (mounted = true))
 </script>
 
 {#snippet card(unit: Unit, index = 0, quantity?: number)}
@@ -35,17 +40,23 @@
           {#if quantity}
             <ChevronsUpDown {...iconProps} />
           {:else if faces.length > 0}
-            <CircleCheckBig size={16} class="text-constructive" />
+            <CircleCheckBig {...iconProps} />
           {:else}
             <CircleDashed {...iconProps} />
           {/if}
         </Item.Media>
-        <Item.Content class="flex flex-row flex-wrap items-center gap-2">
+        <Item.Content class="flex flex-row flex-wrap items-centerd gap-2">
           <Item.Title>{unit.display}</Item.Title>
           {#if faces.length > 0}
             <div class="flex flex-row flex-nowrap items-center [&>*:not(:last-child)]:-mr-[8px]">
               {#each faces as identity (identity)}
-                <Asyvatar {identity} size={24} class="ring-1 ring-accent-foreground/50" />
+                <Asyvatar
+                  {identity}
+                  size={24}
+                  class={[
+                    'ring-1 ring-accent-foreground/50',
+                    mounted && 'starting:scale-0 duration-150',
+                  ]} />
               {/each}
             </div>
           {/if}

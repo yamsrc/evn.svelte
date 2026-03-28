@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Async, combined } from 'svas'
-  import { Splitter, Leave } from '@/receipts/ui'
+  import { Splitter, Leave, Reset } from '@/receipts/ui'
   import { receipts } from '@/receipts'
   import { account } from '@/iam'
   import { Header, Section } from '@/app/ui'
@@ -31,6 +31,7 @@
             {/if}
           </div>
           <Header.Actions>
+            <Reset {id} />
             <Leave {receipt} onclick={onleave} />
           </Header.Actions>
         </Header.Root>

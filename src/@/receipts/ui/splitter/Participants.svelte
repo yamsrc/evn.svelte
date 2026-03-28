@@ -3,13 +3,15 @@
   import { onMount } from 'svelte'
   import { Async } from 'svas'
   import { leave } from '@/receipts'
+  import { Coins } from '@/app/ui'
   import { Avatar } from '@/accounts/ui'
   import { accounts } from '@/accounts'
   import { Button } from '$ui/button'
   import { TextEllipsis } from '$com/text-ellipsis'
   import { Scrollable } from '$com/scrollable'
   import { dict } from '../intl'
-  import type { Props } from './Participants'
+  import { store } from './store'
+  import { claimedCostBy, type Props } from './Participants'
 
   let { receipt, account, actor = $bindable(''), class: classes }: Props = $props()
 
@@ -40,13 +42,15 @@
   onMount(() => (mounted = true))
 </script>
 
-<Scrollable bleed class={['gap-1 py-1', classes]}>
+<Scrollable bleed class={['gap-1 pt-1 pb-8', classes]}>
   {#each identities as identity (identity)}
     {@const selected = identity === actor}
+    {@const cost = claimedCostBy($store, identity)}
     <Button
       variant="outline"
       class={[
-        'min-w-20 max-w-32 h-20 flex flex-col items-center justify-center',
+        'relative',
+        'min-w-20 max-w-32 h-fit flex flex-col items-center justify-center gap-1',
         'disabled:opacity-100 transition-all',
         selected && 'bg-accent! ring-2 ring-accent-foreground/20',
         mounted && 'starting:scale-0 duration-300',
@@ -66,6 +70,14 @@
           </TextEllipsis>
         {/snippet}
       </Async>
+      <div
+        class={[
+          'absolute -bottom-8',
+          'py-1 px-2 rounded-lg bg-background border border-muted-foreground/20',
+          'text-xs',
+        ]}>
+        <Coins amount={cost} />
+      </div>
     </Button>
   {/each}
 </Scrollable>

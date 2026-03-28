@@ -21,7 +21,7 @@ import * as receipts from '@/receipts'
 import { store, ensure, type State } from './store'
 import type { Unit } from './groups'
 
-export function itemClaimedBy(state: State, identity: string, item: string, index: number): boolean {
+export function unitClaimedBy(state: State, identity: string, item: string, index: number): boolean {
   const transient = state.transient[identity]?.[item]?.[index]
   const persistent = state.persistent[identity]?.[item]?.[index]?.value
 
@@ -86,7 +86,7 @@ export function toggleAll(identity: string, item: string, on: boolean): void {
  * Check if a unit is claimed by anyone
  */
 export function unitClaimed(state: State, item: string, index: number): boolean {
-  return state.identities.some((identity) => itemClaimedBy(state, identity, item, index))
+  return state.identities.some((identity) => unitClaimedBy(state, identity, item, index))
 }
 
 /**
@@ -113,7 +113,7 @@ export function claimedUnits(state: State, item: string): number {
 export function itemIdentities(state: State, item: Unit): string[] {
   return state.identities.filter((identity) => {
     for (let i = 0; i < item.quantity; i++)
-      if (itemClaimedBy(state, identity, item.item, i))
+      if (unitClaimedBy(state, identity, item.item, i))
         return true
 
     return false
@@ -124,7 +124,7 @@ export function itemIdentities(state: State, item: Unit): string[] {
  * Get the claiming identities for an item
  */
 export function unitIdentities(state: State, item: string, index: number): string[] {
-  return state.identities.filter((identity) => itemClaimedBy(state, identity, item, index))
+  return state.identities.filter((identity) => unitClaimedBy(state, identity, item, index))
 }
 
 let pending = false

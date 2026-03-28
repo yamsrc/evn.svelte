@@ -65,3 +65,11 @@ export const invitations = {
   del: (id: string) =>
     invitations.resource.json(id, { method: 'DELETE', credentials: 'include' }),
 }
+
+export const claims = {
+  del: async (identity: string, id: string): Promise<Receipt | Error> => {
+    return await receipts.json<Receipt>(`${identity}/${id}/claims`, {
+      method: 'DELETE',
+    })
+  },
+}
