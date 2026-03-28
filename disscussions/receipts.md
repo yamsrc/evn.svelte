@@ -13,6 +13,7 @@
 - [x] Select actor
 - [x] Shared items (and item groups)
 - [ ] Mark as Done
+- [ ] Split taxes
 - [ ] Pending state screen
 - [ ] Error state screen (+non-receipts)
 

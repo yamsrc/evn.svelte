@@ -34,4 +34,4 @@
   <Items {receipt} {actor} />
 </div>
 
-<Actions {receipt} />
+<Actions {receipt} {actor} />

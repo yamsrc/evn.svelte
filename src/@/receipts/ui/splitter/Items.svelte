@@ -34,8 +34,9 @@
           : itemIdentities($store, unit)}
       <button
         {...rest}
-        class={['text-start hover:bg-accent', classes]}
-        onclick={() => toggle(actor, unit.item, index)}>
+        class={['text-start not-disabled:hover:bg-accent', classes]}
+        onclick={() => toggle(actor, unit.item, index)}
+        disabled={receipt.done[actor] === true}>
         <Item.Media class="w-5">
           {#if quantity}
             <ChevronsUpDown {...iconProps} />

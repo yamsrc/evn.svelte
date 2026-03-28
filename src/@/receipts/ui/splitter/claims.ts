@@ -131,6 +131,9 @@ let pending = false
 
 const MAX_ITERATIONS = 5
 
+/**
+ * Claim the state for an identity
+ */
 async function claim(state: State, identity: string, iteration = 0): Promise<void> {
   if (pending && iteration === 0)
     return
@@ -155,7 +158,7 @@ async function claim(state: State, identity: string, iteration = 0): Promise<voi
     return
   }
 
-  // receipts store got updated in the `receipts.claim` call
+  // receipts store got updated in the `receipts.claim()` call
   const updated = get(store)
   const drifted = drift(updated, identity)
 
@@ -168,22 +171,48 @@ async function claim(state: State, identity: string, iteration = 0): Promise<voi
 /**
  * Extract claims
  */
-function extract(state: State, identity: string): receipts.ClaimChangeset {
+export function extract(state: State, identity: string): receipts.ClaimChangeset {
   const patch: receipts.ClaimChangeset = {}
-  const items = state.transient[identity]
+  const transient = state.transient[identity]
 
-  for (const [item, claims] of Object.entries(items)) {
-    patch[item] = []
+  if (transient !== undefined)
+    for (const [item, claims] of Object.entries(transient)) {
+      patch[item] = []
 
-    claims.forEach((claim, index) =>
-      (patch[item][index] = claim.value))
-  }
+      claims.forEach((claim, index) =>
+        (patch[item][index] = claim.value))
+    }
 
   return patch
 }
 
+interface ItemClaim {
+  item: string
+  units: number
+}
+
 /**
- * Detect drift between the local state and the server state
+ * Get the claims for an identity
+ */
+export function itemsClaimedBy(state: State, identity: string): ItemClaim[] {
+  const claims = extract(state, identity)
+  const items: ItemClaim[] = []
+
+  for (const [id, units] of Object.entries(claims)) {
+    const claimed = units.filter((unit) => unit === true).length
+
+    if (claimed > 0)
+      items.push({
+        item: id,
+        units: claimed,
+      })
+  }
+
+  return items
+}
+
+/**
+ * Detect drift between transient and persistent state
  */
 function drift(state: State, identity: string): boolean {
   for (const claims of Object.values(state.transient[identity]))

@@ -2,6 +2,7 @@
   import { SvelteSet } from 'svelte/reactivity'
   import { onMount } from 'svelte'
   import { Async } from 'svas'
+  import { CircleCheck } from '@lucide/svelte'
   import { leave } from '@/receipts'
   import { Coins } from '@/app/ui'
   import { Avatar } from '@/accounts/ui'
@@ -70,6 +71,13 @@
           </TextEllipsis>
         {/snippet}
       </Async>
+      {#if receipt.done[identity] === true}
+        <CircleCheck
+          class={[
+            'absolute top-1 right-1 size-3 bg-constructive text-constructive-foreground rounded-full',
+            mounted && 'starting:scale-0 duration-150',
+          ]} />
+      {/if}
       <div
         class={[
           'absolute -bottom-8',

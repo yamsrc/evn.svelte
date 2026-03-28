@@ -29,6 +29,7 @@
   --destructive: oklch(0.5771 0.2152 27.325);
   --destructive-foreground: oklch(0.7106 0.1661 22.2162);
   --constructive: oklch(0.6637 0.161 150.99);
+  --constructive-foreground: oklch(0.9824 0.0093 62.5888);
   --warning: oklch(0.7724 0.1728 65.367);
   --border: oklch(0.9138 0.0216 65.3013);
   --input: oklch(0.9925 0.0051 67.7654);
@@ -74,6 +75,7 @@
     --destructive: oklch(0.5664 0.1887 24.6729);
     --destructive-foreground: oklch(0.7106 0.1661 22.2162);
     --constructive: oklch(0.6637 0.161 150.99);
+    --constructive-foreground: oklch(0.9824 0.0093 62.5888);
     --warning: oklch(0.7712 0.1721 65.6848);
     --border: oklch(0.2662 0.0232 60.8564);
     --input: oklch(0.1549 0.0237 65.9272);
@@ -133,6 +135,7 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-constructive: var(--constructive);
+  --color-constructive-foreground: var(--constructive-foreground);
   --color-warning: var(--warning);
 
   --font-sans: var(--font-sans);
@@ -190,7 +193,8 @@
     @apply cursor-pointer;
   }
 
-  button:active {
+
+  button:not([disabled]):active {
     scale: 0.98;
   }
 

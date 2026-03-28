@@ -21,11 +21,14 @@ export async function get(identity: string): Promise<Receipt[] | Error> {
   return await receipts.json<Receipt[]>(identity)
 }
 
-export interface ReceiptPut {
-  identity: string
+export type ReceiptPut = { identity: string } & ({
   claims: ClaimsChangeset
   done?: boolean
-}
+} | {
+  done: false
+})
+
+export type ClaimsChangeset = Record<string, Array<boolean | null>>
 
 export interface ReceiptPost {
   participants: string[]
@@ -56,8 +59,6 @@ export const receipt = {
     })
   },
 }
-
-export type ClaimsChangeset = Record<string, Array<boolean | null>>
 
 export const invitations = {
   resource: origin.resource<Invitation>('/receipts/invitations/'),
