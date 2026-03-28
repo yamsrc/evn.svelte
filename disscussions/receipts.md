@@ -7,13 +7,14 @@
 - [x] Ready (Continue)
 - [x] CRDT
 - [x] Tail merging (diffs)
-- [ ] Pending state screen
-- [ ] Error state screen (+non-receipts)
 - [x] Participants list
 - [x] Add participants
-- [ ] Leave receipt
-- [ ] Select actor
-- [ ] Shared items (and item groups)
+- [x] Leave receipt
+- [x] Select actor
+- [x] Shared items (and item groups)
+- [ ] Mark as Done
+- [ ] Pending state screen
+- [ ] Error state screen (+non-receipts)
 
 ## Routes
 
