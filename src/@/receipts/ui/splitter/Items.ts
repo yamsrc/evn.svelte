@@ -1,6 +1,7 @@
-import { claimedUnits, unitClaimed, type State } from './claims'
+import { claimedUnits, unitClaimed } from './claims'
 import type { Receipt } from '@/receipts'
 import type { Props as CoinsProps } from '@/app/ui/Coins'
+import type { State } from './store'
 import type { Unit } from './groups'
 
 export interface Props {

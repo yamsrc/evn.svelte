@@ -6,6 +6,4 @@
   const ctx = Editor.getContext()
 </script>
 
-<Participants.Selector
-  title={ctx.value.title || $dict.expenses.participants.title}
-  options={{ managedContactsCreation: true }} />
+<Participants.Selector title={ctx.value.title || $dict.expenses.participants.title} />

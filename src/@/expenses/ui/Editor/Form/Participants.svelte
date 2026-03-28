@@ -55,7 +55,6 @@
       id="expenses-spendings-add-participants-button"
       {exclude}
       {onadd}
-      options={{ managedContactsCreation: true }}
       class="w-full" />
   </Card.Content>
 </Card.Root>
