@@ -15,7 +15,20 @@ export const dictionaries = {
     "delete": {
       "label": "اضغط مطولاً للحذف"
     },
-    "me": "أنا"
+    "me": "أنا",
+    "overview": {
+      "title": "اختياراتك",
+      "total": "الإجمالي"
+    },
+    "feedback": {
+      "question": "هل الفحص جيد؟",
+      "down": "سنتحقق.",
+      "thanks": "شكرًا!"
+    },
+    "autoclose": {
+      "description": "أنشئ التقسيم وقم بتحديث الأرصدة عند انتهاء الجميع.",
+      "title": "أكمِل تلقائيًا"
+    }
   },
   "de-DE": {
     "splitter": {
@@ -30,7 +43,20 @@ export const dictionaries = {
     "delete": {
       "label": "Zum Löschen halten"
     },
-    "me": "Ich"
+    "me": "Ich",
+    "overview": {
+      "title": "Deine Favoriten",
+      "total": "Gesamt"
+    },
+    "feedback": {
+      "question": "Scan sieht gut aus?",
+      "down": "Wir schauen nach.",
+      "thanks": "Danke!"
+    },
+    "autoclose": {
+      "description": "Erstelle die Aufteilung und aktualisiere die Salden, sobald alle fertig sind.",
+      "title": "Automatisch abschließen"
+    }
   },
   "en-US": {
     "splitter": {
@@ -45,7 +71,20 @@ export const dictionaries = {
     "delete": {
       "label": "Hold to delete"
     },
-    "me": "Me"
+    "me": "Me",
+    "overview": {
+      "title": "Your picks",
+      "total": "Total"
+    },
+    "feedback": {
+      "question": "Scan looks good?",
+      "down": "We'll check.",
+      "thanks": "Thank you!"
+    },
+    "autoclose": {
+      "description": "Create the split and update balances when everyone is done.",
+      "title": "Finish automatically"
+    }
   },
   "es-ES": {
     "splitter": {
@@ -60,7 +99,20 @@ export const dictionaries = {
     "delete": {
       "label": "Mantener para eliminar"
     },
-    "me": "Yo"
+    "me": "Yo",
+    "overview": {
+      "title": "Tus selecciones",
+      "total": "Total"
+    },
+    "feedback": {
+      "question": "¿La exploración se ve bien?",
+      "down": "Lo comprobaremos.",
+      "thanks": "¡Gracias!"
+    },
+    "autoclose": {
+      "description": "Crea la división y actualiza los saldos cuando todos hayan terminado.",
+      "title": "Finalizar automáticamente"
+    }
   },
   "fr-FR": {
     "splitter": {
@@ -75,7 +127,20 @@ export const dictionaries = {
     "delete": {
       "label": "Maintenir pour supprimer"
     },
-    "me": "Moi"
+    "me": "Moi",
+    "overview": {
+      "title": "Vos choix",
+      "total": "Total"
+    },
+    "feedback": {
+      "question": "Le scan a l’air bon ?",
+      "down": "Nous allons vérifier.",
+      "thanks": "Merci !"
+    },
+    "autoclose": {
+      "description": "Crée le partage et mets à jour les soldes quand tout le monde a terminé.",
+      "title": "Terminer automatiquement"
+    }
   },
   "hi-IN": {
     "splitter": {
@@ -90,7 +155,20 @@ export const dictionaries = {
     "delete": {
       "label": "हटाने के लिए दबाकर रखें"
     },
-    "me": "मैं"
+    "me": "मैं",
+    "overview": {
+      "title": "आपकी पसंद",
+      "total": "कुल"
+    },
+    "feedback": {
+      "question": "क्या स्कैन सही है?",
+      "down": "हम जांचेंगे।",
+      "thanks": "धन्यवाद!"
+    },
+    "autoclose": {
+      "description": "स्प्लिट बनाएं और जब सभी पूरा कर लें तो बैलेंस अपडेट करें।",
+      "title": "स्वचालित रूप से समाप्त करें"
+    }
   },
   "it-IT": {
     "splitter": {
@@ -105,7 +183,20 @@ export const dictionaries = {
     "delete": {
       "label": "Tieni premuto per eliminare"
     },
-    "me": "Me"
+    "me": "Me",
+    "overview": {
+      "title": "Le tue scelte",
+      "total": "Totale"
+    },
+    "feedback": {
+      "question": "La scansione va bene?",
+      "down": "Controlliamo noi.",
+      "thanks": "Grazie!"
+    },
+    "autoclose": {
+      "description": "Crea la suddivisione e aggiorna i saldi quando tutti hanno finito.",
+      "title": "Completamento automatico"
+    }
   },
   "ja-JP": {
     "splitter": {
@@ -120,7 +211,20 @@ export const dictionaries = {
     "delete": {
       "label": "長押しで削除"
     },
-    "me": "私"
+    "me": "私",
+    "overview": {
+      "title": "あなたのピック",
+      "total": "合計"
+    },
+    "feedback": {
+      "question": "スキャンは問題なさそうですか？",
+      "down": "こちらで確認します。",
+      "thanks": "ありがとうございます！"
+    },
+    "autoclose": {
+      "description": "全員が完了したら、精算を作成して残高を更新してください。",
+      "title": "自動で完了"
+    }
   },
   "ko-KR": {
     "splitter": {
@@ -135,7 +239,20 @@ export const dictionaries = {
     "delete": {
       "label": "길게 눌러서 삭제"
     },
-    "me": "나"
+    "me": "나",
+    "overview": {
+      "title": "내 추천",
+      "total": "합계"
+    },
+    "feedback": {
+      "question": "스캔 괜찮나요?",
+      "down": "저희가 확인하겠습니다.",
+      "thanks": "감사합니다!"
+    },
+    "autoclose": {
+      "description": "모두 완료되면 분할을 생성하고 잔액을 업데이트하세요.",
+      "title": "자동으로 완료"
+    }
   },
   "nl-NL": {
     "splitter": {
@@ -150,7 +267,20 @@ export const dictionaries = {
     "delete": {
       "label": "Vasthouden om te verwijderen"
     },
-    "me": "Ik"
+    "me": "Ik",
+    "overview": {
+      "title": "Jouw keuzes",
+      "total": "Totaal"
+    },
+    "feedback": {
+      "question": "Ziet de scan er goed uit?",
+      "down": "We zullen het nakijken.",
+      "thanks": "Dank je!"
+    },
+    "autoclose": {
+      "description": "Maak de verdeling en werk de saldi bij zodra iedereen klaar is.",
+      "title": "Automatisch voltooien"
+    }
   },
   "ru-RU": {
     "splitter": {
@@ -165,7 +295,20 @@ export const dictionaries = {
     "delete": {
       "label": "Удерживайте для удаления"
     },
-    "me": "Я"
+    "me": "Я",
+    "overview": {
+      "title": "Твои выборы",
+      "total": "Итого"
+    },
+    "feedback": {
+      "question": "Скан выглядит хорошо?",
+      "down": "Мы проверим.",
+      "thanks": "Спасибо!"
+    },
+    "autoclose": {
+      "description": "Создайте разделение и обновите балансы, когда все будут готовы.",
+      "title": "Завершить автоматически"
+    }
   },
   "sw-TZ": {
     "splitter": {
@@ -180,7 +323,20 @@ export const dictionaries = {
     "delete": {
       "label": "Shikilia kufuta"
     },
-    "me": "Mimi"
+    "me": "Mimi",
+    "overview": {
+      "title": "Chaguo lako",
+      "total": "Jumla"
+    },
+    "feedback": {
+      "question": "Je, uchunguzi unaonekana mzuri?",
+      "down": "Tutaangalia.",
+      "thanks": "Asante!"
+    },
+    "autoclose": {
+      "description": "Unda mgawanyo na sasisha salio pindi kila mtu atakapomaliza.",
+      "title": "Maliza kiotomatiki"
+    }
   },
   "tr-TR": {
     "splitter": {
@@ -195,7 +351,20 @@ export const dictionaries = {
     "delete": {
       "label": "Silmek için basılı tutun"
     },
-    "me": "Ben"
+    "me": "Ben",
+    "overview": {
+      "title": "Senin seçimlerin",
+      "total": "Toplam"
+    },
+    "feedback": {
+      "question": "Tarama iyi görünüyor mu?",
+      "down": "Biz kontrol edeceğiz.",
+      "thanks": "Teşekkürler!"
+    },
+    "autoclose": {
+      "description": "Herkes işi bitirdiğinde bölüşümü oluşturun ve bakiyeleri güncelleyin.",
+      "title": "Otomatik olarak bitir"
+    }
   },
   "uk-UA": {
     "splitter": {
@@ -210,7 +379,20 @@ export const dictionaries = {
     "delete": {
       "label": "Утримуйте для видалення"
     },
-    "me": "Я"
+    "me": "Я",
+    "overview": {
+      "title": "Твої вибори",
+      "total": "Разом"
+    },
+    "feedback": {
+      "question": "Скан виглядає добре?",
+      "down": "Ми перевіримо.",
+      "thanks": "Дякую!"
+    },
+    "autoclose": {
+      "description": "Створіть поділ і оновіть баланси, коли всі завершать.",
+      "title": "Завершити автоматично"
+    }
   },
   "zh-CN": {
     "splitter": {
@@ -225,7 +407,20 @@ export const dictionaries = {
     "delete": {
       "label": "长按删除"
     },
-    "me": "我"
+    "me": "我",
+    "overview": {
+      "title": "你的精选",
+      "total": "合计"
+    },
+    "feedback": {
+      "question": "扫描看起来正常吗？",
+      "down": "我们会检查。",
+      "thanks": "谢谢！"
+    },
+    "autoclose": {
+      "description": "等所有人都完成后，创建分账并更新余额。",
+      "title": "自动完成"
+    }
   }
 };
 /** @type {import("./types").Locale[]} */

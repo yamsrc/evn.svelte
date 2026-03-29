@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { Props } from './TextEllipsis'
+  import type { Props } from './Ellipsis'
 
   const { class: classes, children, ...restProps }: Props = $props()
 </script>

@@ -7,3 +7,13 @@ leave:
 delete:
   label: اضغط مطولاً للحذف
 me: أنا
+overview:
+  title: اختياراتك
+  total: الإجمالي
+feedback:
+  question: هل الفحص جيد؟
+  down: سنتحقق.
+  thanks: شكرًا!
+autoclose:
+  description: أنشئ التقسيم وقم بتحديث الأرصدة عند انتهاء الجميع.
+  title: أكمِل تلقائيًا

@@ -3,7 +3,7 @@
   import { Picture } from '@/accounts/ui'
   import { cn } from '$lib/utils'
   import { dict } from '$lib/intl'
-  import { TextEllipsis } from '$com/text-ellipsis'
+  import { Ellipsis } from '$com/text'
   import { Attention } from '$com/shell'
   import { Panel } from '$com/panel'
   import type { Props } from './Panel'
@@ -43,7 +43,7 @@
   {/snippet}
   {#snippet left()}
     <div class="flex items-center gap-2 min-w-0">
-      <TextEllipsis>{account.name}</TextEllipsis>
+      <Ellipsis>{account.name}</Ellipsis>
       {#if highlighted}
         <Attention />
       {/if}

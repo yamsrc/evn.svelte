@@ -6,6 +6,6 @@ export type Props = HTMLAttributes<HTMLSpanElement> & {
   class?: string
 }
 
-export function textEllipsis() {
+export function ellipsis() {
   return 'inline-block max-w-full overflow-hidden text-ellipsis whitespace-nowrap'
 }

@@ -7,3 +7,13 @@ leave:
 delete:
   label: Удерживайте для удаления
 me: Я
+overview:
+  title: Твои выборы
+  total: Итого
+feedback:
+  question: Скан выглядит хорошо?
+  down: Мы проверим.
+  thanks: Спасибо!
+autoclose:
+  description: Создайте разделение и обновите балансы, когда все будут готовы.
+  title: Завершить автоматически

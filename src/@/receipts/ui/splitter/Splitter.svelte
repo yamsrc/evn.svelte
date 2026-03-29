@@ -1,8 +1,11 @@
 <script lang="ts">
   import { sync } from './store'
+  import Summary from './Summary.svelte'
   import Progress from './Progress.svelte'
   import Participants from './Participants.svelte'
   import Items from './Items.svelte'
+  import Feedback from './Feedback.svelte'
+  import Autoclose from './Autoclose.svelte'
   import Actions from './Actions.svelte'
   import type { Props } from './Splitter'
 
@@ -25,13 +28,19 @@
 </script>
 
 <div class="space-y-2">
-  <div
-    class={['z-10 sticky top-4 tim:top-[env(safe-area-inset-top)]', 'space-y-2']}
-    style="view-transition-name: splitter-header;">
+  <div class={['z-10 sticky top-4 tim:top-[env(safe-area-inset-top)]', 'space-y-2']}>
     <Progress />
     <Participants bind:this={participants} {receipt} {account} bind:actor />
   </div>
-  <Items {receipt} {actor} />
+  {#if receipt.done[actor] === true}
+    <div class="space-y-4 pt-2">
+      <Summary {actor} />
+      <Autoclose />
+      <Feedback {actor} />
+    </div>
+  {:else}
+    <Items {receipt} {actor} />
+  {/if}
 </div>
 
 <Actions {receipt} {actor} />

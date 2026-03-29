@@ -1,7 +1,7 @@
-import { get, writable, type Writable } from 'svelte/store'
+import { get, writable } from 'svelte/store'
 import type * as receipts from '@/receipts'
 
-export const store: Writable<State> = writable({ id: '', version: 0, identities: [], items: {}, persistent: {}, transient: {} })
+export const store = writable<State>({ id: '', version: 0, identities: [], items: {}, persistent: {}, transient: {} })
 
 export function sync(receipt: receipts.Receipt): void {
   const stored = get(store)
@@ -23,7 +23,7 @@ export function sync(receipt: receipts.Receipt): void {
     })
 }
 
-function toClaims(items: receipts.Item[]): Record<string, Claims> {
+function toClaims(items: Item[]): Record<string, Claims> {
   const claims: Record<string, Claims> = {}
 
   for (const item of items)
@@ -35,7 +35,7 @@ function toClaims(items: receipts.Item[]): Record<string, Claims> {
   return claims
 }
 
-function toMap(items: receipts.Item[]): Record<string, receipts.Item> {
+function toMap(items: Item[]): Record<string, Item> {
   return Object.fromEntries(items.map((item) => [item.id, item]))
 }
 
@@ -66,7 +66,7 @@ function merge(state: State, receipt: receipts.Receipt): void {
 export function ensure(
   claims: Record<string, Claims>,
   identity: string,
-  item: receipts.Item,
+  item: Item,
 ): Claim[] {
   claims[identity] ??= {}
   claims[identity][item.id] ??= Array.from({ length: item.quantity }, () => ({ value: null, settled: true }))
@@ -74,11 +74,13 @@ export function ensure(
   return claims[identity][item.id]
 }
 
+export type Item = receipts.Item
+
 export interface State {
   id: string
   version: number
   identities: string[]
-  items: Record<string, receipts.Item>
+  items: Record<string, Item>
 
   /** Claims per identity */
   persistent: Record<string, Claims>

@@ -171,7 +171,11 @@ async function claim(state: State, identity: string, iteration = 0): Promise<voi
 /**
  * Extract claims
  */
-export function extract(state: State, identity: string): receipts.ClaimChangeset {
+export function extract(
+  state: State,
+  identity: string,
+  includePersistent = false,
+): receipts.ClaimChangeset {
   const patch: receipts.ClaimChangeset = {}
   const transient = state.transient[identity]
 
@@ -183,28 +187,53 @@ export function extract(state: State, identity: string): receipts.ClaimChangeset
         (patch[item][index] = claim.value))
     }
 
+  if (!includePersistent)
+    return patch
+
+  const persistent = state.persistent[identity]
+
+  if (persistent !== undefined)
+    for (const [item, claims] of Object.entries(persistent)) {
+      patch[item] ??= []
+
+      claims.forEach((claim, index) =>
+        (patch[item][index] ??= claim.value))
+    }
+
   return patch
 }
 
 interface ItemClaim {
-  item: string
-  units: number
+  id: string
+  /**
+   * Each number is the number of identities that claimed the unit (including yourself)
+   **/
+  units: number[]
 }
 
 /**
  * Get the claims for an identity
  */
 export function itemsClaimedBy(state: State, identity: string): ItemClaim[] {
-  const claims = extract(state, identity)
+  const claims = extract(state, identity, true)
   const items: ItemClaim[] = []
 
-  for (const [id, units] of Object.entries(claims)) {
-    const claimed = units.filter((unit) => unit === true).length
+  for (const [id, values] of Object.entries(claims)) {
+    const units: number[] = []
 
-    if (claimed > 0)
+    for (let index = 0; index < values.length; index++) {
+      if (values[index] !== true)
+        continue
+
+      const identities = unitIdentities(state, id, index)
+
+      units.push(identities.length)
+    }
+
+    if (units.length > 0)
       items.push({
-        item: id,
-        units: claimed,
+        id,
+        units,
       })
   }
 

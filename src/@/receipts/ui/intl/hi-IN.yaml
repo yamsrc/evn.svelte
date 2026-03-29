@@ -7,3 +7,13 @@ leave:
 delete:
   label: हटाने के लिए दबाकर रखें
 me: मैं
+overview:
+  title: आपकी पसंद
+  total: कुल
+feedback:
+  question: क्या स्कैन सही है?
+  down: हम जांचेंगे।
+  thanks: धन्यवाद!
+autoclose:
+  description: स्प्लिट बनाएं और जब सभी पूरा कर लें तो बैलेंस अपडेट करें।
+  title: स्वचालित रूप से समाप्त करें

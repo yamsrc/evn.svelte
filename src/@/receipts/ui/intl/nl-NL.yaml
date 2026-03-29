@@ -7,3 +7,13 @@ leave:
 delete:
   label: Vasthouden om te verwijderen
 me: Ik
+overview:
+  title: Jouw keuzes
+  total: Totaal
+feedback:
+  question: Ziet de scan er goed uit?
+  down: We zullen het nakijken.
+  thanks: Dank je!
+autoclose:
+  description: Maak de verdeling en werk de saldi bij zodra iedereen klaar is.
+  title: Automatisch voltooien

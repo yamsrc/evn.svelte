@@ -2,7 +2,7 @@
   import { Async } from 'svas'
   import { Picture } from '@/accounts/ui'
   import { accounts } from '@/accounts'
-  import { TextEllipsis } from '$com/text-ellipsis'
+  import { Ellipsis } from '$com/text'
   import { Panel } from '$com/panel'
   import type { Props } from './Contact'
 
@@ -30,9 +30,9 @@
             <Picture {account} class="size-8 shrink-0" />
           </div>
           <div class="max-w-30 flex items-start overflow-hidden text-start">
-            <TextEllipsis>
+            <Ellipsis>
               {account.name}
-            </TextEllipsis>
+            </Ellipsis>
           </div>
         </div>
       {/snippet}

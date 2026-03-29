@@ -22,4 +22,17 @@ export type Dictionary = {
         label: string
       }
       me: string
+      overview: {
+        title: string
+        total: string
+      }
+      feedback: {
+        question: string
+        down: string
+        thanks: string
+      }
+      autoclose: {
+        description: string
+        title: string
+      }
     }

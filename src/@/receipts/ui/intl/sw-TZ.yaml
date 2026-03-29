@@ -7,3 +7,13 @@ leave:
 delete:
   label: Shikilia kufuta
 me: Mimi
+overview:
+  title: Chaguo lako
+  total: Jumla
+feedback:
+  question: Je, uchunguzi unaonekana mzuri?
+  down: Tutaangalia.
+  thanks: Asante!
+autoclose:
+  description: Unda mgawanyo na sasisha salio pindi kila mtu atakapomaliza.
+  title: Maliza kiotomatiki

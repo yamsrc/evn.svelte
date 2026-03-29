@@ -7,3 +7,13 @@ leave:
 delete:
   label: Утримуйте для видалення
 me: Я
+overview:
+  title: Твої вибори
+  total: Разом
+feedback:
+  question: Скан виглядає добре?
+  down: Ми перевіримо.
+  thanks: Дякую!
+autoclose:
+  description: Створіть поділ і оновіть баланси, коли всі завершать.
+  title: Завершити автоматично

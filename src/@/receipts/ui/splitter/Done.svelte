@@ -39,7 +39,10 @@
   }
 </script>
 
-<Action {onclick} {...props} disabled={itemsClaimedBy($store, actor).length === 0}>
+<Action
+  {onclick}
+  {...props}
+  disabled={receipt.done[actor] !== true && itemsClaimedBy($store, actor).length === 0}>
   {#if receipt.done[actor] === true}
     <Pencil />
   {:else}

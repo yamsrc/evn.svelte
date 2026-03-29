@@ -6,7 +6,7 @@
   import * as Item from '$ui/item'
   import { dict } from '$lib/intl'
   import { Panel } from '$lib/components/panel'
-  import { TextEllipsis } from '$com/text-ellipsis'
+  import { Ellipsis } from '$com/text'
   import { getContext } from './Context'
   import type { Props } from './Payer'
 
@@ -35,7 +35,7 @@
         {#if $me?.id === account.id}
           <div class="flex items-center justify-between gap-2 w-full">
             <Item.Title class={nameClass}>
-              <TextEllipsis>{$dict.expenses.me}</TextEllipsis>
+              <Ellipsis>{$dict.expenses.me}</Ellipsis>
             </Item.Title>
           </div>
         {:else}
@@ -44,7 +44,7 @@
               <Picture {account} size={32} />
             </Item.Media>
             <Item.Title class={nameClass}>
-              <TextEllipsis>{account.name}</TextEllipsis>
+              <Ellipsis>{account.name}</Ellipsis>
             </Item.Title>
           </div>
         {/if}

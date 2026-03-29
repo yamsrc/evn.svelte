@@ -7,3 +7,13 @@ leave:
 delete:
   label: Tieni premuto per eliminare
 me: Me
+overview:
+  title: Le tue scelte
+  total: Totale
+feedback:
+  question: La scansione va bene?
+  down: Controlliamo noi.
+  thanks: Grazie!
+autoclose:
+  description: Crea la suddivisione e aggiorna i saldi quando tutti hanno finito.
+  title: Completamento automatico

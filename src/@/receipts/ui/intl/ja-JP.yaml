@@ -7,3 +7,13 @@ leave:
 delete:
   label: 長押しで削除
 me: 私
+overview:
+  title: あなたのピック
+  total: 合計
+feedback:
+  question: スキャンは問題なさそうですか？
+  down: こちらで確認します。
+  thanks: ありがとうございます！
+autoclose:
+  description: 全員が完了したら、精算を作成して残高を更新してください。
+  title: 自動で完了

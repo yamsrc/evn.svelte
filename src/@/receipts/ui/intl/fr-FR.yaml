@@ -7,3 +7,13 @@ leave:
 delete:
   label: Maintenir pour supprimer
 me: Moi
+overview:
+  title: Vos choix
+  total: Total
+feedback:
+  question: Le scan a l’air bon ?
+  down: Nous allons vérifier.
+  thanks: Merci !
+autoclose:
+  description: Crée le partage et mets à jour les soldes quand tout le monde a terminé.
+  title: Terminer automatiquement

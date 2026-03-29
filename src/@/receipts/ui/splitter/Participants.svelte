@@ -8,7 +8,7 @@
   import { Avatar } from '@/accounts/ui'
   import { accounts } from '@/accounts'
   import { Button } from '$ui/button'
-  import { TextEllipsis } from '$com/text-ellipsis'
+  import { Ellipsis } from '$com/text'
   import { Scrollable } from '$com/scrollable'
   import { dict } from '../intl'
   import { store } from './store'
@@ -62,13 +62,13 @@
       <Async store={accounts.get(identity)}>
         {#snippet awaited(participant)}
           <Avatar account={participant} />
-          <TextEllipsis>
+          <Ellipsis>
             {#if identity === account.id}
               {$dict.me}
             {:else}
               {participant.name}
             {/if}
-          </TextEllipsis>
+          </Ellipsis>
         {/snippet}
       </Async>
       {#if receipt.done[identity] === true}

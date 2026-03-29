@@ -17,3 +17,21 @@ inputs:
       context: button label, if it's too long, then just Delete
   me:
     input: Me
+  overview:
+    title:
+      input: Your picks
+      context: title of a list of picked items (ты, не вы)
+    total:
+      input: Total
+  feedback:
+    question:
+      input: Scan looks good?
+    down:
+      input: We'll check.
+    thanks:
+      input: Спасибо!
+  autoclose:
+    description:
+      input: Create the split and update balances when everyone is done.
+    title:
+      input: Finish automatically

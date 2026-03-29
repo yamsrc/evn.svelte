@@ -6,7 +6,7 @@
   import { accounts } from '@/accounts'
   import { currency } from '$lib/tools'
   import { dict, locale } from '$lib/intl'
-  import { TextEllipsis } from '$com/text-ellipsis'
+  import { Ellipsis } from '$com/text'
   import { Separator } from '$com/separator'
   import { getContext } from './Context'
   import type { Props } from './BySum'
@@ -38,7 +38,7 @@
               <Picture {account} class="size-8" />
             </div>
             <div class={nameClass}>
-              <TextEllipsis>{name}</TextEllipsis>
+              <Ellipsis>{name}</Ellipsis>
             </div>
           {/snippet}
         </Async>
@@ -59,9 +59,9 @@
       <div class="flex flex-nowrap items-center justify-between gap-2">
         <div class="flex items-center gap-2 overflow-hidden flex-1">
           <div class={nameClass}>
-            <TextEllipsis>
+            <Ellipsis>
               {extra.comment ?? $dict.expenses.spendings.extras.title}
-            </TextEllipsis>
+            </Ellipsis>
           </div>
         </div>
         <CoinsInput

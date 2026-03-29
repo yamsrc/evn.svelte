@@ -2,8 +2,8 @@
   import { account } from '@/iam'
   import { Avatars, Coins } from '@/app/ui'
   import { Button } from '$ui/button'
-  import { Trim } from '$com/trim'
-  import { textEllipsis } from '$com/text-ellipsis'
+  import { ellipsis } from '$com/text'
+  import { Trim } from '$com/text'
   import { Attention } from '$com/shell'
   import { dict } from './intl'
   import Picture from './Picture.svelte'
@@ -30,7 +30,7 @@
   <Picture {adventure} class="absolute size-full inset-0 -z-1 object-cover" />
 
   <div class="relative z-10 flex h-full flex-col items-start gap-1.5 w-full justify-between">
-    <Trim class={['font-bold text-base', textEllipsis()]}>{adventure.title}</Trim>
+    <Trim class={['font-bold text-base', ellipsis()]}>{adventure.title}</Trim>
     {#if highlighted}
       <Attention class="absolute top-0 inset-e-0 z-10" />
     {/if}

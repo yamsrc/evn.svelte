@@ -7,3 +7,13 @@ leave:
 delete:
   label: Hold to delete
 me: Me
+overview:
+  title: Your picks
+  total: Total
+feedback:
+  question: Scan looks good?
+  down: We'll check.
+  thanks: Thank you!
+autoclose:
+  description: Create the split and update balances when everyone is done.
+  title: Finish automatically
