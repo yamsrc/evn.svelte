@@ -30,8 +30,8 @@ auth:
       !js
 
       (name) => `${name ? name + ", per" : "Per"} motivi di sicurezza, le tue
-      credenziali sono scadute. Effettua di&nbsp;nuovo il login
-      per&nbsp;continuare.`
+      credenziali sono scadute. Effettua di nuovo il login
+      per continuare.`
     title: Bentornato
   signout: Esci
   login: Accedi

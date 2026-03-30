@@ -29,7 +29,7 @@ auth:
 
       (name) => `${name ? name + ", kwa" : "Kwa"} sababu za kiusalama, taarifa
       zako za kuingia zimeisha muda wake. Tafadhali ingia tena
-      ili&nbsp;kuendelea.`
+      ili kuendelea.`
     title: Karibu tena
   signout: Ondoka
   login: Ingia
