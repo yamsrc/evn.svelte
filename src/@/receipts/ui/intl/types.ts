@@ -23,7 +23,6 @@ export type Dictionary = {
       }
       me: string
       overview: {
-        title: string
         total: string
       }
       feedback: {

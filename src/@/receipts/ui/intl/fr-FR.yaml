@@ -8,7 +8,6 @@ delete:
   label: Maintenir pour supprimer
 me: Moi
 overview:
-  title: Votre part
   total: Total
 feedback:
   question: Le scan a l’air bon ?

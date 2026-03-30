@@ -17,7 +17,6 @@ export const dictionaries = {
     },
     "me": "أنا",
     "overview": {
-      "title": "حصتك",
       "total": "الإجمالي"
     },
     "feedback": {
@@ -45,7 +44,6 @@ export const dictionaries = {
     },
     "me": "Ich",
     "overview": {
-      "title": "Dein Anteil",
       "total": "Gesamt"
     },
     "feedback": {
@@ -73,7 +71,6 @@ export const dictionaries = {
     },
     "me": "Me",
     "overview": {
-      "title": "Your share",
       "total": "Total"
     },
     "feedback": {
@@ -101,7 +98,6 @@ export const dictionaries = {
     },
     "me": "Yo",
     "overview": {
-      "title": "Tu parte",
       "total": "Total"
     },
     "feedback": {
@@ -129,7 +125,6 @@ export const dictionaries = {
     },
     "me": "Moi",
     "overview": {
-      "title": "Votre part",
       "total": "Total"
     },
     "feedback": {
@@ -157,7 +152,6 @@ export const dictionaries = {
     },
     "me": "मैं",
     "overview": {
-      "title": "आपका हिस्सा",
       "total": "कुल"
     },
     "feedback": {
@@ -185,7 +179,6 @@ export const dictionaries = {
     },
     "me": "Me",
     "overview": {
-      "title": "La tua quota",
       "total": "Totale"
     },
     "feedback": {
@@ -213,7 +206,6 @@ export const dictionaries = {
     },
     "me": "私",
     "overview": {
-      "title": "あなたの分",
       "total": "合計"
     },
     "feedback": {
@@ -241,7 +233,6 @@ export const dictionaries = {
     },
     "me": "나",
     "overview": {
-      "title": "당신의 몫",
       "total": "합계"
     },
     "feedback": {
@@ -269,7 +260,6 @@ export const dictionaries = {
     },
     "me": "Ik",
     "overview": {
-      "title": "Jouw aandeel",
       "total": "Totaal"
     },
     "feedback": {
@@ -297,7 +287,6 @@ export const dictionaries = {
     },
     "me": "Я",
     "overview": {
-      "title": "Ваша доля",
       "total": "Итого"
     },
     "feedback": {
@@ -325,7 +314,6 @@ export const dictionaries = {
     },
     "me": "Mimi",
     "overview": {
-      "title": "Sehemu yako",
       "total": "Jumla"
     },
     "feedback": {
@@ -353,7 +341,6 @@ export const dictionaries = {
     },
     "me": "Ben",
     "overview": {
-      "title": "Senin payın",
       "total": "Toplam"
     },
     "feedback": {
@@ -381,7 +368,6 @@ export const dictionaries = {
     },
     "me": "Я",
     "overview": {
-      "title": "Ваша частка",
       "total": "Разом"
     },
     "feedback": {
@@ -409,7 +395,6 @@ export const dictionaries = {
     },
     "me": "我",
     "overview": {
-      "title": "你的份额",
       "total": "合计"
     },
     "feedback": {

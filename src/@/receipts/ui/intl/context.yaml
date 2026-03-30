@@ -18,9 +18,6 @@ inputs:
   me:
     input: Me
   overview:
-    title:
-      input: Your share
-      context: regarding items in the shared receipt
     total:
       input: Total
   feedback:

@@ -8,7 +8,6 @@ delete:
   label: Удерживайте для удаления
 me: Я
 overview:
-  title: Ваша доля
   total: Итого
 feedback:
   question: Скан выглядит хорошо?

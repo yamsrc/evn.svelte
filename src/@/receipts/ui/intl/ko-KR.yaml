@@ -8,7 +8,6 @@ delete:
   label: 길게 눌러서 삭제
 me: 나
 overview:
-  title: 당신의 몫
   total: 합계
 feedback:
   question: 스캔 괜찮나요?

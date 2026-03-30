@@ -8,7 +8,6 @@ delete:
   label: اضغط مطولاً للحذف
 me: أنا
 overview:
-  title: حصتك
   total: الإجمالي
 feedback:
   question: هل الفحص جيد؟

@@ -8,7 +8,6 @@ delete:
   label: 長押しで削除
 me: 私
 overview:
-  title: あなたの分
   total: 合計
 feedback:
   question: スキャンは問題なさそうですか？

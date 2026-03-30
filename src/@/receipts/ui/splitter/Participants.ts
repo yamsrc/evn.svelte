@@ -1,6 +1,7 @@
 import { unitClaimedBy, unitIdentities } from './claims'
 import type { ClassValue } from 'svelte/elements'
 import type { Receipt } from '@/receipts'
+import type { Props as CoinsProps } from '@/app/ui/Coins'
 import type { State } from './store'
 import type { AccountLike } from './Splitter'
 
@@ -23,4 +24,15 @@ export function claimedCostBy(state: State, identity: string): number {
       }
 
   return cost
+}
+
+export function sign(receipt: Receipt, identity: string): CoinsProps['sign'] {
+  if (receipt.done[identity] === true) return 'positive'
+  else if (claiming(receipt, identity)) return 'highlight'
+  else return 'neutral'
+}
+
+export function claiming(receipt: Receipt, identity: string): boolean {
+  return receipt.items.some((item) =>
+    item.claims.some((claim) => claim.includes(identity)))
 }

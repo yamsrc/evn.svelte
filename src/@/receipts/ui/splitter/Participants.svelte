@@ -12,7 +12,7 @@
   import { Scrollable } from '$com/scrollable'
   import { dict } from '../intl'
   import { store } from './store'
-  import { claimedCostBy, type Props } from './Participants'
+  import { claimedCostBy, sign, type Props } from './Participants'
 
   let { receipt, account, actor = $bindable(''), class: classes }: Props = $props()
 
@@ -71,20 +71,22 @@
           </Ellipsis>
         {/snippet}
       </Async>
-      {#if receipt.done[identity] === true}
-        <CircleCheck
-          class={[
-            'absolute top-1 right-1 size-3 bg-constructive text-constructive-foreground rounded-full',
-            mounted && 'starting:scale-0 duration-150',
-          ]} />
-      {/if}
+      <div class="absolute top-1 right-1">
+        {#if receipt.done[identity] === true}
+          <CircleCheck
+            class={[
+              'bg-constructive text-constructive-foreground rounded-full',
+              mounted && 'starting:scale-0 duration-150',
+            ]} />
+        {/if}
+      </div>
       <div
         class={[
           'absolute -bottom-8',
           'py-1 px-2 rounded-lg bg-background border border-muted-foreground/20',
           'text-xs',
         ]}>
-        <Coins amount={cost} />
+        <Coins amount={cost} sign={sign(receipt, identity)} />
       </div>
     </Button>
   {/each}

@@ -2,7 +2,7 @@
   import { Coins } from '@/app/ui'
   import { Separator } from '$ui/separator'
   import * as Item from '$ui/item'
-  import { Fraction, Trim } from '$com/text'
+  import { Fraction } from '$com/text'
   import { dict } from '../intl'
   import { store } from './store'
   import { summarize, type Props } from './Summary'
@@ -14,7 +14,6 @@
 
 <Item.Root class={['bg-constructive/20! border-constructive/30!']}>
   <Item.Content class="space-y-2">
-    <Item.Title><Trim><h2>{$dict.overview.title}</h2></Trim></Item.Title>
     <ul class="space-y-2">
       {#each lines as line, i (i)}
         <li class="flex justify-between">

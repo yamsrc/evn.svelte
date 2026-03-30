@@ -8,7 +8,6 @@ delete:
   label: Vasthouden om te verwijderen
 me: Ik
 overview:
-  title: Jouw aandeel
   total: Totaal
 feedback:
   question: Ziet de scan er goed uit?

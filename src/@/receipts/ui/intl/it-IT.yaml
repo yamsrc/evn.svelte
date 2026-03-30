@@ -8,7 +8,6 @@ delete:
   label: Tieni premuto per eliminare
 me: Me
 overview:
-  title: La tua quota
   total: Totale
 feedback:
   question: La scansione va bene?
