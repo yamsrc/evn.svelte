@@ -5,7 +5,7 @@ inputs:
       description:
         input: |-
           !js
-                  (name) => `${name ? name + ", for" : "For"} security reasons, your credentials have expired. Please log&nbsp;in again to&nbsp;continue.`
+                  (name) => `${name ? name + ", for" : "For"} security reasons, your credentials have expired. Please log in again to continue.`
         context: Preserve html tags where appropriate
       title:
         input: Welcome back

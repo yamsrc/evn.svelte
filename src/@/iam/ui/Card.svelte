@@ -8,8 +8,7 @@
 <Card.Root class="w-full">
   <Card.Header>
     <Card.Title>{title}</Card.Title>
-    <!-- eslint-disable-next-line svelte/no-at-html-tags -->
-    <Card.Description>{@html description}</Card.Description>
+    <Card.Description>{description}</Card.Description>
   </Card.Header>
   <Card.Content class="flex justify-center">{@render action()}</Card.Content>
 </Card.Root>

@@ -28,7 +28,7 @@ auth:
       !js
 
       (name) => `${name ? name + ", for" : "For"} security reasons, your
-      credentials have expired. Please log&nbsp;in again to&nbsp;continue.`
+      credentials have expired. Please log in again to continue.`
     title: Welcome back
   signout: Sign out
   login: Log In
