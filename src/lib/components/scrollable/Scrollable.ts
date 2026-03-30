@@ -41,7 +41,7 @@ function infinite(options: Options): Attachment {
 
     let chill = false
 
-    function onscrollend(e: Event) {
+    function onscrollend(_: Event) {
       if (chill) return
 
       const pos = Math.floor((root.scrollLeft / root.scrollWidth) * INFINITY)

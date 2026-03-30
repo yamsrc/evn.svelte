@@ -65,7 +65,7 @@
   <Section>
     <Hint.Root key="adventures">
       <Hint.Content>
-        <p class="text-sm">{$dict.editor.info}</p>
+        <p>{$dict.editor.info}</p>
         <Hint.Actions>
           <Hint.Dismiss>
             {$dict.hint.dismiss}

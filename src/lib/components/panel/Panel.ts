@@ -4,7 +4,6 @@ import type { ButtonProps } from '$ui/button'
 export type Props = {
   left: Snippet
   right?: Snippet
-  bottom?: Snippet
   icon?: Snippet
   collapsed?: boolean
   selected?: boolean

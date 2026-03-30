@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Background } from '@/app/ui'
-  import { navigate } from '$lib/tools'
+  import { navigate, suppressContextMenu } from '$lib/tools'
   import { dict } from '$lib/intl'
   import { meta } from '$config'
   import { track } from '$com/history'
@@ -15,7 +15,7 @@
   const image = $derived(page.data.meta?.image ?? meta.image)
 
   onNavigate(navigate)
-  afterNavigate(track)
+  afterNavigate((nav) => track(nav, page.state))
 
   $effect(() => {
     document.dir = $dict.dir
@@ -46,6 +46,8 @@
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={image.url} />
 </svelte:head>
+
+<svelte:body oncontextmenu={suppressContextMenu} />
 
 <Background class="fixed inset-0 -z-50 pointer-events-none" />
 {@render children()}

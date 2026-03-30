@@ -10,7 +10,6 @@
     h,
     left,
     right,
-    bottom,
     icon,
     actions,
     action,

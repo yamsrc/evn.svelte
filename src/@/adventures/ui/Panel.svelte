@@ -2,8 +2,7 @@
   import { account } from '@/iam'
   import { Avatars, Coins } from '@/app/ui'
   import { Button } from '$ui/button'
-  import { ellipsis } from '$com/text'
-  import { Trim } from '$com/text'
+  import { Ellipsis } from '$com/text'
   import { Attention } from '$com/shell'
   import { dict } from './intl'
   import Picture from './Picture.svelte'
@@ -23,14 +22,15 @@
   const balance = $derived(full?.participants[$account?.id ?? ''] ?? 0)
   const total = $derived(full?.expenses.reduce((sum, e) => sum + e.amount, 0) ?? 0)
 
-  const base = 'adventure-cover relative isolate overflow-hidden rounded-lg bg-cover bg-center p-3'
+  const base =
+    'adventure-cover relative isolate overflow-hidden rounded-lg bg-cover bg-center py-3 px-4'
 </script>
 
 {#snippet content()}
   <Picture {adventure} class="absolute size-full inset-0 -z-1 object-cover" />
 
   <div class="relative z-10 flex h-full flex-col items-start gap-1.5 w-full justify-between">
-    <Trim class={['font-bold text-base', ellipsis()]}>{adventure.title}</Trim>
+    <Ellipsis class={['font-bold text-lg leading-6']}>{adventure.title}</Ellipsis>
     {#if highlighted}
       <Attention class="absolute top-0 inset-e-0 z-10" />
     {/if}
@@ -40,8 +40,8 @@
         <Archived at={full.archivedAt} />
       {:else}
         <div class="grid grid-cols-2 gap-x-3 w-full text-start">
-          <span class="text-xs font-bold">{$dict.me}</span>
-          <span class="text-xs font-bold">{$dict.panel.total}</span>
+          <span class="text-sm font-bold">{$dict.me}</span>
+          <span class="text-sm font-bold">{$dict.panel.total}</span>
           <Coins amount={balance} sign="neutral" />
           <Coins amount={total} sign="neutral" />
         </div>

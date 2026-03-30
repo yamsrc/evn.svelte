@@ -1,13 +1,33 @@
 <script lang="ts">
+  import { onMount } from 'svelte'
   import { UserPlus } from '@lucide/svelte'
+  import { Button } from '$ui/button'
   import { dict } from '$lib/intl'
-  import Button from './Button.svelte'
-  import type { Props } from './Button'
+  import { goto } from '$app/navigation'
+  import { identities } from './identities'
+  import type { Props } from './Add'
 
-  const { size = 'lg', variant = 'secondary', ...props }: Props = $props()
+  const { exclude, onadd, options, ...props }: Props = $props()
+
+  function onclick() {
+    goto('add/', {
+      state: {
+        participants: {
+          identities: [...exclude],
+          ...(options && { options: { ...options } }),
+        },
+      },
+    })
+  }
+
+  onMount(() => {
+    if (identities.length === 0) return
+
+    onadd(identities.splice(0))
+  })
 </script>
 
-<Button {size} {variant} {...props}>
+<Button size="lg" variant="secondary" {onclick} {...props}>
   <UserPlus />
   <span>{$dict.participants.add.button}</span>
 </Button>

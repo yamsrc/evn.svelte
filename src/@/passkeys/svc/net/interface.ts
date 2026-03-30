@@ -22,7 +22,7 @@ async function get(identity: string): Promise<Passkey[] | Error> {
   return await passkeys.json<Passkey[]>(identity, { credentials: 'include' })
 }
 
-async function del(identity: string, id: string): Promise<void | Error> {
+async function del(identity: string, _: string): Promise<void | Error> {
   return await passkeys.json(identity, { credentials: 'include' })
 }
 
