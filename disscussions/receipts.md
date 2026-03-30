@@ -14,6 +14,8 @@
 - [x] Shared items (and item groups)
 - [ ] Mark as Done
 - [ ] Autoclose
+- [ ] Share receipt
+- [ ] Actions on Summary screen: [edit, close], remove participants button
 - [ ] Split taxes
 - [ ] Pending state screen
 - [ ] Error state screen (+non-receipts)

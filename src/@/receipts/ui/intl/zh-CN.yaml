@@ -8,7 +8,7 @@ delete:
   label: 长按删除
 me: 我
 overview:
-  title: 你的精选
+  title: 你的份额
   total: 合计
 feedback:
   question: 扫描看起来正常吗？

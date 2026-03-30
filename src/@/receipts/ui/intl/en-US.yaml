@@ -8,7 +8,7 @@ delete:
   label: Hold to delete
 me: Me
 overview:
-  title: Your picks
+  title: Your share
   total: Total
 feedback:
   question: Scan looks good?

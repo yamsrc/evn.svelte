@@ -17,7 +17,7 @@ export const dictionaries = {
     },
     "me": "أنا",
     "overview": {
-      "title": "اختياراتك",
+      "title": "حصتك",
       "total": "الإجمالي"
     },
     "feedback": {
@@ -45,7 +45,7 @@ export const dictionaries = {
     },
     "me": "Ich",
     "overview": {
-      "title": "Deine Favoriten",
+      "title": "Dein Anteil",
       "total": "Gesamt"
     },
     "feedback": {
@@ -73,7 +73,7 @@ export const dictionaries = {
     },
     "me": "Me",
     "overview": {
-      "title": "Your picks",
+      "title": "Your share",
       "total": "Total"
     },
     "feedback": {
@@ -101,7 +101,7 @@ export const dictionaries = {
     },
     "me": "Yo",
     "overview": {
-      "title": "Tus selecciones",
+      "title": "Tu parte",
       "total": "Total"
     },
     "feedback": {
@@ -129,7 +129,7 @@ export const dictionaries = {
     },
     "me": "Moi",
     "overview": {
-      "title": "Vos choix",
+      "title": "Votre part",
       "total": "Total"
     },
     "feedback": {
@@ -157,7 +157,7 @@ export const dictionaries = {
     },
     "me": "मैं",
     "overview": {
-      "title": "आपकी पसंद",
+      "title": "आपका हिस्सा",
       "total": "कुल"
     },
     "feedback": {
@@ -185,7 +185,7 @@ export const dictionaries = {
     },
     "me": "Me",
     "overview": {
-      "title": "Le tue scelte",
+      "title": "La tua quota",
       "total": "Totale"
     },
     "feedback": {
@@ -213,7 +213,7 @@ export const dictionaries = {
     },
     "me": "私",
     "overview": {
-      "title": "あなたのピック",
+      "title": "あなたの分",
       "total": "合計"
     },
     "feedback": {
@@ -241,7 +241,7 @@ export const dictionaries = {
     },
     "me": "나",
     "overview": {
-      "title": "내 추천",
+      "title": "당신의 몫",
       "total": "합계"
     },
     "feedback": {
@@ -269,7 +269,7 @@ export const dictionaries = {
     },
     "me": "Ik",
     "overview": {
-      "title": "Jouw keuzes",
+      "title": "Jouw aandeel",
       "total": "Totaal"
     },
     "feedback": {
@@ -297,7 +297,7 @@ export const dictionaries = {
     },
     "me": "Я",
     "overview": {
-      "title": "Твои выборы",
+      "title": "Ваша доля",
       "total": "Итого"
     },
     "feedback": {
@@ -325,7 +325,7 @@ export const dictionaries = {
     },
     "me": "Mimi",
     "overview": {
-      "title": "Chaguo lako",
+      "title": "Sehemu yako",
       "total": "Jumla"
     },
     "feedback": {
@@ -353,7 +353,7 @@ export const dictionaries = {
     },
     "me": "Ben",
     "overview": {
-      "title": "Senin seçimlerin",
+      "title": "Senin payın",
       "total": "Toplam"
     },
     "feedback": {
@@ -381,7 +381,7 @@ export const dictionaries = {
     },
     "me": "Я",
     "overview": {
-      "title": "Твої вибори",
+      "title": "Ваша частка",
       "total": "Разом"
     },
     "feedback": {
@@ -409,7 +409,7 @@ export const dictionaries = {
     },
     "me": "我",
     "overview": {
-      "title": "你的精选",
+      "title": "你的份额",
       "total": "合计"
     },
     "feedback": {

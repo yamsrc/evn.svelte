@@ -19,8 +19,8 @@ inputs:
     input: Me
   overview:
     title:
-      input: Your picks
-      context: title of a list of picked items (ты, не вы)
+      input: Your share
+      context: regarding items in the shared receipt
     total:
       input: Total
   feedback:
