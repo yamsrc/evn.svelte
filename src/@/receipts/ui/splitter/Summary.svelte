@@ -17,7 +17,7 @@
     <ul class="space-y-2">
       {#each lines as line, i (i)}
         <li class="flex justify-between">
-          <div>
+          <div class="flex items-center gap-1">
             <span class="min-w-4 inline-block text-center text-sm font-medium">
               {#if line.denominator > 1}
                 <Fraction numerator={line.numerator} denominator={line.denominator} />
