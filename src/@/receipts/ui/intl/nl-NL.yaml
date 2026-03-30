@@ -10,8 +10,8 @@ me: Ik
 overview:
   total: Totaal
 feedback:
-  question: Ziet de scan er goed uit?
-  down: We zullen het nakijken.
+  question: Hoe is de scan geworden?
+  down: We zullen ernaar kijken.
   thanks: Dank je!
 autoclose:
   description: Maak de verdeling en werk de saldi bij zodra iedereen klaar is.

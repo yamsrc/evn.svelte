@@ -10,8 +10,8 @@ me: 我
 overview:
   total: 合计
 feedback:
-  question: 扫描看起来正常吗？
-  down: 我们会检查。
+  question: 扫描效果怎么样？
+  down: 我们会查看一下。
   thanks: 谢谢！
 autoclose:
   description: 等所有人都完成后，创建分账并更新余额。

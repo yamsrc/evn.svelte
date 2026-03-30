@@ -10,8 +10,8 @@ me: मैं
 overview:
   total: कुल
 feedback:
-  question: क्या स्कैन सही है?
-  down: हम जांचेंगे।
+  question: स्कैन कैसा रहा?
+  down: हम देख लेंगे।
   thanks: धन्यवाद!
 autoclose:
   description: स्प्लिट बनाएं और जब सभी पूरा कर लें तो बैलेंस अपडेट करें।

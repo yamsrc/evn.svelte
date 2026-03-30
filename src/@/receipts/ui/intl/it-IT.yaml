@@ -10,8 +10,8 @@ me: Me
 overview:
   total: Totale
 feedback:
-  question: La scansione va bene?
-  down: Controlliamo noi.
+  question: Com'è venuta la scansione?
+  down: Daremo un’occhiata.
   thanks: Grazie!
 autoclose:
   description: Crea la suddivisione e aggiorna i saldi quando tutti hanno finito.

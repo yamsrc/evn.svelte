@@ -10,8 +10,8 @@ me: Я
 overview:
   total: Разом
 feedback:
-  question: Скан виглядає добре?
-  down: Ми перевіримо.
+  question: Як вийшов скан?
+  down: Ми подивимось.
   thanks: Дякую!
 autoclose:
   description: Створіть поділ і оновіть баланси, коли всі завершать.

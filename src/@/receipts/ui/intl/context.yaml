@@ -22,9 +22,10 @@ inputs:
       input: Total
   feedback:
     question:
-      input: Scan looks good?
+      input: How was the scan?
+      context: question regarding the quality of receipt scan
     down:
-      input: We'll check.
+      input: We’ll take a look.
     thanks:
       input: Спасибо!
   autoclose:

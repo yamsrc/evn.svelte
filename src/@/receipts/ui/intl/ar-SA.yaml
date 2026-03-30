@@ -10,8 +10,8 @@ me: أنا
 overview:
   total: الإجمالي
 feedback:
-  question: هل الفحص جيد؟
-  down: سنتحقق.
+  question: كيف كانت نتيجة المسح الضوئي؟
+  down: سنلقي نظرة.
   thanks: شكرًا!
 autoclose:
   description: أنشئ التقسيم وقم بتحديث الأرصدة عند انتهاء الجميع.

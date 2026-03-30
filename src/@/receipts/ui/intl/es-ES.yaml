@@ -10,8 +10,8 @@ me: Yo
 overview:
   total: Total
 feedback:
-  question: ¿La exploración se ve bien?
-  down: Lo comprobaremos.
+  question: ¿Qué tal salió el escaneo?
+  down: Le echaremos un vistazo.
   thanks: ¡Gracias!
 autoclose:
   description: Crea la división y actualiza los saldos cuando todos hayan terminado.

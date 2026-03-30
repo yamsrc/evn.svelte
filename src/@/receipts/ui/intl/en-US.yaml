@@ -10,8 +10,8 @@ me: Me
 overview:
   total: Total
 feedback:
-  question: Scan looks good?
-  down: We'll check.
+  question: How did the scan turn out?
+  down: We’ll take a look.
   thanks: Thank you!
 autoclose:
   description: Create the split and update balances when everyone is done.

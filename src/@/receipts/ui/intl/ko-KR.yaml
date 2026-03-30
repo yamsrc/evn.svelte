@@ -10,8 +10,8 @@ me: 나
 overview:
   total: 합계
 feedback:
-  question: 스캔 괜찮나요?
-  down: 저희가 확인하겠습니다.
+  question: 스캔은 어땠나요?
+  down: 확인해 보겠습니다.
   thanks: 감사합니다!
 autoclose:
   description: 모두 완료되면 분할을 생성하고 잔액을 업데이트하세요.

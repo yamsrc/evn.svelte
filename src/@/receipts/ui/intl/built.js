@@ -20,8 +20,8 @@ export const dictionaries = {
       "total": "الإجمالي"
     },
     "feedback": {
-      "question": "هل الفحص جيد؟",
-      "down": "سنتحقق.",
+      "question": "كيف كانت نتيجة المسح الضوئي؟",
+      "down": "سنلقي نظرة.",
       "thanks": "شكرًا!"
     },
     "autoclose": {
@@ -47,8 +47,8 @@ export const dictionaries = {
       "total": "Gesamt"
     },
     "feedback": {
-      "question": "Scan sieht gut aus?",
-      "down": "Wir schauen nach.",
+      "question": "Wie war der Scan?",
+      "down": "Wir schauen es uns an.",
       "thanks": "Danke!"
     },
     "autoclose": {
@@ -74,8 +74,8 @@ export const dictionaries = {
       "total": "Total"
     },
     "feedback": {
-      "question": "Scan looks good?",
-      "down": "We'll check.",
+      "question": "How did the scan turn out?",
+      "down": "We’ll take a look.",
       "thanks": "Thank you!"
     },
     "autoclose": {
@@ -101,8 +101,8 @@ export const dictionaries = {
       "total": "Total"
     },
     "feedback": {
-      "question": "¿La exploración se ve bien?",
-      "down": "Lo comprobaremos.",
+      "question": "¿Qué tal salió el escaneo?",
+      "down": "Le echaremos un vistazo.",
       "thanks": "¡Gracias!"
     },
     "autoclose": {
@@ -128,8 +128,8 @@ export const dictionaries = {
       "total": "Total"
     },
     "feedback": {
-      "question": "Le scan a l’air bon ?",
-      "down": "Nous allons vérifier.",
+      "question": "Comment s'est passé le scan ?",
+      "down": "Nous allons jeter un œil.",
       "thanks": "Merci !"
     },
     "autoclose": {
@@ -155,8 +155,8 @@ export const dictionaries = {
       "total": "कुल"
     },
     "feedback": {
-      "question": "क्या स्कैन सही है?",
-      "down": "हम जांचेंगे।",
+      "question": "स्कैन कैसा रहा?",
+      "down": "हम देख लेंगे।",
       "thanks": "धन्यवाद!"
     },
     "autoclose": {
@@ -182,8 +182,8 @@ export const dictionaries = {
       "total": "Totale"
     },
     "feedback": {
-      "question": "La scansione va bene?",
-      "down": "Controlliamo noi.",
+      "question": "Com'è venuta la scansione?",
+      "down": "Daremo un’occhiata.",
       "thanks": "Grazie!"
     },
     "autoclose": {
@@ -209,8 +209,8 @@ export const dictionaries = {
       "total": "合計"
     },
     "feedback": {
-      "question": "スキャンは問題なさそうですか？",
-      "down": "こちらで確認します。",
+      "question": "スキャンの出来栄えはどうでしたか？",
+      "down": "確認します。",
       "thanks": "ありがとうございます！"
     },
     "autoclose": {
@@ -236,8 +236,8 @@ export const dictionaries = {
       "total": "합계"
     },
     "feedback": {
-      "question": "스캔 괜찮나요?",
-      "down": "저희가 확인하겠습니다.",
+      "question": "스캔은 어땠나요?",
+      "down": "확인해 보겠습니다.",
       "thanks": "감사합니다!"
     },
     "autoclose": {
@@ -263,8 +263,8 @@ export const dictionaries = {
       "total": "Totaal"
     },
     "feedback": {
-      "question": "Ziet de scan er goed uit?",
-      "down": "We zullen het nakijken.",
+      "question": "Hoe is de scan geworden?",
+      "down": "We zullen ernaar kijken.",
       "thanks": "Dank je!"
     },
     "autoclose": {
@@ -290,8 +290,8 @@ export const dictionaries = {
       "total": "Итого"
     },
     "feedback": {
-      "question": "Скан выглядит хорошо?",
-      "down": "Мы проверим.",
+      "question": "Как получился скан?",
+      "down": "Мы посмотрим.",
       "thanks": "Спасибо!"
     },
     "autoclose": {
@@ -317,7 +317,7 @@ export const dictionaries = {
       "total": "Jumla"
     },
     "feedback": {
-      "question": "Je, uchunguzi unaonekana mzuri?",
+      "question": "Uchunguzi ulitokeaje?",
       "down": "Tutaangalia.",
       "thanks": "Asante!"
     },
@@ -344,8 +344,8 @@ export const dictionaries = {
       "total": "Toplam"
     },
     "feedback": {
-      "question": "Tarama iyi görünüyor mu?",
-      "down": "Biz kontrol edeceğiz.",
+      "question": "Tarama nasıl oldu?",
+      "down": "Bir göz atacağız.",
       "thanks": "Teşekkürler!"
     },
     "autoclose": {
@@ -371,8 +371,8 @@ export const dictionaries = {
       "total": "Разом"
     },
     "feedback": {
-      "question": "Скан виглядає добре?",
-      "down": "Ми перевіримо.",
+      "question": "Як вийшов скан?",
+      "down": "Ми подивимось.",
       "thanks": "Дякую!"
     },
     "autoclose": {
@@ -398,8 +398,8 @@ export const dictionaries = {
       "total": "合计"
     },
     "feedback": {
-      "question": "扫描看起来正常吗？",
-      "down": "我们会检查。",
+      "question": "扫描效果怎么样？",
+      "down": "我们会查看一下。",
       "thanks": "谢谢！"
     },
     "autoclose": {

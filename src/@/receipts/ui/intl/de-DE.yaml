@@ -10,9 +10,11 @@ me: Ich
 overview:
   total: Gesamt
 feedback:
-  question: Scan sieht gut aus?
-  down: Wir schauen nach.
+  question: Wie war der Scan?
+  down: Wir schauen es uns an.
   thanks: Danke!
 autoclose:
-  description: Erstelle die Aufteilung und aktualisiere die Salden, sobald alle fertig sind.
+  description: >-
+    Erstelle die Aufteilung und aktualisiere die Salden, sobald alle fertig
+    sind.
   title: Automatisch abschließen

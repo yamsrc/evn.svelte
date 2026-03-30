@@ -10,8 +10,8 @@ me: Ben
 overview:
   total: Toplam
 feedback:
-  question: Tarama iyi görünüyor mu?
-  down: Biz kontrol edeceğiz.
+  question: Tarama nasıl oldu?
+  down: Bir göz atacağız.
   thanks: Teşekkürler!
 autoclose:
   description: Herkes işi bitirdiğinde bölüşümü oluşturun ve bakiyeleri güncelleyin.

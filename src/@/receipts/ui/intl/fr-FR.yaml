@@ -10,8 +10,8 @@ me: Moi
 overview:
   total: Total
 feedback:
-  question: Le scan a l’air bon ?
-  down: Nous allons vérifier.
+  question: Comment s'est passé le scan ?
+  down: Nous allons jeter un œil.
   thanks: Merci !
 autoclose:
   description: Crée le partage et mets à jour les soldes quand tout le monde a terminé.
