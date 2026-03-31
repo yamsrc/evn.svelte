@@ -7,6 +7,7 @@
   import { Header } from '@/app/ui'
   import { Spinner } from '$ui/spinner'
   import { dict } from '$lib/intl'
+  import { Return } from '$com/shell'
   import { page } from '$app/state'
 
   const id = $derived(page.params.id)
@@ -66,3 +67,5 @@
 </Section>
 
 <Editor.Edit {id} bind:value={ctx.value} bind:mode={ctx.mode} />
+
+<Return href="/expenses/{id}/" />

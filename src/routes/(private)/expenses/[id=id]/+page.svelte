@@ -43,12 +43,12 @@
       <Section>
         <Details.Participants {expense} />
       </Section>
-
-      <Actions>
-        <Action id="expenses-edit-action" href={`/expenses/editor/${id}/`}>
-          <Pencil />
-        </Action>
-      </Actions>
     {/if}
   {/snippet}
 </Async>
+
+<Actions>
+  <Action id="expenses-edit-action" href={`/expenses/editor/${id}/`}>
+    <Pencil />
+  </Action>
+</Actions>

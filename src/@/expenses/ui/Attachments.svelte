@@ -18,44 +18,42 @@
   }
 </script>
 
-{#if attachments.length > 0}
-  <div
-    class={[
-      'bg-accent flex justify-center p-4 overflow-x-auto overscroll-x-contain touch-pan-x no-scrollbar',
-      classes,
-    ]}>
-    <div class="flex gap-3">
-      {#each attachments as attachment (attachment)}
-        <div
-          class={[
-            'shrink-0 border h-full no-scrollbar',
-            editable && 'overflow-y-auto overscroll-y-contain touch-pan-y snap-y snap-mandatory',
-          ]}>
-          <Fullscreen class="h-[300px]">
-            <Picture
-              id={attachment}
-              {path}
-              variant="300x600?"
-              class={['w-full max-h-full object-contain rounded-md', editable && 'snap-center']}
-              style="view-transition-name: attachment-{attachment}; view-transition-class: transition-spring transition-morph;" />
-            {#snippet overlay()}
-              {#if editable}
-                <div class="px-5 pt-2 tim:pt-[env(safe-area-inset-top)] flex justify-end">
-                  <Hold
-                    label={$dict.actions.delete}
-                    variant="outline"
-                    size="icon"
-                    class="text-destructive"
-                    onclick={() => filter(attachment)}>
-                    <Trash2 class="size-5" />
-                  </Hold>
-                </div>
-              {/if}
-            {/snippet}
-          </Fullscreen>
-        </div>
-      {/each}
-      <div class="w-2 shrink-0"></div>
-    </div>
+<div
+  class={[
+    'bg-accent flex justify-center p-4 overflow-x-auto overscroll-x-contain touch-pan-x no-scrollbar',
+    classes,
+  ]}>
+  <div class="flex gap-3">
+    {#each attachments as attachment (attachment)}
+      <div
+        class={[
+          'shrink-0 border h-full no-scrollbar',
+          editable && 'overflow-y-auto overscroll-y-contain touch-pan-y snap-y snap-mandatory',
+        ]}>
+        <Fullscreen class="h-[300px]">
+          <Picture
+            id={attachment}
+            {path}
+            variant="300x600?"
+            class={['w-full max-h-full object-contain rounded-md', editable && 'snap-center']}
+            style="view-transition-name: attachment-{attachment}; view-transition-class: transition-spring transition-morph;" />
+          {#snippet overlay()}
+            {#if editable}
+              <div class="px-5 pt-2 tim:pt-[env(safe-area-inset-top)] flex justify-end">
+                <Hold
+                  label={$dict.actions.delete}
+                  variant="outline"
+                  size="icon"
+                  class="text-destructive"
+                  onclick={() => filter(attachment)}>
+                  <Trash2 class="size-5" />
+                </Hold>
+              </div>
+            {/if}
+          {/snippet}
+        </Fullscreen>
+      </div>
+    {/each}
+    <div class="w-2 shrink-0"></div>
   </div>
-{/if}
+</div>
