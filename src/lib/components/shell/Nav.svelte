@@ -10,6 +10,7 @@
   import { page } from '$app/state'
   import { preloadCode } from '$app/navigation'
   import { actions, returns } from './store'
+  import Underlay from './Underlay.svelte'
   import { exact, match, nested, type Props, type Section } from './Nav'
   import Attention from './Attention.svelte'
 
@@ -69,16 +70,10 @@
     classes,
   ]}>
   {#if underlay}
-    <div
-      class={[
-        'absolute -z-1 inset-0 -top-6',
-        '-bottom-[max(env(safe-area-inset-bottom),1rem)]',
-        'bg-background/80',
-        'mask-[linear-gradient(to_bottom,transparent_0%,black_2rem)]',
-      ]}
-      style="view-transition-name: shell-nav-underlay;"
-      class:hidden={safariBrowser}>
-    </div>
+    <Underlay
+      direction="bottom"
+      class="absolute -z-1 inset-0 -top-6 -bottom-[max(env(safe-area-inset-bottom),1rem)]"
+      style="view-transition-name: shell-nav-underlay;" />
   {/if}
   <div
     class={cn(
