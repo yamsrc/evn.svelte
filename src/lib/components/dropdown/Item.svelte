@@ -6,7 +6,7 @@
     variants: {
       direction: {
         col: 'justify-start',
-        row: "flex-col gap-1 h-fit [&_svg:not([class*='size-'])]:size-5 w-min min-w-20 whitespace-normal",
+        row: "flex-col gap-2 h-fit [&_svg:not([class*='size-'])]:size-5 w-min min-w-20 whitespace-normal",
       },
     },
     defaultVariants: { direction: 'col' },

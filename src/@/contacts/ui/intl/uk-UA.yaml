@@ -14,3 +14,7 @@ expenses:
   empty: Поки що спільних витрат немає.
 delete:
   label: Утримуйте, щоб видалити
+invite:
+  link: Поділитися
+  qr: Показати QR
+  manually: Додати вручну

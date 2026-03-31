@@ -14,3 +14,7 @@ expenses:
   empty: 아직 공유된 지출이 없습니다.
 delete:
   label: 길게 눌러 삭제
+invite:
+  link: 공유
+  qr: QR 표시
+  manually: 수동으로 추가

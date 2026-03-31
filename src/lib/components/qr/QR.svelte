@@ -40,8 +40,7 @@
   <AlertDialog.Trigger
     class={cn(buttonVariants(props), classes)}
     disabled={busy || disabled}
-    {onclick}
-  >
+    {onclick}>
     {#if busy}
       <Spinner />
     {:else}

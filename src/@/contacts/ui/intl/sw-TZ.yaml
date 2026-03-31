@@ -14,3 +14,7 @@ expenses:
   empty: Hakuna gharama za pamoja hadi sasa.
 delete:
   label: Shikilia ili ufute
+invite:
+  link: Shiriki
+  qr: Onesha QR
+  manually: Ongeza mwenyewe

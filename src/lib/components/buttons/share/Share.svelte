@@ -1,7 +1,6 @@
 <script lang="ts">
   import { Share2 } from '@lucide/svelte'
   import { Button } from '$ui/button'
-  import { cn } from '$lib/utils'
   import { Loader } from '$com/loader'
   import { Clipboard } from '$com/buttons'
   import { browser } from '$app/environment'
@@ -42,7 +41,7 @@
 </script>
 
 {#if supported}
-  <Button class={cn(classes)} {onclick} disabled={waiting || disabled} {...rest}>
+  <Button class={classes} {onclick} disabled={waiting || disabled} {...rest}>
     {#if children}
       {@render children?.()}
     {:else}

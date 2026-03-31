@@ -26,4 +26,9 @@ export type Dictionary = {
       delete: {
         label: string
       }
+      invite: {
+        link: string
+        qr: string
+        manually: string
+      }
     }

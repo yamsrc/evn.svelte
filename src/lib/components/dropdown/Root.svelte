@@ -1,38 +1,48 @@
 <script lang="ts">
   import { onDestroy, onMount } from 'svelte'
   import { transit } from '$lib/tools/svt'
-  import { setContext } from './Context'
+  import { setContext, type Context } from './Context'
   import type { Props } from './Root'
 
   const { children, onopen }: Props = $props()
 
   const id = `am-${crypto.randomUUID()}`
-  let open = $state(false)
+  let opened = $state(false)
   let contentRef = $state<HTMLDivElement | undefined>()
   let triggerRef = $state<HTMLDivElement | undefined>()
 
-  setContext({
+  const ctx: Context = {
     get opened() {
-      return open
+      return opened
     },
     open: () => {
       onopen?.(true)
-      transit(() => (open = true))
+      transit(() => (opened = true))
     },
     close: () => {
       onopen?.(false)
-      transit(() => (open = false))
+      transit(() => (opened = false))
     },
     get id() {
       return id
     },
     setContentRef: (el) => (contentRef = el),
     setTriggerRef: (el) => (triggerRef = el),
-  })
+  }
+
+  setContext(ctx)
+
+  export function open() {
+    ctx.open()
+  }
+
+  export function close() {
+    ctx.close()
+  }
 
   onMount(() => {
     function handle(e: MouseEvent) {
-      if (!open) return
+      if (!opened) return
 
       const target = e.target as Node
 
@@ -42,7 +52,7 @@
       e.stopPropagation()
 
       onopen?.(false)
-      transit(() => (open = false))
+      transit(() => (opened = false))
     }
 
     document.addEventListener('click', handle, { capture: true })
