@@ -18,7 +18,7 @@
     <Button
       {id}
       class={classes}
-      style="view-transition-name: {ctx.id}; view-transition-class: transition-spring transition-morph;"
+      style="view-transition-name: {ctx.id}; view-transition-class: transition-spring transition-morph dropdown-content;"
       onclick={() => ctx.open()}
       {...rest}>
       {@render children?.()}

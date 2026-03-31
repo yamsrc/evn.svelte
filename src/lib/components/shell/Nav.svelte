@@ -76,6 +76,7 @@
         'bg-background/80',
         'mask-[linear-gradient(to_bottom,transparent_0%,black_2rem)]',
       ]}
+      style="view-transition-name: shell-nav-underlay;"
       class:hidden={safariBrowser}>
     </div>
   {/if}
@@ -90,7 +91,7 @@
     )}>
     <ul
       class={cn('bg-muted overflow-hidden flex sm:ml-4 h-full', $faded && 'bg-background', rounded)}
-      style="view-transition-name: shell-nav;">
+      style="view-transition-name: shell-nav; view-transition-class: transition-morph;">
       {#each sections as section (section.href)}
         {@const active = match(section, page.url.pathname)}
         {@const hidden = !visible.includes(section)}
@@ -114,12 +115,14 @@
                 // $faded && 'opacity-25 transition-opacity duration-200',
                 active || 'hidden',
               )}
-              style={active ? 'view-transition-name: shell-nav-active;' : ''}>
+              style={active
+                ? 'view-transition-name: shell-nav-active; view-transition-class: transition-morph;'
+                : ''}>
             </div>
             {#if section.unseen && !ret}
               <Attention
                 id={`shell-nav-notify-${section.id}`}
-                class="absolute top-2.5 right-2.5 z-10" />
+                class={['absolute top-2.5 right-2.5 z-10', $faded && 'opacity-25']} />
             {/if}
             <div
               class={cn(
@@ -127,7 +130,7 @@
                 'transition-opacity duration-200',
                 $faded && 'opacity-25',
               )}
-              style="view-transition-name: shell-nav-item-{section.id};">
+              style="view-transition-name: shell-nav-item-{section.id}; view-transition-class: shell-nav-item transition-morph;">
               {#if ret}
                 {#if ret.children}
                   {@render ret.children()}
@@ -165,8 +168,15 @@
 <style>
   ::view-transition-old(shell-nav),
   ::view-transition-new(shell-nav) {
-    width: auto;
     isolation: isolate;
+  }
+
+  ::view-transition-group(shell-nav),
+  ::view-transition-group(shell-nav-underlay),
+  ::view-transition-group(shell-nav-active),
+  ::view-transition-group(*.shell-nav-item),
+  ::view-transition-group(.attention) {
+    z-index: 1;
   }
 
   ::view-transition-new(shell-nav-active):only-child {
