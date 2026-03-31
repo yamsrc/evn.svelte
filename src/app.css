@@ -205,6 +205,10 @@
     scale: 0.98;
   }
 
+  .selected {
+    @apply bg-accent ring-2 ring-accent-foreground/20;
+  }
+
   /* Hide scrollbar */
   .no-scrollbar::-webkit-scrollbar {
     display: none;

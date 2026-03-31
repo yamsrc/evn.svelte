@@ -34,7 +34,7 @@
   class={cn(
     'relative overflow-hidden rounded-lg transition-all duration-200 ease-in-out',
     collapsed ? 'h-0' : h,
-    selected && 'outline-muted-foreground/50 outline-2',
+    selected && 'selected',
   )}>
   <div
     bind:this={container}
@@ -45,9 +45,6 @@
           'w-full max-w-full flex items-center justify-between gap-2 text-base font-normal',
           h || 'h-auto',
           classes,
-          {
-            'bg-accent dark:bg-accent': selected,
-          },
         )}
         {variant}
         {...props}>

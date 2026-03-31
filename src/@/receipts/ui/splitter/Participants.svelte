@@ -53,7 +53,7 @@
         'relative',
         'min-w-20 max-w-32 h-fit flex flex-col items-center justify-center gap-1',
         'disabled:opacity-100 transition-all',
-        selected && 'bg-accent! ring-2 ring-accent-foreground/20',
+        selected && 'selected',
         mounted && 'starting:scale-0 duration-300',
         removing.has(identity) && 'scale-0 duration-150',
       ]}
