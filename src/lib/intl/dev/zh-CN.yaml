@@ -34,6 +34,12 @@ components:
     title: 参与者
     managedContactsCreation: 显示托管联系人创建按钮
     shareUrl: 分享链接
+  fullscreen:
+    title: Fullscreen
+    attachment: 给任意一笔支出添加附件
+    delete: 长按删除
+  invitation:
+    title: 邀请
 transmission:
   title: Transmission
   permission:

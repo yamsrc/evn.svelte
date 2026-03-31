@@ -33,6 +33,8 @@
   })
 
   function onpointerdown(e: PointerEvent) {
+    swallow(e)
+
     if (e.altKey) click(true)
     else press()
   }
@@ -108,7 +110,7 @@
   <div
     use:portal
     class={cn(
-      'fixed z-1000 w-fit min-w-26 transition-all ease-in-out space-y-1',
+      'fixed z-1002 w-fit min-w-26 transition-all ease-in-out space-y-1',
       'bg-background/85 p-2 pt-1 rounded-md',
       'opacity-0 scale-0',
       {

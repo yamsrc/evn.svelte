@@ -54,6 +54,18 @@ inputs:
         input: Show managed contacts creation button
       shareUrl:
         input: Share URL
+    fullscreen:
+      title:
+        input: Fullscreen
+      attachment:
+        input: Add attachment to any expense
+        context: instruction to act
+      delete:
+        input: Hold to delete
+        context: button label
+    invitation:
+      title:
+        input: Invitations
   transmission:
     title:
       input: Transmission

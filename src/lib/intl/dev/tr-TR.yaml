@@ -34,6 +34,12 @@ components:
     title: Katılımcılar
     managedContactsCreation: Yönetilen kişiler oluşturma butonunu göster
     shareUrl: URL’yi paylaş
+  fullscreen:
+    title: Fullscreen
+    attachment: Herhangi bir harcamaya ek dosya ekle
+    delete: Silmek için basılı tut
+  invitation:
+    title: Davetiyeler
 transmission:
   title: Transmission
   permission:

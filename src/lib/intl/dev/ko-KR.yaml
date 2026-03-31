@@ -34,6 +34,12 @@ components:
     title: 참가자
     managedContactsCreation: 관리되는 연락처 생성 버튼 표시
     shareUrl: URL 공유
+  fullscreen:
+    title: Fullscreen
+    attachment: 어느 지출에나 첨부파일을 추가해봐
+    delete: 길게 눌러서 삭제
+  invitation:
+    title: 초대장
 transmission:
   title: Transmission
   permission:

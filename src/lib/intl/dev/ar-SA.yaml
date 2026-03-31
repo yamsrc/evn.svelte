@@ -34,6 +34,12 @@ components:
     title: المشاركون
     managedContactsCreation: عرض زر إنشاء جهات الاتصال المُدارة
     shareUrl: مشاركة الرابط
+  fullscreen:
+    title: Fullscreen
+    attachment: أضف مرفقًا إلى أي مصروف
+    delete: اضغط مطولًا للحذف
+  invitation:
+    title: الدعوات
 transmission:
   title: Transmission
   permission:

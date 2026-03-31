@@ -34,6 +34,12 @@ components:
     title: Participantes
     managedContactsCreation: Mostrar botón para crear contactos gestionados
     shareUrl: Compartir URL
+  fullscreen:
+    title: Fullscreen
+    attachment: Añade un archivo adjunto a cualquier gasto
+    delete: Mantén pulsado para borrar
+  invitation:
+    title: Invitaciones
 transmission:
   title: Transmission
   permission:

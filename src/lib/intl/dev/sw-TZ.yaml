@@ -34,6 +34,12 @@ components:
     title: Washiriki
     managedContactsCreation: Onyesha kitufe cha kuunda mawasiliano yanayosimamiwa
     shareUrl: Shiriki URL
+  fullscreen:
+    title: Fullscreen
+    attachment: Ongeza kiambatisho kwenye gharama yoyote
+    delete: Shikilia kufuta
+  invitation:
+    title: Mialiko
 transmission:
   title: Transmission
   permission:

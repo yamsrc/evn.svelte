@@ -21,14 +21,16 @@
       <a href="receipts/">{$dict.components.receipts.title}</a>
     </li>
     <li>
-      <!-- TODO: i18n -->
-      <a href="joins/">Invitations</a>
+      <a href="joins/">{$dict.components.invitation.title}</a>
     </li>
     <li>
       <a href="picture/">{$dict.components.picture.title}</a>
     </li>
     <li>
       <a href="participants/">{$dict.components.participants.title}</a>
+    </li>
+    <li>
+      <a href="fullscreen/">{$dict.components.fullscreen.title}</a>
     </li>
   </ul>
 </Section>

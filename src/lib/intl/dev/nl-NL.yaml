@@ -34,6 +34,12 @@ components:
     title: Deelnemers
     managedContactsCreation: Knop voor het aanmaken van beheerde contacten tonen
     shareUrl: URL delen
+  fullscreen:
+    title: Fullscreen
+    attachment: Voeg een bijlage toe aan een willekeurige uitgave
+    delete: Vasthouden om te verwijderen
+  invitation:
+    title: Uitnodigingen
 transmission:
   title: Transmission
   permission:

@@ -34,6 +34,12 @@ components:
     title: Участники
     managedContactsCreation: Показать кнопку создания управляемых контактов
     shareUrl: Поделиться ссылкой
+  fullscreen:
+    title: Fullscreen
+    attachment: Добавь вложение к любому расходу
+    delete: Удерживай, чтобы удалить
+  invitation:
+    title: Приглашения
 transmission:
   title: Transmission
   permission:

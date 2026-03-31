@@ -34,6 +34,12 @@ components:
     title: प्रतिभागी
     managedContactsCreation: प्रबंधित संपर्क निर्माण बटन दिखाएं
     shareUrl: URL साझा करें
+  fullscreen:
+    title: Fullscreen
+    attachment: किसी भी खर्च में अटैचमेंट जोड़ो
+    delete: हटाने के लिए दबाए रखें
+  invitation:
+    title: निमंत्रण
 transmission:
   title: Transmission
   permission:

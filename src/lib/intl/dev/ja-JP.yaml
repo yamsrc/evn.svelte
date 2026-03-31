@@ -34,6 +34,12 @@ components:
     title: 参加者
     managedContactsCreation: 管理対象の連絡先作成ボタンを表示
     shareUrl: URLを共有
+  fullscreen:
+    title: Fullscreen
+    attachment: どの支出にも添付ファイルを追加しよう
+    delete: 長押しで削除
+  invitation:
+    title: 招待
 transmission:
   title: Transmission
   permission:
