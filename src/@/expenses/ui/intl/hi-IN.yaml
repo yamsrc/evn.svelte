@@ -45,3 +45,6 @@ transfers:
 
       (gender) => gender === "he" ? "तुम्हें मिला है" : gender === "she" ?
       "तुम्हें मिली है" : "तुम्हें मिला/मिली है"
+action: {}
+actions:
+  delete: अटैचमेंट हटाओ

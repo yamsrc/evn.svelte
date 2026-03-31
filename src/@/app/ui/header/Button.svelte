@@ -1,6 +1,5 @@
 <script lang="ts">
   import { Button, type ButtonProps } from '$ui/button'
-  import { cn } from '$lib/utils'
 
   const {
     children,
@@ -11,6 +10,6 @@
   }: ButtonProps = $props()
 </script>
 
-<Button class={cn(classes)} {size} {variant} {...rest}>
+<Button class={classes} {size} {variant} {...rest}>
   {@render children?.()}
 </Button>

@@ -39,3 +39,6 @@ transfers:
     received: |-
       !js
       (gender) => "Hai ricevuto"
+action: {}
+actions:
+  delete: Elimina allegato

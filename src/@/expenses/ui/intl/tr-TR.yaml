@@ -37,3 +37,6 @@ transfers:
     received: |-
       !js
       (gender) => "Aldın"
+action: {}
+actions:
+  delete: Ek dosyayı sil

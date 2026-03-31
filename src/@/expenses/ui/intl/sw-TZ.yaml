@@ -41,3 +41,6 @@ transfers:
     received: |-
       !js
       (gender) => "Umepewa"
+action: {}
+actions:
+  delete: Futa kiambatisho
