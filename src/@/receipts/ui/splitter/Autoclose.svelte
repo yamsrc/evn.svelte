@@ -51,21 +51,28 @@
       <Item.Media>
         <ChartPie class="text-muted-foreground" />
       </Item.Media>
-      <Item.Content>
-        <Item.Title>{$dict.autoclose.title}</Item.Title>
-        <Item.Description>{$dict.autoclose.description}</Item.Description>
-      </Item.Content>
-      <Item.Actions class="pt-1.5">
-        <Switch id="autoclose-switch" {checked} {onCheckedChange} disabled={busy} />
-      </Item.Actions>
+      <div class="flex flex-col flex-1 gap-2">
+        <Item.Content class="flex-row flex-1 justify-between">
+          <div>
+            <Item.Title>{$dict.autoclose.title}</Item.Title>
+            <Item.Description>{$dict.autoclose.description}</Item.Description>
+          </div>
+          <Item.Actions class="pt-1.5">
+            <Switch id="autoclose-switch" {checked} {onCheckedChange} disabled={busy} />
+          </Item.Actions>
+        </Item.Content>
+        {#if checked}
+          <Item.Content>
+            <Item.Title>{$dict.autoclose.payer.title}</Item.Title>
+            <PayerSelect
+              bind:value={payer}
+              identities={receipt.identities}
+              disabled={busy}
+              onchange={onpayerchange}
+              id="receipts-autoclose-payer-select" />
+          </Item.Content>
+        {/if}
+      </div>
     </Item.Root>
   </label>
-  {#if checked}
-    <PayerSelect
-      bind:value={payer}
-      identities={receipt.identities}
-      disabled={busy}
-      onchange={onpayerchange}
-      id="receipts-autoclose-payer-select" />
-  {/if}
 </div>

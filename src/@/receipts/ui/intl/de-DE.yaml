@@ -18,3 +18,5 @@ autoclose:
     Erstelle die Aufteilung und aktualisiere die Salden, sobald alle fertig
     sind.
   title: Automatisch abschließen
+  payer:
+    title: Bezahlt von

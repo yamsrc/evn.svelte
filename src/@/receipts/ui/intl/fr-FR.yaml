@@ -16,3 +16,5 @@ feedback:
 autoclose:
   description: Crée le partage et mets à jour les soldes quand tout le monde a terminé.
   title: Terminer automatiquement
+  payer:
+    title: Payé par

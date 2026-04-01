@@ -16,3 +16,5 @@ feedback:
 autoclose:
   description: Maak de verdeling en werk de saldi bij zodra iedereen klaar is.
   title: Automatisch voltooien
+  payer:
+    title: Betaald door

@@ -16,3 +16,5 @@ feedback:
 autoclose:
   description: Herkes işi bitirdiğinde bölüşümü oluşturun ve bakiyeleri güncelleyin.
   title: Otomatik olarak bitir
+  payer:
+    title: Ödeyen

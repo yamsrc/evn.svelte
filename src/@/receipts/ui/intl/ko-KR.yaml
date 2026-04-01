@@ -16,3 +16,5 @@ feedback:
 autoclose:
   description: 모두 완료되면 분할을 생성하고 잔액을 업데이트하세요.
   title: 자동으로 완료
+  payer:
+    title: 지불자

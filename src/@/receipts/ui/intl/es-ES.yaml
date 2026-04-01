@@ -16,3 +16,5 @@ feedback:
 autoclose:
   description: Crea la división y actualiza los saldos cuando todos hayan terminado.
   title: Finalizar automáticamente
+  payer:
+    title: Pagado por

@@ -16,3 +16,5 @@ feedback:
 autoclose:
   description: Create the split and update balances when everyone is done.
   title: Finish automatically
+  payer:
+    title: Paid by

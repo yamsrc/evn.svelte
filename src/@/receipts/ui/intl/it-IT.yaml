@@ -16,3 +16,5 @@ feedback:
 autoclose:
   description: Crea la suddivisione e aggiorna i saldi quando tutti hanno finito.
   title: Completamento automatico
+  payer:
+    title: Pagato da

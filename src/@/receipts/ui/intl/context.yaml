@@ -33,3 +33,7 @@ inputs:
       input: Create the split and update balances when everyone is done.
     title:
       input: Finish automatically
+    payer:
+      title:
+        input: Paid by
+        context: selector label

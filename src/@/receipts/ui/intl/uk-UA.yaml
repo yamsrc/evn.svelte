@@ -16,3 +16,5 @@ feedback:
 autoclose:
   description: Створіть поділ і оновіть баланси, коли всі завершать.
   title: Завершити автоматично
+  payer:
+    title: Оплачено

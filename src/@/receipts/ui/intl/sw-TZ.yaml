@@ -16,3 +16,5 @@ feedback:
 autoclose:
   description: Unda mgawanyo na sasisha salio pindi kila mtu atakapomaliza.
   title: Maliza kiotomatiki
+  payer:
+    title: Imelipwa na

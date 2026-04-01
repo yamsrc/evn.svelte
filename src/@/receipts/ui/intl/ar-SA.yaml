@@ -16,3 +16,5 @@ feedback:
 autoclose:
   description: أنشئ التقسيم وقم بتحديث الأرصدة عند انتهاء الجميع.
   title: أكمِل تلقائيًا
+  payer:
+    title: تم الدفع بواسطة
