@@ -64,6 +64,7 @@
 <div class="h-20 sm:h-24"></div>
 <nav
   class={[
+    'shell-navigation',
     'fixed max-w-3xl mx-auto',
     'bottom-[env(safe-area-inset-bottom)] standalone:bottom-[max(env(safe-area-inset-bottom),1rem)]',
     'left-[env(safe-area-inset-left)] right-[env(safe-area-inset-right)]',

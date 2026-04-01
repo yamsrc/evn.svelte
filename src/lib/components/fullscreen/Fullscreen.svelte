@@ -37,7 +37,9 @@
     {/if}
   </div>
 {:else}
-  <button class={['focus:outline-none **:data-[slot=overlay]:hidden', classes]} onclick={show}>
+  <button
+    class={['focus:outline-none **:data-[slot=fullscreen-overlay]:hidden', classes]}
+    onclick={show}>
     {@render children()}
   </button>
 {/if}
