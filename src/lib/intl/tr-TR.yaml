@@ -12,7 +12,7 @@ actions:
   contacts:
     group: Grup Oluştur
     title: Arkadaşlar
-    contact: Arkadaş
+    contact: Arkadaş ekle
   addSelected: Seçileni ekle
   cancel: İptal
   search: Ara
@@ -23,6 +23,7 @@ actions:
     adventure: Macera Başlat
   expenses:
     split: Böl
+  scan: Tara
 nav:
   home: Ana Sayfa
   profile: Ben

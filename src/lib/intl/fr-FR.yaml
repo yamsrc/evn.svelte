@@ -12,7 +12,7 @@ actions:
   contacts:
     group: Créer un groupe
     title: Amis
-    contact: Ami
+    contact: Ajouter un ami
   addSelected: Ajouter la sélection
   cancel: Annuler
   search: Rechercher
@@ -23,6 +23,7 @@ actions:
     adventure: Commencer l’aventure
   expenses:
     split: Partager
+  scan: Scanner
 nav:
   home: Accueil
   profile: Moi

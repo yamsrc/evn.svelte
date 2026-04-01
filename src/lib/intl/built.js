@@ -18,7 +18,7 @@ export const dictionaries = {
       "contacts": {
         "group": "إنشاء مجموعة",
         "title": "أصدقاء",
-        "contact": "صديق"
+        "contact": "أضِف صديقًا"
       },
       "addSelected": "إضافة المحدد",
       "cancel": "إلغاء",
@@ -31,7 +31,8 @@ export const dictionaries = {
       },
       "expenses": {
         "split": "تقسيم"
-      }
+      },
+      "scan": "مسح"
     },
     "nav": {
       "home": "الرئيسية",
@@ -234,7 +235,7 @@ export const dictionaries = {
       "contacts": {
         "group": "Gruppe erstellen",
         "title": "Freunde",
-        "contact": "Freund"
+        "contact": "Freund hinzufügen"
       },
       "addSelected": "Ausgewählte hinzufügen",
       "cancel": "Abbrechen",
@@ -247,7 +248,8 @@ export const dictionaries = {
       },
       "expenses": {
         "split": "Aufteilen"
-      }
+      },
+      "scan": "Scannen"
     },
     "nav": {
       "home": "Startseite",
@@ -450,7 +452,7 @@ export const dictionaries = {
       "contacts": {
         "group": "Create Group",
         "title": "Friends",
-        "contact": "Friend"
+        "contact": "Add Friend"
       },
       "addSelected": "Add selected",
       "cancel": "Cancel",
@@ -463,7 +465,8 @@ export const dictionaries = {
       },
       "expenses": {
         "split": "Split"
-      }
+      },
+      "scan": "Scan"
     },
     "nav": {
       "home": "Home",
@@ -666,7 +669,7 @@ export const dictionaries = {
       "contacts": {
         "group": "Crear grupo",
         "title": "Amigos",
-        "contact": "Amigo"
+        "contact": "Añadir amigo"
       },
       "addSelected": "Agregar seleccionado(s)",
       "cancel": "Cancelar",
@@ -679,7 +682,8 @@ export const dictionaries = {
       },
       "expenses": {
         "split": "Dividir"
-      }
+      },
+      "scan": "Escanear"
     },
     "nav": {
       "home": "Inicio",
@@ -882,7 +886,7 @@ export const dictionaries = {
       "contacts": {
         "group": "Créer un groupe",
         "title": "Amis",
-        "contact": "Ami"
+        "contact": "Ajouter un ami"
       },
       "addSelected": "Ajouter la sélection",
       "cancel": "Annuler",
@@ -895,7 +899,8 @@ export const dictionaries = {
       },
       "expenses": {
         "split": "Partager"
-      }
+      },
+      "scan": "Scanner"
     },
     "nav": {
       "home": "Accueil",
@@ -1098,7 +1103,7 @@ export const dictionaries = {
       "contacts": {
         "group": "समूह बनाएँ",
         "title": "मित्र",
-        "contact": "मित्र"
+        "contact": "दोस्त जोड़ो"
       },
       "addSelected": "चयनित जोड़ें",
       "cancel": "रद्द करें",
@@ -1111,7 +1116,8 @@ export const dictionaries = {
       },
       "expenses": {
         "split": "विभाजित करें"
-      }
+      },
+      "scan": "स्कैन करें"
     },
     "nav": {
       "home": "मुख्य पृष्ठ",
@@ -1314,7 +1320,7 @@ export const dictionaries = {
       "contacts": {
         "group": "Crea gruppo",
         "title": "Amici",
-        "contact": "Amico"
+        "contact": "Aggiungi amico"
       },
       "addSelected": "Aggiungi selezionati",
       "cancel": "Annulla",
@@ -1327,7 +1333,8 @@ export const dictionaries = {
       },
       "expenses": {
         "split": "Dividi"
-      }
+      },
+      "scan": "Scansiona"
     },
     "nav": {
       "home": "Home",
@@ -1530,7 +1537,7 @@ export const dictionaries = {
       "contacts": {
         "group": "グループを作成",
         "title": "友達",
-        "contact": "友達"
+        "contact": "友だちを追加"
       },
       "addSelected": "選択したものを追加",
       "cancel": "キャンセル",
@@ -1543,7 +1550,8 @@ export const dictionaries = {
       },
       "expenses": {
         "split": "割り勘"
-      }
+      },
+      "scan": "スキャン"
     },
     "nav": {
       "home": "ホーム",
@@ -1746,7 +1754,7 @@ export const dictionaries = {
       "contacts": {
         "group": "그룹 만들기",
         "title": "친구",
-        "contact": "친구"
+        "contact": "친구 추가"
       },
       "addSelected": "선택 항목 추가",
       "cancel": "취소",
@@ -1759,7 +1767,8 @@ export const dictionaries = {
       },
       "expenses": {
         "split": "나누기"
-      }
+      },
+      "scan": "스캔"
     },
     "nav": {
       "home": "홈",
@@ -1962,7 +1971,7 @@ export const dictionaries = {
       "contacts": {
         "group": "Groep aanmaken",
         "title": "Vrienden",
-        "contact": "Vriend"
+        "contact": "Vriend toevoegen"
       },
       "addSelected": "Geselecteerde toevoegen",
       "cancel": "Annuleren",
@@ -1975,7 +1984,8 @@ export const dictionaries = {
       },
       "expenses": {
         "split": "Splitsen"
-      }
+      },
+      "scan": "Scannen"
     },
     "nav": {
       "home": "Home",
@@ -2178,7 +2188,7 @@ export const dictionaries = {
       "contacts": {
         "group": "Создать группу",
         "title": "Друзья",
-        "contact": "Друг"
+        "contact": "Добавить друга"
       },
       "addSelected": "Добавить выбранные",
       "cancel": "Отмена",
@@ -2191,7 +2201,8 @@ export const dictionaries = {
       },
       "expenses": {
         "split": "Разделить"
-      }
+      },
+      "scan": "Сканировать"
     },
     "nav": {
       "home": "Главная",
@@ -2394,7 +2405,7 @@ export const dictionaries = {
       "contacts": {
         "group": "Unda Kikundi",
         "title": "Marafiki",
-        "contact": "Rafiki"
+        "contact": "Ongeza rafiki"
       },
       "addSelected": "Ongeza zilizochaguliwa",
       "cancel": "Ghairi",
@@ -2407,7 +2418,8 @@ export const dictionaries = {
       },
       "expenses": {
         "split": "Gawanya"
-      }
+      },
+      "scan": "Kagua"
     },
     "nav": {
       "home": "Mwanzo",
@@ -2610,7 +2622,7 @@ export const dictionaries = {
       "contacts": {
         "group": "Grup Oluştur",
         "title": "Arkadaşlar",
-        "contact": "Arkadaş"
+        "contact": "Arkadaş ekle"
       },
       "addSelected": "Seçileni ekle",
       "cancel": "İptal",
@@ -2623,7 +2635,8 @@ export const dictionaries = {
       },
       "expenses": {
         "split": "Böl"
-      }
+      },
+      "scan": "Tara"
     },
     "nav": {
       "home": "Ana Sayfa",
@@ -2826,7 +2839,7 @@ export const dictionaries = {
       "contacts": {
         "group": "Створити групу",
         "title": "Друзі",
-        "contact": "Друг"
+        "contact": "Додати друга"
       },
       "addSelected": "Додати вибране",
       "cancel": "Скасувати",
@@ -2839,7 +2852,8 @@ export const dictionaries = {
       },
       "expenses": {
         "split": "Розділити"
-      }
+      },
+      "scan": "Сканувати"
     },
     "nav": {
       "home": "Головна",
@@ -3042,7 +3056,7 @@ export const dictionaries = {
       "contacts": {
         "group": "创建群组",
         "title": "朋友",
-        "contact": "朋友"
+        "contact": "添加好友"
       },
       "addSelected": "添加已选项",
       "cancel": "取消",
@@ -3055,7 +3069,8 @@ export const dictionaries = {
       },
       "expenses": {
         "split": "分摊"
-      }
+      },
+      "scan": "扫描"
     },
     "nav": {
       "home": "首页",

@@ -12,7 +12,7 @@ actions:
   contacts:
     group: إنشاء مجموعة
     title: أصدقاء
-    contact: صديق
+    contact: أضِف صديقًا
   addSelected: إضافة المحدد
   cancel: إلغاء
   search: بحث
@@ -23,6 +23,7 @@ actions:
     adventure: ابدأ المغامرة
   expenses:
     split: تقسيم
+  scan: مسح
 nav:
   home: الرئيسية
   profile: أنا

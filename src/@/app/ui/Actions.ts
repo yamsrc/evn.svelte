@@ -1,18 +1,16 @@
 import { derived } from 'svelte/store'
 import { ok } from 'svas'
-import { ChartPie, Coins, Fan, UserPlus, Users } from '@lucide/svelte'
+import { ChartPie, Coins, Fan, ScanText, UserPlus, Users } from '@lucide/svelte'
 import { adventures } from '@/adventures'
 import { dict } from '$lib/intl'
-import { goto } from '$app/navigation'
 import type { Icon } from '@lucide/svelte'
 import type { Adventure } from '@/adventures'
+import type { ButtonProps } from '$ui/button'
 import type { Dictionary } from '$lib/intl'
 
-type ActionItem = {
-  id: string
-  name: string
-  icon: typeof Icon
-  onSelect: () => void
+interface ActionItem extends ButtonProps {
+  label: string
+  Icon: typeof Icon
 }
 
 type ActionGroup = {
@@ -24,45 +22,54 @@ type ActionGroup = {
 function addAdventureExpense(dict: Dictionary, adventure: Adventure): ActionItem {
   return {
     id: 'nav-actions-adventure-expense-button',
-    name: adventure.title,
-    icon: Coins,
-    onSelect: () => goto(`/adventures/${adventure.id}/expenses/editor/`),
+    label: adventure.title,
+    Icon: Coins,
+    href: `/adventures/${adventure.id}/expenses/editor/`,
   }
 }
 
 function addExpense(dict: Dictionary): ActionItem {
   return {
     id: 'nav-actions-cheques-input-button',
-    name: dict.actions.expenses.split,
-    icon: ChartPie,
-    onSelect: () => goto('/expenses/editor/'),
+    label: dict.actions.expenses.split,
+    Icon: ChartPie,
+    href: '/expenses/editor/',
   }
 }
 
 function addContact(dict: Dictionary): ActionItem {
   return {
     id: 'nav-actions-contacts-new-button',
-    name: dict.actions.contacts.contact,
-    icon: UserPlus,
-    onSelect: () => goto('/contacts/new/'),
+    label: dict.actions.contacts.contact,
+    Icon: UserPlus,
+    href: '/contacts/new/',
   }
 }
 
 function addContactGroup(dict: Dictionary): ActionItem {
   return {
     id: 'nav-actions-contacts-groups-button',
-    name: dict.actions.contacts.group,
-    icon: Users,
-    onSelect: () => goto('/contacts/groups/'),
+    label: dict.actions.contacts.group,
+    Icon: Users,
+    href: '/contacts/groups/',
   }
 }
 
 function addAdventure(dict: Dictionary): ActionItem {
   return {
     id: 'nav-actions-adventures-new-button',
-    name: dict.actions.adventures.adventure,
-    icon: Fan,
-    onSelect: () => goto('/adventures/editor/'),
+    label: dict.actions.adventures.adventure,
+    Icon: Fan,
+    href: '/adventures/editor/',
+  }
+}
+
+function addScan(dict: Dictionary): ActionItem {
+  return {
+    id: 'nav-actions-scan-button',
+    label: dict.actions.scan,
+    Icon: ScanText,
+    class: '[&_svg]:text-primary!',
   }
 }
 
@@ -77,12 +84,12 @@ export const actions = derived([dict, adventures], ([$dict, $adventures]) => {
     {
       name: $dict.actions.cheques.title,
       direction: 'col' as const,
-      items: [addContactGroup($dict), addAdventure($dict)],
+      items: [addContact($dict), addContactGroup($dict), addAdventure($dict)],
     },
     {
       name: $dict.actions.contacts.title,
       direction: 'row' as const,
-      items: [addContact($dict), addExpense($dict)],
+      items: [addExpense($dict), addScan($dict)],
     },
   ] satisfies ActionGroup[]
 

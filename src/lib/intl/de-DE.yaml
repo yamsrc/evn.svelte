@@ -12,7 +12,7 @@ actions:
   contacts:
     group: Gruppe erstellen
     title: Freunde
-    contact: Freund
+    contact: Freund hinzufügen
   addSelected: Ausgewählte hinzufügen
   cancel: Abbrechen
   search: Suchen
@@ -23,6 +23,7 @@ actions:
     adventure: Abenteuer starten
   expenses:
     split: Aufteilen
+  scan: Scannen
 nav:
   home: Startseite
   profile: Ich

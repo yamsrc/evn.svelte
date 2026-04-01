@@ -12,7 +12,7 @@ actions:
   contacts:
     group: 그룹 만들기
     title: 친구
-    contact: 친구
+    contact: 친구 추가
   addSelected: 선택 항목 추가
   cancel: 취소
   search: 검색
@@ -23,6 +23,7 @@ actions:
     adventure: 모험 시작하기
   expenses:
     split: 나누기
+  scan: 스캔
 nav:
   home: 홈
   profile: 나

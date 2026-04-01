@@ -20,10 +20,10 @@
           <Dropdown.Separator />
         {/if}
         <Dropdown.Group direction={group.direction}>
-          {#each group.items as item (item.name)}
-            <Dropdown.Item id={item.id} onclick={item.onSelect}>
-              <item.icon />
-              {item.name}
+          {#each group.items as { label, Icon, ...props } (props.id)}
+            <Dropdown.Item {...props}>
+              <Icon />
+              {label}
             </Dropdown.Item>
           {/each}
         </Dropdown.Group>

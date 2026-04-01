@@ -12,7 +12,7 @@ actions:
   contacts:
     group: समूह बनाएँ
     title: मित्र
-    contact: मित्र
+    contact: दोस्त जोड़ो
   addSelected: चयनित जोड़ें
   cancel: रद्द करें
   search: खोजें
@@ -23,6 +23,7 @@ actions:
     adventure: साहसिक यात्रा शुरू करें
   expenses:
     split: विभाजित करें
+  scan: स्कैन करें
 nav:
   home: मुख्य पृष्ठ
   profile: मैं

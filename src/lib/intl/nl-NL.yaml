@@ -12,7 +12,7 @@ actions:
   contacts:
     group: Groep aanmaken
     title: Vrienden
-    contact: Vriend
+    contact: Vriend toevoegen
   addSelected: Geselecteerde toevoegen
   cancel: Annuleren
   search: Zoeken
@@ -23,6 +23,7 @@ actions:
     adventure: Avontuur starten
   expenses:
     split: Splitsen
+  scan: Scannen
 nav:
   home: Home
   profile: Ik

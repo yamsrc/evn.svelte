@@ -34,8 +34,8 @@ inputs:
       title:
         input: Friends
       contact:
-        input: Friend
-        context: without gender forms
+        input: Add Friend
+        context: button label
     addSelected:
       input: Add selected
     cancel:
@@ -56,6 +56,9 @@ inputs:
       split:
         input: Split
         context: split expense/receipt etc
+    scan:
+      input: Scan
+      context: button label
   nav:
     home:
       input: Home

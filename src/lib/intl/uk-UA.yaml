@@ -12,7 +12,7 @@ actions:
   contacts:
     group: Створити групу
     title: Друзі
-    contact: Друг
+    contact: Додати друга
   addSelected: Додати вибране
   cancel: Скасувати
   search: Пошук
@@ -23,6 +23,7 @@ actions:
     adventure: Розпочати пригоду
   expenses:
     split: Розділити
+  scan: Сканувати
 nav:
   home: Головна
   profile: Я

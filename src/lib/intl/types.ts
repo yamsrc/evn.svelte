@@ -38,6 +38,7 @@ export type Dictionary = {
         expenses: {
           split: string
         }
+        scan: string
       }
       nav: {
         home: string

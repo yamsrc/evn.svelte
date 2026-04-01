@@ -12,7 +12,7 @@ actions:
   contacts:
     group: Unda Kikundi
     title: Marafiki
-    contact: Rafiki
+    contact: Ongeza rafiki
   addSelected: Ongeza zilizochaguliwa
   cancel: Ghairi
   search: Tafuta
@@ -23,6 +23,7 @@ actions:
     adventure: Anza safari
   expenses:
     split: Gawanya
+  scan: Kagua
 nav:
   home: Mwanzo
   profile: Mimi
