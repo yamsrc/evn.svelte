@@ -8,37 +8,47 @@
   import { dict } from '../intl'
   import type { Props } from './Autoclose'
 
-  let { receipt, actor, payer = $bindable() }: Props = $props()
+  const { receipt, actor, payer }: Props = $props()
 
-  let checked = $state(payer !== undefined)
-  let busy = $state(false)
+  let transient = $state<string | null | undefined>(undefined)
 
-  async function patch(autolock: string | null) {
-    busy = true
-    await assign(receipt.id, { autolock })
-    busy = false
+  const autolock = $derived(transient !== undefined ? transient : (payer ?? null))
+  const checked = $derived(autolock !== null)
+
+  let pending = false
+
+  const MAX_ITERATIONS = 5
+
+  function settle(value?: string | null) {
+    transit(() => (transient = value))
+
+    if (value === undefined) pending = false
   }
 
-  async function onCheckedChange(value: boolean) {
-    if (value) {
-      await patch(actor)
+  async function patch(value: string | null, iteration = 0) {
+    settle(value)
 
-      transit(() => {
-        checked = true
-        payer = actor
-      })
-    } else {
-      await patch(null)
+    if (pending && iteration === 0) return
 
-      transit(() => {
-        checked = false
-        payer = undefined
-      })
-    }
+    if (iteration === MAX_ITERATIONS) return settle()
+
+    pending = true
+
+    const result = await assign(receipt.id, { autolock: value })
+
+    if (result instanceof Error) return settle()
+
+    if (transient !== undefined && transient !== value) return patch(transient, iteration + 1)
+
+    settle()
   }
 
-  async function onpayerchange(value: string | undefined) {
-    if (value !== undefined) await patch(value)
+  function onCheckedChange(value: boolean) {
+    patch(value ? actor : null)
+  }
+
+  function onpayerchange(value: string | undefined) {
+    if (value !== undefined) patch(value)
   }
 </script>
 
@@ -58,16 +68,15 @@
             <Item.Description>{$dict.autoclose.description}</Item.Description>
           </div>
           <Item.Actions class="pt-1.5">
-            <Switch id="autoclose-switch" {checked} {onCheckedChange} disabled={busy} />
+            <Switch id="autoclose-switch" {checked} {onCheckedChange} />
           </Item.Actions>
         </Item.Content>
         {#if checked}
           <Item.Content>
             <Item.Title>{$dict.autoclose.payer.title}</Item.Title>
             <PayerSelect
-              bind:value={payer}
+              value={autolock ?? undefined}
               identities={receipt.identities}
-              disabled={busy}
               onchange={onpayerchange}
               id="receipts-autoclose-payer-select" />
           </Item.Content>
