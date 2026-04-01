@@ -2,6 +2,7 @@
   import { account } from '@/iam'
   import { Avatars, Coins } from '@/app/ui'
   import { Button } from '$ui/button'
+  import { takeoff } from '$lib/tools'
   import { Ellipsis } from '$com/text'
   import { Attention } from '$com/shell'
   import { dict } from './intl'
@@ -56,6 +57,7 @@
   <Button
     variant="outline"
     href={`/adventures/${adventure.id}/`}
+    onclick={() => takeoff(adventure.picture, 'adventure-cover')}
     size="lg"
     class={[
       base,

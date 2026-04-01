@@ -10,3 +10,18 @@ export function navigate(nav: OnNavigate): Promise<void> | void {
 
   return transit()
 }
+
+export function takeoff(id: string, name: string, classes?: string) {
+  const el = document.getElementById(id)
+
+  if (el === null) {
+    console.warn('No element to depart from', id)
+
+    return
+  }
+
+  el.style.viewTransitionName = name
+
+  if (classes !== undefined)
+    el.style.viewTransitionClass = classes
+}
