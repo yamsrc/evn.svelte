@@ -35,7 +35,7 @@
   {#if receipt.done[actor] === true}
     <div class="space-y-4 pt-2">
       <Summary {actor} />
-      <Autoclose />
+      <Autoclose {receipt} {actor} payer={receipt.autolock} />
       <Feedback {actor} />
     </div>
   {:else}

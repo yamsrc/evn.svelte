@@ -14,6 +14,7 @@ export interface Receipt {
   extras: Extra[]
   done: Record<string, boolean>
   locked: boolean
+  autolock?: string
   _version: number
 }
 

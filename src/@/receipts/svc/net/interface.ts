@@ -34,6 +34,8 @@ export interface ReceiptPost {
   participants: string[]
 }
 
+export type Assign = { autolock: string | null }
+
 export const receipt = {
   get: async (identity: string, id: string): Promise<Receipt | Error> => {
     return await receipts.json<Receipt>(`${identity}/${id}`)
@@ -56,6 +58,13 @@ export const receipt = {
   del: async (identity: string, id: string, actor: string): Promise<Receipt | Error> => {
     return await receipts.json<Receipt>(`${identity}/${id}/${actor}`, {
       method: 'DELETE',
+    })
+  },
+
+  patch: async (identity: string, id: string, body: Assign): Promise<Receipt | Error> => {
+    return await receipts.json<Receipt>(`${identity}/${id}`, {
+      method: 'PATCH',
+      body,
     })
   },
 }

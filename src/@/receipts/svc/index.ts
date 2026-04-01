@@ -1,6 +1,7 @@
 export * from './store'
 export { upload } from './upload'
 export { claim } from './claim'
+export { assign } from './assign'
 export { leave } from './leave'
 export { reset } from './reset'
 export * as invitations from './invitations'
