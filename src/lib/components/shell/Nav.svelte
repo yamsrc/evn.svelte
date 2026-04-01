@@ -151,7 +151,7 @@
           action || 'opacity-0',
           position === 'center' && !action && 'hidden',
         )}
-        style="view-transition-name: shell-actions-{position};">
+        style="view-transition-name: shell-actions-{position}; view-transition-class: shell-actions">
         <ButtonGroup.Root class={cn('flex h-full', action?.class)}>
           {@render action.snippet()}
         </ButtonGroup.Root>
@@ -170,7 +170,8 @@
   ::view-transition-group(shell-nav-underlay),
   ::view-transition-group(shell-nav-active),
   ::view-transition-group(*.shell-nav-item),
-  ::view-transition-group(.attention) {
+  ::view-transition-group(.attention),
+  ::view-transition-group(.shell-actions) {
     z-index: 1;
   }
 
