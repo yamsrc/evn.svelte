@@ -2,7 +2,7 @@
   import { ChevronsDownUp } from '@lucide/svelte'
   import { Section, Header } from '@/app/ui'
   import { Button } from '$ui/button'
-  import { transit } from '$lib/tools/svt'
+  import { transit } from '$lib/tools'
   import { dict } from '$lib/intl/dev'
   import * as Stack from '$com/stack'
 

@@ -1,6 +1,6 @@
 <script lang="ts">
   import { del } from '@/notifications'
-  import { transit } from '$lib/tools/svt'
+  import { transit } from '$lib/tools/transition'
   import { Dismissable } from '$com/dismissable'
   import type { Props } from './Notification'
 

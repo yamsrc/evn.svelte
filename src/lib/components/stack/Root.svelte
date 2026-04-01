@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { transit } from '$lib/tools/svt'
+  import { transit } from '$lib/tools/transition'
   import { setContext } from './Context'
   import type { Props } from './Root'
 

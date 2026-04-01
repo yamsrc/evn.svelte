@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { transit } from '$lib/tools/svt'
+  import { transit } from '$lib/tools/transition'
   import { Overlay } from '$com/fullscreen'
   import type { Props } from './Fullscreen'
 
