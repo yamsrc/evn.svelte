@@ -11,7 +11,9 @@
 <div
   class={[
     'bg-background/80',
-    `mask-[linear-gradient(to_${direction},transparent_0%,black_2rem)]`,
+    direction === 'bottom'
+      ? 'mask-[linear-gradient(to_bottom,transparent_0%,black_2rem)]'
+      : 'mask-[linear-gradient(to_top,transparent_0%,black_2rem)]',
     safariBrowser && 'hidden',
     classes,
   ]}
