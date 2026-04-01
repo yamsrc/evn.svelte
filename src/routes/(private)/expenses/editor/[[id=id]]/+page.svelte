@@ -68,4 +68,4 @@
 
 <Editor.Edit {id} bind:value={ctx.value} bind:mode={ctx.mode} />
 
-<Return href="/expenses/{id}/" />
+<Return href="/expenses/{id === undefined ? '' : id + '/'}" />
