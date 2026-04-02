@@ -93,3 +93,20 @@ adventures:
       тебя присоединиться к приключению` : `${name} приглашает тебя
       присоединиться к приключению`
     heading: Приглашение в приключение
+receipts:
+  og:
+    title: |-
+      !js
+      (title) => `Присоединиться к ${title} на Evnly`
+    description: Разделите чек и отслеживайте, кто кому должен — вместе на Evnly.
+  dialog:
+    join: Присоединиться
+    decline: Отклонить
+    title: Приглашение к счету
+    description: |-
+      !js
+      (name, gender) => {
+        if (gender === "he") return `${name} хочет добавить вас к счёту.`;
+        if (gender === "she") return `${name} хочет добавить вас к счёту.`;
+        return `${name} хочет(хочет) добавить вас к счёту.`;
+      }

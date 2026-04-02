@@ -75,3 +75,18 @@ adventures:
       !js
       (name, gender) => `${name}邀请你加入冒险`
     heading: 冒险邀请函
+receipts:
+  og:
+    title: |-
+      !js
+      (title) => `加入Evnly上的${title}`
+    description: 在 Evnly 一起分账并追踪谁欠谁。
+  dialog:
+    join: 加入
+    decline: 拒绝
+    title: 邀请结账
+    description: |-
+      !js
+      (name, gender) => {
+        return `${name}希望将你添加到账单中。`;
+      }

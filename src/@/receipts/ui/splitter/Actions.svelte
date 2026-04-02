@@ -19,6 +19,7 @@
     <Participants.Button
       class={actionVariants({ variant: receipt.identities.length === 1 ? 'default' : 'secondary' })}
       exclude={receipt.identities}
+      options={{ shareUrl: `/join/receipts/${receipt.id}/` }}
       {onadd}>
       <UserPlus />
     </Participants.Button>

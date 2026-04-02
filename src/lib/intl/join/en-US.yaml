@@ -87,3 +87,18 @@ adventures:
       !js
       (name, gender) => `${name} invites you to join the adventure`
     heading: Invitation to the adventure
+receipts:
+  og:
+    title: |-
+      !js
+      (title) => `Join ${title} on Evnly`
+    description: Split a receipt and track who owes whom — together on Evnly.
+  dialog:
+    join: Join
+    decline: Decline
+    title: Invitation to the check
+    description: |-
+      !js
+      (name, gender) => {
+        return `${name} would like to add you to the check.`;
+      }

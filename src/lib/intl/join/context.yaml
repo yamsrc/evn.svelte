@@ -107,3 +107,20 @@ inputs:
         input: "{name} invites you to join the adventure."
       heading:
         input: Invitation to the adventure
+  receipts:
+    og:
+      title:
+        input: Join {title} on Evnly
+      description:
+        input: Split a receipt and track who owes whom — together on Evnly.
+    dialog:
+      join:
+        input: Join
+        context: button label
+      decline:
+        input: Decline
+        context: button label
+      description:
+        input: "{name} would like to add you to\_the\_check."
+      title:
+        input: Invitation to the check

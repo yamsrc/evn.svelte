@@ -4,6 +4,10 @@
  * @author copilot
  */
 
+export type Locale = 'ar-SA' | 'de-DE' | 'en-US' | 'es-ES' | 'fr-FR' | 'hi-IN' | 'it-IT' | 'ja-JP' | 'ko-KR' | 'nl-NL' | 'ru-RU' | 'sw-TZ' | 'tr-TR' | 'uk-UA' | 'zh-CN'
+
+export type Grammar = 'he' | 'she' | 'none'
+
 export type Dictionary = {
       account: {
         title: string
@@ -72,6 +76,18 @@ export type Dictionary = {
           decline: string
           description: (...args: [any, any]) => string
           heading: string
+        }
+      }
+      receipts: {
+        og: {
+          title: (value: any) => string
+          description: string
+        }
+        dialog: {
+          join: string
+          decline: string
+          title: string
+          description: (...args: [any, any]) => string
         }
       }
     }

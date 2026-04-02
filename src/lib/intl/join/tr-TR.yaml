@@ -89,3 +89,20 @@ adventures:
       !js
       (name, gender) => `${name} seni maceraya davet ediyor`
     heading: Macera davetiyesi
+receipts:
+  og:
+    title: |-
+      !js
+      (title) => `Evnly'de ${title}'a katıl`
+    description: >-
+      Bir fişi bölüştürün ve kimin kime borcu olduğunu Evnly ile birlikte takip
+      edin.
+  dialog:
+    join: Katıl
+    decline: Reddet
+    title: Hesaba davet
+    description: |-
+      !js
+      (name, gender) => {
+        return `${name} sizi hesaba eklemek istiyor.`;
+      }

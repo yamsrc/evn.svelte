@@ -86,3 +86,20 @@ adventures:
       : gender === "she" ? `${name} تدعوك للانضمام إلى المغامرة` : `${name}
       يدعوك/تدعوك للانضمام إلى المغامرة`
     heading: دعوة إلى المغامرة
+receipts:
+  og:
+    title: |-
+      !js
+      (title) => `انضم إلى ${title} على Evnly`
+    description: اقسم الفاتورة وتابع من الذي يدين لمن — معًا على إيڤنلي.
+  dialog:
+    join: انضمام
+    decline: رفض
+    title: دعوة إلى الفاتورة
+    description: |-
+      !js
+      (name, gender) => {
+        if (gender === "he") return `${name} يرغب في إضافتك إلى الفاتورة.`;
+        if (gender === "she") return `${name} ترغب في إضافتك إلى الفاتورة.`;
+        return `${name} يرغب(ترغب) في إضافتك إلى الفاتورة.`;
+      }

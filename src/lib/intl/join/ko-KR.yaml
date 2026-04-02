@@ -75,3 +75,18 @@ adventures:
       !js
       (name, gender) => `${name}님이 모험에 초대합니다`
     heading: 모험으로의 초대
+receipts:
+  og:
+    title: |-
+      !js
+      (title) => `Evnly에서 ${title}에 참여하세요`
+    description: 영수증을 나누고 누가 누구에게 얼마를 빚졌는지 함께 Evnly에서 확인하세요.
+  dialog:
+    join: 참여하기
+    decline: 거절
+    title: 계산서 요청 안내
+    description: |-
+      !js
+      (name, gender) => {
+        return `${name}님이 당신을 계산서에 추가하고 싶어합니다.`;
+      }

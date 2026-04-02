@@ -77,3 +77,18 @@ adventures:
       !js
       (name, gender) => `${name}が冒険にあなたを招待しています`
     heading: 冒険への招待
+receipts:
+  og:
+    title: |-
+      !js
+      (title) => `Evnlyで${title}に参加する`
+    description: 領収書を分けて、誰が誰にいくら借りているかをEvnyで一緒に管理しましょう。
+  dialog:
+    join: 参加する
+    decline: 拒否
+    title: 会計へのご案内
+    description: |-
+      !js
+      (name, gender) => {
+        return `${name} さんがあなたをお会計に追加したいと考えています。`;
+      }
