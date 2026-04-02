@@ -19,6 +19,7 @@
     "host": "npm run cert && pm2 start ecosystem.config.cjs",
     "restart": "npm run cert && pm2 restart ecosystem.config.cjs",
     "test": "vitest --run",
+    "clip": "printf \"https://%s:15173\" $(ipconfig getifaddr en0) | pbcopy",
     "bump": "npx -y npm-check-updates --target minor -u"
   },
   "devDependencies": {
