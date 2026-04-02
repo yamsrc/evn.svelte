@@ -1,6 +1,7 @@
 <script lang="ts">
   import { Async } from 'svas'
   import { account as me } from '@/iam'
+  import { numbers } from '@/expenses'
   import { CoinsInput } from '@/app/ui'
   import { Picture } from '@/accounts/ui'
   import { accounts } from '@/accounts'
@@ -14,13 +15,19 @@
   const nameClass = 'text-start text-base font-normal flex-1 min-w-0 flex'
   const amountClass = 'min-w-24 max-w-28 flex-1'
 
-  let { value = $bindable() }: Props = $props()
+  let { value = $bindable(), total = $bindable() }: Props = $props()
+
   const ctx = getContext()
   const paid = $derived(ctx.paid)
-  const total = $derived(ctx.total)
   const overpayment = $derived(Math.max(paid - total, 0))
-
   const participants = $derived(Object.keys(value.participants))
+
+  function oninput() {
+    if (value.calculated === undefined && total === 0) value.calculated = true
+    else if (value.calculated !== true) return
+
+    total = numbers.total(value)
+  }
 </script>
 
 <div class="space-y-2">
@@ -46,7 +53,8 @@
       <CoinsInput
         id={`expenses-participant-amount-${i}`}
         class={amountClass}
-        bind:value={value.participants[id].amount} />
+        bind:value={value.participants[id].amount}
+        {oninput} />
     </div>
   {/each}
 

@@ -26,9 +26,7 @@
     if (total !== numbers.total(value)) {
       error = true
 
-      setTimeout(() => {
-        error = false
-      }, 600)
+      setTimeout(() => (error = false), 600)
 
       return
     }
@@ -80,7 +78,7 @@
   <form onsubmit={onsubmit(submit)} class="space-y-5">
     <Description bind:title={value.title} bind:location={value.location} />
     <Total bind:value bind:total />
-    <Participants bind:value bind:error bind:mode />
+    <Participants bind:value bind:total bind:error bind:mode />
     <PayerSelect bind:value />
 
     <button bind:this={submitButton} type="submit" class="sr-only">

@@ -6,14 +6,14 @@
 
   let { value = $bindable(), total = $bindable() }: Props = $props()
 
-  const participantIds = $derived(Object.keys(value.participants))
-  const isEvenlySplit = $derived(numbers.even(value.participants, participantIds))
+  const ids = $derived(Object.keys(value.participants))
+  const even = $derived(numbers.even(value.participants))
 
   function oninput(amount: number) {
-    total = amount
+    value.calculated = amount === 0
 
-    if (isEvenlySplit && participantIds.length > 0) {
-      const splitAmounts = numbers.split(amount, participantIds)
+    if (even && ids.length > 0) {
+      const splitAmounts = numbers.split(amount, ids)
 
       for (const [id, amount] of Object.entries(splitAmounts))
         value.participants[id].amount = amount
@@ -27,6 +27,6 @@
     id="expenses-total-input"
     class="max-w-2/3"
     inputClass="text-3xl font-bold"
-    value={total}
+    bind:value={total}
     {oninput} />
 </div>

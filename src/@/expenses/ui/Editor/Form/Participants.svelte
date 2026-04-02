@@ -8,7 +8,12 @@
   import ByShare from './ByShare.svelte'
   import type { Props } from './Participants'
 
-  let { value = $bindable(), error = $bindable(false), mode = $bindable('sums') }: Props = $props()
+  let {
+    value = $bindable(),
+    total = $bindable(),
+    error = $bindable(false),
+    mode = $bindable('sums'),
+  }: Props = $props()
 
   const exclude = $derived(Object.keys(value.participants))
 
@@ -45,7 +50,7 @@
         </Tabs.Trigger>
       </Tabs.List>
       <Tabs.Content value="sums">
-        <BySum bind:value />
+        <BySum bind:value bind:total />
       </Tabs.Content>
       <Tabs.Content value="shares">
         <ByShare bind:value />

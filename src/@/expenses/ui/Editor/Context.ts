@@ -65,6 +65,8 @@ export interface Value {
   participants: Record<string, Participant>
   extras: Extra[]
   attachments: string[]
+  /** Total is calculated from participants */
+  calculated?: boolean
 }
 
 interface Participant {
