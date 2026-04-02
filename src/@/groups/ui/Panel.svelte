@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Users } from '@lucide/svelte'
+  import { Component } from '@lucide/svelte'
   import { account } from '@/iam'
   import { Avatars, Balance } from '@/app/ui'
   import { Attention } from '$com/shell'
@@ -30,7 +30,7 @@
         {#if group.emoji}
           <span class="font-bold">{group.emoji}</span>
         {:else}
-          <Users class="size-4" />
+          <Component class="size-4" />
         {/if}
         <span class="font-bold">{group.title ?? group.name}</span>
       </div>

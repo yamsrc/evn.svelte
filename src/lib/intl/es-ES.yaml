@@ -104,7 +104,7 @@ join:
 groups:
   leave: Mantén pulsado para salir
   name:
-    description: Todos los miembros del grupo verán este nombre
+    description: Prueba a añadir un emoji ✨
     placeholder: Introduce el nombre
   members:
     title: Miembros

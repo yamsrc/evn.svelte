@@ -105,7 +105,7 @@ join:
 groups:
   leave: Gedrückt halten zum Verlassen
   name:
-    description: Alle Gruppenmitglieder sehen diesen Namen
+    description: Probier mal, ein Emoji hinzuzufügen ✨
     placeholder: Name eingeben
   members:
     title: Mitglieder

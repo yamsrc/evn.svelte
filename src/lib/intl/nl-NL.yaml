@@ -105,7 +105,7 @@ join:
 groups:
   leave: Vasthouden om te verlaten
   name:
-    description: Alle groepsleden kunnen deze naam zien
+    description: Probeer eens een emoji toe te voegen ✨
     placeholder: Naam invoeren
   members:
     title: Leden

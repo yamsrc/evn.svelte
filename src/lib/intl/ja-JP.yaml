@@ -91,7 +91,7 @@ join:
 groups:
   leave: 長押しして退出
   name:
-    description: すべてのグループメンバーがこの名前を表示します
+    description: 絵文字を追加してみて ✨
     placeholder: 名前を入力
   members:
     title: メンバー

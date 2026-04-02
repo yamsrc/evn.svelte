@@ -102,7 +102,7 @@ join:
 groups:
   leave: Утримуйте, щоб вийти
   name:
-    description: Усі учасники групи побачать це ім’я
+    description: Спробуй додати емодзі ✨
     placeholder: Введіть ім’я
   members:
     title: Учасники

@@ -99,7 +99,7 @@ join:
 groups:
   leave: اضغط مع الاستمرار للمغادرة
   name:
-    description: سيرى جميع أعضاء المجموعة هذا الاسم
+    description: جرّب إضافة رمز تعبيري ✨
     placeholder: أدخل الاسم
   members:
     title: الأعضاء

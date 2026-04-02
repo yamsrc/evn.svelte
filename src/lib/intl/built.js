@@ -118,7 +118,7 @@ export const dictionaries = {
     "groups": {
       "leave": "اضغط مع الاستمرار للمغادرة",
       "name": {
-        "description": "سيرى جميع أعضاء المجموعة هذا الاسم",
+        "description": "جرّب إضافة رمز تعبيري ✨",
         "placeholder": "أدخل الاسم"
       },
       "members": {
@@ -335,7 +335,7 @@ export const dictionaries = {
     "groups": {
       "leave": "Gedrückt halten zum Verlassen",
       "name": {
-        "description": "Alle Gruppenmitglieder sehen diesen Namen",
+        "description": "Probier mal, ein Emoji hinzuzufügen ✨",
         "placeholder": "Name eingeben"
       },
       "members": {
@@ -552,7 +552,7 @@ export const dictionaries = {
     "groups": {
       "leave": "Hold to leave",
       "name": {
-        "description": "All group members will see this name",
+        "description": "Try adding an emoji ✨",
         "placeholder": "Enter name"
       },
       "members": {
@@ -769,7 +769,7 @@ export const dictionaries = {
     "groups": {
       "leave": "Mantén pulsado para salir",
       "name": {
-        "description": "Todos los miembros del grupo verán este nombre",
+        "description": "Prueba a añadir un emoji ✨",
         "placeholder": "Introduce el nombre"
       },
       "members": {
@@ -986,7 +986,7 @@ export const dictionaries = {
     "groups": {
       "leave": "Maintenez appuyé pour quitter",
       "name": {
-        "description": "Tous les membres du groupe verront ce nom",
+        "description": "Essaie d’ajouter un émoji ✨",
         "placeholder": "Saisir le nom"
       },
       "members": {
@@ -1203,7 +1203,7 @@ export const dictionaries = {
     "groups": {
       "leave": "छोड़ने के लिए दबाए रखें",
       "name": {
-        "description": "सभी समूह सदस्य यह नाम देखेंगे",
+        "description": "इमोजी जोड़ कर देखो ✨",
         "placeholder": "नाम दर्ज करें"
       },
       "members": {
@@ -1420,7 +1420,7 @@ export const dictionaries = {
     "groups": {
       "leave": "Tieni premuto per uscire",
       "name": {
-        "description": "Tutti i membri del gruppo vedranno questo nome",
+        "description": "Prova ad aggiungere una emoji ✨",
         "placeholder": "Inserisci nome"
       },
       "members": {
@@ -1637,7 +1637,7 @@ export const dictionaries = {
     "groups": {
       "leave": "長押しして退出",
       "name": {
-        "description": "すべてのグループメンバーがこの名前を表示します",
+        "description": "絵文字を追加してみて ✨",
         "placeholder": "名前を入力"
       },
       "members": {
@@ -1854,7 +1854,7 @@ export const dictionaries = {
     "groups": {
       "leave": "길게 눌러서 나가기",
       "name": {
-        "description": "모든 그룹 구성원이 이 이름을 볼 수 있습니다",
+        "description": "이모지를 추가해봐 ✨",
         "placeholder": "이름 입력"
       },
       "members": {
@@ -2071,7 +2071,7 @@ export const dictionaries = {
     "groups": {
       "leave": "Vasthouden om te verlaten",
       "name": {
-        "description": "Alle groepsleden kunnen deze naam zien",
+        "description": "Probeer eens een emoji toe te voegen ✨",
         "placeholder": "Naam invoeren"
       },
       "members": {
@@ -2288,7 +2288,7 @@ export const dictionaries = {
     "groups": {
       "leave": "Удерживайте, чтобы выйти",
       "name": {
-        "description": "Все участники группы увидят это имя",
+        "description": "Попробуй добавить эмодзи ✨",
         "placeholder": "Введите имя"
       },
       "members": {
@@ -2505,7 +2505,7 @@ export const dictionaries = {
     "groups": {
       "leave": "Shikilia kuondoka",
       "name": {
-        "description": "Wanachama wote wa kundi wataona jina hili",
+        "description": "Jaribu kuongeza emoji ✨",
         "placeholder": "Weka jina"
       },
       "members": {
@@ -2722,7 +2722,7 @@ export const dictionaries = {
     "groups": {
       "leave": "Ayrılmak için basılı tut",
       "name": {
-        "description": "Tüm grup üyeleri bu ismi görecek",
+        "description": "Bir emoji eklemeyi dene ✨",
         "placeholder": "Ad girin"
       },
       "members": {
@@ -2939,7 +2939,7 @@ export const dictionaries = {
     "groups": {
       "leave": "Утримуйте, щоб вийти",
       "name": {
-        "description": "Усі учасники групи побачать це ім’я",
+        "description": "Спробуй додати емодзі ✨",
         "placeholder": "Введіть ім’я"
       },
       "members": {
@@ -3156,7 +3156,7 @@ export const dictionaries = {
     "groups": {
       "leave": "长按退出",
       "name": {
-        "description": "所有群组成员都能看到这个名称",
+        "description": "试着加个表情符号 ✨",
         "placeholder": "输入名称"
       },
       "members": {

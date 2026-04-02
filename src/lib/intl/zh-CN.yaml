@@ -91,7 +91,7 @@ join:
 groups:
   leave: 长按退出
   name:
-    description: 所有群组成员都能看到这个名称
+    description: 试着加个表情符号 ✨
     placeholder: 输入名称
   members:
     title: 成员

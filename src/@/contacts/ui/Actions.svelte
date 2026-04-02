@@ -1,6 +1,6 @@
 <script lang="ts">
   import { ensure } from 'svas'
-  import { UserPlus, Users } from '@lucide/svelte'
+  import { Component, UserPlus } from '@lucide/svelte'
   import { account } from '@/iam'
   import { actionVariants } from '@/app/ui'
   import { Action } from '@/app/ui'
@@ -30,7 +30,7 @@
 
 <Actions>
   <Action id="nav-action-group" href="./groups/" variant="secondary">
-    <Users />
+    <Component />
   </Action>
   <Dropdown.Root bind:this={dropdown}>
     <Dropdown.Trigger id="contacts-actions-contact" class={[actionVariants(), 'rounded-s-none']}>

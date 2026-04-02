@@ -102,7 +102,7 @@ join:
 groups:
   leave: Удерживайте, чтобы выйти
   name:
-    description: Все участники группы увидят это имя
+    description: Попробуй добавить эмодзи ✨
     placeholder: Введите имя
   members:
     title: Участники

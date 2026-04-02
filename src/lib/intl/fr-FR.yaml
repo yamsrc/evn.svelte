@@ -103,7 +103,7 @@ join:
 groups:
   leave: Maintenez appuyé pour quitter
   name:
-    description: Tous les membres du groupe verront ce nom
+    description: Essaie d’ajouter un émoji ✨
     placeholder: Saisir le nom
   members:
     title: Membres

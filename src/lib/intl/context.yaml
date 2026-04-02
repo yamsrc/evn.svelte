@@ -171,7 +171,7 @@ inputs:
       context: button tooltip (to leave the group)
     name:
       description:
-        input: All group members will see this name
+        input: Try adding an emoji ✨
       placeholder:
         input: Enter name
         context: input placeholder for a group name

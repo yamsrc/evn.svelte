@@ -101,7 +101,7 @@ join:
 groups:
   leave: छोड़ने के लिए दबाए रखें
   name:
-    description: सभी समूह सदस्य यह नाम देखेंगे
+    description: इमोजी जोड़ कर देखो ✨
     placeholder: नाम दर्ज करें
   members:
     title: सदस्य

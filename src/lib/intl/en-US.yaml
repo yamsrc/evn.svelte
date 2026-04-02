@@ -101,7 +101,7 @@ join:
 groups:
   leave: Hold to leave
   name:
-    description: All group members will see this name
+    description: Try adding an emoji ✨
     placeholder: Enter name
   members:
     title: Members

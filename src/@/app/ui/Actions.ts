@@ -1,6 +1,6 @@
 import { derived } from 'svelte/store'
 import { ok } from 'svas'
-import { ChartPie, Coins, Fan, ScanText, UserPlus, Users } from '@lucide/svelte'
+import { ChartPie, Coins, Component, Fan, ScanText, UserPlus } from '@lucide/svelte'
 import { adventures } from '@/adventures'
 import { dict } from '$lib/intl'
 import type { Icon } from '@lucide/svelte'
@@ -51,7 +51,7 @@ function addContactGroup(dict: Dictionary): ActionItem {
   return {
     id: 'nav-actions-contacts-groups-button',
     label: dict.actions.contacts.group,
-    Icon: Users,
+    Icon: Component,
     href: '/contacts/groups/',
   }
 }

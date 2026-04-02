@@ -93,7 +93,7 @@ join:
 groups:
   leave: 길게 눌러서 나가기
   name:
-    description: 모든 그룹 구성원이 이 이름을 볼 수 있습니다
+    description: 이모지를 추가해봐 ✨
     placeholder: 이름 입력
   members:
     title: 회원
