@@ -26,6 +26,6 @@
       Back
     </Button>
     {@render children()}
-    <Nav position="start" sections={sections($dict)} underlay class="z-50" />
+    <Nav position="start" sections={sections($dict)} underlay class="z-48" />
   </Screen>
 </Authenticated>

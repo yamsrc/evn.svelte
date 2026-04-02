@@ -24,7 +24,7 @@
     use:trackRef
     style="position-anchor: --{ctx.id}; view-transition-name: {ctx.id}; view-transition-class: transition-spring transition-morph dropdown-content;"
     class={[
-      'action-menu-content fixed z-51 flex flex-col',
+      'action-menu-content fixed z-49 flex flex-col',
       'bg-popover shadow-[0_0_15px_var(--shadow-color)] text-popover-foreground rounded-xl',
       'p-1',
       classes,
@@ -40,6 +40,6 @@
   }
 
   ::view-transition-group(.dropdown-content) {
-    z-index: 51;
+    z-index: 49;
   }
 </style>
