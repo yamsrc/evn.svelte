@@ -22,7 +22,7 @@ export const load: PageServerLoad = async ({ params, request }) => {
       title: dict.receipts.og.title(receipt.title),
       description: dict.receipts.og.description,
       image: {
-        url: '/og/group.jpg', // TODO: receipt image
+        url: '/og/receipt.jpg',
         width: 1200,
         height: 630,
         type: 'image/jpg',
