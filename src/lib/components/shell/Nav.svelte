@@ -73,7 +73,7 @@
   {#if underlay}
     <Underlay
       direction="bottom"
-      class="absolute -z-1 inset-0 -top-6 -bottom-[max(env(safe-area-inset-bottom),1rem)]"
+      class="absolute -z-1 inset-0 -top-6 -bottom-[max(env(safe-area-inset-bottom),1rem)] mx-[calc(-50vw+50%)]"
       style="view-transition-name: shell-nav-underlay;" />
   {/if}
   <div
