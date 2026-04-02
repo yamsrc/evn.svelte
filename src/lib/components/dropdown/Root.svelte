@@ -8,6 +8,7 @@
 
   const id = `am-${crypto.randomUUID()}`
   let opened = $state(false)
+  let layers = $state<string[]>([])
   let contentRef = $state<HTMLDivElement | undefined>()
   let triggerRef = $state<HTMLDivElement | undefined>()
 
@@ -21,13 +22,28 @@
     },
     close: () => {
       onopen?.(false)
-      transit(() => (opened = false))
+
+      transit(() => {
+        opened = false
+        layers = []
+      })
     },
     get id() {
       return id
     },
     setContentRef: (el) => (contentRef = el),
     setTriggerRef: (el) => (triggerRef = el),
+    push: (name: string) =>
+      transit(() => {
+        layers = [...layers, name]
+      }),
+    pop: () =>
+      transit(() => {
+        layers = layers.slice(0, -1)
+      }),
+    get layer() {
+      return layers.at(-1) ?? ''
+    },
   }
 
   setContext(ctx)
@@ -52,7 +68,11 @@
       e.stopPropagation()
 
       onopen?.(false)
-      transit(() => (opened = false))
+
+      transit(() => {
+        opened = false
+        layers = []
+      })
     }
 
     document.addEventListener('click', handle, { capture: true })

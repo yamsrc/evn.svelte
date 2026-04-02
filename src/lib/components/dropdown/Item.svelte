@@ -16,13 +16,16 @@
 <script lang="ts">
   import { Button } from '$ui/button'
   import { getGroupContext } from './GroupContext'
+  import { getContext } from './Context'
   import type { Props } from './Item'
 
-  const { children, onclick, class: classes, variant = 'ghost', ...rest }: Props = $props()
+  const { children, onclick, layer, class: classes, variant = 'ghost', ...rest }: Props = $props()
+  const ctx = getContext()
 
+  const click = $derived(layer ? () => ctx.push(layer) : onclick)
   const direction = $derived(getGroupContext()?.direction ?? 'col')
 </script>
 
-<Button {onclick} {variant} class={[itemVariants({ direction }), classes]} {...rest}>
+<Button onclick={click} {variant} class={[itemVariants({ direction }), classes]} {...rest}>
   {@render children?.()}
 </Button>

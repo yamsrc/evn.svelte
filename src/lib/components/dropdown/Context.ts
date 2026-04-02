@@ -7,6 +7,9 @@ export interface Context {
   get id(): string
   setContentRef: (el: HTMLDivElement | undefined) => void
   setTriggerRef: (el: HTMLDivElement | undefined) => void
+  push: (name: string) => void
+  pop: () => void
+  get layer(): string
 }
 
 const CONTEXT = Symbol('action-menu')

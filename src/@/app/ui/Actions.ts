@@ -11,6 +11,7 @@ import type { Dictionary } from '$lib/intl'
 interface ActionItem extends ButtonProps {
   label: string
   Icon: typeof Icon
+  layer?: string
 }
 
 type ActionGroup = {
@@ -42,7 +43,7 @@ function addContact(dict: Dictionary): ActionItem {
     id: 'nav-actions-contacts-new-button',
     label: dict.actions.contacts.contact,
     Icon: UserPlus,
-    href: '/contacts/new/',
+    layer: 'contacts',
   }
 }
 
