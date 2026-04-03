@@ -25,16 +25,13 @@
 
   const removing = new SvelteSet<string>()
 
-  export async function remove() {
+  export function remove(): boolean {
     const victim = actor
 
     removing.add(victim)
-
-    const leaved = await leave(receipt.id, victim).finally(() => removing.delete(victim))
-
-    if (leaved instanceof Error) return
-
     actor = account.id
+
+    void leave(receipt.id, victim).finally(() => removing.delete(victim))
 
     return victim === account.id
   }
