@@ -3,14 +3,11 @@
   import { Panel } from '$com/panel'
   import { TextEllipsis } from '$com/text-ellipsis'
   import { Avatars } from '@/app/ui'
-  import { account } from '@/iam'
   import type { Props } from './Group'
 
   const MAX_DISPLAYED_MEMBERS = 3
 
   let { group, selected = $bindable(), onselect, class: classes }: Props = $props()
-
-  const members = $derived(group.identities.filter((id) => id !== $account?.id))
 
   function onclick(event: MouseEvent) {
     if (selected === undefined || onselect === undefined) return
@@ -36,7 +33,7 @@
         {/if}
         <TextEllipsis class="font-bold">{group.title ?? group.name}</TextEllipsis>
       </div>
-      <Avatars identities={members} max={MAX_DISPLAYED_MEMBERS} />
+      <Avatars identities={group.identities} max={MAX_DISPLAYED_MEMBERS} />
     </div>
   {/snippet}
 </Panel>
