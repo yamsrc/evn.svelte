@@ -14,3 +14,6 @@ inputs:
     empty:
       input: No shared expenses so far.
       context: Empty state for group expenses list
+  balance:
+    input: Your balance
+    context: Label of group expenses balance

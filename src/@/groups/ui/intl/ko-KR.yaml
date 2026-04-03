@@ -7,3 +7,4 @@ reduction:
 expenses:
   title: 이벤트
   empty: 아직 공동 지출이 없습니다.
+balance: 내 잔액
