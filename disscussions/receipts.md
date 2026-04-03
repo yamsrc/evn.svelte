@@ -12,7 +12,7 @@
 - [x] Leave receipt
 - [x] Select actor
 - [x] Shared items (and item groups)
-- [ ] Mark as Done
+- [x] Mark as Done
 - [ ] Autoclose
 - [ ] Share receipt
 - [ ] Actions on Summary screen: [edit, close], remove participants button

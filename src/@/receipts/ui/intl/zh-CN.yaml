@@ -14,7 +14,7 @@ feedback:
   down: 我们会查看一下。
   thanks: 谢谢！
 autoclose:
-  description: 等大家都完成后，创建活动并更新余额
+  description: 当所有人完成后自动更新余额，或等待手动继续
   title: 自动完成
   payer:
     title: 付款人

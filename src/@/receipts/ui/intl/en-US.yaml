@@ -14,7 +14,9 @@ feedback:
   down: We’ll take a look.
   thanks: Thank you!
 autoclose:
-  description: Create the event and update balances when everyone’s done
+  description: >-
+    Update balances automatically when everyone’s done, or wait to continue
+    manually
   title: Autocomplete
   payer:
     title: Paid by

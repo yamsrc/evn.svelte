@@ -67,7 +67,7 @@
             <Item.Title>{$dict.autoclose.title}</Item.Title>
             <Item.Description>{$dict.autoclose.description}</Item.Description>
           </div>
-          <Item.Actions class="pt-1.5">
+          <Item.Actions class="pt-1.5 items-start">
             <Switch id="autoclose-switch" {checked} {onCheckedChange} />
           </Item.Actions>
         </Item.Content>

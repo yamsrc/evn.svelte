@@ -30,7 +30,8 @@ inputs:
       input: Спасибо!
   autoclose:
     description:
-      input: Create the event and update balances when everyone’s done
+      input: Update balances automatically when everyone’s done, or wait to proceed manually.
+      context: button label (action)
     title:
       input: Autoadvance
       context: meaning Autocomplete

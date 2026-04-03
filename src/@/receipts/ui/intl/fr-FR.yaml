@@ -14,7 +14,9 @@ feedback:
   down: Nous allons jeter un œil.
   thanks: Merci !
 autoclose:
-  description: Crée l’événement et mets à jour les soldes quand tout le monde a fini
+  description: >-
+    Mettre à jour les soldes automatiquement quand tout le monde a fini, ou
+    attendre pour continuer manuellement
   title: Saisie automatique
   payer:
     title: Payé par

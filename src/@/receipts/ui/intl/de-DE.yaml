@@ -14,7 +14,9 @@ feedback:
   down: Wir schauen es uns an.
   thanks: Danke!
 autoclose:
-  description: Erstelle das Event und aktualisiere die Kontostände, wenn alle fertig sind
+  description: >-
+    Salden automatisch aktualisieren, wenn alle fertig sind, oder manuell
+    fortfahren
   title: Automatisch vervollständigen
   payer:
     title: Bezahlt von

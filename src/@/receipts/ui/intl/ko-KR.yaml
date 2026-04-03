@@ -14,7 +14,7 @@ feedback:
   down: 확인해 보겠습니다.
   thanks: 감사합니다!
 autoclose:
-  description: 모두 끝나면 이벤트를 만들고 잔액을 업데이트해
+  description: 모두 완료하면 잔액을 자동으로 업데이트하거나, 직접 계속 진행하세요
   title: 자동 완성
   payer:
     title: 지불자

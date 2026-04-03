@@ -14,7 +14,9 @@ feedback:
   down: We zullen ernaar kijken.
   thanks: Dank je!
 autoclose:
-  description: Maak het evenement aan en werk de saldi bij als iedereen klaar is
+  description: >-
+    Werk de saldi automatisch bij zodra iedereen klaar is, of wacht om handmatig
+    verder te gaan
   title: Automatisch aanvullen
   payer:
     title: Betaald door

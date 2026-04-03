@@ -14,7 +14,9 @@ feedback:
   down: Le echaremos un vistazo.
   thanks: ¡Gracias!
 autoclose:
-  description: Crea el evento y actualiza los saldos cuando todos hayan terminado
+  description: >-
+    Actualiza los saldos automáticamente cuando todos hayan terminado o espera
+    para continuar manualmente
   title: Autocompletar
   payer:
     title: Pagado por

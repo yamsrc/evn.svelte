@@ -25,7 +25,7 @@ export const dictionaries = {
       "thanks": "شكرًا!"
     },
     "autoclose": {
-      "description": "أنشئ الحدث وحدّث الأرصدة عندما ينتهي الجميع",
+      "description": "حدّث الأرصدة تلقائيًا بعد انتهاء الجميع، أو انتظر لتكمل يدويًا",
       "title": "الإكمال التلقائي",
       "payer": {
         "title": "تم الدفع بواسطة"
@@ -55,7 +55,7 @@ export const dictionaries = {
       "thanks": "Danke!"
     },
     "autoclose": {
-      "description": "Erstelle das Event und aktualisiere die Kontostände, wenn alle fertig sind",
+      "description": "Salden automatisch aktualisieren, wenn alle fertig sind, oder manuell fortfahren",
       "title": "Automatisch vervollständigen",
       "payer": {
         "title": "Bezahlt von"
@@ -85,7 +85,7 @@ export const dictionaries = {
       "thanks": "Thank you!"
     },
     "autoclose": {
-      "description": "Create the event and update balances when everyone’s done",
+      "description": "Update balances automatically when everyone’s done, or wait to continue manually",
       "title": "Autocomplete",
       "payer": {
         "title": "Paid by"
@@ -115,7 +115,7 @@ export const dictionaries = {
       "thanks": "¡Gracias!"
     },
     "autoclose": {
-      "description": "Crea el evento y actualiza los saldos cuando todos hayan terminado",
+      "description": "Actualiza los saldos automáticamente cuando todos hayan terminado o espera para continuar manualmente",
       "title": "Autocompletar",
       "payer": {
         "title": "Pagado por"
@@ -145,7 +145,7 @@ export const dictionaries = {
       "thanks": "Merci !"
     },
     "autoclose": {
-      "description": "Crée l’événement et mets à jour les soldes quand tout le monde a fini",
+      "description": "Mettre à jour les soldes automatiquement quand tout le monde a fini, ou attendre pour continuer manuellement",
       "title": "Saisie automatique",
       "payer": {
         "title": "Payé par"
@@ -175,7 +175,7 @@ export const dictionaries = {
       "thanks": "धन्यवाद!"
     },
     "autoclose": {
-      "description": "इवेंट बनाओ और जब सभी लोग पूरा कर लें तो बैलेंस अपडेट करो",
+      "description": "जब सब हो जाएँ तो बैलेंस अपने आप अपडेट करें, या खुद आगे बढ़ें",
       "title": "ऑटोकंप्लीट",
       "payer": {
         "title": "द्वारा भुगतान"
@@ -205,7 +205,7 @@ export const dictionaries = {
       "thanks": "Grazie!"
     },
     "autoclose": {
-      "description": "Crea l’evento e aggiorna i saldi quando tutti hanno finito",
+      "description": "Aggiorna i saldi automaticamente quando tutti hanno finito, oppure attendi per procedere manualmente",
       "title": "Completamento automatico",
       "payer": {
         "title": "Pagato da"
@@ -235,7 +235,7 @@ export const dictionaries = {
       "thanks": "ありがとうございます！"
     },
     "autoclose": {
-      "description": "全員が終わったらイベントを作成して、残高を更新しよう",
+      "description": "全員が完了したら自動で残高を更新、または手動で進めるまで待つ",
       "title": "オートコンプリート",
       "payer": {
         "title": "支払い者"
@@ -265,7 +265,7 @@ export const dictionaries = {
       "thanks": "감사합니다!"
     },
     "autoclose": {
-      "description": "모두 끝나면 이벤트를 만들고 잔액을 업데이트해",
+      "description": "모두 완료하면 잔액을 자동으로 업데이트하거나, 직접 계속 진행하세요",
       "title": "자동 완성",
       "payer": {
         "title": "지불자"
@@ -295,7 +295,7 @@ export const dictionaries = {
       "thanks": "Dank je!"
     },
     "autoclose": {
-      "description": "Maak het evenement aan en werk de saldi bij als iedereen klaar is",
+      "description": "Werk de saldi automatisch bij zodra iedereen klaar is, of wacht om handmatig verder te gaan",
       "title": "Automatisch aanvullen",
       "payer": {
         "title": "Betaald door"
@@ -325,7 +325,7 @@ export const dictionaries = {
       "thanks": "Спасибо!"
     },
     "autoclose": {
-      "description": "Создай событие и обнови балансы, когда все закончат",
+      "description": "Обновить балансы автоматически, когда все закончат, или подождать и продолжить вручную",
       "title": "Автозаполнение",
       "payer": {
         "title": "Оплачено"
@@ -355,7 +355,7 @@ export const dictionaries = {
       "thanks": "Asante!"
     },
     "autoclose": {
-      "description": "Unda tukio na sasisha salio kila mtu atakapomaliza",
+      "description": "Sasisha salio moja kwa moja kila mtu akimaliza, au subiri uendelee mwenyewe",
       "title": "Jaza moja kwa moja",
       "payer": {
         "title": "Imelipwa na"
@@ -385,7 +385,7 @@ export const dictionaries = {
       "thanks": "Teşekkürler!"
     },
     "autoclose": {
-      "description": "Herkes bitirdiğinde etkinliği oluştur ve bakiyeleri güncelle",
+      "description": "Herkes bitirdiğinde bakiyeleri otomatik güncelle veya elle devam etmek için bekle",
       "title": "Otomatik tamamlama",
       "payer": {
         "title": "Ödeyen"
@@ -415,7 +415,7 @@ export const dictionaries = {
       "thanks": "Дякую!"
     },
     "autoclose": {
-      "description": "Створи подію та онови баланси, коли всі завершать",
+      "description": "Оновити баланси автоматично, коли всі закінчать, або зачекати й продовжити вручну",
       "title": "Автозаповнення",
       "payer": {
         "title": "Оплачено"
@@ -445,7 +445,7 @@ export const dictionaries = {
       "thanks": "谢谢！"
     },
     "autoclose": {
-      "description": "等大家都完成后，创建活动并更新余额",
+      "description": "当所有人完成后自动更新余额，或等待手动继续",
       "title": "自动完成",
       "payer": {
         "title": "付款人"
