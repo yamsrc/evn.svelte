@@ -43,7 +43,7 @@ Given('new expense', async ({ page, ctx }) => {
 
   await expect(page.getByText(ctx.name)).toBeVisible()
 
-  await page.locator('#expenses-recent-list > *').first().click()
+  await page.locator('#expenses-list > *').first().click()
 
   await expect(page).toHaveURL(/\/expenses\/[^/]+\/$/)
   await expect(page.locator('#expenses-details-title')).toContainText(ctx.name)
