@@ -14,7 +14,7 @@ feedback:
   down: Le echaremos un vistazo.
   thanks: ¡Gracias!
 autoclose:
-  description: Crea la división y actualiza los saldos cuando todos hayan terminado.
-  title: Finalizar automáticamente
+  description: Crea el evento y actualiza los saldos cuando todos hayan terminado
+  title: Autocompletar
   payer:
     title: Pagado por

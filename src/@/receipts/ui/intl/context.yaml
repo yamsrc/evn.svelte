@@ -30,9 +30,10 @@ inputs:
       input: Спасибо!
   autoclose:
     description:
-      input: Create the split and update balances when everyone is done.
+      input: Create the event and update balances when everyone’s done
     title:
-      input: Finish automatically
+      input: Autoadvance
+      context: meaning Autocomplete
     payer:
       title:
         input: Paid by

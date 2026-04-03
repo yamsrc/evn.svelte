@@ -14,7 +14,7 @@ feedback:
   down: We’ll take a look.
   thanks: Thank you!
 autoclose:
-  description: Create the split and update balances when everyone is done.
-  title: Finish automatically
+  description: Create the event and update balances when everyone’s done
+  title: Autocomplete
   payer:
     title: Paid by

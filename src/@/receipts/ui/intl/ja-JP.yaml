@@ -14,7 +14,7 @@ feedback:
   down: 確認します。
   thanks: ありがとうございます！
 autoclose:
-  description: 全員が完了したら、精算を作成して残高を更新してください。
-  title: 自動で完了
+  description: 全員が終わったらイベントを作成して、残高を更新しよう
+  title: オートコンプリート
   payer:
     title: 支払い者

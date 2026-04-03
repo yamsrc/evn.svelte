@@ -10,7 +10,7 @@
   const { receipt, actor }: Props = $props()
 
   function onadd(identities: string[]) {
-    add(receipt.id, identities)
+    void add(receipt.id, identities)
   }
 </script>
 

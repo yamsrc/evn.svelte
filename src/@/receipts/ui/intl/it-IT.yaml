@@ -14,7 +14,7 @@ feedback:
   down: Daremo un’occhiata.
   thanks: Grazie!
 autoclose:
-  description: Crea la suddivisione e aggiorna i saldi quando tutti hanno finito.
+  description: Crea l’evento e aggiorna i saldi quando tutti hanno finito
   title: Completamento automatico
   payer:
     title: Pagato da

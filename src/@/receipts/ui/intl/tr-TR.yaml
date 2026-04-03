@@ -14,7 +14,7 @@ feedback:
   down: Bir göz atacağız.
   thanks: Teşekkürler!
 autoclose:
-  description: Herkes işi bitirdiğinde bölüşümü oluşturun ve bakiyeleri güncelleyin.
-  title: Otomatik olarak bitir
+  description: Herkes bitirdiğinde etkinliği oluştur ve bakiyeleri güncelle
+  title: Otomatik tamamlama
   payer:
     title: Ödeyen
