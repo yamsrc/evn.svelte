@@ -1,6 +1,5 @@
 <script lang="ts">
   import { dict } from '$lib/intl'
-  import { cn } from '$lib/utils'
   import Coins from './Coins.svelte'
   import type { Props } from './Balance'
 
@@ -17,7 +16,7 @@
   const amount = $derived(total ?? balance ?? 0)
 </script>
 
-<div class={cn('flex items-center justify-end gap-2', classes)}>
+<div class={['flex items-center justify-end gap-x-2', classes]}>
   {#if sign !== 'neutral'}
     <p class="text-muted-foreground text-sm text-nowrap">
       {#if total !== undefined}
