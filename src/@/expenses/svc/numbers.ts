@@ -167,8 +167,9 @@ function gcd(a: number, b: number): number {
  */
 export function amounts(value: Value, shares: Record<string, number>, bill: number): Record<string, number> {
   const parts = Object.values(shares).reduce((acc, share) => acc + share, 0)
-
   const participants = Object.keys(value.participants)
+
+  if (parts === 0) return Object.fromEntries(participants.map((id) => [id, 0]))
 
   let sum = 0
 

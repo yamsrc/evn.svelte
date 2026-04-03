@@ -88,6 +88,7 @@ describe('amounts', () => {
     ['zero share → 0', participants(200, 0), record(1, 0), 200, record(200, 0)],
     ['zeroed sums with explicit total', participants(0, 0), record(1, 1), 100, record(50, 50)],
     ['zeroed sums with unequal shares', participants(0, 0, 0), record(2, 1, 1), 100, record(50, 25, 25)],
+    ['all shares zero → all amounts zero', participants(0, 0), record(0, 0), 100, record(0, 0)],
   ] as const)('%s', (_, participants, shares, bill, expected) => {
     expect(amounts(expense(participants), shares, bill)).toEqual(expected)
   })
