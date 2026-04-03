@@ -35,7 +35,7 @@
 
     busy = true
 
-    const normalized = normalize(value, mode)
+    const normalized = normalize(value, mode, total)
 
     await callback?.(normalized)
 

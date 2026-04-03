@@ -28,7 +28,7 @@
     Object.fromEntries(participants.map((id) => [id, value.participants[id].shares ?? 0])),
   )
 
-  const amounts = $derived(numbers.amounts(value, shares))
+  const amounts = $derived(numbers.amounts(value, shares, total))
 </script>
 
 <div class="space-y-2">

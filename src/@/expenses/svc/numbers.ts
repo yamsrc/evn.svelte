@@ -129,7 +129,7 @@ export function shares(value: Value): Record<string, number> {
     // rounding errors — shares don't add up to parts
     if (sum !== parts) continue
 
-    const restored = amounts(value, trial)
+    const restored = amounts(value, trial, spent)
     const exact = ids.every((id) => restored[id] === of(id))
 
     // shares don't reconstruct original amounts
@@ -161,15 +161,15 @@ function gcd(a: number, b: number): number {
 /**
  * Calculates the amounts of each participant based on their shares.
  *
- * @param value - The expense value
- * @returns A record mapping participant IDs to their amounts
+ * @param value - The expense value (used for participant list)
+ * @param shares - Share per participant
+ * @param bill - Total amount to distribute
  */
-export function amounts(value: Value, shares: Record<string, number>): Record<string, number> {
+export function amounts(value: Value, shares: Record<string, number>, bill: number): Record<string, number> {
   const parts = Object.values(shares).reduce((acc, share) => acc + share, 0)
-
   const participants = Object.keys(value.participants)
 
-  const totalSum = total(value)
+  if (parts === 0) return Object.fromEntries(participants.map((id) => [id, 0]))
 
   let sum = 0
 
@@ -177,8 +177,8 @@ export function amounts(value: Value, shares: Record<string, number>): Record<st
     participants.map((id, i) => {
       const share = shares[id]
       const last = i === participants.length - 1
-      const portion = Math.floor((totalSum / parts) * (share ?? 0))
-      const amount = last ? totalSum - sum : portion
+      const portion = Math.floor((bill / parts) * (share ?? 0))
+      const amount = last ? bill - sum : portion
 
       sum += portion
 

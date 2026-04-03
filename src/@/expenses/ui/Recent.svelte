@@ -13,7 +13,7 @@
   {#if expenses.length === 0}
     <p class="text-muted-foreground">{$dict.recent.empty}</p>
   {:else}
-    <ul class="space-y-2">
+    <ul id="expenses-recent-list" class="space-y-2">
       {#each expenses.slice(0, LIMIT) as expense (expense.id)}
         {@const highlighted = unseen(expense, notifications ?? [])}
         <li>
