@@ -18,3 +18,5 @@ autoclose:
   title: الإكمال التلقائي
   payer:
     title: تم الدفع بواسطة
+close:
+  label: تابع

@@ -18,3 +18,5 @@ autoclose:
   title: 자동 완성
   payer:
     title: 지불자
+close:
+  label: 계속하기

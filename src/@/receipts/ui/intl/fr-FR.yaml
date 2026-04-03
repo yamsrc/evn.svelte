@@ -20,3 +20,5 @@ autoclose:
   title: Saisie automatique
   payer:
     title: Payé par
+close:
+  label: Continuer

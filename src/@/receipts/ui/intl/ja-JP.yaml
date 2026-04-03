@@ -18,3 +18,5 @@ autoclose:
   title: オートコンプリート
   payer:
     title: 支払い者
+close:
+  label: 続ける

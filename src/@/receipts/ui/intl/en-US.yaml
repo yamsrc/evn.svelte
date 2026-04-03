@@ -20,3 +20,5 @@ autoclose:
   title: Autocomplete
   payer:
     title: Paid by
+close:
+  label: Continue

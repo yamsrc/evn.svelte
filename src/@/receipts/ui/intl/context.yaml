@@ -39,3 +39,6 @@ inputs:
       title:
         input: Paid by
         context: selector label
+  close:
+    label:
+      input: Proceed

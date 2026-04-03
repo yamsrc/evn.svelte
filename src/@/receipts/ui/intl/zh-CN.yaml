@@ -18,3 +18,5 @@ autoclose:
   title: 自动完成
   payer:
     title: 付款人
+close:
+  label: 继续

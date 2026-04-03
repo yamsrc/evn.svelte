@@ -20,3 +20,5 @@ autoclose:
   title: Automatisch aanvullen
   payer:
     title: Betaald door
+close:
+  label: Doorgaan

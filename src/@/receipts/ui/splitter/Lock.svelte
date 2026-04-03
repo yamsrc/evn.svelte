@@ -1,16 +1,24 @@
 <script lang="ts">
-  import { ArrowRight, CircleSmall } from '@lucide/svelte'
-  import { Action } from '@/app/ui'
-  import { allDone, type Props } from './Lock'
+  import { ArrowRight } from '@lucide/svelte'
+  import { Button } from '$ui/button'
+  import { transition } from '$lib/tools'
+  import { dict } from '../intl'
+  import type { Props } from './Lock'
 
   const { receipt, actor }: Props = $props()
-  const done = $derived(allDone(receipt))
+
+  function onclick(e: MouseEvent) {
+    const button = e.target as HTMLButtonElement
+
+    button.disabled = true
+
+    console.debug('onclick', receipt.id, actor)
+  }
 </script>
 
-<Action disabled={!done} variant={done ? 'default' : 'secondary'}>
-  {#if done}
+<div class="flex justify-center" use:transition={{ name: 'splitter-lock-button' }}>
+  <Button size="lg" class="w-full md:w-auto" {onclick}>
+    {$dict.close.label}
     <ArrowRight />
-  {:else}
-    <CircleSmall class="text-warning animate-pulse" fill="currentColor" />
-  {/if}
-</Action>
+  </Button>
+</div>

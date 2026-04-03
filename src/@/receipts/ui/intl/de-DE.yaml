@@ -20,3 +20,5 @@ autoclose:
   title: Automatisch vervollständigen
   payer:
     title: Bezahlt von
+close:
+  label: Weiter

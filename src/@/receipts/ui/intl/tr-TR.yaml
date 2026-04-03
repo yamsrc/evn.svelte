@@ -20,3 +20,5 @@ autoclose:
   title: Otomatik tamamlama
   payer:
     title: Ödeyen
+close:
+  label: Devam et

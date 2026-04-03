@@ -20,3 +20,5 @@ autoclose:
   title: Автозаповнення
   payer:
     title: Оплачено
+close:
+  label: Продовжити

@@ -8,6 +8,7 @@
   import { Avatar } from '@/accounts/ui'
   import { accounts } from '@/accounts'
   import { Button } from '$ui/button'
+  import { transit } from '$lib/tools'
   import { Ellipsis } from '$com/text'
   import { Scrollable } from '$com/scrollable'
   import { dict } from '../intl'
@@ -20,7 +21,7 @@
   const identities = $derived(receipt.identities.toSorted((a) => (a === account.id ? -1 : 1)))
 
   function select(identity: string) {
-    actor = identity
+    transit(() => (actor = identity))
   }
 
   const removing = new SvelteSet<string>()

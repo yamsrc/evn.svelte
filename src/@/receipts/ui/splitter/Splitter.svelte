@@ -3,6 +3,8 @@
   import Summary from './Summary.svelte'
   import Progress from './Progress.svelte'
   import Participants from './Participants.svelte'
+  import Lock from './Lock.svelte'
+  import { allDone } from './Lock'
   import Items from './Items.svelte'
   import Feedback from './Feedback.svelte'
   import Autoclose from './Autoclose.svelte'
@@ -35,7 +37,11 @@
   {#if receipt.done[actor] === true}
     <div class="space-y-4 pt-2">
       <Summary {actor} />
-      <Autoclose {receipt} {actor} payer={receipt.autolock} />
+      {#if allDone(receipt)}
+        <Lock {receipt} {actor} />
+      {:else}
+        <Autoclose {receipt} {actor} payer={receipt.autolock} />
+      {/if}
       <Feedback {actor} />
     </div>
   {:else}

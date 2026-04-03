@@ -2,7 +2,7 @@
   import { ThumbsDown, ThumbsUp } from '@lucide/svelte'
   import { ButtonGroup } from '$ui/button-group'
   import { Button } from '$ui/button'
-  import { transit } from '$lib/tools'
+  import { transit, transition } from '$lib/tools'
   import { dict } from '../intl'
   import type { Props } from './Feedback'
 
@@ -27,7 +27,7 @@
 
 <div
   class="flex flex-col items-center justify-center space-y-2"
-  style="view-transition-name: splitter-feedback;">
+  use:transition={{ name: 'splitter-feedback' }}>
   <span class="text-muted-foreground">
     {#if value === -1}
       {$dict.feedback.question}

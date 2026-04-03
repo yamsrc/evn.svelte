@@ -37,4 +37,7 @@ export type Dictionary = {
           title: string
         }
       }
+      close: {
+        label: string
+      }
     }

@@ -30,6 +30,9 @@ export const dictionaries = {
       "payer": {
         "title": "تم الدفع بواسطة"
       }
+    },
+    "close": {
+      "label": "تابع"
     }
   },
   "de-DE": {
@@ -60,6 +63,9 @@ export const dictionaries = {
       "payer": {
         "title": "Bezahlt von"
       }
+    },
+    "close": {
+      "label": "Weiter"
     }
   },
   "en-US": {
@@ -90,6 +96,9 @@ export const dictionaries = {
       "payer": {
         "title": "Paid by"
       }
+    },
+    "close": {
+      "label": "Continue"
     }
   },
   "es-ES": {
@@ -120,6 +129,9 @@ export const dictionaries = {
       "payer": {
         "title": "Pagado por"
       }
+    },
+    "close": {
+      "label": "Continuar"
     }
   },
   "fr-FR": {
@@ -150,6 +162,9 @@ export const dictionaries = {
       "payer": {
         "title": "Payé par"
       }
+    },
+    "close": {
+      "label": "Continuer"
     }
   },
   "hi-IN": {
@@ -180,6 +195,9 @@ export const dictionaries = {
       "payer": {
         "title": "द्वारा भुगतान"
       }
+    },
+    "close": {
+      "label": "आगे बढ़ो"
     }
   },
   "it-IT": {
@@ -210,6 +228,9 @@ export const dictionaries = {
       "payer": {
         "title": "Pagato da"
       }
+    },
+    "close": {
+      "label": "Continua"
     }
   },
   "ja-JP": {
@@ -240,6 +261,9 @@ export const dictionaries = {
       "payer": {
         "title": "支払い者"
       }
+    },
+    "close": {
+      "label": "続ける"
     }
   },
   "ko-KR": {
@@ -270,6 +294,9 @@ export const dictionaries = {
       "payer": {
         "title": "지불자"
       }
+    },
+    "close": {
+      "label": "계속하기"
     }
   },
   "nl-NL": {
@@ -300,6 +327,9 @@ export const dictionaries = {
       "payer": {
         "title": "Betaald door"
       }
+    },
+    "close": {
+      "label": "Doorgaan"
     }
   },
   "ru-RU": {
@@ -330,6 +360,9 @@ export const dictionaries = {
       "payer": {
         "title": "Оплачено"
       }
+    },
+    "close": {
+      "label": "Продолжить"
     }
   },
   "sw-TZ": {
@@ -360,6 +393,9 @@ export const dictionaries = {
       "payer": {
         "title": "Imelipwa na"
       }
+    },
+    "close": {
+      "label": "Endelea"
     }
   },
   "tr-TR": {
@@ -390,6 +426,9 @@ export const dictionaries = {
       "payer": {
         "title": "Ödeyen"
       }
+    },
+    "close": {
+      "label": "Devam et"
     }
   },
   "uk-UA": {
@@ -420,6 +459,9 @@ export const dictionaries = {
       "payer": {
         "title": "Оплачено"
       }
+    },
+    "close": {
+      "label": "Продовжити"
     }
   },
   "zh-CN": {
@@ -450,6 +492,9 @@ export const dictionaries = {
       "payer": {
         "title": "付款人"
       }
+    },
+    "close": {
+      "label": "继续"
     }
   }
 };
