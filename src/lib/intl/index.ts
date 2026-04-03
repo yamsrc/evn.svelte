@@ -39,9 +39,9 @@ const locale = derived([account, selected], ([$account, $selected]) => {
 export const grammar = derived(account, ($account) => $account?.grammar ?? 'none')
 
 function preferred(): Locale | null {
-  for (const lang of navigator.languages) {
-    if (supported(lang)) return resolveLocale(lang)
-  }
+  if (typeof navigator !== 'undefined')
+    for (const lang of navigator.languages)
+      if (supported(lang)) return resolveLocale(lang)
 
   return null
 }
