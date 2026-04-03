@@ -241,6 +241,41 @@ Feature: Expenses
     Then 'expenses-list' contains that name
     And 'expenses-list' contains text '100'
 
+  Scenario: Shares work after clearing sums
+    Given new account
+    And new managed contact
+    And I tap 'nav-contacts-button'
+    And I tap 'nav-home-button'
+    And I tap 'nav-actions-button'
+    And I tap 'nav-actions-cheques-input-button'
+    And I tap 'expenses-spendings-add-participants-button'
+    Then 'participants-selector-add-button' is visible
+    When I tap first item of 'contacts-list-content'
+    And I tap 'participants-selector-add-button'
+    Then 'expenses-form-title-input' is visible
+    When I tap 'expenses-form-title-input'
+    And I type random expense title
+    When I tap 'expenses-total-input'
+    And I type '100'
+    Then input 'expenses-participant-amount-0' contains '50'
+    And input 'expenses-participant-amount-1' contains '50'
+    When I tap 'expenses-participant-amount-0'
+    And I clear 'expenses-participant-amount-0'
+    And I type '0'
+    And I tap 'expenses-participant-amount-1'
+    And I clear 'expenses-participant-amount-1'
+    And I type '0'
+    When I tap 'expenses-participants-tabs-shares'
+    Then 'expenses-participant-share-0' is visible
+    And 'expenses-participant-share-0-dots' contains 1 elements
+    And 'expenses-participant-share-1-dots' contains 1 elements
+    And 'expenses-participant-share-0' contains text '50'
+    And 'expenses-participant-share-1' contains text '50'
+    When I tap 'expenses-participant-share-0-increment'
+    Then 'expenses-participant-share-0-dots' contains 2 elements
+    And 'expenses-participant-share-0' contains text '66.66'
+    And 'expenses-participant-share-1' contains text '33.34'
+
   Scenario: Total changes with even split
     Given new account
     And new expense

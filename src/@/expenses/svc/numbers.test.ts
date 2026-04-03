@@ -83,10 +83,12 @@ describe('shares', () => {
 
 describe('amounts', () => {
   it.each([
-    ['reconstructs from shares', participants(200, 100), record(2, 1), record(200, 100)],
-    ['remainder to last', participants(33, 33, 34), record(1, 1, 1), record(33, 33, 34)],
-    ['zero share → 0', participants(200, 0), record(1, 0), record(200, 0)],
-  ] as const)('%s', (_, participants, shares, expected) => {
-    expect(amounts(expense(participants), shares)).toEqual(expected)
+    ['reconstructs from shares', participants(200, 100), record(2, 1), 300, record(200, 100)],
+    ['remainder to last', participants(33, 33, 34), record(1, 1, 1), 100, record(33, 33, 34)],
+    ['zero share → 0', participants(200, 0), record(1, 0), 200, record(200, 0)],
+    ['zeroed sums with explicit total', participants(0, 0), record(1, 1), 100, record(50, 50)],
+    ['zeroed sums with unequal shares', participants(0, 0, 0), record(2, 1, 1), 100, record(50, 25, 25)],
+  ] as const)('%s', (_, participants, shares, bill, expected) => {
+    expect(amounts(expense(participants), shares, bill)).toEqual(expected)
   })
 })
