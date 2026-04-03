@@ -8,3 +8,4 @@ reduction:
 expenses:
   title: Eventos
   empty: Aún no hay gastos compartidos.
+balance: Tu saldo
