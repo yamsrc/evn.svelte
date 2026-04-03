@@ -107,11 +107,12 @@ receipts:
   dialog:
     join: Rejoindre
     decline: Refuser
-    title: Invitation à l’addition
-    description: |-
+    title: Invitation à partager l’addition
+    description: >-
       !js
-      (name, gender) => {
-        if (gender === "he") return `${name} souhaite t'ajouter à l'addition.`;
-        if (gender === "she") return `${name} souhaite t'ajouter à l'addition.`;
-        return `${name} souhaite t'ajouter à l'addition.`;
-      }
+
+      (name, gender) => gender === "he" ? `${name} vous invite à partager une
+      addition` : gender === "she" ? `${name} vous invite à partager une
+      addition` : `${name} vous invite à partager une addition`
+    balance:
+      total: Total de la facture

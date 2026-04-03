@@ -84,9 +84,9 @@ receipts:
   dialog:
     join: 加入
     decline: 拒绝
-    title: 邀请结账
+    title: 邀请一起分账
     description: |-
       !js
-      (name, gender) => {
-        return `${name}希望将你添加到账单中。`;
-      }
+      (name, gender) => `${name}邀请你一起AA制`
+    balance:
+      total: 账单总额

@@ -100,9 +100,9 @@ receipts:
   dialog:
     join: Katıl
     decline: Reddet
-    title: Hesaba davet
+    title: Hesap paylaşma daveti
     description: |-
       !js
-      (name, gender) => {
-        return `${name} sizi hesaba eklemek istiyor.`;
-      }
+      (name, gender) => `${name} seni bir hesabı bölüşmeye davet ediyor`
+    balance:
+      total: Toplam fatura

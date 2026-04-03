@@ -19,16 +19,23 @@
     e.preventDefault()
     hide()
   }
+
+  function portal(node: HTMLElement) {
+    document.body.appendChild(node)
+
+    return { destroy: () => node.remove() }
+  }
 </script>
 
 <svelte:window {onkeydown} />
 
 {#if open}
   <div
+    use:portal
     role="button"
     tabindex="0"
     onpointerdown={hide}
-    class="fixed inset-0 z-1001 flex items-center justify-center bg-background">
+    class="fixed inset-0 z-1001 flex items-center justify-center bg-background pointer-events-auto">
     {@render children()}
     {#if overlay}
       <Overlay>

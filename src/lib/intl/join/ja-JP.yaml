@@ -86,9 +86,9 @@ receipts:
   dialog:
     join: 参加する
     decline: 拒否
-    title: 会計へのご案内
+    title: 割り勘への招待
     description: |-
       !js
-      (name, gender) => {
-        return `${name} さんがあなたをお会計に追加したいと考えています。`;
-      }
+      (name, gender) => `${name}さんが割り勘をしませんかと招待しています`
+    balance:
+      total: 合計請求額

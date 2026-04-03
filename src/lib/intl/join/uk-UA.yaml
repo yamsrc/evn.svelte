@@ -101,11 +101,12 @@ receipts:
   dialog:
     join: Приєднатися
     decline: Відхилити
-    title: Запрошення до рахунку
-    description: |-
+    title: Запрошення розділити рахунок
+    description: >-
       !js
-      (name, gender) => {
-        if (gender === "he") return `${name} хоче додати вас до рахунку.`;
-        if (gender === "she") return `${name} хоче додати вас до рахунку.`;
-        return `${name} хоче додати вас до рахунку.`;
-      }
+
+      (name, gender) => gender === "he" ? `${name} запрошує вас розділити
+      рахунок` : gender === "she" ? `${name} запрошує вас розділити рахунок` :
+      `${name} запрошує вас розділити рахунок`
+    balance:
+      total: Загальний рахунок

@@ -95,11 +95,12 @@ receipts:
   dialog:
     join: انضمام
     decline: رفض
-    title: دعوة إلى الفاتورة
-    description: |-
+    title: دعوة لتقسيم الفاتورة
+    description: >-
       !js
-      (name, gender) => {
-        if (gender === "he") return `${name} يرغب في إضافتك إلى الفاتورة.`;
-        if (gender === "she") return `${name} ترغب في إضافتك إلى الفاتورة.`;
-        return `${name} يرغب(ترغب) في إضافتك إلى الفاتورة.`;
-      }
+
+      (name, gender) => gender === "he" ? `${name} يدعوك لتقسيم الفاتورة` :
+      gender === "she" ? `${name} تدعوك لتقسيم الفاتورة` : `${name} يدعوك/تدعوك
+      لتقسيم الفاتورة`
+    balance:
+      total: إجمالي الفاتورة

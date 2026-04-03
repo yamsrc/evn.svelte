@@ -107,9 +107,9 @@ receipts:
   dialog:
     join: Beitreten
     decline: Ablehnen
-    title: Einladung zur Rechnung
+    title: Einladung, die Rechnung zu teilen
     description: |-
       !js
-      (name, gender) => {
-        return `${name} möchte dich zur Rechnung hinzufügen.`;
-      }
+      (name, gender) => `${name} lädt dich ein, eine Rechnung zu teilen`
+    balance:
+      total: Gesamtrechnung

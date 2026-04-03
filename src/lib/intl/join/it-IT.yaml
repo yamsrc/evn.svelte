@@ -102,9 +102,12 @@ receipts:
   dialog:
     join: Unisciti
     decline: Rifiuta
-    title: Invito al conto
-    description: |-
+    title: Invito a dividere il conto
+    description: >-
       !js
-      (name, gender) => {
-        return `${name} vorrebbe aggiungerti al conto.`;
-      }
+
+      (name, gender) => gender === "he" ? `${name} ti invita a dividere un
+      conto` : gender === "she" ? `${name} ti invita a dividere un conto` :
+      `${name} ti invita a dividere un conto`
+    balance:
+      total: Totale conto

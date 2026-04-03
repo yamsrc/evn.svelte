@@ -84,9 +84,9 @@ receipts:
   dialog:
     join: 참여하기
     decline: 거절
-    title: 계산서 요청 안내
+    title: 더치페이 초대
     description: |-
       !js
-      (name, gender) => {
-        return `${name}님이 당신을 계산서에 추가하고 싶어합니다.`;
-      }
+      (name, gender) => `${name}님이 더치페이를 제안합니다`
+    balance:
+      total: 총 청구 금액

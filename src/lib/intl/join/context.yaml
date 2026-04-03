@@ -121,6 +121,9 @@ inputs:
         input: Decline
         context: button label
       description:
-        input: "{name} would like to add you to\_the\_check."
+        input: "{name} invites you to split a bill"
       title:
-        input: Invitation to the check
+        input: Invitation to split a bill
+      balance:
+        total:
+          input: Total bill

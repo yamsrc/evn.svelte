@@ -102,11 +102,12 @@ receipts:
   dialog:
     join: Присоединиться
     decline: Отклонить
-    title: Приглашение к счету
-    description: |-
+    title: Приглашение разделить счёт
+    description: >-
       !js
-      (name, gender) => {
-        if (gender === "he") return `${name} хочет добавить вас к счёту.`;
-        if (gender === "she") return `${name} хочет добавить вас к счёту.`;
-        return `${name} хочет(хочет) добавить вас к счёту.`;
-      }
+
+      (name, gender) => gender === "he" ? `${name} приглашает вас разделить
+      счёт` : gender === "she" ? `${name} приглашает вас разделить счёт` :
+      `${name} приглашает вас разделить счёт`
+    balance:
+      total: Общий счет

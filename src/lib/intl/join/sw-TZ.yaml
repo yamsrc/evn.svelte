@@ -96,9 +96,9 @@ receipts:
   dialog:
     join: Jiunge
     decline: Kataa
-    title: Mwaliko wa bili
+    title: Mwaliko wa kugawana bili
     description: |-
       !js
-      (name, gender) => {
-        return `${name} angependa kukuongeza kwenye bili.`;
-      }
+      (name, gender) => `${name} anakualika kugawana bili`
+    balance:
+      total: Jumla ya bili

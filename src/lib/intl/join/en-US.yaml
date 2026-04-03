@@ -96,9 +96,9 @@ receipts:
   dialog:
     join: Join
     decline: Decline
-    title: Invitation to the check
+    title: Invitation to split a bill
     description: |-
       !js
-      (name, gender) => {
-        return `${name} would like to add you to the check.`;
-      }
+      (name, gender) => `${name} invites you to split a bill`
+    balance:
+      total: Total bill

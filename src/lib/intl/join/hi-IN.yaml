@@ -106,11 +106,13 @@ receipts:
   dialog:
     join: जुड़ें
     decline: अस्वीकार करें
-    title: बिल के लिए निमंत्रण
-    description: |-
+    title: बिल साझा करने का निमंत्रण
+    description: >-
       !js
-      (name, gender) => {
-        if (gender === "he") return `${name} आपको बिल में जोड़ना चाहता है।`;
-        if (gender === "she") return `${name} आपको बिल में जोड़ना चाहती है।`;
-        return `${name} आपको बिल में जोड़ना चाहता/चाहती है।`;
-      }
+
+      (name, gender) => gender === "he" ? `${name} आपको बिल साझा करने के लिए
+      आमंत्रित करता है` : gender === "she" ? `${name} आपको बिल साझा करने के लिए
+      आमंत्रित करती है` : `${name} आपको बिल साझा करने के लिए आमंत्रित करता/करती
+      है`
+    balance:
+      total: कुल बिल
