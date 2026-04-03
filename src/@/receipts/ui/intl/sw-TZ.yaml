@@ -20,3 +20,6 @@ autoclose:
     title: Imelipwa na
 close:
   label: Endelea
+unassigned:
+  - one: "{n} kipengee kisichogawiwa"
+    other: "{n} vipengee visivyogawiwa"

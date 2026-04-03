@@ -22,3 +22,6 @@ autoclose:
     title: Payé par
 close:
   label: Continuer
+unassigned:
+  - one: "{n} élément non attribué"
+    other: "{n} éléments non attribués"

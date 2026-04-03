@@ -33,6 +33,15 @@ export const dictionaries = {
     },
     "close": {
       "label": "تابع"
+    },
+    "unassigned": (count) => {
+      const forms = {"zero":"{n} عنصر غير معين","one":"{n} عنصر غير معين","two":"{n} عنصران غير معينان","few":"{n} عناصر غير معينة","many":"{n} عنصراً غير معين","other":"{n} عنصر غير معين"};
+      const locale = "ar-SA"; // This will be replaced by the build system
+      const pluralRules = new Intl.PluralRules(locale);
+      const rule = pluralRules.select(count);
+
+      // Direct object property access - no CLDR ordering needed!
+      return (forms[rule] ?? forms.other).replace(/{n}/g, new Intl.NumberFormat(locale).format(count));
     }
   },
   "de-DE": {
@@ -66,6 +75,15 @@ export const dictionaries = {
     },
     "close": {
       "label": "Weiter"
+    },
+    "unassigned": (count) => {
+      const forms = {"one":"{n} nicht zugewiesenes Element","other":"{n} nicht zugewiesene Elemente"};
+      const locale = "de-DE"; // This will be replaced by the build system
+      const pluralRules = new Intl.PluralRules(locale);
+      const rule = pluralRules.select(count);
+
+      // Direct object property access - no CLDR ordering needed!
+      return (forms[rule] ?? forms.other).replace(/{n}/g, new Intl.NumberFormat(locale).format(count));
     }
   },
   "en-US": {
@@ -99,6 +117,15 @@ export const dictionaries = {
     },
     "close": {
       "label": "Continue"
+    },
+    "unassigned": (count) => {
+      const forms = {"one":"{n} unassigned item","other":"{n} unassigned items"};
+      const locale = "en-US"; // This will be replaced by the build system
+      const pluralRules = new Intl.PluralRules(locale);
+      const rule = pluralRules.select(count);
+
+      // Direct object property access - no CLDR ordering needed!
+      return (forms[rule] ?? forms.other).replace(/{n}/g, new Intl.NumberFormat(locale).format(count));
     }
   },
   "es-ES": {
@@ -132,6 +159,15 @@ export const dictionaries = {
     },
     "close": {
       "label": "Continuar"
+    },
+    "unassigned": (count) => {
+      const forms = {"one":"{n} elemento sin asignar","other":"{n} elementos sin asignar"};
+      const locale = "es-ES"; // This will be replaced by the build system
+      const pluralRules = new Intl.PluralRules(locale);
+      const rule = pluralRules.select(count);
+
+      // Direct object property access - no CLDR ordering needed!
+      return (forms[rule] ?? forms.other).replace(/{n}/g, new Intl.NumberFormat(locale).format(count));
     }
   },
   "fr-FR": {
@@ -165,6 +201,15 @@ export const dictionaries = {
     },
     "close": {
       "label": "Continuer"
+    },
+    "unassigned": (count) => {
+      const forms = {"one":"{n} élément non attribué","other":"{n} éléments non attribués"};
+      const locale = "fr-FR"; // This will be replaced by the build system
+      const pluralRules = new Intl.PluralRules(locale);
+      const rule = pluralRules.select(count);
+
+      // Direct object property access - no CLDR ordering needed!
+      return (forms[rule] ?? forms.other).replace(/{n}/g, new Intl.NumberFormat(locale).format(count));
     }
   },
   "hi-IN": {
@@ -198,6 +243,15 @@ export const dictionaries = {
     },
     "close": {
       "label": "आगे बढ़ो"
+    },
+    "unassigned": (count) => {
+      const forms = {"one":"{n} असाइन न किया गया आइटम","other":"{n} असाइन न किए गए आइटम"};
+      const locale = "hi-IN"; // This will be replaced by the build system
+      const pluralRules = new Intl.PluralRules(locale);
+      const rule = pluralRules.select(count);
+
+      // Direct object property access - no CLDR ordering needed!
+      return (forms[rule] ?? forms.other).replace(/{n}/g, new Intl.NumberFormat(locale).format(count));
     }
   },
   "it-IT": {
@@ -231,6 +285,15 @@ export const dictionaries = {
     },
     "close": {
       "label": "Continua"
+    },
+    "unassigned": (count) => {
+      const forms = {"one":"{n} elemento non assegnato","other":"{n} elementi non assegnati"};
+      const locale = "it-IT"; // This will be replaced by the build system
+      const pluralRules = new Intl.PluralRules(locale);
+      const rule = pluralRules.select(count);
+
+      // Direct object property access - no CLDR ordering needed!
+      return (forms[rule] ?? forms.other).replace(/{n}/g, new Intl.NumberFormat(locale).format(count));
     }
   },
   "ja-JP": {
@@ -264,6 +327,15 @@ export const dictionaries = {
     },
     "close": {
       "label": "続ける"
+    },
+    "unassigned": (count) => {
+      const forms = {"other":"未割り当てのアイテム {n} 件"};
+      const locale = "ja-JP"; // This will be replaced by the build system
+      const pluralRules = new Intl.PluralRules(locale);
+      const rule = pluralRules.select(count);
+
+      // Direct object property access - no CLDR ordering needed!
+      return (forms[rule] ?? forms.other).replace(/{n}/g, new Intl.NumberFormat(locale).format(count));
     }
   },
   "ko-KR": {
@@ -297,6 +369,15 @@ export const dictionaries = {
     },
     "close": {
       "label": "계속하기"
+    },
+    "unassigned": (count) => {
+      const forms = {"other":"할당되지 않은 항목 {n}개"};
+      const locale = "ko-KR"; // This will be replaced by the build system
+      const pluralRules = new Intl.PluralRules(locale);
+      const rule = pluralRules.select(count);
+
+      // Direct object property access - no CLDR ordering needed!
+      return (forms[rule] ?? forms.other).replace(/{n}/g, new Intl.NumberFormat(locale).format(count));
     }
   },
   "nl-NL": {
@@ -330,6 +411,15 @@ export const dictionaries = {
     },
     "close": {
       "label": "Doorgaan"
+    },
+    "unassigned": (count) => {
+      const forms = {"one":"{n} niet-toegewezen item","other":"{n} niet-toegewezen items"};
+      const locale = "nl-NL"; // This will be replaced by the build system
+      const pluralRules = new Intl.PluralRules(locale);
+      const rule = pluralRules.select(count);
+
+      // Direct object property access - no CLDR ordering needed!
+      return (forms[rule] ?? forms.other).replace(/{n}/g, new Intl.NumberFormat(locale).format(count));
     }
   },
   "ru-RU": {
@@ -363,6 +453,15 @@ export const dictionaries = {
     },
     "close": {
       "label": "Продолжить"
+    },
+    "unassigned": (count) => {
+      const forms = {"one":"{n} нераспределённый элемент","few":"{n} нераспределённых элемента","many":"{n} нераспределённых элементов","other":"{n} нераспределённых элементов"};
+      const locale = "ru-RU"; // This will be replaced by the build system
+      const pluralRules = new Intl.PluralRules(locale);
+      const rule = pluralRules.select(count);
+
+      // Direct object property access - no CLDR ordering needed!
+      return (forms[rule] ?? forms.other).replace(/{n}/g, new Intl.NumberFormat(locale).format(count));
     }
   },
   "sw-TZ": {
@@ -396,6 +495,15 @@ export const dictionaries = {
     },
     "close": {
       "label": "Endelea"
+    },
+    "unassigned": (count) => {
+      const forms = {"one":"{n} kipengee kisichogawiwa","other":"{n} vipengee visivyogawiwa"};
+      const locale = "sw-TZ"; // This will be replaced by the build system
+      const pluralRules = new Intl.PluralRules(locale);
+      const rule = pluralRules.select(count);
+
+      // Direct object property access - no CLDR ordering needed!
+      return (forms[rule] ?? forms.other).replace(/{n}/g, new Intl.NumberFormat(locale).format(count));
     }
   },
   "tr-TR": {
@@ -429,6 +537,15 @@ export const dictionaries = {
     },
     "close": {
       "label": "Devam et"
+    },
+    "unassigned": (count) => {
+      const forms = {"one":"{n} atanmamış öğe","other":"{n} atanmamış öğe"};
+      const locale = "tr-TR"; // This will be replaced by the build system
+      const pluralRules = new Intl.PluralRules(locale);
+      const rule = pluralRules.select(count);
+
+      // Direct object property access - no CLDR ordering needed!
+      return (forms[rule] ?? forms.other).replace(/{n}/g, new Intl.NumberFormat(locale).format(count));
     }
   },
   "uk-UA": {
@@ -462,6 +579,15 @@ export const dictionaries = {
     },
     "close": {
       "label": "Продовжити"
+    },
+    "unassigned": (count) => {
+      const forms = {"one":"{n} непризначений елемент","few":"{n} непризначених елементи","many":"{n} непризначених елементів","other":"{n} непризначених елементів"};
+      const locale = "uk-UA"; // This will be replaced by the build system
+      const pluralRules = new Intl.PluralRules(locale);
+      const rule = pluralRules.select(count);
+
+      // Direct object property access - no CLDR ordering needed!
+      return (forms[rule] ?? forms.other).replace(/{n}/g, new Intl.NumberFormat(locale).format(count));
     }
   },
   "zh-CN": {
@@ -495,6 +621,15 @@ export const dictionaries = {
     },
     "close": {
       "label": "继续"
+    },
+    "unassigned": (count) => {
+      const forms = {"other":"{n} 个未分配项目"};
+      const locale = "zh-CN"; // This will be replaced by the build system
+      const pluralRules = new Intl.PluralRules(locale);
+      const rule = pluralRules.select(count);
+
+      // Direct object property access - no CLDR ordering needed!
+      return (forms[rule] ?? forms.other).replace(/{n}/g, new Intl.NumberFormat(locale).format(count));
     }
   }
 };

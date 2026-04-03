@@ -20,3 +20,5 @@ autoclose:
     title: 付款人
 close:
   label: 继续
+unassigned:
+  - other: "{n} 个未分配项目"

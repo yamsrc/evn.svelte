@@ -40,4 +40,5 @@ export type Dictionary = {
       close: {
         label: string
       }
+      unassigned: (value: number) => string
     }

@@ -22,3 +22,6 @@ autoclose:
     title: Bezahlt von
 close:
   label: Weiter
+unassigned:
+  - one: "{n} nicht zugewiesenes Element"
+    other: "{n} nicht zugewiesene Elemente"

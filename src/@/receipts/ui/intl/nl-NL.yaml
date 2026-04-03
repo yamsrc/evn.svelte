@@ -22,3 +22,6 @@ autoclose:
     title: Betaald door
 close:
   label: Doorgaan
+unassigned:
+  - one: "{n} niet-toegewezen item"
+    other: "{n} niet-toegewezen items"

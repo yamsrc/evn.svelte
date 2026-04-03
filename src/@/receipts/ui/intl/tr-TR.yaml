@@ -22,3 +22,6 @@ autoclose:
     title: Ödeyen
 close:
   label: Devam et
+unassigned:
+  - one: "{n} atanmamış öğe"
+    other: "{n} atanmamış öğe"

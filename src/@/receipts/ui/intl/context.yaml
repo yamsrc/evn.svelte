@@ -42,3 +42,6 @@ inputs:
   close:
     label:
       input: Proceed
+  unassigned:
+    input: "{n} unassigned items"
+    context: items of a list

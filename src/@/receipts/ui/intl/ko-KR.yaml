@@ -20,3 +20,5 @@ autoclose:
     title: 지불자
 close:
   label: 계속하기
+unassigned:
+  - other: 할당되지 않은 항목 {n}개

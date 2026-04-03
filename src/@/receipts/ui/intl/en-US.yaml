@@ -22,3 +22,6 @@ autoclose:
     title: Paid by
 close:
   label: Continue
+unassigned:
+  - one: "{n} unassigned item"
+    other: "{n} unassigned items"
