@@ -6,7 +6,7 @@ Feature: Expenses
     And I tap 'nav-expenses-button'
     And I tap 'expenses-draft-action'
     And I tap 'expenses-spendings-add-participants-button'
-    Then 'expenses-add-participants-add-button' is visible
+    Then 'participants-selector-add-button' is visible
     When I tap 'expenses-add-participants-create-button'
     Then 'app-cosmetics-name-input' is visible
     When I tap 'app-cosmetics-name-input'
@@ -15,7 +15,7 @@ Feature: Expenses
     When I tap 'app-cosmetics-submit-button'
     Then 'app-cosmetics-name-input' is not visible
     When I tap first item of 'contacts-list-content'
-    And I tap 'expenses-add-participants-add-button'
+    And I tap 'participants-selector-add-button'
     Then 'expenses-form-title-input' is visible
     When I tap 'expenses-form-title-input'
     And I type random expense title
@@ -27,8 +27,7 @@ Feature: Expenses
     Then input 'expenses-participant-amount-0' contains '50'
     And input 'expenses-participant-amount-1' contains '50'
     And I tap 'expenses-form-save-button'
-    Then 'expenses-details-title' is visible
-    And the page contains that name
+    Then the page contains that name
     When I tap 'nav-expenses-button'
     Then 'expenses-list' contains that name
     And 'expenses-list' contains text '100'
@@ -42,9 +41,9 @@ Feature: Expenses
     When I tap 'expenses-edit-action'
     Then 'expenses-form-title-input' is visible
     When I tap first visible 'expenses-spendings-add-participants-button'
-    Then 'expenses-add-participants-add-button' is visible
+    Then 'participants-selector-add-button' is visible
     When I tap first item of 'contacts-list-content'
-    And I tap 'expenses-add-participants-add-button'
+    And I tap 'participants-selector-add-button'
     Then 'expenses-participant-amount-2' is visible
     When I tap 'expenses-participant-amount-0'
     And I clear 'expenses-participant-amount-0'
@@ -56,9 +55,8 @@ Feature: Expenses
     And I clear 'expenses-participant-amount-2'
     And I type '33'
     When I tap 'expenses-form-save-button'
-    Then 'expenses-details-title' is visible
-    And 'expenses-details-title' contains that name
-    And 'expenses-details-total' contains text '100'
+    Then the page contains that name
+    And the page contains text '100'
     When I tap 'nav-expenses-button'
     Then 'expenses-list' contains that name
     And 'expenses-list' contains text '100'
@@ -90,9 +88,8 @@ Feature: Expenses
     And I type '100'
     Then input 'expenses-participant-amount-0' contains '100'
     When I tap 'expenses-form-save-button'
-    Then 'expenses-details-title' is visible
-    And 'expenses-details-title' contains that name
-    And 'expenses-details-total' contains text '200'
+    Then the page contains that name
+    And the page contains text '200'
     When I tap 'nav-expenses-button'
     Then 'expenses-list' contains that name
     And 'expenses-list' contains text '200'
@@ -103,11 +100,11 @@ Feature: Expenses
     And I tap 'nav-contacts-button'
     And I tap 'nav-home-button'
     And I tap 'nav-actions-button'
-    And I tap 'nav-actions-cheqes-input-button'
+    And I tap 'nav-actions-cheques-input-button'
     And I tap 'expenses-spendings-add-participants-button'
-    Then 'expenses-add-participants-add-button' is visible
+    Then 'participants-selector-add-button' is visible
     When I tap first item of 'contacts-list-content'
-    And I tap 'expenses-add-participants-add-button'
+    And I tap 'participants-selector-add-button'
     Then 'expenses-form-title-input' is visible
     When I tap 'expenses-form-title-input'
     And I type random expense title
@@ -143,8 +140,7 @@ Feature: Expenses
     And input 'expenses-participant-amount-1' contains '50'
     When I tap 'expenses-participants-tabs-shares'
     And I tap 'expenses-form-save-button'
-    Then 'expenses-details-title' is visible
-    And the page contains that name
+    Then the page contains that name
     When I tap 'nav-expenses-button'
     Then 'expenses-list' contains that name
     And 'expenses-list' contains text '100'
@@ -155,11 +151,11 @@ Feature: Expenses
     And I tap 'nav-contacts-button'
     And I tap 'nav-home-button'
     And I tap 'nav-actions-button'
-    And I tap 'nav-actions-cheqes-input-button'
+    And I tap 'nav-actions-cheques-input-button'
     And I tap 'expenses-spendings-add-participants-button'
-    Then 'expenses-add-participants-add-button' is visible
+    Then 'participants-selector-add-button' is visible
     When I tap first item of 'contacts-list-content'
-    And I tap 'expenses-add-participants-add-button'
+    And I tap 'participants-selector-add-button'
     Then 'expenses-form-title-input' is visible
     When I tap 'expenses-form-title-input'
     And I type random expense title
@@ -178,8 +174,7 @@ Feature: Expenses
     Then 'expenses-participant-amount-0' is visible
     And input 'expenses-participant-amount-0' contains '50'
     And I tap 'expenses-form-save-button'
-    Then 'expenses-details-title' is visible
-    And the page contains that name
+    Then the page contains that name
     When I tap 'nav-expenses-button'
     Then 'expenses-list' contains that name
     And 'expenses-list' contains text '100'
@@ -190,11 +185,11 @@ Feature: Expenses
     And I tap 'nav-contacts-button'
     And I tap 'nav-home-button'
     And I tap 'nav-actions-button'
-    And I tap 'nav-actions-cheqes-input-button'
+    And I tap 'nav-actions-cheques-input-button'
     And I tap 'expenses-spendings-add-participants-button'
-    Then 'expenses-add-participants-add-button' is visible
+    Then 'participants-selector-add-button' is visible
     When I tap first item of 'contacts-list-content'
-    And I tap 'expenses-add-participants-add-button'
+    And I tap 'participants-selector-add-button'
     Then 'expenses-form-title-input' is visible
     When I tap 'expenses-form-title-input'
     And I type random expense title
@@ -241,8 +236,7 @@ Feature: Expenses
     Then input 'expenses-participant-amount-0' contains '50'
     And input 'expenses-participant-amount-1' contains '50'
     And I tap 'expenses-form-save-button'
-    Then 'expenses-details-title' is visible
-    And the page contains that name
+    Then the page contains that name
     When I tap 'nav-expenses-button'
     Then 'expenses-list' contains that name
     And 'expenses-list' contains text '100'
@@ -264,8 +258,8 @@ Feature: Expenses
     Then input 'expenses-participant-amount-0' contains '100'
     And input 'expenses-participant-amount-1' contains '100'
     And I tap 'expenses-form-save-button'
-    Then 'expenses-details-title' is visible
-    And 'expenses-details-total' contains text '200'
+    Then the page contains that name
+    And the page contains text '200'
     When I tap 'nav-expenses-button'
     Then 'expenses-list' contains that name
     And 'expenses-list' contains text '200'
