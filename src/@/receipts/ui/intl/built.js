@@ -42,6 +42,14 @@ export const dictionaries = {
 
       // Direct object property access - no CLDR ordering needed!
       return (forms[rule] ?? forms.other).replace(/{n}/g, new Intl.NumberFormat(locale).format(count));
+    },
+    "pending": {
+      "status": "انتظر قليلاً، اقتربنا من الوصول",
+      "description": "عادةً يستغرق ذلك لحظات قليلة"
+    },
+    "failed": {
+      "title": "هناك شيء غير صحيح",
+      "description": "حاولت جهدي، لكن هذا لا يبدو كإيصال بالنسبة لي. لنحاول مرة أخرى!"
     }
   },
   "de-DE": {
@@ -84,6 +92,14 @@ export const dictionaries = {
 
       // Direct object property access - no CLDR ordering needed!
       return (forms[rule] ?? forms.other).replace(/{n}/g, new Intl.NumberFormat(locale).format(count));
+    },
+    "pending": {
+      "status": "Gleich geschafft, halte durch",
+      "description": "Dauert normalerweise nur einen kurzen Moment"
+    },
+    "failed": {
+      "title": "Irgendwas stimmt nicht",
+      "description": "Ich hab mein Bestes gegeben, aber für mich sieht das nicht wie ein Beleg aus. Probieren wir’s nochmal!"
     }
   },
   "en-US": {
@@ -126,6 +142,14 @@ export const dictionaries = {
 
       // Direct object property access - no CLDR ordering needed!
       return (forms[rule] ?? forms.other).replace(/{n}/g, new Intl.NumberFormat(locale).format(count));
+    },
+    "pending": {
+      "status": "Hang tight, almost there",
+      "description": "Usually takes just a few moments"
+    },
+    "failed": {
+      "title": "Something doesn’t look right",
+      "description": "I tried my best, but this doesn’t look like a receipt to me. Let’s give it another shot!"
     }
   },
   "es-ES": {
@@ -168,6 +192,14 @@ export const dictionaries = {
 
       // Direct object property access - no CLDR ordering needed!
       return (forms[rule] ?? forms.other).replace(/{n}/g, new Intl.NumberFormat(locale).format(count));
+    },
+    "pending": {
+      "status": "¡Aguanta, casi llegamos!",
+      "description": "Normalmente tarda solo unos segundos"
+    },
+    "failed": {
+      "title": "Algo no parece estar bien",
+      "description": "He puesto todo de mi parte, pero esto no me parece un recibo. ¡Vamos a intentarlo otra vez!"
     }
   },
   "fr-FR": {
@@ -210,6 +242,14 @@ export const dictionaries = {
 
       // Direct object property access - no CLDR ordering needed!
       return (forms[rule] ?? forms.other).replace(/{n}/g, new Intl.NumberFormat(locale).format(count));
+    },
+    "pending": {
+      "status": "Encore un peu de patience, on y est presque",
+      "description": "Ça ne prend généralement que quelques instants"
+    },
+    "failed": {
+      "title": "Quelque chose ne va pas",
+      "description": "J’ai fait de mon mieux, mais ça ne ressemble pas à un reçu pour moi. On réessaye ?"
     }
   },
   "hi-IN": {
@@ -252,6 +292,14 @@ export const dictionaries = {
 
       // Direct object property access - no CLDR ordering needed!
       return (forms[rule] ?? forms.other).replace(/{n}/g, new Intl.NumberFormat(locale).format(count));
+    },
+    "pending": {
+      "status": "बस थोड़ा रुक, लगभग हो गया",
+      "description": "आम तौर पर कुछ ही पल लगते हैं"
+    },
+    "failed": {
+      "title": "कुछ ठीक नहीं लग रहा",
+      "description": "मैंने पूरी कोशिश की, लेकिन मुझे ये रसीद जैसा नहीं लग रहा। चलो एक बार फिर कोशिश करते हैं!"
     }
   },
   "it-IT": {
@@ -294,6 +342,14 @@ export const dictionaries = {
 
       // Direct object property access - no CLDR ordering needed!
       return (forms[rule] ?? forms.other).replace(/{n}/g, new Intl.NumberFormat(locale).format(count));
+    },
+    "pending": {
+      "status": "Aspetta un attimo, ci siamo quasi",
+      "description": "Di solito ci vogliono solo pochi istanti"
+    },
+    "failed": {
+      "title": "Qualcosa non va",
+      "description": "Ci ho messo tutto l’impegno, ma non mi sembra proprio una ricevuta. Riproviamoci!"
     }
   },
   "ja-JP": {
@@ -336,6 +392,14 @@ export const dictionaries = {
 
       // Direct object property access - no CLDR ordering needed!
       return (forms[rule] ?? forms.other).replace(/{n}/g, new Intl.NumberFormat(locale).format(count));
+    },
+    "pending": {
+      "status": "あと少しで終わるよ、待っててね",
+      "description": "たいてい少しだけ時間がかかります"
+    },
+    "failed": {
+      "title": "何かがおかしいみたい",
+      "description": "頑張ったけど、これはレシートには見えないな。もう一回やってみよう！"
     }
   },
   "ko-KR": {
@@ -378,6 +442,14 @@ export const dictionaries = {
 
       // Direct object property access - no CLDR ordering needed!
       return (forms[rule] ?? forms.other).replace(/{n}/g, new Intl.NumberFormat(locale).format(count));
+    },
+    "pending": {
+      "status": "조금만 기다려, 거의 다 됐어",
+      "description": "보통 잠깐 걸려요"
+    },
+    "failed": {
+      "title": "뭔가 이상해 보여",
+      "description": "최선을 다했는데, 이건 영수증처럼 안 보여. 다시 한 번 해보자!"
     }
   },
   "nl-NL": {
@@ -420,6 +492,14 @@ export const dictionaries = {
 
       // Direct object property access - no CLDR ordering needed!
       return (forms[rule] ?? forms.other).replace(/{n}/g, new Intl.NumberFormat(locale).format(count));
+    },
+    "pending": {
+      "status": "Even geduld, we zijn er bijna",
+      "description": "Meestal duurt het maar een paar momenten"
+    },
+    "failed": {
+      "title": "Er klopt iets niet",
+      "description": "Ik heb echt m’n best gedaan, maar dit lijkt toch geen bonnetje. Laten we het nog eens proberen!"
     }
   },
   "ru-RU": {
@@ -462,6 +542,14 @@ export const dictionaries = {
 
       // Direct object property access - no CLDR ordering needed!
       return (forms[rule] ?? forms.other).replace(/{n}/g, new Intl.NumberFormat(locale).format(count));
+    },
+    "pending": {
+      "status": "Чуть-чуть осталось, уже почти готово",
+      "description": "Обычно это занимает пару секунд"
+    },
+    "failed": {
+      "title": "Что-то не так",
+      "description": "Я старался изо всех сил, но это совсем не похоже на чек. Давай попробуем ещё раз!"
     }
   },
   "sw-TZ": {
@@ -504,6 +592,14 @@ export const dictionaries = {
 
       // Direct object property access - no CLDR ordering needed!
       return (forms[rule] ?? forms.other).replace(/{n}/g, new Intl.NumberFormat(locale).format(count));
+    },
+    "pending": {
+      "status": "Shikilia kidogo, karibu tumemaliza",
+      "description": "Kawaida huchukua muda mfupi tu"
+    },
+    "failed": {
+      "title": "Kuna kitu hakiko sawa",
+      "description": "Nimejitahidi kweli, lakini hii haionekani kama risiti kwangu. Hebu tujaribu tena!"
     }
   },
   "tr-TR": {
@@ -546,6 +642,14 @@ export const dictionaries = {
 
       // Direct object property access - no CLDR ordering needed!
       return (forms[rule] ?? forms.other).replace(/{n}/g, new Intl.NumberFormat(locale).format(count));
+    },
+    "pending": {
+      "status": "Dayan, neredeyse bitti",
+      "description": "Genellikle sadece birkaç saniye sürer"
+    },
+    "failed": {
+      "title": "Bir şeyler doğru görünmüyor",
+      "description": "Elimden geleni yaptım ama bu bana fiş gibi gelmedi. Hadi bir daha deneyelim!"
     }
   },
   "uk-UA": {
@@ -588,6 +692,14 @@ export const dictionaries = {
 
       // Direct object property access - no CLDR ordering needed!
       return (forms[rule] ?? forms.other).replace(/{n}/g, new Intl.NumberFormat(locale).format(count));
+    },
+    "pending": {
+      "status": "Трішки зачекай, вже майже готово",
+      "description": "Зазвичай це займає лише кілька секунд"
+    },
+    "failed": {
+      "title": "Щось не так",
+      "description": "Я зробив усе, що міг, але це зовсім не схоже на чек. Давай спробуємо ще раз!"
     }
   },
   "zh-CN": {
@@ -630,6 +742,14 @@ export const dictionaries = {
 
       // Direct object property access - no CLDR ordering needed!
       return (forms[rule] ?? forms.other).replace(/{n}/g, new Intl.NumberFormat(locale).format(count));
+    },
+    "pending": {
+      "status": "再坚持一下，快好了",
+      "description": "通常只需片刻"
+    },
+    "failed": {
+      "title": "好像哪里不对劲",
+      "description": "我已经尽力了，但这看起来不像发票。我们再试一次吧！"
     }
   }
 };

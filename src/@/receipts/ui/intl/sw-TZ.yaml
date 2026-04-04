@@ -23,3 +23,11 @@ close:
 unassigned:
   - one: "{n} kipengee kisichogawiwa"
     other: "{n} vipengee visivyogawiwa"
+pending:
+  status: Shikilia kidogo, karibu tumemaliza
+  description: Kawaida huchukua muda mfupi tu
+failed:
+  title: Kuna kitu hakiko sawa
+  description: >-
+    Nimejitahidi kweli, lakini hii haionekani kama risiti kwangu. Hebu tujaribu
+    tena!

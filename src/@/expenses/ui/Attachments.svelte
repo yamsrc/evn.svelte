@@ -23,7 +23,7 @@
     'bg-accent flex justify-center p-4 overflow-x-auto overscroll-x-contain touch-pan-x no-scrollbar',
     classes,
   ]}>
-  <div class="flex gap-3">
+  <div class="flex gap-3 h-[300px]">
     {#each attachments as attachment (attachment)}
       <div
         class={[

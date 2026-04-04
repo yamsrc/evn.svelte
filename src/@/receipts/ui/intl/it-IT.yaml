@@ -25,3 +25,11 @@ close:
 unassigned:
   - one: "{n} elemento non assegnato"
     other: "{n} elementi non assegnati"
+pending:
+  status: Aspetta un attimo, ci siamo quasi
+  description: Di solito ci vogliono solo pochi istanti
+failed:
+  title: Qualcosa non va
+  description: >-
+    Ci ho messo tutto l’impegno, ma non mi sembra proprio una ricevuta.
+    Riproviamoci!

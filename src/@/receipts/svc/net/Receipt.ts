@@ -1,5 +1,6 @@
 export interface Receipt {
   id: string
+  title: string
   identities: string[]
   status: 'pending' | 'failed' | 'success'
   attachments: string[]

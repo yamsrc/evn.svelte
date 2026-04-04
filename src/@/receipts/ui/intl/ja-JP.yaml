@@ -22,3 +22,9 @@ close:
   label: 続ける
 unassigned:
   - other: 未割り当てのアイテム {n} 件
+pending:
+  status: あと少しで終わるよ、待っててね
+  description: たいてい少しだけ時間がかかります
+failed:
+  title: 何かがおかしいみたい
+  description: 頑張ったけど、これはレシートには見えないな。もう一回やってみよう！

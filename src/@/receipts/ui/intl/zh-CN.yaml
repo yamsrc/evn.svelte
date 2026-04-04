@@ -22,3 +22,9 @@ close:
   label: 继续
 unassigned:
   - other: "{n} 个未分配项目"
+pending:
+  status: 再坚持一下，快好了
+  description: 通常只需片刻
+failed:
+  title: 好像哪里不对劲
+  description: 我已经尽力了，但这看起来不像发票。我们再试一次吧！

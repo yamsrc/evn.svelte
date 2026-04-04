@@ -73,7 +73,7 @@
   </Item.Root>
 {/snippet}
 
-<div class="flex flex-col gap-2">
+<div class={['flex flex-col gap-2', mounted && 'starting:opacity-0 duration-300']}>
   {#each groups as group, i (group.id)}
     {#if group.outcast}
       {@const claimed = groupClaimedBy($store, actor, group.id)}

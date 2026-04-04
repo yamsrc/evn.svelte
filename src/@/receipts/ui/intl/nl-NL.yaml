@@ -25,3 +25,11 @@ close:
 unassigned:
   - one: "{n} niet-toegewezen item"
     other: "{n} niet-toegewezen items"
+pending:
+  status: Even geduld, we zijn er bijna
+  description: Meestal duurt het maar een paar momenten
+failed:
+  title: Er klopt iets niet
+  description: >-
+    Ik heb echt m’n best gedaan, maar dit lijkt toch geen bonnetje. Laten we het
+    nog eens proberen!

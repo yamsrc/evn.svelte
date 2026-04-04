@@ -22,3 +22,9 @@ close:
   label: 계속하기
 unassigned:
   - other: 할당되지 않은 항목 {n}개
+pending:
+  status: 조금만 기다려, 거의 다 됐어
+  description: 보통 잠깐 걸려요
+failed:
+  title: 뭔가 이상해 보여
+  description: 최선을 다했는데, 이건 영수증처럼 안 보여. 다시 한 번 해보자!

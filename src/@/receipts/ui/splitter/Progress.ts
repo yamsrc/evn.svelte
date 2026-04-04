@@ -4,7 +4,7 @@ import type { State } from './store'
 export function progress(state: State): number {
   const { claimed, total } = stats(state)
 
-  return (claimed / total) * 100
+  return total === 0 ? 0 : (claimed / total) * 100
 }
 
 export function stats(state: State): { claimed: number, total: number } {

@@ -45,3 +45,13 @@ inputs:
   unassigned:
     input: "{n} unassigned items"
     context: items of a list
+  pending:
+    status:
+      input: Hang tight, almost there
+    description:
+      input: Usually takes a few moments
+  failed:
+    title:
+      input: Something doesn’t look right
+    description:
+      input: I tried my best, but this doesn’t look like a receipt to me. Let’s give it another shot!

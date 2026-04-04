@@ -25,3 +25,11 @@ close:
 unassigned:
   - one: "{n} elemento sin asignar"
     other: "{n} elementos sin asignar"
+pending:
+  status: ¡Aguanta, casi llegamos!
+  description: Normalmente tarda solo unos segundos
+failed:
+  title: Algo no parece estar bien
+  description: >-
+    He puesto todo de mi parte, pero esto no me parece un recibo. ¡Vamos a
+    intentarlo otra vez!

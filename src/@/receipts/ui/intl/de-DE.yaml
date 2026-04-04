@@ -25,3 +25,11 @@ close:
 unassigned:
   - one: "{n} nicht zugewiesenes Element"
     other: "{n} nicht zugewiesene Elemente"
+pending:
+  status: Gleich geschafft, halte durch
+  description: Dauert normalerweise nur einen kurzen Moment
+failed:
+  title: Irgendwas stimmt nicht
+  description: >-
+    Ich hab mein Bestes gegeben, aber für mich sieht das nicht wie ein Beleg
+    aus. Probieren wir’s nochmal!

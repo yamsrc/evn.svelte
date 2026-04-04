@@ -25,3 +25,9 @@ close:
 unassigned:
   - one: "{n} atanmamış öğe"
     other: "{n} atanmamış öğe"
+pending:
+  status: Dayan, neredeyse bitti
+  description: Genellikle sadece birkaç saniye sürer
+failed:
+  title: Bir şeyler doğru görünmüyor
+  description: Elimden geleni yaptım ama bu bana fiş gibi gelmedi. Hadi bir daha deneyelim!

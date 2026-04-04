@@ -9,13 +9,9 @@ interface Creating extends Omit<Uploading, 'status'> {
   picture: string
 }
 
-interface Processing extends Omit<Creating, 'status'> {
-  status: 'processing'
+export interface Created extends Omit<Creating, 'status'> {
+  status: 'created'
   receipt: string
 }
 
-interface Ready extends Omit<Processing, 'status'> {
-  status: 'ready'
-}
-
-export type Progress = Uploading | Creating | Processing | Ready
+export type Progress = Uploading | Creating | Created

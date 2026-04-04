@@ -2,6 +2,7 @@
   import { sync } from './store'
   import Summary from './Summary.svelte'
   import Progress from './Progress.svelte'
+  import Pending from './Pending.svelte'
   import Participants from './Participants.svelte'
   import Lock from './Lock.svelte'
   import { allDone } from './Lock'
@@ -34,7 +35,9 @@
     <Progress />
     <Participants bind:this={participants} {receipt} {account} bind:actor />
   </div>
-  {#if receipt.done[actor] === true}
+  {#if receipt.status === 'pending'}
+    <Pending />
+  {:else if receipt.done[actor] === true}
     <div class="space-y-4 pt-2">
       <Summary {actor} />
       {#if allDone(receipt)}

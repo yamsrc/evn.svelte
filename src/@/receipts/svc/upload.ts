@@ -1,6 +1,6 @@
-import { ensure, ok, once } from 'svas'
+import { ensure } from 'svas'
 import { account } from '@/iam'
-import { progress, receipts } from './store'
+import { progress } from './store'
 import * as net from './net'
 import type { Progress } from './Progress'
 
@@ -19,19 +19,16 @@ export async function upload(file: File) {
 
   update(thread, { status: 'creating', picture: entry.id })
 
-  emitter.on('create', (receipt) => {
+  emitter.on('create', function handle(receipt) {
+    emitter.off('create', handle)
+
     if (receipt instanceof Error)
       return error(receipt)
 
     update(thread, {
-      status: 'processing',
+      status: 'created',
       receipt: receipt.id,
     })
-
-    once(receipts, ($receipts) => ok($receipts) && done($receipts, receipt.id))
-      .then(() => update(thread, {
-        status: 'ready',
-      }))
   })
 }
 
@@ -54,10 +51,4 @@ function error(error: Error) {
   console.error(error)
 
   return error
-}
-
-function done(receipts: net.Receipt[], id: string): boolean {
-  const receipt = receipts.find((r) => r.id === id)
-
-  return receipt !== undefined && receipt.status !== 'pending'
 }

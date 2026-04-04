@@ -41,4 +41,12 @@ export type Dictionary = {
         label: string
       }
       unassigned: (value: number) => string
+      pending: {
+        status: string
+        description: string
+      }
+      failed: {
+        title: string
+        description: string
+      }
     }

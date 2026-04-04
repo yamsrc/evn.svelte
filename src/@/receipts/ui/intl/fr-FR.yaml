@@ -25,3 +25,11 @@ close:
 unassigned:
   - one: "{n} élément non attribué"
     other: "{n} éléments non attribués"
+pending:
+  status: Encore un peu de patience, on y est presque
+  description: Ça ne prend généralement que quelques instants
+failed:
+  title: Quelque chose ne va pas
+  description: >-
+    J’ai fait de mon mieux, mais ça ne ressemble pas à un reçu pour moi. On
+    réessaye ?
