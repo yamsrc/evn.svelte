@@ -1,6 +1,6 @@
 import { ensure, sync } from 'svas'
 import { account } from '@/iam'
-import { receipts } from './store'
+import { internal } from './store'
 import * as net from './net'
 
 export async function reset(id: string) {
@@ -10,5 +10,5 @@ export async function reset(id: string) {
 
   if (receipt instanceof Error) return receipt
 
-  sync(receipts, receipt)
+  sync(internal, receipt)
 }

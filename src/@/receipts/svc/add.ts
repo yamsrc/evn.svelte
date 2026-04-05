@@ -1,12 +1,12 @@
 import { ensure, sync } from 'svas'
 import { account } from '@/iam'
-import { receipts } from './store'
+import { internal } from './store'
 import * as net from './net'
 
 export async function add(id: string, participants: string[]): Promise<void | Error> {
   const me = ensure(account)
 
-  receipts.update(id, (receipt) => {
+  internal.update(id, (receipt) => {
     receipt.identities = [...new Set([...receipt.identities, ...participants])]
 
     return receipt
@@ -16,7 +16,7 @@ export async function add(id: string, participants: string[]): Promise<void | Er
 
   if (receipt instanceof Error) {
     // rollback
-    receipts.update(id, (receipt) => {
+    internal.update(id, (receipt) => {
       receipt.identities = receipt.identities.filter((identity) => !participants.includes(identity))
 
       return receipt
@@ -25,5 +25,5 @@ export async function add(id: string, participants: string[]): Promise<void | Er
     return receipt
   }
 
-  sync(receipts, receipt)
+  sync(internal, receipt)
 }

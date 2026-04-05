@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Async } from 'svas'
   import { Splitter, Leave, Reset, Failed } from '@/receipts/ui'
-  import { receipts } from '@/receipts'
+  import { internal } from '@/receipts'
   import { account } from '@/iam'
   import { Header, Section } from '@/app/ui'
   import { Skeleton } from '$ui/skeleton'
@@ -26,7 +26,7 @@
 </script>
 
 {#if $account !== null}
-  <Async store={receipts.get(id)}>
+  <Async store={internal.get(id)}>
     <!-- combined() causes exception when receipt is deleted -->
     {#snippet awaited(receipt)}
       <Section>
