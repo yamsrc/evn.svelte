@@ -50,7 +50,7 @@
     tabindex="0"
     data-slot="fullscreen-container"
     onpointerdown={fragile && !controlled ? hide : undefined}
-    class="fixed inset-0 z-1001 flex items-center justify-center bg-background pointer-events-auto">
+    class="fixed inset-0 z-1001 flex items-center justify-center bg-background/75 backdrop-blur-sm">
     {#if content}
       {@render content()}
     {:else}
@@ -62,7 +62,11 @@
       </Overlay>
     {/if}
     {#if x}
-      <Button variant="ghost" size="icon" class="absolute top-4 right-4" onclick={hide}>
+      <Button
+        variant="ghost"
+        size="icon"
+        class="absolute top-4 right-4 tim:top-[env(safe-area-inset-top)]"
+        onclick={hide}>
         <X />
       </Button>
     {/if}
