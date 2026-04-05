@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Failed from '../Failed.svelte'
   import { sync } from './store'
   import Summary from './Summary.svelte'
   import Progress from './Progress.svelte'
@@ -12,10 +13,9 @@
   import Actions from './Actions.svelte'
   import type { Props } from './Splitter'
 
-  const { receipt, account }: Props = $props()
+  let { receipt, account, actor = $bindable(account.id) }: Props = $props()
 
-  // svelte-ignore state_referenced_locally
-  let actor = $state(account.id)
+  // let actor = $state(account.id)
 
   export function leave() {
     return participants?.remove()
@@ -31,12 +31,16 @@
 </script>
 
 <div class="space-y-2">
-  <div class={['z-10 sticky top-4 tim:top-[env(safe-area-inset-top)]', 'space-y-2']}>
-    <Progress />
-    <Participants bind:this={participants} {receipt} {account} bind:actor />
-  </div>
+  {#if receipt.status !== 'failed'}
+    <div class={['z-10 sticky top-4 tim:top-[env(safe-area-inset-top)]', 'space-y-2']}>
+      <Progress />
+      <Participants bind:this={participants} {receipt} {account} bind:actor />
+    </div>
+  {/if}
   {#if receipt.status === 'pending'}
     <Pending />
+  {:else if receipt.status === 'failed'}
+    <Failed />
   {:else if receipt.done[actor] === true}
     <div class="space-y-4 pt-2">
       <Summary {actor} />

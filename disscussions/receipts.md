@@ -14,11 +14,11 @@
 - [x] Shared items (and item groups)
 - [x] Mark as Done
 - [ ] Autoclose
-- [ ] Share receipt
-- [ ] Actions on Summary screen: [edit, close], remove participants button
+- [x] Share receipt
+- [x] Actions on Summary screen: [edit, close], remove participants button
 - [ ] Split taxes
-- [ ] Pending state screen
-- [ ] Error state screen (+non-receipts)
+- [x] Pending state screen
+- [x] Error state screen (+non-receipts)
 
 ## Routes
 
