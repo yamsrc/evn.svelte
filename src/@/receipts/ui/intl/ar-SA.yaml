@@ -33,3 +33,10 @@ pending:
 failed:
   title: هناك شيء غير صحيح
   description: حاولت جهدي، لكن هذا لا يبدو كإيصال بالنسبة لي. لنحاول مرة أخرى!
+  retry:
+    label: إعادة المحاولة
+state:
+  uploading: عادةً ما يستغرق بضع لحظات
+  processing: انتظر قليلًا، اقتربنا من الانتهاء
+action:
+  label: مسح

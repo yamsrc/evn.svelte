@@ -31,3 +31,10 @@ pending:
 failed:
   title: Bir şeyler doğru görünmüyor
   description: Elimden geleni yaptım ama bu bana fiş gibi gelmedi. Hadi bir daha deneyelim!
+  retry:
+    label: Tekrar dene
+state:
+  uploading: Genellikle sadece birkaç saniye sürer
+  processing: Biraz bekle, neredeyse bitti
+action:
+  label: Tara

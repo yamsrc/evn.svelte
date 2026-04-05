@@ -1,8 +1,8 @@
 <script lang="ts">
   import { Bot, RotateCcw } from '@lucide/svelte'
   import * as Item from '$ui/item'
-  import { dict } from '../intl'
-  import Upload from '../Upload.svelte'
+  import { Button } from '$ui/button'
+  import { dict } from './intl'
   import type { Props } from './Failed'
 
   const { onretry }: Props = $props()
@@ -16,10 +16,10 @@
     <Item.Title>{$dict.failed.title}</Item.Title>
     <Item.Description>{$dict.failed.description}</Item.Description>
     <div class="mt-4 flex flex-col">
-      <Upload onstart={onretry}>
+      <Button onclick={onretry}>
         <RotateCcw />
-        Try again
-      </Upload>
+        {$dict.failed.retry.label}
+      </Button>
     </div>
   </Item.Content>
 </Item.Root>

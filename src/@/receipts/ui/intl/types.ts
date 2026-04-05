@@ -48,5 +48,15 @@ export type Dictionary = {
       failed: {
         title: string
         description: string
+        retry: {
+          label: string
+        }
+      }
+      state: {
+        uploading: string
+        processing: string
+      }
+      action: {
+        label: string
       }
     }

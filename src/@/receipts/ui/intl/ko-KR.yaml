@@ -28,3 +28,10 @@ pending:
 failed:
   title: 뭔가 이상해 보여
   description: 최선을 다했는데, 이건 영수증처럼 안 보여. 다시 한 번 해보자!
+  retry:
+    label: 다시 시도
+state:
+  uploading: 보통 잠깐 걸려요
+  processing: 잠깐만 기다려, 거의 다 왔어
+action:
+  label: 스캔

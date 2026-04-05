@@ -33,3 +33,10 @@ failed:
   description: >-
     He puesto todo de mi parte, pero esto no me parece un recibo. ¡Vamos a
     intentarlo otra vez!
+  retry:
+    label: Volver a intentar
+state:
+  uploading: Suele tardar unos momentos
+  processing: ¡Espera un poco, ya casi estamos!
+action:
+  label: Escanear

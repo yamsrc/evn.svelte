@@ -28,3 +28,10 @@ pending:
 failed:
   title: 何かがおかしいみたい
   description: 頑張ったけど、これはレシートには見えないな。もう一回やってみよう！
+  retry:
+    label: 再試行
+state:
+  uploading: たいてい数秒で終わります
+  processing: もう少し、あとちょっとだよ
+action:
+  label: スキャン

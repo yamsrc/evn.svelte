@@ -33,3 +33,10 @@ failed:
   description: >-
     Ik heb echt m’n best gedaan, maar dit lijkt toch geen bonnetje. Laten we het
     nog eens proberen!
+  retry:
+    label: Opnieuw proberen
+state:
+  uploading: Duurt meestal maar een paar tellen
+  processing: Even volhouden, we zijn er bijna
+action:
+  label: Scannen

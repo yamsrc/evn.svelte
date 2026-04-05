@@ -1,54 +1,61 @@
+import { writable, type Readable, type Writable } from 'svelte/store'
 import { ensure } from 'svas'
 import { account } from '@/iam'
-import { progress } from './store'
 import * as net from './net'
-import type { Progress } from './Progress'
 
-export async function upload(file: File) {
-  const thread = crypto.randomUUID()
-
-  set({ thread, status: 'uploading', since: Date.now() })
+export function upload(file: File): Readable<Progress> {
+  const progress = writable<Progress>({ status: 'uploading', since: Date.now() })
 
   const me = ensure(account)
-  const uploaded = await net.post(me.id, file)
 
-  if (uploaded instanceof Error)
-    return error(uploaded)
+  net.post(me.id, file).then((uploaded) => {
+    if (uploaded instanceof Error)
+      return set(progress, { status: 'failed', error: uploaded })
 
-  const [entry, emitter] = uploaded
+    const [entry, emitter] = uploaded
 
-  update(thread, { status: 'creating', picture: entry.id })
+    set(progress, { status: 'creating', picture: entry.id })
 
-  emitter.on('create', function handle(receipt) {
-    emitter.off('create', handle)
+    emitter.on('create', function handle(receipt) {
+      emitter.off('create', handle)
 
-    if (receipt instanceof Error)
-      return error(receipt)
+      if (receipt instanceof Error)
+        return set(progress, { status: 'failed', error: receipt })
 
-    update(thread, {
-      status: 'created',
-      receipt: receipt.id,
+      set(progress, {
+        status: 'created',
+        receipt: receipt.id,
+      })
     })
   })
+
+  return progress
 }
 
-function set(status: Progress) {
-  progress.set(status)
+function set(progress: Writable<Progress>, tobe: Partial<Progress>) {
+  progress.update((asis) => Object.assign(asis, tobe))
+
+  return progress
 }
 
-function update(thread: string, status: Partial<Progress>) {
-  progress.update((asis) => {
-    if (asis?.thread !== thread) // overlaped
-      return asis
-
-    return { ...asis, ...status } as Progress
-  })
+interface Uploading {
+  status: 'uploading'
+  since: number
 }
 
-function error(error: Error) {
-  progress.set(null)
-
-  console.error(error)
-
-  return error
+interface Creating extends Omit<Uploading, 'status'> {
+  status: 'creating'
+  picture: string
 }
+
+export interface Created extends Omit<Creating, 'status'> {
+  status: 'created'
+  receipt: string
+}
+
+interface Failed extends Omit<Creating, 'status'> {
+  status: 'failed'
+  error: Error
+}
+
+export type Progress = Uploading | Creating | Created | Failed

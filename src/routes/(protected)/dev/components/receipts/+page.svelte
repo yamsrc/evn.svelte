@@ -5,6 +5,7 @@
   import { Section, Header, actionVariants } from '@/app/ui'
   import { dict } from '$lib/intl/dev'
   import { Actions } from '$com/shell'
+  import { goto } from '$app/navigation'
 </script>
 
 <Section>
@@ -28,5 +29,5 @@
 </Section>
 
 <Actions>
-  <Scan class={actionVariants()} />
+  <Scan class={actionVariants()} oncomplete={(id) => goto(`./${id}/`)} />
 </Actions>

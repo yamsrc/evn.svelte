@@ -33,3 +33,10 @@ failed:
   description: >-
     I tried my best, but this doesn’t look like a receipt to me. Let’s give it
     another shot!
+  retry:
+    label: Try again
+state:
+  uploading: Usually takes a few moments
+  processing: Hang tight, almost there
+action:
+  label: Scan

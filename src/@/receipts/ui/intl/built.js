@@ -49,7 +49,17 @@ export const dictionaries = {
     },
     "failed": {
       "title": "هناك شيء غير صحيح",
-      "description": "حاولت جهدي، لكن هذا لا يبدو كإيصال بالنسبة لي. لنحاول مرة أخرى!"
+      "description": "حاولت جهدي، لكن هذا لا يبدو كإيصال بالنسبة لي. لنحاول مرة أخرى!",
+      "retry": {
+        "label": "إعادة المحاولة"
+      }
+    },
+    "state": {
+      "uploading": "عادةً ما يستغرق بضع لحظات",
+      "processing": "انتظر قليلًا، اقتربنا من الانتهاء"
+    },
+    "action": {
+      "label": "مسح"
     }
   },
   "de-DE": {
@@ -99,7 +109,17 @@ export const dictionaries = {
     },
     "failed": {
       "title": "Irgendwas stimmt nicht",
-      "description": "Ich hab mein Bestes gegeben, aber für mich sieht das nicht wie ein Beleg aus. Probieren wir’s nochmal!"
+      "description": "Ich hab mein Bestes gegeben, aber für mich sieht das nicht wie ein Beleg aus. Probieren wir’s nochmal!",
+      "retry": {
+        "label": "Erneut versuchen"
+      }
+    },
+    "state": {
+      "uploading": "Dauert normalerweise nur einen Moment",
+      "processing": "Bleib dran, gleich geschafft!"
+    },
+    "action": {
+      "label": "Scannen"
     }
   },
   "en-US": {
@@ -149,7 +169,17 @@ export const dictionaries = {
     },
     "failed": {
       "title": "Something doesn’t look right",
-      "description": "I tried my best, but this doesn’t look like a receipt to me. Let’s give it another shot!"
+      "description": "I tried my best, but this doesn’t look like a receipt to me. Let’s give it another shot!",
+      "retry": {
+        "label": "Try again"
+      }
+    },
+    "state": {
+      "uploading": "Usually takes a few moments",
+      "processing": "Hang tight, almost there"
+    },
+    "action": {
+      "label": "Scan"
     }
   },
   "es-ES": {
@@ -199,7 +229,17 @@ export const dictionaries = {
     },
     "failed": {
       "title": "Algo no parece estar bien",
-      "description": "He puesto todo de mi parte, pero esto no me parece un recibo. ¡Vamos a intentarlo otra vez!"
+      "description": "He puesto todo de mi parte, pero esto no me parece un recibo. ¡Vamos a intentarlo otra vez!",
+      "retry": {
+        "label": "Volver a intentar"
+      }
+    },
+    "state": {
+      "uploading": "Suele tardar unos momentos",
+      "processing": "¡Espera un poco, ya casi estamos!"
+    },
+    "action": {
+      "label": "Escanear"
     }
   },
   "fr-FR": {
@@ -249,7 +289,17 @@ export const dictionaries = {
     },
     "failed": {
       "title": "Quelque chose ne va pas",
-      "description": "J’ai fait de mon mieux, mais ça ne ressemble pas à un reçu pour moi. On réessaye ?"
+      "description": "J’ai fait de mon mieux, mais ça ne ressemble pas à un reçu pour moi. On réessaye ?",
+      "retry": {
+        "label": "Réessayer"
+      }
+    },
+    "state": {
+      "uploading": "Ça prend généralement quelques instants",
+      "processing": "Accroche-toi, on y est presque"
+    },
+    "action": {
+      "label": "Scanner"
     }
   },
   "hi-IN": {
@@ -299,7 +349,17 @@ export const dictionaries = {
     },
     "failed": {
       "title": "कुछ ठीक नहीं लग रहा",
-      "description": "मैंने पूरी कोशिश की, लेकिन मुझे ये रसीद जैसा नहीं लग रहा। चलो एक बार फिर कोशिश करते हैं!"
+      "description": "मैंने पूरी कोशिश की, लेकिन मुझे ये रसीद जैसा नहीं लग रहा। चलो एक बार फिर कोशिश करते हैं!",
+      "retry": {
+        "label": "फिर से कोशिश करो"
+      }
+    },
+    "state": {
+      "uploading": "आमतौर पर कुछ क्षण लगते हैं",
+      "processing": "जरा रुको, बस पहुँच ही गए हैं"
+    },
+    "action": {
+      "label": "स्कैन करें"
     }
   },
   "it-IT": {
@@ -349,7 +409,17 @@ export const dictionaries = {
     },
     "failed": {
       "title": "Qualcosa non va",
-      "description": "Ci ho messo tutto l’impegno, ma non mi sembra proprio una ricevuta. Riproviamoci!"
+      "description": "Ci ho messo tutto l’impegno, ma non mi sembra proprio una ricevuta. Riproviamoci!",
+      "retry": {
+        "label": "Riprova"
+      }
+    },
+    "state": {
+      "uploading": "Di solito ci vuole solo qualche istante",
+      "processing": "Resisti, ci siamo quasi"
+    },
+    "action": {
+      "label": "Scansiona"
     }
   },
   "ja-JP": {
@@ -399,7 +469,17 @@ export const dictionaries = {
     },
     "failed": {
       "title": "何かがおかしいみたい",
-      "description": "頑張ったけど、これはレシートには見えないな。もう一回やってみよう！"
+      "description": "頑張ったけど、これはレシートには見えないな。もう一回やってみよう！",
+      "retry": {
+        "label": "再試行"
+      }
+    },
+    "state": {
+      "uploading": "たいてい数秒で終わります",
+      "processing": "もう少し、あとちょっとだよ"
+    },
+    "action": {
+      "label": "スキャン"
     }
   },
   "ko-KR": {
@@ -449,7 +529,17 @@ export const dictionaries = {
     },
     "failed": {
       "title": "뭔가 이상해 보여",
-      "description": "최선을 다했는데, 이건 영수증처럼 안 보여. 다시 한 번 해보자!"
+      "description": "최선을 다했는데, 이건 영수증처럼 안 보여. 다시 한 번 해보자!",
+      "retry": {
+        "label": "다시 시도"
+      }
+    },
+    "state": {
+      "uploading": "보통 잠깐 걸려요",
+      "processing": "잠깐만 기다려, 거의 다 왔어"
+    },
+    "action": {
+      "label": "스캔"
     }
   },
   "nl-NL": {
@@ -499,7 +589,17 @@ export const dictionaries = {
     },
     "failed": {
       "title": "Er klopt iets niet",
-      "description": "Ik heb echt m’n best gedaan, maar dit lijkt toch geen bonnetje. Laten we het nog eens proberen!"
+      "description": "Ik heb echt m’n best gedaan, maar dit lijkt toch geen bonnetje. Laten we het nog eens proberen!",
+      "retry": {
+        "label": "Opnieuw proberen"
+      }
+    },
+    "state": {
+      "uploading": "Duurt meestal maar een paar tellen",
+      "processing": "Even volhouden, we zijn er bijna"
+    },
+    "action": {
+      "label": "Scannen"
     }
   },
   "ru-RU": {
@@ -549,7 +649,17 @@ export const dictionaries = {
     },
     "failed": {
       "title": "Что-то не так",
-      "description": "Я старался изо всех сил, но это совсем не похоже на чек. Давай попробуем ещё раз!"
+      "description": "Я старался изо всех сил, но это совсем не похоже на чек. Давай попробуем ещё раз!",
+      "retry": {
+        "label": "Попробовать ещё раз"
+      }
+    },
+    "state": {
+      "uploading": "Обычно это занимает пару секунд",
+      "processing": "Подожди немного, почти готово"
+    },
+    "action": {
+      "label": "Сканировать"
     }
   },
   "sw-TZ": {
@@ -599,7 +709,17 @@ export const dictionaries = {
     },
     "failed": {
       "title": "Kuna kitu hakiko sawa",
-      "description": "Nimejitahidi kweli, lakini hii haionekani kama risiti kwangu. Hebu tujaribu tena!"
+      "description": "Nimejitahidi kweli, lakini hii haionekani kama risiti kwangu. Hebu tujaribu tena!",
+      "retry": {
+        "label": "Jaribu tena"
+      }
+    },
+    "state": {
+      "uploading": "Kwa kawaida huchukua sekunde chache tu",
+      "processing": "Subiri kidogo, tumekaribia kufika"
+    },
+    "action": {
+      "label": "Changanua"
     }
   },
   "tr-TR": {
@@ -649,7 +769,17 @@ export const dictionaries = {
     },
     "failed": {
       "title": "Bir şeyler doğru görünmüyor",
-      "description": "Elimden geleni yaptım ama bu bana fiş gibi gelmedi. Hadi bir daha deneyelim!"
+      "description": "Elimden geleni yaptım ama bu bana fiş gibi gelmedi. Hadi bir daha deneyelim!",
+      "retry": {
+        "label": "Tekrar dene"
+      }
+    },
+    "state": {
+      "uploading": "Genellikle sadece birkaç saniye sürer",
+      "processing": "Biraz bekle, neredeyse bitti"
+    },
+    "action": {
+      "label": "Tara"
     }
   },
   "uk-UA": {
@@ -699,7 +829,17 @@ export const dictionaries = {
     },
     "failed": {
       "title": "Щось не так",
-      "description": "Я зробив усе, що міг, але це зовсім не схоже на чек. Давай спробуємо ще раз!"
+      "description": "Я зробив усе, що міг, але це зовсім не схоже на чек. Давай спробуємо ще раз!",
+      "retry": {
+        "label": "Спробуй ще раз"
+      }
+    },
+    "state": {
+      "uploading": "Зазвичай це займає кілька секунд",
+      "processing": "Трішки зачекай, вже майже все"
+    },
+    "action": {
+      "label": "Сканувати"
     }
   },
   "zh-CN": {
@@ -749,7 +889,17 @@ export const dictionaries = {
     },
     "failed": {
       "title": "好像哪里不对劲",
-      "description": "我已经尽力了，但这看起来不像发票。我们再试一次吧！"
+      "description": "我已经尽力了，但这看起来不像发票。我们再试一次吧！",
+      "retry": {
+        "label": "重试"
+      }
+    },
+    "state": {
+      "uploading": "通常只需几秒钟",
+      "processing": "再等一下，马上就好"
+    },
+    "action": {
+      "label": "扫码"
     }
   }
 };

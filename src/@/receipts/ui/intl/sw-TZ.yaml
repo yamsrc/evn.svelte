@@ -31,3 +31,10 @@ failed:
   description: >-
     Nimejitahidi kweli, lakini hii haionekani kama risiti kwangu. Hebu tujaribu
     tena!
+  retry:
+    label: Jaribu tena
+state:
+  uploading: Kwa kawaida huchukua sekunde chache tu
+  processing: Subiri kidogo, tumekaribia kufika
+action:
+  label: Changanua

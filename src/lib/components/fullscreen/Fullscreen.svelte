@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { X } from '@lucide/svelte'
+  import { Button } from '$ui/button'
   import { transit } from '$lib/tools/transition'
   import { Overlay } from '$com/fullscreen'
   import type { Props } from './Fullscreen'
@@ -11,6 +13,7 @@
     class: classes,
     onshow,
     onhide,
+    x = true,
     fragile = false,
     controlled = false,
   }: Props = $props()
@@ -57,6 +60,11 @@
       <Overlay>
         {@render overlay()}
       </Overlay>
+    {/if}
+    {#if x}
+      <Button variant="ghost" size="icon" class="absolute top-4 right-4" onclick={hide}>
+        <X />
+      </Button>
     {/if}
   </div>
 {:else if controlled}

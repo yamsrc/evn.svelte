@@ -55,3 +55,16 @@ inputs:
       input: Something doesn’t look right
     description:
       input: I tried my best, but this doesn’t look like a receipt to me. Let’s give it another shot!
+    retry:
+      label:
+        input: Retry
+        context: button label
+  state:
+    uploading:
+      input: Usually takes a few moments
+    processing:
+      input: Hang tight, almost there
+  action:
+    label:
+      input: Scan
+      context: button label

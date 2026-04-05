@@ -28,3 +28,10 @@ pending:
 failed:
   title: 好像哪里不对劲
   description: 我已经尽力了，但这看起来不像发票。我们再试一次吧！
+  retry:
+    label: 重试
+state:
+  uploading: 通常只需几秒钟
+  processing: 再等一下，马上就好
+action:
+  label: 扫码

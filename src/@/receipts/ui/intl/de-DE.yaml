@@ -33,3 +33,10 @@ failed:
   description: >-
     Ich hab mein Bestes gegeben, aber für mich sieht das nicht wie ein Beleg
     aus. Probieren wir’s nochmal!
+  retry:
+    label: Erneut versuchen
+state:
+  uploading: Dauert normalerweise nur einen Moment
+  processing: Bleib dran, gleich geschafft!
+action:
+  label: Scannen

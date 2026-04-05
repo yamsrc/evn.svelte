@@ -1,17 +1,21 @@
 <script lang="ts">
   import { ScanText } from '@lucide/svelte'
-  import { upload } from '@/receipts'
+  import { upload, type Progress } from '@/receipts'
   import { Button } from '$ui/button'
   import { styles } from '$lib/tools'
-  import { dict } from '$lib/intl/dev'
   import { Fullscreen } from '$com/fullscreen'
+  import { dict } from './intl'
+  import Process from './Progress.svelte'
+  import type { Readable } from 'svelte/store'
   import type { Props } from './Button'
 
-  const { ...props }: Props = $props()
+  const { oncomplete: callback, ...props }: Props = $props()
 
   let fullscreen = $state<Fullscreen | null>(null)
   let input = $state<HTMLInputElement | null>(null)
   let file = $state<File | undefined>()
+  let progress = $state<Readable<Progress> | undefined>()
+  let open = $state(false)
 
   function onclick() {
     input?.click()
@@ -24,29 +28,30 @@
 
     if (file === undefined) return
 
+    target.value = ''
     fullscreen?.show()
-    void upload(file)
+    progress = upload(file)
+  }
+
+  function oncomplete(id: string) {
+    if (open) callback?.(id)
   }
 
   const style = styles('receipt', 'transition-spring transition-morph')
 </script>
 
-<Fullscreen bind:this={fullscreen} controlled>
-  <Button {onclick} {...props} style={$style}>
-    <ScanText />
-    <span>{$dict.components.receipts.upload.label}</span>
-    <input bind:this={input} type="file" class="sr-only" {oninput} accept="image/*" />
-  </Button>
-  {#snippet content()}
-    <div class="p-4 border rounded-lg">
-      {#if file}
-        <img
-          src={URL.createObjectURL(file)}
-          alt="Receipt"
-          style={$style}
-          class="rounded-lg max-h-[50vh]" />
+<div>
+  <input bind:this={input} type="file" class="sr-only" {oninput} accept="image/*" />
+
+  <Fullscreen bind:this={fullscreen} bind:open controlled>
+    <Button {onclick} {...props} style={$style}>
+      <ScanText />
+      <span>{$dict.action.label}</span>
+    </Button>
+    {#snippet content()}
+      {#if file && $progress}
+        <Process {file} progress={$progress} style={$style} onretry={onclick} {oncomplete} />
       {/if}
-      <Button onclick={() => fullscreen?.hide()}>Close</Button>
-    </div>
-  {/snippet}
-</Fullscreen>
+    {/snippet}
+  </Fullscreen>
+</div>

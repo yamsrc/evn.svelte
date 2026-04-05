@@ -33,3 +33,10 @@ failed:
   description: >-
     J’ai fait de mon mieux, mais ça ne ressemble pas à un reçu pour moi. On
     réessaye ?
+  retry:
+    label: Réessayer
+state:
+  uploading: Ça prend généralement quelques instants
+  processing: Accroche-toi, on y est presque
+action:
+  label: Scanner

@@ -13,4 +13,6 @@ export interface Props {
   fragile?: boolean
   /** Opens manually. Default is false. */
   controlled?: boolean
+  /** Show close button. Default is true. */
+  x?: boolean
 }
