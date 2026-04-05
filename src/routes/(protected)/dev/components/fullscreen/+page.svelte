@@ -15,7 +15,7 @@
     {#snippet awaited(expenses)}
       {@const attachment = expenses.find((e) => e.attachments.length > 0)?.attachments[0]}
       {#if attachment}
-        <Fullscreen bind:this={fullscreen} class="ring-2 ring-ring/20 max-w-40">
+        <Fullscreen bind:this={fullscreen} class="ring-2 ring-ring/20 max-w-40" fragile>
           <Picture
             id={attachment}
             variant="1200x?"

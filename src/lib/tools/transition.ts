@@ -1,3 +1,4 @@
+import { derived, writable, type Readable } from 'svelte/store'
 import type { OnNavigate } from '@sveltejs/kit'
 
 export function transit(fn?: (() => void) | (() => Promise<void>)): Promise<void> {
@@ -35,6 +36,7 @@ export function takeoff(id: string, name: string, classes?: string) {
     el.style.viewTransitionClass = classes
 }
 
+const flying = writable<boolean>(false)
 const flyers = new Set<Flyer>()
 
 /**
@@ -61,7 +63,25 @@ export function transition(node: HTMLElement, options: FlyOptions) {
   }
 }
 
+/**
+ * Create a readable store that has `style` value when in non-navigation view transition.
+ *
+ * @param name
+ * @param classes
+ * @returns Readable<string | undefined>
+ */
+export function styles(name: string, classes?: string): Readable<string | undefined> {
+  let value = `view-transition-name: ${name};`
+
+  if (classes !== undefined)
+    value += ` view-transition-class: ${classes};`
+
+  return derived(flying, (flying) => flying ? value : undefined)
+}
+
 function depart() {
+  flying.set(true)
+
   for (const flyer of flyers) {
     // could have changed
     flyer.original = {
@@ -83,6 +103,8 @@ function arrive() {
     flyer.node.style.viewTransitionName = flyer.original.name
     flyer.node.style.viewTransitionClass = flyer.original.classes
   }
+
+  flying.set(false)
 }
 
 interface Flyer {

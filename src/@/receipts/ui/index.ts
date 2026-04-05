@@ -1,4 +1,5 @@
 export { default as Upload } from './Upload.svelte'
 export { default as Attachments } from './Attachments.svelte'
 export { default as Reset } from './Reset.svelte'
+export { default as Scan } from './Scan.svelte'
 export { Splitter, Leave, Failed } from './splitter'

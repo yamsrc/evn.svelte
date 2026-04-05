@@ -13,8 +13,14 @@
     class: classes,
   }: Props = $props()
 
+  let zoomed = $state<string | null>(null)
+
   function filter(id: string) {
     attachments = attachments.filter((attachment) => attachment !== id)
+  }
+
+  function onshow(id: string) {
+    zoomed = id
   }
 </script>
 
@@ -30,13 +36,13 @@
           'shrink-0 border h-full no-scrollbar',
           editable && 'overflow-y-auto overscroll-y-contain touch-pan-y snap-y snap-mandatory',
         ]}>
-        <Fullscreen class="h-[300px]">
+        <Fullscreen class="h-[300px]" fragile onshow={() => onshow(attachment)}>
           <Picture
             id={attachment}
             {path}
             variant="300x600?"
             class={['w-full max-h-full object-contain rounded-md', editable && 'snap-center']}
-            style="view-transition-name: attachment-{attachment}; view-transition-class: transition-spring transition-morph;" />
+            style={`${zoomed === attachment ? `view-transition-name: attachment-${attachment};` : ''} view-transition-class: transition-spring transition-morph;`} />
           {#snippet overlay()}
             {#if editable}
               <div class="px-5 pt-2 tim:pt-[env(safe-area-inset-top)] flex justify-end">

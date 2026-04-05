@@ -1,7 +1,7 @@
 export { onsubmit } from './onsubmit'
 export { assert } from './assert'
 export { shake } from './shake'
-export { transit, navigate, takeoff, transition } from './transition'
+export { transit, navigate, takeoff, transition, styles } from './transition'
 export { fragment, query, inAppPopOut } from './location'
 export { timeout } from './timeout'
 export * as convert from './convert'

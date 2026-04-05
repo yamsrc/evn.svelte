@@ -3,18 +3,29 @@
   import { Overlay } from '$com/fullscreen'
   import type { Props } from './Fullscreen'
 
-  let { open = $bindable(false), children, overlay, class: classes }: Props = $props()
+  let {
+    open = $bindable(false),
+    children,
+    content,
+    overlay,
+    class: classes,
+    onshow,
+    onhide,
+    fragile = false,
+    controlled = false,
+  }: Props = $props()
 
   export function show() {
+    onshow?.()
     transit(() => (open = true))
   }
 
   export function hide() {
-    transit(() => (open = false))
+    transit(() => (open = false)).then(() => onhide?.())
   }
 
   function onkeydown(e: KeyboardEvent) {
-    if (!open || e.key !== 'Escape') return
+    if (controlled || !open || e.key !== 'Escape') return
 
     e.preventDefault()
     hide()
@@ -34,15 +45,22 @@
     use:portal
     role="button"
     tabindex="0"
-    onpointerdown={hide}
+    data-slot="fullscreen-container"
+    onpointerdown={fragile && !controlled ? hide : undefined}
     class="fixed inset-0 z-1001 flex items-center justify-center bg-background pointer-events-auto">
-    {@render children()}
+    {#if content}
+      {@render content()}
+    {:else}
+      {@render children()}
+    {/if}
     {#if overlay}
       <Overlay>
         {@render overlay()}
       </Overlay>
     {/if}
   </div>
+{:else if controlled}
+  {@render children()}
 {:else}
   <button
     class={['focus:outline-none **:data-[slot=fullscreen-overlay]:hidden', classes]}
@@ -50,3 +68,9 @@
     {@render children()}
   </button>
 {/if}
+
+<style>
+  :global(body:has([data-slot='fullscreen-container'])) :global(.shell-navigation) {
+    display: none;
+  }
+</style>
