@@ -1,5 +1,4 @@
 export { default as Confirm } from './Confirm.svelte'
-export { Cosmetics, type Value } from './cosmetics'
 export { default as Footer } from './Footer.svelte'
 export { default as Screen } from './Screen.svelte'
 export { default as Section } from './Section.svelte'
