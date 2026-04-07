@@ -1,6 +1,7 @@
 <script lang="ts">
   import { ScanText } from '@lucide/svelte'
   import { upload, type Progress } from '@/receipts'
+  import { paywall } from '@/purchases/ui'
   import { Button } from '$ui/button'
   import { styles } from '$lib/tools'
   import { Fullscreen } from '$com/fullscreen'
@@ -18,9 +19,13 @@
   let open = $state(false)
 
   function onclick() {
-    input?.click()
+    paywall({
+      benefit: 'scan',
+      label: $dict.action.label,
+      icon: ScanText,
+      callback: () => input?.click(),
+    })
   }
-
   function oninput(e: Event) {
     const target = e.target as HTMLInputElement
 

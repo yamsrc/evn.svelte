@@ -1,6 +1,7 @@
 <script lang="ts">
   import { derived } from 'svelte/store'
   import { ok } from 'svas'
+  import { Paywall } from '@/purchases/ui'
   import { notifications as store } from '@/notifications'
   import { Screen, Authenticated } from '@/app/ui'
   import { dict } from '$lib/intl'
@@ -17,5 +18,6 @@
   <Authenticated {oidc} oncreate={welcome}>
     {@render children()}
     <Nav position="start" sections={sections($dict, $notifications)} underlay class="z-48" />
+    <Paywall />
   </Authenticated>
 </Screen>

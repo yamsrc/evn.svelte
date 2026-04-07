@@ -8,6 +8,7 @@ export interface Account {
   locale?: string
   grammar?: Grammar | null
   overlord?: string | null
+  premium?: number
   _created: number
   _version: number
 }

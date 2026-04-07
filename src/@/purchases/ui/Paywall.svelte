@@ -1,0 +1,30 @@
+<script lang="ts">
+  import { Section } from '@/app/ui'
+  import { Fullscreen } from '$com/fullscreen'
+  import { open } from './store'
+  import { cta } from './store'
+  import { dict } from './intl'
+  import Offer from './Offer.svelte'
+  import Complete from './Complete.svelte'
+
+  const steps = ['offer', 'complete'] as const
+  let step = $state<(typeof steps)[number]>(steps[0])
+
+  function next() {
+    step = steps[(steps.indexOf(step) + 1) % steps.length]
+  }
+</script>
+
+<Fullscreen bind:open={$open}>
+  {#snippet content()}
+    <Section class="space-y-4">
+      <h1>{$dict.paywall.title}</h1>
+      {#if step === 'offer'}
+        <Offer benefit={$cta?.benefit} {next} />
+      {:else if step === 'complete'}
+        <Complete cta={$cta} {next} />
+      {/if}
+    </Section>
+  {/snippet}
+  <div></div>
+</Fullscreen>

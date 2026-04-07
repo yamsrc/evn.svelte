@@ -54,6 +54,7 @@
   --tracking-normal: -0.025em;
   --spacing: 0.25rem;
   --shadow-color: rgb(0 0 0 / 0.1);
+  --gradient-premium: linear-gradient(135deg, #d2a754 0%, #ffe1b4 35%, #e8ba66 65%, #c9984e 100%);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -166,6 +167,24 @@
   }
 }
 
+@utility bg-premium {
+  background: var(--gradient-premium);
+}
+
+@utility text-premium {
+  background: var(--gradient-premium);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility border-premium {
+  border-color: transparent;
+  background:
+    linear-gradient(var(--background), var(--background)) padding-box,
+    var(--gradient-premium) border-box;
+}
+
 @custom-variant standalone {
   @media (display-mode: standalone) {
     @slot;
@@ -200,7 +219,6 @@
     @apply cursor-pointer;
   }
 
-
   button:not([disabled]):active {
     scale: 0.98;
   }
@@ -234,6 +252,10 @@
 
   p {
     @apply text-pretty;
+
+    &:not(:first-child) {
+      @apply mt-2;
+    }
   }
 
   input {

@@ -1,5 +1,6 @@
 <script lang="ts">
   import { ChevronLeft } from '@lucide/svelte'
+  import { Paywall } from '@/purchases/ui'
   import { Languages } from '@/iam/ui'
   import { update } from '@/iam'
   import { Authenticated } from '@/app/ui'
@@ -27,5 +28,6 @@
     </Button>
     {@render children()}
     <Nav position="start" sections={sections($dict)} underlay class="z-48" />
+    <Paywall />
   </Screen>
 </Authenticated>
