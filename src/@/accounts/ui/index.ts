@@ -1,4 +1,5 @@
 export { default as Picture } from './Picture.svelte'
+export { default as Title } from './Title.svelte'
 export { default as Language } from './Language.svelte'
 export { default as Grammar } from './Grammar.svelte'
 export { default as Named } from './Named.svelte'

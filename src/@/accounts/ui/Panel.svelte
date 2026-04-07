@@ -1,9 +1,9 @@
 <script lang="ts">
   import { Balance } from '@/app/ui'
-  import { Picture } from '@/accounts/ui'
+  import { Avatar } from '@/accounts/ui'
+  import { Title } from '@/accounts/ui'
   import { cn } from '$lib/utils'
   import { dict } from '$lib/intl'
-  import { Ellipsis } from '$com/text'
   import { Attention } from '$com/shell'
   import { Panel } from '$com/panel'
   import type { Props } from './Panel'
@@ -39,11 +39,11 @@
   {onclick}
   {...actionProps}>
   {#snippet icon()}
-    <Picture {account} class="size-8" />
+    <Avatar {account} class="size-8" />
   {/snippet}
   {#snippet left()}
     <div class="flex items-center gap-2 min-w-0">
-      <Ellipsis>{account.name}</Ellipsis>
+      <Title {account} />
       {#if highlighted}
         <Attention />
       {/if}

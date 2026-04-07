@@ -2,6 +2,7 @@
   import * as Cosmetics from '@/app/ui/cosmetics'
   import { Avatar } from '@/accounts/ui'
   import { managed as accounts, upload, update } from '@/accounts'
+  import { premium } from '@/accounts'
   import type { Props } from './Cosmetics'
 
   const {
@@ -27,6 +28,11 @@
     <Cosmetics.Upload {onupload} disabled={!editable}>
       <Avatar {account} style={pictureStyle} size={150} />
     </Cosmetics.Upload>
-    <Cosmetics.Name value={account.name} onchange={save} {editable} class="w-full" />
+    <Cosmetics.Name
+      value={account.name}
+      premium={premium(account)}
+      onchange={save}
+      {editable}
+      class="w-full" />
   </Cosmetics.Content>
 </Cosmetics.Root>

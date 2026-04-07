@@ -1,13 +1,12 @@
-import { get } from 'svelte/store'
 import { having } from 'svas'
-import { time } from '@/realtime'
 import { account } from '@/iam'
+import { premium } from '@/accounts'
 import { open, cta as ctaStore, type CTA } from './store'
 
 export const paywall = async (cta: CTA) => {
   const me = await having(account)
 
-  if (me.premium === undefined || me.premium < get(time)) {
+  if (!premium(me)) {
     open.set(true)
     ctaStore.set(cta)
   } else

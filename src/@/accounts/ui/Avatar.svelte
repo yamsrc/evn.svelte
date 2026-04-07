@@ -1,13 +1,12 @@
 <script lang="ts">
-  import { get } from 'svelte/store'
   import { Crown } from '@lucide/svelte'
-  import { time } from '@/realtime'
   import { Picture } from '@/accounts/ui'
+  import * as accounts from '@/accounts'
   import type { Props } from './Avatar'
 
   const { account, size = 32, ...rest }: Props = $props()
 
-  const premium = $derived(account.premium !== undefined && account.premium > get(time))
+  const premium = $derived(accounts.premium(account))
 </script>
 
 <div class={[premium && 'rounded-full border-2 border-premium relative']}>

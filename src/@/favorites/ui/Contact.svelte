@@ -1,8 +1,8 @@
 <script lang="ts">
   import { Async } from 'svas'
-  import { Picture } from '@/accounts/ui'
+  import { Avatar } from '@/accounts/ui'
+  import { Title } from '@/accounts/ui'
   import { accounts } from '@/accounts'
-  import { Ellipsis } from '$com/text'
   import { Panel } from '$com/panel'
   import type { Props } from './Contact'
 
@@ -27,13 +27,9 @@
       {#snippet left()}
         <div class="flex flex-col items-center gap-2 max-w-30">
           <div class="shrink-0 flex">
-            <Picture {account} class="size-8 shrink-0" />
+            <Avatar {account} size={32} class="size-8 shrink-0" />
           </div>
-          <div class="max-w-30 flex items-start overflow-hidden text-start">
-            <Ellipsis>
-              {account.name}
-            </Ellipsis>
-          </div>
+          <Title {account} class="max-w-30 flex items-start overflow-hidden text-start" />
         </div>
       {/snippet}
     </Panel>
