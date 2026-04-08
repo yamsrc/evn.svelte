@@ -5,6 +5,7 @@
   import { account } from '@/iam'
   import { wallpaper } from '@/app/svc'
   import { buttonVariants } from '$ui/button'
+  import { transit } from '$lib/tools'
   import { dict } from '$lib/intl'
   import * as Picker from '$com/picker'
   import { Loader } from '$com/loader'
@@ -37,7 +38,7 @@
 
     if (!id) return
 
-    void premium(() => wallpaper.set(id))
+    void premium(() => transit(() => void wallpaper.set(id)))
   }
 
   function onupload() {

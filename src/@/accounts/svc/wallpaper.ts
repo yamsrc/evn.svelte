@@ -1,10 +1,14 @@
 import { ensure } from 'svas'
-import { account } from '@/iam'
+import * as iam from '@/iam'
 import { update } from './update'
 import * as net from './net'
 
 export async function set(id: string): Promise<void | Error> {
-  const me = ensure(account)
+  const me = ensure(iam.account)
+
+  // optimistic
+  iam.update({ wallpaper: { method: 'picture' as const, picture: id } })
+
   const wallpaper = { ...(me.wallpaper ?? {}), method: 'picture' as const, picture: id }
   const updated = await update(me.id, { wallpaper })
 
