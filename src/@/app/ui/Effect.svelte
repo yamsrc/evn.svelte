@@ -13,8 +13,10 @@
 
 <style>
   .effect-red {
-    background: linear-gradient(to bottom, #ff00040d, #ff00041a);
+    /* background: linear-gradient(to bottom, #ff00040d, #ff00041a); */
+    background: linear-gradient(to bottom, var(--color-primary), var(--color-warning));
   }
+
   .effect-orange {
     background: linear-gradient(to bottom, #ff4d000d, #ff4d002e);
   }

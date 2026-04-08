@@ -15,7 +15,7 @@
 
 {#if method === 'picture' && picture}
   <div class={['overflow-hidden', classes]}>
-    <Picture id={picture} alt="" {variant} class="size-full object-cover opacity-20" />
+    <Picture id={picture} {variant} class="size-full object-cover opacity-20" />
   </div>
 {:else}
   <Pattern class={classes} />
