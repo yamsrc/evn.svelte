@@ -5,7 +5,7 @@
 <script lang="ts">
   import { onMount, tick } from 'svelte'
   import { account } from '@/iam'
-  import { update } from '@/accounts'
+  import { wallpaper } from '@/accounts'
   import { ios, safari, shell, standalone } from '$lib/tools/mq'
   import { dict } from '$lib/intl'
   import Slide from '../Slide.svelte'
@@ -61,10 +61,7 @@
 
     pattern = id
 
-    if ($account)
-      void update($account.id, {
-        wallpaper: { method: 'pattern', pattern: id, effect },
-      })
+    if ($account) void wallpaper.set({ method: 'pattern', pattern: id, effect })
   }
 
   const slides: HTMLDivElement[] = $state([])

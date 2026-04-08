@@ -1,7 +1,7 @@
 <script lang="ts">
   import { account } from '@/iam'
   import { effects, type Effect as EffectId } from '@/app'
-  import { update } from '@/accounts'
+  import { wallpaper } from '@/accounts'
   import * as ToggleGroup from '$ui/toggle-group'
   import { backgrounds } from './wallpaper/Pattern'
   import Effect from './Effect.svelte'
@@ -21,9 +21,7 @@
 
     busy = true
 
-    await update($account.id, {
-      wallpaper: { method: 'pattern', pattern, effect },
-    })
+    await wallpaper.set({ method: 'pattern', pattern, effect })
 
     busy = false
   }

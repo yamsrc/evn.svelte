@@ -38,7 +38,7 @@
 
     if (!id) return
 
-    void premium(() => transit(() => void wallpaper.set(id)))
+    void premium(() => transit(() => void wallpaper.set({ method: 'picture', picture: id })))
   }
 
   function onupload() {
@@ -65,7 +65,7 @@
 <Picker.Root {picked} {onpick} align="center" class="gap-2 py-1 -my-1" bleed>
   {#each options as id, index (id)}
     <Picker.Option class={card} {index}>
-      <Picture {id} alt="" variant="300x600" class="size-full object-cover" />
+      <Picture {id} alt="" variant="1280x2700" densities={[1]} class="size-full object-cover" />
     </Picker.Option>
   {/each}
 

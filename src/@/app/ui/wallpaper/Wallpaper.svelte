@@ -1,16 +1,24 @@
 <script lang="ts">
   import { Crown } from '@lucide/svelte'
   import { account } from '@/iam'
+  import { premium, wallpaper } from '@/accounts'
   import * as Tabs from '$ui/tabs'
   import { dict } from '$lib/intl'
   import Effects from '../Effects.svelte'
   import Picture from './Picture.svelte'
   import Pattern from './Pattern.svelte'
+  import type { Wallpaper } from '@/accounts'
 
-  let method = $state<'pattern' | 'picture'>($account?.wallpaper?.method ?? 'pattern')
+  let method = $state<Wallpaper['method']>($account?.wallpaper?.method ?? 'pattern')
+
+  function onValueChange(value: string) {
+    method = value as Wallpaper['method']
+
+    if ($account && premium($account)) void wallpaper.set({ method })
+  }
 </script>
 
-<Tabs.Root value={method} onValueChange={(v) => (method = v === 'picture' ? 'picture' : 'pattern')}>
+<Tabs.Root value={method} {onValueChange}>
   <Tabs.List class="grid grid-cols-2 w-full h-12">
     <Tabs.Trigger value="pattern">{$dict.profile.background.pattern}</Tabs.Trigger>
     <Tabs.Trigger value="picture">

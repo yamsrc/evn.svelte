@@ -23,7 +23,9 @@
   bind:this={ref}
   {id}
   src={url({ id, path, variant, format })}
-  srcset={variant ? srcSet({ id, path, variant, format }, densities) : undefined}
+  srcset={variant && densities.length > 1
+    ? srcSet({ id, path, variant, format }, densities)
+    : undefined}
   alt={alt ?? id}
   {width}
   {height}

@@ -1,7 +1,6 @@
 <script lang="ts">
   import { Picture } from '@/media/ui'
   import { account } from '@/iam'
-  import { browser } from '$app/environment'
   import Pattern from './Pattern.svelte'
   import { overriden } from './Pattern'
   import type { ClassValue } from 'svelte/elements'
@@ -10,12 +9,15 @@
 
   const method = $derived($overriden?.method ?? $account?.wallpaper?.method ?? 'pattern')
   const picture = $derived($overriden?.picture ?? $account?.wallpaper?.picture)
-  const variant = browser ? `${screen.width}x${screen.height}` : '720x1280'
 </script>
 
 {#if method === 'picture' && picture}
   <div class={['overflow-hidden', classes]}>
-    <Picture id={picture} {variant} class="size-full object-cover opacity-20" />
+    <Picture
+      id={picture}
+      variant="1280x2700"
+      densities={[1]}
+      class="size-full object-cover opacity-20" />
   </div>
 {:else}
   <Pattern class={classes} />
