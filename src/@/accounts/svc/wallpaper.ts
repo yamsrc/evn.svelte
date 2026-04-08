@@ -19,10 +19,6 @@ export async function set(value: net.Wallpaper): Promise<void | Error> {
   if (updated instanceof Error) return updated
 }
 
-export async function upload(file: File): Promise<void | Error> {
-  const entry = await net.pictures.post(file)
-
-  if (entry instanceof Error) return entry
-
-  return set({ method: 'picture', picture: entry.id })
+export async function upload(file: File): Promise<{ id: string } | Error> {
+  return await net.pictures.post(file)
 }

@@ -39,6 +39,7 @@ export type Dictionary = {
           split: string
         }
         scan: string
+        upload: string
       }
       nav: {
         home: string
@@ -64,7 +65,6 @@ export type Dictionary = {
           title: string
           pattern: string
           picture: string
-          upload: string
           cta: string
         }
         notifications: {

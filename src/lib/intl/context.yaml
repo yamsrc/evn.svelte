@@ -59,6 +59,8 @@ inputs:
     scan:
       input: Scan
       context: button label
+    upload:
+      input: Choose your own
   nav:
     home:
       input: Home
@@ -97,8 +99,6 @@ inputs:
         input: Pattern
       picture:
         input: Picture
-      upload:
-        input: Choose your own
       cta:
         input: Apply background
     notifications:

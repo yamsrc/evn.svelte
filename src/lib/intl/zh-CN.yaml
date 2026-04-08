@@ -24,6 +24,7 @@ actions:
   expenses:
     split: 分摊
   scan: 扫描
+  upload: 选你自己的
 nav:
   home: 首页
   profile: 我
@@ -47,7 +48,6 @@ profile:
     title: 背景
     pattern: 模板
     picture: 照片
-    upload: 选你自己的
     cta: 应用背景
   notifications:
     title: 通知

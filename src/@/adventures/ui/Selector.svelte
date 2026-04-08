@@ -1,11 +1,11 @@
 <script lang="ts">
   import { ok } from 'svas'
   import { ChartPie } from '@lucide/svelte'
+  import { List } from '@/app/ui'
   import { adventures } from '@/adventures'
   import { buttonVariants } from '$ui/button'
   import { replace } from '$com/history'
   import { replaceState } from '$app/navigation'
-  import * as List from './list'
   import { dict } from './intl'
   import Panel from './Panel.svelte'
   import type { Props } from './Selector'

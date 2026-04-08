@@ -1,6 +1,6 @@
 <script lang="ts">
+  import { List } from '@/app/ui'
   import { unseen } from '@/adventures'
-  import * as List from './list'
   import Panel from './Panel.svelte'
   import type { Props } from './Adventures'
 

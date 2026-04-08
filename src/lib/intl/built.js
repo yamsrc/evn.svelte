@@ -32,7 +32,8 @@ export const dictionaries = {
       "expenses": {
         "split": "تقسيم"
       },
-      "scan": "مسح"
+      "scan": "مسح",
+      "upload": "اختر ما يناسبك"
     },
     "nav": {
       "home": "الرئيسية",
@@ -58,7 +59,6 @@ export const dictionaries = {
         "title": "الخلفية",
         "pattern": "نمط",
         "picture": "صورة",
-        "upload": "اختر ما يناسبك",
         "cta": "تطبيق الخلفية"
       },
       "notifications": {
@@ -253,7 +253,8 @@ export const dictionaries = {
       "expenses": {
         "split": "Aufteilen"
       },
-      "scan": "Scannen"
+      "scan": "Scannen",
+      "upload": "Wähle selbst"
     },
     "nav": {
       "home": "Startseite",
@@ -279,7 +280,6 @@ export const dictionaries = {
         "title": "Hintergrund",
         "pattern": "Vorlage",
         "picture": "Bild",
-        "upload": "Wähle selbst",
         "cta": "Hintergrund anwenden"
       },
       "notifications": {
@@ -474,7 +474,8 @@ export const dictionaries = {
       "expenses": {
         "split": "Split"
       },
-      "scan": "Scan"
+      "scan": "Scan",
+      "upload": "Choose your own"
     },
     "nav": {
       "home": "Home",
@@ -500,7 +501,6 @@ export const dictionaries = {
         "title": "Background",
         "pattern": "Pattern",
         "picture": "Picture",
-        "upload": "Choose your own",
         "cta": "Apply background"
       },
       "notifications": {
@@ -695,7 +695,8 @@ export const dictionaries = {
       "expenses": {
         "split": "Dividir"
       },
-      "scan": "Escanear"
+      "scan": "Escanear",
+      "upload": "Elige el tuyo"
     },
     "nav": {
       "home": "Inicio",
@@ -721,7 +722,6 @@ export const dictionaries = {
         "title": "Fondo",
         "pattern": "Patrón",
         "picture": "Foto",
-        "upload": "Elige el tuyo",
         "cta": "Aplicar fondo"
       },
       "notifications": {
@@ -916,7 +916,8 @@ export const dictionaries = {
       "expenses": {
         "split": "Partager"
       },
-      "scan": "Scanner"
+      "scan": "Scanner",
+      "upload": "Choisis le tien"
     },
     "nav": {
       "home": "Accueil",
@@ -942,7 +943,6 @@ export const dictionaries = {
         "title": "Arrière-plan",
         "pattern": "Modèle",
         "picture": "Photo",
-        "upload": "Choisis le tien",
         "cta": "Appliquer l’arrière-plan"
       },
       "notifications": {
@@ -1137,7 +1137,8 @@ export const dictionaries = {
       "expenses": {
         "split": "विभाजित करें"
       },
-      "scan": "स्कैन करें"
+      "scan": "स्कैन करें",
+      "upload": "अपना खुद चुनो"
     },
     "nav": {
       "home": "मुख्य पृष्ठ",
@@ -1163,7 +1164,6 @@ export const dictionaries = {
         "title": "पृष्ठभूमि",
         "pattern": "पैटर्न",
         "picture": "तस्वीर",
-        "upload": "अपना खुद चुनो",
         "cta": "बैकग्राउंड लागू करें"
       },
       "notifications": {
@@ -1358,7 +1358,8 @@ export const dictionaries = {
       "expenses": {
         "split": "Dividi"
       },
-      "scan": "Scansiona"
+      "scan": "Scansiona",
+      "upload": "Scegli il tuo"
     },
     "nav": {
       "home": "Home",
@@ -1384,7 +1385,6 @@ export const dictionaries = {
         "title": "Sfondo",
         "pattern": "Modello",
         "picture": "Foto",
-        "upload": "Scegli il tuo",
         "cta": "Applica sfondo"
       },
       "notifications": {
@@ -1579,7 +1579,8 @@ export const dictionaries = {
       "expenses": {
         "split": "割り勘"
       },
-      "scan": "スキャン"
+      "scan": "スキャン",
+      "upload": "自分のを選んで"
     },
     "nav": {
       "home": "ホーム",
@@ -1605,7 +1606,6 @@ export const dictionaries = {
         "title": "背景",
         "pattern": "パターン",
         "picture": "写真",
-        "upload": "自分のを選んで",
         "cta": "背景を適用"
       },
       "notifications": {
@@ -1800,7 +1800,8 @@ export const dictionaries = {
       "expenses": {
         "split": "나누기"
       },
-      "scan": "스캔"
+      "scan": "스캔",
+      "upload": "네 것으로 골라"
     },
     "nav": {
       "home": "홈",
@@ -1826,7 +1827,6 @@ export const dictionaries = {
         "title": "배경",
         "pattern": "패턴",
         "picture": "사진",
-        "upload": "네 것으로 골라",
         "cta": "배경 적용"
       },
       "notifications": {
@@ -2021,7 +2021,8 @@ export const dictionaries = {
       "expenses": {
         "split": "Splitsen"
       },
-      "scan": "Scannen"
+      "scan": "Scannen",
+      "upload": "Kies je eigen"
     },
     "nav": {
       "home": "Home",
@@ -2047,7 +2048,6 @@ export const dictionaries = {
         "title": "Achtergrond",
         "pattern": "Patroon",
         "picture": "Foto",
-        "upload": "Kies je eigen",
         "cta": "Achtergrond toepassen"
       },
       "notifications": {
@@ -2242,7 +2242,8 @@ export const dictionaries = {
       "expenses": {
         "split": "Разделить"
       },
-      "scan": "Сканировать"
+      "scan": "Сканировать",
+      "upload": "Выбери своё"
     },
     "nav": {
       "home": "Главная",
@@ -2268,7 +2269,6 @@ export const dictionaries = {
         "title": "Фон",
         "pattern": "Шаблон",
         "picture": "Фото",
-        "upload": "Выбери своё",
         "cta": "Применить фон"
       },
       "notifications": {
@@ -2463,7 +2463,8 @@ export const dictionaries = {
       "expenses": {
         "split": "Gawanya"
       },
-      "scan": "Kagua"
+      "scan": "Kagua",
+      "upload": "Chagua yako mwenyewe"
     },
     "nav": {
       "home": "Mwanzo",
@@ -2489,7 +2490,6 @@ export const dictionaries = {
         "title": "Mandharinyuma",
         "pattern": "Mfano",
         "picture": "Picha",
-        "upload": "Chagua yako mwenyewe",
         "cta": "Tumia mandharinyuma"
       },
       "notifications": {
@@ -2684,7 +2684,8 @@ export const dictionaries = {
       "expenses": {
         "split": "Böl"
       },
-      "scan": "Tara"
+      "scan": "Tara",
+      "upload": "Kendininkini seç"
     },
     "nav": {
       "home": "Ana Sayfa",
@@ -2710,7 +2711,6 @@ export const dictionaries = {
         "title": "Arka plan",
         "pattern": "Şablon",
         "picture": "Fotoğraf",
-        "upload": "Kendininkini seç",
         "cta": "Arka planı uygula"
       },
       "notifications": {
@@ -2905,7 +2905,8 @@ export const dictionaries = {
       "expenses": {
         "split": "Розділити"
       },
-      "scan": "Сканувати"
+      "scan": "Сканувати",
+      "upload": "Вибери своє"
     },
     "nav": {
       "home": "Головна",
@@ -2931,7 +2932,6 @@ export const dictionaries = {
         "title": "Тло",
         "pattern": "Шаблон",
         "picture": "Фото",
-        "upload": "Вибери своє",
         "cta": "Застосувати фон"
       },
       "notifications": {
@@ -3126,7 +3126,8 @@ export const dictionaries = {
       "expenses": {
         "split": "分摊"
       },
-      "scan": "扫描"
+      "scan": "扫描",
+      "upload": "选你自己的"
     },
     "nav": {
       "home": "首页",
@@ -3152,7 +3153,6 @@ export const dictionaries = {
         "title": "背景",
         "pattern": "模板",
         "picture": "照片",
-        "upload": "选你自己的",
         "cta": "应用背景"
       },
       "notifications": {

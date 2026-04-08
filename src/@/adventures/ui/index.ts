@@ -1,7 +1,6 @@
 export { default as Hint } from './Hint.svelte'
 export { default as Panel } from './Panel.svelte'
 export { default as Adventures } from './Adventures.svelte'
-export { default as List } from './list/Root.svelte'
 export { default as Cover } from './Cover.svelte'
 export { default as Archive } from './Archive.svelte'
 export { default as Archived } from './Archived.svelte'

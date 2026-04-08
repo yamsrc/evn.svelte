@@ -24,6 +24,7 @@ actions:
   expenses:
     split: Partager
   scan: Scanner
+  upload: Choisis le tien
 nav:
   home: Accueil
   profile: Moi
@@ -36,18 +37,25 @@ profile:
   title: Mon profil
   language:
     title: Langue
-    description: Cela n’affecte pas la numérisation des reçus — nous pouvons de toute façon les lire dans la plupart des langues.
+    description: >-
+      Cela n’affecte pas la numérisation des reçus — nous pouvons de toute façon
+      les lire dans la plupart des langues.
   grammar:
     title: Forme grammaticale
-    description: Dans certaines langues, la formulation des messages dépend du genre grammatical. Nous utilisons ce réglage pour que les textes de l’interface soient naturels et corrects.
-    example: |-
+    description: >-
+      Dans certaines langues, la formulation des messages dépend du genre
+      grammatical. Nous utilisons ce réglage pour que les textes de l’interface
+      soient naturels et corrects.
+    example: >-
       !js
-      (name, gender) => gender === "he" ? `${name} a ajouté une dépense` : gender === "she" ? `${name} a ajouté une dépense` : `${name} a ajouté une dépense`
+
+      (name, gender) => gender === "he" ? `${name} a ajouté une dépense` :
+      gender === "she" ? `${name} a ajouté une dépense` : `${name} a ajouté une
+      dépense`
   background:
     title: Arrière-plan
     pattern: Modèle
     picture: Photo
-    upload: Choisis le tien
     cta: Appliquer l’arrière-plan
   notifications:
     title: Notifications
@@ -78,7 +86,9 @@ contacts:
       confirm: Supprimer
   add:
     label: Ajouter un contact
-    description: Plus tard, vous pourrez transférer ce compte au propriétaire afin qu'il puisse définir ses informations de connexion et en prendre possession.
+    description: >-
+      Plus tard, vous pourrez transférer ce compte au propriétaire afin qu'il
+      puisse définir ses informations de connexion et en prendre possession.
   share:
     invite:
       link: Inviter sur Evnly
@@ -88,9 +98,11 @@ join:
   app:
     description: La façon intelligente de suivre qui doit quoi à qui, avec vos amis.
   inviter:
-    description: |-
+    description: >-
       !js
-      (name) => `Vous avez été invité(e) par ${name}. Inscrivez-vous ou connectez-vous, et tout est prêt`
+
+      (name) => `Vous avez été invité(e) par ${name}. Inscrivez-vous ou
+      connectez-vous, et tout est prêt`
   accept: Commencer à utiliser Evnly
 groups:
   leave: Maintenez appuyé pour quitter
@@ -101,7 +113,9 @@ groups:
     title: Membres
     addMembers: Ajouter des membres
     addMember: Ajouter un membre
-    empty: Personne ici pour l'instant. Ajoutez des membres pour commencer à utiliser ce groupe.
+    empty: >-
+      Personne ici pour l'instant. Ajoutez des membres pour commencer à utiliser
+      ce groupe.
   title: Groupes
   summary:
     balance:
@@ -119,7 +133,9 @@ account:
   delete:
     button: Supprimer le compte
     title: Supprimer le compte
-    description: Nous supprimerons définitivement votre compte ainsi que toutes les informations associées. Cette action est irréversible.
+    description: >-
+      Nous supprimerons définitivement votre compte ainsi que toutes les
+      informations associées. Cette action est irréversible.
     sorry: Nous sommes vraiment désolés de vous voir partir.
     hold: Maintenir pour confirmer
     link: Supprimer le compte
@@ -130,7 +146,9 @@ expenses:
     title: Dépenses
     total: Total
     extras:
-      description: Les pourboires, taxes et autres frais supplémentaires sont répartis proportionnellement.
+      description: >-
+        Les pourboires, taxes et autres frais supplémentaires sont répartis
+        proportionnellement.
       title: Extras
   payers:
     title: Payé par
