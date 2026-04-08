@@ -36,22 +36,19 @@ profile:
   title: Mi perfil
   language:
     title: Idioma
-    description: >-
-      Esto no afecta al escaneo de recibos — podemos leerlos en la mayoría de
-      los idiomas de todas formas.
+    description: Esto no afecta al escaneo de recibos — podemos leerlos en la mayoría de los idiomas de todas formas.
   grammar:
     title: Forma gramatical
-    description: >-
-      En algunos idiomas, la redacción de los mensajes depende del género
-      gramatical. Usamos este ajuste para que los textos de la interfaz suenen
-      naturales y correctos.
-    example: >-
+    description: En algunos idiomas, la redacción de los mensajes depende del género gramatical. Usamos este ajuste para que los textos de la interfaz suenen naturales y correctos.
+    example: |-
       !js
-
-      (name, gender) => gender === "he" ? `${name} añadió un gasto` : gender ===
-      "she" ? `${name} añadió un gasto` : `${name} añadió un gasto`
+      (name, gender) => gender === "he" ? `${name} añadió un gasto` : gender === "she" ? `${name} añadió un gasto` : `${name} añadió un gasto`
   background:
     title: Fondo
+    pattern: Patrón
+    picture: Foto
+    upload: Elige el tuyo
+    cta: Aplicar fondo
   notifications:
     title: Notificaciones
 form:
@@ -81,9 +78,7 @@ contacts:
       confirm: Eliminar
   add:
     label: Agregar contacto
-    description: >-
-      Más adelante podrás transferir esta cuenta al propietario para que
-      configure sus datos de acceso y tome el control de la cuenta.
+    description: Más adelante podrás transferir esta cuenta al propietario para que configure sus datos de acceso y tome el control de la cuenta.
   share:
     invite:
       link: Invitar a Evnly
@@ -91,15 +86,11 @@ contacts:
       description: La invitación caducará en 5 minutos
 join:
   app:
-    description: >-
-      La forma inteligente de llevar el control de quién le debe a quién, junto
-      con tus amigos.
+    description: La forma inteligente de llevar el control de quién le debe a quién, junto con tus amigos.
   inviter:
-    description: >-
+    description: |-
       !js
-
-      (name) => `Has sido invitado por ${name}. Solo regístrate o inicia sesión,
-      y ya está todo listo`
+      (name) => `Has sido invitado por ${name}. Solo regístrate o inicia sesión, y ya está todo listo`
   accept: Comienza a usar Evnly
 groups:
   leave: Mantén pulsado para salir
@@ -110,9 +101,7 @@ groups:
     title: Miembros
     addMembers: Agregar miembros
     addMember: Añadir miembro
-    empty: >-
-      Todavía no hay nadie aquí. Agrega algunos miembros para empezar a usar
-      este grupo.
+    empty: Todavía no hay nadie aquí. Agrega algunos miembros para empezar a usar este grupo.
   title: Grupos
   summary:
     balance:
@@ -130,9 +119,7 @@ account:
   delete:
     button: Eliminar cuenta
     title: Eliminar cuenta
-    description: >-
-      Eliminaremos permanentemente tu cuenta y toda la información asociada.
-      Esta acción no se puede deshacer.
+    description: Eliminaremos permanentemente tu cuenta y toda la información asociada. Esta acción no se puede deshacer.
     sorry: Lamentamos mucho que te vayas.
     hold: Mantén pulsado para confirmar
     link: Eliminar cuenta
@@ -143,9 +130,7 @@ expenses:
     title: Gastos
     total: Total
     extras:
-      description: >-
-        Las propinas, los impuestos y otros extras se reparten de forma
-        proporcional.
+      description: Las propinas, los impuestos y otros extras se reparten de forma proporcional.
       title: Extras
   payers:
     title: Pagado por

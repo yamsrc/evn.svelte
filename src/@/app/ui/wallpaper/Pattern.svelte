@@ -8,9 +8,9 @@
   import { update } from '@/accounts'
   import { ios, safari, shell, standalone } from '$lib/tools/mq'
   import { dict } from '$lib/intl'
-  import Slide from './Slide.svelte'
-  import Effect from './Effect.svelte'
-  import { backgrounds, overriden, type Props } from './Background'
+  import Slide from '../Slide.svelte'
+  import Effect from '../Effect.svelte'
+  import { backgrounds, overriden, type Props } from './Pattern'
 
   const { scrollable, class: classes }: Props = $props()
 
@@ -52,9 +52,12 @@
   function select(id: string) {
     if (!ready) {
       ready = true
+      pattern = id
 
       return
     }
+
+    if (id === pattern) return
 
     pattern = id
 

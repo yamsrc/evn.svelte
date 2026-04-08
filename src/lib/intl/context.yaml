@@ -93,6 +93,14 @@ inputs:
     background:
       title:
         input: Background
+      pattern:
+        input: Pattern
+      picture:
+        input: Picture
+      upload:
+        input: Choose your own
+      cta:
+        input: Apply background
     notifications:
       title:
         input: Notifications

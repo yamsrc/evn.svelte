@@ -3,8 +3,8 @@
   import { effects, type Effect as EffectId } from '@/app'
   import { update } from '@/accounts'
   import * as ToggleGroup from '$ui/toggle-group'
+  import { backgrounds } from './wallpaper/Pattern'
   import Effect from './Effect.svelte'
-  import { backgrounds } from './Background'
   import type { Props } from './Effects'
 
   const { class: classes }: Props = $props()

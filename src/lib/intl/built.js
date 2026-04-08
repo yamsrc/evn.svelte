@@ -55,7 +55,11 @@ export const dictionaries = {
         "example": (name, gender) => gender === "he" ? `${name} أضاف مصروفًا` : gender === "she" ? `${name} أضافت مصروفًا` : `${name} أضاف(ت) مصروفًا`
       },
       "background": {
-        "title": "الخلفية"
+        "title": "الخلفية",
+        "pattern": "نمط",
+        "picture": "صورة",
+        "upload": "اختر ما يناسبك",
+        "cta": "تطبيق الخلفية"
       },
       "notifications": {
         "title": "الإشعارات"
@@ -272,7 +276,11 @@ export const dictionaries = {
         "example": (name, gender) => gender === "he" ? `${name} hat eine Ausgabe hinzugefügt` : gender === "she" ? `${name} hat eine Ausgabe hinzugefügt` : `${name} hat eine Ausgabe hinzugefügt`
       },
       "background": {
-        "title": "Hintergrund"
+        "title": "Hintergrund",
+        "pattern": "Vorlage",
+        "picture": "Bild",
+        "upload": "Wähle selbst",
+        "cta": "Hintergrund anwenden"
       },
       "notifications": {
         "title": "Benachrichtigungen"
@@ -489,7 +497,11 @@ export const dictionaries = {
         "example": (name, gender) => gender === "he" ? `${name} added an expense` : gender === "she" ? `${name} added an expense` : `${name} added an expense`
       },
       "background": {
-        "title": "Background"
+        "title": "Background",
+        "pattern": "Pattern",
+        "picture": "Picture",
+        "upload": "Choose your own",
+        "cta": "Apply background"
       },
       "notifications": {
         "title": "Notifications"
@@ -706,7 +718,11 @@ export const dictionaries = {
         "example": (name, gender) => gender === "he" ? `${name} añadió un gasto` : gender === "she" ? `${name} añadió un gasto` : `${name} añadió un gasto`
       },
       "background": {
-        "title": "Fondo"
+        "title": "Fondo",
+        "pattern": "Patrón",
+        "picture": "Foto",
+        "upload": "Elige el tuyo",
+        "cta": "Aplicar fondo"
       },
       "notifications": {
         "title": "Notificaciones"
@@ -923,7 +939,11 @@ export const dictionaries = {
         "example": (name, gender) => gender === "he" ? `${name} a ajouté une dépense` : gender === "she" ? `${name} a ajouté une dépense` : `${name} a ajouté une dépense`
       },
       "background": {
-        "title": "Arrière-plan"
+        "title": "Arrière-plan",
+        "pattern": "Modèle",
+        "picture": "Photo",
+        "upload": "Choisis le tien",
+        "cta": "Appliquer l’arrière-plan"
       },
       "notifications": {
         "title": "Notifications"
@@ -1140,7 +1160,11 @@ export const dictionaries = {
         "example": (name, gender) => gender === "he" ? `${name} ने खर्च जोड़ा` : gender === "she" ? `${name} ने खर्च जोड़ी` : `${name} ने खर्च जोड़ा(जोड़ी)`
       },
       "background": {
-        "title": "पृष्ठभूमि"
+        "title": "पृष्ठभूमि",
+        "pattern": "पैटर्न",
+        "picture": "तस्वीर",
+        "upload": "अपना खुद चुनो",
+        "cta": "बैकग्राउंड लागू करें"
       },
       "notifications": {
         "title": "सूचनाएँ"
@@ -1357,7 +1381,11 @@ export const dictionaries = {
         "example": (name, gender) => gender === "he" ? `${name} ha aggiunto una spesa` : gender === "she" ? `${name} ha aggiunto una spesa` : `${name} ha aggiunto una spesa`
       },
       "background": {
-        "title": "Sfondo"
+        "title": "Sfondo",
+        "pattern": "Modello",
+        "picture": "Foto",
+        "upload": "Scegli il tuo",
+        "cta": "Applica sfondo"
       },
       "notifications": {
         "title": "Notifiche"
@@ -1574,7 +1602,11 @@ export const dictionaries = {
         "example": (name, gender) => `${name} さんが支出を追加しました`
       },
       "background": {
-        "title": "背景"
+        "title": "背景",
+        "pattern": "パターン",
+        "picture": "写真",
+        "upload": "自分のを選んで",
+        "cta": "背景を適用"
       },
       "notifications": {
         "title": "通知"
@@ -1791,7 +1823,11 @@ export const dictionaries = {
         "example": (name, gender) => `${name}님이 지출을 추가했습니다`
       },
       "background": {
-        "title": "배경"
+        "title": "배경",
+        "pattern": "패턴",
+        "picture": "사진",
+        "upload": "네 것으로 골라",
+        "cta": "배경 적용"
       },
       "notifications": {
         "title": "알림"
@@ -2008,7 +2044,11 @@ export const dictionaries = {
         "example": (name, gender) => gender === "he" ? `${name} heeft een uitgave toegevoegd` : gender === "she" ? `${name} heeft een uitgave toegevoegd` : `${name} heeft een uitgave toegevoegd`
       },
       "background": {
-        "title": "Achtergrond"
+        "title": "Achtergrond",
+        "pattern": "Patroon",
+        "picture": "Foto",
+        "upload": "Kies je eigen",
+        "cta": "Achtergrond toepassen"
       },
       "notifications": {
         "title": "Meldingen"
@@ -2225,7 +2265,11 @@ export const dictionaries = {
         "example": (name, gender) => gender === "he" ? `${name} добавил расход` : gender === "she" ? `${name} добавила расход` : `${name} добавил(а) расход`
       },
       "background": {
-        "title": "Фон"
+        "title": "Фон",
+        "pattern": "Шаблон",
+        "picture": "Фото",
+        "upload": "Выбери своё",
+        "cta": "Применить фон"
       },
       "notifications": {
         "title": "Уведомления"
@@ -2442,7 +2486,11 @@ export const dictionaries = {
         "example": (name, gender) => gender === "he" ? `${name} ameongeza matumizi` : gender === "she" ? `${name} ameongeza matumizi` : `${name} ameongeza matumizi`
       },
       "background": {
-        "title": "Mandharinyuma"
+        "title": "Mandharinyuma",
+        "pattern": "Mfano",
+        "picture": "Picha",
+        "upload": "Chagua yako mwenyewe",
+        "cta": "Tumia mandharinyuma"
       },
       "notifications": {
         "title": "Arifa"
@@ -2659,7 +2707,11 @@ export const dictionaries = {
         "example": (name, gender) => `${name} bir harcama ekledi`
       },
       "background": {
-        "title": "Arka plan"
+        "title": "Arka plan",
+        "pattern": "Şablon",
+        "picture": "Fotoğraf",
+        "upload": "Kendininkini seç",
+        "cta": "Arka planı uygula"
       },
       "notifications": {
         "title": "Bildirimler"
@@ -2876,7 +2928,11 @@ export const dictionaries = {
         "example": (name, gender) => gender === "he" ? `${name} додав витрату` : gender === "she" ? `${name} додала витрату` : `${name} додав(ла) витрату`
       },
       "background": {
-        "title": "Тло"
+        "title": "Тло",
+        "pattern": "Шаблон",
+        "picture": "Фото",
+        "upload": "Вибери своє",
+        "cta": "Застосувати фон"
       },
       "notifications": {
         "title": "Сповіщення"
@@ -3093,7 +3149,11 @@ export const dictionaries = {
         "example": (name, gender) => `${name} 添加了一笔支出`
       },
       "background": {
-        "title": "背景"
+        "title": "背景",
+        "pattern": "模板",
+        "picture": "照片",
+        "upload": "选你自己的",
+        "cta": "应用背景"
       },
       "notifications": {
         "title": "通知"

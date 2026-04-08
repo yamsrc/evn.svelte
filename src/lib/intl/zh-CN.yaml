@@ -45,6 +45,10 @@ profile:
       (name, gender) => `${name} 添加了一笔支出`
   background:
     title: 背景
+    pattern: 模板
+    picture: 照片
+    upload: 选你自己的
+    cta: 应用背景
   notifications:
     title: 通知
 form:

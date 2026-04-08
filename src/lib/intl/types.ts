@@ -62,6 +62,10 @@ export type Dictionary = {
         }
         background: {
           title: string
+          pattern: string
+          picture: string
+          upload: string
+          cta: string
         }
         notifications: {
           title: string
