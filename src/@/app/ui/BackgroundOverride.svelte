@@ -1,8 +1,19 @@
 <script lang="ts">
   import { onMount } from 'svelte'
   import { override } from './Background'
+  import type { Account } from '@/accounts/svc/net/Account'
 
-  const { id }: { id: string } = $props()
+  const { account }: { account: Account } = $props()
 
-  onMount(() => override(id))
+  onMount(() => {
+    const pattern = account.wallpaper?.pattern ?? account.background
+
+    if (!pattern) return
+
+    return override({
+      method: account.wallpaper?.method ?? 'pattern',
+      pattern,
+      effect: account.wallpaper?.effect ?? null,
+    })
+  })
 </script>

@@ -50,8 +50,8 @@
     <Async store={combined(groups, expenses)}>
       {#snippet awaited([groups, expenses])}
         {#if contact?.account && ok(contact.account)}
-          {#if contact.account.background}
-            <BackgroundOverride id={contact.account.background} />
+          {#if contact.account.wallpaper?.pattern ?? contact.account.background}
+            <BackgroundOverride account={contact.account} />
           {/if}
           <Section>
             <div class="flex flex-col gap-4">

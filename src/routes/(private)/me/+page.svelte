@@ -7,7 +7,7 @@
   import { Feedback } from '@/feedback/ui'
   import { Section } from '@/app/ui'
   import { Header } from '@/app/ui'
-  import { Background } from '@/app/ui'
+  import { Background, Effects } from '@/app/ui'
   import { Action } from '@/app/ui'
   import { Cosmetics, Delete, Grammar, Language } from '@/accounts/ui'
   import { clicks } from '$lib/tools'
@@ -72,6 +72,7 @@
     <div class="border h-40 rounded-lg bg-background overflow-hidden">
       <Background scrollable />
     </div>
+    <Effects />
   </Section>
 
   <Section class="space-y-2">

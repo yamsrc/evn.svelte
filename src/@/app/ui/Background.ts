@@ -1,14 +1,15 @@
 import { writable } from 'svelte/store'
+import type { Wallpaper } from '@/accounts/svc/net/Account'
 
 export interface Props {
   scrollable?: boolean
   class?: string
 }
 
-export const overriden = writable<string | null>(null)
+export const overriden = writable<Wallpaper | null>(null)
 
-export function override(id: string) {
-  overriden.set(id)
+export function override(wallpaper: Wallpaper) {
+  overriden.set(wallpaper)
 
   return () => {
     overriden.set(null)

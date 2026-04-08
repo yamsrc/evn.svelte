@@ -9,6 +9,7 @@
   import { ios, safari, shell, standalone } from '$lib/tools/mq'
   import { dict } from '$lib/intl'
   import Slide from './Slide.svelte'
+  import Effect from './Effect.svelte'
   import { backgrounds, overriden, type Props } from './Background'
 
   const { scrollable, class: classes }: Props = $props()
@@ -20,7 +21,13 @@
 
   let container: HTMLDivElement | null = $state(null)
 
-  const selected = backgrounds.findIndex((background) => background.id === $account?.background)
+  let pattern = $state<string | undefined>(
+    $overriden?.pattern ?? $account?.wallpaper?.pattern ?? $account?.background,
+  )
+
+  const selected = backgrounds.findIndex((background) => background.id === pattern)
+
+  const effect = $derived($overriden?.effect ?? $account?.wallpaper?.effect ?? null)
 
   function onscroll(e: Event) {
     const target = e.target as HTMLDivElement
@@ -49,7 +56,12 @@
       return
     }
 
-    if ($account) void update($account.id, { background: id })
+    pattern = id
+
+    if ($account)
+      void update($account.id, {
+        wallpaper: { method: 'pattern', pattern: id, effect },
+      })
   }
 
   const slides: HTMLDivElement[] = $state([])
@@ -114,17 +126,23 @@
   ]}
   onscroll={scrollable ? onscroll : undefined}>
   {#each backgrounds as background, i (background.id)}
-    {#if scrollable || !$overriden || $overriden === background.id}
+    {#if scrollable || !$overriden || $overriden.pattern === background.id}
       <div
         bind:this={slides[i]}
         data-id={background.id}
-        class={['h-full w-full shrink-0 ', scrollable && 'snap-center', i === 0 && 'relative']}
+        class={['h-full w-full shrink-0 relative', scrollable && 'snap-center']}
         style="background: url('/bg/{background.filename}') 50% 50% / {scale(
           background.width,
         )}px {scale(background.height)}px repeat; {scrollable
           ? ''
           : `opacity: ${background.opacity?.toString() ?? '0.2'}`}">
-        {#if scrollable && i === 0 && $account?.background === undefined}
+        {#if effect}
+          <Effect
+            {effect}
+            mask={`url('/bg/${background.filename}') 50% 50% / ${scale(background.width)}px ${scale(background.height)}px`}
+            class="absolute inset-0" />
+        {/if}
+        {#if scrollable && i === 0 && pattern === undefined}
           <Slide class="h-full justify-end p-8">{$dict.actions.slide}</Slide>
         {/if}
       </div>
