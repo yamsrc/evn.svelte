@@ -2,17 +2,16 @@ import { derived, writable, type Readable } from 'svelte/store'
 import type { OnNavigate } from '@sveltejs/kit'
 
 export function transit(fn?: (() => void) | (() => Promise<void>)): Promise<void> {
-  if (fn === undefined) return Promise.resolve()
-
   if (document.startViewTransition === undefined)
-    return Promise.resolve(fn())
-  else {
-    depart()
+    return Promise.resolve(fn?.())
 
-    return new Promise((resolve) => document.startViewTransition(async () => {
-      resolve(await fn())
-    }).finished.then(() => arrive()))
-  }
+  const fly = fn !== undefined
+
+  if (fly) depart()
+
+  return new Promise((resolve) => document.startViewTransition(async () => {
+    resolve(await fn?.())
+  }).finished.then(() => { if (fly) arrive() }))
 }
 
 export function navigate(nav: OnNavigate): Promise<void> | void {

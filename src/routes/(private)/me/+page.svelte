@@ -49,7 +49,9 @@
   </Section>
 
   <Section>
-    <Cosmetics account={$account} pictureStyle="view-transition-name: my-avatar;" />
+    <Cosmetics
+      account={$account}
+      pictureStyle="view-transition-name: my-avatar; view-transition-class: transition-morph;" />
   </Section>
 
   <Separator class="mt-5" />

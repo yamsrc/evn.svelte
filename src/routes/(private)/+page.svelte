@@ -32,7 +32,9 @@
         <Header.Title>{$dict.home.title(account.name)}</Header.Title>
         <Header.Actions>
           <Header.Button href="/me/" id="header-me-button" variant="ghost">
-            <Avatar {account} style="view-transition-name: my-avatar;" />
+            <Avatar
+              {account}
+              style="view-transition-name: my-avatar; view-transition-class: transition-morph;" />
           </Header.Button>
         </Header.Actions>
       </Header.Root>
