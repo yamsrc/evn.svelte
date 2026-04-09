@@ -36,7 +36,7 @@
           'shrink-0 border h-full no-scrollbar',
           editable && 'overflow-y-auto overscroll-y-contain touch-pan-y snap-y snap-mandatory',
         ]}>
-        <Fullscreen class="h-[300px]" fragile onshow={() => onshow(attachment)}>
+        <Fullscreen class="h-[300px]" fragile onshow={() => onshow(attachment)} x={false}>
           <Picture
             id={attachment}
             {path}
