@@ -1,7 +1,6 @@
-import type { Benefit, BenefitType } from './Benefit'
+import type { Benefit } from './Benefit'
 
 export interface Props {
-  benefit?: BenefitType
   next: () => void
 }
 

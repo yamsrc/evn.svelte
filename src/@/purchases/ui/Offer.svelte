@@ -8,10 +8,9 @@
   import Benefit from './Benefit.svelte'
   import type { Props } from './Offer'
 
-  const { benefit, next }: Props = $props()
+  const { next }: Props = $props()
 
   let busy = $state(false)
-  const index = $derived(benefit ? benefits.findIndex((b) => b.id === benefit) : 0)
   const price = '€19.99'
 
   async function onclick() {
@@ -28,7 +27,7 @@
 </script>
 
 <p>{$dict.paywall.offer.headline}</p>
-<Scrollable class="gap-2" bleed scroll={index} align="center">
+<Scrollable class="gap-2" bleed scroll={0} align="center">
   {#each benefits as benefit (benefit.id)}
     <Benefit {benefit} class="w-full snap-center" />
   {/each}

@@ -17,10 +17,10 @@
 
 <Fullscreen bind:open={$open}>
   {#snippet content()}
-    <Section class="space-y-4">
+    <Section class="space-y-4 h-full flex flex-col">
       <h1>{$dict.paywall.title}</h1>
       {#if step === 'offer'}
-        <Offer benefit={$cta?.benefit} {next} />
+        <Offer {next} />
       {:else if step === 'complete'}
         <Complete cta={$cta} {next} />
       {/if}
