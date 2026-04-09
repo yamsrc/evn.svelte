@@ -10,6 +10,7 @@ export function transit(fn?: (() => void) | (() => Promise<void>)): Promise<void
   if (fly) depart()
 
   return new Promise((resolve) => document.startViewTransition(async () => {
+    land()
     resolve(await fn?.())
   }).finished.then(() => { if (fly) arrive() }))
 }
@@ -20,11 +21,19 @@ export function navigate(nav: OnNavigate): Promise<void> | void {
   return transit()
 }
 
+let launch: Launch | null = null
+
 export function takeoff(id: string, name: string, classes?: string) {
+  if (launch !== null) {
+    launch.el.style.viewTransitionName = ''
+    launch.el.style.viewTransitionClass = ''
+  }
+
   const el = document.getElementById(id)
 
   if (el === null) {
     console.warn('No element to depart from', id)
+    launch = null
 
     return
   }
@@ -33,6 +42,17 @@ export function takeoff(id: string, name: string, classes?: string) {
 
   if (classes !== undefined)
     el.style.viewTransitionClass = classes
+
+  launch = { el, name, classes }
+}
+
+function land() {
+  if (launch === null) return
+
+  const clear = launch.el.style.viewTransitionName === launch.name
+
+  launch.el.style.viewTransitionName = clear ? '' : launch.name
+  launch.el.style.viewTransitionClass = clear ? '' : (launch.classes ?? '')
 }
 
 const flying = writable<boolean>(false)
@@ -119,5 +139,11 @@ interface FlyOptions {
   /** view-transition-name */
   name: string
   /** view-transition-class */
+  classes?: string
+}
+
+interface Launch {
+  el: HTMLElement
+  name: string
   classes?: string
 }

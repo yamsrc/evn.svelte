@@ -19,7 +19,9 @@
 <Fullscreen bind:open={$open}>
   {#snippet content()}
     <Screen class="overflow-y-auto no-scrollbar h-full pb-8">
-      <Section class="space-y-4 h-full flex flex-col">
+      <Section
+        class="space-y-4 h-full flex flex-col"
+        style="view-transition-name: paywall; view-transition-class: transition-spring transition-morph;">
         <h1>{$dict.paywall.title}</h1>
         {#if step === 'offer'}
           <Offer {next} />

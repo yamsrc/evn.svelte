@@ -2,6 +2,7 @@
   import { ImageUp } from '@lucide/svelte'
   import { Picture } from '@/media/ui'
   import { buttonVariants } from '$ui/button'
+  import { takeoff } from '$lib/tools'
   import { dict } from '$lib/intl'
   import { Loader } from '$com/loader'
   import * as List from '../list'
@@ -42,6 +43,8 @@
   }
 
   function pick(index: number) {
+    if (gate) takeoff(`paywall-${index - offset}`, 'paywall', 'transition-spring transition-morph')
+
     guarded(() => {
       picture = options[index - offset]
       onpick?.(picture)
@@ -49,6 +52,8 @@
   }
 
   function browse() {
+    if (gate) takeoff('paywall-upload', 'paywall', 'transition-spring transition-morph')
+
     guarded(() => input?.click())
   }
 
@@ -79,6 +84,7 @@
 
   {#each options as id, i (id)}
     <List.Option
+      id={gate ? `paywall-${i}` : undefined}
       class={[baseCard, card]}
       index={i + offset}
       style={vt && id === picture
@@ -93,6 +99,7 @@
 
 {#snippet uploader()}
   <List.Option
+    id={gate ? 'paywall-upload' : undefined}
     onclick={browse}
     disabled={uploading}
     class={[

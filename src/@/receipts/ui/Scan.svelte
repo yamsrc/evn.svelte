@@ -2,6 +2,8 @@
   import { ScanText } from '@lucide/svelte'
   import { upload, type Progress } from '@/receipts'
   import { paywall } from '@/purchases/ui'
+  import { account } from '@/iam'
+  import { premium } from '@/accounts'
   import { Button } from '$ui/button'
   import { styles } from '$lib/tools'
   import { Fullscreen } from '$com/fullscreen'
@@ -42,7 +44,10 @@
     if (open) callback?.(id)
   }
 
-  const style = styles('receipt', 'transition-spring transition-morph')
+  const style = styles(
+    $account && premium($account) ? 'receipt' : 'paywall',
+    'transition-spring transition-morph',
+  )
 </script>
 
 <div>
