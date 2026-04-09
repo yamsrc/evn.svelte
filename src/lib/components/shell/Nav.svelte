@@ -65,7 +65,7 @@
 <nav
   class={[
     'shell-navigation',
-    'fixed max-w-3xl mx-auto',
+    'fixed max-w-3xl mx-auto my-0',
     'bottom-[env(safe-area-inset-bottom)] standalone:bottom-[max(env(safe-area-inset-bottom),1rem)]',
     'left-[env(safe-area-inset-left)] right-[env(safe-area-inset-right)]',
     classes,
