@@ -47,7 +47,7 @@ export default [
   },
   {
     rules: {
-      'no-void': ['error', { allowAsStatement: true }],
+      'no-void': 'off',
       curly: ['error', 'multi'],
       'no-console': ['error', { allow: ['info', 'debug', 'warn', 'error'] }],
       'no-implicit-coercion': 'error',

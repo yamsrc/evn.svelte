@@ -83,3 +83,12 @@ export const claims = {
     })
   },
 }
+
+export const extras = {
+  patch: async (identity: string, id: string, extraId: string, body: { included: boolean }): Promise<Receipt | Error> => {
+    return await receipts.json<Receipt>(`${identity}/${id}/extras/${extraId}`, {
+      method: 'PATCH',
+      body,
+    })
+  },
+}

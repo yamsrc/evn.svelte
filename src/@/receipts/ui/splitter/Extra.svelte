@@ -10,7 +10,7 @@
   const amount = $derived(portion === undefined ? extra.amount : extra.amount * portion)
 
   function toggle(id: string) {
-    transit(() => (extra.included ? exclude(receipt.id, id) : include(receipt.id, id)))
+    transit(() => void (extra.included ? exclude(receipt.id, id) : include(receipt.id, id)))
   }
 </script>
 
