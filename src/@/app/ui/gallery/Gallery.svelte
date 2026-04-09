@@ -42,8 +42,12 @@
     else run()
   }
 
+  function transit(id: string) {
+    takeoff(id, 'paywall', 'transition-spring transition-morph')
+  }
+
   function pick(index: number) {
-    if (gate) takeoff(`paywall-${index - offset}`, 'paywall', 'transition-spring transition-morph')
+    if (gate) transit(`paywall-${index - offset}`)
 
     guarded(() => {
       picture = options[index - offset]
@@ -52,7 +56,7 @@
   }
 
   function browse() {
-    if (gate) takeoff('paywall-upload', 'paywall', 'transition-spring transition-morph')
+    if (gate) transit('paywall-upload')
 
     guarded(() => input?.click())
   }
