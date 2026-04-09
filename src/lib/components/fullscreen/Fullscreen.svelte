@@ -65,7 +65,7 @@
       <Button
         variant="ghost"
         size="icon"
-        class="absolute top-4 right-4 tim:top-[env(safe-area-inset-top)]"
+        class="absolute top-4 inset-e-4 tim:top-[env(safe-area-inset-top)]"
         onclick={hide}>
         <X />
       </Button>

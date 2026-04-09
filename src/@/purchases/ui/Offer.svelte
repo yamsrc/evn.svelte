@@ -39,7 +39,7 @@
     {$dict.paywall.offer.trial(price)}
   </p>
 </div>
-<div class="text-sm **:text-muted-foreground text-center">
+<div class="text-sm **:text-muted-foreground text-center space-y-2">
   <p>{$dict.paywall.offer.disclaimer}</p>
   <p>{$dict.paywall.offer.footnote}</p>
   <p>

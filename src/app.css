@@ -252,10 +252,6 @@
 
   p {
     @apply text-pretty;
-
-    &:not(:first-child) {
-      @apply mt-2;
-    }
   }
 
   input {
