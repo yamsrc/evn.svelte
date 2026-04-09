@@ -1,11 +1,11 @@
 <script lang="ts">
   import { ImageUp } from '@lucide/svelte'
   import { Picture } from '@/media/ui'
+  import { List } from '@/app/ui'
   import { buttonVariants } from '$ui/button'
   import { takeoff } from '$lib/tools'
   import { dict } from '$lib/intl'
   import { Loader } from '$com/loader'
-  import * as List from '../list'
   import type { Props } from './Gallery'
 
   let {
