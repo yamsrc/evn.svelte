@@ -6,8 +6,9 @@
 </script>
 
 <Card.Root class={['space-y-2 gap-0 pt-0', classes]}>
-  <Card.Header class="p-0">
+  <Card.Header class="p-0 gap-0">
     <img
+      class="size-full object-cover aspect-[1.4]"
       alt={benefit.title}
       src={`/assets/w_630,h_450/${benefit.picture}.webp`}
       srcset={`/assets/w_630,h_450/${benefit.picture}.webp 1x, /assets/w_1260,h_900/${benefit.picture}.webp 2x`} />
