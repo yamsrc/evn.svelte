@@ -50,7 +50,8 @@
     tabindex="0"
     data-slot="fullscreen-container"
     onpointerdown={fragile && !controlled ? hide : undefined}
-    class="fixed inset-0 z-1001 flex items-center justify-center bg-background/75 backdrop-blur-sm">
+    class="fixed inset-0 z-1001 flex items-center justify-center bg-background/90"
+    style="view-transition-name: fullscreen;">
     {#if content}
       {@render content()}
     {:else}
@@ -84,5 +85,9 @@
 <style>
   :global(body:has([data-slot='fullscreen-container'])) :global(.shell-navigation) {
     display: none;
+  }
+
+  ::view-transition-group(.fullscreen-content) {
+    z-index: 1;
   }
 </style>
