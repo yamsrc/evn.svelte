@@ -9,6 +9,7 @@ export interface Props {
   /** Extend scroll area to full viewport width, breaking out of parent padding */
   bleed?: boolean
   class?: ClassValue
+  style?: string
   id?: string
   dir?: 'ltr' | 'rtl'
   scroll?: number

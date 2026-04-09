@@ -8,7 +8,7 @@
   import { Avatar } from '@/accounts/ui'
   import { accounts } from '@/accounts'
   import { Button } from '$ui/button'
-  import { transit } from '$lib/tools'
+  import { styles, transit } from '$lib/tools'
   import { Ellipsis } from '$com/text'
   import { Scrollable } from '$com/scrollable'
   import { dict } from '../intl'
@@ -40,9 +40,11 @@
   let mounted = $state(false)
 
   onMount(() => (mounted = true))
+
+  const style = styles('receipts-participants')
 </script>
 
-<Scrollable bleed class={['gap-1 pt-1 pb-8', classes]}>
+<Scrollable bleed class={['gap-1 pt-1 pb-8', classes]} style={$style}>
   {#each identities as identity (identity)}
     {@const selected = identity === actor}
     {@const cost = claimedCostBy($store, identity)}

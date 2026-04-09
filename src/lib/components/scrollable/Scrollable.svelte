@@ -8,6 +8,7 @@
     align = 'start',
     bleed = false,
     class: classes,
+    style,
     id,
     dir,
     scroll = 0,
@@ -23,7 +24,7 @@
   })
 </script>
 
-<div {dir} class="@container">
+<div {dir} class="@container" {style}>
   <div
     {id}
     {@attach scrollable({ infinite, align, scroll }, mounted)}
