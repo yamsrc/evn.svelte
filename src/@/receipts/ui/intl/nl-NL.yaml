@@ -40,3 +40,5 @@ state:
   processing: Even volhouden, we zijn er bijna
 action:
   label: Scannen
+extras:
+  included: Vergoedingen, vermoedelijk inbegrepen bij de prijzen

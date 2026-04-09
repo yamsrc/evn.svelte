@@ -22,4 +22,4 @@ export const receipts = derived(internal, (internal) => {
   return internal.filter((receipt) => receipt.status === 'success')
 })
 
-events.on('default.receipts.sync', (entry: Receipt) => sync(internal, entry))
+events.on('default.receipts.sync', (entry: Receipt) => sync(internal, entry, { delete: false }))

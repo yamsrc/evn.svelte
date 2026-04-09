@@ -40,3 +40,5 @@ state:
   processing: ¡Espera un poco, ya casi estamos!
 action:
   label: Escanear
+extras:
+  included: Comisiones, supuestamente incluidas en los precios

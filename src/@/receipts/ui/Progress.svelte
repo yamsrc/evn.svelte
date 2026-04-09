@@ -1,6 +1,6 @@
 <script lang="ts">
   import { ok } from 'svas'
-  import { receipts } from '@/receipts'
+  import { internal as receipts } from '@/receipts'
   import { Spinner } from '$ui/spinner'
   import { dict } from './intl'
   import Failed from './Failed.svelte'
@@ -19,6 +19,10 @@
         else if (receipt.status === 'failed') failed = true
     } else if (progress.status === 'failed') failed = true
   })
+
+  export function clear() {
+    failed = false
+  }
 </script>
 
 <div class="space-y-6 w-full max-w-md mx-auto p-4">

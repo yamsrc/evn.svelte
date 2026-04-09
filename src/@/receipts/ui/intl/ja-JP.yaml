@@ -35,3 +35,5 @@ state:
   processing: もう少し、あとちょっとだよ
 action:
   label: スキャン
+extras:
+  included: 手数料―料金に含まれていると思われます

@@ -47,7 +47,7 @@
           {/if}
         </Item.Media>
         <Item.Content class="flex flex-row flex-wrap items-centerd gap-2">
-          <Item.Title>{unit.display}</Item.Title>
+          <Item.Title class="text-pretty">{unit.display}</Item.Title>
           {#if faces.length > 0}
             <div class="flex flex-row flex-nowrap items-center [&>*:not(:last-child)]:-mr-[8px]">
               {#each faces as identity (identity)}

@@ -35,3 +35,5 @@ state:
   processing: 잠깐만 기다려, 거의 다 왔어
 action:
   label: 스캔
+extras:
+  included: 수수료, 아마 가격에 포함되어 있을 거예요

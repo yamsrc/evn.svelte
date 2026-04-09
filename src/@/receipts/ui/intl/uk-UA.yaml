@@ -40,3 +40,5 @@ state:
   processing: Трішки зачекай, вже майже все
 action:
   label: Сканувати
+extras:
+  included: Комісії, ймовірно включені у ціни

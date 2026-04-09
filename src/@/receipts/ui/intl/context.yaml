@@ -68,3 +68,6 @@ inputs:
     label:
       input: Scan
       context: button label
+  extras:
+    included:
+      input: Комиссии, предположительно включенные в цены

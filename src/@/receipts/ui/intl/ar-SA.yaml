@@ -40,3 +40,5 @@ state:
   processing: انتظر قليلًا، اقتربنا من الانتهاء
 action:
   label: مسح
+extras:
+  included: العمولات، من المفترض أنها مشمولة في الأسعار

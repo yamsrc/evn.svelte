@@ -40,3 +40,5 @@ state:
   processing: Bleib dran, gleich geschafft!
 action:
   label: Scannen
+extras:
+  included: Vermutlich in den Preisen enthaltene Gebühren

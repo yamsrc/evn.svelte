@@ -9,6 +9,7 @@
   import { allDone } from './Lock'
   import Items from './Items.svelte'
   import Feedback from './Feedback.svelte'
+  import Extras from './Extras.svelte'
   import Autoclose from './Autoclose.svelte'
   import Actions from './Actions.svelte'
   import type { Props } from './Splitter'
@@ -43,17 +44,26 @@
     <Failed />
   {:else if receipt.done[actor] === true}
     <div class="space-y-4 pt-2">
-      <Summary {actor} />
-      {#if allDone(receipt)}
-        <Lock {receipt} {actor} />
-      {:else}
-        <Autoclose {receipt} {actor} payer={receipt.autolock} />
+      <div>
+        <Summary {receipt} {actor} />
+        {#if receipt.extras.length > 0}
+          <Extras {receipt} />
+        {/if}
+      </div>
+      {#if !receipt.locked}
+        {#if allDone(receipt)}
+          <Lock {receipt} {actor} />
+        {:else}
+          <Autoclose {receipt} {actor} payer={receipt.autolock} />
+        {/if}
+        <Feedback {actor} />
       {/if}
-      <Feedback {actor} />
     </div>
   {:else}
     <Items {receipt} {actor} />
   {/if}
 </div>
 
-<Actions {receipt} {actor} />
+{#if receipt.status !== 'failed' && !receipt.locked}
+  <Actions {receipt} {actor} />
+{/if}

@@ -1,7 +1,9 @@
 import { itemsClaimedBy } from './claims'
+import type { Receipt } from '@/receipts'
 import type { Item, State } from './store'
 
 export interface Props {
+  receipt: Receipt
   actor: string
 }
 

@@ -35,3 +35,5 @@ state:
   processing: 再等一下，马上就好
 action:
   label: 扫码
+extras:
+  included: 手续费，据推测已包含在价格中

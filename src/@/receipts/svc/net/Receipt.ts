@@ -41,6 +41,8 @@ export interface Item {
 }
 
 export interface Extra {
+  id: string
   name: string
   amount: number
+  included: boolean
 }

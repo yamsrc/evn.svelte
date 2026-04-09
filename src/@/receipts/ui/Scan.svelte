@@ -12,6 +12,7 @@
   const { oncomplete: callback, ...props }: Props = $props()
 
   let fullscreen = $state<Fullscreen | null>(null)
+  let process = $state<Process | null>(null)
   let input = $state<HTMLInputElement | null>(null)
   let file = $state<File | undefined>()
   let progress = $state<Readable<Progress> | undefined>()
@@ -31,6 +32,7 @@
     target.value = ''
     fullscreen?.show()
     progress = upload(file)
+    process?.clear()
   }
 
   function oncomplete(id: string) {
@@ -50,7 +52,13 @@
     </Button>
     {#snippet content()}
       {#if file && $progress}
-        <Process {file} progress={$progress} style={$style} onretry={onclick} {oncomplete} />
+        <Process
+          bind:this={process}
+          {file}
+          progress={$progress}
+          style={$style}
+          onretry={onclick}
+          {oncomplete} />
       {/if}
     {/snippet}
   </Fullscreen>

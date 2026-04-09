@@ -38,3 +38,5 @@ state:
   processing: जरा रुको, बस पहुँच ही गए हैं
 action:
   label: स्कैन करें
+extras:
+  included: फीस, जो शायद कीमतों में शामिल हैं

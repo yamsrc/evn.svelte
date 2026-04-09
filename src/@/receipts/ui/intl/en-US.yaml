@@ -40,3 +40,5 @@ state:
   processing: Hang tight, almost there
 action:
   label: Scan
+extras:
+  included: Fees, presumably included in the prices

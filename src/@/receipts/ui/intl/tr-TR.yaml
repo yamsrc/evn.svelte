@@ -38,3 +38,5 @@ state:
   processing: Biraz bekle, neredeyse bitti
 action:
   label: Tara
+extras:
+  included: Komisyonlar, muhtemelen fiyatlara dahil

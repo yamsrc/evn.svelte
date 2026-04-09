@@ -40,3 +40,5 @@ state:
   processing: Accroche-toi, on y est presque
 action:
   label: Scanner
+extras:
+  included: Frais, supposément inclus dans les prix

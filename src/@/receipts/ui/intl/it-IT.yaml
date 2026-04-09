@@ -40,3 +40,5 @@ state:
   processing: Resisti, ci siamo quasi
 action:
   label: Scansiona
+extras:
+  included: Commissioni, presumibilmente incluse nei prezzi

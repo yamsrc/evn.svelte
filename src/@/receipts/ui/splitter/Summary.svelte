@@ -2,14 +2,23 @@
   import { Coins } from '@/app/ui'
   import { Separator } from '$ui/separator'
   import * as Item from '$ui/item'
+  import { transition } from '$lib/tools'
   import { Fraction } from '$com/text'
   import { dict } from '../intl'
   import { store } from './store'
   import { summarize, type Props } from './Summary'
+  import { portionOf } from './Extras'
+  import Extra from './Extra.svelte'
 
-  const { actor }: Props = $props()
+  const { receipt, actor }: Props = $props()
   const lines = $derived(summarize($store, actor))
-  const total = $derived(lines.reduce((acc, line) => acc + line.price, 0))
+  const extras = $derived(receipt.extras.filter((e) => !e.included))
+  const portion = $derived(portionOf($store, actor))
+
+  const total = $derived(
+    lines.reduce((acc, line) => acc + line.price, 0) +
+      extras.reduce((acc, extra) => acc + extra.amount, 0) * portion,
+  )
 </script>
 
 <Item.Root class={['bg-constructive/20! border-constructive/30!']}>
@@ -32,9 +41,21 @@
       {/each}
     </ul>
     <Separator class="bg-foreground/50" />
-    <div class="flex justify-between">
-      <span class="font-medium">{$dict.overview.total}</span>
-      <Coins amount={total} sign="neutral" />
+    <div>
+      {#if extras.length > 0}
+        {#each extras as extra (extra.id)}
+          <Extra {receipt} {extra} {portion} />
+        {/each}
+      {/if}
+      <div
+        class="flex justify-between"
+        use:transition={{
+          name: 'receipt-summary-total',
+          classes: 'transition-morph transition-spring',
+        }}>
+        <span class="font-medium">{$dict.overview.total}</span>
+        <Coins amount={total} sign="neutral" />
+      </div>
     </div>
   </Item.Content>
 </Item.Root>
