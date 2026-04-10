@@ -1,10 +1,13 @@
 <script lang="ts">
+  import { onMount } from 'svelte'
   import { add } from '@/purchases'
   import { Button } from '$ui/button'
+  import { image } from '$lib/tools'
   import { dict as common } from '$lib/intl'
   import { Scrollable } from '$com/scrollable'
   import { dict } from './intl'
   import { benefits } from './Offer'
+  import { assets } from './Complete'
   import Benefit from './Benefit.svelte'
   import type { Props } from './Offer'
 
@@ -24,6 +27,8 @@
 
     next()
   }
+
+  onMount(() => image.preload(assets))
 </script>
 
 <p>{$dict.paywall.offer.headline}</p>

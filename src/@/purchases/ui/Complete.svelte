@@ -3,9 +3,10 @@
   import { account } from '@/iam'
   import { Avatar } from '@/accounts/ui'
   import { Button } from '$ui/button'
+  import { image } from '$lib/tools'
   import { open } from './store'
   import { dict } from './intl'
-  import type { Props } from './Complete'
+  import { type Props, assets } from './Complete'
 
   const { cta, next }: Props = $props()
 
@@ -18,7 +19,8 @@
 
 <div class="space-y-4">
   <div
-    class="congrats w-full aspect-7/5 border border-border rounded-lg overflow-hidden flex items-center justify-center">
+    class="w-full aspect-7/5 border border-border rounded-lg overflow-hidden flex items-center justify-center bg-background bg-cover bg-center bg-no-repeat"
+    style:background-image={image.imageSet(assets)}>
     <div class="flex flex-col items-center gap-2">
       <div class="bg-constructive rounded-full size-14 flex items-center justify-center text-white">
         <Check class="size-10" strokeWidth={1.5} />
@@ -48,16 +50,3 @@
     </Button>
   {/if}
 </div>
-
-<style>
-  .congrats {
-    background-image: url('/assets/w_630,h_450/confetti_iqzdvy.webp');
-    background-image: image-set(
-      '/assets/w_630,h_450/confetti_iqzdvy.webp' 1x,
-      '/assets/w_1260,h_900/confetti_iqzdvy.webp' 2x
-    );
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-</style>
