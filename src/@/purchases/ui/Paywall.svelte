@@ -18,7 +18,9 @@
 
 <Fullscreen bind:open={$open}>
   {#snippet content()}
-    <Screen class="relative overflow-y-auto no-scrollbar h-full pb-8 bg-background">
+    <Screen
+      class="relative overflow-y-auto no-scrollbar h-full pb-8 bg-background"
+      underlay={false}>
       <div class="absolute inset-0 overflow-hidden">
         <div class="rays absolute -inset-[10px] opacity-50"></div>
       </div>
