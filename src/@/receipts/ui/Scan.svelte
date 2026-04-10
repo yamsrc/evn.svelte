@@ -12,7 +12,7 @@
   import type { Readable } from 'svelte/store'
   import type { Props } from './Button'
 
-  const { oncomplete: callback, ...props }: Props = $props()
+  const { oncomplete: callback, id = 'scan-button', ...props }: Props = $props()
 
   const subscribed = $derived($account && premium($account))
 
@@ -22,10 +22,10 @@
   let progress = $state<Readable<Progress> | undefined>()
   let open = $state(false)
 
-  function onclick(e: MouseEvent) {
+  function onclick() {
     if (subscribed) return input?.click()
 
-    takeoff((e.target as HTMLElement).id, 'paywall', 'transition-spring transition-morph')
+    takeoff(id, 'paywall', 'transition-spring transition-morph')
 
     paywall({
       benefit: 'scan',
@@ -34,7 +34,10 @@
       callback: () => input?.click(),
     })
   }
+
   function oninput(e: Event) {
+    takeoff(id, 'receipt', 'transition-spring transition-morph')
+
     const target = e.target as HTMLInputElement
 
     file = target.files?.[0]
@@ -50,23 +53,14 @@
     if (open) callback?.(id)
   }
 
-  const style = $derived(
-    subscribed
-      ? styles('receipt', 'transition-spring transition-morph fullscreen-content')
-      : undefined,
-  )
+  const style = styles('receipt', 'transition-spring transition-morph fullscreen-content')
 </script>
 
 <div class="size-full">
   <input bind:this={input} type="file" class="sr-only" {oninput} accept="image/*" />
 
   <Fullscreen bind:this={fullscreen} bind:open controlled>
-    <Button
-      id="scan-button"
-      {onclick}
-      {...props}
-      style={$style}
-      class={['scan size-full', props.class]}>
+    <Button {id} {onclick} {...props} class={['scan size-full', props.class]}>
       <ScanText />
       <span>{$dict.action.label}</span>
     </Button>

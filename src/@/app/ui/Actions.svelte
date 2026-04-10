@@ -81,7 +81,6 @@
             {$dict.actions.expenses.split}
           </Dropdown.Item>
           <Scan
-            id="nav-actions-scan-button"
             variant="ghost"
             class={[Dropdown.itemVariants({ direction: 'row' }), '[&_svg]:text-primary!']}
             oncomplete={(id: string) => goto(`/dev/components/receipts/${id}/`)} />
