@@ -17,6 +17,7 @@
     onclick,
     onpress,
     class: classes,
+    message,
     ...props
   }: Props = $props()
 
@@ -120,9 +121,16 @@
         '-translate-y-1/2': position === 'bottom',
       },
       shown && 'translate-x-0 translate-y-0 opacity-100 scale-100',
+      'starting:scale-0',
     )}
     style={`position-anchor: --${name}; position-area: ${position} ${align};`}>
-    <div class="text-xs text-muted-foreground">{label}</div>
+    <div class="text-xs text-muted-foreground">
+      {#if message}
+        {@render message()}
+      {:else}
+        {label}
+      {/if}
+    </div>
     <Progress
       value={progress}
       class="h-1 [&_div[data-slot=progress-indicator]]:bg-destructive/90 [&_div[data-slot=progress-indicator]]:transition-none" />

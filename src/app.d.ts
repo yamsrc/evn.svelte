@@ -1,6 +1,6 @@
 // See https://svelte.dev/docs/kit/types#app.d.ts
 // for information about these interfaces
-import type { Value as ExpenseValue } from '@/expenses/ui/Editor/Context'
+import type { Value as ExpenseValue } from '@/expenses/ui/Editor'
 import type { ParticipantsState } from '@/app/ui/participants'
 
 declare global {

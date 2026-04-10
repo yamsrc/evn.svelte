@@ -15,12 +15,13 @@ export interface Receipt {
   extras: Extra[]
   done: Record<string, boolean>
   locked: boolean
+  locker: string | null
   autolock?: string
   _version: number
 }
 
 export interface Link {
-  type: 'groups' | 'adventures'
+  type: 'expense' | unknown
   id: string
 }
 

@@ -42,11 +42,13 @@
   <div
     class={['px-4 flex items-center justify-between', 'text-sm text-muted-foreground']}
     style={$style}>
-    <div class="inline-flex items-center">
+    <div class="inline-flex items-center h-8">
       <span class="py-1">{$dict.extras.included}</span>
-      <Button variant="ghost" size="sm" onclick={toggle}>
-        <Pencil />
-      </Button>
+      {#if !receipt.locked}
+        <Button variant="ghost" size="sm" onclick={toggle}>
+          <Pencil />
+        </Button>
+      {/if}
     </div>
     <Coins amount={total} sign="neutral" />
   </div>

@@ -52,11 +52,14 @@
       </div>
       {#if !receipt.locked}
         {#if allDone(receipt)}
-          <Lock {receipt} {actor} />
+          <Lock {receipt} />
         {:else}
           <Autoclose {receipt} {actor} payer={receipt.autolock} />
         {/if}
         <Feedback {actor} />
+      {:else if receipt.locker === account.id}
+        TODO: Continue (locked by me), waiting (locked by someone else), go to expense (linked
+        expense)
       {/if}
     </div>
   {:else}

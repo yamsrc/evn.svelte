@@ -1,33 +1,66 @@
 <script lang="ts">
-  import { ArrowRight, TriangleAlert } from '@lucide/svelte'
+  import { ArrowRight } from '@lucide/svelte'
+  import { Spinner } from '$ui/spinner'
   import { Button } from '$ui/button'
   import { transition } from '$lib/tools'
+  import { Hold } from '$com/buttons'
+  import { goto } from '$app/navigation'
   import { dict } from '../intl'
   import { store } from './store'
   import { stats } from './Progress'
-  import type { Props } from './Lock'
+  import { convert, type Props } from './Lock'
 
-  const { receipt, actor }: Props = $props()
+  const { receipt }: Props = $props()
   const { claimed, total } = $derived(stats($store))
 
-  function onclick(e: MouseEvent) {
-    const button = e.target as HTMLButtonElement
+  let busy = $state(false)
 
-    button.disabled = true
+  async function onclick() {
+    busy = true
 
-    console.debug('onclick', receipt.id, actor)
+    const expense = convert(receipt, $store)
+
+    await new Promise((resolve) => setTimeout(resolve, 500))
+
+    await goto('/expenses/editor/', { state: { expense } })
+
+    // const locked = await lock(receipt.id)
+
+    // if (locked instanceof Error) busy = false
   }
 </script>
 
-<div class="flex flex-col justify-center gap-2" use:transition={{ name: 'splitter-lock-button' }}>
-  <Button size="lg" {onclick}>
-    {$dict.close.label}
+{#snippet icon()}
+  {#if busy}
+    <Spinner />
+  {:else}
     <ArrowRight />
-  </Button>
+  {/if}
+{/snippet}
+
+<div class="flex flex-col justify-center gap-2" use:transition={{ name: 'splitter-lock-button' }}>
   {#if claimed < total}
-    <p class="text-muted-foreground flex justify-center items-center gap-1">
-      <TriangleAlert size={16} />
-      {$dict.unassigned(total - claimed)}
-    </p>
+    <Hold
+      variant="default"
+      size="lg"
+      {onclick}
+      position="top"
+      align="center"
+      disabled={busy}
+      label={$dict.unassigned(total - claimed)}>
+      {$dict.close.label}
+      {@render icon()}
+      {#snippet message()}
+        <p>Hold to continue</p>
+        <p class="flex justify-center items-center gap-1">
+          {$dict.unassigned(total - claimed)}
+        </p>
+      {/snippet}
+    </Hold>
+  {:else}
+    <Button size="lg" {onclick} disabled={busy}>
+      {$dict.close.label}
+      {@render icon()}
+    </Button>
   {/if}
 </div>

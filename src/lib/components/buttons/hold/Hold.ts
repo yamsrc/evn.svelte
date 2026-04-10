@@ -1,3 +1,4 @@
+import type { Snippet } from 'svelte'
 import type { ButtonProps } from '$ui/button'
 
 export interface Props extends Omit<ButtonProps, 'onpointerdown' | 'onkeydown'> {
@@ -7,4 +8,5 @@ export interface Props extends Omit<ButtonProps, 'onpointerdown' | 'onkeydown'> 
   position?: 'center' | 'left' | 'right' | 'top' | 'bottom'
   align?: 'center' | 'left' | 'right' | 'top' | 'bottom'
   onpress?: () => void
+  message?: Snippet
 }
