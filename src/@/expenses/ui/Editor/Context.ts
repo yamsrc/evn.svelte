@@ -57,6 +57,8 @@ export interface Context {
   value: Value
   mode: 'sums' | 'shares'
   snapshot: string
+  /** Total is derived from participants amounts, not entered manually */
+  derived?: boolean
 }
 
 export interface Value {
@@ -65,8 +67,6 @@ export interface Value {
   participants: Record<string, Participant>
   extras: Extra[]
   attachments: string[]
-  /** Total is calculated from participants */
-  calculated?: boolean
 }
 
 interface Participant {

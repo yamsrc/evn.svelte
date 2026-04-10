@@ -45,6 +45,7 @@
   )
 
   let total = $state(numbers.total(value))
+
   const split = $derived(payers.length > 1)
   const paid = $derived(numbers.paid(value))
   const overpaid = $derived(numbers.overpaid(value))
@@ -65,6 +66,7 @@
     get overpaid() {
       return overpaid
     },
+    derived: true,
   })
 
   const enough = $derived(paid > 0 && (payers.length === 1 || paid >= total))

@@ -23,8 +23,8 @@
   const participants = $derived(Object.keys(value.participants))
 
   function oninput() {
-    if (value.calculated === undefined && total === 0) value.calculated = true
-    else if (value.calculated !== true) return
+    if (ctx.derived === undefined && total === 0) ctx.derived = true
+    else if (ctx.derived !== true) return
 
     total = numbers.total(value)
   }
