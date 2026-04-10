@@ -14,7 +14,10 @@
 </script>
 
 <Actions>
-  <!-- do not remove this condition -->
+  <!--
+  do not remove this condition
+  receipt is undefined somehow before navigation
+  -->
   {#if receipt?.identities !== undefined}
     <Participants.Button
       class={[

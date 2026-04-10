@@ -113,14 +113,6 @@
     class={cn(
       'fixed z-1002 w-fit min-w-26 transition-all ease-in-out space-y-1',
       'bg-background/85 p-2 pt-1 rounded-md',
-      'opacity-0 scale-0',
-      {
-        'translate-x-1/2': position === 'left',
-        '-translate-x-1/2': position === 'right',
-        'translate-y-1/2': position === 'top',
-        '-translate-y-1/2': position === 'bottom',
-      },
-      shown && 'translate-x-0 translate-y-0 opacity-100 scale-100',
       'starting:scale-0',
     )}
     style={`position-anchor: --${name}; position-area: ${position} ${align};`}>
