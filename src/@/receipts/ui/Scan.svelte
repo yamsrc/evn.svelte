@@ -1,15 +1,20 @@
 <script lang="ts">
   import { ScanText } from '@lucide/svelte'
   import { upload, type Progress } from '@/receipts'
+  import { paywall } from '@/purchases/ui'
+  import { account } from '@/iam'
+  import { premium } from '@/accounts'
   import { Button } from '$ui/button'
-  import { styles } from '$lib/tools'
+  import { styles, takeoff } from '$lib/tools'
   import { Fullscreen } from '$com/fullscreen'
   import { dict } from './intl'
   import Process from './Progress.svelte'
   import type { Readable } from 'svelte/store'
   import type { Props } from './Button'
 
-  const { oncomplete: callback, ...props }: Props = $props()
+  const { oncomplete: callback, id = 'scan-button', ...props }: Props = $props()
+
+  const subscribed = $derived($account && premium($account))
 
   let fullscreen = $state<Fullscreen | null>(null)
   let process = $state<Process | null>(null)
@@ -19,10 +24,21 @@
   let open = $state(false)
 
   function onclick() {
-    input?.click()
+    if (subscribed) return input?.click()
+
+    takeoff(id, 'paywall', 'transition-spring transition-morph')
+
+    paywall({
+      benefit: 'scan',
+      label: $dict.action.label,
+      icon: ScanText,
+      callback: () => input?.click(),
+    })
   }
 
   function oninput(e: Event) {
+    takeoff(id, 'receipt', 'transition-spring transition-morph')
+
     const target = e.target as HTMLInputElement
 
     file = target.files?.[0]
@@ -39,14 +55,14 @@
     if (open) callback?.(id)
   }
 
-  const style = styles('receipt', 'transition-spring transition-morph')
+  const style = styles('receipt', 'transition-spring transition-morph fullscreen-content')
 </script>
 
-<div>
+<div class="size-full">
   <input bind:this={input} type="file" class="sr-only" {oninput} accept="image/*" />
 
   <Fullscreen bind:this={fullscreen} bind:open controlled>
-    <Button {onclick} {...props} style={$style}>
+    <Button {id} {onclick} {...props} class={['scan size-full', props.class]}>
       <ScanText />
       <span>{$dict.action.label}</span>
     </Button>

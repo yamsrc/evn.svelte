@@ -32,7 +32,8 @@ export const dictionaries = {
       "expenses": {
         "split": "تقسيم"
       },
-      "scan": "مسح"
+      "scan": "مسح",
+      "upload": "اختر ما يناسبك"
     },
     "nav": {
       "home": "الرئيسية",
@@ -55,7 +56,10 @@ export const dictionaries = {
         "example": (name, gender) => gender === "he" ? `${name} أضاف مصروفًا` : gender === "she" ? `${name} أضافت مصروفًا` : `${name} أضاف(ت) مصروفًا`
       },
       "background": {
-        "title": "الخلفية"
+        "title": "الخلفية",
+        "pattern": "نمط",
+        "picture": "صورة",
+        "cta": "تطبيق الخلفية"
       },
       "notifications": {
         "title": "الإشعارات"
@@ -249,7 +253,8 @@ export const dictionaries = {
       "expenses": {
         "split": "Aufteilen"
       },
-      "scan": "Scannen"
+      "scan": "Scannen",
+      "upload": "Wähle selbst"
     },
     "nav": {
       "home": "Startseite",
@@ -272,7 +277,10 @@ export const dictionaries = {
         "example": (name, gender) => gender === "he" ? `${name} hat eine Ausgabe hinzugefügt` : gender === "she" ? `${name} hat eine Ausgabe hinzugefügt` : `${name} hat eine Ausgabe hinzugefügt`
       },
       "background": {
-        "title": "Hintergrund"
+        "title": "Hintergrund",
+        "pattern": "Vorlage",
+        "picture": "Bild",
+        "cta": "Hintergrund anwenden"
       },
       "notifications": {
         "title": "Benachrichtigungen"
@@ -466,7 +474,8 @@ export const dictionaries = {
       "expenses": {
         "split": "Split"
       },
-      "scan": "Scan"
+      "scan": "Scan",
+      "upload": "Choose your own"
     },
     "nav": {
       "home": "Home",
@@ -489,7 +498,10 @@ export const dictionaries = {
         "example": (name, gender) => gender === "he" ? `${name} added an expense` : gender === "she" ? `${name} added an expense` : `${name} added an expense`
       },
       "background": {
-        "title": "Background"
+        "title": "Background",
+        "pattern": "Pattern",
+        "picture": "Picture",
+        "cta": "Apply background"
       },
       "notifications": {
         "title": "Notifications"
@@ -683,7 +695,8 @@ export const dictionaries = {
       "expenses": {
         "split": "Dividir"
       },
-      "scan": "Escanear"
+      "scan": "Escanear",
+      "upload": "Elige el tuyo"
     },
     "nav": {
       "home": "Inicio",
@@ -706,7 +719,10 @@ export const dictionaries = {
         "example": (name, gender) => gender === "he" ? `${name} añadió un gasto` : gender === "she" ? `${name} añadió un gasto` : `${name} añadió un gasto`
       },
       "background": {
-        "title": "Fondo"
+        "title": "Fondo",
+        "pattern": "Patrón",
+        "picture": "Foto",
+        "cta": "Aplicar fondo"
       },
       "notifications": {
         "title": "Notificaciones"
@@ -900,7 +916,8 @@ export const dictionaries = {
       "expenses": {
         "split": "Partager"
       },
-      "scan": "Scanner"
+      "scan": "Scanner",
+      "upload": "Choisis le tien"
     },
     "nav": {
       "home": "Accueil",
@@ -923,7 +940,10 @@ export const dictionaries = {
         "example": (name, gender) => gender === "he" ? `${name} a ajouté une dépense` : gender === "she" ? `${name} a ajouté une dépense` : `${name} a ajouté une dépense`
       },
       "background": {
-        "title": "Arrière-plan"
+        "title": "Arrière-plan",
+        "pattern": "Modèle",
+        "picture": "Photo",
+        "cta": "Appliquer l’arrière-plan"
       },
       "notifications": {
         "title": "Notifications"
@@ -1117,7 +1137,8 @@ export const dictionaries = {
       "expenses": {
         "split": "विभाजित करें"
       },
-      "scan": "स्कैन करें"
+      "scan": "स्कैन करें",
+      "upload": "अपना खुद चुनो"
     },
     "nav": {
       "home": "मुख्य पृष्ठ",
@@ -1140,7 +1161,10 @@ export const dictionaries = {
         "example": (name, gender) => gender === "he" ? `${name} ने खर्च जोड़ा` : gender === "she" ? `${name} ने खर्च जोड़ी` : `${name} ने खर्च जोड़ा(जोड़ी)`
       },
       "background": {
-        "title": "पृष्ठभूमि"
+        "title": "पृष्ठभूमि",
+        "pattern": "पैटर्न",
+        "picture": "तस्वीर",
+        "cta": "बैकग्राउंड लागू करें"
       },
       "notifications": {
         "title": "सूचनाएँ"
@@ -1334,7 +1358,8 @@ export const dictionaries = {
       "expenses": {
         "split": "Dividi"
       },
-      "scan": "Scansiona"
+      "scan": "Scansiona",
+      "upload": "Scegli il tuo"
     },
     "nav": {
       "home": "Home",
@@ -1357,7 +1382,10 @@ export const dictionaries = {
         "example": (name, gender) => gender === "he" ? `${name} ha aggiunto una spesa` : gender === "she" ? `${name} ha aggiunto una spesa` : `${name} ha aggiunto una spesa`
       },
       "background": {
-        "title": "Sfondo"
+        "title": "Sfondo",
+        "pattern": "Modello",
+        "picture": "Foto",
+        "cta": "Applica sfondo"
       },
       "notifications": {
         "title": "Notifiche"
@@ -1551,7 +1579,8 @@ export const dictionaries = {
       "expenses": {
         "split": "割り勘"
       },
-      "scan": "スキャン"
+      "scan": "スキャン",
+      "upload": "自分のを選んで"
     },
     "nav": {
       "home": "ホーム",
@@ -1574,7 +1603,10 @@ export const dictionaries = {
         "example": (name, gender) => `${name} さんが支出を追加しました`
       },
       "background": {
-        "title": "背景"
+        "title": "背景",
+        "pattern": "パターン",
+        "picture": "写真",
+        "cta": "背景を適用"
       },
       "notifications": {
         "title": "通知"
@@ -1768,7 +1800,8 @@ export const dictionaries = {
       "expenses": {
         "split": "나누기"
       },
-      "scan": "스캔"
+      "scan": "스캔",
+      "upload": "네 것으로 골라"
     },
     "nav": {
       "home": "홈",
@@ -1791,7 +1824,10 @@ export const dictionaries = {
         "example": (name, gender) => `${name}님이 지출을 추가했습니다`
       },
       "background": {
-        "title": "배경"
+        "title": "배경",
+        "pattern": "패턴",
+        "picture": "사진",
+        "cta": "배경 적용"
       },
       "notifications": {
         "title": "알림"
@@ -1985,7 +2021,8 @@ export const dictionaries = {
       "expenses": {
         "split": "Splitsen"
       },
-      "scan": "Scannen"
+      "scan": "Scannen",
+      "upload": "Kies je eigen"
     },
     "nav": {
       "home": "Home",
@@ -2008,7 +2045,10 @@ export const dictionaries = {
         "example": (name, gender) => gender === "he" ? `${name} heeft een uitgave toegevoegd` : gender === "she" ? `${name} heeft een uitgave toegevoegd` : `${name} heeft een uitgave toegevoegd`
       },
       "background": {
-        "title": "Achtergrond"
+        "title": "Achtergrond",
+        "pattern": "Patroon",
+        "picture": "Foto",
+        "cta": "Achtergrond toepassen"
       },
       "notifications": {
         "title": "Meldingen"
@@ -2202,7 +2242,8 @@ export const dictionaries = {
       "expenses": {
         "split": "Разделить"
       },
-      "scan": "Сканировать"
+      "scan": "Сканировать",
+      "upload": "Выбери своё"
     },
     "nav": {
       "home": "Главная",
@@ -2225,7 +2266,10 @@ export const dictionaries = {
         "example": (name, gender) => gender === "he" ? `${name} добавил расход` : gender === "she" ? `${name} добавила расход` : `${name} добавил(а) расход`
       },
       "background": {
-        "title": "Фон"
+        "title": "Фон",
+        "pattern": "Шаблон",
+        "picture": "Фото",
+        "cta": "Применить фон"
       },
       "notifications": {
         "title": "Уведомления"
@@ -2419,7 +2463,8 @@ export const dictionaries = {
       "expenses": {
         "split": "Gawanya"
       },
-      "scan": "Kagua"
+      "scan": "Kagua",
+      "upload": "Chagua yako mwenyewe"
     },
     "nav": {
       "home": "Mwanzo",
@@ -2442,7 +2487,10 @@ export const dictionaries = {
         "example": (name, gender) => gender === "he" ? `${name} ameongeza matumizi` : gender === "she" ? `${name} ameongeza matumizi` : `${name} ameongeza matumizi`
       },
       "background": {
-        "title": "Mandharinyuma"
+        "title": "Mandharinyuma",
+        "pattern": "Mfano",
+        "picture": "Picha",
+        "cta": "Tumia mandharinyuma"
       },
       "notifications": {
         "title": "Arifa"
@@ -2636,7 +2684,8 @@ export const dictionaries = {
       "expenses": {
         "split": "Böl"
       },
-      "scan": "Tara"
+      "scan": "Tara",
+      "upload": "Kendininkini seç"
     },
     "nav": {
       "home": "Ana Sayfa",
@@ -2659,7 +2708,10 @@ export const dictionaries = {
         "example": (name, gender) => `${name} bir harcama ekledi`
       },
       "background": {
-        "title": "Arka plan"
+        "title": "Arka plan",
+        "pattern": "Şablon",
+        "picture": "Fotoğraf",
+        "cta": "Arka planı uygula"
       },
       "notifications": {
         "title": "Bildirimler"
@@ -2853,7 +2905,8 @@ export const dictionaries = {
       "expenses": {
         "split": "Розділити"
       },
-      "scan": "Сканувати"
+      "scan": "Сканувати",
+      "upload": "Вибери своє"
     },
     "nav": {
       "home": "Головна",
@@ -2876,7 +2929,10 @@ export const dictionaries = {
         "example": (name, gender) => gender === "he" ? `${name} додав витрату` : gender === "she" ? `${name} додала витрату` : `${name} додав(ла) витрату`
       },
       "background": {
-        "title": "Тло"
+        "title": "Тло",
+        "pattern": "Шаблон",
+        "picture": "Фото",
+        "cta": "Застосувати фон"
       },
       "notifications": {
         "title": "Сповіщення"
@@ -3070,7 +3126,8 @@ export const dictionaries = {
       "expenses": {
         "split": "分摊"
       },
-      "scan": "扫描"
+      "scan": "扫描",
+      "upload": "选你自己的"
     },
     "nav": {
       "home": "首页",
@@ -3093,7 +3150,10 @@ export const dictionaries = {
         "example": (name, gender) => `${name} 添加了一笔支出`
       },
       "background": {
-        "title": "背景"
+        "title": "背景",
+        "pattern": "模板",
+        "picture": "照片",
+        "cta": "应用背景"
       },
       "notifications": {
         "title": "通知"

@@ -24,6 +24,7 @@ actions:
   expenses:
     split: Splitsen
   scan: Scannen
+  upload: Kies je eigen
 nav:
   home: Home
   profile: Ik
@@ -53,6 +54,9 @@ profile:
       heeft een uitgave toegevoegd`
   background:
     title: Achtergrond
+    pattern: Patroon
+    picture: Foto
+    cta: Achtergrond toepassen
   notifications:
     title: Meldingen
 form:

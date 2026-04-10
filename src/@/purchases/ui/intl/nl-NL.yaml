@@ -1,0 +1,24 @@
+paywall:
+  title: Evnly Premium
+  offer:
+    headline: Evn wordt nog beter met een abonnement!
+    promo: Evnly Premium is tijdelijk helemaal gratis beschikbaar.
+    cta: Begin je gratis proefperiode
+    disclaimer: >-
+      Gratis proefperiode is alleen beschikbaar voor in aanmerking komende
+      nieuwe abonnees. Annuleer minimaal 24 uur voor het einde van de
+      proefperiode om kosten te voorkomen. Na de gratis proefperiode vindt
+      automatische verlenging plaats; opzeggen kan op elk moment.
+    footnote: >-
+      * Eén Premium-gebruiker maakt het markeren van items mogelijk voor alle
+      deelnemers. In avonturen wordt alleen de tekst van het ontvangstbewijs
+      opgeslagen (geen visuele verdeling).
+    trial: |-
+      !js
+      (price) => `7 dagen gratis, daarna ${price}/jaar`
+  complete:
+    thanks: Bedankt voor je abonnement op Envly Premium
+    avatarNote: Vanaf nu zien andere Evnly-gebruikers jouw avatar er zo uit.
+    featuresNote: >-
+      Bovendien kun je vanaf nu de interface verder aanpassen in je profiel,
+      bonnetjes scannen en herkennen, en meer.

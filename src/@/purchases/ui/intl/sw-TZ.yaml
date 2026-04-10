@@ -1,0 +1,23 @@
+paywall:
+  title: Evnly Premium
+  offer:
+    headline: Evn inakuwa bora zaidi ukiwa na usajili!
+    promo: Kwa muda mfupi, Evnly Premium inapatikana bure kabisa.
+    cta: Anza jaribio lako bure
+    disclaimer: >-
+      Jaribio la bure linapatikana tu kwa wateja wapya wanaostahiki. Ghairi saa
+      24 kabla jaribio haliijaisha ili kuepuka malipo. Baada ya kipindi cha
+      jaribio la bure, ada itakatwa kila mara, unaweza kughairi wakati wowote.
+    footnote: >-
+      * Mtumiaji mmoja wa Premium huwasha uandikaji wa bidhaa kwa washiriki
+      wote. Katika safari, maandishi ya risiti pekee ndiyo yanayahifadhiwa
+      (hakuna mgawanyo wa kiona).
+    trial: |-
+      !js
+      (price) => `Bure kwa siku 7, halafu ${price}/mwaka`
+  complete:
+    thanks: Asante kwa kujisajili kwenye Envly Premium
+    avatarNote: Kuanzia sasa, watumiaji wengine wa Evnly wataona avatar yako hivi.
+    featuresNote: >-
+      Zaidi ya hayo, kuanzia sasa unaweza kubinafsisha zaidi muonekano kwenye
+      wasifu wako, kutambaza na kutambua risiti na mengi zaidi.

@@ -64,6 +64,8 @@
 
       if (triggerRef?.contains(target) || contentRef?.contains(target)) return
 
+      if ((target as Element).closest?.('[data-overlay]')) return
+
       e.preventDefault()
       e.stopPropagation()
 

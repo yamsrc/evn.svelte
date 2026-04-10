@@ -24,6 +24,7 @@ actions:
   expenses:
     split: Partager
   scan: Scanner
+  upload: Choisis le tien
 nav:
   home: Accueil
   profile: Moi
@@ -53,6 +54,9 @@ profile:
       dépense`
   background:
     title: Arrière-plan
+    pattern: Modèle
+    picture: Photo
+    cta: Appliquer l’arrière-plan
   notifications:
     title: Notifications
 form:

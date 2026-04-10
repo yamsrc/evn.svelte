@@ -36,13 +36,13 @@
           'shrink-0 border h-full no-scrollbar',
           editable && 'overflow-y-auto overscroll-y-contain touch-pan-y snap-y snap-mandatory',
         ]}>
-        <Fullscreen class="h-[300px]" fragile onshow={() => onshow(attachment)}>
+        <Fullscreen class="h-[300px]" fragile onshow={() => onshow(attachment)} x={false}>
           <Picture
             id={attachment}
             {path}
             variant="300x600?"
-            class={['w-full max-h-full object-contain rounded-md', editable && 'snap-center']}
-            style={`${zoomed === attachment ? `view-transition-name: attachment-${attachment};` : ''} view-transition-class: transition-spring transition-morph;`} />
+            class={['h-full object-contain rounded-md', editable && 'snap-center']}
+            style={`${zoomed === attachment ? `view-transition-name: attachment-${attachment};` : ''} view-transition-class: transition-spring transition-morph fullscreen-content;`} />
           {#snippet overlay()}
             {#if editable}
               <div class="px-5 pt-2 tim:pt-[env(safe-area-inset-top)] flex justify-end">

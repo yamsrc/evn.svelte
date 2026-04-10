@@ -40,6 +40,6 @@
   }
 
   ::view-transition-group(.dropdown-content) {
-    z-index: 49;
+    z-index: 1;
   }
 </style>

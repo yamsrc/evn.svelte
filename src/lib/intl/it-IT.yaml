@@ -24,6 +24,7 @@ actions:
   expenses:
     split: Dividi
   scan: Scansiona
+  upload: Scegli il tuo
 nav:
   home: Home
   profile: Io
@@ -53,6 +54,9 @@ profile:
       una spesa`
   background:
     title: Sfondo
+    pattern: Modello
+    picture: Foto
+    cta: Applica sfondo
   notifications:
     title: Notifiche
 form:

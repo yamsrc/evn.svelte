@@ -24,6 +24,7 @@ actions:
   expenses:
     split: Aufteilen
   scan: Scannen
+  upload: Wähle selbst
 nav:
   home: Startseite
   profile: Ich
@@ -53,6 +54,9 @@ profile:
       eine Ausgabe hinzugefügt`
   background:
     title: Hintergrund
+    pattern: Vorlage
+    picture: Bild
+    cta: Hintergrund anwenden
   notifications:
     title: Benachrichtigungen
 form:

@@ -54,6 +54,7 @@
   --tracking-normal: -0.025em;
   --spacing: 0.25rem;
   --shadow-color: rgb(0 0 0 / 0.1);
+  --gradient-premium: linear-gradient(135deg, #d2a754 0%, #ffe1b4 35%, #e8ba66 65%, #c9984e 100%);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -166,6 +167,24 @@
   }
 }
 
+@utility bg-premium {
+  background: var(--gradient-premium);
+}
+
+@utility text-premium {
+  background: var(--gradient-premium);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility border-premium {
+  border-color: transparent;
+  background:
+    linear-gradient(var(--background), var(--background)) padding-box,
+    var(--gradient-premium) border-box;
+}
+
 @custom-variant standalone {
   @media (display-mode: standalone) {
     @slot;
@@ -199,7 +218,6 @@
   button:not([disabled]) {
     @apply cursor-pointer;
   }
-
 
   button:not([disabled]):active {
     scale: 0.98;
@@ -255,7 +273,7 @@
   ::view-transition-old(*.transition-spring),
   ::view-transition-new(*.transition-spring) {
     animation-duration: 300ms;
-    animation-timing-function: cubic-bezier(0.2, 1.4, 0.4, 1);
+    animation-timing-function: cubic-bezier(0.2, 1.2, 0.2, 1);
   }
 
   ::view-transition-old(.transition-morph),

@@ -4,9 +4,9 @@
   import Underlay from './Underlay.svelte'
   import type { Props } from './Screen'
 
-  const { children, unsafe = false, class: classes }: Props = $props()
+  const { children, unsafe = false, class: classes, underlay = true }: Props = $props()
 
-  const iosStatusBarUnderlay = ios && safari && (standalone || shell)
+  const iosStatusBarUnderlay = ios && safari && (standalone || shell) && underlay
 </script>
 
 <div

@@ -24,6 +24,7 @@ actions:
   expenses:
     split: Böl
   scan: Tara
+  upload: Kendininkini seç
 nav:
   home: Ana Sayfa
   profile: Ben
@@ -47,6 +48,9 @@ profile:
       (name, gender) => `${name} bir harcama ekledi`
   background:
     title: Arka plan
+    pattern: Şablon
+    picture: Fotoğraf
+    cta: Arka planı uygula
   notifications:
     title: Bildirimler
 form:

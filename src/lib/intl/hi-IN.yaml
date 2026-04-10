@@ -24,6 +24,7 @@ actions:
   expenses:
     split: विभाजित करें
   scan: स्कैन करें
+  upload: अपना खुद चुनो
 nav:
   home: मुख्य पृष्ठ
   profile: मैं
@@ -51,6 +52,9 @@ profile:
       "she" ? `${name} ने खर्च जोड़ी` : `${name} ने खर्च जोड़ा(जोड़ी)`
   background:
     title: पृष्ठभूमि
+    pattern: पैटर्न
+    picture: तस्वीर
+    cta: बैकग्राउंड लागू करें
   notifications:
     title: सूचनाएँ
 form:

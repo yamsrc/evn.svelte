@@ -1,0 +1,20 @@
+import type { ClassValue } from 'svelte/elements'
+
+interface Entry {
+  id: string
+}
+
+export interface Props {
+  picture: string
+  presets: readonly string[]
+  upload: (file: File) => Promise<Entry | Error>
+  variant: string
+  card: ClassValue
+  /** @default 'end' */
+  placement?: 'start' | 'end'
+  /** view-transition-name applied to picked item */
+  vt?: string
+  /** wrap pick/upload actions (paywall) */
+  gate?: (run: () => void) => void
+  onpick?: (picture: string) => void
+}

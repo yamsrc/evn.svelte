@@ -24,6 +24,7 @@ actions:
   expenses:
     split: Розділити
   scan: Сканувати
+  upload: Вибери своє
 nav:
   home: Головна
   profile: Я
@@ -52,6 +53,9 @@ profile:
       "she" ? `${name} додала витрату` : `${name} додав(ла) витрату`
   background:
     title: Тло
+    pattern: Шаблон
+    picture: Фото
+    cta: Застосувати фон
   notifications:
     title: Сповіщення
 form:

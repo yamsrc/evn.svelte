@@ -48,9 +48,11 @@
     use:portal
     role="button"
     tabindex="0"
+    data-overlay
     data-slot="fullscreen-container"
     onpointerdown={fragile && !controlled ? hide : undefined}
-    class="fixed inset-0 z-1001 flex items-center justify-center bg-background/75 backdrop-blur-sm">
+    class="fixed inset-0 z-1001 flex items-center justify-center bg-background/90"
+    style="view-transition-name: fullscreen;">
     {#if content}
       {@render content()}
     {:else}
@@ -65,7 +67,7 @@
       <Button
         variant="ghost"
         size="icon"
-        class="absolute top-4 right-4 tim:top-[env(safe-area-inset-top)]"
+        class="absolute top-4 inset-e-4 tim:top-[env(safe-area-inset-top)]"
         onclick={hide}>
         <X />
       </Button>
@@ -82,7 +84,11 @@
 {/if}
 
 <style>
-  :global(body:has([data-slot='fullscreen-container'])) :global(.shell-navigation) {
-    display: none;
+  ::view-transition-group(fullscreen) {
+    z-index: 2;
+  }
+
+  ::view-transition-group(.fullscreen-content) {
+    z-index: 3;
   }
 </style>

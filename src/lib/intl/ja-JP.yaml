@@ -24,6 +24,7 @@ actions:
   expenses:
     split: 割り勘
   scan: スキャン
+  upload: 自分のを選んで
 nav:
   home: ホーム
   profile: 私
@@ -45,6 +46,9 @@ profile:
       (name, gender) => `${name} さんが支出を追加しました`
   background:
     title: 背景
+    pattern: パターン
+    picture: 写真
+    cta: 背景を適用
   notifications:
     title: 通知
 form:

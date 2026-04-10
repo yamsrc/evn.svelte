@@ -24,6 +24,7 @@ actions:
   expenses:
     split: تقسيم
   scan: مسح
+  upload: اختر ما يناسبك
 nav:
   home: الرئيسية
   profile: أنا
@@ -49,6 +50,9 @@ profile:
       "she" ? `${name} أضافت مصروفًا` : `${name} أضاف(ت) مصروفًا`
   background:
     title: الخلفية
+    pattern: نمط
+    picture: صورة
+    cta: تطبيق الخلفية
   notifications:
     title: الإشعارات
 form:

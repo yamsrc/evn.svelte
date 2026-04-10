@@ -6,5 +6,5 @@
 </script>
 
 <Picker.Option
-  class={['w-[calc((100%-var(--spacing))/2)] max-w-64 shrink-0', classes]}
+  class={['w-[calc((100%-var(--spacing)*2)/2)] max-w-64 shrink-0', classes]}
   {...props} />

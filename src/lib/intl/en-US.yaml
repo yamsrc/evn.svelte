@@ -24,6 +24,7 @@ actions:
   expenses:
     split: Split
   scan: Scan
+  upload: Choose your own
 nav:
   home: Home
   profile: Me
@@ -51,6 +52,9 @@ profile:
       === "she" ? `${name} added an expense` : `${name} added an expense`
   background:
     title: Background
+    pattern: Pattern
+    picture: Picture
+    cta: Apply background
   notifications:
     title: Notifications
 form:

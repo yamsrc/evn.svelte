@@ -1,0 +1,30 @@
+context: Mount 'purchases' context
+inputs:
+  paywall:
+    title:
+      input: Evnly Premium
+      context: paywall h1
+    offer:
+      headline:
+        input: Evn better with subscription!
+        context: Play on words - Evn is action of spliting (app purpose)
+      promo:
+        input: For a limited time, Evnly Premium is available completely free.
+      cta:
+        input: Start your free trial
+        context: button
+      disclaimer:
+        input: Free trial available only to eligible first time subscribers. Cancel 24 hours before trial ends to avoid charge. Recurring billing after free trial, cancel anytime.
+        context: legal
+      footnote:
+        input: "* One Premium user enables item marking for all participants. In adventures, only receipt text is saved (no visual split)."
+        context: asterisk note
+      trial:
+        input: 7-day free, then {price}/year
+    complete:
+      thanks:
+        input: Thank you for subscribing to Envly Premium
+      avatarNote:
+        input: For a start, other Evnly users from now on will see your avatar like this.
+      featuresNote:
+        input: Plus, from now on you can further customize the interface in your profile, scan and recognize receipts and more.

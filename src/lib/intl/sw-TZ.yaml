@@ -24,6 +24,7 @@ actions:
   expenses:
     split: Gawanya
   scan: Kagua
+  upload: Chagua yako mwenyewe
 nav:
   home: Mwanzo
   profile: Mimi
@@ -52,6 +53,9 @@ profile:
       === "she" ? `${name} ameongeza matumizi` : `${name} ameongeza matumizi`
   background:
     title: Mandharinyuma
+    pattern: Mfano
+    picture: Picha
+    cta: Tumia mandharinyuma
   notifications:
     title: Arifa
 form:

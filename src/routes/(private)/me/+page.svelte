@@ -7,7 +7,7 @@
   import { Feedback } from '@/feedback/ui'
   import { Section } from '@/app/ui'
   import { Header } from '@/app/ui'
-  import { Background } from '@/app/ui'
+  import { Wallpaper } from '@/app/ui'
   import { Action } from '@/app/ui'
   import { Cosmetics, Delete, Grammar, Language } from '@/accounts/ui'
   import { clicks } from '$lib/tools'
@@ -49,7 +49,9 @@
   </Section>
 
   <Section>
-    <Cosmetics account={$account} pictureStyle="view-transition-name: my-avatar;" />
+    <Cosmetics
+      account={$account}
+      pictureStyle="view-transition-name: my-avatar; view-transition-class: transition-morph;" />
   </Section>
 
   <Separator class="mt-5" />
@@ -69,9 +71,7 @@
 
   <Section class="space-y-2">
     <h2>{$dict.profile.background.title}</h2>
-    <div class="border h-40 rounded-lg bg-background overflow-hidden">
-      <Background scrollable />
-    </div>
+    <Wallpaper />
   </Section>
 
   <Section class="space-y-2">

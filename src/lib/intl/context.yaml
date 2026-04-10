@@ -59,6 +59,8 @@ inputs:
     scan:
       input: Scan
       context: button label
+    upload:
+      input: Choose your own
   nav:
     home:
       input: Home
@@ -93,6 +95,12 @@ inputs:
     background:
       title:
         input: Background
+      pattern:
+        input: Pattern
+      picture:
+        input: Picture
+      cta:
+        input: Apply background
     notifications:
       title:
         input: Notifications
@@ -311,3 +319,4 @@ mounts:
   groups: ../../@/groups/ui/intl
   receipts: ../../@/receipts/ui/intl
   adventures: ../../@/adventures/ui/intl
+  purchases: ../../@/purchases/ui/intl

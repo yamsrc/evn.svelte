@@ -24,6 +24,7 @@ actions:
   expenses:
     split: Dividir
   scan: Escanear
+  upload: Elige el tuyo
 nav:
   home: Inicio
   profile: Yo
@@ -52,6 +53,9 @@ profile:
       "she" ? `${name} añadió un gasto` : `${name} añadió un gasto`
   background:
     title: Fondo
+    pattern: Patrón
+    picture: Foto
+    cta: Aplicar fondo
   notifications:
     title: Notificaciones
 form:

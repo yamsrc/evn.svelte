@@ -1,0 +1,22 @@
+paywall:
+  title: Evnly Premium
+  offer:
+    headline: Evn better with a subscription!
+    promo: For a limited time, Evnly Premium is available completely free.
+    cta: Start your free trial
+    disclaimer: >-
+      Free trial available only to eligible first time subscribers. Cancel 24
+      hours before trial ends to avoid charge. Recurring billing after free
+      trial, cancel anytime.
+    footnote: >-
+      * One Premium user enables item marking for all participants. In
+      adventures, only receipt text is saved (no visual split).
+    trial: |-
+      !js
+      (price) => `7-day free, then ${price}/year`
+  complete:
+    thanks: Thank you for subscribing to Envly Premium
+    avatarNote: From now on, other Evnly users will see your avatar like this.
+    featuresNote: >-
+      Plus, from now on you can further customize the interface in your profile,
+      scan and recognize receipts, and more.

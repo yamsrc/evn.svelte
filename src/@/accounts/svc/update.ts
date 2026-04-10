@@ -12,8 +12,11 @@ export async function update(identity: string, properties: net.Editable): Promis
 
   accounts.set(res.id, res)
 
-  if (properties.background !== undefined)
-    track('Background', { background: properties.background })
+  if (properties.wallpaper !== undefined)
+    track('Wallpaper', {
+      pattern: properties.wallpaper?.pattern ?? null,
+      effect: properties.wallpaper?.effect ?? null,
+    })
 
   if (properties.grammar !== undefined)
     track('Grammar', { grammar: properties.grammar })

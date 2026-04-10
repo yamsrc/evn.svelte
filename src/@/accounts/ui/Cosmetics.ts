@@ -1,9 +1,14 @@
-import type { Props as CosmeticsProps } from '@/app/ui/cosmetics'
+import type { ClassValue } from 'svelte/elements'
 import type { Account } from '@/accounts'
 
-type AccountLike = Pick<Account, 'id' | 'name' | 'picture'>
+type AccountLike = Pick<Account, 'id' | 'name' | 'picture' | 'premium'>
 
-export interface Props extends Omit<CosmeticsProps, 'value' | 'onchange'> {
+export interface Props {
   account: AccountLike
+  /** @default false */
   managed?: boolean
+  /** @default true */
+  editable?: boolean
+  pictureStyle?: string
+  class?: ClassValue
 }
