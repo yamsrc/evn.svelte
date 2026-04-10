@@ -6,7 +6,7 @@
 
   const { children, unsafe = false, class: classes, underlay = true }: Props = $props()
 
-  const iosStatusBarUnderlay = ios && safari && (standalone || shell) && underlay
+  const iosStatusBarUnderlay = $derived(ios && safari && (standalone || shell) && underlay)
 </script>
 
 <div
