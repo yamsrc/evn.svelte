@@ -273,7 +273,7 @@
   ::view-transition-old(*.transition-spring),
   ::view-transition-new(*.transition-spring) {
     animation-duration: 300ms;
-    animation-timing-function: cubic-bezier(0.2, 1.4, 0.4, 1);
+    animation-timing-function: cubic-bezier(0.2, 1.2, 0.2, 1);
   }
 
   ::view-transition-old(.transition-morph),

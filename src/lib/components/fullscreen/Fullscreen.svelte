@@ -48,6 +48,7 @@
     use:portal
     role="button"
     tabindex="0"
+    data-overlay
     data-slot="fullscreen-container"
     onpointerdown={fragile && !controlled ? hide : undefined}
     class="fixed inset-0 z-1001 flex items-center justify-center bg-background/90"
@@ -83,11 +84,11 @@
 {/if}
 
 <style>
-  :global(body:has([data-slot='fullscreen-container'])) :global(.shell-navigation) {
-    display: none;
+  ::view-transition-group(fullscreen) {
+    z-index: 2;
   }
 
   ::view-transition-group(.fullscreen-content) {
-    z-index: 1;
+    z-index: 3;
   }
 </style>

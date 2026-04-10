@@ -106,4 +106,8 @@
       mix-blend-mode: difference;
     }
   }
+
+  ::view-transition-group(paywall) {
+    z-index: 4;
+  }
 </style>
