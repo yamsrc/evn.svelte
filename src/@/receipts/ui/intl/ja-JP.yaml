@@ -36,4 +36,5 @@ state:
 action:
   label: スキャン
 extras:
-  included: 手数料―料金に含まれていると思われます
+  included: 手数料と割引はすでに含まれているとみなします
+  incomplete: すべてのアイテムが請求された後に管理できます

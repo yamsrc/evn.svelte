@@ -27,7 +27,7 @@
       {/if}
     </Button>
   </div>
-  <Coins {amount} sign="neutral" />
+  <Coins {amount} sign="neutral" absolute={false} />
 </div>
 
 <style>

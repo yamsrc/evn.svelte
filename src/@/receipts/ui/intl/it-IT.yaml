@@ -41,4 +41,5 @@ state:
 action:
   label: Scansiona
 extras:
-  included: Commissioni, presumibilmente incluse nei prezzi
+  included: Si considera che commissioni e sconti siano già inclusi
+  incomplete: Puoi gestirlo dopo che tutti gli articoli sono stati reclamati

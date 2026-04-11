@@ -5,7 +5,7 @@
   import { locale } from '$lib/intl'
   import type { Props } from './Coins'
 
-  const { id, amount, prefix, sign, class: classes }: Props = $props()
+  const { id, amount, prefix, sign, absolute = true, class: classes }: Props = $props()
 
   const color = $derived.by(() => {
     if (sign === 'neutral' || (sign === undefined && amount === 0)) return 'var(--muted-foreground)'
@@ -25,7 +25,9 @@
 
 <div {id} class={cn('flex items-center gap-1', classes)}>
   {#if amount !== undefined}
-    <div class="font-bold">{prefix ? `${prefix} ` : ''}{currency(Math.abs(amount), $locale)}</div>
+    <div class="font-bold">
+      {prefix ? `${prefix} ` : ''}{currency(absolute ? Math.abs(amount) : amount, $locale)}
+    </div>
   {/if}
   <div>
     <Coins size={16} {color} class="transition-colors" />

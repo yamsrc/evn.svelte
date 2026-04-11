@@ -39,4 +39,5 @@ state:
 action:
   label: Changanua
 extras:
-  included: Ada, zinazoaminika zimejumuishwa kwenye bei
+  included: Inachukuliwa kuwa ada na punguzo tayari vimejumuishwa
+  incomplete: Inaweza kudhibitiwa baada ya vitu vyote kudaiwa

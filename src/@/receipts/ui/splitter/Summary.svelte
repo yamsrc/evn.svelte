@@ -15,10 +15,10 @@
   const extras = $derived(receipt.extras.filter((e) => !e.included))
   const portion = $derived(portionOf($store, actor))
 
-  const total = $derived(
-    lines.reduce((acc, line) => acc + line.price, 0) +
-      extras.reduce((acc, extra) => acc + extra.amount, 0) * portion,
-  )
+  const totalByLines = $derived(lines.reduce((acc, line) => acc + line.price, 0))
+  const totalByExtras = $derived(extras.reduce((acc, extra) => acc + extra.amount, 0) * portion)
+
+  const total = $derived(totalByLines + totalByExtras)
 </script>
 
 <Item.Root class={['bg-constructive/20! border-constructive/30!']}>

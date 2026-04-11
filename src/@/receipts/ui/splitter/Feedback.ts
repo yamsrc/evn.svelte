@@ -1,3 +1,7 @@
+import type { Receipt } from '@/receipts'
+import type { AccountLike } from './Splitter'
+
 export interface Props {
-  actor: string
+  receipt: Receipt
+  account: AccountLike
 }

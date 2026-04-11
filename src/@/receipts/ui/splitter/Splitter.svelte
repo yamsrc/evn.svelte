@@ -1,8 +1,9 @@
 <script lang="ts">
   import Failed from '../Failed.svelte'
-  import { sync } from './store'
+  import { sync, store } from './store'
   import Summary from './Summary.svelte'
   import Progress from './Progress.svelte'
+  import { statistics } from './Progress'
   import Pending from './Pending.svelte'
   import Participants from './Participants.svelte'
   import Lock from './Lock.svelte'
@@ -16,7 +17,7 @@
 
   let { receipt, account, actor = $bindable(account.id) }: Props = $props()
 
-  // let actor = $state(account.id)
+  const stats = $derived(statistics($store))
 
   export function leave() {
     return participants?.remove()
@@ -47,16 +48,16 @@
       <div>
         <Summary {receipt} {actor} />
         {#if receipt.extras.length > 0}
-          <Extras {receipt} />
+          <Extras {receipt} {stats} />
         {/if}
       </div>
       {#if !receipt.locked}
         {#if allDone(receipt)}
-          <Lock {receipt} />
+          <Lock {receipt} {stats} />
         {:else}
           <Autoclose {receipt} {actor} payer={receipt.autolock} />
         {/if}
-        <Feedback {actor} />
+        <Feedback {receipt} {account} />
       {:else if receipt.locker === account.id}
         TODO: Continue (locked by me), waiting (locked by someone else), go to expense (linked
         expense)

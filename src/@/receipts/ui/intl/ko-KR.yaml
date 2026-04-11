@@ -36,4 +36,5 @@ state:
 action:
   label: 스캔
 extras:
-  included: 수수료, 아마 가격에 포함되어 있을 거예요
+  included: 수수료와 할인은 이미 포함된 것으로 간주돼
+  incomplete: 모든 아이템이 청구된 후에 관리할 수 있어요

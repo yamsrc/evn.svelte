@@ -35,7 +35,7 @@
     false,
   )
 
-  const { sections, position = 'start', underlay = false, class: classes }: Props = $props()
+  const { sections = [], position = 'start', underlay = false, class: classes }: Props = $props()
   const action = $derived($actions.at(-1) ?? null)
 
   const active = $derived(sections.find((section) => match(section, page.url.pathname)))

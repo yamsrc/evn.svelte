@@ -1,9 +1,11 @@
 import { claimedCostBy } from './Participants'
 import type { Receipt } from '@/receipts'
 import type { State } from './store'
+import type { Statistics } from './Progress'
 
 export interface Props {
   receipt: Receipt
+  stats: Statistics
 }
 
 /**

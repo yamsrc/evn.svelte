@@ -62,7 +62,8 @@ export const dictionaries = {
       "label": "مسح"
     },
     "extras": {
-      "included": "العمولات، من المفترض أنها مشمولة في الأسعار"
+      "included": "يُفترض أن الرسوم والخصومات مشمولة بالفعل",
+      "incomplete": "يمكنك إدارة ذلك بعد أن تتم المطالبة بجميع البنود"
     }
   },
   "de-DE": {
@@ -125,7 +126,8 @@ export const dictionaries = {
       "label": "Scannen"
     },
     "extras": {
-      "included": "Vermutlich in den Preisen enthaltene Gebühren"
+      "included": "Gebühren und Rabatte sind bereits enthalten",
+      "incomplete": "Kann verwaltet werden, sobald alle Posten beansprucht wurden"
     }
   },
   "en-US": {
@@ -188,7 +190,8 @@ export const dictionaries = {
       "label": "Scan"
     },
     "extras": {
-      "included": "Fees, presumably included in the prices"
+      "included": "Fees and discounts are considered included",
+      "incomplete": "You can manage it after all items are claimed"
     }
   },
   "es-ES": {
@@ -251,7 +254,8 @@ export const dictionaries = {
       "label": "Escanear"
     },
     "extras": {
-      "included": "Comisiones, supuestamente incluidas en los precios"
+      "included": "Se da por hecho que las tarifas y descuentos ya están incluidos",
+      "incomplete": "Se puede gestionar después de que se hayan reclamado todos los artículos"
     }
   },
   "fr-FR": {
@@ -314,7 +318,8 @@ export const dictionaries = {
       "label": "Scanner"
     },
     "extras": {
-      "included": "Frais, supposément inclus dans les prix"
+      "included": "Les frais et les réductions sont considérés comme inclus",
+      "incomplete": "Tu pourras gérer ça une fois que tous les articles auront été réclamés"
     }
   },
   "hi-IN": {
@@ -377,7 +382,8 @@ export const dictionaries = {
       "label": "स्कैन करें"
     },
     "extras": {
-      "included": "फीस, जो शायद कीमतों में शामिल हैं"
+      "included": "माना गया है कि फीस और छूट पहले से शामिल हैं",
+      "incomplete": "सभी आइटम क्लेम हो जाने के बाद इसे मैनेज किया जा सकता है"
     }
   },
   "it-IT": {
@@ -440,7 +446,8 @@ export const dictionaries = {
       "label": "Scansiona"
     },
     "extras": {
-      "included": "Commissioni, presumibilmente incluse nei prezzi"
+      "included": "Si considera che commissioni e sconti siano già inclusi",
+      "incomplete": "Puoi gestirlo dopo che tutti gli articoli sono stati reclamati"
     }
   },
   "ja-JP": {
@@ -503,7 +510,8 @@ export const dictionaries = {
       "label": "スキャン"
     },
     "extras": {
-      "included": "手数料―料金に含まれていると思われます"
+      "included": "手数料と割引はすでに含まれているとみなします",
+      "incomplete": "すべてのアイテムが請求された後に管理できます"
     }
   },
   "ko-KR": {
@@ -566,7 +574,8 @@ export const dictionaries = {
       "label": "스캔"
     },
     "extras": {
-      "included": "수수료, 아마 가격에 포함되어 있을 거예요"
+      "included": "수수료와 할인은 이미 포함된 것으로 간주돼",
+      "incomplete": "모든 아이템이 청구된 후에 관리할 수 있어요"
     }
   },
   "nl-NL": {
@@ -629,7 +638,8 @@ export const dictionaries = {
       "label": "Scannen"
     },
     "extras": {
-      "included": "Vergoedingen, vermoedelijk inbegrepen bij de prijzen"
+      "included": "Kosten en kortingen worden als inbegrepen beschouwd",
+      "incomplete": "Kan beheerd worden nadat alle items zijn geclaimd"
     }
   },
   "ru-RU": {
@@ -692,7 +702,8 @@ export const dictionaries = {
       "label": "Сканировать"
     },
     "extras": {
-      "included": "Комиссии, предположительно включённые в цены"
+      "included": "Считается, что комиссии и скидки уже включены",
+      "incomplete": "Можно будет управлять после того, как все позиции будут разобраны"
     }
   },
   "sw-TZ": {
@@ -755,7 +766,8 @@ export const dictionaries = {
       "label": "Changanua"
     },
     "extras": {
-      "included": "Ada, zinazoaminika zimejumuishwa kwenye bei"
+      "included": "Inachukuliwa kuwa ada na punguzo tayari vimejumuishwa",
+      "incomplete": "Inaweza kudhibitiwa baada ya vitu vyote kudaiwa"
     }
   },
   "tr-TR": {
@@ -818,7 +830,8 @@ export const dictionaries = {
       "label": "Tara"
     },
     "extras": {
-      "included": "Komisyonlar, muhtemelen fiyatlara dahil"
+      "included": "Ücretler ve indirimlerin zaten dahil olduğu varsayılır",
+      "incomplete": "Tüm ürünler alındıktan sonra yönetilebilir"
     }
   },
   "uk-UA": {
@@ -881,7 +894,8 @@ export const dictionaries = {
       "label": "Сканувати"
     },
     "extras": {
-      "included": "Комісії, ймовірно включені у ціни"
+      "included": "Вважається, що комісії та знижки вже включені",
+      "incomplete": "Можна буде керувати, коли всі позиції будуть розібрані"
     }
   },
   "zh-CN": {
@@ -944,7 +958,8 @@ export const dictionaries = {
       "label": "扫码"
     },
     "extras": {
-      "included": "手续费，据推测已包含在价格中"
+      "included": "默认费用和折扣都已包含在内",
+      "incomplete": "所有项目都被认领后即可管理"
     }
   }
 };

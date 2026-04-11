@@ -14,6 +14,7 @@ export interface Receipt {
   items: Item[]
   extras: Extra[]
   done: Record<string, boolean>
+  good?: Record<string, boolean>
   locked: boolean
   locker: string | null
   autolock?: string

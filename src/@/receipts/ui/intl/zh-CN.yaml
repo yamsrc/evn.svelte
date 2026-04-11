@@ -36,4 +36,5 @@ state:
 action:
   label: 扫码
 extras:
-  included: 手续费，据推测已包含在价格中
+  included: 默认费用和折扣都已包含在内
+  incomplete: 所有项目都被认领后即可管理

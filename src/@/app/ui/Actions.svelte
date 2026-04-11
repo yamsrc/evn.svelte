@@ -83,7 +83,7 @@
           <Scan
             variant="ghost"
             class={[Dropdown.itemVariants({ direction: 'row' }), '[&_svg]:text-primary!']}
-            oncomplete={(id: string) => goto(`/dev/components/receipts/${id}/`)} />
+            oncomplete={(id: string) => goto(`/receipts/${id}/`)} />
         </Dropdown.Group>
       </Dropdown.Layer>
       <Dropdown.Layer name="contacts">

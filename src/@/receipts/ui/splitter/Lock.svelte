@@ -1,5 +1,6 @@
 <script lang="ts">
   import { ArrowRight } from '@lucide/svelte'
+  import { lock } from '@/receipts'
   import { Spinner } from '$ui/spinner'
   import { Button } from '$ui/button'
   import { transition } from '$lib/tools'
@@ -7,26 +8,26 @@
   import { goto } from '$app/navigation'
   import { dict } from '../intl'
   import { store } from './store'
-  import { stats } from './Progress'
+  import { statistics } from './Progress'
   import { convert, type Props } from './Lock'
 
   const { receipt }: Props = $props()
-  const { claimed, total } = $derived(stats($store))
+  const { claimed, total } = $derived(statistics($store))
 
   let busy = $state(false)
 
   async function onclick() {
     busy = true
 
-    const expense = convert(receipt, $store)
+    const locked = await lock(receipt.id)
 
-    await new Promise((resolve) => setTimeout(resolve, 500))
+    if (!(locked instanceof Error)) {
+      const expense = convert(receipt, $store)
 
-    await goto('/expenses/editor/', { state: { expense } })
+      await goto('/expenses/editor/', { state: { expense } })
+    }
 
-    // const locked = await lock(receipt.id)
-
-    // if (locked instanceof Error) busy = false
+    busy = false
   }
 </script>
 

@@ -61,5 +61,6 @@ export type Dictionary = {
       }
       extras: {
         included: string
+        incomplete: string
       }
     }

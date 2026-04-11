@@ -39,4 +39,5 @@ state:
 action:
   label: Tara
 extras:
-  included: Komisyonlar, muhtemelen fiyatlara dahil
+  included: Ücretler ve indirimlerin zaten dahil olduğu varsayılır
+  incomplete: Tüm ürünler alındıktan sonra yönetilebilir

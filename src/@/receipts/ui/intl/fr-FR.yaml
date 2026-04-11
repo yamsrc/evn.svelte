@@ -41,4 +41,5 @@ state:
 action:
   label: Scanner
 extras:
-  included: Frais, supposément inclus dans les prix
+  included: Les frais et les réductions sont considérés comme inclus
+  incomplete: Tu pourras gérer ça une fois que tous les articles auront été réclamés

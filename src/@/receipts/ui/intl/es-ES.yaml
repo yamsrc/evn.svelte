@@ -41,4 +41,5 @@ state:
 action:
   label: Escanear
 extras:
-  included: Comisiones, supuestamente incluidas en los precios
+  included: Se da por hecho que las tarifas y descuentos ya están incluidos
+  incomplete: Se puede gestionar después de que se hayan reclamado todos los artículos

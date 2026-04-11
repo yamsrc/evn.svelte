@@ -98,3 +98,12 @@ export const extras = {
     })
   },
 }
+
+export const ratings = {
+  post: async (identity: string, id: string, body: { good: boolean }): Promise<Receipt | Error> => {
+    return await receipts.json<Receipt>(`${identity}/${id}/ratings`, {
+      method: 'POST',
+      body,
+    })
+  },
+}

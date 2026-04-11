@@ -70,4 +70,8 @@ inputs:
       context: button label
   extras:
     included:
-      input: Комиссии, предположительно включенные в цены
+      input: Fees and discounts are considered included
+      context: т.е. предполагается, что показанные цены уже их включают
+    incomplete:
+      input: Can be managed after all items are claimed
+      context: regarding fees and discounts in the receipt

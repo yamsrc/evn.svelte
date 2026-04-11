@@ -2,9 +2,11 @@ import { portions } from './Extras'
 import type { Receipt } from '@/receipts'
 import type { Value as ExpenseValue } from '@/expenses/ui/Editor'
 import type { State } from './store'
+import type { Statistics } from './Progress'
 
 export interface Props {
   receipt: Receipt
+  stats: Statistics
 }
 
 export function allDone(receipt: Receipt): boolean {
@@ -16,7 +18,7 @@ export function convert(receipt: Receipt, state: State): ExpenseValue {
     title: receipt.title,
     location: receipt.merchant?.location,
     participants: toParticipants(receipt, state),
-    extras: receipt.extras,
+    extras: receipt.extras.filter((extra) => !extra.included),
     attachments: receipt.attachments,
   }
 }

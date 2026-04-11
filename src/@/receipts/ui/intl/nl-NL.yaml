@@ -41,4 +41,5 @@ state:
 action:
   label: Scannen
 extras:
-  included: Vergoedingen, vermoedelijk inbegrepen bij de prijzen
+  included: Kosten en kortingen worden als inbegrepen beschouwd
+  incomplete: Kan beheerd worden nadat alle items zijn geclaimd

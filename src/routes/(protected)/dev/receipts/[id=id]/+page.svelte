@@ -32,7 +32,7 @@
       <Section>
         <Header.Root class="gap-4">
           <div class="space-y-1 w-full">
-            <Header.Title class="h-[1.2em]">
+            <Header.Title class="min-h-[1.2em]">
               {#if receipt.status === 'pending'}
                 <Skeleton class="w-3/4 h-[1.2em]" />
               {:else}
