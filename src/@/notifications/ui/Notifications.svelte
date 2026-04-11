@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { onMount, tick } from 'svelte'
   import { ChevronsDownUp, Trash2 } from '@lucide/svelte'
   import { dict } from '@/notifications/ui/intl'
   import { clear } from '@/notifications'
@@ -51,10 +52,13 @@
   const stacked = $derived(visible.length >= min)
 
   let stack = $state<ReturnType<typeof Stack.Root> | undefined>()
+  let artemBurtsev = $state(true)
+
+  onMount(() => tick().then(() => (artemBurtsev = false)))
 </script>
 
 <div class="space-y-2">
-  {#if renderable.length > 0}
+  {#if renderable.length > 0 && !artemBurtsev}
     <Dismissable ondismiss={clearAll} dismissable={collapsed && stacked}>
       <Stack.Root bind:this={stack} {min} bind:collapsed>
         <Stack.Toolbar class="flex justify-between text-muted-foreground px-5">

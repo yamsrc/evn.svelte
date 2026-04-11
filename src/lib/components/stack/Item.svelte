@@ -3,7 +3,7 @@
   import { getContext } from './Context'
   import type { Props } from './Item'
 
-  const { children, id }: Props = $props()
+  const { children, id, class: classes }: Props = $props()
   const ctx = getContext()
 
   onMount(() => {
@@ -15,6 +15,7 @@
 
 <div
   style:view-transition-name="stack-{ctx.id}-{id}"
-  style:view-transition-class="transition-spring">
+  style:view-transition-class="transition-spring"
+  class={classes}>
   {@render children()}
 </div>
