@@ -6,11 +6,7 @@ export interface Receipt {
   attachments: string[]
   links?: Link[]
   merchant?: Merchant
-  date?: string
-  subtotal?: number
   total: number
-  currency?: string
-  category?: string
   items: Item[]
   extras: Extra[]
   done: Record<string, boolean>
