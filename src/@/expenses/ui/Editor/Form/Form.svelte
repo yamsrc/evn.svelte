@@ -1,5 +1,6 @@
 <script lang="ts">
   import { Check } from '@lucide/svelte'
+  import { account } from '@/iam'
   import { numbers } from '@/expenses'
   import { Action, Section } from '@/app/ui'
   import { onsubmit } from '$lib/tools'
@@ -40,9 +41,15 @@
     busy = false
   }
 
-  const payers = $derived(
-    Object.keys(value.participants).filter((id) => value.participants[id].paid !== undefined),
-  )
+  const identities = $derived(Object.keys(value.participants))
+
+  const payers = $derived.by(() => {
+    const found = identities.filter((id) => value.participants[id].paid !== undefined)
+
+    if (found.length > 0) return found
+
+    return [identities.find((id) => id === $account?.id) ?? identities[0]].filter(Boolean)
+  })
 
   let total = $state(numbers.total(value))
 
