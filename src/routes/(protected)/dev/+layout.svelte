@@ -6,7 +6,7 @@
   import { Authenticated } from '@/app/ui'
   import { Button } from '$ui/button'
   import { dict } from '$lib/intl/dev'
-  import { oidc } from '$config'
+  import { oidc } from '$config/configuration'
   import { Screen } from '$com/shell'
   import { Nav } from '$com/shell'
   import { sections } from './sections'

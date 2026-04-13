@@ -27,7 +27,10 @@
       <Section
         class="relative space-y-4 h-full flex flex-col"
         style="view-transition-name: paywall; view-transition-class: transition-spring transition-morph fullscreen-content;">
-        <h1>{$dict.paywall.title}</h1>
+        <div>
+          <h1>{$dict.paywall.title}</h1>
+          <span>{$dict.paywall.offer.headline}</span>
+        </div>
         {#if step === 'offer'}
           <Offer {next} />
         {:else if step === 'complete'}

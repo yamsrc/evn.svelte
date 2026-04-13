@@ -2,7 +2,7 @@ paywall:
   title: Evnly Premium
   offer:
     headline: Evn better with a subscription!
-    promo: For a limited time, Evnly Premium is available completely free.
+    promo: For a limited time, Premium is completely free.
     cta: Start your free trial
     disclaimer: >-
       Free trial available only to eligible first time subscribers. Cancel 24
@@ -20,3 +20,5 @@ paywall:
     featuresNote: >-
       Plus, from now on you can further customize the interface in your profile,
       scan and recognize receipts, and more.
+  free:
+    cta: Enjoy Premium

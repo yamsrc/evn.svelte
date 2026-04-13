@@ -2,7 +2,7 @@ paywall:
   title: Evnly Premium
   offer:
     headline: Evn inakuwa bora zaidi ukiwa na usajili!
-    promo: Kwa muda mfupi, Evnly Premium inapatikana bure kabisa.
+    promo: Kwa muda mchache, Premium ni bure kabisa.
     cta: Anza jaribio lako bure
     disclaimer: >-
       Jaribio la bure linapatikana tu kwa wateja wapya wanaostahiki. Ghairi saa
@@ -21,3 +21,5 @@ paywall:
     featuresNote: >-
       Zaidi ya hayo, kuanzia sasa unaweza kubinafsisha zaidi muonekano kwenye
       wasifu wako, kutambaza na kutambua risiti na mengi zaidi.
+  free:
+    cta: Furahia Premium

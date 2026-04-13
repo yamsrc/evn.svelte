@@ -2,7 +2,7 @@
   import { ok } from 'svas'
   import { account as iam } from '@/iam'
   import { Screen, Authenticated, Goto } from '@/app/ui'
-  import { oidc } from '$config'
+  import { oidc } from '$config/configuration'
   import { page } from '$app/state'
   import Expired from './Expired.svelte'
   import Accept from './Accept.svelte'

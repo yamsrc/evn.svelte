@@ -1,6 +1,6 @@
 import { locales } from "./built"
 import type { Locale } from "./types"
-import { defaultLocale } from "$config"
+import { defaultLocale } from "$config/configuration"
 
 /**
  * Check if a BCP 47 language code matches a language code in the list

@@ -5,7 +5,7 @@
 
 import * as accounts from '@/iam/svc/net'
 import { fragment, query, convert, assert } from '$lib/tools'
-import { navigation } from '$config'
+import { navigation } from '$config/configuration'
 import { resolve } from '$app/paths'
 import { goto } from '$app/navigation'
 import { account, challenge, greeting } from '../store'

@@ -12,7 +12,7 @@
   import { Cosmetics, Delete, Grammar, Language } from '@/accounts/ui'
   import { clicks } from '$lib/tools'
   import { dict } from '$lib/intl'
-  import { version } from '$config'
+  import { version } from '$config/configuration'
   import { Actions } from '$com/shell'
   import { Separator } from '$com/separator'
   import { Clipboard, Hold } from '$com/buttons'

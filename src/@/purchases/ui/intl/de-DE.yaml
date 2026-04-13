@@ -2,7 +2,7 @@ paywall:
   title: Evnly Premium
   offer:
     headline: Mit Abo wird’s erst richtig Evn!
-    promo: Nur für kurze Zeit ist Evnly Premium völlig kostenlos verfügbar.
+    promo: Premium ist für kurze Zeit komplett kostenlos.
     cta: Kostenlose Testversion starten
     disclaimer: >-
       Kostenlose Testphase nur für berechtigte Erstabonnenten verfügbar. Um eine
@@ -22,3 +22,5 @@ paywall:
     featuresNote: >-
       Außerdem kannst du ab sofort die Oberfläche in deinem Profil noch weiter
       anpassen, Belege scannen und erkennen sowie vieles mehr.
+  free:
+    cta: Premium genießen

@@ -9,7 +9,7 @@ inputs:
         input: Evn better with subscription!
         context: Play on words - Evn is action of spliting (app purpose)
       promo:
-        input: For a limited time, Evnly Premium is available completely free.
+        input: For a limited time, Premium is completely free.
       cta:
         input: Start your free trial
         context: button
@@ -28,3 +28,7 @@ inputs:
         input: For a start, other Evnly users from now on will see your avatar like this.
       featuresNote:
         input: Plus, from now on you can further customize the interface in your profile, scan and recognize receipts and more.
+    free:
+      cta:
+        input: Enjoiy Premium
+        context: button label, инфинитив (начальная форма)

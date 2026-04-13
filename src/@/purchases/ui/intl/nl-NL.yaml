@@ -2,7 +2,7 @@ paywall:
   title: Evnly Premium
   offer:
     headline: Evn wordt nog beter met een abonnement!
-    promo: Evnly Premium is tijdelijk helemaal gratis beschikbaar.
+    promo: Premium is tijdelijk helemaal gratis.
     cta: Begin je gratis proefperiode
     disclaimer: >-
       Gratis proefperiode is alleen beschikbaar voor in aanmerking komende
@@ -22,3 +22,5 @@ paywall:
     featuresNote: >-
       Bovendien kun je vanaf nu de interface verder aanpassen in je profiel,
       bonnetjes scannen en herkennen, en meer.
+  free:
+    cta: Premium genieten

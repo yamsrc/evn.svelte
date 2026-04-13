@@ -1,4 +1,4 @@
-import { origin } from '$config'
+import { origin } from '$config/configuration'
 import type { HTMLImgAttributes } from 'svelte/elements'
 
 export interface Props {

@@ -2,7 +2,7 @@ paywall:
   title: Evnly Premium
   offer:
     headline: Abonelikle Evn çok daha iyi!
-    promo: Sınırlı bir süre için, Evnly Premium tamamen ücretsiz olarak sunuluyor.
+    promo: Sınırlı bir süreliğine Premium tamamen ücretsiz.
     cta: Ücretsiz denemeyi başlat
     disclaimer: >-
       Ücretsiz deneme yalnızca uygun ve ilk kez abone olanlar için geçerlidir.
@@ -22,3 +22,5 @@ paywall:
     featuresNote: >-
       Ayrıca, artık profilinizde arayüzü daha fazla özelleştirebilir, fişleri
       tarayıp tanıyabilir ve daha fazlasını yapabilirsiniz.
+  free:
+    cta: Premium'un Tadını Çıkar

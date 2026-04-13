@@ -2,7 +2,7 @@ paywall:
   title: Evnly Premium
   offer:
     headline: Evn ancora meglio con l’abbonamento!
-    promo: Per un periodo limitato, Evnly Premium è disponibile completamente gratis.
+    promo: Per un periodo limitato, Premium è completamente gratuito.
     cta: Inizia la prova gratuita
     disclaimer: >-
       Prova gratuita disponibile solo per nuovi abbonati idonei. Cancella almeno
@@ -22,3 +22,5 @@ paywall:
     featuresNote: >-
       Inoltre, da ora puoi personalizzare ulteriormente l’interfaccia nel tuo
       profilo, scansionare e riconoscere ricevute e molto altro.
+  free:
+    cta: Goditi Premium

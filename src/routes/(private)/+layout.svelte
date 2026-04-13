@@ -5,7 +5,7 @@
   import { notifications as store } from '@/notifications'
   import { Screen, Authenticated } from '@/app/ui'
   import { dict } from '$lib/intl'
-  import { oidc } from '$config'
+  import { oidc } from '$config/configuration'
   import { Nav } from '$com/shell'
   import { welcome } from './welcome'
   import { sections } from './sections'

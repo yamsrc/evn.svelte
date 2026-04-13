@@ -2,7 +2,7 @@ paywall:
   title: Evnly尊享版
   offer:
     headline: 订阅让 Evn 更出色！
-    promo: 限时优惠，Evnly Premium 完全免费开放。
+    promo: 限时免费体验Premium。
     cta: 开始免费试用
     disclaimer: 免费试用仅对符合条件的首次订阅用户开放。为避免收费，请在试用结束前24小时取消。免费试用结束后将自动续费，您可随时取消订阅。
     footnote: "* 一名高级用户可为所有参与者启用物品标记。在冒险中，仅保存收据文本（无可视化分割）。"
@@ -13,3 +13,5 @@ paywall:
     thanks: 感谢您订阅 Envly Premium
     avatarNote: 从现在开始，其他 Evnly 用户会这样看到你的头像。
     featuresNote: 此外，从现在起，你还可以在个人资料中进一步自定义界面，扫描和识别小票等更多功能。
+  free:
+    cta: 享受高级版

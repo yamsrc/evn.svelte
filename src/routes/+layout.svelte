@@ -2,7 +2,7 @@
   import { Background } from '@/app/ui'
   import { navigate, suppressContextMenu } from '$lib/tools'
   import { dict } from '$lib/intl'
-  import { meta } from '$config'
+  import { meta } from '$config/configuration'
   import { track } from '$com/history'
   import { page } from '$app/state'
   import { afterNavigate, onNavigate } from '$app/navigation'

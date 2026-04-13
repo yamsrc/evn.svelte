@@ -4,6 +4,7 @@
   import { Button } from '$ui/button'
   import { image } from '$lib/tools'
   import { dict as common } from '$lib/intl'
+  import { features } from '$config'
   import { Scrollable } from '$com/scrollable'
   import { dict } from './intl'
   import { benefits } from './Offer'
@@ -31,25 +32,39 @@
   onMount(() => image.preload(assets))
 </script>
 
-<p>{$dict.paywall.offer.headline}</p>
-<Scrollable class="gap-2" bleed scroll={0} align="center">
-  {#each benefits as benefit (benefit.id)}
-    <Benefit {benefit} class="w-full snap-center" />
-  {/each}
-</Scrollable>
-<p>{$dict.paywall.offer.promo}</p>
-<div>
-  <Button {onclick} size="lg" class="w-full" disabled={busy}>{$dict.paywall.offer.cta}</Button>
-  <p class="text-sm text-muted-foreground text-center">
-    {$dict.paywall.offer.trial(price)}
-  </p>
-</div>
-<div class="text-sm **:text-muted-foreground text-center space-y-2">
-  <p>{$dict.paywall.offer.disclaimer}</p>
-  <p>{$dict.paywall.offer.footnote}</p>
-  <p>
-    <a href="/terms/">{$common.terms}</a>
-    <span aria-hidden="true">·</span>
-    <a href="/privacy/">{$common.privacy}</a>
-  </p>
+<div class="flex flex-col justify-between h-full">
+  <Scrollable class="gap-2" bleed scroll={0} align="center">
+    {#each benefits as benefit (benefit.id)}
+      <Benefit {benefit} class="w-full snap-center" />
+    {/each}
+  </Scrollable>
+  <div class="space-y-2 flex flex-col justify-between">
+    <div class="rounded-lg ring-3 ring-primary/20">
+      <Button {onclick} size="lg" class="w-full relative" disabled={busy}>
+        {#if features.purchase}
+          {$dict.paywall.offer.cta}
+        {:else}
+          {$dict.paywall.free.cta}
+        {/if}
+      </Button>
+    </div>
+    <p class="text-sm text-muted-foreground text-center">
+      {#if features.purchase}
+        {$dict.paywall.offer.trial(price)}
+      {:else}
+        {$dict.paywall.offer.promo}
+      {/if}
+    </p>
+  </div>
+  {#if features.purchase}
+    <div class="text-sm **:text-muted-foreground text-center space-y-2">
+      <p>{$dict.paywall.offer.disclaimer}</p>
+      <p>{$dict.paywall.offer.footnote}</p>
+      <p>
+        <a href="/terms/">{$common.terms}</a>
+        <span aria-hidden="true">·</span>
+        <a href="/privacy/">{$common.privacy}</a>
+      </p>
+    </div>
+  {/if}
 </div>
