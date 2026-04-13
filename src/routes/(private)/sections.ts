@@ -33,6 +33,7 @@ export const sections = (dict: Dictionary, notifications: Notification[]): Secti
       (n) =>
         n.domain === 'expenses' ||
         n.domain === 'adventures' ||
+        n.domain === 'receipts' ||
         (n.domain === 'contacts' && n.event === 'transferred'),
     ),
   },

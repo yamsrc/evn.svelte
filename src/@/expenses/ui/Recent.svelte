@@ -1,6 +1,7 @@
 <script lang="ts">
   import { Receipt } from '@/receipts/ui'
-  import { unseen } from '@/expenses'
+  import { unseen as unseenReceipt } from '@/receipts'
+  import { unseen as unseenExpense } from '@/expenses'
   import { dict } from './intl'
   import Expense from './Expense.svelte'
   import type { Props } from './Recent'
@@ -17,12 +18,13 @@
   {:else}
     <ul class="space-y-2">
       {#each receipts.slice(0, RECEIPTS) as receipt (receipt.id)}
+        {@const highlighted = unseenReceipt(receipt, notifications ?? [])}
         <li>
-          <Receipt {receipt} />
+          <Receipt {receipt} {highlighted} />
         </li>
       {/each}
       {#each expenses.slice(0, EXPENSES) as expense (expense.id)}
-        {@const highlighted = unseen(expense, notifications ?? [])}
+        {@const highlighted = unseenExpense(expense, notifications ?? [])}
         <li>
           <Expense {expense} {highlighted} />
         </li>

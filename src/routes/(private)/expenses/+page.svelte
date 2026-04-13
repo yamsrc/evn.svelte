@@ -20,6 +20,7 @@
   const expensesNotifications = scope({ domain: 'expenses' })
   const transfersNotifications = scope({ domain: 'contacts', event: 'transferred' })
   const adventuresNotifications = scope({ domain: 'adventures' })
+  const receiptsNotifications = scope({ domain: 'receipts' })
   const notifications = $derived([...$expensesNotifications, ...$transfersNotifications])
   const adventuresHint = $derived($hints?.['adventures'] !== true && !search)
 </script>
@@ -37,7 +38,7 @@
     {@const filteredAdventures = filterAdventures(adventures, search)}
     {@const empty = filteredExpenses.length === 0 && filteredAdventures.length === 0}
 
-    {#if expenses.length || adventures.length}
+    {#if expenses.length || adventures.length || receipts.length}
       <Section>
         <Input type="text" placeholder={$dict.actions.search} bind:value={search} />
       </Section>
@@ -54,15 +55,15 @@
       </Section>
     {/if}
 
-    {#if filteredExpenses.length > 0}
+    {#if filteredExpenses.length > 0 || filteredReceipts.length > 0}
       <Section class="space-y-2">
         <h2>{$dict.expenses.expenses.title}</h2>
-        <Receipts receipts={filteredReceipts} />
+        <Receipts receipts={filteredReceipts} notifications={$receiptsNotifications} />
         <Expenses expenses={filteredExpenses} {notifications} />
       </Section>
     {/if}
 
-    {#if expenses.length === 0 && $account}
+    {#if expenses.length === 0 && receipts.length === 0 && $account}
       <Section class="m-auto flex flex-col items-center justify-center gap-2">
         <h2>{$dict.expenses.empty.title}</h2>
         <p>{$dict.expenses.empty.description}</p>

@@ -87,3 +87,7 @@ adventures:
     body: |-
       !js
       (title) => `Gasto añadido a ${title}`
+receipts:
+  joined:
+    hint: Revisa los artículos y reclama los tuyos.
+    title: Acaba de llegar un nuevo recibo

@@ -59,6 +59,12 @@ export const dictionaries = {
         "title": (title, amount) => `${title} · ${amount}`,
         "body": (title) => `تمت إضافة مصروف إلى ${title}`
       }
+    },
+    "receipts": {
+      "joined": {
+        "hint": "تحقق من العناصر واختر ما يخصك.",
+        "title": "وصلت إيصال جديد"
+      }
     }
   },
   "de-DE": {
@@ -111,6 +117,12 @@ export const dictionaries = {
         "title": (title, amount) => `${title} · ${amount}`,
         "body": (title) => `Ausgabe zu ${title} hinzugefügt`
       }
+    },
+    "receipts": {
+      "joined": {
+        "hint": "Schau dir die Posten an und markiere deine.",
+        "title": "Eine neue Quittung ist eingegangen"
+      }
     }
   },
   "en-US": {
@@ -158,6 +170,12 @@ export const dictionaries = {
       "expense": {
         "title": (title, amount) => `${title} · ${amount}`,
         "body": (title) => `Expense added to ${title}`
+      }
+    },
+    "receipts": {
+      "joined": {
+        "hint": "Check the items and claim yours.",
+        "title": "A new receipt just landed"
       }
     }
   },
@@ -218,6 +236,12 @@ export const dictionaries = {
         "title": (title, amount) => `${title} · ${amount}`,
         "body": (title) => `Gasto añadido a ${title}`
       }
+    },
+    "receipts": {
+      "joined": {
+        "hint": "Revisa los artículos y reclama los tuyos.",
+        "title": "Acaba de llegar un nuevo recibo"
+      }
     }
   },
   "fr-FR": {
@@ -276,6 +300,12 @@ export const dictionaries = {
       "expense": {
         "title": (title, amount) => `${title} · ${amount}`,
         "body": (title) => `Dépense ajoutée à ${title}`
+      }
+    },
+    "receipts": {
+      "joined": {
+        "hint": "Vérifie les articles et prends les tiens.",
+        "title": "Un nouveau reçu vient d’arriver"
       }
     }
   },
@@ -337,6 +367,12 @@ export const dictionaries = {
         "title": (title, amount) => `${title} · ${amount}`,
         "body": (title) => `${title} में खर्च जोड़ा गया`
       }
+    },
+    "receipts": {
+      "joined": {
+        "hint": "सामानों को देखो और अपने हिस्से का चुनो।",
+        "title": "एक नई रसीद आई है"
+      }
     }
   },
   "it-IT": {
@@ -396,6 +432,12 @@ export const dictionaries = {
         "title": (title, amount) => `${title} · ${amount}`,
         "body": (title) => `Spesa aggiunta a ${title}`
       }
+    },
+    "receipts": {
+      "joined": {
+        "hint": "Controlla gli articoli e prendi i tuoi.",
+        "title": "È arrivata una nuova ricevuta"
+      }
     }
   },
   "ja-JP": {
@@ -443,6 +485,12 @@ export const dictionaries = {
       "expense": {
         "title": (title, amount) => `${title} · ${amount}`,
         "body": (title) => `${title} に経費を追加しました`
+      }
+    },
+    "receipts": {
+      "joined": {
+        "hint": "アイテムを確認して自分のものを選んでね。",
+        "title": "新しいレシートが届きました"
       }
     }
   },
@@ -492,6 +540,12 @@ export const dictionaries = {
         "title": (title, amount) => `${title} · ${amount}`,
         "body": (title) => `${title}에 지출이 추가되었습니다`
       }
+    },
+    "receipts": {
+      "joined": {
+        "hint": "항목을 확인하고 네 몫을 선택해!",
+        "title": "새 영수증이 도착했어요"
+      }
     }
   },
   "nl-NL": {
@@ -539,6 +593,12 @@ export const dictionaries = {
       "expense": {
         "title": (title, amount) => `${title} · ${amount}`,
         "body": (title) => `Uitgave toegevoegd aan ${title}`
+      }
+    },
+    "receipts": {
+      "joined": {
+        "hint": "Check de items en claim die van jou.",
+        "title": "Er is zojuist een nieuw bonnetje binnengekomen"
       }
     }
   },
@@ -599,6 +659,12 @@ export const dictionaries = {
         "title": (title, amount) => `${title} · ${amount}`,
         "body": (title) => `Расход добавлен в ${title}`
       }
+    },
+    "receipts": {
+      "joined": {
+        "hint": "Посмотри, что в чеке, и забери своё.",
+        "title": "Прилетел новый чек"
+      }
     }
   },
   "sw-TZ": {
@@ -647,6 +713,12 @@ export const dictionaries = {
         "title": (title, amount) => `${title} · ${amount}`,
         "body": (title) => `Gharama imeongezwa kwa ${title}`
       }
+    },
+    "receipts": {
+      "joined": {
+        "hint": "Angalia vitu na chukua ulivyolipa.",
+        "title": "Risiti mpya imewasili"
+      }
     }
   },
   "tr-TR": {
@@ -694,6 +766,12 @@ export const dictionaries = {
       "expense": {
         "title": (title, amount) => `${title} · ${amount}`,
         "body": (title) => `${title} için harcama eklendi`
+      }
+    },
+    "receipts": {
+      "joined": {
+        "hint": "Ürünlere bak ve seninkileri seç.",
+        "title": "Yeni bir fiş geldi"
       }
     }
   },
@@ -754,6 +832,12 @@ export const dictionaries = {
         "title": (title, amount) => `${title} · ${amount}`,
         "body": (title) => `Витрату додано до ${title}`
       }
+    },
+    "receipts": {
+      "joined": {
+        "hint": "Перевір список і забери своє.",
+        "title": "Прилетів новий чек"
+      }
     }
   },
   "zh-CN": {
@@ -801,6 +885,12 @@ export const dictionaries = {
       "expense": {
         "title": (title, amount) => `${title} · ${amount}`,
         "body": (title) => `已将支出添加到${title}`
+      }
+    },
+    "receipts": {
+      "joined": {
+        "hint": "看看项目，认领属于你的。",
+        "title": "新收据刚刚到账"
       }
     }
   }

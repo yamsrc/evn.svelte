@@ -67,3 +67,7 @@ adventures:
     body: |-
       !js
       (title) => `${title}에 지출이 추가되었습니다`
+receipts:
+  joined:
+    hint: 항목을 확인하고 네 몫을 선택해!
+    title: 새 영수증이 도착했어요

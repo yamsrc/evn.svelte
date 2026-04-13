@@ -90,3 +90,7 @@ adventures:
     body: |-
       !js
       (title) => `تمت إضافة مصروف إلى ${title}`
+receipts:
+  joined:
+    hint: تحقق من العناصر واختر ما يخصك.
+    title: وصلت إيصال جديد
