@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Async } from 'svas'
   import { Coins, Settings } from '@lucide/svelte'
-  import { seen } from '@/notifications'
+  import { Looking } from '@/notifications/ui'
   import { account } from '@/iam'
   import { Action, Header, Section } from '@/app/ui'
   import { Archived, Details } from '@/adventures/ui'
@@ -12,11 +12,9 @@
   import { page } from '$app/state'
 
   const id = $derived(page.params.id) as string
-
-  $effect(() => {
-    void seen('adventures', id)
-  })
 </script>
+
+<Looking domain="adventures" key={id} />
 
 <Async store={adventures}>
   {#snippet awaited(adventures)}

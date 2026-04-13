@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Async, ok } from 'svas'
   import { LogOut } from '@lucide/svelte'
-  import { seen } from '@/notifications'
+  import { Looking } from '@/notifications/ui'
   import { Editor, Expenses } from '@/groups/ui'
   import { groups, del } from '@/groups'
   import { Toggle as Favorite } from '@/favorites/ui'
@@ -20,10 +20,6 @@
 
   const group = $derived(ok($groups) ? $groups.find((g) => g.id === id) : undefined)
 
-  $effect(() => {
-    if (id) void seen('groups', id)
-  })
-
   async function leave() {
     if (!id) return
 
@@ -34,6 +30,7 @@
 </script>
 
 {#if id}
+  <Looking domain="groups" key={id} />
   <Return href="/contacts/" />
 {/if}
 

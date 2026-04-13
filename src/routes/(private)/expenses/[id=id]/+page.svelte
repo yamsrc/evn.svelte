@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Async } from 'svas'
   import { Pencil } from '@lucide/svelte'
-  import { seen } from '@/notifications'
+  import { Looking } from '@/notifications/ui'
   import { Attachments, Details } from '@/expenses/ui'
   import { expenses } from '@/expenses'
   import { Action, Section } from '@/app/ui'
@@ -11,11 +11,9 @@
   import { page } from '$app/state'
 
   const id = $derived(page.params.id) as string
-
-  $effect(() => {
-    void seen('expenses', id)
-  })
 </script>
+
+<Looking domain="expenses" key={id} />
 
 <Async store={expenses}>
   {#snippet awaited(expenses)}

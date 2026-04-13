@@ -71,6 +71,7 @@ type Base<D extends Domain, E extends Event<D>> = {
   key: string
   _created: number
   _version: number
+  _deleted?: number | null
 }
 
 type Entry<D extends Domain, E extends Event<D>> = Expand<

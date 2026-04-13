@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Async, combined, ok } from 'svas'
-  import { seen } from '@/notifications'
+  import { Looking } from '@/notifications/ui'
   import { account } from '@/iam'
   import { groups } from '@/groups'
   import { Toggle as Favorite } from '@/favorites/ui'
@@ -25,11 +25,9 @@
   function ondelete() {
     void goto('..')
   }
-
-  $effect(() => {
-    void seen('contacts', id)
-  })
 </script>
+
+<Looking domain="contacts" key={id} />
 
 <Async store={contacts}>
   {#snippet awaited(contacts)}

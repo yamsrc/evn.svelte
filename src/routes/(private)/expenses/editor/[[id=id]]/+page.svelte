@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Paperclip } from '@lucide/svelte'
-  import { seen } from '@/notifications'
+  import { Looking } from '@/notifications/ui'
   import { Editor } from '@/expenses/ui'
   import { attach } from '@/expenses'
   import { Section } from '@/app/ui'
@@ -38,11 +38,11 @@
 
     ctx.value.attachments.push(...ids)
   }
-
-  $effect(() => {
-    if (id) void seen('expenses', id)
-  })
 </script>
+
+{#if id}
+  <Looking domain="expenses" key={id} />
+{/if}
 
 <Section>
   <Header.Root>
