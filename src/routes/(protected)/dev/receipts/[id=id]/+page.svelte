@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Async } from 'svas'
+  import { Async, combined } from 'svas'
   import { Splitter, Leave, Reset } from '@/receipts/ui'
   import { internal } from '@/receipts'
   import { account } from '@/iam'
@@ -9,7 +9,7 @@
   import { page } from '$app/state'
   import { goto } from '$app/navigation'
 
-  const id = $derived(page.params.id) as string
+  const id = page.params.id as string
 
   let splitter = $state<Splitter | undefined>(undefined)
   let actor = $state('')
@@ -21,45 +21,42 @@
   }
 </script>
 
-{#if $account !== null}
-  <Async store={internal.get(id)}>
-    <!-- combined() causes exception when receipt is deleted -->
-    {#snippet awaited(receipt)}
-      <Section>
-        <Header.Root class="gap-4">
-          <div class="space-y-1 w-full">
-            <Header.Title class="min-h-[1.2em]">
-              {#if receipt.status === 'pending'}
-                <Skeleton class="w-3/4 h-[1.2em]" />
-              {:else}
-                {receipt.title}
-              {/if}
-            </Header.Title>
-            {#if receipt.status === 'pending' || receipt.merchant?.location}
-              <Header.Subtitle class="h-[1.4em]">
-                {#if receipt.merchant?.location}
-                  {receipt.merchant.location}
-                {:else}
-                  <Skeleton class="w-1/2 h-full" />
-                {/if}
-              </Header.Subtitle>
+<Async store={combined(account, internal.get(id))}>
+  {#snippet awaited([account, receipt])}
+    <Section>
+      <Header.Root class="gap-4">
+        <div class="space-y-1 w-full">
+          <Header.Title class="min-h-[1.2em]">
+            {#if receipt.status === 'pending'}
+              <Skeleton class="w-3/4 h-[1.2em]" />
+            {:else}
+              {receipt.title}
             {/if}
-          </div>
-          <Header.Actions>
-            <Reset {id} />
-            <Leave {receipt} onclick={() => onleave($account.id)} />
-          </Header.Actions>
-        </Header.Root>
-      </Section>
+          </Header.Title>
+          {#if receipt.status === 'pending' || receipt.merchant?.location}
+            <Header.Subtitle class="h-[1.4em]">
+              {#if receipt.merchant?.location}
+                {receipt.merchant.location}
+              {:else}
+                <Skeleton class="w-1/2 h-full" />
+              {/if}
+            </Header.Subtitle>
+          {/if}
+        </div>
+        <Header.Actions>
+          <Reset {id} />
+          <Leave {receipt} onclick={() => onleave(account.id)} />
+        </Header.Actions>
+      </Header.Root>
+    </Section>
 
-      <Section>
-        <Splitter bind:this={splitter} {receipt} account={$account} bind:actor />
-      </Section>
-    {/snippet}
-    {#snippet error()}
-      <Error />
-    {/snippet}
-  </Async>
-{/if}
+    <Section>
+      <Splitter bind:this={splitter} {receipt} {account} bind:actor />
+    </Section>
+  {/snippet}
+  {#snippet error()}
+    <Error />
+  {/snippet}
+</Async>
 
 <Return />

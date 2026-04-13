@@ -16,7 +16,7 @@
 - [x] Autoclose
 - [x] Share receipt
 - [x] Actions on Summary screen: [edit, close], remove participants button
-- [ ] Split taxes
+- [x] Split taxes
 - [x] Pending state screen
 - [x] Error state screen (+non-receipts)
 - [x] Attachments location. Compatibility? — put to /expenses/attachments/
