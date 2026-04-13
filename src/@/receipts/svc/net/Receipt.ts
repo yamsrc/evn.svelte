@@ -2,7 +2,7 @@ export interface Receipt {
   id: string
   title: string
   identities: string[]
-  status: 'pending' | 'failed' | 'success'
+  status: 'pending' | 'failed' | 'success' | 'sealed'
   attachments: string[]
   links?: Link[]
   merchant?: Merchant

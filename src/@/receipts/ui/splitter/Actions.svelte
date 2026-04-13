@@ -14,12 +14,8 @@
   }
 </script>
 
-<Actions>
-  <!--
-  do not remove this condition
-  receipt is undefined somehow before navigation
-  -->
-  {#if receipt?.identities !== undefined}
+{#if receipt.status !== 'sealed'}
+  <Actions>
     {#if receipt.locked}
       {#if receipt.locker === account.id}
         <Unlock {receipt} />
@@ -41,5 +37,5 @@
           ? 'secondary'
           : 'default'} />
     {/if}
-  {/if}
-</Actions>
+  </Actions>
+{/if}
