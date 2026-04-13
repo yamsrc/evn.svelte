@@ -22,6 +22,7 @@ export function normalize(value: Value, mode: 'sums' | 'shares'): Value {
     participants,
     extras: value.extras.filter((extra) => extra.amount !== 0),
     attachments: value.attachments,
+    links: value.links,
   }
 }
 

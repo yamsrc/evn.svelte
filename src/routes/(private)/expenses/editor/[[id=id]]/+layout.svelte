@@ -13,9 +13,7 @@
 
     const participants = { [$account.id]: { amount: 0, paid: 0, shares: 0 } }
 
-    return page.state.expense
-      ? { participants, ...page.state.expense }
-      : { participants }
+    return page.state.expense ? { participants, ...page.state.expense } : { participants }
   })
 </script>
 

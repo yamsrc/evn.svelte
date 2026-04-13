@@ -18,6 +18,7 @@ export function convert(receipt: Receipt, stats: Statistics): ExpenseValue {
     participants: toParticipants(stats),
     extras: [],
     attachments: receipt.attachments,
+    links: [{ type: 'receipt', id: receipt.id }],
   }
 }
 

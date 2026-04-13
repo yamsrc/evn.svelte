@@ -9,10 +9,6 @@ import { get } from './get'
 import type { Account } from '@/accounts'
 import type * as net from './net'
 
-export interface Expense extends net.Expense {
-  accounts: Record<string, Maybe<Account>>
-}
-
 export const internal = collection<net.Expense>({
   get,
   persist: 'expenses',
@@ -65,3 +61,9 @@ function map(entry: net.Expense): Expense {
 
   return { ...entry, accounts: linked }
 }
+
+export interface Expense extends net.Expense {
+  accounts: Record<string, Maybe<Account>>
+}
+
+export type Link = net.Link

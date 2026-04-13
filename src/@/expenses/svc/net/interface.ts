@@ -11,6 +11,7 @@ export async function get(identity: string): Promise<Expense[] | Error> {
 
 export interface Post extends Editable {
   participants: Expense['participants']
+  links?: Expense['links']
 }
 
 export async function post(identity: string, body: Post): Promise<Expense | Error> {
