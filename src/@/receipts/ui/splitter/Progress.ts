@@ -1,4 +1,5 @@
 import { claimedUnits } from './claims'
+import { portions, type Portion } from './Participants'
 import type { State } from './store'
 
 export function progress(state: State): number {
@@ -12,15 +13,16 @@ export function statistics(state: State): Statistics {
   const total = items.reduce((acc, item) => acc + item.quantity, 0)
 
   if (total === 0)
-    return { claimed: 0, total: 0, incomplete: false }
+    return { claimed: 0, total: 0, incomplete: false, portions: {} }
 
   const claimed = items.reduce((acc, item) => acc + claimedUnits(state, item.id), 0)
 
-  return { claimed, total, incomplete: claimed < total }
+  return { claimed, total, incomplete: claimed < total, portions: portions(state) }
 }
 
 export interface Statistics {
   claimed: number
   total: number
   incomplete: boolean
+  portions: Record<string, Portion>
 }

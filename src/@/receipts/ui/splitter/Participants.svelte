@@ -12,10 +12,9 @@
   import { Ellipsis } from '$com/text'
   import { Scrollable } from '$com/scrollable'
   import { dict } from '../intl'
-  import { store } from './store'
-  import { claimedCostBy, sign, type Props } from './Participants'
+  import { sign, type Props } from './Participants'
 
-  let { receipt, account, actor = $bindable(''), class: classes }: Props = $props()
+  let { receipt, stats, account, actor = $bindable(''), class: classes }: Props = $props()
 
   // current user first
   const identities = $derived(receipt.identities.toSorted((a) => (a === account.id ? -1 : 1)))
@@ -47,7 +46,7 @@
 <Scrollable bleed class={['gap-1 pt-1 pb-8', classes]} style={$style}>
   {#each identities as identity (identity)}
     {@const selected = identity === actor}
-    {@const cost = claimedCostBy($store, identity)}
+    {@const cost = stats.portions[identity]?.total ?? 0}
     <Button
       variant="outline"
       class={[

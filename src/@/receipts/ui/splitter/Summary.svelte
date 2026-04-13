@@ -7,18 +7,16 @@
   import { dict } from '../intl'
   import { store } from './store'
   import { summarize, type Props } from './Summary'
-  import { portionOf } from './Extras'
   import Extra from './Extra.svelte'
 
-  const { receipt, actor }: Props = $props()
+  const { receipt, stats, actor }: Props = $props()
   const lines = $derived(summarize($store, actor))
   const extras = $derived(receipt.extras.filter((e) => !e.included))
-  const portion = $derived(portionOf($store, actor))
+  const portion = $derived(stats.portions[actor].portion)
 
-  const totalByLines = $derived(lines.reduce((acc, line) => acc + line.price, 0))
-  const totalByExtras = $derived(extras.reduce((acc, extra) => acc + extra.amount, 0) * portion)
-
-  const total = $derived(totalByLines + totalByExtras)
+  const linesCost = $derived(lines.reduce((acc, line) => acc + line.price, 0))
+  const extraCost = $derived(extras.reduce((acc, extra) => acc + extra.amount, 0) * portion)
+  const total = $derived(linesCost + extraCost)
 </script>
 
 <Item.Root class={['bg-constructive/20! border-constructive/30!']}>
@@ -26,10 +24,13 @@
     <ul class="space-y-2">
       {#each lines as line, i (i)}
         <li class="flex justify-between">
-          <div class="flex items-center gap-1">
-            <span class="min-w-4 inline-block text-center text-sm font-medium">
+          <div class="flex items-start gap-1">
+            <span class="min-w-4 inline-block text-center font-medium h-lh">
               {#if line.denominator > 1}
-                <Fraction numerator={line.numerator} denominator={line.denominator} />
+                <Fraction
+                  numerator={line.numerator}
+                  denominator={line.denominator}
+                  class="text-sm" />
               {:else}
                 <span>{line.numerator}</span>
               {/if}

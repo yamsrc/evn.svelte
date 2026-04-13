@@ -12,7 +12,7 @@ export async function exclude(receiptId: string, extraId: string, value = false)
 
     if (index === -1) throw new Error('Extra not found')
 
-    // Rich, Rich...
+    // Rich, Rich
     receipt.extras[index] = { ...receipt.extras[index], included: value }
     receipt.extras = [...receipt.extras]
 

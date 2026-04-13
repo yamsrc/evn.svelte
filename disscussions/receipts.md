@@ -13,12 +13,17 @@
 - [x] Select actor
 - [x] Shared items (and item groups)
 - [x] Mark as Done
-- [ ] Autoclose
+- [x] Autoclose
 - [x] Share receipt
 - [x] Actions on Summary screen: [edit, close], remove participants button
 - [ ] Split taxes
 - [x] Pending state screen
 - [x] Error state screen (+non-receipts)
+- [x] Attachments location. Compatibility? — put to /expenses/attachments/
+- [x] Receipt rating
+- [ ] ExpenseValue: add `links`
+- [ ] API: add `links` `POST`
+- [ ] Delete receipt on linked expense? Backlink? 'closed' state?
 
 ## Routes
 

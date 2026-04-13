@@ -7,12 +7,10 @@
   import { Hold } from '$com/buttons'
   import { goto } from '$app/navigation'
   import { dict } from '../intl'
-  import { store } from './store'
-  import { statistics } from './Progress'
   import { convert, type Props } from './Lock'
 
-  const { receipt }: Props = $props()
-  const { claimed, total } = $derived(statistics($store))
+  const { receipt, stats }: Props = $props()
+  const { claimed, total } = $derived(stats)
 
   let busy = $state(false)
 
@@ -22,7 +20,7 @@
     const locked = await lock(receipt.id)
 
     if (!(locked instanceof Error)) {
-      const expense = convert(receipt, $store)
+      const expense = convert(receipt, stats)
 
       await goto('/expenses/editor/', { state: { expense } })
     }

@@ -1,7 +1,5 @@
-import { portions } from './Extras'
 import type { Receipt } from '@/receipts'
 import type { Value as ExpenseValue } from '@/expenses/ui/Editor'
-import type { State } from './store'
 import type { Statistics } from './Progress'
 
 export interface Props {
@@ -13,24 +11,17 @@ export function allDone(receipt: Receipt): boolean {
   return receipt.identities.every((identity) => receipt.done[identity] === true)
 }
 
-export function convert(receipt: Receipt, state: State): ExpenseValue {
+export function convert(receipt: Receipt, stats: Statistics): ExpenseValue {
   return {
     title: receipt.title,
     location: receipt.merchant?.location,
-    participants: toParticipants(receipt, state),
-    extras: receipt.extras.filter((extra) => !extra.included),
+    participants: toParticipants(stats),
+    extras: [],
     attachments: receipt.attachments,
   }
 }
 
-function toParticipants(receipt: Receipt, state: State): ExpenseValue['participants'] {
-  const parts = portions(state)
-
-  const extras = receipt.extras
-    .filter((extra) => !extra.included)
-    .reduce((acc, extra) => acc + extra.amount, 0)
-
-  return Object.fromEntries(Object.entries(parts).map(([identity, part]) => [identity, {
-    amount: part.amount + extras * part.portion,
-  }]))
+function toParticipants(stats: Statistics): ExpenseValue['participants'] {
+  return Object.fromEntries(
+    Object.entries(stats.portions).map(([identity, portion]) => [identity, { amount: portion.total }]))
 }

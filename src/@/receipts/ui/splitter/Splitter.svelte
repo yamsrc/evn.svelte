@@ -36,7 +36,7 @@
   {#if receipt.status !== 'failed'}
     <div class={['z-10 sticky top-4 tim:top-[env(safe-area-inset-top)]', 'space-y-2']}>
       <Progress />
-      <Participants bind:this={participants} {receipt} {account} bind:actor />
+      <Participants bind:this={participants} {receipt} {stats} {account} bind:actor />
     </div>
   {/if}
   {#if receipt.status === 'pending'}
@@ -46,9 +46,9 @@
   {:else if receipt.done[actor] === true}
     <div class="space-y-4 pt-2">
       <div>
-        <Summary {receipt} {actor} />
+        <Summary {receipt} {stats} {actor} />
         {#if receipt.extras.length > 0}
-          <Extras {receipt} {stats} />
+          <Extras {receipt} />
         {/if}
       </div>
       {#if !receipt.locked}

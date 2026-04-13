@@ -10,7 +10,7 @@
 
   const style = styles('receipts-splitter-extras', 'transition-spring transition-morph')
 
-  const { receipt, stats }: Props = $props()
+  const { receipt }: Props = $props()
   const included = $derived(receipt.extras.filter((e) => e.included))
 
   const total = $derived(
@@ -21,32 +21,22 @@
 
   async function toggle() {
     await transit(() => (edit = !edit))
-
-    if (edit === true && stats.incomplete) setTimeout(() => transit(() => (edit = false)), 5000)
   }
 </script>
 
 {#if included.length > 0}
   {#if edit}
-    {#if stats.incomplete}
-      <div class="inline-flex items-center min-h-8">
-        <p class="text-sm text-muted-foreground py-1 px-4">
-          {$dict.extras.incomplete}
-        </p>
-      </div>
-    {:else}
-      <Item.Root class="py-2 mt-2" style={$style}>
-        <Item.Content>
-          <ul>
-            {#each included as extra (extra.id)}
-              <li>
-                <Extra {receipt} {extra} />
-              </li>
-            {/each}
-          </ul>
-        </Item.Content>
-      </Item.Root>
-    {/if}
+    <Item.Root class="py-2 mt-2" style={$style}>
+      <Item.Content>
+        <ul>
+          {#each included as extra (extra.id)}
+            <li>
+              <Extra {receipt} {extra} />
+            </li>
+          {/each}
+        </ul>
+      </Item.Content>
+    </Item.Root>
   {:else}
     <div
       class={['px-4 flex items-center justify-between', 'text-sm text-muted-foreground']}

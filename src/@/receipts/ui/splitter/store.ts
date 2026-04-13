@@ -1,7 +1,16 @@
 import { get, writable } from 'svelte/store'
 import type * as receipts from '@/receipts'
+import type { Extra } from '@/receipts'
 
-export const store = writable<State>({ id: '', version: 0, identities: [], items: {}, persistent: {}, transient: {} })
+export const store = writable<State>({
+  id: '',
+  version: 0,
+  identities: [],
+  items: {},
+  extras: [],
+  persistent: {},
+  transient: {},
+})
 
 export function sync(receipt: receipts.Receipt): void {
   const stored = get(store)
@@ -12,10 +21,11 @@ export function sync(receipt: receipts.Receipt): void {
       version: receipt._version,
       identities: receipt.identities,
       items: toMap(receipt.items),
+      extras: receipt.extras,
       persistent: toClaims(receipt.items),
       transient: {},
     })
-  else if (stored.version < receipt._version)
+  else if (stored.version <= receipt._version)
     store.update((state) => {
       merge(state, receipt)
 
@@ -46,6 +56,7 @@ function merge(state: State, receipt: receipts.Receipt): void {
   state.version = receipt._version
   state.identities = receipt.identities
   state.items = toMap(receipt.items)
+  state.extras = receipt.extras
   state.persistent = toClaims(receipt.items)
 
   for (const [identity, items] of Object.entries(state.transient))
@@ -81,6 +92,7 @@ export interface State {
   version: number
   identities: string[]
   items: Record<string, Item>
+  extras: Extra[]
 
   /** Claims per identity */
   persistent: Record<string, Claims>
