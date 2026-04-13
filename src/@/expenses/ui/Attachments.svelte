@@ -31,11 +31,7 @@
   ]}>
   <div class="flex gap-3 h-[300px]">
     {#each attachments as attachment (attachment)}
-      <div
-        class={[
-          'shrink-0 border h-full no-scrollbar',
-          editable && 'overflow-y-auto overscroll-y-contain touch-pan-y snap-y snap-mandatory',
-        ]}>
+      <div class={['shrink-0 border h-full no-scrollbar']}>
         <Fullscreen class="h-[300px]" fragile onshow={() => onshow(attachment)} x={false}>
           <Picture
             id={attachment}

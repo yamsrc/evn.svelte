@@ -22,6 +22,7 @@ autoclose:
     title: Pagato da
 close:
   label: Continua
+  hold: Tieni premuto per continuare
 unassigned:
   - one: "{n} elemento non assegnato"
     other: "{n} elementi non assegnati"

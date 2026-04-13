@@ -20,6 +20,7 @@ autoclose:
     title: द्वारा भुगतान
 close:
   label: आगे बढ़ो
+  hold: जारी रखने के लिए दबाए रहें
 unassigned:
   - one: "{n} असाइन न किया गया आइटम"
     other: "{n} असाइन न किए गए आइटम"

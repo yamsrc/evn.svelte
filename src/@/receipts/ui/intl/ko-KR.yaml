@@ -20,6 +20,7 @@ autoclose:
     title: 지불자
 close:
   label: 계속하기
+  hold: 계속하려면 길게 눌러줘
 unassigned:
   - other: 할당되지 않은 항목 {n}개
 pending:

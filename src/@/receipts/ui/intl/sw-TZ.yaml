@@ -20,6 +20,7 @@ autoclose:
     title: Imelipwa na
 close:
   label: Endelea
+  hold: Shikilia ili uendelee
 unassigned:
   - one: "{n} kipengee kisichogawiwa"
     other: "{n} vipengee visivyogawiwa"

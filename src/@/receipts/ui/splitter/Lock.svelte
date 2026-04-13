@@ -15,9 +15,9 @@
   let busy = $state(false)
 
   async function onclick() {
-    busy = true
+    busy = !receipt.locked
 
-    const locked = await lock(receipt.id)
+    const locked = receipt.locked ? undefined : await lock(receipt.id)
 
     if (!(locked instanceof Error)) {
       const expense = convert(receipt, stats)
@@ -38,7 +38,7 @@
 {/snippet}
 
 <div class="flex flex-col justify-center gap-2" use:transition={{ name: 'splitter-lock-button' }}>
-  {#if claimed < total}
+  {#if claimed < total && !receipt.locked}
     <Hold
       variant="default"
       size="lg"
@@ -50,7 +50,7 @@
       {$dict.close.label}
       {@render icon()}
       {#snippet message()}
-        <p>Hold to continue</p>
+        <p>{$dict.close.hold}</p>
         <p class="flex justify-center items-center gap-1">
           {$dict.unassigned(total - claimed)}
         </p>

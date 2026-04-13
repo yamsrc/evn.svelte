@@ -53,7 +53,7 @@
       </div>
     {/if}
 
-    <Attachments attachments={receipt.attachments} path="/receipts/attachments/" class="-mx-6" />
+    <Attachments attachments={receipt.attachments} path="/expenses/attachments/" class="-mx-6" />
 
     <Card.Root>
       <Card.Row align="start">

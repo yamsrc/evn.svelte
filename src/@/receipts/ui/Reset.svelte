@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { RotateCcw } from '@lucide/svelte'
+  import { Eraser } from '@lucide/svelte'
   import { reset } from '@/receipts'
   import { Button } from '$ui/button'
   import type { Props } from './Reset'
@@ -18,5 +18,5 @@
 </script>
 
 <Button {onclick} size="icon" variant="outline">
-  <RotateCcw />
+  <Eraser />
 </Button>

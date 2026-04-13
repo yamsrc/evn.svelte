@@ -22,6 +22,7 @@ autoclose:
     title: Betaald door
 close:
   label: Doorgaan
+  hold: Houd vast om door te gaan
 unassigned:
   - one: "{n} niet-toegewezen item"
     other: "{n} niet-toegewezen items"

@@ -73,6 +73,12 @@ export const receipt = {
       method: 'LOCK',
     })
   },
+
+  unlock: async (identity: string, id: string): Promise<Receipt | Error> => {
+    return await receipts.json<Receipt>(`${identity}/${id}`, {
+      method: 'UNLOCK',
+    })
+  },
 }
 
 export const invitations = {

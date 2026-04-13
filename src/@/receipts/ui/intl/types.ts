@@ -39,6 +39,7 @@ export type Dictionary = {
       }
       close: {
         label: string
+        hold: string
       }
       unassigned: (value: number) => string
       pending: {

@@ -22,6 +22,7 @@ autoclose:
     title: Pagado por
 close:
   label: Continuar
+  hold: Mantén pulsado para continuar
 unassigned:
   - one: "{n} elemento sin asignar"
     other: "{n} elementos sin asignar"

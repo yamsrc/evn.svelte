@@ -1,9 +1,9 @@
 <script lang="ts">
   import { Async } from 'svas'
-  import { Splitter, Leave, Reset, Failed } from '@/receipts/ui'
+  import { Splitter, Leave, Reset } from '@/receipts/ui'
   import { internal } from '@/receipts'
   import { account } from '@/iam'
-  import { Header, Section } from '@/app/ui'
+  import { Header, Section, Error } from '@/app/ui'
   import { Skeleton } from '$ui/skeleton'
   import { Return } from '$com/shell'
   import { page } from '$app/state'
@@ -18,10 +18,6 @@
     if (me === actor) void goto('..')
 
     splitter?.leave()
-  }
-
-  function onretry() {
-    void goto('../pending/')
   }
 </script>
 
@@ -60,19 +56,10 @@
         <Splitter bind:this={splitter} {receipt} account={$account} bind:actor />
       </Section>
     {/snippet}
-    {#snippet waiting()}
-      {@render failed()}
-    {/snippet}
     {#snippet error()}
-      {@render failed()}
+      <Error />
     {/snippet}
   </Async>
 {/if}
-
-{#snippet failed()}
-  <Section class="m-auto">
-    <Failed {onretry} />
-  </Section>
-{/snippet}
 
 <Return />

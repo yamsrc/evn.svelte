@@ -5,4 +5,4 @@
   const { attachments, class: classes }: Props = $props()
 </script>
 
-<Attachments attachments={attachments ?? []} path="/receipts/attachments/" class={classes} />
+<Attachments attachments={attachments ?? []} path="/expenses/attachments/" class={classes} />

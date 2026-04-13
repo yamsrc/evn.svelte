@@ -22,6 +22,7 @@ autoclose:
     title: Bezahlt von
 close:
   label: Weiter
+  hold: Zum Fortfahren gedrückt halten
 unassigned:
   - one: "{n} nicht zugewiesenes Element"
     other: "{n} nicht zugewiesene Elemente"

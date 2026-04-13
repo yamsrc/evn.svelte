@@ -32,7 +32,8 @@ export const dictionaries = {
       }
     },
     "close": {
-      "label": "تابع"
+      "label": "تابع",
+      "hold": "اضغط مطولًا للمتابعة"
     },
     "unassigned": (count) => {
       const forms = {"zero":"{n} عنصر غير معين","one":"{n} عنصر غير معين","two":"{n} عنصران غير معينان","few":"{n} عناصر غير معينة","many":"{n} عنصراً غير معين","other":"{n} عنصر غير معين"};
@@ -96,7 +97,8 @@ export const dictionaries = {
       }
     },
     "close": {
-      "label": "Weiter"
+      "label": "Weiter",
+      "hold": "Zum Fortfahren gedrückt halten"
     },
     "unassigned": (count) => {
       const forms = {"one":"{n} nicht zugewiesenes Element","other":"{n} nicht zugewiesene Elemente"};
@@ -160,7 +162,8 @@ export const dictionaries = {
       }
     },
     "close": {
-      "label": "Continue"
+      "label": "Continue",
+      "hold": "Hold to continue"
     },
     "unassigned": (count) => {
       const forms = {"one":"{n} unassigned item","other":"{n} unassigned items"};
@@ -224,7 +227,8 @@ export const dictionaries = {
       }
     },
     "close": {
-      "label": "Continuar"
+      "label": "Continuar",
+      "hold": "Mantén pulsado para continuar"
     },
     "unassigned": (count) => {
       const forms = {"one":"{n} elemento sin asignar","other":"{n} elementos sin asignar"};
@@ -288,7 +292,8 @@ export const dictionaries = {
       }
     },
     "close": {
-      "label": "Continuer"
+      "label": "Continuer",
+      "hold": "Maintiens appuyé pour continuer"
     },
     "unassigned": (count) => {
       const forms = {"one":"{n} élément non attribué","other":"{n} éléments non attribués"};
@@ -352,7 +357,8 @@ export const dictionaries = {
       }
     },
     "close": {
-      "label": "आगे बढ़ो"
+      "label": "आगे बढ़ो",
+      "hold": "जारी रखने के लिए दबाए रहें"
     },
     "unassigned": (count) => {
       const forms = {"one":"{n} असाइन न किया गया आइटम","other":"{n} असाइन न किए गए आइटम"};
@@ -416,7 +422,8 @@ export const dictionaries = {
       }
     },
     "close": {
-      "label": "Continua"
+      "label": "Continua",
+      "hold": "Tieni premuto per continuare"
     },
     "unassigned": (count) => {
       const forms = {"one":"{n} elemento non assegnato","other":"{n} elementi non assegnati"};
@@ -480,7 +487,8 @@ export const dictionaries = {
       }
     },
     "close": {
-      "label": "続ける"
+      "label": "続ける",
+      "hold": "続けるには長押し"
     },
     "unassigned": (count) => {
       const forms = {"other":"未割り当てのアイテム {n} 件"};
@@ -544,7 +552,8 @@ export const dictionaries = {
       }
     },
     "close": {
-      "label": "계속하기"
+      "label": "계속하기",
+      "hold": "계속하려면 길게 눌러줘"
     },
     "unassigned": (count) => {
       const forms = {"other":"할당되지 않은 항목 {n}개"};
@@ -608,7 +617,8 @@ export const dictionaries = {
       }
     },
     "close": {
-      "label": "Doorgaan"
+      "label": "Doorgaan",
+      "hold": "Houd vast om door te gaan"
     },
     "unassigned": (count) => {
       const forms = {"one":"{n} niet-toegewezen item","other":"{n} niet-toegewezen items"};
@@ -672,7 +682,8 @@ export const dictionaries = {
       }
     },
     "close": {
-      "label": "Продолжить"
+      "label": "Продолжить",
+      "hold": "Удерживай, чтобы продолжить"
     },
     "unassigned": (count) => {
       const forms = {"one":"{n} нераспределённый элемент","few":"{n} нераспределённых элемента","many":"{n} нераспределённых элементов","other":"{n} нераспределённых элементов"};
@@ -736,7 +747,8 @@ export const dictionaries = {
       }
     },
     "close": {
-      "label": "Endelea"
+      "label": "Endelea",
+      "hold": "Shikilia ili uendelee"
     },
     "unassigned": (count) => {
       const forms = {"one":"{n} kipengee kisichogawiwa","other":"{n} vipengee visivyogawiwa"};
@@ -800,7 +812,8 @@ export const dictionaries = {
       }
     },
     "close": {
-      "label": "Devam et"
+      "label": "Devam et",
+      "hold": "Devam etmek için basılı tut"
     },
     "unassigned": (count) => {
       const forms = {"one":"{n} atanmamış öğe","other":"{n} atanmamış öğe"};
@@ -864,7 +877,8 @@ export const dictionaries = {
       }
     },
     "close": {
-      "label": "Продовжити"
+      "label": "Продовжити",
+      "hold": "Утримуй, щоб продовжити"
     },
     "unassigned": (count) => {
       const forms = {"one":"{n} непризначений елемент","few":"{n} непризначених елементи","many":"{n} непризначених елементів","other":"{n} непризначених елементів"};
@@ -928,7 +942,8 @@ export const dictionaries = {
       }
     },
     "close": {
-      "label": "继续"
+      "label": "继续",
+      "hold": "按住继续"
     },
     "unassigned": (count) => {
       const forms = {"other":"{n} 个未分配项目"};

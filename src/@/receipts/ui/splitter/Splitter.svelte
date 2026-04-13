@@ -59,8 +59,8 @@
         {/if}
         <Feedback {receipt} {account} />
       {:else if receipt.locker === account.id}
-        TODO: Continue (locked by me), waiting (locked by someone else), go to expense (linked
-        expense)
+        <Lock {receipt} {stats} />
+        TODO: Continue (locked by me), waiting (locked by someone else), go to expense (linked expense)
       {/if}
     </div>
   {:else}
@@ -68,6 +68,6 @@
   {/if}
 </div>
 
-{#if receipt.status !== 'failed' && !receipt.locked}
-  <Actions {receipt} {actor} />
+{#if receipt.status !== 'failed'}
+  <Actions {receipt} {account} {actor} />
 {/if}
