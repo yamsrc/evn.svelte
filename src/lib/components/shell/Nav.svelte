@@ -95,7 +95,7 @@
         <li>
           <Button
             id={`nav-${section.id}-button`}
-            href={link(section)}
+            href={ret?.href ?? link(section)}
             onclick={collapsed ? () => back(ret?.href ?? section.href) : null}
             variant="ghost"
             class={cn(
