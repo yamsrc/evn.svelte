@@ -1,8 +1,8 @@
 <script lang="ts">
   import { Async } from 'svas'
-  import { Indicator, Scan } from '@/receipts/ui'
+  import { Receipts, Scan } from '@/receipts/ui'
   import { receipts } from '@/receipts'
-  import { Section, Header, actionVariants, Coins } from '@/app/ui'
+  import { Section, Header, actionVariants } from '@/app/ui'
   import { dict } from '$lib/intl/dev'
   import { Actions } from '$com/shell'
   import { goto } from '$app/navigation'
@@ -17,17 +17,7 @@
 <Section>
   <Async store={receipts}>
     {#snippet awaited(receipts)}
-      <ul>
-        {#each receipts as receipt (receipt.id)}
-          <li class="flex items-center justify-between gap-2">
-            <div class="flex items-center gap-1">
-              <Indicator {receipt} />
-              <a href={`${receipt.id}/`}>{receipt.title || receipt.id}</a>
-            </div>
-            <span><Coins amount={receipt.total} /></span>
-          </li>
-        {/each}
-      </ul>
+      <Receipts {receipts} />
     {/snippet}
   </Async>
 </Section>
