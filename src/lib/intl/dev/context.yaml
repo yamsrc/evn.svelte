@@ -95,3 +95,6 @@ inputs:
       context: App navigation tab
     transmission:
       input: Transmission
+    app:
+      input: App
+      context: menu item

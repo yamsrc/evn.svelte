@@ -5,10 +5,11 @@
   import { update } from '@/iam'
   import { Authenticated } from '@/app/ui'
   import { Button } from '$ui/button'
+  import { dict } from '$lib/intl/dev'
   import { oidc } from '$config'
   import { Screen } from '$com/shell'
   import { Nav } from '$com/shell'
-  // import { sections } from './sections'
+  import { sections } from './sections'
   import type { Locale } from '$lib/intl'
 
   const { children } = $props()
@@ -26,7 +27,7 @@
       Back
     </Button>
     {@render children()}
-    <Nav position="start" underlay class="z-48" />
+    <Nav position="start" underlay class="z-48" sections={sections($dict)} />
     <Paywall />
   </Screen>
 </Authenticated>
