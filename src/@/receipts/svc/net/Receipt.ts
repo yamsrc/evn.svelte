@@ -19,6 +19,7 @@ export interface Receipt {
   locker: string | null
   autolock?: string
   _version: number
+  _created: number
 }
 
 export interface Link {

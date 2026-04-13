@@ -13,10 +13,11 @@
   const me = $derived($account?.id)
 
   const description = $derived(
-    `${receipt.date ? date(receipt.date, $locale) : ''} ${receipt.merchant?.location ? `, ${receipt.merchant.location}` : ''}`,
+    `${receipt.date ? date(receipt._created, $locale) : ''} ${receipt.merchant?.location ? `, ${receipt.merchant.location}` : ''}`,
   )
 </script>
 
+asdf {receipt._created}
 {#snippet indicator()}
   {#if receipt.locked && receipt.locker === me}
     <Attention class="mx-1 animate-pulse" />
