@@ -1,6 +1,7 @@
 <script lang="ts">
   import { ok } from 'svas'
   import { Scopes } from '@/transmission/ui'
+  import { receipts } from '@/receipts'
   import { Notifications } from '@/notifications/ui'
   import { account } from '@/iam'
   import { groups } from '@/groups'
@@ -116,6 +117,15 @@
           }),
         )
       }
+    }
+
+    // Receipts: joined
+    const receiptsList = $receipts
+
+    if (ok(receiptsList)) {
+      const receipt = receiptsList[0]
+
+      if (receipt) result.unshift(create(i++, acc.id, 'receipts', 'joined', receipt.id, receipt))
     }
 
     // Expenses
