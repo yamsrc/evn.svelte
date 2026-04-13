@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Async } from 'svas'
-  import { Scan } from '@/receipts/ui'
+  import { Indicator, Scan } from '@/receipts/ui'
   import { receipts } from '@/receipts'
   import { Section, Header, actionVariants, Coins } from '@/app/ui'
   import { dict } from '$lib/intl/dev'
@@ -20,7 +20,10 @@
       <ul>
         {#each receipts as receipt (receipt.id)}
           <li class="flex items-center justify-between gap-2">
-            <a href={`${receipt.id}/`}>{receipt.title || receipt.id}</a>
+            <div class="flex items-center gap-1">
+              <Indicator {receipt} />
+              <a href={`${receipt.id}/`}>{receipt.title || receipt.id}</a>
+            </div>
             <span><Coins amount={receipt.total} /></span>
           </li>
         {/each}
