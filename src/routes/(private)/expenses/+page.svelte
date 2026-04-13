@@ -1,5 +1,7 @@
 <script lang="ts">
   import { Async, combined } from 'svas'
+  import { Receipts } from '@/receipts/ui'
+  import { receipts, filter as filterReceipts } from '@/receipts'
   import { scope } from '@/notifications'
   import { account } from '@/iam'
   import { Actions, Expenses, Create } from '@/expenses/ui'
@@ -28,9 +30,10 @@
   </Header.Root>
 </Section>
 
-<Async store={combined(expenses, adventures)}>
-  {#snippet awaited([expenses, adventures])}
+<Async store={combined(expenses, adventures, receipts)}>
+  {#snippet awaited([expenses, adventures, receipts])}
     {@const filteredExpenses = filterExpenses(expenses, search)}
+    {@const filteredReceipts = filterReceipts(receipts, search)}
     {@const filteredAdventures = filterAdventures(adventures, search)}
     {@const empty = filteredExpenses.length === 0 && filteredAdventures.length === 0}
 
@@ -54,7 +57,8 @@
     {#if filteredExpenses.length > 0}
       <Section class="space-y-2">
         <h2>{$dict.expenses.expenses.title}</h2>
-        <Expenses expenses={filteredExpenses} {search} {notifications} />
+        <Receipts receipts={filteredReceipts} />
+        <Expenses expenses={filteredExpenses} {notifications} />
       </Section>
     {/if}
 

@@ -2,6 +2,7 @@
   import { Async, combined } from 'svas'
   import { Permission } from '@/transmission/ui'
   import { subscribed } from '@/transmission'
+  import { receipts } from '@/receipts'
   import { Notifications } from '@/notifications/ui'
   import { notifications, scope } from '@/notifications'
   import { account } from '@/iam'
@@ -25,8 +26,8 @@
   ])
 </script>
 
-<Async store={combined(account, contacts, expenses, notifications, adventures)}>
-  {#snippet awaited([account, contacts, expenses, notifications, adventures])}
+<Async store={combined(account, contacts, expenses, receipts, notifications, adventures)}>
+  {#snippet awaited([account, contacts, expenses, receipts, notifications, adventures])}
     <Section>
       <Header.Root>
         <Header.Title>{$dict.home.title(account.name)}</Header.Title>
@@ -66,7 +67,7 @@
     {/if}
 
     <Section>
-      <Recent {expenses} notifications={expensesNotifications} />
+      <Recent {expenses} {receipts} notifications={expensesNotifications} />
     </Section>
   {/snippet}
 </Async>
