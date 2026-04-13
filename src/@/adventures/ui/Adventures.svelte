@@ -12,7 +12,7 @@
 <List.Root class={classes}>
   {#each sorted as adventure (adventure.id)}
     {@const highlighted = unseen(adventure, notifications ?? [])}
-    <List.Option>
+    <List.Option class="w-[calc(75%-var(--spacing))]">
       <Panel {adventure} link {highlighted} class="size-full" />
     </List.Option>
   {/each}
