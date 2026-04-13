@@ -19,13 +19,19 @@
   style="view-transition-name: receipt-extra-{extra.id}; view-transition-class: transition-spring transition-morph receipt-extra;">
   <div class="flex items-center gap-1">
     <span>{extra.name}</span>
-    <Button variant="ghost" size="icon-sm" onclick={() => toggle(extra.id)} class="bg-transparent!">
-      {#if extra.included}
-        <ArrowBigUpDash />
-      {:else}
-        <ArrowBigDownDash />
-      {/if}
-    </Button>
+    {#if !receipt.locked}
+      <Button
+        variant="ghost"
+        size="icon-sm"
+        onclick={() => toggle(extra.id)}
+        class="bg-transparent!">
+        {#if extra.included}
+          <ArrowBigUpDash />
+        {:else}
+          <ArrowBigDownDash />
+        {/if}
+      </Button>
+    {/if}
   </div>
   <Coins {amount} sign="neutral" absolute={false} />
 </div>
