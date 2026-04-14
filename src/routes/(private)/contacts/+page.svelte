@@ -65,7 +65,6 @@
           <p class="text-muted-foreground text-center">{$dict.search.empty}</p>
         </Section>
       {/if}
-      <Actions />
     {:else}
       <Section class="m-auto flex flex-col items-center justify-center gap-2">
         <h2>{$dict.contacts.empty.title}</h2>
@@ -75,3 +74,5 @@
     {/if}
   {/snippet}
 </Async>
+
+<Actions />

@@ -4,6 +4,7 @@
   import { ChartPie, Coins, Component, Fan, Plus, UserPlus } from '@lucide/svelte'
   import { Scan } from '@/receipts/ui'
   import { account } from '@/iam'
+  import { templates } from '@/expenses.templates'
   import { dict as contactsDict } from '@/contacts/ui/intl'
   import { adventures } from '@/adventures'
   import { dict } from '$lib/intl'
@@ -15,7 +16,11 @@
   import { actionVariants } from './Action'
   import type { Props } from './Actions'
 
-  const { showContacts = true }: Props = $props()
+  const {
+    showContacts = true,
+    showStartAdventure = false,
+    showExpensesTemplates = false,
+  }: Props = $props()
 
   const active = writable(false)
   const variant = [Dropdown.itemVariants({ direction: 'row' }), 'whitespace-nowrap']
@@ -52,20 +57,36 @@
     </Dropdown.Trigger>
     <Dropdown.Content>
       <Dropdown.Layer>
-        <Dropdown.Group direction="col">
-          {#if adventure}
-            <Dropdown.Item
-              id="nav-actions-adventure-expense-button"
-              href={`/adventures/${adventure.id}/expenses/editor/`}>
-              <Coins />
-              {adventure.title}
-            </Dropdown.Item>
-          {/if}
-          <Dropdown.Item id="nav-actions-adventures-new-button" href="/adventures/editor/">
-            <Fan />
-            {$dict.actions.adventures.adventure}
-          </Dropdown.Item>
-        </Dropdown.Group>
+        {#if showExpensesTemplates && ok($templates) && $templates.length > 0}
+          <Dropdown.Group direction="col">
+            {#each $templates as template (template.id)}
+              <Dropdown.Item id="nav-actions-templates-new-button" href="/expenses/editor/">
+                <ChartPie />
+                {template.title}
+              </Dropdown.Item>
+            {/each}
+          </Dropdown.Group>
+          <Dropdown.Separator />
+        {/if}
+
+        {#if showStartAdventure || adventure}
+          <Dropdown.Group direction="col">
+            {#if adventure}
+              <Dropdown.Item
+                id="nav-actions-adventure-expense-button"
+                href={`/adventures/${adventure.id}/expenses/editor/`}>
+                <Coins />
+                {adventure.title}
+              </Dropdown.Item>
+            {/if}
+            {#if showStartAdventure}
+              <Dropdown.Item id="nav-actions-adventures-new-button" href="/adventures/editor/">
+                <Fan />
+                {$dict.actions.adventures.adventure}
+              </Dropdown.Item>
+            {/if}
+          </Dropdown.Group>
+        {/if}
         <Dropdown.Separator />
         {#if showContacts}
           <Dropdown.Group direction="col">
