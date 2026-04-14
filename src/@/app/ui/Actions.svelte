@@ -4,7 +4,7 @@
   import { ChartPie, Coins, Component, Fan, Plus, UserPlus } from '@lucide/svelte'
   import { Scan } from '@/receipts/ui'
   import { account } from '@/iam'
-  import { templates } from '@/expenses.templates'
+  import { templates, type Template } from '@/expenses.templates'
   import { dict as contactsDict } from '@/contacts/ui/intl'
   import { adventures } from '@/adventures'
   import { dict } from '$lib/intl'
@@ -48,6 +48,14 @@
   function text() {
     return data(false).url
   }
+
+  function copy(template: Template) {
+    const { id, ...rest } = template
+
+    void goto('/expenses/editor/', {
+      state: { expense: { ...rest, copied: id } },
+    })
+  }
 </script>
 
 <Actions {active}>
@@ -60,7 +68,7 @@
         {#if showExpensesTemplates && ok($templates) && $templates.length > 0}
           <Dropdown.Group direction="col">
             {#each $templates as template (template.id)}
-              <Dropdown.Item id="nav-actions-templates-new-button" href="/expenses/editor/">
+              <Dropdown.Item id="nav-actions-templates-new-button" onclick={() => copy(template)}>
                 <ChartPie />
                 {template.title}
               </Dropdown.Item>

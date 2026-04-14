@@ -6,3 +6,7 @@ const templates = origin.resource<Template>('/expenses/templates/', { credential
 export async function get(identity: string): Promise<Template[] | Error> {
   return templates.json(identity)
 }
+
+export async function del(identity: string, id: string): Promise<Template | Error> {
+  return templates.json(`${identity}/${id}`, { method: 'DELETE' })
+}

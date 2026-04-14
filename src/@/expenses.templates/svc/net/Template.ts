@@ -4,6 +4,8 @@ export interface Template {
   title: string
   location?: string
   participants: Participants
+  _version: number
+  _deleted?: number | null
 }
 
 type Participants = Record<string, Participant>
