@@ -6,13 +6,13 @@
   import { Button } from '$ui/button'
   import { cn } from '$lib/utils'
   import { ios, safari, shell, standalone } from '$lib/tools'
+  import { Attention } from '$com/shell'
+  import { Underlay } from '$com/shell'
   import { back } from '$com/history'
   import { page } from '$app/state'
   import { preloadCode } from '$app/navigation'
   import { actions, returns } from './store'
-  import Underlay from './Underlay.svelte'
   import { exact, match, nested, type Props, type Section } from './Nav'
-  import Attention from './Attention.svelte'
 
   const app = standalone || shell
   const safariBrowser = ios && safari && !app
