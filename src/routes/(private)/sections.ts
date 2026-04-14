@@ -26,7 +26,7 @@ export const sections = (dict: Dictionary, notifications: Notification[]): Secti
   {
     id: 'expenses',
     href: '/expenses/',
-    nested: ['/adventures/'],
+    nested: ['/adventures/', '/receipts/'],
     label: dict.nav.expenses,
     Icon: Wallet,
     unseen: notifications.some(

@@ -17,7 +17,7 @@
 
 <Card.Root
   {highlighted}
-  href={`/dev/receipts/${receipt.id}/`}
+  href={`/receipts/${receipt.id}/`}
   class="bg-warning/20! border-warning/30! hover:bg-warning/25! hover:border-warning/35!">
   <Card.Row align="start">
     <Card.Side class="flex-1">
