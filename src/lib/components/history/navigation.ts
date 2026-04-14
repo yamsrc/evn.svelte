@@ -36,6 +36,7 @@ export async function back(href: string) {
   const index = closest(target)
 
   if (index > 0 && index <= 42) window.history.go(-index)
+  else if (history.length > 0) window.history.back()
   else await goto(href)
 }
 
