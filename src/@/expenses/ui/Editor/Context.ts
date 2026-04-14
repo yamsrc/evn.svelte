@@ -37,6 +37,7 @@ function exact(partial: Partial<Value>): Value {
     extras: structuredClone(value.extras),
     attachments: structuredClone(value.attachments),
     links: structuredClone(value.links),
+    template: value.template,
   }
 }
 
@@ -48,6 +49,7 @@ function blank(draft?: Partial<Value>): Value {
     extras: draft?.extras ?? [],
     attachments: draft?.attachments ?? [],
     links: draft?.links ?? [],
+    template: draft?.template ?? false,
   }
 }
 
@@ -71,6 +73,7 @@ export interface Value {
   extras: Extra[]
   attachments: string[]
   links?: Link[]
+  template?: boolean
 }
 
 interface Participant {

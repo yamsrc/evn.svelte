@@ -8,6 +8,7 @@ import * as net from './net'
 export async function add(properties: net.Post): Promise<net.Expense | Error> {
   const me = await having(account)
 
+  // save date in the current timezone
   properties.date ??= new Date().toISOString().split('T')[0]
 
   const expense = await net.post(me.id, properties)

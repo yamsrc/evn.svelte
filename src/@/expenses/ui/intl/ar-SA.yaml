@@ -46,3 +46,7 @@ transfers:
 action: {}
 actions:
   delete: حذف المرفق
+template:
+  toggle:
+    label: احفظ كقالب
+    description: استخدم لاحقًا في الإجراءات السريعة

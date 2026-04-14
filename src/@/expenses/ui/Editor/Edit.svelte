@@ -4,6 +4,7 @@
   import { Selector } from '@/adventures/ui'
   import { back } from '$com/history'
   import Attachments from '../Attachments.svelte'
+  import Template from './Template.svelte'
   import { Form } from './Form'
   import { getContext } from './Context'
   import type { Props } from './Edit'
@@ -39,4 +40,10 @@
   <Attachments bind:attachments={value.attachments} editable={true} />
 {/if}
 
-<Form bind:value bind:mode {onsubmit} />
+<Section>
+  <Form bind:value bind:mode {onsubmit} />
+
+  {#if !id}
+    <Template bind:value={value.template} />
+  {/if}
+</Section>

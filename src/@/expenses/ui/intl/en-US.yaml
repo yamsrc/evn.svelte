@@ -42,3 +42,7 @@ transfers:
 action: {}
 actions:
   delete: Delete attachment
+template:
+  toggle:
+    label: Save as template
+    description: Use later in Quick Actions
