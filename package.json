@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite dev --open --host",
     "build": "vite build",
-    "rebuild": "npm i && npm run build && pm2 restart ui",
+    "rebuild": "npm i && npm run build && pm2 restart ui && npm run check",
     "preview": "vite preview",
     "prepare": "husky",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
