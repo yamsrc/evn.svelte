@@ -15,4 +15,5 @@ export type Dictionary = {
         title: string
         empty: string
       }
+      balance: string
     }

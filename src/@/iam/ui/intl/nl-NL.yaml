@@ -32,7 +32,7 @@ auth:
       !js
 
       (name) => `${name ? name + ", om" : "Om"} veiligheidsredenen zijn je
-      inloggegevens verlopen. Log&nbsp;opnieuw in om&nbsp;door te gaan.`
+      inloggegevens verlopen. Log opnieuw in om door te gaan.`
     title: Welkom terug
   signout: Afmelden
   login: Inloggen

@@ -8,8 +8,6 @@
 
   let { group, selected = $bindable(), highlighted, onselect }: Props = $props()
 
-  const members = $derived(group.identities.filter((identity) => identity !== $account?.id))
-
   function onclick(event: MouseEvent) {
     if (onselect) {
       event.preventDefault()
@@ -34,12 +32,12 @@
         {/if}
         <span class="font-bold">{group.title ?? group.name}</span>
       </div>
-      <Avatars identities={members} max={5} class="py-1" />
+      <Avatars identities={group.identities} max={5} class="py-1" />
     </div>
   {/snippet}
   {#snippet right()}
     {#if group.balance}
-      <Balance balance={group.balance} />
+      <Balance balance={group.balance} youOwe={$dict.balance} youAreOwed={$dict.balance} />
     {/if}
     {#if highlighted}
       <Attention class="absolute top-2 right-2 z-10" />

@@ -12,7 +12,8 @@ export const dictionaries = {
     "expenses": {
       "title": "الفعاليات",
       "empty": "لا توجد مصروفات مشتركة حتى الآن."
-    }
+    },
+    "balance": "رصيدك"
   },
   "de-DE": {
     "reduction": {
@@ -24,7 +25,8 @@ export const dictionaries = {
     "expenses": {
       "title": "Veranstaltungen",
       "empty": "Bisher keine geteilten Ausgaben."
-    }
+    },
+    "balance": "Dein Kontostand"
   },
   "en-US": {
     "reduction": {
@@ -36,7 +38,8 @@ export const dictionaries = {
     "expenses": {
       "title": "Events",
       "empty": "No shared expenses so far."
-    }
+    },
+    "balance": "Your balance"
   },
   "es-ES": {
     "reduction": {
@@ -48,7 +51,8 @@ export const dictionaries = {
     "expenses": {
       "title": "Eventos",
       "empty": "Aún no hay gastos compartidos."
-    }
+    },
+    "balance": "Tu saldo"
   },
   "fr-FR": {
     "reduction": {
@@ -60,7 +64,8 @@ export const dictionaries = {
     "expenses": {
       "title": "Événements",
       "empty": "Aucune dépense partagée pour le moment."
-    }
+    },
+    "balance": "Votre solde"
   },
   "hi-IN": {
     "reduction": {
@@ -72,7 +77,8 @@ export const dictionaries = {
     "expenses": {
       "title": "इवेंट्स",
       "empty": "अभी तक कोई साझा खर्च नहीं हैं।"
-    }
+    },
+    "balance": "आपकी शेष राशि"
   },
   "it-IT": {
     "reduction": {
@@ -84,7 +90,8 @@ export const dictionaries = {
     "expenses": {
       "title": "Eventi",
       "empty": "Nessuna spesa condivisa finora."
-    }
+    },
+    "balance": "Il tuo saldo"
   },
   "ja-JP": {
     "reduction": {
@@ -96,7 +103,8 @@ export const dictionaries = {
     "expenses": {
       "title": "イベント",
       "empty": "まだ共有された支出はありません。"
-    }
+    },
+    "balance": "あなたの残高"
   },
   "ko-KR": {
     "reduction": {
@@ -108,7 +116,8 @@ export const dictionaries = {
     "expenses": {
       "title": "이벤트",
       "empty": "아직 공동 지출이 없습니다."
-    }
+    },
+    "balance": "내 잔액"
   },
   "nl-NL": {
     "reduction": {
@@ -120,7 +129,8 @@ export const dictionaries = {
     "expenses": {
       "title": "Evenementen",
       "empty": "Nog geen gedeelde uitgaven."
-    }
+    },
+    "balance": "Jouw saldo"
   },
   "ru-RU": {
     "reduction": {
@@ -132,7 +142,8 @@ export const dictionaries = {
     "expenses": {
       "title": "События",
       "empty": "Пока нет общих расходов."
-    }
+    },
+    "balance": "Ваш баланс"
   },
   "sw-TZ": {
     "reduction": {
@@ -144,7 +155,8 @@ export const dictionaries = {
     "expenses": {
       "title": "Matukio",
       "empty": "Hakuna gharama zilizoshirikiwa hadi sasa."
-    }
+    },
+    "balance": "Salio lako"
   },
   "tr-TR": {
     "reduction": {
@@ -156,7 +168,8 @@ export const dictionaries = {
     "expenses": {
       "title": "Etkinlikler",
       "empty": "Henüz paylaşılan bir harcama yok."
-    }
+    },
+    "balance": "Bakiyeniz"
   },
   "uk-UA": {
     "reduction": {
@@ -168,7 +181,8 @@ export const dictionaries = {
     "expenses": {
       "title": "Події",
       "empty": "Поки що немає спільних витрат."
-    }
+    },
+    "balance": "Ваш баланс"
   },
   "zh-CN": {
     "reduction": {
@@ -180,6 +194,7 @@ export const dictionaries = {
     "expenses": {
       "title": "活动",
       "empty": "目前还没有共享支出。"
-    }
+    },
+    "balance": "你的余额"
   }
 };

@@ -5,10 +5,10 @@ import { Given, When } from './fixtures'
 Given('new expense', async ({ page, ctx }) => {
   await page.goto('/')
   await page.locator('#nav-actions-button').click()
-  await page.locator('#nav-actions-cheqes-input-button').click()
+  await page.locator('#nav-actions-cheques-input-button').click()
   await expect(page.locator('#expenses-spendings-add-participants-button')).toBeVisible()
   await page.locator('#expenses-spendings-add-participants-button').click()
-  await expect(page.locator('#expenses-add-participants-add-button')).toBeVisible()
+  await expect(page.locator('#participants-selector-add-button')).toBeVisible()
 
   // Create a new participant via CreateDialog
   await page.locator('#expenses-add-participants-create-button').click()
@@ -21,7 +21,7 @@ Given('new expense', async ({ page, ctx }) => {
 
   // Select the newly created participant and add it
   await page.locator('#contacts-list-content > *').first().click()
-  await page.locator('#expenses-add-participants-add-button').click()
+  await page.locator('#participants-selector-add-button').click()
 
   await expect(page.locator('#expenses-form-title-input')).toBeVisible()
   await page.locator('#expenses-form-title-input').click()
@@ -34,15 +34,18 @@ Given('new expense', async ({ page, ctx }) => {
   await page.locator('#expenses-total-input').click()
   await page.keyboard.type('100')
 
-  // Enter amount for participant to enable save button (user gets 50, contact gets 50)
   await expect(page.locator('#expenses-participant-amount-0')).toHaveValue('50')
   await expect(page.locator('#expenses-participant-amount-1')).toHaveValue('50')
 
   await expect(page.locator('#expenses-form-save-button')).toBeVisible()
   await expect(page.locator('#expenses-form-save-button')).toBeEnabled()
   await page.locator('#expenses-form-save-button').click()
-  await expect(page).toHaveURL(/\/expenses\/[^/]+\/$/)
 
+  await expect(page.getByText(ctx.name)).toBeVisible()
+
+  await page.locator('#expenses-list > *').first().click()
+
+  await expect(page).toHaveURL(/\/expenses\/[^/]+\/$/)
   await expect(page.locator('#expenses-details-title')).toContainText(ctx.name)
   await expect(page.locator('#expenses-edit-action')).toBeVisible()
 })

@@ -8,3 +8,4 @@ reduction:
 expenses:
   title: Events
   empty: No shared expenses so far.
+balance: Your balance

@@ -25,20 +25,23 @@ const selected = value<Locale | undefined>({
 })
 
 const locale = derived([account, selected], ([$account, $selected]) => {
-  if ($selected && $account?.locale === undefined) return resolveLocale($selected)
+  if ($selected) return resolveLocale($selected)
 
-  if ($account?.locale !== undefined && supported($account?.locale))
+  const system = preferred()
+  if (system) return system
+
+  if ($account?.locale !== undefined && supported($account.locale))
     return resolveLocale($account.locale)
-  else
-    return preferred() ?? defaultLocale
+
+  return defaultLocale
 })
 
 export const grammar = derived(account, ($account) => $account?.grammar ?? 'none')
 
 function preferred(): Locale | null {
-  for (const lang of navigator.languages) {
-    if (supported(lang)) return resolveLocale(lang)
-  }
+  if (typeof navigator !== 'undefined')
+    for (const lang of navigator.languages)
+      if (supported(lang)) return resolveLocale(lang)
 
   return null
 }

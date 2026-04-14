@@ -8,3 +8,4 @@ reduction:
 expenses:
   title: События
   empty: Пока нет общих расходов.
+balance: Ваш баланс
