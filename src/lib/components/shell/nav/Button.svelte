@@ -13,16 +13,13 @@
     variant = 'ghost',
     ...props
   }: Props = $props()
-
-  const rounded = 'rounded-xl'
 </script>
 
 <Button
   {id}
   {variant}
   class={[
-    'relative flex flex-col h-full flex-1 min-w-16 p-3 gap-1 text-sm transition-colors duration-300 hover:bg-accent/25 overflow-hidden',
-    rounded,
+    'relative flex flex-col h-full flex-1 min-w-16 p-3 gap-1 text-sm transition-colors duration-300 hover:bg-accent/25 overflow-hidden rounded-xl',
     active && 'text-accent-foreground',
     classes,
   ]}

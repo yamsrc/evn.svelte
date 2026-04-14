@@ -3,17 +3,15 @@
   import { back } from '$com/history'
   import { page } from '$app/state'
   import { preloadCode } from '$app/navigation'
-  import { exact, match, nested, type Section } from './Nav'
+  import { faded } from './store'
+  import { exact, nested, type Section } from './Nav'
   import Button from './Button.svelte'
   import type { Props } from './Sections'
 
-  const { sections, faded }: Props = $props()
+  const { sections, section: active }: Props = $props()
 
-  const active = $derived(sections.find((section) => match(section, page.url.pathname)))
   const collapsed = $derived(active ? nested(active, page.url.pathname) : false)
-  const visible = $derived(
-    sections.filter((section) => !collapsed || match(section, page.url.pathname)),
-  )
+  const visible = $derived(sections.filter(({ id }) => !collapsed || id === active?.id))
 
   onMount(() => {
     for (const section of sections) {
@@ -29,19 +27,18 @@
 </script>
 
 {#each sections as section (section.href)}
-  {@const isActive = match(section, page.url.pathname)}
   {@const hidden = !visible.includes(section)}
-  <li>
+  <div>
     <Button
       id={`nav-${section.id}-button`}
       href={link(section)}
       onclick={collapsed ? () => back(section.href) : null}
-      active={isActive}
+      active={section.id === active?.id}
       unseen={section.unseen}
-      {faded}
+      faded={$faded}
       class={[hidden && 'hidden']}>
       <section.Icon color="var(--muted-foreground)" />
       <span>{section.label}</span>
     </Button>
-  </li>
+  </div>
 {/each}

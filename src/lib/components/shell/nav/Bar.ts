@@ -1,5 +1,3 @@
-import type { Section } from './Nav'
+import type { HTMLAttributes } from 'svelte/elements'
 
-export interface Props {
-  sections: Section[]
-}
+export interface Props extends HTMLAttributes<HTMLDivElement> {}

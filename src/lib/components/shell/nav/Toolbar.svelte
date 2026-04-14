@@ -6,18 +6,11 @@
   const { position }: Props = $props()
 
   const action = $derived($actions.at(-1) ?? null)
-  const rounded = 'rounded-xl'
 </script>
 
-{#if action}
+{#if action && position !== 'center'}
   <div
-    class={[
-      'flex h-full py-1',
-      'sm:me-4 transition-all duration-300',
-      "[&_svg:not([class*='size-'])]:size-5",
-      rounded,
-      position === 'center' && !action && 'hidden',
-    ]}
+    class="flex h-full py-1 sm:me-4 transition-all duration-300 [&_svg:not([class*='size-'])]:size-5"
     style="view-transition-name: shell-actions-{position}; view-transition-class: shell-actions">
     <ButtonGroup.Root class={['flex h-full', action?.class]}>
       {@render action.snippet()}
