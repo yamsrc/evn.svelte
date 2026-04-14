@@ -45,16 +45,18 @@
       <Totals {contacts} />
     </Section>
 
-    <Section class="px-0 flex flex-col gap-2">
-      {#if $subscribed === false}
-        <div class="px-5">
-          <Permission dismissable />
-        </div>
-      {/if}
-      {#if notifications.length > 0}
-        <Notifications {notifications} />
-      {/if}
-    </Section>
+    {#if $subscribed === false || notifications.length > 0}
+      <Section class="px-0 flex flex-col gap-2">
+        {#if $subscribed === false}
+          <div class="px-5">
+            <Permission dismissable />
+          </div>
+        {/if}
+        {#if notifications.length > 0}
+          <Notifications {notifications} />
+        {/if}
+      </Section>
+    {/if}
 
     <Section>
       <Tops {contacts} />
