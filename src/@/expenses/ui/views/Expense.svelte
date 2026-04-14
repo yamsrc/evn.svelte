@@ -1,9 +1,9 @@
 <script lang="ts">
   import { Paperclip } from '@lucide/svelte'
   import { account } from '@/iam'
+  import { description } from '@/expenses/ui'
   import { numbers, owe } from '@/expenses'
   import { Avatars, Balance } from '@/app/ui'
-  import { date } from '$lib/tools'
   import { locale, dict } from '$lib/intl'
   import { Attention } from '$com/shell'
   import { Separator } from '$com/separator'
@@ -12,9 +12,8 @@
 
   const { expense, highlighted }: Props = $props()
   const participants = $derived(Object.keys(expense.participants))
-  const description = $derived(
-    `${date(expense.date, $locale)}${expense.location ? `, ${expense.location}` : ''}`,
-  )
+
+  const desc = $derived(description(expense, $locale))
 </script>
 
 <Card.Root href={`/expenses/${expense.id}/`} {highlighted}>
@@ -31,7 +30,7 @@
           <Attention class="mx-1" />
         {/if}
       </div>
-      <p class="text-sm text-muted-foreground">{description}</p>
+      <p class="text-sm text-muted-foreground">{desc}</p>
     </Card.Side>
     <Card.Metric amount={numbers.total(expense)} label={$dict.expenses.balance.total} />
   </Card.Row>

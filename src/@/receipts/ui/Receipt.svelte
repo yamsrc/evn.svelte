@@ -1,8 +1,8 @@
 <script lang="ts">
   import { Paperclip } from '@lucide/svelte'
   import { Card } from '@/expenses/ui'
+  import { description } from '@/expenses/ui'
   import { Avatars } from '@/app/ui'
-  import { date } from '$lib/tools'
   import { locale, dict } from '$lib/intl'
   import { Separator } from '$com/separator'
   import Indicator from './Indicator.svelte'
@@ -10,8 +10,14 @@
 
   const { receipt, highlighted }: Props = $props()
 
-  const description = $derived(
-    `${date(receipt._created, $locale)} ${receipt.merchant?.location ? `, ${receipt.merchant.location}` : ''}`,
+  const desc = $derived(
+    description(
+      {
+        date: receipt._created,
+        location: receipt.merchant?.location,
+      },
+      $locale,
+    ),
   )
 </script>
 
@@ -30,7 +36,7 @@
         {/if}
         <Indicator {receipt} />
       </div>
-      <p class="text-sm text-muted-foreground">{description}</p>
+      <p class="text-sm text-muted-foreground">{desc}</p>
     </Card.Side>
     <Card.Metric amount={receipt.total} label={$dict.expenses.balance.total} />
   </Card.Row>

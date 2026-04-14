@@ -35,7 +35,7 @@
           <Header.Subtitle>
             {#if receipt.merchant?.location}
               {receipt.merchant.location}
-            {:else}
+            {:else if receipt.status === 'pending'}
               <Skeleton class="w-1/2 h-lh" />
             {/if}
           </Header.Subtitle>
