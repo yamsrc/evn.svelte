@@ -24,7 +24,7 @@
 - [x] ExpenseValue: add `links`
 - [x] API: add `links` `POST`
 - [x] Delete receipt on linked expense? Backlink? 'closed' state?
-- [ ] new button on /expenses/
+- [x] new button on /expenses/
 
 ## Routes
 

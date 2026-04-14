@@ -13,6 +13,9 @@
   import { Share } from '$com/buttons'
   import { goto } from '$app/navigation'
   import { actionVariants } from './Action'
+  import type { Props } from './Actions'
+
+  const { showContacts = true }: Props = $props()
 
   const active = writable(false)
   const variant = [Dropdown.itemVariants({ direction: 'row' }), 'whitespace-nowrap']
@@ -49,32 +52,34 @@
     </Dropdown.Trigger>
     <Dropdown.Content>
       <Dropdown.Layer>
-        {#if adventure}
-          <Dropdown.Group direction="col">
+        <Dropdown.Group direction="col">
+          {#if adventure}
             <Dropdown.Item
               id="nav-actions-adventure-expense-button"
               href={`/adventures/${adventure.id}/expenses/editor/`}>
               <Coins />
               {adventure.title}
             </Dropdown.Item>
-          </Dropdown.Group>
-          <Dropdown.Separator />
-        {/if}
-        <Dropdown.Group direction="col">
-          <Dropdown.Item id="nav-actions-contacts-new-button" layer="contacts">
-            <UserPlus />
-            {$dict.actions.contacts.contact}
-          </Dropdown.Item>
-          <Dropdown.Item id="nav-actions-contacts-groups-button" href="/contacts/groups/">
-            <Component />
-            {$dict.actions.contacts.group}
-          </Dropdown.Item>
+          {/if}
           <Dropdown.Item id="nav-actions-adventures-new-button" href="/adventures/editor/">
             <Fan />
             {$dict.actions.adventures.adventure}
           </Dropdown.Item>
         </Dropdown.Group>
         <Dropdown.Separator />
+        {#if showContacts}
+          <Dropdown.Group direction="col">
+            <Dropdown.Item id="nav-actions-contacts-new-button" layer="contacts">
+              <UserPlus />
+              {$dict.actions.contacts.contact}
+            </Dropdown.Item>
+            <Dropdown.Item id="nav-actions-contacts-groups-button" href="/contacts/groups/">
+              <Component />
+              {$dict.actions.contacts.group}
+            </Dropdown.Item>
+          </Dropdown.Group>
+          <Dropdown.Separator />
+        {/if}
         <Dropdown.Group direction="row">
           <Dropdown.Item id="nav-actions-cheques-input-button" href="/expenses/editor/">
             <ChartPie />
