@@ -1,10 +1,11 @@
+import type { ClassValue } from 'svelte/elements'
 import type { Icon } from '@lucide/svelte'
 
 export interface Props {
   sections?: Section[]
   position?: 'start' | 'center' | 'end'
   underlay?: boolean
-  class?: string
+  class?: ClassValue
 }
 
 export interface Section {
