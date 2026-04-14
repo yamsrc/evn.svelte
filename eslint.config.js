@@ -1,9 +1,10 @@
-import tsPlugin from '@typescript-eslint/eslint-plugin'
-import importPlugin from 'eslint-plugin-import'
-import svelte from 'eslint-plugin-svelte'
-import globals from 'globals'
-import neostandard from 'neostandard'
 import ts from 'typescript-eslint'
+import neostandard from 'neostandard'
+import globals from 'globals'
+import unusedImports from 'eslint-plugin-unused-imports'
+import svelte from 'eslint-plugin-svelte'
+import importPlugin from 'eslint-plugin-import'
+import tsPlugin from '@typescript-eslint/eslint-plugin'
 
 export default [
   ...neostandard({
@@ -20,6 +21,7 @@ export default [
     plugins: {
       import: importPlugin,
       '@typescript-eslint': tsPlugin,
+      'unused-imports': unusedImports,
     },
   },
   ...svelte.configs['flat/recommended'],
@@ -45,7 +47,7 @@ export default [
   },
   {
     rules: {
-      'no-void': ['error', { allowAsStatement: true }],
+      'no-void': 'off',
       curly: ['error', 'multi'],
       'no-console': ['error', { allow: ['info', 'debug', 'warn', 'error'] }],
       'no-implicit-coercion': 'error',
@@ -56,6 +58,16 @@ export default [
         anonymous: 'never',
       }],
       'arrow-parens': ['error', 'always'],
+      'no-unused-vars': 'off',
+      'unused-imports/no-unused-imports': 'error',
+      'unused-imports/no-unused-vars': [
+        'warn',
+        {
+          vars: 'all',
+          varsIgnorePattern: '^_',
+          args: 'after-used',
+          argsIgnorePattern: '^_',
+        }],
       '@stylistic/padding-line-between-statements': [
         'error',
         {
@@ -107,7 +119,7 @@ export default [
       'import/order': ['error', {
         groups: ['builtin', 'external', 'internal', 'unknown', 'parent', 'sibling', 'index', 'type'],
         alphabetize: {
-          order: 'asc',
+          order: 'desc',
         },
       }],
       'import-x/no-duplicates': 'off', // stupid shit doesn't work

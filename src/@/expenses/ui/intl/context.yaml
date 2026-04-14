@@ -57,3 +57,7 @@ inputs:
       received:
         input: You've received
         context: use ты with gender
+  actions:
+    delete:
+      input: Delete attachment
+      context: button label

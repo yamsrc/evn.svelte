@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { Users } from '@lucide/svelte'
-  import { Panel } from '$com/panel'
-  import { Attention } from '$com/shell'
+  import { Component } from '@lucide/svelte'
   import { Avatars, Balance } from '@/app/ui'
+  import { Attention } from '$com/shell'
+  import { Panel } from '$com/panel'
   import { dict } from './intl'
   import type { Props } from './Panel'
 
@@ -28,7 +28,7 @@
         {#if group.emoji}
           <span class="font-bold">{group.emoji}</span>
         {:else}
-          <Users class="size-4" />
+          <Component class="size-4" />
         {/if}
         <span class="font-bold">{group.title ?? group.name}</span>
       </div>

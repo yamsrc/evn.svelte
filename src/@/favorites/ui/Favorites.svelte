@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { Scrollable } from '$com/scrollable'
   import { Section } from '@/app/ui'
+  import { Scrollable } from '$com/scrollable'
   import Panel from './Panel.svelte'
   import type { Props } from './Favorites'
 

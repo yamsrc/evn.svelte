@@ -67,3 +67,7 @@ adventures:
     body: |-
       !js
       (title) => `${title} に経費を追加しました`
+receipts:
+  joined:
+    hint: アイテムを確認して自分のものを選んでね。
+    title: 新しいレシートが届きました

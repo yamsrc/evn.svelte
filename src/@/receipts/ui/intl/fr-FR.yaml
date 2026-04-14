@@ -1,0 +1,46 @@
+splitter:
+  stack:
+    claim: Tout récupérer
+    release: Relâcher
+leave:
+  label: Maintenir pour quitter
+delete:
+  label: Maintenir pour supprimer
+me: Moi
+overview:
+  total: Total
+feedback:
+  question: Comment s'est passé le scan ?
+  down: Nous allons jeter un œil.
+  thanks: Merci !
+autoclose:
+  description: >-
+    Mettre à jour les soldes automatiquement quand tout le monde a fini, ou
+    attendre pour continuer manuellement
+  title: Saisie automatique
+  payer:
+    title: Payé par
+close:
+  label: Continuer
+  hold: Maintiens appuyé pour continuer
+unassigned:
+  - one: "{n} élément non attribué"
+    other: "{n} éléments non attribués"
+pending:
+  status: Encore un peu de patience, on y est presque
+  description: Ça ne prend généralement que quelques instants
+failed:
+  title: Quelque chose ne va pas
+  description: >-
+    J’ai fait de mon mieux, mais ça ne ressemble pas à un reçu pour moi. On
+    réessaye ?
+  retry:
+    label: Réessayer
+state:
+  uploading: Ça prend généralement quelques instants
+  processing: Accroche-toi, on y est presque
+action:
+  label: Scanner
+extras:
+  included: Les frais et les réductions sont considérés comme inclus
+  incomplete: Tu pourras gérer ça une fois que tous les articles auront été réclamés

@@ -1,17 +1,18 @@
 <script lang="ts">
-  import { ChevronLeft } from '@lucide/svelte'
-  import { onMount } from 'svelte'
   import { derived } from 'svelte/store'
-  import { preloadCode } from '$app/navigation'
-  import { page } from '$app/state'
-  import { back } from '$com/history'
-  import { ios, safari, shell, standalone } from '$lib/tools'
-  import { cn } from '$lib/utils'
-  import { Button } from '$ui/button'
+  import { onMount } from 'svelte'
+  import { ChevronLeft } from '@lucide/svelte'
   import * as ButtonGroup from '$ui/button-group'
-  import Attention from './Attention.svelte'
-  import { exact, match, nested, type Props, type Section } from './Nav'
+  import { Button } from '$ui/button'
+  import { cn } from '$lib/utils'
+  import { ios, safari, shell, standalone } from '$lib/tools'
+  import { back } from '$com/history'
+  import { page } from '$app/state'
+  import { preloadCode } from '$app/navigation'
   import { actions, returns } from './store'
+  import Underlay from './Underlay.svelte'
+  import { exact, match, nested, type Props, type Section } from './Nav'
+  import Attention from './Attention.svelte'
 
   const app = standalone || shell
   const safariBrowser = ios && safari && !app
@@ -34,7 +35,7 @@
     false,
   )
 
-  const { sections, position = 'start', underlay = false, class: classes }: Props = $props()
+  const { sections = [], position = 'start', underlay = false, class: classes }: Props = $props()
   const action = $derived($actions.at(-1) ?? null)
 
   const active = $derived(sections.find((section) => match(section, page.url.pathname)))
@@ -63,21 +64,17 @@
 <div class="h-20 sm:h-24"></div>
 <nav
   class={[
-    'fixed max-w-3xl mx-auto',
+    'shell-navigation',
+    'fixed max-w-3xl mx-auto my-0',
     'bottom-[env(safe-area-inset-bottom)] standalone:bottom-[max(env(safe-area-inset-bottom),1rem)]',
     'left-[env(safe-area-inset-left)] right-[env(safe-area-inset-right)]',
     classes,
   ]}>
   {#if underlay}
-    <div
-      class={[
-        'absolute -z-1 inset-0 -top-6',
-        '-bottom-[max(env(safe-area-inset-bottom),1rem)]',
-        'bg-background/80',
-        'mask-[linear-gradient(to_bottom,transparent_0%,black_2rem)]',
-      ]}
-      class:hidden={safariBrowser}>
-    </div>
+    <Underlay
+      direction="bottom"
+      class="absolute -z-1 inset-0 -top-6 -bottom-[max(env(safe-area-inset-bottom),1rem)] mx-[calc(-50vw+50%)]"
+      style="view-transition-name: shell-nav-underlay;" />
   {/if}
   <div
     class={cn(
@@ -90,7 +87,7 @@
     )}>
     <ul
       class={cn('bg-muted overflow-hidden flex sm:ml-4 h-full', $faded && 'bg-background', rounded)}
-      style="view-transition-name: shell-nav;">
+      style="view-transition-name: shell-nav; view-transition-class: transition-morph;">
       {#each sections as section (section.href)}
         {@const active = match(section, page.url.pathname)}
         {@const hidden = !visible.includes(section)}
@@ -114,12 +111,14 @@
                 // $faded && 'opacity-25 transition-opacity duration-200',
                 active || 'hidden',
               )}
-              style={active ? 'view-transition-name: shell-nav-active;' : ''}>
+              style={active
+                ? 'view-transition-name: shell-nav-active; view-transition-class: transition-morph;'
+                : ''}>
             </div>
             {#if section.unseen && !ret}
               <Attention
                 id={`shell-nav-notify-${section.id}`}
-                class="absolute top-2.5 right-2.5 z-10" />
+                class={['absolute top-2.5 right-2.5 z-10', $faded && 'opacity-25']} />
             {/if}
             <div
               class={cn(
@@ -127,7 +126,7 @@
                 'transition-opacity duration-200',
                 $faded && 'opacity-25',
               )}
-              style="view-transition-name: shell-nav-item-{section.id};">
+              style="view-transition-name: shell-nav-item-{section.id}; view-transition-class: shell-nav-item transition-morph;">
               {#if ret}
                 {#if ret.children}
                   {@render ret.children()}
@@ -153,7 +152,7 @@
           action || 'opacity-0',
           position === 'center' && !action && 'hidden',
         )}
-        style="view-transition-name: shell-actions-{position};">
+        style="view-transition-name: shell-actions-{position}; view-transition-class: shell-actions">
         <ButtonGroup.Root class={cn('flex h-full', action?.class)}>
           {@render action.snippet()}
         </ButtonGroup.Root>
@@ -165,8 +164,16 @@
 <style>
   ::view-transition-old(shell-nav),
   ::view-transition-new(shell-nav) {
-    width: auto;
     isolation: isolate;
+  }
+
+  ::view-transition-group(shell-nav),
+  ::view-transition-group(shell-nav-underlay),
+  ::view-transition-group(shell-nav-active),
+  ::view-transition-group(*.shell-nav-item),
+  ::view-transition-group(.attention),
+  ::view-transition-group(.shell-actions) {
+    z-index: 1;
   }
 
   ::view-transition-new(shell-nav-active):only-child {

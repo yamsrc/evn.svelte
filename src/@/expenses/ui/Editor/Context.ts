@@ -1,5 +1,6 @@
 import { getContext as svelteGetContext, setContext as svelteSetContext, type Snippet } from 'svelte'
 import { numbers } from '@/expenses'
+import type { Link } from '@/expenses'
 
 const CONTEXT = Symbol('editor')
 
@@ -35,6 +36,7 @@ function exact(partial: Partial<Value>): Value {
     participants,
     extras: structuredClone(value.extras),
     attachments: structuredClone(value.attachments),
+    links: structuredClone(value.links),
   }
 }
 
@@ -45,6 +47,7 @@ function blank(draft?: Partial<Value>): Value {
     participants: draft?.participants ?? {},
     extras: draft?.extras ?? [],
     attachments: draft?.attachments ?? [],
+    links: draft?.links ?? [],
   }
 }
 
@@ -57,6 +60,8 @@ export interface Context {
   value: Value
   mode: 'sums' | 'shares'
   snapshot: string
+  /** Total is derived from participants amounts, not entered manually */
+  derived?: boolean
 }
 
 export interface Value {
@@ -65,6 +70,7 @@ export interface Value {
   participants: Record<string, Participant>
   extras: Extra[]
   attachments: string[]
+  links?: Link[]
 }
 
 interface Participant {

@@ -1,12 +1,12 @@
 <script lang="ts">
   import { Async, ok } from 'svas'
-  import { dict } from '$lib/intl'
-  import { accounts } from '@/accounts'
-  import { Panel } from '@/accounts/ui'
-  import { Participants } from '@/app/ui'
-  import { contacts } from '@/contacts'
-  import { add } from '@/groups'
   import { account } from '@/iam'
+  import { add } from '@/groups'
+  import { contacts } from '@/contacts'
+  import { Participants } from '@/app/ui'
+  import { Panel } from '@/accounts/ui'
+  import { accounts } from '@/accounts'
+  import { dict } from '$lib/intl'
   import { getContext } from './Context'
   import type { Props } from './Participants'
 

@@ -2,7 +2,7 @@
   import { onMount } from 'svelte'
   import type { Props } from './Dismissable'
 
-  const { children, ondismiss }: Props = $props()
+  const { dismissable = true, children, ondismiss }: Props = $props()
 
   const ANIMATION_DURATION_MS = 300
 
@@ -52,11 +52,14 @@
 </script>
 
 <div class="relative" class:dismissing>
-  <div bind:this={container} class="flex w-full overflow-x-auto snap-x snap-mandatory no-scrollbar">
+  <div
+    bind:this={container}
+    class={['flex w-full', dismissable && 'overflow-x-auto snap-x snap-mandatory no-scrollbar']}>
     <div class="w-full shrink-0 snap-center">
       {@render children()}
     </div>
-    <div bind:this={sentinel} class="w-full shrink-0 snap-center"></div>
+    <div bind:this={sentinel} class={['w-full shrink-0 snap-center', !dismissable && 'hidden']}>
+    </div>
   </div>
 </div>
 

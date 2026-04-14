@@ -42,6 +42,12 @@ export const dictionaries = {
         "paid": (gender) => gender === "he" ? "لقد دفعتَ" : gender === "she" ? "لقد دفعتِ" : "لقد دفعت",
         "received": (gender) => gender === "he" ? "لقد استلمتَ" : gender === "she" ? "لقد استلمتِ" : "لقد استلمت"
       }
+    },
+    "action": {
+
+    },
+    "actions": {
+      "delete": "حذف المرفق"
     }
   },
   "de-DE": {
@@ -84,6 +90,12 @@ export const dictionaries = {
         "paid": (gender) => gender === "he" ? "Du hast bezahlt" : gender === "she" ? "Du hast bezahlt" : "Du hast bezahlt",
         "received": (gender) => gender === "he" ? "Du hast bekommen" : gender === "she" ? "Du hast bekommen" : "Du hast bekommen"
       }
+    },
+    "action": {
+
+    },
+    "actions": {
+      "delete": "Anhang löschen"
     }
   },
   "en-US": {
@@ -126,6 +138,12 @@ export const dictionaries = {
         "paid": (gender) => "You’ve paid",
         "received": (gender) => gender === "he" ? "You've received" : gender === "she" ? "You've received" : "You've received"
       }
+    },
+    "action": {
+
+    },
+    "actions": {
+      "delete": "Delete attachment"
     }
   },
   "es-ES": {
@@ -168,6 +186,12 @@ export const dictionaries = {
         "paid": (gender) => gender === "he" ? "Has pagado" : gender === "she" ? "Has pagado" : "Has pagado",
         "received": (gender) => gender === "he" ? "Has recibido" : gender === "she" ? "Has recibido" : "Has recibido"
       }
+    },
+    "action": {
+
+    },
+    "actions": {
+      "delete": "Eliminar adjunto"
     }
   },
   "fr-FR": {
@@ -210,6 +234,12 @@ export const dictionaries = {
         "paid": (gender) => gender === "he" ? "Tu as payé" : gender === "she" ? "Tu as payé" : "Tu as payé",
         "received": (gender) => gender === "he" ? "Tu as reçu" : gender === "she" ? "Tu as reçu" : "Tu as reçu"
       }
+    },
+    "action": {
+
+    },
+    "actions": {
+      "delete": "Supprimer la pièce jointe"
     }
   },
   "hi-IN": {
@@ -252,6 +282,12 @@ export const dictionaries = {
         "paid": (gender) => gender === "he" ? "तुमने पैसे दे दिए" : gender === "she" ? "तुमने पैसे दे दी" : "तुमने पैसे दे दिए",
         "received": (gender) => gender === "he" ? "तुम्हें मिला है" : gender === "she" ? "तुम्हें मिली है" : "तुम्हें मिला/मिली है"
       }
+    },
+    "action": {
+
+    },
+    "actions": {
+      "delete": "अटैचमेंट हटाओ"
     }
   },
   "it-IT": {
@@ -294,6 +330,12 @@ export const dictionaries = {
         "paid": (gender) => "Hai pagato",
         "received": (gender) => "Hai ricevuto"
       }
+    },
+    "action": {
+
+    },
+    "actions": {
+      "delete": "Elimina allegato"
     }
   },
   "ja-JP": {
@@ -336,6 +378,12 @@ export const dictionaries = {
         "paid": (gender) => "支払いが完了しました",
         "received": (gender) => "受け取ったよ"
       }
+    },
+    "action": {
+
+    },
+    "actions": {
+      "delete": "添付ファイルを削除"
     }
   },
   "ko-KR": {
@@ -378,6 +426,12 @@ export const dictionaries = {
         "paid": (gender) => "결제하셨습니다",
         "received": (gender) => "받았어"
       }
+    },
+    "action": {
+
+    },
+    "actions": {
+      "delete": "첨부파일 삭제"
     }
   },
   "nl-NL": {
@@ -420,6 +474,12 @@ export const dictionaries = {
         "paid": (gender) => "Je hebt betaald",
         "received": (gender) => "Je hebt ontvangen"
       }
+    },
+    "action": {
+
+    },
+    "actions": {
+      "delete": "Bijlage verwijderen"
     }
   },
   "ru-RU": {
@@ -462,6 +522,12 @@ export const dictionaries = {
         "paid": (gender) => gender === "he" ? "Ты заплатил" : gender === "she" ? "Ты заплатила" : "Ты заплатил(а)",
         "received": (gender) => gender === "he" ? "Ты получил" : gender === "she" ? "Ты получила" : "Ты получил(а)"
       }
+    },
+    "action": {
+
+    },
+    "actions": {
+      "delete": "Удалить вложение"
     }
   },
   "sw-TZ": {
@@ -504,6 +570,12 @@ export const dictionaries = {
         "paid": (gender) => "Umelipa",
         "received": (gender) => "Umepewa"
       }
+    },
+    "action": {
+
+    },
+    "actions": {
+      "delete": "Futa kiambatisho"
     }
   },
   "tr-TR": {
@@ -546,6 +618,12 @@ export const dictionaries = {
         "paid": (gender) => "Ödedin",
         "received": (gender) => "Aldın"
       }
+    },
+    "action": {
+
+    },
+    "actions": {
+      "delete": "Ek dosyayı sil"
     }
   },
   "uk-UA": {
@@ -588,6 +666,12 @@ export const dictionaries = {
         "paid": (gender) => gender === "he" ? "Ти заплатив" : gender === "she" ? "Ти заплатила" : "Ти заплатив(ла)",
         "received": (gender) => gender === "he" ? "Ти отримав" : gender === "she" ? "Ти отримала" : "Ти отримав(ла)"
       }
+    },
+    "action": {
+
+    },
+    "actions": {
+      "delete": "Видалити вкладення"
     }
   },
   "zh-CN": {
@@ -630,6 +714,12 @@ export const dictionaries = {
         "paid": (gender) => "你已付款",
         "received": (gender) => "你已收到"
       }
+    },
+    "action": {
+
+    },
+    "actions": {
+      "delete": "删除附件"
     }
   }
 };

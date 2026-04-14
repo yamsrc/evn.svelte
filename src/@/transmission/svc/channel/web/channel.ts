@@ -1,6 +1,6 @@
 import { create, extractKeys, get } from './subscription'
-import type { SubscribeInput } from '../../net'
 import type { Channel } from '../Channel'
+import type { SubscribeInput } from '../../net'
 
 export const web: Channel = {
   async available(): Promise<boolean> {

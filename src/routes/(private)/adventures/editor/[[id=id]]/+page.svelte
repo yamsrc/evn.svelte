@@ -1,16 +1,16 @@
 <script lang="ts">
-  import { LogOut } from '@lucide/svelte'
   import { Async } from 'svas'
-  import { goto } from '$app/navigation'
-  import { page } from '$app/state'
-  import { Hold } from '$com/buttons'
-  import { Return } from '$com/shell'
-  import { dict as common } from '$lib/intl'
-  import { leave, adventures } from '@/adventures'
+  import { LogOut } from '@lucide/svelte'
+  import { Header, Section, Hint } from '@/app/ui'
+  import { dict } from '@/adventures/ui/intl'
   import { Editor } from '@/adventures/ui'
   import { Archive } from '@/adventures/ui'
-  import { dict } from '@/adventures/ui/intl'
-  import { Header, Section, Hint } from '@/app/ui'
+  import { leave, adventures } from '@/adventures'
+  import { dict as common } from '$lib/intl'
+  import { Return } from '$com/shell'
+  import { Hold } from '$com/buttons'
+  import { page } from '$app/state'
+  import { goto } from '$app/navigation'
 
   const ctx = Editor.getContext()
   const id = $derived(page.params.id)

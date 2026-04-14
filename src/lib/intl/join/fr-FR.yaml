@@ -98,3 +98,21 @@ adventures:
       l’aventure` : gender === "she" ? `${name} t’invite à rejoindre l’aventure`
       : `${name} t’invite à rejoindre l’aventure`
     heading: Invitation à l’aventure
+receipts:
+  og:
+    title: |-
+      !js
+      (title) => `Rejoindre ${title} sur Evnly`
+    description: Partagez une note et suivez qui doit quoi à qui — ensemble sur Evnly.
+  dialog:
+    join: Rejoindre
+    decline: Refuser
+    title: Invitation à partager l’addition
+    description: >-
+      !js
+
+      (name, gender) => gender === "he" ? `${name} vous invite à partager une
+      addition` : gender === "she" ? `${name} vous invite à partager une
+      addition` : `${name} vous invite à partager une addition`
+    balance:
+      total: Total de la facture

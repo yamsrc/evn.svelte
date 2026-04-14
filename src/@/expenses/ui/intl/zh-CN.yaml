@@ -35,3 +35,6 @@ transfers:
     received: |-
       !js
       (gender) => "你已收到"
+action: {}
+actions:
+  delete: 删除附件

@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { attach as postFiles } from '@/expenses'
   import { Attachments } from '@/expenses/ui'
+  import { attach as postFiles } from '@/expenses'
   import Form from './Form.svelte'
   import type { Props } from './Edit'
 

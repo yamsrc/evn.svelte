@@ -1,17 +1,18 @@
 <script lang="ts">
   import { Check } from '@lucide/svelte'
-  import { Actions } from '$com/shell'
-  import { dict } from '$lib/intl'
-  import { onsubmit } from '$lib/tools'
-  import { Action, Section } from '@/app/ui'
+  import { account } from '@/iam'
   import { numbers } from '@/expenses'
-  import { setContext } from './Context'
-  import Description from './Description.svelte'
+  import { Action, Section } from '@/app/ui'
+  import { onsubmit } from '$lib/tools'
+  import { dict } from '$lib/intl'
+  import { Actions } from '$com/shell'
+  import Total from './Total.svelte'
+  import PayerSelect from './PayerSelect.svelte'
+  import Participants from './Participants.svelte'
   import { normalize, type Props, type Value } from './Form'
   import { autoeffects } from './Form'
-  import Participants from './Participants.svelte'
-  import PayerSelect from './PayerSelect.svelte'
-  import Total from './Total.svelte'
+  import Description from './Description.svelte'
+  import { setContext } from './Context'
 
   let {
     value = $bindable<Value>(),
@@ -26,9 +27,7 @@
     if (total !== numbers.total(value)) {
       error = true
 
-      setTimeout(() => {
-        error = false
-      }, 600)
+      setTimeout(() => (error = false), 600)
 
       return
     }
@@ -42,11 +41,18 @@
     busy = false
   }
 
-  const payers = $derived(
-    Object.keys(value.participants).filter((id) => value.participants[id].paid !== undefined),
-  )
+  const identities = $derived(Object.keys(value.participants))
+
+  const payers = $derived.by(() => {
+    const found = identities.filter((id) => value.participants[id].paid !== undefined)
+
+    if (found.length > 0) return found
+
+    return [identities.find((id) => id === $account?.id) ?? identities[0]].filter(Boolean)
+  })
 
   let total = $state(numbers.total(value))
+
   const split = $derived(payers.length > 1)
   const paid = $derived(numbers.paid(value))
   const overpaid = $derived(numbers.overpaid(value))
@@ -67,6 +73,7 @@
     get overpaid() {
       return overpaid
     },
+    derived: true,
   })
 
   const enough = $derived(paid > 0 && (payers.length === 1 || paid >= total))
@@ -80,7 +87,7 @@
   <form onsubmit={onsubmit(submit)} class="space-y-5">
     <Description bind:title={value.title} bind:location={value.location} />
     <Total bind:value bind:total />
-    <Participants bind:value bind:error bind:mode />
+    <Participants bind:value bind:total bind:error bind:mode />
     <PayerSelect bind:value />
 
     <button bind:this={submitButton} type="submit" class="sr-only">

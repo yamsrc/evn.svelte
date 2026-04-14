@@ -1,7 +1,7 @@
 import { redirect } from '@sveltejs/kit'
-import { acceptable } from '$lib/intl'
-import { dictionaries } from '$lib/intl/join'
 import { get } from '@/accounts/svc/get'
+import { dictionaries } from '$lib/intl/join'
+import { acceptable } from '$lib/intl'
 import type { PageServerLoad } from './$types.js'
 
 export const load: PageServerLoad = async ({ params, request }) => {

@@ -1,13 +1,13 @@
 <script lang="ts">
   import { having } from 'svas'
-  import { goto } from '$app/navigation'
-  import { dict } from '$lib/intl/join'
-  import { cn } from '$lib/utils'
-  import * as AlertDialog from '$ui/alert-dialog'
-  import { Button, buttonVariants } from '$ui/button'
-  import { Picture } from '@/accounts/ui'
-  import { add } from '@/contacts'
   import { account, named } from '@/iam'
+  import { add } from '@/contacts'
+  import { Picture } from '@/accounts/ui'
+  import { Button, buttonVariants } from '$ui/button'
+  import * as AlertDialog from '$ui/alert-dialog'
+  import { cn } from '$lib/utils'
+  import { dict } from '$lib/intl/join'
+  import { goto } from '$app/navigation'
   import type { Props } from './Accept'
 
   let { inviter, accepted = $bindable(false), error = $bindable(false) }: Props = $props()

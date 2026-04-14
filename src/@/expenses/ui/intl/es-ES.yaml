@@ -45,3 +45,6 @@ transfers:
 
       (gender) => gender === "he" ? "Has recibido" : gender === "she" ? "Has
       recibido" : "Has recibido"
+action: {}
+actions:
+  delete: Eliminar adjunto

@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { Hint } from '@/app/ui'
   import { permission, request } from '@/transmission'
+  import { Hint } from '@/app/ui'
   import { dict } from './intl'
   import type { Props } from './Permission'
 

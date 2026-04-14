@@ -1,1 +1,1 @@
-export type { Account } from './net'
+export type { Account, Wallpaper } from './net'

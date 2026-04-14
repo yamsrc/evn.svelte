@@ -1,5 +1,5 @@
-import { defineConfig } from '@playwright/test'
 import { defineBddConfig } from 'playwright-bdd'
+import { defineConfig } from '@playwright/test'
 
 const testDir = defineBddConfig({
   features: './features/**/*.feature',

@@ -1,11 +1,11 @@
-import { track } from '@vercel/analytics'
 import { having, sync } from 'svas'
+import { track } from '@vercel/analytics'
 import { account } from '@/iam'
-import * as net from './net'
-import { total } from './numbers'
 import { internal } from './store'
+import { total } from './numbers'
+import * as net from './net'
 
-export async function add(properties: Input): Promise<net.Expense | Error> {
+export async function add(properties: net.Post): Promise<net.Expense | Error> {
   const me = await having(account)
 
   properties.date ??= new Date().toISOString().split('T')[0]
@@ -18,8 +18,4 @@ export async function add(properties: Input): Promise<net.Expense | Error> {
   track('Expense', { total: total(expense) })
 
   return expense
-}
-
-interface Input extends Partial<net.Post> {
-  participants: net.Post['participants']
 }

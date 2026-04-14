@@ -1,7 +1,7 @@
 import { having, sync } from 'svas'
 import { account } from '@/iam'
-import * as net from './net'
 import { internal } from './store'
+import * as net from './net'
 
 export async function create(properties: net.Initial): Promise<net.Group | Error> {
   const me = await having(account)

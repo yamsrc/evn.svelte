@@ -14,3 +14,7 @@ expenses:
   empty: अब तक कोई साझा खर्च नहीं हुआ है।
 delete:
   label: हटाने के लिए दबाए रखें
+invite:
+  link: साझा करें
+  qr: QR दिखाएं
+  manually: मैन्युअल रूप से जोड़ें

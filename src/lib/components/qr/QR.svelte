@@ -1,11 +1,11 @@
 <script lang="ts">
-  import { QrCode } from '@lucide/svelte'
   import { tick } from 'svelte'
-  import { dict } from '$lib/intl'
-  import { cn } from '$lib/utils'
-  import * as AlertDialog from '$ui/alert-dialog'
-  import { Button, buttonVariants } from '$ui/button'
+  import { QrCode } from '@lucide/svelte'
   import Spinner from '$ui/spinner/spinner.svelte'
+  import { Button, buttonVariants } from '$ui/button'
+  import * as AlertDialog from '$ui/alert-dialog'
+  import { cn } from '$lib/utils'
+  import { dict } from '$lib/intl'
   import { createQR, type Props } from './QR'
 
   const { label, disabled, text, class: classes, ...props }: Props = $props()
@@ -40,8 +40,7 @@
   <AlertDialog.Trigger
     class={cn(buttonVariants(props), classes)}
     disabled={busy || disabled}
-    {onclick}
-  >
+    {onclick}>
     {#if busy}
       <Spinner />
     {:else}

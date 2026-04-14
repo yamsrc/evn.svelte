@@ -1,11 +1,11 @@
 <script lang="ts">
   import { ArrowRight } from '@lucide/svelte'
-  import { Loader } from '$com/loader'
-  import { autofocus, onsubmit } from '$lib/tools'
-  import { Button } from '$ui/button'
-  import { Input } from '$ui/input'
-  import { passkeys } from '@/iam'
   import { dict } from '@/iam/ui/intl'
+  import { passkeys } from '@/iam'
+  import { Input } from '$ui/input'
+  import { Button } from '$ui/button'
+  import { autofocus, onsubmit } from '$lib/tools'
+  import { Loader } from '$com/loader'
   import type { Props } from './Create'
 
   const { account, disabled, oncreate }: Props = $props()

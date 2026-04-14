@@ -1,7 +1,7 @@
 import { ensure } from 'svas'
 import { account } from '@/iam'
-import * as net from './net'
 import { internal } from './store'
+import * as net from './net'
 import type { Contact } from './Contact'
 
 export async function del(contact: Contact): Promise<void | Error> {

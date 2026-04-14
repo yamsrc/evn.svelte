@@ -1,9 +1,9 @@
-import { meta } from '@toa.io/origin'
 import { having } from 'svas'
+import { meta } from '@toa.io/origin'
 import { account } from '@/iam'
-import { channel } from './channel'
-import * as net from './net'
 import { permission, subscribed } from './store'
+import * as net from './net'
+import { channel } from './channel'
 
 export async function subscribe(): Promise<void | Error> {
   const input = await channel!.subscribe()

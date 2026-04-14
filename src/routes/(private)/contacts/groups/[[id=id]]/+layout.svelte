@@ -1,9 +1,9 @@
 <script lang="ts">
   import { Async, ok } from 'svas'
-  import { page } from '$app/state'
-  import { groups } from '@/groups'
-  import { Editor } from '@/groups/ui'
   import { account } from '@/iam'
+  import { Editor } from '@/groups/ui'
+  import { groups } from '@/groups'
+  import { page } from '$app/state'
 
   const { children } = $props()
   const id = $derived(page.params.id)

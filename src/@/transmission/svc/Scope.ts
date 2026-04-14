@@ -1,4 +1,4 @@
-export type Domain = 'accounts' | 'contacts' | 'groups' | 'expenses' | 'adventures'
+export type Domain = 'accounts' | 'contacts' | 'groups' | 'expenses' | 'adventures' | 'receipts'
 
 export type EventMap = {
   accounts: 'created'
@@ -6,6 +6,7 @@ export type EventMap = {
   groups: 'joined'
   expenses: 'expense'
   adventures: 'joined' | 'expense'
+  receipts: 'joined'
 }
 
 export type Event<D extends Domain> = EventMap[D]

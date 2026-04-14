@@ -1,10 +1,10 @@
 <script lang="ts">
   import { Archive as ArchiveIcon, Trash2 } from '@lucide/svelte'
-  import { goto } from '$app/navigation'
-  import { Hold } from '$com/buttons'
-  import { Button } from '$ui/button'
-  import { Spinner } from '$ui/spinner'
   import { archive } from '@/adventures'
+  import { Spinner } from '$ui/spinner'
+  import { Button } from '$ui/button'
+  import { Hold } from '$com/buttons'
+  import { goto } from '$app/navigation'
   import { dict } from './intl'
   import type { Props } from './Archive'
 

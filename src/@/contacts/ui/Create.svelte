@@ -1,15 +1,23 @@
 <script lang="ts">
-  import { goto } from '$app/navigation'
-  import { dict } from '$lib/intl'
-  import { Cosmetics, type Value } from '@/app/ui'
-  import { add } from '@/contacts'
   import { account } from '@/iam'
+  import { add } from '@/contacts'
+  import * as Cosmetics from '@/app/ui/cosmetics'
+  import { pickpic } from '@/accounts'
+  import { dict } from '$lib/intl'
+  import { goto } from '$app/navigation'
 
-  async function onchange(value: Value) {
-    const contact = await add({
-      name: value.name,
-      picture: value.picture,
-    })
+  let name = $state('')
+  let picture = $state(pickpic())
+  let busy = $state(false)
+
+  async function submit() {
+    if (busy || name.trim() === '') return
+
+    busy = true
+
+    const contact = await add({ name, picture })
+
+    busy = false
 
     if (contact instanceof Error) return
 
@@ -19,8 +27,13 @@
   }
 </script>
 
-<Cosmetics
-  label={$dict.contacts.add.label}
-  note={$dict.contacts.add.description}
-  {onchange}
-  autofocus />
+<Cosmetics.Root>
+  <Cosmetics.Content>
+    <Cosmetics.Picture bind:id={picture} />
+    <div class="space-y-2 w-full">
+      <Cosmetics.Name bind:value={name} bind:busy onchange={submit} autofocus class="w-full" />
+      <Cosmetics.Note>{$dict.contacts.add.description}</Cosmetics.Note>
+    </div>
+  </Cosmetics.Content>
+  <Cosmetics.Actions label={$dict.contacts.add.label} {busy} onclick={submit} />
+</Cosmetics.Root>

@@ -12,12 +12,34 @@ components:
       (count) => `${count} दिखाएं`
   graph:
     title: ऋण ग्राफ़
+  receipts:
+    title: रसीदें
+    upload:
+      label: अपलोड करें
+    progress:
+      uploading:
+        title: अपलोड किया जा रहा है
+        comment: आम तौर पर कुछ क्षण लगते हैं
+      processing:
+        comment: बस थोड़ा रुकिए, हम लगभग पहुँच गए हैं
+        title: प्रोसेस हो रहा है
+      ready:
+        title: तैयार
+        comment: |-
+          !js
+          (ms) => `${(ms / 1000).toFixed(1)} सेकंड में पूरा हुआ`
   picture:
     title: Picture
   participants:
     title: प्रतिभागी
     managedContactsCreation: प्रबंधित संपर्क निर्माण बटन दिखाएं
     shareUrl: URL साझा करें
+  fullscreen:
+    title: Fullscreen
+    attachment: किसी भी खर्च में अटैचमेंट जोड़ो
+    delete: हटाने के लिए दबाए रखें
+  invitation:
+    title: निमंत्रण
 transmission:
   title: Transmission
   permission:
@@ -28,3 +50,12 @@ transmission:
   ping: Ping
 loading:
   title: लोडिंग स्क्रीन
+receipts:
+  upload: {}
+actions:
+  continue: जारी रखें
+nav:
+  home: होम
+  components: कॉम्पोनेंट्स
+  transmission: ट्रांसमिशन
+  app: ऐप

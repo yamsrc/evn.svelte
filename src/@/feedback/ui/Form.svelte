@@ -1,12 +1,12 @@
 <script lang="ts">
   import { Send } from '@lucide/svelte'
-  import { onsubmit } from '$lib/tools'
-  import { Button } from '$ui/button'
-  import * as Field from '$ui/field'
-  import { Input } from '$ui/input'
-  import { Spinner } from '$ui/spinner'
-  import { Textarea } from '$ui/textarea'
   import { send } from '@/feedback'
+  import { Textarea } from '$ui/textarea'
+  import { Spinner } from '$ui/spinner'
+  import { Input } from '$ui/input'
+  import * as Field from '$ui/field'
+  import { Button } from '$ui/button'
+  import { onsubmit } from '$lib/tools'
   import { dict } from './intl'
   import type { Props } from './Form'
 
@@ -71,7 +71,6 @@
   <div class="flex justify-center">
     <Button
       type="submit"
-      size="lg"
       class="w-full md:w-auto"
       disabled={busy}
       style="view-transition-name: feedback-button;">

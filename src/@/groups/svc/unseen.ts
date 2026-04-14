@@ -1,5 +1,5 @@
-import type { Group } from './store'
 import type { Notification } from '@/notifications'
+import type { Group } from './store'
 
 export function unseen(group: Group, notifications: Notification[]) {
   return notifications.some((n) => n.domain === 'groups' && n.key === group.id)

@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { Leaderboard } from '@/contacts/ui'
   import { account } from '@/iam'
+  import { Leaderboard } from '@/contacts/ui'
   import { dict } from '../intl'
   import type { Props } from './Participants'
 

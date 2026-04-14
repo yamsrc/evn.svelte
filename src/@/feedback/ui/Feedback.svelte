@@ -1,10 +1,10 @@
 <script lang="ts">
   import { Check, ChevronUp, Send } from '@lucide/svelte'
-  import { transit } from '$lib/tools'
-  import { Button } from '$ui/button'
   import * as Card from '$ui/card'
-  import Form from './Form.svelte'
+  import { Button } from '$ui/button'
+  import { transit } from '$lib/tools'
   import { dict } from './intl'
+  import Form from './Form.svelte'
 
   let open = $state(false)
   let card = $state<HTMLDivElement | null>(null)
@@ -27,7 +27,7 @@
 </script>
 
 {#if open}
-  <Card.Root class="bg-muted pt-4 relative" bind:ref={card}>
+  <Card.Root class="bg-muted pt-4 relative w-full" bind:ref={card}>
     <Button
       variant="ghost"
       size="icon"
@@ -36,12 +36,12 @@
       <ChevronUp />
     </Button>
     <Card.Header>
-      <Card.Title class="flex justify-center">
+      <Card.Title>
         <h2>
           {$dict.title}
         </h2>
       </Card.Title>
-      <Card.Description class="text-center">
+      <Card.Description>
         {$dict.description}
       </Card.Description>
     </Card.Header>

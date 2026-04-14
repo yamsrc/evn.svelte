@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { Expense } from '@/expenses/ui'
   import { account } from '@/iam'
+  import { Expense } from '@/expenses/ui'
   import { dict } from './intl'
   import type { Props } from './Expenses'
 

@@ -1,5 +1,5 @@
-import * as credentials from './credentials'
 import * as origin from './net'
+import * as credentials from './credentials'
 
 export async function create(name: string, identity?: string): Promise<Output | Error> {
   const options = await origin.challenges.post('creation', identity)

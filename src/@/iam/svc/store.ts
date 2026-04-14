@@ -1,7 +1,7 @@
-import { value } from 'svas'
 import { derived, writable } from 'svelte/store'
-import type { Echo } from './net'
+import { value } from 'svas'
 import type { IDP } from './oidc'
+import type { Echo } from './net'
 
 const account = value<Echo>({
   persist: 'auth:account',

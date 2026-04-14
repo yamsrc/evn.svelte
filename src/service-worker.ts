@@ -3,9 +3,9 @@
 /// <reference lib="webworker" />
 /// <reference types="@sveltejs/kit" />
 
+import { build, files, version } from '$service-worker'
 // @ts-expect-error: wtf
 import { PUBLIC_API_ORIGIN } from '$env/static/public'
-import { build, files, version } from '$service-worker'
 import type { Notification } from './@/transmission'
 
 const app = globalThis.self as unknown as ServiceWorkerGlobalScope
@@ -40,20 +40,26 @@ app.addEventListener('install', (event) => {
 
     console.info(`${ASSETS.length} assets cached`)
     console.info(`App version ${version} installed in ${Date.now() - start}ms`)
+
+    if (dev)
+      app.skipWaiting()
   }
 
   event.waitUntil(install())
 })
 
 app.addEventListener('activate', (event) => {
-  async function deleteOldCaches() {
+  async function activate() {
     for (const key of await caches.keys())
       if (key !== CACHE) await caches.delete(key)
+
+    if (dev)
+      await app.clients.claim()
+
+    console.info('App activated')
   }
 
-  event.waitUntil(deleteOldCaches())
-
-  console.info('App activated')
+  event.waitUntil(activate())
 })
 
 app.addEventListener('fetch', (event) => {

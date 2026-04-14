@@ -1,0 +1,44 @@
+splitter:
+  stack:
+    claim: सभी प्राप्त करें
+    release: छोड़ें
+leave:
+  label: छोड़ने के लिए दबाए रखें
+delete:
+  label: हटाने के लिए दबाकर रखें
+me: मैं
+overview:
+  total: कुल
+feedback:
+  question: स्कैन कैसा रहा?
+  down: हम देख लेंगे।
+  thanks: धन्यवाद!
+autoclose:
+  description: जब सब हो जाएँ तो बैलेंस अपने आप अपडेट करें, या खुद आगे बढ़ें
+  title: ऑटोकंप्लीट
+  payer:
+    title: द्वारा भुगतान
+close:
+  label: आगे बढ़ो
+  hold: जारी रखने के लिए दबाए रहें
+unassigned:
+  - one: "{n} असाइन न किया गया आइटम"
+    other: "{n} असाइन न किए गए आइटम"
+pending:
+  status: बस थोड़ा रुक, लगभग हो गया
+  description: आम तौर पर कुछ ही पल लगते हैं
+failed:
+  title: कुछ ठीक नहीं लग रहा
+  description: >-
+    मैंने पूरी कोशिश की, लेकिन मुझे ये रसीद जैसा नहीं लग रहा। चलो एक बार फिर
+    कोशिश करते हैं!
+  retry:
+    label: फिर से कोशिश करो
+state:
+  uploading: आमतौर पर कुछ क्षण लगते हैं
+  processing: जरा रुको, बस पहुँच ही गए हैं
+action:
+  label: स्कैन करें
+extras:
+  included: माना गया है कि फीस और छूट पहले से शामिल हैं
+  incomplete: सभी आइटम क्लेम हो जाने के बाद इसे मैनेज किया जा सकता है

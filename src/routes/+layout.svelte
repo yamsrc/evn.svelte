@@ -1,12 +1,12 @@
 <script lang="ts">
-  import { dev } from '$app/environment'
-  import { afterNavigate, onNavigate } from '$app/navigation'
-  import { page } from '$app/state'
-  import { track } from '$com/history'
-  import { meta } from '$config'
-  import { dict } from '$lib/intl'
-  import { navigate, suppressContextMenu } from '$lib/tools'
   import { Background } from '@/app/ui'
+  import { navigate, suppressContextMenu } from '$lib/tools'
+  import { dict } from '$lib/intl'
+  import { meta } from '$config/configuration'
+  import { track } from '$com/history'
+  import { page } from '$app/state'
+  import { afterNavigate, onNavigate } from '$app/navigation'
+  import { dev } from '$app/environment'
   import '../app.css'
 
   const { children } = $props()

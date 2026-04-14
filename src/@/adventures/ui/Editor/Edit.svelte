@@ -1,9 +1,9 @@
 <script lang="ts">
-  import { back } from '$com/history'
   import { create } from '@/adventures'
+  import { back } from '$com/history'
   import Form from './Form.svelte'
-  import type { Value } from './Context'
   import type { Props } from './Edit'
+  import type { Value } from './Context'
 
   let { id, value = $bindable(), busy = $bindable(false) }: Props = $props()
 

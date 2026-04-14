@@ -1,26 +1,33 @@
 <script lang="ts">
   import { Async } from 'svas'
-  import { Separator } from '$com/separator'
-  import { TextEllipsis } from '$com/text-ellipsis'
-  import { dict, locale } from '$lib/intl'
-  import { currency } from '$lib/tools'
-  import { accounts } from '@/accounts'
-  import { Picture } from '@/accounts/ui'
-  import { CoinsInput } from '@/app/ui'
   import { account as me } from '@/iam'
+  import { numbers } from '@/expenses'
+  import { CoinsInput } from '@/app/ui'
+  import { Picture } from '@/accounts/ui'
+  import { accounts } from '@/accounts'
+  import { currency } from '$lib/tools'
+  import { dict, locale } from '$lib/intl'
+  import { Ellipsis } from '$com/text'
+  import { Separator } from '$com/separator'
   import { getContext } from './Context'
   import type { Props } from './BySum'
 
   const nameClass = 'text-start text-base font-normal flex-1 min-w-0 flex'
   const amountClass = 'min-w-24 max-w-28 flex-1'
 
-  let { value = $bindable() }: Props = $props()
+  let { value = $bindable(), total = $bindable() }: Props = $props()
+
   const ctx = getContext()
   const paid = $derived(ctx.paid)
-  const total = $derived(ctx.total)
   const overpayment = $derived(Math.max(paid - total, 0))
-
   const participants = $derived(Object.keys(value.participants))
+
+  function oninput() {
+    if (ctx.derived === undefined && total === 0) ctx.derived = true
+    else if (ctx.derived !== true) return
+
+    total = numbers.total(value)
+  }
 </script>
 
 <div class="space-y-2">
@@ -38,7 +45,7 @@
               <Picture {account} class="size-8" />
             </div>
             <div class={nameClass}>
-              <TextEllipsis>{name}</TextEllipsis>
+              <Ellipsis>{name}</Ellipsis>
             </div>
           {/snippet}
         </Async>
@@ -46,7 +53,8 @@
       <CoinsInput
         id={`expenses-participant-amount-${i}`}
         class={amountClass}
-        bind:value={value.participants[id].amount} />
+        bind:value={value.participants[id].amount}
+        {oninput} />
     </div>
   {/each}
 
@@ -59,9 +67,9 @@
       <div class="flex flex-nowrap items-center justify-between gap-2">
         <div class="flex items-center gap-2 overflow-hidden flex-1">
           <div class={nameClass}>
-            <TextEllipsis>
+            <Ellipsis>
               {extra.comment ?? $dict.expenses.spendings.extras.title}
-            </TextEllipsis>
+            </Ellipsis>
           </div>
         </div>
         <CoinsInput

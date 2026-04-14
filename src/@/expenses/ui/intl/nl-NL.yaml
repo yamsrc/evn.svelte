@@ -37,3 +37,6 @@ transfers:
     received: |-
       !js
       (gender) => "Je hebt ontvangen"
+action: {}
+actions:
+  delete: Bijlage verwijderen

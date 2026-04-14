@@ -1,6 +1,6 @@
 <script lang="ts">
-  import * as Card from '$ui/card'
   import { Coins } from '@/app/ui'
+  import * as Card from '$ui/card'
   import { dict } from './intl'
   import type { Props, Sign } from './Totals'
 

@@ -1,5 +1,5 @@
-import * as origin from './net'
 import { challenge, iam } from './store'
+import * as origin from './net'
 
 /**
  * Sync account from origin

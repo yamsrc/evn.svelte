@@ -35,3 +35,6 @@ transfers:
     received: |-
       !js
       (gender) => "受け取ったよ"
+action: {}
+actions:
+  delete: 添付ファイルを削除

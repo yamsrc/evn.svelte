@@ -45,3 +45,6 @@ transfers:
 
       (gender) => gender === "he" ? "Ты получил" : gender === "she" ? "Ты
       получила" : "Ты получил(а)"
+action: {}
+actions:
+  delete: Удалить вложение

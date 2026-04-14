@@ -1,13 +1,13 @@
 <script lang="ts">
   import { ShieldCheck, ShieldOff } from '@lucide/svelte'
-  import { apple } from '$lib/tools/mq'
-  import { cn } from '$lib/utils'
-  import * as Alert from '$ui/alert'
-  import * as Card from '$ui/card'
-  import { dict } from '@/iam/ui/intl'
   import { supported } from '@/passkeys'
-  import Create from './Create.svelte'
+  import { dict } from '@/iam/ui/intl'
+  import * as Card from '$ui/card'
+  import * as Alert from '$ui/alert'
+  import { cn } from '$lib/utils'
+  import { apple } from '$lib/tools/mq'
   import Login from './Login.svelte'
+  import Create from './Create.svelte'
   import type { Props } from './Authentication'
 
   const { class: classes, account, oncreate }: Props = $props()

@@ -1,9 +1,9 @@
-import { FONT, NAME_Y } from './Nodes'
 import { toUnit } from './layout'
-import type { EdgeView, NodeView } from './Canvas'
-import type { GridLayout } from './layout'
-import type { Account } from '@/accounts'
+import { FONT, NAME_Y } from './Nodes'
 import type { Contact } from '@/contacts'
+import type { Account } from '@/accounts'
+import type { GridLayout } from './layout'
+import type { EdgeView, NodeView } from './Canvas'
 
 export type AccountLike = Pick<Account, 'id' | 'name' | 'picture'>
 export type ContactLike = Pick<Contact, 'identities' | 'balance'>

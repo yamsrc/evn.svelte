@@ -3,15 +3,15 @@
  * Currently unused as both apple and google use popups.
  */
 
-import { goto } from '$app/navigation'
-import { resolve } from '$app/paths'
-import { navigation } from '$config'
-import { fragment, query, convert, assert } from '$lib/tools'
 import * as accounts from '@/iam/svc/net'
-import { logout } from '../logout'
+import { fragment, query, convert, assert } from '$lib/tools'
+import { navigation } from '$config/configuration'
+import { resolve } from '$app/paths'
+import { goto } from '$app/navigation'
 import { account, challenge, greeting } from '../store'
-import { nonce } from './nonce'
+import { logout } from '../logout'
 import { providers, type IDP } from './providers'
+import { nonce } from './nonce'
 
 export async function hello() {
   const authorization = token() ?? bearer() ?? code()

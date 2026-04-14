@@ -23,6 +23,11 @@ export const dictionaries = {
     },
     "delete": {
       "label": "اضغط مع الاستمرار للحذف"
+    },
+    "invite": {
+      "link": "مشاركة",
+      "qr": "عرض رمز الاستجابة السريعة",
+      "manually": "أضف يدويًا"
     }
   },
   "de-DE": {
@@ -46,6 +51,11 @@ export const dictionaries = {
     },
     "delete": {
       "label": "Zum Löschen gedrückt halten"
+    },
+    "invite": {
+      "link": "Teilen",
+      "qr": "QR-Code anzeigen",
+      "manually": "Manuell hinzufügen"
     }
   },
   "en-US": {
@@ -69,6 +79,11 @@ export const dictionaries = {
     },
     "delete": {
       "label": "Hold to delete"
+    },
+    "invite": {
+      "link": "Share",
+      "qr": "Show QR",
+      "manually": "Add manually"
     }
   },
   "es-ES": {
@@ -92,6 +107,11 @@ export const dictionaries = {
     },
     "delete": {
       "label": "Mantén presionado para eliminar"
+    },
+    "invite": {
+      "link": "Compartir",
+      "qr": "Mostrar QR",
+      "manually": "Agregar manualmente"
     }
   },
   "fr-FR": {
@@ -115,6 +135,11 @@ export const dictionaries = {
     },
     "delete": {
       "label": "Maintenir pour supprimer"
+    },
+    "invite": {
+      "link": "Partager",
+      "qr": "Afficher le QR",
+      "manually": "Ajouter manuellement"
     }
   },
   "hi-IN": {
@@ -138,6 +163,11 @@ export const dictionaries = {
     },
     "delete": {
       "label": "हटाने के लिए दबाए रखें"
+    },
+    "invite": {
+      "link": "साझा करें",
+      "qr": "QR दिखाएं",
+      "manually": "मैन्युअल रूप से जोड़ें"
     }
   },
   "it-IT": {
@@ -161,6 +191,11 @@ export const dictionaries = {
     },
     "delete": {
       "label": "Tieni premuto per eliminare"
+    },
+    "invite": {
+      "link": "Condividi",
+      "qr": "Mostra QR",
+      "manually": "Aggiungi manualmente"
     }
   },
   "ja-JP": {
@@ -184,6 +219,11 @@ export const dictionaries = {
     },
     "delete": {
       "label": "長押しで削除"
+    },
+    "invite": {
+      "link": "共有",
+      "qr": "QRを表示",
+      "manually": "手動で追加"
     }
   },
   "ko-KR": {
@@ -207,6 +247,11 @@ export const dictionaries = {
     },
     "delete": {
       "label": "길게 눌러 삭제"
+    },
+    "invite": {
+      "link": "공유",
+      "qr": "QR 표시",
+      "manually": "수동으로 추가"
     }
   },
   "nl-NL": {
@@ -230,6 +275,11 @@ export const dictionaries = {
     },
     "delete": {
       "label": "Houd vast om te verwijderen"
+    },
+    "invite": {
+      "link": "Delen",
+      "qr": "QR weergeven",
+      "manually": "Handmatig toevoegen"
     }
   },
   "ru-RU": {
@@ -253,6 +303,11 @@ export const dictionaries = {
     },
     "delete": {
       "label": "Удерживайте для удаления"
+    },
+    "invite": {
+      "link": "Поделиться",
+      "qr": "Показать QR",
+      "manually": "Добавить вручную"
     }
   },
   "sw-TZ": {
@@ -276,6 +331,11 @@ export const dictionaries = {
     },
     "delete": {
       "label": "Shikilia ili ufute"
+    },
+    "invite": {
+      "link": "Shiriki",
+      "qr": "Onesha QR",
+      "manually": "Ongeza mwenyewe"
     }
   },
   "tr-TR": {
@@ -299,6 +359,11 @@ export const dictionaries = {
     },
     "delete": {
       "label": "Silmek için basılı tutun"
+    },
+    "invite": {
+      "link": "Paylaş",
+      "qr": "QR Göster",
+      "manually": "Manuel olarak ekle"
     }
   },
   "uk-UA": {
@@ -322,6 +387,11 @@ export const dictionaries = {
     },
     "delete": {
       "label": "Утримуйте, щоб видалити"
+    },
+    "invite": {
+      "link": "Поділитися",
+      "qr": "Показати QR",
+      "manually": "Додати вручну"
     }
   },
   "zh-CN": {
@@ -345,6 +415,11 @@ export const dictionaries = {
     },
     "delete": {
       "label": "按住以删除"
+    },
+    "invite": {
+      "link": "分享",
+      "qr": "显示二维码",
+      "manually": "手动添加"
     }
   }
 };

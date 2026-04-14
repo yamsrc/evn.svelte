@@ -70,3 +70,7 @@ adventures:
     body: |-
       !js
       (title) => `Uitgave toegevoegd aan ${title}`
+receipts:
+  joined:
+    hint: Check de items en claim die van jou.
+    title: Er is zojuist een nieuw bonnetje binnengekomen

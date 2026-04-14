@@ -1,11 +1,11 @@
 <script lang="ts">
-  import { Hold } from '$com/buttons'
-  import { dict } from '$lib/intl'
-  import { cn } from '$lib/utils'
-  import * as AlertDialog from '$ui/alert-dialog'
-  import { buttonVariants } from '$ui/button'
-  import { Spinner } from '$ui/spinner'
   import { terminate } from '@/accounts'
+  import { Spinner } from '$ui/spinner'
+  import { buttonVariants } from '$ui/button'
+  import * as AlertDialog from '$ui/alert-dialog'
+  import { cn } from '$lib/utils'
+  import { dict } from '$lib/intl'
+  import { Hold } from '$com/buttons'
   import type { Props } from './Delete'
 
   const { ondelete, class: classes }: Props = $props()

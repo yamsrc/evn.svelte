@@ -93,3 +93,18 @@ adventures:
       !js
       (name, gender) => `${name} nodigt je uit voor het avontuur`
     heading: Uitnodiging voor het avontuur
+receipts:
+  og:
+    title: |-
+      !js
+      (title) => `Word lid van ${title} op Evnly`
+    description: Splits een bon en houd bij wie wie moet betalen — samen op Evnly.
+  dialog:
+    join: Meedoen
+    decline: Weigeren
+    title: Uitnodiging om de rekening te delen
+    description: |-
+      !js
+      (name, gender) => `${name} nodigt je uit om een rekening te splitten`
+    balance:
+      total: Totaalrekening

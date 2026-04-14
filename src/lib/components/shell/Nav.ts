@@ -1,7 +1,7 @@
 import type { Icon } from '@lucide/svelte'
 
 export interface Props {
-  sections: Section[]
+  sections?: Section[]
   position?: 'start' | 'center' | 'end'
   underlay?: boolean
   class?: string

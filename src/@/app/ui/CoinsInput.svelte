@@ -1,9 +1,9 @@
 <script lang="ts">
   import { Coins } from '@lucide/svelte'
-  import { locale } from '$lib/intl'
-  import { currency, unit } from '$lib/tools'
-  import { cn } from '$lib/utils'
   import * as InputGroup from '$ui/input-group'
+  import { cn } from '$lib/utils'
+  import { currency, unit } from '$lib/tools'
+  import { locale } from '$lib/intl'
   import type { Props } from './CoinsInput'
 
   let {

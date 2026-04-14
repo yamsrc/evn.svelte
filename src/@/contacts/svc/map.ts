@@ -1,6 +1,6 @@
 import { accounts } from '@/accounts/svc/store'
-import type { Contact } from './Contact'
 import type * as net from './net'
+import type { Contact } from './Contact'
 
 export function map(entry: net.Contact, me: string): Contact {
   const i = entry.identities

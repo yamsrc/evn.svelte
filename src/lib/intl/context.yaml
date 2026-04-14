@@ -34,8 +34,8 @@ inputs:
       title:
         input: Friends
       contact:
-        input: Friend
-        context: without gender forms
+        input: Add Friend
+        context: button label
     addSelected:
       input: Add selected
     cancel:
@@ -56,6 +56,11 @@ inputs:
       split:
         input: Split
         context: split expense/receipt etc
+    scan:
+      input: Scan
+      context: button label
+    upload:
+      input: Choose your own
   nav:
     home:
       input: Home
@@ -90,6 +95,16 @@ inputs:
     background:
       title:
         input: Background
+      pattern:
+        input: Pattern
+      picture:
+        input: Picture
+      cta:
+        input: Apply background
+    notifications:
+      title:
+        input: Notifications
+        context: section title
   form:
     enterName:
       input: Enter name
@@ -164,7 +179,7 @@ inputs:
       context: button tooltip (to leave the group)
     name:
       description:
-        input: All group members will see this name
+        input: Try adding an emoji ✨
       placeholder:
         input: Enter name
         context: input placeholder for a group name
@@ -302,4 +317,6 @@ mounts:
   accounts: ../../@/accounts/ui/intl
   transmission: ../../@/transmission/ui/intl
   groups: ../../@/groups/ui/intl
+  receipts: ../../@/receipts/ui/intl
   adventures: ../../@/adventures/ui/intl
+  purchases: ../../@/purchases/ui/intl

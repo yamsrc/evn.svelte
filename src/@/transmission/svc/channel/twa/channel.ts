@@ -1,7 +1,7 @@
 import { having, once, value } from 'svas'
 import { cap } from '$lib/tools'
-import type { SubscribeInput } from '../../net'
 import type { Channel } from '../Channel'
+import type { SubscribeInput } from '../../net'
 import type { NativeMessage, WebMessage } from './types'
 
 const TIMEOUT = 3000

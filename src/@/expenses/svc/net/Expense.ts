@@ -1,3 +1,16 @@
+export interface Expense {
+  id: string
+  title?: string
+  location?: string
+  date: string
+  participants: Record<string, Participant>
+  extras: Extra[]
+  attachments: string[]
+  _created: number
+  _version: number
+  links?: Link[]
+}
+
 export interface Participant {
   amount: number
   paid?: number
@@ -9,14 +22,7 @@ export interface Extra {
   comment?: string
 }
 
-export interface Expense {
+export interface Link {
+  type: 'receipt' | unknown
   id: string
-  title?: string
-  location?: string
-  date: string
-  participants: Record<string, Participant>
-  extras: Extra[]
-  attachments: string[]
-  _created: number
-  _version: number
 }

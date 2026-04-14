@@ -1,8 +1,8 @@
 <script lang="ts">
-  import * as AlertDialog from '$com/ui/alert-dialog'
-  import { buttonVariants } from '$com/ui/button'
-  import { dict } from '$lib/intl'
   import { cn } from '$lib/utils'
+  import { dict } from '$lib/intl'
+  import { buttonVariants } from '$com/ui/button'
+  import * as AlertDialog from '$com/ui/alert-dialog'
   import type { Props } from './Confirm'
 
   let { title, description, confirm, open = $bindable(false), onconfirm }: Props = $props()

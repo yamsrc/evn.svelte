@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { dict } from '$lib/intl'
   import * as Cosmetics from '@/app/ui/cosmetics'
+  import { dict } from '$lib/intl'
   import type { Props } from './Cosmetics'
 
   let { value = $bindable(), onchange, class: classes }: Props = $props()

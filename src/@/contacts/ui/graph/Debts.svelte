@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Coins } from '@/app/ui'
-  import { STROKE_W } from './Canvas'
   import { RECT_H } from './Debts'
+  import { STROKE_W } from './Canvas'
   import type { Props } from './Debts'
 
   const { edges, me, debtBox }: Props = $props()

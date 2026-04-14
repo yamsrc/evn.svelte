@@ -1,0 +1,46 @@
+splitter:
+  stack:
+    claim: Reclamar todo
+    release: Soltar
+leave:
+  label: Mantén pulsado para salir
+delete:
+  label: Mantener para eliminar
+me: Yo
+overview:
+  total: Total
+feedback:
+  question: ¿Qué tal salió el escaneo?
+  down: Le echaremos un vistazo.
+  thanks: ¡Gracias!
+autoclose:
+  description: >-
+    Actualiza los saldos automáticamente cuando todos hayan terminado o espera
+    para continuar manualmente
+  title: Autocompletar
+  payer:
+    title: Pagado por
+close:
+  label: Continuar
+  hold: Mantén pulsado para continuar
+unassigned:
+  - one: "{n} elemento sin asignar"
+    other: "{n} elementos sin asignar"
+pending:
+  status: ¡Aguanta, casi llegamos!
+  description: Normalmente tarda solo unos segundos
+failed:
+  title: Algo no parece estar bien
+  description: >-
+    He puesto todo de mi parte, pero esto no me parece un recibo. ¡Vamos a
+    intentarlo otra vez!
+  retry:
+    label: Volver a intentar
+state:
+  uploading: Suele tardar unos momentos
+  processing: ¡Espera un poco, ya casi estamos!
+action:
+  label: Escanear
+extras:
+  included: Se da por hecho que las tarifas y descuentos ya están incluidos
+  incomplete: Se puede gestionar después de que se hayan reclamado todos los artículos

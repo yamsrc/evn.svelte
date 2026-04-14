@@ -1,6 +1,6 @@
 import { origin } from '@/net'
-import type { Adventure, Expense, Invitation } from './Adventure'
 import type { Contact } from '@/contacts/svc/net'
+import type { Adventure, Expense, Invitation } from './Adventure'
 
 const adventures = origin.resource<Adventure>('/adventures/', { credentials: 'include' })
 

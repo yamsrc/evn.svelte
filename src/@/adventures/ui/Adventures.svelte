@@ -1,7 +1,7 @@
 <script lang="ts">
+  import { List } from '@/app/ui'
   import { unseen } from '@/adventures'
   import Panel from './Panel.svelte'
-  import * as List from './list'
   import type { Props } from './Adventures'
 
   const { adventures, notifications, class: classes }: Props = $props()
@@ -12,7 +12,7 @@
 <List.Root class={classes}>
   {#each sorted as adventure (adventure.id)}
     {@const highlighted = unseen(adventure, notifications ?? [])}
-    <List.Option>
+    <List.Option class="w-[calc(75%-var(--spacing))]">
       <Panel {adventure} link {highlighted} class="size-full" />
     </List.Option>
   {/each}

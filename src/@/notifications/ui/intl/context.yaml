@@ -41,7 +41,7 @@ inputs:
   expenses:
     expense:
       input: Paid by {...names}
-      context: "names - formatted list"
+      context: names - formatted list
   adventures:
     joined:
       me:
@@ -56,3 +56,11 @@ inputs:
         input: "{title} · {amount}"
       body:
         input: Expense added to {title}
+  receipts:
+    joined:
+      hint:
+        input: Check the items and claim yours.
+        context: subtitle receipt joined notification
+      title:
+        input: A new receipt just landed
+        context: notification title when merchant unknown

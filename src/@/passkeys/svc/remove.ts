@@ -1,7 +1,7 @@
 import { having } from 'svas'
 import { account } from '@/iam'
-import * as origin from './net'
 import { passkeys } from './store'
+import * as origin from './net'
 
 export async function remove(id: string): Promise<void | Error> {
   const me = await having(account)

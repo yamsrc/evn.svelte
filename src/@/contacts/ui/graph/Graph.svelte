@@ -1,12 +1,12 @@
 <script lang="ts">
   import { ok } from 'svas'
   import { account } from '@/iam'
-  import Canvas from './Canvas.svelte'
-  import { PAD, buildScene } from './Graph'
-  import Zoom from './Zoom.svelte'
   import { layout } from './layout'
-  import type { Member } from './Canvas'
+  import Zoom from './Zoom.svelte'
+  import { PAD, buildScene } from './Graph'
+  import Canvas from './Canvas.svelte'
   import type { Props } from './Graph'
+  import type { Member } from './Canvas'
 
   const { contacts, accounts, class: classes, showNames = false }: Props = $props()
 

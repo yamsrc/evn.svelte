@@ -67,3 +67,7 @@ adventures:
     body: |-
       !js
       (title) => `Gharama imeongezwa kwa ${title}`
+receipts:
+  joined:
+    hint: Angalia vitu na chukua ulivyolipa.
+    title: Risiti mpya imewasili

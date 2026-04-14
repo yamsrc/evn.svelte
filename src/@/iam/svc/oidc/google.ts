@@ -4,7 +4,9 @@ async function google(descriptor: Descriptor): Promise<string | Error> {
   await init()
 
   const response = await new Promise((resolve) => {
-    const client = window.google.accounts.oauth2.initCodeClient({
+    const google = (window as any).google as any
+
+    const client = google.accounts.oauth2.initCodeClient({
       client_id: descriptor.client,
       scope: descriptor.scope,
       ux_mode: 'popup',
@@ -26,7 +28,9 @@ async function google(descriptor: Descriptor): Promise<string | Error> {
 
 function init() {
   return new Promise((resolve, reject) => {
-    if (window.google?.accounts?.oauth2 !== undefined) return resolve(undefined)
+    const google = (window as any).google as any
+
+    if (google?.accounts?.oauth2 !== undefined) return resolve(undefined)
 
     const script = document.createElement('script')
 

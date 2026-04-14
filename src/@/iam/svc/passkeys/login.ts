@@ -1,6 +1,6 @@
 import { request } from '@/passkeys'
-import { passkeys } from '../net'
 import { method, iam } from '../store'
+import { passkeys } from '../net'
 
 export async function login(id?: string): Promise<void | Error> {
   const response = await request(id)

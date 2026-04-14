@@ -1,6 +1,6 @@
-import * as net from './net'
-import { method, iam } from './store'
 import { sync } from './sync'
+import { method, iam } from './store'
+import * as net from './net'
 import type { Echo } from './net'
 
 export async function verify(username: string, password: string): Promise<Echo | Error> {

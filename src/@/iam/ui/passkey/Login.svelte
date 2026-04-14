@@ -1,9 +1,9 @@
 <script lang="ts">
   import { Fingerprint } from '@lucide/svelte'
-  import { Loader } from '$com/loader'
-  import { Button } from '$ui/button'
-  import { passkeys } from '@/iam'
   import { dict } from '@/iam/ui/intl'
+  import { passkeys } from '@/iam'
+  import { Button } from '$ui/button'
+  import { Loader } from '$com/loader'
 
   let busy = $state(false)
 

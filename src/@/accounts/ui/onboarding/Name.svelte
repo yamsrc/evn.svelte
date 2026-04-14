@@ -1,10 +1,10 @@
 <script lang="ts">
   import { ArrowRight } from '@lucide/svelte'
-  import { dict } from '$lib/intl'
-  import { Button } from '$ui/button'
+  import * as Cosmetics from '@/app/ui/cosmetics'
   import { pickpic } from '@/accounts'
   import { update, type Account } from '@/accounts'
-  import * as Cosmetics from '@/app/ui/cosmetics'
+  import { Button } from '$ui/button'
+  import { dict } from '$lib/intl'
 
   const { account, autofocus }: { account: Account; autofocus?: boolean } = $props()
 

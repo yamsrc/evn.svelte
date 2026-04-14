@@ -1,5 +1,5 @@
-import { faker } from '@faker-js/faker'
 import { expect } from '@playwright/test'
+import { faker } from '@faker-js/faker'
 import { Given, When, Then } from './fixtures'
 import type { Page } from '@playwright/test'
 

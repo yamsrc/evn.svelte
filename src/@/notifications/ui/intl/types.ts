@@ -46,4 +46,10 @@ export type Dictionary = {
           body: (value: any) => string
         }
       }
+      receipts: {
+        joined: {
+          hint: string
+          title: string
+        }
+      }
     }

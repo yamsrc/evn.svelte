@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Picture } from '@/accounts/ui'
-  import { R } from './Canvas'
   import { D, FONT, NAME_Y } from './Nodes'
+  import { R } from './Canvas'
   import type { Props } from './Nodes'
 
   const { nodes, members, me, showNames = true }: Props = $props()

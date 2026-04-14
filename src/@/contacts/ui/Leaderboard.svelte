@@ -1,8 +1,8 @@
 <script lang="ts">
   import { Async } from 'svas'
-  import { Progress } from '$ui/progress'
-  import { accounts } from '@/accounts'
   import { Panel } from '@/accounts/ui'
+  import { accounts } from '@/accounts'
+  import { Progress } from '$ui/progress'
   import type { Props } from './Leaderboard'
 
   const { entries, sign = 'negative', neutral, top }: Props = $props()

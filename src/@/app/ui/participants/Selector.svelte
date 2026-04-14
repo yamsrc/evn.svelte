@@ -1,26 +1,26 @@
 <script lang="ts">
-  import { Check } from '@lucide/svelte'
-  import { Async, combined, ok } from 'svas'
   import { SvelteSet } from 'svelte/reactivity'
-  import { page } from '$app/state'
-  import { Share } from '$com/buttons'
-  import { back } from '$com/history'
-  import { QR } from '$com/qr'
-  import { Actions, Return } from '$com/shell'
-  import { dict } from '$lib/intl'
-  import { Input } from '$ui/input'
-  import { Action, actionVariants, Header, Section } from '@/app/ui'
-  import { contacts, filter as filterContacts } from '@/contacts'
-  import { Contacts, CreateDialog } from '@/contacts/ui'
-  import { favorites, filter as filterFavorites } from '@/favorites'
-  import { Favorites } from '@/favorites/ui'
-  import { groups, filter as filterGroups } from '@/groups'
+  import { Async, combined, ok } from 'svas'
+  import { Check } from '@lucide/svelte'
   import { Groups } from '@/groups/ui'
+  import { groups, filter as filterGroups } from '@/groups'
+  import { Favorites } from '@/favorites/ui'
+  import { favorites, filter as filterFavorites } from '@/favorites'
+  import { Contacts, CreateDialog } from '@/contacts/ui'
+  import { contacts, filter as filterContacts } from '@/contacts'
+  import { Action, actionVariants, Header, Section } from '@/app/ui'
+  import { Input } from '$ui/input'
+  import { dict } from '$lib/intl'
+  import { Actions, Return } from '$com/shell'
+  import { QR } from '$com/qr'
+  import { back } from '$com/history'
+  import { Share } from '$com/buttons'
+  import { page } from '$app/state'
   import { identities } from './identities'
-  import type { Props } from './Selector'
-  import type { Contact } from '@/contacts'
-  import type { Favorite } from '@/favorites'
   import type { Group } from '@/groups'
+  import type { Favorite } from '@/favorites'
+  import type { Contact } from '@/contacts'
+  import type { Props } from './Selector'
 
   const { title, options: propsOptions }: Props = $props()
   const exclude = $derived(page.state.participants?.identities ?? [])
@@ -146,13 +146,11 @@
     <Share class={actionVariants({ variant: 'secondary', class: 'flex-1' })} data={invitation} />
     <QR class={actionVariants({ variant: 'secondary', class: 'flex-1' })} text={invitation.url} />
   {/if}
-  {#if options.managedContactsCreation}
-    <CreateDialog
-      class={actionVariants({
-        variant: 'secondary',
-        class: 'flex-1 [&_span]:hidden',
-      })} />
-  {/if}
+  <CreateDialog
+    class={actionVariants({
+      variant: 'secondary',
+      class: 'flex-1 [&_span]:hidden',
+    })} />
   <Action id="participants-selector-add-button" disabled={!selected} onclick={addMembers}>
     <Check />
     <span>{$dict.actions.addSelected}</span>

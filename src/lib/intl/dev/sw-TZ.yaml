@@ -12,12 +12,34 @@ components:
       (count) => `Onyesha: ${count}`
   graph:
     title: Chati ya Madeni
+  receipts:
+    title: Risiti
+    upload:
+      label: Pakia
+    progress:
+      uploading:
+        title: Inapakia
+        comment: Kwa kawaida huchukua muda mfupi tu
+      processing:
+        comment: Shikilia, tumebakiza kidogo tu
+        title: Inashughulikiwa
+      ready:
+        title: Tayari
+        comment: |-
+          !js
+          (ms) => `Imekamilika kwa sekunde ${(ms / 1000).toFixed(1)}`
   picture:
     title: Picture
   participants:
     title: Washiriki
     managedContactsCreation: Onyesha kitufe cha kuunda mawasiliano yanayosimamiwa
     shareUrl: Shiriki URL
+  fullscreen:
+    title: Fullscreen
+    attachment: Ongeza kiambatisho kwenye gharama yoyote
+    delete: Shikilia kufuta
+  invitation:
+    title: Mialiko
 transmission:
   title: Transmission
   permission:
@@ -28,3 +50,12 @@ transmission:
   ping: Ping
 loading:
   title: Skrini ya kupakia
+receipts:
+  upload: {}
+actions:
+  continue: Endelea
+nav:
+  home: Mwanzo
+  components: Vijenzi
+  transmission: Gia
+  app: App

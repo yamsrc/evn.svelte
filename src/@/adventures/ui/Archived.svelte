@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Archive } from '@lucide/svelte'
-  import { locale } from '$lib/intl'
   import { ago } from '$lib/tools'
+  import { locale } from '$lib/intl'
   import { dict } from './intl'
   import type { Props } from './Archived'
 

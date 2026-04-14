@@ -35,3 +35,6 @@ transfers:
     received: |-
       !js
       (gender) => "받았어"
+action: {}
+actions:
+  delete: 첨부파일 삭제

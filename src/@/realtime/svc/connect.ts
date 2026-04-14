@@ -1,7 +1,7 @@
-import { events, type Events, type Message } from './events'
-import * as net from './net'
-import { reset } from './reset'
 import { status } from './status'
+import { reset } from './reset'
+import * as net from './net'
+import { events, type Events, type Message } from './events'
 
 let connected: string | null = null
 let controller: AbortController | null = null

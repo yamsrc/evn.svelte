@@ -1,8 +1,8 @@
 import { ensure } from 'svas'
 import { account } from '@/iam'
-import * as managed from './managed'
-import * as net from './net'
 import { update } from './update'
+import * as net from './net'
+import * as managed from './managed'
 
 export const pictures = [
   'f89bea1dcfdb2f85c3d30a222233c841',

@@ -1,20 +1,21 @@
 <script lang="ts">
   import { Async, combined } from 'svas'
-  import { dict } from '$lib/intl'
-  import { Avatar } from '@/accounts/ui'
-  import { adventures } from '@/adventures'
-  import Adventures from '@/adventures/ui/Adventures.svelte'
+  import { Permission } from '@/transmission/ui'
+  import { subscribed } from '@/transmission'
+  import { receipts } from '@/receipts'
+  import { Notifications } from '@/notifications/ui'
+  import { notifications, scope } from '@/notifications'
+  import { account } from '@/iam'
+  import { Recent } from '@/expenses/ui'
+  import { expenses } from '@/expenses'
+  import { Totals, Tops } from '@/contacts/ui'
+  import { contacts } from '@/contacts'
   import { Header, Section } from '@/app/ui'
   import { Actions } from '@/app/ui'
-  import { contacts } from '@/contacts'
-  import { Totals, Tops } from '@/contacts/ui'
-  import { expenses } from '@/expenses'
-  import { Recent } from '@/expenses/ui'
-  import { account } from '@/iam'
-  import { notifications, scope } from '@/notifications'
-  import { Notifications } from '@/notifications/ui'
-  import { subscribed } from '@/transmission'
-  import { Permission } from '@/transmission/ui'
+  import Adventures from '@/adventures/ui/Adventures.svelte'
+  import { adventures } from '@/adventures'
+  import { Avatar } from '@/accounts/ui'
+  import { dict } from '$lib/intl'
 
   const expensesOnlyNotifications = scope({ domain: 'expenses' })
   const transfersNotifications = scope({ domain: 'contacts', event: 'transferred' })
@@ -25,14 +26,16 @@
   ])
 </script>
 
-<Async store={combined(account, contacts, expenses, notifications, adventures)}>
-  {#snippet awaited([account, contacts, expenses, notifications, adventures])}
+<Async store={combined(account, contacts, expenses, receipts, notifications, adventures)}>
+  {#snippet awaited([account, contacts, expenses, receipts, notifications, adventures])}
     <Section>
       <Header.Root>
         <Header.Title>{$dict.home.title(account.name)}</Header.Title>
         <Header.Actions>
           <Header.Button href="/me/" id="header-me-button" variant="ghost">
-            <Avatar {account} style="view-transition-name: my-avatar;" />
+            <Avatar
+              {account}
+              style="view-transition-name: my-avatar; view-transition-class: transition-morph;" />
           </Header.Button>
         </Header.Actions>
       </Header.Root>
@@ -42,16 +45,18 @@
       <Totals {contacts} />
     </Section>
 
-    <Section class="px-0 flex flex-col gap-2">
-      {#if $subscribed === false}
-        <div class="px-5">
-          <Permission dismissable />
-        </div>
-      {/if}
-      {#if notifications.length > 0}
-        <Notifications {notifications} />
-      {/if}
-    </Section>
+    {#if $subscribed === false || notifications.length > 0}
+      <Section class="px-0 flex flex-col gap-2">
+        {#if $subscribed === false}
+          <div class="px-5">
+            <Permission dismissable />
+          </div>
+        {/if}
+        {#if notifications.length > 0}
+          <Notifications {notifications} />
+        {/if}
+      </Section>
+    {/if}
 
     <Section>
       <Tops {contacts} />
@@ -64,7 +69,7 @@
     {/if}
 
     <Section>
-      <Recent {expenses} notifications={expensesNotifications} />
+      <Recent {expenses} {receipts} notifications={expensesNotifications} />
     </Section>
   {/snippet}
 </Async>

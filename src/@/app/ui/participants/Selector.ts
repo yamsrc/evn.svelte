@@ -1,9 +1,8 @@
-export interface ParticipantsOptions {
-  managedContactsCreation?: boolean
+export interface Options {
   shareUrl?: string
 }
 
 export interface Props {
   title?: string
-  options?: ParticipantsOptions
+  options?: Options
 }

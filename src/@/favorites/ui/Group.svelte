@@ -1,8 +1,9 @@
 <script lang="ts">
-  import { Users } from '@lucide/svelte'
-  import { Panel } from '$com/panel'
-  import { TextEllipsis } from '$com/text-ellipsis'
+  import { Component } from '@lucide/svelte'
+  import { account } from '@/iam'
   import { Avatars } from '@/app/ui'
+  import { Ellipsis } from '$com/text'
+  import { Panel } from '$com/panel'
   import type { Props } from './Group'
 
   const MAX_DISPLAYED_MEMBERS = 3
@@ -29,9 +30,9 @@
         {#if group.emoji}
           <span class="font-bold shrink-0">{group.emoji}</span>
         {:else}
-          <Users class="size-4 shrink-0" />
+          <Component class="size-4 shrink-0" />
         {/if}
-        <TextEllipsis class="font-bold">{group.title ?? group.name}</TextEllipsis>
+        <Ellipsis class="font-bold">{group.title ?? group.name}</Ellipsis>
       </div>
       <Avatars identities={group.identities} max={MAX_DISPLAYED_MEMBERS} />
     </div>

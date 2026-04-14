@@ -1,0 +1,26 @@
+paywall:
+  title: Evnly Premium
+  offer:
+    headline: Mit Abo wird’s erst richtig Evn!
+    promo: Premium ist für kurze Zeit komplett kostenlos.
+    cta: Kostenlose Testversion starten
+    disclaimer: >-
+      Kostenlose Testphase nur für berechtigte Erstabonnenten verfügbar. Um eine
+      Berechnung zu vermeiden, kündigen Sie mindestens 24 Stunden vor Ablauf der
+      Testphase. Nach der kostenlosen Testphase wird das Abonnement automatisch
+      verlängert, Kündigung jederzeit möglich.
+    footnote: >-
+      * Ein Premium-Nutzer aktiviert das Markieren von Gegenständen für alle
+      Teilnehmenden. In Abenteuern wird nur der Belegtext gespeichert (keine
+      visuelle Aufteilung).
+    trial: |-
+      !js
+      (price) => `7 Tage kostenlos, danach ${price}/Jahr`
+  complete:
+    thanks: Vielen Dank für dein Abonnement von Envly Premium
+    avatarNote: Ab jetzt werden andere Evnly-Nutzer dein Avatar so sehen.
+    featuresNote: >-
+      Außerdem kannst du ab sofort die Oberfläche in deinem Profil noch weiter
+      anpassen, Belege scannen und erkennen sowie vieles mehr.
+  free:
+    cta: Premium genießen

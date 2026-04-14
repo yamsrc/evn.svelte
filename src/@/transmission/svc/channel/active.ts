@@ -1,6 +1,6 @@
 import { writable } from 'svelte/store'
-import { fcm } from './fcm'
 import { web } from './web'
+import { fcm } from './fcm'
 import type { Channel } from './Channel'
 
 export let channel: Channel | null = null

@@ -1,14 +1,14 @@
 <script lang="ts">
   import { Async, combined } from 'svas'
-  import { accounts } from '@/accounts'
-  import { Picture } from '@/accounts/ui'
-  import { adventures } from '@/adventures'
-  import { account } from '@/iam'
   import { dict } from '@/notifications/ui/intl'
+  import { account } from '@/iam'
+  import { adventures } from '@/adventures'
+  import { Picture } from '@/accounts/ui'
+  import { accounts } from '@/accounts'
   import Base from '../Base.svelte'
-  import type { Props } from './Joined'
-  import type { Account } from '@/accounts'
   import type { Adventure } from '@/adventures'
+  import type { Account } from '@/accounts'
+  import type { Props } from './Joined'
 
   const { notification }: Props = $props()
 

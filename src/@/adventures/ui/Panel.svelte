@@ -1,12 +1,13 @@
 <script lang="ts">
-  import { Attention } from '$com/shell'
-  import { TextEllipsis } from '$com/text-ellipsis'
-  import { Button } from '$ui/button'
-  import { Avatars, Coins } from '@/app/ui'
   import { account } from '@/iam'
-  import Archived from './Archived.svelte'
-  import Picture from './Picture.svelte'
+  import { Avatars, Coins } from '@/app/ui'
+  import { Button } from '$ui/button'
+  import { takeoff } from '$lib/tools'
+  import { Ellipsis } from '$com/text'
+  import { Attention } from '$com/shell'
   import { dict } from './intl'
+  import Picture from './Picture.svelte'
+  import Archived from './Archived.svelte'
   import type { Props } from './Panel'
 
   const { adventure, link, highlighted, class: classes }: Props = $props()
@@ -30,7 +31,7 @@
   <Picture {adventure} class="absolute size-full inset-0 -z-1 object-cover" />
 
   <div class="relative z-10 flex h-full flex-col items-start gap-1.5 w-full justify-between">
-    <TextEllipsis class={['font-bold text-lg leading-6']}>{adventure.title}</TextEllipsis>
+    <Ellipsis class={['font-bold text-lg leading-6']}>{adventure.title}</Ellipsis>
     {#if highlighted}
       <Attention class="absolute top-0 inset-e-0 z-10" />
     {/if}
@@ -56,6 +57,7 @@
   <Button
     variant="outline"
     href={`/adventures/${adventure.id}/`}
+    onclick={() => takeoff(adventure.picture, 'adventure-cover')}
     size="lg"
     class={[
       base,

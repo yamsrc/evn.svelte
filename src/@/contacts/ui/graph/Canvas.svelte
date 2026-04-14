@@ -1,7 +1,7 @@
 <script lang="ts">
-  import Arrows from './Arrows.svelte'
-  import Debts from './Debts.svelte'
   import Nodes from './Nodes.svelte'
+  import Debts from './Debts.svelte'
+  import Arrows from './Arrows.svelte'
   import type { Props } from './Canvas'
 
   const { viewBox, nodes, edges, members, me, step, showNames = false }: Props = $props()

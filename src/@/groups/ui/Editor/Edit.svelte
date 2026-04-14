@@ -1,9 +1,9 @@
 <script lang="ts">
-  import { goto } from '$app/navigation'
   import { create } from '@/groups'
+  import { goto } from '$app/navigation'
   import Form from './Form.svelte'
-  import type { Value } from './Context'
   import type { Props } from './Edit'
+  import type { Value } from './Context'
 
   let { value = $bindable(), busy = $bindable(false) }: Props = $props()
 

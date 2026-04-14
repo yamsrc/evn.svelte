@@ -1,0 +1,46 @@
+splitter:
+  stack:
+    claim: المطالبة بالجميع
+    release: إفلات
+leave:
+  label: اضغط مطولًا للمغادرة
+delete:
+  label: اضغط مطولاً للحذف
+me: أنا
+overview:
+  total: الإجمالي
+feedback:
+  question: كيف كانت نتيجة المسح الضوئي؟
+  down: سنلقي نظرة.
+  thanks: شكرًا!
+autoclose:
+  description: حدّث الأرصدة تلقائيًا بعد انتهاء الجميع، أو انتظر لتكمل يدويًا
+  title: الإكمال التلقائي
+  payer:
+    title: تم الدفع بواسطة
+close:
+  label: تابع
+  hold: اضغط مطولًا للمتابعة
+unassigned:
+  - zero: "{n} عنصر غير معين"
+    one: "{n} عنصر غير معين"
+    two: "{n} عنصران غير معينان"
+    few: "{n} عناصر غير معينة"
+    many: "{n} عنصراً غير معين"
+    other: "{n} عنصر غير معين"
+pending:
+  status: انتظر قليلاً، اقتربنا من الوصول
+  description: عادةً يستغرق ذلك لحظات قليلة
+failed:
+  title: هناك شيء غير صحيح
+  description: حاولت جهدي، لكن هذا لا يبدو كإيصال بالنسبة لي. لنحاول مرة أخرى!
+  retry:
+    label: إعادة المحاولة
+state:
+  uploading: عادةً ما يستغرق بضع لحظات
+  processing: انتظر قليلًا، اقتربنا من الانتهاء
+action:
+  label: مسح
+extras:
+  included: يُفترض أن الرسوم والخصومات مشمولة بالفعل
+  incomplete: يمكنك إدارة ذلك بعد أن تتم المطالبة بجميع البنود

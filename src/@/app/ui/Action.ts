@@ -1,11 +1,11 @@
-import { cn } from '$lib/utils'
 import { buttonVariants, type ButtonProps } from '$ui/button'
+import { cn } from '$lib/utils'
 import type { ClassValue } from 'tailwind-variants'
 import type { ClassProp, VariantProps } from 'tailwind-variants'
 
-export const defaults: ButtonProps = {
-  class: 'flex-1 h-full aspect-square',
-} as const
+export const defaults = {
+  class: 'flex-1 h-full aspect-square [&_span]:sr-only',
+} satisfies ButtonProps
 
 export type Props = ButtonProps
 

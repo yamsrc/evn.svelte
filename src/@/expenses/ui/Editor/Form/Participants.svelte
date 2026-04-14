@@ -1,14 +1,19 @@
 <script lang="ts">
-  import * as Card from '$ui/card'
-  import * as Tabs from '$ui/tabs'
-  import { Participants } from '@/app/ui'
-  import { numbers, type Participant } from '@/expenses'
   import { dict } from '@/expenses/ui/intl'
-  import ByShare from './ByShare.svelte'
+  import { numbers, type Participant } from '@/expenses'
+  import { Participants } from '@/app/ui'
+  import * as Tabs from '$ui/tabs'
+  import * as Card from '$ui/card'
   import BySum from './BySum.svelte'
+  import ByShare from './ByShare.svelte'
   import type { Props } from './Participants'
 
-  let { value = $bindable(), error = $bindable(false), mode = $bindable('sums') }: Props = $props()
+  let {
+    value = $bindable(),
+    total = $bindable(),
+    error = $bindable(false),
+    mode = $bindable('sums'),
+  }: Props = $props()
 
   const exclude = $derived(Object.keys(value.participants))
 
@@ -45,7 +50,7 @@
         </Tabs.Trigger>
       </Tabs.List>
       <Tabs.Content value="sums">
-        <BySum bind:value />
+        <BySum bind:value bind:total />
       </Tabs.Content>
       <Tabs.Content value="shares">
         <ByShare bind:value />
@@ -55,7 +60,6 @@
       id="expenses-spendings-add-participants-button"
       {exclude}
       {onadd}
-      options={{ managedContactsCreation: true }}
       class="w-full" />
   </Card.Content>
 </Card.Root>

@@ -14,3 +14,7 @@ expenses:
   empty: これまでに共有された支出はありません。
 delete:
   label: 長押しで削除
+invite:
+  link: 共有
+  qr: QRを表示
+  manually: 手動で追加

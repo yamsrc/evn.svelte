@@ -1,7 +1,7 @@
 import { ensure, sync } from 'svas'
 import { account } from '@/iam'
-import * as net from './net'
 import { internal } from './store'
+import * as net from './net'
 
 export async function attach(files: File[], id?: string): Promise<string[] | Error> {
   const me = ensure(account)

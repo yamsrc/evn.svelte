@@ -12,12 +12,34 @@ components:
       (count) => `Mostra: ${count}`
   graph:
     title: Grafico dei debiti
+  receipts:
+    title: Scontrini
+    upload:
+      label: Carica
+    progress:
+      uploading:
+        title: Caricamento in corso
+        comment: Di solito ci vogliono pochi istanti
+      processing:
+        comment: Resisti, ci siamo quasi
+        title: Elaborazione in corso
+      ready:
+        title: Pronto
+        comment: |-
+          !js
+          (ms) => `Fatto in ${(ms / 1000).toFixed(1)} secondi`
   picture:
     title: Picture
   participants:
     title: Partecipanti
     managedContactsCreation: Mostra il pulsante per creare contatti gestiti
     shareUrl: Condividi URL
+  fullscreen:
+    title: Fullscreen
+    attachment: Aggiungi un allegato a qualsiasi spesa
+    delete: Tieni premuto per eliminare
+  invitation:
+    title: Inviti
 transmission:
   title: Transmission
   permission:
@@ -28,3 +50,12 @@ transmission:
   ping: Ping
 loading:
   title: Schermata di caricamento
+receipts:
+  upload: {}
+actions:
+  continue: Continua
+nav:
+  home: Home
+  components: Componenti
+  transmission: Trasmissione
+  app: App

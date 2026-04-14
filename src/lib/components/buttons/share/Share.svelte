@@ -1,10 +1,9 @@
 <script lang="ts">
   import { Share2 } from '@lucide/svelte'
-  import { browser } from '$app/environment'
-  import { Clipboard } from '$com/buttons'
-  import { Loader } from '$com/loader'
-  import { cn } from '$lib/utils'
   import { Button } from '$ui/button'
+  import { Loader } from '$com/loader'
+  import { Clipboard } from '$com/buttons'
+  import { browser } from '$app/environment'
   import type { Props, Retriever } from './Share'
 
   const { children, data, label, disabled, onshare, class: classes, ...rest }: Props = $props()
@@ -42,7 +41,7 @@
 </script>
 
 {#if supported}
-  <Button class={cn(classes)} {onclick} disabled={waiting || disabled} {...rest}>
+  <Button class={classes} {onclick} disabled={waiting || disabled} {...rest}>
     {#if children}
       {@render children?.()}
     {:else}

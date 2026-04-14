@@ -1,0 +1,44 @@
+splitter:
+  stack:
+    claim: Hepsini al
+    release: Bırak
+leave:
+  label: Ayrılmak için basılı tut
+delete:
+  label: Silmek için basılı tutun
+me: Ben
+overview:
+  total: Toplam
+feedback:
+  question: Tarama nasıl oldu?
+  down: Bir göz atacağız.
+  thanks: Teşekkürler!
+autoclose:
+  description: >-
+    Herkes bitirdiğinde bakiyeleri otomatik güncelle veya elle devam etmek için
+    bekle
+  title: Otomatik tamamlama
+  payer:
+    title: Ödeyen
+close:
+  label: Devam et
+  hold: Devam etmek için basılı tut
+unassigned:
+  - one: "{n} atanmamış öğe"
+    other: "{n} atanmamış öğe"
+pending:
+  status: Dayan, neredeyse bitti
+  description: Genellikle sadece birkaç saniye sürer
+failed:
+  title: Bir şeyler doğru görünmüyor
+  description: Elimden geleni yaptım ama bu bana fiş gibi gelmedi. Hadi bir daha deneyelim!
+  retry:
+    label: Tekrar dene
+state:
+  uploading: Genellikle sadece birkaç saniye sürer
+  processing: Biraz bekle, neredeyse bitti
+action:
+  label: Tara
+extras:
+  included: Ücretler ve indirimlerin zaten dahil olduğu varsayılır
+  incomplete: Tüm ürünler alındıktan sonra yönetilebilir

@@ -1,11 +1,11 @@
 <script lang="ts">
   import { ok } from 'svas'
-  import { page } from '$app/state'
-  import { oidc } from '$config'
-  import { Screen, Authenticated, Goto } from '@/app/ui'
   import { account as iam } from '@/iam'
-  import Accept from './Accept.svelte'
+  import { Screen, Authenticated, Goto } from '@/app/ui'
+  import { oidc } from '$config/configuration'
+  import { page } from '$app/state'
   import Expired from './Expired.svelte'
+  import Accept from './Accept.svelte'
   import type { PageData } from './$types'
 
   const data = page.data as PageData

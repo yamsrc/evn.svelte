@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { Minus, Plus } from '@lucide/svelte'
   import { SvelteMap } from 'svelte/reactivity'
-  import { Button } from '$ui/button'
+  import { Minus, Plus } from '@lucide/svelte'
   import * as ButtonGroup from '$ui/button-group'
+  import { Button } from '$ui/button'
   import type { Props } from './Zoom'
 
   let {

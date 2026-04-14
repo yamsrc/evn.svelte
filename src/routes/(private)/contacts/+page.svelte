@@ -1,17 +1,17 @@
 <script lang="ts">
   import { Async, combined } from 'svas'
-  import { dict } from '$lib/intl'
-  import { Input } from '$ui/input'
+  import { scope } from '@/notifications'
+  import { account } from '@/iam'
+  import { Groups } from '@/groups/ui'
+  import { groups, filter as filterGroups } from '@/groups'
+  import { Favorites } from '@/favorites/ui'
+  import { favorites, filter as filterFavorites } from '@/favorites'
+  import { Actions, Invite, Contacts } from '@/contacts/ui'
+  import { contacts, filter as filterContacts } from '@/contacts'
   import { Section } from '@/app/ui'
   import { Header } from '@/app/ui'
-  import { contacts, filter as filterContacts } from '@/contacts'
-  import { Actions, Invite, Contacts } from '@/contacts/ui'
-  import { favorites, filter as filterFavorites } from '@/favorites'
-  import { Favorites } from '@/favorites/ui'
-  import { groups, filter as filterGroups } from '@/groups'
-  import { Groups } from '@/groups/ui'
-  import { account } from '@/iam'
-  import { scope } from '@/notifications'
+  import { Input } from '$ui/input'
+  import { dict } from '$lib/intl'
 
   let search = $state('')
 

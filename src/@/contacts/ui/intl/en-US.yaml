@@ -14,3 +14,7 @@ expenses:
   empty: No shared expenses so far.
 delete:
   label: Hold to delete
+invite:
+  link: Share
+  qr: Show QR
+  manually: Add manually

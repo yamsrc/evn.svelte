@@ -1,49 +1,61 @@
 <script lang="ts">
   import { Trash2 } from '@lucide/svelte'
-  import Button from '$ui/button/button.svelte'
-  import { Picture, url } from '@/media/ui'
+  import { Picture } from '@/media/ui'
+  import { Fullscreen } from '$com/fullscreen'
+  import { Hold } from '$com/buttons'
+  import { dict } from './intl'
   import type { Props } from './Attachments'
 
-  let { attachments = $bindable([]), editable = true }: Props = $props()
+  let {
+    attachments = $bindable([]),
+    path = '/expenses/attachments/',
+    editable,
+    class: classes,
+  }: Props = $props()
+
+  let zoomed = $state<string | null>(null)
 
   function filter(id: string) {
     attachments = attachments.filter((attachment) => attachment !== id)
   }
 
-  const path = '/expenses/attachments/'
+  function onshow(id: string) {
+    zoomed = id
+  }
 </script>
 
-{#if attachments.length > 0}
-  <div
-    class="bg-accent flex justify-center p-4 overflow-x-auto overscroll-x-contain no-scrollbar">
-    <div class="flex gap-3">
-      {#each attachments as attachment (attachment)}
-        <div
-          class={[
-            'shrink-0 border h-[300px] no-scrollbar rounded-md',
-            editable && 'overflow-y-auto overscroll-y-contain snap-y snap-mandatory',
-          ]}>
-          <a href={url({ id: attachment, path })} target="_blank">
-            <Picture
-              id={attachment}
-              {path}
-              variant="300x600?"
-              class={['block h-full', editable && 'snap-center']} />
-          </a>
-          {#if editable}
-            <div class="snap-center flex justify-center items-center bg-destructive p-4">
-              <Button
-                variant="ghost"
-                size="icon-lg"
-                onclick={() => filter(attachment)}
-                class="w-full">
-                <Trash2 />
-              </Button>
-            </div>
-          {/if}
-        </div>
-      {/each}
-      <div class="w-2 shrink-0"></div>
-    </div>
+<div
+  class={[
+    'bg-accent flex justify-center p-4 overflow-x-auto overscroll-x-contain touch-pan-x no-scrollbar',
+    classes,
+  ]}>
+  <div class="flex gap-3 h-[300px]">
+    {#each attachments as attachment (attachment)}
+      <div class={['shrink-0 border h-full no-scrollbar']}>
+        <Fullscreen class="h-[300px]" fragile onshow={() => onshow(attachment)} x={false}>
+          <Picture
+            id={attachment}
+            {path}
+            variant="300x600?"
+            class={['h-full object-contain rounded-md', editable && 'snap-center']}
+            style={`${zoomed === attachment ? `view-transition-name: attachment-${attachment};` : ''} view-transition-class: transition-spring transition-morph fullscreen-content;`} />
+          {#snippet overlay()}
+            {#if editable}
+              <div class="px-5 pt-2 tim:pt-[env(safe-area-inset-top)] flex justify-end">
+                <Hold
+                  label={$dict.actions.delete}
+                  variant="outline"
+                  size="icon"
+                  class="text-destructive"
+                  onclick={() => filter(attachment)}>
+                  <Trash2 class="size-5" />
+                </Hold>
+              </div>
+            {/if}
+          {/snippet}
+        </Fullscreen>
+      </div>
+    {/each}
+    <div class="w-2 shrink-0"></div>
   </div>
-{/if}
+</div>

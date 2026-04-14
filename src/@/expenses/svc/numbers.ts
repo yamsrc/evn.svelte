@@ -1,7 +1,7 @@
 import { get } from 'svelte/store'
 import { account } from '@/iam'
-import type { Participant } from './net'
 import type { Expense } from './store'
+import type { Participant } from './net'
 
 type Value = Pick<Expense, 'participants' | 'extras'>
 
@@ -90,7 +90,7 @@ export function split(total: number, ids: string[]): Record<string, number> {
  * @param ids - The IDs of the participants to check
  * @returns True if the amounts follow the even split pattern, false otherwise
  */
-export function even(participants: Record<string, Participant>, ids: string[]): boolean {
+export function even(participants: Record<string, Participant>, ids: string[] = Object.keys(participants)): boolean {
   if (ids.length <= 1) return true
 
   const amounts = ids.map((id) => participants[id]?.amount ?? 0)

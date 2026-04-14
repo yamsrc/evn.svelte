@@ -1,5 +1,5 @@
-import * as net from './net'
 import { method, iam } from './store'
+import * as net from './net'
 import type { Echo } from './net'
 
 export async function send(email: string): Promise<void | Error> {

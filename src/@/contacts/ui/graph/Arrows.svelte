@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { AH, AHW, GAP } from './Arrows'
   import { R, STROKE_W } from './Canvas'
+  import { AH, AHW, GAP } from './Arrows'
   import type { Props } from './Arrows'
 
   const { edges, nodeMap }: Props = $props()
@@ -13,7 +13,12 @@
     const dy = (t.py - f.py) / len
     const gap = R + GAP
 
-    return { sx: f.px + dx * gap, sy: f.py + dy * gap, tx: t.px - dx * (gap + AH), ty: t.py - dy * (gap + AH) }
+    return {
+      sx: f.px + dx * gap,
+      sy: f.py + dy * gap,
+      tx: t.px - dx * (gap + AH),
+      ty: t.py - dy * (gap + AH),
+    }
   }
 </script>
 
@@ -27,10 +32,7 @@
     markerUnits="userSpaceOnUse"
     orient="auto-start-reverse"
     overflow="visible">
-    <path
-      d="M0,0 L{AH},{AHW} L0,{AHW * 2} Z"
-      stroke="none"
-      class="fill-muted-foreground" />
+    <path d="M0,0 L{AH},{AHW} L0,{AHW * 2} Z" stroke="none" class="fill-muted-foreground" />
   </marker>
 </defs>
 

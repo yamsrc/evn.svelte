@@ -67,3 +67,7 @@ adventures:
     body: |-
       !js
       (title) => `Expense added to ${title}`
+receipts:
+  joined:
+    hint: Check the items and claim yours.
+    title: A new receipt just landed

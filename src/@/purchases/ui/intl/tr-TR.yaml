@@ -1,0 +1,26 @@
+paywall:
+  title: Evnly Premium
+  offer:
+    headline: Abonelikle Evn çok daha iyi!
+    promo: Sınırlı bir süreliğine Premium tamamen ücretsiz.
+    cta: Ücretsiz denemeyi başlat
+    disclaimer: >-
+      Ücretsiz deneme yalnızca uygun ve ilk kez abone olanlar için geçerlidir.
+      Ücretlendirmeyi önlemek için deneme sona ermeden 24 saat önce iptal edin.
+      Ücretsiz deneme sonrasında otomatik yenilenir; istediğiniz zaman iptal
+      edebilirsiniz.
+    footnote: >-
+      * Bir Premium kullanıcı, tüm katılımcılar için ürün işaretlemeyi
+      etkinleştirir. Maceralarda yalnızca fiş metni kaydedilir (görsel bölme
+      yoktur).
+    trial: |-
+      !js
+      (price) => `7 gün ücretsiz, ardından ${price}/yıl`
+  complete:
+    thanks: Envly Premium’a abone olduğunuz için teşekkürler
+    avatarNote: Bundan sonra diğer Evnly kullanıcıları avatarınızı bu şekilde görecek.
+    featuresNote: >-
+      Ayrıca, artık profilinizde arayüzü daha fazla özelleştirebilir, fişleri
+      tarayıp tanıyabilir ve daha fazlasını yapabilirsiniz.
+  free:
+    cta: Premium'un Tadını Çıkar

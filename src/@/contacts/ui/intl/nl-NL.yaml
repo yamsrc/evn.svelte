@@ -16,3 +16,7 @@ expenses:
   empty: Tot nu toe geen gedeelde uitgaven.
 delete:
   label: Houd vast om te verwijderen
+invite:
+  link: Delen
+  qr: QR weergeven
+  manually: Handmatig toevoegen

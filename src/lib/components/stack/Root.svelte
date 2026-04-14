@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { transit } from '$lib/tools/svt'
+  import { transit } from '$lib/tools/transition'
   import { setContext } from './Context'
   import type { Props } from './Root'
 
@@ -9,6 +9,7 @@
   const stacked = $derived(count >= min)
 
   setContext({
+    id: crypto.randomUUID().slice(0, 8),
     increment: () => count++,
     decrement: () => count--,
     get collapsed() {
@@ -19,16 +20,17 @@
     },
   })
 
-  export function toggle() {
-    transit(() => (collapsed = !collapsed))
+  export function toggle(on?: boolean) {
+    if (on !== undefined) transit(() => (collapsed = on))
+    else transit(() => (collapsed = !collapsed))
   }
 
   export function expand() {
-    transit(() => (collapsed = false))
+    toggle(false)
   }
 
   export function collapse() {
-    transit(() => (collapsed = true))
+    toggle(true)
   }
 
   function onclick(e: MouseEvent) {

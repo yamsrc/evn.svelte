@@ -1,5 +1,5 @@
-import type { Expense } from './store'
 import type { Notification } from '@/notifications'
+import type { Expense } from './store'
 
 export function unseen(expense: Expense, notifications: Notification[]) {
   return notifications.some((n) =>

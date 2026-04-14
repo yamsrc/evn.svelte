@@ -1,3 +1,5 @@
+import { sync } from 'svas'
+import { internal } from './store'
 import * as net from './net'
 
 export async function get(id: string): Promise<net.Group | Error> {
@@ -5,8 +7,10 @@ export async function get(id: string): Promise<net.Group | Error> {
 }
 
 export async function accept(id: string): Promise<void | Error> {
-  const res = await net.invitations.del(id)
+  const group = await net.invitations.del(id)
 
-  if (res instanceof Error)
-    return res
+  if (group instanceof Error)
+    return group
+
+  sync(internal, group)
 }

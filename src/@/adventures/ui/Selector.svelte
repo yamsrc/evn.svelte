@@ -1,13 +1,13 @@
 <script lang="ts">
-  import { ChartPie } from '@lucide/svelte'
   import { ok } from 'svas'
-  import { replaceState } from '$app/navigation'
-  import { replace } from '$com/history'
-  import { buttonVariants } from '$ui/button'
+  import { ChartPie } from '@lucide/svelte'
+  import { List } from '@/app/ui'
   import { adventures } from '@/adventures'
-  import Panel from './Panel.svelte'
+  import { buttonVariants } from '$ui/button'
+  import { replace } from '$com/history'
+  import { replaceState } from '$app/navigation'
   import { dict } from './intl'
-  import * as List from './list'
+  import Panel from './Panel.svelte'
   import type { Props } from './Selector'
 
   const { id, draft, onchange }: Props = $props()
@@ -22,7 +22,6 @@
 
     const state = { expense: { ...draft, attachments: [...draft.attachments] } }
 
-    // if (index === 0) return replace('/expenses/editor/', state)
     if (index === 0) return replace('/expenses/editor/', state)
 
     const path = `/adventures/${active[index - 1].id}/expenses/editor/`

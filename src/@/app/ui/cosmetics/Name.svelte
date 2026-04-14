@@ -1,12 +1,9 @@
 <script lang="ts">
   import NameForm from './NameForm.svelte'
-  import type { Props } from './NameForm'
-
-  interface NameProps extends Props {
-    editable?: boolean
-  }
+  import type { Props } from './Name'
 
   let {
+    premium,
     value = $bindable(''),
     busy = $bindable(false),
     placeholder,
@@ -15,7 +12,7 @@
     onchange,
     editable = true,
     class: classes,
-  }: NameProps = $props()
+  }: Props = $props()
 </script>
 
 {#if editable}
@@ -26,8 +23,7 @@
     {autocomplete}
     {placeholder}
     {autofocus}
-    class={classes}
-  />
+    class={classes} />
 {:else}
-  <p class="text-center text-3xl font-bold">{value}</p>
+  <p class={['text-center text-3xl font-bold', premium && 'text-premium']}>{value}</p>
 {/if}

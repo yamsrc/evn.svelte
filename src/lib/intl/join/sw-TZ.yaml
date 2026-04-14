@@ -87,3 +87,18 @@ adventures:
       !js
       (name, gender) => `${name} anakualika ujiunge na tukio hili la kusisimua`
     heading: Mwaliko wa kuingia kwenye adventure
+receipts:
+  og:
+    title: |-
+      !js
+      (title) => `Jiunge na ${title} kwenye Evnly`
+    description: Gawanya risiti na fuatilia nani anamdai nani — pamoja kwenye Evnly.
+  dialog:
+    join: Jiunge
+    decline: Kataa
+    title: Mwaliko wa kugawana bili
+    description: |-
+      !js
+      (name, gender) => `${name} anakualika kugawana bili`
+    balance:
+      total: Jumla ya bili

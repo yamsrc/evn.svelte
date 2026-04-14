@@ -1,8 +1,8 @@
-import { ok } from 'svas'
 import { derived, type Readable } from 'svelte/store'
+import { ok } from 'svas'
 import { notifications } from './store'
-import type { Of } from './net'
 import type { Scope } from '@/transmission'
+import type { Of } from './net'
 
 type Domain = Scope['domain']
 

@@ -19,6 +19,26 @@ export const dictionaries = {
       "graph": {
         "title": "مخطط الديون"
       },
+      "receipts": {
+        "title": "الإيصالات",
+        "upload": {
+          "label": "تحميل"
+        },
+        "progress": {
+          "uploading": {
+            "title": "جارٍ الرفع",
+            "comment": "يستغرق الأمر عادة بضع لحظات"
+          },
+          "processing": {
+            "comment": "تمسك جيدًا، أوشكنا على الوصول",
+            "title": "جارٍ المعالجة"
+          },
+          "ready": {
+            "title": "جاهز",
+            "comment": (ms) => `تم في ${(ms / 1000).toFixed(1)} ثانية`
+          }
+        }
+      },
       "picture": {
         "title": "Picture"
       },
@@ -26,6 +46,14 @@ export const dictionaries = {
         "title": "المشاركون",
         "managedContactsCreation": "عرض زر إنشاء جهات الاتصال المُدارة",
         "shareUrl": "مشاركة الرابط"
+      },
+      "fullscreen": {
+        "title": "Fullscreen",
+        "attachment": "أضف مرفقًا إلى أي مصروف",
+        "delete": "اضغط مطولًا للحذف"
+      },
+      "invitation": {
+        "title": "الدعوات"
       }
     },
     "transmission": {
@@ -40,6 +68,20 @@ export const dictionaries = {
     },
     "loading": {
       "title": "شاشة التحميل"
+    },
+    "receipts": {
+      "upload": {
+
+      }
+    },
+    "actions": {
+      "continue": "متابعة"
+    },
+    "nav": {
+      "home": "الرئيسية",
+      "components": "المكوّنات",
+      "transmission": "ناقل الحركة",
+      "app": "التطبيق"
     }
   },
   "de-DE": {
@@ -59,6 +101,26 @@ export const dictionaries = {
       "graph": {
         "title": "Schuldenübersicht"
       },
+      "receipts": {
+        "title": "Quittungen",
+        "upload": {
+          "label": "Hochladen"
+        },
+        "progress": {
+          "uploading": {
+            "title": "Wird hochgeladen",
+            "comment": "Dauert normalerweise nur wenige Augenblicke"
+          },
+          "processing": {
+            "comment": "Halte durch, gleich sind wir da",
+            "title": "Wird verarbeitet"
+          },
+          "ready": {
+            "title": "Bereit",
+            "comment": (ms) => `Fertig in ${(ms / 1000).toFixed(1)} Sekunden`
+          }
+        }
+      },
       "picture": {
         "title": "Picture"
       },
@@ -66,6 +128,14 @@ export const dictionaries = {
         "title": "Teilnehmende",
         "managedContactsCreation": "Button zum Erstellen verwalteter Kontakte anzeigen",
         "shareUrl": "URL teilen"
+      },
+      "fullscreen": {
+        "title": "Fullscreen",
+        "attachment": "Füge einen Anhang zu einer beliebigen Ausgabe hinzu",
+        "delete": "Zum Löschen halten"
+      },
+      "invitation": {
+        "title": "Einladungen"
       }
     },
     "transmission": {
@@ -80,6 +150,20 @@ export const dictionaries = {
     },
     "loading": {
       "title": "Ladebildschirm"
+    },
+    "receipts": {
+      "upload": {
+
+      }
+    },
+    "actions": {
+      "continue": "Weiter"
+    },
+    "nav": {
+      "home": "Startseite",
+      "components": "Komponenten",
+      "transmission": "Getriebe",
+      "app": "App"
     }
   },
   "en-US": {
@@ -99,6 +183,26 @@ export const dictionaries = {
       "graph": {
         "title": "Debt Graph"
       },
+      "receipts": {
+        "title": "Receipts",
+        "upload": {
+          "label": "Upload"
+        },
+        "progress": {
+          "uploading": {
+            "title": "Uploading",
+            "comment": "Usually takes a few moments"
+          },
+          "processing": {
+            "comment": "Hang tight, almost there",
+            "title": "Processing"
+          },
+          "ready": {
+            "title": "Ready",
+            "comment": (ms) => `Done in ${(ms / 1000).toFixed(1)} seconds`
+          }
+        }
+      },
       "picture": {
         "title": "Picture"
       },
@@ -106,6 +210,14 @@ export const dictionaries = {
         "title": "Participants",
         "managedContactsCreation": "Show managed contacts creation button",
         "shareUrl": "Share URL"
+      },
+      "fullscreen": {
+        "title": "Fullscreen",
+        "attachment": "Add an attachment to any expense",
+        "delete": "Hold to delete"
+      },
+      "invitation": {
+        "title": "Invitations"
       }
     },
     "transmission": {
@@ -120,6 +232,20 @@ export const dictionaries = {
     },
     "loading": {
       "title": "Loading screen"
+    },
+    "receipts": {
+      "upload": {
+
+      }
+    },
+    "actions": {
+      "continue": "Continue"
+    },
+    "nav": {
+      "home": "Home",
+      "components": "Components",
+      "transmission": "Transmission",
+      "app": "App"
     }
   },
   "es-ES": {
@@ -139,6 +265,26 @@ export const dictionaries = {
       "graph": {
         "title": "Gráfico de deudas"
       },
+      "receipts": {
+        "title": "Recibos",
+        "upload": {
+          "label": "Subir"
+        },
+        "progress": {
+          "uploading": {
+            "title": "Subiendo",
+            "comment": "Normalmente tarda unos momentos"
+          },
+          "processing": {
+            "comment": "Aguanta, ya casi llegamos",
+            "title": "Procesando"
+          },
+          "ready": {
+            "title": "Listo",
+            "comment": (ms) => `Listo en ${(ms / 1000).toFixed(1)} segundos`
+          }
+        }
+      },
       "picture": {
         "title": "Picture"
       },
@@ -146,6 +292,14 @@ export const dictionaries = {
         "title": "Participantes",
         "managedContactsCreation": "Mostrar botón para crear contactos gestionados",
         "shareUrl": "Compartir URL"
+      },
+      "fullscreen": {
+        "title": "Fullscreen",
+        "attachment": "Añade un archivo adjunto a cualquier gasto",
+        "delete": "Mantén pulsado para borrar"
+      },
+      "invitation": {
+        "title": "Invitaciones"
       }
     },
     "transmission": {
@@ -160,6 +314,20 @@ export const dictionaries = {
     },
     "loading": {
       "title": "Pantalla de carga"
+    },
+    "receipts": {
+      "upload": {
+
+      }
+    },
+    "actions": {
+      "continue": "Continuar"
+    },
+    "nav": {
+      "home": "Inicio",
+      "components": "Componentes",
+      "transmission": "Transmisión",
+      "app": "App"
     }
   },
   "fr-FR": {
@@ -179,6 +347,26 @@ export const dictionaries = {
       "graph": {
         "title": "Graphique des dettes"
       },
+      "receipts": {
+        "title": "Reçus",
+        "upload": {
+          "label": "Téléverser"
+        },
+        "progress": {
+          "uploading": {
+            "title": "Téléchargement en cours",
+            "comment": "Cela prend généralement quelques instants"
+          },
+          "processing": {
+            "comment": "Accroche-toi, on y est presque",
+            "title": "Traitement en cours"
+          },
+          "ready": {
+            "title": "Prêt",
+            "comment": (ms) => `Terminé en ${(ms / 1000).toFixed(1)} secondes`
+          }
+        }
+      },
       "picture": {
         "title": "Picture"
       },
@@ -186,6 +374,14 @@ export const dictionaries = {
         "title": "Participants",
         "managedContactsCreation": "Afficher le bouton de création de contacts gérés",
         "shareUrl": "Partager l’URL"
+      },
+      "fullscreen": {
+        "title": "Fullscreen",
+        "attachment": "Ajoute une pièce jointe à n’importe quelle dépense",
+        "delete": "Maintiens pour supprimer"
+      },
+      "invitation": {
+        "title": "Invitations"
       }
     },
     "transmission": {
@@ -200,6 +396,20 @@ export const dictionaries = {
     },
     "loading": {
       "title": "Écran de chargement"
+    },
+    "receipts": {
+      "upload": {
+
+      }
+    },
+    "actions": {
+      "continue": "Continuer"
+    },
+    "nav": {
+      "home": "Accueil",
+      "components": "Composants",
+      "transmission": "Transmission",
+      "app": "Appli"
     }
   },
   "hi-IN": {
@@ -219,6 +429,26 @@ export const dictionaries = {
       "graph": {
         "title": "ऋण ग्राफ़"
       },
+      "receipts": {
+        "title": "रसीदें",
+        "upload": {
+          "label": "अपलोड करें"
+        },
+        "progress": {
+          "uploading": {
+            "title": "अपलोड किया जा रहा है",
+            "comment": "आम तौर पर कुछ क्षण लगते हैं"
+          },
+          "processing": {
+            "comment": "बस थोड़ा रुकिए, हम लगभग पहुँच गए हैं",
+            "title": "प्रोसेस हो रहा है"
+          },
+          "ready": {
+            "title": "तैयार",
+            "comment": (ms) => `${(ms / 1000).toFixed(1)} सेकंड में पूरा हुआ`
+          }
+        }
+      },
       "picture": {
         "title": "Picture"
       },
@@ -226,6 +456,14 @@ export const dictionaries = {
         "title": "प्रतिभागी",
         "managedContactsCreation": "प्रबंधित संपर्क निर्माण बटन दिखाएं",
         "shareUrl": "URL साझा करें"
+      },
+      "fullscreen": {
+        "title": "Fullscreen",
+        "attachment": "किसी भी खर्च में अटैचमेंट जोड़ो",
+        "delete": "हटाने के लिए दबाए रखें"
+      },
+      "invitation": {
+        "title": "निमंत्रण"
       }
     },
     "transmission": {
@@ -240,6 +478,20 @@ export const dictionaries = {
     },
     "loading": {
       "title": "लोडिंग स्क्रीन"
+    },
+    "receipts": {
+      "upload": {
+
+      }
+    },
+    "actions": {
+      "continue": "जारी रखें"
+    },
+    "nav": {
+      "home": "होम",
+      "components": "कॉम्पोनेंट्स",
+      "transmission": "ट्रांसमिशन",
+      "app": "ऐप"
     }
   },
   "it-IT": {
@@ -259,6 +511,26 @@ export const dictionaries = {
       "graph": {
         "title": "Grafico dei debiti"
       },
+      "receipts": {
+        "title": "Scontrini",
+        "upload": {
+          "label": "Carica"
+        },
+        "progress": {
+          "uploading": {
+            "title": "Caricamento in corso",
+            "comment": "Di solito ci vogliono pochi istanti"
+          },
+          "processing": {
+            "comment": "Resisti, ci siamo quasi",
+            "title": "Elaborazione in corso"
+          },
+          "ready": {
+            "title": "Pronto",
+            "comment": (ms) => `Fatto in ${(ms / 1000).toFixed(1)} secondi`
+          }
+        }
+      },
       "picture": {
         "title": "Picture"
       },
@@ -266,6 +538,14 @@ export const dictionaries = {
         "title": "Partecipanti",
         "managedContactsCreation": "Mostra il pulsante per creare contatti gestiti",
         "shareUrl": "Condividi URL"
+      },
+      "fullscreen": {
+        "title": "Fullscreen",
+        "attachment": "Aggiungi un allegato a qualsiasi spesa",
+        "delete": "Tieni premuto per eliminare"
+      },
+      "invitation": {
+        "title": "Inviti"
       }
     },
     "transmission": {
@@ -280,6 +560,20 @@ export const dictionaries = {
     },
     "loading": {
       "title": "Schermata di caricamento"
+    },
+    "receipts": {
+      "upload": {
+
+      }
+    },
+    "actions": {
+      "continue": "Continua"
+    },
+    "nav": {
+      "home": "Home",
+      "components": "Componenti",
+      "transmission": "Trasmissione",
+      "app": "App"
     }
   },
   "ja-JP": {
@@ -299,6 +593,26 @@ export const dictionaries = {
       "graph": {
         "title": "債務グラフ"
       },
+      "receipts": {
+        "title": "レシート",
+        "upload": {
+          "label": "アップロード"
+        },
+        "progress": {
+          "uploading": {
+            "title": "アップロード中",
+            "comment": "通常は数瞬で完了します"
+          },
+          "processing": {
+            "comment": "もう少しで到着です、頑張ってください",
+            "title": "処理中"
+          },
+          "ready": {
+            "title": "準備完了",
+            "comment": (ms) => `${(ms / 1000).toFixed(1)}秒で完了`
+          }
+        }
+      },
       "picture": {
         "title": "Picture"
       },
@@ -306,6 +620,14 @@ export const dictionaries = {
         "title": "参加者",
         "managedContactsCreation": "管理対象の連絡先作成ボタンを表示",
         "shareUrl": "URLを共有"
+      },
+      "fullscreen": {
+        "title": "Fullscreen",
+        "attachment": "どの支出にも添付ファイルを追加しよう",
+        "delete": "長押しで削除"
+      },
+      "invitation": {
+        "title": "招待"
       }
     },
     "transmission": {
@@ -320,6 +642,20 @@ export const dictionaries = {
     },
     "loading": {
       "title": "ロード画面"
+    },
+    "receipts": {
+      "upload": {
+
+      }
+    },
+    "actions": {
+      "continue": "続行"
+    },
+    "nav": {
+      "home": "ホーム",
+      "components": "コンポーネント",
+      "transmission": "トランスミッション",
+      "app": "アプリ"
     }
   },
   "ko-KR": {
@@ -339,6 +675,26 @@ export const dictionaries = {
       "graph": {
         "title": "부채 그래프"
       },
+      "receipts": {
+        "title": "영수증",
+        "upload": {
+          "label": "업로드"
+        },
+        "progress": {
+          "uploading": {
+            "title": "업로드 중",
+            "comment": "보통 잠시만 걸립니다"
+          },
+          "processing": {
+            "comment": "조금만 참아 주세요, 거의 다 왔어요",
+            "title": "처리 중"
+          },
+          "ready": {
+            "title": "준비 완료",
+            "comment": (ms) => `${(ms / 1000).toFixed(1)}초 만에 완료됨`
+          }
+        }
+      },
       "picture": {
         "title": "Picture"
       },
@@ -346,6 +702,14 @@ export const dictionaries = {
         "title": "참가자",
         "managedContactsCreation": "관리되는 연락처 생성 버튼 표시",
         "shareUrl": "URL 공유"
+      },
+      "fullscreen": {
+        "title": "Fullscreen",
+        "attachment": "어느 지출에나 첨부파일을 추가해봐",
+        "delete": "길게 눌러서 삭제"
+      },
+      "invitation": {
+        "title": "초대장"
       }
     },
     "transmission": {
@@ -360,6 +724,20 @@ export const dictionaries = {
     },
     "loading": {
       "title": "로딩 화면"
+    },
+    "receipts": {
+      "upload": {
+
+      }
+    },
+    "actions": {
+      "continue": "계속"
+    },
+    "nav": {
+      "home": "홈",
+      "components": "컴포넌트",
+      "transmission": "변속기",
+      "app": "앱"
     }
   },
   "nl-NL": {
@@ -379,6 +757,26 @@ export const dictionaries = {
       "graph": {
         "title": "Schuldenoverzicht"
       },
+      "receipts": {
+        "title": "Bonnetjes",
+        "upload": {
+          "label": "Uploaden"
+        },
+        "progress": {
+          "uploading": {
+            "title": "Bezig met uploaden",
+            "comment": "Duurt meestal slechts een paar momenten"
+          },
+          "processing": {
+            "comment": "Hou vol, we zijn er bijna",
+            "title": "Bezig met verwerken"
+          },
+          "ready": {
+            "title": "Klaar",
+            "comment": (ms) => `Klaar in ${(ms / 1000).toFixed(1)} seconden`
+          }
+        }
+      },
       "picture": {
         "title": "Picture"
       },
@@ -386,6 +784,14 @@ export const dictionaries = {
         "title": "Deelnemers",
         "managedContactsCreation": "Knop voor het aanmaken van beheerde contacten tonen",
         "shareUrl": "URL delen"
+      },
+      "fullscreen": {
+        "title": "Fullscreen",
+        "attachment": "Voeg een bijlage toe aan een willekeurige uitgave",
+        "delete": "Vasthouden om te verwijderen"
+      },
+      "invitation": {
+        "title": "Uitnodigingen"
       }
     },
     "transmission": {
@@ -400,6 +806,20 @@ export const dictionaries = {
     },
     "loading": {
       "title": "Laadscherm"
+    },
+    "receipts": {
+      "upload": {
+
+      }
+    },
+    "actions": {
+      "continue": "Doorgaan"
+    },
+    "nav": {
+      "home": "Startpagina",
+      "components": "Componenten",
+      "transmission": "Transmissie",
+      "app": "App"
     }
   },
   "ru-RU": {
@@ -419,6 +839,26 @@ export const dictionaries = {
       "graph": {
         "title": "График долгов"
       },
+      "receipts": {
+        "title": "Чеки",
+        "upload": {
+          "label": "Загрузить"
+        },
+        "progress": {
+          "uploading": {
+            "title": "Загрузка",
+            "comment": "Обычно занимает несколько секунд"
+          },
+          "processing": {
+            "comment": "Потерпи, почти пришли",
+            "title": "Обработка"
+          },
+          "ready": {
+            "title": "Готово",
+            "comment": (ms) => `Готово за ${(ms / 1000).toFixed(1)} секунд(ы)`
+          }
+        }
+      },
       "picture": {
         "title": "Picture"
       },
@@ -426,6 +866,14 @@ export const dictionaries = {
         "title": "Участники",
         "managedContactsCreation": "Показать кнопку создания управляемых контактов",
         "shareUrl": "Поделиться ссылкой"
+      },
+      "fullscreen": {
+        "title": "Fullscreen",
+        "attachment": "Добавь вложение к любому расходу",
+        "delete": "Удерживай, чтобы удалить"
+      },
+      "invitation": {
+        "title": "Приглашения"
       }
     },
     "transmission": {
@@ -440,6 +888,20 @@ export const dictionaries = {
     },
     "loading": {
       "title": "Экран загрузки"
+    },
+    "receipts": {
+      "upload": {
+
+      }
+    },
+    "actions": {
+      "continue": "Продолжить"
+    },
+    "nav": {
+      "home": "Главная",
+      "components": "Компоненты",
+      "transmission": "Трансмиссия",
+      "app": "Приложение"
     }
   },
   "sw-TZ": {
@@ -459,6 +921,26 @@ export const dictionaries = {
       "graph": {
         "title": "Chati ya Madeni"
       },
+      "receipts": {
+        "title": "Risiti",
+        "upload": {
+          "label": "Pakia"
+        },
+        "progress": {
+          "uploading": {
+            "title": "Inapakia",
+            "comment": "Kwa kawaida huchukua muda mfupi tu"
+          },
+          "processing": {
+            "comment": "Shikilia, tumebakiza kidogo tu",
+            "title": "Inashughulikiwa"
+          },
+          "ready": {
+            "title": "Tayari",
+            "comment": (ms) => `Imekamilika kwa sekunde ${(ms / 1000).toFixed(1)}`
+          }
+        }
+      },
       "picture": {
         "title": "Picture"
       },
@@ -466,6 +948,14 @@ export const dictionaries = {
         "title": "Washiriki",
         "managedContactsCreation": "Onyesha kitufe cha kuunda mawasiliano yanayosimamiwa",
         "shareUrl": "Shiriki URL"
+      },
+      "fullscreen": {
+        "title": "Fullscreen",
+        "attachment": "Ongeza kiambatisho kwenye gharama yoyote",
+        "delete": "Shikilia kufuta"
+      },
+      "invitation": {
+        "title": "Mialiko"
       }
     },
     "transmission": {
@@ -480,6 +970,20 @@ export const dictionaries = {
     },
     "loading": {
       "title": "Skrini ya kupakia"
+    },
+    "receipts": {
+      "upload": {
+
+      }
+    },
+    "actions": {
+      "continue": "Endelea"
+    },
+    "nav": {
+      "home": "Mwanzo",
+      "components": "Vijenzi",
+      "transmission": "Gia",
+      "app": "App"
     }
   },
   "tr-TR": {
@@ -499,6 +1003,26 @@ export const dictionaries = {
       "graph": {
         "title": "Borç Grafiği"
       },
+      "receipts": {
+        "title": "Fişler",
+        "upload": {
+          "label": "Yükle"
+        },
+        "progress": {
+          "uploading": {
+            "title": "Yükleniyor",
+            "comment": "Genellikle birkaç saniye sürer"
+          },
+          "processing": {
+            "comment": "Biraz daha sabret, neredeyse geldik",
+            "title": "İşleniyor"
+          },
+          "ready": {
+            "title": "Hazır",
+            "comment": (ms) => `${(ms / 1000).toFixed(1)} saniyede tamamlandı`
+          }
+        }
+      },
       "picture": {
         "title": "Picture"
       },
@@ -506,6 +1030,14 @@ export const dictionaries = {
         "title": "Katılımcılar",
         "managedContactsCreation": "Yönetilen kişiler oluşturma butonunu göster",
         "shareUrl": "URL’yi paylaş"
+      },
+      "fullscreen": {
+        "title": "Fullscreen",
+        "attachment": "Herhangi bir harcamaya ek dosya ekle",
+        "delete": "Silmek için basılı tut"
+      },
+      "invitation": {
+        "title": "Davetiyeler"
       }
     },
     "transmission": {
@@ -520,6 +1052,20 @@ export const dictionaries = {
     },
     "loading": {
       "title": "Yükleme ekranı"
+    },
+    "receipts": {
+      "upload": {
+
+      }
+    },
+    "actions": {
+      "continue": "Devam et"
+    },
+    "nav": {
+      "home": "Ana Sayfa",
+      "components": "Bileşenler",
+      "transmission": "Şanzıman",
+      "app": "Uygulama"
     }
   },
   "uk-UA": {
@@ -539,6 +1085,26 @@ export const dictionaries = {
       "graph": {
         "title": "Графік боргів"
       },
+      "receipts": {
+        "title": "Чеки",
+        "upload": {
+          "label": "Завантажити"
+        },
+        "progress": {
+          "uploading": {
+            "title": "Завантаження",
+            "comment": "Зазвичай це займає кілька секунд"
+          },
+          "processing": {
+            "comment": "Тримайся, вже майже на місці",
+            "title": "Обробка"
+          },
+          "ready": {
+            "title": "Готово",
+            "comment": (ms) => `Виконано за ${(ms / 1000).toFixed(1)} секунд(и)`
+          }
+        }
+      },
       "picture": {
         "title": "Picture"
       },
@@ -546,6 +1112,14 @@ export const dictionaries = {
         "title": "Учасники",
         "managedContactsCreation": "Показати кнопку створення керованих контактів",
         "shareUrl": "Поділитися посиланням"
+      },
+      "fullscreen": {
+        "title": "Fullscreen",
+        "attachment": "Додай вкладення до будь-якої витрати",
+        "delete": "Утримуй, щоб видалити"
+      },
+      "invitation": {
+        "title": "Запрошення"
       }
     },
     "transmission": {
@@ -560,6 +1134,20 @@ export const dictionaries = {
     },
     "loading": {
       "title": "Екран завантаження"
+    },
+    "receipts": {
+      "upload": {
+
+      }
+    },
+    "actions": {
+      "continue": "Продовжити"
+    },
+    "nav": {
+      "home": "Головна",
+      "components": "Компоненти",
+      "transmission": "Трансмісія",
+      "app": "Застосунок"
     }
   },
   "zh-CN": {
@@ -579,6 +1167,26 @@ export const dictionaries = {
       "graph": {
         "title": "债务图表"
       },
+      "receipts": {
+        "title": "小票",
+        "upload": {
+          "label": "上传"
+        },
+        "progress": {
+          "uploading": {
+            "title": "正在上传",
+            "comment": "通常只需几秒钟"
+          },
+          "processing": {
+            "comment": "坚持一下，马上就到了",
+            "title": "处理中"
+          },
+          "ready": {
+            "title": "已准备好",
+            "comment": (ms) => `${(ms / 1000).toFixed(1)} 秒内完成`
+          }
+        }
+      },
       "picture": {
         "title": "Picture"
       },
@@ -586,6 +1194,14 @@ export const dictionaries = {
         "title": "参与者",
         "managedContactsCreation": "显示托管联系人创建按钮",
         "shareUrl": "分享链接"
+      },
+      "fullscreen": {
+        "title": "Fullscreen",
+        "attachment": "给任意一笔支出添加附件",
+        "delete": "长按删除"
+      },
+      "invitation": {
+        "title": "邀请"
       }
     },
     "transmission": {
@@ -600,6 +1216,20 @@ export const dictionaries = {
     },
     "loading": {
       "title": "加载界面"
+    },
+    "receipts": {
+      "upload": {
+
+      }
+    },
+    "actions": {
+      "continue": "继续"
+    },
+    "nav": {
+      "home": "首页",
+      "components": "组件",
+      "transmission": "变速器",
+      "app": "应用"
     }
   }
 };

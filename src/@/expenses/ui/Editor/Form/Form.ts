@@ -1,6 +1,6 @@
 import { get } from 'svelte/store'
-import { numbers } from '@/expenses'
 import { account } from '@/iam'
+import { numbers } from '@/expenses'
 import type { Value } from '../Context'
 
 export function normalize(value: Value, mode: 'sums' | 'shares', total: number): Value {
@@ -22,6 +22,7 @@ export function normalize(value: Value, mode: 'sums' | 'shares', total: number):
     participants,
     extras: value.extras.filter((extra) => extra.amount !== 0),
     attachments: value.attachments,
+    links: value.links,
   }
 }
 

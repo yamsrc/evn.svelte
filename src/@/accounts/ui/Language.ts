@@ -1,5 +1,5 @@
-import type { Option } from '$com/radio'
 import type { Locale } from '$lib/intl'
+import type { Option } from '$com/radio'
 
 export const options = [
   { value: 'en-US', label: 'English' },
