@@ -1,9 +1,9 @@
 <script lang="ts">
   import { Component } from '@lucide/svelte'
-  import { account } from '@/iam'
   import { Avatars, Balance } from '@/app/ui'
   import { Attention } from '$com/shell'
   import { Panel } from '$com/panel'
+  import { dict } from './intl'
   import type { Props } from './Panel'
 
   let { group, selected = $bindable(), highlighted, onselect }: Props = $props()
