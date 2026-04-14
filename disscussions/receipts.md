@@ -21,9 +21,10 @@
 - [x] Error state screen (+non-receipts)
 - [x] Attachments location. Compatibility? — put to /expenses/attachments/
 - [x] Receipt rating
-- [ ] ExpenseValue: add `links`
-- [ ] API: add `links` `POST`
-- [ ] Delete receipt on linked expense? Backlink? 'closed' state?
+- [x] ExpenseValue: add `links`
+- [x] API: add `links` `POST`
+- [x] Delete receipt on linked expense? Backlink? 'closed' state?
+- [ ] new button on /expenses/
 
 ## Routes
 
