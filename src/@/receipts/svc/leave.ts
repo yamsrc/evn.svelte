@@ -6,8 +6,11 @@ import * as net from './net'
 export async function leave(id: string, actor: string): Promise<void | Error> {
   const me = ensure(account)
 
-  if (me.id === actor)
-    internal.delete(id)
+  internal.update(id, (receipt) => {
+    receipt.identities = receipt.identities.filter((identity) => identity !== actor)
+
+    return receipt
+  })
 
   const receipt = await net.receipt.del(me.id, id, actor)
 

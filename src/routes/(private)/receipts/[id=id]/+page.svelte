@@ -14,7 +14,7 @@
   let actor = $state('')
 
   function onleave(me: string) {
-    if (me === actor) void goto('..')
+    if (me === actor) void goto('/expenses/')
 
     splitter?.leave()
   }
