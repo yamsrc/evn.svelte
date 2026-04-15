@@ -150,7 +150,9 @@
     {/if}
   {/each}
   {#if scrollable}
-    <Effects class="absolute bottom-1 inset-e-1" />
+    <div class="absolute bottom-1 inset-e-1">
+      <Effects />
+    </div>
   {/if}
 </div>
 
