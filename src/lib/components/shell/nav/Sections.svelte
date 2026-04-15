@@ -2,7 +2,7 @@
   import { onMount } from 'svelte'
   import { back } from '$com/history'
   import { page } from '$app/state'
-  import { preloadCode } from '$app/navigation'
+  import { goto, preloadCode } from '$app/navigation'
   import { faded } from './store'
   import { exact, nested, type Section } from './Nav'
   import Button from './Button.svelte'
@@ -20,9 +20,19 @@
     }
   })
 
-  function link(section: Section) {
+  function href(section: Section) {
     if (collapsed) return null
     else return exact(section, page.url.pathname) ? null : section.href
+  }
+
+  function click(section: Section) {
+    if (collapsed) void back(section.href)
+    else {
+      const ref = href(section)
+
+      if (ref === null) window.scrollTo({ top: 0, behavior: 'smooth' })
+      else void goto(ref)
+    }
   }
 </script>
 
@@ -31,8 +41,7 @@
   <div>
     <Button
       id={`nav-${section.id}-button`}
-      href={link(section)}
-      onclick={collapsed ? () => back(section.href) : null}
+      onclick={() => click(section)}
       active={section.id === active?.id}
       unseen={section.unseen}
       faded={$faded}

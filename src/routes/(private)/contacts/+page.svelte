@@ -10,6 +10,7 @@
   import { contacts, filter as filterContacts } from '@/contacts'
   import { Section } from '@/app/ui'
   import { Header } from '@/app/ui'
+  import { Avatar } from '@/accounts/ui'
   import { Input } from '$ui/input'
   import { dict } from '$lib/intl'
 
@@ -19,14 +20,8 @@
   const contactsNotifications = scope({ domain: 'contacts' })
 </script>
 
-<Section>
-  <Header.Root>
-    <Header.Title>{$dict.contacts.title}</Header.Title>
-  </Header.Root>
-</Section>
-
-<Async store={combined(contacts, favorites, groups)}>
-  {#snippet awaited([contacts, favorites, groupsList])}
+<Async store={combined(contacts, favorites, groups, account)}>
+  {#snippet awaited([contacts, favorites, groupsList, account])}
     {@const filteredGroups = filterGroups(groupsList, search)}
     {@const filteredContacts = filterContacts(contacts, search)}
     {@const filteredFavorites = filterFavorites(favorites, contacts, groupsList, search)}
@@ -34,6 +29,19 @@
       filteredGroups.length === 0 &&
       filteredContacts.length === 0 &&
       filteredFavorites.length === 0}
+
+    <Section>
+      <Header.Root>
+        <Header.Title>{$dict.contacts.title}</Header.Title>
+        <Header.Actions>
+          <Header.Button href="/me/" id="header-me-button" variant="ghost">
+            <Avatar
+              {account}
+              style="view-transition-name: my-avatar; view-transition-class: transition-morph;" />
+          </Header.Button>
+        </Header.Actions>
+      </Header.Root>
+    </Section>
 
     {#if groupsList.length || contacts.length || favorites.length}
       <Section>
@@ -57,13 +65,14 @@
           <p class="text-muted-foreground text-center">{$dict.search.empty}</p>
         </Section>
       {/if}
-      <Actions />
-    {:else if $account}
+    {:else}
       <Section class="m-auto flex flex-col items-center justify-center gap-2">
         <h2>{$dict.contacts.empty.title}</h2>
         <p>{$dict.contacts.empty.description}</p>
-        <Invite id={$account.id} />
+        <Invite id={account.id} />
       </Section>
     {/if}
   {/snippet}
 </Async>
+
+<Actions />

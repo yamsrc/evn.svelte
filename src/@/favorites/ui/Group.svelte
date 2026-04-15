@@ -1,6 +1,5 @@
 <script lang="ts">
   import { Component } from '@lucide/svelte'
-  import { account } from '@/iam'
   import { Avatars } from '@/app/ui'
   import { Ellipsis } from '$com/text'
   import { Panel } from '$com/panel'

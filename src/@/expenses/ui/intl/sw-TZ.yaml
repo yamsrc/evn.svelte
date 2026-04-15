@@ -44,3 +44,7 @@ transfers:
 action: {}
 actions:
   delete: Futa kiambatisho
+template:
+  toggle:
+    label: Hifadhi kama kiolezo
+    description: Tumia baadaye kwenye Hatua za Haraka

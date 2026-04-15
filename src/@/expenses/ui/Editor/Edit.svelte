@@ -1,9 +1,11 @@
 <script lang="ts">
+  import { Delete } from '@/expenses.templates/ui'
   import { add, update } from '@/expenses'
   import { Section } from '@/app/ui'
   import { Selector } from '@/adventures/ui'
   import { back } from '$com/history'
   import Attachments from '../Attachments.svelte'
+  import Template from './Template.svelte'
   import { Form } from './Form'
   import { getContext } from './Context'
   import type { Props } from './Edit'
@@ -39,4 +41,16 @@
   <Attachments bind:attachments={value.attachments} editable={true} />
 {/if}
 
-<Form bind:value bind:mode {onsubmit} />
+<Section>
+  <Form bind:value bind:mode {onsubmit} />
+
+  {#if !id && !value.copied}
+    <Template bind:value={value.template} />
+  {/if}
+
+  {#if value.copied}
+    <div class="flex justify-center">
+      <Delete id={value.copied} ondelete={() => void back('/expenses/')} />
+    </div>
+  {/if}
+</Section>

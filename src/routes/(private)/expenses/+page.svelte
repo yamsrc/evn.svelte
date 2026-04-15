@@ -12,6 +12,7 @@
   import Adventures from '@/adventures/ui/Adventures.svelte'
   import { Hint } from '@/adventures/ui'
   import { adventures, filter as filterAdventures } from '@/adventures'
+  import { Avatar } from '@/accounts/ui'
   import { Input } from '$ui/input'
   import { dict } from '$lib/intl'
 
@@ -25,18 +26,25 @@
   const adventuresHint = $derived($hints?.['adventures'] !== true && !search)
 </script>
 
-<Section>
-  <Header.Root>
-    <Header.Title>{$dict.expenses.title}</Header.Title>
-  </Header.Root>
-</Section>
-
-<Async store={combined(expenses, adventures, receipts)}>
-  {#snippet awaited([expenses, adventures, receipts])}
+<Async store={combined(expenses, adventures, receipts, account)}>
+  {#snippet awaited([expenses, adventures, receipts, account])}
     {@const filteredExpenses = filterExpenses(expenses, search)}
     {@const filteredReceipts = filterReceipts(receipts, search)}
     {@const filteredAdventures = filterAdventures(adventures, search)}
     {@const empty = filteredExpenses.length === 0 && filteredAdventures.length === 0}
+
+    <Section>
+      <Header.Root>
+        <Header.Title>{$dict.expenses.title}</Header.Title>
+        <Header.Actions>
+          <Header.Button href="/me/" id="header-me-button" variant="ghost">
+            <Avatar
+              {account}
+              style="view-transition-name: my-avatar; view-transition-class: transition-morph;" />
+          </Header.Button>
+        </Header.Actions>
+      </Header.Root>
+    </Section>
 
     {#if expenses.length || adventures.length || receipts.length}
       <Section>
@@ -63,7 +71,7 @@
       </Section>
     {/if}
 
-    {#if expenses.length === 0 && receipts.length === 0 && $account}
+    {#if expenses.length === 0 && receipts.length === 0}
       <Section class="m-auto flex flex-col items-center justify-center gap-2">
         <h2>{$dict.expenses.empty.title}</h2>
         <p>{$dict.expenses.empty.description}</p>

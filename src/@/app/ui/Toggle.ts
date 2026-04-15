@@ -5,5 +5,6 @@ export interface Props {
   label: string
   children?: Snippet
   checked?: boolean
+  class?: string
   onchange?: (checked: boolean) => void | Promise<void>
 }

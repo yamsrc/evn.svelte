@@ -3,7 +3,14 @@
   import Panel from './Panel.svelte'
   import type { Props } from './Toggle'
 
-  let { id, label, children, checked = $bindable(false), onchange }: Props = $props()
+  let {
+    id,
+    label,
+    children,
+    checked = $bindable(false),
+    class: classes,
+    onchange,
+  }: Props = $props()
 
   let busy = $state(false)
 
@@ -18,11 +25,11 @@
   }
 </script>
 
-<button class="text-left" {onclick}>
+<button class={['text-left', classes]} {onclick}>
   <Panel>
     <div class="space-y-1">
       <h3 class="flex items-center justify-between gap-2">
-        <label for={id}>{label}</label>
+        <label for={id} data-slot="label">{label}</label>
         <Switch {id} {checked} disabled={busy} class="border border-border" />
       </h3>
       {@render children?.()}

@@ -48,3 +48,7 @@ transfers:
 action: {}
 actions:
   delete: Anhang löschen
+template:
+  toggle:
+    label: Als Vorlage speichern
+    description: Später in Schnellaktionen verwenden

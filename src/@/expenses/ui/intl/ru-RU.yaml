@@ -48,3 +48,7 @@ transfers:
 action: {}
 actions:
   delete: Удалить вложение
+template:
+  toggle:
+    label: Сохранить как шаблон
+    description: Используй позже в быстрых действиях
