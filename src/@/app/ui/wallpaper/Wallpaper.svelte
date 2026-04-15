@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { track } from '@vercel/analytics'
   import { Crown } from '@lucide/svelte'
   import { account } from '@/iam'
   import { premium, wallpaper } from '@/accounts'
@@ -9,12 +10,19 @@
   import Pattern from './Pattern.svelte'
   import type { Wallpaper } from '@/accounts'
 
+  const events: Record<Wallpaper['method'], string> = {
+    pattern: 'Wallpaper.Pattern',
+    picture: 'Wallpaper.Picture',
+  }
+
   let method = $state<Wallpaper['method']>($account?.wallpaper?.method ?? 'pattern')
 
   function onValueChange(value: string) {
     method = value as Wallpaper['method']
 
     if ($account && premium($account)) void wallpaper.set({ method })
+
+    track(events[method])
   }
 </script>
 
