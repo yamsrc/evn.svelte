@@ -48,3 +48,7 @@ transfers:
 action: {}
 actions:
   delete: Eliminar adjunto
+template:
+  toggle:
+    label: Guardar como plantilla
+    description: Usar más tarde en Acciones rápidas

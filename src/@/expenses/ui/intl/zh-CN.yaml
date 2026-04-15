@@ -38,3 +38,7 @@ transfers:
 action: {}
 actions:
   delete: 删除附件
+template:
+  toggle:
+    label: 保存为模板
+    description: 稍后在快捷操作中使用

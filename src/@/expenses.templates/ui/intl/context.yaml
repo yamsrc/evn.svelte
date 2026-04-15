@@ -1,0 +1,9 @@
+context: Mount 'templates' context
+inputs:
+  delete:
+    label:
+      input: Delete template
+      context: button label
+    hold:
+      input: Hold to delete
+      context: button tooltip

@@ -61,3 +61,10 @@ inputs:
     delete:
       input: Delete attachment
       context: button label
+  template:
+    toggle:
+      label:
+        input: Save as template
+      description:
+        input: Use later in Quick Actions
+        context: используй

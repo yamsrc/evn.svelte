@@ -29,7 +29,7 @@
 
     if (result instanceof Error) return
 
-    await goto('/')
+    await goto('/expenses/')
   }
 </script>
 

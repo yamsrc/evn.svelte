@@ -48,6 +48,12 @@ export const dictionaries = {
     },
     "actions": {
       "delete": "حذف المرفق"
+    },
+    "template": {
+      "toggle": {
+        "label": "احفظ كقالب",
+        "description": "استخدم لاحقًا في الإجراءات السريعة"
+      }
     }
   },
   "de-DE": {
@@ -96,6 +102,12 @@ export const dictionaries = {
     },
     "actions": {
       "delete": "Anhang löschen"
+    },
+    "template": {
+      "toggle": {
+        "label": "Als Vorlage speichern",
+        "description": "Später in Schnellaktionen verwenden"
+      }
     }
   },
   "en-US": {
@@ -144,6 +156,12 @@ export const dictionaries = {
     },
     "actions": {
       "delete": "Delete attachment"
+    },
+    "template": {
+      "toggle": {
+        "label": "Save as template",
+        "description": "Use later in Quick Actions"
+      }
     }
   },
   "es-ES": {
@@ -192,6 +210,12 @@ export const dictionaries = {
     },
     "actions": {
       "delete": "Eliminar adjunto"
+    },
+    "template": {
+      "toggle": {
+        "label": "Guardar como plantilla",
+        "description": "Usar más tarde en Acciones rápidas"
+      }
     }
   },
   "fr-FR": {
@@ -240,6 +264,12 @@ export const dictionaries = {
     },
     "actions": {
       "delete": "Supprimer la pièce jointe"
+    },
+    "template": {
+      "toggle": {
+        "label": "Enregistrer comme modèle",
+        "description": "Utiliser plus tard dans les actions rapides"
+      }
     }
   },
   "hi-IN": {
@@ -288,6 +318,12 @@ export const dictionaries = {
     },
     "actions": {
       "delete": "अटैचमेंट हटाओ"
+    },
+    "template": {
+      "toggle": {
+        "label": "टेम्पलेट के रूप में सेव करें",
+        "description": "क्विक एक्शन्स में बाद में उपयोग करें"
+      }
     }
   },
   "it-IT": {
@@ -336,6 +372,12 @@ export const dictionaries = {
     },
     "actions": {
       "delete": "Elimina allegato"
+    },
+    "template": {
+      "toggle": {
+        "label": "Salva come modello",
+        "description": "Usa più tardi nelle azioni rapide"
+      }
     }
   },
   "ja-JP": {
@@ -384,6 +426,12 @@ export const dictionaries = {
     },
     "actions": {
       "delete": "添付ファイルを削除"
+    },
+    "template": {
+      "toggle": {
+        "label": "テンプレートとして保存",
+        "description": "クイックアクションで後で使う"
+      }
     }
   },
   "ko-KR": {
@@ -432,6 +480,12 @@ export const dictionaries = {
     },
     "actions": {
       "delete": "첨부파일 삭제"
+    },
+    "template": {
+      "toggle": {
+        "label": "템플릿으로 저장",
+        "description": "빠른 작업에서 나중에 사용하기"
+      }
     }
   },
   "nl-NL": {
@@ -480,6 +534,12 @@ export const dictionaries = {
     },
     "actions": {
       "delete": "Bijlage verwijderen"
+    },
+    "template": {
+      "toggle": {
+        "label": "Opslaan als sjabloon",
+        "description": "Later gebruiken bij Snelle acties"
+      }
     }
   },
   "ru-RU": {
@@ -528,6 +588,12 @@ export const dictionaries = {
     },
     "actions": {
       "delete": "Удалить вложение"
+    },
+    "template": {
+      "toggle": {
+        "label": "Сохранить как шаблон",
+        "description": "Используй позже в быстрых действиях"
+      }
     }
   },
   "sw-TZ": {
@@ -576,6 +642,12 @@ export const dictionaries = {
     },
     "actions": {
       "delete": "Futa kiambatisho"
+    },
+    "template": {
+      "toggle": {
+        "label": "Hifadhi kama kiolezo",
+        "description": "Tumia baadaye kwenye Hatua za Haraka"
+      }
     }
   },
   "tr-TR": {
@@ -624,6 +696,12 @@ export const dictionaries = {
     },
     "actions": {
       "delete": "Ek dosyayı sil"
+    },
+    "template": {
+      "toggle": {
+        "label": "Şablon olarak kaydet",
+        "description": "Hızlı İşlemlerde sonra kullan"
+      }
     }
   },
   "uk-UA": {
@@ -672,6 +750,12 @@ export const dictionaries = {
     },
     "actions": {
       "delete": "Видалити вкладення"
+    },
+    "template": {
+      "toggle": {
+        "label": "Зберегти як шаблон",
+        "description": "Використай пізніше у швидких діях"
+      }
     }
   },
   "zh-CN": {
@@ -720,6 +804,12 @@ export const dictionaries = {
     },
     "actions": {
       "delete": "删除附件"
+    },
+    "template": {
+      "toggle": {
+        "label": "保存为模板",
+        "description": "稍后在快捷操作中使用"
+      }
     }
   }
 };

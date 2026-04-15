@@ -2,7 +2,7 @@
   import { Check } from '@lucide/svelte'
   import { account } from '@/iam'
   import { numbers } from '@/expenses'
-  import { Action, Section } from '@/app/ui'
+  import { Action } from '@/app/ui'
   import { onsubmit } from '$lib/tools'
   import { dict } from '$lib/intl'
   import { Actions } from '$com/shell'
@@ -83,18 +83,16 @@
   let submitButton = $state<HTMLButtonElement | null>(null)
 </script>
 
-<Section>
-  <form onsubmit={onsubmit(submit)} class="space-y-5">
-    <Description bind:title={value.title} bind:location={value.location} />
-    <Total bind:value bind:total />
-    <Participants bind:value bind:total bind:error bind:mode />
-    <PayerSelect bind:value />
+<form onsubmit={onsubmit(submit)} class="space-y-5">
+  <Description bind:title={value.title} bind:location={value.location} />
+  <Total bind:value bind:total />
+  <Participants bind:value bind:total bind:error bind:mode />
+  <PayerSelect bind:value />
 
-    <button bind:this={submitButton} type="submit" class="sr-only">
-      {$dict.expenses.form.save}
-    </button>
-  </form>
-</Section>
+  <button bind:this={submitButton} type="submit" class="sr-only">
+    {$dict.expenses.form.save}
+  </button>
+</form>
 
 <Actions>
   <Action

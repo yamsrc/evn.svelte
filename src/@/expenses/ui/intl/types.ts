@@ -51,4 +51,10 @@ export type Dictionary = {
       actions: {
         delete: string
       }
+      template: {
+        toggle: {
+          label: string
+          description: string
+        }
+      }
     }
