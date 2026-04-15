@@ -2,7 +2,7 @@ import type { ActionReturn } from 'svelte/action'
 import type { Snippet } from 'svelte'
 
 export interface Props {
-  children: Snippet
+  children?: Snippet
   oncomplete?: (id: string) => void
 }
 

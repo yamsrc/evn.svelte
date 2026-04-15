@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Async } from 'svas'
-  import { Dropzone, Receipts, Scan } from '@/receipts/ui'
+  import { Receipts, Scan } from '@/receipts/ui'
   import { receipts } from '@/receipts'
   import { Section, Header, actionVariants } from '@/app/ui'
   import { dict } from '$lib/intl/dev'
@@ -14,13 +14,13 @@
   </Header.Root>
 </Section>
 
-<Section>
+<!-- <Section>
   <Dropzone oncomplete={(id) => goto(`./${id}/`)}>
     <div class="h-40 bg-muted rounded-md flex items-center justify-center">
       {$dict.receipts.dropzone.label}
     </div>
   </Dropzone>
-</Section>
+</Section> -->
 
 <Section>
   <Async store={receipts}>
