@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { onMount } from 'svelte'
+  import { track } from '@vercel/analytics'
   import Failed from '../Failed.svelte'
   import { sync, store } from './store'
   import Summary from './Summary.svelte'
@@ -24,6 +26,8 @@
   }
 
   let participants = $state<Participants | undefined>(undefined)
+
+  onMount(() => track('Receipts.Splitter'))
 
   $effect(() => {
     sync(receipt)

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { track } from '@vercel/analytics'
   import { ScanText } from '@lucide/svelte'
   import { upload, type Progress } from '@/receipts'
   import { paywall } from '@/purchases/ui'
@@ -48,6 +49,7 @@
     target.value = ''
     fullscreen?.show()
     progress = upload(file)
+    track('Receipts.Upload')
     process?.clear()
   }
 

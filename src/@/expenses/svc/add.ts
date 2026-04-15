@@ -17,5 +17,9 @@ export async function add(properties: net.Post): Promise<net.Expense | Error> {
   sync(internal, expense)
   track('Expense', { total: total(expense) })
 
+  const receipt = expense.links?.some((link) => link.type === 'receipt') ?? false
+
+  if (receipt) track('Receipts.Completed')
+
   return expense
 }
