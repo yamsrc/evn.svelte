@@ -1,7 +1,7 @@
 <script lang="ts">
   import { writable } from 'svelte/store'
   import { ensure, ok } from 'svas'
-  import { ChartPie, Coins, Component, Fan, Plus, UserPlus } from '@lucide/svelte'
+  import { ChartPie, Coins, Component, Fan, FileChartPie, Plus, UserPlus } from '@lucide/svelte'
   import { Scan } from '@/receipts/ui'
   import { account } from '@/iam'
   import { templates, type Template } from '@/expenses.templates'
@@ -69,7 +69,7 @@
           <Dropdown.Group direction="col">
             {#each $templates as template (template.id)}
               <Dropdown.Item onclick={() => copy(template)}>
-                <ChartPie />
+                <FileChartPie />
                 {template.title}
               </Dropdown.Item>
             {/each}

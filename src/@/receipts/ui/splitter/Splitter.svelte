@@ -1,4 +1,7 @@
 <script lang="ts">
+  import { ChartPie } from '@lucide/svelte'
+  import { Asyvatar } from '@/accounts/ui'
+  import { Button } from '$ui/button'
   import Failed from '../Failed.svelte'
   import { sync, store } from './store'
   import Summary from './Summary.svelte'
@@ -60,7 +63,19 @@
         <Feedback {receipt} {account} />
       {:else if receipt.locker === account.id}
         <Lock {receipt} {stats} />
-        TODO: Continue (locked by me), waiting (locked by someone else), go to expense (linked expense)
+      {:else if receipt.status === 'sealed'}
+        {@const expense = receipt.links?.find((l) => l.type === 'expense')}
+        {#if expense}
+          <div class="flex justify-center">
+            <Button variant="outline" size="icon" href={`/expenses/${expense.id}/`}>
+              <ChartPie />
+            </Button>
+          </div>
+        {/if}
+      {:else if receipt.locker}
+        <div class="flex justify-center">
+          <Asyvatar identity={receipt.locker} class="animate-pulse" />
+        </div>
       {/if}
     </div>
   {:else}
