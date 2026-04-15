@@ -1,53 +1,16 @@
-/*
-  background: to bottom, a, b
-  text: 135deg, b, a (inverted)
-*/
-
 .effect-solar {
   /* background: linear-gradient(to bottom, #ff00040d, #ff00041a); */
   background: linear-gradient(to bottom, var(--color-primary), var(--color-warning));
-}
-
-.effect-solar-text {
-  background: linear-gradient(135deg, var(--color-warning), var(--color-primary));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
 }
 
 .effect-influence {
   background: linear-gradient(to bottom, #480048, #C04848);
 }
 
-.effect-influence-text {
-  background: linear-gradient(135deg, #C04848, #480048);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-}
-
 .effect-pino {
   background: linear-gradient(to bottom, #182848, #4b6cb7);
 }
 
-.effect-pino-text {
-  background: linear-gradient(135deg, #4b6cb7, #182848);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-}
-
 .effect-sunset {
   background: linear-gradient(to bottom, #ff5acd 0.000%, #ff9188 50.000%, #fada61 100.000%);
-}
-
-.effect-sunset-text {
-  background: linear-gradient(135deg, #fada61 0.000%, #ff9188 50.000%, #ff5acd 100.000%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
 }

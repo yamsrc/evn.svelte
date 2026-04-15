@@ -15,8 +15,9 @@
   <Dropdown.Content position="start-bottom">
     <Dropdown.Layer>
       {#each effects as effect (effect)}
-        <Dropdown.Item>
-          <span class="effect-{effect}-text">{$dict.wallpapers.effects[effect]}</span>
+        <Dropdown.Item class="pl-3">
+          <div class="h-lh aspect-square rounded-sm effect-{effect}"></div>
+          <div>{$dict.wallpapers.effects[effect]}</div>
         </Dropdown.Item>
       {/each}
     </Dropdown.Layer>

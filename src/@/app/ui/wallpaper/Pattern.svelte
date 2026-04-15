@@ -116,7 +116,7 @@
 <div
   bind:this={container}
   class={[
-    'flex w-full relative',
+    'flex w-full',
     !scrollable && safariBrowser ? 'h-[calc(100%-10px)]' : 'h-full',
     scrollable &&
       'overflow-x-scroll overflow-y-hidden touch-pan-x overscroll-x-contain no-scrollbar snap-x snap-mandatory bg-input',
@@ -149,9 +149,12 @@
       </div>
     {/if}
   {/each}
-  <div class="absolute bottom-2 right-2">
-    <Effects />
-  </div>
+  {#if scrollable}
+    <div class="absolute right-2.5 bottom-1">
+      <!-- TODO: doesnt work in Safari -->
+      <Effects />
+    </div>
+  {/if}
 </div>
 
 <style>
