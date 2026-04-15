@@ -17,7 +17,7 @@ export function override(wallpaper: Wallpaper) {
   }
 }
 
-export const backgrounds: Background[] = [
+export const patterns: Pattern[] = [
   {
     id: 'pencil',
     name: 'Pencil',
@@ -107,11 +107,18 @@ export const backgrounds: Background[] = [
   },
 ]
 
-interface Background {
+interface Pattern {
   id: string
   name: string
   filename: string
   width: number
   height: number
   opacity?: number
+}
+
+export function opacity(pattern: Pattern, effect: string | null) {
+  const opacity = pattern.opacity ?? 0.2
+
+  if (effect === null) return opacity
+  else return opacity * 2
 }

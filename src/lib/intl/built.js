@@ -228,7 +228,8 @@ export const dictionaries = {
         "solar": "الوهج الشمسي",
         "influence": "تأثير",
         "pino": "بينو نوار",
-        "sunset": "غروب وردي"
+        "sunset": "غروب وردي",
+        "fire": "موجة حر نارية"
       }
     }
   },
@@ -458,7 +459,8 @@ export const dictionaries = {
         "solar": "Sonnenflare",
         "influence": "Einfluss",
         "pino": "Pinot Noir",
-        "sunset": "Rosaroter Sonnenuntergang"
+        "sunset": "Rosaroter Sonnenuntergang",
+        "fire": "Hitzewelle Feuer"
       }
     }
   },
@@ -688,7 +690,8 @@ export const dictionaries = {
         "solar": "Solar Flare",
         "influence": "Influence",
         "pino": "Pinot Noir",
-        "sunset": "Pink Sunset"
+        "sunset": "Pink Sunset",
+        "fire": "Heatwave Fire"
       }
     }
   },
@@ -918,7 +921,8 @@ export const dictionaries = {
         "solar": "Destello solar",
         "influence": "Influencia",
         "pino": "Pinot Noir",
-        "sunset": "Atardecer Rosado"
+        "sunset": "Atardecer Rosado",
+        "fire": "Fuego de ola de calor"
       }
     }
   },
@@ -1148,7 +1152,8 @@ export const dictionaries = {
         "solar": "Éruption solaire",
         "influence": "Influence",
         "pino": "Pinot Noir",
-        "sunset": "Coucher de soleil rose"
+        "sunset": "Coucher de soleil rose",
+        "fire": "Feu de canicule"
       }
     }
   },
@@ -1378,7 +1383,8 @@ export const dictionaries = {
         "solar": "सौर चमक",
         "influence": "प्रभाव",
         "pino": "पिनोट नोइर",
-        "sunset": "गुलाबी सूर्यास्त"
+        "sunset": "गुलाबी सूर्यास्त",
+        "fire": "हीटवेव फायर"
       }
     }
   },
@@ -1608,7 +1614,8 @@ export const dictionaries = {
         "solar": "Bagliore solare",
         "influence": "Influenza",
         "pino": "Pinot Noir",
-        "sunset": "Tramonto Rosa"
+        "sunset": "Tramonto Rosa",
+        "fire": "Incendio da ondata di calore"
       }
     }
   },
@@ -1838,7 +1845,8 @@ export const dictionaries = {
         "solar": "ソーラーフレア",
         "influence": "影響",
         "pino": "ピノ・ノワール",
-        "sunset": "ピンクサンセット"
+        "sunset": "ピンクサンセット",
+        "fire": "熱波の炎"
       }
     }
   },
@@ -2068,7 +2076,8 @@ export const dictionaries = {
         "solar": "태양 플레어",
         "influence": "영향력",
         "pino": "피노 누아",
-        "sunset": "핑크 선셋"
+        "sunset": "핑크 선셋",
+        "fire": "폭염 화재"
       }
     }
   },
@@ -2298,7 +2307,8 @@ export const dictionaries = {
         "solar": "Zonnevlam",
         "influence": "Invloed",
         "pino": "Pinot Noir",
-        "sunset": "Roze Zonsondergang"
+        "sunset": "Roze Zonsondergang",
+        "fire": "Hittegolfvuur"
       }
     }
   },
@@ -2528,7 +2538,8 @@ export const dictionaries = {
         "solar": "Солнечная вспышка",
         "influence": "Влияние",
         "pino": "Пино Нуар",
-        "sunset": "Розовый закат"
+        "sunset": "Розовый закат",
+        "fire": "Жара и огонь"
       }
     }
   },
@@ -2758,7 +2769,8 @@ export const dictionaries = {
         "solar": "Miali ya Jua",
         "influence": "Ushawishi",
         "pino": "Pinot Noir",
-        "sunset": "Machweo ya Waridi"
+        "sunset": "Machweo ya Waridi",
+        "fire": "Moto wa Joto Kali"
       }
     }
   },
@@ -2988,7 +3000,8 @@ export const dictionaries = {
         "solar": "Güneş Patlaması",
         "influence": "Etkisi",
         "pino": "Pinot Noir",
-        "sunset": "Pembe Günbatımı"
+        "sunset": "Pembe Günbatımı",
+        "fire": "Sıcak Dalga Ateşi"
       }
     }
   },
@@ -3218,7 +3231,8 @@ export const dictionaries = {
         "solar": "Сонячний спалах",
         "influence": "Вплив",
         "pino": "Піно Нуар",
-        "sunset": "Рожевий захід сонця"
+        "sunset": "Рожевий захід сонця",
+        "fire": "Спека й пожежа"
       }
     }
   },
@@ -3448,7 +3462,8 @@ export const dictionaries = {
         "solar": "太阳耀斑",
         "influence": "影响",
         "pino": "黑皮诺",
-        "sunset": "粉色日落"
+        "sunset": "粉色日落",
+        "fire": "热浪火焰"
       }
     }
   }

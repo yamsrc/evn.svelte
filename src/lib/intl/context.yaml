@@ -321,6 +321,9 @@ inputs:
       sunset:
         input: Pink Sunset
         context: short pattern name
+      fire:
+        input: Heatwave Fire
+        context: short pattern name
 mounts:
   iam: ../../@/iam/ui/intl
   feedback: ../../@/feedback/ui/intl

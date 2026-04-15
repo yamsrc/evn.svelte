@@ -235,6 +235,7 @@ export type Dictionary = {
           influence: string
           pino: string
           sunset: string
+          fire: string
         }
       }
     }

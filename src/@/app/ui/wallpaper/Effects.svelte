@@ -5,7 +5,7 @@
   import { wallpaper } from '@/accounts'
   import { dict } from '$lib/intl'
   import * as Dropdown from '$com/dropdown'
-  import { backgrounds } from './Pattern'
+  import { patterns } from './Pattern'
   import { effects, type Props, type Effect } from './Effects'
 
   const { class: classes, variant = 'outline', ...rest }: Props = $props()
@@ -17,7 +17,7 @@
 
     dropdown?.close()
 
-    const pattern = $account.wallpaper?.pattern ?? $account.background ?? backgrounds[0].id
+    const pattern = $account.wallpaper?.pattern ?? $account.background ?? patterns[0].id
     const effect = value === 'classic' ? null : value
 
     await wallpaper.set({ method: 'pattern', pattern, effect })
@@ -28,7 +28,7 @@
   <Dropdown.Trigger id="wallpaper-effects-trigger" {variant} size="icon" class={classes} {...rest}>
     <Palette />
   </Dropdown.Trigger>
-  <Dropdown.Content position="end-top">
+  <Dropdown.Content position="start-top">
     <Dropdown.Layer>
       {#each effects as effect (effect)}
         <Dropdown.Item class="pl-3" onclick={() => pick(effect)}>
