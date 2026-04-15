@@ -3,6 +3,7 @@
   import { Check, Palette } from '@lucide/svelte'
   import { account } from '@/iam'
   import { wallpaper } from '@/accounts'
+  import { transit } from '$lib/tools'
   import { dict } from '$lib/intl'
   import * as Dropdown from '$com/dropdown'
   import { patterns } from './Pattern'
@@ -20,7 +21,7 @@
     const pattern = $account.wallpaper?.pattern ?? $account.background ?? patterns[0].id
     const effect = value === 'classic' ? null : value
 
-    await wallpaper.set({ method: 'pattern', pattern, effect })
+    transit(() => void wallpaper.set({ method: 'pattern', pattern, effect }))
   }
 </script>
 
