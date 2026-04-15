@@ -26,7 +26,15 @@
 </script>
 
 <Dropdown.Root bind:this={dropdown}>
-  <Dropdown.Trigger id="wallpaper-effects-trigger" {variant} size="icon" class={classes} {...rest}>
+  <Dropdown.Trigger
+    id="wallpaper-effects-trigger"
+    {variant}
+    size="icon"
+    class={[
+      'rainbow border border-transparent dark:border-transparent bg-origin-border [background-clip:padding-box,border-box]',
+      classes,
+    ]}
+    {...rest}>
     <Palette />
   </Dropdown.Trigger>
   <Dropdown.Content position="end-top">
@@ -52,3 +60,10 @@
     </Dropdown.Layer>
   </Dropdown.Content>
 </Dropdown.Root>
+
+<style>
+  :global(.rainbow) {
+    background-image: linear-gradient(var(--color-background), var(--color-background)),
+      linear-gradient(135deg, #d94444, #e8802a, #d4b82e, #3fa85f, #3b7fc4, #8844c4);
+  }
+</style>
