@@ -68,7 +68,7 @@
         {#if showExpensesTemplates && ok($templates) && $templates.length > 0}
           <Dropdown.Group direction="col">
             {#each $templates as template (template.id)}
-              <Dropdown.Item id="nav-actions-templates-new-button" onclick={() => copy(template)}>
+              <Dropdown.Item onclick={() => copy(template)}>
                 <ChartPie />
                 {template.title}
               </Dropdown.Item>
