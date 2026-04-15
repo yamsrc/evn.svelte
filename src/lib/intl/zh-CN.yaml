@@ -170,3 +170,10 @@ adventures:
 participants:
   add:
     button: 添加参与者
+wallpapers:
+  effects:
+    classic: 经典
+    solar: 太阳耀斑
+    influence: 影响
+    pino: 黑皮诺
+    sunset: 粉色日落

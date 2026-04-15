@@ -221,6 +221,15 @@ export const dictionaries = {
       "add": {
         "button": "إضافة المشاركين"
       }
+    },
+    "wallpapers": {
+      "effects": {
+        "classic": "كلاسيكي",
+        "solar": "الوهج الشمسي",
+        "influence": "تأثير",
+        "pino": "بينو نوار",
+        "sunset": "غروب وردي"
+      }
     }
   },
   "de-DE": {
@@ -441,6 +450,15 @@ export const dictionaries = {
     "participants": {
       "add": {
         "button": "Teilnehmende hinzufügen"
+      }
+    },
+    "wallpapers": {
+      "effects": {
+        "classic": "Klassisch",
+        "solar": "Sonnenflare",
+        "influence": "Einfluss",
+        "pino": "Pinot Noir",
+        "sunset": "Rosaroter Sonnenuntergang"
       }
     }
   },
@@ -663,6 +681,15 @@ export const dictionaries = {
       "add": {
         "button": "Add participants"
       }
+    },
+    "wallpapers": {
+      "effects": {
+        "classic": "Classic",
+        "solar": "Solar Flare",
+        "influence": "Influence",
+        "pino": "Pinot Noir",
+        "sunset": "Pink Sunset"
+      }
     }
   },
   "es-ES": {
@@ -883,6 +910,15 @@ export const dictionaries = {
     "participants": {
       "add": {
         "button": "Agregar participantes"
+      }
+    },
+    "wallpapers": {
+      "effects": {
+        "classic": "Clásico",
+        "solar": "Destello solar",
+        "influence": "Influencia",
+        "pino": "Pinot Noir",
+        "sunset": "Atardecer Rosado"
       }
     }
   },
@@ -1105,6 +1141,15 @@ export const dictionaries = {
       "add": {
         "button": "Ajouter des participants"
       }
+    },
+    "wallpapers": {
+      "effects": {
+        "classic": "Classique",
+        "solar": "Éruption solaire",
+        "influence": "Influence",
+        "pino": "Pinot Noir",
+        "sunset": "Coucher de soleil rose"
+      }
     }
   },
   "hi-IN": {
@@ -1325,6 +1370,15 @@ export const dictionaries = {
     "participants": {
       "add": {
         "button": "प्रतिभागी जोड़ें"
+      }
+    },
+    "wallpapers": {
+      "effects": {
+        "classic": "क्लासिक",
+        "solar": "सौर चमक",
+        "influence": "प्रभाव",
+        "pino": "पिनोट नोइर",
+        "sunset": "गुलाबी सूर्यास्त"
       }
     }
   },
@@ -1547,6 +1601,15 @@ export const dictionaries = {
       "add": {
         "button": "Aggiungi partecipanti"
       }
+    },
+    "wallpapers": {
+      "effects": {
+        "classic": "Classico",
+        "solar": "Bagliore solare",
+        "influence": "Influenza",
+        "pino": "Pinot Noir",
+        "sunset": "Tramonto Rosa"
+      }
     }
   },
   "ja-JP": {
@@ -1767,6 +1830,15 @@ export const dictionaries = {
     "participants": {
       "add": {
         "button": "参加者を追加"
+      }
+    },
+    "wallpapers": {
+      "effects": {
+        "classic": "クラシック",
+        "solar": "ソーラーフレア",
+        "influence": "影響",
+        "pino": "ピノ・ノワール",
+        "sunset": "ピンクサンセット"
       }
     }
   },
@@ -1989,6 +2061,15 @@ export const dictionaries = {
       "add": {
         "button": "참가자 추가"
       }
+    },
+    "wallpapers": {
+      "effects": {
+        "classic": "클래식",
+        "solar": "태양 플레어",
+        "influence": "영향력",
+        "pino": "피노 누아",
+        "sunset": "핑크 선셋"
+      }
     }
   },
   "nl-NL": {
@@ -2209,6 +2290,15 @@ export const dictionaries = {
     "participants": {
       "add": {
         "button": "Deelnemers toevoegen"
+      }
+    },
+    "wallpapers": {
+      "effects": {
+        "classic": "Klassiek",
+        "solar": "Zonnevlam",
+        "influence": "Invloed",
+        "pino": "Pinot Noir",
+        "sunset": "Roze Zonsondergang"
       }
     }
   },
@@ -2431,6 +2521,15 @@ export const dictionaries = {
       "add": {
         "button": "Добавить участников"
       }
+    },
+    "wallpapers": {
+      "effects": {
+        "classic": "Классика",
+        "solar": "Солнечная вспышка",
+        "influence": "Влияние",
+        "pino": "Пино Нуар",
+        "sunset": "Розовый закат"
+      }
     }
   },
   "sw-TZ": {
@@ -2651,6 +2750,15 @@ export const dictionaries = {
     "participants": {
       "add": {
         "button": "Ongeza washiriki"
+      }
+    },
+    "wallpapers": {
+      "effects": {
+        "classic": "Klasiki",
+        "solar": "Miali ya Jua",
+        "influence": "Ushawishi",
+        "pino": "Pinot Noir",
+        "sunset": "Machweo ya Waridi"
       }
     }
   },
@@ -2873,6 +2981,15 @@ export const dictionaries = {
       "add": {
         "button": "Katılımcı ekle"
       }
+    },
+    "wallpapers": {
+      "effects": {
+        "classic": "Klasik",
+        "solar": "Güneş Patlaması",
+        "influence": "Etkisi",
+        "pino": "Pinot Noir",
+        "sunset": "Pembe Günbatımı"
+      }
     }
   },
   "uk-UA": {
@@ -3094,6 +3211,15 @@ export const dictionaries = {
       "add": {
         "button": "Додати учасників"
       }
+    },
+    "wallpapers": {
+      "effects": {
+        "classic": "Класика",
+        "solar": "Сонячний спалах",
+        "influence": "Вплив",
+        "pino": "Піно Нуар",
+        "sunset": "Рожевий захід сонця"
+      }
     }
   },
   "zh-CN": {
@@ -3314,6 +3440,15 @@ export const dictionaries = {
     "participants": {
       "add": {
         "button": "添加参与者"
+      }
+    },
+    "wallpapers": {
+      "effects": {
+        "classic": "经典",
+        "solar": "太阳耀斑",
+        "influence": "影响",
+        "pino": "黑皮诺",
+        "sunset": "粉色日落"
       }
     }
   }

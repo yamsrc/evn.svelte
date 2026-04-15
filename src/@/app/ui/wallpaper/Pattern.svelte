@@ -11,6 +11,7 @@
   import Slide from '../Slide.svelte'
   import Effect from '../Effect.svelte'
   import { backgrounds, overriden, type Props } from './Pattern'
+  import Effects from './Effects.svelte'
 
   const { scrollable, class: classes }: Props = $props()
 
@@ -115,11 +116,11 @@
 <div
   bind:this={container}
   class={[
-    'flex w-full',
+    'flex w-full relative',
     !scrollable && safariBrowser ? 'h-[calc(100%-10px)]' : 'h-full',
     scrollable &&
       'overflow-x-scroll overflow-y-hidden touch-pan-x overscroll-x-contain no-scrollbar snap-x snap-mandatory bg-input',
-    scrollable || 'overflow-hidden',
+    scrollable || 'overflow-x-hidden',
     mounted || 'invisible',
     faded && 'fade-edges',
     classes,
@@ -148,6 +149,9 @@
       </div>
     {/if}
   {/each}
+  <div class="absolute bottom-2 right-2">
+    <Effects />
+  </div>
 </div>
 
 <style>
