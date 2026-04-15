@@ -52,6 +52,8 @@ loading:
   title: Ladebildschirm
 receipts:
   upload: {}
+  dropzone:
+    label: Ablagebereich
 actions:
   continue: Weiter
 nav:

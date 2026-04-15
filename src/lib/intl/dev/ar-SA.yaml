@@ -52,6 +52,8 @@ loading:
   title: شاشة التحميل
 receipts:
   upload: {}
+  dropzone:
+    label: منطقة الإسقاط
 actions:
   continue: متابعة
 nav:

@@ -52,6 +52,8 @@ loading:
   title: लोडिंग स्क्रीन
 receipts:
   upload: {}
+  dropzone:
+    label: ड्रॉप ज़ोन
 actions:
   continue: जारी रखें
 nav:

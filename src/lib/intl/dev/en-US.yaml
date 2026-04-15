@@ -52,6 +52,8 @@ loading:
   title: Loading screen
 receipts:
   upload: {}
+  dropzone:
+    label: Dropzone
 actions:
   continue: Continue
 nav:

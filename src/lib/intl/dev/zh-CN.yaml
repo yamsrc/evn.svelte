@@ -52,6 +52,8 @@ loading:
   title: 加载界面
 receipts:
   upload: {}
+  dropzone:
+    label: 拖放区
 actions:
   continue: 继续
 nav:

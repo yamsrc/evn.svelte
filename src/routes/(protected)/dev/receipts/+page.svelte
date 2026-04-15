@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Async } from 'svas'
-  import { Receipts, Scan } from '@/receipts/ui'
+  import { Dropzone, Receipts, Scan } from '@/receipts/ui'
   import { receipts } from '@/receipts'
   import { Section, Header, actionVariants } from '@/app/ui'
   import { dict } from '$lib/intl/dev'
@@ -12,6 +12,14 @@
   <Header.Root>
     <Header.Title>{$dict.components.receipts.title}</Header.Title>
   </Header.Root>
+</Section>
+
+<Section>
+  <Dropzone>
+    <div class="h-40 bg-muted rounded-md flex items-center justify-center">
+      {$dict.receipts.dropzone.label}
+    </div>
+  </Dropzone>
 </Section>
 
 <Section>

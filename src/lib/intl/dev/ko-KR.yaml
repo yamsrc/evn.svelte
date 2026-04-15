@@ -52,6 +52,8 @@ loading:
   title: 로딩 화면
 receipts:
   upload: {}
+  dropzone:
+    label: 드롭존
 actions:
   continue: 계속
 nav:
