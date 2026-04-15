@@ -6,14 +6,26 @@ export interface Props {
   oncomplete?: (id: string) => void
 }
 
-export function dropzone(node: HTMLElement): ActionReturn {
+interface ActionOptions {
+  ondrop?: (file: File) => void
+}
+
+export function dropzone(node: HTMLElement, options: ActionOptions): ActionReturn {
+  function ondrop(event: DragEvent) {
+    const file = drop(event)
+
+    if (file === undefined) return
+
+    options.ondrop?.(file)
+  }
+
   node.addEventListener('dragover', dragover)
-  node.addEventListener('drop', drop)
+  node.addEventListener('drop', ondrop)
 
   return {
     destroy: () => {
       node.removeEventListener('dragover', dragover)
-      node.removeEventListener('drop', drop)
+      node.removeEventListener('drop', ondrop)
     },
   }
 }
@@ -39,6 +51,5 @@ function drop(event: DragEvent) {
     return
   }
 
-  // upload
-  void 0
+  return file
 }
