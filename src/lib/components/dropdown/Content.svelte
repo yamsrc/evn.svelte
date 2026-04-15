@@ -2,7 +2,7 @@
   import { getContext } from './Context'
   import type { Props } from './Content'
 
-  const { children, position = 'start-top', class: classes }: Props = $props()
+  const { children, position = 'end-bottom', class: classes }: Props = $props()
   const ctx = getContext()
 
   function portal(node: HTMLElement) {
@@ -39,23 +39,35 @@
 
 <style>
   .action-menu-start-top {
-    position-area: span-x-start span-top;
-    position-try-fallbacks: span-x-end span-top;
+    position-area: span-x-end span-y-end;
+    position-try-fallbacks:
+      span-x-end span-y-start,
+      span-x-start span-y-end,
+      span-x-start span-y-start;
   }
 
   .action-menu-start-bottom {
-    position-area: span-x-start span-bottom;
-    position-try-fallbacks: span-x-end span-top;
+    position-area: span-x-end span-y-start;
+    position-try-fallbacks:
+      span-x-end span-y-end,
+      span-x-start span-y-start,
+      span-x-start span-y-end;
   }
 
   .action-menu-end-top {
-    position-area: span-x-end span-top;
-    position-try-fallbacks: span-x-start span-bottom;
+    position-area: span-x-start span-y-end;
+    position-try-fallbacks:
+      span-x-start span-y-start,
+      span-x-end span-y-end,
+      span-x-end span-y-start;
   }
 
   .action-menu-end-bottom {
-    position-area: span-x-end span-bottom;
-    position-try-fallbacks: span-x-start span-top;
+    position-area: span-x-start span-y-start;
+    position-try-fallbacks:
+      span-x-start span-y-end,
+      span-x-end span-y-start,
+      span-x-end span-y-end;
   }
 
   ::view-transition-group(.dropdown-content) {

@@ -150,8 +150,7 @@
     {/if}
   {/each}
   {#if scrollable}
-    <div class="absolute right-2.5 bottom-1">
-      <!-- TODO: doesnt work in Safari -->
+    <div class="absolute bottom-1 right-1 size-12">
       <Effects />
     </div>
   {/if}

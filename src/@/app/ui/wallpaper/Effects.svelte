@@ -9,10 +9,10 @@
 </script>
 
 <Dropdown.Root>
-  <Dropdown.Trigger id="wallpaper-effects-trigger" {variant} class={classes} {...rest}>
+  <Dropdown.Trigger id="wallpaper-effects-trigger" {variant} size="icon" class={classes} {...rest}>
     <Palette />
   </Dropdown.Trigger>
-  <Dropdown.Content position="start-bottom">
+  <Dropdown.Content position="end-bottom">
     <Dropdown.Layer>
       {#each effects as effect (effect)}
         <Dropdown.Item class="pl-3">
