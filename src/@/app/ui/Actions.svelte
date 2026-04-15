@@ -94,8 +94,8 @@
               </Dropdown.Item>
             {/if}
           </Dropdown.Group>
+          <Dropdown.Separator />
         {/if}
-        <Dropdown.Separator />
         {#if showContacts}
           <Dropdown.Group direction="col">
             <Dropdown.Item id="nav-actions-contacts-new-button" layer="contacts">
