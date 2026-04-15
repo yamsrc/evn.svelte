@@ -9,7 +9,6 @@
   import { ios, safari, shell, standalone } from '$lib/tools/mq'
   import { dict } from '$lib/intl'
   import Slide from '../Slide.svelte'
-  import Effect from '../Effect.svelte'
   import { backgrounds, overriden, type Props } from './Pattern'
   import Effects from './Effects.svelte'
 
@@ -138,10 +137,11 @@
           ? ''
           : `opacity: ${background.opacity?.toString() ?? '0.2'}`}">
         {#if effect}
-          <Effect
-            {effect}
-            mask={`url('/bg/${background.filename}') 50% 50% / ${scale(background.width)}px ${scale(background.height)}px`}
-            class="absolute inset-0" />
+          {@const mask = `url('/bg/${background.filename}') 50% 50% / ${scale(background.width)}px ${scale(background.height)}px`}
+          <div
+            class="absolute inset-0 effect-{effect}"
+            style={`-webkit-mask: ${mask}; mask: ${mask}; -webkit-mask-repeat: repeat; mask-repeat: repeat;`}>
+          </div>
         {/if}
         {#if scrollable && i === 0 && pattern === undefined}
           <Slide class="h-full justify-end p-8">{$dict.actions.slide}</Slide>

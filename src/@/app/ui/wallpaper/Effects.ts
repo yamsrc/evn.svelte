@@ -6,6 +6,6 @@ export interface Props extends Omit<ButtonProps, 'id'> {
   class?: ClassValue
 }
 
-type Effect = (keyof Dictionary['wallpapers']['effects'])
+export type Effect = (keyof Dictionary['wallpapers']['effects'])
 
 export const effects = Object.keys(dictionaries['en-US'].wallpapers.effects) as Effect[]

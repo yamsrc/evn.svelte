@@ -1,11 +1,10 @@
-import type { Effect } from '@/app'
 import type { Grammar } from '$lib/intl'
 
 export interface Wallpaper {
   method: 'pattern' | 'picture'
   pattern?: string
   picture?: string
-  effect?: Effect | null
+  effect?: string | null
 }
 
 export interface Account {
