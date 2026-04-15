@@ -28,7 +28,7 @@
   <Dropdown.Trigger id="wallpaper-effects-trigger" {variant} size="icon" class={classes} {...rest}>
     <Palette />
   </Dropdown.Trigger>
-  <Dropdown.Content position="start-top">
+  <Dropdown.Content position="end-top">
     <Dropdown.Layer>
       {#each effects as effect (effect)}
         {@const selected = $account?.wallpaper?.effect === effect}
