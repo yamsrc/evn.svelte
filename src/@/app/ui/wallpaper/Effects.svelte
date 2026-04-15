@@ -1,6 +1,6 @@
 <script lang="ts">
   import './effects.css'
-  import { Palette } from '@lucide/svelte'
+  import { Check, Palette } from '@lucide/svelte'
   import { account } from '@/iam'
   import { wallpaper } from '@/accounts'
   import { dict } from '$lib/intl'
@@ -31,9 +31,21 @@
   <Dropdown.Content position="start-top">
     <Dropdown.Layer>
       {#each effects as effect (effect)}
+        {@const selected = $account?.wallpaper?.effect === effect}
         <Dropdown.Item class="pl-3" onclick={() => pick(effect)}>
-          <div class="h-lh aspect-square rounded-sm effect-{effect}"></div>
-          <div>{$dict.wallpapers.effects[effect]}</div>
+          <div
+            class={[
+              'h-lh aspect-square rounded-sm ',
+              effect === 'classic' ? 'border border-muted-foreground' : `effect-${effect}`,
+              selected ? '' : '',
+            ]}>
+          </div>
+          <div class="flex items-center gap-2">
+            {$dict.wallpapers.effects[effect]}
+            {#if selected}
+              <Check />
+            {/if}
+          </div>
         </Dropdown.Item>
       {/each}
     </Dropdown.Layer>

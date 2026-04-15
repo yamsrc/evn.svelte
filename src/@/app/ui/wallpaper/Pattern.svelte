@@ -148,7 +148,7 @@
     {/if}
   {/each}
   {#if scrollable}
-    <div class="absolute bottom-1 inset-e-1">
+    <div class="absolute bottom-2 inset-e-2">
       <Effects />
     </div>
   {/if}
