@@ -4,6 +4,7 @@
 
 <script lang="ts">
   import { onMount, tick } from 'svelte'
+  import { track } from '@vercel/analytics'
   import { account } from '@/iam'
   import { wallpaper } from '@/accounts'
   import { ios, safari, shell, standalone } from '$lib/tools/mq'
@@ -62,6 +63,8 @@
     pattern = id
 
     if ($account) void wallpaper.set({ method: 'pattern', pattern: id, effect })
+
+    track('Wallpaper.Pattern')
   }
 
   const slides: HTMLDivElement[] = $state([])

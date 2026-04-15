@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { track } from '@vercel/analytics'
   import { account } from '@/iam'
   import { effects, type Effect as EffectId } from '@/app'
   import { wallpaper } from '@/accounts'
@@ -22,6 +23,8 @@
     busy = true
 
     await wallpaper.set({ method: 'pattern', pattern, effect })
+
+    track('Wallpaper.Effect')
 
     busy = false
   }

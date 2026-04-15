@@ -21,7 +21,7 @@
 
   function onpick(picture: string) {
     void transit(() => void wallpaper.set({ method: 'picture', picture }))
-    track('Background')
+    track('Wallpaper.Picture')
   }
 </script>
 
