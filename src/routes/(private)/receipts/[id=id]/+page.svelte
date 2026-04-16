@@ -8,7 +8,7 @@
   import { page } from '$app/state'
   import { goto } from '$app/navigation'
 
-  const id = page.params.id as string
+  const id = $derived(page.params.id) as string
 
   let splitter = $state<Splitter | undefined>(undefined)
   let actor = $state('')

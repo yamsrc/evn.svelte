@@ -22,12 +22,8 @@
   },
   "shortcuts": [
     {
-      "name": "Add Event",
+      "name": "Split",
       "url": "/expenses/editor/"
-    },
-    {
-      "name": "Invite Friend",
-      "url": "/contacts/new/"
     }
   ],
   "icons": [
@@ -56,6 +52,21 @@
       "purpose": "any"
     }
   ],
+  "share_target": {
+    "action": "/share/",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "files": [
+        {
+          "name": "file",
+          "accept": [
+            "image/*"
+          ]
+        }
+      ]
+    }
+  },
   "screenshots": [
     {
       "src": "/screenshots/FeatureGraphic.png",

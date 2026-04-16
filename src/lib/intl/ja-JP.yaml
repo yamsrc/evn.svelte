@@ -170,3 +170,11 @@ adventures:
 participants:
   add:
     button: 参加者を追加
+wallpapers:
+  effects:
+    classic: クラシック
+    solar: ソーラーフレア
+    influence: 影響
+    pino: ピノ・ノワール
+    sunset: ピンクサンセット
+    fire: 熱波の炎

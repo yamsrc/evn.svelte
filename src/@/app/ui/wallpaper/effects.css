@@ -1,0 +1,20 @@
+.effect-solar {
+  /* background: linear-gradient(to bottom, #ff00040d, #ff00041a); */
+  background: linear-gradient(to bottom, var(--color-primary), var(--color-warning));
+}
+
+.effect-influence {
+  background: linear-gradient(to bottom, #480048, #C04848);
+}
+
+.effect-pino {
+  background: linear-gradient(to bottom, #182848, #4b6cb7);
+}
+
+.effect-sunset {
+  background: linear-gradient(135deg, #d0415e 0.000%, #d0415e 20.000%, #d65767 calc(20.000% + 1px), #d65767 40.000%, #db7971 calc(40.000% + 1px), #db7971 60.000%, #e0a57c calc(60.000% + 1px), #e0a57c 80.000%, #e6d886 calc(80.000% + 1px) 100.000%);
+}
+
+.effect-fire {
+  background: linear-gradient(-45deg, #2a001b 0.000%, #78130c 16.667%, #ce480e 33.333%, #ff8d22 50.000%, #ffd543 66.667%, #ffff69 83.333%, #ffff8d 100.000%);
+}

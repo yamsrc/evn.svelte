@@ -14,6 +14,14 @@
   </Header.Root>
 </Section>
 
+<!-- <Section>
+  <Dropzone oncomplete={(id) => goto(`./${id}/`)}>
+    <div class="h-40 bg-muted rounded-md flex items-center justify-center">
+      {$dict.receipts.dropzone.label}
+    </div>
+  </Dropzone>
+</Section> -->
+
 <Section>
   <Async store={receipts}>
     {#snippet awaited(receipts)}

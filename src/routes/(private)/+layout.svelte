@@ -1,12 +1,14 @@
 <script lang="ts">
   import { derived } from 'svelte/store'
   import { ok } from 'svas'
+  import { Dropzone } from '@/receipts/ui'
   import { Paywall } from '@/purchases/ui'
   import { notifications as store } from '@/notifications'
   import { Screen, Authenticated } from '@/app/ui'
   import { dict } from '$lib/intl'
   import { oidc } from '$config/configuration'
   import { Nav } from '$com/shell'
+  import { goto } from '$app/navigation'
   import { welcome } from './welcome'
   import { sections } from './sections'
 
@@ -19,5 +21,6 @@
     {@render children()}
     <Nav position="start" sections={sections($dict, $notifications)} underlay class="z-48" />
     <Paywall />
+    <Dropzone oncomplete={(id) => goto(`/receipts/${id}/`)} />
   </Authenticated>
 </Screen>

@@ -37,13 +37,20 @@ profile:
   title: Wasifu wangu
   language:
     title: Lugha
-    description: Hii haiathiri uchanganuzi wa risiti — tunaweza kuzisoma katika lugha nyingi hata hivyo.
+    description: >-
+      Hii haiathiri uchanganuzi wa risiti — tunaweza kuzisoma katika lugha
+      nyingi hata hivyo.
   grammar:
     title: Umbo wa kisarufi
-    description: Katika baadhi ya lugha, uundaji wa ujumbe hutegemea jinsia ya kisarufi. Tunatumia kipimo hiki ili maandishi ya kiolesura yawe ya kawaida na sahihi.
-    example: |-
+    description: >-
+      Katika baadhi ya lugha, uundaji wa ujumbe hutegemea jinsia ya kisarufi.
+      Tunatumia kipimo hiki ili maandishi ya kiolesura yawe ya kawaida na
+      sahihi.
+    example: >-
       !js
-      (name, gender) => gender === "he" ? `${name} ameongeza matumizi` : gender === "she" ? `${name} ameongeza matumizi` : `${name} ameongeza matumizi`
+
+      (name, gender) => gender === "he" ? `${name} ameongeza matumizi` : gender
+      === "she" ? `${name} ameongeza matumizi` : `${name} ameongeza matumizi`
   background:
     title: Mandharinyuma
     pattern: Mfano
@@ -78,7 +85,9 @@ contacts:
       confirm: Futa
   add:
     label: Ongeza mawasiliano
-    description: Baadaye utaweza kuhamisha akaunti hii kwa mmiliki ili aweze kuweka taarifa zake za kuingia na kuchukua umiliki wa akaunti.
+    description: >-
+      Baadaye utaweza kuhamisha akaunti hii kwa mmiliki ili aweze kuweka taarifa
+      zake za kuingia na kuchukua umiliki wa akaunti.
   share:
     invite:
       link: Alika kwenye Evnly
@@ -101,7 +110,9 @@ groups:
     title: Wanachama
     addMembers: Ongeza wanachama
     addMember: Ongeza mwanachama
-    empty: Hakuna mtu hapa bado. Ongeza baadhi ya wanachama ili kuanza kutumia kundi hili.
+    empty: >-
+      Hakuna mtu hapa bado. Ongeza baadhi ya wanachama ili kuanza kutumia kundi
+      hili.
   title: Makundi
   summary:
     balance:
@@ -119,7 +130,9 @@ account:
   delete:
     button: Futa akaunti
     title: Futa akaunti
-    description: Tutafuta akaunti yako na taarifa zote zinazohusiana nayo kabisa. Hatua hii haiwezi kutenduliwa.
+    description: >-
+      Tutafuta akaunti yako na taarifa zote zinazohusiana nayo kabisa. Hatua hii
+      haiwezi kutenduliwa.
     sorry: Tunaomba radhi sana kukuona ukiondoka.
     hold: Shikilia kuthibitisha
     link: Futa akaunti
@@ -170,3 +183,11 @@ adventures:
 participants:
   add:
     button: Ongeza washiriki
+wallpapers:
+  effects:
+    classic: Klasiki
+    solar: Miali ya Jua
+    influence: Ushawishi
+    pino: Pinot Noir
+    sunset: Machweo ya Waridi
+    fire: Moto wa Joto Kali

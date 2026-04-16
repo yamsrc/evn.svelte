@@ -5,7 +5,6 @@
   import { premium, wallpaper } from '@/accounts'
   import * as Tabs from '$ui/tabs'
   import { dict } from '$lib/intl'
-  import Effects from '../Effects.svelte'
   import Picture from './Picture.svelte'
   import Pattern from './Pattern.svelte'
   import type { Wallpaper } from '@/accounts'
@@ -34,11 +33,10 @@
       {$dict.profile.background.picture}
     </Tabs.Trigger>
   </Tabs.List>
-  <Tabs.Content value="pattern" class="space-y-2 aspect-square">
-    <div class="border h-40 rounded-lg bg-background overflow-hidden">
+  <Tabs.Content value="pattern" class="space-y-2">
+    <div class="border h-40 rounded-lg bg-background overflow-hidden relative">
       <Pattern scrollable />
     </div>
-    <Effects />
   </Tabs.Content>
   <Tabs.Content value="picture" class="aspect-square">
     <Picture />

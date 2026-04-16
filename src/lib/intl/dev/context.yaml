@@ -98,3 +98,7 @@ inputs:
     app:
       input: App
       context: menu item
+  receipts:
+    dropzone:
+      label:
+        input: Dropzone

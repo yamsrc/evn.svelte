@@ -305,6 +305,25 @@ inputs:
     add:
       button:
         input: Add participants
+  wallpapers:
+    effects:
+      classic:
+        input: Classic
+      solar:
+        input: Solar Flare
+        context: short pattern name
+      influence:
+        input: Influence
+        context: short pattern name
+      pino:
+        input: Pino Noir
+        context: short pattern name
+      sunset:
+        input: Pink Sunset
+        context: short pattern name
+      fire:
+        input: Heatwave Fire
+        context: short pattern name
 mounts:
   iam: ../../@/iam/ui/intl
   feedback: ../../@/feedback/ui/intl

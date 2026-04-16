@@ -52,6 +52,8 @@ loading:
   title: ロード画面
 receipts:
   upload: {}
+  dropzone:
+    label: ドロップゾーン
 actions:
   continue: 続行
 nav:

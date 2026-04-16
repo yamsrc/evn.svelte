@@ -52,6 +52,8 @@ loading:
   title: Pantalla de carga
 receipts:
   upload: {}
+  dropzone:
+    label: Zona de arrastre
 actions:
   continue: Continuar
 nav:

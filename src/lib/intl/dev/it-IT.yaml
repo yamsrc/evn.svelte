@@ -52,6 +52,8 @@ loading:
   title: Schermata di caricamento
 receipts:
   upload: {}
+  dropzone:
+    label: Area di rilascio
 actions:
   continue: Continua
 nav:

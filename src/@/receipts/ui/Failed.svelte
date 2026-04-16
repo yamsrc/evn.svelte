@@ -15,11 +15,13 @@
   <Item.Content>
     <Item.Title>{$dict.failed.title}</Item.Title>
     <Item.Description>{$dict.failed.description}</Item.Description>
-    <div class="mt-2">
-      <Button onclick={onretry} class="min-w-40">
-        <RotateCcw />
-        {$dict.failed.retry.label}
-      </Button>
-    </div>
+    {#if onretry}
+      <div class="mt-2">
+        <Button onclick={onretry} class="min-w-40">
+          <RotateCcw />
+          {$dict.failed.retry.label}
+        </Button>
+      </div>
+    {/if}
   </Item.Content>
 </Item.Root>

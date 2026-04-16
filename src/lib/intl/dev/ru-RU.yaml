@@ -52,6 +52,8 @@ loading:
   title: Экран загрузки
 receipts:
   upload: {}
+  dropzone:
+    label: Зона для загрузки
 actions:
   continue: Продолжить
 nav:

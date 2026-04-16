@@ -10,8 +10,8 @@
   import { ios, safari, shell, standalone } from '$lib/tools/mq'
   import { dict } from '$lib/intl'
   import Slide from '../Slide.svelte'
-  import Effect from '../Effect.svelte'
-  import { backgrounds, overriden, type Props } from './Pattern'
+  import { patterns, opacity, overriden, type Props } from './Pattern'
+  import Effects from './Effects.svelte'
 
   const { scrollable, class: classes }: Props = $props()
 
@@ -26,7 +26,7 @@
     $overriden?.pattern ?? $account?.wallpaper?.pattern ?? $account?.background,
   )
 
-  const selected = backgrounds.findIndex((background) => background.id === pattern)
+  const selected = patterns.findIndex((background) => background.id === pattern)
 
   const effect = $derived($overriden?.effect ?? $account?.wallpaper?.effect ?? null)
 
@@ -122,28 +122,27 @@
     !scrollable && safariBrowser ? 'h-[calc(100%-10px)]' : 'h-full',
     scrollable &&
       'overflow-x-scroll overflow-y-hidden touch-pan-x overscroll-x-contain no-scrollbar snap-x snap-mandatory bg-input',
-    scrollable || 'overflow-hidden',
+    scrollable || 'overflow-x-hidden',
     mounted || 'invisible',
     faded && 'fade-edges',
     classes,
   ]}
   onscroll={scrollable ? onscroll : undefined}>
-  {#each backgrounds as background, i (background.id)}
-    {#if scrollable || !$overriden || $overriden.pattern === background.id}
+  {#each patterns as pattern, i (pattern.id)}
+    {#if scrollable || !$overriden || $overriden.pattern === pattern.id}
       <div
         bind:this={slides[i]}
-        data-id={background.id}
+        data-id={pattern.id}
         class={['h-full w-full shrink-0 relative', scrollable && 'snap-center']}
-        style="background: url('/bg/{background.filename}') 50% 50% / {scale(
-          background.width,
-        )}px {scale(background.height)}px repeat; {scrollable
-          ? ''
-          : `opacity: ${background.opacity?.toString() ?? '0.2'}`}">
+        style="background: url('/bg/{pattern.filename}') 50% 50% / {scale(pattern.width)}px {scale(
+          pattern.height,
+        )}px repeat; {scrollable ? '' : `opacity: ${opacity(pattern, effect)}`}">
         {#if effect}
-          <Effect
-            {effect}
-            mask={`url('/bg/${background.filename}') 50% 50% / ${scale(background.width)}px ${scale(background.height)}px`}
-            class="absolute inset-0" />
+          {@const mask = `url('/bg/${pattern.filename}') 50% 50% / ${scale(pattern.width)}px ${scale(pattern.height)}px`}
+          <div
+            class="absolute inset-0 effect-{effect}"
+            style={`-webkit-mask: ${mask}; mask: ${mask}; -webkit-mask-repeat: repeat; mask-repeat: repeat;`}>
+          </div>
         {/if}
         {#if scrollable && i === 0 && pattern === undefined}
           <Slide class="h-full justify-end p-8">{$dict.actions.slide}</Slide>
@@ -151,6 +150,11 @@
       </div>
     {/if}
   {/each}
+  {#if scrollable}
+    <div class="absolute bottom-2 inset-e-2">
+      <Effects />
+    </div>
+  {/if}
 </div>
 
 <style>

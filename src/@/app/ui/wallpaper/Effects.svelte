@@ -1,0 +1,72 @@
+<script lang="ts">
+  import './effects.css'
+  import { track } from '@vercel/analytics'
+  import { Check, Palette } from '@lucide/svelte'
+  import { account } from '@/iam'
+  import { wallpaper } from '@/accounts'
+  import { transit } from '$lib/tools'
+  import { dict } from '$lib/intl'
+  import * as Dropdown from '$com/dropdown'
+  import { patterns } from './Pattern'
+  import { effects, type Props, type Effect } from './Effects'
+
+  const { class: classes, variant = 'outline', ...rest }: Props = $props()
+
+  let dropdown = $state<Dropdown.Root | undefined>()
+
+  async function pick(value: Effect) {
+    if (!$account) return
+
+    dropdown?.close()
+
+    const pattern = $account.wallpaper?.pattern ?? $account.background ?? patterns[0].id
+    const effect = value === 'classic' ? null : value
+
+    transit(() => void wallpaper.set({ method: 'pattern', pattern, effect }))
+
+    track('Wallpaper.Effect')
+  }
+</script>
+
+<Dropdown.Root bind:this={dropdown}>
+  <Dropdown.Trigger
+    id="wallpaper-effects-trigger"
+    {variant}
+    size="icon"
+    class={[
+      'rainbow border border-transparent dark:border-transparent bg-origin-border [background-clip:padding-box,border-box]',
+      classes,
+    ]}
+    {...rest}>
+    <Palette />
+  </Dropdown.Trigger>
+  <Dropdown.Content position="end-top">
+    <Dropdown.Layer>
+      {#each effects as effect (effect)}
+        {@const selected = $account?.wallpaper?.effect === effect}
+        <Dropdown.Item class="pl-3" onclick={() => pick(effect)}>
+          <div
+            class={[
+              'h-lh aspect-square rounded-sm ',
+              effect === 'classic' ? 'border border-muted-foreground' : `effect-${effect}`,
+              selected ? '' : '',
+            ]}>
+          </div>
+          <div class="flex items-center gap-2">
+            {$dict.wallpapers.effects[effect]}
+            {#if selected}
+              <Check />
+            {/if}
+          </div>
+        </Dropdown.Item>
+      {/each}
+    </Dropdown.Layer>
+  </Dropdown.Content>
+</Dropdown.Root>
+
+<style>
+  :global(.rainbow) {
+    background-image: linear-gradient(var(--color-background), var(--color-background)),
+      linear-gradient(135deg, #d94444, #e8802a, #d4b82e, #3fa85f, #3b7fc4, #8844c4);
+  }
+</style>

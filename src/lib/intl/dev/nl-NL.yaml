@@ -52,6 +52,8 @@ loading:
   title: Laadscherm
 receipts:
   upload: {}
+  dropzone:
+    label: Dropzone
 actions:
   continue: Doorgaan
 nav:

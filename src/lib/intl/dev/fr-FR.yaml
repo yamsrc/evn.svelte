@@ -52,6 +52,8 @@ loading:
   title: Écran de chargement
 receipts:
   upload: {}
+  dropzone:
+    label: Zone de dépôt
 actions:
   continue: Continuer
 nav:

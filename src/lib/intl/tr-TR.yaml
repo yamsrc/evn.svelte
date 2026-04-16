@@ -40,7 +40,9 @@ profile:
     description: Bu, fiş taramayı etkilemez — zaten çoğu dilde okuyabiliyoruz.
   grammar:
     title: Dilbilgisel biçim
-    description: Bazı dillerde mesajın ifadesi dilbilgisel cinsiyete bağlıdır. Arayüz metinlerinin doğal ve doğru olması için bu ayarı kullanıyoruz.
+    description: >-
+      Bazı dillerde mesajın ifadesi dilbilgisel cinsiyete bağlıdır. Arayüz
+      metinlerinin doğal ve doğru olması için bu ayarı kullanıyoruz.
     example: |-
       !js
       (name, gender) => `${name} bir harcama ekledi`
@@ -78,7 +80,9 @@ contacts:
       confirm: Sil
   add:
     label: Kişi ekle
-    description: Daha sonra bu hesabı sahibine aktarabileceksin, böylece giriş bilgilerini ayarlayıp hesabın sahibi olabilir.
+    description: >-
+      Daha sonra bu hesabı sahibine aktarabileceksin, böylece giriş bilgilerini
+      ayarlayıp hesabın sahibi olabilir.
   share:
     invite:
       link: Evnly'ye davet et
@@ -86,11 +90,15 @@ contacts:
       description: Davet 5 dakika içinde sona erecek
 join:
   app:
-    description: Kimin kime borcu olduğunu arkadaşlarınla birlikte akıllıca takip etmenin yolu.
+    description: >-
+      Kimin kime borcu olduğunu arkadaşlarınla birlikte akıllıca takip etmenin
+      yolu.
   inviter:
-    description: |-
+    description: >-
       !js
-      (name) => `${name} tarafından davet edildiniz. Sadece kaydolun veya giriş yapın, ve hazırsınız`
+
+      (name) => `${name} tarafından davet edildiniz. Sadece kaydolun veya giriş
+      yapın, ve hazırsınız`
   accept: Evnly'i kullanmaya başla
 groups:
   leave: Ayrılmak için basılı tut
@@ -119,7 +127,9 @@ account:
   delete:
     button: Hesabı sil
     title: Hesabı sil
-    description: Hesabınızı ve tüm bağlantılı bilgileri kalıcı olarak sileceğiz. Bu işlem geri alınamaz.
+    description: >-
+      Hesabınızı ve tüm bağlantılı bilgileri kalıcı olarak sileceğiz. Bu işlem
+      geri alınamaz.
     sorry: Gitmene çok üzüldük.
     hold: Onaylamak için basılı tutun
     link: Hesabı sil
@@ -170,3 +180,11 @@ adventures:
 participants:
   add:
     button: Katılımcı ekle
+wallpapers:
+  effects:
+    classic: Klasik
+    solar: Güneş Patlaması
+    influence: Etkisi
+    pino: Pinot Noir
+    sunset: Pembe Günbatımı
+    fire: Sıcak Dalga Ateşi

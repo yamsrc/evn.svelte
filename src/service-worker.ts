@@ -63,6 +63,30 @@ app.addEventListener('activate', (event) => {
 })
 
 app.addEventListener('fetch', (event) => {
+  const url = new URL(event.request.url)
+
+  if (event.request.method === 'POST' && url.pathname === '/share/') {
+    async function share() {
+      const data = await event.request.formData()
+      const file = data.get('file') as File | null
+
+      if (file === null)
+        return Response.redirect('/share/', 303)
+
+      const cache = await caches.open('share')
+
+      await cache.put('/share/file', new Response(file, {
+        headers: { 'Content-Type': file.type, 'X-File-Name': file.name },
+      }))
+
+      return Response.redirect('/share/', 303)
+    }
+
+    event.respondWith(share())
+
+    return
+  }
+
   if (event.request.method !== 'GET') return
 
   if (EXTERNAL.some((prefix) => event.request.url.startsWith(prefix))) {
@@ -85,8 +109,6 @@ app.addEventListener('fetch', (event) => {
 
     return
   }
-
-  const url = new URL(event.request.url)
 
   if (dev || url.origin !== app.location.origin) return
 

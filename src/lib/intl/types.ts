@@ -228,4 +228,14 @@ export type Dictionary = {
           button: string
         }
       }
+      wallpapers: {
+        effects: {
+          classic: string
+          solar: string
+          influence: string
+          pino: string
+          sunset: string
+          fire: string
+        }
+      }
     }
