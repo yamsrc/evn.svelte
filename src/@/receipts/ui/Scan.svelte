@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { track } from '@vercel/analytics'
   import { ScanText } from '@lucide/svelte'
   import { paywall } from '@/purchases/ui'
   import { account } from '@/iam'
@@ -43,6 +44,7 @@
     target.value = ''
     fullscreen?.show()
     progress?.upload(file)
+    track('Receipts.Upload')
   }
 
   function oncomplete(id: string) {

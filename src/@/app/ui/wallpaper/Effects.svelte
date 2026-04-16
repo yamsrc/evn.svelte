@@ -1,5 +1,6 @@
 <script lang="ts">
   import './effects.css'
+  import { track } from '@vercel/analytics'
   import { Check, Palette } from '@lucide/svelte'
   import { account } from '@/iam'
   import { wallpaper } from '@/accounts'
@@ -22,6 +23,8 @@
     const effect = value === 'classic' ? null : value
 
     transit(() => void wallpaper.set({ method: 'pattern', pattern, effect }))
+
+    track('Wallpaper.Effect')
   }
 </script>
 
