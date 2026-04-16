@@ -3,11 +3,10 @@
   import { account as me } from '@/iam'
   import { numbers } from '@/expenses'
   import { Coins } from '@/app/ui'
-  import { Picture } from '@/accounts/ui'
+  import { Avatar, Title } from '@/accounts/ui'
   import { accounts } from '@/accounts'
   import * as Card from '$ui/card'
   import { dict } from '$lib/intl'
-  import { Ellipsis } from '$com/text'
   import type { Props } from './Totals'
 
   const { expense }: Props = $props()
@@ -45,8 +44,8 @@
           {#snippet awaited(account)}
             {@const name = payer === $me?.id ? $dict.expenses.me : account.name}
             <div class="flex items-center gap-2">
-              <Picture {account} class="size-8" />
-              <Ellipsis>{name}</Ellipsis>
+              <Avatar {account} class="size-8" />
+              <Title account={{ ...account, name }} />
             </div>
           {/snippet}
         </Async>

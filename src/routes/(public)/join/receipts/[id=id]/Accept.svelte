@@ -5,7 +5,7 @@
   import * as Card from '@/expenses/ui/views/card'
   import { Attachments } from '@/expenses/ui'
   import { Avatars } from '@/app/ui'
-  import { Picture } from '@/accounts/ui'
+  import { Avatar } from '@/accounts/ui'
   import { Button, buttonVariants } from '$ui/button'
   import * as AlertDialog from '$ui/alert-dialog'
   import { date } from '$lib/tools'
@@ -46,7 +46,7 @@
 
     {#if inviter}
       <div class="flex flex-col items-center gap-3">
-        <Picture account={inviter} class="size-24" />
+        <Avatar account={inviter} size={96} />
         <p class="text-center text-muted-foreground">
           {$dict.receipts.dialog.description(inviter.name, inviter.grammar)}
         </p>

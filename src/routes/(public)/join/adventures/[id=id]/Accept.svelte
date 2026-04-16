@@ -3,7 +3,7 @@
   import { account, named } from '@/iam'
   import { Panel } from '@/adventures/ui'
   import { invitations } from '@/adventures'
-  import { Picture } from '@/accounts/ui'
+  import { Avatar } from '@/accounts/ui'
   import { Button, buttonVariants } from '$ui/button'
   import * as AlertDialog from '$ui/alert-dialog'
   import { cn } from '$lib/utils'
@@ -44,7 +44,7 @@
 
     {#if inviter}
       <div class="flex flex-col items-center gap-3">
-        <Picture account={inviter} class="size-24" />
+        <Avatar account={inviter} size={96} />
         <p class="text-center text-muted-foreground">
           {$dict.adventures.dialog.description(inviter.name, inviter.grammar)}
         </p>
