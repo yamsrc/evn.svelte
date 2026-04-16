@@ -54,10 +54,7 @@
                 <Asyvatar
                   {identity}
                   size={24}
-                  class={[
-                    'ring-1 ring-accent-foreground/50',
-                    mounted && 'starting:scale-0 duration-150',
-                  ]} />
+                  class={[mounted && 'starting:scale-0 duration-150']} />
               {/each}
             </div>
           {/if}
