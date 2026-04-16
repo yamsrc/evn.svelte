@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Async } from 'svas'
-  import { accounts } from '@/accounts'
   import { Picture } from '@/accounts/ui'
+  import { accounts } from '@/accounts'
   import type { Props } from './Avatars'
 
   const { identities, max = 4, class: classes }: Props = $props()

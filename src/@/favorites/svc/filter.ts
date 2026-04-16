@@ -1,8 +1,8 @@
-import { filter as contactsFilter } from '@/contacts'
 import { filter as groupsFilter } from '@/groups'
-import type { Contact } from '@/contacts'
-import type { Favorite } from '@/favorites'
+import { filter as contactsFilter } from '@/contacts'
 import type { Group } from '@/groups'
+import type { Favorite } from '@/favorites'
+import type { Contact } from '@/contacts'
 
 export function filter(
   favorites: Favorite[],

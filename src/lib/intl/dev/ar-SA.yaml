@@ -12,12 +12,34 @@ components:
       (count) => `عرض: ${count}`
   graph:
     title: مخطط الديون
+  receipts:
+    title: الإيصالات
+    upload:
+      label: تحميل
+    progress:
+      uploading:
+        title: جارٍ الرفع
+        comment: يستغرق الأمر عادة بضع لحظات
+      processing:
+        comment: تمسك جيدًا، أوشكنا على الوصول
+        title: جارٍ المعالجة
+      ready:
+        title: جاهز
+        comment: |-
+          !js
+          (ms) => `تم في ${(ms / 1000).toFixed(1)} ثانية`
   picture:
     title: Picture
   participants:
     title: المشاركون
     managedContactsCreation: عرض زر إنشاء جهات الاتصال المُدارة
     shareUrl: مشاركة الرابط
+  fullscreen:
+    title: Fullscreen
+    attachment: أضف مرفقًا إلى أي مصروف
+    delete: اضغط مطولًا للحذف
+  invitation:
+    title: الدعوات
 transmission:
   title: Transmission
   permission:
@@ -28,3 +50,14 @@ transmission:
   ping: Ping
 loading:
   title: شاشة التحميل
+receipts:
+  upload: {}
+  dropzone:
+    label: منطقة الإسقاط
+actions:
+  continue: متابعة
+nav:
+  home: الرئيسية
+  components: المكوّنات
+  transmission: ناقل الحركة
+  app: التطبيق

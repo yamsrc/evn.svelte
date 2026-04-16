@@ -1,0 +1,79 @@
+context: Mount 'receipts' context
+inputs:
+  splitter:
+    stack:
+      claim:
+        input: Claim all
+      release:
+        input: Release
+        context: button label, release something being holded
+  leave:
+    label:
+      input: Hold to leave
+      context: button label, if it's too long, then just Leave
+  delete:
+    label:
+      input: Hold to delete
+      context: button label, if it's too long, then just Delete
+  me:
+    input: Me
+  overview:
+    total:
+      input: Total
+  feedback:
+    question:
+      input: How was the scan?
+      context: question regarding the quality of receipt scan
+    down:
+      input: We’ll take a look.
+    thanks:
+      input: Спасибо!
+  autoclose:
+    description:
+      input: Update balances automatically when everyone’s done, or wait to proceed manually.
+      context: button label (action)
+    title:
+      input: Autoadvance
+      context: meaning Autocomplete
+    payer:
+      title:
+        input: Paid by
+        context: selector label
+  close:
+    label:
+      input: Proceed
+    hold:
+      input: Hold to continue
+  unassigned:
+    input: "{n} unassigned items"
+    context: items of a list
+  pending:
+    status:
+      input: Hang tight, almost there
+    description:
+      input: Usually takes a few moments
+  failed:
+    title:
+      input: Something doesn’t look right
+    description:
+      input: I tried my best, but this doesn’t look like a receipt to me. Let’s give it another shot!
+    retry:
+      label:
+        input: Retry
+        context: button label
+  state:
+    uploading:
+      input: Usually takes a few moments
+    processing:
+      input: Hang tight, almost there
+  action:
+    label:
+      input: Scan
+      context: button label
+  extras:
+    included:
+      input: Fees and discounts are considered included
+      context: т.е. предполагается, что показанные цены уже их включают
+    incomplete:
+      input: Can be managed after all items are claimed
+      context: regarding fees and discounts in the receipt

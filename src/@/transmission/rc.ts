@@ -1,6 +1,6 @@
 import { account } from '@/iam'
-import { get, permission, permissions, subscribe, subscribed, unsubscribe } from './svc'
 import { channel, boot } from './svc/channel'
+import { get, permission, permissions, subscribe, subscribed, unsubscribe } from './svc'
 
 let prev: string | null = null
 

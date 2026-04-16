@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { goto } from '$app/navigation'
-  import { dict } from '$lib/intl/join'
-  import * as AlertDialog from '$ui/alert-dialog'
   import { buttonVariants } from '$ui/button'
+  import * as AlertDialog from '$ui/alert-dialog'
+  import { dict } from '$lib/intl/join'
+  import { goto } from '$app/navigation'
 </script>
 
 <AlertDialog.Root open={true}>

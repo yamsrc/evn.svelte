@@ -12,7 +12,7 @@ actions:
   contacts:
     group: Створити групу
     title: Друзі
-    contact: Друг
+    contact: Додати друга
   addSelected: Додати вибране
   cancel: Скасувати
   search: Пошук
@@ -23,6 +23,8 @@ actions:
     adventure: Розпочати пригоду
   expenses:
     split: Розділити
+  scan: Сканувати
+  upload: Вибери своє
 nav:
   home: Головна
   profile: Я
@@ -51,6 +53,11 @@ profile:
       "she" ? `${name} додала витрату` : `${name} додав(ла) витрату`
   background:
     title: Тло
+    pattern: Шаблон
+    picture: Фото
+    cta: Застосувати фон
+  notifications:
+    title: Сповіщення
 form:
   enterName: Введіть ім’я
 onboarding:
@@ -99,7 +106,7 @@ join:
 groups:
   leave: Утримуйте, щоб вийти
   name:
-    description: Усі учасники групи побачать це ім’я
+    description: Спробуй додати емодзі ✨
     placeholder: Введіть ім’я
   members:
     title: Учасники
@@ -178,3 +185,11 @@ adventures:
 participants:
   add:
     button: Додати учасників
+wallpapers:
+  effects:
+    classic: Класика
+    solar: Сонячний спалах
+    influence: Вплив
+    pino: Піно Нуар
+    sunset: Рожевий захід сонця
+    fire: Спека й пожежа

@@ -69,3 +69,7 @@ adventures:
     body: |-
       !js
       (title) => `${title} için harcama eklendi`
+receipts:
+  joined:
+    hint: Ürünlere bak ve seninkileri seç.
+    title: Yeni bir fiş geldi

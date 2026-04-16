@@ -1,28 +1,24 @@
 <script lang="ts">
-  import { LogOut } from '@lucide/svelte'
   import { Async, ok } from 'svas'
-  import { goto } from '$app/navigation'
-  import { page } from '$app/state'
-  import { Hold } from '$com/buttons'
-  import { Return } from '$com/shell'
-  import { dict } from '$lib/intl'
+  import { LogOut } from '@lucide/svelte'
+  import { Looking } from '@/notifications/ui'
+  import { Editor, Expenses } from '@/groups/ui'
+  import { groups, del } from '@/groups'
+  import { Toggle as Favorite } from '@/favorites/ui'
+  import { expenses } from '@/expenses'
   import { Section } from '@/app/ui'
   import { Header } from '@/app/ui'
-  import { expenses } from '@/expenses'
-  import { Toggle as Favorite } from '@/favorites/ui'
-  import { groups, del } from '@/groups'
-  import { Editor, Expenses } from '@/groups/ui'
-  import { seen } from '@/notifications'
+  import { dict } from '$lib/intl'
+  import { Return } from '$com/shell'
+  import { Hold } from '$com/buttons'
+  import { page } from '$app/state'
+  import { goto } from '$app/navigation'
 
   const ctx = Editor.getContext()
   const id = $derived(page.params.id)
   let busy = $state(false)
 
   const group = $derived(ok($groups) ? $groups.find((g) => g.id === id) : undefined)
-
-  $effect(() => {
-    if (id) void seen('groups', id)
-  })
 
   async function leave() {
     if (!id) return
@@ -34,6 +30,7 @@
 </script>
 
 {#if id}
+  <Looking domain="groups" key={id} />
   <Return href="/contacts/" />
 {/if}
 

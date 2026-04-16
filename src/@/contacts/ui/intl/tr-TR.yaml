@@ -14,3 +14,7 @@ expenses:
   empty: Şu ana kadar paylaşılan bir harcama yok.
 delete:
   label: Silmek için basılı tutun
+invite:
+  link: Paylaş
+  qr: QR Göster
+  manually: Manuel olarak ekle

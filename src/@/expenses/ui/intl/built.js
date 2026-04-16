@@ -42,6 +42,18 @@ export const dictionaries = {
         "paid": (gender) => gender === "he" ? "لقد دفعتَ" : gender === "she" ? "لقد دفعتِ" : "لقد دفعت",
         "received": (gender) => gender === "he" ? "لقد استلمتَ" : gender === "she" ? "لقد استلمتِ" : "لقد استلمت"
       }
+    },
+    "action": {
+
+    },
+    "actions": {
+      "delete": "حذف المرفق"
+    },
+    "template": {
+      "toggle": {
+        "label": "احفظ كقالب",
+        "description": "استخدم لاحقًا في الإجراءات السريعة"
+      }
     }
   },
   "de-DE": {
@@ -83,6 +95,18 @@ export const dictionaries = {
       "done": {
         "paid": (gender) => gender === "he" ? "Du hast bezahlt" : gender === "she" ? "Du hast bezahlt" : "Du hast bezahlt",
         "received": (gender) => gender === "he" ? "Du hast bekommen" : gender === "she" ? "Du hast bekommen" : "Du hast bekommen"
+      }
+    },
+    "action": {
+
+    },
+    "actions": {
+      "delete": "Anhang löschen"
+    },
+    "template": {
+      "toggle": {
+        "label": "Als Vorlage speichern",
+        "description": "Später in Schnellaktionen verwenden"
       }
     }
   },
@@ -126,6 +150,18 @@ export const dictionaries = {
         "paid": (gender) => "You’ve paid",
         "received": (gender) => gender === "he" ? "You've received" : gender === "she" ? "You've received" : "You've received"
       }
+    },
+    "action": {
+
+    },
+    "actions": {
+      "delete": "Delete attachment"
+    },
+    "template": {
+      "toggle": {
+        "label": "Save as template",
+        "description": "Use later in Quick Actions"
+      }
     }
   },
   "es-ES": {
@@ -167,6 +203,18 @@ export const dictionaries = {
       "done": {
         "paid": (gender) => gender === "he" ? "Has pagado" : gender === "she" ? "Has pagado" : "Has pagado",
         "received": (gender) => gender === "he" ? "Has recibido" : gender === "she" ? "Has recibido" : "Has recibido"
+      }
+    },
+    "action": {
+
+    },
+    "actions": {
+      "delete": "Eliminar adjunto"
+    },
+    "template": {
+      "toggle": {
+        "label": "Guardar como plantilla",
+        "description": "Usar más tarde en Acciones rápidas"
       }
     }
   },
@@ -210,6 +258,18 @@ export const dictionaries = {
         "paid": (gender) => gender === "he" ? "Tu as payé" : gender === "she" ? "Tu as payé" : "Tu as payé",
         "received": (gender) => gender === "he" ? "Tu as reçu" : gender === "she" ? "Tu as reçu" : "Tu as reçu"
       }
+    },
+    "action": {
+
+    },
+    "actions": {
+      "delete": "Supprimer la pièce jointe"
+    },
+    "template": {
+      "toggle": {
+        "label": "Enregistrer comme modèle",
+        "description": "Utiliser plus tard dans les actions rapides"
+      }
     }
   },
   "hi-IN": {
@@ -251,6 +311,18 @@ export const dictionaries = {
       "done": {
         "paid": (gender) => gender === "he" ? "तुमने पैसे दे दिए" : gender === "she" ? "तुमने पैसे दे दी" : "तुमने पैसे दे दिए",
         "received": (gender) => gender === "he" ? "तुम्हें मिला है" : gender === "she" ? "तुम्हें मिली है" : "तुम्हें मिला/मिली है"
+      }
+    },
+    "action": {
+
+    },
+    "actions": {
+      "delete": "अटैचमेंट हटाओ"
+    },
+    "template": {
+      "toggle": {
+        "label": "टेम्पलेट के रूप में सेव करें",
+        "description": "क्विक एक्शन्स में बाद में उपयोग करें"
       }
     }
   },
@@ -294,6 +366,18 @@ export const dictionaries = {
         "paid": (gender) => "Hai pagato",
         "received": (gender) => "Hai ricevuto"
       }
+    },
+    "action": {
+
+    },
+    "actions": {
+      "delete": "Elimina allegato"
+    },
+    "template": {
+      "toggle": {
+        "label": "Salva come modello",
+        "description": "Usa più tardi nelle azioni rapide"
+      }
     }
   },
   "ja-JP": {
@@ -335,6 +419,18 @@ export const dictionaries = {
       "done": {
         "paid": (gender) => "支払いが完了しました",
         "received": (gender) => "受け取ったよ"
+      }
+    },
+    "action": {
+
+    },
+    "actions": {
+      "delete": "添付ファイルを削除"
+    },
+    "template": {
+      "toggle": {
+        "label": "テンプレートとして保存",
+        "description": "クイックアクションで後で使う"
       }
     }
   },
@@ -378,6 +474,18 @@ export const dictionaries = {
         "paid": (gender) => "결제하셨습니다",
         "received": (gender) => "받았어"
       }
+    },
+    "action": {
+
+    },
+    "actions": {
+      "delete": "첨부파일 삭제"
+    },
+    "template": {
+      "toggle": {
+        "label": "템플릿으로 저장",
+        "description": "빠른 작업에서 나중에 사용하기"
+      }
     }
   },
   "nl-NL": {
@@ -419,6 +527,18 @@ export const dictionaries = {
       "done": {
         "paid": (gender) => "Je hebt betaald",
         "received": (gender) => "Je hebt ontvangen"
+      }
+    },
+    "action": {
+
+    },
+    "actions": {
+      "delete": "Bijlage verwijderen"
+    },
+    "template": {
+      "toggle": {
+        "label": "Opslaan als sjabloon",
+        "description": "Later gebruiken bij Snelle acties"
       }
     }
   },
@@ -462,6 +582,18 @@ export const dictionaries = {
         "paid": (gender) => gender === "he" ? "Ты заплатил" : gender === "she" ? "Ты заплатила" : "Ты заплатил(а)",
         "received": (gender) => gender === "he" ? "Ты получил" : gender === "she" ? "Ты получила" : "Ты получил(а)"
       }
+    },
+    "action": {
+
+    },
+    "actions": {
+      "delete": "Удалить вложение"
+    },
+    "template": {
+      "toggle": {
+        "label": "Сохранить как шаблон",
+        "description": "Используй позже в быстрых действиях"
+      }
     }
   },
   "sw-TZ": {
@@ -503,6 +635,18 @@ export const dictionaries = {
       "done": {
         "paid": (gender) => "Umelipa",
         "received": (gender) => "Umepewa"
+      }
+    },
+    "action": {
+
+    },
+    "actions": {
+      "delete": "Futa kiambatisho"
+    },
+    "template": {
+      "toggle": {
+        "label": "Hifadhi kama kiolezo",
+        "description": "Tumia baadaye kwenye Hatua za Haraka"
       }
     }
   },
@@ -546,6 +690,18 @@ export const dictionaries = {
         "paid": (gender) => "Ödedin",
         "received": (gender) => "Aldın"
       }
+    },
+    "action": {
+
+    },
+    "actions": {
+      "delete": "Ek dosyayı sil"
+    },
+    "template": {
+      "toggle": {
+        "label": "Şablon olarak kaydet",
+        "description": "Hızlı İşlemlerde sonra kullan"
+      }
     }
   },
   "uk-UA": {
@@ -588,6 +744,18 @@ export const dictionaries = {
         "paid": (gender) => gender === "he" ? "Ти заплатив" : gender === "she" ? "Ти заплатила" : "Ти заплатив(ла)",
         "received": (gender) => gender === "he" ? "Ти отримав" : gender === "she" ? "Ти отримала" : "Ти отримав(ла)"
       }
+    },
+    "action": {
+
+    },
+    "actions": {
+      "delete": "Видалити вкладення"
+    },
+    "template": {
+      "toggle": {
+        "label": "Зберегти як шаблон",
+        "description": "Використай пізніше у швидких діях"
+      }
     }
   },
   "zh-CN": {
@@ -629,6 +797,18 @@ export const dictionaries = {
       "done": {
         "paid": (gender) => "你已付款",
         "received": (gender) => "你已收到"
+      }
+    },
+    "action": {
+
+    },
+    "actions": {
+      "delete": "删除附件"
+    },
+    "template": {
+      "toggle": {
+        "label": "保存为模板",
+        "description": "稍后在快捷操作中使用"
       }
     }
   }

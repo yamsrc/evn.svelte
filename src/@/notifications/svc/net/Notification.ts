@@ -1,5 +1,5 @@
-import type { Expense } from '@/expenses'
 import type { Domain, Event } from '@/transmission'
+import type { Expense } from '@/expenses'
 
 type Constrain<T extends { [D in Domain]: Record<Event<D>, unknown> } & Record<Exclude<keyof T, Domain>, never>> = T
 
@@ -47,6 +47,17 @@ type Payloads = Constrain<{
       }
     }
   }
+  receipts: {
+    joined: {
+      id: string
+      identities: string[]
+      merchant?: {
+        name: string
+        display: string
+        location?: string
+      }
+    }
+  }
 }>
 
 type Payload<D extends Domain, E extends Event<D>> = Payloads[D][E & keyof Payloads[D]]
@@ -60,6 +71,7 @@ type Base<D extends Domain, E extends Event<D>> = {
   key: string
   _created: number
   _version: number
+  _deleted?: number | null
 }
 
 type Entry<D extends Domain, E extends Event<D>> = Expand<

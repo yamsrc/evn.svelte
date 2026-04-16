@@ -1,14 +1,14 @@
 <script lang="ts">
   import { Async } from 'svas'
-  import { Separator } from '$com/separator'
-  import { TextEllipsis } from '$com/text-ellipsis'
-  import { dict } from '$lib/intl'
-  import { Button } from '$ui/button'
-  import * as Card from '$ui/card'
-  import { accounts } from '@/accounts'
-  import { Picture } from '@/accounts/ui'
-  import { Coins } from '@/app/ui'
   import { account as me } from '@/iam'
+  import { Coins } from '@/app/ui'
+  import { Picture } from '@/accounts/ui'
+  import { accounts } from '@/accounts'
+  import * as Card from '$ui/card'
+  import { Button } from '$ui/button'
+  import { dict } from '$lib/intl'
+  import { Ellipsis } from '$com/text'
+  import { Separator } from '$com/separator'
   import type { Props } from './Participants'
 
   const { expense }: Props = $props()
@@ -34,7 +34,7 @@
                 <Picture {account} class="size-8" />
               </div>
               <div class="text-start text-base font-normal flex-1 min-w-0 flex">
-                <TextEllipsis>{name}</TextEllipsis>
+                <Ellipsis>{name}</Ellipsis>
               </div>
             {/snippet}
           </Async>
@@ -49,9 +49,9 @@
       {/if}
       <div class="flex flex-nowrap items-center justify-between gap-2">
         <div class="text-start text-base font-normal flex-1 min-w-0 flex">
-          <TextEllipsis>
+          <Ellipsis>
             {extra.comment ?? $dict.expenses.spendings.extras.title}
-          </TextEllipsis>
+          </Ellipsis>
         </div>
         <Coins amount={extra.amount} sign="neutral" />
       </div>

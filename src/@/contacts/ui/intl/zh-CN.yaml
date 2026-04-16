@@ -14,3 +14,7 @@ expenses:
   empty: 目前还没有共享支出。
 delete:
   label: 按住以删除
+invite:
+  link: 分享
+  qr: 显示二维码
+  manually: 手动添加

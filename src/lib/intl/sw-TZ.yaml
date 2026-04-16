@@ -12,7 +12,7 @@ actions:
   contacts:
     group: Unda Kikundi
     title: Marafiki
-    contact: Rafiki
+    contact: Ongeza rafiki
   addSelected: Ongeza zilizochaguliwa
   cancel: Ghairi
   search: Tafuta
@@ -23,6 +23,8 @@ actions:
     adventure: Anza safari
   expenses:
     split: Gawanya
+  scan: Kagua
+  upload: Chagua yako mwenyewe
 nav:
   home: Mwanzo
   profile: Mimi
@@ -51,6 +53,11 @@ profile:
       === "she" ? `${name} ameongeza matumizi` : `${name} ameongeza matumizi`
   background:
     title: Mandharinyuma
+    pattern: Mfano
+    picture: Picha
+    cta: Tumia mandharinyuma
+  notifications:
+    title: Arifa
 form:
   enterName: Weka jina
 onboarding:
@@ -97,7 +104,7 @@ join:
 groups:
   leave: Shikilia kuondoka
   name:
-    description: Wanachama wote wa kundi wataona jina hili
+    description: Jaribu kuongeza emoji ✨
     placeholder: Weka jina
   members:
     title: Wanachama
@@ -176,3 +183,11 @@ adventures:
 participants:
   add:
     button: Ongeza washiriki
+wallpapers:
+  effects:
+    classic: Klasiki
+    solar: Miali ya Jua
+    influence: Ushawishi
+    pino: Pinot Noir
+    sunset: Machweo ya Waridi
+    fire: Moto wa Joto Kali

@@ -1,12 +1,12 @@
 <script lang="ts">
-  import { Pencil } from '@lucide/svelte'
   import { Async } from 'svas'
-  import { page } from '$app/state'
-  import { Actions, Return } from '$com/shell'
-  import { adventures } from '@/adventures'
-  import { ExpenseDetails } from '@/adventures/ui'
-  import { Action, Header, Section } from '@/app/ui'
+  import { Pencil } from '@lucide/svelte'
   import { Attachments } from '@/expenses/ui'
+  import { Action, Header, Section } from '@/app/ui'
+  import { ExpenseDetails } from '@/adventures/ui'
+  import { adventures } from '@/adventures'
+  import { Actions, Return } from '$com/shell'
+  import { page } from '$app/state'
 
   const id = $derived(page.params.id) as string
   const eid = $derived(page.params.eid) as string
@@ -26,7 +26,9 @@
         </Header.Root>
       </Section>
 
-      <Attachments attachments={expense.attachments} editable={false} />
+      {#if expense.attachments.length > 0}
+        <Attachments attachments={expense.attachments} editable={false} />
+      {/if}
 
       <Section>
         <ExpenseDetails.Description {expense} />

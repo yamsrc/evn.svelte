@@ -1,10 +1,10 @@
 <script lang="ts">
-  import { Separator } from '$com/separator'
-  import { Switch } from '$ui/switch'
-  import { Panel } from '@/app/ui'
   import { configure, permissions, key } from '@/transmission'
-  import { scopes } from './Scopes'
+  import { Panel } from '@/app/ui'
+  import { Switch } from '$ui/switch'
+  import { Separator } from '$com/separator'
   import { dict } from './intl'
+  import { scopes } from './Scopes'
   import type { Scope } from '@/transmission'
 
   const { class: classes }: { class?: string } = $props()
@@ -36,7 +36,9 @@
 <Panel name="transmission-settings" class={classes}>
   <div class="space-y-1">
     <div class="flex justify-between items-center gap-2">
-      <h2><label for="transmission-settings-switch">{$dict.settings.title}</label></h2>
+      <h2 style="view-transition-name: me-notifications-title;">
+        <label for="transmission-settings-switch">{$dict.settings.title}</label>
+      </h2>
       <Switch
         id="transmission-settings-switch"
         checked={all}

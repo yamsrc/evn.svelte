@@ -18,7 +18,7 @@ export const dictionaries = {
       "contacts": {
         "group": "إنشاء مجموعة",
         "title": "أصدقاء",
-        "contact": "صديق"
+        "contact": "أضِف صديقًا"
       },
       "addSelected": "إضافة المحدد",
       "cancel": "إلغاء",
@@ -31,7 +31,9 @@ export const dictionaries = {
       },
       "expenses": {
         "split": "تقسيم"
-      }
+      },
+      "scan": "مسح",
+      "upload": "اختر ما يناسبك"
     },
     "nav": {
       "home": "الرئيسية",
@@ -54,7 +56,13 @@ export const dictionaries = {
         "example": (name, gender) => gender === "he" ? `${name} أضاف مصروفًا` : gender === "she" ? `${name} أضافت مصروفًا` : `${name} أضاف(ت) مصروفًا`
       },
       "background": {
-        "title": "الخلفية"
+        "title": "الخلفية",
+        "pattern": "نمط",
+        "picture": "صورة",
+        "cta": "تطبيق الخلفية"
+      },
+      "notifications": {
+        "title": "الإشعارات"
       }
     },
     "form": {
@@ -114,7 +122,7 @@ export const dictionaries = {
     "groups": {
       "leave": "اضغط مع الاستمرار للمغادرة",
       "name": {
-        "description": "سيرى جميع أعضاء المجموعة هذا الاسم",
+        "description": "جرّب إضافة رمز تعبيري ✨",
         "placeholder": "أدخل الاسم"
       },
       "members": {
@@ -213,6 +221,16 @@ export const dictionaries = {
       "add": {
         "button": "إضافة المشاركين"
       }
+    },
+    "wallpapers": {
+      "effects": {
+        "classic": "كلاسيكي",
+        "solar": "الوهج الشمسي",
+        "influence": "تأثير",
+        "pino": "بينو نوار",
+        "sunset": "غروب وردي",
+        "fire": "موجة حر نارية"
+      }
     }
   },
   "de-DE": {
@@ -231,7 +249,7 @@ export const dictionaries = {
       "contacts": {
         "group": "Gruppe erstellen",
         "title": "Freunde",
-        "contact": "Freund"
+        "contact": "Freund hinzufügen"
       },
       "addSelected": "Ausgewählte hinzufügen",
       "cancel": "Abbrechen",
@@ -244,7 +262,9 @@ export const dictionaries = {
       },
       "expenses": {
         "split": "Aufteilen"
-      }
+      },
+      "scan": "Scannen",
+      "upload": "Wähle selbst"
     },
     "nav": {
       "home": "Startseite",
@@ -267,7 +287,13 @@ export const dictionaries = {
         "example": (name, gender) => gender === "he" ? `${name} hat eine Ausgabe hinzugefügt` : gender === "she" ? `${name} hat eine Ausgabe hinzugefügt` : `${name} hat eine Ausgabe hinzugefügt`
       },
       "background": {
-        "title": "Hintergrund"
+        "title": "Hintergrund",
+        "pattern": "Vorlage",
+        "picture": "Bild",
+        "cta": "Hintergrund anwenden"
+      },
+      "notifications": {
+        "title": "Benachrichtigungen"
       }
     },
     "form": {
@@ -327,7 +353,7 @@ export const dictionaries = {
     "groups": {
       "leave": "Gedrückt halten zum Verlassen",
       "name": {
-        "description": "Alle Gruppenmitglieder sehen diesen Namen",
+        "description": "Probier mal, ein Emoji hinzuzufügen ✨",
         "placeholder": "Name eingeben"
       },
       "members": {
@@ -426,6 +452,16 @@ export const dictionaries = {
       "add": {
         "button": "Teilnehmende hinzufügen"
       }
+    },
+    "wallpapers": {
+      "effects": {
+        "classic": "Klassisch",
+        "solar": "Sonnenflare",
+        "influence": "Einfluss",
+        "pino": "Pinot Noir",
+        "sunset": "Rosaroter Sonnenuntergang",
+        "fire": "Hitzewelle Feuer"
+      }
     }
   },
   "en-US": {
@@ -444,7 +480,7 @@ export const dictionaries = {
       "contacts": {
         "group": "Create Group",
         "title": "Friends",
-        "contact": "Friend"
+        "contact": "Add Friend"
       },
       "addSelected": "Add selected",
       "cancel": "Cancel",
@@ -457,7 +493,9 @@ export const dictionaries = {
       },
       "expenses": {
         "split": "Split"
-      }
+      },
+      "scan": "Scan",
+      "upload": "Choose your own"
     },
     "nav": {
       "home": "Home",
@@ -480,7 +518,13 @@ export const dictionaries = {
         "example": (name, gender) => gender === "he" ? `${name} added an expense` : gender === "she" ? `${name} added an expense` : `${name} added an expense`
       },
       "background": {
-        "title": "Background"
+        "title": "Background",
+        "pattern": "Pattern",
+        "picture": "Picture",
+        "cta": "Apply background"
+      },
+      "notifications": {
+        "title": "Notifications"
       }
     },
     "form": {
@@ -540,7 +584,7 @@ export const dictionaries = {
     "groups": {
       "leave": "Hold to leave",
       "name": {
-        "description": "All group members will see this name",
+        "description": "Try adding an emoji ✨",
         "placeholder": "Enter name"
       },
       "members": {
@@ -639,6 +683,16 @@ export const dictionaries = {
       "add": {
         "button": "Add participants"
       }
+    },
+    "wallpapers": {
+      "effects": {
+        "classic": "Classic",
+        "solar": "Solar Flare",
+        "influence": "Influence",
+        "pino": "Pinot Noir",
+        "sunset": "Pink Sunset",
+        "fire": "Heatwave Fire"
+      }
     }
   },
   "es-ES": {
@@ -657,7 +711,7 @@ export const dictionaries = {
       "contacts": {
         "group": "Crear grupo",
         "title": "Amigos",
-        "contact": "Amigo"
+        "contact": "Añadir amigo"
       },
       "addSelected": "Agregar seleccionado(s)",
       "cancel": "Cancelar",
@@ -670,7 +724,9 @@ export const dictionaries = {
       },
       "expenses": {
         "split": "Dividir"
-      }
+      },
+      "scan": "Escanear",
+      "upload": "Elige el tuyo"
     },
     "nav": {
       "home": "Inicio",
@@ -693,7 +749,13 @@ export const dictionaries = {
         "example": (name, gender) => gender === "he" ? `${name} añadió un gasto` : gender === "she" ? `${name} añadió un gasto` : `${name} añadió un gasto`
       },
       "background": {
-        "title": "Fondo"
+        "title": "Fondo",
+        "pattern": "Patrón",
+        "picture": "Foto",
+        "cta": "Aplicar fondo"
+      },
+      "notifications": {
+        "title": "Notificaciones"
       }
     },
     "form": {
@@ -753,7 +815,7 @@ export const dictionaries = {
     "groups": {
       "leave": "Mantén pulsado para salir",
       "name": {
-        "description": "Todos los miembros del grupo verán este nombre",
+        "description": "Prueba a añadir un emoji ✨",
         "placeholder": "Introduce el nombre"
       },
       "members": {
@@ -852,6 +914,16 @@ export const dictionaries = {
       "add": {
         "button": "Agregar participantes"
       }
+    },
+    "wallpapers": {
+      "effects": {
+        "classic": "Clásico",
+        "solar": "Destello solar",
+        "influence": "Influencia",
+        "pino": "Pinot Noir",
+        "sunset": "Atardecer Rosado",
+        "fire": "Fuego de ola de calor"
+      }
     }
   },
   "fr-FR": {
@@ -870,7 +942,7 @@ export const dictionaries = {
       "contacts": {
         "group": "Créer un groupe",
         "title": "Amis",
-        "contact": "Ami"
+        "contact": "Ajouter un ami"
       },
       "addSelected": "Ajouter la sélection",
       "cancel": "Annuler",
@@ -883,7 +955,9 @@ export const dictionaries = {
       },
       "expenses": {
         "split": "Partager"
-      }
+      },
+      "scan": "Scanner",
+      "upload": "Choisis le tien"
     },
     "nav": {
       "home": "Accueil",
@@ -906,7 +980,13 @@ export const dictionaries = {
         "example": (name, gender) => gender === "he" ? `${name} a ajouté une dépense` : gender === "she" ? `${name} a ajouté une dépense` : `${name} a ajouté une dépense`
       },
       "background": {
-        "title": "Arrière-plan"
+        "title": "Arrière-plan",
+        "pattern": "Modèle",
+        "picture": "Photo",
+        "cta": "Appliquer l’arrière-plan"
+      },
+      "notifications": {
+        "title": "Notifications"
       }
     },
     "form": {
@@ -966,7 +1046,7 @@ export const dictionaries = {
     "groups": {
       "leave": "Maintenez appuyé pour quitter",
       "name": {
-        "description": "Tous les membres du groupe verront ce nom",
+        "description": "Essaie d’ajouter un émoji ✨",
         "placeholder": "Saisir le nom"
       },
       "members": {
@@ -1065,6 +1145,16 @@ export const dictionaries = {
       "add": {
         "button": "Ajouter des participants"
       }
+    },
+    "wallpapers": {
+      "effects": {
+        "classic": "Classique",
+        "solar": "Éruption solaire",
+        "influence": "Influence",
+        "pino": "Pinot Noir",
+        "sunset": "Coucher de soleil rose",
+        "fire": "Feu de canicule"
+      }
     }
   },
   "hi-IN": {
@@ -1083,7 +1173,7 @@ export const dictionaries = {
       "contacts": {
         "group": "समूह बनाएँ",
         "title": "मित्र",
-        "contact": "मित्र"
+        "contact": "दोस्त जोड़ो"
       },
       "addSelected": "चयनित जोड़ें",
       "cancel": "रद्द करें",
@@ -1096,7 +1186,9 @@ export const dictionaries = {
       },
       "expenses": {
         "split": "विभाजित करें"
-      }
+      },
+      "scan": "स्कैन करें",
+      "upload": "अपना खुद चुनो"
     },
     "nav": {
       "home": "मुख्य पृष्ठ",
@@ -1119,7 +1211,13 @@ export const dictionaries = {
         "example": (name, gender) => gender === "he" ? `${name} ने खर्च जोड़ा` : gender === "she" ? `${name} ने खर्च जोड़ी` : `${name} ने खर्च जोड़ा(जोड़ी)`
       },
       "background": {
-        "title": "पृष्ठभूमि"
+        "title": "पृष्ठभूमि",
+        "pattern": "पैटर्न",
+        "picture": "तस्वीर",
+        "cta": "बैकग्राउंड लागू करें"
+      },
+      "notifications": {
+        "title": "सूचनाएँ"
       }
     },
     "form": {
@@ -1179,7 +1277,7 @@ export const dictionaries = {
     "groups": {
       "leave": "छोड़ने के लिए दबाए रखें",
       "name": {
-        "description": "सभी समूह सदस्य यह नाम देखेंगे",
+        "description": "इमोजी जोड़ कर देखो ✨",
         "placeholder": "नाम दर्ज करें"
       },
       "members": {
@@ -1278,6 +1376,16 @@ export const dictionaries = {
       "add": {
         "button": "प्रतिभागी जोड़ें"
       }
+    },
+    "wallpapers": {
+      "effects": {
+        "classic": "क्लासिक",
+        "solar": "सौर चमक",
+        "influence": "प्रभाव",
+        "pino": "पिनोट नोइर",
+        "sunset": "गुलाबी सूर्यास्त",
+        "fire": "हीटवेव फायर"
+      }
     }
   },
   "it-IT": {
@@ -1296,7 +1404,7 @@ export const dictionaries = {
       "contacts": {
         "group": "Crea gruppo",
         "title": "Amici",
-        "contact": "Amico"
+        "contact": "Aggiungi amico"
       },
       "addSelected": "Aggiungi selezionati",
       "cancel": "Annulla",
@@ -1309,7 +1417,9 @@ export const dictionaries = {
       },
       "expenses": {
         "split": "Dividi"
-      }
+      },
+      "scan": "Scansiona",
+      "upload": "Scegli il tuo"
     },
     "nav": {
       "home": "Home",
@@ -1332,7 +1442,13 @@ export const dictionaries = {
         "example": (name, gender) => gender === "he" ? `${name} ha aggiunto una spesa` : gender === "she" ? `${name} ha aggiunto una spesa` : `${name} ha aggiunto una spesa`
       },
       "background": {
-        "title": "Sfondo"
+        "title": "Sfondo",
+        "pattern": "Modello",
+        "picture": "Foto",
+        "cta": "Applica sfondo"
+      },
+      "notifications": {
+        "title": "Notifiche"
       }
     },
     "form": {
@@ -1392,7 +1508,7 @@ export const dictionaries = {
     "groups": {
       "leave": "Tieni premuto per uscire",
       "name": {
-        "description": "Tutti i membri del gruppo vedranno questo nome",
+        "description": "Prova ad aggiungere una emoji ✨",
         "placeholder": "Inserisci nome"
       },
       "members": {
@@ -1491,6 +1607,16 @@ export const dictionaries = {
       "add": {
         "button": "Aggiungi partecipanti"
       }
+    },
+    "wallpapers": {
+      "effects": {
+        "classic": "Classico",
+        "solar": "Bagliore solare",
+        "influence": "Influenza",
+        "pino": "Pinot Noir",
+        "sunset": "Tramonto Rosa",
+        "fire": "Incendio da ondata di calore"
+      }
     }
   },
   "ja-JP": {
@@ -1509,7 +1635,7 @@ export const dictionaries = {
       "contacts": {
         "group": "グループを作成",
         "title": "友達",
-        "contact": "友達"
+        "contact": "友だちを追加"
       },
       "addSelected": "選択したものを追加",
       "cancel": "キャンセル",
@@ -1522,7 +1648,9 @@ export const dictionaries = {
       },
       "expenses": {
         "split": "割り勘"
-      }
+      },
+      "scan": "スキャン",
+      "upload": "自分のを選んで"
     },
     "nav": {
       "home": "ホーム",
@@ -1545,7 +1673,13 @@ export const dictionaries = {
         "example": (name, gender) => `${name} さんが支出を追加しました`
       },
       "background": {
-        "title": "背景"
+        "title": "背景",
+        "pattern": "パターン",
+        "picture": "写真",
+        "cta": "背景を適用"
+      },
+      "notifications": {
+        "title": "通知"
       }
     },
     "form": {
@@ -1605,7 +1739,7 @@ export const dictionaries = {
     "groups": {
       "leave": "長押しして退出",
       "name": {
-        "description": "すべてのグループメンバーがこの名前を表示します",
+        "description": "絵文字を追加してみて ✨",
         "placeholder": "名前を入力"
       },
       "members": {
@@ -1704,6 +1838,16 @@ export const dictionaries = {
       "add": {
         "button": "参加者を追加"
       }
+    },
+    "wallpapers": {
+      "effects": {
+        "classic": "クラシック",
+        "solar": "ソーラーフレア",
+        "influence": "影響",
+        "pino": "ピノ・ノワール",
+        "sunset": "ピンクサンセット",
+        "fire": "熱波の炎"
+      }
     }
   },
   "ko-KR": {
@@ -1722,7 +1866,7 @@ export const dictionaries = {
       "contacts": {
         "group": "그룹 만들기",
         "title": "친구",
-        "contact": "친구"
+        "contact": "친구 추가"
       },
       "addSelected": "선택 항목 추가",
       "cancel": "취소",
@@ -1735,7 +1879,9 @@ export const dictionaries = {
       },
       "expenses": {
         "split": "나누기"
-      }
+      },
+      "scan": "스캔",
+      "upload": "네 것으로 골라"
     },
     "nav": {
       "home": "홈",
@@ -1758,7 +1904,13 @@ export const dictionaries = {
         "example": (name, gender) => `${name}님이 지출을 추가했습니다`
       },
       "background": {
-        "title": "배경"
+        "title": "배경",
+        "pattern": "패턴",
+        "picture": "사진",
+        "cta": "배경 적용"
+      },
+      "notifications": {
+        "title": "알림"
       }
     },
     "form": {
@@ -1818,7 +1970,7 @@ export const dictionaries = {
     "groups": {
       "leave": "길게 눌러서 나가기",
       "name": {
-        "description": "모든 그룹 구성원이 이 이름을 볼 수 있습니다",
+        "description": "이모지를 추가해봐 ✨",
         "placeholder": "이름 입력"
       },
       "members": {
@@ -1917,6 +2069,16 @@ export const dictionaries = {
       "add": {
         "button": "참가자 추가"
       }
+    },
+    "wallpapers": {
+      "effects": {
+        "classic": "클래식",
+        "solar": "태양 플레어",
+        "influence": "영향력",
+        "pino": "피노 누아",
+        "sunset": "핑크 선셋",
+        "fire": "폭염 화재"
+      }
     }
   },
   "nl-NL": {
@@ -1935,7 +2097,7 @@ export const dictionaries = {
       "contacts": {
         "group": "Groep aanmaken",
         "title": "Vrienden",
-        "contact": "Vriend"
+        "contact": "Vriend toevoegen"
       },
       "addSelected": "Geselecteerde toevoegen",
       "cancel": "Annuleren",
@@ -1948,7 +2110,9 @@ export const dictionaries = {
       },
       "expenses": {
         "split": "Splitsen"
-      }
+      },
+      "scan": "Scannen",
+      "upload": "Kies je eigen"
     },
     "nav": {
       "home": "Home",
@@ -1971,7 +2135,13 @@ export const dictionaries = {
         "example": (name, gender) => gender === "he" ? `${name} heeft een uitgave toegevoegd` : gender === "she" ? `${name} heeft een uitgave toegevoegd` : `${name} heeft een uitgave toegevoegd`
       },
       "background": {
-        "title": "Achtergrond"
+        "title": "Achtergrond",
+        "pattern": "Patroon",
+        "picture": "Foto",
+        "cta": "Achtergrond toepassen"
+      },
+      "notifications": {
+        "title": "Meldingen"
       }
     },
     "form": {
@@ -2031,7 +2201,7 @@ export const dictionaries = {
     "groups": {
       "leave": "Vasthouden om te verlaten",
       "name": {
-        "description": "Alle groepsleden kunnen deze naam zien",
+        "description": "Probeer eens een emoji toe te voegen ✨",
         "placeholder": "Naam invoeren"
       },
       "members": {
@@ -2130,6 +2300,16 @@ export const dictionaries = {
       "add": {
         "button": "Deelnemers toevoegen"
       }
+    },
+    "wallpapers": {
+      "effects": {
+        "classic": "Klassiek",
+        "solar": "Zonnevlam",
+        "influence": "Invloed",
+        "pino": "Pinot Noir",
+        "sunset": "Roze Zonsondergang",
+        "fire": "Hittegolfvuur"
+      }
     }
   },
   "ru-RU": {
@@ -2148,7 +2328,7 @@ export const dictionaries = {
       "contacts": {
         "group": "Создать группу",
         "title": "Друзья",
-        "contact": "Друг"
+        "contact": "Добавить друга"
       },
       "addSelected": "Добавить выбранные",
       "cancel": "Отмена",
@@ -2161,7 +2341,9 @@ export const dictionaries = {
       },
       "expenses": {
         "split": "Разделить"
-      }
+      },
+      "scan": "Сканировать",
+      "upload": "Выбери своё"
     },
     "nav": {
       "home": "Главная",
@@ -2184,7 +2366,13 @@ export const dictionaries = {
         "example": (name, gender) => gender === "he" ? `${name} добавил расход` : gender === "she" ? `${name} добавила расход` : `${name} добавил(а) расход`
       },
       "background": {
-        "title": "Фон"
+        "title": "Фон",
+        "pattern": "Шаблон",
+        "picture": "Фото",
+        "cta": "Применить фон"
+      },
+      "notifications": {
+        "title": "Уведомления"
       }
     },
     "form": {
@@ -2244,7 +2432,7 @@ export const dictionaries = {
     "groups": {
       "leave": "Удерживайте, чтобы выйти",
       "name": {
-        "description": "Все участники группы увидят это имя",
+        "description": "Попробуй добавить эмодзи ✨",
         "placeholder": "Введите имя"
       },
       "members": {
@@ -2343,6 +2531,16 @@ export const dictionaries = {
       "add": {
         "button": "Добавить участников"
       }
+    },
+    "wallpapers": {
+      "effects": {
+        "classic": "Классика",
+        "solar": "Солнечная вспышка",
+        "influence": "Влияние",
+        "pino": "Пино Нуар",
+        "sunset": "Розовый закат",
+        "fire": "Жара и огонь"
+      }
     }
   },
   "sw-TZ": {
@@ -2361,7 +2559,7 @@ export const dictionaries = {
       "contacts": {
         "group": "Unda Kikundi",
         "title": "Marafiki",
-        "contact": "Rafiki"
+        "contact": "Ongeza rafiki"
       },
       "addSelected": "Ongeza zilizochaguliwa",
       "cancel": "Ghairi",
@@ -2374,7 +2572,9 @@ export const dictionaries = {
       },
       "expenses": {
         "split": "Gawanya"
-      }
+      },
+      "scan": "Kagua",
+      "upload": "Chagua yako mwenyewe"
     },
     "nav": {
       "home": "Mwanzo",
@@ -2397,7 +2597,13 @@ export const dictionaries = {
         "example": (name, gender) => gender === "he" ? `${name} ameongeza matumizi` : gender === "she" ? `${name} ameongeza matumizi` : `${name} ameongeza matumizi`
       },
       "background": {
-        "title": "Mandharinyuma"
+        "title": "Mandharinyuma",
+        "pattern": "Mfano",
+        "picture": "Picha",
+        "cta": "Tumia mandharinyuma"
+      },
+      "notifications": {
+        "title": "Arifa"
       }
     },
     "form": {
@@ -2457,7 +2663,7 @@ export const dictionaries = {
     "groups": {
       "leave": "Shikilia kuondoka",
       "name": {
-        "description": "Wanachama wote wa kundi wataona jina hili",
+        "description": "Jaribu kuongeza emoji ✨",
         "placeholder": "Weka jina"
       },
       "members": {
@@ -2556,6 +2762,16 @@ export const dictionaries = {
       "add": {
         "button": "Ongeza washiriki"
       }
+    },
+    "wallpapers": {
+      "effects": {
+        "classic": "Klasiki",
+        "solar": "Miali ya Jua",
+        "influence": "Ushawishi",
+        "pino": "Pinot Noir",
+        "sunset": "Machweo ya Waridi",
+        "fire": "Moto wa Joto Kali"
+      }
     }
   },
   "tr-TR": {
@@ -2574,7 +2790,7 @@ export const dictionaries = {
       "contacts": {
         "group": "Grup Oluştur",
         "title": "Arkadaşlar",
-        "contact": "Arkadaş"
+        "contact": "Arkadaş ekle"
       },
       "addSelected": "Seçileni ekle",
       "cancel": "İptal",
@@ -2587,7 +2803,9 @@ export const dictionaries = {
       },
       "expenses": {
         "split": "Böl"
-      }
+      },
+      "scan": "Tara",
+      "upload": "Kendininkini seç"
     },
     "nav": {
       "home": "Ana Sayfa",
@@ -2610,7 +2828,13 @@ export const dictionaries = {
         "example": (name, gender) => `${name} bir harcama ekledi`
       },
       "background": {
-        "title": "Arka plan"
+        "title": "Arka plan",
+        "pattern": "Şablon",
+        "picture": "Fotoğraf",
+        "cta": "Arka planı uygula"
+      },
+      "notifications": {
+        "title": "Bildirimler"
       }
     },
     "form": {
@@ -2670,7 +2894,7 @@ export const dictionaries = {
     "groups": {
       "leave": "Ayrılmak için basılı tut",
       "name": {
-        "description": "Tüm grup üyeleri bu ismi görecek",
+        "description": "Bir emoji eklemeyi dene ✨",
         "placeholder": "Ad girin"
       },
       "members": {
@@ -2769,6 +2993,16 @@ export const dictionaries = {
       "add": {
         "button": "Katılımcı ekle"
       }
+    },
+    "wallpapers": {
+      "effects": {
+        "classic": "Klasik",
+        "solar": "Güneş Patlaması",
+        "influence": "Etkisi",
+        "pino": "Pinot Noir",
+        "sunset": "Pembe Günbatımı",
+        "fire": "Sıcak Dalga Ateşi"
+      }
     }
   },
   "uk-UA": {
@@ -2787,7 +3021,7 @@ export const dictionaries = {
       "contacts": {
         "group": "Створити групу",
         "title": "Друзі",
-        "contact": "Друг"
+        "contact": "Додати друга"
       },
       "addSelected": "Додати вибране",
       "cancel": "Скасувати",
@@ -2800,7 +3034,9 @@ export const dictionaries = {
       },
       "expenses": {
         "split": "Розділити"
-      }
+      },
+      "scan": "Сканувати",
+      "upload": "Вибери своє"
     },
     "nav": {
       "home": "Головна",
@@ -2823,7 +3059,13 @@ export const dictionaries = {
         "example": (name, gender) => gender === "he" ? `${name} додав витрату` : gender === "she" ? `${name} додала витрату` : `${name} додав(ла) витрату`
       },
       "background": {
-        "title": "Тло"
+        "title": "Тло",
+        "pattern": "Шаблон",
+        "picture": "Фото",
+        "cta": "Застосувати фон"
+      },
+      "notifications": {
+        "title": "Сповіщення"
       }
     },
     "form": {
@@ -2883,7 +3125,7 @@ export const dictionaries = {
     "groups": {
       "leave": "Утримуйте, щоб вийти",
       "name": {
-        "description": "Усі учасники групи побачать це ім’я",
+        "description": "Спробуй додати емодзі ✨",
         "placeholder": "Введіть ім’я"
       },
       "members": {
@@ -2982,6 +3224,16 @@ export const dictionaries = {
       "add": {
         "button": "Додати учасників"
       }
+    },
+    "wallpapers": {
+      "effects": {
+        "classic": "Класика",
+        "solar": "Сонячний спалах",
+        "influence": "Вплив",
+        "pino": "Піно Нуар",
+        "sunset": "Рожевий захід сонця",
+        "fire": "Спека й пожежа"
+      }
     }
   },
   "zh-CN": {
@@ -3000,7 +3252,7 @@ export const dictionaries = {
       "contacts": {
         "group": "创建群组",
         "title": "朋友",
-        "contact": "朋友"
+        "contact": "添加好友"
       },
       "addSelected": "添加已选项",
       "cancel": "取消",
@@ -3013,7 +3265,9 @@ export const dictionaries = {
       },
       "expenses": {
         "split": "分摊"
-      }
+      },
+      "scan": "扫描",
+      "upload": "选你自己的"
     },
     "nav": {
       "home": "首页",
@@ -3036,7 +3290,13 @@ export const dictionaries = {
         "example": (name, gender) => `${name} 添加了一笔支出`
       },
       "background": {
-        "title": "背景"
+        "title": "背景",
+        "pattern": "模板",
+        "picture": "照片",
+        "cta": "应用背景"
+      },
+      "notifications": {
+        "title": "通知"
       }
     },
     "form": {
@@ -3096,7 +3356,7 @@ export const dictionaries = {
     "groups": {
       "leave": "长按退出",
       "name": {
-        "description": "所有群组成员都能看到这个名称",
+        "description": "试着加个表情符号 ✨",
         "placeholder": "输入名称"
       },
       "members": {
@@ -3194,6 +3454,16 @@ export const dictionaries = {
     "participants": {
       "add": {
         "button": "添加参与者"
+      }
+    },
+    "wallpapers": {
+      "effects": {
+        "classic": "经典",
+        "solar": "太阳耀斑",
+        "influence": "影响",
+        "pino": "黑皮诺",
+        "sunset": "粉色日落",
+        "fire": "热浪火焰"
       }
     }
   }

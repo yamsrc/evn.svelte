@@ -12,7 +12,7 @@ actions:
   contacts:
     group: समूह बनाएँ
     title: मित्र
-    contact: मित्र
+    contact: दोस्त जोड़ो
   addSelected: चयनित जोड़ें
   cancel: रद्द करें
   search: खोजें
@@ -23,6 +23,8 @@ actions:
     adventure: साहसिक यात्रा शुरू करें
   expenses:
     split: विभाजित करें
+  scan: स्कैन करें
+  upload: अपना खुद चुनो
 nav:
   home: मुख्य पृष्ठ
   profile: मैं
@@ -50,6 +52,11 @@ profile:
       "she" ? `${name} ने खर्च जोड़ी` : `${name} ने खर्च जोड़ा(जोड़ी)`
   background:
     title: पृष्ठभूमि
+    pattern: पैटर्न
+    picture: तस्वीर
+    cta: बैकग्राउंड लागू करें
+  notifications:
+    title: सूचनाएँ
 form:
   enterName: नाम दर्ज करें
 onboarding:
@@ -98,7 +105,7 @@ join:
 groups:
   leave: छोड़ने के लिए दबाए रखें
   name:
-    description: सभी समूह सदस्य यह नाम देखेंगे
+    description: इमोजी जोड़ कर देखो ✨
     placeholder: नाम दर्ज करें
   members:
     title: सदस्य
@@ -175,3 +182,11 @@ adventures:
 participants:
   add:
     button: प्रतिभागी जोड़ें
+wallpapers:
+  effects:
+    classic: क्लासिक
+    solar: सौर चमक
+    influence: प्रभाव
+    pino: पिनोट नोइर
+    sunset: गुलाबी सूर्यास्त
+    fire: हीटवेव फायर

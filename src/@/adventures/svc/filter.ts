@@ -1,5 +1,5 @@
-import { search } from '$lib/tools'
 import { accounts } from '@/accounts'
+import { search } from '$lib/tools'
 import type { Adventure } from './net'
 
 export function filter(adventures: Adventure[], query?: string): Adventure[] {

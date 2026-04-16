@@ -12,7 +12,7 @@ actions:
   contacts:
     group: Grup Oluştur
     title: Arkadaşlar
-    contact: Arkadaş
+    contact: Arkadaş ekle
   addSelected: Seçileni ekle
   cancel: İptal
   search: Ara
@@ -23,6 +23,8 @@ actions:
     adventure: Macera Başlat
   expenses:
     split: Böl
+  scan: Tara
+  upload: Kendininkini seç
 nav:
   home: Ana Sayfa
   profile: Ben
@@ -46,6 +48,11 @@ profile:
       (name, gender) => `${name} bir harcama ekledi`
   background:
     title: Arka plan
+    pattern: Şablon
+    picture: Fotoğraf
+    cta: Arka planı uygula
+  notifications:
+    title: Bildirimler
 form:
   enterName: İsim girin
 onboarding:
@@ -96,7 +103,7 @@ join:
 groups:
   leave: Ayrılmak için basılı tut
   name:
-    description: Tüm grup üyeleri bu ismi görecek
+    description: Bir emoji eklemeyi dene ✨
     placeholder: Ad girin
   members:
     title: Üyeler
@@ -173,3 +180,11 @@ adventures:
 participants:
   add:
     button: Katılımcı ekle
+wallpapers:
+  effects:
+    classic: Klasik
+    solar: Güneş Patlaması
+    influence: Etkisi
+    pino: Pinot Noir
+    sunset: Pembe Günbatımı
+    fire: Sıcak Dalga Ateşi

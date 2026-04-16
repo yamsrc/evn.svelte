@@ -91,3 +91,23 @@ adventures:
       !js
       (name, gender) => `${name} ti invita a unirti all’avventura`
     heading: Invito all’avventura
+receipts:
+  og:
+    title: |-
+      !js
+      (title) => `Unisciti a ${title} su Evnly`
+    description: >-
+      Dividi uno scontrino e tieni traccia di chi deve cosa a chi — tutto
+      insieme su Evnly.
+  dialog:
+    join: Unisciti
+    decline: Rifiuta
+    title: Invito a dividere il conto
+    description: >-
+      !js
+
+      (name, gender) => gender === "he" ? `${name} ti invita a dividere un
+      conto` : gender === "she" ? `${name} ti invita a dividere un conto` :
+      `${name} ti invita a dividere un conto`
+    balance:
+      total: Totale conto

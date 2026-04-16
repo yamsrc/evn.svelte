@@ -37,3 +37,10 @@ transfers:
     received: |-
       !js
       (gender) => "Je hebt ontvangen"
+action: {}
+actions:
+  delete: Bijlage verwijderen
+template:
+  toggle:
+    label: Opslaan als sjabloon
+    description: Later gebruiken bij Snelle acties

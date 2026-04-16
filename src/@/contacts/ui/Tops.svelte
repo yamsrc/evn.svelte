@@ -1,9 +1,9 @@
 <script lang="ts">
-  import Leaderboard from './Leaderboard.svelte'
   import { dict } from './intl'
-  import type { Entry } from './Leaderboard'
-  import type { Props } from './Tops'
+  import Leaderboard from './Leaderboard.svelte'
   import type { Contact } from '@/contacts'
+  import type { Props } from './Tops'
+  import type { Entry } from './Leaderboard'
 
   const { contacts }: Props = $props()
 

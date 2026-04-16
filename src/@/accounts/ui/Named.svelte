@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { dict } from '$lib/intl'
-  import { Header } from '@/app/ui'
-  import Section from '@/app/ui/Section.svelte'
   import { account } from '@/iam'
+  import Section from '@/app/ui/Section.svelte'
+  import { Header } from '@/app/ui'
+  import { dict } from '$lib/intl'
   import Name from './onboarding/Name.svelte'
   import type { Props } from './Named'
 

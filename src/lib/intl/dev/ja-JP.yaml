@@ -12,12 +12,34 @@ components:
       (count) => `${count}件を表示`
   graph:
     title: 債務グラフ
+  receipts:
+    title: レシート
+    upload:
+      label: アップロード
+    progress:
+      uploading:
+        title: アップロード中
+        comment: 通常は数瞬で完了します
+      processing:
+        comment: もう少しで到着です、頑張ってください
+        title: 処理中
+      ready:
+        title: 準備完了
+        comment: |-
+          !js
+          (ms) => `${(ms / 1000).toFixed(1)}秒で完了`
   picture:
     title: Picture
   participants:
     title: 参加者
     managedContactsCreation: 管理対象の連絡先作成ボタンを表示
     shareUrl: URLを共有
+  fullscreen:
+    title: Fullscreen
+    attachment: どの支出にも添付ファイルを追加しよう
+    delete: 長押しで削除
+  invitation:
+    title: 招待
 transmission:
   title: Transmission
   permission:
@@ -28,3 +50,14 @@ transmission:
   ping: Ping
 loading:
   title: ロード画面
+receipts:
+  upload: {}
+  dropzone:
+    label: ドロップゾーン
+actions:
+  continue: 続行
+nav:
+  home: ホーム
+  components: コンポーネント
+  transmission: トランスミッション
+  app: アプリ

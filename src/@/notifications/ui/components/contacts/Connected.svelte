@@ -1,8 +1,8 @@
 <script lang="ts">
   import { Async, ok } from 'svas'
-  import { Picture } from '@/accounts/ui'
-  import { contacts } from '@/contacts'
   import { dict } from '@/notifications/ui/intl'
+  import { contacts } from '@/contacts'
+  import { Picture } from '@/accounts/ui'
   import Base from '../Base.svelte'
   import type { Props } from './Connected'
 

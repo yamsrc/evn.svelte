@@ -1,5 +1,5 @@
-import type { Value } from './Context'
 import type { ClassValue } from 'svelte/elements'
+import type { Value } from './Context'
 
 export interface Props {
   value: Value

@@ -1,21 +1,19 @@
 <script lang="ts">
-  import { Pencil } from '@lucide/svelte'
   import { Async } from 'svas'
-  import { page } from '$app/state'
-  import { Actions } from '$com/shell'
-  import { dict } from '$lib/intl'
+  import { Pencil } from '@lucide/svelte'
+  import { Looking } from '@/notifications/ui'
+  import { Attachments, Details } from '@/expenses/ui'
+  import { expenses } from '@/expenses'
   import { Action, Section } from '@/app/ui'
   import { Header } from '@/app/ui'
-  import { expenses } from '@/expenses'
-  import { Attachments, Details } from '@/expenses/ui'
-  import { seen } from '@/notifications'
+  import { dict } from '$lib/intl'
+  import { Actions } from '$com/shell'
+  import { page } from '$app/state'
 
   const id = $derived(page.params.id) as string
-
-  $effect(() => {
-    void seen('expenses', id)
-  })
 </script>
+
+<Looking domain="expenses" key={id} />
 
 <Async store={expenses}>
   {#snippet awaited(expenses)}
@@ -28,7 +26,9 @@
         </Header.Root>
       </Section>
 
-      <Attachments attachments={expense.attachments} editable={false} />
+      {#if expense.attachments.length > 0}
+        <Attachments attachments={expense.attachments} />
+      {/if}
 
       <Section>
         <Details.Description {expense} />
@@ -41,12 +41,12 @@
       <Section>
         <Details.Participants {expense} />
       </Section>
-
-      <Actions>
-        <Action id="expenses-edit-action" href={`/expenses/editor/${id}/`}>
-          <Pencil />
-        </Action>
-      </Actions>
     {/if}
   {/snippet}
 </Async>
+
+<Actions>
+  <Action id="expenses-edit-action" href={`/expenses/editor/${id}/`}>
+    <Pencil />
+  </Action>
+</Actions>

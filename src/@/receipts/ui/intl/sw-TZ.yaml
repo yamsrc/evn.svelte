@@ -1,0 +1,44 @@
+splitter:
+  stack:
+    claim: Dai zote
+    release: Achia
+leave:
+  label: Shikilia kuondoka
+delete:
+  label: Shikilia kufuta
+me: Mimi
+overview:
+  total: Jumla
+feedback:
+  question: Uchunguzi ulitokeaje?
+  down: Tutaangalia.
+  thanks: Asante!
+autoclose:
+  description: Sasisha salio moja kwa moja kila mtu akimaliza, au subiri uendelee mwenyewe
+  title: Jaza moja kwa moja
+  payer:
+    title: Imelipwa na
+close:
+  label: Endelea
+  hold: Shikilia ili uendelee
+unassigned:
+  - one: "{n} kipengee kisichogawiwa"
+    other: "{n} vipengee visivyogawiwa"
+pending:
+  status: Shikilia kidogo, karibu tumemaliza
+  description: Kawaida huchukua muda mfupi tu
+failed:
+  title: Kuna kitu hakiko sawa
+  description: >-
+    Nimejitahidi kweli, lakini hii haionekani kama risiti kwangu. Hebu tujaribu
+    tena!
+  retry:
+    label: Jaribu tena
+state:
+  uploading: Kwa kawaida huchukua sekunde chache tu
+  processing: Subiri kidogo, tumekaribia kufika
+action:
+  label: Changanua
+extras:
+  included: Inachukuliwa kuwa ada na punguzo tayari vimejumuishwa
+  incomplete: Inaweza kudhibitiwa baada ya vitu vyote kudaiwa

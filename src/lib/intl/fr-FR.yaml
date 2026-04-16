@@ -12,7 +12,7 @@ actions:
   contacts:
     group: Créer un groupe
     title: Amis
-    contact: Ami
+    contact: Ajouter un ami
   addSelected: Ajouter la sélection
   cancel: Annuler
   search: Rechercher
@@ -23,6 +23,8 @@ actions:
     adventure: Commencer l’aventure
   expenses:
     split: Partager
+  scan: Scanner
+  upload: Choisis le tien
 nav:
   home: Accueil
   profile: Moi
@@ -52,6 +54,11 @@ profile:
       dépense`
   background:
     title: Arrière-plan
+    pattern: Modèle
+    picture: Photo
+    cta: Appliquer l’arrière-plan
+  notifications:
+    title: Notifications
 form:
   enterName: Saisissez le nom
 onboarding:
@@ -100,7 +107,7 @@ join:
 groups:
   leave: Maintenez appuyé pour quitter
   name:
-    description: Tous les membres du groupe verront ce nom
+    description: Essaie d’ajouter un émoji ✨
     placeholder: Saisir le nom
   members:
     title: Membres
@@ -181,3 +188,11 @@ adventures:
 participants:
   add:
     button: Ajouter des participants
+wallpapers:
+  effects:
+    classic: Classique
+    solar: Éruption solaire
+    influence: Influence
+    pino: Pinot Noir
+    sunset: Coucher de soleil rose
+    fire: Feu de canicule

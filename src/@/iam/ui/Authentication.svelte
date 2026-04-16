@@ -1,13 +1,13 @@
 <script lang="ts">
-  import { AtSign, FingerprintPattern } from '@lucide/svelte'
   import { onMount } from 'svelte'
-  import { cn } from '$lib/utils'
-  import * as Tabs from '$ui/tabs'
-  import { dict } from '@/iam/ui/intl'
+  import { AtSign, FingerprintPattern } from '@lucide/svelte'
   import { supported } from '@/passkeys'
-  import { Authentication as OIDC } from './oidc'
-  import { Authentication as Passkey } from './passkey'
+  import { dict } from '@/iam/ui/intl'
+  import * as Tabs from '$ui/tabs'
+  import { cn } from '$lib/utils'
   import { Authentication as Password } from './password'
+  import { Authentication as Passkey } from './passkey'
+  import { Authentication as OIDC } from './oidc'
   import type { Props } from './Authentication'
 
   const { class: classes, account, oidc, oncreate }: Props = $props()

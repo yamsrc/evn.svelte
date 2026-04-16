@@ -71,6 +71,21 @@ export const dictionaries = {
         "description": (name, gender) => gender === "he" ? `${name} يدعوك للانضمام إلى المغامرة` : gender === "she" ? `${name} تدعوك للانضمام إلى المغامرة` : `${name} يدعوك/تدعوك للانضمام إلى المغامرة`,
         "heading": "دعوة إلى المغامرة"
       }
+    },
+    "receipts": {
+      "og": {
+        "title": (title) => `انضم إلى ${title} على Evnly`,
+        "description": "اقسم الفاتورة وتابع من الذي يدين لمن — معًا على إيڤنلي."
+      },
+      "dialog": {
+        "join": "انضمام",
+        "decline": "رفض",
+        "title": "دعوة لتقسيم الفاتورة",
+        "description": (name, gender) => gender === "he" ? `${name} يدعوك لتقسيم الفاتورة` : gender === "she" ? `${name} تدعوك لتقسيم الفاتورة` : `${name} يدعوك/تدعوك لتقسيم الفاتورة`,
+        "balance": {
+          "total": "إجمالي الفاتورة"
+        }
+      }
     }
   },
   "de-DE": {
@@ -141,6 +156,21 @@ export const dictionaries = {
         "decline": "Ignorieren",
         "description": (name, gender) => `${name} lädt dich zum Abenteuer ein`,
         "heading": "Einladung zum Abenteuer"
+      }
+    },
+    "receipts": {
+      "og": {
+        "title": (title) => `Tritt ${title} auf Evnly bei`,
+        "description": "Teilt eine Rechnung und verfolgt, wer wem wie viel schuldet – gemeinsam auf Evnly."
+      },
+      "dialog": {
+        "join": "Beitreten",
+        "decline": "Ablehnen",
+        "title": "Einladung, die Rechnung zu teilen",
+        "description": (name, gender) => `${name} lädt dich ein, eine Rechnung zu teilen`,
+        "balance": {
+          "total": "Gesamtrechnung"
+        }
       }
     }
   },
@@ -213,6 +243,21 @@ export const dictionaries = {
         "description": (name, gender) => `${name} invites you to join the adventure`,
         "heading": "Invitation to the adventure"
       }
+    },
+    "receipts": {
+      "og": {
+        "title": (title) => `Join ${title} on Evnly`,
+        "description": "Split a receipt and track who owes whom — together on Evnly."
+      },
+      "dialog": {
+        "join": "Join",
+        "decline": "Decline",
+        "title": "Invitation to split a bill",
+        "description": (name, gender) => `${name} invites you to split a bill`,
+        "balance": {
+          "total": "Total bill"
+        }
+      }
     }
   },
   "es-ES": {
@@ -283,6 +328,21 @@ export const dictionaries = {
         "decline": "Ignorar",
         "description": (name, gender) => `${name} te invita a unirte a la aventura`,
         "heading": "Invitación a la aventura"
+      }
+    },
+    "receipts": {
+      "og": {
+        "title": (title) => `Únete a ${title} en Evnly`,
+        "description": "Divide un recibo y lleva el control de quién le debe a quién, todo juntos en Evnly."
+      },
+      "dialog": {
+        "join": "Unirse",
+        "decline": "Rechazar",
+        "title": "Invitación a dividir la cuenta",
+        "description": (name, gender) => gender === "he" ? `${name} te invita a dividir una cuenta` : gender === "she" ? `${name} te invita a dividir una cuenta` : `${name} te invita a dividir una cuenta`,
+        "balance": {
+          "total": "Total de la cuenta"
+        }
       }
     }
   },
@@ -355,6 +415,21 @@ export const dictionaries = {
         "description": (name, gender) => gender === "he" ? `${name} t’invite à rejoindre l’aventure` : gender === "she" ? `${name} t’invite à rejoindre l’aventure` : `${name} t’invite à rejoindre l’aventure`,
         "heading": "Invitation à l’aventure"
       }
+    },
+    "receipts": {
+      "og": {
+        "title": (title) => `Rejoindre ${title} sur Evnly`,
+        "description": "Partagez une note et suivez qui doit quoi à qui — ensemble sur Evnly."
+      },
+      "dialog": {
+        "join": "Rejoindre",
+        "decline": "Refuser",
+        "title": "Invitation à partager l’addition",
+        "description": (name, gender) => gender === "he" ? `${name} vous invite à partager une addition` : gender === "she" ? `${name} vous invite à partager une addition` : `${name} vous invite à partager une addition`,
+        "balance": {
+          "total": "Total de la facture"
+        }
+      }
     }
   },
   "hi-IN": {
@@ -425,6 +500,21 @@ export const dictionaries = {
         "decline": "अनदेखा करें",
         "description": (name, gender) => gender === "he" ? `${name} आपको रोमांच में शामिल होने के लिए आमंत्रित करता है` : gender === "she" ? `${name} आपको रोमांच में शामिल होने के लिए आमंत्रित करती है` : `${name} आपको रोमांच में शामिल होने के लिए आमंत्रित करता/करती है`,
         "heading": "साहसिक यात्रा के लिए निमंत्रण"
+      }
+    },
+    "receipts": {
+      "og": {
+        "title": (title) => `Evnly पर ${title} से जुड़ें`,
+        "description": "रसीद को बाँटें और किसने किसे कितना देना है, यह ट्रैक करें — सब एक साथ Evnly पर।"
+      },
+      "dialog": {
+        "join": "जुड़ें",
+        "decline": "अस्वीकार करें",
+        "title": "बिल साझा करने का निमंत्रण",
+        "description": (name, gender) => gender === "he" ? `${name} आपको बिल साझा करने के लिए आमंत्रित करता है` : gender === "she" ? `${name} आपको बिल साझा करने के लिए आमंत्रित करती है` : `${name} आपको बिल साझा करने के लिए आमंत्रित करता/करती है`,
+        "balance": {
+          "total": "कुल बिल"
+        }
       }
     }
   },
@@ -497,6 +587,21 @@ export const dictionaries = {
         "description": (name, gender) => `${name} ti invita a unirti all’avventura`,
         "heading": "Invito all’avventura"
       }
+    },
+    "receipts": {
+      "og": {
+        "title": (title) => `Unisciti a ${title} su Evnly`,
+        "description": "Dividi uno scontrino e tieni traccia di chi deve cosa a chi — tutto insieme su Evnly."
+      },
+      "dialog": {
+        "join": "Unisciti",
+        "decline": "Rifiuta",
+        "title": "Invito a dividere il conto",
+        "description": (name, gender) => gender === "he" ? `${name} ti invita a dividere un conto` : gender === "she" ? `${name} ti invita a dividere un conto` : `${name} ti invita a dividere un conto`,
+        "balance": {
+          "total": "Totale conto"
+        }
+      }
     }
   },
   "ja-JP": {
@@ -567,6 +672,21 @@ export const dictionaries = {
         "decline": "無視",
         "description": (name, gender) => `${name}が冒険にあなたを招待しています`,
         "heading": "冒険への招待"
+      }
+    },
+    "receipts": {
+      "og": {
+        "title": (title) => `Evnlyで${title}に参加する`,
+        "description": "領収書を分けて、誰が誰にいくら借りているかをEvnyで一緒に管理しましょう。"
+      },
+      "dialog": {
+        "join": "参加する",
+        "decline": "拒否",
+        "title": "割り勘への招待",
+        "description": (name, gender) => `${name}さんが割り勘をしませんかと招待しています`,
+        "balance": {
+          "total": "合計請求額"
+        }
       }
     }
   },
@@ -639,6 +759,21 @@ export const dictionaries = {
         "description": (name, gender) => `${name}님이 모험에 초대합니다`,
         "heading": "모험으로의 초대"
       }
+    },
+    "receipts": {
+      "og": {
+        "title": (title) => `Evnly에서 ${title}에 참여하세요`,
+        "description": "영수증을 나누고 누가 누구에게 얼마를 빚졌는지 함께 Evnly에서 확인하세요."
+      },
+      "dialog": {
+        "join": "참여하기",
+        "decline": "거절",
+        "title": "더치페이 초대",
+        "description": (name, gender) => `${name}님이 더치페이를 제안합니다`,
+        "balance": {
+          "total": "총 청구 금액"
+        }
+      }
     }
   },
   "nl-NL": {
@@ -709,6 +844,21 @@ export const dictionaries = {
         "decline": "Negeren",
         "description": (name, gender) => `${name} nodigt je uit voor het avontuur`,
         "heading": "Uitnodiging voor het avontuur"
+      }
+    },
+    "receipts": {
+      "og": {
+        "title": (title) => `Word lid van ${title} op Evnly`,
+        "description": "Splits een bon en houd bij wie wie moet betalen — samen op Evnly."
+      },
+      "dialog": {
+        "join": "Meedoen",
+        "decline": "Weigeren",
+        "title": "Uitnodiging om de rekening te delen",
+        "description": (name, gender) => `${name} nodigt je uit om een rekening te splitten`,
+        "balance": {
+          "total": "Totaalrekening"
+        }
       }
     }
   },
@@ -781,6 +931,21 @@ export const dictionaries = {
         "description": (name, gender) => gender === "he" ? `${name} приглашает тебя присоединиться к приключению` : gender === "she" ? `${name} приглашает тебя присоединиться к приключению` : `${name} приглашает тебя присоединиться к приключению`,
         "heading": "Приглашение в приключение"
       }
+    },
+    "receipts": {
+      "og": {
+        "title": (title) => `Присоединиться к ${title} на Evnly`,
+        "description": "Разделите чек и отслеживайте, кто кому должен — вместе на Evnly."
+      },
+      "dialog": {
+        "join": "Присоединиться",
+        "decline": "Отклонить",
+        "title": "Приглашение разделить счёт",
+        "description": (name, gender) => gender === "he" ? `${name} приглашает вас разделить счёт` : gender === "she" ? `${name} приглашает вас разделить счёт` : `${name} приглашает вас разделить счёт`,
+        "balance": {
+          "total": "Общий счет"
+        }
+      }
     }
   },
   "sw-TZ": {
@@ -851,6 +1016,21 @@ export const dictionaries = {
         "decline": "Puuza",
         "description": (name, gender) => `${name} anakualika ujiunge na tukio hili la kusisimua`,
         "heading": "Mwaliko wa kuingia kwenye adventure"
+      }
+    },
+    "receipts": {
+      "og": {
+        "title": (title) => `Jiunge na ${title} kwenye Evnly`,
+        "description": "Gawanya risiti na fuatilia nani anamdai nani — pamoja kwenye Evnly."
+      },
+      "dialog": {
+        "join": "Jiunge",
+        "decline": "Kataa",
+        "title": "Mwaliko wa kugawana bili",
+        "description": (name, gender) => `${name} anakualika kugawana bili`,
+        "balance": {
+          "total": "Jumla ya bili"
+        }
       }
     }
   },
@@ -923,6 +1103,21 @@ export const dictionaries = {
         "description": (name, gender) => `${name} seni maceraya davet ediyor`,
         "heading": "Macera davetiyesi"
       }
+    },
+    "receipts": {
+      "og": {
+        "title": (title) => `Evnly'de ${title}'a katıl`,
+        "description": "Bir fişi bölüştürün ve kimin kime borcu olduğunu Evnly ile birlikte takip edin."
+      },
+      "dialog": {
+        "join": "Katıl",
+        "decline": "Reddet",
+        "title": "Hesap paylaşma daveti",
+        "description": (name, gender) => `${name} seni bir hesabı bölüşmeye davet ediyor`,
+        "balance": {
+          "total": "Toplam fatura"
+        }
+      }
     }
   },
   "uk-UA": {
@@ -994,6 +1189,21 @@ export const dictionaries = {
         "description": (name, gender) => gender === "he" ? `${name} запрошує вас приєднатися до пригоди` : gender === "she" ? `${name} запрошує вас приєднатися до пригоди` : `${name} запрошує вас приєднатися до пригоди`,
         "heading": "Запрошення до пригоди"
       }
+    },
+    "receipts": {
+      "og": {
+        "title": (title) => `Приєднатися до ${title} на Evnly`,
+        "description": "Розділіть чек і стежте, хто кому винен — разом на Evnly."
+      },
+      "dialog": {
+        "join": "Приєднатися",
+        "decline": "Відхилити",
+        "title": "Запрошення розділити рахунок",
+        "description": (name, gender) => gender === "he" ? `${name} запрошує вас розділити рахунок` : gender === "she" ? `${name} запрошує вас розділити рахунок` : `${name} запрошує вас розділити рахунок`,
+        "balance": {
+          "total": "Загальний рахунок"
+        }
+      }
     }
   },
   "zh-CN": {
@@ -1064,6 +1274,21 @@ export const dictionaries = {
         "decline": "忽略",
         "description": (name, gender) => `${name}邀请你加入冒险`,
         "heading": "冒险邀请函"
+      }
+    },
+    "receipts": {
+      "og": {
+        "title": (title) => `加入Evnly上的${title}`,
+        "description": "在 Evnly 一起分账并追踪谁欠谁。"
+      },
+      "dialog": {
+        "join": "加入",
+        "decline": "拒绝",
+        "title": "邀请一起分账",
+        "description": (name, gender) => `${name}邀请你一起AA制`,
+        "balance": {
+          "total": "账单总额"
+        }
       }
     }
   }

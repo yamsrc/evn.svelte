@@ -7,7 +7,7 @@
 </script>
 
 {#if !ctx.collapsed && ctx.stacked}
-  <div style:view-transition-name="stack-toolbar" class={[classes]}>
+  <div style:view-transition-name="stack-{ctx.id}-toolbar" class={[classes]}>
     {@render children()}
   </div>
 {/if}

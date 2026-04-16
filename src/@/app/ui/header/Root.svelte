@@ -5,6 +5,6 @@
   const { children, class: classes }: Props = $props()
 </script>
 
-<header class={cn('flex justify-between items-center relative min-h-12', classes)}>
+<header class={cn('flex justify-between items-start relative', classes)}>
   {@render children?.()}
 </header>

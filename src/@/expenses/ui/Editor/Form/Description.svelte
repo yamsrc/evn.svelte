@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { dict } from '$lib/intl'
   import { Input } from '$ui/input'
+  import { dict } from '$lib/intl'
   import type { Props } from './Description'
 
   let { title = $bindable(), location = $bindable() }: Props = $props()

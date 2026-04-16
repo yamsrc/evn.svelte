@@ -1,7 +1,7 @@
 import { having } from 'svas'
 import { account } from '@/iam'
-import * as net from './net'
 import { adventures } from './store'
+import * as net from './net'
 
 export async function leave(id: string): Promise<void | Error> {
   const me = await having(account)

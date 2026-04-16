@@ -1,0 +1,46 @@
+splitter:
+  stack:
+    claim: Riscuoti tutto
+    release: Rilascia
+leave:
+  label: Tieni premuto per uscire
+delete:
+  label: Tieni premuto per eliminare
+me: Me
+overview:
+  total: Totale
+feedback:
+  question: Com'è venuta la scansione?
+  down: Daremo un’occhiata.
+  thanks: Grazie!
+autoclose:
+  description: >-
+    Aggiorna i saldi automaticamente quando tutti hanno finito, oppure attendi
+    per procedere manualmente
+  title: Completamento automatico
+  payer:
+    title: Pagato da
+close:
+  label: Continua
+  hold: Tieni premuto per continuare
+unassigned:
+  - one: "{n} elemento non assegnato"
+    other: "{n} elementi non assegnati"
+pending:
+  status: Aspetta un attimo, ci siamo quasi
+  description: Di solito ci vogliono solo pochi istanti
+failed:
+  title: Qualcosa non va
+  description: >-
+    Ci ho messo tutto l’impegno, ma non mi sembra proprio una ricevuta.
+    Riproviamoci!
+  retry:
+    label: Riprova
+state:
+  uploading: Di solito ci vuole solo qualche istante
+  processing: Resisti, ci siamo quasi
+action:
+  label: Scansiona
+extras:
+  included: Si considera che commissioni e sconti siano già inclusi
+  incomplete: Puoi gestirlo dopo che tutti gli articoli sono stati reclamati

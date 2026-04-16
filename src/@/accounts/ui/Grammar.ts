@@ -1,6 +1,6 @@
 import { CircleSmall, Mars, Venus, type Icon } from '@lucide/svelte'
-import type { Grammar } from '$lib/intl'
 import type { Account } from '@/accounts'
+import type { Grammar } from '$lib/intl'
 
 type AccountLike = Pick<Account, 'id' | 'name' | 'grammar'>
 

@@ -38,6 +38,8 @@ export type Dictionary = {
         expenses: {
           split: string
         }
+        scan: string
+        upload: string
       }
       nav: {
         home: string
@@ -60,6 +62,12 @@ export type Dictionary = {
           example: (...args: [any, any]) => string
         }
         background: {
+          title: string
+          pattern: string
+          picture: string
+          cta: string
+        }
+        notifications: {
           title: string
         }
       }
@@ -218,6 +226,16 @@ export type Dictionary = {
       participants: {
         add: {
           button: string
+        }
+      }
+      wallpapers: {
+        effects: {
+          classic: string
+          solar: string
+          influence: string
+          pino: string
+          sunset: string
+          fire: string
         }
       }
     }

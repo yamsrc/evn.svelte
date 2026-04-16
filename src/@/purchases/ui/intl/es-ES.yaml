@@ -1,0 +1,26 @@
+paywall:
+  title: Evnly Premium
+  offer:
+    headline: ¡Mucho más Evn con suscripción!
+    promo: Por tiempo limitado, Premium es totalmente gratis.
+    cta: Comienza tu prueba gratis
+    disclaimer: >-
+      Prueba gratuita disponible solo para suscriptores elegibles por primera
+      vez. Cancela 24 horas antes de que termine la prueba para evitar cargos.
+      La suscripción se renovará automáticamente después del periodo de prueba
+      gratuita; puedes cancelar en cualquier momento.
+    footnote: >-
+      * Un usuario Premium permite el marcado de elementos para todos los
+      participantes. En las aventuras, solo se guarda el texto del recibo (sin
+      división visual).
+    trial: |-
+      !js
+      (price) => `7 días gratis, luego ${price}/año`
+  complete:
+    thanks: Gracias por suscribirte a Envly Premium
+    avatarNote: A partir de ahora, otros usuarios de Evnly verán tu avatar así.
+    featuresNote: >-
+      Además, a partir de ahora puedes personalizar aún más la interfaz en tu
+      perfil, escanear y reconocer recibos y mucho más.
+  free:
+    cta: Disfrutar Premium

@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { Slide } from '@/app/ui'
   import { dict } from '@/notifications/ui/intl'
+  import { Slide } from '@/app/ui'
   import type { Props } from './Created'
 
   // if Props unused, types look weird. Add fake usage for cleaner types

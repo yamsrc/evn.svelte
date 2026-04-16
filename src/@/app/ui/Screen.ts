@@ -1,7 +1,4 @@
-import type { Snippet } from 'svelte'
-import type { ClassValue } from 'svelte/elements'
+import type { ComponentProps } from 'svelte'
+import type { Screen } from '$com/shell'
 
-export interface Props {
-  children: Snippet
-  class?: ClassValue
-}
+export interface Props extends ComponentProps<typeof Screen> { }

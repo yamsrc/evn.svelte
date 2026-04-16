@@ -1,7 +1,7 @@
 import { ensure } from 'svas'
 import { account } from '@/iam'
-import { net } from './net'
 import { notifications } from './store'
+import { net } from './net'
 
 export async function del(id: string): Promise<void | Error> {
   const me = ensure(account)

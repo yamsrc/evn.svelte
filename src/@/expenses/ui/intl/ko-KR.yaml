@@ -35,3 +35,10 @@ transfers:
     received: |-
       !js
       (gender) => "받았어"
+action: {}
+actions:
+  delete: 첨부파일 삭제
+template:
+  toggle:
+    label: 템플릿으로 저장
+    description: 빠른 작업에서 나중에 사용하기

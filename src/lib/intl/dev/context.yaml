@@ -20,6 +20,30 @@ inputs:
     graph:
       title:
         input: Debt Graph
+    receipts:
+      title:
+        input: Receipts
+        context: cafe bills, invoces, etc.
+      upload:
+        label:
+          input: Upload
+      progress:
+        uploading:
+          title:
+            input: Uploading
+          comment:
+            input: Usually takes a few moments
+        processing:
+          comment:
+            input: Hang tight, almost there
+          title:
+            input: Processing
+        ready:
+          title:
+            input: Ready
+          comment:
+            input: Done in {n} seconds
+            context: "Make it a function accepting ms: number (milliseconds) and using phrase with seconds .toFixed(1)"
     picture:
       title:
         input: Picture
@@ -30,6 +54,18 @@ inputs:
         input: Show managed contacts creation button
       shareUrl:
         input: Share URL
+    fullscreen:
+      title:
+        input: Fullscreen
+      attachment:
+        input: Add attachment to any expense
+        context: instruction to act
+      delete:
+        input: Hold to delete
+        context: button label
+    invitation:
+      title:
+        input: Invitations
   transmission:
     title:
       input: Transmission
@@ -47,3 +83,22 @@ inputs:
   loading:
     title:
       input: Loading screen
+  actions:
+    continue:
+      input: Continue
+  nav:
+    home:
+      input: Home
+      context: App navigation tab
+    components:
+      input: Components
+      context: App navigation tab
+    transmission:
+      input: Transmission
+    app:
+      input: App
+      context: menu item
+  receipts:
+    dropzone:
+      label:
+        input: Dropzone

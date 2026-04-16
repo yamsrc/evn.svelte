@@ -1,13 +1,15 @@
 <script lang="ts">
-  import { back } from '$com/history'
-  import { Selector } from '@/adventures/ui'
-  import { Section } from '@/app/ui'
+  import { Delete } from '@/expenses.templates/ui'
   import { add, update } from '@/expenses'
+  import { Section } from '@/app/ui'
+  import { Selector } from '@/adventures/ui'
+  import { back } from '$com/history'
   import Attachments from '../Attachments.svelte'
-  import { getContext } from './Context'
+  import Template from './Template.svelte'
   import { Form } from './Form'
-  import type { Value } from './Context'
+  import { getContext } from './Context'
   import type { Props } from './Edit'
+  import type { Value } from './Context'
 
   let { id, value = $bindable(), mode = $bindable<'sums' | 'shares'>('sums') }: Props = $props()
 
@@ -35,5 +37,20 @@
   </Section>
 {/if}
 
-<Attachments bind:attachments={value.attachments} />
-<Form bind:value bind:mode {onsubmit} />
+{#if value.attachments.length > 0}
+  <Attachments bind:attachments={value.attachments} editable={true} />
+{/if}
+
+<Section>
+  <Form bind:value bind:mode {onsubmit} />
+
+  {#if !id && !value.copied}
+    <Template bind:value={value.template} />
+  {/if}
+
+  {#if value.copied}
+    <div class="flex justify-center">
+      <Delete id={value.copied} ondelete={() => void back('/expenses/')} />
+    </div>
+  {/if}
+</Section>

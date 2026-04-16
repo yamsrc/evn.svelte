@@ -12,7 +12,7 @@ actions:
   contacts:
     group: Crea gruppo
     title: Amici
-    contact: Amico
+    contact: Aggiungi amico
   addSelected: Aggiungi selezionati
   cancel: Annulla
   search: Cerca
@@ -23,6 +23,8 @@ actions:
     adventure: Inizia l’avventura
   expenses:
     split: Dividi
+  scan: Scansiona
+  upload: Scegli il tuo
 nav:
   home: Home
   profile: Io
@@ -52,6 +54,11 @@ profile:
       una spesa`
   background:
     title: Sfondo
+    pattern: Modello
+    picture: Foto
+    cta: Applica sfondo
+  notifications:
+    title: Notifiche
 form:
   enterName: Inserisci il nome
 onboarding:
@@ -102,7 +109,7 @@ join:
 groups:
   leave: Tieni premuto per uscire
   name:
-    description: Tutti i membri del gruppo vedranno questo nome
+    description: Prova ad aggiungere una emoji ✨
     placeholder: Inserisci nome
   members:
     title: Membri
@@ -181,3 +188,11 @@ adventures:
 participants:
   add:
     button: Aggiungi partecipanti
+wallpapers:
+  effects:
+    classic: Classico
+    solar: Bagliore solare
+    influence: Influenza
+    pino: Pinot Noir
+    sunset: Tramonto Rosa
+    fire: Incendio da ondata di calore

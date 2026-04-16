@@ -1,11 +1,11 @@
-import { track } from '@vercel/analytics'
 import { ok, once } from 'svas'
-import { internal as internalContacts, contacts } from '@/contacts/svc/store'
-import { internal as expenses } from '@/expenses/svc/store'
-import { favorites } from '@/favorites/svc/store'
-import { internal as groups } from '@/groups/svc/store'
-import { account, processing } from '@/iam'
+import { track } from '@vercel/analytics'
 import { notifications } from '@/notifications/svc/store'
+import { account, processing } from '@/iam'
+import { internal as groups } from '@/groups/svc/store'
+import { favorites } from '@/favorites/svc/store'
+import { internal as expenses } from '@/expenses/svc/store'
+import { internal as internalContacts, contacts } from '@/contacts/svc/store'
 import * as net from './net'
 
 export async function demo(): Promise<void | Error> {

@@ -1,0 +1,46 @@
+splitter:
+  stack:
+    claim: Claim all
+    release: Release
+leave:
+  label: Hold to leave
+delete:
+  label: Hold to delete
+me: Me
+overview:
+  total: Total
+feedback:
+  question: How did the scan turn out?
+  down: We’ll take a look.
+  thanks: Thank you!
+autoclose:
+  description: >-
+    Update balances automatically when everyone’s done, or wait to continue
+    manually
+  title: Autocomplete
+  payer:
+    title: Paid by
+close:
+  label: Continue
+  hold: Hold to continue
+unassigned:
+  - one: "{n} unassigned item"
+    other: "{n} unassigned items"
+pending:
+  status: Hang tight, almost there
+  description: Usually takes just a few moments
+failed:
+  title: Something doesn’t look right
+  description: >-
+    I tried my best, but this doesn’t look like a receipt to me. Let’s give it
+    another shot!
+  retry:
+    label: Try again
+state:
+  uploading: Usually takes a few moments
+  processing: Hang tight, almost there
+action:
+  label: Scan
+extras:
+  included: Fees and discounts are considered included
+  incomplete: You can manage it after all items are claimed

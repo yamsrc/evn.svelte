@@ -1,19 +1,16 @@
-import Actions from './Actions.svelte'
-import Content from './Content.svelte'
-import Cosmetics from './Cosmetics.svelte'
-import Name from './Name.svelte'
-import Note from './Note.svelte'
-import Picture from './Picture.svelte'
+import Upload from './Upload.svelte'
 import Root from './Root.svelte'
-
-export type { Props, Value } from './Cosmetics'
+import Picture from './Picture.svelte'
+import Note from './Note.svelte'
+import Name from './Name.svelte'
+import Content from './Content.svelte'
+import Actions from './Actions.svelte'
 
 export {
-  Cosmetics,
-
   Root,
   Content,
   Picture,
+  Upload,
   Name,
   Note,
   Actions,

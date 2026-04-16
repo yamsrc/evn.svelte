@@ -1,13 +1,13 @@
 <script lang="ts">
   import { Async } from 'svas'
-  import { TextEllipsis } from '$com/text-ellipsis'
-  import { dict } from '$lib/intl'
-  import * as Card from '$ui/card'
-  import { accounts } from '@/accounts'
-  import { Picture } from '@/accounts/ui'
-  import { Coins } from '@/app/ui'
-  import { numbers } from '@/expenses'
   import { account as me } from '@/iam'
+  import { numbers } from '@/expenses'
+  import { Coins } from '@/app/ui'
+  import { Picture } from '@/accounts/ui'
+  import { accounts } from '@/accounts'
+  import * as Card from '$ui/card'
+  import { dict } from '$lib/intl'
+  import { Ellipsis } from '$com/text'
   import type { Props } from './Totals'
 
   const { expense }: Props = $props()
@@ -25,7 +25,11 @@
       </Card.Title>
     </Card.Header>
     <Card.Content class="p-0">
-      <Coins id="expenses-details-total" amount={numbers.total(expense)} sign="neutral" class="text-3xl" />
+      <Coins
+        id="expenses-details-total"
+        amount={numbers.total(expense)}
+        sign="neutral"
+        class="text-3xl" />
     </Card.Content>
   </Card.Root>
 
@@ -42,7 +46,7 @@
             {@const name = payer === $me?.id ? $dict.expenses.me : account.name}
             <div class="flex items-center gap-2">
               <Picture {account} class="size-8" />
-              <TextEllipsis>{name}</TextEllipsis>
+              <Ellipsis>{name}</Ellipsis>
             </div>
           {/snippet}
         </Async>

@@ -12,7 +12,7 @@ actions:
   contacts:
     group: Создать группу
     title: Друзья
-    contact: Друг
+    contact: Добавить друга
   addSelected: Добавить выбранные
   cancel: Отмена
   search: Поиск
@@ -23,6 +23,8 @@ actions:
     adventure: Начать приключение
   expenses:
     split: Разделить
+  scan: Сканировать
+  upload: Выбери своё
 nav:
   home: Главная
   profile: Я
@@ -51,6 +53,11 @@ profile:
       "she" ? `${name} добавила расход` : `${name} добавил(а) расход`
   background:
     title: Фон
+    pattern: Шаблон
+    picture: Фото
+    cta: Применить фон
+  notifications:
+    title: Уведомления
 form:
   enterName: Введите имя
 onboarding:
@@ -99,7 +106,7 @@ join:
 groups:
   leave: Удерживайте, чтобы выйти
   name:
-    description: Все участники группы увидят это имя
+    description: Попробуй добавить эмодзи ✨
     placeholder: Введите имя
   members:
     title: Участники
@@ -178,3 +185,11 @@ adventures:
 participants:
   add:
     button: Добавить участников
+wallpapers:
+  effects:
+    classic: Классика
+    solar: Солнечная вспышка
+    influence: Влияние
+    pino: Пино Нуар
+    sunset: Розовый закат
+    fire: Жара и огонь

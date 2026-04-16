@@ -39,3 +39,10 @@ transfers:
 
       (gender) => gender === "he" ? "You've received" : gender === "she" ?
       "You've received" : "You've received"
+action: {}
+actions:
+  delete: Delete attachment
+template:
+  toggle:
+    label: Save as template
+    description: Use later in Quick Actions

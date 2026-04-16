@@ -1,7 +1,7 @@
 import { values } from 'svas'
-import { browser } from '$app/environment'
-import { account, update } from '@/iam'
 import { events } from '@/realtime'
+import { account, update } from '@/iam'
+import { browser } from '$app/environment'
 import { get } from './get'
 import type { Account } from './Account'
 

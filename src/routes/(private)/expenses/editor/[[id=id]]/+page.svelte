@@ -1,13 +1,14 @@
 <script lang="ts">
   import { Paperclip } from '@lucide/svelte'
-  import { page } from '$app/state'
-  import { dict } from '$lib/intl'
-  import { Spinner } from '$ui/spinner'
+  import { Looking } from '@/notifications/ui'
+  import { Editor } from '@/expenses/ui'
+  import { attach } from '@/expenses'
   import { Section } from '@/app/ui'
   import { Header } from '@/app/ui'
-  import { attach } from '@/expenses'
-  import { Editor } from '@/expenses/ui'
-  import { seen } from '@/notifications'
+  import { Spinner } from '$ui/spinner'
+  import { dict } from '$lib/intl'
+  import { Return } from '$com/shell'
+  import { page } from '$app/state'
 
   const id = $derived(page.params.id)
   const ctx = Editor.getContext()
@@ -37,11 +38,11 @@
 
     ctx.value.attachments.push(...ids)
   }
-
-  $effect(() => {
-    if (id) void seen('expenses', id)
-  })
 </script>
+
+{#if id}
+  <Looking domain="expenses" key={id} />
+{/if}
 
 <Section>
   <Header.Root>
@@ -66,3 +67,5 @@
 </Section>
 
 <Editor.Edit {id} bind:value={ctx.value} bind:mode={ctx.mode} />
+
+<Return href="/expenses/{id === undefined ? '' : id + '/'}" />

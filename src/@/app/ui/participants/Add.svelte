@@ -1,9 +1,9 @@
 <script lang="ts">
-  import { UserPlus } from '@lucide/svelte'
   import { onMount } from 'svelte'
-  import { goto } from '$app/navigation'
-  import { dict } from '$lib/intl'
+  import { UserPlus } from '@lucide/svelte'
   import { Button } from '$ui/button'
+  import { dict } from '$lib/intl'
+  import { goto } from '$app/navigation'
   import { identities } from './identities'
   import type { Props } from './Add'
 

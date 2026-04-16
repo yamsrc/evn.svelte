@@ -1,13 +1,13 @@
 import { get } from 'svelte/store'
-import { numbers } from '@/expenses'
 import { account } from '@/iam'
+import { numbers } from '@/expenses'
 import type { Value } from '../Context'
 
-export function normalize(value: Value, mode: 'sums' | 'shares'): Value {
+export function normalize(value: Value, mode: 'sums' | 'shares', total: number): Value {
   const shares = Object.fromEntries(Object.entries(value.participants)
     .map(([id, participant]) => [id, participant.shares ?? 0]))
 
-  const amounts = numbers.amounts(value, shares)
+  const amounts = numbers.amounts(value, shares, total)
 
   const participants = Object.fromEntries(Object.entries(value.participants)
     .map(([id, participant]) => [id, {
@@ -22,6 +22,8 @@ export function normalize(value: Value, mode: 'sums' | 'shares'): Value {
     participants,
     extras: value.extras.filter((extra) => extra.amount !== 0),
     attachments: value.attachments,
+    links: value.links,
+    template: value.template,
   }
 }
 
@@ -41,7 +43,7 @@ export function autoeffects(value: Value, payers: string[], total: number): void
       participant.shares = 1
 }
 
-export function balance(value: Value, mode: 'sums' | 'shares'): number {
+export function balance(value: Value, mode: 'sums' | 'shares', total: number): number {
   if (mode === 'sums')
     return numbers.balance(value)
 
@@ -54,7 +56,6 @@ export function balance(value: Value, mode: 'sums' | 'shares'): number {
   if (me === null || value.participants[me.id] === undefined)
     return 0
 
-  const total = numbers.total(value)
   const overpaid = numbers.overpaid(value)
   const bill = total + overpaid
 

@@ -74,4 +74,19 @@ export type Dictionary = {
           heading: string
         }
       }
+      receipts: {
+        og: {
+          title: (value: any) => string
+          description: string
+        }
+        dialog: {
+          join: string
+          decline: string
+          title: string
+          description: (...args: [any, any]) => string
+          balance: {
+            total: string
+          }
+        }
+      }
     }

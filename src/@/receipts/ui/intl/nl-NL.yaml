@@ -1,0 +1,46 @@
+splitter:
+  stack:
+    claim: Alles claimen
+    release: Loslaten
+leave:
+  label: Houd vast om te verlaten
+delete:
+  label: Vasthouden om te verwijderen
+me: Ik
+overview:
+  total: Totaal
+feedback:
+  question: Hoe is de scan geworden?
+  down: We zullen ernaar kijken.
+  thanks: Dank je!
+autoclose:
+  description: >-
+    Werk de saldi automatisch bij zodra iedereen klaar is, of wacht om handmatig
+    verder te gaan
+  title: Automatisch aanvullen
+  payer:
+    title: Betaald door
+close:
+  label: Doorgaan
+  hold: Houd vast om door te gaan
+unassigned:
+  - one: "{n} niet-toegewezen item"
+    other: "{n} niet-toegewezen items"
+pending:
+  status: Even geduld, we zijn er bijna
+  description: Meestal duurt het maar een paar momenten
+failed:
+  title: Er klopt iets niet
+  description: >-
+    Ik heb echt m’n best gedaan, maar dit lijkt toch geen bonnetje. Laten we het
+    nog eens proberen!
+  retry:
+    label: Opnieuw proberen
+state:
+  uploading: Duurt meestal maar een paar tellen
+  processing: Even volhouden, we zijn er bijna
+action:
+  label: Scannen
+extras:
+  included: Kosten en kortingen worden als inbegrepen beschouwd
+  incomplete: Kan beheerd worden nadat alle items zijn geclaimd

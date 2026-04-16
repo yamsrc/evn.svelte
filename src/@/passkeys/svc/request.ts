@@ -1,5 +1,5 @@
-import * as credentials from './credentials'
 import * as origin from './net'
+import * as credentials from './credentials'
 
 export async function request(id?: string): Promise<origin.RequestResponse | Error> {
   const options = await origin.challenges.post('request', id)

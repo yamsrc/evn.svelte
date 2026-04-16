@@ -1,16 +1,16 @@
 <script lang="ts">
   import { Async } from 'svas'
-  import { Separator } from '$com/separator'
-  import { TextEllipsis } from '$com/text-ellipsis'
-  import { dict, locale } from '$lib/intl'
-  import { currency } from '$lib/tools'
-  import { accounts } from '@/accounts'
-  import { Picture } from '@/accounts/ui'
-  import { CoinsInput } from '@/app/ui'
-  import { numbers } from '@/expenses'
   import { account as me } from '@/iam'
-  import { getContext } from './Context'
+  import { numbers } from '@/expenses'
+  import { CoinsInput } from '@/app/ui'
+  import { Picture } from '@/accounts/ui'
+  import { accounts } from '@/accounts'
+  import { currency } from '$lib/tools'
+  import { dict, locale } from '$lib/intl'
+  import { Ellipsis } from '$com/text'
+  import { Separator } from '$com/separator'
   import ShareAmount from './ShareAmount.svelte'
+  import { getContext } from './Context'
   import type { Props } from './ByShare'
 
   const nameClass = 'text-start text-base font-normal flex-1 min-w-0 flex'
@@ -28,7 +28,7 @@
     Object.fromEntries(participants.map((id) => [id, value.participants[id].shares ?? 0])),
   )
 
-  const amounts = $derived(numbers.amounts(value, shares))
+  const amounts = $derived(numbers.amounts(value, shares, total))
 </script>
 
 <div class="space-y-2">
@@ -46,7 +46,7 @@
               <Picture {account} class="size-8" />
             </div>
             <div class={nameClass}>
-              <TextEllipsis>{name}</TextEllipsis>
+              <Ellipsis>{name}</Ellipsis>
             </div>
           {/snippet}
         </Async>
@@ -70,9 +70,9 @@
       <div class="flex flex-nowrap items-center justify-between gap-2">
         <div class="flex items-center gap-2 overflow-hidden flex-1">
           <div class={nameClass}>
-            <TextEllipsis>
+            <Ellipsis>
               {extra.comment ?? $dict.expenses.spendings.extras.title}
-            </TextEllipsis>
+            </Ellipsis>
           </div>
         </div>
         <CoinsInput

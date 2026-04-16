@@ -14,3 +14,7 @@ expenses:
   empty: Aucune dépense partagée pour le moment.
 delete:
   label: Maintenir pour supprimer
+invite:
+  link: Partager
+  qr: Afficher le QR
+  manually: Ajouter manuellement

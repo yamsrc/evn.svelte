@@ -1,12 +1,12 @@
 <script lang="ts">
-  import { ArrowRight } from '@lucide/svelte'
   import { meta } from '@toa.io/origin'
-  import { Loader } from '$com/loader'
-  import { autofocus, onsubmit } from '$lib/tools'
-  import { Button } from '$ui/button'
-  import { Input } from '$ui/input'
-  import * as iam from '@/iam'
+  import { ArrowRight } from '@lucide/svelte'
   import { dict } from '@/iam/ui/intl'
+  import * as iam from '@/iam'
+  import { Input } from '$ui/input'
+  import { Button } from '$ui/button'
+  import { autofocus, onsubmit } from '$lib/tools'
+  import { Loader } from '$com/loader'
   import Password from './Password.svelte'
   import type { Props } from './Form'
 

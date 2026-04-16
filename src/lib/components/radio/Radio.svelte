@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { cn } from '$lib/utils'
-  import { Label } from '$ui/label'
   import * as RadioGroup from '$ui/radio-group'
+  import { Label } from '$ui/label'
+  import { cn } from '$lib/utils'
   import type { Props } from './Radio'
 
   let { name, value = $bindable(''), options, class: classes, onchange }: Props = $props()

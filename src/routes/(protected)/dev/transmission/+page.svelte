@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { dict } from '$lib/intl/dev'
-  import { Button } from '$ui/button'
-  import { Section, Header } from '@/app/ui'
   import { permission, ping, request, supported } from '@/transmission'
+  import { Section, Header } from '@/app/ui'
+  import { Button } from '$ui/button'
+  import { dict } from '$lib/intl/dev'
 
   let busy = $state(false)
 

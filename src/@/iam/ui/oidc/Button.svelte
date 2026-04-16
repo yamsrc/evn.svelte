@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { Loader } from '$com/loader'
-  import { Button } from '$ui/button'
   import { oidc } from '@/iam'
+  import { Button } from '$ui/button'
+  import { Loader } from '$com/loader'
   import { icons } from './icons'
   import type { Props } from './Button'
 

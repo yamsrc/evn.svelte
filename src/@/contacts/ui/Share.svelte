@@ -1,9 +1,9 @@
 <script lang="ts">
   import { ok } from 'svas'
-  import { Share } from '$com/buttons'
-  import { QR } from '$com/qr'
-  import { dict } from '$lib/intl'
   import { codes } from '@/accounts'
+  import { dict } from '$lib/intl'
+  import { QR } from '$com/qr'
+  import { Share } from '$com/buttons'
   import type { Props } from './Share'
 
   const { contact }: Props = $props()

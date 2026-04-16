@@ -25,6 +25,26 @@ export type Dictionary = {
         graph: {
           title: string
         }
+        receipts: {
+          title: string
+          upload: {
+            label: string
+          }
+          progress: {
+            uploading: {
+              title: string
+              comment: string
+            }
+            processing: {
+              comment: string
+              title: string
+            }
+            ready: {
+              title: string
+              comment: (value: any) => string
+            }
+          }
+        }
         picture: {
           title: string
         }
@@ -32,6 +52,14 @@ export type Dictionary = {
           title: string
           managedContactsCreation: string
           shareUrl: string
+        }
+        fullscreen: {
+          title: string
+          attachment: string
+          delete: string
+        }
+        invitation: {
+          title: string
         }
       }
       transmission: {
@@ -46,5 +74,22 @@ export type Dictionary = {
       }
       loading: {
         title: string
+      }
+      receipts: {
+        upload: {
+
+        }
+        dropzone: {
+          label: string
+        }
+      }
+      actions: {
+        continue: string
+      }
+      nav: {
+        home: string
+        components: string
+        transmission: string
+        app: string
       }
     }

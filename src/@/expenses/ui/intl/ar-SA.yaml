@@ -43,3 +43,10 @@ transfers:
 
       (gender) => gender === "he" ? "لقد استلمتَ" : gender === "she" ? "لقد
       استلمتِ" : "لقد استلمت"
+action: {}
+actions:
+  delete: حذف المرفق
+template:
+  toggle:
+    label: احفظ كقالب
+    description: استخدم لاحقًا في الإجراءات السريعة

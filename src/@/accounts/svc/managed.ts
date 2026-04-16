@@ -1,7 +1,7 @@
 import { ensure } from 'svas'
 import { account as iam } from '@/iam'
-import * as net from './net'
 import { accounts } from './store'
+import * as net from './net'
 
 export async function update(id: string, properties: net.Editable): Promise<void | Error> {
   const me = ensure(iam)

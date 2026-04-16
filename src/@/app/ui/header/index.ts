@@ -1,4 +1,6 @@
 export { default as Root } from './Root.svelte'
-export { default as Button } from './Button.svelte'
+export { default as Content } from './Content.svelte'
 export { default as Title } from './Title.svelte'
+export { default as Subtitle } from './Subtitle.svelte'
 export { default as Actions } from './Actions.svelte'
+export { default as Button } from './Button.svelte'

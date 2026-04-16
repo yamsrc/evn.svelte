@@ -1,13 +1,16 @@
 <script lang="ts">
-  import { ok } from 'svas'
   import { derived } from 'svelte/store'
-  import { Nav } from '$com/shell'
-  import { oidc } from '$config'
-  import { dict } from '$lib/intl'
-  import { Screen, Authenticated } from '@/app/ui'
+  import { ok } from 'svas'
+  import { Dropzone } from '@/receipts/ui'
+  import { Paywall } from '@/purchases/ui'
   import { notifications as store } from '@/notifications'
-  import { sections } from './sections'
+  import { Screen, Authenticated } from '@/app/ui'
+  import { dict } from '$lib/intl'
+  import { oidc } from '$config/configuration'
+  import { Nav } from '$com/shell'
+  import { goto } from '$app/navigation'
   import { welcome } from './welcome'
+  import { sections } from './sections'
 
   const { children } = $props()
   const notifications = derived(store, ($n) => (ok($n) ? $n : []))
@@ -16,6 +19,8 @@
 <Screen>
   <Authenticated {oidc} oncreate={welcome}>
     {@render children()}
-    <Nav position="start" sections={sections($dict, $notifications)} underlay class="z-50" />
+    <Nav position="start" sections={sections($dict, $notifications)} underlay class="z-48" />
+    <Paywall />
+    <Dropzone oncomplete={(id) => goto(`/receipts/${id}/`)} />
   </Authenticated>
 </Screen>

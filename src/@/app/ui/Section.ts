@@ -1,7 +1,6 @@
+import type { HTMLAttributes } from 'svelte/elements'
 import type { Snippet } from 'svelte'
 
-export interface Props {
+export interface Props extends HTMLAttributes<HTMLElement> {
   children: Snippet
-  class?: string
-  id?: string
 }

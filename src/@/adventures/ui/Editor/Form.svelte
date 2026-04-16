@@ -1,15 +1,15 @@
 <script lang="ts">
   import { Check } from '@lucide/svelte'
-  import { Actions } from '$com/shell'
-  import { dict as common } from '$lib/intl'
-  import { onsubmit as submitter } from '$lib/tools'
-  import { assign } from '@/adventures'
-  import { Cover } from '@/adventures/ui'
-  import { dict } from '@/adventures/ui/intl'
-  import { Action, Section } from '@/app/ui'
   import * as Cosmetics from '@/app/ui/cosmetics'
-  import { getContext } from './Context'
+  import { Action, Section } from '@/app/ui'
+  import { dict } from '@/adventures/ui/intl'
+  import { Cover } from '@/adventures/ui'
+  import { assign } from '@/adventures'
+  import { onsubmit as submitter } from '$lib/tools'
+  import { dict as common } from '$lib/intl'
+  import { Actions } from '$com/shell'
   import Participants from './Participants.svelte'
+  import { getContext } from './Context'
   import type { Props, Value } from './Form'
 
   let { value = $bindable<Value>(), busy = $bindable(false), onsubmit: callback }: Props = $props()

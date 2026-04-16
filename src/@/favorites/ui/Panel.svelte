@@ -1,9 +1,9 @@
 <script lang="ts">
   import { Async, combined } from 'svas'
-  import { contacts } from '@/contacts'
   import { groups } from '@/groups'
-  import Contact from './Contact.svelte'
+  import { contacts } from '@/contacts'
   import Group from './Group.svelte'
+  import Contact from './Contact.svelte'
   import type { Props } from './Panel'
 
   let { favorite, selected = $bindable(), onselect, class: classes }: Props = $props()

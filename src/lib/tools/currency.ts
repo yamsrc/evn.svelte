@@ -12,7 +12,7 @@ import type { Locale } from '$lib/intl'
 export function currency(amount: number, locale: Locale, currency?: string): string {
   if (currency === undefined) {
     const value = amount / 100
-    const precision = value > 100 ? 0 : 2
+    const precision = value > 500 ? 0 : 2
 
     return Number.isInteger(value) ? value.toString() : value.toFixed(precision)
   }

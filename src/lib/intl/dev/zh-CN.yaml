@@ -12,12 +12,34 @@ components:
       (count) => `显示：${count}`
   graph:
     title: 债务图表
+  receipts:
+    title: 小票
+    upload:
+      label: 上传
+    progress:
+      uploading:
+        title: 正在上传
+        comment: 通常只需几秒钟
+      processing:
+        comment: 坚持一下，马上就到了
+        title: 处理中
+      ready:
+        title: 已准备好
+        comment: |-
+          !js
+          (ms) => `${(ms / 1000).toFixed(1)} 秒内完成`
   picture:
     title: Picture
   participants:
     title: 参与者
     managedContactsCreation: 显示托管联系人创建按钮
     shareUrl: 分享链接
+  fullscreen:
+    title: Fullscreen
+    attachment: 给任意一笔支出添加附件
+    delete: 长按删除
+  invitation:
+    title: 邀请
 transmission:
   title: Transmission
   permission:
@@ -28,3 +50,14 @@ transmission:
   ping: Ping
 loading:
   title: 加载界面
+receipts:
+  upload: {}
+  dropzone:
+    label: 拖放区
+actions:
+  continue: 继续
+nav:
+  home: 首页
+  components: 组件
+  transmission: 变速器
+  app: 应用

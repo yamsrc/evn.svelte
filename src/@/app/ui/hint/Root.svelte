@@ -1,8 +1,8 @@
 <script lang="ts">
   import { transit } from '$lib/tools'
   import Panel from '../Panel.svelte'
-  import { setContext } from './Context'
   import { hints } from './store'
+  import { setContext } from './Context'
   import type { Props } from './Root'
 
   const { key, delay, name, class: classes, children }: Props = $props()

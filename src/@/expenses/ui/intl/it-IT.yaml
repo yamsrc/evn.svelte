@@ -39,3 +39,10 @@ transfers:
     received: |-
       !js
       (gender) => "Hai ricevuto"
+action: {}
+actions:
+  delete: Elimina allegato
+template:
+  toggle:
+    label: Salva come modello
+    description: Usa più tardi nelle azioni rapide

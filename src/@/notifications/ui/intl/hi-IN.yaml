@@ -91,3 +91,7 @@ adventures:
     body: |-
       !js
       (title) => `${title} में खर्च जोड़ा गया`
+receipts:
+  joined:
+    hint: सामानों को देखो और अपने हिस्से का चुनो।
+    title: एक नई रसीद आई है

@@ -12,12 +12,34 @@ components:
       (count) => `Tonen: ${count}`
   graph:
     title: Schuldenoverzicht
+  receipts:
+    title: Bonnetjes
+    upload:
+      label: Uploaden
+    progress:
+      uploading:
+        title: Bezig met uploaden
+        comment: Duurt meestal slechts een paar momenten
+      processing:
+        comment: Hou vol, we zijn er bijna
+        title: Bezig met verwerken
+      ready:
+        title: Klaar
+        comment: |-
+          !js
+          (ms) => `Klaar in ${(ms / 1000).toFixed(1)} seconden`
   picture:
     title: Picture
   participants:
     title: Deelnemers
     managedContactsCreation: Knop voor het aanmaken van beheerde contacten tonen
     shareUrl: URL delen
+  fullscreen:
+    title: Fullscreen
+    attachment: Voeg een bijlage toe aan een willekeurige uitgave
+    delete: Vasthouden om te verwijderen
+  invitation:
+    title: Uitnodigingen
 transmission:
   title: Transmission
   permission:
@@ -28,3 +50,14 @@ transmission:
   ping: Ping
 loading:
   title: Laadscherm
+receipts:
+  upload: {}
+  dropzone:
+    label: Dropzone
+actions:
+  continue: Doorgaan
+nav:
+  home: Startpagina
+  components: Componenten
+  transmission: Transmissie
+  app: App

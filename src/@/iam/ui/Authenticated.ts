@@ -1,7 +1,7 @@
-import type { AccountLike } from './AccountLike'
+import type { Snippet } from 'svelte'
 import type { oidc } from '@/iam'
 import type { Method } from '@/iam'
-import type { Snippet } from 'svelte'
+import type { AccountLike } from './AccountLike'
 
 export interface Props {
   children: Snippet

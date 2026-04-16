@@ -1,0 +1,41 @@
+splitter:
+  stack:
+    claim: すべて受け取る
+    release: 離す
+leave:
+  label: 長押しで退出
+delete:
+  label: 長押しで削除
+me: 私
+overview:
+  total: 合計
+feedback:
+  question: スキャンの出来栄えはどうでしたか？
+  down: 確認します。
+  thanks: ありがとうございます！
+autoclose:
+  description: 全員が完了したら自動で残高を更新、または手動で進めるまで待つ
+  title: オートコンプリート
+  payer:
+    title: 支払い者
+close:
+  label: 続ける
+  hold: 続けるには長押し
+unassigned:
+  - other: 未割り当てのアイテム {n} 件
+pending:
+  status: あと少しで終わるよ、待っててね
+  description: たいてい少しだけ時間がかかります
+failed:
+  title: 何かがおかしいみたい
+  description: 頑張ったけど、これはレシートには見えないな。もう一回やってみよう！
+  retry:
+    label: 再試行
+state:
+  uploading: たいてい数秒で終わります
+  processing: もう少し、あとちょっとだよ
+action:
+  label: スキャン
+extras:
+  included: 手数料と割引はすでに含まれているとみなします
+  incomplete: すべてのアイテムが請求された後に管理できます

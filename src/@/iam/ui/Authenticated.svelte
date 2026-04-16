@@ -1,13 +1,13 @@
 <script lang="ts">
-  import { browser } from '$app/environment'
-  import { Loader } from '$com/loader'
-  import { inApp } from '$lib/tools'
-  import { cn } from '$lib/utils'
   import { authenticated, greeting, account as iam, method, processing } from '@/iam'
-  import Authentication from './Authentication.svelte'
-  import InApp from './InApp.svelte'
-  import Languages from './Languages.svelte'
+  import { cn } from '$lib/utils'
+  import { inApp } from '$lib/tools'
+  import { Loader } from '$com/loader'
+  import { browser } from '$app/environment'
   import Refresh from './Refresh.svelte'
+  import Languages from './Languages.svelte'
+  import InApp from './InApp.svelte'
+  import Authentication from './Authentication.svelte'
   import type { Props } from './Authenticated'
 
   const { children, screen, account, oidc, oncreate }: Props = $props()

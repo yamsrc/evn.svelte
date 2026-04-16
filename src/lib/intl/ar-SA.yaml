@@ -12,7 +12,7 @@ actions:
   contacts:
     group: إنشاء مجموعة
     title: أصدقاء
-    contact: صديق
+    contact: أضِف صديقًا
   addSelected: إضافة المحدد
   cancel: إلغاء
   search: بحث
@@ -23,6 +23,8 @@ actions:
     adventure: ابدأ المغامرة
   expenses:
     split: تقسيم
+  scan: مسح
+  upload: اختر ما يناسبك
 nav:
   home: الرئيسية
   profile: أنا
@@ -48,6 +50,11 @@ profile:
       "she" ? `${name} أضافت مصروفًا` : `${name} أضاف(ت) مصروفًا`
   background:
     title: الخلفية
+    pattern: نمط
+    picture: صورة
+    cta: تطبيق الخلفية
+  notifications:
+    title: الإشعارات
 form:
   enterName: أدخل الاسم
 onboarding:
@@ -96,7 +103,7 @@ join:
 groups:
   leave: اضغط مع الاستمرار للمغادرة
   name:
-    description: سيرى جميع أعضاء المجموعة هذا الاسم
+    description: جرّب إضافة رمز تعبيري ✨
     placeholder: أدخل الاسم
   members:
     title: الأعضاء
@@ -173,3 +180,11 @@ adventures:
 participants:
   add:
     button: إضافة المشاركين
+wallpapers:
+  effects:
+    classic: كلاسيكي
+    solar: الوهج الشمسي
+    influence: تأثير
+    pino: بينو نوار
+    sunset: غروب وردي
+    fire: موجة حر نارية

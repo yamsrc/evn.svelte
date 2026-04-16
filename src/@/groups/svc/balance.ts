@@ -1,6 +1,6 @@
-import type { Group } from './net'
-import type { Account } from '@/accounts'
 import type { Contact } from '@/contacts'
+import type { Account } from '@/accounts'
+import type { Group } from './net'
 
 export function balance(group: Group, contacts: Contact[], account: Account): number {
   const identities = group.identities.filter((identity) => identity !== account.id)

@@ -37,3 +37,10 @@ transfers:
     received: |-
       !js
       (gender) => "Aldın"
+action: {}
+actions:
+  delete: Ek dosyayı sil
+template:
+  toggle:
+    label: Şablon olarak kaydet
+    description: Hızlı İşlemlerde sonra kullan

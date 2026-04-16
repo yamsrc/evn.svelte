@@ -30,3 +30,13 @@ inputs:
   delete:
     label:
       input: Hold to delete
+  invite:
+    link:
+      input: Share
+      context: button label
+    qr:
+      input: Show QR
+      context: button label
+    manually:
+      input: Add manually
+      context: button label

@@ -1,11 +1,11 @@
 <script lang="ts">
   import { Coins, Minus, Plus } from '@lucide/svelte'
-  import { locale } from '$lib/intl'
-  import { currency } from '$lib/tools'
-  import { cn } from '$lib/utils'
-  import { Button } from '$ui/button'
-  import * as ButtonGroup from '$ui/button-group'
   import { numbers } from '@/expenses'
+  import * as ButtonGroup from '$ui/button-group'
+  import { Button } from '$ui/button'
+  import { cn } from '$lib/utils'
+  import { currency } from '$lib/tools'
+  import { locale } from '$lib/intl'
   import type { Props } from './ShareAmount'
 
   let { amount = 0, share = $bindable(), min = 0, max = numbers.MAX_SHARE, class: classes, id }: Props = $props()

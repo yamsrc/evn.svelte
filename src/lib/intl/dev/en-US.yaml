@@ -12,12 +12,34 @@ components:
       (count) => `Show: ${count}`
   graph:
     title: Debt Graph
+  receipts:
+    title: Receipts
+    upload:
+      label: Upload
+    progress:
+      uploading:
+        title: Uploading
+        comment: Usually takes a few moments
+      processing:
+        comment: Hang tight, almost there
+        title: Processing
+      ready:
+        title: Ready
+        comment: |-
+          !js
+          (ms) => `Done in ${(ms / 1000).toFixed(1)} seconds`
   picture:
     title: Picture
   participants:
     title: Participants
     managedContactsCreation: Show managed contacts creation button
     shareUrl: Share URL
+  fullscreen:
+    title: Fullscreen
+    attachment: Add an attachment to any expense
+    delete: Hold to delete
+  invitation:
+    title: Invitations
 transmission:
   title: Transmission
   permission:
@@ -28,3 +50,14 @@ transmission:
   ping: Ping
 loading:
   title: Loading screen
+receipts:
+  upload: {}
+  dropzone:
+    label: Dropzone
+actions:
+  continue: Continue
+nav:
+  home: Home
+  components: Components
+  transmission: Transmission
+  app: App

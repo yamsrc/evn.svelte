@@ -30,8 +30,8 @@ auth:
       !js
 
       (name) => `${name ? name + ", por" : "Por"} motivos de seguridad, tus
-      credenciales han caducado. Por favor, vuelve a&nbsp;iniciar sesión
-      para&nbsp;continuar.`
+      credenciales han caducado. Por favor, vuelve a iniciar sesión
+      para continuar.`
     title: Bienvenido de nuevo
   signout: Cerrar sesión
   login: Iniciar sesión

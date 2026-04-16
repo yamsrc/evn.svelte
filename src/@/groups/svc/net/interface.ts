@@ -1,6 +1,6 @@
 import { origin } from '@/net'
-import type { Group } from './Group'
 import type { Contact } from '@/contacts/svc/net'
+import type { Group } from './Group'
 
 const groups = origin.resource<Group>('/groups/', { credentials: 'include' })
 // const invitations = origin.resource<Group>('/groups/invitations/', { credentials: 'include' })

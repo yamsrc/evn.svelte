@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Plus } from '@lucide/svelte'
-  import { dict } from '$lib/intl'
   import { Button } from '$ui/button'
+  import { dict } from '$lib/intl'
 </script>
 
 <div class="w-full flex flex-col items-center justify-center gap-2">

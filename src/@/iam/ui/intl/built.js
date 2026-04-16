@@ -97,7 +97,7 @@ export const dictionaries = {
       "yourName": "Your name",
       "password": "Password",
       "refresh": {
-        "description": (name) => `${name ? name + ", for" : "For"} security reasons, your credentials have expired. Please log&nbsp;in again to&nbsp;continue.`,
+        "description": (name) => `${name ? name + ", for" : "For"} security reasons, your credentials have expired. Please log in again to continue.`,
         "title": "Welcome back"
       },
       "signout": "Sign out",
@@ -133,7 +133,7 @@ export const dictionaries = {
       "yourName": "Tu nombre",
       "password": "Contraseña",
       "refresh": {
-        "description": (name) => `${name ? name + ", por" : "Por"} motivos de seguridad, tus credenciales han caducado. Por favor, vuelve a&nbsp;iniciar sesión para&nbsp;continuar.`,
+        "description": (name) => `${name ? name + ", por" : "Por"} motivos de seguridad, tus credenciales han caducado. Por favor, vuelve a iniciar sesión para continuar.`,
         "title": "Bienvenido de nuevo"
       },
       "signout": "Cerrar sesión",
@@ -205,7 +205,7 @@ export const dictionaries = {
       "yourName": "आपका नाम",
       "password": "पासवर्ड",
       "refresh": {
-        "description": (name) => `${name ? name + " के लिए" : "सुरक्षा कारणों से"} आपके क्रेडेंशियल्स की वैधता समाप्त हो गई है। जारी रखने के लिए कृपया फिर से लॉग&nbsp;इन करें।`,
+        "description": (name) => `${name ? name + " के लिए" : "सुरक्षा कारणों से"} आपके क्रेडेंशियल्स की वैधता समाप्त हो गई है। जारी रखने के लिए कृपया फिर से लॉग इन करें।`,
         "title": "वापसी पर स्वागत है"
       },
       "signout": "साइन आउट करें",
@@ -241,7 +241,7 @@ export const dictionaries = {
       "yourName": "Il tuo nome",
       "password": "Password",
       "refresh": {
-        "description": (name) => `${name ? name + ", per" : "Per"} motivi di sicurezza, le tue credenziali sono scadute. Effettua di&nbsp;nuovo il login per&nbsp;continuare.`,
+        "description": (name) => `${name ? name + ", per" : "Per"} motivi di sicurezza, le tue credenziali sono scadute. Effettua di nuovo il login per continuare.`,
         "title": "Bentornato"
       },
       "signout": "Esci",
@@ -349,7 +349,7 @@ export const dictionaries = {
       "yourName": "Je naam",
       "password": "Wachtwoord",
       "refresh": {
-        "description": (name) => `${name ? name + ", om" : "Om"} veiligheidsredenen zijn je inloggegevens verlopen. Log&nbsp;opnieuw in om&nbsp;door te gaan.`,
+        "description": (name) => `${name ? name + ", om" : "Om"} veiligheidsredenen zijn je inloggegevens verlopen. Log opnieuw in om door te gaan.`,
         "title": "Welkom terug"
       },
       "signout": "Afmelden",
@@ -385,7 +385,7 @@ export const dictionaries = {
       "yourName": "Ваше имя",
       "password": "Пароль",
       "refresh": {
-        "description": (name) => `${name ? name + ", по" : "По"} соображениям безопасности срок действия ваших учетных данных истёк. Пожалуйста, войдите&nbsp;снова, чтобы&nbsp;продолжить.`,
+        "description": (name) => `${name ? name + ", по" : "По"} соображениям безопасности срок действия ваших учетных данных истёк. Пожалуйста, войдите снова, чтобы продолжить.`,
         "title": "С возвращением"
       },
       "signout": "Выйти",
@@ -421,7 +421,7 @@ export const dictionaries = {
       "yourName": "Jina lako",
       "password": "Nenosiri",
       "refresh": {
-        "description": (name) => `${name ? name + ", kwa" : "Kwa"} sababu za kiusalama, taarifa zako za kuingia zimeisha muda wake. Tafadhali ingia tena ili&nbsp;kuendelea.`,
+        "description": (name) => `${name ? name + ", kwa" : "Kwa"} sababu za kiusalama, taarifa zako za kuingia zimeisha muda wake. Tafadhali ingia tena ili kuendelea.`,
         "title": "Karibu tena"
       },
       "signout": "Ondoka",

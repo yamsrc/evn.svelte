@@ -1,14 +1,15 @@
-import { track } from '@vercel/analytics'
 import { having, sync } from 'svas'
+import { track } from '@vercel/analytics'
 import { account } from '@/iam'
-import * as net from './net'
-import { total } from './numbers'
 import { internal } from './store'
+import { total } from './numbers'
+import * as net from './net'
 
-export async function add(properties: Input): Promise<net.Expense | Error> {
+export async function add(properties: net.Post): Promise<net.Expense | Error> {
   const me = await having(account)
 
-  properties.date ??= new Date().toISOString().split('T')[0]
+  // save date in the current timezone
+  properties.date ??= new Date().toLocaleDateString('en-CA')
 
   const expense = await net.post(me.id, properties)
 
@@ -17,9 +18,9 @@ export async function add(properties: Input): Promise<net.Expense | Error> {
   sync(internal, expense)
   track('Expense', { total: total(expense) })
 
-  return expense
-}
+  const receipt = expense.links?.some((link) => link.type === 'receipt') ?? false
 
-interface Input extends Partial<net.Post> {
-  participants: net.Post['participants']
+  if (receipt) track('Receipts.Completed')
+
+  return expense
 }

@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { dict } from '$lib/intl'
-  import { onsubmit as handleSubmit } from '$lib/tools'
-  import { cn } from '$lib/utils'
   import { Input } from '$ui/input'
+  import { cn } from '$lib/utils'
+  import { onsubmit as handleSubmit } from '$lib/tools'
+  import { dict } from '$lib/intl'
   import type { Props } from './NameForm'
 
   let {

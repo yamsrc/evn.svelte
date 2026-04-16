@@ -1,35 +1,33 @@
 <script lang="ts">
   import { Async, combined, ok } from 'svas'
-  import { goto } from '$app/navigation'
-  import { page } from '$app/state'
-  import { Separator } from '$com/separator'
-  import { Actions } from '$com/shell'
-  import { dict } from '$lib/intl'
-  import { Spinner } from '$ui/spinner'
-  import { Grammar } from '@/accounts/ui'
-  import { Cosmetics } from '@/accounts/ui'
-  import { BackgroundOverride, Section } from '@/app/ui'
-  import { Header } from '@/app/ui'
-  import { contacts } from '@/contacts'
+  import { Looking } from '@/notifications/ui'
+  import { account } from '@/iam'
+  import { groups } from '@/groups'
+  import { Toggle as Favorite } from '@/favorites/ui'
+  import { Transfer } from '@/expenses/ui'
+  import { expenses } from '@/expenses'
   import { Balance, Share, Groups, Expenses } from '@/contacts/ui'
   import { Delete } from '@/contacts/ui'
-  import { expenses } from '@/expenses'
-  import { Transfer } from '@/expenses/ui'
-  import { Toggle as Favorite } from '@/favorites/ui'
-  import { groups } from '@/groups'
-  import { account } from '@/iam'
-  import { seen } from '@/notifications'
+  import { contacts } from '@/contacts'
+  import { BackgroundOverride, Section } from '@/app/ui'
+  import { Header } from '@/app/ui'
+  import { Grammar } from '@/accounts/ui'
+  import { Cosmetics } from '@/accounts/ui'
+  import { Spinner } from '$ui/spinner'
+  import { dict } from '$lib/intl'
+  import { Actions } from '$com/shell'
+  import { Separator } from '$com/separator'
+  import { page } from '$app/state'
+  import { goto } from '$app/navigation'
 
   const id = $derived(page.params.id) as string
 
   function ondelete() {
     void goto('..')
   }
-
-  $effect(() => {
-    void seen('contacts', id)
-  })
 </script>
+
+<Looking domain="contacts" key={id} />
 
 <Async store={contacts}>
   {#snippet awaited(contacts)}
@@ -50,8 +48,8 @@
     <Async store={combined(groups, expenses)}>
       {#snippet awaited([groups, expenses])}
         {#if contact?.account && ok(contact.account)}
-          {#if contact.account.background}
-            <BackgroundOverride id={contact.account.background} />
+          {#if contact.account.wallpaper?.pattern ?? contact.account.background}
+            <BackgroundOverride account={contact.account} />
           {/if}
           <Section>
             <div class="flex flex-col gap-4">

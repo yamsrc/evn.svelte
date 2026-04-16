@@ -1,4 +1,4 @@
-import { APPLE_CLIENT_ID, GOOGLE_CLIENT_ID } from '$config'
+import { APPLE_CLIENT_ID, GOOGLE_CLIENT_ID } from '$config/configuration'
 
 export const providers = {
   apple: {

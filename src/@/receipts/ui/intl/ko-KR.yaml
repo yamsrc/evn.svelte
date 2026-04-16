@@ -1,0 +1,41 @@
+splitter:
+  stack:
+    claim: 모두 받기
+    release: 놓기
+leave:
+  label: 길게 눌러 나가기
+delete:
+  label: 길게 눌러서 삭제
+me: 나
+overview:
+  total: 합계
+feedback:
+  question: 스캔은 어땠나요?
+  down: 확인해 보겠습니다.
+  thanks: 감사합니다!
+autoclose:
+  description: 모두 완료하면 잔액을 자동으로 업데이트하거나, 직접 계속 진행하세요
+  title: 자동 완성
+  payer:
+    title: 지불자
+close:
+  label: 계속하기
+  hold: 계속하려면 길게 눌러줘
+unassigned:
+  - other: 할당되지 않은 항목 {n}개
+pending:
+  status: 조금만 기다려, 거의 다 됐어
+  description: 보통 잠깐 걸려요
+failed:
+  title: 뭔가 이상해 보여
+  description: 최선을 다했는데, 이건 영수증처럼 안 보여. 다시 한 번 해보자!
+  retry:
+    label: 다시 시도
+state:
+  uploading: 보통 잠깐 걸려요
+  processing: 잠깐만 기다려, 거의 다 왔어
+action:
+  label: 스캔
+extras:
+  included: 수수료와 할인은 이미 포함된 것으로 간주돼
+  incomplete: 모든 아이템이 청구된 후에 관리할 수 있어요

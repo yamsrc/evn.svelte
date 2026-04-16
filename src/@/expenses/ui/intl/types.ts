@@ -45,4 +45,16 @@ export type Dictionary = {
           received: (value: any) => string
         }
       }
+      action: {
+
+      }
+      actions: {
+        delete: string
+      }
+      template: {
+        toggle: {
+          label: string
+          description: string
+        }
+      }
     }

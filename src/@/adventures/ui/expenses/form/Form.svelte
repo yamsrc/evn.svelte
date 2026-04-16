@@ -1,17 +1,17 @@
 <script lang="ts">
   import { Check } from '@lucide/svelte'
-  import { back } from '$com/history'
-  import { Actions } from '$com/shell'
-  import { dict as common } from '$lib/intl'
-  import { onsubmit } from '$lib/tools'
-  import { expenses } from '@/adventures'
-  import { Action, Section } from '@/app/ui'
   import { account as me } from '@/iam'
-  import Description from './Description.svelte'
-  import PayerSelect from './PayerSelect.svelte'
+  import { PayerSelect } from '@/expenses/ui'
+  import { Action, Section } from '@/app/ui'
+  import { expenses } from '@/adventures'
+  import { onsubmit } from '$lib/tools'
+  import { dict as common } from '$lib/intl'
+  import { Actions } from '$com/shell'
+  import { back } from '$com/history'
   import Total from './Total.svelte'
-  import type { Props } from './Form'
+  import Description from './Description.svelte'
   import type { Expense } from '@/adventures'
+  import type { Props } from './Form'
 
   const {
     adventure,
@@ -93,7 +93,7 @@
   <form onsubmit={onsubmit(submit)} class="space-y-5">
     <Description bind:title={form.title} bind:location={form.location} />
     <Total bind:amount={form.amount} />
-    <PayerSelect bind:payer={form.payer} {participants} />
+    <PayerSelect bind:value={form.payer} identities={participants} />
 
     <button bind:this={submitButton} type="submit" class="sr-only">
       {$common.expenses.form.save}

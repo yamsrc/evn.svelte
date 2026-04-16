@@ -67,3 +67,7 @@ adventures:
     body: |-
       !js
       (title) => `已将支出添加到${title}`
+receipts:
+  joined:
+    hint: 看看项目，认领属于你的。
+    title: 新收据刚刚到账

@@ -91,3 +91,7 @@ adventures:
     body: |-
       !js
       (title) => `Spesa aggiunta a ${title}`
+receipts:
+  joined:
+    hint: Controlla gli articoli e prendi i tuoi.
+    title: È arrivata una nuova ricevuta

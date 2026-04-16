@@ -1,0 +1,41 @@
+splitter:
+  stack:
+    claim: 全部领取
+    release: 释放
+leave:
+  label: 按住离开
+delete:
+  label: 长按删除
+me: 我
+overview:
+  total: 合计
+feedback:
+  question: 扫描效果怎么样？
+  down: 我们会查看一下。
+  thanks: 谢谢！
+autoclose:
+  description: 当所有人完成后自动更新余额，或等待手动继续
+  title: 自动完成
+  payer:
+    title: 付款人
+close:
+  label: 继续
+  hold: 按住继续
+unassigned:
+  - other: "{n} 个未分配项目"
+pending:
+  status: 再坚持一下，快好了
+  description: 通常只需片刻
+failed:
+  title: 好像哪里不对劲
+  description: 我已经尽力了，但这看起来不像发票。我们再试一次吧！
+  retry:
+    label: 重试
+state:
+  uploading: 通常只需几秒钟
+  processing: 再等一下，马上就好
+action:
+  label: 扫码
+extras:
+  included: 默认费用和折扣都已包含在内
+  incomplete: 所有项目都被认领后即可管理

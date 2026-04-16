@@ -12,12 +12,34 @@ components:
       (count) => `${count} göster`
   graph:
     title: Borç Grafiği
+  receipts:
+    title: Fişler
+    upload:
+      label: Yükle
+    progress:
+      uploading:
+        title: Yükleniyor
+        comment: Genellikle birkaç saniye sürer
+      processing:
+        comment: Biraz daha sabret, neredeyse geldik
+        title: İşleniyor
+      ready:
+        title: Hazır
+        comment: |-
+          !js
+          (ms) => `${(ms / 1000).toFixed(1)} saniyede tamamlandı`
   picture:
     title: Picture
   participants:
     title: Katılımcılar
     managedContactsCreation: Yönetilen kişiler oluşturma butonunu göster
     shareUrl: URL’yi paylaş
+  fullscreen:
+    title: Fullscreen
+    attachment: Herhangi bir harcamaya ek dosya ekle
+    delete: Silmek için basılı tut
+  invitation:
+    title: Davetiyeler
 transmission:
   title: Transmission
   permission:
@@ -28,3 +50,14 @@ transmission:
   ping: Ping
 loading:
   title: Yükleme ekranı
+receipts:
+  upload: {}
+  dropzone:
+    label: Bırakma alanı
+actions:
+  continue: Devam et
+nav:
+  home: Ana Sayfa
+  components: Bileşenler
+  transmission: Şanzıman
+  app: Uygulama

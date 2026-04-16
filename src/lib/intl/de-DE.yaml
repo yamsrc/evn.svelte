@@ -12,7 +12,7 @@ actions:
   contacts:
     group: Gruppe erstellen
     title: Freunde
-    contact: Freund
+    contact: Freund hinzufügen
   addSelected: Ausgewählte hinzufügen
   cancel: Abbrechen
   search: Suchen
@@ -23,6 +23,8 @@ actions:
     adventure: Abenteuer starten
   expenses:
     split: Aufteilen
+  scan: Scannen
+  upload: Wähle selbst
 nav:
   home: Startseite
   profile: Ich
@@ -52,6 +54,11 @@ profile:
       eine Ausgabe hinzugefügt`
   background:
     title: Hintergrund
+    pattern: Vorlage
+    picture: Bild
+    cta: Hintergrund anwenden
+  notifications:
+    title: Benachrichtigungen
 form:
   enterName: Name eingeben
 onboarding:
@@ -102,7 +109,7 @@ join:
 groups:
   leave: Gedrückt halten zum Verlassen
   name:
-    description: Alle Gruppenmitglieder sehen diesen Namen
+    description: Probier mal, ein Emoji hinzuzufügen ✨
     placeholder: Name eingeben
   members:
     title: Mitglieder
@@ -181,3 +188,11 @@ adventures:
 participants:
   add:
     button: Teilnehmende hinzufügen
+wallpapers:
+  effects:
+    classic: Klassisch
+    solar: Sonnenflare
+    influence: Einfluss
+    pino: Pinot Noir
+    sunset: Rosaroter Sonnenuntergang
+    fire: Hitzewelle Feuer

@@ -92,3 +92,7 @@ adventures:
     body: |-
       !js
       (title) => `Расход добавлен в ${title}`
+receipts:
+  joined:
+    hint: Посмотри, что в чеке, и забери своё.
+    title: Прилетел новый чек

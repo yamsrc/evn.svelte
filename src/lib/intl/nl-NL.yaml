@@ -12,7 +12,7 @@ actions:
   contacts:
     group: Groep aanmaken
     title: Vrienden
-    contact: Vriend
+    contact: Vriend toevoegen
   addSelected: Geselecteerde toevoegen
   cancel: Annuleren
   search: Zoeken
@@ -23,6 +23,8 @@ actions:
     adventure: Avontuur starten
   expenses:
     split: Splitsen
+  scan: Scannen
+  upload: Kies je eigen
 nav:
   home: Home
   profile: Ik
@@ -52,6 +54,11 @@ profile:
       heeft een uitgave toegevoegd`
   background:
     title: Achtergrond
+    pattern: Patroon
+    picture: Foto
+    cta: Achtergrond toepassen
+  notifications:
+    title: Meldingen
 form:
   enterName: Naam invoeren
 onboarding:
@@ -102,7 +109,7 @@ join:
 groups:
   leave: Vasthouden om te verlaten
   name:
-    description: Alle groepsleden kunnen deze naam zien
+    description: Probeer eens een emoji toe te voegen ✨
     placeholder: Naam invoeren
   members:
     title: Leden
@@ -179,3 +186,11 @@ adventures:
 participants:
   add:
     button: Deelnemers toevoegen
+wallpapers:
+  effects:
+    classic: Klassiek
+    solar: Zonnevlam
+    influence: Invloed
+    pino: Pinot Noir
+    sunset: Roze Zonsondergang
+    fire: Hittegolfvuur

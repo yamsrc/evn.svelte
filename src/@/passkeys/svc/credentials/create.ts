@@ -1,5 +1,5 @@
-import { base64urlToArrayBuffer, stringToArrayBuffer } from './convert'
 import { key } from './key'
+import { base64urlToArrayBuffer, stringToArrayBuffer } from './convert'
 import type { CreationOptions } from '../net/challenges'
 
 export async function create(

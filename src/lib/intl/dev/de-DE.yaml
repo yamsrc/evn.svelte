@@ -12,12 +12,34 @@ components:
       (count) => `Anzeigen: ${count}`
   graph:
     title: Schuldenübersicht
+  receipts:
+    title: Quittungen
+    upload:
+      label: Hochladen
+    progress:
+      uploading:
+        title: Wird hochgeladen
+        comment: Dauert normalerweise nur wenige Augenblicke
+      processing:
+        comment: Halte durch, gleich sind wir da
+        title: Wird verarbeitet
+      ready:
+        title: Bereit
+        comment: |-
+          !js
+          (ms) => `Fertig in ${(ms / 1000).toFixed(1)} Sekunden`
   picture:
     title: Picture
   participants:
     title: Teilnehmende
     managedContactsCreation: Button zum Erstellen verwalteter Kontakte anzeigen
     shareUrl: URL teilen
+  fullscreen:
+    title: Fullscreen
+    attachment: Füge einen Anhang zu einer beliebigen Ausgabe hinzu
+    delete: Zum Löschen halten
+  invitation:
+    title: Einladungen
 transmission:
   title: Transmission
   permission:
@@ -28,3 +50,14 @@ transmission:
   ping: Ping
 loading:
   title: Ladebildschirm
+receipts:
+  upload: {}
+  dropzone:
+    label: Ablagebereich
+actions:
+  continue: Weiter
+nav:
+  home: Startseite
+  components: Komponenten
+  transmission: Getriebe
+  app: App

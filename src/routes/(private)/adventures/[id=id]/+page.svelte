@@ -1,22 +1,20 @@
 <script lang="ts">
-  import { Coins, Settings } from '@lucide/svelte'
   import { Async } from 'svas'
-  import { page } from '$app/state'
-  import { Actions } from '$com/shell'
-  import { dict as common } from '$lib/intl'
-  import { adventures } from '@/adventures'
+  import { Coins, Settings } from '@lucide/svelte'
+  import { Looking } from '@/notifications/ui'
+  import { account } from '@/iam'
+  import { Action, Header, Section } from '@/app/ui'
   import { Archived, Details } from '@/adventures/ui'
   import { Picture } from '@/adventures/ui'
-  import { Action, Header, Section } from '@/app/ui'
-  import { account } from '@/iam'
-  import { seen } from '@/notifications'
+  import { adventures } from '@/adventures'
+  import { dict as common } from '$lib/intl'
+  import { Actions } from '$com/shell'
+  import { page } from '$app/state'
 
   const id = $derived(page.params.id) as string
-
-  $effect(() => {
-    void seen('adventures', id)
-  })
 </script>
+
+<Looking domain="adventures" key={id} />
 
 <Async store={adventures}>
   {#snippet awaited(adventures)}

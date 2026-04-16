@@ -1,9 +1,9 @@
-import { track } from '@vercel/analytics'
 import { having } from 'svas'
 import { sync } from 'svas'
+import { track } from '@vercel/analytics'
 import { account } from '@/iam'
-import * as net from './net'
 import { internal } from './store'
+import * as net from './net'
 
 export async function add(id: string, identities: string[]): Promise<net.Group | Error> {
   const me = await having(account)

@@ -45,3 +45,10 @@ transfers:
 
       (gender) => gender === "he" ? "Ти отримав" : gender === "she" ? "Ти
       отримала" : "Ти отримав(ла)"
+action: {}
+actions:
+  delete: Видалити вкладення
+template:
+  toggle:
+    label: Зберегти як шаблон
+    description: Використай пізніше у швидких діях

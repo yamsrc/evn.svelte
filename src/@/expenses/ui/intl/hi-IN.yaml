@@ -45,3 +45,10 @@ transfers:
 
       (gender) => gender === "he" ? "तुम्हें मिला है" : gender === "she" ?
       "तुम्हें मिली है" : "तुम्हें मिला/मिली है"
+action: {}
+actions:
+  delete: अटैचमेंट हटाओ
+template:
+  toggle:
+    label: टेम्पलेट के रूप में सेव करें
+    description: क्विक एक्शन्स में बाद में उपयोग करें

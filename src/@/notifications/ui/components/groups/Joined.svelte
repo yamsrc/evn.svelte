@@ -1,13 +1,13 @@
 <script lang="ts">
   import { Async, combined } from 'svas'
-  import { accounts } from '@/accounts'
-  import { Picture } from '@/accounts/ui'
-  import { groups, type Group } from '@/groups'
-  import { account } from '@/iam'
   import { dict } from '@/notifications/ui/intl'
+  import { account } from '@/iam'
+  import { groups, type Group } from '@/groups'
+  import { Picture } from '@/accounts/ui'
+  import { accounts } from '@/accounts'
   import Base from '../Base.svelte'
-  import type { Props } from './Joined'
   import type { Account } from '@/accounts'
+  import type { Props } from './Joined'
 
   const { notification }: Props = $props()
 

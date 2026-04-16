@@ -12,12 +12,34 @@ components:
       (count) => `Показати: ${count}`
   graph:
     title: Графік боргів
+  receipts:
+    title: Чеки
+    upload:
+      label: Завантажити
+    progress:
+      uploading:
+        title: Завантаження
+        comment: Зазвичай це займає кілька секунд
+      processing:
+        comment: Тримайся, вже майже на місці
+        title: Обробка
+      ready:
+        title: Готово
+        comment: |-
+          !js
+          (ms) => `Виконано за ${(ms / 1000).toFixed(1)} секунд(и)`
   picture:
     title: Picture
   participants:
     title: Учасники
     managedContactsCreation: Показати кнопку створення керованих контактів
     shareUrl: Поділитися посиланням
+  fullscreen:
+    title: Fullscreen
+    attachment: Додай вкладення до будь-якої витрати
+    delete: Утримуй, щоб видалити
+  invitation:
+    title: Запрошення
 transmission:
   title: Transmission
   permission:
@@ -28,3 +50,14 @@ transmission:
   ping: Ping
 loading:
   title: Екран завантаження
+receipts:
+  upload: {}
+  dropzone:
+    label: Зона для перетягування
+actions:
+  continue: Продовжити
+nav:
+  home: Головна
+  components: Компоненти
+  transmission: Трансмісія
+  app: Застосунок

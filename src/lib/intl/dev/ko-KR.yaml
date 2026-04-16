@@ -12,12 +12,34 @@ components:
       (count) => `${count}개 표시`
   graph:
     title: 부채 그래프
+  receipts:
+    title: 영수증
+    upload:
+      label: 업로드
+    progress:
+      uploading:
+        title: 업로드 중
+        comment: 보통 잠시만 걸립니다
+      processing:
+        comment: 조금만 참아 주세요, 거의 다 왔어요
+        title: 처리 중
+      ready:
+        title: 준비 완료
+        comment: |-
+          !js
+          (ms) => `${(ms / 1000).toFixed(1)}초 만에 완료됨`
   picture:
     title: Picture
   participants:
     title: 참가자
     managedContactsCreation: 관리되는 연락처 생성 버튼 표시
     shareUrl: URL 공유
+  fullscreen:
+    title: Fullscreen
+    attachment: 어느 지출에나 첨부파일을 추가해봐
+    delete: 길게 눌러서 삭제
+  invitation:
+    title: 초대장
 transmission:
   title: Transmission
   permission:
@@ -28,3 +50,14 @@ transmission:
   ping: Ping
 loading:
   title: 로딩 화면
+receipts:
+  upload: {}
+  dropzone:
+    label: 드롭존
+actions:
+  continue: 계속
+nav:
+  home: 홈
+  components: 컴포넌트
+  transmission: 변속기
+  app: 앱

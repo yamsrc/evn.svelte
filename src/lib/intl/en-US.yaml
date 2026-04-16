@@ -12,7 +12,7 @@ actions:
   contacts:
     group: Create Group
     title: Friends
-    contact: Friend
+    contact: Add Friend
   addSelected: Add selected
   cancel: Cancel
   search: Search
@@ -23,6 +23,8 @@ actions:
     adventure: Start Adventure
   expenses:
     split: Split
+  scan: Scan
+  upload: Choose your own
 nav:
   home: Home
   profile: Me
@@ -50,6 +52,11 @@ profile:
       === "she" ? `${name} added an expense` : `${name} added an expense`
   background:
     title: Background
+    pattern: Pattern
+    picture: Picture
+    cta: Apply background
+  notifications:
+    title: Notifications
 form:
   enterName: Enter name
 onboarding:
@@ -98,7 +105,7 @@ join:
 groups:
   leave: Hold to leave
   name:
-    description: All group members will see this name
+    description: Try adding an emoji ✨
     placeholder: Enter name
   members:
     title: Members
@@ -175,3 +182,11 @@ adventures:
 participants:
   add:
     button: Add participants
+wallpapers:
+  effects:
+    classic: Classic
+    solar: Solar Flare
+    influence: Influence
+    pino: Pinot Noir
+    sunset: Pink Sunset
+    fire: Heatwave Fire

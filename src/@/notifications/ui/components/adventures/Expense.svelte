@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { currency } from '$lib/tools'
   import { dict, locale } from '@/notifications/ui/intl'
+  import { currency } from '$lib/tools'
   import Base from '../Base.svelte'
   import type { Props } from './Expense'
 

@@ -79,3 +79,7 @@ adventures:
     body: |-
       !js
       (title) => `Ausgabe zu ${title} hinzugefügt`
+receipts:
+  joined:
+    hint: Schau dir die Posten an und markiere deine.
+    title: Eine neue Quittung ist eingegangen

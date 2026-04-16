@@ -43,3 +43,10 @@ transfers:
 
       (gender) => gender === "he" ? "Tu as reçu" : gender === "she" ? "Tu as
       reçu" : "Tu as reçu"
+action: {}
+actions:
+  delete: Supprimer la pièce jointe
+template:
+  toggle:
+    label: Enregistrer comme modèle
+    description: Utiliser plus tard dans les actions rapides

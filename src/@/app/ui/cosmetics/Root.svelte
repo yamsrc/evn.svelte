@@ -1,7 +1,7 @@
 <script lang="ts">
   import { cn } from '$lib/utils'
-  import type { Snippet } from 'svelte'
   import type { ClassValue, HTMLAttributes } from 'svelte/elements'
+  import type { Snippet } from 'svelte'
 
   interface Props extends HTMLAttributes<HTMLDivElement> {
     class?: ClassValue

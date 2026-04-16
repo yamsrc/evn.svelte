@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { page } from '$app/state'
-  import { Participants } from '@/app/ui'
   import { Editor } from '@/groups/ui'
+  import { Participants } from '@/app/ui'
+  import { page } from '$app/state'
 
   const ctx = Editor.getContext()
   const id = $derived(page.params.id)

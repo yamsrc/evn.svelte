@@ -1,6 +1,9 @@
 export interface Props {
   id?: string
   amount?: number
-  sign?: 'positive' | 'negative' | 'neutral'
+  prefix?: string
+  sign?: 'positive' | 'negative' | 'neutral' | 'highlight'
+  /** @default true */
+  absolute?: boolean
   class?: string
 }

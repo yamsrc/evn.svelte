@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { unseen } from '@/expenses'
   import { Expense } from '@/expenses/ui'
+  import { unseen } from '@/expenses'
   import { dict } from './intl'
   import type { Props } from './Expenses'
 

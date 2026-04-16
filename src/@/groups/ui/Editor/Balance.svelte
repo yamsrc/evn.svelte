@@ -1,9 +1,9 @@
 <script lang="ts">
   import { ok } from 'svas'
-  import { dict } from '$lib/intl'
-  import { Coins } from '@/app/ui'
-  import { contacts } from '@/contacts'
   import { account } from '@/iam'
+  import { contacts } from '@/contacts'
+  import { Coins } from '@/app/ui'
+  import { dict } from '$lib/intl'
   import type { Props } from './Balance'
 
   const { value }: Props = $props()

@@ -1,6 +1,6 @@
 import { origin, type OctetsEntry, type Faulty } from '@/net'
-import type { Expense } from './Expense'
 import type { Emitter } from 'mitt'
+import type { Expense } from './Expense'
 
 const expenses = origin.resource<Expense>('/expenses/', { credentials: 'include' })
 

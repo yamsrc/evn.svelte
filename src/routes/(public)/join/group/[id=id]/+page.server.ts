@@ -1,8 +1,8 @@
 import { redirect } from '@sveltejs/kit'
-import { acceptable } from '$lib/intl'
-import { dictionaries } from '$lib/intl/join'
-import { get } from '@/accounts'
 import { invitations } from '@/groups'
+import { get } from '@/accounts'
+import { dictionaries } from '$lib/intl/join'
+import { acceptable } from '$lib/intl'
 import type { PageServerLoad } from './$types.js'
 
 const MAX_NAMES = 7

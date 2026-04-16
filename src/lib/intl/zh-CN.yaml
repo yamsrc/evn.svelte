@@ -12,7 +12,7 @@ actions:
   contacts:
     group: 创建群组
     title: 朋友
-    contact: 朋友
+    contact: 添加好友
   addSelected: 添加已选项
   cancel: 取消
   search: 搜索
@@ -23,6 +23,8 @@ actions:
     adventure: 开始冒险
   expenses:
     split: 分摊
+  scan: 扫描
+  upload: 选你自己的
 nav:
   home: 首页
   profile: 我
@@ -44,6 +46,11 @@ profile:
       (name, gender) => `${name} 添加了一笔支出`
   background:
     title: 背景
+    pattern: 模板
+    picture: 照片
+    cta: 应用背景
+  notifications:
+    title: 通知
 form:
   enterName: 输入姓名
 onboarding:
@@ -88,7 +95,7 @@ join:
 groups:
   leave: 长按退出
   name:
-    description: 所有群组成员都能看到这个名称
+    description: 试着加个表情符号 ✨
     placeholder: 输入名称
   members:
     title: 成员
@@ -163,3 +170,11 @@ adventures:
 participants:
   add:
     button: 添加参与者
+wallpapers:
+  effects:
+    classic: 经典
+    solar: 太阳耀斑
+    influence: 影响
+    pino: 黑皮诺
+    sunset: 粉色日落
+    fire: 热浪火焰

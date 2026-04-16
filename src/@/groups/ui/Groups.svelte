@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { Section } from '@/app/ui'
   import { unseen } from '@/groups'
+  import { Section } from '@/app/ui'
   import Group from './Panel.svelte'
   import type { Props } from './Groups'
 
