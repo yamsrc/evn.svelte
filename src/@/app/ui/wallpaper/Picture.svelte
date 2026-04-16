@@ -30,6 +30,7 @@
   presets={wallpaper.presets}
   upload={wallpaper.upload}
   variant="1280x2700"
+  densities={[1]}
   card="aspect-1/2"
   placement="end"
   {gate}

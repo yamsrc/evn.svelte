@@ -13,6 +13,7 @@
     presets,
     upload,
     variant,
+    densities,
     card,
     placement = 'end',
     vt,
@@ -94,7 +95,7 @@
       style={vt && id === picture
         ? `view-transition-name: ${vt}; view-transition-class: transition-morph;`
         : undefined}>
-      <Picture {id} alt={id} {variant} class="size-full object-cover" />
+      <Picture {id} alt={id} {variant} {densities} class="size-full object-cover" />
     </List.Option>
   {/each}
 

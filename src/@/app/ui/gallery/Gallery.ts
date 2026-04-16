@@ -9,6 +9,7 @@ export interface Props {
   presets: readonly string[]
   upload: (file: File) => Promise<Entry | Error>
   variant: string
+  densities?: number[]
   card: ClassValue
   /** @default 'end' */
   placement?: 'start' | 'end'
