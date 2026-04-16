@@ -9,7 +9,7 @@
   const premium = $derived(accounts.premium(account))
 </script>
 
-<div class={[premium && 'relative premium-frame rounded-full', classes]} {style}>
+<div class={['rounded-full relative', premium && 'premium-frame', classes]} {style}>
   {#if premium}
     <div
       class={[
@@ -28,7 +28,7 @@
   .premium-frame::before {
     content: '';
     position: absolute;
-    inset: 0;
+    inset: -2px;
     padding: 2px;
     border-radius: inherit;
     background: var(--gradient-premium);

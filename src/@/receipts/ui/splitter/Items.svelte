@@ -54,7 +54,7 @@
                 <Asyvatar
                   {identity}
                   size={24}
-                  class={[mounted && 'starting:scale-0 duration-150']} />
+                  class={[mounted && 'starting:scale-0 duration-150 ring-2 ring-card']} />
               {/each}
             </div>
           {/if}
