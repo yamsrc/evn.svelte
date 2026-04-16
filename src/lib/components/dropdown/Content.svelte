@@ -71,6 +71,6 @@
   }
 
   ::view-transition-group(.dropdown-content) {
-    z-index: 2;
+    z-index: 1;
   }
 </style>

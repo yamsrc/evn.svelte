@@ -21,7 +21,7 @@
   beforeNavigate(() => (style = ''))
 </script>
 
-<div class="flex-1" style="anchor-name: --{ctx.id};" use:trackRef>
+<div class="flex-1 h-full" style="anchor-name: --{ctx.id};" use:trackRef>
   {#if ctx.opened}
     <!-- Placeholder of same size and position for proper dropdown alignment when trigger is hidden -->
     <div class={[buttonVariants({ variant, size }), classes, 'invisible']}></div>

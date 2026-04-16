@@ -40,7 +40,7 @@
     {...rest}>
     <Palette />
   </Dropdown.Trigger>
-  <Dropdown.Content position="end-top">
+  <Dropdown.Content position="end-top" class="z-1!">
     <Dropdown.Layer>
       {#each effects as effect (effect)}
         {@const selected = $account?.wallpaper?.effect === effect}
