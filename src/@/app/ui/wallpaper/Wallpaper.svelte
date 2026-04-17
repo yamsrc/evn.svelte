@@ -4,6 +4,7 @@
   import { account } from '@/iam'
   import { premium, wallpaper } from '@/accounts'
   import * as Tabs from '$ui/tabs'
+  import { transit } from '$lib/tools'
   import { dict } from '$lib/intl'
   import Picture from './Picture.svelte'
   import Pattern from './Pattern.svelte'
@@ -19,7 +20,7 @@
   function onValueChange(value: string) {
     method = value as Wallpaper['method']
 
-    if ($account && premium($account)) void wallpaper.set({ method })
+    if ($account && premium($account)) transit(() => void wallpaper.set({ method }))
 
     track(events[method])
   }
