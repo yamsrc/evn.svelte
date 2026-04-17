@@ -5,7 +5,7 @@
   import { logout } from '@/iam'
   import { account } from '@/iam'
   import { Feedback } from '@/feedback/ui'
-  import { Section } from '@/app/ui'
+  import { Section, Update } from '@/app/ui'
   import { Header } from '@/app/ui'
   import { Wallpaper } from '@/app/ui'
   import { Action } from '@/app/ui'
@@ -25,6 +25,7 @@
   }
 
   const onpress = clicks(5, () => goto('/dev/'))
+  const updateAvailable = true
 </script>
 
 {#if $account}
@@ -109,6 +110,13 @@
           class="flex-row-reverse" />
         <Delete class="py-0 underline underline-offset-3 font-normal" ondelete={getout} />
       </div>
+      {#if updateAvailable}
+        <div class="px-2">
+          <Update variant="outline" size="sm">
+            {$dict.update.label}
+          </Update>
+        </div>
+      {/if}
     </footer>
   </Section>
 {/if}
