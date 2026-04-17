@@ -3,6 +3,7 @@ import { faker } from '@faker-js/faker'
 import { Given } from './fixtures'
 
 Given('new group', async ({ page, ctx }) => {
+  await page.goto('/contacts/')
   await page.goto('/contacts/groups/')
 
   const input = page.locator('#app-cosmetics-name-input')
@@ -13,7 +14,7 @@ Given('new group', async ({ page, ctx }) => {
   const name = faker.word.noun()
 
   await input.fill(name)
-  await page.keyboard.press('Enter')
   ctx.name = name
-  await expect(page.locator('#groups-favorite-button')).toBeVisible()
+  await page.locator('#nav-actions-groups-save-button').click()
+  await expect(page.locator('#group-favorite-button')).toBeVisible()
 })

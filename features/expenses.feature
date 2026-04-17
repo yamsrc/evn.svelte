@@ -2,9 +2,8 @@ Feature: Expenses
 
   Scenario: Create a new expense
     Given new account
-    And I tap 'nav-contacts-button'
     And I tap 'nav-expenses-button'
-    And I tap 'expenses-draft-action'
+    And I tap 'expenses-empty-create-button'
     And I tap 'expenses-spendings-add-participants-button'
     Then 'participants-selector-add-button' is visible
     When I tap 'expenses-add-participants-create-button'

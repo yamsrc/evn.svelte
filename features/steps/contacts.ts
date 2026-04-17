@@ -3,7 +3,8 @@ import { faker } from '@faker-js/faker'
 import { Given } from './fixtures'
 
 Given('new managed contact', async ({ page, ctx }) => {
-  await page.goto('/contacts/new/managed/')
+  await page.goto('/contacts/')
+  await page.goto('/contacts/managed/')
   await expect(page.locator('#app-cosmetics-name-input')).toBeFocused()
 
   const name = faker.person.firstName()

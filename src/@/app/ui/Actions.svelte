@@ -123,7 +123,7 @@
       <Dropdown.Layer name="contacts">
         <Dropdown.Group direction="col">
           <Dropdown.Back />
-          <Dropdown.Item href="/contacts/managed/">
+          <Dropdown.Item id="contacts-invite-manual-button" href="/contacts/managed/">
             <UserPlus />
             <span class="whitespace-nowrap">{$contactsDict.invite.manually}</span>
           </Dropdown.Item>
