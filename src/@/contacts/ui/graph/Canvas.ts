@@ -16,6 +16,7 @@ export interface Member {
   id: string
   name: string
   picture?: string
+  premium?: number
 }
 
 export interface Props {

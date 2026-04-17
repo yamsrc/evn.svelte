@@ -20,7 +20,7 @@
       [...ids].map((id) => {
         const a = byId.get(id)
 
-        return [id, { id, name: a?.name ?? id, picture: a?.picture }]
+        return [id, { id, name: a?.name ?? id, picture: a?.picture, premium: a?.premium }]
       }),
     )
   })
