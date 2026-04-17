@@ -53,13 +53,17 @@ app.addEventListener('activate', (event) => {
     for (const key of await caches.keys())
       if (key !== CACHE) await caches.delete(key)
 
-    if (dev)
-      await app.clients.claim()
+    await app.clients.claim()
 
     console.info('App activated')
   }
 
   event.waitUntil(activate())
+})
+
+app.addEventListener('message', (event) => {
+  if (event.data?.type === 'SKIP_WAITING')
+    void app.skipWaiting()
 })
 
 app.addEventListener('fetch', (event) => {

@@ -2,13 +2,10 @@
   import { CodeXml, LogOut } from '@lucide/svelte'
   import { Permission, Scopes } from '@/transmission/ui'
   import { subscribed } from '@/transmission'
-  import { logout } from '@/iam'
-  import { account } from '@/iam'
+  import { account, logout } from '@/iam'
   import { Feedback } from '@/feedback/ui'
-  import { Section, Update } from '@/app/ui'
-  import { Header } from '@/app/ui'
-  import { Wallpaper } from '@/app/ui'
-  import { Action } from '@/app/ui'
+  import { Section, Update, Header, Wallpaper, Action } from '@/app/ui'
+  import { updateAvailable } from '@/app'
   import { Cosmetics, Delete, Grammar, Language } from '@/accounts/ui'
   import { clicks } from '$lib/tools'
   import { dict } from '$lib/intl'
@@ -25,7 +22,6 @@
   }
 
   const onpress = clicks(5, () => goto('/dev/'))
-  const updateAvailable = true
 </script>
 
 {#if $account}
@@ -110,7 +106,7 @@
           class="flex-row-reverse" />
         <Delete class="py-0 underline underline-offset-3 font-normal" ondelete={getout} />
       </div>
-      {#if updateAvailable}
+      {#if $updateAvailable || true}
         <div class="px-2">
           <Update variant="outline" size="sm">
             {$dict.update.label}

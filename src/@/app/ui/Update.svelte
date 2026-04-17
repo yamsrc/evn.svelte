@@ -1,10 +1,11 @@
 <script lang="ts">
+  import { apply } from '@/app'
   import { Button } from '$ui/button'
   import type { Props } from './Update'
 
-  const { children, ...rest }: Props = $props()
+  const { children, onclick = apply, ...rest }: Props = $props()
 </script>
 
-<Button {...rest}>
+<Button {onclick} {...rest}>
   {@render children?.()}
 </Button>
