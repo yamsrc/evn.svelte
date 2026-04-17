@@ -281,4 +281,10 @@
     animation-duration: 300ms;
     block-size: 100%;
   }
+
+  ::view-transition-group(*.transition-instant),
+  ::view-transition-old(*.transition-instant),
+  ::view-transition-new(*.transition-instant) {
+    animation-duration: 0s;
+  }
 }

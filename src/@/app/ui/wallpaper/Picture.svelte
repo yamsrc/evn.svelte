@@ -10,12 +10,13 @@
 
   let picture = $state<string>($account?.wallpaper?.picture ?? '')
 
-  function gate(run: () => void) {
+  function gate(source: string, callback: () => void) {
     paywall({
       benefit: 'background',
       label: $dict.profile.background.cta,
       icon: ImageUp,
-      callback: run,
+      source,
+      callback,
     })
   }
 

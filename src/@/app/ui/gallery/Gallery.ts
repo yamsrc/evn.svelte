@@ -15,7 +15,7 @@ export interface Props {
   placement?: 'start' | 'end'
   /** view-transition-name applied to picked item */
   vt?: string
-  /** wrap pick/upload actions (paywall) */
-  gate?: (run: () => void) => void
+  /** wrap pick/upload actions (paywall); source is element id for VT morph */
+  gate?: (source: string, callback: () => void) => void
   onpick?: (picture: string) => void
 }
