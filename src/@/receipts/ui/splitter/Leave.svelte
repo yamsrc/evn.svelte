@@ -9,6 +9,7 @@
 </script>
 
 <Hold
+  name="leave-receipt"
   variant="outline"
   size="icon"
   label={shared ? $dict.leave.label : $dict.delete.label}
