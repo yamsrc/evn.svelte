@@ -106,7 +106,7 @@
           class="flex-row-reverse" />
         <Delete class="py-0 underline underline-offset-3 font-normal" ondelete={getout} />
       </div>
-      {#if $updateAvailable || true}
+      {#if $updateAvailable}
         <div class="px-2">
           <Update variant="outline" size="sm">
             {$dict.update.label}
