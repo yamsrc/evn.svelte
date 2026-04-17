@@ -3,7 +3,7 @@
   import { Picture } from '@/media/ui'
   import { List } from '@/app/ui'
   import { buttonVariants } from '$ui/button'
-  import { takeoff } from '$lib/tools'
+  import { styles } from '$lib/tools'
   import { dict } from '$lib/intl'
   import { Loader } from '$com/loader'
   import type { Props } from './Gallery'
@@ -13,6 +13,7 @@
     presets,
     upload,
     variant,
+    densities,
     card,
     placement = 'end',
     vt,
@@ -21,6 +22,7 @@
   }: Props = $props()
 
   const baseCard = 'overflow-hidden rounded-lg max-w-64 shrink-0'
+  const scrollVT = styles(`gallery-scroll-${crypto.randomUUID()}`, 'transition-instant')
 
   let input = $state<HTMLInputElement | null>(null)
   let uploading = $state(false)
@@ -31,34 +33,28 @@
     uploaded ? (placement === 'start' ? [uploaded, ...presets] : [...presets, uploaded]) : presets,
   )
   const offset = $derived(placement === 'start' ? 1 : 0)
+
   const picked = $derived.by(() => {
     const i = options.indexOf(picture)
 
     return i >= 0 ? i + offset : undefined
   })
 
-  function guarded(run: () => void) {
-    if (gate) gate(run)
+  function pick(index: number) {
+    const run = () => {
+      picture = options[index - offset]
+      onpick?.(picture)
+    }
+
+    if (gate) gate(`paywall-${index - offset}`, run)
     else run()
   }
 
-  function transit(id: string) {
-    takeoff(id, 'paywall', 'transition-spring transition-morph')
-  }
-
-  function pick(index: number) {
-    if (gate) transit(`paywall-${index - offset}`)
-
-    guarded(() => {
-      picture = options[index - offset]
-      onpick?.(picture)
-    })
-  }
-
   function browse() {
-    if (gate) transit('paywall-upload')
+    const run = () => input?.click()
 
-    guarded(() => input?.click())
+    if (gate) gate('paywall-upload', run)
+    else run()
   }
 
   async function handle(event: Event) {
@@ -83,7 +79,7 @@
 
 <input type="file" accept="image/*" bind:this={input} onchange={handle} class="hidden" />
 
-<List.Root {picked} onpick={pick} align="center" class="py-1 -my-1">
+<List.Root {picked} onpick={pick} align="center" class="py-1 -my-1" style={$scrollVT}>
   {#if placement === 'start'}{@render uploader()}{/if}
 
   {#each options as id, i (id)}
@@ -94,7 +90,7 @@
       style={vt && id === picture
         ? `view-transition-name: ${vt}; view-transition-class: transition-morph;`
         : undefined}>
-      <Picture {id} alt={id} {variant} class="size-full object-cover" />
+      <Picture {id} alt={id} {variant} {densities} class="size-full object-cover" />
     </List.Option>
   {/each}
 

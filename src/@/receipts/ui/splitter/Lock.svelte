@@ -40,6 +40,7 @@
 <div class="flex flex-col justify-center gap-2" use:transition={{ name: 'splitter-lock-button' }}>
   {#if claimed < total && !receipt.locked}
     <Hold
+      name="lock-receipt"
       variant="default"
       size="lg"
       {onclick}

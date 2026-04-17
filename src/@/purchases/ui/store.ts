@@ -9,6 +9,8 @@ export type CTA = {
   label: string
   icon: typeof Icon
   callback: () => void
+  /** Element id to morph into paywall via view transition */
+  source?: string
 }
 
 const open = writable(false)

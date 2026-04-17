@@ -10,12 +10,13 @@
 
   let picture = $state<string>($account?.wallpaper?.picture ?? '')
 
-  function gate(run: () => void) {
+  function gate(source: string, callback: () => void) {
     paywall({
       benefit: 'background',
       label: $dict.profile.background.cta,
       icon: ImageUp,
-      callback: run,
+      source,
+      callback,
     })
   }
 
@@ -30,6 +31,7 @@
   presets={wallpaper.presets}
   upload={wallpaper.upload}
   variant="1280x2700"
+  densities={[1]}
   card="aspect-1/2"
   placement="end"
   {gate}

@@ -3,7 +3,7 @@
   import { Paperclip } from '@lucide/svelte'
   import { account as me } from '@/iam'
   import { Card } from '@/expenses/ui/views'
-  import { Picture } from '@/accounts/ui'
+  import { Avatar } from '@/accounts/ui'
   import { accounts } from '@/accounts'
   import { date } from '$lib/tools'
   import { locale } from '$lib/intl'
@@ -23,7 +23,7 @@
     <Async store={accounts.get(expense.payer)}>
       {#snippet awaited(account)}
         <div class="flex items-center gap-3 min-w-0">
-          <Picture {account} class="size-8" />
+          <Avatar {account} class="size-8" />
           <span>{expense.payer === $me?.id ? $dict.me : account.name}</span>
         </div>
       {/snippet}

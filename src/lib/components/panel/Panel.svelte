@@ -48,7 +48,7 @@
         )}
         {variant}
         {...props}>
-        <div class="flex items-center justify-start gap-2 shrink overflow-hidden">
+        <div class="flex items-center justify-start gap-2 shrink">
           {#if icon}
             <div class="shrink-0">
               {@render icon()}

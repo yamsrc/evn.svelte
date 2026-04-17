@@ -2,7 +2,7 @@
   import { having } from 'svas'
   import { account, named } from '@/iam'
   import { add } from '@/contacts'
-  import { Picture } from '@/accounts/ui'
+  import { Avatar } from '@/accounts/ui'
   import { Button, buttonVariants } from '$ui/button'
   import * as AlertDialog from '$ui/alert-dialog'
   import { cn } from '$lib/utils'
@@ -38,7 +38,7 @@
       </AlertDialog.Description>
     </AlertDialog.Header>
     <div class="flex flex-row gap-4 p-4 rounded-md bg-muted justify-center items-center">
-      <Picture account={inviter} class="size-10" />
+      <Avatar account={inviter} size={40} />
       <p class="text-balance">
         {$dict.friends.dialog.content(inviter.name)}
       </p>

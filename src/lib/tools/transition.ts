@@ -9,10 +9,15 @@ export function transit(fn?: (() => void) | (() => Promise<void>)): Promise<void
 
   if (fly) depart()
 
-  return new Promise((resolve) => document.startViewTransition(async () => {
-    land()
-    resolve(await fn?.())
-  }).finished.then(() => { if (fly) arrive() }))
+  return new Promise((resolve) =>
+    document.startViewTransition(async () => {
+      land()
+      resolve(await fn?.())
+    }).finished.then(() => {
+      if (fly) arrive()
+
+      touchdown()
+    }))
 }
 
 export function navigate(nav: OnNavigate): Promise<void> | void {
@@ -24,10 +29,7 @@ export function navigate(nav: OnNavigate): Promise<void> | void {
 let launch: Launch | null = null
 
 export function takeoff(id: string, name: string, classes?: string) {
-  if (launch !== null) {
-    launch.el.style.viewTransitionName = ''
-    launch.el.style.viewTransitionClass = ''
-  }
+  if (launch !== null) clearInline(launch)
 
   const el = document.getElementById(id)
 
@@ -53,6 +55,22 @@ function land() {
 
   launch.el.style.viewTransitionName = clear ? '' : launch.name
   launch.el.style.viewTransitionClass = clear ? '' : (launch.classes ?? '')
+}
+
+function touchdown() {
+  if (launch === null) return
+
+  // Keep `launch` alive after forward pass so land() can re-apply the name
+  // on return transit (source → target → source morph).
+  if (launch.el.style.viewTransitionName !== launch.name) return
+
+  clearInline(launch)
+  launch = null
+}
+
+function clearInline(launch: Launch) {
+  launch.el.style.viewTransitionName = ''
+  launch.el.style.viewTransitionClass = ''
 }
 
 const flying = writable<boolean>(false)
