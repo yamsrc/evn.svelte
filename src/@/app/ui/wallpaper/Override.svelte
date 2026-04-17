@@ -1,21 +1,19 @@
 <script lang="ts">
-  import { onMount } from 'svelte'
   import { override } from './Pattern'
   import type { Account } from '@/accounts/svc/net/Account'
 
   const { account }: { account: Account } = $props()
 
-  onMount(() => {
-    const pattern = account.wallpaper?.pattern ?? account.background
-    const picture = account.wallpaper?.picture
+  const wallpaper = $derived({
+    method: account.wallpaper?.method ?? 'pattern',
+    pattern: account.wallpaper?.pattern ?? account.background,
+    picture: account.wallpaper?.picture,
+    effect: account.wallpaper?.effect ?? null,
+  })
 
-    if (!pattern && !picture) return
+  $effect(() => {
+    if (!wallpaper.pattern && !wallpaper.picture) return
 
-    return override({
-      method: account.wallpaper?.method ?? 'pattern',
-      pattern,
-      picture,
-      effect: account.wallpaper?.effect ?? null,
-    })
+    return override(wallpaper)
   })
 </script>
