@@ -60,6 +60,8 @@ function land() {
 function touchdown() {
   if (launch === null) return
 
+  // Keep `launch` alive after forward pass so land() can re-apply the name
+  // on return transit (source → target → source morph).
   if (launch.el.style.viewTransitionName !== launch.name) return
 
   clearInline(launch)
