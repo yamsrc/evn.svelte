@@ -63,7 +63,7 @@ app.addEventListener('activate', (event) => {
 
 app.addEventListener('message', (event) => {
   if (event.data?.type === 'SKIP_WAITING')
-    void app.skipWaiting()
+    event.waitUntil(app.skipWaiting())
 })
 
 app.addEventListener('fetch', (event) => {
