@@ -3,7 +3,7 @@
   import { dict } from '@/notifications/ui/intl'
   import { account } from '@/iam'
   import { adventures } from '@/adventures'
-  import { Picture } from '@/accounts/ui'
+  import { Avatar, Title } from '@/accounts/ui'
   import { accounts } from '@/accounts'
   import Base from '../Base.svelte'
   import type { Adventure } from '@/adventures'
@@ -28,8 +28,9 @@
           {$dict.adventures.joined.me(title, me.grammar)}
         {:else if newbies.length === 1}
           {@const newbie = newbies[0]}
-          <Picture account={newbie} size={32} />
-          {$dict.adventures.joined.other(newbie.name, title, newbie.grammar)}
+          {@const name = $dict.adventures.joined.other(newbie.name, title, newbie.grammar)}
+          <Avatar account={newbie} size={32} />
+          <Title account={{ ...newbie, name }} />
         {:else}
           {@const names = newbies.map((account) => account.name)}
           {$dict.adventures.joined.others(names, title, undefined)}

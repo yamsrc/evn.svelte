@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Async } from 'svas'
-  import { Picture } from '@/accounts/ui'
+  import { Avatar } from '@/accounts/ui'
   import { accounts } from '@/accounts'
   import type { Props } from './Avatars'
 
@@ -16,7 +16,7 @@
       {#each visible as identity (identity)}
         <Async store={accounts.get(identity)}>
           {#snippet awaited(account)}
-            <Picture {account} class="size-8 ring-2 ring-card shrink-0" />
+            <Avatar {account} class="size-8 ring-2 ring-card shrink-0" />
           {/snippet}
         </Async>
       {/each}

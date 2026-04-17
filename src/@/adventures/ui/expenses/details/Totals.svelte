@@ -2,10 +2,9 @@
   import { Async } from 'svas'
   import { account as me } from '@/iam'
   import { Coins } from '@/app/ui'
-  import { Picture } from '@/accounts/ui'
+  import { Avatar, Title } from '@/accounts/ui'
   import { accounts } from '@/accounts'
   import * as Card from '$ui/card'
-  import { Ellipsis } from '$com/text'
   import { dict } from '../../intl'
   import type { Props } from './Totals'
 
@@ -39,8 +38,8 @@
         {#snippet awaited(account)}
           {@const name = expense.payer === $me?.id ? $dict.me : account.name}
           <div class="flex items-center gap-2">
-            <Picture {account} class="size-8" />
-            <Ellipsis>{name}</Ellipsis>
+            <Avatar {account} class="size-8" />
+            <Title account={{ ...account, name }} />
           </div>
         {/snippet}
       </Async>

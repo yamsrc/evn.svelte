@@ -238,4 +238,7 @@ export type Dictionary = {
           fire: string
         }
       }
+      update: {
+        label: string
+      }
     }

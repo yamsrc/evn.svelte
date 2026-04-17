@@ -324,6 +324,10 @@ inputs:
       fire:
         input: Heatwave Fire
         context: short pattern name
+  update:
+    label:
+      input: Update
+      context: button label
 mounts:
   iam: ../../@/iam/ui/intl
   feedback: ../../@/feedback/ui/intl

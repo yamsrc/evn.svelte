@@ -3,7 +3,7 @@
   import { account as me } from '@/iam'
   import { numbers } from '@/expenses'
   import { CoinsInput } from '@/app/ui'
-  import { Picture } from '@/accounts/ui'
+  import { Avatar, Title } from '@/accounts/ui'
   import { accounts } from '@/accounts'
   import { currency } from '$lib/tools'
   import { dict, locale } from '$lib/intl'
@@ -13,7 +13,6 @@
   import { getContext } from './Context'
   import type { Props } from './ByShare'
 
-  const nameClass = 'text-start text-base font-normal flex-1 min-w-0 flex'
   const amountClass = 'min-w-24 max-w-48 flex-1'
 
   let { value = $bindable() }: Props = $props()
@@ -38,16 +37,12 @@
       <Separator />
     {/if}
     <div class="flex flex-nowrap items-center justify-between gap-2 min-h-13">
-      <div class="flex items-center gap-2 overflow-hidden flex-1">
+      <div class="flex items-center gap-2 flex-1 min-w-0">
         <Async store={accounts.get(id)}>
           {#snippet awaited(account)}
             {@const name = id === $me?.id ? $dict.expenses.me : account.name}
-            <div class="shrink-0">
-              <Picture {account} class="size-8" />
-            </div>
-            <div class={nameClass}>
-              <Ellipsis>{name}</Ellipsis>
-            </div>
+            <Avatar {account} class="size-8 shrink-0" />
+            <Title account={{ ...account, name }} class="text-start text-base font-normal" />
           {/snippet}
         </Async>
       </div>
@@ -68,13 +63,9 @@
     {/if}
     <div class="flex flex-col gap-2">
       <div class="flex flex-nowrap items-center justify-between gap-2">
-        <div class="flex items-center gap-2 overflow-hidden flex-1">
-          <div class={nameClass}>
-            <Ellipsis>
-              {extra.comment ?? $dict.expenses.spendings.extras.title}
-            </Ellipsis>
-          </div>
-        </div>
+        <Ellipsis class="text-start text-base font-normal flex-1 min-w-0">
+          {extra.comment ?? $dict.expenses.spendings.extras.title}
+        </Ellipsis>
         <CoinsInput
           class={amountClass}
           bind:value={value.extras[i].amount}

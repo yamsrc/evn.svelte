@@ -231,6 +231,9 @@ export const dictionaries = {
         "sunset": "غروب وردي",
         "fire": "موجة حر نارية"
       }
+    },
+    "update": {
+      "label": "تحديث"
     }
   },
   "de-DE": {
@@ -462,6 +465,9 @@ export const dictionaries = {
         "sunset": "Rosaroter Sonnenuntergang",
         "fire": "Hitzewelle Feuer"
       }
+    },
+    "update": {
+      "label": "Aktualisieren"
     }
   },
   "en-US": {
@@ -693,6 +699,9 @@ export const dictionaries = {
         "sunset": "Pink Sunset",
         "fire": "Heatwave Fire"
       }
+    },
+    "update": {
+      "label": "Update"
     }
   },
   "es-ES": {
@@ -924,6 +933,9 @@ export const dictionaries = {
         "sunset": "Atardecer Rosado",
         "fire": "Fuego de ola de calor"
       }
+    },
+    "update": {
+      "label": "Actualizar"
     }
   },
   "fr-FR": {
@@ -1155,6 +1167,9 @@ export const dictionaries = {
         "sunset": "Coucher de soleil rose",
         "fire": "Feu de canicule"
       }
+    },
+    "update": {
+      "label": "Mettre à jour"
     }
   },
   "hi-IN": {
@@ -1386,6 +1401,9 @@ export const dictionaries = {
         "sunset": "गुलाबी सूर्यास्त",
         "fire": "हीटवेव फायर"
       }
+    },
+    "update": {
+      "label": "अपडेट करें"
     }
   },
   "it-IT": {
@@ -1617,6 +1635,9 @@ export const dictionaries = {
         "sunset": "Tramonto Rosa",
         "fire": "Incendio da ondata di calore"
       }
+    },
+    "update": {
+      "label": "Aggiorna"
     }
   },
   "ja-JP": {
@@ -1848,6 +1869,9 @@ export const dictionaries = {
         "sunset": "ピンクサンセット",
         "fire": "熱波の炎"
       }
+    },
+    "update": {
+      "label": "更新"
     }
   },
   "ko-KR": {
@@ -2079,6 +2103,9 @@ export const dictionaries = {
         "sunset": "핑크 선셋",
         "fire": "폭염 화재"
       }
+    },
+    "update": {
+      "label": "업데이트"
     }
   },
   "nl-NL": {
@@ -2310,6 +2337,9 @@ export const dictionaries = {
         "sunset": "Roze Zonsondergang",
         "fire": "Hittegolfvuur"
       }
+    },
+    "update": {
+      "label": "Bijwerken"
     }
   },
   "ru-RU": {
@@ -2541,6 +2571,9 @@ export const dictionaries = {
         "sunset": "Розовый закат",
         "fire": "Жара и огонь"
       }
+    },
+    "update": {
+      "label": "Обновить"
     }
   },
   "sw-TZ": {
@@ -2772,6 +2805,9 @@ export const dictionaries = {
         "sunset": "Machweo ya Waridi",
         "fire": "Moto wa Joto Kali"
       }
+    },
+    "update": {
+      "label": "Sasisha"
     }
   },
   "tr-TR": {
@@ -3003,6 +3039,9 @@ export const dictionaries = {
         "sunset": "Pembe Günbatımı",
         "fire": "Sıcak Dalga Ateşi"
       }
+    },
+    "update": {
+      "label": "Güncelle"
     }
   },
   "uk-UA": {
@@ -3234,6 +3273,9 @@ export const dictionaries = {
         "sunset": "Рожевий захід сонця",
         "fire": "Спека й пожежа"
       }
+    },
+    "update": {
+      "label": "Оновити"
     }
   },
   "zh-CN": {
@@ -3465,6 +3507,9 @@ export const dictionaries = {
         "sunset": "粉色日落",
         "fire": "热浪火焰"
       }
+    },
+    "update": {
+      "label": "更新"
     }
   }
 };

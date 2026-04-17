@@ -1,11 +1,14 @@
 <script lang="ts">
   import { me } from '@/accounts'
   import { Select, SelectTrigger, SelectContent, SelectItem } from '$ui/select'
-  import { locale } from '$lib/intl'
+  import { locale, selected, resolveLocale } from '$lib/intl'
   import { options } from './Language'
 
-  function change(locale: string) {
-    void me.update({ locale })
+  function change(value: string) {
+    const picked = resolveLocale(value)
+
+    selected.set(picked)
+    void me.update({ locale: picked })
   }
 </script>
 

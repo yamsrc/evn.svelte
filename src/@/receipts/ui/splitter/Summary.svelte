@@ -12,7 +12,7 @@
   const { receipt, stats, actor }: Props = $props()
   const lines = $derived(summarize($store, actor))
   const extras = $derived(receipt.extras.filter((e) => !e.included))
-  const portion = $derived(stats.portions[actor].portion)
+  const portion = $derived(stats.portions[actor]?.portion ?? 0)
 
   const linesCost = $derived(lines.reduce((acc, line) => acc + line.price, 0))
   const extraCost = $derived(extras.reduce((acc, extra) => acc + extra.amount, 0) * portion)

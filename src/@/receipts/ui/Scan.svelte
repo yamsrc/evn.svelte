@@ -23,12 +23,11 @@
   function onclick() {
     if (subscribed) return input?.click()
 
-    takeoff(id, 'paywall', 'transition-spring transition-morph')
-
     paywall({
       benefit: 'scan',
       label: $dict.action.label,
       icon: ScanText,
+      source: id,
       callback: () => input?.click(),
     })
   }

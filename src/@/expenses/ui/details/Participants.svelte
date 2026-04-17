@@ -2,7 +2,7 @@
   import { Async } from 'svas'
   import { account as me } from '@/iam'
   import { Coins } from '@/app/ui'
-  import { Picture } from '@/accounts/ui'
+  import { Avatar, Title } from '@/accounts/ui'
   import { accounts } from '@/accounts'
   import * as Card from '$ui/card'
   import { Button } from '$ui/button'
@@ -26,16 +26,12 @@
         variant="ghost"
         href={participant === $me?.id ? '/me/' : `/contacts/${participant}/`}
         class="flex flex-nowrap items-center justify-between gap-2 min-h-13 px-2">
-        <div class="flex items-center gap-2 overflow-hidden flex-1">
+        <div class="flex items-center gap-2 flex-1 min-w-0">
           <Async store={accounts.get(participant)}>
             {#snippet awaited(account)}
               {@const name = participant === $me?.id ? $dict.expenses.me : account.name}
-              <div class="shrink-0">
-                <Picture {account} class="size-8" />
-              </div>
-              <div class="text-start text-base font-normal flex-1 min-w-0 flex">
-                <Ellipsis>{name}</Ellipsis>
-              </div>
+              <Avatar {account} class="size-8 shrink-0" />
+              <Title account={{ ...account, name }} class="text-start text-base font-normal" />
             {/snippet}
           </Async>
         </div>

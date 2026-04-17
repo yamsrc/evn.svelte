@@ -72,7 +72,11 @@
 
     if (!central) return
 
-    select(central.dataset.value as Locale)
+    const lang = central.dataset.value as Locale
+
+    if (lang === $locale) return
+
+    select(lang)
   }
 
   function select(lang: Locale) {

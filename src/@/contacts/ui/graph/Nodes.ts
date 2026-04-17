@@ -11,3 +11,4 @@ export interface Props {
 export const D = R * 2
 export const FONT = 16
 export const NAME_Y = 16
+export const PAD = 4

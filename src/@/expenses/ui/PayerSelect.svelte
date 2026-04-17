@@ -2,7 +2,7 @@
   import { Async } from 'svas'
   import { account as me } from '@/iam'
   import { dict as expensesDict } from '@/expenses/ui/intl'
-  import { Picture } from '@/accounts/ui'
+  import { Avatar, Title } from '@/accounts/ui'
   import { accounts } from '@/accounts'
   import { Select, SelectTrigger, SelectContent, SelectItem } from '$ui/select'
   import { dict } from '$lib/intl'
@@ -27,12 +27,11 @@
   {#if value}
     <Async store={accounts.get(value)}>
       {#snippet awaited(account)}
+        {@const name = account.id === $me?.id ? $dict.expenses.me : account.name}
         <SelectTrigger {id} class={['w-full', classes]}>
           <div class="flex items-center gap-2">
-            <Picture {account} class="size-6" />
-            <span>
-              {account.id === $me?.id ? $dict.expenses.me : account.name}
-            </span>
+            <Avatar {account} class="size-6" />
+            <Title account={{ ...account, name }} />
           </div>
         </SelectTrigger>
       {/snippet}
@@ -46,12 +45,11 @@
     {#each identities as identity (identity)}
       <Async store={accounts.get(identity)}>
         {#snippet awaited(account)}
+          {@const name = identity === $me?.id ? $dict.expenses.me : account.name}
           <SelectItem value={identity}>
             <div class="flex items-center gap-2">
-              <Picture {account} class="size-6" />
-              <span>
-                {identity === $me?.id ? $dict.expenses.me : account.name}
-              </span>
+              <Avatar {account} class="size-6" />
+              <Title account={{ ...account, name }} />
             </div>
           </SelectItem>
         {/snippet}
