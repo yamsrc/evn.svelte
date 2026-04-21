@@ -59,6 +59,7 @@
           duration={5_000}
           position="top"
           align="center"
+          portal={false}
           onclick={del}>
           {#if busy}
             <Spinner />
