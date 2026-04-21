@@ -6,6 +6,8 @@ interface Entry {
 
 export interface Props {
   picture: string
+  /** @default true */
+  active?: boolean
   presets: readonly string[]
   upload: (file: File) => Promise<Entry | Error>
   variant: string
