@@ -8,6 +8,7 @@
   import { transit } from '$lib/tools'
   import { dict } from '$lib/intl'
 
+  const active = $derived($account?.wallpaper?.method === 'picture')
   let picture = $state<string>($account?.wallpaper?.picture ?? '')
 
   function gate(source: string, callback: () => void) {
@@ -28,6 +29,7 @@
 
 <Gallery
   bind:picture
+  {active}
   presets={wallpaper.presets}
   upload={wallpaper.upload}
   variant="1280x2700"
