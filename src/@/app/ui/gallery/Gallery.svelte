@@ -10,6 +10,7 @@
 
   let {
     picture = $bindable(''),
+    active = true,
     presets,
     upload,
     variant,
@@ -35,6 +36,8 @@
   const offset = $derived(placement === 'start' ? 1 : 0)
 
   const picked = $derived.by(() => {
+    if (!active) return undefined
+
     const i = options.indexOf(picture)
 
     return i >= 0 ? i + offset : undefined

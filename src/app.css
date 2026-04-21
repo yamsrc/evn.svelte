@@ -54,7 +54,7 @@
   --tracking-normal: -0.025em;
   --spacing: 0.25rem;
   --shadow-color: rgb(0 0 0 / 0.1);
-  --gradient-premium: linear-gradient(135deg, #d2a754 0%, #ffe1b4 35%, #e8ba66 65%, #c9984e 100%);
+  --gradient-premium: linear-gradient(135deg, #905c0c 0%, #cfa116 35%, #bc8a0f 65%, #996515 100%);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -99,6 +99,7 @@
     --font-mono: Golos Text, ui-sans-serif, sans-serif, system-ui;
     --radius: 0.5rem;
     --shadow-color: rgba(53, 35, 20, 0.1);
+    --gradient-premium: linear-gradient(135deg, #d2a754 0%, #ffe1b4 35%, #e8ba66 65%, #c9984e 100%);
   }
 }
 

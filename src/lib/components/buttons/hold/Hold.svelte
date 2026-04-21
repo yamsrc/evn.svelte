@@ -14,6 +14,7 @@
     children,
     position = 'left',
     align = 'center',
+    portal: portaled = true,
     onclick,
     onpress,
     class: classes,
@@ -86,7 +87,9 @@
     e.stopPropagation()
   }
 
-  function portal(node: HTMLElement) {
+  function portal(node: HTMLElement, enabled: boolean) {
+    if (!enabled) return
+
     document.body.appendChild(node)
 
     return { destroy: () => node.remove() }
@@ -109,7 +112,7 @@
 
 {#if shown}
   <div
-    use:portal
+    use:portal={portaled}
     class={cn(
       'fixed z-1002 w-fit min-w-26 transition-all ease-in-out space-y-1',
       'bg-background/85 p-2 pt-1 rounded-md',
