@@ -3,9 +3,8 @@ import { faker } from '@faker-js/faker'
 import { Given, When } from './fixtures'
 
 Given('new expense', async ({ page, ctx }) => {
-  await page.goto('/')
-  await page.locator('#nav-actions-button').click()
-  await page.locator('#nav-actions-cheques-input-button').click()
+  await page.goto('/expenses/')
+  await page.locator('#expenses-empty-create-button').click()
   await expect(page.locator('#expenses-spendings-add-participants-button')).toBeVisible()
   await page.locator('#expenses-spendings-add-participants-button').click()
   await expect(page.locator('#participants-selector-add-button')).toBeVisible()
