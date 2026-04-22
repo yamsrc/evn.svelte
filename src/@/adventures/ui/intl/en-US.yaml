@@ -31,6 +31,8 @@ expenses:
   empty: >-
     Nothing happened yet. Invite some friends and add some spendings to get
     things started.
+  delete:
+    hold: Hold to delete
 spending:
   yours: Your spending
   total: Total spent

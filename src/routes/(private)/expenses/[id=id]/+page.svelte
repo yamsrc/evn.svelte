@@ -2,12 +2,13 @@
   import { Async } from 'svas'
   import { Pencil } from '@lucide/svelte'
   import { Looking } from '@/notifications/ui'
-  import { Attachments, Details } from '@/expenses/ui'
+  import { Attachments, Delete, Details } from '@/expenses/ui'
   import { expenses } from '@/expenses'
   import { Action, Section } from '@/app/ui'
   import { Header } from '@/app/ui'
   import { dict } from '$lib/intl'
   import { Actions } from '$com/shell'
+  import { back } from '$com/history'
   import { page } from '$app/state'
 
   const id = $derived(page.params.id) as string
@@ -23,6 +24,9 @@
       <Section>
         <Header.Root>
           <Header.Title>{$dict.expenses.title}</Header.Title>
+          <Header.Actions>
+            <Delete {id} ondelete={() => back('..')} />
+          </Header.Actions>
         </Header.Root>
       </Section>
 

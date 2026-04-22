@@ -24,3 +24,7 @@ export type Put = Partial<Pick<Expense, 'date' | 'title' | 'location' | 'partici
 export async function put(identity: string, id: string, body: Put): Promise<Expense | Error> {
   return expenses.json(`${identity}/${id}`, { method: 'PUT', body })
 }
+
+export async function del(identity: string, id: string): Promise<Expense | Error> {
+  return expenses.json(`${identity}/${id}`, { method: 'DELETE' })
+}

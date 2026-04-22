@@ -3,10 +3,13 @@
   import { Pencil } from '@lucide/svelte'
   import { Attachments } from '@/expenses/ui'
   import { Action, Header, Section } from '@/app/ui'
-  import { ExpenseDetails } from '@/adventures/ui'
+  import { expenses } from '@/adventures/ui'
   import { adventures } from '@/adventures'
   import { Actions, Return } from '$com/shell'
+  import { back } from '$com/history'
   import { page } from '$app/state'
+
+  const { Delete, Details } = expenses
 
   const id = $derived(page.params.id) as string
   const eid = $derived(page.params.eid) as string
@@ -23,6 +26,12 @@
       <Section>
         <Header.Root>
           <Header.Title>{adventure.title}</Header.Title>
+          <Header.Actions>
+            <Delete
+              adventure={adventure.id}
+              id={expense.id}
+              ondelete={() => back(`/adventures/${id}/`)} />
+          </Header.Actions>
         </Header.Root>
       </Section>
 
@@ -31,11 +40,11 @@
       {/if}
 
       <Section>
-        <ExpenseDetails.Description {expense} />
+        <Details.Description {expense} />
       </Section>
 
       <Section>
-        <ExpenseDetails.Totals {expense} />
+        <Details.Totals {expense} />
       </Section>
 
       <Actions>

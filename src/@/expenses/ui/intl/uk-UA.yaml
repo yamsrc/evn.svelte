@@ -52,3 +52,5 @@ template:
   toggle:
     label: Зберегти як шаблон
     description: Використай пізніше у швидких діях
+delete:
+  hold: Утримуй, щоб видалити

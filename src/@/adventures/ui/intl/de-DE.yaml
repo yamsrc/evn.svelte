@@ -32,6 +32,8 @@ expenses:
   empty: >-
     Es ist noch nichts passiert. Lade ein paar Freunde ein und füge Ausgaben
     hinzu, damit es losgehen kann.
+  delete:
+    hold: Zum Löschen gedrückt halten
 spending:
   yours: Ihre Ausgaben
   total: Gesamtausgaben

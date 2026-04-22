@@ -50,3 +50,5 @@ template:
   toggle:
     label: احفظ كقالب
     description: استخدم لاحقًا في الإجراءات السريعة
+delete:
+  hold: اضغط مع الاستمرار للحذف

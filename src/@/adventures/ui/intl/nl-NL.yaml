@@ -31,6 +31,8 @@ expenses:
   empty: >-
     Er is nog niks gebeurd. Nodig wat vrienden uit en voeg uitgaven toe om op
     gang te komen.
+  delete:
+    hold: Houd vast om te verwijderen
 spending:
   yours: Jouw uitgaven
   total: Totaal uitgegeven

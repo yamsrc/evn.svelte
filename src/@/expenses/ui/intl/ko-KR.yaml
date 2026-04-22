@@ -42,3 +42,5 @@ template:
   toggle:
     label: 템플릿으로 저장
     description: 빠른 작업에서 나중에 사용하기
+delete:
+  hold: 길게 눌러서 삭제

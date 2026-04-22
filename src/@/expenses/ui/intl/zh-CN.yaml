@@ -42,3 +42,5 @@ template:
   toggle:
     label: 保存为模板
     description: 稍后在快捷操作中使用
+delete:
+  hold: 长按删除

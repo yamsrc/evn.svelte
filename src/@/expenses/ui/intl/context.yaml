@@ -68,3 +68,6 @@ inputs:
       description:
         input: Use later in Quick Actions
         context: используй
+  delete:
+    hold:
+      input: Hold to delete

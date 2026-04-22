@@ -3,16 +3,18 @@
   import { Paperclip } from '@lucide/svelte'
   import { Header, Section } from '@/app/ui'
   import { Selector } from '@/adventures/ui'
-  import { ExpenseForm } from '@/adventures/ui'
+  import { expenses } from '@/adventures/ui'
   import { adventures } from '@/adventures'
   import { Spinner } from '$ui/spinner'
   import { Return } from '$com/shell'
   import { page } from '$app/state'
 
+  const { Form } = expenses
+
   let id = $state(page.params.id as string)
   const eid = $derived(page.params.eid)
 
-  let editor = $state<ReturnType<typeof ExpenseForm.Edit>>()
+  let editor = $state<ReturnType<typeof Form.Edit>>()
 </script>
 
 <Async store={adventures}>
@@ -48,7 +50,7 @@
       {/if}
 
       {#key `${id}-${eid}`}
-        <ExpenseForm.Edit bind:this={editor} {adventure} {expense} />
+        <Form.Edit bind:this={editor} {adventure} {expense} />
         <Return href="/adventures/{id}/" />
       {/key}
     {/if}
