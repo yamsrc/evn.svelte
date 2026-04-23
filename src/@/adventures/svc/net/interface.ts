@@ -53,6 +53,8 @@ export const expenses = {
     adventures.json(`${identity}/${adventure}/`, { method: 'POST', body }),
   update: (identity: string, adventure: string, id: string, body: Partial<ExpenseInput>): Promise<Adventure | Error> =>
     adventures.json(`${identity}/${adventure}/${id}`, { method: 'PATCH', body }),
+  del: (identity: string, adventure: string, id: string): Promise<Adventure | Error> =>
+    adventures.json(`${identity}/${adventure}/${id}`, { method: 'DELETE' }),
 }
 
 export const pictures = {

@@ -52,3 +52,5 @@ template:
   toggle:
     label: Guardar como plantilla
     description: Usar más tarde en Acciones rápidas
+delete:
+  hold: Mantén pulsado para borrar

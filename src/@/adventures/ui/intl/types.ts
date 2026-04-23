@@ -32,6 +32,9 @@ export type Dictionary = {
         paidBy: string
         paid: string
         empty: string
+        delete: {
+          hold: string
+        }
       }
       spending: {
         yours: string

@@ -52,3 +52,5 @@ template:
   toggle:
     label: Als Vorlage speichern
     description: Später in Schnellaktionen verwenden
+delete:
+  hold: Zum Löschen halten

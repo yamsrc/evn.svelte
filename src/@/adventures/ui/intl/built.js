@@ -29,7 +29,10 @@ export const dictionaries = {
       "total": "الإجمالي",
       "paidBy": "دفع بواسطة",
       "paid": "دفع",
-      "empty": "لم يحدث أي شيء بعد. ادعُ بعض الأصدقاء وأضف بعض النفقات لبدء الأمور."
+      "empty": "لم يحدث أي شيء بعد. ادعُ بعض الأصدقاء وأضف بعض النفقات لبدء الأمور.",
+      "delete": {
+        "hold": "اضغط مع الاستمرار للحذف"
+      }
     },
     "spending": {
       "yours": "إنفاقك",
@@ -95,7 +98,10 @@ export const dictionaries = {
       "total": "Gesamt",
       "paidBy": "Bezahlt von",
       "paid": "Bezahlt",
-      "empty": "Es ist noch nichts passiert. Lade ein paar Freunde ein und füge Ausgaben hinzu, damit es losgehen kann."
+      "empty": "Es ist noch nichts passiert. Lade ein paar Freunde ein und füge Ausgaben hinzu, damit es losgehen kann.",
+      "delete": {
+        "hold": "Zum Löschen gedrückt halten"
+      }
     },
     "spending": {
       "yours": "Ihre Ausgaben",
@@ -161,7 +167,10 @@ export const dictionaries = {
       "total": "Total",
       "paidBy": "Paid by",
       "paid": "Paid",
-      "empty": "Nothing happened yet. Invite some friends and add some spendings to get things started."
+      "empty": "Nothing happened yet. Invite some friends and add some spendings to get things started.",
+      "delete": {
+        "hold": "Hold to delete"
+      }
     },
     "spending": {
       "yours": "Your spending",
@@ -227,7 +236,10 @@ export const dictionaries = {
       "total": "Total",
       "paidBy": "Pagado por",
       "paid": "Pagado",
-      "empty": "Aún no ha pasado nada. Invita a algunos amigos y añade algunos gastos para poner todo en marcha."
+      "empty": "Aún no ha pasado nada. Invita a algunos amigos y añade algunos gastos para poner todo en marcha.",
+      "delete": {
+        "hold": "Mantén pulsado para borrar"
+      }
     },
     "spending": {
       "yours": "Tus gastos",
@@ -293,7 +305,10 @@ export const dictionaries = {
       "total": "Total",
       "paidBy": "Payé par",
       "paid": "Payé",
-      "empty": "Rien ne s'est encore passé. Invite des amis et ajoute des dépenses pour lancer les choses."
+      "empty": "Rien ne s'est encore passé. Invite des amis et ajoute des dépenses pour lancer les choses.",
+      "delete": {
+        "hold": "Maintiens pour supprimer"
+      }
     },
     "spending": {
       "yours": "Vos dépenses",
@@ -359,7 +374,10 @@ export const dictionaries = {
       "total": "कुल",
       "paidBy": "द्वारा भुगतान किया गया",
       "paid": "भुगतान किया गया",
-      "empty": "अभी तक कुछ नहीं हुआ है। कुछ दोस्तों को बुलाएं और खर्च जोड़ें ताकि चीज़ें शुरू हो सकें।"
+      "empty": "अभी तक कुछ नहीं हुआ है। कुछ दोस्तों को बुलाएं और खर्च जोड़ें ताकि चीज़ें शुरू हो सकें।",
+      "delete": {
+        "hold": "हटाने के लिए दबाए रखें"
+      }
     },
     "spending": {
       "yours": "आपके खर्च",
@@ -425,7 +443,10 @@ export const dictionaries = {
       "total": "Totale",
       "paidBy": "Pagato da",
       "paid": "Pagato",
-      "empty": "Non è ancora successo nulla. Invita degli amici e aggiungi delle spese per far partire tutto."
+      "empty": "Non è ancora successo nulla. Invita degli amici e aggiungi delle spese per far partire tutto.",
+      "delete": {
+        "hold": "Tieni premuto per eliminare"
+      }
     },
     "spending": {
       "yours": "Le tue spese",
@@ -491,7 +512,10 @@ export const dictionaries = {
       "total": "合計",
       "paidBy": "支払者",
       "paid": "支払い済み",
-      "empty": "まだ何も起きていません。友達を招待して、支出を追加してみましょう。"
+      "empty": "まだ何も起きていません。友達を招待して、支出を追加してみましょう。",
+      "delete": {
+        "hold": "長押しで削除"
+      }
     },
     "spending": {
       "yours": "あなたの支出",
@@ -557,7 +581,10 @@ export const dictionaries = {
       "total": "합계",
       "paidBy": "결제자",
       "paid": "결제 완료",
-      "empty": "아직 아무 일도 일어나지 않았어요. 친구들을 초대하고 지출을 추가해서 시작해보세요."
+      "empty": "아직 아무 일도 일어나지 않았어요. 친구들을 초대하고 지출을 추가해서 시작해보세요.",
+      "delete": {
+        "hold": "길게 눌러서 삭제"
+      }
     },
     "spending": {
       "yours": "내 지출",
@@ -623,7 +650,10 @@ export const dictionaries = {
       "total": "Totaal",
       "paidBy": "Betaald door",
       "paid": "Betaald",
-      "empty": "Er is nog niks gebeurd. Nodig wat vrienden uit en voeg uitgaven toe om op gang te komen."
+      "empty": "Er is nog niks gebeurd. Nodig wat vrienden uit en voeg uitgaven toe om op gang te komen.",
+      "delete": {
+        "hold": "Houd vast om te verwijderen"
+      }
     },
     "spending": {
       "yours": "Jouw uitgaven",
@@ -689,7 +719,10 @@ export const dictionaries = {
       "total": "Итого",
       "paidBy": "Оплачено",
       "paid": "Оплачено",
-      "empty": "Пока ничего не произошло. Пригласите друзей и добавьте расходы, чтобы начать движение."
+      "empty": "Пока ничего не произошло. Пригласите друзей и добавьте расходы, чтобы начать движение.",
+      "delete": {
+        "hold": "Удерживай, чтобы удалить"
+      }
     },
     "spending": {
       "yours": "Ваши расходы",
@@ -755,7 +788,10 @@ export const dictionaries = {
       "total": "Jumla",
       "paidBy": "Imelipiwa na",
       "paid": "Imelipwa",
-      "empty": "Hakuna kilichotokea bado. Alika marafiki na ongeza matumizi ili mambo yaanze."
+      "empty": "Hakuna kilichotokea bado. Alika marafiki na ongeza matumizi ili mambo yaanze.",
+      "delete": {
+        "hold": "Shikilia ili ufute"
+      }
     },
     "spending": {
       "yours": "Matumizi yako",
@@ -821,7 +857,10 @@ export const dictionaries = {
       "total": "Toplam",
       "paidBy": "Ödeyen",
       "paid": "Ödendi",
-      "empty": "Henüz hiçbir şey olmadı. Birkaç arkadaşını davet et ve harcamalar ekleyerek işleri başlat."
+      "empty": "Henüz hiçbir şey olmadı. Birkaç arkadaşını davet et ve harcamalar ekleyerek işleri başlat.",
+      "delete": {
+        "hold": "Silmek için basılı tut"
+      }
     },
     "spending": {
       "yours": "Harcamalarınız",
@@ -887,7 +926,10 @@ export const dictionaries = {
       "total": "Всього",
       "paidBy": "Сплачено",
       "paid": "Оплачено",
-      "empty": "Поки що нічого не сталося. Запросіть друзів і додайте витрати, щоб почати рух."
+      "empty": "Поки що нічого не сталося. Запросіть друзів і додайте витрати, щоб почати рух.",
+      "delete": {
+        "hold": "Утримуй, щоб видалити"
+      }
     },
     "spending": {
       "yours": "Ваші витрати",
@@ -953,7 +995,10 @@ export const dictionaries = {
       "total": "总计",
       "paidBy": "由...支付",
       "paid": "已支付",
-      "empty": "还没有任何活动。邀请一些朋友并添加花费，让事情开始运转吧。"
+      "empty": "还没有任何活动。邀请一些朋友并添加花费，让事情开始运转吧。",
+      "delete": {
+        "hold": "长按删除"
+      }
     },
     "spending": {
       "yours": "你的支出",

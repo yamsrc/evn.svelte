@@ -24,6 +24,8 @@ expenses:
   paidBy: 支払者
   paid: 支払い済み
   empty: まだ何も起きていません。友達を招待して、支出を追加してみましょう。
+  delete:
+    hold: 長押しで削除
 spending:
   yours: あなたの支出
   total: 合計支出

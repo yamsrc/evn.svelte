@@ -50,3 +50,5 @@ template:
   toggle:
     label: Enregistrer comme modèle
     description: Utiliser plus tard dans les actions rapides
+delete:
+  hold: Maintiens pour supprimer

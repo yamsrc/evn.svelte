@@ -44,3 +44,5 @@ template:
   toggle:
     label: Şablon olarak kaydet
     description: Hızlı İşlemlerde sonra kullan
+delete:
+  hold: Silmek için basılı tut

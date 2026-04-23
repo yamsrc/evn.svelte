@@ -31,6 +31,8 @@ expenses:
   empty: >-
     Hakuna kilichotokea bado. Alika marafiki na ongeza matumizi ili mambo
     yaanze.
+  delete:
+    hold: Shikilia ili ufute
 spending:
   yours: Matumizi yako
   total: Jumla iliyotumika

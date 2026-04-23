@@ -46,3 +46,5 @@ template:
   toggle:
     label: Save as template
     description: Use later in Quick Actions
+delete:
+  hold: Hold to delete

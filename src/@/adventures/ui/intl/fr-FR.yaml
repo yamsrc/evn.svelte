@@ -32,6 +32,8 @@ expenses:
   empty: >-
     Rien ne s'est encore passé. Invite des amis et ajoute des dépenses pour
     lancer les choses.
+  delete:
+    hold: Maintiens pour supprimer
 spending:
   yours: Vos dépenses
   total: Total dépensé
