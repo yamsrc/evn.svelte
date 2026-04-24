@@ -73,7 +73,7 @@
   function click(instant = false) {
     if (!pressed && !instant) return
 
-    onclick?.(null as any)
+    onclick?.()
     pressed = false
 
     hiding = setTimeout(() => {

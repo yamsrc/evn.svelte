@@ -24,3 +24,14 @@ export async function update(adventureId: string, id: string, input: Partial<net
 
   return adventure
 }
+
+export async function del(adventureId: string, id: string): Promise<net.Adventure | Error> {
+  const me = await having(account)
+  const adventure = await net.expenses.del(me.id, adventureId, id)
+
+  if (adventure instanceof Error) return adventure
+
+  sync(adventures, adventure)
+
+  return adventure
+}

@@ -23,6 +23,8 @@ expenses:
   paidBy: 由...支付
   paid: 已支付
   empty: 还没有任何活动。邀请一些朋友并添加花费，让事情开始运转吧。
+  delete:
+    hold: 长按删除
 spending:
   yours: 你的支出
   total: 总支出

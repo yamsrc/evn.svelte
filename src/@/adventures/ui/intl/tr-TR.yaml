@@ -31,6 +31,8 @@ expenses:
   empty: >-
     Henüz hiçbir şey olmadı. Birkaç arkadaşını davet et ve harcamalar ekleyerek
     işleri başlat.
+  delete:
+    hold: Silmek için basılı tut
 spending:
   yours: Harcamalarınız
   total: Toplam harcama

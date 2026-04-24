@@ -25,6 +25,8 @@ expenses:
   paidBy: 결제자
   paid: 결제 완료
   empty: 아직 아무 일도 일어나지 않았어요. 친구들을 초대하고 지출을 추가해서 시작해보세요.
+  delete:
+    hold: 길게 눌러서 삭제
 spending:
   yours: 내 지출
   total: 총 지출

@@ -26,6 +26,9 @@ inputs:
       input: Paid
     empty:
       input: Nothing happened yet. Bring some friends and add some spendings to start things rolling.
+    delete:
+      hold:
+        input: Hold to delete
   spending:
     yours:
       input: Your spending

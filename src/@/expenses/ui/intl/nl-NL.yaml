@@ -44,3 +44,5 @@ template:
   toggle:
     label: Opslaan als sjabloon
     description: Later gebruiken bij Snelle acties
+delete:
+  hold: Houd vast om te verwijderen

@@ -54,6 +54,9 @@ export const dictionaries = {
         "label": "احفظ كقالب",
         "description": "استخدم لاحقًا في الإجراءات السريعة"
       }
+    },
+    "delete": {
+      "hold": "اضغط مع الاستمرار للحذف"
     }
   },
   "de-DE": {
@@ -108,6 +111,9 @@ export const dictionaries = {
         "label": "Als Vorlage speichern",
         "description": "Später in Schnellaktionen verwenden"
       }
+    },
+    "delete": {
+      "hold": "Zum Löschen halten"
     }
   },
   "en-US": {
@@ -162,6 +168,9 @@ export const dictionaries = {
         "label": "Save as template",
         "description": "Use later in Quick Actions"
       }
+    },
+    "delete": {
+      "hold": "Hold to delete"
     }
   },
   "es-ES": {
@@ -216,6 +225,9 @@ export const dictionaries = {
         "label": "Guardar como plantilla",
         "description": "Usar más tarde en Acciones rápidas"
       }
+    },
+    "delete": {
+      "hold": "Mantén pulsado para borrar"
     }
   },
   "fr-FR": {
@@ -270,6 +282,9 @@ export const dictionaries = {
         "label": "Enregistrer comme modèle",
         "description": "Utiliser plus tard dans les actions rapides"
       }
+    },
+    "delete": {
+      "hold": "Maintiens pour supprimer"
     }
   },
   "hi-IN": {
@@ -324,6 +339,9 @@ export const dictionaries = {
         "label": "टेम्पलेट के रूप में सेव करें",
         "description": "क्विक एक्शन्स में बाद में उपयोग करें"
       }
+    },
+    "delete": {
+      "hold": "हटाने के लिए दबाकर रखें"
     }
   },
   "it-IT": {
@@ -378,6 +396,9 @@ export const dictionaries = {
         "label": "Salva come modello",
         "description": "Usa più tardi nelle azioni rapide"
       }
+    },
+    "delete": {
+      "hold": "Tieni premuto per eliminare"
     }
   },
   "ja-JP": {
@@ -432,6 +453,9 @@ export const dictionaries = {
         "label": "テンプレートとして保存",
         "description": "クイックアクションで後で使う"
       }
+    },
+    "delete": {
+      "hold": "長押しで削除"
     }
   },
   "ko-KR": {
@@ -486,6 +510,9 @@ export const dictionaries = {
         "label": "템플릿으로 저장",
         "description": "빠른 작업에서 나중에 사용하기"
       }
+    },
+    "delete": {
+      "hold": "길게 눌러서 삭제"
     }
   },
   "nl-NL": {
@@ -540,6 +567,9 @@ export const dictionaries = {
         "label": "Opslaan als sjabloon",
         "description": "Later gebruiken bij Snelle acties"
       }
+    },
+    "delete": {
+      "hold": "Houd vast om te verwijderen"
     }
   },
   "ru-RU": {
@@ -594,6 +624,9 @@ export const dictionaries = {
         "label": "Сохранить как шаблон",
         "description": "Используй позже в быстрых действиях"
       }
+    },
+    "delete": {
+      "hold": "Удерживай, чтобы удалить"
     }
   },
   "sw-TZ": {
@@ -648,6 +681,9 @@ export const dictionaries = {
         "label": "Hifadhi kama kiolezo",
         "description": "Tumia baadaye kwenye Hatua za Haraka"
       }
+    },
+    "delete": {
+      "hold": "Shikilia ili kufuta"
     }
   },
   "tr-TR": {
@@ -702,6 +738,9 @@ export const dictionaries = {
         "label": "Şablon olarak kaydet",
         "description": "Hızlı İşlemlerde sonra kullan"
       }
+    },
+    "delete": {
+      "hold": "Silmek için basılı tut"
     }
   },
   "uk-UA": {
@@ -756,6 +795,9 @@ export const dictionaries = {
         "label": "Зберегти як шаблон",
         "description": "Використай пізніше у швидких діях"
       }
+    },
+    "delete": {
+      "hold": "Утримуй, щоб видалити"
     }
   },
   "zh-CN": {
@@ -810,6 +852,9 @@ export const dictionaries = {
         "label": "保存为模板",
         "description": "稍后在快捷操作中使用"
       }
+    },
+    "delete": {
+      "hold": "长按删除"
     }
   }
 };

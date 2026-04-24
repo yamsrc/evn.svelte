@@ -1,4 +1,5 @@
 export { default as Attachments } from './Attachments.svelte'
+export { default as Delete } from './Delete.svelte'
 export { default as Actions } from './Actions.svelte'
 export { default as CreateAction } from './CreateAction.svelte'
 export { default as Expense } from './Expense.svelte'

@@ -48,3 +48,5 @@ template:
   toggle:
     label: Hifadhi kama kiolezo
     description: Tumia baadaye kwenye Hatua za Haraka
+delete:
+  hold: Shikilia ili kufuta

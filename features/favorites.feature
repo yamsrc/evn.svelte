@@ -6,7 +6,7 @@ Feature: Favorites
     When I tap 'nav-contacts-button'
     And I tap first item of 'groups-list-content'
     Then the page is loaded
-    And I tap 'groups-favorite-button'
+    And I tap 'group-favorite-button'
     When I tap 'nav-contacts-button'
     Then 'favorites-list' is visible
     And 'favorites-list-content' contains that name
@@ -22,7 +22,7 @@ Feature: Favorites
     And 'favorites-list' is not visible
     When I tap first item of 'contacts-list-content'
     Then the page is loaded
-    And I tap 'contacts-favorite-button'
+    And I tap 'contact-favorite-button'
     When I tap 'nav-contacts-button'
     Then 'favorites-list' is visible
     And 'favorites-list-content' contains that name
@@ -32,6 +32,6 @@ Feature: Favorites
     When I tap 'nav-contacts-button'
     And I tap first item of 'contacts-list-content'
     Then the page is loaded
-    And I tap 'contacts-favorite-button'
+    And I tap 'contact-favorite-button'
     When I tap 'nav-contacts-button'
     Then 'favorites-list' is not visible

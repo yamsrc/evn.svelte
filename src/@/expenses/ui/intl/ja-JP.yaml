@@ -42,3 +42,5 @@ template:
   toggle:
     label: テンプレートとして保存
     description: クイックアクションで後で使う
+delete:
+  hold: 長押しで削除

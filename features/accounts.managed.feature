@@ -9,8 +9,7 @@ Feature: Managed accounts
     When I type random name
     And I press 'Enter'
     Then 'contacts-share-button' is visible
-    When I tap 'nav-contacts-button'
-    Then some of 'contacts-panel' contains that name
+    And input 'app-cosmetics-name-input' contains that name
     
   Scenario: Update managed account
     Given new account

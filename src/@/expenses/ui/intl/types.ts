@@ -57,4 +57,7 @@ export type Dictionary = {
           description: string
         }
       }
+      delete: {
+        hold: string
+      }
     }

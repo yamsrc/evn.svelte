@@ -46,3 +46,5 @@ template:
   toggle:
     label: Salva come modello
     description: Usa più tardi nelle azioni rapide
+delete:
+  hold: Tieni premuto per eliminare
