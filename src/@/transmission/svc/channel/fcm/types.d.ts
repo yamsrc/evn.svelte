@@ -1,16 +1,12 @@
 import type { Notification } from '@/transmission'
 
 declare global {
-  interface Window {
-    webkit?: {
-      messageHandlers?: {
-        'push-subscribe'?: { postMessage: (msg?: { topic?: string, unsubscribe?: boolean }) => void }
-        'push-permission-state'?: { postMessage: () => void }
-        'push-permission-request'?: { postMessage: () => void }
-        'push-token'?: { postMessage: () => void }
-        'push-token-delete'?: { postMessage: () => void }
-      }
-    }
+  interface WebkitMessageHandlers {
+    'push-subscribe'?: { postMessage: (msg?: { topic?: string, unsubscribe?: boolean }) => void }
+    'push-permission-state'?: { postMessage: () => void }
+    'push-permission-request'?: { postMessage: () => void }
+    'push-token'?: { postMessage: () => void }
+    'push-token-delete'?: { postMessage: () => void }
   }
 
   interface WindowEventMap {

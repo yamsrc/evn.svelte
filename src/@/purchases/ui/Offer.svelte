@@ -1,21 +1,25 @@
 <script lang="ts">
   import { onMount } from 'svelte'
-  import { add } from '@/purchases'
+  import { add, channel } from '@/purchases'
   import { Button } from '$ui/button'
   import { image } from '$lib/tools'
   import { dict as common } from '$lib/intl'
   import { features } from '$config'
   import { Scrollable } from '$com/scrollable'
   import { dict } from './intl'
+  import Plan from './Plan.svelte'
   import { benefits } from './Offer'
   import { assets } from './Complete'
   import Benefit from './Benefit.svelte'
+  import type { Product } from '@/purchases'
   import type { Props } from './Offer'
 
   const { next }: Props = $props()
 
   let busy = $state(false)
-  const price = '€19.99'
+  let products = $state<Product[]>([])
+
+  const yearly = $derived(products.find((p) => p.period === 'P1Y'))
 
   async function onclick() {
     busy = true
@@ -29,15 +33,41 @@
     next()
   }
 
-  onMount(() => image.preload(assets))
+  async function load() {
+    const ch = channel()
+
+    if (ch === null) return
+
+    if (!(await ch.available())) return
+
+    const r = await ch.products()
+
+    if (r instanceof Error) return
+
+    products = r
+  }
+
+  onMount(() => {
+    image.preload(assets)
+    load()
+  })
 </script>
 
-<div class="flex flex-col justify-between h-full">
+<div class="flex flex-col justify-between h-full gap-2">
   <Scrollable class="gap-2" bleed scroll={0} align="center">
     {#each benefits as benefit (benefit.id)}
       <Benefit {benefit} class="w-full snap-center" />
     {/each}
   </Scrollable>
+  {#if products.length > 0}
+    <div class="flex-1 flex items-start">
+      <div class="grid grid-cols-2 gap-2 w-full">
+        {#each products as product (product.id)}
+          <Plan {product} />
+        {/each}
+      </div>
+    </div>
+  {/if}
   <div class="space-y-2 flex flex-col justify-between">
     <div class="rounded-lg ring-3 ring-primary/20">
       <Button {onclick} size="lg" class="w-full relative" disabled={busy}>
@@ -49,9 +79,9 @@
       </Button>
     </div>
     <p class="text-sm text-muted-foreground text-center">
-      {#if features.purchase}
-        {$dict.paywall.offer.trial(price)}
-      {:else}
+      {#if features.purchase && yearly}
+        {$dict.paywall.offer.trial(yearly.displayPrice)}
+      {:else if !features.purchase}
         {$dict.paywall.offer.promo}
       {/if}
     </p>

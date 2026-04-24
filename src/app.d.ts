@@ -5,6 +5,13 @@ import type { ParticipantsState } from '@/app/ui/participants'
 
 declare global {
 
+  /** Extended per-domain via interface merging (e.g. transmission/fcm, purchases/apple). */
+  interface WebkitMessageHandlers {}
+
+  interface Window {
+    webkit?: { messageHandlers?: WebkitMessageHandlers }
+  }
+
   namespace App {
     // interface Error {}
     // interface Locals {}
