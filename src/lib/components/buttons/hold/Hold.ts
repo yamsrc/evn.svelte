@@ -1,7 +1,7 @@
 import type { Snippet } from 'svelte'
 import type { ButtonProps } from '$ui/button'
 
-export interface Props extends Omit<ButtonProps, 'onpointerdown' | 'onkeydown'> {
+export interface Props extends Omit<ButtonProps, 'onpointerdown' | 'onkeydown' | 'onclick'> {
   name?: string
   duration?: number
   label?: string
@@ -18,5 +18,6 @@ export interface Props extends Omit<ButtonProps, 'onpointerdown' | 'onkeydown'> 
    */
   portal?: boolean
   onpress?: () => void
+  onclick?: () => void
   message?: Snippet
 }

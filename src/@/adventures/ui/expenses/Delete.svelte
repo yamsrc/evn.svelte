@@ -7,8 +7,14 @@
 
   const { adventure, id, ondelete, ...props }: Props = $props()
 
+  let busy = $state(false)
+
   async function onclick() {
+    busy = true
+
     const err = await expenses.del(adventure, id)
+
+    busy = false
 
     if (err instanceof Error) return
 
@@ -22,7 +28,7 @@
   size="icon"
   position="left"
   label={$dict.expenses.delete.hold}
-  duration={2000}
+  disabled={busy}
   {onclick}
   {...props}>
   <Trash2 class="text-destructive" />
