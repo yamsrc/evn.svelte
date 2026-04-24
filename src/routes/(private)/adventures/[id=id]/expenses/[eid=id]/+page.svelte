@@ -26,12 +26,14 @@
       <Section>
         <Header.Root>
           <Header.Title>{adventure.title}</Header.Title>
-          <Header.Actions>
-            <Delete
-              adventure={adventure.id}
-              id={expense.id}
-              ondelete={() => back(`/adventures/${id}/`)} />
-          </Header.Actions>
+          {#if !adventure.archived}
+            <Header.Actions>
+              <Delete
+                adventure={adventure.id}
+                id={expense.id}
+                ondelete={() => back(`/adventures/${id}/`)} />
+            </Header.Actions>
+          {/if}
         </Header.Root>
       </Section>
 
