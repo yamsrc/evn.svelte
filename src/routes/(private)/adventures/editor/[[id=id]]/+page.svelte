@@ -1,6 +1,7 @@
 <script lang="ts">
   import { Async } from 'svas'
-  import { LogOut } from '@lucide/svelte'
+  import { LogOut, Trash2 } from '@lucide/svelte'
+  import { account } from '@/iam'
   import { Header, Section, Hint } from '@/app/ui'
   import { dict } from '@/adventures/ui/intl'
   import { Editor } from '@/adventures/ui'
@@ -46,16 +47,29 @@
     <Header.Root>
       <Header.Title>{$dict.editor.settings}</Header.Title>
       <Header.Actions>
-        <Hold
-          id="adventures-editor-quit-button"
-          onclick={quit}
-          variant="outline"
-          size="icon"
-          position="left"
-          label={$common.groups.leave}
-          disabled={busy || quitting}>
-          <LogOut class="size-5 text-destructive" />
-        </Hold>
+        <Async store={adventures}>
+          {#snippet awaited(adventures)}
+            {@const adventure = adventures.find((entry) => entry.id === id)}
+            {@const originator = adventure?.originator === $account?.id}
+            {#if adventure}
+              <Hold
+                id="adventures-editor-quit-button"
+                onclick={quit}
+                variant="outline"
+                size="icon"
+                position="left"
+                duration={originator ? 3000 : 2000}
+                label={originator ? $common.adventures.delete : $common.groups.leave}
+                disabled={busy || quitting}>
+                {#if originator}
+                  <Trash2 class="size-5 text-destructive" />
+                {:else}
+                  <LogOut class="size-5 text-destructive" />
+                {/if}
+              </Hold>
+            {/if}
+          {/snippet}
+        </Async>
       </Header.Actions>
     </Header.Root>
   {/if}

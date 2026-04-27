@@ -10,6 +10,7 @@ export interface Expense {
 
 export interface Adventure {
   id: string
+  originator?: string
   participants: Record<string, number>
   title: string
   picture: string

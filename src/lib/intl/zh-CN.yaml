@@ -167,6 +167,7 @@ search:
 dir: ltr
 adventures:
   title: 冒险
+  delete: 长按删除
 participants:
   add:
     button: 添加参与者

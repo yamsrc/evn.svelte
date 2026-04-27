@@ -167,6 +167,7 @@ search:
 dir: ltr
 adventures:
   title: 冒険
+  delete: 長押しで削除
 participants:
   add:
     button: 参加者を追加
