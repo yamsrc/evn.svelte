@@ -177,6 +177,7 @@ search:
 dir: rtl
 adventures:
   title: مغامرات
+  delete: اضغط مطولًا للحذف
 participants:
   add:
     button: إضافة المشاركين

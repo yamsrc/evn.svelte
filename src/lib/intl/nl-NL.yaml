@@ -183,6 +183,7 @@ search:
 dir: ltr
 adventures:
   title: Avonturen
+  delete: Vasthouden om te verwijderen
 participants:
   add:
     button: Deelnemers toevoegen

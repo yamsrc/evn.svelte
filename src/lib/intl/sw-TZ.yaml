@@ -180,6 +180,7 @@ search:
 dir: ltr
 adventures:
   title: Matukio
+  delete: Shikilia ili uondoe
 participants:
   add:
     button: Ongeza washiriki

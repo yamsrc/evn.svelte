@@ -169,6 +169,7 @@ search:
 dir: ltr
 adventures:
   title: 모험
+  delete: 길게 눌러서 삭제
 participants:
   add:
     button: 참가자 추가

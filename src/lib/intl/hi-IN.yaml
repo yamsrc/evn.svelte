@@ -179,6 +179,7 @@ search:
 dir: ltr
 adventures:
   title: साहसिक यात्राएँ
+  delete: हटाने के लिए दबाकर रखें
 participants:
   add:
     button: प्रतिभागी जोड़ें

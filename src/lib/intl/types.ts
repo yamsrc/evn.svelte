@@ -222,6 +222,7 @@ export type Dictionary = {
       dir: string
       adventures: {
         title: string
+        delete: string
       }
       participants: {
         add: {

@@ -182,6 +182,7 @@ search:
 dir: ltr
 adventures:
   title: Приключения
+  delete: Удерживай, чтобы удалить
 participants:
   add:
     button: Добавить участников

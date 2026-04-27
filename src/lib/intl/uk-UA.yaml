@@ -182,6 +182,7 @@ search:
 dir: ltr
 adventures:
   title: Пригоди
+  delete: Утримуй, щоб видалити
 participants:
   add:
     button: Додати учасників
