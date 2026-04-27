@@ -16,7 +16,8 @@
   import { Input } from '$ui/input'
   import { dict } from '$lib/intl'
 
-  let search = $state('')
+  let searchValue = $state('')
+  const search = $derived(searchValue.trim())
 
   const expensesNotifications = scope({ domain: 'expenses' })
   const transfersNotifications = scope({ domain: 'contacts', event: 'transferred' })
@@ -48,7 +49,7 @@
 
     {#if expenses.length || adventures.length || receipts.length}
       <Section>
-        <Input type="text" placeholder={$dict.actions.search} bind:value={search} />
+        <Input type="text" placeholder={$dict.actions.search} bind:value={searchValue} />
       </Section>
     {/if}
 
