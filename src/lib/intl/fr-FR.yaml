@@ -185,6 +185,7 @@ search:
 dir: ltr
 adventures:
   title: Aventures
+  delete: Maintiens pour supprimer
 participants:
   add:
     button: Ajouter des participants

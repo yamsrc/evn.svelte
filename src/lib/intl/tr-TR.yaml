@@ -177,6 +177,7 @@ search:
 dir: ltr
 adventures:
   title: Macera
+  delete: Silmek için basılı tut
 participants:
   add:
     button: Katılımcı ekle

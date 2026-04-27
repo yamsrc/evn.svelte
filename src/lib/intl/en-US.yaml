@@ -179,6 +179,7 @@ search:
 dir: ltr
 adventures:
   title: Adventures
+  delete: Hold to delete
 participants:
   add:
     button: Add participants

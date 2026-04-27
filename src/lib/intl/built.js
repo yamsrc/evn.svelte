@@ -215,7 +215,8 @@ export const dictionaries = {
     },
     "dir": "rtl",
     "adventures": {
-      "title": "مغامرات"
+      "title": "مغامرات",
+      "delete": "اضغط مطولًا للحذف"
     },
     "participants": {
       "add": {
@@ -449,7 +450,8 @@ export const dictionaries = {
     },
     "dir": "ltr",
     "adventures": {
-      "title": "Abenteuer"
+      "title": "Abenteuer",
+      "delete": "Zum Löschen gedrückt halten"
     },
     "participants": {
       "add": {
@@ -683,7 +685,8 @@ export const dictionaries = {
     },
     "dir": "ltr",
     "adventures": {
-      "title": "Adventures"
+      "title": "Adventures",
+      "delete": "Hold to delete"
     },
     "participants": {
       "add": {
@@ -917,7 +920,8 @@ export const dictionaries = {
     },
     "dir": "ltr",
     "adventures": {
-      "title": "Aventuras"
+      "title": "Aventuras",
+      "delete": "Mantén pulsado para borrar"
     },
     "participants": {
       "add": {
@@ -1151,7 +1155,8 @@ export const dictionaries = {
     },
     "dir": "ltr",
     "adventures": {
-      "title": "Aventures"
+      "title": "Aventures",
+      "delete": "Maintiens pour supprimer"
     },
     "participants": {
       "add": {
@@ -1385,7 +1390,8 @@ export const dictionaries = {
     },
     "dir": "ltr",
     "adventures": {
-      "title": "साहसिक यात्राएँ"
+      "title": "साहसिक यात्राएँ",
+      "delete": "हटाने के लिए दबाकर रखें"
     },
     "participants": {
       "add": {
@@ -1619,7 +1625,8 @@ export const dictionaries = {
     },
     "dir": "ltr",
     "adventures": {
-      "title": "Avventure"
+      "title": "Avventure",
+      "delete": "Tieni premuto per eliminare"
     },
     "participants": {
       "add": {
@@ -1853,7 +1860,8 @@ export const dictionaries = {
     },
     "dir": "ltr",
     "adventures": {
-      "title": "冒険"
+      "title": "冒険",
+      "delete": "長押しで削除"
     },
     "participants": {
       "add": {
@@ -2087,7 +2095,8 @@ export const dictionaries = {
     },
     "dir": "ltr",
     "adventures": {
-      "title": "모험"
+      "title": "모험",
+      "delete": "길게 눌러서 삭제"
     },
     "participants": {
       "add": {
@@ -2321,7 +2330,8 @@ export const dictionaries = {
     },
     "dir": "ltr",
     "adventures": {
-      "title": "Avonturen"
+      "title": "Avonturen",
+      "delete": "Vasthouden om te verwijderen"
     },
     "participants": {
       "add": {
@@ -2555,7 +2565,8 @@ export const dictionaries = {
     },
     "dir": "ltr",
     "adventures": {
-      "title": "Приключения"
+      "title": "Приключения",
+      "delete": "Удерживай, чтобы удалить"
     },
     "participants": {
       "add": {
@@ -2789,7 +2800,8 @@ export const dictionaries = {
     },
     "dir": "ltr",
     "adventures": {
-      "title": "Matukio"
+      "title": "Matukio",
+      "delete": "Shikilia ili uondoe"
     },
     "participants": {
       "add": {
@@ -3023,7 +3035,8 @@ export const dictionaries = {
     },
     "dir": "ltr",
     "adventures": {
-      "title": "Macera"
+      "title": "Macera",
+      "delete": "Silmek için basılı tut"
     },
     "participants": {
       "add": {
@@ -3257,7 +3270,8 @@ export const dictionaries = {
     },
     "dir": "ltr",
     "adventures": {
-      "title": "Пригоди"
+      "title": "Пригоди",
+      "delete": "Утримуй, щоб видалити"
     },
     "participants": {
       "add": {
@@ -3491,7 +3505,8 @@ export const dictionaries = {
     },
     "dir": "ltr",
     "adventures": {
-      "title": "冒险"
+      "title": "冒险",
+      "delete": "长按删除"
     },
     "participants": {
       "add": {

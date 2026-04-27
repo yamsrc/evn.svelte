@@ -301,6 +301,9 @@ inputs:
   adventures:
     title:
       input: Adventures
+    delete:
+      input: Hold to delete
+      context: button label
   participants:
     add:
       button:
