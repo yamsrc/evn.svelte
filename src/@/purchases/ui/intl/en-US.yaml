@@ -22,3 +22,18 @@ paywall:
       scan and recognize receipts, and more.
   free:
     cta: Enjoy Premium
+products:
+  yearly:
+    title: Yearly
+    description: |-
+      !js
+      (value) => `Annual payment of ${value}`
+  monthly:
+    title: Monthly
+    description: Flexible
+permonth: |-
+  !js
+  (value) => `${value} per month`
+trial: |-
+  !js
+  (period) => `${period} free`

@@ -40,6 +40,8 @@ components:
     delete: 長押しで削除
   invitation:
     title: 招待
+  purchase:
+    title: 購入
 transmission:
   title: Transmission
   permission:

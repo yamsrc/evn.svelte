@@ -19,3 +19,18 @@ paywall:
       있습니다.
   free:
     cta: 프리미엄을 즐기기
+products:
+  yearly:
+    title: 연간
+    description: |-
+      !js
+      (value) => `연간 결제 ${value}`
+  monthly:
+    title: 매월
+    description: 유연함
+permonth: |-
+  !js
+  (value) => `월 ${value}`
+trial: |-
+  !js
+  (period) => `${period} 무료`

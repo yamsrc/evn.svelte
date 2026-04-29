@@ -12,3 +12,21 @@ export function date(value: string | Date | number, locale: Locale): string {
 
   return new Intl.DateTimeFormat(locale, { month: 'short', day: 'numeric' }).format(d)
 }
+
+/**
+ * Formats an ISO duration string into a localized representation (e.g., "1 year", "1 month").
+ *
+ * @param iso - ISO duration string
+ * @param locale - Locale for formatting
+ * @returns Formatted duration string
+ */
+export function formatISODuration(iso: string, locale: Locale): string {
+  const match = iso.match(/^P(?:(\d+)Y)?(?:(\d+)M)?(?:(\d+)W)?(?:(\d+)D)?(?:T(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?)?$/)
+
+  if (match === null) return iso
+
+  const [, y, mo, w, d, h, mi, s] = match.map((v) => Number.isNaN(Number(v)) ? undefined : Number(v))
+
+  return new Intl.DurationFormat(locale, { style: 'long' })
+    .format({ years: y, months: mo, weeks: w, days: d, hours: h, minutes: mi, seconds: s })
+}

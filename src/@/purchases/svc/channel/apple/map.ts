@@ -22,6 +22,8 @@ export function toProduct(raw: AppleProduct): Product | null {
     period,
     displayName: attrs.name,
     displayPrice: buy.priceFormatted,
+    priceString: buy.priceString,
+    currencyCode: buy.currencyCode,
   }
 
   const intro = buy.discounts.find((d) => d.type === 'IntroOffer')

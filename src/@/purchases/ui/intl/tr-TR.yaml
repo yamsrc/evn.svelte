@@ -24,3 +24,18 @@ paywall:
       tarayıp tanıyabilir ve daha fazlasını yapabilirsiniz.
   free:
     cta: Premium'un Tadını Çıkar
+products:
+  yearly:
+    title: Yıllık
+    description: |-
+      !js
+      (value) => `${value} tutarında yıllık ödeme`
+  monthly:
+    title: Aylık
+    description: Esnek
+permonth: |-
+  !js
+  (value) => `aylık ${value}`
+trial: |-
+  !js
+  (period) => `${period} ücretsiz`

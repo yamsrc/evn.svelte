@@ -40,6 +40,8 @@ components:
     delete: Silmek için basılı tut
   invitation:
     title: Davetiyeler
+  purchase:
+    title: Alışveriş
 transmission:
   title: Transmission
   permission:

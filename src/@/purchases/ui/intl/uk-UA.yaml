@@ -24,3 +24,18 @@ paywall:
       профілі, сканувати й розпізнавати чеки та багато іншого.
   free:
     cta: Насолоджуйся Premium
+products:
+  yearly:
+    title: Щорічно
+    description: |-
+      !js
+      (value) => `Річна оплата ${value}`
+  monthly:
+    title: Щомісяця
+    description: Гнучко
+permonth: |-
+  !js
+  (value) => `${value} на місяць`
+trial: |-
+  !js
+  (period) => `${period} безкоштовно`

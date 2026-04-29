@@ -15,3 +15,18 @@ paywall:
     featuresNote: 此外，从现在起，你还可以在个人资料中进一步自定义界面，扫描和识别小票等更多功能。
   free:
     cta: 享受高级版
+products:
+  yearly:
+    title: 每年
+    description: |-
+      !js
+      (value) => `年度付款 ${value}`
+  monthly:
+    title: 每月
+    description: 灵活
+permonth: |-
+  !js
+  (value) => `每月${value}`
+trial: |-
+  !js
+  (period) => `${period}免费`

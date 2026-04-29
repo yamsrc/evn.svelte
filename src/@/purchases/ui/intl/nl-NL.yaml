@@ -24,3 +24,18 @@ paywall:
       bonnetjes scannen en herkennen, en meer.
   free:
     cta: Premium genieten
+products:
+  yearly:
+    title: Jaarlijks
+    description: |-
+      !js
+      (value) => `Jaarlijkse betaling van ${value}`
+  monthly:
+    title: Maandelijks
+    description: Flexibel
+permonth: |-
+  !js
+  (value) => `${value} per maand`
+trial: |-
+  !js
+  (period) => `${period} gratis`

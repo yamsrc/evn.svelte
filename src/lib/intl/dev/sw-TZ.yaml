@@ -40,6 +40,8 @@ components:
     delete: Shikilia kufuta
   invitation:
     title: Mialiko
+  purchase:
+    title: Ununuzi
 transmission:
   title: Transmission
   permission:

@@ -24,3 +24,18 @@ paywall:
       الإيصالات والتعرف عليها، والمزيد.
   free:
     cta: استمتع بريميوم
+products:
+  yearly:
+    title: سنوي
+    description: |-
+      !js
+      (value) => `دفع سنوي بقيمة ${value}`
+  monthly:
+    title: شهريًا
+    description: مرن
+permonth: |-
+  !js
+  (value) => `${value} شهريًا`
+trial: |-
+  !js
+  (period) => `${period} مجانًا`

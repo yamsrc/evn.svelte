@@ -23,3 +23,18 @@ paywall:
       wasifu wako, kutambaza na kutambua risiti na mengi zaidi.
   free:
     cta: Furahia Premium
+products:
+  yearly:
+    title: Kila mwaka
+    description: |-
+      !js
+      (value) => `Malipo ya mwaka ya ${value}`
+  monthly:
+    title: Kila mwezi
+    description: Kubadilika
+permonth: |-
+  !js
+  (value) => `${value} kwa mwezi`
+trial: |-
+  !js
+  (period) => `${period} bila malipo`

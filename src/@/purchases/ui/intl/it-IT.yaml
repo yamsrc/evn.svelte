@@ -24,3 +24,18 @@ paywall:
       profilo, scansionare e riconoscere ricevute e molto altro.
   free:
     cta: Goditi Premium
+products:
+  yearly:
+    title: Annuale
+    description: |-
+      !js
+      (value) => `Pagamento annuale di ${value}`
+  monthly:
+    title: Mensile
+    description: Flessibile
+permonth: |-
+  !js
+  (value) => `${value} al mese`
+trial: |-
+  !js
+  (period) => `${period} gratis`

@@ -4,6 +4,8 @@ export interface Product {
   period: 'P1M' | 'P1Y'
   displayName: string
   displayPrice: string
+  priceString: string
+  currencyCode: string
   trial?: { period: string, displayPrice: string }
 }
 

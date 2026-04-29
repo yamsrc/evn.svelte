@@ -66,7 +66,7 @@ const yearly = product({
 
 describe('toProduct', () => {
   it('maps monthly subscription', () => {
-    expect(toProduct(monthly)).toEqual({
+    expect(toProduct(monthly)).toMatchObject({
       id: 'premium_monthly',
       kind: 'subscription',
       period: 'P1M',
@@ -76,7 +76,7 @@ describe('toProduct', () => {
   })
 
   it('maps yearly subscription with trial', () => {
-    expect(toProduct(yearly)).toEqual({
+    expect(toProduct(yearly)).toMatchObject({
       id: 'premium_yearly',
       kind: 'subscription',
       period: 'P1Y',

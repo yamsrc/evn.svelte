@@ -24,3 +24,18 @@ paywall:
       perfil, escanear y reconocer recibos y mucho más.
   free:
     cta: Disfrutar Premium
+products:
+  yearly:
+    title: Anual
+    description: |-
+      !js
+      (value) => `Pago anual de ${value}`
+  monthly:
+    title: Mensual
+    description: Flexible
+permonth: |-
+  !js
+  (value) => `${value} al mes`
+trial: |-
+  !js
+  (period) => `${period} gratis`

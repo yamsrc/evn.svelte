@@ -22,3 +22,18 @@ paywall:
       हैं, रसीदें स्कैन और पहचान सकते हैं, और भी बहुत कुछ कर सकते हैं।
   free:
     cta: प्रीमियम का आनंद लो
+products:
+  yearly:
+    title: वार्षिक
+    description: |-
+      !js
+      (value) => `${value} का सालाना भुगतान`
+  monthly:
+    title: मासिक
+    description: लचीलापन
+permonth: |-
+  !js
+  (value) => `${value} प्रति माह`
+trial: |-
+  !js
+  (period) => `${period} फ्री`

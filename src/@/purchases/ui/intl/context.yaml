@@ -32,3 +32,24 @@ inputs:
       cta:
         input: Enjoiy Premium
         context: button label, инфинитив (начальная форма)
+  products:
+    yearly:
+      title:
+        input: Yearly
+        context: payment option title
+      description:
+        input: Annual payment of {value}
+        context: payment option description, a function
+    monthly:
+      title:
+        input: Monthly
+        context: payment option title
+      description:
+        input: Flexible
+        context: payment option description
+  permonth:
+    input: "{value} per month"
+    context: price per month, a function
+  trial:
+    input: "{period} free"
+    context: trial period, a function that will accept periods like 1 day, 2 weeks etc

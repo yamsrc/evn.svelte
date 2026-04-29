@@ -21,3 +21,18 @@ paywall:
       et bien plus encore.
   free:
     cta: Profiter de Premium
+products:
+  yearly:
+    title: Annuel
+    description: |-
+      !js
+      (value) => `Paiement annuel de ${value}`
+  monthly:
+    title: Mensuel
+    description: Flexible
+permonth: |-
+  !js
+  (value) => `${value} par mois`
+trial: |-
+  !js
+  (period) => `${period} gratuit`

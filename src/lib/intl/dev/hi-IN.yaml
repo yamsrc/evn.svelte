@@ -40,6 +40,8 @@ components:
     delete: हटाने के लिए दबाए रखें
   invitation:
     title: निमंत्रण
+  purchase:
+    title: खरीदारी
 transmission:
   title: Transmission
   permission:

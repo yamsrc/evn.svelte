@@ -40,6 +40,8 @@ components:
     delete: Zum Löschen halten
   invitation:
     title: Einladungen
+  purchase:
+    title: Ausgabe
 transmission:
   title: Transmission
   permission:

@@ -40,6 +40,8 @@ components:
     delete: Vasthouden om te verwijderen
   invitation:
     title: Uitnodigingen
+  purchase:
+    title: Aankoop
 transmission:
   title: Transmission
   permission:

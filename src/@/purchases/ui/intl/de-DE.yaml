@@ -24,3 +24,18 @@ paywall:
       anpassen, Belege scannen und erkennen sowie vieles mehr.
   free:
     cta: Premium genießen
+products:
+  yearly:
+    title: Jährlich
+    description: |-
+      !js
+      (value) => `Jährliche Zahlung über ${value}`
+  monthly:
+    title: Monatlich
+    description: Flexibel
+permonth: |-
+  !js
+  (value) => `${value} pro Monat`
+trial: |-
+  !js
+  (period) => `${period} gratis`

@@ -18,3 +18,18 @@ paywall:
     featuresNote: さらに、今後はプロフィールからインターフェースをよりカスタマイズしたり、レシートをスキャンして認識したり、さまざまな機能がご利用いただけます。
   free:
     cta: プレミアムを楽しもう
+products:
+  yearly:
+    title: 年間
+    description: |-
+      !js
+      (value) => `年額 ${value} のお支払い`
+  monthly:
+    title: 毎月
+    description: 柔軟
+permonth: |-
+  !js
+  (value) => `月額${value}`
+trial: |-
+  !js
+  (period) => `${period} 無料`
