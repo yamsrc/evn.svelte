@@ -1,6 +1,8 @@
 <script lang="ts">
   import { onMount } from 'svelte'
+  import { ok } from 'svas'
   import { add, channel } from '@/purchases'
+  import { account } from '@/iam'
   import { Spinner } from '$ui/spinner'
   import { Button } from '$ui/button'
   import { image, ios, shell } from '$lib/tools'
@@ -22,15 +24,34 @@
   let selected = $state<Product | null>(null)
 
   async function onclick() {
+    if (selected === null) return
+
     busy = true
 
-    const result = await add()
+    const method = (() => {
+      if (products.length === 0) return freePurchase
+      else return paidPurchase
+    })()
+
+    const result = await method()
 
     busy = false
 
-    if (result instanceof Error) return
+    if (!(result instanceof Error)) next?.()
+  }
 
-    next?.()
+  async function freePurchase() {
+    return await add()
+  }
+
+  async function paidPurchase() {
+    if (selected === null || !ok(account)) return new Error('no-account or not-selected')
+
+    const ch = channel()
+
+    if (ch === null) return new Error('no-channel')
+
+    return await ch.purchase(selected.id, $account!.id)
   }
 
   async function load() {
