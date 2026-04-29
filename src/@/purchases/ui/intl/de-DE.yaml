@@ -13,9 +13,15 @@ paywall:
       * Ein Premium-Nutzer aktiviert das Markieren von Gegenständen für alle
       Teilnehmenden. In Abenteuern wird nur der Belegtext gespeichert (keine
       visuelle Aufteilung).
-    trial: |-
+    buy: Evnly Premium kaufen
+    trial:
+      comment: |-
+        !js
+        (price) => `7 Tage kostenlos, danach ${price}/Jahr`
+      cta: Teste kostenlos starten
+    subscribe_monthly: |-
       !js
-      (price) => `7 Tage kostenlos, danach ${price}/Jahr`
+      (price) => `Abonniere für ${price} pro Monat`
   complete:
     thanks: Vielen Dank für dein Abonnement von Envly Premium
     avatarNote: Ab jetzt werden andere Evnly-Nutzer dein Avatar so sehen.
@@ -24,6 +30,12 @@ paywall:
       anpassen, Belege scannen und erkennen sowie vieles mehr.
   free:
     cta: Premium genießen
+  disclaimers:
+    apple: >-
+      Das kostenlose Probeabo gibt’s nur für berechtigte Erstabonnenten. Um eine
+      Abbuchung zu vermeiden, kündige mindestens 24 Stunden vor Ablauf des
+      Probezeitraums. Du kannst dein Abo in den Einstellungen deiner Apple-ID
+      verwalten oder kündigen.
 products:
   yearly:
     title: Jährlich
@@ -39,3 +51,19 @@ permonth: |-
 trial: |-
   !js
   (period) => `${period} gratis`
+disclaimers:
+  trial: Das kostenlose Probeabo ist für berechtigte Erstabonnenten verfügbar.
+  apple_account: Die Zahlung wird bei Kaufbestätigung deinem Apple-ID-Konto belastet.
+  apple_yearly: >-
+    !js
+
+    (price) => `Dein Abo wird automatisch für ${price}/Jahr verlängert, wenn du
+    nicht spätestens 24 Stunden vor Ende der aktuellen Periode kündigst.`
+  apple_manage: >-
+    Du kannst dein Abo in den Einstellungen deiner Apple-ID verwalten oder
+    kündigen.
+  apple_monthly: >-
+    !js
+
+    (price) => `Dein Abo wird automatisch für ${price}/Monat verlängert, sofern
+    du nicht mindestens 24 Stunden vor Ablauf des aktuellen Zeitraums kündigst.`

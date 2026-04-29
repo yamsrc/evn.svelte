@@ -9,15 +9,25 @@ paywall:
     footnote: >-
       ※
       1人のプレミアムユーザーが全参加者にアイテムマーク機能を有効にします。冒険では、レシートのテキストのみが保存されます（ビジュアルの分割はありません）。
-    trial: |-
+    buy: Evnly Premiumを購入
+    trial:
+      comment: |-
+        !js
+        (price) => `7日間無料、その後は${price}/年`
+      cta: 無料トライアルを始める
+    subscribe_monthly: |-
       !js
-      (price) => `7日間無料、その後は${price}/年`
+      (price) => `${price}で毎月サブスクしよう`
   complete:
     thanks: Envly Premiumへのご登録ありがとうございます
     avatarNote: これからは、他のEvnlyユーザーがあなたのアバターをこのように表示します。
     featuresNote: さらに、今後はプロフィールからインターフェースをよりカスタマイズしたり、レシートをスキャンして認識したり、さまざまな機能がご利用いただけます。
   free:
     cta: プレミアムを楽しもう
+  disclaimers:
+    apple: >-
+      無料トライアルは、初めて利用する対象者のみが利用できます。請求を避けるために、トライアル終了の24時間前までにキャンセルしてください。Apple
+      IDのアカウント設定で、サブスクリプションの管理や解約ができます。
 products:
   yearly:
     title: 年間
@@ -33,3 +43,15 @@ permonth: |-
 trial: |-
   !js
   (period) => `${period} 無料`
+disclaimers:
+  trial: 無料トライアルは、対象となる初回登録者が利用できます。
+  apple_account: 購入を確定すると、支払いはあなたのApple IDアカウントに請求されます。
+  apple_yearly: |-
+    !js
+    (price) => `サブスクリプションは、現在の期間終了の24時間以上前に解約しない限り、毎年${price}で自動更新されます。`
+  apple_manage: Apple IDのアカウント設定でサブスクリプションの管理やキャンセルができます。
+  apple_monthly: >-
+    !js
+
+    (price) =>
+    `サブスクリプションは${price}/月で自動更新されます。現在の期間の終了24時間以上前にキャンセルしない限り、自動的に継続されます。`

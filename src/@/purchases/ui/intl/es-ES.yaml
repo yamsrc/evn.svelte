@@ -13,9 +13,15 @@ paywall:
       * Un usuario Premium permite el marcado de elementos para todos los
       participantes. En las aventuras, solo se guarda el texto del recibo (sin
       división visual).
-    trial: |-
+    buy: Consigue Evnly Premium
+    trial:
+      comment: |-
+        !js
+        (price) => `7 días gratis, luego ${price}/año`
+      cta: Empieza tu prueba gratis
+    subscribe_monthly: |-
       !js
-      (price) => `7 días gratis, luego ${price}/año`
+      (price) => `Suscríbete por ${price} al mes`
   complete:
     thanks: Gracias por suscribirte a Envly Premium
     avatarNote: A partir de ahora, otros usuarios de Evnly verán tu avatar así.
@@ -24,6 +30,12 @@ paywall:
       perfil, escanear y reconocer recibos y mucho más.
   free:
     cta: Disfrutar Premium
+  disclaimers:
+    apple: >-
+      La prueba gratuita solo está disponible para los nuevos suscriptores
+      elegibles. Cancela al menos 24 horas antes de que acabe la prueba para
+      evitar cargos. Puedes gestionar o cancelar tu suscripción en la
+      configuración de tu cuenta Apple ID.
 products:
   yearly:
     title: Anual
@@ -39,3 +51,23 @@ permonth: |-
 trial: |-
   !js
   (period) => `${period} gratis`
+disclaimers:
+  trial: >-
+    La prueba gratuita está disponible para quienes se suscriben por primera vez
+    y cumplen los requisitos.
+  apple_account: El pago se cargará a tu cuenta de Apple ID al confirmar la compra.
+  apple_yearly: >-
+    !js
+
+    (price) => `La suscripción se renueva automáticamente por ${price}/año a
+    menos que la canceles al menos 24 horas antes de que termine el periodo
+    actual.`
+  apple_manage: >-
+    Puedes gestionar o cancelar tu suscripción en la configuración de tu cuenta
+    de Apple ID.
+  apple_monthly: >-
+    !js
+
+    (price) => `La suscripción se renueva automáticamente por ${price}/mes a
+    menos que la canceles al menos 24 horas antes de que termine el periodo
+    actual.`

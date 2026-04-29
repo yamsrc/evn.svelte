@@ -11,7 +11,12 @@ export const dictionaries = {
         "cta": "ابدأ تجربتك المجانية",
         "disclaimer": "التجربة المجانية متاحة فقط للمشتركين المؤهلين لأول مرة. يجب الإلغاء قبل 24 ساعة من انتهاء التجربة لتجنب الرسوم. سيتم تفعيل الفوترة التلقائية بعد انتهاء الفترة التجريبية المجانية، ويمكنك الإلغاء في أي وقت.",
         "footnote": "‏* يتيح مستخدم بريميوم واحد إمكانية تمييز العناصر لجميع المشاركين. في المغامرات، يتم حفظ نص الإيصال فقط (بدون عرض مرئي للتقسيم).",
-        "trial": (price) => `مجاني لمدة 7 أيام، ثم ${price} سنويًا`
+        "buy": "اشترِ Evnly Premium",
+        "trial": {
+          "comment": (price) => `مجاني لمدة 7 أيام، ثم ${price} سنويًا`,
+          "cta": "ابدأ تجربتك المجانية"
+        },
+        "subscribe_monthly": (price) => `اشترك مقابل ${price} شهريًا`
       },
       "complete": {
         "thanks": "شكرًا لاشتراكك في Envly Premium",
@@ -20,6 +25,9 @@ export const dictionaries = {
       },
       "free": {
         "cta": "استمتع بريميوم"
+      },
+      "disclaimers": {
+        "apple": "التجربة المجانية متاحة فقط للمشتركين الجدد المؤهلين. يمكنك الإلغاء قبل ٢٤ ساعة من انتهاء التجربة لتجنب أي رسوم. يمكنك إدارة أو إلغاء اشتراكك من إعدادات حساب Apple ID الخاص بك."
       }
     },
     "products": {
@@ -33,7 +41,14 @@ export const dictionaries = {
       }
     },
     "permonth": (value) => `${value} شهريًا`,
-    "trial": (period) => `${period} مجانًا`
+    "trial": (period) => `${period} مجانًا`,
+    "disclaimers": {
+      "trial": "التجربة المجانية متاحة للمشتركين لأول مرة المؤهلين.",
+      "apple_account": "سيتم خصم الدفعة من حساب Apple ID الخاص بك عند تأكيد الشراء.",
+      "apple_yearly": (price) => `سيتم تجديد الاشتراك تلقائياً بمبلغ ${price} سنوياً ما لم يتم الإلغاء قبل 24 ساعة على الأقل من نهاية الفترة الحالية.`,
+      "apple_manage": "يمكنك إدارة أو إلغاء اشتراكك من إعدادات حساب Apple ID الخاص بك.",
+      "apple_monthly": (price) => `سيتم تجديد الاشتراك تلقائيًا مقابل ${price} شهريًا ما لم يتم الإلغاء قبل 24 ساعة على الأقل من نهاية الفترة الحالية.`
+    }
   },
   "de-DE": {
     "paywall": {
@@ -44,7 +59,12 @@ export const dictionaries = {
         "cta": "Kostenlose Testversion starten",
         "disclaimer": "Kostenlose Testphase nur für berechtigte Erstabonnenten verfügbar. Um eine Berechnung zu vermeiden, kündigen Sie mindestens 24 Stunden vor Ablauf der Testphase. Nach der kostenlosen Testphase wird das Abonnement automatisch verlängert, Kündigung jederzeit möglich.",
         "footnote": "* Ein Premium-Nutzer aktiviert das Markieren von Gegenständen für alle Teilnehmenden. In Abenteuern wird nur der Belegtext gespeichert (keine visuelle Aufteilung).",
-        "trial": (price) => `7 Tage kostenlos, danach ${price}/Jahr`
+        "buy": "Evnly Premium kaufen",
+        "trial": {
+          "comment": (price) => `7 Tage kostenlos, danach ${price}/Jahr`,
+          "cta": "Teste kostenlos starten"
+        },
+        "subscribe_monthly": (price) => `Abonniere für ${price} pro Monat`
       },
       "complete": {
         "thanks": "Vielen Dank für dein Abonnement von Envly Premium",
@@ -53,6 +73,9 @@ export const dictionaries = {
       },
       "free": {
         "cta": "Premium genießen"
+      },
+      "disclaimers": {
+        "apple": "Das kostenlose Probeabo gibt’s nur für berechtigte Erstabonnenten. Um eine Abbuchung zu vermeiden, kündige mindestens 24 Stunden vor Ablauf des Probezeitraums. Du kannst dein Abo in den Einstellungen deiner Apple-ID verwalten oder kündigen."
       }
     },
     "products": {
@@ -66,7 +89,14 @@ export const dictionaries = {
       }
     },
     "permonth": (value) => `${value} pro Monat`,
-    "trial": (period) => `${period} gratis`
+    "trial": (period) => `${period} gratis`,
+    "disclaimers": {
+      "trial": "Das kostenlose Probeabo ist für berechtigte Erstabonnenten verfügbar.",
+      "apple_account": "Die Zahlung wird bei Kaufbestätigung deinem Apple-ID-Konto belastet.",
+      "apple_yearly": (price) => `Dein Abo wird automatisch für ${price}/Jahr verlängert, wenn du nicht spätestens 24 Stunden vor Ende der aktuellen Periode kündigst.`,
+      "apple_manage": "Du kannst dein Abo in den Einstellungen deiner Apple-ID verwalten oder kündigen.",
+      "apple_monthly": (price) => `Dein Abo wird automatisch für ${price}/Monat verlängert, sofern du nicht mindestens 24 Stunden vor Ablauf des aktuellen Zeitraums kündigst.`
+    }
   },
   "en-US": {
     "paywall": {
@@ -77,7 +107,12 @@ export const dictionaries = {
         "cta": "Start your free trial",
         "disclaimer": "Free trial available only to eligible first time subscribers. Cancel 24 hours before trial ends to avoid charge. Recurring billing after free trial, cancel anytime.",
         "footnote": "* One Premium user enables item marking for all participants. In adventures, only receipt text is saved (no visual split).",
-        "trial": (price) => `7-day free, then ${price}/year`
+        "buy": "Buy Evnly Premium",
+        "trial": {
+          "comment": (price) => `7-day free, then ${price}/year`,
+          "cta": "Start your free trial"
+        },
+        "subscribe_monthly": (price) => `Subscribe for ${price}/month`
       },
       "complete": {
         "thanks": "Thank you for subscribing to Envly Premium",
@@ -86,6 +121,9 @@ export const dictionaries = {
       },
       "free": {
         "cta": "Enjoy Premium"
+      },
+      "disclaimers": {
+        "apple": "Free trial is only available to eligible first-time subscribers. Cancel at least 24 hours before the trial ends to avoid being charged. You can manage or cancel your subscription in your Apple ID account settings."
       }
     },
     "products": {
@@ -99,7 +137,14 @@ export const dictionaries = {
       }
     },
     "permonth": (value) => `${value} per month`,
-    "trial": (period) => `${period} free`
+    "trial": (period) => `${period} free`,
+    "disclaimers": {
+      "trial": "Free trial is available to eligible first-time subscribers.",
+      "apple_account": "Payment will be charged to your Apple ID account when you confirm your purchase.",
+      "apple_yearly": (price) => `Subscription automatically renews for ${price}/year unless canceled at least 24 hours before the end of the current period.`,
+      "apple_manage": "You can manage or cancel your subscription in your Apple ID account settings.",
+      "apple_monthly": (price) => `Subscription automatically renews for ${price}/month unless canceled at least 24 hours before the end of the current period.`
+    }
   },
   "es-ES": {
     "paywall": {
@@ -110,7 +155,12 @@ export const dictionaries = {
         "cta": "Comienza tu prueba gratis",
         "disclaimer": "Prueba gratuita disponible solo para suscriptores elegibles por primera vez. Cancela 24 horas antes de que termine la prueba para evitar cargos. La suscripción se renovará automáticamente después del periodo de prueba gratuita; puedes cancelar en cualquier momento.",
         "footnote": "* Un usuario Premium permite el marcado de elementos para todos los participantes. En las aventuras, solo se guarda el texto del recibo (sin división visual).",
-        "trial": (price) => `7 días gratis, luego ${price}/año`
+        "buy": "Consigue Evnly Premium",
+        "trial": {
+          "comment": (price) => `7 días gratis, luego ${price}/año`,
+          "cta": "Empieza tu prueba gratis"
+        },
+        "subscribe_monthly": (price) => `Suscríbete por ${price} al mes`
       },
       "complete": {
         "thanks": "Gracias por suscribirte a Envly Premium",
@@ -119,6 +169,9 @@ export const dictionaries = {
       },
       "free": {
         "cta": "Disfrutar Premium"
+      },
+      "disclaimers": {
+        "apple": "La prueba gratuita solo está disponible para los nuevos suscriptores elegibles. Cancela al menos 24 horas antes de que acabe la prueba para evitar cargos. Puedes gestionar o cancelar tu suscripción en la configuración de tu cuenta Apple ID."
       }
     },
     "products": {
@@ -132,7 +185,14 @@ export const dictionaries = {
       }
     },
     "permonth": (value) => `${value} al mes`,
-    "trial": (period) => `${period} gratis`
+    "trial": (period) => `${period} gratis`,
+    "disclaimers": {
+      "trial": "La prueba gratuita está disponible para quienes se suscriben por primera vez y cumplen los requisitos.",
+      "apple_account": "El pago se cargará a tu cuenta de Apple ID al confirmar la compra.",
+      "apple_yearly": (price) => `La suscripción se renueva automáticamente por ${price}/año a menos que la canceles al menos 24 horas antes de que termine el periodo actual.`,
+      "apple_manage": "Puedes gestionar o cancelar tu suscripción en la configuración de tu cuenta de Apple ID.",
+      "apple_monthly": (price) => `La suscripción se renueva automáticamente por ${price}/mes a menos que la canceles al menos 24 horas antes de que termine el periodo actual.`
+    }
   },
   "fr-FR": {
     "paywall": {
@@ -143,7 +203,12 @@ export const dictionaries = {
         "cta": "Commencer votre essai gratuit",
         "disclaimer": "Essai gratuit réservé uniquement aux nouveaux abonnés éligibles. Annulez 24 heures avant la fin de l’essai pour éviter tout prélèvement. Facturation récurrente après la période d’essai, annulation à tout moment.",
         "footnote": "* Un utilisateur Premium permet le marquage des articles pour tous les participants. Dans les aventures, seul le texte du reçu est enregistré (aucune répartition visuelle).",
-        "trial": (price) => `7 jours gratuits, puis ${price}/an`
+        "buy": "Prends Evnly Premium",
+        "trial": {
+          "comment": (price) => `7 jours gratuits, puis ${price}/an`,
+          "cta": "Commence ton essai gratuit"
+        },
+        "subscribe_monthly": (price) => `Abonne-toi pour ${price}/mois`
       },
       "complete": {
         "thanks": "Merci de vous être abonné à Envly Premium",
@@ -152,6 +217,9 @@ export const dictionaries = {
       },
       "free": {
         "cta": "Profiter de Premium"
+      },
+      "disclaimers": {
+        "apple": "L’essai gratuit est réservé aux nouveaux abonnés éligibles. Pense à annuler au moins 24 h avant la fin de l’essai pour éviter le débit. Tu peux gérer ou annuler ton abonnement dans les réglages de ton identifiant Apple."
       }
     },
     "products": {
@@ -165,7 +233,14 @@ export const dictionaries = {
       }
     },
     "permonth": (value) => `${value} par mois`,
-    "trial": (period) => `${period} gratuit`
+    "trial": (period) => `${period} gratuit`,
+    "disclaimers": {
+      "trial": "L’essai gratuit est dispo pour les nouveaux abonnés éligibles.",
+      "apple_account": "Le paiement sera prélevé sur ton compte Apple ID lors de la confirmation de l’achat.",
+      "apple_yearly": (price) => `L'abonnement se renouvelle automatiquement pour ${price}/an sauf si tu l'annules au moins 24 heures avant la fin de la période en cours.`,
+      "apple_manage": "Tu peux gérer ou annuler ton abonnement dans les réglages de ton compte Apple ID.",
+      "apple_monthly": (price) => `L’abonnement se renouvelle automatiquement pour ${price}/mois, sauf si tu l’annules au moins 24 heures avant la fin de la période en cours.`
+    }
   },
   "hi-IN": {
     "paywall": {
@@ -176,7 +251,12 @@ export const dictionaries = {
         "cta": "अपना फ्री ट्रायल शुरू करें",
         "disclaimer": "नि:शुल्क ट्रायल केवल योग्य प्रथम बार ग्राहकों के लिए उपलब्ध है। चार्ज से बचने के लिए ट्रायल समाप्त होने से 24 घंटे पहले रद्द करें। नि:शुल्क ट्रायल के बाद आवर्तक बिलिंग स्वचालित रूप से शुरू हो जाएगी, कभी भी रद्द करें।",
         "footnote": "* एक प्रीमियम उपयोगकर्ता सभी प्रतिभागियों के लिए आइटम मार्किंग सक्षम करता है। रोमांचों में केवल रसीद पाठ सेव किया जाता है (कोई दृश्य विभाजन नहीं)।",
-        "trial": (price) => `7 दिन मुफ्त, फिर ${price}/वर्ष`
+        "buy": "Evnly Premium खरीदो",
+        "trial": {
+          "comment": (price) => `7 दिन मुफ्त, फिर ${price}/वर्ष`,
+          "cta": "अपनी फ्री ट्रायल शुरू करो"
+        },
+        "subscribe_monthly": (price) => `${price} प्रति माह पर सब्सक्राइब करो`
       },
       "complete": {
         "thanks": "Envly Premium की सदस्यता लेने के लिए धन्यवाद",
@@ -185,6 +265,9 @@ export const dictionaries = {
       },
       "free": {
         "cta": "प्रीमियम का आनंद लो"
+      },
+      "disclaimers": {
+        "apple": "फ्री ट्रायल सिर्फ योग्य पहले बार के सब्सक्राइबर्स के लिए उपलब्ध है। चार्ज से बचने के लिए ट्रायल खत्म होने से 24 घंटे पहले कैंसल करें। अपनी सदस्यता को Apple ID अकाउंट सेटिंग्स में मैनेज या कैंसल कर सकते हो।"
       }
     },
     "products": {
@@ -198,7 +281,14 @@ export const dictionaries = {
       }
     },
     "permonth": (value) => `${value} प्रति माह`,
-    "trial": (period) => `${period} फ्री`
+    "trial": (period) => `${period} फ्री`,
+    "disclaimers": {
+      "trial": "फ्री ट्रायल योग्य पहले बार के सब्सक्राइबर के लिए उपलब्ध है।",
+      "apple_account": "खरीद की पुष्टि करते ही भुगतान तुम्हारे Apple ID खाते से लिया जाएगा।",
+      "apple_yearly": (price) => `सब्सक्रिप्शन अपने आप हर साल ${price} में रिन्यू होगा, जब तक कि इसे मौजूदा अवधि के खत्म होने से कम से कम 24 घंटे पहले कैंसिल न किया जाए।`,
+      "apple_manage": "तुम अपने Apple ID अकाउंट सेटिंग्स में अपनी सब्स्क्रिप्शन मैनेज या कैंसिल कर सकते हो।",
+      "apple_monthly": (price) => `सब्सक्रिप्शन हर महीने ${price} में अपने आप रिन्यू हो जाएगा, जब तक कि तुम इसे मौजूदा अवधि की समाप्ति से कम से कम 24 घंटे पहले कैंसल नहीं करते हो।`
+    }
   },
   "it-IT": {
     "paywall": {
@@ -209,7 +299,12 @@ export const dictionaries = {
         "cta": "Inizia la prova gratuita",
         "disclaimer": "Prova gratuita disponibile solo per nuovi abbonati idonei. Cancella almeno 24 ore prima della fine della prova per evitare addebiti. Dopo la prova gratuita, la fatturazione sarà ricorrente; è possibile annullare in qualsiasi momento.",
         "footnote": "* Un utente Premium consente la marcatura degli oggetti per tutti i partecipanti. Nelle avventure, viene salvato solo il testo della ricevuta (nessuna suddivisione visiva).",
-        "trial": (price) => `7 giorni gratis, poi ${price}/anno`
+        "buy": "Acquista Evnly Premium",
+        "trial": {
+          "comment": (price) => `7 giorni gratis, poi ${price}/anno`,
+          "cta": "Inizia la tua prova gratuita"
+        },
+        "subscribe_monthly": (price) => `Abbonati a ${price} al mese`
       },
       "complete": {
         "thanks": "Grazie per esserti abbonato a Envly Premium",
@@ -218,6 +313,9 @@ export const dictionaries = {
       },
       "free": {
         "cta": "Goditi Premium"
+      },
+      "disclaimers": {
+        "apple": "La prova gratuita è disponibile solo per i nuovi iscritti idonei. Cancella almeno 24 ore prima della fine della prova per evitare addebiti. Puoi gestire o annullare il tuo abbonamento dalle impostazioni dell’account Apple ID."
       }
     },
     "products": {
@@ -231,7 +329,14 @@ export const dictionaries = {
       }
     },
     "permonth": (value) => `${value} al mese`,
-    "trial": (period) => `${period} gratis`
+    "trial": (period) => `${period} gratis`,
+    "disclaimers": {
+      "trial": "La prova gratuita è disponibile per chi si abbona per la prima volta ed è idoneo.",
+      "apple_account": "Il pagamento verrà addebitato sul tuo account Apple ID al momento della conferma dell’acquisto.",
+      "apple_yearly": (price) => `L'abbonamento si rinnova automaticamente per ${price}/anno, a meno che tu non lo cancelli almeno 24 ore prima della fine del periodo attuale.`,
+      "apple_manage": "Puoi gestire o annullare l’abbonamento dalle impostazioni del tuo account Apple ID.",
+      "apple_monthly": (price) => `L’abbonamento si rinnova automaticamente a ${price}/mese a meno che tu non lo annulli almeno 24 ore prima della fine del periodo attuale.`
+    }
   },
   "ja-JP": {
     "paywall": {
@@ -242,7 +347,12 @@ export const dictionaries = {
         "cta": "無料トライアルを開始",
         "disclaimer": "無料トライアルは初めてご利用の対象ユーザーのみ利用できます。料金が発生しないよう、トライアル終了24時間前までにキャンセルしてください。無料トライアル終了後は自動的に継続課金されます。いつでも解約可能です。",
         "footnote": "※ 1人のプレミアムユーザーが全参加者にアイテムマーク機能を有効にします。冒険では、レシートのテキストのみが保存されます（ビジュアルの分割はありません）。",
-        "trial": (price) => `7日間無料、その後は${price}/年`
+        "buy": "Evnly Premiumを購入",
+        "trial": {
+          "comment": (price) => `7日間無料、その後は${price}/年`,
+          "cta": "無料トライアルを始める"
+        },
+        "subscribe_monthly": (price) => `${price}で毎月サブスクしよう`
       },
       "complete": {
         "thanks": "Envly Premiumへのご登録ありがとうございます",
@@ -251,6 +361,9 @@ export const dictionaries = {
       },
       "free": {
         "cta": "プレミアムを楽しもう"
+      },
+      "disclaimers": {
+        "apple": "無料トライアルは、初めて利用する対象者のみが利用できます。請求を避けるために、トライアル終了の24時間前までにキャンセルしてください。Apple IDのアカウント設定で、サブスクリプションの管理や解約ができます。"
       }
     },
     "products": {
@@ -264,7 +377,14 @@ export const dictionaries = {
       }
     },
     "permonth": (value) => `月額${value}`,
-    "trial": (period) => `${period} 無料`
+    "trial": (period) => `${period} 無料`,
+    "disclaimers": {
+      "trial": "無料トライアルは、対象となる初回登録者が利用できます。",
+      "apple_account": "購入を確定すると、支払いはあなたのApple IDアカウントに請求されます。",
+      "apple_yearly": (price) => `サブスクリプションは、現在の期間終了の24時間以上前に解約しない限り、毎年${price}で自動更新されます。`,
+      "apple_manage": "Apple IDのアカウント設定でサブスクリプションの管理やキャンセルができます。",
+      "apple_monthly": (price) => `サブスクリプションは${price}/月で自動更新されます。現在の期間の終了24時間以上前にキャンセルしない限り、自動的に継続されます。`
+    }
   },
   "ko-KR": {
     "paywall": {
@@ -275,7 +395,12 @@ export const dictionaries = {
         "cta": "무료 체험 시작하기",
         "disclaimer": "무료 체험은 자격이 있는 최초 구독자에게만 제공됩니다. 요금이 청구되지 않도록 체험 종료 24시간 전에 해지하세요. 무료 체험 후 반복 결제가 시작되며, 언제든지 해지할 수 있습니다.",
         "footnote": "* 프리미엄 사용자 한 명이 모든 참여자에게 아이템 표시를 활성화합니다. 모험에서는 영수증 텍스트만 저장되며(시각적 분할 없음).",
-        "trial": (price) => `7일 무료, 이후 ${price}/연`
+        "buy": "Evnly Premium 구매하기",
+        "trial": {
+          "comment": (price) => `7일 무료, 이후 ${price}/연`,
+          "cta": "무료 체험 시작하기"
+        },
+        "subscribe_monthly": (price) => `한 달에 ${price}로 구독하기`
       },
       "complete": {
         "thanks": "Envly Premium을 구독해 주셔서 감사합니다",
@@ -284,6 +409,9 @@ export const dictionaries = {
       },
       "free": {
         "cta": "프리미엄을 즐기기"
+      },
+      "disclaimers": {
+        "apple": "무료 체험은 자격이 되는 최초 가입자만 이용할 수 있어요. 요금이 청구되기 전에 체험 종료 24시간 전에 꼭 구독을 취소하세요. Apple ID 계정 설정에서 구독을 관리하거나 취소할 수 있습니다."
       }
     },
     "products": {
@@ -297,7 +425,14 @@ export const dictionaries = {
       }
     },
     "permonth": (value) => `월 ${value}`,
-    "trial": (period) => `${period} 무료`
+    "trial": (period) => `${period} 무료`,
+    "disclaimers": {
+      "trial": "무료 체험은 자격이 있는 최초 구독자에게 제공돼요.",
+      "apple_account": "구매를 확인하면 결제가 네 Apple ID 계정으로 청구돼.",
+      "apple_yearly": (price) => `현재 기간이 끝나기 최소 24시간 전에 취소하지 않으면 구독이 연 ${price}로 자동 갱신돼요.`,
+      "apple_manage": "Apple ID 계정 설정에서 구독을 관리하거나 취소할 수 있어.",
+      "apple_monthly": (price) => `구독은 매달 ${price}에 자동으로 갱신돼. 현재 기간 종료 24시간 전까지 해지하지 않으면 계속 결제돼.`
+    }
   },
   "nl-NL": {
     "paywall": {
@@ -308,7 +443,12 @@ export const dictionaries = {
         "cta": "Begin je gratis proefperiode",
         "disclaimer": "Gratis proefperiode is alleen beschikbaar voor in aanmerking komende nieuwe abonnees. Annuleer minimaal 24 uur voor het einde van de proefperiode om kosten te voorkomen. Na de gratis proefperiode vindt automatische verlenging plaats; opzeggen kan op elk moment.",
         "footnote": "* Eén Premium-gebruiker maakt het markeren van items mogelijk voor alle deelnemers. In avonturen wordt alleen de tekst van het ontvangstbewijs opgeslagen (geen visuele verdeling).",
-        "trial": (price) => `7 dagen gratis, daarna ${price}/jaar`
+        "buy": "Evnly Premium kopen",
+        "trial": {
+          "comment": (price) => `7 dagen gratis, daarna ${price}/jaar`,
+          "cta": "Start je gratis proefperiode"
+        },
+        "subscribe_monthly": (price) => `Abonneer je voor ${price} per maand`
       },
       "complete": {
         "thanks": "Bedankt voor je abonnement op Envly Premium",
@@ -317,6 +457,9 @@ export const dictionaries = {
       },
       "free": {
         "cta": "Premium genieten"
+      },
+      "disclaimers": {
+        "apple": "De gratis proefperiode is alleen beschikbaar voor in aanmerking komende, nieuwe abonnees. Annuleer minstens 24 uur voor het einde van de proef om kosten te voorkomen. Je kunt je abonnement beheren of opzeggen via je Apple ID-accountinstellingen."
       }
     },
     "products": {
@@ -330,7 +473,14 @@ export const dictionaries = {
       }
     },
     "permonth": (value) => `${value} per maand`,
-    "trial": (period) => `${period} gratis`
+    "trial": (period) => `${period} gratis`,
+    "disclaimers": {
+      "trial": "De gratis proefperiode is beschikbaar voor in aanmerking komende eerste abonnees.",
+      "apple_account": "De betaling wordt in rekening gebracht op je Apple ID-account zodra je de aankoop bevestigt.",
+      "apple_yearly": (price) => `Het abonnement wordt automatisch verlengd voor ${price}/jaar, tenzij je minstens 24 uur voor het einde van de huidige periode opzegt.`,
+      "apple_manage": "Je kunt je abonnement beheren of annuleren in de instellingen van je Apple ID-account.",
+      "apple_monthly": (price) => `Abonnement wordt automatisch verlengd voor ${price}/maand, tenzij je minstens 24 uur voor het einde van de huidige periode opzegt.`
+    }
   },
   "ru-RU": {
     "paywall": {
@@ -341,7 +491,12 @@ export const dictionaries = {
         "cta": "Начать бесплатную пробную версию",
         "disclaimer": "Бесплатная пробная версия доступна только новым подходящим подписчикам. Отмените за 24 часа до окончания пробного периода, чтобы избежать оплаты. После окончания бесплатного периода списание происходит автоматически, вы можете отменить подписку в любое время.",
         "footnote": "* Один пользователь с подпиской Premium включает возможность пометки предметов для всех участников. В приключениях сохраняется только текст чека (без визуального разделения).",
-        "trial": (price) => `7 дней бесплатно, затем ${price} в год`
+        "buy": "Купить Evnly Premium",
+        "trial": {
+          "comment": (price) => `7 дней бесплатно, затем ${price} в год`,
+          "cta": "Начни бесплатную пробу"
+        },
+        "subscribe_monthly": (price) => `Подпишись за ${price} в месяц`
       },
       "complete": {
         "thanks": "Спасибо за подписку на Envly Premium",
@@ -350,6 +505,9 @@ export const dictionaries = {
       },
       "free": {
         "cta": "Наслаждаться Премиум"
+      },
+      "disclaimers": {
+        "apple": "Бесплатная пробная версия только для новых подходящих подписчиков. Чтобы не списали деньги, отмени подписку за 24 часа до конца пробного периода. Управлять подпиской можно в настройках аккаунта Apple ID."
       }
     },
     "products": {
@@ -363,7 +521,14 @@ export const dictionaries = {
       }
     },
     "permonth": (value) => `${value} в месяц`,
-    "trial": (period) => `${period} бесплатно`
+    "trial": (period) => `${period} бесплатно`,
+    "disclaimers": {
+      "trial": "Бесплатная пробная версия доступна подходящим новым подписчикам.",
+      "apple_account": "Платёж спишется с твоего аккаунта Apple ID после подтверждения покупки.",
+      "apple_yearly": (price) => `Подписка автоматически продлевается за ${price}/год, если ты не отменишь её хотя бы за 24 часа до конца текущего периода.`,
+      "apple_manage": "Ты можешь управлять или отменить свою подписку в настройках аккаунта Apple ID.",
+      "apple_monthly": (price) => `Подписка автоматически продлевается за ${price}/месяц, если ты не отменишь её минимум за 24 часа до конца текущего периода.`
+    }
   },
   "sw-TZ": {
     "paywall": {
@@ -374,7 +539,12 @@ export const dictionaries = {
         "cta": "Anza jaribio lako bure",
         "disclaimer": "Jaribio la bure linapatikana tu kwa wateja wapya wanaostahiki. Ghairi saa 24 kabla jaribio haliijaisha ili kuepuka malipo. Baada ya kipindi cha jaribio la bure, ada itakatwa kila mara, unaweza kughairi wakati wowote.",
         "footnote": "* Mtumiaji mmoja wa Premium huwasha uandikaji wa bidhaa kwa washiriki wote. Katika safari, maandishi ya risiti pekee ndiyo yanayahifadhiwa (hakuna mgawanyo wa kiona).",
-        "trial": (price) => `Bure kwa siku 7, halafu ${price}/mwaka`
+        "buy": "Nunua Evnly Premium",
+        "trial": {
+          "comment": (price) => `Bure kwa siku 7, halafu ${price}/mwaka`,
+          "cta": "Anza jaribio lako bure"
+        },
+        "subscribe_monthly": (price) => `Jisajili kwa ${price} kwa mwezi`
       },
       "complete": {
         "thanks": "Asante kwa kujisajili kwenye Envly Premium",
@@ -383,6 +553,9 @@ export const dictionaries = {
       },
       "free": {
         "cta": "Furahia Premium"
+      },
+      "disclaimers": {
+        "apple": "Jaribio la bure linapatikana tu kwa waliojiandikisha kwa mara ya kwanza na wanastahili. Ghairi siku 1 (saa 24) kabla jaribio kuisha ili kuepuka malipo. Unaweza kudhibiti au kughairi usajili wako kwenye mipangilio ya akaunti yako ya Apple ID."
       }
     },
     "products": {
@@ -396,7 +569,14 @@ export const dictionaries = {
       }
     },
     "permonth": (value) => `${value} kwa mwezi`,
-    "trial": (period) => `${period} bila malipo`
+    "trial": (period) => `${period} bila malipo`,
+    "disclaimers": {
+      "trial": "Jaribio la bure linapatikana kwa watumiaji wa kwanza wanaokidhi vigezo.",
+      "apple_account": "Malipo yatakatwa kwenye akaunti yako ya Apple ID utakapoidhinisha ununuzi.",
+      "apple_yearly": (price) => `Usajili utajirudia moja kwa moja kwa ${price}/mwaka isipokuwa ukighairi angalau saa 24 kabla ya mwisho wa kipindi kilichopo.`,
+      "apple_manage": "Unaweza kudhibiti au kughairi usajili wako kwenye mipangilio ya akaunti yako ya Apple ID.",
+      "apple_monthly": (price) => `Usajili utafu renewed kwa ${price}/mwezi kiotomatiki, isipokuwa ukighairi angalau saa 24 kabla ya mwisho wa kipindi kilichopo.`
+    }
   },
   "tr-TR": {
     "paywall": {
@@ -407,7 +587,12 @@ export const dictionaries = {
         "cta": "Ücretsiz denemeyi başlat",
         "disclaimer": "Ücretsiz deneme yalnızca uygun ve ilk kez abone olanlar için geçerlidir. Ücretlendirmeyi önlemek için deneme sona ermeden 24 saat önce iptal edin. Ücretsiz deneme sonrasında otomatik yenilenir; istediğiniz zaman iptal edebilirsiniz.",
         "footnote": "* Bir Premium kullanıcı, tüm katılımcılar için ürün işaretlemeyi etkinleştirir. Maceralarda yalnızca fiş metni kaydedilir (görsel bölme yoktur).",
-        "trial": (price) => `7 gün ücretsiz, ardından ${price}/yıl`
+        "buy": "Evnly Premium’u Al",
+        "trial": {
+          "comment": (price) => `7 gün ücretsiz, ardından ${price}/yıl`,
+          "cta": "Ücretsiz denemeni başlat"
+        },
+        "subscribe_monthly": (price) => `Aylık ${price}’a abone ol`
       },
       "complete": {
         "thanks": "Envly Premium’a abone olduğunuz için teşekkürler",
@@ -416,6 +601,9 @@ export const dictionaries = {
       },
       "free": {
         "cta": "Premium'un Tadını Çıkar"
+      },
+      "disclaimers": {
+        "apple": "Ücretsiz deneme sadece uygun olan ilk kez abone olacaklar için geçerlidir. Ücret alınmaması için deneme bitmeden 24 saat önce iptal etmelisin. Aboneliğini Apple ID hesap ayarlarından yönetebilir veya iptal edebilirsin."
       }
     },
     "products": {
@@ -429,7 +617,14 @@ export const dictionaries = {
       }
     },
     "permonth": (value) => `aylık ${value}`,
-    "trial": (period) => `${period} ücretsiz`
+    "trial": (period) => `${period} ücretsiz`,
+    "disclaimers": {
+      "trial": "Uygun ilk kez abone olanlar için ücretsiz deneme mevcut.",
+      "apple_account": "Satın alımını onayladığında, ödeme Apple ID hesabına yansıtılacak.",
+      "apple_yearly": (price) => `Abonelik, mevcut dönem bitiminden en az 24 saat önce iptal edilmezse yılda ${price} karşılığında otomatik olarak yenilenir.`,
+      "apple_manage": "Apple ID hesabı ayarlarından aboneliğini yönetebilir veya iptal edebilirsin.",
+      "apple_monthly": (price) => `Abonelik, geçerli dönem bitmeden en az 24 saat önce iptal etmezsen ${price}/ay olarak otomatik yenilenir.`
+    }
   },
   "uk-UA": {
     "paywall": {
@@ -440,7 +635,12 @@ export const dictionaries = {
         "cta": "Почати безкоштовний пробний період",
         "disclaimer": "Безкоштовна пробна версія доступна лише для нових відповідних підписників. Скасуйте за 24 години до завершення пробного періоду, щоб уникнути стягнення плати. Після закінчення безкоштовного періоду діє автоматична підписка — скасувати можна будь-коли.",
         "footnote": "* Один користувач із підпискою Premium дає змогу позначати елементи для всіх учасників. У пригодах зберігається лише текст чеку (без візуального поділу).",
-        "trial": (price) => `7 днів безкоштовно, потім ${price} на рік`
+        "buy": "Купити Evnly Premium",
+        "trial": {
+          "comment": (price) => `7 днів безкоштовно, потім ${price} на рік`,
+          "cta": "Почни безкоштовну пробну версію"
+        },
+        "subscribe_monthly": (price) => `Підпишись за ${price} на місяць`
       },
       "complete": {
         "thanks": "Дякуємо за підписку на Envly Premium",
@@ -449,6 +649,9 @@ export const dictionaries = {
       },
       "free": {
         "cta": "Насолоджуйся Premium"
+      },
+      "disclaimers": {
+        "apple": "Безкоштовна пробна версія доступна лише новим, відповідним підписникам. Щоб уникнути списання коштів, скасуй підписку за 24 години до завершення пробного періоду. Керувати підпискою можна в налаштуваннях облікового запису Apple ID."
       }
     },
     "products": {
@@ -462,7 +665,14 @@ export const dictionaries = {
       }
     },
     "permonth": (value) => `${value} на місяць`,
-    "trial": (period) => `${period} безкоштовно`
+    "trial": (period) => `${period} безкоштовно`,
+    "disclaimers": {
+      "trial": "Безкоштовна пробна версія доступна для нових підписників, які відповідають вимогам.",
+      "apple_account": "Платіж буде знято з твого акаунта Apple ID після підтвердження покупки.",
+      "apple_yearly": (price) => `Підписка автоматично поновлюється за ${price}/рік, якщо ти не скасуєш її принаймні за 24 години до кінця поточного періоду.`,
+      "apple_manage": "Ти можеш керувати підпискою або скасувати її в налаштуваннях свого Apple ID.",
+      "apple_monthly": (price) => `Підписка автоматично подовжується за ${price}/місяць, якщо ти не скасуєш її щонайменше за 24 години до кінця поточного періоду.`
+    }
   },
   "zh-CN": {
     "paywall": {
@@ -473,7 +683,12 @@ export const dictionaries = {
         "cta": "开始免费试用",
         "disclaimer": "免费试用仅对符合条件的首次订阅用户开放。为避免收费，请在试用结束前24小时取消。免费试用结束后将自动续费，您可随时取消订阅。",
         "footnote": "* 一名高级用户可为所有参与者启用物品标记。在冒险中，仅保存收据文本（无可视化分割）。",
-        "trial": (price) => `7天免费，之后${price}/年`
+        "buy": "购买 Evnly Premium",
+        "trial": {
+          "comment": (price) => `7天免费，之后${price}/年`,
+          "cta": "开始你的免费试用"
+        },
+        "subscribe_monthly": (price) => `每月${price}元订阅`
       },
       "complete": {
         "thanks": "感谢您订阅 Envly Premium",
@@ -482,6 +697,9 @@ export const dictionaries = {
       },
       "free": {
         "cta": "享受高级版"
+      },
+      "disclaimers": {
+        "apple": "免费试用仅对符合条件的首次订阅用户开放。为避免扣费，请在试用结束前24小时取消。你可以在 Apple ID 账户设置中管理或取消订阅。"
       }
     },
     "products": {
@@ -495,7 +713,14 @@ export const dictionaries = {
       }
     },
     "permonth": (value) => `每月${value}`,
-    "trial": (period) => `${period}免费`
+    "trial": (period) => `${period}免费`,
+    "disclaimers": {
+      "trial": "符合条件的首次订阅用户可享受免费试用。",
+      "apple_account": "确认购买后，付款将从你的 Apple ID 账户中扣除。",
+      "apple_yearly": (price) => `如果未在当前周期结束前至少24小时取消，订阅将以${price}/年自动续费。`,
+      "apple_manage": "你可以在 Apple ID 账户设置中管理或取消你的订阅。",
+      "apple_monthly": (price) => `订阅会以${price}/月自动续费，除非你在当前订阅期结束前至少24小时取消。`
+    }
   }
 };
 /** @type {import("./types").Locale[]} */

@@ -8,11 +8,15 @@
   import { ids, type Props } from './Products'
   import type { Product } from '@/purchases'
 
-  const { products }: Props = $props()
+  let { products, selected = $bindable(null) }: Props = $props()
   const known = $derived(products.filter((p) => ids.includes(p.id)))
   const sorted = $derived(known.toSorted((a) => (a.id === 'premium_yearly' ? -1 : 1)))
 
   let value = $state<Product['id']>('premium_yearly')
+
+  $effect(() => {
+    if (value !== selected?.id) selected = products.find((p) => p.id === value) ?? null
+  })
 </script>
 
 <RadioGroup.Root bind:value>
@@ -27,7 +31,7 @@
         <Item.Content>
           <Item.Title>
             {#if product.id === 'premium_yearly'}
-              {@const pms = currency((price * 100) / 12, $locale, product.currencyCode)}
+              {@const pms = '≈ ' + currency((price * 100) / 12, $locale, product.currencyCode)}
               <span class="font-semibold">{$dict.products.yearly.title}</span>
               <span class="font-normal">{$dict.permonth(pms)}</span>
             {:else if product.id === 'premium_monthly'}
@@ -47,7 +51,10 @@
         {#if product.trial}
           {@const duration = formatISODuration(product.trial.period, $locale)}
           <Badge
-            class="text-sm font-semibold text-nowrap absolute -top-3 right-4 transition-all"
+            class={[
+              'text-sm font-semibold text-nowrap absolute -top-3 right-4 transition-all',
+              selected || 'text-muted-foreground/25',
+            ]}
             variant={selected ? 'default' : 'secondary'}>
             {$dict.trial(duration)}
           </Badge>

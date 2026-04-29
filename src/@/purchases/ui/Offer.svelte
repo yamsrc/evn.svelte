@@ -3,9 +3,8 @@
   import { add, channel } from '@/purchases'
   import { Spinner } from '$ui/spinner'
   import { Button } from '$ui/button'
-  import { image } from '$lib/tools'
+  import { image, ios, shell } from '$lib/tools'
   import { dict as common } from '$lib/intl'
-  import { features } from '$config'
   import { Scrollable } from '$com/scrollable'
   import { dict } from './intl'
   import { Products } from './Products'
@@ -20,8 +19,7 @@
   let busy = $state(false)
   let products = $state<Product[]>([])
   let loaded = $state<boolean>(true)
-
-  const yearly = $derived(products.find((p) => p.period === 'P1Y'))
+  let selected = $state<Product | null>(null)
 
   async function onclick() {
     busy = true
@@ -62,31 +60,46 @@
     {/each}
   </Scrollable>
   {#if loaded}
-    {#if products.length > 0}
-      <Products {products} />
+    {@const free = products.length === 0}
+    {#if !free}
+      <Products {products} bind:selected />
     {/if}
     <div class="space-y-2 flex flex-col justify-between">
       <div class="rounded-lg ring-3 ring-primary/20">
         <Button {onclick} size="lg" class="w-full relative" disabled={busy}>
-          {#if features.purchase}
-            {$dict.paywall.offer.cta}
-          {:else}
+          {#if free}
             {$dict.paywall.free.cta}
+          {:else if selected?.trial}
+            {$dict.paywall.offer.trial.cta}
+          {:else}
+            {$dict.paywall.offer.subscribe_monthly(selected?.displayPrice)}
           {/if}
         </Button>
       </div>
       <p class="text-sm text-muted-foreground text-center">
-        {#if features.purchase && yearly}
-          {$dict.paywall.offer.trial(yearly.displayPrice)}
-        {:else if !features.purchase}
+        {#if !free && selected?.trial}
+          {$dict.paywall.offer.trial.comment(selected.displayPrice)}
+        {:else if free}
           {$dict.paywall.offer.promo}
         {/if}
       </p>
     </div>
-    {#if features.purchase}
+    {#if !free}
       <div class="text-sm **:text-muted-foreground text-center space-y-2">
-        <p>{$dict.paywall.offer.disclaimer}</p>
-        <p>{$dict.paywall.offer.footnote}</p>
+        <p>
+          {#if selected?.trial}
+            {$dict.disclaimers.trial}
+          {/if}
+          {#if shell && ios}
+            {$dict.disclaimers.apple_account}
+            {#if selected?.period === 'P1Y'}
+              {$dict.disclaimers.apple_yearly(selected?.displayPrice)}
+            {:else if selected?.period === 'P1M'}
+              {$dict.disclaimers.apple_monthly(selected?.displayPrice)}
+            {/if}
+            {$dict.disclaimers.apple_manage}
+          {/if}
+        </p>
         <p>
           <a href="/terms/">{$common.terms}</a>
           <span aria-hidden="true">·</span>

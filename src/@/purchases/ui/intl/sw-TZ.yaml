@@ -12,9 +12,15 @@ paywall:
       * Mtumiaji mmoja wa Premium huwasha uandikaji wa bidhaa kwa washiriki
       wote. Katika safari, maandishi ya risiti pekee ndiyo yanayahifadhiwa
       (hakuna mgawanyo wa kiona).
-    trial: |-
+    buy: Nunua Evnly Premium
+    trial:
+      comment: |-
+        !js
+        (price) => `Bure kwa siku 7, halafu ${price}/mwaka`
+      cta: Anza jaribio lako bure
+    subscribe_monthly: |-
       !js
-      (price) => `Bure kwa siku 7, halafu ${price}/mwaka`
+      (price) => `Jisajili kwa ${price} kwa mwezi`
   complete:
     thanks: Asante kwa kujisajili kwenye Envly Premium
     avatarNote: Kuanzia sasa, watumiaji wengine wa Evnly wataona avatar yako hivi.
@@ -23,6 +29,12 @@ paywall:
       wasifu wako, kutambaza na kutambua risiti na mengi zaidi.
   free:
     cta: Furahia Premium
+  disclaimers:
+    apple: >-
+      Jaribio la bure linapatikana tu kwa waliojiandikisha kwa mara ya kwanza na
+      wanastahili. Ghairi siku 1 (saa 24) kabla jaribio kuisha ili kuepuka
+      malipo. Unaweza kudhibiti au kughairi usajili wako kwenye mipangilio ya
+      akaunti yako ya Apple ID.
 products:
   yearly:
     title: Kila mwaka
@@ -38,3 +50,19 @@ permonth: |-
 trial: |-
   !js
   (period) => `${period} bila malipo`
+disclaimers:
+  trial: Jaribio la bure linapatikana kwa watumiaji wa kwanza wanaokidhi vigezo.
+  apple_account: Malipo yatakatwa kwenye akaunti yako ya Apple ID utakapoidhinisha ununuzi.
+  apple_yearly: >-
+    !js
+
+    (price) => `Usajili utajirudia moja kwa moja kwa ${price}/mwaka isipokuwa
+    ukighairi angalau saa 24 kabla ya mwisho wa kipindi kilichopo.`
+  apple_manage: >-
+    Unaweza kudhibiti au kughairi usajili wako kwenye mipangilio ya akaunti yako
+    ya Apple ID.
+  apple_monthly: >-
+    !js
+
+    (price) => `Usajili utafu renewed kwa ${price}/mwezi kiotomatiki, isipokuwa
+    ukighairi angalau saa 24 kabla ya mwisho wa kipindi kilichopo.`

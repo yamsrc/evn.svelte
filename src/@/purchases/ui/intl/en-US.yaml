@@ -11,9 +11,15 @@ paywall:
     footnote: >-
       * One Premium user enables item marking for all participants. In
       adventures, only receipt text is saved (no visual split).
-    trial: |-
+    buy: Buy Evnly Premium
+    trial:
+      comment: |-
+        !js
+        (price) => `7-day free, then ${price}/year`
+      cta: Start your free trial
+    subscribe_monthly: |-
       !js
-      (price) => `7-day free, then ${price}/year`
+      (price) => `Subscribe for ${price}/month`
   complete:
     thanks: Thank you for subscribing to Envly Premium
     avatarNote: From now on, other Evnly users will see your avatar like this.
@@ -22,6 +28,11 @@ paywall:
       scan and recognize receipts, and more.
   free:
     cta: Enjoy Premium
+  disclaimers:
+    apple: >-
+      Free trial is only available to eligible first-time subscribers. Cancel at
+      least 24 hours before the trial ends to avoid being charged. You can
+      manage or cancel your subscription in your Apple ID account settings.
 products:
   yearly:
     title: Yearly
@@ -37,3 +48,21 @@ permonth: |-
 trial: |-
   !js
   (period) => `${period} free`
+disclaimers:
+  trial: Free trial is available to eligible first-time subscribers.
+  apple_account: >-
+    Payment will be charged to your Apple ID account when you confirm your
+    purchase.
+  apple_yearly: >-
+    !js
+
+    (price) => `Subscription automatically renews for ${price}/year unless
+    canceled at least 24 hours before the end of the current period.`
+  apple_manage: >-
+    You can manage or cancel your subscription in your Apple ID account
+    settings.
+  apple_monthly: >-
+    !js
+
+    (price) => `Subscription automatically renews for ${price}/month unless
+    canceled at least 24 hours before the end of the current period.`
