@@ -19,8 +19,16 @@ inputs:
       footnote:
         input: "* One Premium user enables item marking for all participants. In adventures, only receipt text is saved (no visual split)."
         context: asterisk note
+      buy:
+        input: Buy Evnly Premium
+        context: button label, Evnly is an app name
       trial:
-        input: 7-day free, then {price}/year
+        cta:
+          input: Start your free trial
+          context: button label
+      subscribe_monthly:
+        input: Subscribe for {price}/month
+        context: function accepting price
     complete:
       thanks:
         input: Thank you for subscribing to Envly Premium
@@ -32,3 +40,40 @@ inputs:
       cta:
         input: Enjoiy Premium
         context: button label, инфинитив (начальная форма)
+    disclaimers:
+      apple:
+        input: Free trial available only to eligible first time subscribers. Cancel 24 hours before trial ends to avoid charge. You can manage or cancel your subscription in your Apple ID account settings.
+  products:
+    yearly:
+      title:
+        input: Yearly
+        context: payment option title
+      description:
+        input: Annual payment of {value}
+        context: payment option description, a function
+    monthly:
+      title:
+        input: Monthly
+        context: payment option title
+      description:
+        input: Flexible
+        context: payment option description
+  permonth:
+    input: "{value} per month"
+    context: price per month, a function
+  trial:
+    input: "{period} free"
+    context: trial period, a function that will accept periods like 1 day, 2 weeks etc
+  disclaimers:
+    trial:
+      input: Free trial is available to eligible first-time subscribers.
+    apple_account:
+      input: Payment will be charged to your Apple ID account at confirmation of purchase.
+    apple_yearly:
+      input: Subscription automatically renews for {price}/year unless canceled at least 24 hours before the end of the current period.
+      context: a function accepting price
+    apple_manage:
+      input: You can manage or cancel your subscription in your Apple ID account settings.
+    apple_monthly:
+      input: Subscription automatically renews for {price}/month unless canceled at least 24 hours before the end of the current period.
+      context: a function accepting price

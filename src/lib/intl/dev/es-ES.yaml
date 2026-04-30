@@ -40,6 +40,8 @@ components:
     delete: Mantén pulsado para borrar
   invitation:
     title: Invitaciones
+  purchase:
+    title: Compra
 transmission:
   title: Transmission
   permission:

@@ -7,7 +7,7 @@
   import { Section, Update, Header, Wallpaper, Action } from '@/app/ui'
   import { updateAvailable } from '@/app'
   import { Cosmetics, Delete, Grammar, Language } from '@/accounts/ui'
-  import { clicks } from '$lib/tools'
+  import { clicks, shellVersion } from '$lib/tools'
   import { dict } from '$lib/intl'
   import { version } from '$config/configuration'
   import { Actions } from '$com/shell'
@@ -91,8 +91,8 @@
   <Section class="space-y-2 mt-4">
     <footer class="text-muted-foreground text-sm">
       <div class="flex justify-between">
-        <div class="py-1.5 px-2">
-          <p>v{version}</p>
+        <div class="px-2 flex-1 relative text-xs leading-8">
+          v{version}/{shellVersion}
         </div>
         <!-- <p>
           &copy; <a href="https://seed.me" target="_blank">seed.me</a>
@@ -103,8 +103,8 @@
           variant="ghost"
           size="sm"
           label={$account.id.slice(0, 8)}
-          class="flex-row-reverse" />
-        <Delete class="py-0 underline underline-offset-3 font-normal" ondelete={getout} />
+          class="flex-row-reverse flex-1 font-normal" />
+        <Delete class="py-0 underline underline-offset-3 font-normal flex-1" ondelete={getout} />
       </div>
       {#if $updateAvailable}
         <div class="px-2">

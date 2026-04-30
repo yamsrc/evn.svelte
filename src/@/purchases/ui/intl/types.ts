@@ -4,6 +4,10 @@
  * @author copilot
  */
 
+export type Locale = 'ar-SA' | 'de-DE' | 'en-US' | 'es-ES' | 'fr-FR' | 'hi-IN' | 'it-IT' | 'ja-JP' | 'ko-KR' | 'nl-NL' | 'ru-RU' | 'sw-TZ' | 'tr-TR' | 'uk-UA' | 'zh-CN'
+
+export type Grammar = string
+
 export type Dictionary = {
       paywall: {
         title: string
@@ -13,7 +17,12 @@ export type Dictionary = {
           cta: string
           disclaimer: string
           footnote: string
-          trial: (value: any) => string
+          buy: string
+          trial: {
+            comment: (value: any) => string
+            cta: string
+          }
+          subscribe_monthly: (value: any) => string
         }
         complete: {
           thanks: string
@@ -23,5 +32,27 @@ export type Dictionary = {
         free: {
           cta: string
         }
+        disclaimers: {
+          apple: string
+        }
+      }
+      products: {
+        yearly: {
+          title: string
+          description: (value: any) => string
+        }
+        monthly: {
+          title: string
+          description: string
+        }
+      }
+      permonth: (value: any) => string
+      trial: (value: any) => string
+      disclaimers: {
+        trial: string
+        apple_account: string
+        apple_yearly: (value: any) => string
+        apple_manage: string
+        apple_monthly: (value: any) => string
       }
     }

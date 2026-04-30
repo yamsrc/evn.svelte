@@ -57,6 +57,9 @@ export type Dictionary = {
         invitation: {
           title: string
         }
+        purchase: {
+          title: string
+        }
       }
       transmission: {
         title: string

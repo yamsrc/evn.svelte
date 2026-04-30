@@ -19,6 +19,9 @@ export const standalone = browser ? window.matchMedia('(display-mode: standalone
 
 export const shell = browser ? /PWAShell/i.test(navigator.userAgent) : false
 
+// PWAShell/<version>
+export const shellVersion = navigator.userAgent.match(/PWAShell\/(\S+)/)?.[1] ?? null
+
 // do not autofocus on touch devices, as it's annoying
 export const autofocus = browser ? !('ontouchstart' in window) : false
 

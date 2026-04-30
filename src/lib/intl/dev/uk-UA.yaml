@@ -40,6 +40,8 @@ components:
     delete: Утримуй, щоб видалити
   invitation:
     title: Запрошення
+  purchase:
+    title: Покупка
 transmission:
   title: Transmission
   permission:

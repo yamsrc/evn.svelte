@@ -40,6 +40,8 @@ components:
     delete: 长按删除
   invitation:
     title: 邀请
+  purchase:
+    title: 购买
 transmission:
   title: Transmission
   permission:

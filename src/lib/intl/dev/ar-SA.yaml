@@ -40,6 +40,8 @@ components:
     delete: اضغط مطولًا للحذف
   invitation:
     title: الدعوات
+  purchase:
+    title: عملية شراء
 transmission:
   title: Transmission
   permission:

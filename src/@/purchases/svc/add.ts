@@ -8,13 +8,12 @@ export async function add(): Promise<Account | Error> {
   const me = await having(account)
 
   const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone
-
   const res = await net.post(me.id, { timezone })
 
   if (res instanceof Error) return res
 
   updateMe(res)
-  track('Premium')
+  track('Premium.Free')
 
   return res
 }

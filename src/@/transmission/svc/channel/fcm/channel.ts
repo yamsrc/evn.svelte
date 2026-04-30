@@ -6,8 +6,8 @@ import type { SubscribeInput } from '../../net'
 
 const TIMEOUT = 5000
 
-type Handlers = NonNullable<NonNullable<typeof window.webkit>['messageHandlers']>
-type Handler = keyof Handlers
+type Handler = 'push-subscribe' | 'push-permission-state' | 'push-permission-request' | 'push-token' | 'push-token-delete'
+type Handlers = Pick<WebkitMessageHandlers, Handler>
 type Message<H extends Handler> = Parameters<NonNullable<Handlers[H]>['postMessage']>[0]
 
 const mapPermission = (s: string): NotificationPermission =>
