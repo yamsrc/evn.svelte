@@ -3,6 +3,7 @@
   import { ok } from 'svas'
   import { add, channel } from '@/purchases'
   import { account } from '@/iam'
+  import { report } from '@/appstore'
   import { Spinner } from '$ui/spinner'
   import { Button } from '$ui/button'
   import { image, ios, shell } from '$lib/tools'
@@ -51,7 +52,12 @@
 
     if (ch === null) return new Error('no-channel')
 
-    return await ch.purchase(selected.id, $account!.id)
+    const tx = await ch.purchase(selected.id, $account!.id)
+
+    if (tx instanceof Error) return tx
+
+    // appstore specific
+    return await report(tx.payload)
   }
 
   async function load() {
