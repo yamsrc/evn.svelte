@@ -8,6 +8,7 @@
   import { Button } from '$ui/button'
   import { image, ios, shell } from '$lib/tools'
   import { dict as common } from '$lib/intl'
+  import { features } from '$config'
   import { Scrollable } from '$com/scrollable'
   import { dict } from './intl'
   import { Products } from './Products'
@@ -76,7 +77,9 @@
 
   onMount(() => {
     image.preload(assets)
-    void load().then(() => (loaded = true))
+
+    if (features.purchase) void load().then(() => (loaded = true))
+    else loaded = true
   })
 </script>
 
