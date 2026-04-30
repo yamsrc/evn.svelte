@@ -7,6 +7,7 @@
   import { Section, Update, Header, Wallpaper, Action } from '@/app/ui'
   import { updateAvailable } from '@/app'
   import { Cosmetics, Delete, Grammar, Language } from '@/accounts/ui'
+  import { Spinner } from '$ui/spinner'
   import { clicks, shellVersion } from '$lib/tools'
   import { dict } from '$lib/intl'
   import { version } from '$config/configuration'
@@ -92,7 +93,7 @@
     <footer class="text-muted-foreground text-sm">
       <div class="flex justify-between">
         <div class="px-2 flex-1 relative text-xs leading-8">
-          v{version}/{shellVersion}
+          v{version}{shellVersion ? '/' + shellVersion : ''}
         </div>
         <!-- <p>
           &copy; <a href="https://seed.me" target="_blank">seed.me</a>
@@ -106,10 +107,11 @@
           class="flex-row-reverse flex-1 font-normal" />
         <Delete class="py-0 underline underline-offset-3 font-normal flex-1" ondelete={getout} />
       </div>
-      {#if $updateAvailable}
+      {#if $updateAvailable || true}
         <div class="px-2">
-          <Update variant="outline" size="sm">
-            {$dict.update.label}
+          <Update variant="outline" size="sm" class="group min-w-20">
+            <Spinner class="hidden group-disabled:block" />
+            <span class="group-disabled:hidden">{$dict.update.label}</span>
           </Update>
         </div>
       {/if}

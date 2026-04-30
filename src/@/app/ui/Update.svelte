@@ -3,7 +3,14 @@
   import { Button } from '$ui/button'
   import type { Props } from './Update'
 
-  const { children, onclick = apply, ...rest }: Props = $props()
+  const { children, ...rest }: Props = $props()
+
+  function onclick(e: MouseEvent) {
+    const button = e.currentTarget as HTMLButtonElement
+
+    button.disabled = true
+    apply()
+  }
 </script>
 
 <Button {onclick} {...rest}>
