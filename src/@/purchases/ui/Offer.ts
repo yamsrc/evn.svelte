@@ -1,7 +1,7 @@
 import type { Benefit } from './Benefit'
 
 export interface Props {
-  next: () => void
+  next?: () => void
 }
 
 export const benefits: Benefit[] = [

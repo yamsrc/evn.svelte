@@ -66,6 +66,10 @@ inputs:
     invitation:
       title:
         input: Invitations
+    purchase:
+      title:
+        input: Purchase
+        context: screen title
   transmission:
     title:
       input: Transmission

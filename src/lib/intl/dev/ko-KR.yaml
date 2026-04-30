@@ -40,6 +40,8 @@ components:
     delete: 길게 눌러서 삭제
   invitation:
     title: 초대장
+  purchase:
+    title: 구매
 transmission:
   title: Transmission
   permission:

@@ -9,7 +9,13 @@ paywall:
       * Un utilisateur Premium permet le marquage des articles pour tous les
       participants. Dans les aventures, seul le texte du reçu est enregistré
       (aucune répartition visuelle).
-    trial: "!js\n(price) => `7\_jours gratuits, puis ${price}/an`"
+    buy: Prends Evnly Premium
+    trial:
+      comment: "!js\n(price) => `7\_jours gratuits, puis ${price}/an`"
+      cta: Commence ton essai gratuit
+    subscribe_monthly: |-
+      !js
+      (price) => `Abonne-toi pour ${price}/mois`
   complete:
     thanks: Merci de vous être abonné à Envly Premium
     avatarNote: >-
@@ -21,3 +27,39 @@ paywall:
       et bien plus encore.
   free:
     cta: Profiter de Premium
+  disclaimers:
+    apple: "L’essai gratuit est réservé aux nouveaux abonnés éligibles. Pense à annuler au moins 24\_h avant la fin de l’essai pour éviter le débit. Tu peux gérer ou annuler ton abonnement dans les réglages de ton identifiant Apple."
+products:
+  yearly:
+    title: Annuel
+    description: |-
+      !js
+      (value) => `Paiement annuel de ${value}`
+  monthly:
+    title: Mensuel
+    description: Flexible
+permonth: |-
+  !js
+  (value) => `${value} par mois`
+trial: |-
+  !js
+  (period) => `${period} gratuit`
+disclaimers:
+  trial: L’essai gratuit est dispo pour les nouveaux abonnés éligibles.
+  apple_account: >-
+    Le paiement sera prélevé sur ton compte Apple ID lors de la confirmation de
+    l’achat.
+  apple_yearly: >-
+    !js
+
+    (price) => `L'abonnement se renouvelle automatiquement pour ${price}/an sauf
+    si tu l'annules au moins 24 heures avant la fin de la période en cours.`
+  apple_manage: >-
+    Tu peux gérer ou annuler ton abonnement dans les réglages de ton compte
+    Apple ID.
+  apple_monthly: >-
+    !js
+
+    (price) => `L’abonnement se renouvelle automatiquement pour ${price}/mois,
+    sauf si tu l’annules au moins 24 heures avant la fin de la période en
+    cours.`

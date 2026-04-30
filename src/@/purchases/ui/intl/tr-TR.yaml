@@ -13,9 +13,15 @@ paywall:
       * Bir Premium kullanıcı, tüm katılımcılar için ürün işaretlemeyi
       etkinleştirir. Maceralarda yalnızca fiş metni kaydedilir (görsel bölme
       yoktur).
-    trial: |-
+    buy: Evnly Premium’u Al
+    trial:
+      comment: |-
+        !js
+        (price) => `7 gün ücretsiz, ardından ${price}/yıl`
+      cta: Ücretsiz denemeni başlat
+    subscribe_monthly: |-
       !js
-      (price) => `7 gün ücretsiz, ardından ${price}/yıl`
+      (price) => `Aylık ${price}’a abone ol`
   complete:
     thanks: Envly Premium’a abone olduğunuz için teşekkürler
     avatarNote: Bundan sonra diğer Evnly kullanıcıları avatarınızı bu şekilde görecek.
@@ -24,3 +30,38 @@ paywall:
       tarayıp tanıyabilir ve daha fazlasını yapabilirsiniz.
   free:
     cta: Premium'un Tadını Çıkar
+  disclaimers:
+    apple: >-
+      Ücretsiz deneme sadece uygun olan ilk kez abone olacaklar için geçerlidir.
+      Ücret alınmaması için deneme bitmeden 24 saat önce iptal etmelisin.
+      Aboneliğini Apple ID hesap ayarlarından yönetebilir veya iptal
+      edebilirsin.
+products:
+  yearly:
+    title: Yıllık
+    description: |-
+      !js
+      (value) => `${value} tutarında yıllık ödeme`
+  monthly:
+    title: Aylık
+    description: Esnek
+permonth: |-
+  !js
+  (value) => `aylık ${value}`
+trial: |-
+  !js
+  (period) => `${period} ücretsiz`
+disclaimers:
+  trial: Uygun ilk kez abone olanlar için ücretsiz deneme mevcut.
+  apple_account: Satın alımını onayladığında, ödeme Apple ID hesabına yansıtılacak.
+  apple_yearly: >-
+    !js
+
+    (price) => `Abonelik, mevcut dönem bitiminden en az 24 saat önce iptal
+    edilmezse yılda ${price} karşılığında otomatik olarak yenilenir.`
+  apple_manage: Apple ID hesabı ayarlarından aboneliğini yönetebilir veya iptal edebilirsin.
+  apple_monthly: >-
+    !js
+
+    (price) => `Abonelik, geçerli dönem bitmeden en az 24 saat önce iptal
+    etmezsen ${price}/ay olarak otomatik yenilenir.`

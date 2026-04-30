@@ -40,6 +40,8 @@ components:
     delete: Maintiens pour supprimer
   invitation:
     title: Invitations
+  purchase:
+    title: Achat
 transmission:
   title: Transmission
   permission:

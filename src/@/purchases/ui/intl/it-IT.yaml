@@ -13,9 +13,15 @@ paywall:
       * Un utente Premium consente la marcatura degli oggetti per tutti i
       partecipanti. Nelle avventure, viene salvato solo il testo della ricevuta
       (nessuna suddivisione visiva).
-    trial: |-
+    buy: Acquista Evnly Premium
+    trial:
+      comment: |-
+        !js
+        (price) => `7 giorni gratis, poi ${price}/anno`
+      cta: Inizia la tua prova gratuita
+    subscribe_monthly: |-
       !js
-      (price) => `7 giorni gratis, poi ${price}/anno`
+      (price) => `Abbonati a ${price} al mese`
   complete:
     thanks: Grazie per esserti abbonato a Envly Premium
     avatarNote: D’ora in poi, gli altri utenti di Evnly vedranno il tuo avatar così.
@@ -24,3 +30,45 @@ paywall:
       profilo, scansionare e riconoscere ricevute e molto altro.
   free:
     cta: Goditi Premium
+  disclaimers:
+    apple: >-
+      La prova gratuita è disponibile solo per i nuovi iscritti idonei. Cancella
+      almeno 24 ore prima della fine della prova per evitare addebiti. Puoi
+      gestire o annullare il tuo abbonamento dalle impostazioni dell’account
+      Apple ID.
+products:
+  yearly:
+    title: Annuale
+    description: |-
+      !js
+      (value) => `Pagamento annuale di ${value}`
+  monthly:
+    title: Mensile
+    description: Flessibile
+permonth: |-
+  !js
+  (value) => `${value} al mese`
+trial: |-
+  !js
+  (period) => `${period} gratis`
+disclaimers:
+  trial: >-
+    La prova gratuita è disponibile per chi si abbona per la prima volta ed è
+    idoneo.
+  apple_account: >-
+    Il pagamento verrà addebitato sul tuo account Apple ID al momento della
+    conferma dell’acquisto.
+  apple_yearly: >-
+    !js
+
+    (price) => `L'abbonamento si rinnova automaticamente per ${price}/anno, a
+    meno che tu non lo cancelli almeno 24 ore prima della fine del periodo
+    attuale.`
+  apple_manage: >-
+    Puoi gestire o annullare l’abbonamento dalle impostazioni del tuo account
+    Apple ID.
+  apple_monthly: >-
+    !js
+
+    (price) => `L’abbonamento si rinnova automaticamente a ${price}/mese a meno
+    che tu non lo annulli almeno 24 ore prima della fine del periodo attuale.`

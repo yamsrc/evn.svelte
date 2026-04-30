@@ -1,70 +1,142 @@
 <script lang="ts">
   import { onMount } from 'svelte'
-  import { add } from '@/purchases'
+  import { ok } from 'svas'
+  import { add, channel } from '@/purchases'
+  import { account } from '@/iam'
+  import { report } from '@/appstore'
+  import { Spinner } from '$ui/spinner'
   import { Button } from '$ui/button'
-  import { image } from '$lib/tools'
+  import { image, ios, shell } from '$lib/tools'
   import { dict as common } from '$lib/intl'
-  import { features } from '$config'
   import { Scrollable } from '$com/scrollable'
   import { dict } from './intl'
+  import { Products } from './Products'
   import { benefits } from './Offer'
   import { assets } from './Complete'
   import Benefit from './Benefit.svelte'
+  import type { Product } from '@/purchases'
   import type { Props } from './Offer'
 
   const { next }: Props = $props()
 
   let busy = $state(false)
-  const price = '€19.99'
+  let products = $state<Product[]>([])
+  let loaded = $state<boolean>(false)
+  let selected = $state<Product | null>(null)
 
   async function onclick() {
+    if (products.length !== 0 && selected === null) return
+
     busy = true
 
-    const result = await add()
+    const method = (() => {
+      if (products.length === 0) return freePurchase
+      else return paidPurchase
+    })()
+
+    const result = await method()
 
     busy = false
 
-    if (result instanceof Error) return
-
-    next()
+    if (!(result instanceof Error)) next?.()
   }
 
-  onMount(() => image.preload(assets))
+  async function freePurchase() {
+    return await add()
+  }
+
+  async function paidPurchase() {
+    if (selected === null || !ok(account)) return new Error('no-account or not-selected')
+
+    const ch = channel()
+
+    if (ch === null) return new Error('no-channel')
+
+    const tx = await ch.purchase(selected.id, $account!.id)
+
+    if (tx instanceof Error) return tx
+
+    // appstore specific
+    return await report(tx.payload)
+  }
+
+  async function load() {
+    const ch = channel()
+
+    if (ch === null) return
+
+    if (!(await ch.available())) return
+
+    const r = await ch.products()
+
+    if (r instanceof Error) return
+
+    products = r
+  }
+
+  onMount(() => {
+    image.preload(assets)
+    void load().then(() => (loaded = true))
+  })
 </script>
 
-<div class="flex flex-col justify-between h-full">
+<div class="flex flex-col justify-between h-full gap-4">
   <Scrollable class="gap-2" bleed scroll={0} align="center">
     {#each benefits as benefit (benefit.id)}
       <Benefit {benefit} class="w-full snap-center" />
     {/each}
   </Scrollable>
-  <div class="space-y-2 flex flex-col justify-between">
-    <div class="rounded-lg ring-3 ring-primary/20">
-      <Button {onclick} size="lg" class="w-full relative" disabled={busy}>
-        {#if features.purchase}
-          {$dict.paywall.offer.cta}
-        {:else}
-          {$dict.paywall.free.cta}
+  {#if loaded}
+    {@const free = products.length === 0}
+    {#if !free}
+      <Products {products} bind:selected />
+    {/if}
+    <div class="space-y-2 flex flex-col justify-between">
+      <div class="rounded-lg ring-3 ring-primary/20">
+        <Button {onclick} size="lg" class="w-full relative" disabled={busy}>
+          {#if free}
+            {$dict.paywall.free.cta}
+          {:else if selected?.trial}
+            {$dict.paywall.offer.trial.cta}
+          {:else}
+            {$dict.paywall.offer.subscribe_monthly(selected?.displayPrice)}
+          {/if}
+        </Button>
+      </div>
+      <p class="text-sm text-muted-foreground text-center">
+        {#if !free && selected?.trial}
+          {$dict.paywall.offer.trial.comment(selected.displayPrice)}
+        {:else if free}
+          {$dict.paywall.offer.promo}
         {/if}
-      </Button>
-    </div>
-    <p class="text-sm text-muted-foreground text-center">
-      {#if features.purchase}
-        {$dict.paywall.offer.trial(price)}
-      {:else}
-        {$dict.paywall.offer.promo}
-      {/if}
-    </p>
-  </div>
-  {#if features.purchase}
-    <div class="text-sm **:text-muted-foreground text-center space-y-2">
-      <p>{$dict.paywall.offer.disclaimer}</p>
-      <p>{$dict.paywall.offer.footnote}</p>
-      <p>
-        <a href="/terms/">{$common.terms}</a>
-        <span aria-hidden="true">·</span>
-        <a href="/privacy/">{$common.privacy}</a>
       </p>
+    </div>
+    {#if !free}
+      <div class="text-sm **:text-muted-foreground text-center space-y-2">
+        <p>
+          {#if selected?.trial}
+            {$dict.disclaimers.trial}
+          {/if}
+          {#if shell && ios}
+            {$dict.disclaimers.apple_account}
+            {#if selected?.period === 'P1Y'}
+              {$dict.disclaimers.apple_yearly(selected?.displayPrice)}
+            {:else if selected?.period === 'P1M'}
+              {$dict.disclaimers.apple_monthly(selected?.displayPrice)}
+            {/if}
+            {$dict.disclaimers.apple_manage}
+          {/if}
+        </p>
+        <p>
+          <a href="/terms/">{$common.terms}</a>
+          <span aria-hidden="true">·</span>
+          <a href="/privacy/">{$common.privacy}</a>
+        </p>
+      </div>
+    {/if}
+  {:else}
+    <div class="flex items-center justify-center py-8">
+      <Spinner />
     </div>
   {/if}
 </div>

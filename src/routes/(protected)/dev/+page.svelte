@@ -35,5 +35,8 @@
     <li>
       <a href="transmission/">{$dict.transmission.title}</a>
     </li>
+    <li>
+      <a href="purchase/">{$dict.components.purchase.title}</a>
+    </li>
   </ul>
 </Section>

@@ -6,12 +6,45 @@ paywall:
     cta: 开始免费试用
     disclaimer: 免费试用仅对符合条件的首次订阅用户开放。为避免收费，请在试用结束前24小时取消。免费试用结束后将自动续费，您可随时取消订阅。
     footnote: "* 一名高级用户可为所有参与者启用物品标记。在冒险中，仅保存收据文本（无可视化分割）。"
-    trial: |-
+    buy: 购买 Evnly Premium
+    trial:
+      comment: |-
+        !js
+        (price) => `7天免费，之后${price}/年`
+      cta: 开始你的免费试用
+    subscribe_monthly: |-
       !js
-      (price) => `7天免费，之后${price}/年`
+      (price) => `每月${price}元订阅`
   complete:
     thanks: 感谢您订阅 Envly Premium
     avatarNote: 从现在开始，其他 Evnly 用户会这样看到你的头像。
     featuresNote: 此外，从现在起，你还可以在个人资料中进一步自定义界面，扫描和识别小票等更多功能。
   free:
     cta: 享受高级版
+  disclaimers:
+    apple: 免费试用仅对符合条件的首次订阅用户开放。为避免扣费，请在试用结束前24小时取消。你可以在 Apple ID 账户设置中管理或取消订阅。
+products:
+  yearly:
+    title: 每年
+    description: |-
+      !js
+      (value) => `年度付款 ${value}`
+  monthly:
+    title: 每月
+    description: 灵活
+permonth: |-
+  !js
+  (value) => `每月${value}`
+trial: |-
+  !js
+  (period) => `${period}免费`
+disclaimers:
+  trial: 符合条件的首次订阅用户可享受免费试用。
+  apple_account: 确认购买后，付款将从你的 Apple ID 账户中扣除。
+  apple_yearly: |-
+    !js
+    (price) => `如果未在当前周期结束前至少24小时取消，订阅将以${price}/年自动续费。`
+  apple_manage: 你可以在 Apple ID 账户设置中管理或取消你的订阅。
+  apple_monthly: |-
+    !js
+    (price) => `订阅会以${price}/月自动续费，除非你在当前订阅期结束前至少24小时取消。`
