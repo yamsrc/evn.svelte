@@ -107,7 +107,7 @@
           class="flex-row-reverse flex-1 font-normal" />
         <Delete class="py-0 underline underline-offset-3 font-normal flex-1" ondelete={getout} />
       </div>
-      {#if $updateAvailable || true}
+      {#if $updateAvailable}
         <div class="px-2">
           <Update variant="outline" size="sm" class="group min-w-20">
             <Spinner class="hidden group-disabled:block" />
