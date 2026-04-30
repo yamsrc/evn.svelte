@@ -21,11 +21,11 @@
 
   let busy = $state(false)
   let products = $state<Product[]>([])
-  let loaded = $state<boolean>(true)
+  let loaded = $state<boolean>(false)
   let selected = $state<Product | null>(null)
 
   async function onclick() {
-    if (selected === null) return
+    if (products.length !== 0 && selected === null) return
 
     busy = true
 
