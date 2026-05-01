@@ -102,7 +102,7 @@
               <UserPlus />
               {$dict.actions.contacts.contact}
             </Dropdown.Item>
-            <Dropdown.Item id="nav-actions-contacts-groups-button" href="/contacts/groups/">
+            <Dropdown.Item id="nav-actions-contacts-groups-button" href="/contacts/groups/editor/">
               <Component />
               {$dict.actions.contacts.group}
             </Dropdown.Item>

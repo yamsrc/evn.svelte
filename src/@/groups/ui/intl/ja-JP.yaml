@@ -8,3 +8,8 @@ expenses:
   empty: まだ共有された支出はありません。
 balance: あなたの残高
 cover: カバー写真
+details:
+  total: 合計支出
+  paid: あなたが支払いました
+editor:
+  settings: 設定

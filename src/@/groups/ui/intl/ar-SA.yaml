@@ -9,3 +9,8 @@ expenses:
   empty: لا توجد مصروفات مشتركة حتى الآن.
 balance: رصيدك
 cover: صورة الغلاف
+details:
+  total: إجمالي المصروف
+  paid: لقد دفعت
+editor:
+  settings: الإعدادات

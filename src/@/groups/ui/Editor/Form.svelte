@@ -1,9 +1,7 @@
 <script lang="ts">
   import { Check } from '@lucide/svelte'
-  import { account } from '@/iam'
   import { Cosmetics, Cover, Reduction } from '@/groups/ui'
   import { update } from '@/groups'
-  import { CreateAction } from '@/expenses/ui'
   import { Action, Section } from '@/app/ui'
   import { onsubmit as submitter } from '$lib/tools'
   import { dict } from '$lib/intl'
@@ -30,15 +28,15 @@
   }
 
   function onname(name: string) {
-    if (ctx.id) update(ctx.id, { name })
+    if (ctx.id) void update(ctx.id, { name })
   }
 
   function onreduction(reduction: boolean) {
-    if (ctx.id) update(ctx.id, { reduction })
+    if (ctx.id) void update(ctx.id, { reduction })
   }
 
   function onpicture(picture: string) {
-    if (ctx.id) update(ctx.id, { picture })
+    if (ctx.id) void update(ctx.id, { picture })
   }
 </script>
 
@@ -67,33 +65,17 @@
     <Reduction bind:enabled={value.reduction} onchange={onreduction} />
   </Section>
 
-  {#if ctx.id === undefined}
-    <button bind:this={submitButton} type="submit" class="sr-only">
-      {$dict.actions.save}
-    </button>
-  {/if}
+  <button bind:this={submitButton} type="submit" class="sr-only">
+    {$dict.actions.save}
+  </button>
 </form>
 
-{#if ctx.id === undefined}
-  <Actions>
-    <Action
-      id="nav-actions-groups-save-button"
-      disabled={busy || !valid}
-      onclick={() => submitButton?.click()}>
-      <Check />
-      <span>{$dict.actions.save}</span>
-    </Action>
-  </Actions>
-{:else}
-  <Actions>
-    <CreateAction
-      value={{
-        participants: Object.fromEntries(
-          value.identities.map((id) => [
-            id,
-            { amount: 0, shares: 0, paid: $account?.id === id ? 0 : undefined },
-          ]),
-        ),
-      }} />
-  </Actions>
-{/if}
+<Actions>
+  <Action
+    id="nav-actions-groups-save-button"
+    disabled={busy || !valid}
+    onclick={() => submitButton?.click()}>
+    <Check />
+    <span>{$dict.actions.save}</span>
+  </Action>
+</Actions>

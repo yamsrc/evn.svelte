@@ -17,4 +17,11 @@ export type Dictionary = {
       }
       balance: string
       cover: string
+      details: {
+        total: string
+        paid: string
+      }
+      editor: {
+        settings: string
+      }
     }

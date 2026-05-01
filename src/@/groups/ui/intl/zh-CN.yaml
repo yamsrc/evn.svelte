@@ -7,3 +7,8 @@ expenses:
   empty: 目前还没有共享支出。
 balance: 你的余额
 cover: 封面照片
+details:
+  total: 总支出
+  paid: 你已付款
+editor:
+  settings: 设置

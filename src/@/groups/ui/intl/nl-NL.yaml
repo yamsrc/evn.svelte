@@ -10,3 +10,8 @@ expenses:
   empty: Nog geen gedeelde uitgaven.
 balance: Jouw saldo
 cover: Omslagfoto
+details:
+  total: Totaal uitgegeven
+  paid: Je hebt betaald
+editor:
+  settings: Instellingen

@@ -10,3 +10,8 @@ expenses:
   empty: Bisher keine geteilten Ausgaben.
 balance: Dein Kontostand
 cover: Titelbild
+details:
+  total: Insgesamt ausgegeben
+  paid: Du hast bezahlt
+editor:
+  settings: Einstellungen

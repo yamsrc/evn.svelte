@@ -32,7 +32,7 @@
 {#if !group}
   <Section class="py-4">
     <!-- TODO: i18n -->
-    <a href="/contacts/groups/">Create group</a>
+    <a href="/contacts/groups/editor/">Create group</a>
   </Section>
 {:else}
   <AlertDialog.Root {open}>

@@ -10,3 +10,8 @@ expenses:
   empty: Пока нет общих расходов.
 balance: Ваш баланс
 cover: Обложка
+details:
+  total: Всего потрачено
+  paid: Ты заплатил(а)
+editor:
+  settings: Настройки

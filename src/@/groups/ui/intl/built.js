@@ -14,7 +14,14 @@ export const dictionaries = {
       "empty": "لا توجد مصروفات مشتركة حتى الآن."
     },
     "balance": "رصيدك",
-    "cover": "صورة الغلاف"
+    "cover": "صورة الغلاف",
+    "details": {
+      "total": "إجمالي المصروف",
+      "paid": "لقد دفعت"
+    },
+    "editor": {
+      "settings": "الإعدادات"
+    }
   },
   "de-DE": {
     "reduction": {
@@ -28,7 +35,14 @@ export const dictionaries = {
       "empty": "Bisher keine geteilten Ausgaben."
     },
     "balance": "Dein Kontostand",
-    "cover": "Titelbild"
+    "cover": "Titelbild",
+    "details": {
+      "total": "Insgesamt ausgegeben",
+      "paid": "Du hast bezahlt"
+    },
+    "editor": {
+      "settings": "Einstellungen"
+    }
   },
   "en-US": {
     "reduction": {
@@ -42,7 +56,14 @@ export const dictionaries = {
       "empty": "No shared expenses so far."
     },
     "balance": "Your balance",
-    "cover": "Cover Photo"
+    "cover": "Cover Photo",
+    "details": {
+      "total": "Total spent",
+      "paid": "You’ve paid"
+    },
+    "editor": {
+      "settings": "Settings"
+    }
   },
   "es-ES": {
     "reduction": {
@@ -56,7 +77,14 @@ export const dictionaries = {
       "empty": "Aún no hay gastos compartidos."
     },
     "balance": "Tu saldo",
-    "cover": "Foto de portada"
+    "cover": "Foto de portada",
+    "details": {
+      "total": "Total gastado",
+      "paid": "Has pagado"
+    },
+    "editor": {
+      "settings": "Configuración"
+    }
   },
   "fr-FR": {
     "reduction": {
@@ -70,7 +98,14 @@ export const dictionaries = {
       "empty": "Aucune dépense partagée pour le moment."
     },
     "balance": "Votre solde",
-    "cover": "Photo de couverture"
+    "cover": "Photo de couverture",
+    "details": {
+      "total": "Total dépensé",
+      "paid": "Tu as payé"
+    },
+    "editor": {
+      "settings": "Paramètres"
+    }
   },
   "hi-IN": {
     "reduction": {
@@ -84,7 +119,14 @@ export const dictionaries = {
       "empty": "अभी तक कोई साझा खर्च नहीं हैं।"
     },
     "balance": "आपकी शेष राशि",
-    "cover": "कवर फोटो"
+    "cover": "कवर फोटो",
+    "details": {
+      "total": "कुल खर्च",
+      "paid": "तुमने भुगतान किया है"
+    },
+    "editor": {
+      "settings": "सेटिंग्स"
+    }
   },
   "it-IT": {
     "reduction": {
@@ -98,7 +140,14 @@ export const dictionaries = {
       "empty": "Nessuna spesa condivisa finora."
     },
     "balance": "Il tuo saldo",
-    "cover": "Foto di copertina"
+    "cover": "Foto di copertina",
+    "details": {
+      "total": "Totale speso",
+      "paid": "Hai pagato"
+    },
+    "editor": {
+      "settings": "Impostazioni"
+    }
   },
   "ja-JP": {
     "reduction": {
@@ -112,7 +161,14 @@ export const dictionaries = {
       "empty": "まだ共有された支出はありません。"
     },
     "balance": "あなたの残高",
-    "cover": "カバー写真"
+    "cover": "カバー写真",
+    "details": {
+      "total": "合計支出",
+      "paid": "あなたが支払いました"
+    },
+    "editor": {
+      "settings": "設定"
+    }
   },
   "ko-KR": {
     "reduction": {
@@ -126,7 +182,14 @@ export const dictionaries = {
       "empty": "아직 공동 지출이 없습니다."
     },
     "balance": "내 잔액",
-    "cover": "커버 사진"
+    "cover": "커버 사진",
+    "details": {
+      "total": "총 지출",
+      "paid": "네가 결제함"
+    },
+    "editor": {
+      "settings": "설정"
+    }
   },
   "nl-NL": {
     "reduction": {
@@ -140,7 +203,14 @@ export const dictionaries = {
       "empty": "Nog geen gedeelde uitgaven."
     },
     "balance": "Jouw saldo",
-    "cover": "Omslagfoto"
+    "cover": "Omslagfoto",
+    "details": {
+      "total": "Totaal uitgegeven",
+      "paid": "Je hebt betaald"
+    },
+    "editor": {
+      "settings": "Instellingen"
+    }
   },
   "ru-RU": {
     "reduction": {
@@ -154,7 +224,14 @@ export const dictionaries = {
       "empty": "Пока нет общих расходов."
     },
     "balance": "Ваш баланс",
-    "cover": "Обложка"
+    "cover": "Обложка",
+    "details": {
+      "total": "Всего потрачено",
+      "paid": "Ты заплатил(а)"
+    },
+    "editor": {
+      "settings": "Настройки"
+    }
   },
   "sw-TZ": {
     "reduction": {
@@ -168,7 +245,14 @@ export const dictionaries = {
       "empty": "Hakuna gharama zilizoshirikiwa hadi sasa."
     },
     "balance": "Salio lako",
-    "cover": "Picha ya jalada"
+    "cover": "Picha ya jalada",
+    "details": {
+      "total": "Jumla iliyotumika",
+      "paid": "Umelipa"
+    },
+    "editor": {
+      "settings": "Mipangilio"
+    }
   },
   "tr-TR": {
     "reduction": {
@@ -182,7 +266,14 @@ export const dictionaries = {
       "empty": "Henüz paylaşılan bir harcama yok."
     },
     "balance": "Bakiyeniz",
-    "cover": "Kapak fotoğrafı"
+    "cover": "Kapak fotoğrafı",
+    "details": {
+      "total": "Toplam harcanan",
+      "paid": "Sen ödedin"
+    },
+    "editor": {
+      "settings": "Ayarlar"
+    }
   },
   "uk-UA": {
     "reduction": {
@@ -196,7 +287,14 @@ export const dictionaries = {
       "empty": "Поки що немає спільних витрат."
     },
     "balance": "Ваш баланс",
-    "cover": "Обкладинка"
+    "cover": "Обкладинка",
+    "details": {
+      "total": "Всього витрачено",
+      "paid": "Ти заплатив(ла)"
+    },
+    "editor": {
+      "settings": "Налаштування"
+    }
   },
   "zh-CN": {
     "reduction": {
@@ -210,6 +308,13 @@ export const dictionaries = {
       "empty": "目前还没有共享支出。"
     },
     "balance": "你的余额",
-    "cover": "封面照片"
+    "cover": "封面照片",
+    "details": {
+      "total": "总支出",
+      "paid": "你已付款"
+    },
+    "editor": {
+      "settings": "设置"
+    }
   }
 };

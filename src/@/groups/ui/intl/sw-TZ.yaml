@@ -10,3 +10,8 @@ expenses:
   empty: Hakuna gharama zilizoshirikiwa hadi sasa.
 balance: Salio lako
 cover: Picha ya jalada
+details:
+  total: Jumla iliyotumika
+  paid: Umelipa
+editor:
+  settings: Mipangilio

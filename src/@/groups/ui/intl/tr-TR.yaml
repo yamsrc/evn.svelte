@@ -10,3 +10,8 @@ expenses:
   empty: Henüz paylaşılan bir harcama yok.
 balance: Bakiyeniz
 cover: Kapak fotoğrafı
+details:
+  total: Toplam harcanan
+  paid: Sen ödedin
+editor:
+  settings: Ayarlar

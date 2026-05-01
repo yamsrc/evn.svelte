@@ -10,3 +10,8 @@ expenses:
   empty: No shared expenses so far.
 balance: Your balance
 cover: Cover Photo
+details:
+  total: Total spent
+  paid: You’ve paid
+editor:
+  settings: Settings

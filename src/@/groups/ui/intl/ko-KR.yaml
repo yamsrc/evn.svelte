@@ -9,3 +9,8 @@ expenses:
   empty: 아직 공동 지출이 없습니다.
 balance: 내 잔액
 cover: 커버 사진
+details:
+  total: 총 지출
+  paid: 네가 결제함
+editor:
+  settings: 설정
