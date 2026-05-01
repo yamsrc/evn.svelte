@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Check } from '@lucide/svelte'
   import { account } from '@/iam'
-  import { Cosmetics, Reduction } from '@/groups/ui'
+  import { Cosmetics, Cover, Reduction } from '@/groups/ui'
   import { update } from '@/groups'
   import { CreateAction } from '@/expenses/ui'
   import { Action, Section } from '@/app/ui'
@@ -36,11 +36,19 @@
   function onreduction(reduction: boolean) {
     if (ctx.id) update(ctx.id, { reduction })
   }
+
+  function onpicture(picture: string) {
+    if (ctx.id) update(ctx.id, { picture })
+  }
 </script>
 
 <form onsubmit={submitter(submit)} class="space-y-5">
   <Section>
     <Cosmetics bind:value onchange={onname} />
+  </Section>
+
+  <Section>
+    <Cover bind:picture={value.picture} onchange={onpicture} />
   </Section>
 
   <Separator />

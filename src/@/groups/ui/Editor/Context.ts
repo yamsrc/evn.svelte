@@ -23,6 +23,7 @@ export function createContext(id?: string, value?: Partial<Value>): Context {
 function exact(partial: Partial<Value>): Value {
   return {
     name: partial.name ?? '',
+    picture: partial.picture ?? '',
     reduction: partial.reduction ?? true,
     identities: partial.identities ?? [],
   }
@@ -31,6 +32,7 @@ function exact(partial: Partial<Value>): Value {
 function blank(): Value {
   return {
     name: '',
+    picture: '',
     reduction: true,
     identities: [],
   }
@@ -50,6 +52,7 @@ export interface Context {
 
 export interface Value {
   name: string
+  picture: string
   reduction: boolean
   identities: string[]
 }

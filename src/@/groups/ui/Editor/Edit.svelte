@@ -10,6 +10,7 @@
   async function onsubmit(value: Value) {
     const group = await create({
       name: value.name,
+      picture: value.picture || undefined,
       reduction: value.reduction,
       participants: value.identities.length > 0 ? value.identities : undefined,
     })

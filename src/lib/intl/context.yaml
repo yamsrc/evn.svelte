@@ -69,7 +69,8 @@ inputs:
     contacts:
       input: Friends
     expenses:
-      input: Events
+      input: Expenses
+      context: bottom navigation tab label
   terms:
     input: Terms & conditions
   privacy:

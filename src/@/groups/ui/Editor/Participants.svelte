@@ -41,7 +41,10 @@
         {#each others as id (id)}
           {@const contact = contacts.find((c) => c.identity === id)}
           {#if contact?.account && ok(contact.account)}
-            <Panel account={contact.account} balance={contact.balance} href={`/contacts/${id}/`} />
+            <Panel
+              account={contact.account}
+              balance={contact.balances?.[id]}
+              href={`/contacts/${id}/`} />
           {:else}
             <Async store={accounts.get(id)}>
               {#snippet awaited(account)}

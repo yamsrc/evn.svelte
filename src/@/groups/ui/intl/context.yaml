@@ -17,3 +17,6 @@ inputs:
   balance:
     input: Your balance
     context: Label of group expenses balance
+  cover:
+    input: Cover
+    context: Section heading for optional group cover image picker

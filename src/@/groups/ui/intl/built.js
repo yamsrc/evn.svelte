@@ -13,7 +13,8 @@ export const dictionaries = {
       "title": "الفعاليات",
       "empty": "لا توجد مصروفات مشتركة حتى الآن."
     },
-    "balance": "رصيدك"
+    "balance": "رصيدك",
+    "cover": "صورة الغلاف"
   },
   "de-DE": {
     "reduction": {
@@ -26,7 +27,8 @@ export const dictionaries = {
       "title": "Veranstaltungen",
       "empty": "Bisher keine geteilten Ausgaben."
     },
-    "balance": "Dein Kontostand"
+    "balance": "Dein Kontostand",
+    "cover": "Titelbild"
   },
   "en-US": {
     "reduction": {
@@ -39,7 +41,8 @@ export const dictionaries = {
       "title": "Events",
       "empty": "No shared expenses so far."
     },
-    "balance": "Your balance"
+    "balance": "Your balance",
+    "cover": "Cover Photo"
   },
   "es-ES": {
     "reduction": {
@@ -52,7 +55,8 @@ export const dictionaries = {
       "title": "Eventos",
       "empty": "Aún no hay gastos compartidos."
     },
-    "balance": "Tu saldo"
+    "balance": "Tu saldo",
+    "cover": "Foto de portada"
   },
   "fr-FR": {
     "reduction": {
@@ -65,7 +69,8 @@ export const dictionaries = {
       "title": "Événements",
       "empty": "Aucune dépense partagée pour le moment."
     },
-    "balance": "Votre solde"
+    "balance": "Votre solde",
+    "cover": "Photo de couverture"
   },
   "hi-IN": {
     "reduction": {
@@ -78,7 +83,8 @@ export const dictionaries = {
       "title": "इवेंट्स",
       "empty": "अभी तक कोई साझा खर्च नहीं हैं।"
     },
-    "balance": "आपकी शेष राशि"
+    "balance": "आपकी शेष राशि",
+    "cover": "कवर फोटो"
   },
   "it-IT": {
     "reduction": {
@@ -91,7 +97,8 @@ export const dictionaries = {
       "title": "Eventi",
       "empty": "Nessuna spesa condivisa finora."
     },
-    "balance": "Il tuo saldo"
+    "balance": "Il tuo saldo",
+    "cover": "Foto di copertina"
   },
   "ja-JP": {
     "reduction": {
@@ -104,7 +111,8 @@ export const dictionaries = {
       "title": "イベント",
       "empty": "まだ共有された支出はありません。"
     },
-    "balance": "あなたの残高"
+    "balance": "あなたの残高",
+    "cover": "カバー写真"
   },
   "ko-KR": {
     "reduction": {
@@ -117,7 +125,8 @@ export const dictionaries = {
       "title": "이벤트",
       "empty": "아직 공동 지출이 없습니다."
     },
-    "balance": "내 잔액"
+    "balance": "내 잔액",
+    "cover": "커버 사진"
   },
   "nl-NL": {
     "reduction": {
@@ -130,7 +139,8 @@ export const dictionaries = {
       "title": "Evenementen",
       "empty": "Nog geen gedeelde uitgaven."
     },
-    "balance": "Jouw saldo"
+    "balance": "Jouw saldo",
+    "cover": "Omslagfoto"
   },
   "ru-RU": {
     "reduction": {
@@ -143,7 +153,8 @@ export const dictionaries = {
       "title": "События",
       "empty": "Пока нет общих расходов."
     },
-    "balance": "Ваш баланс"
+    "balance": "Ваш баланс",
+    "cover": "Обложка"
   },
   "sw-TZ": {
     "reduction": {
@@ -156,7 +167,8 @@ export const dictionaries = {
       "title": "Matukio",
       "empty": "Hakuna gharama zilizoshirikiwa hadi sasa."
     },
-    "balance": "Salio lako"
+    "balance": "Salio lako",
+    "cover": "Picha ya jalada"
   },
   "tr-TR": {
     "reduction": {
@@ -169,7 +181,8 @@ export const dictionaries = {
       "title": "Etkinlikler",
       "empty": "Henüz paylaşılan bir harcama yok."
     },
-    "balance": "Bakiyeniz"
+    "balance": "Bakiyeniz",
+    "cover": "Kapak fotoğrafı"
   },
   "uk-UA": {
     "reduction": {
@@ -182,7 +195,8 @@ export const dictionaries = {
       "title": "Події",
       "empty": "Поки що немає спільних витрат."
     },
-    "balance": "Ваш баланс"
+    "balance": "Ваш баланс",
+    "cover": "Обкладинка"
   },
   "zh-CN": {
     "reduction": {
@@ -195,6 +209,7 @@ export const dictionaries = {
       "title": "活动",
       "empty": "目前还没有共享支出。"
     },
-    "balance": "你的余额"
+    "balance": "你的余额",
+    "cover": "封面照片"
   }
 };
