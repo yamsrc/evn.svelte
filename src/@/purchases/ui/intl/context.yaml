@@ -77,3 +77,7 @@ inputs:
     apple_monthly:
       input: Subscription automatically renews for {price}/month unless canceled at least 24 hours before the end of the current period.
       context: a function accepting price
+  restore:
+    label:
+      input: Restore purchases
+      context: button label

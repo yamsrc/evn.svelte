@@ -8,7 +8,7 @@
   import { ids, type Props } from './Products'
   import type { Product } from '@/purchases'
 
-  let { products, selected = $bindable(null) }: Props = $props()
+  let { products, selected = $bindable(null), disabled = false }: Props = $props()
   const known = $derived(products.filter((p) => ids.includes(p.id)))
   const sorted = $derived(known.toSorted((a) => (a.id === 'premium_yearly' ? -1 : 1)))
 
@@ -24,9 +24,10 @@
     {@const selected = product.id === value}
     {@const price = Number.parseFloat(product.priceString)}
     <label>
-      <Item.Root class={['relative transition-all', selected && 'selected']}>
+      <Item.Root
+        class={['relative transition-all', selected && 'selected', disabled && 'opacity-50']}>
         <Item.Media>
-          <RadioGroup.Item value={product.id} />
+          <RadioGroup.Item value={product.id} {disabled} />
         </Item.Media>
         <Item.Content>
           <Item.Title>
