@@ -10,3 +10,11 @@ interface Post {
 export async function post(identity: string, body: Post): Promise<Transaction | Error> {
   return transactions.json(identity, { method: 'POST', body })
 }
+
+interface Patch {
+  signedTransactionInfos: string[]
+}
+
+export async function patch(identity: string, body: Patch): Promise<Transaction | Error> {
+  return transactions.json(identity, { method: 'PATCH', body })
+}

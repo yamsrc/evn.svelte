@@ -1,1 +1,1 @@
-export { report } from './report'
+export { report, restore } from './report'

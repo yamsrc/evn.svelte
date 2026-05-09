@@ -48,3 +48,5 @@ disclaimers:
   apple_monthly: |-
     !js
     (price) => `订阅会以${price}/月自动续费，除非你在当前订阅期结束前至少24小时取消。`
+restore:
+  label: 恢复购买

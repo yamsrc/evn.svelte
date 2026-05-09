@@ -48,6 +48,9 @@ export const dictionaries = {
       "apple_yearly": (price) => `سيتم تجديد الاشتراك تلقائياً بمبلغ ${price} سنوياً ما لم يتم الإلغاء قبل 24 ساعة على الأقل من نهاية الفترة الحالية.`,
       "apple_manage": "يمكنك إدارة أو إلغاء اشتراكك من إعدادات حساب Apple ID الخاص بك.",
       "apple_monthly": (price) => `سيتم تجديد الاشتراك تلقائيًا مقابل ${price} شهريًا ما لم يتم الإلغاء قبل 24 ساعة على الأقل من نهاية الفترة الحالية.`
+    },
+    "restore": {
+      "label": "استعادة المشتريات"
     }
   },
   "de-DE": {
@@ -96,6 +99,9 @@ export const dictionaries = {
       "apple_yearly": (price) => `Dein Abo wird automatisch für ${price}/Jahr verlängert, wenn du nicht spätestens 24 Stunden vor Ende der aktuellen Periode kündigst.`,
       "apple_manage": "Du kannst dein Abo in den Einstellungen deiner Apple-ID verwalten oder kündigen.",
       "apple_monthly": (price) => `Dein Abo wird automatisch für ${price}/Monat verlängert, sofern du nicht mindestens 24 Stunden vor Ablauf des aktuellen Zeitraums kündigst.`
+    },
+    "restore": {
+      "label": "Käufe wiederherstellen"
     }
   },
   "en-US": {
@@ -144,6 +150,9 @@ export const dictionaries = {
       "apple_yearly": (price) => `Subscription automatically renews for ${price}/year unless canceled at least 24 hours before the end of the current period.`,
       "apple_manage": "You can manage or cancel your subscription in your Apple ID account settings.",
       "apple_monthly": (price) => `Subscription automatically renews for ${price}/month unless canceled at least 24 hours before the end of the current period.`
+    },
+    "restore": {
+      "label": "Restore purchases"
     }
   },
   "es-ES": {
@@ -192,6 +201,9 @@ export const dictionaries = {
       "apple_yearly": (price) => `La suscripción se renueva automáticamente por ${price}/año a menos que la canceles al menos 24 horas antes de que termine el periodo actual.`,
       "apple_manage": "Puedes gestionar o cancelar tu suscripción en la configuración de tu cuenta de Apple ID.",
       "apple_monthly": (price) => `La suscripción se renueva automáticamente por ${price}/mes a menos que la canceles al menos 24 horas antes de que termine el periodo actual.`
+    },
+    "restore": {
+      "label": "Restaurar compras"
     }
   },
   "fr-FR": {
@@ -240,6 +252,9 @@ export const dictionaries = {
       "apple_yearly": (price) => `L'abonnement se renouvelle automatiquement pour ${price}/an sauf si tu l'annules au moins 24 heures avant la fin de la période en cours.`,
       "apple_manage": "Tu peux gérer ou annuler ton abonnement dans les réglages de ton compte Apple ID.",
       "apple_monthly": (price) => `L’abonnement se renouvelle automatiquement pour ${price}/mois, sauf si tu l’annules au moins 24 heures avant la fin de la période en cours.`
+    },
+    "restore": {
+      "label": "Restaurer les achats"
     }
   },
   "hi-IN": {
@@ -288,6 +303,9 @@ export const dictionaries = {
       "apple_yearly": (price) => `सब्सक्रिप्शन अपने आप हर साल ${price} में रिन्यू होगा, जब तक कि इसे मौजूदा अवधि के खत्म होने से कम से कम 24 घंटे पहले कैंसिल न किया जाए।`,
       "apple_manage": "तुम अपने Apple ID अकाउंट सेटिंग्स में अपनी सब्स्क्रिप्शन मैनेज या कैंसिल कर सकते हो।",
       "apple_monthly": (price) => `सब्सक्रिप्शन हर महीने ${price} में अपने आप रिन्यू हो जाएगा, जब तक कि तुम इसे मौजूदा अवधि की समाप्ति से कम से कम 24 घंटे पहले कैंसल नहीं करते हो।`
+    },
+    "restore": {
+      "label": "खरीदारी बहाल करें"
     }
   },
   "it-IT": {
@@ -336,6 +354,9 @@ export const dictionaries = {
       "apple_yearly": (price) => `L'abbonamento si rinnova automaticamente per ${price}/anno, a meno che tu non lo cancelli almeno 24 ore prima della fine del periodo attuale.`,
       "apple_manage": "Puoi gestire o annullare l’abbonamento dalle impostazioni del tuo account Apple ID.",
       "apple_monthly": (price) => `L’abbonamento si rinnova automaticamente a ${price}/mese a meno che tu non lo annulli almeno 24 ore prima della fine del periodo attuale.`
+    },
+    "restore": {
+      "label": "Ripristina acquisti"
     }
   },
   "ja-JP": {
@@ -384,6 +405,9 @@ export const dictionaries = {
       "apple_yearly": (price) => `サブスクリプションは、現在の期間終了の24時間以上前に解約しない限り、毎年${price}で自動更新されます。`,
       "apple_manage": "Apple IDのアカウント設定でサブスクリプションの管理やキャンセルができます。",
       "apple_monthly": (price) => `サブスクリプションは${price}/月で自動更新されます。現在の期間の終了24時間以上前にキャンセルしない限り、自動的に継続されます。`
+    },
+    "restore": {
+      "label": "購入を復元"
     }
   },
   "ko-KR": {
@@ -432,6 +456,9 @@ export const dictionaries = {
       "apple_yearly": (price) => `현재 기간이 끝나기 최소 24시간 전에 취소하지 않으면 구독이 연 ${price}로 자동 갱신돼요.`,
       "apple_manage": "Apple ID 계정 설정에서 구독을 관리하거나 취소할 수 있어.",
       "apple_monthly": (price) => `구독은 매달 ${price}에 자동으로 갱신돼. 현재 기간 종료 24시간 전까지 해지하지 않으면 계속 결제돼.`
+    },
+    "restore": {
+      "label": "구매 복원"
     }
   },
   "nl-NL": {
@@ -480,6 +507,9 @@ export const dictionaries = {
       "apple_yearly": (price) => `Het abonnement wordt automatisch verlengd voor ${price}/jaar, tenzij je minstens 24 uur voor het einde van de huidige periode opzegt.`,
       "apple_manage": "Je kunt je abonnement beheren of annuleren in de instellingen van je Apple ID-account.",
       "apple_monthly": (price) => `Abonnement wordt automatisch verlengd voor ${price}/maand, tenzij je minstens 24 uur voor het einde van de huidige periode opzegt.`
+    },
+    "restore": {
+      "label": "Aankopen herstellen"
     }
   },
   "ru-RU": {
@@ -528,6 +558,9 @@ export const dictionaries = {
       "apple_yearly": (price) => `Подписка автоматически продлевается за ${price}/год, если ты не отменишь её хотя бы за 24 часа до конца текущего периода.`,
       "apple_manage": "Ты можешь управлять или отменить свою подписку в настройках аккаунта Apple ID.",
       "apple_monthly": (price) => `Подписка автоматически продлевается за ${price}/месяц, если ты не отменишь её минимум за 24 часа до конца текущего периода.`
+    },
+    "restore": {
+      "label": "Восстановить покупки"
     }
   },
   "sw-TZ": {
@@ -576,6 +609,9 @@ export const dictionaries = {
       "apple_yearly": (price) => `Usajili utajirudia moja kwa moja kwa ${price}/mwaka isipokuwa ukighairi angalau saa 24 kabla ya mwisho wa kipindi kilichopo.`,
       "apple_manage": "Unaweza kudhibiti au kughairi usajili wako kwenye mipangilio ya akaunti yako ya Apple ID.",
       "apple_monthly": (price) => `Usajili utafu renewed kwa ${price}/mwezi kiotomatiki, isipokuwa ukighairi angalau saa 24 kabla ya mwisho wa kipindi kilichopo.`
+    },
+    "restore": {
+      "label": "Rejesha manunuzi"
     }
   },
   "tr-TR": {
@@ -624,6 +660,9 @@ export const dictionaries = {
       "apple_yearly": (price) => `Abonelik, mevcut dönem bitiminden en az 24 saat önce iptal edilmezse yılda ${price} karşılığında otomatik olarak yenilenir.`,
       "apple_manage": "Apple ID hesabı ayarlarından aboneliğini yönetebilir veya iptal edebilirsin.",
       "apple_monthly": (price) => `Abonelik, geçerli dönem bitmeden en az 24 saat önce iptal etmezsen ${price}/ay olarak otomatik yenilenir.`
+    },
+    "restore": {
+      "label": "Satın alımları geri yükle"
     }
   },
   "uk-UA": {
@@ -672,6 +711,9 @@ export const dictionaries = {
       "apple_yearly": (price) => `Підписка автоматично поновлюється за ${price}/рік, якщо ти не скасуєш її принаймні за 24 години до кінця поточного періоду.`,
       "apple_manage": "Ти можеш керувати підпискою або скасувати її в налаштуваннях свого Apple ID.",
       "apple_monthly": (price) => `Підписка автоматично подовжується за ${price}/місяць, якщо ти не скасуєш її щонайменше за 24 години до кінця поточного періоду.`
+    },
+    "restore": {
+      "label": "Відновити покупки"
     }
   },
   "zh-CN": {
@@ -720,6 +762,9 @@ export const dictionaries = {
       "apple_yearly": (price) => `如果未在当前周期结束前至少24小时取消，订阅将以${price}/年自动续费。`,
       "apple_manage": "你可以在 Apple ID 账户设置中管理或取消你的订阅。",
       "apple_monthly": (price) => `订阅会以${price}/月自动续费，除非你在当前订阅期结束前至少24小时取消。`
+    },
+    "restore": {
+      "label": "恢复购买"
     }
   }
 };

@@ -67,3 +67,5 @@ disclaimers:
 
     (price) => `Dein Abo wird automatisch für ${price}/Monat verlängert, sofern
     du nicht mindestens 24 Stunden vor Ablauf des aktuellen Zeitraums kündigst.`
+restore:
+  label: Käufe wiederherstellen

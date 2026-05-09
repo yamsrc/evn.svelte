@@ -71,3 +71,5 @@ disclaimers:
     (price) => `La suscripción se renueva automáticamente por ${price}/mes a
     menos que la canceles al menos 24 horas antes de que termine el periodo
     actual.`
+restore:
+  label: Restaurar compras

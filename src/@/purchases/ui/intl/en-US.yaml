@@ -66,3 +66,5 @@ disclaimers:
 
     (price) => `Subscription automatically renews for ${price}/month unless
     canceled at least 24 hours before the end of the current period.`
+restore:
+  label: Restore purchases

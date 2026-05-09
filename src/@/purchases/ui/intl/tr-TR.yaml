@@ -65,3 +65,5 @@ disclaimers:
 
     (price) => `Abonelik, geçerli dönem bitmeden en az 24 saat önce iptal
     etmezsen ${price}/ay olarak otomatik yenilenir.`
+restore:
+  label: Satın alımları geri yükle

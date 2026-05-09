@@ -72,3 +72,5 @@ disclaimers:
 
     (price) => `L’abbonamento si rinnova automaticamente a ${price}/mese a meno
     che tu non lo annulli almeno 24 ore prima della fine del periodo attuale.`
+restore:
+  label: Ripristina acquisti

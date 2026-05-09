@@ -55,4 +55,7 @@ export type Dictionary = {
         apple_manage: string
         apple_monthly: (value: any) => string
       }
+      restore: {
+        label: string
+      }
     }

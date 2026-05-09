@@ -54,3 +54,5 @@ disclaimers:
   apple_monthly: |-
     !js
     (price) => `구독은 매달 ${price}에 자동으로 갱신돼. 현재 기간 종료 24시간 전까지 해지하지 않으면 계속 결제돼.`
+restore:
+  label: 구매 복원

@@ -66,3 +66,5 @@ disclaimers:
 
     (price) => `Usajili utafu renewed kwa ${price}/mwezi kiotomatiki, isipokuwa
     ukighairi angalau saa 24 kabla ya mwisho wa kipindi kilichopo.`
+restore:
+  label: Rejesha manunuzi

@@ -1,9 +1,11 @@
 <script lang="ts">
+  // this file needs serious refactoring
+
   import { onMount } from 'svelte'
   import { ok } from 'svas'
   import { add, channel } from '@/purchases'
   import { account } from '@/iam'
-  import { report } from '@/appstore'
+  import { report, restore } from '@/appstore'
   import { Spinner } from '$ui/spinner'
   import { Button } from '$ui/button'
   import { image, ios, shell } from '$lib/tools'
@@ -57,8 +59,35 @@
 
     if (tx instanceof Error) return tx
 
-    // appstore specific
     return await report(tx.payload)
+  }
+
+  async function restorePurchases(e: MouseEvent) {
+    const button = e.currentTarget as HTMLButtonElement
+
+    button.disabled = true
+
+    const ch = channel()
+
+    if (ch === null) {
+      button.disabled = false
+
+      return
+    }
+
+    const txs = await ch.restore()
+
+    if (txs instanceof Error) {
+      button.disabled = false
+
+      return
+    }
+
+    const jwses = txs.map((tx) => tx.payload)
+
+    await restore(jwses)
+
+    button.disabled = false
   }
 
   async function load() {
@@ -135,6 +164,16 @@
           <span aria-hidden="true">·</span>
           <a href="/privacy/">{$common.privacy}</a>
         </p>
+        <div>
+          <Button
+            onclick={restorePurchases}
+            size="sm"
+            variant="outline"
+            class="disabled:[&_span]:hidden [&_svg]:hidden disabled:[&_svg]:block">
+            <span>{$dict.restore.label}</span>
+            <Spinner />
+          </Button>
+        </div>
       </div>
     {/if}
   {:else}
