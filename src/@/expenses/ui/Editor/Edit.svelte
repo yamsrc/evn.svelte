@@ -27,9 +27,7 @@
     const total = numbers.total(value)
 
     if (id === undefined) {
-      value.participants = $account
-        ? { [$account.id]: { amount: total, shares: 0, paid: 0 } }
-        : {}
+      value.participants = $account ? { [$account.id]: { amount: total, shares: 0, paid: 0 } } : {}
 
       return
     }
@@ -82,7 +80,7 @@
 
   {#if value.copied}
     <div class="flex justify-center">
-      <Delete id={value.copied} ondelete={() => void back('/expenses/')} />
+      <Delete id={value.copied} ondelete={() => (value.copied = undefined)} />
     </div>
   {/if}
 </Section>
