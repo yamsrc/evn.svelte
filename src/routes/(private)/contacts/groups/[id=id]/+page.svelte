@@ -78,15 +78,7 @@
             </Section>
 
             <Actions>
-              <CreateAction
-                value={{
-                  participants: Object.fromEntries(
-                    group.identities.map((identity) => [
-                      identity,
-                      { amount: 0, shares: 0, paid: $account?.id === identity ? 0 : undefined },
-                    ]),
-                  ),
-                }} />
+              <CreateAction value={{ links: [{ type: 'group', id }] }} />
             </Actions>
           {/snippet}
         </Async>

@@ -1,5 +1,8 @@
 <script lang="ts">
+  import { ok } from 'svas'
+  import { account } from '@/iam'
   import { Selector } from '@/groups/ui'
+  import { groups } from '@/groups'
   import { Delete } from '@/expenses.templates/ui'
   import { add, update } from '@/expenses'
   import { Section } from '@/app/ui'
@@ -21,6 +24,19 @@
     const others = (value.links ?? []).filter((link) => link.type !== 'group')
 
     value.links = id ? [...others, { type: 'group', id }] : others
+
+    if (id === undefined) return
+
+    const group = (ok($groups) ? $groups : []).find((g) => g.id === id)
+
+    if (group === undefined) return
+
+    value.participants = Object.fromEntries(
+      group.identities.map((identity) => [
+        identity,
+        { amount: 0, shares: 0, paid: $account?.id === identity ? 0 : undefined },
+      ]),
+    )
   }
 
   async function onsubmit(value: Value) {
