@@ -1,6 +1,7 @@
 export { default as Expenses } from './Expenses.svelte'
 export { default as Groups } from './Groups.svelte'
 export { default as Panel } from './Panel.svelte'
+export { default as Selector } from './Selector.svelte'
 export { default as Cosmetics } from './Cosmetics.svelte'
 export { default as Cover } from './Cover.svelte'
 export { default as Reduction } from './Reduction.svelte'
