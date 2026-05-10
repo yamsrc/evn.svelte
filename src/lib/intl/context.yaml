@@ -260,7 +260,7 @@ inputs:
       save:
         input: Save and update balances
     title:
-      input: Events
+      input: Expenses
     empty:
       title:
         input: No expenses yet

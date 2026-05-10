@@ -158,7 +158,7 @@ expenses:
     location:
       placeholder: Wo? (optional)
     save: Speichern und Salden aktualisieren
-  title: Veranstaltungen
+  title: Ausgaben
   balance:
     total: Gesamtrechnung
     youAreOwed: Dir steht etwas zu

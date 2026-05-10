@@ -158,7 +158,7 @@ expenses:
     location:
       placeholder: Où ? (facultatif)
     save: Enregistrer et mettre à jour les soldes
-  title: Événements
+  title: Dépenses
   balance:
     total: Facture totale
     youAreOwed: On te doit

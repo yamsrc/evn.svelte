@@ -155,7 +155,7 @@ expenses:
     location:
       placeholder: Де? (необов’язково)
     save: Зберегти й оновити баланси
-  title: Події
+  title: Витрати
   balance:
     total: Загальний рахунок
     youAreOwed: Вам винні

@@ -150,7 +150,7 @@ expenses:
     location:
       placeholder: أين؟ (اختياري)
     save: احفظ وقم بتحديث الأرصدة
-  title: الفعاليات
+  title: المصروفات
   balance:
     total: إجمالي الفاتورة
     youAreOwed: لك مستحقات

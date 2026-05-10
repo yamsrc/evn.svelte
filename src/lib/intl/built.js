@@ -183,7 +183,7 @@ export const dictionaries = {
         },
         "save": "احفظ وقم بتحديث الأرصدة"
       },
-      "title": "الفعاليات",
+      "title": "المصروفات",
       "balance": {
         "total": "إجمالي الفاتورة",
         "youAreOwed": "لك مستحقات",
@@ -418,7 +418,7 @@ export const dictionaries = {
         },
         "save": "Speichern und Salden aktualisieren"
       },
-      "title": "Veranstaltungen",
+      "title": "Ausgaben",
       "balance": {
         "total": "Gesamtrechnung",
         "youAreOwed": "Dir steht etwas zu",
@@ -653,7 +653,7 @@ export const dictionaries = {
         },
         "save": "Save and update balances"
       },
-      "title": "Events",
+      "title": "Expenses",
       "empty": {
         "title": "No expenses yet",
         "description": "Create your first expense to start tracking",
@@ -888,7 +888,7 @@ export const dictionaries = {
         },
         "save": "Guardar y actualizar saldos"
       },
-      "title": "Eventos",
+      "title": "Gastos",
       "balance": {
         "total": "Factura total",
         "youAreOwed": "Te deben",
@@ -1123,7 +1123,7 @@ export const dictionaries = {
         },
         "save": "Enregistrer et mettre à jour les soldes"
       },
-      "title": "Événements",
+      "title": "Dépenses",
       "balance": {
         "total": "Facture totale",
         "youAreOwed": "On te doit",
@@ -1358,7 +1358,7 @@ export const dictionaries = {
         },
         "save": "सहेजें और बैलेंस अपडेट करें"
       },
-      "title": "आयोजन",
+      "title": "खर्चे",
       "balance": {
         "total": "कुल बिल",
         "youAreOwed": "आपको कुछ मिलना बाकी है",
@@ -1593,7 +1593,7 @@ export const dictionaries = {
         },
         "save": "Salva e aggiorna i saldi"
       },
-      "title": "Eventi",
+      "title": "Spese",
       "balance": {
         "total": "Totale conto",
         "youAreOwed": "Ti è dovuto",
@@ -1828,7 +1828,7 @@ export const dictionaries = {
         },
         "save": "保存して残高を更新"
       },
-      "title": "イベント",
+      "title": "支出",
       "balance": {
         "total": "合計金額",
         "youAreOwed": "あなたには支払いが残っています",
@@ -2063,7 +2063,7 @@ export const dictionaries = {
         },
         "save": "저장하고 잔액 업데이트"
       },
-      "title": "이벤트",
+      "title": "지출",
       "balance": {
         "total": "총 금액",
         "youAreOwed": "당신은 받을 돈이 있습니다",
@@ -2298,7 +2298,7 @@ export const dictionaries = {
         },
         "save": "Opslaan en saldi bijwerken"
       },
-      "title": "Evenementen",
+      "title": "Uitgaven",
       "balance": {
         "total": "Totaalrekening",
         "youAreOwed": "Je hebt iets tegoed",
@@ -2533,7 +2533,7 @@ export const dictionaries = {
         },
         "save": "Сохранить и обновить балансы"
       },
-      "title": "События",
+      "title": "Расходы",
       "balance": {
         "total": "Итоговый счет",
         "youAreOwed": "Вам должны",
@@ -2768,7 +2768,7 @@ export const dictionaries = {
         },
         "save": "Hifadhi na sasisha mizania"
       },
-      "title": "Matukio",
+      "title": "Matumizi",
       "balance": {
         "total": "Jumla ya bili",
         "youAreOwed": "Unadai malipo",
@@ -3003,7 +3003,7 @@ export const dictionaries = {
         },
         "save": "Bakiyeleri kaydet ve güncelle"
       },
-      "title": "Etkinlikler",
+      "title": "Harcamalar",
       "balance": {
         "total": "Toplam fatura",
         "youAreOwed": "Sana borç var",
@@ -3238,7 +3238,7 @@ export const dictionaries = {
         },
         "save": "Зберегти й оновити баланси"
       },
-      "title": "Події",
+      "title": "Витрати",
       "balance": {
         "total": "Загальний рахунок",
         "youAreOwed": "Вам винні",
@@ -3473,7 +3473,7 @@ export const dictionaries = {
         },
         "save": "保存并更新余额"
       },
-      "title": "活动",
+      "title": "支出",
       "balance": {
         "total": "总账单",
         "youAreOwed": "你有应得的",

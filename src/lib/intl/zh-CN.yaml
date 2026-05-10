@@ -140,7 +140,7 @@ expenses:
     location:
       placeholder: 在哪里？（可选）
     save: 保存并更新余额
-  title: 活动
+  title: 支出
   balance:
     total: 总账单
     youAreOwed: 你有应得的

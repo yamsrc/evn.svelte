@@ -140,7 +140,7 @@ expenses:
     location:
       placeholder: どこですか？（任意）
     save: 保存して残高を更新
-  title: イベント
+  title: 支出
   balance:
     total: 合計金額
     youAreOwed: あなたには支払いが残っています

@@ -152,7 +152,7 @@ expenses:
     location:
       placeholder: कहाँ? (वैकल्पिक)
     save: सहेजें और बैलेंस अपडेट करें
-  title: आयोजन
+  title: खर्चे
   balance:
     total: कुल बिल
     youAreOwed: आपको कुछ मिलना बाकी है

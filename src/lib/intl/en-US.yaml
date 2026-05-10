@@ -152,7 +152,7 @@ expenses:
     location:
       placeholder: Where? (Optional)
     save: Save and update balances
-  title: Events
+  title: Expenses
   empty:
     title: No expenses yet
     description: Create your first expense to start tracking
