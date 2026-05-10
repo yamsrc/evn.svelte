@@ -18,7 +18,7 @@
     onchange?.(index === 0 ? undefined : $groups[index - 1].id)
   }
 
-  const card = 'shrink-0 overflow-hidden rounded-lg'
+  const card = 'overflow-hidden'
   const base =
     'group-cover relative isolate overflow-hidden rounded-lg bg-cover bg-center py-3 px-4'
 </script>
@@ -37,10 +37,7 @@
     </List.Option>
 
     {#each $groups as group, index (group.id)}
-      <List.Option
-        variant="outline"
-        class={[card, 'p-0', picked !== index + 1 && 'ring-1 ring-border']}
-        index={index + 1}>
+      <List.Option variant="outline" index={index + 1} class={card}>
         <div class={[base, 'size-full text-foreground']}>
           {#if group.picture}
             <Picture

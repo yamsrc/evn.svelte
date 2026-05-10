@@ -20,7 +20,7 @@
   data-picked={picked ? '' : undefined}
   class={[
     'h-auto rounded-lg',
-    picked && 'selected transition-all starting:ring-transparent duration-1000',
+    picked && 'selected transition-all starting:ring-transparent duration-300',
     SNAP[ctx.state.snap],
     classes,
   ]}
