@@ -13,23 +13,16 @@
 
   const id = $derived(page.params.id) as string
 
-  function shared(entries: Expense[], identities: string[]): Expense[] {
-    const me = $account
-
-    if (!me) return []
-
-    const others = identities.filter((identity) => identity !== me.id)
-
-    return entries.filter((expense) => {
-      const participants = Object.keys(expense.participants)
-
-      return (
-        participants.includes(me.id) && participants.some((identity) => others.includes(identity))
-      )
-    })
+  /**
+   * Returns the expenses that are linked to the group.
+   */
+  function linked(expenses: Expense[]): Expense[] {
+    return expenses.filter((expense) =>
+      expense.links?.some((link) => link.type === 'group' && link.id === id),
+    )
   }
 
-  function paid(entries: Expense[]): number {
+  function paidByMe(entries: Expense[]): number {
     return entries.reduce(
       (sum, expense) => sum + (expense.participants[$account?.id ?? '']?.paid ?? 0),
       0,
@@ -68,35 +61,33 @@
 
         <Async store={expenses}>
           {#snippet awaited(expenses)}
-            {#if ok(expenses)}
-              {@const entries = shared(expenses, group.identities)}
-              {@const total = entries.reduce((sum, expense) => sum + numbers.total(expense), 0)}
-              {@const paidByMe = paid(entries)}
+            {@const entries = linked(expenses)}
+            {@const total = entries.reduce((sum, expense) => sum + numbers.total(expense), 0)}
+            {@const paid = paidByMe(entries)}
 
-              <Section>
-                <Details.Totals paid={paidByMe} {total} />
-              </Section>
+            <Section>
+              <Details.Totals {paid} {total} />
+            </Section>
 
-              <Section>
-                <Details.Participants identities={group.identities} expenses={entries} />
-              </Section>
+            <Section>
+              <Details.Participants identities={group.identities} expenses={entries} />
+            </Section>
 
-              <Section>
-                <Details.Expenses expenses={entries} />
-              </Section>
+            <Section>
+              <Details.Expenses expenses={entries} />
+            </Section>
 
-              <Actions>
-                <CreateAction
-                  value={{
-                    participants: Object.fromEntries(
-                      group.identities.map((identity) => [
-                        identity,
-                        { amount: 0, shares: 0, paid: $account?.id === identity ? 0 : undefined },
-                      ]),
-                    ),
-                  }} />
-              </Actions>
-            {/if}
+            <Actions>
+              <CreateAction
+                value={{
+                  participants: Object.fromEntries(
+                    group.identities.map((identity) => [
+                      identity,
+                      { amount: 0, shares: 0, paid: $account?.id === identity ? 0 : undefined },
+                    ]),
+                  ),
+                }} />
+            </Actions>
           {/snippet}
         </Async>
       {/if}
