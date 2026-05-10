@@ -4,7 +4,7 @@
   import { Selector } from '@/groups/ui'
   import { groups } from '@/groups'
   import { Delete } from '@/expenses.templates/ui'
-  import { add, update } from '@/expenses'
+  import { add, numbers, update } from '@/expenses'
   import { Section } from '@/app/ui'
   import { back } from '$com/history'
   import Attachments from '../Attachments.svelte'
@@ -31,10 +31,17 @@
 
     if (group === undefined) return
 
+    const total = numbers.total(value)
+    const split = total > 0 ? numbers.split(total, group.identities) : {}
+
     value.participants = Object.fromEntries(
       group.identities.map((identity) => [
         identity,
-        { amount: 0, shares: 0, paid: $account?.id === identity ? 0 : undefined },
+        {
+          amount: split[identity] ?? 0,
+          shares: 0,
+          paid: $account?.id === identity ? 0 : undefined,
+        },
       ]),
     )
   }
