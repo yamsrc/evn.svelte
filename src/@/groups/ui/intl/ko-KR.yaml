@@ -14,3 +14,5 @@ details:
   paid: 네가 결제함
 editor:
   settings: 설정
+selector:
+  none: 나누기

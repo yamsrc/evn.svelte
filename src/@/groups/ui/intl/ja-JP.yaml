@@ -13,3 +13,5 @@ details:
   paid: あなたが支払いました
 editor:
   settings: 設定
+selector:
+  none: 分ける

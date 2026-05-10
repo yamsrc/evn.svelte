@@ -15,3 +15,5 @@ details:
   paid: You’ve paid
 editor:
   settings: Settings
+selector:
+  none: Split

@@ -12,3 +12,5 @@ details:
   paid: 你已付款
 editor:
   settings: 设置
+selector:
+  none: 拆分

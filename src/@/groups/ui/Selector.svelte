@@ -1,22 +1,21 @@
 <script lang="ts">
-  import { ok } from 'svas'
-  import { Component } from '@lucide/svelte'
+  import { ChartPie, Component } from '@lucide/svelte'
   import { Picture } from '@/media/ui'
   import { groups } from '@/groups'
   import { List, Avatars } from '@/app/ui'
   import { buttonVariants } from '$ui/button'
   import { Ellipsis } from '$com/text'
+  import { dict } from './intl'
   import type { Props } from './Selector'
 
   const { id, onchange }: Props = $props()
 
-  const active = $derived(ok($groups) ? $groups : [])
-  const picked = $derived(id ? active.findIndex((group) => group.id === id) + 1 : 0)
+  const picked = $derived(id ? $groups.findIndex((group) => group.id === id) + 1 : 0)
 
   function onpick(index: number) {
     if (index === picked) return
 
-    onchange?.(index === 0 ? undefined : active[index - 1].id)
+    onchange?.(index === 0 ? undefined : $groups[index - 1].id)
   }
 
   const card = 'shrink-0 overflow-hidden rounded-lg'
@@ -24,7 +23,7 @@
     'group-cover relative isolate overflow-hidden rounded-lg bg-cover bg-center py-3 px-4'
 </script>
 
-{#if active.length > 0}
+{#if $groups.length > 0}
   <List.Root {picked} {onpick} align="start" class="py-1 -my-1">
     <List.Option
       index={0}
@@ -33,12 +32,11 @@
         card,
         'w-20! flex-col items-center justify-center text-muted-foreground',
       ]}>
-      <Component />
-      <!-- TODO: add intl -->
-      <span class="text-sm">No group</span>
+      <ChartPie />
+      <span class="text-sm">{$dict.selector.none}</span>
     </List.Option>
 
-    {#each active as group, index (group.id)}
+    {#each $groups as group, index (group.id)}
       <List.Option
         variant="outline"
         class={[card, 'p-0', picked !== index + 1 && 'ring-1 ring-border']}

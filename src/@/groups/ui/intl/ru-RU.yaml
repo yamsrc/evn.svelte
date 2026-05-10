@@ -15,3 +15,5 @@ details:
   paid: Ты заплатил(а)
 editor:
   settings: Настройки
+selector:
+  none: Разделить
