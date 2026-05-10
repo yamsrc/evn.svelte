@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { ok } from 'svas'
   import { account } from '@/iam'
   import { Selector } from '@/groups/ui'
   import { groups } from '@/groups'
@@ -25,13 +24,20 @@
 
     value.links = id ? [...others, { type: 'group', id }] : others
 
-    if (id === undefined) return
+    const total = numbers.total(value)
 
-    const group = (ok($groups) ? $groups : []).find((g) => g.id === id)
+    if (id === undefined) {
+      value.participants = $account
+        ? { [$account.id]: { amount: total, shares: 0, paid: 0 } }
+        : {}
+
+      return
+    }
+
+    const group = $groups.find((g) => g.id === id)
 
     if (group === undefined) return
 
-    const total = numbers.total(value)
     const split = total > 0 ? numbers.split(total, group.identities) : {}
 
     value.participants = Object.fromEntries(
