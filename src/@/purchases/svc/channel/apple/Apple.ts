@@ -17,7 +17,7 @@ export interface AppleProduct {
       priceString: string
       currencyCode: string
       assets: unknown[]
-      discounts: {
+      discounts?: {
         type: string
         modeType: string
         billingPlanType: string

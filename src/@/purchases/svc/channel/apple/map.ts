@@ -26,7 +26,7 @@ export function toProduct(raw: AppleProduct): Product | null {
     currencyCode: buy.currencyCode,
   }
 
-  const intro = buy.discounts.find((d) => d.type === 'IntroOffer')
+  const intro = buy.discounts?.find((d) => d.type === 'IntroOffer')
 
   if (intro !== undefined && TRIAL_PERIOD.test(intro.recurringSubscriptionPeriod))
     product.trial = { period: intro.recurringSubscriptionPeriod, displayPrice: intro.priceFormatted }
