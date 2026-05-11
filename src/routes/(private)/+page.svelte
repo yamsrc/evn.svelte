@@ -6,6 +6,7 @@
   import { Notifications } from '@/notifications/ui'
   import { notifications, scope } from '@/notifications'
   import { account } from '@/iam'
+  import { Cards } from '@/groups/ui'
   import { Recent } from '@/expenses/ui'
   import { expenses } from '@/expenses'
   import { Totals, Tops } from '@/contacts/ui'
@@ -67,6 +68,10 @@
         <Adventures {adventures} notifications={$adventuresNotifications} />
       </Section>
     {/if}
+
+    <Section class="space-y-2">
+      <Cards />
+    </Section>
 
     <Section>
       <Recent {expenses} {receipts} notifications={expensesNotifications} />
