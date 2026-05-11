@@ -16,3 +16,6 @@ editor:
   settings: الإعدادات
 selector:
   none: تقسيم
+card:
+  balance: الرصيد
+  total: الإجمالي

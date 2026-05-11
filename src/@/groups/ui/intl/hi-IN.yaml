@@ -17,3 +17,6 @@ editor:
   settings: सेटिंग्स
 selector:
   none: बांटो
+card:
+  balance: बैलेंस
+  total: कुल

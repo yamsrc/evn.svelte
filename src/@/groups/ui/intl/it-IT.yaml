@@ -17,3 +17,6 @@ editor:
   settings: Impostazioni
 selector:
   none: Dividi
+card:
+  balance: Saldo
+  total: Totale

@@ -17,3 +17,6 @@ editor:
   settings: Настройки
 selector:
   none: Разделить
+card:
+  balance: Баланс
+  total: Всего

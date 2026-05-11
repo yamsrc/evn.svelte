@@ -15,3 +15,6 @@ editor:
   settings: 設定
 selector:
   none: 分ける
+card:
+  balance: 残高
+  total: 合計

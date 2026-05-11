@@ -17,3 +17,6 @@ editor:
   settings: Mipangilio
 selector:
   none: Gawanya
+card:
+  balance: Salio
+  total: Jumla

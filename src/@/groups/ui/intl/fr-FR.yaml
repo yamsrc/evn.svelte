@@ -17,3 +17,6 @@ editor:
   settings: Paramètres
 selector:
   none: Partager
+card:
+  balance: Solde
+  total: Total

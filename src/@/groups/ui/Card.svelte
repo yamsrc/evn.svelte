@@ -1,17 +1,18 @@
 <script lang="ts">
   import { Component } from '@lucide/svelte'
   import { Picture } from '@/media/ui'
-  import { Avatars } from '@/app/ui'
+  import { Avatars, Coins } from '@/app/ui'
   import { Ellipsis } from '$com/text'
+  import { dict } from './intl'
   import type { Props } from './Card'
 
-  const { group, class: classes }: Props = $props()
+  const { group, extended = false, total = 0, class: classes }: Props = $props()
 
   const base =
     'group-cover relative isolate overflow-hidden rounded-lg bg-cover bg-center py-3 px-4'
 </script>
 
-<div class={[base, 'size-full', classes]}>
+<div class={[base, 'size-full text-foreground', classes]}>
   {#if group.picture}
     <Picture
       id={group.picture}
@@ -28,6 +29,16 @@
       {/if}
       <Ellipsis class="font-bold text-lg leading-6">{group.title ?? group.name}</Ellipsis>
     </div>
+
+    {#if extended}
+      <div class="grid grid-cols-2 gap-x-3 w-full text-start">
+        <span class="text-sm font-bold">{$dict.card.balance}</span>
+        <span class="text-sm font-bold">{$dict.card.total}</span>
+        <Coins amount={group.balance} />
+        <Coins amount={total} sign="neutral" />
+      </div>
+    {/if}
+
     <Avatars identities={group.identities} />
   </div>
 </div>

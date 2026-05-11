@@ -16,3 +16,6 @@ editor:
   settings: 설정
 selector:
   none: 나누기
+card:
+  balance: 잔액
+  total: 총합

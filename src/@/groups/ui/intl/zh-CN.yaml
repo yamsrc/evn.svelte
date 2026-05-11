@@ -14,3 +14,6 @@ editor:
   settings: 设置
 selector:
   none: 拆分
+card:
+  balance: 余额
+  total: 总计

@@ -17,3 +17,6 @@ editor:
   settings: Ayarlar
 selector:
   none: Bölüş
+card:
+  balance: Bakiye
+  total: Toplam

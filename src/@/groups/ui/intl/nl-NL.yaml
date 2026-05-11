@@ -17,3 +17,6 @@ editor:
   settings: Instellingen
 selector:
   none: Verdelen
+card:
+  balance: Saldo
+  total: Totaal

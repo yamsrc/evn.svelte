@@ -17,3 +17,6 @@ editor:
   settings: Settings
 selector:
   none: Split
+card:
+  balance: Balance
+  total: Total

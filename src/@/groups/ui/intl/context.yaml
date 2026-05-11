@@ -34,3 +34,8 @@ inputs:
   selector:
     none:
       input: Split
+  card:
+    balance:
+      input: Balance
+    total:
+      input: Всего

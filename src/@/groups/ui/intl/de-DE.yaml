@@ -17,3 +17,6 @@ editor:
   settings: Einstellungen
 selector:
   none: Aufteilen
+card:
+  balance: Guthaben
+  total: Gesamt

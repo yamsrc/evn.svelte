@@ -1,12 +1,11 @@
 <script lang="ts">
   import { writable } from 'svelte/store'
   import { ensure, ok } from 'svas'
-  import { ChartPie, Coins, Component, Fan, FileChartPie, Plus, UserPlus } from '@lucide/svelte'
+  import { ChartPie, Component, FileChartPie, Plus, UserPlus } from '@lucide/svelte'
   import { Scan } from '@/receipts/ui'
   import { account } from '@/iam'
   import { templates, type Template } from '@/expenses.templates'
   import { dict as contactsDict } from '@/contacts/ui/intl'
-  import { adventures } from '@/adventures'
   import { dict } from '$lib/intl'
   import { Actions } from '$com/shell'
   import { QR } from '$com/qr'
@@ -16,26 +15,12 @@
   import { actionVariants } from './Action'
   import type { Props } from './Actions'
 
-  const {
-    showContacts = true,
-    showStartAdventure = false,
-    showExpensesTemplates = false,
-  }: Props = $props()
+  const { showContacts = true }: Props = $props()
 
   const active = writable(false)
   const variant = [Dropdown.itemVariants({ direction: 'row' }), 'whitespace-nowrap']
 
   let dropdown = $state<Dropdown.Root | undefined>()
-
-  const adventure = $derived.by(() => {
-    if (!ok($adventures)) return
-
-    const active = $adventures.filter((a) => !a.archived)
-
-    return active.length > 0
-      ? active.reduce((a, b) => (a._created > b._created ? a : b))
-      : undefined
-  })
 
   function data(close = true) {
     const me = ensure(account)
@@ -65,7 +50,7 @@
     </Dropdown.Trigger>
     <Dropdown.Content>
       <Dropdown.Layer>
-        {#if showExpensesTemplates && ok($templates) && $templates.length > 0}
+        {#if ok($templates) && $templates.length > 0}
           <Dropdown.Group direction="col">
             {#each $templates as template (template.id)}
               <Dropdown.Item onclick={() => copy(template)}>
@@ -77,25 +62,6 @@
           <Dropdown.Separator />
         {/if}
 
-        {#if showStartAdventure || adventure}
-          <Dropdown.Group direction="col">
-            {#if adventure}
-              <Dropdown.Item
-                id="nav-actions-adventure-expense-button"
-                href={`/adventures/${adventure.id}/expenses/editor/`}>
-                <Coins />
-                {adventure.title}
-              </Dropdown.Item>
-            {/if}
-            {#if showStartAdventure}
-              <Dropdown.Item id="nav-actions-adventures-new-button" href="/adventures/editor/">
-                <Fan />
-                {$dict.actions.adventures.adventure}
-              </Dropdown.Item>
-            {/if}
-          </Dropdown.Group>
-          <Dropdown.Separator />
-        {/if}
         {#if showContacts}
           <Dropdown.Group direction="col">
             <Dropdown.Item id="nav-actions-contacts-new-button" layer="contacts">
@@ -109,6 +75,7 @@
           </Dropdown.Group>
           <Dropdown.Separator />
         {/if}
+
         <Dropdown.Group direction="row">
           <Dropdown.Item id="nav-actions-cheques-input-button" href="/expenses/editor/">
             <ChartPie />
