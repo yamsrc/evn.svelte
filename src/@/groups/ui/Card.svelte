@@ -12,7 +12,7 @@
     'group-cover relative isolate overflow-hidden rounded-lg bg-cover bg-center py-3 px-4'
 </script>
 
-<div class={[base, 'size-full text-foreground', classes]}>
+<div class={[base, 'size-full text-foreground border', classes]}>
   {#if group.picture}
     <Picture
       id={group.picture}
