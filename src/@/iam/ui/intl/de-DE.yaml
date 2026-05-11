@@ -10,9 +10,7 @@ auth:
   passkeysNotSupported: Passkeys nicht unterstützt
   passkeysWarning: Ihr Browser respektiert Ihre Privatsphäre und Sicherheit nicht.
   learnMore: Mehr erfahren
-  passwordBlank: >-
-    Lassen Sie das Passwort leer, <nobr>um</nobr> <nobr>einen Einmal-Code</nobr>
-    zu erhalten.
+  passwordBlank: Lassen Sie das Passwort leer, <nobr>um</nobr> <nobr>einen Einmal-Code</nobr> zu erhalten.
   otpInstructions: Geben Sie den an Ihre E-Mail gesendeten Code ein. Er läuft in 5 Minuten ab.
   holdToLogout: Halten Sie gedrückt, um sich abzumelden
   continueWith: |
@@ -20,19 +18,15 @@ auth:
     (provider) => {
       return `Fortfahren mit ${provider}`
     }
-  passkeysDescription: >-
-    Passkeys sind sicherer als Passwörter, einfacher zu verwenden und können
-    nicht gestohlen werden.
+  passkeysDescription: Passkeys sind sicherer als Passwörter, einfacher zu verwenden und können nicht gestohlen werden.
   yourName: Ihr Name
   password: Passwort
   refresh:
-    description: >-
+    description: |-
       !js
-
-      (name) => `${name ? name + ", aus" : "Aus"} Sicherheitsgründen sind Ihre
-      Anmeldedaten abgelaufen. Bitte melden Sie sich erneut an, um
-      fortzufahren.`
+      (name) => `${name ? name + ", aus" : "Aus"} Sicherheitsgründen sind Ihre Anmeldedaten abgelaufen. Bitte melden Sie sich erneut an, um fortzufahren.`
     title: Willkommen zurück
+    continue: Weiter
   signout: Abmelden
   login: Anmelden
   signin: Anmelden

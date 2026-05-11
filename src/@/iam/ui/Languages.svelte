@@ -1,6 +1,5 @@
 <script lang="ts">
-  import { options } from '@/accounts/ui/Language'
-  import { locale, selected, type Locale } from '$lib/intl'
+  import { dictionaries, locale, locales, selected, type Locale } from '$lib/intl'
   import { Scrollable } from '$com/scrollable'
   import type { Props } from './Languages'
 
@@ -84,26 +83,26 @@
     onselect?.(lang)
   }
 
-  const scroll = options.findIndex((option) => option.value === $locale)
+  const scroll = locales.indexOf($locale)
 </script>
 
 <svelte:window {onresize} />
 
 <Scrollable infinite align="center" class="text-sm" dir="ltr" {onscroll} {scroll} id={SCROLL_ID}>
-  {#each options as option (option.value)}
+  {#each locales as code (code)}
     <button
-      onclick={(e) => click(e, option.value)}
+      onclick={(e) => click(e, code)}
       class={[
         'snap-center px-2 py-1 text-muted-foreground transition-all',
-        $locale === option.value && 'pointer-events-none text-foreground bg-muted rounded-md',
+        $locale === code && 'pointer-events-none text-foreground bg-muted rounded-md',
       ]}
-      data-value={option.value}>
+      data-value={code}>
       <span
         class={[
           'inline-block min-w-8',
-          (option.value === 'ja-JP' || option.value === 'ko-KR') && 'min-w-12',
+          (code === 'ja-JP' || code === 'ko-KR') && 'min-w-12',
         ]}>
-        {option.label}
+        {dictionaries[code].native}
       </span>
     </button>
   {/each}

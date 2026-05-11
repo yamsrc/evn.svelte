@@ -10,9 +10,7 @@ auth:
   passkeysNotSupported: Chiavi di accesso non supportate
   passkeysWarning: Il tuo browser non rispetta la tua privacy e sicurezza.
   learnMore: Scopri di più
-  passwordBlank: >-
-    Lascia la password vuota <nobr>per ricevere</nobr> <nobr>un codice
-    monouso</nobr>.
+  passwordBlank: Lascia la password vuota <nobr>per ricevere</nobr> <nobr>un codice monouso</nobr>.
   otpInstructions: Inserisci il codice inviato alla tua email. Scade in 5 minuti.
   holdToLogout: Tieni premuto per disconnetterti
   continueWith: |
@@ -20,19 +18,15 @@ auth:
     (provider) => {
       return `Continua con ${provider}`
     }
-  passkeysDescription: >-
-    Le passkey sono più sicure delle password, più facili da usare e non possono
-    essere rubate.
+  passkeysDescription: Le passkey sono più sicure delle password, più facili da usare e non possono essere rubate.
   yourName: Il tuo nome
   password: Password
   refresh:
-    description: >-
+    description: |-
       !js
-
-      (name) => `${name ? name + ", per" : "Per"} motivi di sicurezza, le tue
-      credenziali sono scadute. Effettua di nuovo il login
-      per continuare.`
+      (name) => `${name ? name + ", per" : "Per"} motivi di sicurezza, le tue credenziali sono scadute. Effettua di nuovo il login per continuare.`
     title: Bentornato
+    continue: Continua
   signout: Esci
   login: Accedi
   signin: Accedi

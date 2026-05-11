@@ -1,7 +1,7 @@
 <script lang="ts">
   import { ok } from 'svas'
   import { Screen, Authenticated, Goto } from '@/app/ui'
-  import { oidc } from '$config/configuration.js'
+  import { oidc } from '$config/configuration'
   import { page } from '$app/state'
   import Accept from './Accept.svelte'
   import type { PageData } from './$types.js'
