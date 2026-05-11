@@ -9,3 +9,14 @@ expenses:
   title: Événements
   empty: Aucune dépense partagée pour le moment.
 balance: Votre solde
+cover: Photo de couverture
+details:
+  total: Total dépensé
+  paid: Tu as payé
+editor:
+  settings: Paramètres
+selector:
+  none: Partager
+card:
+  balance: Solde
+  total: Total

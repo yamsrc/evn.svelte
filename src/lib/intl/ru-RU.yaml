@@ -29,7 +29,7 @@ nav:
   home: Главная
   profile: Я
   contacts: Друзья
-  expenses: События
+  expenses: Расходы
 terms: Условия и положения
 privacy: Политика конфиденциальности
 madeBy: Сделано
@@ -155,7 +155,7 @@ expenses:
     location:
       placeholder: Где? (необязательно)
     save: Сохранить и обновить балансы
-  title: События
+  title: Расходы
   balance:
     total: Итоговый счет
     youAreOwed: Вам должны

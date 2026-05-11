@@ -29,7 +29,7 @@ nav:
   home: Home
   profile: Ik
   contacts: Vrienden
-  expenses: Evenementen
+  expenses: Uitgaven
 terms: Algemene voorwaarden
 privacy: Privacybeleid
 madeBy: Gemaakt door
@@ -156,7 +156,7 @@ expenses:
     location:
       placeholder: Waar? (optioneel)
     save: Opslaan en saldi bijwerken
-  title: Evenementen
+  title: Uitgaven
   balance:
     total: Totaalrekening
     youAreOwed: Je hebt iets tegoed

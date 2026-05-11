@@ -9,3 +9,14 @@ expenses:
   title: Events
   empty: No shared expenses so far.
 balance: Your balance
+cover: Cover Photo
+details:
+  total: Total spent
+  paid: You’ve paid
+editor:
+  settings: Settings
+selector:
+  none: Split
+card:
+  balance: Balance
+  total: Total

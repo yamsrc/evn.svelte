@@ -29,7 +29,7 @@ nav:
   home: Головна
   profile: Я
   contacts: Друзі
-  expenses: Події
+  expenses: Витрати
 terms: Умови та положення
 privacy: Політика конфіденційності
 madeBy: Створено
@@ -155,7 +155,7 @@ expenses:
     location:
       placeholder: Де? (необов’язково)
     save: Зберегти й оновити баланси
-  title: Події
+  title: Витрати
   balance:
     total: Загальний рахунок
     youAreOwed: Вам винні

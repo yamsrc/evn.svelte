@@ -9,3 +9,14 @@ expenses:
   title: Eventos
   empty: Aún no hay gastos compartidos.
 balance: Tu saldo
+cover: Foto de portada
+details:
+  total: Total gastado
+  paid: Has pagado
+editor:
+  settings: Configuración
+selector:
+  none: Dividir
+card:
+  balance: Saldo
+  total: Total

@@ -6,28 +6,27 @@
   import { Notifications } from '@/notifications/ui'
   import { notifications, scope } from '@/notifications'
   import { account } from '@/iam'
+  import { Cards as Groups } from '@/groups/ui'
+  import { groups } from '@/groups'
   import { Recent } from '@/expenses/ui'
   import { expenses } from '@/expenses'
   import { Totals, Tops } from '@/contacts/ui'
   import { contacts } from '@/contacts'
   import { Header, Section } from '@/app/ui'
   import { Actions } from '@/app/ui'
-  import Adventures from '@/adventures/ui/Adventures.svelte'
-  import { adventures } from '@/adventures'
   import { Avatar } from '@/accounts/ui'
   import { dict } from '$lib/intl'
 
   const expensesOnlyNotifications = scope({ domain: 'expenses' })
   const transfersNotifications = scope({ domain: 'contacts', event: 'transferred' })
-  const adventuresNotifications = scope({ domain: 'adventures' })
   const expensesNotifications = $derived([
     ...$expensesOnlyNotifications,
     ...$transfersNotifications,
   ])
 </script>
 
-<Async store={combined(account, contacts, expenses, receipts, notifications, adventures)}>
-  {#snippet awaited([account, contacts, expenses, receipts, notifications, adventures])}
+<Async store={combined(account, contacts, expenses, receipts, groups, notifications)}>
+  {#snippet awaited([account, contacts, expenses, receipts, groups, notifications])}
     <Section>
       <Header.Root>
         <Header.Title>{$dict.home.title(account.name)}</Header.Title>
@@ -62,9 +61,10 @@
       <Tops {contacts} />
     </Section>
 
-    {#if adventures.length > 0}
+    {#if groups.length > 0}
       <Section class="space-y-2">
-        <Adventures {adventures} notifications={$adventuresNotifications} />
+        <h2>{$dict.groups.title}</h2>
+        <Groups {groups} extended />
       </Section>
     {/if}
 

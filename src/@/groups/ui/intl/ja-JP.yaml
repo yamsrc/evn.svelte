@@ -7,3 +7,14 @@ expenses:
   title: イベント
   empty: まだ共有された支出はありません。
 balance: あなたの残高
+cover: カバー写真
+details:
+  total: 合計支出
+  paid: あなたが支払いました
+editor:
+  settings: 設定
+selector:
+  none: 分ける
+card:
+  balance: 残高
+  total: 合計

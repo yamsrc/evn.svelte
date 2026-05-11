@@ -1,22 +1,25 @@
 <script lang="ts">
   import { create } from '@/groups'
-  import { goto } from '$app/navigation'
+  import { back } from '$com/history'
   import Form from './Form.svelte'
   import type { Props } from './Edit'
   import type { Value } from './Context'
 
-  let { value = $bindable(), busy = $bindable(false) }: Props = $props()
+  let { id, value = $bindable(), busy = $bindable(false) }: Props = $props()
 
   async function onsubmit(value: Value) {
+    if (id !== undefined) return back(`/contacts/groups/${id}/`)
+
     const group = await create({
       name: value.name,
+      picture: value.picture || undefined,
       reduction: value.reduction,
       participants: value.identities.length > 0 ? value.identities : undefined,
     })
 
     if (group instanceof Error) return
 
-    await goto(`/contacts/groups/${group.id}/`)
+    await back(`/contacts/groups/${group.id}/`)
   }
 </script>
 

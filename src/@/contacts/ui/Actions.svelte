@@ -29,7 +29,7 @@
 </script>
 
 <Actions>
-  <Action id="nav-action-group" href="./groups/" variant="secondary">
+  <Action id="nav-action-group" href="./groups/editor/" variant="secondary">
     <Component />
   </Action>
   <Dropdown.Root bind:this={dropdown}>

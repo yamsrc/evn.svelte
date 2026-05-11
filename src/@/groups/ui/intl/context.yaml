@@ -17,3 +17,25 @@ inputs:
   balance:
     input: Your balance
     context: Label of group expenses balance
+  cover:
+    input: Cover
+    context: Section heading for optional group cover image picker
+  details:
+    total:
+      input: Total spent
+      context: Label for total amount spent by all group members
+    paid:
+      input: You've paid
+      context: Label for amount paid by the current user in a group
+  editor:
+    settings:
+      input: Settings
+      context: Header title for editing group settings
+  selector:
+    none:
+      input: Split
+  card:
+    balance:
+      input: Balance
+    total:
+      input: Всего

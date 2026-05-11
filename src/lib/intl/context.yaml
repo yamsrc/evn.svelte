@@ -69,7 +69,8 @@ inputs:
     contacts:
       input: Friends
     expenses:
-      input: Events
+      input: Expenses
+      context: bottom navigation tab label
   terms:
     input: Terms & conditions
   privacy:
@@ -259,7 +260,7 @@ inputs:
       save:
         input: Save and update balances
     title:
-      input: Events
+      input: Expenses
     empty:
       title:
         input: No expenses yet

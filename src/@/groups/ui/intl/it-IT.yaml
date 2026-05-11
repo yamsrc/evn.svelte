@@ -9,3 +9,14 @@ expenses:
   title: Eventi
   empty: Nessuna spesa condivisa finora.
 balance: Il tuo saldo
+cover: Foto di copertina
+details:
+  total: Totale speso
+  paid: Hai pagato
+editor:
+  settings: Impostazioni
+selector:
+  none: Dividi
+card:
+  balance: Saldo
+  total: Totale

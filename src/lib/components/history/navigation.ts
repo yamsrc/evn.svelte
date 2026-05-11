@@ -24,8 +24,8 @@ export async function back(href: string) {
   const target = path(new URL(href, window.location.href))
   const index = impl.closest(target)
 
-  if (index > 0 && index <= 42) window.history.go(-index)
-  else if (impl.canGoBack()) window.history.back()
+  if (impl.canGoBack()) window.history.back()
+  else if (index > 0 && index <= 42) window.history.go(-index)
   else await goto(href)
 }
 

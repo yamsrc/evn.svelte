@@ -18,7 +18,7 @@
 
   setContext({
     state: ui,
-    pick: (index) => onpick(index),
+    pick: (index) => onpick?.(index),
   })
 </script>
 

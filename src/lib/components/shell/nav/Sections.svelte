@@ -1,6 +1,5 @@
 <script lang="ts">
   import { onMount } from 'svelte'
-  import { back } from '$com/history'
   import { page } from '$app/state'
   import { goto, preloadCode } from '$app/navigation'
   import { faded } from './store'
@@ -26,7 +25,7 @@
   }
 
   function click(section: Section) {
-    if (collapsed) void back(section.href)
+    if (collapsed) void goto(section.href)
     else {
       const ref = href(section)
 
