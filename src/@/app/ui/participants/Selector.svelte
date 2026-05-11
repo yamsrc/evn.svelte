@@ -106,7 +106,7 @@
 
 <Section>
   <Header.Root>
-    <Header.Title>{title ?? $dict.participants.add.button}</Header.Title>
+    <Header.Title>{title || $dict.participants.add.button}</Header.Title>
   </Header.Root>
 </Section>
 

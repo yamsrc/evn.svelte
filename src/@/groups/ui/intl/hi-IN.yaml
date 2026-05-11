@@ -9,3 +9,14 @@ expenses:
   title: इवेंट्स
   empty: अभी तक कोई साझा खर्च नहीं हैं।
 balance: आपकी शेष राशि
+cover: कवर फोटो
+details:
+  total: कुल खर्च
+  paid: तुमने भुगतान किया है
+editor:
+  settings: सेटिंग्स
+selector:
+  none: बांटो
+card:
+  balance: बैलेंस
+  total: कुल

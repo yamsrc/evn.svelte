@@ -5,8 +5,8 @@ import type { Group } from './Group'
 const groups = origin.resource<Group>('/groups/', { credentials: 'include' })
 // const invitations = origin.resource<Group>('/groups/invitations/', { credentials: 'include' })
 
-export type Initial = Pick<Group, 'name'> & Partial<Pick<Group, 'reduction'>> & { participants?: string[] }
-export type Editable = Partial<Pick<Group, 'name' | 'reduction'>>
+export type Initial = Pick<Group, 'name'> & Partial<Pick<Group, 'picture' | 'reduction'>> & { participants?: string[] }
+export type Editable = Partial<Pick<Group, 'name' | 'picture' | 'reduction'>>
 
 export async function get(identity: string): Promise<Group[] | Error> {
   return groups.json(identity)
@@ -36,4 +36,10 @@ export const invitations = {
   resource: origin.resource<Group>('/groups/invitations/'),
   get: (id: string) => invitations.resource.json(id),
   del: (id: string) => invitations.resource.json(id, { method: 'DELETE', credentials: 'include' }),
+}
+
+export const pictures = {
+  resource: origin.resource<{ id: string }>('/groups/pictures'),
+  post: (body: File): Promise<{ id: string } | Error> =>
+    pictures.resource.json('', { method: 'POST', body, credentials: 'include' }),
 }

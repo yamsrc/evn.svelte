@@ -53,6 +53,8 @@ When working with Svelte code:
 
 - **Use `$effect` only as a last resort** - Having `$effect` in code indicates a bad architectural solution that leads to bugs and unexpected behaviors. Always prefer reactive declarations (`$:`), proper state management, and declarative patterns over `$effect`. If you find yourself reaching for `$effect`, reconsider the architecture and find a more declarative solution.
 
+- **Never** use `resolve` from `$app/navigation`
+
 ### Class Merging with Array Syntax
 
 Use Svelte array syntax for conditional classes (NOT cn utility):

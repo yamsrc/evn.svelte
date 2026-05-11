@@ -9,3 +9,14 @@ expenses:
   title: Veranstaltungen
   empty: Bisher keine geteilten Ausgaben.
 balance: Dein Kontostand
+cover: Titelbild
+details:
+  total: Insgesamt ausgegeben
+  paid: Du hast bezahlt
+editor:
+  settings: Einstellungen
+selector:
+  none: Aufteilen
+card:
+  balance: Guthaben
+  total: Gesamt

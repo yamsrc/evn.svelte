@@ -29,7 +29,7 @@ nav:
   home: Startseite
   profile: Ich
   contacts: Freunde
-  expenses: Veranstaltungen
+  expenses: Ausgaben
 terms: Allgemeine Geschäftsbedingungen
 privacy: Datenschutzrichtlinie
 madeBy: Erstellt von
@@ -158,7 +158,7 @@ expenses:
     location:
       placeholder: Wo? (optional)
     save: Speichern und Salden aktualisieren
-  title: Veranstaltungen
+  title: Ausgaben
   balance:
     total: Gesamtrechnung
     youAreOwed: Dir steht etwas zu

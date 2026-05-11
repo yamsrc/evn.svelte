@@ -9,3 +9,14 @@ expenses:
   title: События
   empty: Пока нет общих расходов.
 balance: Ваш баланс
+cover: Обложка
+details:
+  total: Всего потрачено
+  paid: Ты заплатил(а)
+editor:
+  settings: Настройки
+selector:
+  none: Разделить
+card:
+  balance: Баланс
+  total: Всего

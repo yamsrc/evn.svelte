@@ -5,6 +5,6 @@
   const { children, class: classes, onpick, ...rest }: Props = $props()
 </script>
 
-<Picker.Root class={['gap-2', classes]} onpick={onpick ?? (() => {})} bleed {...rest}>
+<Picker.Root class={['gap-2', classes]} {onpick} bleed {...rest}>
   {@render children()}
 </Picker.Root>

@@ -3,7 +3,6 @@
   import { Avatars, Balance } from '@/app/ui'
   import { Attention } from '$com/shell'
   import { Panel } from '$com/panel'
-  import { dict } from './intl'
   import type { Props } from './Panel'
 
   let { group, selected = $bindable(), highlighted, onselect }: Props = $props()
@@ -37,7 +36,7 @@
   {/snippet}
   {#snippet right()}
     {#if group.balance}
-      <Balance balance={group.balance} youOwe={$dict.balance} youAreOwed={$dict.balance} />
+      <Balance balance={group.balance} />
     {/if}
     {#if highlighted}
       <Attention class="absolute top-2 right-2 z-10" />

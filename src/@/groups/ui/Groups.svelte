@@ -1,7 +1,7 @@
 <script lang="ts">
   import { unseen } from '@/groups'
   import { Section } from '@/app/ui'
-  import Group from './Panel.svelte'
+  import Panel from './Panel.svelte'
   import type { Props } from './Groups'
 
   let { groups, notifications, title, selection = $bindable() }: Props = $props()
@@ -27,9 +27,9 @@
           {@const selected = selection?.has(group.id)}
           {@const highlighted = unseen(group, notifications ?? [])}
           {#if selectable}
-            <Group {group} {selected} {highlighted} {onselect} />
+            <Panel {group} {selected} {highlighted} {onselect} />
           {:else}
-            <Group {group} {highlighted} />
+            <Panel {group} {highlighted} />
           {/if}
         {/each}
       </div>

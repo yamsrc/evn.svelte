@@ -29,7 +29,7 @@ nav:
   home: ホーム
   profile: 私
   contacts: 友だち
-  expenses: イベント
+  expenses: 支出
 terms: 利用規約
 privacy: プライバシーポリシー
 madeBy: 作成者
@@ -140,7 +140,7 @@ expenses:
     location:
       placeholder: どこですか？（任意）
     save: 保存して残高を更新
-  title: イベント
+  title: 支出
   balance:
     total: 合計金額
     youAreOwed: あなたには支払いが残っています

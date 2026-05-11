@@ -6,11 +6,8 @@
   import { account } from '@/iam'
   import { Actions, Expenses, Create } from '@/expenses/ui'
   import { expenses, filter as filterExpenses } from '@/expenses'
-  import { hints } from '@/app/ui/hint'
   import { Section } from '@/app/ui'
   import { Header } from '@/app/ui'
-  import Adventures from '@/adventures/ui/Adventures.svelte'
-  import { Hint } from '@/adventures/ui'
   import { adventures, filter as filterAdventures } from '@/adventures'
   import { Avatar } from '@/accounts/ui'
   import { Input } from '$ui/input'
@@ -21,10 +18,8 @@
 
   const expensesNotifications = scope({ domain: 'expenses' })
   const transfersNotifications = scope({ domain: 'contacts', event: 'transferred' })
-  const adventuresNotifications = scope({ domain: 'adventures' })
   const receiptsNotifications = scope({ domain: 'receipts' })
   const notifications = $derived([...$expensesNotifications, ...$transfersNotifications])
-  const adventuresHint = $derived($hints?.['adventures'] !== true && !search)
 </script>
 
 <Async store={combined(expenses, adventures, receipts, account)}>
@@ -53,20 +48,8 @@
       </Section>
     {/if}
 
-    {#if filteredAdventures.length > 0 || adventuresHint}
-      <Section class="space-y-2">
-        <h2>{$dict.adventures.title}</h2>
-        {#if filteredAdventures.length > 0}
-          <Adventures adventures={filteredAdventures} notifications={$adventuresNotifications} />
-        {:else if adventuresHint}
-          <Hint />
-        {/if}
-      </Section>
-    {/if}
-
     {#if filteredExpenses.length > 0 || filteredReceipts.length > 0}
       <Section class="space-y-2">
-        <h2>{$dict.expenses.expenses.title}</h2>
         <Receipts receipts={filteredReceipts} notifications={$receiptsNotifications} />
         <Expenses expenses={filteredExpenses} {notifications} />
       </Section>

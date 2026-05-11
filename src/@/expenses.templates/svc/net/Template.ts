@@ -4,6 +4,7 @@ export interface Template {
   title: string
   location?: string
   participants: Participants
+  links?: Link[]
   _version: number
   _deleted?: number | null
 }
@@ -14,4 +15,9 @@ interface Participant {
   amount: number
   paid?: number
   comment?: string
+}
+
+interface Link {
+  type: 'receipt' | 'group'
+  id: string
 }

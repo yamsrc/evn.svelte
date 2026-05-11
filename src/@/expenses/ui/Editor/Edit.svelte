@@ -1,9 +1,12 @@
 <script lang="ts">
+  import { account } from '@/iam'
+  import { Selector } from '@/groups/ui'
+  import { groups } from '@/groups'
   import { Delete } from '@/expenses.templates/ui'
-  import { add, update } from '@/expenses'
+  import { add, numbers, update } from '@/expenses'
   import { Section } from '@/app/ui'
-  import { Selector } from '@/adventures/ui'
   import { back } from '$com/history'
+  import { goto } from '$app/navigation'
   import Attachments from '../Attachments.svelte'
   import Template from './Template.svelte'
   import { Form } from './Form'
@@ -15,25 +18,57 @@
 
   const ctx = getContext()
 
+  const groupId = $derived(value.links?.find((link) => link.type === 'group')?.id)
+
+  function onpickGroup(id?: string) {
+    const others = (value.links ?? []).filter((link) => link.type !== 'group')
+
+    value.links = id ? [...others, { type: 'group', id }] : others
+
+    const total = numbers.total(value)
+
+    if (id === undefined) {
+      value.participants = $account ? { [$account.id]: { amount: total, shares: 0, paid: 0 } } : {}
+
+      return
+    }
+
+    const group = $groups.find((g) => g.id === id)
+
+    if (group === undefined) return
+
+    const split = total > 0 ? numbers.split(total, group.identities) : {}
+
+    value.participants = Object.fromEntries(
+      group.identities.map((identity) => [
+        identity,
+        {
+          amount: split[identity] ?? 0,
+          shares: 0,
+          paid: $account?.id === identity ? 0 : undefined,
+        },
+      ]),
+    )
+  }
+
   async function onsubmit(value: Value) {
-    if (JSON.stringify(ctx.value) !== ctx.snapshot) {
+    const creating = id === undefined
+    const modified = JSON.stringify(ctx.value) !== ctx.snapshot
+
+    if (creating || modified) {
       const expense = id === undefined ? await add(value) : await update(id, value)
 
       if (expense instanceof Error) return expense
     }
 
-    await back('/expenses/')
+    if (groupId) await goto(`/contacts/groups/${groupId}`)
+    else await back('/expenses/')
   }
 </script>
 
 {#if !id}
   <Section class="overflow-visible">
-    <Selector
-      draft={{
-        title: ctx.value.title,
-        location: ctx.value.location,
-        attachments: [...ctx.value.attachments],
-      }} />
+    <Selector id={groupId} onchange={onpickGroup} />
   </Section>
 {/if}
 
@@ -50,7 +85,7 @@
 
   {#if value.copied}
     <div class="flex justify-center">
-      <Delete id={value.copied} ondelete={() => void back('/expenses/')} />
+      <Delete id={value.copied} ondelete={() => (value.copied = undefined)} />
     </div>
   {/if}
 </Section>

@@ -2,4 +2,4 @@
   import { Actions } from '@/app/ui'
 </script>
 
-<Actions showContacts={false} showStartAdventure showExpensesTemplates />
+<Actions showContacts={false} />
