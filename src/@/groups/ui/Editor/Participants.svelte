@@ -43,7 +43,7 @@
           {#if contact?.account && ok(contact.account)}
             <Panel
               account={contact.account}
-              balance={contact.balances?.[id]}
+              balance={ctx.id ? contact.balances?.[ctx.id] : contact.balance}
               href={`/contacts/${id}/`} />
           {:else}
             <Async store={accounts.get(id)}>
