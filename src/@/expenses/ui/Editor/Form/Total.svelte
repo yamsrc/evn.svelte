@@ -9,16 +9,25 @@
 
   const ctx = getContext()
   const ids = $derived(Object.keys(value.participants))
-  const even = $derived(numbers.even(value.participants))
 
   function oninput(amount: number) {
     ctx.derived = amount === 0
 
-    if (even && ids.length > 0) {
-      const splitAmounts = numbers.split(amount, ids)
+    if (ids.length > 0) {
+      let touched = 0
 
-      for (const [id, amount] of Object.entries(splitAmounts))
-        value.participants[id].amount = amount
+      for (const id of ids)
+        if (value.participants[id].touched === true) touched += value.participants[id].amount
+
+      if (touched >= amount) return
+
+      const untouched = ids.filter((id) => value.participants[id].touched !== true)
+
+      if (untouched.length > 0) {
+        const parts = numbers.split(amount - touched, untouched)
+
+        for (const [id, part] of Object.entries(parts)) value.participants[id].amount = part
+      }
     }
 
     total = amount

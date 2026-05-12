@@ -1,6 +1,7 @@
 <script lang="ts">
   import { Async } from 'svas'
   import { account as me } from '@/iam'
+  import { numbers } from '@/expenses'
   import { CoinsInput } from '@/app/ui'
   import { Avatar, Title } from '@/accounts/ui'
   import { accounts } from '@/accounts'
@@ -24,13 +25,14 @@
     value.participants[id].amount = amount
     value.participants[id].touched = true
 
+    if (ctx.derived !== false) total = numbers.total(value)
+
     // ping svelte
     value = { ...value }
   }
 </script>
 
 <div class="space-y-2">
-  <!-- Participants -->
   {#each participants as id, i (id)}
     {#if i > 0}
       <Separator />
