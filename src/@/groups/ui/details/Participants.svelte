@@ -2,20 +2,19 @@
   import { account } from '@/iam'
   import { Leaderboard } from '@/contacts/ui'
   import { dict as common } from '$lib/intl'
-  import type { Expense } from '@/expenses'
 
   interface Props {
     identities: string[]
-    expenses: Expense[]
+    balances?: Record<string, number>
     class?: string
   }
 
-  const { identities, expenses, class: classes }: Props = $props()
+  const { identities, balances, class: classes }: Props = $props()
 
   const entries = $derived(
     identities.map((id) => ({
       id,
-      value: expenses.reduce((sum, expense) => sum + (expense.participants[id]?.paid ?? 0), 0),
+      value: balances?.[id] ?? 0,
       name: id === $account?.id ? $common.expenses.me : undefined,
       href: id === $account?.id ? '/me/' : `/contacts/${id}/`,
     })),
