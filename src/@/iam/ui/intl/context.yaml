@@ -9,6 +9,8 @@ inputs:
         context: Preserve html tags where appropriate
       title:
         input: Welcome back
+      continue:
+        input: Continue
     signout:
       input: Sign out
     login:

@@ -10,9 +10,7 @@ auth:
   passkeysNotSupported: Geçiş anahtarları desteklenmiyor
   passkeysWarning: Tarayıcınız gizliliğinize ve güvenliğinize saygı göstermiyor.
   learnMore: Daha fazla bilgi edinin
-  passwordBlank: >-
-    Tek seferlik bir şifre almak için <nobr>şifreyi boş</nobr>
-    <nobr>bırakın.</nobr>
+  passwordBlank: Tek seferlik bir şifre almak için <nobr>şifreyi boş</nobr> <nobr>bırakın.</nobr>
   otpInstructions: E-postanıza gönderilen kodu girin. 5 dakika içinde süresi dolacak.
   holdToLogout: Çıkış yapmak için basılı tutun
   continueWith: |
@@ -20,19 +18,15 @@ auth:
     (provider) => {
       return `${provider} ile devam et`
     }
-  passkeysDescription: >-
-    Geçiş anahtarları şifrelerden daha güvenlidir, kullanımı daha kolaydır ve
-    çalınamaz.
+  passkeysDescription: Geçiş anahtarları şifrelerden daha güvenlidir, kullanımı daha kolaydır ve çalınamaz.
   yourName: Adınız
   password: Şifre
   refresh:
-    description: >-
+    description: |-
       !js
-
-      (name) => `${name ? name + ", güvenlik nedeniyle" : "Güvenlik nedeniyle"}
-      giriş bilgilerinizin süresi doldu. Devam etmek için lütfen tekrar giriş
-      yapın.`
+      (name) => `${name ? name + ", güvenlik nedeniyle" : "Güvenlik nedeniyle"} giriş bilgilerinizin süresi doldu. Devam etmek için lütfen tekrar giriş yapın.`
     title: Tekrar hoş geldiniz
+    continue: Devam et
   signout: Oturumu kapat
   login: Giriş Yap
   signin: Giriş Yap

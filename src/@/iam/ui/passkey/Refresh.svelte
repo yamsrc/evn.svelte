@@ -1,8 +1,8 @@
 <script lang="ts">
   import { Fingerprint } from '@lucide/svelte'
+  import { dict } from '@/iam/ui/intl'
   import { passkeys } from '@/iam'
   import { Button } from '$ui/button'
-  import { dict } from '$lib/intl'
   import { Loader } from '$com/loader'
   import type { AccountLike } from '../AccountLike'
 
@@ -21,9 +21,8 @@
 
 <Button
   class="disabled:[&>.x-icon]:hidden [&>.x-loader]:hidden disabled:[&>.x-loader]:block"
-  {onclick}
->
+  {onclick}>
   <Fingerprint class="size-5 x-icon" />
   <Loader class="x-loader" />
-  {$dict.actions.continue}
+  {$dict.auth.refresh.continue}
 </Button>

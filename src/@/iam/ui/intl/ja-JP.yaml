@@ -22,12 +22,11 @@ auth:
   yourName: あなたの名前
   password: パスワード
   refresh:
-    description: >-
+    description: |-
       !js
-
-      (name) => `${name ? name + "、セキュリティ上の理由により" :
-      "セキュリティ上の理由により"}、資格情報の有効期限が切れました。続行するには再度ログインしてください。`
+      (name) => `${name ? name + "、セキュリティ上の理由により" : "セキュリティ上の理由により"}、資格情報の有効期限が切れました。続行するには再度ログインしてください。`
     title: お帰りなさい
+    continue: 続ける
   signout: サインアウト
   login: ログイン
   signin: サインイン

@@ -1,8 +1,7 @@
 <script lang="ts">
   import { me } from '@/accounts'
   import { Select, SelectTrigger, SelectContent, SelectItem } from '$ui/select'
-  import { locale, selected, resolveLocale } from '$lib/intl'
-  import { options } from './Language'
+  import { dictionaries, locale, locales, selected, resolveLocale } from '$lib/intl'
 
   function change(value: string) {
     const picked = resolveLocale(value)
@@ -13,11 +12,10 @@
 </script>
 
 <Select type="single" value={$locale} onValueChange={change}>
-  {@const selected = options.find((option) => option.value === $locale)}
-  <SelectTrigger class="w-full">{selected?.label}</SelectTrigger>
+  <SelectTrigger class="w-full">{dictionaries[$locale].native}</SelectTrigger>
   <SelectContent collisionPadding={{ top: 64, bottom: 88 }}>
-    {#each options as option (option.value)}
-      <SelectItem value={option.value}>{option.label}</SelectItem>
+    {#each locales as code (code)}
+      <SelectItem value={code}>{dictionaries[code].native}</SelectItem>
     {/each}
   </SelectContent>
 </Select>

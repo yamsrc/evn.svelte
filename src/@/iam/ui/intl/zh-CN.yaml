@@ -22,12 +22,11 @@ auth:
   yourName: 你的名字
   password: 密码
   refresh:
-    description: >-
+    description: |-
       !js
-
-      (name) => `${name ? name + (name.endsWith("，") ? "出于安全原因，" : "，出于安全原因，") :
-      "出于安全原因，"}您的凭据已过期。请重新登录以便继续。`
+      (name) => `${name ? name + (name.endsWith("，") ? "出于安全原因，" : "，出于安全原因，") : "出于安全原因，"}您的凭据已过期。请重新登录以便继续。`
     title: 欢迎回来
+    continue: 继续
   signout: 退出登录
   login: 登录
   signin: 登录
