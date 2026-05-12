@@ -1,26 +1,19 @@
 <script lang="ts">
   import { dict } from '@/expenses/ui/intl'
-  import { numbers, type Participant } from '@/expenses'
   import { Participants } from '@/app/ui'
   import * as Tabs from '$ui/tabs'
   import * as Card from '$ui/card'
   import { redistribute } from './Total'
   import BySum from './BySum.svelte'
   import ByShare from './ByShare.svelte'
+  import type { Participant } from '@/expenses'
   import type { Props } from './Participants'
 
-  let {
-    value = $bindable(),
-    total = $bindable(),
-    error = $bindable(false),
-    mode = $bindable('sums'),
-  }: Props = $props()
+  let { value = $bindable(), error = $bindable(false), mode = $bindable('sums') }: Props = $props()
 
   const exclude = $derived(Object.keys(value.participants))
 
   function onadd(identities: string[]) {
-    const total = numbers.total(value)
-
     const added: Record<string, Participant> = Object.fromEntries(
       identities
         .filter((id) => !(id in value.participants))
@@ -28,7 +21,7 @@
     )
 
     value.participants = { ...value.participants, ...added }
-    redistribute(value, total)
+    redistribute(value)
   }
 </script>
 
@@ -44,7 +37,7 @@
         </Tabs.Trigger>
       </Tabs.List>
       <Tabs.Content value="sums">
-        <BySum bind:value bind:total />
+        <BySum bind:value />
       </Tabs.Content>
       <Tabs.Content value="shares">
         <ByShare bind:value />

@@ -3,14 +3,14 @@ import type { Value } from './Form'
 
 export interface Props {
   value: Value
-  total: number
 }
 
 /**
  * Redistributes the amount among the untouched participants
  */
-export function redistribute(value: Value, total: number): void {
+export function redistribute(value: Value): void {
   const ids = Object.keys(value.participants)
+  const total = value.total.amount
 
   let touched = 0
 

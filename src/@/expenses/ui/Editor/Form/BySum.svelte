@@ -1,7 +1,6 @@
 <script lang="ts">
   import { Async } from 'svas'
   import { account as me } from '@/iam'
-  import { numbers } from '@/expenses'
   import { CoinsInput } from '@/app/ui'
   import { Avatar, Title } from '@/accounts/ui'
   import { accounts } from '@/accounts'
@@ -14,18 +13,16 @@
 
   const amountClass = 'min-w-24 max-w-28 flex-1'
 
-  let { value = $bindable(), total = $bindable() }: Props = $props()
+  let { value = $bindable() }: Props = $props()
 
   const ctx = getContext()
   const paid = $derived(ctx.paid)
-  const overpayment = $derived(Math.max(paid - total, 0))
+  const overpayment = $derived(Math.max(paid - value.total.amount, 0))
   const participants = $derived(Object.keys(value.participants))
 
   function oninput(amount: number, id: string) {
     value.participants[id].amount = amount
     value.participants[id].touched = true
-
-    if (ctx.derived !== false) total = numbers.total(value)
 
     // ping svelte
     value = { ...value }

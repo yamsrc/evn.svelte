@@ -17,7 +17,6 @@
   let { id, value = $bindable(), mode = $bindable<'sums' | 'shares'>('sums') }: Props = $props()
 
   const ctx = getContext()
-
   const groupId = $derived(value.links?.find((link) => link.type === 'group')?.id)
 
   function onpickGroup(id?: string) {
@@ -56,7 +55,8 @@
     const modified = JSON.stringify(ctx.value) !== ctx.snapshot
 
     if (creating || modified) {
-      const expense = id === undefined ? await add(value) : await update(id, value)
+      const { total: _, ...rest } = value // :(
+      const expense = id === undefined ? await add(rest) : await update(id, rest)
 
       if (expense instanceof Error) return expense
     }

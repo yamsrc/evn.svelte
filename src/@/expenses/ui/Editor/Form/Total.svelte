@@ -2,16 +2,13 @@
   import { CoinsInput } from '@/app/ui'
   import { dict } from '$lib/intl'
   import { redistribute, type Props } from './Total'
-  import { getContext } from './Context'
 
-  let { value = $bindable(), total = $bindable() }: Props = $props()
-
-  const ctx = getContext()
+  let { value = $bindable() }: Props = $props()
 
   function oninput(amount: number) {
-    ctx.derived = amount === 0
-    redistribute(value, amount)
-    total = amount
+    value.total.amount = amount
+    value.total.touched = true
+    redistribute(value)
   }
 </script>
 
@@ -21,6 +18,6 @@
     id="expenses-total-input"
     class="max-w-2/3"
     inputClass="text-3xl font-bold"
-    value={total}
+    value={value.total.amount}
     {oninput} />
 </div>
