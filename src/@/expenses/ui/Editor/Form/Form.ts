@@ -27,7 +27,12 @@ export function normalize(value: Value, mode: 'sums' | 'shares', total: number):
   }
 }
 
+let locked = false
+
 export function autoeffects(value: Value, payers: string[], total: number): void {
+  if (locked) return
+  else locked = true
+
   if (payers.length === 1)
     // payer MUST be in participants
     value.participants[payers[0]].paid = total
@@ -41,6 +46,8 @@ export function autoeffects(value: Value, payers: string[], total: number): void
   if (parts === 0)
     for (const participant of Object.values(value.participants))
       participant.shares = 1
+
+  locked = false
 }
 
 export function balance(value: Value, mode: 'sums' | 'shares', total: number): number {

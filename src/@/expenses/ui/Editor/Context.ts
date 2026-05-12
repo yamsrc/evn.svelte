@@ -77,11 +77,12 @@ export interface Value {
   copied?: string
 }
 
-interface Participant {
+export interface Participant {
   amount: number
   paid?: number
   comment?: string
   shares?: number
+  touched?: boolean
 }
 
 interface Extra {

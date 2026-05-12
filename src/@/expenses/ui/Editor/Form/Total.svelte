@@ -20,6 +20,8 @@
       for (const [id, amount] of Object.entries(splitAmounts))
         value.participants[id].amount = amount
     }
+
+    total = amount
   }
 </script>
 
@@ -29,6 +31,6 @@
     id="expenses-total-input"
     class="max-w-2/3"
     inputClass="text-3xl font-bold"
-    bind:value={total}
+    value={total}
     {oninput} />
 </div>

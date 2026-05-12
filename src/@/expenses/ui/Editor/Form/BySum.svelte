@@ -1,7 +1,6 @@
 <script lang="ts">
   import { Async } from 'svas'
   import { account as me } from '@/iam'
-  import { numbers } from '@/expenses'
   import { CoinsInput } from '@/app/ui'
   import { Avatar, Title } from '@/accounts/ui'
   import { accounts } from '@/accounts'
@@ -21,11 +20,12 @@
   const overpayment = $derived(Math.max(paid - total, 0))
   const participants = $derived(Object.keys(value.participants))
 
-  function oninput() {
-    if (ctx.derived === undefined && total === 0) ctx.derived = true
-    else if (ctx.derived !== true) return
+  function oninput(amount: number, id: string) {
+    value.participants[id].amount = amount
+    value.participants[id].touched = true
 
-    total = numbers.total(value)
+    // ping svelte
+    value = { ...value }
   }
 </script>
 
@@ -48,8 +48,8 @@
       <CoinsInput
         id={`expenses-participant-amount-${i}`}
         class={amountClass}
-        bind:value={value.participants[id].amount}
-        {oninput} />
+        value={value.participants[id].amount}
+        oninput={(amount) => oninput(amount, id)} />
     </div>
   {/each}
 
