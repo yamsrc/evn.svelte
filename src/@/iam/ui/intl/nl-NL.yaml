@@ -10,30 +10,23 @@ auth:
   passkeysNotSupported: Passkeys worden niet ondersteund
   passkeysWarning: Je browser respecteert je privacy en veiligheid niet.
   learnMore: Meer informatie
-  passwordBlank: >-
-    Laat het wachtwoordveld leeg <nobr>om een</nobr> <nobr>eenmalige code</nobr>
-    te ontvangen.
-  otpInstructions: >-
-    Voer de code in die naar je e-mail is gestuurd. Deze verloopt over 5
-    minuten.
+  passwordBlank: Laat het wachtwoordveld leeg <nobr>om een</nobr> <nobr>eenmalige code</nobr> te ontvangen.
+  otpInstructions: Voer de code in die naar je e-mail is gestuurd. Deze verloopt over 5 minuten.
   holdToLogout: Houd vast om uit te loggen
   continueWith: |
     !js
     (provider) => {
       return `Doorgaan met ${provider}`
     }
-  passkeysDescription: >-
-    Passkeys zijn veiliger dan wachtwoorden, makkelijker te gebruiken en kunnen
-    niet gestolen worden.
+  passkeysDescription: Passkeys zijn veiliger dan wachtwoorden, makkelijker te gebruiken en kunnen niet gestolen worden.
   yourName: Je naam
   password: Wachtwoord
   refresh:
-    description: >-
+    description: |-
       !js
-
-      (name) => `${name ? name + ", om" : "Om"} veiligheidsredenen zijn je
-      inloggegevens verlopen. Log opnieuw in om door te gaan.`
+      (name) => `${name ? name + ", om" : "Om"} veiligheidsredenen zijn je inloggegevens verlopen. Log opnieuw in om door te gaan.`
     title: Welkom terug
+    continue: Doorgaan
   signout: Afmelden
   login: Inloggen
   signin: Inloggen

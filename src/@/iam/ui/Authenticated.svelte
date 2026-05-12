@@ -2,6 +2,7 @@
   import { authenticated, greeting, account as iam, method, processing } from '@/iam'
   import { cn } from '$lib/utils'
   import { inApp } from '$lib/tools'
+  import { locales } from '$lib/intl'
   import { Loader } from '$com/loader'
   import { browser } from '$app/environment'
   import Refresh from './Refresh.svelte'
@@ -23,7 +24,8 @@
       class={cn('scale-0 transition-transform', browser && 'scale-100')}
       {account}
       {oidc}
-      {oncreate} />
+      {oncreate}
+    />
   {/if}
 {/snippet}
 
@@ -36,7 +38,9 @@
 {:else if screen}
   {@render screen({ authentication })}
 {:else}
-  <Languages />
+  {#if locales.length > 1}
+    <Languages />
+  {/if}
   <div class="flex items-center justify-center pt-[14vh] px-4 max-w-sm mx-auto">
     {@render authentication()}
   </div>

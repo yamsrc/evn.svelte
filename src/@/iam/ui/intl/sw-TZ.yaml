@@ -10,9 +10,7 @@ auth:
   passkeysNotSupported: Funguo za kupita hazitumiki
   passkeysWarning: Kivinjari chako hakiheshimu faragha na usalama wako.
   learnMore: Jifunze zaidi
-  passwordBlank: >-
-    Acha nenosiri wazi <nobr>kupokea</nobr> <nobr>msimbo wa matumizi
-    moja</nobr>.
+  passwordBlank: Acha nenosiri wazi <nobr>kupokea</nobr> <nobr>msimbo wa matumizi moja</nobr>.
   otpInstructions: Weka msimbo uliotumwa kwenye barua pepe yako. Unamalizika baada ya dakika 5.
   holdToLogout: Shikilia ili utoke
   continueWith: |
@@ -24,13 +22,11 @@ auth:
   yourName: Jina lako
   password: Nenosiri
   refresh:
-    description: >-
+    description: |-
       !js
-
-      (name) => `${name ? name + ", kwa" : "Kwa"} sababu za kiusalama, taarifa
-      zako za kuingia zimeisha muda wake. Tafadhali ingia tena
-      ili kuendelea.`
+      (name) => `${name ? name + ", kwa" : "Kwa"} sababu za kiusalama, taarifa zako za kuingia zimeisha muda wake. Tafadhali ingia tena ili kuendelea.`
     title: Karibu tena
+    continue: Endelea
   signout: Ondoka
   login: Ingia
   signin: Ingia

@@ -10,9 +10,7 @@ auth:
   passkeysNotSupported: Passkeys not supported
   passkeysWarning: Your browser does not respect your privacy and security.
   learnMore: Learn more
-  passwordBlank: >-
-    Leave password blank <nobr>to receive</nobr> <nobr>a one-time</nobr>
-    passcode.
+  passwordBlank: Leave password blank <nobr>to receive</nobr> <nobr>a one-time</nobr> passcode.
   otpInstructions: Enter the code sent to your email. It expires in 5 minutes.
   holdToLogout: Hold to logout
   continueWith: |
@@ -24,12 +22,11 @@ auth:
   yourName: Your name
   password: Password
   refresh:
-    description: >-
+    description: |-
       !js
-
-      (name) => `${name ? name + ", for" : "For"} security reasons, your
-      credentials have expired. Please log in again to continue.`
+      (name) => `${name ? name + ", for" : "For"} security reasons, your credentials have expired. Please log in again to continue.`
     title: Welcome back
+    continue: Continue
   signout: Sign out
   login: Log In
   signin: Sign In

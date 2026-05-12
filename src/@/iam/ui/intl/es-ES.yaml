@@ -10,9 +10,7 @@ auth:
   passkeysNotSupported: Llaves de acceso no soportadas
   passkeysWarning: Tu navegador no respeta tu privacidad y seguridad.
   learnMore: Saber más
-  passwordBlank: >-
-    Deja la contraseña en blanco <nobr>para recibir</nobr> <nobr>un código de
-    acceso de un solo uso</nobr>.
+  passwordBlank: Deja la contraseña en blanco <nobr>para recibir</nobr> <nobr>un código de acceso de un solo uso</nobr>.
   otpInstructions: Ingresa el código enviado a tu correo electrónico. Expira en 5 minutos.
   holdToLogout: Mantén presionado para cerrar sesión
   continueWith: |
@@ -20,19 +18,15 @@ auth:
     (provider) => {
       return `Continuar con ${provider}`
     }
-  passkeysDescription: >-
-    Las claves de acceso son más seguras que las contraseñas, más fáciles de
-    usar y no pueden ser robadas.
+  passkeysDescription: Las claves de acceso son más seguras que las contraseñas, más fáciles de usar y no pueden ser robadas.
   yourName: Tu nombre
   password: Contraseña
   refresh:
-    description: >-
+    description: |-
       !js
-
-      (name) => `${name ? name + ", por" : "Por"} motivos de seguridad, tus
-      credenciales han caducado. Por favor, vuelve a iniciar sesión
-      para continuar.`
+      (name) => `${name ? name + ", por" : "Por"} motivos de seguridad, tus credenciales han caducado. Por favor, vuelve a iniciar sesión para continuar.`
     title: Bienvenido de nuevo
+    continue: Continuar
   signout: Cerrar sesión
   login: Iniciar sesión
   signin: Iniciar sesión

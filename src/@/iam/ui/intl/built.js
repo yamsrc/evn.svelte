@@ -26,7 +26,8 @@ export const dictionaries = {
       "password": "كلمة المرور",
       "refresh": {
         "description": (name) => `${name ? name + "، لأسباب" : "لأسباب"} أمنية، انتهت صلاحية بيانات اعتمادك. الرجاء تسجيل الدخول مرة أخرى للمتابعة.`,
-        "title": "مرحبًا بعودتك"
+        "title": "مرحبًا بعودتك",
+        "continue": "استمر"
       },
       "signout": "تسجيل الخروج",
       "login": "تسجيل الدخول",
@@ -62,7 +63,8 @@ export const dictionaries = {
       "password": "Passwort",
       "refresh": {
         "description": (name) => `${name ? name + ", aus" : "Aus"} Sicherheitsgründen sind Ihre Anmeldedaten abgelaufen. Bitte melden Sie sich erneut an, um fortzufahren.`,
-        "title": "Willkommen zurück"
+        "title": "Willkommen zurück",
+        "continue": "Weiter"
       },
       "signout": "Abmelden",
       "login": "Anmelden",
@@ -98,7 +100,8 @@ export const dictionaries = {
       "password": "Password",
       "refresh": {
         "description": (name) => `${name ? name + ", for" : "For"} security reasons, your credentials have expired. Please log in again to continue.`,
-        "title": "Welcome back"
+        "title": "Welcome back",
+        "continue": "Continue"
       },
       "signout": "Sign out",
       "login": "Log In",
@@ -134,7 +137,8 @@ export const dictionaries = {
       "password": "Contraseña",
       "refresh": {
         "description": (name) => `${name ? name + ", por" : "Por"} motivos de seguridad, tus credenciales han caducado. Por favor, vuelve a iniciar sesión para continuar.`,
-        "title": "Bienvenido de nuevo"
+        "title": "Bienvenido de nuevo",
+        "continue": "Continuar"
       },
       "signout": "Cerrar sesión",
       "login": "Iniciar sesión",
@@ -170,7 +174,8 @@ export const dictionaries = {
       "password": "Mot de passe",
       "refresh": {
         "description": (name) => `${name ? name + ", pour des" : "Pour des"} raisons de sécurité, vos identifiants ont expiré. Veuillez vous reconnecter pour continuer.`,
-        "title": "Bon retour"
+        "title": "Bon retour",
+        "continue": "Continuer"
       },
       "signout": "Se déconnecter",
       "login": "Se connecter",
@@ -206,7 +211,8 @@ export const dictionaries = {
       "password": "पासवर्ड",
       "refresh": {
         "description": (name) => `${name ? name + " के लिए" : "सुरक्षा कारणों से"} आपके क्रेडेंशियल्स की वैधता समाप्त हो गई है। जारी रखने के लिए कृपया फिर से लॉग इन करें।`,
-        "title": "वापसी पर स्वागत है"
+        "title": "वापसी पर स्वागत है",
+        "continue": "आगे बढ़ो"
       },
       "signout": "साइन आउट करें",
       "login": "लॉग इन करें",
@@ -242,7 +248,8 @@ export const dictionaries = {
       "password": "Password",
       "refresh": {
         "description": (name) => `${name ? name + ", per" : "Per"} motivi di sicurezza, le tue credenziali sono scadute. Effettua di nuovo il login per continuare.`,
-        "title": "Bentornato"
+        "title": "Bentornato",
+        "continue": "Continua"
       },
       "signout": "Esci",
       "login": "Accedi",
@@ -278,7 +285,8 @@ export const dictionaries = {
       "password": "パスワード",
       "refresh": {
         "description": (name) => `${name ? name + "、セキュリティ上の理由により" : "セキュリティ上の理由により"}、資格情報の有効期限が切れました。続行するには再度ログインしてください。`,
-        "title": "お帰りなさい"
+        "title": "お帰りなさい",
+        "continue": "続ける"
       },
       "signout": "サインアウト",
       "login": "ログイン",
@@ -314,7 +322,8 @@ export const dictionaries = {
       "password": "비밀번호",
       "refresh": {
         "description": (name) => `${name ? name + "님, 보안상의 이유로" : "보안상의 이유로"} 인증 정보가 만료되었습니다. 계속하려면 다시 로그인해 주세요.`,
-        "title": "다시 오신 것을 환영합니다"
+        "title": "다시 오신 것을 환영합니다",
+        "continue": "계속하기"
       },
       "signout": "로그아웃",
       "login": "로그인",
@@ -350,7 +359,8 @@ export const dictionaries = {
       "password": "Wachtwoord",
       "refresh": {
         "description": (name) => `${name ? name + ", om" : "Om"} veiligheidsredenen zijn je inloggegevens verlopen. Log opnieuw in om door te gaan.`,
-        "title": "Welkom terug"
+        "title": "Welkom terug",
+        "continue": "Doorgaan"
       },
       "signout": "Afmelden",
       "login": "Inloggen",
@@ -386,7 +396,8 @@ export const dictionaries = {
       "password": "Пароль",
       "refresh": {
         "description": (name) => `${name ? name + ", по" : "По"} соображениям безопасности срок действия ваших учетных данных истёк. Пожалуйста, войдите снова, чтобы продолжить.`,
-        "title": "С возвращением"
+        "title": "С возвращением",
+        "continue": "Продолжить"
       },
       "signout": "Выйти",
       "login": "Войти",
@@ -422,7 +433,8 @@ export const dictionaries = {
       "password": "Nenosiri",
       "refresh": {
         "description": (name) => `${name ? name + ", kwa" : "Kwa"} sababu za kiusalama, taarifa zako za kuingia zimeisha muda wake. Tafadhali ingia tena ili kuendelea.`,
-        "title": "Karibu tena"
+        "title": "Karibu tena",
+        "continue": "Endelea"
       },
       "signout": "Ondoka",
       "login": "Ingia",
@@ -458,7 +470,8 @@ export const dictionaries = {
       "password": "Şifre",
       "refresh": {
         "description": (name) => `${name ? name + ", güvenlik nedeniyle" : "Güvenlik nedeniyle"} giriş bilgilerinizin süresi doldu. Devam etmek için lütfen tekrar giriş yapın.`,
-        "title": "Tekrar hoş geldiniz"
+        "title": "Tekrar hoş geldiniz",
+        "continue": "Devam et"
       },
       "signout": "Oturumu kapat",
       "login": "Giriş Yap",
@@ -494,7 +507,8 @@ export const dictionaries = {
       "password": "Пароль",
       "refresh": {
         "description": (name) => `${name ? name + ", з міркувань" : "З міркувань"} безпеки термін дії ваших облікових даних закінчився. Будь ласка, увійдіть знову, щоб продовжити.`,
-        "title": "Ласкаво просимо назад"
+        "title": "Ласкаво просимо назад",
+        "continue": "Продовжити"
       },
       "signout": "Вийти",
       "login": "Увійти",
@@ -530,7 +544,8 @@ export const dictionaries = {
       "password": "密码",
       "refresh": {
         "description": (name) => `${name ? name + (name.endsWith("，") ? "出于安全原因，" : "，出于安全原因，") : "出于安全原因，"}您的凭据已过期。请重新登录以便继续。`,
-        "title": "欢迎回来"
+        "title": "欢迎回来",
+        "continue": "继续"
       },
       "signout": "退出登录",
       "login": "登录",

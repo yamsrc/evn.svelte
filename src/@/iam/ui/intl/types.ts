@@ -27,6 +27,7 @@ export type Dictionary = {
         refresh: {
           description: (value: any) => string
           title: string
+          continue: string
         }
         signout: string
         login: string

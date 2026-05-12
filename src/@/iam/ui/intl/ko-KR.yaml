@@ -22,12 +22,11 @@ auth:
   yourName: 이름
   password: 비밀번호
   refresh:
-    description: >-
+    description: |-
       !js
-
-      (name) => `${name ? name + "님, 보안상의 이유로" : "보안상의 이유로"} 인증 정보가 만료되었습니다.
-      계속하려면 다시 로그인해 주세요.`
+      (name) => `${name ? name + "님, 보안상의 이유로" : "보안상의 이유로"} 인증 정보가 만료되었습니다. 계속하려면 다시 로그인해 주세요.`
     title: 다시 오신 것을 환영합니다
+    continue: 계속하기
   signout: 로그아웃
   login: 로그인
   signin: 로그인
