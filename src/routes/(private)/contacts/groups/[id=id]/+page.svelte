@@ -70,7 +70,7 @@
             </Section>
 
             <Section>
-              <Details.Participants identities={group.identities} balances={group.balances} />
+              <Details.Participants {group} />
             </Section>
 
             <Section>

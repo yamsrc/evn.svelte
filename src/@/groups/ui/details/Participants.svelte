@@ -1,35 +1,31 @@
 <script lang="ts">
+  import { ok } from 'svas'
   import { account } from '@/iam'
-  import { Leaderboard } from '@/contacts/ui'
-  import { dict as common } from '$lib/intl'
+  import { Leaderboard, Panel } from '@/contacts/ui'
+  import { contacts } from '@/contacts'
+  import { dict } from '$lib/intl'
+  import { toEntries, type Props } from './Participants'
 
-  interface Props {
-    identities: string[]
-    balances?: Record<string, number>
-    class?: string
-  }
-
-  const { identities, balances, class: classes }: Props = $props()
-
-  const entries = $derived(
-    identities.map((id) => ({
-      id,
-      value: balances?.[id] ?? 0,
-      name: id === $account?.id ? $common.expenses.me : undefined,
-      href: id === $account?.id ? '/me/' : `/contacts/${id}/`,
-    })),
-  )
-
-  const empty = $derived(
-    entries.length === 0 || (entries.length === 1 && entries[0].id === $account?.id),
-  )
+  const { group, class: classes }: Props = $props()
+  const empty = $derived(group.identities.length < 2)
 </script>
 
 <div class={['space-y-2', classes]}>
-  <h2>{$common.groups.members.title}</h2>
-  {#if empty}
-    <p class="text-sm text-muted-foreground">{$common.groups.members.empty}</p>
-  {:else}
-    <Leaderboard {entries} sign="positive" neutral />
+  <h2>{$dict.groups.members.title}</h2>
+  {#if ok($account)}
+    {#if empty}
+      <p class="text-sm text-muted-foreground">{$dict.groups.members.empty}</p>
+    {:else if group.reduction}
+      {@const entries = toEntries(group, $account, $dict)}
+      <Leaderboard {entries} sign="positive" neutral />
+    {:else if ok($contacts)}
+      {@const identities = group.identities.filter((id) => id !== $account?.id)}
+      {#each identities as identity (identity)}
+        {@const contact = $contacts.find((c) => c.identity === identity)}
+        {#if contact}
+          <Panel {contact} balance={group.id} />
+        {/if}
+      {/each}
+    {/if}
   {/if}
 </div>
