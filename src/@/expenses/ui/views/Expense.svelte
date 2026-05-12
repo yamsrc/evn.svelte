@@ -1,6 +1,7 @@
 <script lang="ts">
   import { Paperclip } from '@lucide/svelte'
   import { account } from '@/iam'
+  import { groups } from '@/groups'
   import { description } from '@/expenses/ui'
   import { numbers, owe } from '@/expenses'
   import { Avatars, Balance } from '@/app/ui'
@@ -12,7 +13,7 @@
 
   const { expense, highlighted }: Props = $props()
   const participants = $derived(Object.keys(expense.participants))
-
+  const linked = $derived(expense.links?.find((l) => l.type === 'group')?.id)
   const desc = $derived(description(expense, $locale))
 </script>
 
@@ -30,7 +31,14 @@
           <Attention class="mx-1" />
         {/if}
       </div>
-      <p class="text-sm text-muted-foreground">{desc}</p>
+      <p class="text-sm text-muted-foreground">
+        {desc}{#if linked}
+          {@const group = $groups.find((g) => g.id === linked)}
+          {#if group}
+            {`, ${group.title}`}
+          {/if}
+        {/if}
+      </p>
     </Card.Side>
     <Card.Metric amount={numbers.total(expense)} label={$dict.expenses.balance.total} />
   </Card.Row>
