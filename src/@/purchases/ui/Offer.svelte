@@ -41,7 +41,8 @@
 
     busy = false
 
-    if (!(result instanceof Error)) next?.()
+    if (result instanceof Error) console.error(result)
+    else next?.()
   }
 
   async function freePurchase() {
