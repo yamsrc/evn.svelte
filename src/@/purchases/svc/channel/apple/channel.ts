@@ -145,9 +145,7 @@ export const apple: Channel = {
     lastError.set(null)
     postMessage('iap-purchase-request', { productID: productId, appAccountToken: toUuid(accountId) })
 
-    const state = await race(having(purchaseState), 'purchase')
-
-    if (state instanceof Error) return state
+    const state = await having(purchaseState)
 
     if (state !== 'success') return new Error(`purchase: ${state}`)
 
