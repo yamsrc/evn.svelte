@@ -4,6 +4,7 @@
   import { Participants } from '@/app/ui'
   import * as Tabs from '$ui/tabs'
   import * as Card from '$ui/card'
+  import { redistribute } from './Total'
   import BySum from './BySum.svelte'
   import ByShare from './ByShare.svelte'
   import type { Props } from './Participants'
@@ -18,8 +19,6 @@
   const exclude = $derived(Object.keys(value.participants))
 
   function onadd(identities: string[]) {
-    const existing = Object.keys(value.participants)
-    const even = existing.length > 0 && numbers.even(value.participants, existing)
     const total = numbers.total(value)
 
     const added: Record<string, Participant> = Object.fromEntries(
@@ -29,12 +28,7 @@
     )
 
     value.participants = { ...value.participants, ...added }
-
-    if (even && total > 0) {
-      const split = numbers.split(total, Object.keys(value.participants))
-
-      for (const [id, amount] of Object.entries(split)) value.participants[id].amount = amount
-    }
+    redistribute(value, total)
   }
 </script>
 
