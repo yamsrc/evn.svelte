@@ -6,7 +6,6 @@
   import type { Props } from './Back'
 
   const { ret, section }: Props = $props()
-
   const id = $derived(section ? `nav-${section.id}-button` : undefined)
 </script>
 
