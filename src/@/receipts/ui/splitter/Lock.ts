@@ -25,5 +25,6 @@ export function convert(receipt: Receipt, stats: Statistics): ExpenseValue {
 
 function toParticipants(stats: Statistics): ExpenseValue['participants'] {
   return Object.fromEntries(
-    Object.entries(stats.portions).map(([identity, portion]) => [identity, { amount: portion.total }]))
+    Object.entries(stats.portions).map(([identity, portion]) =>
+      [identity, { amount: portion.total, touched: true }]))
 }
