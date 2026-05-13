@@ -61,14 +61,14 @@
   }
 </script>
 
+{#if value.attachments.length > 0}
+  <Attachments bind:attachments={value.attachments} editable={true} />
+{/if}
+
 {#if !id}
   <Section class="overflow-visible">
     <Selector id={groupId} onchange={onpickGroup} />
   </Section>
-{/if}
-
-{#if value.attachments.length > 0}
-  <Attachments bind:attachments={value.attachments} editable={true} />
 {/if}
 
 <Section>

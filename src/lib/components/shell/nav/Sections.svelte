@@ -5,6 +5,7 @@
   import { faded } from './store'
   import { exact, nested, type Section } from './Nav'
   import Button from './Button.svelte'
+  import Back from './Back.svelte'
   import type { Props } from './Sections'
 
   const { sections, section: active }: Props = $props()
@@ -37,16 +38,21 @@
 
 {#each sections as section (section.href)}
   {@const hidden = !visible.includes(section)}
-  <div>
-    <Button
-      id={`nav-${section.id}-button`}
-      onclick={() => click(section)}
-      active={section.id === active?.id}
-      unseen={section.unseen}
-      faded={$faded}
-      class={[hidden && 'hidden']}>
-      <section.Icon color="var(--muted-foreground)" />
-      <span>{section.label}</span>
-    </Button>
-  </div>
+  {#if collapsed && !hidden}
+    {@const ret = { href: section.href }}
+    <Back {ret} {section} />
+  {:else}
+    <div>
+      <Button
+        id={`nav-${section.id}-button`}
+        onclick={() => click(section)}
+        active={section.id === active?.id}
+        unseen={section.unseen}
+        faded={$faded}
+        class={[hidden && 'hidden']}>
+        <section.Icon color="var(--muted-foreground)" />
+        <span>{section.label}</span>
+      </Button>
+    </div>
+  {/if}
 {/each}
