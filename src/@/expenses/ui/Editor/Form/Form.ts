@@ -3,11 +3,11 @@ import { account } from '@/iam'
 import { numbers } from '@/expenses'
 import type { Value } from '../Context'
 
-export function normalize(value: Value, mode: 'sums' | 'shares', total: number): Value {
+export function normalize(value: Value, mode: 'sums' | 'shares'): Value {
   const shares = Object.fromEntries(Object.entries(value.participants)
     .map(([id, participant]) => [id, participant.shares ?? 0]))
 
-  const amounts = numbers.amounts(value, shares, total)
+  const amounts = numbers.amounts(value, shares, value.total.amount)
 
   const participants = Object.fromEntries(Object.entries(value.participants)
     .map(([id, participant]) => [id, {
@@ -21,18 +21,22 @@ export function normalize(value: Value, mode: 'sums' | 'shares', total: number):
     location: value.location,
     participants,
     extras: value.extras.filter((extra) => extra.amount !== 0),
+    total: value.total,
     attachments: value.attachments,
     links: value.links,
     template: value.template,
   }
 }
 
-export function autoeffects(value: Value, payers: string[], total: number): void {
+export function autoeffects(value: Value, payers: string[]): void {
   if (payers.length === 1)
     // payer MUST be in participants
-    value.participants[payers[0]].paid = total
+    value.participants[payers[0]].paid = value.total.amount
 
-  if (total === 0)
+  if (!value.total.touched)
+    value.total.amount = numbers.total(value)
+
+  if (value.total.amount === 0)
     return
 
   const parts = Object.values(value.participants)

@@ -13,6 +13,7 @@ export function allDone(receipt: Receipt): boolean {
 
 export function convert(receipt: Receipt, stats: Statistics): ExpenseValue {
   return {
+    total: { amount: stats.total, touched: false },
     title: receipt.title,
     location: receipt.merchant?.location,
     participants: toParticipants(stats),
@@ -24,5 +25,6 @@ export function convert(receipt: Receipt, stats: Statistics): ExpenseValue {
 
 function toParticipants(stats: Statistics): ExpenseValue['participants'] {
   return Object.fromEntries(
-    Object.entries(stats.portions).map(([identity, portion]) => [identity, { amount: portion.total }]))
+    Object.entries(stats.portions).map(([identity, portion]) =>
+      [identity, { amount: portion.total, touched: true }]))
 }

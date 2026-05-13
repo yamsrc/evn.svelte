@@ -24,7 +24,7 @@
   let error = $state(false)
 
   async function submit() {
-    if (total !== numbers.total(value)) {
+    if (value.total.amount !== numbers.total(value)) {
       error = true
 
       setTimeout(() => (error = false), 600)
@@ -34,7 +34,7 @@
 
     busy = true
 
-    const normalized = normalize(value, mode, total)
+    const normalized = normalize(value, mode)
 
     await callback?.(normalized)
 
@@ -51,8 +51,6 @@
     return [identities.find((id) => id === $account?.id) ?? identities[0]].filter(Boolean)
   })
 
-  let total = $state(numbers.total(value))
-
   const split = $derived(payers.length > 1)
   const paid = $derived(numbers.paid(value))
   const overpaid = $derived(numbers.overpaid(value))
@@ -64,29 +62,25 @@
     get split() {
       return split
     },
-    get total() {
-      return total
-    },
     get paid() {
       return paid
     },
     get overpaid() {
       return overpaid
     },
-    derived: true,
   })
 
-  const enough = $derived(paid > 0 && (payers.length === 1 || paid >= total))
+  const enough = $derived(paid > 0 && (payers.length === 1 || paid >= value.total.amount))
 
-  $effect(() => autoeffects(value, payers, total))
+  $effect(() => autoeffects(value, payers))
 
   let submitButton = $state<HTMLButtonElement | null>(null)
 </script>
 
 <form onsubmit={onsubmit(submit)} class="space-y-5">
   <Description bind:title={value.title} bind:location={value.location} />
-  <Total bind:value bind:total />
-  <Participants bind:value bind:total bind:error bind:mode />
+  <Total bind:value />
+  <Participants bind:value bind:error bind:mode />
   <PayerSelect bind:value />
 
   <button bind:this={submitButton} type="submit" class="sr-only">

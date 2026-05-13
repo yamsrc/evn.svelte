@@ -4,6 +4,7 @@ export interface Group {
   picture?: string
   identities: string[]
   reduction?: boolean
+  balances?: Record<string, number>
   _created: number
   _version: number
 }

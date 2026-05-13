@@ -26,6 +26,7 @@ function exact(partial: Partial<Value>): Value {
   const value = blank(partial)
   const participants = structuredClone(value.participants)
   const shares = numbers.shares(value)
+  const total = numbers.total(value)
 
   for (const id of Object.keys(participants))
     participants[id].shares = shares[id]
@@ -34,6 +35,10 @@ function exact(partial: Partial<Value>): Value {
     title: value.title,
     location: value.location,
     participants,
+    total: {
+      amount: total,
+      touched: false,
+    },
     extras: structuredClone(value.extras),
     attachments: structuredClone(value.attachments),
     links: structuredClone(value.links),
@@ -43,11 +48,21 @@ function exact(partial: Partial<Value>): Value {
 }
 
 function blank(draft?: Partial<Value>): Value {
+  const total = draft?.total?.amount ??
+    (draft?.participants === undefined
+      ? 0
+      : numbers.total({ participants: draft.participants, extras: [] })
+    )
+
   return {
     title: draft?.title ?? '',
     location: draft?.location,
     participants: draft?.participants ?? {},
     extras: draft?.extras ?? [],
+    total: {
+      amount: total,
+      touched: false,
+    },
     attachments: draft?.attachments ?? [],
     links: draft?.links ?? [],
     template: draft?.template ?? false,
@@ -64,14 +79,16 @@ export interface Context {
   value: Value
   mode: 'sums' | 'shares'
   snapshot: string
-  /** Total is derived from participants amounts, not entered manually */
-  derived?: boolean
 }
 
 export interface Value {
   title: string
   location?: string
   participants: Record<string, Participant>
+  total: {
+    amount: number
+    touched: boolean
+  }
   extras: Extra[]
   attachments: string[]
   links?: Link[]
@@ -79,11 +96,12 @@ export interface Value {
   copied?: string
 }
 
-interface Participant {
+export interface Participant {
   amount: number
   paid?: number
   comment?: string
   shares?: number
+  touched?: boolean
 }
 
 interface Extra {

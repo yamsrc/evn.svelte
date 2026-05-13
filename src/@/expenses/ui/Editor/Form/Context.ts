@@ -13,8 +13,6 @@ export function getContext(): Context {
 export interface Context {
   readonly payers: string[]
   readonly split: boolean
-  readonly total: number
   readonly paid: number
   readonly overpaid: number
-  derived: boolean
 }

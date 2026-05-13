@@ -70,7 +70,7 @@
             </Section>
 
             <Section>
-              <Details.Participants identities={group.identities} expenses={entries} />
+              <Details.Participants {group} />
             </Section>
 
             <Section>

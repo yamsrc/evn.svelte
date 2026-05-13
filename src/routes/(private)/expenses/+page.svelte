@@ -8,7 +8,6 @@
   import { expenses, filter as filterExpenses } from '@/expenses'
   import { Section } from '@/app/ui'
   import { Header } from '@/app/ui'
-  import { adventures, filter as filterAdventures } from '@/adventures'
   import { Avatar } from '@/accounts/ui'
   import { Input } from '$ui/input'
   import { dict } from '$lib/intl'
@@ -22,12 +21,11 @@
   const notifications = $derived([...$expensesNotifications, ...$transfersNotifications])
 </script>
 
-<Async store={combined(expenses, adventures, receipts, account)}>
-  {#snippet awaited([expenses, adventures, receipts, account])}
+<Async store={combined(expenses, receipts, account)}>
+  {#snippet awaited([expenses, receipts, account])}
     {@const filteredExpenses = filterExpenses(expenses, search)}
     {@const filteredReceipts = filterReceipts(receipts, search)}
-    {@const filteredAdventures = filterAdventures(adventures, search)}
-    {@const empty = filteredExpenses.length === 0 && filteredAdventures.length === 0}
+    {@const empty = filteredExpenses.length === 0}
 
     <Section>
       <Header.Root>
@@ -42,7 +40,7 @@
       </Header.Root>
     </Section>
 
-    {#if expenses.length || adventures.length || receipts.length}
+    {#if expenses.length || receipts.length}
       <Section>
         <Input type="text" placeholder={$dict.actions.search} bind:value={searchValue} />
       </Section>

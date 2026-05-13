@@ -1,12 +1,9 @@
 <script lang="ts">
   import { dict } from '$lib/intl'
   import PayerSelect from '../../PayerSelect.svelte'
-  import { getContext } from './Context'
   import type { Props } from './PayerSelect'
 
   const { value = $bindable() }: Props = $props()
-  const ctx = getContext()
-  const total = $derived(ctx.total)
   const identities = $derived(Object.keys(value.participants))
 
   const payerId = $derived(
@@ -18,7 +15,7 @@
       if (value.participants[participantId].paid !== undefined)
         delete value.participants[participantId].paid
 
-    if (id !== undefined) value.participants[id].paid = total
+    if (id !== undefined) value.participants[id].paid = value.total.amount
   }
 </script>
 

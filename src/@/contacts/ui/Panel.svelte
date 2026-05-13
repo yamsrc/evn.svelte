@@ -14,6 +14,7 @@
 
   const {
     contact,
+    balance,
     selected = $bindable(),
     actionable = false,
     highlighted,
@@ -53,7 +54,7 @@
   <Panel
     href={`/contacts/${contact.identity}/`}
     account={contact.account}
-    balance={contact.balance}
+    balance={balance ? (contact.balances?.[balance] ?? 0) : contact.balance}
     {selected}
     {highlighted}
     {onselect}
