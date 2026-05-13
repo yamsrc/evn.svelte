@@ -5,7 +5,6 @@
   import { Delete } from '@/expenses.templates/ui'
   import { add, numbers, update } from '@/expenses'
   import { Section } from '@/app/ui'
-  import { back } from '$com/history'
   import { goto } from '$app/navigation'
   import Attachments from '../Attachments.svelte'
   import Template from './Template.svelte'
@@ -62,7 +61,7 @@
     }
 
     if (groupId) await goto(`/contacts/groups/${groupId}`)
-    else await back('/expenses/')
+    else await goto('/expenses/', { replaceState: true })
   }
 </script>
 

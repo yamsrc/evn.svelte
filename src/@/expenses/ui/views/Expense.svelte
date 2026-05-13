@@ -47,8 +47,9 @@
     <Card.Side class="flex-1">
       <Avatars identities={participants} max={5} class="flex-1 justify-start" />
     </Card.Side>
-    <Balance
-      balance={owe(expense.participants, expense.extras, $account?.id)}
-      class="flex-col-reverse items-end" />
+    {@const balance = owe(expense.participants, expense.extras, $account?.id)}
+    {#if balance !== 0}
+      <Balance {balance} class="flex-col-reverse items-end" />
+    {/if}
   </Card.Row>
 </Card.Root>
