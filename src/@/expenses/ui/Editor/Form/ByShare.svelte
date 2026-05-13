@@ -19,7 +19,7 @@
 
   const ctx = getContext()
   const paid = $derived(ctx.paid)
-  const total = $derived(ctx.total)
+  const total = $derived(value.total.amount)
   const overpayment = $derived(Math.max(paid - total, 0))
   const participants = $derived(Object.keys(value.participants))
 

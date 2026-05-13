@@ -13,6 +13,7 @@ export function allDone(receipt: Receipt): boolean {
 
 export function convert(receipt: Receipt, stats: Statistics): ExpenseValue {
   return {
+    total: { amount: stats.total, touched: false },
     title: receipt.title,
     location: receipt.merchant?.location,
     participants: toParticipants(stats),
