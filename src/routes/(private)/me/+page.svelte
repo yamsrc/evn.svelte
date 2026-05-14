@@ -1,7 +1,7 @@
 <script lang="ts">
   import { CodeXml, LogOut } from '@lucide/svelte'
   import { Permission, Scopes } from '@/transmission/ui'
-  import { subscribed } from '@/transmission'
+  import { promptable } from '@/transmission'
   import { account, logout } from '@/iam'
   import { Feedback } from '@/feedback/ui'
   import { Section, Update, Header, Wallpaper, Action } from '@/app/ui'
@@ -73,7 +73,7 @@
   </Section>
 
   <Section class="space-y-2">
-    {#if $subscribed === false}
+    {#if $promptable}
       <h2 style="view-transition-name: me-notifications-title;">
         {$dict.profile.notifications.title}
       </h2>
