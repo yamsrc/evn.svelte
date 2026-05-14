@@ -6,10 +6,8 @@
   import { onsubmit as submitter } from '$lib/tools'
   import { dict } from '$lib/intl'
   import { Actions } from '$com/shell'
-  import { Separator } from '$com/separator'
   import Participants from './Participants.svelte'
   import { getContext } from './Context'
-  import Balance from './Balance.svelte'
   import type { Props, Value } from './Form'
 
   let { value = $bindable<Value>(), busy = $bindable(false), onsubmit: callback }: Props = $props()
@@ -48,14 +46,6 @@
   <Section>
     <Cover bind:picture={value.picture} onchange={onpicture} />
   </Section>
-
-  <Separator />
-
-  {#if ctx.id}
-    <Section>
-      <Balance {value} />
-    </Section>
-  {/if}
 
   <Section>
     <Participants bind:identities={value.identities} bind:busy />
