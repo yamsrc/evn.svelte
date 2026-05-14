@@ -17,7 +17,6 @@
     densities,
     card,
     placement = 'end',
-    vt,
     gate,
     onpick,
   }: Props = $props()
@@ -86,13 +85,7 @@
   {#if placement === 'start'}{@render uploader()}{/if}
 
   {#each options as id, i (id)}
-    <List.Option
-      id={gate ? `paywall-${i}` : undefined}
-      class={[baseCard, card]}
-      index={i + offset}
-      style={vt && id === picture
-        ? `view-transition-name: ${vt}; view-transition-class: transition-morph;`
-        : undefined}>
+    <List.Option id={gate ? `paywall-${i}` : undefined} class={[baseCard, card]} index={i + offset}>
       <Picture {id} alt={id} {variant} {densities} class="size-full object-cover" />
     </List.Option>
   {/each}

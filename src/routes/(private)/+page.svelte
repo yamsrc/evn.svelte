@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Async, combined } from 'svas'
   import { Permission } from '@/transmission/ui'
-  import { subscribed } from '@/transmission'
+  import { promptable } from '@/transmission'
   import { receipts } from '@/receipts'
   import { Notifications } from '@/notifications/ui'
   import { notifications, scope } from '@/notifications'
@@ -44,9 +44,9 @@
       <Totals {contacts} />
     </Section>
 
-    {#if $subscribed === false || notifications.length > 0}
+    {#if $promptable || notifications.length > 0}
       <Section class="px-0 flex flex-col gap-2">
-        {#if $subscribed === false}
+        {#if $promptable}
           <div class="px-5">
             <Permission dismissable />
           </div>

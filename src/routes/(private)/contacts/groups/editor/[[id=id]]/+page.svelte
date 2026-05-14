@@ -7,7 +7,7 @@
   import { Header, Section } from '@/app/ui'
   import { dict } from '$lib/intl'
   import { Return } from '$com/shell'
-  import { back } from '$com/history'
+  import { jump } from '$com/history'
   import { Hold } from '$com/buttons'
   import { page } from '$app/state'
 
@@ -27,7 +27,7 @@
 
     if (result instanceof Error) return
 
-    await back('/contacts/')
+    await jump('/contacts/')
   }
 </script>
 

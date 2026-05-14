@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { permission, request } from '@/transmission'
+  import { request } from '@/transmission'
   import { Hint } from '@/app/ui'
   import { dict } from './intl'
   import type { Props } from './Permission'
@@ -13,21 +13,19 @@
   }
 </script>
 
-{#if $permission === 'default'}
-  <Hint.Root key="permission" delay={dismissable ? DELAY : undefined} {name} class={classes}>
-    <Hint.Content>
-      <p>{$dict.permission.prompt}</p>
-      <p class="text-sm text-muted-foreground">{$dict.permission.comment}</p>
-      <Hint.Actions>
-        <Hint.Action onclick={subscribe}>{$dict.permission.button}</Hint.Action>
-        {#if dismissable}
-          <Hint.Later>{$dict.permission.later}</Hint.Later>
-        {/if}
-      </Hint.Actions>
-    </Hint.Content>
-    <Hint.Dismissing>
-      <p>{$dict.permission.dismissed}</p>
-      <Hint.Dismiss>{$dict.permission.dismiss}</Hint.Dismiss>
-    </Hint.Dismissing>
-  </Hint.Root>
-{/if}
+<Hint.Root key="permission" delay={dismissable ? DELAY : undefined} {name} class={classes}>
+  <Hint.Content>
+    <p>{$dict.permission.prompt}</p>
+    <p class="text-sm text-muted-foreground">{$dict.permission.comment}</p>
+    <Hint.Actions>
+      <Hint.Action onclick={subscribe}>{$dict.permission.button}</Hint.Action>
+      {#if dismissable}
+        <Hint.Later>{$dict.permission.later}</Hint.Later>
+      {/if}
+    </Hint.Actions>
+  </Hint.Content>
+  <Hint.Dismissing>
+    <p>{$dict.permission.dismissed}</p>
+    <Hint.Dismiss>{$dict.permission.dismiss}</Hint.Dismiss>
+  </Hint.Dismissing>
+</Hint.Root>

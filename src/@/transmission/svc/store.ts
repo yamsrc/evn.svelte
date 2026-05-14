@@ -1,4 +1,4 @@
-import { writable } from 'svelte/store'
+import { derived, writable } from 'svelte/store'
 import { value } from 'svas'
 import { events } from '@/realtime'
 import { account } from '@/iam'
@@ -6,9 +6,8 @@ import type { Permissions } from './net/Transmission'
 
 export const permission = writable<NotificationPermission | null>(null)
 
-export const subscribed = value<boolean | null>({
+export const subscribed = value<boolean>({
   persist: 'transmission:subscribed',
-  default: null,
 })
 
 export const permissions = value<Permissions>({
@@ -16,5 +15,8 @@ export const permissions = value<Permissions>({
   bind: account,
   default: {},
 })
+
+export const promptable = derived([permission, subscribed],
+  ([$permission, $subscribed]) => $permission === 'default' && $subscribed === false)
 
 events.on('default.transmission.sync', (data) => permissions.set(data.permissions))
