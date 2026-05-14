@@ -225,7 +225,7 @@
   }
 
   .selected {
-    @apply bg-accent ring-2 ring-accent-foreground/20;
+    @apply bg-accent ring-2 ring-primary/75;
   }
 
   /* Hide scrollbar */

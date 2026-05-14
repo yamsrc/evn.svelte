@@ -16,6 +16,5 @@
     variant="700x500"
     card="aspect-[1.4]"
     placement="start"
-    vt="group-cover"
     onpick={onchange} />
 </div>
