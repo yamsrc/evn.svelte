@@ -10,25 +10,29 @@ export interface History {
   replace(href: string, state?: App.PageState): Promise<void>
 }
 
-const impl = 'navigation' in globalThis ? native : manual
+const navigation = 'navigation' in globalThis ? native : manual
 
 export function path(url: URL): string {
   return url.pathname + url.search + url.hash
 }
 
 export function track(nav: AfterNavigate, state?: App.PageState): void {
-  impl.track(nav, state)
+  navigation.track(nav, state)
 }
 
 export async function back(href: string) {
-  const target = path(new URL(href, window.location.href))
-  const index = impl.closest(target)
+  if (navigation.canGoBack()) window.history.back()
+  else await goto(href)
+}
 
-  if (impl.canGoBack()) window.history.back()
-  else if (index > 0 && index <= 42) window.history.go(-index)
+export async function jump(href: string) {
+  const target = path(new URL(href, window.location.href))
+  const index = navigation.closest(target)
+
+  if (index > 0 && index <= 42) window.history.go(-index)
   else await goto(href)
 }
 
 export async function replace(href: string, state?: App.PageState) {
-  await impl.replace(href, state)
+  await navigation.replace(href, state)
 }

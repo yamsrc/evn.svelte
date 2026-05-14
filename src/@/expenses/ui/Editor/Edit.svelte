@@ -5,6 +5,7 @@
   import { Delete } from '@/expenses.templates/ui'
   import { add, update } from '@/expenses'
   import { Section } from '@/app/ui'
+  import { jump } from '$com/history'
   import { goto } from '$app/navigation'
   import Attachments from '../Attachments.svelte'
   import Template from './Template.svelte'
@@ -56,7 +57,7 @@
       if (expense instanceof Error) return expense
     }
 
-    if (groupId) await goto(`/contacts/groups/${groupId}`)
+    if (groupId) await jump(`/contacts/groups/${groupId}/`)
     else await goto('/expenses/', { replaceState: true })
   }
 </script>
