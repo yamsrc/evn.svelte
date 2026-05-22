@@ -34,7 +34,7 @@
       alt="Evnly app sharing experience"
       width="4139"
       height="2530"
-      class="block w-[140%] max-w-none md:w-full md:max-w-4xl h-auto pointer-events-none select-none"
+      class="block w-[140%] max-w-none md:w-full md:max-w-4xl"
       style="aspect-ratio: 4139 / 2530"
     />
   </div>
