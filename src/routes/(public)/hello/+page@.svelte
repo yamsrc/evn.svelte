@@ -1,6 +1,7 @@
 <script lang="ts">
   import Stats from './sections/Stats.svelte'
   import Split from './sections/Split.svelte'
+  import HowItWorks from './sections/HowItWorks.svelte'
   import Hero from './sections/Hero.svelte'
   import Header from './sections/Header.svelte'
 </script>
@@ -11,5 +12,6 @@
     <Hero />
     <Stats />
     <Split />
+    <HowItWorks />
   </main>
 </div>
