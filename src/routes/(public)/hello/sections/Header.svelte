@@ -11,13 +11,15 @@
         <img src="/icon.svg" alt="Evnly" width="32" height="32" />
       </a>
       <nav class="hidden md:flex items-center gap-6">
-        <a href="#how-it-works" class="text-sm text-white/90 hover:text-white">How It Works</a>
-        <a href="#features" class="text-sm text-white/90 hover:text-white">Value Props</a>
-        <a href="#reviews" class="text-sm text-white/90 hover:text-white">Reviews</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#features">Value Props</a>
+        <a href="#reviews">Reviews</a>
       </nav>
     </div>
 
-    <Button href="#download" class="rounded-full bg-primary text-primary-foreground hover:bg-primary/90">
+    <Button
+      href="#download"
+      class="rounded-full bg-primary text-primary-foreground hover:bg-primary/90">
       Download Now
       <Download class="size-4" />
     </Button>

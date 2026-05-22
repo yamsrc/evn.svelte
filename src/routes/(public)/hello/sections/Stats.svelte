@@ -4,16 +4,26 @@
   </p>
   <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
     <div>
-      <div class="text-4xl md:text-6xl font-bold whitespace-nowrap">30<span class="font-normal">×</span> Faster</div>
-      <div class="mt-3 text-sm opacity-90">than manual calculations</div>
+      <div class="text-4xl md:text-6xl font-bold whitespace-nowrap">
+        30
+        <span class="font-normal">×</span>
+        Faster
+      </div>
+      <div class="mt-3">than manual calculations</div>
     </div>
     <div>
-      <div class="text-4xl md:text-6xl font-bold whitespace-nowrap">10,000<span class="font-normal">+</span></div>
-      <div class="mt-3 text-sm opacity-90">bills split every week</div>
+      <div class="text-4xl md:text-6xl font-bold whitespace-nowrap">
+        10,000
+        <span class="font-normal">+</span>
+      </div>
+      <div class="mt-3">bills split every week</div>
     </div>
     <div>
-      <div class="text-4xl md:text-6xl font-bold whitespace-nowrap">100<span class="font-normal">%</span></div>
-      <div class="mt-3 text-sm opacity-90">clarity on who owes what</div>
+      <div class="text-4xl md:text-6xl font-bold whitespace-nowrap">
+        100
+        <span class="font-normal">%</span>
+      </div>
+      <div class="mt-3">clarity on who owes what</div>
     </div>
   </div>
 </div>

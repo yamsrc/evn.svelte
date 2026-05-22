@@ -2,7 +2,7 @@
   <div class="relative text-center max-w-3xl mx-auto">
     <p class="text-xs font-medium tracking-widest uppercase text-primary">Very Easy</p>
     <div role="heading" aria-level="2" class="mt-3 text-4xl md:text-6xl font-bold leading-tight">Split Bills the Easiest Way</div>
-    <p class="mt-4 text-base text-neutral-400 text-balance">
+    <p class="mt-4 text-neutral-400 text-balance">
       Turn any check into a simple, instant breakdown. With Evnly, everyone sees their share right away — no calculations, no confusion, just quick and easy bill splitting.
     </p>
   </div>
