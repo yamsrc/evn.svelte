@@ -13,7 +13,7 @@
     <p class="text-xs font-medium tracking-widest uppercase text-primary">
       For Every Moment You Share
     </p>
-    <div role="heading" aria-level="2" class="text-4xl md:text-6xl font-bold leading-tight">
+    <div role="heading" aria-level="2" class="text-4xl md:text-6xl font-bold leading-tight text-black">
       Built for Real Life
     </div>
     <p class="text-neutral-600 text-balance">

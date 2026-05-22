@@ -31,12 +31,12 @@
 <section id="features" class="max-w-7xl mx-auto pt-20 space-y-6 md:space-y-10">
   <div class="text-center max-w-3xl mx-auto px-4">
     <p class="text-xs font-medium tracking-widest uppercase text-primary">Splitting Made Simple</p>
-    <div role="heading" aria-level="2" class="mt-3 text-4xl md:text-6xl font-bold leading-tight">
+    <div role="heading" aria-level="2" class="mt-3 text-4xl md:text-6xl font-bold leading-tight text-white">
       Everything You Need
       <br />
       to Split With Ease
     </div>
-    <p class="mt-4 text-neutral-400 text-balance">
+    <p class="mt-4 text-balance">
       Everything you need to split bills without stress. From quick receipt scanning to flexible
       group management, Evnly makes every step simple, fast, and clear — so you can focus on the
       moment, not the math.
@@ -58,13 +58,13 @@
         <div
           class="bg-[#ECE0D4] text-neutral-900 rounded-3xl aspect-square p-6 lg:p-16 flex flex-col justify-center gap-3 md:gap-4 overflow-hidden">
           <div
-            class="flex size-10 lg:size-12 shrink-0 items-center justify-center rounded-2xl bg-primary text-primary-foreground">
+            class="flex size-10 lg:size-12 shrink-0 items-center justify-center rounded-xl bg-primary text-primary-foreground">
             <Icon class="size-5 lg:size-6" />
           </div>
           <div
             role="heading"
             aria-level="3"
-            class="text-2xl lg:text-4xl font-bold leading-tight whitespace-pre-line">
+            class="text-2xl lg:text-4xl font-bold leading-tight whitespace-pre-line text-black">
             {title}
           </div>
           <p class="lg:text-base text-neutral-600 text-balance">{body}</p>

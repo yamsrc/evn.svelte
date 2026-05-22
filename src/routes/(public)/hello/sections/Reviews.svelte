@@ -29,7 +29,7 @@
     class="py-12 md:py-20 space-y-10 md:space-y-12 bg-[url('/hello/reviews-quotes.png')] bg-no-repeat bg-center bg-contain">
     <div class="text-center">
       <p class="text-xs font-medium tracking-widest uppercase text-primary">What People Say</p>
-      <div role="heading" aria-level="2" class="mt-3 text-4xl md:text-6xl font-bold leading-tight">
+      <div role="heading" aria-level="2" class="mt-3 text-4xl md:text-6xl font-bold leading-tight text-white">
         Reviews
       </div>
     </div>
