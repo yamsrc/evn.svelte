@@ -3,13 +3,19 @@
   import ScanLine from '@lucide/svelte/icons/scan-line'
   import ListChecks from '@lucide/svelte/icons/list-checks'
   import BadgeCheck from '@lucide/svelte/icons/badge-check'
+  import { imageSet } from '$lib/tools/image'
 
   const steps = [
-    { src: '/hello/how-phone-1.png', label: 'Scan the Receipt', Icon: ScanLine },
-    { src: '/hello/how-phone-2.png', label: 'Assign Items', Icon: ListChecks },
-    { src: '/hello/how-phone-3.png', label: 'Select a Payer', Icon: Smile },
-    { src: '/hello/how-phone-4.png', label: 'Done!', Icon: BadgeCheck },
+    { id: 'how-phone-1_c5ynqv', label: 'Scan the Receipt', Icon: ScanLine },
+    { id: 'how-phone-2_rggglh', label: 'Assign Items', Icon: ListChecks },
+    { id: 'how-phone-3_hqrmag', label: 'Select a Payer', Icon: Smile },
+    { id: 'how-phone-4_rwcooo', label: 'Done!', Icon: BadgeCheck },
   ]
+
+  const bg = imageSet({
+    '1x': '/assets/w_280/how-phone-bg_x2yejc.webp',
+    '2x': '/assets/w_560/how-phone-bg_x2yejc.webp',
+  })
 </script>
 
 <section id="how-it-works" class="max-w-7xl mx-auto bg-[#ECE0D4] text-neutral-900 rounded-3xl px-4 py-12 md:py-16 space-y-16 md:space-y-20">
@@ -22,15 +28,16 @@
   </div>
 
   <ol class="grid justify-around grid-cols-[repeat(2,minmax(0,260px))] lg:grid-cols-[repeat(4,minmax(0,260px))] gap-x-4 gap-y-8 md:gap-y-12">
-    {#each steps as { src, label, Icon } (label)}
+    {#each steps as { id, label, Icon } (label)}
       <li class="flex flex-col items-center gap-8">
         <div class="w-full pt-[31%]">
           <div
             class="relative w-full aspect-1140/1648 rounded-3xl bg-cover bg-center"
-            style="background-image: url('/hello/how-phone-bg.jpg')"
+            style="background-image: {bg}"
           >
             <img
-              {src}
+              src={`/assets/w_220/${id}.webp`}
+              srcset={`/assets/w_220/${id}.webp 1x, /assets/w_440/${id}.webp 2x`}
               alt={label}
               class="absolute left-[10%] bottom-[6.92%] w-[80%] aspect-891/1840"
             />

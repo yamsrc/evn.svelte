@@ -28,13 +28,21 @@
     {/each}
   </ul>
 
-  <div class="flex justify-center">
+  <div class="relative mx-auto w-[140%] max-w-none md:w-full md:max-w-4xl" style="aspect-ratio: 4139 / 2530">
     <img
-      src="/hello/share-content.png"
+      src="/assets/w_1100/share-background_fpilp3.webp"
+      srcset="/assets/w_1100/share-background_fpilp3.webp 1x, /assets/w_2200/share-background_fpilp3.webp 2x"
+      alt=""
+      aria-hidden="true"
+      class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] max-w-none h-auto pointer-events-none select-none"
+    />
+    <img
+      src="/assets/w_896/share-content_eag5jl.webp"
+      srcset="/assets/w_896/share-content_eag5jl.webp 1x, /assets/w_1792/share-content_eag5jl.webp 2x"
       alt="Evnly app sharing experience"
       width="4139"
       height="2530"
-      class="block w-[140%] max-w-none md:w-full md:max-w-4xl"
+      class="relative block w-full h-auto"
       style="aspect-ratio: 4139 / 2530"
     />
   </div>

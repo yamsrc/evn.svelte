@@ -7,7 +7,8 @@
   <div class="grid grid-cols-1 md:grid-cols-2 gap-4 *:min-h-0">
     <div class="rounded-3xl aspect-square bg-neutral-900 p-6 lg:p-8 overflow-hidden">
       <img
-        src="/hello/download-qr.png"
+        src="/assets/w_600/download-qr_zg7lex.webp"
+        srcset="/assets/w_600/download-qr_zg7lex.webp 1x, /assets/w_1200/download-qr_zg7lex.webp 2x"
         alt="Scan to download Evnly"
         width="2464"
         height="1920"
@@ -33,7 +34,8 @@
       <div class="flex flex-wrap gap-3 pt-2">
         <a href={stores.appStore} target="_blank" rel="noopener" aria-label="Download on the App Store">
           <img
-            src="/hello/download-appstore.png"
+            src="/assets/w_200/download-appstore_ie2u5h.webp"
+            srcset="/assets/w_200/download-appstore_ie2u5h.webp 1x, /assets/w_400/download-appstore_ie2u5h.webp 2x"
             alt="Download on the App Store"
             width="720"
             height="208"
@@ -42,7 +44,8 @@
         </a>
         <a href={stores.googlePlay} target="_blank" rel="noopener" aria-label="Get it on Google Play">
           <img
-            src="/hello/download-googleplay.png"
+            src="/assets/w_200/download-googleplay_wubfdm.webp"
+            srcset="/assets/w_200/download-googleplay_wubfdm.webp 1x, /assets/w_400/download-googleplay_wubfdm.webp 2x"
             alt="Get it on Google Play"
             width="720"
             height="208"

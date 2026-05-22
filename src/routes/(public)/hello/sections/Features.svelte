@@ -5,21 +5,21 @@
 
   const cards = [
     {
-      src: '/hello/simple-1.png',
+      id: 'simple-1_hplzge',
       Icon: Users,
       title: 'Create Groups\nfor Any Occasions',
       body: 'Whether it’s dinner with friends, a weekend trip, or shared household expenses, Evnly lets you create groups in seconds. Keep everyone organized, track who paid what, and make splitting simple for any occasion.',
       bg: 'bg-primary',
     },
     {
-      src: '/hello/simple-2.png',
+      id: 'simple-2_geqhs8',
       Icon: UserPlus,
       title: 'Add Friends Even\nif They’re Not on Evnly',
       body: 'No app? No problem. Invite anyone by link, and they can see their share instantly. Splitting bills has never been easier, even for friends who haven’t joined Evnly yet.',
       bg: 'bg-[#A33301]',
     },
     {
-      src: '/hello/simple-3.png',
+      id: 'simple-3_wkwxxl',
       Icon: Briefcase,
       title: 'Adventures',
       body: 'Adventures are for those who want to spend equally — be it a voyage together, a night out at the bar, or just shared household expenses. Evnly makes it effortless to track, split, and settle bills so everyone pays their fair share.',
@@ -44,11 +44,12 @@
   </div>
 
   <ul class="space-y-4">
-    {#each cards as { src, Icon, title, body, bg } (title)}
+    {#each cards as { id, Icon, title, body, bg } (title)}
       <li class="grid grid-cols-1 md:grid-cols-2 gap-4 *:min-h-0">
         <div class={['rounded-3xl aspect-square p-6 lg:p-8', bg]}>
           <img
-            {src}
+            src={`/assets/w_600/${id}.webp`}
+            srcset={`/assets/w_600/${id}.webp 1x, /assets/w_1200/${id}.webp 2x`}
             alt=""
             aria-hidden="true"
             width="2189"

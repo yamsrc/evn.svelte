@@ -32,7 +32,8 @@
     </Button>
 
     <img
-      src="/hello/hero-preview.png"
+      src="/assets/w_1024/hero-preview_kbf2qa.webp"
+      srcset="/assets/w_1024/hero-preview_kbf2qa.webp 1x, /assets/w_2048/hero-preview_kbf2qa.webp 2x"
       alt="Evnly app preview"
       width="3992"
       height="2156"
