@@ -5,6 +5,7 @@
   import HowItWorks from './sections/HowItWorks.svelte'
   import Hero from './sections/Hero.svelte'
   import Header from './sections/Header.svelte'
+  import Footer from './sections/Footer.svelte'
   import Features from './sections/Features.svelte'
   import Download from './sections/Download.svelte'
   import BuiltForLife from './sections/BuiltForLife.svelte'
@@ -21,5 +22,6 @@
     <Reviews />
     <BuiltForLife />
     <Download />
+    <Footer />
   </main>
 </div>
