@@ -35,10 +35,9 @@
       src="/assets/w_1024/hero-preview_kbf2qa.webp"
       srcset="/assets/w_1024/hero-preview_kbf2qa.webp 1x, /assets/w_2048/hero-preview_kbf2qa.webp 2x"
       alt="Evnly app preview"
-      width="3992"
-      height="2156"
+      width="1024"
+      height="553"
       class="mt-10 w-[140%] max-w-none md:w-full md:max-w-5xl h-auto block"
-      style="aspect-ratio: 3992 / 2156"
     />
   </div>
 </div>

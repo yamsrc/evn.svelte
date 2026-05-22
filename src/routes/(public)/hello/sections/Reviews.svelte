@@ -56,8 +56,8 @@
               srcset={`/assets/w_64/${avatar}.webp 1x, /assets/w_128/${avatar}.webp 2x`}
               alt=""
               aria-hidden="true"
-              width="244"
-              height="244"
+              width="64"
+              height="64"
               class="block size-[61px] rounded-full object-cover" />
           </div>
           <div class="text-sm">— {name}, {location}</div>

@@ -32,7 +32,7 @@
       <li class="flex flex-col items-center gap-8">
         <div class="w-full pt-[31%]">
           <div
-            class="relative w-full aspect-1140/1648 rounded-3xl bg-cover bg-center"
+            class="relative w-full aspect-285/412 rounded-3xl bg-cover bg-center"
             style="background-image: {bg}"
           >
             <img

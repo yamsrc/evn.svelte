@@ -28,7 +28,7 @@
     {/each}
   </ul>
 
-  <div class="relative mx-auto w-[140%] max-w-none md:w-full md:max-w-4xl" style="aspect-ratio: 4139 / 2530">
+  <div class="relative mx-auto w-[140%] max-w-none md:w-full md:max-w-4xl aspect-224/137">
     <img
       src="/assets/w_1100/share-background_fpilp3.webp"
       srcset="/assets/w_1100/share-background_fpilp3.webp 1x, /assets/w_2200/share-background_fpilp3.webp 2x"
@@ -40,10 +40,9 @@
       src="/assets/w_896/share-content_eag5jl.webp"
       srcset="/assets/w_896/share-content_eag5jl.webp 1x, /assets/w_1792/share-content_eag5jl.webp 2x"
       alt="Evnly app sharing experience"
-      width="4139"
-      height="2530"
+      width="896"
+      height="548"
       class="relative block w-full h-auto"
-      style="aspect-ratio: 4139 / 2530"
     />
   </div>
 </section>

@@ -52,8 +52,8 @@
             srcset={`/assets/w_600/${id}.webp 1x, /assets/w_1200/${id}.webp 2x`}
             alt=""
             aria-hidden="true"
-            width="2189"
-            height="2608"
+            width="600"
+            height="715"
             class="w-full h-full object-contain pointer-events-none select-none translate-y-[3%]" />
         </div>
         <div

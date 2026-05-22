@@ -10,8 +10,8 @@
         src="/assets/w_600/download-qr_zg7lex.webp"
         srcset="/assets/w_600/download-qr_zg7lex.webp 1x, /assets/w_1200/download-qr_zg7lex.webp 2x"
         alt="Scan to download Evnly"
-        width="2464"
-        height="1920"
+        width="77"
+        height="60"
         class="w-full h-full object-contain pointer-events-none select-none" />
     </div>
 
@@ -37,20 +37,18 @@
             src="/assets/w_200/download-appstore_ie2u5h.webp"
             srcset="/assets/w_200/download-appstore_ie2u5h.webp 1x, /assets/w_400/download-appstore_ie2u5h.webp 2x"
             alt="Download on the App Store"
-            width="720"
-            height="208"
-            class="block h-12 lg:h-14 w-auto"
-            style="aspect-ratio: 720 / 208" />
+            width="45"
+            height="13"
+            class="block h-12 lg:h-14 w-auto" />
         </a>
         <a href={stores.googlePlay} target="_blank" rel="noopener" aria-label="Get it on Google Play">
           <img
             src="/assets/w_200/download-googleplay_wubfdm.webp"
             srcset="/assets/w_200/download-googleplay_wubfdm.webp 1x, /assets/w_400/download-googleplay_wubfdm.webp 2x"
             alt="Get it on Google Play"
-            width="720"
-            height="208"
-            class="block h-12 lg:h-14 w-auto"
-            style="aspect-ratio: 720 / 208" />
+            width="45"
+            height="13"
+            class="block h-12 lg:h-14 w-auto" />
         </a>
       </div>
     </div>
