@@ -6,6 +6,7 @@
   import Hero from './sections/Hero.svelte'
   import Header from './sections/Header.svelte'
   import Features from './sections/Features.svelte'
+  import BuiltForLife from './sections/BuiltForLife.svelte'
 </script>
 
 <div id="top" class="relative z-0 min-h-screen bg-neutral-950 text-white text-base">
@@ -17,5 +18,6 @@
     <HowItWorks />
     <Features />
     <Reviews />
+    <BuiltForLife />
   </main>
 </div>
