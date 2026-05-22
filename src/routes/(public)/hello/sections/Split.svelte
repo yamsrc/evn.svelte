@@ -7,7 +7,7 @@
     </p>
   </div>
 
-  <div class="relative mt-10 md:mt-12 mx-auto w-full max-w-3xl aspect-373/290">
+  <div class="relative mt-10 md:mt-12 mx-auto w-full max-w-3xl">
     <img
       src="/assets/w_960/split-background_ffnpdz.webp"
       srcset="/assets/w_960/split-background_ffnpdz.webp 1x, /assets/w_1920/split-background_ffnpdz.webp 2x"

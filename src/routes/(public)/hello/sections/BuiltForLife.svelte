@@ -28,7 +28,7 @@
     {/each}
   </ul>
 
-  <div class="relative mx-auto w-[140%] max-w-none md:w-full md:max-w-4xl aspect-224/137">
+  <div class="relative mx-auto w-[140%] max-w-none md:w-full md:max-w-4xl">
     <img
       src="/assets/w_1100/share-background_fpilp3.webp"
       srcset="/assets/w_1100/share-background_fpilp3.webp 1x, /assets/w_2200/share-background_fpilp3.webp 2x"
