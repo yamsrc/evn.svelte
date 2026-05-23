@@ -12,6 +12,7 @@
   const { children } = $props()
   const title = $derived(page.data.meta?.title ?? meta.title)
   const description = $derived(page.data.meta?.description ?? meta.description)
+  const keywords = $derived(page.data.meta?.keywords)
   const image = $derived(page.data.meta?.image ?? meta.image)
 
   onNavigate(navigate)
@@ -25,6 +26,9 @@
 <svelte:head>
   <title>{title}</title>
   <meta name="description" content={description} />
+  {#if keywords}
+    <meta name="keywords" content={keywords} />
+  {/if}
 
   {#if dev}
     <meta name="robots" content="noindex,nofollow" />
