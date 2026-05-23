@@ -21,6 +21,11 @@ export const navigation = {
   entry: '/',
 } as const
 
+export const stores = {
+  appStore: 'https://apps.apple.com/app/evnly/id6757803066',
+  googlePlay: 'https://play.google.com/store/apps/details?id=com.evnapp',
+} as const
+
 export const origin = (() => {
   if (!dev || typeof window === 'undefined')
     return PUBLIC_API_ORIGIN
