@@ -20,6 +20,7 @@ declare global {
       meta?: {
         title?: string
         description?: string
+        keywords?: string
         image?: {
           url: string
           width: number
