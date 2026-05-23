@@ -5,7 +5,8 @@
   import { stores } from '$config/configuration'
 </script>
 
-<section id="download" class="max-w-7xl mx-auto">
+<section class="max-w-7xl mx-auto relative">
+  <div id="download" class="absolute -top-18"></div>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-4 *:min-h-0">
     <div
       class="bg-neutral-900 rounded-3xl aspect-square p-6 lg:p-16 flex flex-col gap-3 md:gap-4 overflow-hidden">
