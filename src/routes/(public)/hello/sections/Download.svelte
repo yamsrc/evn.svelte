@@ -9,7 +9,7 @@
   <div id="download" class="absolute -top-18"></div>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-4 *:min-h-0">
     <div
-      class="bg-neutral-900 rounded-3xl aspect-square p-6 lg:p-16 flex flex-col gap-3 md:gap-4 overflow-hidden">
+      class="bg-neutral-900 rounded-3xl md:aspect-square p-6 lg:p-16 flex flex-col gap-3 md:gap-4">
       <div
         class="flex size-10 lg:size-12 shrink-0 items-center justify-center rounded-xl bg-primary text-primary-foreground">
         <Download class="size-5 lg:size-6" />
@@ -55,8 +55,7 @@
         </a>
       </div>
     </div>
-    <div
-      class="bg-neutral-900 rounded-3xl aspect-square p-6 lg:p-16 flex flex-col gap-3 md:gap-4 overflow-hidden">
+    <div class="bg-neutral-900 rounded-3xl aspect-square p-6 lg:p-16 flex flex-col gap-3 md:gap-4">
       <div
         class="flex size-10 lg:size-12 shrink-0 items-center justify-center rounded-xl bg-primary text-primary-foreground">
         <Globe class="size-5 lg:size-6" />
