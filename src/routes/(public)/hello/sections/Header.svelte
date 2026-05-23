@@ -12,7 +12,7 @@
       </a>
       <nav class="hidden md:flex items-center gap-6">
         <a href="#how-it-works">How It Works</a>
-        <a href="#features">Value Props</a>
+        <a href="#features">Features</a>
         <a href="#reviews">Reviews</a>
       </nav>
     </div>
