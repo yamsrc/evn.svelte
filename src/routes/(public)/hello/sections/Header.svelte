@@ -20,7 +20,7 @@
     <Button
       href="#download"
       class="rounded-full bg-primary text-primary-foreground hover:bg-primary/90">
-      Download Now
+      Install App
       <Download class="size-4" />
     </Button>
   </Section>
