@@ -29,7 +29,8 @@ export const receipts = derived([internal, notifications, account],
 
 function filter(receipt: Receipt, account: Account | null) {
   return receipt.status === 'success' &&
-    (account === null || receipt.identities.includes(account.id)) // on leave
+    (account === null || receipt.identities.includes(account.id)) && // on leave
+    receipt._deleted === null
 }
 
 events.on('default.receipts.sync', (entry: Receipt) => sync(internal, entry, { delete: false }))

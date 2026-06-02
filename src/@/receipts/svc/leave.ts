@@ -12,7 +12,7 @@ export async function leave(id: string, actor: string): Promise<void | Error> {
     return receipt
   })
 
-  const receipt = await net.receipt.del(me.id, id, actor)
+  const receipt = await net.receipt.leave(me.id, id, actor)
 
   if (receipt instanceof Error) return receipt
 

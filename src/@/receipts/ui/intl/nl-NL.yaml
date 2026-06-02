@@ -2,6 +2,7 @@ splitter:
   stack:
     claim: Alles claimen
     release: Loslaten
+  waiting: Wachten op iedereen
 leave:
   label: Houd vast om te verlaten
 delete:

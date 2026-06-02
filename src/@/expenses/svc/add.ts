@@ -1,8 +1,7 @@
 import { having, sync } from 'svas'
-import { track } from '@vercel/analytics'
 import { account } from '@/iam'
+import { track } from '@/ga'
 import { internal } from './store'
-import { total } from './numbers'
 import * as net from './net'
 
 export async function add(properties: net.Post): Promise<net.Expense | Error> {
@@ -16,11 +15,11 @@ export async function add(properties: net.Post): Promise<net.Expense | Error> {
   if (expense instanceof Error) return expense
 
   sync(internal, expense)
-  track('Expense', { total: total(expense) })
+  track('expenses.created')
 
   const receipt = expense.links?.some((link) => link.type === 'receipt') ?? false
 
-  if (receipt) track('Receipts.Completed')
+  if (receipt) track('receipts.completed')
 
   return expense
 }

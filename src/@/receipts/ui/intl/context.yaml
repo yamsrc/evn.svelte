@@ -7,6 +7,8 @@ inputs:
       release:
         input: Release
         context: button label, release something being holded
+    waiting:
+      input: Waiting for everyone
   leave:
     label:
       input: Hold to leave

@@ -1,6 +1,6 @@
 import { having } from 'svas'
-import { track } from '@vercel/analytics'
 import { account, update as updateMe } from '@/iam'
+import { track } from '@/ga'
 import * as net from './net'
 import type { Account } from '@/accounts'
 
@@ -13,7 +13,7 @@ export async function add(): Promise<Account | Error> {
   if (res instanceof Error) return res
 
   updateMe(res)
-  track('Premium.Free')
+  track('purchases.completed', { method: 'free' })
 
   return res
 }

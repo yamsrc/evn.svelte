@@ -1,5 +1,4 @@
 import { ensure, sync } from 'svas'
-import { track } from '@vercel/analytics'
 import { account } from '@/iam'
 import { internal } from './store'
 import * as net from './net'
@@ -20,6 +19,4 @@ export async function unlock(id: string) {
   if (receipt instanceof Error) return receipt
 
   sync(internal, receipt)
-
-  track('Receipts.Locked')
 }

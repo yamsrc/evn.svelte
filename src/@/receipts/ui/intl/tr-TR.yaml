@@ -2,6 +2,7 @@ splitter:
   stack:
     claim: Hepsini al
     release: Bırak
+  waiting: Herkesi bekliyoruz
 leave:
   label: Ayrılmak için basılı tut
 delete:

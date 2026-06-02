@@ -1,6 +1,7 @@
 <script lang="ts">
   import Download from '@lucide/svelte/icons/download'
   import { ArrowRight, Globe } from '@lucide/svelte'
+  import { track } from '@/ga'
   import { Button } from '$ui/button'
   import { stores } from '$config/configuration'
 </script>
@@ -31,7 +32,8 @@
           href={stores.appStore}
           target="_blank"
           rel="noopener"
-          aria-label="Download on the App Store">
+          aria-label="Download on the App Store"
+          onclick={() => track('hello.cta', { name: 'app-store' })}>
           <img
             src="/assets/w_200/download-appstore_ie2u5h.webp"
             srcset="/assets/w_200/download-appstore_ie2u5h.webp 1x, /assets/w_400/download-appstore_ie2u5h.webp 2x"
@@ -44,7 +46,8 @@
           href={stores.googlePlay}
           target="_blank"
           rel="noopener"
-          aria-label="Get it on Google Play">
+          aria-label="Get it on Google Play"
+          onclick={() => track('hello.cta', { name: 'google-play' })}>
           <img
             src="/assets/w_200/download-googleplay_wubfdm.webp"
             srcset="/assets/w_200/download-googleplay_wubfdm.webp 1x, /assets/w_400/download-googleplay_wubfdm.webp 2x"
@@ -73,6 +76,7 @@
       <Button
         href="/"
         size="lg"
+        onclick={() => track('hello.cta', { name: 'browser' })}
         class="rounded-full bg-primary text-primary-foreground hover:bg-primary/90 w-fit">
         evnly.com
         <ArrowRight class="size-4" />

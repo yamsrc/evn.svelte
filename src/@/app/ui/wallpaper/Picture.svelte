@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { track } from '@vercel/analytics'
   import { ImageUp } from '@lucide/svelte'
   import { paywall } from '@/purchases/ui'
   import { account } from '@/iam'
@@ -23,7 +22,6 @@
 
   function onpick(picture: string) {
     void transit(() => void wallpaper.set({ method: 'picture', picture }))
-    track('Wallpaper.Picture')
   }
 </script>
 

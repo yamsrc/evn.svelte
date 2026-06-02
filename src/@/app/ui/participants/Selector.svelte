@@ -16,7 +16,7 @@
   import { back } from '$com/history'
   import { Share } from '$com/buttons'
   import { page } from '$app/state'
-  import { identities } from './identities'
+  import { identities, group } from './identities'
   import type { Group } from '@/groups'
   import type { Favorite } from '@/favorites'
   import type { Contact } from '@/contacts'
@@ -98,6 +98,11 @@
     const selected = Array.from(new Set(picked(map).filter(notMember)))
 
     if (selected.length === 0) return
+
+    const single =
+      groupSelection.size === 1 && contactsSelection.size === 0 && favoritesSelection.size === 0
+
+    group.id = single ? [...groupSelection][0] : undefined
 
     identities.push(...selected)
     await back('..')

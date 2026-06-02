@@ -12,6 +12,8 @@
     account,
     balance,
     neutral,
+    labeled,
+    absolute,
     selected = $bindable(),
     highlighted,
     onselect,
@@ -53,6 +55,8 @@
     {#if balance}
       <Balance
         {balance}
+        {absolute}
+        {labeled}
         youAreOwed={$dict.contacts.contact.owesYou}
         sign={neutral ? 'neutral' : undefined} />
     {/if}

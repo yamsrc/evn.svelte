@@ -2,6 +2,7 @@ splitter:
   stack:
     claim: Alles einfordern
     release: Loslassen
+  waiting: Warten auf alle
 leave:
   label: Zum Verlassen halten
 delete:

@@ -1,5 +1,6 @@
 <script lang="ts">
   import Download from '@lucide/svelte/icons/download'
+  import { track } from '@/ga'
   import Section from '@/app/ui/Section.svelte'
   import { Button } from '$ui/button'
 </script>
@@ -19,6 +20,7 @@
 
     <Button
       href="#download"
+      onclick={() => track('hello.cta', { name: 'install-app' })}
       class="rounded-full bg-primary text-primary-foreground hover:bg-primary/90">
       Install App
       <Download class="size-4" />

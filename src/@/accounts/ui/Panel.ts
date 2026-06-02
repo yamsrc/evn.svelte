@@ -9,6 +9,8 @@ export type Props = {
   selected?: boolean
   highlighted?: boolean
   neutral?: boolean
+  labeled?: boolean
+  absolute?: boolean
   href?: string
   class?: string
   onselect?: (id: string, selected: boolean) => void

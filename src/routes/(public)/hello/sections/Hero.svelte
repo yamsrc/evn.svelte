@@ -1,5 +1,6 @@
 <script lang="ts">
   import { ArrowRight } from '@lucide/svelte'
+  import { track } from '@/ga'
   import { Button } from '$ui/button'
 </script>
 
@@ -30,6 +31,7 @@
     <Button
       href="/"
       size="lg"
+      onclick={() => track('hello.cta', { name: 'start-splitting' })}
       class="mt-8 rounded-full bg-primary text-primary-foreground hover:bg-primary/90">
       Start Splitting
       <ArrowRight class="size-4" />

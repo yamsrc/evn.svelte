@@ -21,7 +21,7 @@ export function transit(fn?: (() => void) | (() => Promise<void>)): Promise<void
 }
 
 export function navigate(nav: OnNavigate): Promise<void> | void {
-  if (nav.type === 'popstate' && nav.event.hasUAVisualTransition) return
+  if (nav.type === 'popstate' && nav.event?.hasUAVisualTransition) return
 
   return transit()
 }

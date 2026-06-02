@@ -2,6 +2,7 @@ splitter:
   stack:
     claim: المطالبة بالجميع
     release: إفلات
+  waiting: بانتظار الجميع
 leave:
   label: اضغط مطولًا للمغادرة
 delete:

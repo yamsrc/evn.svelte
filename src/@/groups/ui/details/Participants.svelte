@@ -17,7 +17,7 @@
       <p class="text-sm text-muted-foreground">{$dict.groups.members.empty}</p>
     {:else if group.reduction}
       {@const entries = toEntries(group, $account, $dict)}
-      <Leaderboard {entries} sign="positive" neutral />
+      <Leaderboard {entries} absolute={false} />
     {:else if ok($contacts)}
       {@const identities = group.identities.filter((id) => id !== $account?.id)}
       {#each identities as identity (identity)}

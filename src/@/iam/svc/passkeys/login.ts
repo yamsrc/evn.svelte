@@ -1,4 +1,5 @@
 import { request } from '@/passkeys'
+import { track } from '@/ga'
 import { method, iam } from '../store'
 import { passkeys } from '../net'
 
@@ -21,4 +22,5 @@ export async function login(id?: string): Promise<void | Error> {
 
   iam(echo)
   method.set('passkey')
+  track('accounts.authenticated', { method: 'passkey' })
 }

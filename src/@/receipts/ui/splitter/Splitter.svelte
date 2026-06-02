@@ -1,9 +1,8 @@
 <script lang="ts">
-  import { onMount } from 'svelte'
-  import { track } from '@vercel/analytics'
   import { ChartPie } from '@lucide/svelte'
   import { Asyvatar } from '@/accounts/ui'
   import { Button } from '$ui/button'
+  import { dict } from '../intl'
   import Failed from '../Failed.svelte'
   import { sync, store } from './store'
   import Summary from './Summary.svelte'
@@ -29,8 +28,6 @@
   }
 
   let participants = $state<Participants | undefined>(undefined)
-
-  onMount(() => track('Receipts.Splitter'))
 
   $effect(() => {
     sync(receipt)
@@ -62,6 +59,9 @@
         {#if allDone(receipt)}
           <Lock {receipt} {stats} />
         {:else}
+          <Button variant="outline" size="lg" disabled class="w-full">
+            {$dict.splitter.waiting}
+          </Button>
           <Autoclose {receipt} {actor} payer={receipt.autolock} />
         {/if}
         <Feedback {receipt} {account} />
@@ -88,5 +88,5 @@
 </div>
 
 {#if receipt.status !== 'failed'}
-  <Actions {receipt} {account} {actor} />
+  <Actions {receipt} {account} bind:actor />
 {/if}
