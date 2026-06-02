@@ -2,6 +2,7 @@ splitter:
   stack:
     claim: Riscuoti tutto
     release: Rilascia
+  waiting: In attesa di tutti
 leave:
   label: Tieni premuto per uscire
 delete:

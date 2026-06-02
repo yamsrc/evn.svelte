@@ -2,6 +2,7 @@ splitter:
   stack:
     claim: 全部领取
     release: 释放
+  waiting: 正在等所有人
 leave:
   label: 按住离开
 delete:

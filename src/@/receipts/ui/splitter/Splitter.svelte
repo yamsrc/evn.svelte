@@ -4,6 +4,7 @@
   import { ChartPie } from '@lucide/svelte'
   import { Asyvatar } from '@/accounts/ui'
   import { Button } from '$ui/button'
+  import { dict } from '../intl'
   import Failed from '../Failed.svelte'
   import { sync, store } from './store'
   import Summary from './Summary.svelte'
@@ -62,6 +63,9 @@
         {#if allDone(receipt)}
           <Lock {receipt} {stats} />
         {:else}
+          <Button variant="outline" size="lg" disabled class="w-full">
+            {$dict.splitter.waiting}
+          </Button>
           <Autoclose {receipt} {actor} payer={receipt.autolock} />
         {/if}
         <Feedback {receipt} {account} />

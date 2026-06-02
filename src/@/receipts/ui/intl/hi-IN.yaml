@@ -2,6 +2,7 @@ splitter:
   stack:
     claim: सभी प्राप्त करें
     release: छोड़ें
+  waiting: सबका इंतज़ार हो रहा है
 leave:
   label: छोड़ने के लिए दबाए रखें
 delete:
