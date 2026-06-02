@@ -127,7 +127,9 @@
     <div class="space-y-2 flex flex-col justify-between">
       <div class="rounded-lg ring-3 ring-primary/20">
         <Button {onclick} size="lg" class="w-full relative" disabled={busy}>
-          {#if free}
+          {#if busy}
+            <Spinner />
+          {:else if free}
             {$dict.paywall.free.cta}
           {:else if selected?.trial}
             {$dict.paywall.offer.trial.cta}
