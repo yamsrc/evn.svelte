@@ -7,7 +7,7 @@ import { internal as contacts } from '@/contacts/svc/store'
 import { adventures } from '@/adventures'
 import type { Method } from '@/iam'
 
-export function welcome(_: unknown, method: Method) {
+export function created(_: unknown, method: Method) {
   track('accounts.created', { method })
 
   // avoid redundant roundtrips
@@ -17,4 +17,8 @@ export function welcome(_: unknown, method: Method) {
   contacts.replace([])
   favorites.replace([])
   adventures.replace([])
+}
+
+export function authenticated(method: Method) {
+  track('accounts.authenticated', { method })
 }

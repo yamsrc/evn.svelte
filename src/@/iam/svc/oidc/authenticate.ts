@@ -1,4 +1,3 @@
-import { track } from '@/ga'
 import { sync } from '../sync'
 import { method, iam } from '../store'
 import * as net from '../net'
@@ -63,11 +62,6 @@ async function verify(credentials: string) {
     return echo
 
   iam(echo)
-
-  const authMethod = method.extract()
-
-  if (authMethod !== null)
-    track('accounts.authenticated', { method: authMethod })
 }
 
 type Authenticate = (descriptor: Descriptor, idp: IDP) => Promise<string | Error | undefined>

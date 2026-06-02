@@ -4,18 +4,24 @@
   import { passkeys } from '@/iam'
   import { Button } from '$ui/button'
   import { Loader } from '$com/loader'
+  import type { Method } from '@/iam'
   import type { AccountLike } from '../AccountLike'
 
-  const { account }: { account: AccountLike } = $props()
+  const { account, onauthenticate }: {
+    account: AccountLike
+    onauthenticate?: (method: Method) => void
+  } = $props()
 
   async function onclick(e: MouseEvent) {
     const button = e.currentTarget as HTMLButtonElement
 
     button.disabled = true
 
-    await passkeys.login(account.id)
+    const result = await passkeys.login(account.id)
 
     button.disabled = false
+
+    if (!(result instanceof Error)) onauthenticate?.('passkey')
   }
 </script>
 

@@ -1,4 +1,3 @@
-import { track } from '@/ga'
 import { sync } from './sync'
 import { method, iam } from './store'
 import * as net from './net'
@@ -12,7 +11,6 @@ export async function verify(username: string, password: string): Promise<Echo |
 
   iam(echo)
   method.set('password')
-  track('accounts.authenticated', { method: 'password' })
 
   return echo
 }

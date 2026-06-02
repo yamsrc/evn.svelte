@@ -10,7 +10,7 @@
   import { Authentication as OIDC } from './oidc'
   import type { Props } from './Authentication'
 
-  const { class: classes, account, oidc, oncreate }: Props = $props()
+  const { class: classes, account, oidc, oncreate, onauthenticate }: Props = $props()
 
   let tabsRef = $state<HTMLDivElement | null>(null)
 
@@ -39,12 +39,12 @@
         {$dict.auth.email}
       </Tabs.Trigger>
     </Tabs.List>
-    <OIDC {account} apple={oidc?.apple !== false} google={oidc?.google !== false} />
+    <OIDC {account} apple={oidc?.apple !== false} google={oidc?.google !== false} {onauthenticate} />
   </div>
   <Tabs.Content value="passkey">
-    <Passkey {account} oncreate={(account) => oncreate?.(account, 'passkey')} />
+    <Passkey {account} oncreate={(account) => oncreate?.(account, 'passkey')} {onauthenticate} />
   </Tabs.Content>
   <Tabs.Content value="password">
-    <Password {account} oncreate={(account) => oncreate?.(account, 'password')} />
+    <Password {account} oncreate={(account) => oncreate?.(account, 'password')} {onauthenticate} />
   </Tabs.Content>
 </Tabs.Root>

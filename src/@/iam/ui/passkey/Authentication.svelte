@@ -10,7 +10,7 @@
   import Create from './Create.svelte'
   import type { Props } from './Authentication'
 
-  const { class: classes, account, oncreate }: Props = $props()
+  const { class: classes, account, oncreate, onauthenticate }: Props = $props()
 
   const href = apple
     ? 'https://support.apple.com/en-us/102195'
@@ -59,6 +59,6 @@
   </Card.Root>
 
   {#if supported && !account}
-    <Login />
+    <Login {onauthenticate} />
   {/if}
 </div>

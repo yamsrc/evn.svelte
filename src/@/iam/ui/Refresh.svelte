@@ -10,7 +10,11 @@
   import Card from './Card.svelte'
   import type { AccountLike } from './AccountLike'
 
-  const { account, method }: { account: AccountLike; method: Method | null } = $props()
+  const { account, method, onauthenticate }: {
+    account: AccountLike
+    method: Method | null
+    onauthenticate?: (method: Method) => void
+  } = $props()
 
   onMount(() => {
     if (method === null) logout()
@@ -21,13 +25,13 @@
   <Card title={$dict.auth.refresh.title} description={$dict.auth.refresh.description(account.name)}>
     {#snippet action()}
       {#if method === 'passkey'}
-        <PasskeyRefresh {account} />
+        <PasskeyRefresh {account} {onauthenticate} />
       {:else if method === 'password'}
-        <PasswordRefresh />
+        <PasswordRefresh {onauthenticate} />
       {:else if method === 'apple'}
-        <OIDCRefresh idp="apple" />
+        <OIDCRefresh idp="apple" {onauthenticate} />
       {:else if method === 'google'}
-        <OIDCRefresh idp="google" />
+        <OIDCRefresh idp="google" {onauthenticate} />
       {/if}
     {/snippet}
   </Card>

@@ -5,7 +5,7 @@
   import Form from './Form.svelte'
   import type { Props } from './Authentication'
 
-  const { class: classes, account, oncreate }: Props = $props()
+  const { class: classes, account, oncreate, onauthenticate }: Props = $props()
 </script>
 
 <Card.Root class={cn('pt-4 gap-4 bg-background/75', classes)}>
@@ -14,6 +14,6 @@
     <Card.Description>{$dict.auth.passwordDescription}</Card.Description>
   </Card.Header>
   <Card.Content>
-    <Form {account} {oncreate} />
+    <Form {account} {oncreate} {onauthenticate} />
   </Card.Content>
 </Card.Root>

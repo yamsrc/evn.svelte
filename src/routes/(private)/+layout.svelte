@@ -9,7 +9,7 @@
   import { oidc } from '$config/configuration'
   import { Nav } from '$com/shell'
   import { goto } from '$app/navigation'
-  import { welcome } from './welcome'
+  import { created, authenticated } from './welcome'
   import { sections } from './sections'
 
   const { children } = $props()
@@ -17,7 +17,7 @@
 </script>
 
 <Screen>
-  <Authenticated {oidc} oncreate={welcome}>
+  <Authenticated {oidc} oncreate={created} onauthenticate={authenticated}>
     {@render children()}
     <Nav position="start" sections={sections($dict, $notifications)} underlay class="z-48" />
     <Paywall />

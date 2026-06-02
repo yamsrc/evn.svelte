@@ -5,7 +5,7 @@
   import { icons } from './icons'
   import type { Props } from './Button'
 
-  const { idp, children, account }: Props = $props()
+  const { idp, children, account, onauthenticate }: Props = $props()
 
   const Icon = $derived(icons[idp])
 
@@ -14,9 +14,11 @@
 
     button.disabled = true
 
-    await oidc.authenticate(idp, account?.id)
+    const result = await oidc.authenticate(idp, account?.id)
 
     button.disabled = false
+
+    if (!(result instanceof Error) && account === undefined) onauthenticate?.(idp)
   }
 </script>
 
