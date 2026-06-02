@@ -2,10 +2,19 @@
   import Users from '@lucide/svelte/icons/users'
   import UserPlus from '@lucide/svelte/icons/user-plus'
   import Briefcase from '@lucide/svelte/icons/briefcase'
+  import { track, type HelloCta } from '@/ga'
 
-  const cards = [
+  const cards: {
+    id: string
+    name: HelloCta
+    Icon: typeof Users
+    title: string
+    body: string
+    bg: string
+  }[] = [
     {
       id: 'simple-1_hplzge',
+      name: 'groups',
       Icon: Users,
       title: 'Create Groups\nfor Any Occasions',
       body: 'Whether it’s dinner with friends, a weekend trip, or shared household expenses, Evnly lets you create groups in seconds. Keep everyone organized, track who paid what, and make splitting simple for any occasion.',
@@ -13,6 +22,7 @@
     },
     {
       id: 'simple-2_geqhs8',
+      name: 'invite',
       Icon: UserPlus,
       title: 'Add Friends Even\nif They’re Not on Evnly',
       body: 'No app? No problem. Invite anyone by link, and they can see their share instantly. Splitting bills has never been easier, even for friends who haven’t joined Evnly yet.',
@@ -20,6 +30,7 @@
     },
     {
       id: 'simple-3_wkwxxl',
+      name: 'adventures',
       Icon: Briefcase,
       title: 'Adventures',
       body: 'Adventures are for those who want to spend equally — be it a voyage together, a night out at the bar, or just shared household expenses. Evnly makes it effortless to track, split, and settle bills so everyone pays their fair share.',
@@ -44,7 +55,7 @@
   </div>
 
   <ul class="space-y-4">
-    {#each cards as { id, Icon, title, body, bg } (title)}
+    {#each cards as { id, name, Icon, title, body, bg } (title)}
       <li class="grid grid-cols-1 md:grid-cols-2 gap-4 *:min-h-0">
         <div class={['rounded-3xl aspect-square p-6 lg:p-8', bg]}>
           <img
@@ -72,6 +83,7 @@
           <div>
             <a
               href="#download"
+              onclick={() => track('hello.cta', { name })}
               class="inline-flex items-center rounded-full border border-neutral-900 px-5 py-2 font-medium hover:bg-neutral-900 hover:text-white transition-colors">
               Try It Now
             </a>

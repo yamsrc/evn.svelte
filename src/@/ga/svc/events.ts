@@ -3,6 +3,16 @@ import type { Method } from '@/iam'
 
 export type PurchaseMethod = 'free' | 'ios'
 
+export type HelloCta =
+  | 'start-splitting'
+  | 'install-app'
+  | 'app-store'
+  | 'google-play'
+  | 'browser'
+  | 'groups'
+  | 'invite'
+  | 'adventures'
+
 export type EventMap = {
   /** User explores the app in demo mode without creating an account. */
   'accounts.demo': void
@@ -33,6 +43,9 @@ export type EventMap = {
 
   /** Premium purchase completed. `free` = timezone grant; `ios` = App Store purchase. */
   'purchases.completed': { method: PurchaseMethod }
+
+  /** Landing page CTA click. */
+  'hello.cta': { name: HelloCta }
 }
 
 export type EventName = keyof EventMap

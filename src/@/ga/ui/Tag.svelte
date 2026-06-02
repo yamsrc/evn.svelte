@@ -2,11 +2,12 @@
 
 <script lang="ts">
   import { onMount } from 'svelte'
+  import { dev } from '$app/environment'
 
   const id = import.meta.env.VITE_GA_ID
 
   onMount(() => {
-    if (!id) return
+    if (dev || !id) return
 
     window.dataLayer = window.dataLayer || []
 
@@ -19,6 +20,6 @@
   })
 </script>
 
-{#if id}
+{#if id && !dev}
   <script async src={`https://www.googletagmanager.com/gtag/js?id=${id}`}></script>
 {/if}
