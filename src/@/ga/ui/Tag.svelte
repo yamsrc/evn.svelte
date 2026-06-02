@@ -14,9 +14,11 @@
 
     window.gtag('js', new Date())
     window.gtag('config', id, { send_page_view: false })
+
+    const script = document.createElement('script')
+
+    script.async = true
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${id}`
+    document.head.appendChild(script)
   })
 </script>
-
-{#if id}
-  <script async src={`https://www.googletagmanager.com/gtag/js?id=${id}`}></script>
-{/if}
