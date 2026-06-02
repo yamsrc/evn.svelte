@@ -92,5 +92,5 @@
 </div>
 
 {#if receipt.status !== 'failed'}
-  <Actions {receipt} {account} {actor} />
+  <Actions {receipt} {account} bind:actor />
 {/if}
