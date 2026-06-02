@@ -46,6 +46,12 @@ export type EventMap = {
 
   /** Landing page CTA click. */
   'hello.cta': { name: HelloCta }
+
+  /** Push-notification permission denied. */
+  'transmission.denied': { channel: string }
+
+  /** Push-notification permission granted. */
+  'transmission.granted': { channel: string }
 }
 
 export type EventName = keyof EventMap

@@ -74,6 +74,8 @@ function postMessage<H extends Handler>(name: H, msg?: Message<H>): boolean {
 }
 
 export const fcm: Channel = {
+  name: 'fcm',
+
   async available(): Promise<boolean> {
     if (
       typeof window === 'undefined' ||

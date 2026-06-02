@@ -114,6 +114,8 @@ function send(msg: WebMessage): boolean {
 }
 
 export const twa: Channel = {
+  name: 'twa',
+
   async available(): Promise<boolean> {
     if (typeof window === 'undefined') return false
 

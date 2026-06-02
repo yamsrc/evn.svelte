@@ -1,6 +1,7 @@
 import { having } from 'svas'
 import { meta } from '@toa.io/origin'
 import { account } from '@/iam'
+import { track } from '@/ga'
 import { permission, subscribed } from './store'
 import * as net from './net'
 import { channel } from './channel'
@@ -29,7 +30,13 @@ export async function request(): Promise<void> {
 
   permission.set(result)
 
-  if (result !== 'granted') return
+  if (result !== 'granted') {
+    track('transmission.denied', { channel: channel!.name })
+
+    return
+  }
+
+  track('transmission.granted', { channel: channel!.name })
 
   await subscribe()
 }
