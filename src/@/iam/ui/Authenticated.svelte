@@ -11,12 +11,12 @@
   import Authentication from './Authentication.svelte'
   import type { Props } from './Authenticated'
 
-  const { children, screen, account, oidc, oncreate }: Props = $props()
+  const { children, screen, account, oidc, oncreate, onauthenticate }: Props = $props()
 </script>
 
 {#snippet authentication()}
   {#if $iam}
-    <Refresh account={$iam} method={$method} />
+    <Refresh account={$iam} method={$method} {onauthenticate} />
   {:else if inApp}
     <InApp />
   {:else}
@@ -25,6 +25,7 @@
       {account}
       {oidc}
       {oncreate}
+      {onauthenticate}
     />
   {/if}
 {/snippet}

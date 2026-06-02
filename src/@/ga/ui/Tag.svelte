@@ -1,17 +1,14 @@
-<!-- eslint-disable svelte/no-at-html-tags -->
-
 <script lang="ts">
   import { onMount } from 'svelte'
-  import { dev } from '$app/environment'
 
   const id = import.meta.env.VITE_GA_ID
 
   onMount(() => {
-    if (dev || !id) return
+    if (!id) return
 
-    window.dataLayer = window.dataLayer || []
+    window.dataLayer ??= []
 
-    window.gtag = function gtag(...args: unknown[]) {
+    window.gtag ??= function gtag(...args: unknown[]) {
       window.dataLayer.push(args)
     }
 
@@ -20,6 +17,6 @@
   })
 </script>
 
-{#if id && !dev}
+{#if id}
   <script async src={`https://www.googletagmanager.com/gtag/js?id=${id}`}></script>
 {/if}

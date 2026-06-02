@@ -10,7 +10,7 @@
   import Password from './Password.svelte'
   import type { Props } from './Form'
 
-  const { account, oncreate }: Props = $props()
+  const { account, oncreate, onauthenticate }: Props = $props()
 
   let busy = $state(false)
   let username = $state('')
@@ -48,6 +48,7 @@
     const response = meta(echo)
 
     if (response?.status === 201) oncreate?.(echo)
+    else if (account === undefined) onauthenticate?.('password')
 
     return echo
   }
@@ -94,6 +95,7 @@
     const response = meta(echo)
 
     if (response?.status === 201) oncreate?.(echo)
+    else if (account === undefined) onauthenticate?.('password')
 
     return echo
   }

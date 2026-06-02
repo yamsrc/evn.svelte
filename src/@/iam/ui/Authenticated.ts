@@ -9,4 +9,5 @@ export interface Props {
   account?: AccountLike
   oidc?: Record<oidc.IDP, boolean>
   oncreate?: (account: AccountLike, method: Method) => void
+  onauthenticate?: (method: Method) => void
 }
