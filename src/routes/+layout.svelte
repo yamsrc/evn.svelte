@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Tag } from '@/ga/ui'
+  import { Tag, Manager } from '@/ga/ui'
   import { pageview } from '@/ga'
   import { Background } from '@/app/ui'
   import { navigate, suppressContextMenu } from '$lib/tools'
@@ -58,6 +58,7 @@
   <meta name="twitter:image" content={image.url} />
 
   <Tag />
+  <Manager />
 </svelte:head>
 
 <svelte:body oncontextmenu={suppressContextMenu} />
