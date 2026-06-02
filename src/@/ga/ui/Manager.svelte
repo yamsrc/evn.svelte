@@ -1,12 +1,18 @@
 <script lang="ts">
-  import template from './gtm.txt?raw'
+  import { onMount } from 'svelte'
 
   const id = import.meta.env.VITE_GTM_ID
 
-  const code = template.replace('{{ GTM_ID }}', id)
-</script>
+  onMount(() => {
+    if (!id) return
 
-{#if id}
-  <!-- eslint-disable-next-line svelte/no-at-html-tags -->
-  {@html code}
-{/if}
+    window.dataLayer ??= []
+    window.dataLayer.push({ 'gtm.start': Date.now(), event: 'gtm.js' })
+
+    const script = document.createElement('script')
+
+    script.async = true
+    script.src = `https://www.googletagmanager.com/gtm.js?id=${id}`
+    document.head.appendChild(script)
+  })
+</script>

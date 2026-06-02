@@ -57,9 +57,10 @@
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={image.url} />
 
-  <Tag />
-  <Manager />
 </svelte:head>
+
+<Tag />
+<Manager />
 
 <svelte:body oncontextmenu={suppressContextMenu} />
 
