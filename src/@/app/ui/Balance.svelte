@@ -6,6 +6,8 @@
   const {
     total,
     balance,
+    labeled = true,
+    absolute,
     totalLabel = $dict.expenses.balance.total,
     youOwe = $dict.expenses.balance.youOwe,
     youAreOwed = $dict.expenses.balance.youAreOwed,
@@ -17,7 +19,7 @@
 </script>
 
 <div class={['flex items-center justify-end gap-x-2', classes]}>
-  {#if sign !== 'neutral'}
+  {#if sign !== 'neutral' && labeled}
     <p class="text-muted-foreground text-sm text-nowrap">
       {#if total !== undefined}
         {totalLabel}
@@ -28,5 +30,5 @@
       {/if}
     </p>
   {/if}
-  <Coins {amount} {sign} />
+  <Coins {amount} {sign} {absolute} />
 </div>

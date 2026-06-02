@@ -5,7 +5,7 @@
   import { Progress } from '$ui/progress'
   import type { Props } from './Leaderboard'
 
-  const { entries, sign = 'negative', neutral, top }: Props = $props()
+  const { entries, absolute, top }: Props = $props()
 
   const sorted = $derived([...entries].sort((a, b) => Math.abs(b.value) - Math.abs(a.value)))
   const visible = $derived(top ? sorted.slice(0, top) : sorted)
@@ -20,8 +20,9 @@
           <Panel
             account={{ ...account, name: entry.name ?? account.name }}
             balance={entry.value}
-            href={entry.href}
-            {neutral} />
+            labeled={false}
+            {absolute}
+            href={entry.href} />
         {/snippet}
       </Async>
       {#if entries.length > 1}
@@ -30,8 +31,10 @@
             value={total > 0 ? (Math.abs(entry.value) / total) * 100 : 0}
             class={[
               'h-1',
-              sign === 'positive' &&
+              entry.value > 0 &&
                 'bg-constructive/20 [&_div[data-slot=progress-indicator]]:bg-constructive',
+              entry.value < 0 &&
+                'bg-destructive/20 [&_div[data-slot=progress-indicator]]:bg-destructive',
             ]} />
         </div>
       {/if}

@@ -25,6 +25,6 @@
   {#if empty}
     <p class="text-sm text-muted-foreground">{$dict.participants.empty}</p>
   {:else}
-    <Leaderboard {entries} sign="positive" neutral />
+    <Leaderboard {entries} />
   {/if}
 </div>

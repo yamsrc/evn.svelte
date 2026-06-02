@@ -33,7 +33,7 @@
       {#if positive.length > 0}
         <div class="space-y-1">
           <p>{$dict.tops.positive}</p>
-          <Leaderboard entries={positive} sign="positive" top={3} />
+          <Leaderboard entries={positive} top={3} />
         </div>
       {/if}
     </div>
