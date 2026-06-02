@@ -19,7 +19,7 @@ export interface Receipt {
 }
 
 export interface Link {
-  type: 'expense' | unknown
+  type: 'expense' | 'group' | unknown
   id: string
 }
 

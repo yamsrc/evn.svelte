@@ -9,8 +9,8 @@
 
   const { receipt, account, actor }: Props = $props()
 
-  function onadd(identities: string[]) {
-    void add(receipt.id, identities)
+  function onadd(identities: string[], group?: string) {
+    void add(receipt.id, identities, group)
   }
 </script>
 

@@ -32,6 +32,7 @@ export type ClaimsChangeset = Record<string, Array<boolean | null>>
 
 export interface ReceiptPost {
   participants: string[]
+  group?: string
 }
 
 export type Assign = { autolock: string | null }

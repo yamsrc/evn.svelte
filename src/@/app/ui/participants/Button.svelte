@@ -2,7 +2,7 @@
   import { onMount } from 'svelte'
   import { Button } from '$ui/button'
   import { goto } from '$app/navigation'
-  import { identities } from './identities'
+  import { identities, group } from './identities'
   import type { Props } from './Button'
 
   const { children, exclude, onadd, options, ...props }: Props = $props()
@@ -21,7 +21,11 @@
   onMount(() => {
     if (identities.length === 0) return
 
-    onadd(identities)
+    const picked = group.id
+
+    group.id = undefined
+
+    onadd(identities, picked)
     identities.length = 0
   })
 </script>

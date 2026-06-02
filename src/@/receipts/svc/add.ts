@@ -3,7 +3,7 @@ import { account } from '@/iam'
 import { internal } from './store'
 import * as net from './net'
 
-export async function add(id: string, participants: string[]): Promise<void | Error> {
+export async function add(id: string, participants: string[], group?: string): Promise<void | Error> {
   const me = ensure(account)
 
   internal.update(id, (receipt) => {
@@ -12,7 +12,12 @@ export async function add(id: string, participants: string[]): Promise<void | Er
     return receipt
   })
 
-  const receipt = await net.receipt.post(me.id, id, { participants })
+  const body: net.ReceiptPost = { participants }
+
+  if (group !== undefined)
+    body.group = group
+
+  const receipt = await net.receipt.post(me.id, id, body)
 
   if (receipt instanceof Error) {
     // rollback

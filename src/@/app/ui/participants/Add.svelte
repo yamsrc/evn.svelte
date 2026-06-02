@@ -4,7 +4,7 @@
   import { Button } from '$ui/button'
   import { dict } from '$lib/intl'
   import { goto } from '$app/navigation'
-  import { identities } from './identities'
+  import { identities, group } from './identities'
   import type { Props } from './Add'
 
   const { exclude, onadd, options, ...props }: Props = $props()
@@ -23,7 +23,11 @@
   onMount(() => {
     if (identities.length === 0) return
 
-    onadd(identities.splice(0))
+    const picked = group.id
+
+    group.id = undefined
+
+    onadd(identities.splice(0), picked)
   })
 </script>
 

@@ -12,6 +12,12 @@ export function allDone(receipt: Receipt): boolean {
 }
 
 export function convert(receipt: Receipt, stats: Statistics): ExpenseValue {
+  const group = receipt.links?.find((link) => link.type === 'group')?.id
+  const links = [{ type: 'receipt', id: receipt.id }]
+
+  if (group !== undefined)
+    links.push({ type: 'group' as const, id: group })
+
   return {
     total: { amount: stats.total, touched: false },
     title: receipt.title,
@@ -19,7 +25,7 @@ export function convert(receipt: Receipt, stats: Statistics): ExpenseValue {
     participants: toParticipants(stats),
     extras: [],
     attachments: receipt.attachments,
-    links: [{ type: 'receipt', id: receipt.id }],
+    links,
   }
 }
 
