@@ -1,6 +1,4 @@
 <script lang="ts">
-  import { onMount } from 'svelte'
-  import { track } from '@vercel/analytics'
   import { ChartPie } from '@lucide/svelte'
   import { Asyvatar } from '@/accounts/ui'
   import { Button } from '$ui/button'
@@ -30,8 +28,6 @@
   }
 
   let participants = $state<Participants | undefined>(undefined)
-
-  onMount(() => track('Receipts.Splitter'))
 
   $effect(() => {
     sync(receipt)

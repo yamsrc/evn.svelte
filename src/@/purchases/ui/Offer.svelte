@@ -5,6 +5,7 @@
   import { ok } from 'svas'
   import { add, channel } from '@/purchases'
   import { account } from '@/iam'
+  import { track } from '@/ga'
   import { report, restore } from '@/appstore'
   import { Spinner } from '$ui/spinner'
   import { Button } from '$ui/button'
@@ -60,7 +61,12 @@
 
     if (tx instanceof Error) return tx
 
-    return await report(tx.payload)
+    const result = await report(tx.payload)
+
+    if (!(result instanceof Error))
+      track('purchases.completed', { method: 'ios' })
+
+    return result
   }
 
   async function restorePurchases(e: MouseEvent) {

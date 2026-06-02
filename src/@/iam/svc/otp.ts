@@ -1,3 +1,4 @@
+import { track } from '@/ga'
 import { method, iam } from './store'
 import * as net from './net'
 import type { Echo } from './net'
@@ -18,6 +19,7 @@ export async function verify(username: string, otp: string): Promise<Echo | Erro
 
   iam(echo)
   method.set('password')
+  track('accounts.authenticated', { method: 'password' })
 
   return echo
 }

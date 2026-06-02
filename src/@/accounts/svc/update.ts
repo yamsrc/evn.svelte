@@ -1,5 +1,4 @@
 import { ensure } from 'svas'
-import { track } from '@vercel/analytics'
 import { account, update as updateMe } from '@/iam'
 import { accounts } from './store'
 import * as net from './net'
@@ -11,18 +10,6 @@ export async function update(identity: string, properties: net.Editable): Promis
     return res
 
   accounts.set(res.id, res)
-
-  if (properties.wallpaper !== undefined)
-    track('Wallpaper', {
-      pattern: properties.wallpaper?.pattern ?? null,
-      effect: properties.wallpaper?.effect ?? null,
-    })
-
-  if (properties.grammar !== undefined)
-    track('Grammar', { grammar: properties.grammar })
-
-  if (properties.locale !== undefined)
-    track('Locale', { locale: properties.locale })
 
   if (identity === ensure(account).id)
     updateMe(res)

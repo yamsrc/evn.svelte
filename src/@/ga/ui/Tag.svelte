@@ -1,11 +1,13 @@
 <!-- eslint-disable svelte/no-at-html-tags -->
 
 <script lang="ts">
-  const id = import.meta.env.VITE_GA_ID
-
   import { onMount } from 'svelte'
 
+  const id = import.meta.env.VITE_GA_ID
+
   onMount(() => {
+    if (!id) return
+
     window.dataLayer = window.dataLayer || []
 
     window.gtag = function gtag(...args: unknown[]) {
@@ -13,12 +15,10 @@
     }
 
     window.gtag('js', new Date())
-    window.gtag('config', id)
+    window.gtag('config', id, { send_page_view: false })
   })
 </script>
 
-<svelte:head>
-  {#if id}
-    <script async src={`https://www.googletagmanager.com/gtag/js?id=${id}`}></script>
-  {/if}
-</svelte:head>
+{#if id}
+  <script async src={`https://www.googletagmanager.com/gtag/js?id=${id}`}></script>
+{/if}

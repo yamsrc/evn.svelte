@@ -1,6 +1,6 @@
 import { having } from 'svas'
-import { track } from '@vercel/analytics'
 import { account } from '@/iam'
+import { track } from '@/ga'
 import { premium } from '@/accounts'
 import { takeoff, transit } from '$lib/tools'
 import { open, cta as ctaStore, type CTA } from './store'
@@ -14,7 +14,7 @@ export const paywall = async (cta: CTA) => {
     if (cta.source !== undefined) takeoff(cta.source, 'paywall', 'transition-spring transition-morph')
 
     await transit(() => open.set(true))
-    track('Paywall', { source: cta.benefit })
+    track('purchases.paywall', { source: cta.benefit })
   } else
     cta.callback()
 }

@@ -1,5 +1,6 @@
 <script lang="ts">
   import { Tag } from '@/ga/ui'
+  import { pageview } from '@/ga'
   import { Background } from '@/app/ui'
   import { navigate, suppressContextMenu } from '$lib/tools'
   import { dict } from '$lib/intl'
@@ -17,7 +18,12 @@
   const image = $derived(page.data.meta?.image ?? meta.image)
 
   onNavigate(navigate)
-  afterNavigate((nav) => track(nav, page.state))
+
+  afterNavigate((nav) => {
+    track(nav, page.state)
+
+    if (nav.to) pageview(nav.to.url)
+  })
 
   $effect(() => {
     document.dir = $dict.dir

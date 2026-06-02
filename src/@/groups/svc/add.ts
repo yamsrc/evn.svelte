@@ -1,7 +1,7 @@
 import { having } from 'svas'
 import { sync } from 'svas'
-import { track } from '@vercel/analytics'
 import { account } from '@/iam'
+import { track } from '@/ga'
 import { internal } from './store'
 import * as net from './net'
 
@@ -13,7 +13,7 @@ export async function add(id: string, identities: string[]): Promise<net.Group |
   if (res instanceof Error) return res
 
   sync(internal, res)
-  track('Group')
+  track('groups.created')
 
   return res
 }
