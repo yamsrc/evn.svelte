@@ -38,6 +38,7 @@
     "@toa.io/origin": "1.18.0",
     "@types/dom-navigation": "1.0.7",
     "@types/google.accounts": "0.0.18",
+    "@types/gtag.js": "0.0.20",
     "@types/negotiator": "0.6.4",
     "@types/node": "^24",
     "@types/semver": "7.7.1",

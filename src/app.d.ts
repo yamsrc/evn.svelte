@@ -10,6 +10,8 @@ declare global {
 
   interface Window {
     webkit?: { messageHandlers?: WebkitMessageHandlers }
+    dataLayer: unknown[]
+    gtag?: Gtag.Gtag
   }
 
   namespace App {
