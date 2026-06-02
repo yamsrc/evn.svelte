@@ -2,7 +2,7 @@
   import { SvelteSet } from 'svelte/reactivity'
   import { onMount } from 'svelte'
   import { Async } from 'svas'
-  import { CircleCheck } from '@lucide/svelte'
+  import { CircleCheck, CircleX } from '@lucide/svelte'
   import { leave } from '@/receipts'
   import { Coins } from '@/app/ui'
   import { Avatar } from '@/accounts/ui'
@@ -47,47 +47,58 @@
   {#each identities as identity (identity)}
     {@const selected = identity === actor}
     {@const cost = stats.portions[identity]?.total ?? 0}
-    <Button
-      variant="outline"
-      class={[
-        'relative',
-        'min-w-20 max-w-32 h-fit flex flex-col items-center justify-center gap-1',
-        'disabled:opacity-100 transition-all',
-        selected && 'selected',
-        mounted && 'starting:scale-0 duration-300',
-        removing.has(identity) && 'scale-0 duration-150',
-      ]}
-      disabled={identity === actor}
-      onclick={() => select(identity)}>
-      <Async store={accounts.get(identity)}>
-        {#snippet awaited(participant)}
-          <Avatar account={participant} />
-          <Ellipsis>
-            {#if identity === account.id}
-              {$dict.me}
-            {:else}
-              {participant.name}
-            {/if}
-          </Ellipsis>
-        {/snippet}
-      </Async>
-      <div class="absolute top-1 right-1">
-        {#if receipt.done[identity] === true}
-          <CircleCheck
-            class={[
-              'bg-constructive text-constructive-foreground rounded-full',
-              mounted && 'starting:scale-0 duration-150',
-            ]} />
-        {/if}
-      </div>
-      <div
+    <div class="relative">
+      <Button
+        variant="outline"
         class={[
-          'absolute -bottom-8',
-          'py-1 px-2 rounded-lg bg-background border border-muted-foreground/20',
-          'text-xs',
-        ]}>
-        <Coins amount={cost} sign={sign(receipt, identity)} />
-      </div>
-    </Button>
+          'relative',
+          'min-w-20 max-w-32 h-fit flex flex-col items-center justify-center gap-1',
+          'disabled:opacity-100 transition-all',
+          selected && 'selected',
+          mounted && 'starting:scale-0 duration-300',
+          removing.has(identity) && 'scale-0 duration-150',
+        ]}
+        disabled={identity === actor}
+        onclick={() => select(identity)}>
+        <Async store={accounts.get(identity)}>
+          {#snippet awaited(participant)}
+            <Avatar account={participant} />
+            <Ellipsis>
+              {#if identity === account.id}
+                {$dict.me}
+              {:else}
+                {participant.name}
+              {/if}
+            </Ellipsis>
+          {/snippet}
+        </Async>
+        <div class="absolute top-1 right-1">
+          {#if receipt.done[identity] === true}
+            <CircleCheck
+              class={[
+                'bg-constructive text-constructive-foreground rounded-full',
+                mounted && 'starting:scale-0 duration-150',
+              ]} />
+          {:else}{/if}
+        </div>
+        <div
+          class={[
+            'absolute -bottom-8',
+            'py-1 px-2 rounded-lg bg-background border border-muted-foreground/20',
+            'text-xs',
+          ]}>
+          <Coins amount={cost} sign={sign(receipt, identity)} />
+        </div>
+      </Button>
+      {#if identity === actor && !receipt.done[identity]}
+        <Button
+          variant="ghost"
+          size="icon-sm"
+          class="pointer-events-auto! absolute top-[-4px] right-[-4px] hover:bg-transparent"
+          onclick={() => remove()}>
+          <CircleX class="text-background bg-destructive rounded-full" />
+        </Button>
+      {/if}
+    </div>
   {/each}
 </Scrollable>
