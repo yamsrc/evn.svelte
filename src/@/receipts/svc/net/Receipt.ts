@@ -16,6 +16,7 @@ export interface Receipt {
   autolock?: string
   _version: number
   _created: number
+  _deleted?: number | null
 }
 
 export interface Link {

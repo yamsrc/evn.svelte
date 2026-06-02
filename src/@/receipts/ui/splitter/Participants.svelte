@@ -90,7 +90,7 @@
           <Coins amount={cost} sign={sign(receipt, identity)} />
         </div>
       </Button>
-      {#if identity === actor && !receipt.done[identity]}
+      {#if identity !== account.id && identity === actor && !receipt.done[identity]}
         <Button
           variant="ghost"
           size="icon-sm"

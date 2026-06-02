@@ -56,7 +56,7 @@ export const receipt = {
     })
   },
 
-  del: async (identity: string, id: string, actor: string): Promise<Receipt | Error> => {
+  leave: async (identity: string, id: string, actor: string): Promise<Receipt | Error> => {
     return await receipts.json<Receipt>(`${identity}/${id}/${actor}`, {
       method: 'DELETE',
     })
@@ -79,6 +79,10 @@ export const receipt = {
     return await receipts.json<Receipt>(`${identity}/${id}`, {
       method: 'UNLOCK',
     })
+  },
+
+  del: async (identity: string, id: string): Promise<Receipt | Error> => {
+    return await receipts.json<Receipt>(`${identity}/${id}`, { method: 'DELETE' })
   },
 }
 

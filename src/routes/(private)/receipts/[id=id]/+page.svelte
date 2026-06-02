@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Async, combined } from 'svas'
-  import { Leave, Splitter } from '@/receipts/ui'
+  import { Delete, Leave, Splitter } from '@/receipts/ui'
   import { internal } from '@/receipts'
   import { account } from '@/iam'
   import { Header, Section, Error } from '@/app/ui'
@@ -41,7 +41,11 @@
           </Header.Subtitle>
         </Header.Content>
         <Header.Actions>
-          <Leave {receipt} onclick={() => onleave(account.id)} />
+          {#if receipt.identities[0] === account.id}
+            <Delete id={receipt.id} ondelete={() => void goto('/expenses/')} />
+          {:else}
+            <Leave {receipt} onclick={() => onleave(account.id)} />
+          {/if}
         </Header.Actions>
       </Header.Root>
     </Section>
