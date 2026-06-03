@@ -56,7 +56,6 @@
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={image.url} />
-
 </svelte:head>
 
 <Tag />

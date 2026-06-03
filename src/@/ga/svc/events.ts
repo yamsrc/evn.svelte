@@ -54,9 +54,5 @@ export type EventMap = {
   'transmission.granted': { channel: string }
 }
 
-export type EventName = keyof EventMap
-
-type TrackArgs<E extends EventName> =
-  EventMap[E] extends void ? [event: E] : [event: E, data: EventMap[E]]
-
-export type { TrackArgs }
+export type Event = keyof EventMap
+export type EventData<E extends Event> = EventMap[E]
