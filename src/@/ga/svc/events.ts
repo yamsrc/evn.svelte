@@ -46,11 +46,13 @@ export type EventMap = {
 
   /** Landing page CTA click. */
   'hello.cta': { name: HelloCta }
+
+  /** Push-notification permission denied. */
+  'transmission.denied': { channel: string }
+
+  /** Push-notification permission granted. */
+  'transmission.granted': { channel: string }
 }
 
-export type EventName = keyof EventMap
-
-type TrackArgs<E extends EventName> =
-  EventMap[E] extends void ? [event: E] : [event: E, data: EventMap[E]]
-
-export type { TrackArgs }
+export type Event = keyof EventMap
+export type EventData<E extends Event> = EventMap[E]
