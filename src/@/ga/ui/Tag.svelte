@@ -8,8 +8,8 @@
 
     window.dataLayer ??= []
 
-    window.gtag ??= function gtag(...args: unknown[]) {
-      window.dataLayer.push(args)
+    window.gtag ??= function gtag(object: unknown) {
+      window.dataLayer.push(object)
     }
 
     window.gtag('js', new Date())
