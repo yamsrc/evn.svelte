@@ -1,7 +1,7 @@
 import type { BenefitType } from '@/purchases/ui/Benefit'
 import type { Method } from '@/iam'
 
-export type PurchaseMethod = 'free' | 'ios'
+export type PurchaseMethod = 'free' | 'ios' | 'stripe'
 
 export type HelloCta =
   | 'start-splitting'

@@ -3,6 +3,7 @@ import { test as base, createBdd } from 'playwright-bdd'
 type Fixtures = {
   ctx: {
     name: string
+    redirect?: string
   }
 }
 
