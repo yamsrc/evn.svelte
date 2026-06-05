@@ -7,7 +7,7 @@
   import { account } from '@/iam'
   import { Spinner } from '$ui/spinner'
   import { Button } from '$ui/button'
-  import { image, ios, shell } from '$lib/tools'
+  import { image } from '$lib/tools'
   import { dict as common } from '$lib/intl'
   import { features } from '$config'
   import { Scrollable } from '$com/scrollable'
@@ -20,6 +20,8 @@
   import type { Props } from './Offer'
 
   const { next }: Props = $props()
+
+  const kind = channel()?.kind
 
   let busy = $state(false)
   let products = $state<Product[]>([])
@@ -131,7 +133,7 @@
           {#if selected?.trial}
             {$dict.disclaimers.trial}
           {/if}
-          {#if shell && ios}
+          {#if kind === 'apple'}
             {$dict.disclaimers.apple_account}
             {#if selected?.period === 'P1Y'}
               {$dict.disclaimers.apple_yearly(selected?.displayPrice)}
@@ -139,6 +141,13 @@
               {$dict.disclaimers.apple_monthly(selected?.displayPrice)}
             {/if}
             {$dict.disclaimers.apple_manage}
+          {:else if kind === 'stripe'}
+            {$dict.disclaimers.stripe_account}
+            {#if selected?.period === 'P1Y'}
+              {$dict.disclaimers.stripe_yearly(selected?.displayPrice)}
+            {:else if selected?.period === 'P1M'}
+              {$dict.disclaimers.stripe_monthly(selected?.displayPrice)}
+            {/if}
           {/if}
         </p>
         <p>

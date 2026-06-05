@@ -48,5 +48,12 @@ disclaimers:
   apple_monthly: |-
     !js
     (price) => `订阅会以${price}/月自动续费，除非你在当前订阅期结束前至少24小时取消。`
+  stripe_account: 当你确认购买时，将从你的银行卡扣款。
+  stripe_monthly: |-
+    !js
+    (price) => `订阅会自动以${price}/月续订，除非取消。`
+  stripe_yearly: |-
+    !js
+    (price) => `订阅会自动续费，每年${price}，除非你取消。`
 restore:
   label: 恢复购买

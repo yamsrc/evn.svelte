@@ -65,5 +65,16 @@ disclaimers:
 
     (price) => `Abonelik, geçerli dönem bitmeden en az 24 saat önce iptal
     etmezsen ${price}/ay olarak otomatik yenilenir.`
+  stripe_account: Satın alımını onayladığında kartından ücret alınacak.
+  stripe_monthly: >-
+    !js
+
+    (price) => `Abonelik, iptal edilmezse her ay otomatik olarak ${price}
+    karşılığında yenilenir.`
+  stripe_yearly: >-
+    !js
+
+    (price) => `Abonelik, iptal etmezsen her yıl otomatik olarak ${price}
+    karşılığında yenilenir.`
 restore:
   label: Satın alımları geri yükle

@@ -77,6 +77,15 @@ inputs:
     apple_monthly:
       input: Subscription automatically renews for {price}/month unless canceled at least 24 hours before the end of the current period.
       context: a function accepting price
+    stripe_account:
+      input: Your card will be charged when you confirm your purchase.
+      context: auto-renewal disclosure shown on web (Stripe) before purchase
+    stripe_monthly:
+      input: Subscription automatically renews for {price}/month unless canceled.
+      context: auto-renewal disclosure (Stripe), function accepting price
+    stripe_yearly:
+      input: Subscription automatically renews for {price}/year unless canceled.
+      context: auto-renewal disclosure (Stripe), function accepting price
   restore:
     label:
       input: Restore purchases
