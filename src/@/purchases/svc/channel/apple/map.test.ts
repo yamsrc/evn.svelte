@@ -70,6 +70,7 @@ describe('toProduct', () => {
       id: 'premium_monthly',
       kind: 'subscription',
       period: 'P1M',
+      plan: 'monthly',
       displayName: 'Monthly',
       displayPrice: '€1.99',
     })
@@ -80,6 +81,7 @@ describe('toProduct', () => {
       id: 'premium_yearly',
       kind: 'subscription',
       period: 'P1Y',
+      plan: 'yearly',
       displayName: 'Yearly',
       displayPrice: '€19.99',
       trial: { period: 'P1W', displayPrice: '€0.00' },

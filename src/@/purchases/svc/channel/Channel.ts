@@ -1,6 +1,7 @@
 export interface Product {
   id: string
   kind: 'subscription'
+  plan: 'monthly' | 'yearly'
   period: 'P1M' | 'P1Y'
   displayName: string
   displayPrice: string
