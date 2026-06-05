@@ -13,3 +13,15 @@ Feature: Purchases
     When I tap 'purchases-plan-yearly'
     And I tap 'purchases-subscribe-button'
     Then the browser is redirected to Stripe checkout
+
+  Scenario: Returning from a cancelled Stripe checkout reopens the offer
+    Given new account
+    When path '/contacts/#checkout=cancel'
+    Then 'purchases-products' is visible
+
+  Scenario: Returning from a completed Stripe checkout confirms and shows thanks
+    Given new account
+    And the Stripe transaction confirms
+    When path '/contacts/#session_id=cs_test_123'
+    Then 'purchases-complete' is visible
+    And 'purchases-products' is not visible

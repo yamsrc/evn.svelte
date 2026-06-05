@@ -17,7 +17,7 @@
   }
 </script>
 
-<div class="space-y-4">
+<div id="purchases-complete" class="space-y-4">
   <div
     class="w-full aspect-7/5 border border-border rounded-lg overflow-hidden flex items-center justify-center bg-background bg-cover bg-center bg-no-repeat"
     style:background-image={image.imageSet(assets)}>

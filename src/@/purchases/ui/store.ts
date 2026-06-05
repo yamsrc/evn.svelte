@@ -4,6 +4,8 @@ import type { BenefitType } from './Benefit'
 
 export type Reason = 'scan' | 'background' | null
 
+export type Step = 'offer' | 'complete'
+
 export type CTA = {
   benefit: BenefitType
   label: string
@@ -15,10 +17,11 @@ export type CTA = {
 
 const open = writable(false)
 const cta = writable<CTA | null>(null)
+const step = writable<Step>('offer')
 
 open.subscribe((open: boolean) => {
   if (!open)
     cta.set(null)
 })
 
-export { open, cta }
+export { open, cta, step }

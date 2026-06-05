@@ -30,4 +30,13 @@ export const stripe = {
         credentials: 'include',
       }),
   },
+  transactions: {
+    resource: origin.resource<{ id: string }>('/stripe/transactions/'),
+    confirm: (identity: string, sessionId: string): Promise<{ id: string } | Error> =>
+      stripe.transactions.resource.json<{ id: string }>(`${identity}/`, {
+        method: 'POST',
+        body: { sessionId },
+        credentials: 'include',
+      }),
+  },
 }

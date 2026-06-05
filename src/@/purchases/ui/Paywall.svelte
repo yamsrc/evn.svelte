@@ -4,15 +4,13 @@
   import { Fullscreen } from '$com/fullscreen'
   import { open } from './store'
   import { cta } from './store'
+  import { step } from './store'
   import { dict } from './intl'
   import Offer from './Offer.svelte'
   import Complete from './Complete.svelte'
 
-  const steps = ['offer', 'complete'] as const
-  let step = $state<(typeof steps)[number]>(steps[0])
-
   function next() {
-    step = steps[(steps.indexOf(step) + 1) % steps.length]
+    step.set($step === 'offer' ? 'complete' : 'offer')
   }
 </script>
 
@@ -31,9 +29,9 @@
           <h1>{$dict.paywall.title}</h1>
           <span>{$dict.paywall.offer.headline}</span>
         </div>
-        {#if step === 'offer'}
+        {#if $step === 'offer'}
           <Offer {next} />
-        {:else if step === 'complete'}
+        {:else if $step === 'complete'}
           <Complete cta={$cta} {next} />
         {/if}
       </Section>
