@@ -105,7 +105,7 @@
     {/if}
     <div class="space-y-2 flex flex-col justify-between">
       <div class="rounded-lg ring-3 ring-primary/20">
-        <Button {onclick} size="lg" class="w-full relative" disabled={busy}>
+        <Button id="purchases-subscribe-button" {onclick} size="lg" class="w-full relative" disabled={busy}>
           {#if busy}
             <Spinner />
           {:else if free}

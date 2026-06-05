@@ -21,7 +21,7 @@
 <Tabs.Root value={method} {onValueChange}>
   <Tabs.List class="grid grid-cols-2 w-full h-12">
     <Tabs.Trigger value="pattern">{$dict.profile.background.pattern}</Tabs.Trigger>
-    <Tabs.Trigger value="picture">
+    <Tabs.Trigger id="app-wallpaper-picture-tab" value="picture">
       <Crown class="text-muted-foreground" fill="currentColor" />
       {$dict.profile.background.picture}
     </Tabs.Trigger>

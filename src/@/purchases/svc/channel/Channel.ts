@@ -22,4 +22,8 @@ export interface Apple extends Base {
   finish(transactionId: string): Promise<void>
 }
 
-export type Channel = Apple
+export interface Stripe extends Base {
+  kind: 'stripe'
+}
+
+export type Channel = Apple | Stripe

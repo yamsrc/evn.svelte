@@ -21,13 +21,13 @@
   }
 </script>
 
-<RadioGroup.Root value={selected?.plan} onValueChange={select}>
+<RadioGroup.Root id="purchases-products" value={selected?.plan} onValueChange={select}>
   {#each sorted as product (product.id)}
     {@const cfg = plans[product.plan]}
     {@const active = product.plan === selected?.plan}
     {@const pms =
       (cfg.approx ? '≈ ' : '') + currency(permonth(product), $locale, product.currencyCode)}
-    <label>
+    <label id="purchases-plan-{product.plan}">
       <Item.Root
         class={['relative transition-all', active && 'selected', disabled && 'opacity-50']}>
         <Item.Media>
