@@ -5,8 +5,6 @@
   import { ok } from 'svas'
   import { add, channel } from '@/purchases'
   import { account } from '@/iam'
-  import { track } from '@/ga'
-  import { report, restore } from '@/appstore'
   import { Spinner } from '$ui/spinner'
   import { Button } from '$ui/button'
   import { image, ios, shell } from '$lib/tools'
@@ -57,16 +55,7 @@
 
     if (ch === null) return new Error('no-channel')
 
-    const tx = await ch.purchase(selected.id, $account!.id)
-
-    if (tx instanceof Error) return tx
-
-    const result = await report(tx.payload)
-
-    if (!(result instanceof Error))
-      track('purchases.completed', { method: 'ios' })
-
-    return result
+    return await ch.purchase(selected.id, $account!.id)
   }
 
   async function restorePurchases(e: MouseEvent) {
@@ -76,23 +65,7 @@
 
     const ch = channel()
 
-    if (ch === null) {
-      button.disabled = false
-
-      return
-    }
-
-    const txs = await ch.restore()
-
-    if (txs instanceof Error) {
-      button.disabled = false
-
-      return
-    }
-
-    const jwses = txs.map((tx) => tx.payload)
-
-    await restore(jwses)
+    if (ch?.kind === 'apple') await ch.restore()
 
     button.disabled = false
   }

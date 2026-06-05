@@ -1,1 +1,1 @@
-export type { Channel, Product, Transaction } from './Channel'
+export type { Channel, Product } from './Channel'
