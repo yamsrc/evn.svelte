@@ -85,3 +85,10 @@ disclaimers:
     meno che tu non lo annulli.`
 restore:
   label: Ripristina acquisti
+subscription:
+  active: Premium è attivo
+  expires: >-
+    !js
+
+    (date, gender) => { if (gender === "he") return `Scade il ${date}`; if
+    (gender === "she") return `Scade il ${date}`; return `Scade il ${date}`; }

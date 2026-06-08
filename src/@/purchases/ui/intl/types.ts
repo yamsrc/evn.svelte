@@ -61,4 +61,8 @@ export type Dictionary = {
       restore: {
         label: string
       }
+      subscription: {
+        active: string
+        expires: (...args: [any, any]) => string
+      }
     }

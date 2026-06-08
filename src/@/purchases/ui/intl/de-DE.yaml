@@ -80,3 +80,8 @@ disclaimers:
     solange du nicht kündigst.`
 restore:
   label: Käufe wiederherstellen
+subscription:
+  active: Premium ist aktiv
+  expires: |-
+    !js
+    (date) => `Läuft ab am ${date}`

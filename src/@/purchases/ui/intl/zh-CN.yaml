@@ -57,3 +57,8 @@ disclaimers:
     (price) => `订阅会自动续费，每年${price}，除非你取消。`
 restore:
   label: 恢复购买
+subscription:
+  active: 高级版已激活
+  expires: |-
+    !js
+    (date) => `${date}到期`

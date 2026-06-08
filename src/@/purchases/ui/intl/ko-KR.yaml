@@ -63,3 +63,8 @@ disclaimers:
     (price) => `구독은 취소하지 않으면 매년 ${price}에 자동 갱신돼.`
 restore:
   label: 구매 복원
+subscription:
+  active: 프리미엄이 활성화되어 있어
+  expires: |-
+    !js
+    (date) => `${date}에 만료됨`

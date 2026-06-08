@@ -77,3 +77,8 @@ disclaimers:
     mwaka isipobatilishwa.`
 restore:
   label: Rejesha manunuzi
+subscription:
+  active: Premium imewezeshwa
+  expires: |-
+    !js
+    (date) => `Inaisha ${date}`

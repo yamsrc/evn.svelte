@@ -78,3 +78,11 @@ disclaimers:
     तुम कैंसिल नहीं करते।`
 restore:
   label: खरीदारी बहाल करें
+subscription:
+  active: प्रीमियम सक्रिय है
+  expires: >-
+    !js
+
+    (date, gender) => { if (gender === "he") return `${date} को समाप्त होगा`; if
+    (gender === "she") return `${date} को समाप्त होगी`; return `${date} को
+    समाप्त होगा/होगी`; }

@@ -79,3 +79,10 @@ disclaimers:
     не отменишь её.`
 restore:
   label: Восстановить покупки
+subscription:
+  active: Премиум активен
+  expires: >-
+    !js
+
+    (date, gender) => { if (gender === "he") return `Истекает ${date}`; if
+    (gender === "she") return `Истекает ${date}`; return `Истекает ${date}`; }

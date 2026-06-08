@@ -54,6 +54,10 @@ export const dictionaries = {
     },
     "restore": {
       "label": "استعادة المشتريات"
+    },
+    "subscription": {
+      "active": "الاشتراك المميز مفعل",
+      "expires": (date, gender) => { if (gender === "he") return `ينتهي في ${date}`; if (gender === "she") return `تنتهي في ${date}`; return `ينتهي/تنتهي في ${date}`; }
     }
   },
   "de-DE": {
@@ -108,6 +112,10 @@ export const dictionaries = {
     },
     "restore": {
       "label": "Käufe wiederherstellen"
+    },
+    "subscription": {
+      "active": "Premium ist aktiv",
+      "expires": (date) => `Läuft ab am ${date}`
     }
   },
   "en-US": {
@@ -162,6 +170,10 @@ export const dictionaries = {
     },
     "restore": {
       "label": "Restore purchases"
+    },
+    "subscription": {
+      "active": "Premium is active",
+      "expires": (date) => `Expires on ${date}`
     }
   },
   "es-ES": {
@@ -216,6 +228,10 @@ export const dictionaries = {
     },
     "restore": {
       "label": "Restaurar compras"
+    },
+    "subscription": {
+      "active": "Premium está activo",
+      "expires": (date, gender) => { if (gender === "he") return `Expira el ${date}`; if (gender === "she") return `Expira el ${date}`; return `Expira el ${date}`; }
     }
   },
   "fr-FR": {
@@ -270,6 +286,10 @@ export const dictionaries = {
     },
     "restore": {
       "label": "Restaurer les achats"
+    },
+    "subscription": {
+      "active": "Premium est actif",
+      "expires": (date, gender) => { if (gender === "he") return `Expire le ${date}`; if (gender === "she") return `Expire le ${date}`; return `Expire le ${date}`; }
     }
   },
   "hi-IN": {
@@ -324,6 +344,10 @@ export const dictionaries = {
     },
     "restore": {
       "label": "खरीदारी बहाल करें"
+    },
+    "subscription": {
+      "active": "प्रीमियम सक्रिय है",
+      "expires": (date, gender) => { if (gender === "he") return `${date} को समाप्त होगा`; if (gender === "she") return `${date} को समाप्त होगी`; return `${date} को समाप्त होगा/होगी`; }
     }
   },
   "it-IT": {
@@ -378,6 +402,10 @@ export const dictionaries = {
     },
     "restore": {
       "label": "Ripristina acquisti"
+    },
+    "subscription": {
+      "active": "Premium è attivo",
+      "expires": (date, gender) => { if (gender === "he") return `Scade il ${date}`; if (gender === "she") return `Scade il ${date}`; return `Scade il ${date}`; }
     }
   },
   "ja-JP": {
@@ -432,6 +460,10 @@ export const dictionaries = {
     },
     "restore": {
       "label": "購入を復元"
+    },
+    "subscription": {
+      "active": "プレミアムが有効です",
+      "expires": (date) => `${date}に有効期限切れ`
     }
   },
   "ko-KR": {
@@ -486,6 +518,10 @@ export const dictionaries = {
     },
     "restore": {
       "label": "구매 복원"
+    },
+    "subscription": {
+      "active": "프리미엄이 활성화되어 있어",
+      "expires": (date) => `${date}에 만료됨`
     }
   },
   "nl-NL": {
@@ -540,6 +576,10 @@ export const dictionaries = {
     },
     "restore": {
       "label": "Aankopen herstellen"
+    },
+    "subscription": {
+      "active": "Premium is actief",
+      "expires": (date) => `Verloopt op ${date}`
     }
   },
   "ru-RU": {
@@ -594,6 +634,10 @@ export const dictionaries = {
     },
     "restore": {
       "label": "Восстановить покупки"
+    },
+    "subscription": {
+      "active": "Премиум активен",
+      "expires": (date, gender) => { if (gender === "he") return `Истекает ${date}`; if (gender === "she") return `Истекает ${date}`; return `Истекает ${date}`; }
     }
   },
   "sw-TZ": {
@@ -648,6 +692,10 @@ export const dictionaries = {
     },
     "restore": {
       "label": "Rejesha manunuzi"
+    },
+    "subscription": {
+      "active": "Premium imewezeshwa",
+      "expires": (date) => `Inaisha ${date}`
     }
   },
   "tr-TR": {
@@ -702,6 +750,10 @@ export const dictionaries = {
     },
     "restore": {
       "label": "Satın alımları geri yükle"
+    },
+    "subscription": {
+      "active": "Premium aktif",
+      "expires": (date, gender) => { if (gender === "he") return `${date} tarihinde sona eriyor`; if (gender === "she") return `${date} tarihinde sona eriyor`; return `${date} tarihinde sona eriyor`; }
     }
   },
   "uk-UA": {
@@ -756,6 +808,10 @@ export const dictionaries = {
     },
     "restore": {
       "label": "Відновити покупки"
+    },
+    "subscription": {
+      "active": "Преміум активний",
+      "expires": (date, gender) => { if (gender === "he") return `Завершується ${date}`; if (gender === "she") return `Завершується ${date}`; return `Завершується ${date}`; }
     }
   },
   "zh-CN": {
@@ -810,6 +866,10 @@ export const dictionaries = {
     },
     "restore": {
       "label": "恢复购买"
+    },
+    "subscription": {
+      "active": "高级版已激活",
+      "expires": (date) => `${date}到期`
     }
   }
 };

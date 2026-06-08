@@ -84,3 +84,8 @@ disclaimers:
     tenzij je opzegt.`
 restore:
   label: Aankopen herstellen
+subscription:
+  active: Premium is actief
+  expires: |-
+    !js
+    (date) => `Verloopt op ${date}`

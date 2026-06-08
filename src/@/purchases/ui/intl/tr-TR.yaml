@@ -78,3 +78,11 @@ disclaimers:
     karşılığında yenilenir.`
 restore:
   label: Satın alımları geri yükle
+subscription:
+  active: Premium aktif
+  expires: >-
+    !js
+
+    (date, gender) => { if (gender === "he") return `${date} tarihinde sona
+    eriyor`; if (gender === "she") return `${date} tarihinde sona eriyor`;
+    return `${date} tarihinde sona eriyor`; }

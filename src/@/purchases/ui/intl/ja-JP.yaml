@@ -64,3 +64,8 @@ disclaimers:
     (price) => `解約しない限り、サブスクリプションは毎年${price}で自動更新されます。`
 restore:
   label: 購入を復元
+subscription:
+  active: プレミアムが有効です
+  expires: |-
+    !js
+    (date) => `${date}に有効期限切れ`

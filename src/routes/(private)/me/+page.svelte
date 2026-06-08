@@ -2,11 +2,13 @@
   import { CodeXml, LogOut } from '@lucide/svelte'
   import { Permission, Scopes } from '@/transmission/ui'
   import { promptable } from '@/transmission'
+  import { Subscription } from '@/purchases/ui'
   import { account, logout } from '@/iam'
   import { Feedback } from '@/feedback/ui'
   import { Section, Update, Header, Wallpaper, Action } from '@/app/ui'
   import { updateAvailable } from '@/app'
   import { Cosmetics, Delete, Grammar, Language } from '@/accounts/ui'
+  import { premium } from '@/accounts'
   import { Spinner } from '$ui/spinner'
   import { clicks, shellVersion } from '$lib/tools'
   import { dict } from '$lib/intl'
@@ -66,6 +68,12 @@
       <Grammar account={$account} />
     </div>
   </Section>
+
+  {#if premium($account)}
+    <Section>
+      <Subscription premium={$account.premium} />
+    </Section>
+  {/if}
 
   <Section class="space-y-2">
     <h2>{$dict.profile.background.title}</h2>

@@ -79,3 +79,8 @@ disclaimers:
     canceled.`
 restore:
   label: Restore purchases
+subscription:
+  active: Premium is active
+  expires: |-
+    !js
+    (date) => `Expires on ${date}`

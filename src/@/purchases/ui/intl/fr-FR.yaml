@@ -76,3 +76,10 @@ disclaimers:
     si tu l’annules.`
 restore:
   label: Restaurer les achats
+subscription:
+  active: Premium est actif
+  expires: >-
+    !js
+
+    (date, gender) => { if (gender === "he") return `Expire le ${date}`; if
+    (gender === "she") return `Expire le ${date}`; return `Expire le ${date}`; }

@@ -80,3 +80,11 @@ disclaimers:
     не скасуєш.`
 restore:
   label: Відновити покупки
+subscription:
+  active: Преміум активний
+  expires: >-
+    !js
+
+    (date, gender) => { if (gender === "he") return `Завершується ${date}`; if
+    (gender === "she") return `Завершується ${date}`; return `Завершується
+    ${date}`; }

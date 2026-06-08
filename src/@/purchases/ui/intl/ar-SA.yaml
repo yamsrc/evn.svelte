@@ -77,3 +77,11 @@ disclaimers:
     الإلغاء.`
 restore:
   label: استعادة المشتريات
+subscription:
+  active: الاشتراك المميز مفعل
+  expires: >-
+    !js
+
+    (date, gender) => { if (gender === "he") return `ينتهي في ${date}`; if
+    (gender === "she") return `تنتهي في ${date}`; return `ينتهي/تنتهي في
+    ${date}`; }
