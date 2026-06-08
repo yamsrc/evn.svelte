@@ -1,9 +1,7 @@
-import { having } from 'svas'
-import { account } from '@/iam'
 import { track } from '@/ga'
 import { fragment, strip } from '$lib/tools'
 import { open, step } from './ui/store'
-import * as net from './svc/net'
+import * as stripe from './svc/stripe'
 import { intent } from './svc/intent'
 
 export async function rc(): Promise<void> {
@@ -19,8 +17,7 @@ export async function rc(): Promise<void> {
     return
   }
 
-  const me = await having(account)
-  const res = await net.stripe.transactions.confirm(me.id, action.session)
+  const res = await stripe.transactions.confirm(action.session)
 
   strip()
 

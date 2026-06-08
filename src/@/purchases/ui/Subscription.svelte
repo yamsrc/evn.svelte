@@ -21,7 +21,7 @@
 
     busy = true
 
-    const result = await ch.manage(account.id)
+    const result = await ch.manage()
 
     busy = false
 

@@ -1,7 +1,7 @@
 import { get } from 'svelte/store'
 import { locale } from '$lib/intl'
 import { features } from '$config'
-import * as net from '../../net'
+import { checkout } from '../../stripe'
 import { toProducts } from './map'
 import type { Stripe, Product } from '../Channel'
 
@@ -13,14 +13,14 @@ export const stripe: Stripe = {
   },
 
   async products(): Promise<Product[] | Error> {
-    const raw = await net.stripe.checkout.products()
+    const raw = await checkout.products()
 
     if (raw instanceof Error) return raw
 
     return toProducts(raw, get(locale))
   },
 
-  async purchase(productId: string, accountId: string): Promise<void | Error> {
+  async purchase(productId: string): Promise<void | Error> {
     const products = await this.products()
 
     if (products instanceof Error) return products
@@ -31,7 +31,7 @@ export const stripe: Stripe = {
 
     const current = window.location.origin + window.location.pathname
 
-    const session = await net.stripe.checkout.session(accountId, {
+    const session = await checkout.session({
       price: productId,
       currency: product.currencyCode,
       successUrl: `${current}#session_id={CHECKOUT_SESSION_ID}`,
@@ -45,10 +45,10 @@ export const stripe: Stripe = {
     return new Promise<void>(() => { })
   },
 
-  async manage(accountId: string): Promise<void | Error> {
+  async manage(): Promise<void | Error> {
     const returnUrl = window.location.origin + window.location.pathname
 
-    const portal = await net.stripe.checkout.portal(accountId, { returnUrl })
+    const portal = await checkout.portal(returnUrl)
 
     if (portal instanceof Error) return portal
 
