@@ -155,16 +155,18 @@
           <span aria-hidden="true">·</span>
           <a href="/privacy/">{$common.privacy}</a>
         </p>
-        <div>
-          <Button
-            onclick={restorePurchases}
-            size="sm"
-            variant="outline"
-            class="disabled:[&_span]:hidden [&_svg]:hidden disabled:[&_svg]:block">
-            <span>{$dict.restore.label}</span>
-            <Spinner />
-          </Button>
-        </div>
+        {#if kind === 'apple'}
+          <div>
+            <Button
+              onclick={restorePurchases}
+              size="sm"
+              variant="outline"
+              class="disabled:[&_span]:hidden [&_svg]:hidden disabled:[&_svg]:block">
+              <span>{$dict.restore.label}</span>
+              <Spinner />
+            </Button>
+          </div>
+        {/if}
       </div>
     {/if}
   {:else}
