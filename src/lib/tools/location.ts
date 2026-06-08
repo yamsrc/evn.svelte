@@ -16,7 +16,7 @@ export function strip(): void {
   hash = new URLSearchParams()
 
   if (typeof window !== 'undefined')
-    window.history.replaceState({}, '', window.location.pathname + window.location.search)
+    window.history.replaceState(window.history.state, '', window.location.pathname + window.location.search)
 }
 
 function debug() {
