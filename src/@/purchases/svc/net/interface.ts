@@ -29,6 +29,12 @@ export const stripe = {
         body,
         credentials: 'include',
       }),
+    portal: (identity: string, body: { returnUrl: string }): Promise<{ url: string } | Error> =>
+      stripe.checkout.resource.json<{ url: string }>(`${identity}/portal`, {
+        method: 'POST',
+        body,
+        credentials: 'include',
+      }),
   },
   transactions: {
     resource: origin.resource<{ id: string }>('/stripe/transactions/'),

@@ -44,4 +44,16 @@ export const stripe: Stripe = {
 
     return new Promise<void>(() => { })
   },
+
+  async manage(accountId: string): Promise<void | Error> {
+    const returnUrl = window.location.origin + window.location.pathname
+
+    const portal = await net.stripe.checkout.portal(accountId, { returnUrl })
+
+    if (portal instanceof Error) return portal
+
+    window.location.href = portal.url
+
+    return new Promise<void>(() => { })
+  },
 }

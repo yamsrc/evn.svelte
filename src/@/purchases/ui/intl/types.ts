@@ -64,5 +64,6 @@ export type Dictionary = {
       subscription: {
         active: string
         expires: (...args: [any, any]) => string
+        manage: string
       }
     }

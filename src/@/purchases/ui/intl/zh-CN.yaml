@@ -62,3 +62,4 @@ subscription:
   expires: |-
     !js
     (date) => `${date}到期`
+  manage: 管理

@@ -92,3 +92,4 @@ subscription:
 
     (date, gender) => { if (gender === "he") return `Scade il ${date}`; if
     (gender === "she") return `Scade il ${date}`; return `Scade il ${date}`; }
+  manage: Gestisci

@@ -84,3 +84,4 @@ subscription:
   expires: |-
     !js
     (date) => `Expires on ${date}`
+  manage: Manage

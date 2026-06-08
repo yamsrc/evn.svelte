@@ -57,7 +57,8 @@ export const dictionaries = {
     },
     "subscription": {
       "active": "الاشتراك المميز مفعل",
-      "expires": (date, gender) => { if (gender === "he") return `ينتهي في ${date}`; if (gender === "she") return `تنتهي في ${date}`; return `ينتهي/تنتهي في ${date}`; }
+      "expires": (date, gender) => { if (gender === "he") return `ينتهي في ${date}`; if (gender === "she") return `تنتهي في ${date}`; return `ينتهي/تنتهي في ${date}`; },
+      "manage": "إدارة"
     }
   },
   "de-DE": {
@@ -115,7 +116,8 @@ export const dictionaries = {
     },
     "subscription": {
       "active": "Premium ist aktiv",
-      "expires": (date) => `Läuft ab am ${date}`
+      "expires": (date) => `Läuft ab am ${date}`,
+      "manage": "Verwalten"
     }
   },
   "en-US": {
@@ -173,7 +175,8 @@ export const dictionaries = {
     },
     "subscription": {
       "active": "Premium is active",
-      "expires": (date) => `Expires on ${date}`
+      "expires": (date) => `Expires on ${date}`,
+      "manage": "Manage"
     }
   },
   "es-ES": {
@@ -231,7 +234,8 @@ export const dictionaries = {
     },
     "subscription": {
       "active": "Premium está activo",
-      "expires": (date, gender) => { if (gender === "he") return `Expira el ${date}`; if (gender === "she") return `Expira el ${date}`; return `Expira el ${date}`; }
+      "expires": (date, gender) => { if (gender === "he") return `Expira el ${date}`; if (gender === "she") return `Expira el ${date}`; return `Expira el ${date}`; },
+      "manage": "Gestionar"
     }
   },
   "fr-FR": {
@@ -289,7 +293,8 @@ export const dictionaries = {
     },
     "subscription": {
       "active": "Premium est actif",
-      "expires": (date, gender) => { if (gender === "he") return `Expire le ${date}`; if (gender === "she") return `Expire le ${date}`; return `Expire le ${date}`; }
+      "expires": (date, gender) => { if (gender === "he") return `Expire le ${date}`; if (gender === "she") return `Expire le ${date}`; return `Expire le ${date}`; },
+      "manage": "Gérer"
     }
   },
   "hi-IN": {
@@ -347,7 +352,8 @@ export const dictionaries = {
     },
     "subscription": {
       "active": "प्रीमियम सक्रिय है",
-      "expires": (date, gender) => { if (gender === "he") return `${date} को समाप्त होगा`; if (gender === "she") return `${date} को समाप्त होगी`; return `${date} को समाप्त होगा/होगी`; }
+      "expires": (date, gender) => { if (gender === "he") return `${date} को समाप्त होगा`; if (gender === "she") return `${date} को समाप्त होगी`; return `${date} को समाप्त होगा/होगी`; },
+      "manage": "प्रबंधित करें"
     }
   },
   "it-IT": {
@@ -405,7 +411,8 @@ export const dictionaries = {
     },
     "subscription": {
       "active": "Premium è attivo",
-      "expires": (date, gender) => { if (gender === "he") return `Scade il ${date}`; if (gender === "she") return `Scade il ${date}`; return `Scade il ${date}`; }
+      "expires": (date, gender) => { if (gender === "he") return `Scade il ${date}`; if (gender === "she") return `Scade il ${date}`; return `Scade il ${date}`; },
+      "manage": "Gestisci"
     }
   },
   "ja-JP": {
@@ -463,7 +470,8 @@ export const dictionaries = {
     },
     "subscription": {
       "active": "プレミアムが有効です",
-      "expires": (date) => `${date}に有効期限切れ`
+      "expires": (date) => `${date}に有効期限切れ`,
+      "manage": "管理"
     }
   },
   "ko-KR": {
@@ -521,7 +529,8 @@ export const dictionaries = {
     },
     "subscription": {
       "active": "프리미엄이 활성화되어 있어",
-      "expires": (date) => `${date}에 만료됨`
+      "expires": (date) => `${date}에 만료됨`,
+      "manage": "관리"
     }
   },
   "nl-NL": {
@@ -579,7 +588,8 @@ export const dictionaries = {
     },
     "subscription": {
       "active": "Premium is actief",
-      "expires": (date) => `Verloopt op ${date}`
+      "expires": (date) => `Verloopt op ${date}`,
+      "manage": "Beheren"
     }
   },
   "ru-RU": {
@@ -637,7 +647,8 @@ export const dictionaries = {
     },
     "subscription": {
       "active": "Премиум активен",
-      "expires": (date, gender) => { if (gender === "he") return `Истекает ${date}`; if (gender === "she") return `Истекает ${date}`; return `Истекает ${date}`; }
+      "expires": (date, gender) => { if (gender === "he") return `Истекает ${date}`; if (gender === "she") return `Истекает ${date}`; return `Истекает ${date}`; },
+      "manage": "Управлять"
     }
   },
   "sw-TZ": {
@@ -695,7 +706,8 @@ export const dictionaries = {
     },
     "subscription": {
       "active": "Premium imewezeshwa",
-      "expires": (date) => `Inaisha ${date}`
+      "expires": (date) => `Inaisha ${date}`,
+      "manage": "Dhibiti"
     }
   },
   "tr-TR": {
@@ -753,7 +765,8 @@ export const dictionaries = {
     },
     "subscription": {
       "active": "Premium aktif",
-      "expires": (date, gender) => { if (gender === "he") return `${date} tarihinde sona eriyor`; if (gender === "she") return `${date} tarihinde sona eriyor`; return `${date} tarihinde sona eriyor`; }
+      "expires": (date, gender) => { if (gender === "he") return `${date} tarihinde sona eriyor`; if (gender === "she") return `${date} tarihinde sona eriyor`; return `${date} tarihinde sona eriyor`; },
+      "manage": "Yönet"
     }
   },
   "uk-UA": {
@@ -811,7 +824,8 @@ export const dictionaries = {
     },
     "subscription": {
       "active": "Преміум активний",
-      "expires": (date, gender) => { if (gender === "he") return `Завершується ${date}`; if (gender === "she") return `Завершується ${date}`; return `Завершується ${date}`; }
+      "expires": (date, gender) => { if (gender === "he") return `Завершується ${date}`; if (gender === "she") return `Завершується ${date}`; return `Завершується ${date}`; },
+      "manage": "Керувати"
     }
   },
   "zh-CN": {
@@ -869,7 +883,8 @@ export const dictionaries = {
     },
     "subscription": {
       "active": "高级版已激活",
-      "expires": (date) => `${date}到期`
+      "expires": (date) => `${date}到期`,
+      "manage": "管理"
     }
   }
 };

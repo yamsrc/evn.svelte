@@ -86,3 +86,4 @@ subscription:
     (date, gender) => { if (gender === "he") return `${date} को समाप्त होगा`; if
     (gender === "she") return `${date} को समाप्त होगी`; return `${date} को
     समाप्त होगा/होगी`; }
+  manage: प्रबंधित करें

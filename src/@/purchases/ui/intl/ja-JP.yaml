@@ -69,3 +69,4 @@ subscription:
   expires: |-
     !js
     (date) => `${date}に有効期限切れ`
+  manage: 管理

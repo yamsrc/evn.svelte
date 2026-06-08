@@ -97,3 +97,5 @@ inputs:
     expires:
       input: Expires on {date}
       context: profile; {date} is a pre-formatted localized date string e.g. 'Feb 17'
+    manage:
+      input: Manage

@@ -91,3 +91,4 @@ subscription:
 
     (date, gender) => { if (gender === "he") return `Expira el ${date}`; if
     (gender === "she") return `Expira el ${date}`; return `Expira el ${date}`; }
+  manage: Gestionar

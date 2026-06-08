@@ -71,7 +71,7 @@
 
   {#if premium($account)}
     <Section>
-      <Subscription premium={$account.premium} />
+      <Subscription account={$account} />
     </Section>
   {/if}
 

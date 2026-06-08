@@ -86,3 +86,4 @@ subscription:
     (date, gender) => { if (gender === "he") return `${date} tarihinde sona
     eriyor`; if (gender === "she") return `${date} tarihinde sona eriyor`;
     return `${date} tarihinde sona eriyor`; }
+  manage: Yönet

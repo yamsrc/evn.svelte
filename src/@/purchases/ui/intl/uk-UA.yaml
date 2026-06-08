@@ -88,3 +88,4 @@ subscription:
     (date, gender) => { if (gender === "he") return `Завершується ${date}`; if
     (gender === "she") return `Завершується ${date}`; return `Завершується
     ${date}`; }
+  manage: Керувати

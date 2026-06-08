@@ -89,3 +89,4 @@ subscription:
   expires: |-
     !js
     (date) => `Verloopt op ${date}`
+  manage: Beheren

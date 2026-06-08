@@ -85,3 +85,4 @@ subscription:
   expires: |-
     !js
     (date) => `Läuft ab am ${date}`
+  manage: Verwalten
