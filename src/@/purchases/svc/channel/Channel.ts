@@ -14,6 +14,7 @@ interface Base {
   available(): Promise<boolean>
   products(): Promise<Product[] | Error>
   purchase(productId: string, accountId: string): Promise<void | Error>
+  manage(): Promise<void | Error>
 }
 
 export interface Apple extends Base {
@@ -24,7 +25,6 @@ export interface Apple extends Base {
 
 export interface Stripe extends Base {
   kind: 'stripe'
-  manage(): Promise<void | Error>
 }
 
 export type Channel = Apple | Stripe

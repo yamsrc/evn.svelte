@@ -10,14 +10,17 @@
 
   const { account, class: classes }: Props = $props()
 
-  const manageable = $derived(channel()?.kind === 'stripe' && account.processor === 'stripe')
+  const apple = $derived(channel()?.kind === 'apple' && account.processor === 'appstore')
+  const stripe = $derived(channel()?.kind === 'stripe' && account.processor === 'stripe')
+
+  const manageable = $derived(apple || stripe)
 
   let busy = $state(false)
 
   async function manage() {
     const ch = channel()
 
-    if (ch?.kind !== 'stripe') return
+    if (ch === null) return
 
     busy = true
 

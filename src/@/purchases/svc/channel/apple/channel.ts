@@ -21,6 +21,7 @@ type Handler =
   | 'iap-products-request'
   | 'iap-purchase-request'
   | 'iap-restore-request'
+  | 'iap-manage-request'
   | 'iap-finish-transaction'
 
 type Handlers = Pick<WebkitMessageHandlers, Handler>
@@ -35,6 +36,7 @@ const products = value<AppleProduct[]>()
 const purchaseState = value<string>()
 const lastTx = value<TxUpdate>()
 const restored = value<Restored>()
+const managed = value<true>()
 const lastError = value<ApiError>()
 
 let initialized = false
@@ -67,6 +69,11 @@ function init(): void {
   window.addEventListener('iap-restore-result', (e) => {
     console.debug('iap-restore-result', e.detail)
     restored.set(e.detail.transactions)
+  })
+
+  window.addEventListener('iap-manage-result', (e) => {
+    console.debug('iap-manage-result', e.detail)
+    managed.set(true)
   })
 
   window.addEventListener('iap-error', (e) => {
@@ -201,6 +208,17 @@ export const apple: Apple = {
     if (txs instanceof Error) return txs
 
     const result = await restoreReceipts(txs.map((tx) => tx.payload))
+
+    if (result instanceof Error) return result
+  },
+
+  async manage(): Promise<void | Error> {
+    init()
+    managed.set(null)
+    lastError.set(null)
+    postMessage('iap-manage-request', undefined)
+
+    const result = await race(having(managed), 'manage')
 
     if (result instanceof Error) return result
   },
