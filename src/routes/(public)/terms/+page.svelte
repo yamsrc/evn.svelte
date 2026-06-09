@@ -109,7 +109,11 @@
       <p class="mb-4">
         For web subscriptions, billing and renewals are handled through Stripe using the payment
         method you provide. You can manage or cancel a web subscription from your account settings, or
-        by contacting us using the billing contact below.
+        by contacting us using the contact below.
+      </p>
+      <p class="mb-4">
+        Charges for web purchases may appear on your bank or card statement as "seed.me", which is
+        the brand operated by CORE ENGINE IT INFRASTRUCTURE L.L.C.
       </p>
     </section>
 
