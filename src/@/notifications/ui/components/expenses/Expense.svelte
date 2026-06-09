@@ -25,7 +25,9 @@
         <div>
           {notification.payload.title} &bull; {amount}
           <p class="text-muted-foreground">
-            {$dict.expenses.expense([account.name])}
+            {#if account.name}
+              {$dict.expenses.expense([account.name])}
+            {/if}
           </p>
         </div>
       </Base>
