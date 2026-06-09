@@ -1,50 +1,47 @@
 <script lang="ts">
+  import { untrack } from 'svelte'
   import * as RadioGroup from '$ui/radio-group'
   import * as Item from '$ui/item'
   import { Badge } from '$ui/badge'
   import { currency, formatISODuration } from '$lib/tools'
   import { locale } from '$lib/intl'
   import { dict } from '../intl'
-  import { ids, type Props } from './Products'
-  import type { Product } from '@/purchases'
+  import { plans, sort, permonth, featured, type Props } from './Products'
 
   let { products, selected = $bindable(null), disabled = false }: Props = $props()
-  const known = $derived(products.filter((p) => ids.includes(p.id)))
-  const sorted = $derived(known.toSorted((a) => (a.id === 'premium_yearly' ? -1 : 1)))
 
-  let value = $state<Product['id']>('premium_yearly')
+  // one-time default: products is non-empty and stable for this component's lifetime
+  // (parent mounts <Products> only when loaded && !free)
+  selected ??= untrack(() => featured(products))
 
-  $effect(() => {
-    if (value !== selected?.id) selected = products.find((p) => p.id === value) ?? null
-  })
+  const sorted = $derived(sort(products))
+
+  function select(plan: string) {
+    selected = products.find((p) => p.plan === plan) ?? selected
+  }
 </script>
 
-<RadioGroup.Root bind:value>
+<RadioGroup.Root id="purchases-products" value={selected?.plan} onValueChange={select}>
   {#each sorted as product (product.id)}
-    {@const selected = product.id === value}
-    {@const price = Number.parseFloat(product.priceString)}
-    <label>
+    {@const cfg = plans[product.plan]}
+    {@const active = product.plan === selected?.plan}
+    {@const pms =
+      (cfg.approx ? '≈ ' : '') + currency(permonth(product), $locale, product.currencyCode)}
+    <label id="purchases-plan-{product.plan}">
       <Item.Root
-        class={['relative transition-all', selected && 'selected', disabled && 'opacity-50']}>
+        class={['relative transition-all', active && 'selected', disabled && 'opacity-50']}>
         <Item.Media>
-          <RadioGroup.Item value={product.id} {disabled} />
+          <RadioGroup.Item value={product.plan} {disabled} />
         </Item.Media>
         <Item.Content>
           <Item.Title>
-            {#if product.id === 'premium_yearly'}
-              {@const pms = '≈ ' + currency((price * 100) / 12, $locale, product.currencyCode)}
-              <span class="font-semibold">{$dict.products.yearly.title}</span>
-              <span class="font-normal">{$dict.permonth(pms)}</span>
-            {:else if product.id === 'premium_monthly'}
-              {@const pms = currency(price * 100, $locale, product.currencyCode)}
-              {$dict.products.monthly.title}
-              <span class="font-normal">{$dict.permonth(pms)}</span>
-            {/if}
+            <span class={[cfg.featured && 'font-semibold']}>{$dict.products[product.plan].title}</span>
+            <span class="font-normal">{$dict.permonth(pms)}</span>
           </Item.Title>
           <Item.Description class="text-sm">
-            {#if product.id === 'premium_yearly'}
+            {#if product.plan === 'yearly'}
               {$dict.products.yearly.description(product.displayPrice)}
-            {:else if product.id === 'premium_monthly'}
+            {:else}
               {$dict.products.monthly.description}
             {/if}
           </Item.Description>
@@ -53,10 +50,10 @@
           {@const duration = formatISODuration(product.trial.period, $locale)}
           <Badge
             class={[
-              'text-sm font-semibold text-nowrap absolute -top-3 right-4 transition-all',
-              selected || 'text-muted-foreground/25',
+              'text-sm font-semibold text-nowrap absolute -top-3 inset-e-4 transition-all',
+              active || 'text-muted-foreground/25',
             ]}
-            variant={selected ? 'default' : 'secondary'}>
+            variant={active ? 'default' : 'secondary'}>
             {$dict.trial(duration)}
           </Badge>
         {/if}

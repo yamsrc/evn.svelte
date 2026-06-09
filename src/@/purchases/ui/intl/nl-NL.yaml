@@ -71,5 +71,22 @@ disclaimers:
 
     (price) => `Abonnement wordt automatisch verlengd voor ${price}/maand,
     tenzij je minstens 24 uur voor het einde van de huidige periode opzegt.`
+  stripe_account: Je kaart wordt belast zodra je je aankoop bevestigt.
+  stripe_monthly: >-
+    !js
+
+    (price) => `Je abonnement wordt automatisch verlengd voor ${price} per
+    maand, tenzij je opzegt.`
+  stripe_yearly: >-
+    !js
+
+    (price) => `Abonnement wordt automatisch verlengd voor ${price} per jaar,
+    tenzij je opzegt.`
 restore:
   label: Aankopen herstellen
+subscription:
+  active: Premium is actief
+  expires: |-
+    !js
+    (date) => `Verloopt op ${date}`
+  manage: Beheren

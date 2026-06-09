@@ -18,6 +18,7 @@ export interface Account {
   grammar?: Grammar | null
   overlord?: string | null
   premium?: number
+  processor?: 'appstore' | 'stripe' | 'free'
   _created: number
   _version: number
 }

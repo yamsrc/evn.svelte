@@ -1,5 +1,8 @@
 import { satisfies } from 'semver'
-import { ios, shellVersion } from '$lib/tools'
+import { ios, shell, shellVersion } from '$lib/tools'
 
-export const purchase = shellVersion !== null &&
-  ios && satisfies(shellVersion, '>=1.6')
+export const apple = shell && ios && shellVersion !== null && satisfies(shellVersion, '>=1.6')
+
+export const stripe = !shell
+
+export const purchase = apple || stripe

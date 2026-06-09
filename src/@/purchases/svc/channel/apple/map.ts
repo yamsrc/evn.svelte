@@ -19,6 +19,7 @@ export function toProduct(raw: AppleProduct): Product | null {
   const product: Product = {
     id: attrs.offerName,
     kind: 'subscription',
+    plan: period === 'P1Y' ? 'yearly' : 'monthly',
     period,
     displayName: attrs.name,
     displayPrice: buy.priceFormatted,

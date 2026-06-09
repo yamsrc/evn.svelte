@@ -1,18 +1,27 @@
 import { having, once, value } from 'svas'
+import { track } from '@/ga'
+import { report, restore as restoreReceipts } from '@/appstore'
 import { cap, toUuid } from '$lib/tools'
 import { toProducts } from './map'
-import type { Channel, Product, Transaction } from '../Channel'
+import type { Apple, Product } from '../Channel'
 import type { AppleProduct } from './Apple'
 
 const TIMEOUT = 10_000
 
 const IDS = ['premium_monthly', 'premium_yearly'] as const
 
+interface Transaction {
+  id: string
+  productId: string
+  payload: string
+}
+
 type Handler =
   | 'iap-available'
   | 'iap-products-request'
   | 'iap-purchase-request'
   | 'iap-restore-request'
+  | 'iap-manage-request'
   | 'iap-finish-transaction'
 
 type Handlers = Pick<WebkitMessageHandlers, Handler>
@@ -27,6 +36,7 @@ const products = value<AppleProduct[]>()
 const purchaseState = value<string>()
 const lastTx = value<TxUpdate>()
 const restored = value<Restored>()
+const managed = value<true>()
 const lastError = value<ApiError>()
 
 let initialized = false
@@ -59,6 +69,11 @@ function init(): void {
   window.addEventListener('iap-restore-result', (e) => {
     console.debug('iap-restore-result', e.detail)
     restored.set(e.detail.transactions)
+  })
+
+  window.addEventListener('iap-manage-result', (e) => {
+    console.debug('iap-manage-result', e.detail)
+    managed.set(true)
   })
 
   window.addEventListener('iap-error', (e) => {
@@ -111,7 +126,44 @@ async function race<T>(wait: Promise<T>, kind: string): Promise<T | Error> {
   return result.v
 }
 
-export const apple: Channel = {
+async function buy(productId: string, accountId: string): Promise<Transaction | Error> {
+  init()
+  lastTx.set(null)
+  purchaseState.set(null)
+  lastError.set(null)
+  postMessage('iap-purchase-request', { productID: productId, appAccountToken: toUuid(accountId) })
+
+  const state = await having(purchaseState)
+
+  if (state !== 'success') return new Error(`purchase: ${state}`)
+
+  const tx = lastTx.extract()
+
+  if (tx === null) return new Error('purchase: no-transaction')
+
+  return txToTransaction(tx)
+}
+
+async function recover(): Promise<Transaction[] | Error> {
+  init()
+  restored.set(null)
+  lastError.set(null)
+  postMessage('iap-restore-request', undefined)
+
+  const txs = await race(having(restored), 'restore')
+
+  if (txs instanceof Error) return txs
+
+  return txs.map((t) => ({
+    id: String(t.json.id),
+    productId: t.json.productID,
+    payload: t.jws,
+  }))
+}
+
+export const apple: Apple = {
+  kind: 'apple',
+
   async available(): Promise<boolean> {
     if (typeof window === 'undefined' || window.webkit?.messageHandlers?.['iap-available'] === undefined)
       return false
@@ -138,39 +190,37 @@ export const apple: Channel = {
     return toProducts(raw)
   },
 
-  async purchase(productId: string, accountId: string): Promise<Transaction | Error> {
-    init()
-    lastTx.set(null)
-    purchaseState.set(null)
-    lastError.set(null)
-    postMessage('iap-purchase-request', { productID: productId, appAccountToken: toUuid(accountId) })
+  async purchase(productId: string, accountId: string): Promise<void | Error> {
+    const tx = await buy(productId, accountId)
 
-    const state = await having(purchaseState)
+    if (tx instanceof Error) return tx
 
-    if (state !== 'success') return new Error(`purchase: ${state}`)
+    const result = await report(tx.payload)
 
-    const tx = lastTx.extract()
+    if (result instanceof Error) return result
 
-    if (tx === null) return new Error('purchase: no-transaction')
-
-    return txToTransaction(tx)
+    track('purchases.completed', { method: 'ios' })
   },
 
-  async restore(): Promise<Transaction[] | Error> {
-    init()
-    restored.set(null)
-    lastError.set(null)
-    postMessage('iap-restore-request', undefined)
-
-    const txs = await race(having(restored), 'restore')
+  async restore(): Promise<void | Error> {
+    const txs = await recover()
 
     if (txs instanceof Error) return txs
 
-    return txs.map((t) => ({
-      id: String(t.json.id),
-      productId: t.json.productID,
-      payload: t.jws,
-    }))
+    const result = await restoreReceipts(txs.map((tx) => tx.payload))
+
+    if (result instanceof Error) return result
+  },
+
+  async manage(): Promise<void | Error> {
+    init()
+    managed.set(null)
+    lastError.set(null)
+    postMessage('iap-manage-request', undefined)
+
+    const result = await race(having(managed), 'manage')
+
+    if (result instanceof Error) return result
   },
 
   async finish(transactionId: string): Promise<void> {

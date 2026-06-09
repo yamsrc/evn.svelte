@@ -66,5 +66,20 @@ disclaimers:
 
     (price) => `Usajili utafu renewed kwa ${price}/mwezi kiotomatiki, isipokuwa
     ukighairi angalau saa 24 kabla ya mwisho wa kipindi kilichopo.`
+  stripe_account: Kadi yako itatozwa unapoidhinisha ununuzi wako.
+  stripe_monthly: |-
+    !js
+    (price) => `Usajili utakua upya kila mwezi kwa ${price}, isipofutwa.`
+  stripe_yearly: >-
+    !js
+
+    (price) => `Usajili upya huwa unafanyika moja kwa moja kwa ${price} kwa
+    mwaka isipobatilishwa.`
 restore:
   label: Rejesha manunuzi
+subscription:
+  active: Premium imewezeshwa
+  expires: |-
+    !js
+    (date) => `Inaisha ${date}`
+  manage: Dhibiti

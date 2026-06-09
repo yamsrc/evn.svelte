@@ -64,5 +64,25 @@ disclaimers:
 
     (price) => `سيتم تجديد الاشتراك تلقائيًا مقابل ${price} شهريًا ما لم يتم
     الإلغاء قبل 24 ساعة على الأقل من نهاية الفترة الحالية.`
+  stripe_account: سيتم خصم المبلغ من بطاقتك عند تأكيد الشراء.
+  stripe_monthly: >-
+    !js
+
+    (price) => `سيتم تجديد الاشتراك تلقائيًا مقابل ${price} شهريًا ما لم يتم
+    الإلغاء.`
+  stripe_yearly: >-
+    !js
+
+    (price) => `سيتم تجديد الاشتراك تلقائيًا مقابل ${price} سنويًا ما لم يتم
+    الإلغاء.`
 restore:
   label: استعادة المشتريات
+subscription:
+  active: الاشتراك المميز مفعل
+  expires: >-
+    !js
+
+    (date, gender) => { if (gender === "he") return `ينتهي في ${date}`; if
+    (gender === "she") return `تنتهي في ${date}`; return `ينتهي/تنتهي في
+    ${date}`; }
+  manage: إدارة
