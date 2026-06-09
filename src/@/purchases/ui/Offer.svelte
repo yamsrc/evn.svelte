@@ -107,7 +107,12 @@
     {/if}
     <div class="space-y-2 flex flex-col justify-between">
       <div class="rounded-lg ring-3 ring-primary/20">
-        <Button id="purchases-subscribe-button" {onclick} size="lg" class="w-full relative" disabled={busy}>
+        <Button
+          id="purchases-subscribe-button"
+          {onclick}
+          size="lg"
+          class="w-full relative"
+          disabled={busy}>
           {#if busy}
             <Spinner />
           {:else if free}
@@ -142,12 +147,12 @@
             {/if}
             {$dict.disclaimers.apple_manage}
           {:else if kind === 'stripe'}
-            {$dict.disclaimers.stripe_account}
             {#if selected?.period === 'P1Y'}
               {$dict.disclaimers.stripe_yearly(selected?.displayPrice)}
             {:else if selected?.period === 'P1M'}
               {$dict.disclaimers.stripe_monthly(selected?.displayPrice)}
             {/if}
+            {$dict.disclaimers.stripe_account}
           {/if}
         </p>
         <p>

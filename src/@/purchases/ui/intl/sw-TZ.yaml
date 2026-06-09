@@ -66,7 +66,7 @@ disclaimers:
 
     (price) => `Usajili utafu renewed kwa ${price}/mwezi kiotomatiki, isipokuwa
     ukighairi angalau saa 24 kabla ya mwisho wa kipindi kilichopo.`
-  stripe_account: Kadi yako itatozwa unapoidhinisha ununuzi wako.
+  stripe_account: Unaweza kughairi muda wowote kupitia mipangilio ya akaunti.
   stripe_monthly: |-
     !js
     (price) => `Usajili utakua upya kila mwezi kwa ${price}, isipofutwa.`

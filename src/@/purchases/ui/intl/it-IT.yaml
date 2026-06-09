@@ -72,7 +72,7 @@ disclaimers:
 
     (price) => `L’abbonamento si rinnova automaticamente a ${price}/mese a meno
     che tu non lo annulli almeno 24 ore prima della fine del periodo attuale.`
-  stripe_account: La tua carta verrà addebitata quando confermi l’acquisto.
+  stripe_account: Puoi annullare in qualsiasi momento dalle impostazioni del tuo account.
   stripe_monthly: >-
     !js
 

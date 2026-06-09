@@ -71,7 +71,7 @@ disclaimers:
     (price) => `La suscripción se renueva automáticamente por ${price}/mes a
     menos que la canceles al menos 24 horas antes de que termine el periodo
     actual.`
-  stripe_account: Tu tarjeta se cobrará cuando confirmes la compra.
+  stripe_account: Puedes cancelar en cualquier momento desde la configuración de tu cuenta.
   stripe_monthly: >-
     !js
 

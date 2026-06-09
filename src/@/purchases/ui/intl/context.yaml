@@ -78,8 +78,8 @@ inputs:
       input: Subscription automatically renews for {price}/month unless canceled at least 24 hours before the end of the current period.
       context: a function accepting price
     stripe_account:
-      input: Your card will be charged when you confirm your purchase.
-      context: auto-renewal disclosure shown on web (Stripe) before purchase
+      input: Cancel anytime from account settings.
+      context: (speaking about subscriptions)
     stripe_monthly:
       input: Subscription automatically renews for {price}/month unless canceled.
       context: auto-renewal disclosure (Stripe), function accepting price

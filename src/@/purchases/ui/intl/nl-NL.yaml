@@ -71,7 +71,7 @@ disclaimers:
 
     (price) => `Abonnement wordt automatisch verlengd voor ${price}/maand,
     tenzij je minstens 24 uur voor het einde van de huidige periode opzegt.`
-  stripe_account: Je kaart wordt belast zodra je je aankoop bevestigt.
+  stripe_account: Je kunt op elk moment opzeggen via de accountinstellingen.
   stripe_monthly: >-
     !js
 

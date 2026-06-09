@@ -63,7 +63,7 @@ disclaimers:
     (price) => `L’abonnement se renouvelle automatiquement pour ${price}/mois,
     sauf si tu l’annules au moins 24 heures avant la fin de la période en
     cours.`
-  stripe_account: Ta carte sera débitée lorsque tu confirmeras ton achat.
+  stripe_account: Tu peux annuler à tout moment depuis les paramètres de ton compte.
   stripe_monthly: >-
     !js
 
