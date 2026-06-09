@@ -63,5 +63,24 @@ disclaimers:
     (price) => `L’abonnement se renouvelle automatiquement pour ${price}/mois,
     sauf si tu l’annules au moins 24 heures avant la fin de la période en
     cours.`
+  stripe_account: Tu peux annuler à tout moment depuis les paramètres de ton compte.
+  stripe_monthly: >-
+    !js
+
+    (price) => `L’abonnement se renouvelle automatiquement à ${price} par mois,
+    sauf si tu l’annules.`
+  stripe_yearly: >-
+    !js
+
+    (price) => `L’abonnement se renouvelle automatiquement à ${price}/an, sauf
+    si tu l’annules.`
 restore:
   label: Restaurer les achats
+subscription:
+  active: Premium est actif
+  expires: >-
+    !js
+
+    (date, gender) => { if (gender === "he") return `Expire le ${date}`; if
+    (gender === "she") return `Expire le ${date}`; return `Expire le ${date}`; }
+  manage: Gérer

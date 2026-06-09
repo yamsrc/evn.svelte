@@ -66,5 +66,22 @@ disclaimers:
 
     (price) => `Subscription automatically renews for ${price}/month unless
     canceled at least 24 hours before the end of the current period.`
+  stripe_account: Cancel anytime from account settings.
+  stripe_monthly: >-
+    !js
+
+    (price) => `Subscription automatically renews for ${price}/month unless
+    canceled.`
+  stripe_yearly: >-
+    !js
+
+    (price) => `Subscription automatically renews for ${price}/year unless
+    canceled.`
 restore:
   label: Restore purchases
+subscription:
+  active: Premium is active
+  expires: |-
+    !js
+    (date) => `Expires on ${date}`
+  manage: Manage

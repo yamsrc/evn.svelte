@@ -67,5 +67,22 @@ disclaimers:
 
     (price) => `Dein Abo wird automatisch für ${price}/Monat verlängert, sofern
     du nicht mindestens 24 Stunden vor Ablauf des aktuellen Zeitraums kündigst.`
+  stripe_account: Du kannst jederzeit über die Kontoeinstellungen kündigen.
+  stripe_monthly: >-
+    !js
+
+    (price) => `Dein Abo verlängert sich automatisch für ${price}/Monat, außer
+    du kündigst.`
+  stripe_yearly: >-
+    !js
+
+    (price) => `Das Abo verlängert sich automatisch für ${price} pro Jahr,
+    solange du nicht kündigst.`
 restore:
   label: Käufe wiederherstellen
+subscription:
+  active: Premium ist aktiv
+  expires: |-
+    !js
+    (date) => `Läuft ab am ${date}`
+  manage: Verwalten

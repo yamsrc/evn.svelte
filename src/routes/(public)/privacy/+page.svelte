@@ -7,7 +7,7 @@
   <div class="max-w-none">
     <h1 class="text-3xl font-bold mb-6">Privacy Policy</h1>
 
-    <p class="text-sm text-muted-foreground mb-8">Last updated: January 13, 2026</p>
+    <p class="text-sm text-muted-foreground mb-8">Last updated: June 9, 2026</p>
 
     <section class="mb-8">
       <h2 class="text-2xl font-semibold mb-4">Introduction</h2>
@@ -100,6 +100,35 @@
         </li>
       </ul>
       <p class="mb-4">We do not sell your personal information to third parties.</p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-4">Payment Processing</h2>
+      <p class="mb-4">
+        We do not collect or store your full payment card details. Payments are handled by our
+        payment processors:
+      </p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>
+          <strong>Stripe:</strong>
+          Subscriptions purchased on the web are processed by Stripe on behalf of CORE ENGINE IT INFRASTRUCTURE
+          L.L.C. (United Arab Emirates). Stripe processes your payment information under its own privacy
+          policy.
+        </li>
+        <li>
+          <strong>Apple:</strong>
+          Subscriptions purchased through the Apple App Store are processed by Apple under Apple's privacy
+          policy. We receive subscription status but not your payment card details.
+        </li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-4">Analytics</h2>
+      <p class="mb-4">
+        We use analytics to understand aggregate usage and improve the App. We do not use advertising
+        trackers.
+      </p>
     </section>
 
     <section class="mb-8">

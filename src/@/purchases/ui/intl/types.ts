@@ -4,6 +4,10 @@
  * @author copilot
  */
 
+export type Locale = 'ar-SA' | 'de-DE' | 'en-US' | 'es-ES' | 'fr-FR' | 'hi-IN' | 'it-IT' | 'ja-JP' | 'ko-KR' | 'nl-NL' | 'ru-RU' | 'sw-TZ' | 'tr-TR' | 'uk-UA' | 'zh-CN'
+
+export type Grammar = string
+
 export type Dictionary = {
       paywall: {
         title: string
@@ -50,8 +54,16 @@ export type Dictionary = {
         apple_yearly: (value: any) => string
         apple_manage: string
         apple_monthly: (value: any) => string
+        stripe_account: string
+        stripe_monthly: (value: any) => string
+        stripe_yearly: (value: any) => string
       }
       restore: {
         label: string
+      }
+      subscription: {
+        active: string
+        expires: (...args: [any, any]) => string
+        manage: string
       }
     }

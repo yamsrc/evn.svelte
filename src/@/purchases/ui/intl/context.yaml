@@ -77,7 +77,25 @@ inputs:
     apple_monthly:
       input: Subscription automatically renews for {price}/month unless canceled at least 24 hours before the end of the current period.
       context: a function accepting price
+    stripe_account:
+      input: Cancel anytime from account settings.
+      context: (speaking about subscriptions)
+    stripe_monthly:
+      input: Subscription automatically renews for {price}/month unless canceled.
+      context: auto-renewal disclosure (Stripe), function accepting price
+    stripe_yearly:
+      input: Subscription automatically renews for {price}/year unless canceled.
+      context: auto-renewal disclosure (Stripe), function accepting price
   restore:
     label:
       input: Restore purchases
       context: button label
+  subscription:
+    active:
+      input: Premium is active
+      context: profile status line; premium subscription is currently active
+    expires:
+      input: Expires on {date}
+      context: profile; {date} is a pre-formatted localized date string e.g. 'Feb 17'
+    manage:
+      input: Manage

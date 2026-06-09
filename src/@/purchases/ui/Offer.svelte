@@ -5,11 +5,9 @@
   import { ok } from 'svas'
   import { add, channel } from '@/purchases'
   import { account } from '@/iam'
-  import { track } from '@/ga'
-  import { report, restore } from '@/appstore'
   import { Spinner } from '$ui/spinner'
   import { Button } from '$ui/button'
-  import { image, ios, shell } from '$lib/tools'
+  import { image } from '$lib/tools'
   import { dict as common } from '$lib/intl'
   import { features } from '$config'
   import { Scrollable } from '$com/scrollable'
@@ -22,6 +20,8 @@
   import type { Props } from './Offer'
 
   const { next }: Props = $props()
+
+  const kind = channel()?.kind
 
   let busy = $state(false)
   let products = $state<Product[]>([])
@@ -57,16 +57,7 @@
 
     if (ch === null) return new Error('no-channel')
 
-    const tx = await ch.purchase(selected.id, $account!.id)
-
-    if (tx instanceof Error) return tx
-
-    const result = await report(tx.payload)
-
-    if (!(result instanceof Error))
-      track('purchases.completed', { method: 'ios' })
-
-    return result
+    return await ch.purchase(selected.id, $account!.id)
   }
 
   async function restorePurchases(e: MouseEvent) {
@@ -76,23 +67,7 @@
 
     const ch = channel()
 
-    if (ch === null) {
-      button.disabled = false
-
-      return
-    }
-
-    const txs = await ch.restore()
-
-    if (txs instanceof Error) {
-      button.disabled = false
-
-      return
-    }
-
-    const jwses = txs.map((tx) => tx.payload)
-
-    await restore(jwses)
+    if (ch?.kind === 'apple') await ch.restore()
 
     button.disabled = false
   }
@@ -132,7 +107,12 @@
     {/if}
     <div class="space-y-2 flex flex-col justify-between">
       <div class="rounded-lg ring-3 ring-primary/20">
-        <Button {onclick} size="lg" class="w-full relative" disabled={busy}>
+        <Button
+          id="purchases-subscribe-button"
+          {onclick}
+          size="lg"
+          class="w-full relative"
+          disabled={busy}>
           {#if busy}
             <Spinner />
           {:else if free}
@@ -158,7 +138,7 @@
           {#if selected?.trial}
             {$dict.disclaimers.trial}
           {/if}
-          {#if shell && ios}
+          {#if kind === 'apple'}
             {$dict.disclaimers.apple_account}
             {#if selected?.period === 'P1Y'}
               {$dict.disclaimers.apple_yearly(selected?.displayPrice)}
@@ -166,6 +146,13 @@
               {$dict.disclaimers.apple_monthly(selected?.displayPrice)}
             {/if}
             {$dict.disclaimers.apple_manage}
+          {:else if kind === 'stripe'}
+            {#if selected?.period === 'P1Y'}
+              {$dict.disclaimers.stripe_yearly(selected?.displayPrice)}
+            {:else if selected?.period === 'P1M'}
+              {$dict.disclaimers.stripe_monthly(selected?.displayPrice)}
+            {/if}
+            {$dict.disclaimers.stripe_account}
           {/if}
         </p>
         <p>
@@ -173,16 +160,18 @@
           <span aria-hidden="true">·</span>
           <a href="/privacy/">{$common.privacy}</a>
         </p>
-        <div>
-          <Button
-            onclick={restorePurchases}
-            size="sm"
-            variant="outline"
-            class="disabled:[&_span]:hidden [&_svg]:hidden disabled:[&_svg]:block">
-            <span>{$dict.restore.label}</span>
-            <Spinner />
-          </Button>
-        </div>
+        {#if kind === 'apple'}
+          <div>
+            <Button
+              onclick={restorePurchases}
+              size="sm"
+              variant="outline"
+              class="disabled:[&_span]:hidden [&_svg]:hidden disabled:[&_svg]:block">
+              <span>{$dict.restore.label}</span>
+              <Spinner />
+            </Button>
+          </div>
+        {/if}
       </div>
     {/if}
   {:else}

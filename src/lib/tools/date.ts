@@ -2,15 +2,20 @@ import type { Locale } from '$lib/intl'
 
 /**
  * Formats a date string into a short localized representation (e.g., "Feb 17").
+ * The year is included only when it differs from the current year (e.g., "Feb 17, 2027").
  *
  * @param value - ISO date string or Date
  * @param locale - Locale for formatting
  * @returns Formatted date string
  */
 export function date(value: string | Date | number, locale: Locale): string {
-  const d = typeof value === 'string' ? new Date(value) : value
+  const d = typeof value === 'string' || typeof value === 'number' ? new Date(value) : value
 
-  return new Intl.DateTimeFormat(locale, { month: 'short', day: 'numeric' }).format(d)
+  const options: Intl.DateTimeFormatOptions = { month: 'short', day: 'numeric' }
+
+  if (d.getFullYear() !== new Date().getFullYear()) options.year = 'numeric'
+
+  return new Intl.DateTimeFormat(locale, options).format(d)
 }
 
 /**

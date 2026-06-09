@@ -6,6 +6,7 @@ declare global {
     'iap-products-request'?: { postMessage: (ids: readonly string[]) => void }
     'iap-purchase-request'?: { postMessage: (i: { productID: string, appAccountToken: string }) => void }
     'iap-restore-request'?: { postMessage: () => void }
+    'iap-manage-request'?: { postMessage: () => void }
     'iap-finish-transaction'?: { postMessage: (i: { transactionID: number }) => void }
   }
 
@@ -18,6 +19,7 @@ declare global {
       json: AppleTransactionJson
     }>
     'iap-restore-result': CustomEvent<{ transactions: Array<{ jws: string, json: AppleTransactionJson }> }>
+    'iap-manage-result': CustomEvent<Record<string, never>>
     'iap-error': CustomEvent<{ kind: string, message: string }>
   }
 }

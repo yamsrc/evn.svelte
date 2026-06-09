@@ -1,6 +1,7 @@
 export interface Product {
   id: string
   kind: 'subscription'
+  plan: 'monthly' | 'yearly'
   period: 'P1M' | 'P1Y'
   displayName: string
   displayPrice: string
@@ -9,16 +10,21 @@ export interface Product {
   trial?: { period: string, displayPrice: string }
 }
 
-export interface Transaction {
-  id: string
-  productId: string
-  payload: string
-}
-
-export interface Channel {
+interface Base {
   available(): Promise<boolean>
   products(): Promise<Product[] | Error>
-  purchase(productId: string, accountId: string): Promise<Transaction | Error>
-  restore(): Promise<Transaction[] | Error>
+  purchase(productId: string, accountId: string): Promise<void | Error>
+  manage(): Promise<void | Error>
+}
+
+export interface Apple extends Base {
+  kind: 'apple'
+  restore(): Promise<void | Error>
   finish(transactionId: string): Promise<void>
 }
+
+export interface Stripe extends Base {
+  kind: 'stripe'
+}
+
+export type Channel = Apple | Stripe

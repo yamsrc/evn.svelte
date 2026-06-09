@@ -4,6 +4,6 @@ import type { Account } from './Account'
 
 type AccountLike = Pick<Account, 'premium'>
 
-export function premium(account: AccountLike) {
+export function premium(account: AccountLike): account is AccountLike & { premium: number } {
   return account.premium !== undefined && account.premium > get(time)
 }
