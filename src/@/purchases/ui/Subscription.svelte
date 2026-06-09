@@ -33,8 +33,8 @@
 </script>
 
 <Item.Root class={classes}>
-  <Item.Media class="bg-premium rounded-full p-2">
-    <Crown class="size-full text-black" fill="currentColor" />
+  <Item.Media class="bg-primary rounded-full p-2">
+    <Crown class="size-full text-primary-foreground" fill="currentColor" />
   </Item.Media>
   <Item.Content>
     <Item.Title>{$dict.subscription.active}</Item.Title>
