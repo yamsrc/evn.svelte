@@ -1,3 +1,4 @@
+import '$lib/tools/mq' // detect referrer
 import { rc as transmission } from '@/transmission/rc'
 import { rc as realtime } from '@/realtime/rc'
 import { rc as purchases } from '@/purchases/rc'

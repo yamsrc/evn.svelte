@@ -17,7 +17,9 @@ export const touch = browser ? 'ontouchstart' in window : false
 
 export const standalone = browser ? window.matchMedia('(display-mode: standalone)').matches : false
 
-export const shell = browser ? /PWAShell/i.test(navigator.userAgent) : false
+export const shell = browser
+  ? /PWAShell/i.test(navigator.userAgent) || document.referrer.startsWith('android-app://com.evnapp')
+  : false
 
 // PWAShell/<version>
 export const shellVersion = navigator.userAgent.match(/PWAShell\/(\S+)/)?.[1] ?? null
