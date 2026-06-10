@@ -42,7 +42,11 @@
     <OIDC {account} apple={oidc?.apple !== false} google={oidc?.google !== false} {onauthenticate} />
   </div>
   <Tabs.Content value="passkey">
-    <Passkey {account} oncreate={(account) => oncreate?.(account, 'passkey')} {onauthenticate} />
+    <!-- unmount to abort the conditional request, otherwise
+      Safari shows passkey hints on the email tab as well -->
+    {#if value === 'passkey'}
+      <Passkey {account} oncreate={(account) => oncreate?.(account, 'passkey')} {onauthenticate} />
+    {/if}
   </Tabs.Content>
   <Tabs.Content value="password">
     <Password {account} oncreate={(account) => oncreate?.(account, 'password')} {onauthenticate} />

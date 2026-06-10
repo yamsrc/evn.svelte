@@ -2,7 +2,10 @@ import { key } from './key'
 import { base64urlToArrayBuffer } from './convert'
 import type { RequestOptions } from '../net/challenges'
 
-export async function get(options: RequestOptions): Promise<PublicKeyCredential | null> {
+export async function get(
+  options: RequestOptions,
+  init?: Pick<CredentialRequestOptions, 'mediation' | 'signal'>,
+): Promise<PublicKeyCredential | null> {
   const publicKey: PublicKeyCredentialRequestOptions = {
     timeout: options.timeout,
     challenge: base64urlToArrayBuffer(options.challenge),
@@ -10,5 +13,5 @@ export async function get(options: RequestOptions): Promise<PublicKeyCredential 
     userVerification: options.userVerification,
   }
 
-  return (await navigator.credentials.get({ publicKey })) as PublicKeyCredential
+  return (await navigator.credentials.get({ publicKey, ...init })) as PublicKeyCredential
 }

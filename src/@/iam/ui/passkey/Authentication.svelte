@@ -6,8 +6,7 @@
   import * as Alert from '$ui/alert'
   import { cn } from '$lib/utils'
   import { apple } from '$lib/tools/mq'
-  import Login from './Login.svelte'
-  import Create from './Create.svelte'
+  import Form from './Form.svelte'
   import type { Props } from './Authentication'
 
   const { class: classes, account, oncreate, onauthenticate }: Props = $props()
@@ -33,7 +32,7 @@
         <Card.Title><h2>{$dict.auth.signupTitle}</h2></Card.Title>
       </Card.Header>
       <Card.Content>
-        <Create {account} {oncreate} />
+        <Form {account} {oncreate} {onauthenticate} />
       </Card.Content>
     {/if}
     <Card.Footer>
@@ -57,8 +56,4 @@
       {/if}
     </Card.Footer>
   </Card.Root>
-
-  {#if supported && !account}
-    <Login {onauthenticate} />
-  {/if}
 </div>
