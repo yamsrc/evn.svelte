@@ -69,7 +69,7 @@
 
     const ch = channel()
 
-    if (ch?.kind === 'apple') await ch.restore()
+    if (ch?.kind === 'apple' || ch?.kind === 'google') await ch.restore()
 
     button.disabled = false
   }
@@ -170,7 +170,7 @@
           <span aria-hidden="true">·</span>
           <a href="/privacy/">{$common.privacy}</a>
         </p>
-        {#if kind === 'apple'}
+        {#if kind === 'apple' || kind === 'google'}
           <div>
             <Button
               onclick={restorePurchases}

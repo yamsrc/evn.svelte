@@ -92,6 +92,30 @@ export const google: Google = {
     track('purchases.completed', { method: 'google' })
   },
 
+  async restore(): Promise<void | Error> {
+    const svc = await service()
+
+    if (svc === null) return new Error('google: unavailable')
+
+    let purchases: PurchaseDetails[]
+
+    try {
+      purchases = await svc.listPurchases()
+    } catch (e) {
+      return e instanceof Error ? e : new Error('google: restore')
+    }
+
+    console.debug('google: listPurchases', purchases)
+
+    for (const p of purchases) {
+      const result = await report(p.purchaseToken)
+
+      console.debug('google: restore report', p.itemId, result)
+
+      if (result instanceof Error && result.code !== PENDING) return result
+    }
+  },
+
   async manage(): Promise<void | Error> {
     window.open(stores.googlePlaySubscriptions, '_blank')
   },

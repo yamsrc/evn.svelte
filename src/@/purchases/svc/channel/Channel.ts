@@ -30,6 +30,7 @@ export interface Stripe extends Base {
 
 export interface Google extends Base {
   kind: 'google'
+  restore(): Promise<void | Error>
 }
 
 export type Channel = Apple | Stripe | Google
