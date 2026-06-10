@@ -1,8 +1,12 @@
 import * as passkeys from '@/passkeys'
 import { method, iam } from '../store'
 import * as origin from '../net'
+import { expectation } from './mount'
 
 export async function create(name: string, identity?: string): Promise<origin.Echo | Error> {
+  // pending conditional request blocks credentials.create()
+  expectation?.abort()
+
   const response = await passkeys.create(name, identity)
 
   if (response instanceof Error) {

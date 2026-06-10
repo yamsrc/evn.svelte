@@ -1,13 +1,16 @@
 import * as origin from './net'
 import * as credentials from './credentials'
 
-export async function request(id?: string): Promise<origin.RequestResponse | Error> {
+export async function request(
+  id?: string,
+  init?: Pick<CredentialRequestOptions, 'mediation' | 'signal'>,
+): Promise<origin.RequestResponse | Error> {
   const options = await origin.challenges.post('request', id)
 
   if (options instanceof Error) return options
 
   const start = Date.now()
-  const credential = await credentials.get(options).catch((e) => e as Error)
+  const credential = await credentials.get(options, init).catch((e) => e as Error)
 
   if (credential instanceof Error) {
     // multi-device authentication is not implemented on Android,

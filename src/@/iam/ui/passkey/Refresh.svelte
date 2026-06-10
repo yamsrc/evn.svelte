@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Fingerprint } from '@lucide/svelte'
+  import { FingerprintPattern } from '@lucide/svelte'
   import { dict } from '@/iam/ui/intl'
   import { passkeys } from '@/iam'
   import { Button } from '$ui/button'
@@ -7,7 +7,10 @@
   import type { Method } from '@/iam'
   import type { AccountLike } from '../AccountLike'
 
-  const { account, onauthenticate }: {
+  const {
+    account,
+    onauthenticate,
+  }: {
     account: AccountLike
     onauthenticate?: (method: Method) => void
   } = $props()
@@ -28,7 +31,7 @@
 <Button
   class="disabled:[&>.x-icon]:hidden [&>.x-loader]:hidden disabled:[&>.x-loader]:block"
   {onclick}>
-  <Fingerprint class="size-5 x-icon" />
+  <FingerprintPattern class="size-5 x-icon" />
   <Loader class="x-loader" />
   {$dict.auth.refresh.continue}
 </Button>
