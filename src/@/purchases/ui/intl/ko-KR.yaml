@@ -29,6 +29,9 @@ paywall:
     apple: >-
       무료 체험은 자격이 되는 최초 가입자만 이용할 수 있어요. 요금이 청구되기 전에 체험 종료 24시간 전에 꼭 구독을 취소하세요.
       Apple ID 계정 설정에서 구독을 관리하거나 취소할 수 있습니다.
+  processing:
+    title: 구매를 완료하는 중이에요
+    note: 결제가 처리되고 있어. 확인되는 즉시 프리미엄이 활성화돼.
 products:
   yearly:
     title: 연간
@@ -61,6 +64,14 @@ disclaimers:
   stripe_yearly: |-
     !js
     (price) => `구독은 취소하지 않으면 매년 ${price}에 자동 갱신돼.`
+  google_account: 구매를 확인하면 결제 금액이 네 Google Play 계정으로 청구돼.
+  google_manage: Google Play 계정 설정에서 구독을 관리하거나 취소할 수 있어요.
+  google_yearly: |-
+    !js
+    (price) => `구독은 ${price}/년으로 자동 갱신돼. 현재 기간이 끝나기 최소 24시간 전에 취소하지 않으면 계속돼.`
+  google_monthly: |-
+    !js
+    (price) => `구독은 현재 기간이 끝나기 최소 24시간 전에 취소하지 않으면 ${price}/월로 자동 갱신돼요.`
 restore:
   label: 구매 복원
 subscription:

@@ -29,6 +29,11 @@ paywall:
     cta: Profiter de Premium
   disclaimers:
     apple: "L’essai gratuit est réservé aux nouveaux abonnés éligibles. Pense à annuler au moins 24\_h avant la fin de l’essai pour éviter le débit. Tu peux gérer ou annuler ton abonnement dans les réglages de ton identifiant Apple."
+  processing:
+    title: Finalisation de ton achat
+    note: >-
+      Ton paiement est en cours de traitement. Premium s’activera dès qu’il sera
+      confirmé.
 products:
   yearly:
     title: Annuel
@@ -74,6 +79,24 @@ disclaimers:
 
     (price) => `L’abonnement se renouvelle automatiquement à ${price}/an, sauf
     si tu l’annules.`
+  google_account: >-
+    Le paiement sera débité de ton compte Google Play lors de la confirmation de
+    l'achat.
+  google_manage: >-
+    Tu peux gérer ou annuler ton abonnement dans les paramètres de ton compte
+    Google Play.
+  google_yearly: >-
+    !js
+
+    (price) => `L’abonnement se renouvelle automatiquement pour ${price}/an,
+    sauf si tu l’annules au moins 24 heures avant la fin de la période en
+    cours.`
+  google_monthly: >-
+    !js
+
+    (price) => `L’abonnement se renouvelle automatiquement pour ${price}/mois,
+    sauf si tu l’annules au moins 24 heures avant la fin de la période en
+    cours.`
 restore:
   label: Restaurer les achats
 subscription:

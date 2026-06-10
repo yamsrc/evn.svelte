@@ -36,6 +36,11 @@ paywall:
       almeno 24 ore prima della fine della prova per evitare addebiti. Puoi
       gestire o annullare il tuo abbonamento dalle impostazioni dell’account
       Apple ID.
+  processing:
+    title: Completamento del tuo acquisto
+    note: >-
+      Il tuo pagamento è in fase di elaborazione. Premium si attiverà appena
+      sarà confermato.
 products:
   yearly:
     title: Annuale
@@ -83,6 +88,22 @@ disclaimers:
 
     (price) => `L’abbonamento si rinnova automaticamente a ${price} all’anno, a
     meno che tu non lo annulli.`
+  google_account: >-
+    Il pagamento verrà addebitato sul tuo account Google Play al momento della
+    conferma dell’acquisto.
+  google_manage: >-
+    Puoi gestire o annullare il tuo abbonamento nelle impostazioni del tuo
+    account Google Play.
+  google_yearly: >-
+    !js
+
+    (price) => `L’abbonamento si rinnova automaticamente a ${price}/anno, a meno
+    che tu non lo annulli almeno 24 ore prima della fine del periodo attuale.`
+  google_monthly: >-
+    !js
+
+    (price) => `L’abbonamento si rinnova automaticamente a ${price}/mese, a meno
+    che tu non lo disdica almeno 24 ore prima della fine del periodo corrente.`
 restore:
   label: Ripristina acquisti
 subscription:

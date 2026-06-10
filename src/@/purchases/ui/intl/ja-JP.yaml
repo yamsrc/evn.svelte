@@ -28,6 +28,9 @@ paywall:
     apple: >-
       無料トライアルは、初めて利用する対象者のみが利用できます。請求を避けるために、トライアル終了の24時間前までにキャンセルしてください。Apple
       IDのアカウント設定で、サブスクリプションの管理や解約ができます。
+  processing:
+    title: 購入を完了しています
+    note: 支払いを処理中です。確認され次第、プレミアムが有効になります。
 products:
   yearly:
     title: 年間
@@ -62,6 +65,16 @@ disclaimers:
   stripe_yearly: |-
     !js
     (price) => `解約しない限り、サブスクリプションは毎年${price}で自動更新されます。`
+  google_account: 購入を確定すると、支払いはあなたのGoogle Playアカウントに請求されます。
+  google_manage: Google Playアカウントの設定からサブスクリプションの管理やキャンセルができます。
+  google_yearly: >-
+    !js
+
+    (price) =>
+    `サブスクリプションは${price}/年で自動更新されます。現在の期間が終了する24時間前までにキャンセルしない限り、自動的に継続されます。`
+  google_monthly: |-
+    !js
+    (price) => `サブスクリプションは、現在の期間が終了する24時間以上前にキャンセルしない限り、自動的に${price}/月で更新されます。`
 restore:
   label: 購入を復元
 subscription:

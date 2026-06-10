@@ -33,6 +33,11 @@ paywall:
       Free trial is only available to eligible first-time subscribers. Cancel at
       least 24 hours before the trial ends to avoid being charged. You can
       manage or cancel your subscription in your Apple ID account settings.
+  processing:
+    title: Completing your purchase
+    note: >-
+      Your payment is being processed. Premium will activate as soon as it’s
+      confirmed.
 products:
   yearly:
     title: Yearly
@@ -77,6 +82,22 @@ disclaimers:
 
     (price) => `Subscription automatically renews for ${price}/year unless
     canceled.`
+  google_account: >-
+    Payment will be charged to your Google Play account at confirmation of
+    purchase.
+  google_manage: >-
+    You can manage or cancel your subscription in your Google Play account
+    settings.
+  google_yearly: >-
+    !js
+
+    (price) => `Subscription automatically renews for ${price}/year unless
+    canceled at least 24 hours before the end of the current period.`
+  google_monthly: >-
+    !js
+
+    (price) => `Subscription automatically renews for ${price}/month unless
+    canceled at least 24 hours before the end of the current period.`
 restore:
   label: Restore purchases
 subscription:

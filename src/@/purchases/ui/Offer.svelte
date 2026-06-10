@@ -11,6 +11,7 @@
   import { dict as common } from '$lib/intl'
   import { features } from '$config'
   import { Scrollable } from '$com/scrollable'
+  import { step } from './store'
   import { dict } from './intl'
   import { Products } from './Products'
   import { benefits } from './Offer'
@@ -43,6 +44,7 @@
     busy = false
 
     if (result instanceof Error) console.error(result)
+    else if (result === 'pending') step.set('processing')
     else next?.()
   }
 
@@ -153,6 +155,14 @@
               {$dict.disclaimers.stripe_monthly(selected?.displayPrice)}
             {/if}
             {$dict.disclaimers.stripe_account}
+          {:else if kind === 'google'}
+            {#if selected?.period === 'P1Y'}
+              {$dict.disclaimers.google_yearly(selected?.displayPrice)}
+            {:else if selected?.period === 'P1M'}
+              {$dict.disclaimers.google_monthly(selected?.displayPrice)}
+            {/if}
+            {$dict.disclaimers.google_account}
+            {$dict.disclaimers.google_manage}
           {/if}
         </p>
         <p>

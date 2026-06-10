@@ -36,6 +36,9 @@ paywall:
       Ücret alınmaması için deneme bitmeden 24 saat önce iptal etmelisin.
       Aboneliğini Apple ID hesap ayarlarından yönetebilir veya iptal
       edebilirsin.
+  processing:
+    title: Satın alma işlemin tamamlanıyor
+    note: Ödemen işleniyor. Onaylanır onaylanmaz Premium etkinleşecek.
 products:
   yearly:
     title: Yıllık
@@ -76,6 +79,20 @@ disclaimers:
 
     (price) => `Abonelik, iptal etmezsen her yıl otomatik olarak ${price}
     karşılığında yenilenir.`
+  google_account: Satın alma onaylandığında ödeme Google Play hesabından alınacaktır.
+  google_manage: >-
+    Google Play hesabı ayarlarından aboneliğini yönetebilir veya iptal
+    edebilirsin.
+  google_yearly: >-
+    !js
+
+    (price) => `Aboneliğin ${price}/yıl olarak otomatik yenilenir, mevcut dönem
+    bitmeden en az 24 saat önce iptal etmezsen.`
+  google_monthly: >-
+    !js
+
+    (price) => `Abonelik, mevcut dönemin bitiminden en az 24 saat önce iptal
+    etmezsen, otomatik olarak ${price}/ay olarak yenilenir.`
 restore:
   label: Satın alımları geri yükle
 subscription:

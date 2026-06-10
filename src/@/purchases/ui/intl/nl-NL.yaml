@@ -36,6 +36,11 @@ paywall:
       nieuwe abonnees. Annuleer minstens 24 uur voor het einde van de proef om
       kosten te voorkomen. Je kunt je abonnement beheren of opzeggen via je
       Apple ID-accountinstellingen.
+  processing:
+    title: Je aankoop wordt afgerond
+    note: >-
+      Je betaling wordt verwerkt. Premium wordt geactiveerd zodra die is
+      bevestigd.
 products:
   yearly:
     title: Jaarlijks
@@ -82,6 +87,22 @@ disclaimers:
 
     (price) => `Abonnement wordt automatisch verlengd voor ${price} per jaar,
     tenzij je opzegt.`
+  google_account: >-
+    De betaling wordt afgeschreven van je Google Play-account zodra je de
+    aankoop bevestigt.
+  google_manage: >-
+    Je kunt je abonnement beheren of opzeggen in de instellingen van je Google
+    Play-account.
+  google_yearly: >-
+    !js
+
+    (price) => `Je abonnement wordt automatisch verlengd voor ${price}/jaar,
+    tenzij je ten minste 24 uur voor het einde van de huidige periode opzegt.`
+  google_monthly: >-
+    !js
+
+    (price) => `Abonnement wordt automatisch verlengd voor ${price}/maand,
+    tenzij je het minstens 24 uur vóór het einde van de huidige periode opzegt.`
 restore:
   label: Aankopen herstellen
 subscription:

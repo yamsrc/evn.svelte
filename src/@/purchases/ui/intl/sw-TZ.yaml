@@ -35,6 +35,9 @@ paywall:
       wanastahili. Ghairi siku 1 (saa 24) kabla jaribio kuisha ili kuepuka
       malipo. Unaweza kudhibiti au kughairi usajili wako kwenye mipangilio ya
       akaunti yako ya Apple ID.
+  processing:
+    title: Tunamalizia ununuzi wako
+    note: Malipo yako yanashughulikiwa. Premium itawashwa mara tu ikithibitishwa.
 products:
   yearly:
     title: Kila mwaka
@@ -75,6 +78,22 @@ disclaimers:
 
     (price) => `Usajili upya huwa unafanyika moja kwa moja kwa ${price} kwa
     mwaka isipobatilishwa.`
+  google_account: >-
+    Malipo yatakatwa kutoka kwenye akaunti yako ya Google Play ukithibitisha
+    ununuzi.
+  google_manage: >-
+    Unaweza kudhibiti au kughairi usajili wako kwenye mipangilio ya akaunti yako
+    ya Google Play.
+  google_yearly: >-
+    !js
+
+    (price) => `Usajili hujiwesha upya kwa ${price}/mwaka isipokuwa ukighairi
+    angalau masaa 24 kabla ya mwisho wa kipindi cha sasa.`
+  google_monthly: >-
+    !js
+
+    (price) => `Usajili utafanywa upya moja kwa moja kwa ${price}/mwezi
+    isipokuwa ukighairi angalau saa 24 kabla ya mwisho wa kipindi cha sasa.`
 restore:
   label: Rejesha manunuzi
 subscription:

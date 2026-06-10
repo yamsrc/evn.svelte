@@ -13,7 +13,8 @@ export interface Product {
 interface Base {
   available(): Promise<boolean>
   products(): Promise<Product[] | Error>
-  purchase(productId: string, accountId: string): Promise<void | Error>
+  /** `'pending'` = purchase valid but not yet active (e.g. slow payment); show processing, no grant. */
+  purchase(productId: string, accountId: string): Promise<void | 'pending' | Error>
   manage(): Promise<void | Error>
 }
 
@@ -27,4 +28,8 @@ export interface Stripe extends Base {
   kind: 'stripe'
 }
 
-export type Channel = Apple | Stripe
+export interface Google extends Base {
+  kind: 'google'
+}
+
+export type Channel = Apple | Stripe | Google

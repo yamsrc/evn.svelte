@@ -36,6 +36,9 @@ paywall:
       elegibles. Cancela al menos 24 horas antes de que acabe la prueba para
       evitar cargos. Puedes gestionar o cancelar tu suscripción en la
       configuración de tu cuenta Apple ID.
+  processing:
+    title: Completando tu compra
+    note: Tu pago está en proceso. Premium se activará en cuanto se confirme.
 products:
   yearly:
     title: Anual
@@ -82,6 +85,22 @@ disclaimers:
 
     (price) => `La suscripción se renueva automáticamente por ${price} al año, a
     menos que la canceles.`
+  google_account: El pago se cobrará en tu cuenta de Google Play al confirmar la compra.
+  google_manage: >-
+    Puedes gestionar o cancelar tu suscripción desde la configuración de tu
+    cuenta de Google Play.
+  google_yearly: >-
+    !js
+
+    (price) => `La suscripción se renueva automáticamente por ${price}/año, a
+    menos que la canceles al menos 24 horas antes de que termine el periodo
+    actual.`
+  google_monthly: >-
+    !js
+
+    (price) => `La suscripción se renueva automáticamente por ${price}/mes a
+    menos que la canceles al menos 24 horas antes de que termine el periodo
+    actual.`
 restore:
   label: Restaurar compras
 subscription:

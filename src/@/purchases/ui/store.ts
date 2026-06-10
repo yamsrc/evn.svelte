@@ -4,7 +4,7 @@ import type { BenefitType } from './Benefit'
 
 export type Reason = 'scan' | 'background' | null
 
-export type Step = 'offer' | 'complete'
+export type Step = 'offer' | 'processing' | 'complete'
 
 export type CTA = {
   benefit: BenefitType

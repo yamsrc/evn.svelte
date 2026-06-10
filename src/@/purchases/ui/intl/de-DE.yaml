@@ -36,6 +36,11 @@ paywall:
       Abbuchung zu vermeiden, kündige mindestens 24 Stunden vor Ablauf des
       Probezeitraums. Du kannst dein Abo in den Einstellungen deiner Apple-ID
       verwalten oder kündigen.
+  processing:
+    title: Dein Kauf wird abgeschlossen
+    note: >-
+      Deine Zahlung wird gerade bearbeitet. Premium wird aktiviert, sobald sie
+      bestätigt ist.
 products:
   yearly:
     title: Jährlich
@@ -78,6 +83,22 @@ disclaimers:
 
     (price) => `Das Abo verlängert sich automatisch für ${price} pro Jahr,
     solange du nicht kündigst.`
+  google_account: >-
+    Die Zahlung wird bei Bestätigung des Kaufs von deinem Google Play-Konto
+    abgebucht.
+  google_manage: >-
+    Du kannst dein Abo in den Einstellungen deines Google Play-Kontos verwalten
+    oder kündigen.
+  google_yearly: >-
+    !js
+
+    (price) => `Dein Abo verlängert sich automatisch für ${price}/Jahr, es sei
+    denn, du kündigst mindestens 24 Stunden vor Ablauf des aktuellen Zeitraums.`
+  google_monthly: >-
+    !js
+
+    (price) => `Dein Abo verlängert sich automatisch für ${price}/Monat, sofern
+    du nicht mindestens 24 Stunden vor Ablauf der aktuellen Periode kündigst.`
 restore:
   label: Käufe wiederherstellen
 subscription:
