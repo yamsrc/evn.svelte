@@ -13,6 +13,9 @@ export let expectation: Expectation | undefined
  * Returns a callback aborting the request (for onMount).
  */
 export function mount(callback?: () => void): () => void {
+  if (expectation !== undefined)
+    return expectation.abort
+
   const ac = new AbortController()
 
   const current: Expectation = {
@@ -23,7 +26,7 @@ export function mount(callback?: () => void): () => void {
   expectation = current
 
   void current.promise.then((result) => {
-    if (expectation === current) expectation = undefined
+    expectation = undefined
 
     if (!(result instanceof Error)) callback?.()
   })
