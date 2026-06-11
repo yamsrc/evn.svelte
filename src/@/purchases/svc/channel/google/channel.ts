@@ -44,6 +44,8 @@ export const google: Google = {
 
       return toProducts(details, get(locale))
     } catch (e) {
+      console.error('google: products', e)
+
       return e instanceof Error ? e : new Error('google: products')
     }
   },
@@ -59,7 +61,7 @@ export const google: Google = {
 
       response = await request.show()
     } catch (e) {
-      if (e instanceof DOMException && e.name === 'AbortError') return
+      console.error('google: purchase', e)
 
       return e instanceof Error ? e : new Error('google: purchase')
     }
@@ -97,6 +99,8 @@ export const google: Google = {
     try {
       purchases = await svc.listPurchases()
     } catch (e) {
+      console.error('google: restore', e)
+
       return e instanceof Error ? e : new Error('google: restore')
     }
 
