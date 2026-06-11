@@ -3,6 +3,7 @@
   import { track } from '@/ga'
   import Section from '@/app/ui/Section.svelte'
   import { Button } from '$ui/button'
+  import { dict } from '../intl'
 </script>
 
 <header class="sticky top-0 z-10 w-full bg-neutral-950 text-white">
@@ -12,9 +13,9 @@
         <img src="/icon.svg" alt="Evnly" width="32" height="32" />
       </a>
       <nav class="hidden md:flex items-center gap-6">
-        <a href="#how-it-works">How It Works</a>
-        <a href="#features">Features</a>
-        <a href="#reviews">Reviews</a>
+        <a href="#how-it-works">{$dict.header.nav.howItWorks}</a>
+        <a href="#features">{$dict.header.nav.features}</a>
+        <a href="#reviews">{$dict.header.nav.reviews}</a>
       </nav>
     </div>
 
@@ -22,7 +23,7 @@
       href="#download"
       onclick={() => track('hello.cta', { name: 'install-app' })}
       class="rounded-full bg-primary text-primary-foreground hover:bg-primary/90">
-      Install App
+      {$dict.header.installApp}
       <Download class="size-4" />
     </Button>
   </Section>

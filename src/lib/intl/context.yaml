@@ -348,3 +348,4 @@ mounts:
   adventures: ../../@/adventures/ui/intl
   purchases: ../../@/purchases/ui/intl
   templates: ../../@/expenses.templates/ui/intl
+  hello: ../../routes/(public)/hello/intl

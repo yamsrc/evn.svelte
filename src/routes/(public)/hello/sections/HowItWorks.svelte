@@ -4,13 +4,21 @@
   import ListChecks from '@lucide/svelte/icons/list-checks'
   import BadgeCheck from '@lucide/svelte/icons/badge-check'
   import { imageSet } from '$lib/tools/image'
+  import { dict } from '../intl'
 
-  const steps = [
-    { id: 'how-phone-1_c5ynqv', label: 'Scan the Receipt', Icon: ScanLine },
-    { id: 'how-phone-2_rggglh', label: 'Assign Items', Icon: ListChecks },
-    { id: 'how-phone-3_hqrmag', label: 'Select a Payer', Icon: Smile },
-    { id: 'how-phone-4_rwcooo', label: 'Done!', Icon: BadgeCheck },
+  const stepDefs = [
+    { id: 'how-phone-1_c5ynqv', Icon: ScanLine },
+    { id: 'how-phone-2_rggglh', Icon: ListChecks },
+    { id: 'how-phone-3_hqrmag', Icon: Smile },
+    { id: 'how-phone-4_rwcooo', Icon: BadgeCheck },
   ]
+
+  const steps = $derived.by(() => [
+    { ...stepDefs[0], label: $dict.howItWorks.steps.scan },
+    { ...stepDefs[1], label: $dict.howItWorks.steps.assign },
+    { ...stepDefs[2], label: $dict.howItWorks.steps.payer },
+    { ...stepDefs[3], label: $dict.howItWorks.steps.done },
+  ])
 
   const bg = imageSet({
     '1x': '/assets/w_280/how-phone-bg_x2yejc.webp',
@@ -20,10 +28,12 @@
 
 <section id="how-it-works" class="max-w-7xl mx-auto bg-[#ECE0D4] text-neutral-900 rounded-3xl px-4 py-12 md:py-16 space-y-16 md:space-y-20">
   <div class="text-center max-w-3xl mx-auto space-y-3">
-    <p class="text-xs font-medium tracking-widest uppercase text-primary">Easy Steps</p>
-    <div role="heading" aria-level="2" class="text-4xl md:text-6xl font-bold leading-tight text-black">How It Works</div>
+    <p class="text-xs font-medium tracking-widest uppercase text-primary">{$dict.howItWorks.eyebrow}</p>
+    <div role="heading" aria-level="2" class="text-4xl md:text-6xl font-bold leading-tight text-black">
+      {$dict.howItWorks.title}
+    </div>
     <p class="text-neutral-600 text-balance max-w-xl mx-auto">
-      Just snap a photo, tap to assign who had what, and let Evnly do the rest. No calculations, no confusion — just a clear and fair split in seconds.
+      {$dict.howItWorks.body}
     </p>
   </div>
 

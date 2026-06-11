@@ -1,0 +1,139 @@
+header:
+  nav:
+    howItWorks: Jinsi inavyofanya kazi
+    features: Vipengele
+    reviews: Mapitio
+  installApp: Sakinisha app
+hero:
+  tagline1: Gawanya risiti
+  tagline2: kwa mguso mchache tu
+  startSplitting: Anza kugawanya
+  previewAlt: Muonekano wa awali wa app ya Evnly
+howItWorks:
+  eyebrow: Hatua Rahisi
+  title: Jinsi inavyofanya kazi
+  body: >-
+    Piga tu picha, gusa kuchagua nani alipata nini, kisha acha Evnly ifanye
+    yote. Hakuna mahesabu, hakuna machanganyiko — mgawanyo wazi na wa haki ndani
+    ya sekunde chache tu.
+  steps:
+    scan: Scan risiti
+    assign: Weka vitu
+    payer: Chagua aliyelipa
+    done: Imemalizika!
+stats:
+  eyebrow: Matumizi ya pamoja bila usumbufu
+  scan:
+    title: Scan risiti
+    description: Gawanya vitu moja kwa moja kwenye picha
+  groups:
+    title: Vikundi na safari
+    description: Weka matumizi yako yote sehemu moja
+  balances:
+    title: Futa salio
+    description: Daima jua nani ana deni kwa nani
+split:
+  eyebrow: Rahisi sana
+  title: Njia rahisi zaidi ya kugawana bili
+  body: >-
+    Geuza bili yoyote iwe rahisi kugawanya papo hapo. Ukiwa na Evnly, kila mtu
+    anaona sehemu yake mara moja — hakuna hesabu, hakuna kuchanganyikiwa, ni
+    kugawana bili haraka na kirahisi tu.
+  previewAlt: Hakikisho la mgawanyo wa bili kwenye Evnly
+features:
+  eyebrow: Gawanya kwa urahisi
+  title1: Kila kitu unachohitaji
+  title2: Gawa mgao kwa urahisi
+  body: >-
+    Kila kitu unachohitaji kugawana bili bila wasiwasi. Kuanzia kuchanganua
+    risiti haraka hadi kusimamia vikundi kwa urahisi, Evnly inafanya kila hatua
+    iwe rahisi, haraka na wazi — ili uweze kufurahia muda, si mahesabu.
+  cards:
+    groups:
+      title: Tengeneza vikundi kwa ajili ya tukio lolote
+      body: >-
+        Iwe ni chakula cha usiku na marafiki, safari ya wikendi, au gharama za
+        nyumbani mliyogawana, Evnly inakuwezesha kuunda vikundi ndani ya sekunde
+        chache. Weka kila mtu kwenye mpangilio, fuatilia nani amelipa nini, na
+        fanya kugawana bili kuwa rahisi kwa hafla yoyote.
+    invite:
+      title: Ongeza marafiki hata kama hawapo kwenye Evnly
+      body: >-
+        Huna app? Hakuna shida! Mwalike mtu yeyote kwa link, na ataona sehemu
+        yake papo hapo. Kugawana bili haijawahi kuwa rahisi hivi, hata kwa
+        marafiki ambao bado hawajajiunga na Evnly.
+    adventures:
+      title: Matukio
+      body: >-
+        Mambo ya kuonja maisha ni kwa wale wanaopenda kugawana sawa — iwe ni
+        safari pamoja, usiku bar, au kugawana gharama za nyumbani. Evnly
+        inafanya iwe rahisi kabisa kufuatilia, kugawa na kulipia bili kwa haki
+        ili kila mtu alipe sehemu yake stahiki.
+  tryItNow: Jaribu sasa
+reviews:
+  eyebrow: Watu wanasemaje
+  title: Maoni
+  attribution: |-
+    !js
+    (name, location) => `— ${name}, ${location}`
+  one:
+    title: Ninapenda skana ya stakabadhi
+    body: >-
+      Rahisi sana na hata inafurahisha kutumia. Napenda kipengele cha kuskani
+      risiti — kinaokoa muda mwingi na huepuka makosa.
+    name: Sofía
+    location: Madrid
+  two:
+    title: Inafaa kabisa kwa safari
+    body: >-
+      Tulitumia kila siku, na ilirahisisha kila kitu — hakuna tena kufuatilia
+      matumizi kwenye noti au kubishana kuhusu pesa.
+    name: Jake
+    location: Berlin
+  three:
+    title: Changanua tu!
+    body: >-
+      Mwisho wa zile meseji za 'nani ananidai?' baada ya chakula cha jioni.
+      Tunachofanya ni kuskan risiti na mambo yote yameisha sekunde chache tu.
+    name: Emma
+    location: London
+builtForLife:
+  eyebrow: Kwa kila tukio unaloshiriki
+  title: Imetengenezwa kwa maisha halisi
+  body: >-
+    Kuanzia chakula cha jioni na kutoka usiku hadi safari na matumizi ya kila
+    siku — Evnly inajipanga kulingana na hali yoyote, na kufanya iwe rahisi
+    kugawana gharama na marafiki, wapangaji au mtu yeyote.
+  tags:
+    dinners: Chakula cha jioni na marafiki
+    travel: Safari na Safari za Kikundi
+    apartments: Vyumba vya pamoja
+    nights: Usiku nje
+    other: Matumizi Mengine
+  shareAlt: Uzoefu wa kushiriki app ya Evnly
+download:
+  mobile:
+    title1: Pakua
+    title2: app ya simu
+    body: >-
+      Fanya kugawana gharama kuwa rahisi sana. Pakua Evnly na furahia kila muda
+      bila kuhesabu.
+    appStoreAria: Pakua kwenye App Store
+    appStoreAlt: Pakua kwenye App Store
+    googlePlayAria: Pata kwenye Google Play
+    googlePlayAlt: Ipate kwenye Google Play
+  browser:
+    title1: Au tumia
+    title2: kwenye kivinjari
+footer:
+  tagline: Gawanya kwa busara
+meta:
+  title: "Evnly: gawanya matumizi ya pamoja"
+  description: >-
+    Gawanya risiti na gharama za pamoja kwa sekunde chache tu. Changanua bili,
+    panga vitu, kisha malizana na marafiki kwenye safari, chakula na matumizi ya
+    nyumbani bila stress.
+  keywords: >-
+    mgawanyo wa gharama, kugawana bili, gharama za pamoja, kisoma risiti, app ya
+    kugawanya bili, gharama za kundi, kugawana gharama ya safari, gharama za
+    wapangaji, kugawanya bili ya mgahawa, Evnly

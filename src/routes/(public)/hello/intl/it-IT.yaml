@@ -1,0 +1,140 @@
+header:
+  nav:
+    howItWorks: Come funziona
+    features: Funzioni
+    reviews: Recensioni
+  installApp: Installa l’app
+hero:
+  tagline1: Dividi le ricevute
+  tagline2: in pochi tap
+  startSplitting: Inizia a dividere
+  previewAlt: Anteprima app Evnly
+howItWorks:
+  eyebrow: Passaggi facili
+  title: Come funziona
+  body: >-
+    Basta scattare una foto, toccare per assegnare chi ha preso cosa, e lascia
+    che Evnly faccia il resto. Niente calcoli, niente confusione — solo una
+    divisione chiara ed equa in pochi secondi.
+  steps:
+    scan: Scansiona lo scontrino
+    assign: Assegna articoli
+    payer: Seleziona chi ha pagato
+    done: Fatto!
+stats:
+  eyebrow: Spese condivise senza stress
+  scan:
+    title: Scansiona le ricevute
+    description: Dividi gli articoli direttamente sulla foto
+  groups:
+    title: Gruppi e viaggi
+    description: Tieni tutte le tue spese in un unico posto
+  balances:
+    title: Azzera i saldi
+    description: Sai sempre chi deve a chi
+split:
+  eyebrow: Facilissimo
+  title: Il modo più semplice per dividere le spese
+  body: >-
+    Trasforma qualsiasi conto in una divisione semplice e immediata. Con Evnly,
+    ognuno vede la sua parte subito — niente calcoli, niente confusione, solo
+    una divisione veloce e facile.
+  previewAlt: Anteprima suddivisione conto Evnly
+features:
+  eyebrow: Dividere è facile
+  title1: Tutto quello che ti serve
+  title2: Dividi senza fatica
+  body: >-
+    Tutto quello che ti serve per dividere le spese senza stress. Dal rapido
+    scanner di scontrini alla gestione flessibile dei gruppi, Evnly rende ogni
+    passaggio semplice, veloce e chiaro — così puoi goderti il momento senza
+    pensare ai conti.
+  cards:
+    groups:
+      title: Crea gruppi per ogni occasione
+      body: >-
+        Che si tratti di una cena con amici, un weekend fuori o delle spese di
+        casa condivise, con Evnly crei gruppi in pochi secondi. Tieni tutti
+        organizzati, segui chi ha pagato cosa e rendi facile dividere ogni spesa
+        per qualsiasi occasione.
+    invite:
+      title: Aggiungi amici anche se non sono su Evnly
+      body: >-
+        Nessuna app? Nessun problema. Invita chiunque con un link e potrà vedere
+        subito la sua quota. Dividere le spese non è mai stato così facile,
+        anche per gli amici che non hanno ancora aderito a Evnly.
+    adventures:
+      title: Avventure
+      body: >-
+        Le avventure sono per chi vuole dividere tutto equamente — che si tratti
+        di un viaggio insieme, di una serata al bar o semplicemente delle spese
+        di casa. Con Evnly, tenere traccia, dividere e saldare le spese è
+        semplicissimo così ognuno paga la sua parte giusta.
+  tryItNow: Provalo ora
+reviews:
+  eyebrow: Cosa dicono le persone
+  title: Recensioni
+  attribution: |-
+    !js
+    (name, location) => `— ${name}, ${location}`
+  one:
+    title: Adoro la funzione di scansione scontrini
+    body: >-
+      Super semplice e, davvero, anche divertente da usare. Adoro la scansione
+      degli scontrini — fa risparmiare un sacco di tempo ed evita errori.
+    name: Sofía
+    location: Madrid
+  two:
+    title: Perfetto per i viaggi
+    body: >-
+      L'abbiamo usata ogni singolo giorno, e ha reso tutto molto più semplice —
+      niente più spese annotate nelle note o discussioni sui soldi.
+    name: Jake
+    location: Berlin
+  three:
+    title: Scansiona e basta!
+    body: >-
+      Finalmente, basta messaggi tipo "chi mi deve?" dopo cena. Basta
+      scansionare lo scontrino e in pochi secondi è tutto sistemato.
+    name: Emma
+    location: London
+builtForLife:
+  eyebrow: Per ogni momento che condividi
+  title: Pensato per la vita reale
+  body: >-
+    Dalle cene e serate fuori ai viaggi e alle spese di tutti i giorni — Evnly
+    si adatta a qualsiasi situazione e ti rende facile dividere le spese con
+    amici, coinquilini o chiunque altro.
+  tags:
+    dinners: Cene con amici
+    travel: Viaggi e gite di gruppo
+    apartments: Appartamenti condivisi
+    nights: Serate fuori
+    other: Altre spese
+  shareAlt: Condividere l’esperienza con l’app Evnly
+download:
+  mobile:
+    title1: Scarica
+    title2: l’app mobile
+    body: >-
+      Rendi la condivisione delle spese semplicissima. Scarica Evnly e goditi
+      ogni momento senza fare conti.
+    appStoreAria: Scarica su App Store
+    appStoreAlt: Scarica su App Store
+    googlePlayAria: Scaricala da Google Play
+    googlePlayAlt: Scaricala da Google Play
+  browser:
+    title1: Oppure usa
+    title2: nel browser
+footer:
+  tagline: Dividi in modo furbo
+meta:
+  title: "Evnly: dividi le spese tra amici"
+  description: >-
+    Dividi scontrini e spese condivise in pochi secondi. Scansiona i conti,
+    assegna gli articoli e fai i conti con gli amici per viaggi, cene e spese di
+    casa.
+  keywords: >-
+    divisione spese, dividere i conti, spese condivise, scanner ricevute, app
+    per dividere il conto, spese di gruppo, dividere le spese di viaggio, spese
+    tra coinquilini, dividere il conto, Evnly

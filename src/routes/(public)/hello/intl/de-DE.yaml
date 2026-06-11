@@ -1,0 +1,143 @@
+header:
+  nav:
+    howItWorks: So funktioniert’s
+    features: Funktionen
+    reviews: Bewertungen
+  installApp: App installieren
+hero:
+  tagline1: Quittungen aufteilen
+  tagline2: mit nur wenigen Fingertipps
+  startSplitting: Jetzt aufteilen
+  previewAlt: Evnly App-Vorschau
+howItWorks:
+  eyebrow: Einfache Schritte
+  title: So funktioniert’s
+  body: >-
+    Mach einfach ein Foto, tippe an, wer was hatte, und lass Evnly den Rest
+    erledigen. Keine Rechnerei, keine Verwirrung – nur eine klare und faire
+    Aufteilung in Sekunden.
+  steps:
+    scan: Kassenzettel scannen
+    assign: Posten zuweisen
+    payer: Zahler auswählen
+    done: Fertig!
+stats:
+  eyebrow: Geteilte Ausgaben ohne Stress
+  scan:
+    title: Belege scannen
+    description: Teile die Artikel direkt auf dem Foto auf
+  groups:
+    title: Gruppen & Reisen
+    description: Behalte all deine Ausgaben an einem Ort im Blick
+  balances:
+    title: Salden ausgleichen
+    description: Weiß immer, wer wem was schuldet
+split:
+  eyebrow: Ganz einfach
+  title: Teile Rechnungen ganz einfach
+  body: >-
+    Mach aus jeder Rechnung eine einfache, sofortige Aufteilung. Mit Evnly sieht
+    jeder sofort seinen Anteil – kein Rechnen, keine Verwirrung, nur schnelles
+    und unkompliziertes Teilen.
+  previewAlt: Vorschau auf die Evnly-Rechnungsteilung
+features:
+  eyebrow: Geteilt. Ganz einfach.
+  title1: Alles, was du brauchst
+  title2: Einfach teilen
+  body: >-
+    Alles, was du brauchst, um Rechnungen stressfrei aufzuteilen. Vom schnellen
+    Scannen von Belegen bis zur flexiblen Gruppenverwaltung – mit Evnly wird
+    jeder Schritt einfach, schnell und übersichtlich, damit du den Moment
+    genießen kannst statt zu rechnen.
+  cards:
+    groups:
+      title: Erstelle Gruppen für jeden Anlass
+      body: >-
+        Egal ob Abendessen mit Freunden, ein Wochenendausflug oder geteilte
+        Haushaltskosten – mit Evnly kannst du in Sekunden eine Gruppe erstellen.
+        Behalte den Überblick, wer was bezahlt hat, und mach das Aufteilen für
+        jede Gelegenheit kinderleicht.
+    invite:
+      title: Füge Freunde hinzu, auch wenn sie nicht bei Evnly sind
+      body: >-
+        Keine App? Kein Problem. Lade einfach jemanden per Link ein und er sieht
+        sofort seinen Anteil. Rechnungen aufteilen war noch nie so einfach –
+        selbst für Freunde, die Evnly noch nicht beigetreten sind.
+    adventures:
+      title: Abenteuer
+      body: >-
+        Abenteuer sind für alle, die gemeinsam alles gerecht teilen möchten –
+        egal ob bei einer Reise, einem Abend in der Bar oder einfach bei
+        gemeinsamen Haushaltsausgaben. Mit Evnly kannst du Rechnungen ganz
+        einfach verfolgen, aufteilen und ausgleichen, damit jeder seinen
+        gerechten Anteil bezahlt.
+  tryItNow: Jetzt ausprobieren
+reviews:
+  eyebrow: Erfahrungsberichte
+  title: Bewertungen
+  attribution: |-
+    !js
+    (name, location) => `– ${name}, ${location}`
+  one:
+    title: Ich liebe den Beleg-Scanner
+    body: >-
+      Super einfach und macht sogar Spaß zu benutzen. Ich liebe das
+      Beleg-Scannen – das spart so viel Zeit und verhindert Fehler.
+    name: Sofía
+    location: Madrid
+  two:
+    title: Perfekt für Reisen
+    body: >-
+      Wir haben es wirklich jeden Tag benutzt, und es hat alles so viel
+      einfacher gemacht – kein Herumrechnen in Notizen oder Streiten ums Geld
+      mehr.
+    name: Jake
+    location: Berlin
+  three:
+    title: Einfach scannen!
+    body: >-
+      Endlich keine „Wer schuldet mir noch was?“-Nachrichten mehr nach dem
+      Essen. Wir scannen einfach die Quittung und schon ist alles in Sekunden
+      erledigt.
+    name: Emma
+    location: London
+builtForLife:
+  eyebrow: Für jeden Moment, den du teilst
+  title: Gemacht fürs echte Leben
+  body: >-
+    Ganz egal ob beim Abendessen, Feiern, Reisen oder im Alltag – Evnly passt
+    sich jeder Situation an und macht es dir leicht, Ausgaben mit Freunden,
+    Mitbewohnern oder wem auch immer zu teilen.
+  tags:
+    dinners: Abendessen mit Freunden
+    travel: Reisen & Gruppentrips
+    apartments: Wohngemeinschaften
+    nights: Abende unterwegs
+    other: Weitere Ausgaben
+  shareAlt: Evnly App gemeinsam erleben
+download:
+  mobile:
+    title1: Herunterladen
+    title2: die Mobile App
+    body: >-
+      Mach das Teilen von Ausgaben ganz entspannt. Lade Evnly herunter und
+      genieße jeden Moment ohne Rechnen.
+    appStoreAria: Im App Store herunterladen
+    appStoreAlt: Im App Store herunterladen
+    googlePlayAria: Hol sie dir bei Google Play
+    googlePlayAlt: Bei Google Play herunterladen
+  browser:
+    title1: Oder benutze
+    title2: im Browser
+footer:
+  tagline: Clever teilen
+meta:
+  title: "Evnly: Gemeinsame Ausgaben einfach teilen"
+  description: >-
+    Teile Rechnungen und gemeinsame Ausgaben in Sekundenschnelle. Scanne Belege,
+    weise Posten zu und rechne mit Freunden bei Trips, Abendessen und
+    Haushaltskosten easy ab.
+  keywords: >-
+    Ausgaben teilen, Rechnungen aufteilen, gemeinsame Ausgaben, Belegscanner,
+    Rechnungsapp, Gruppenausgaben, Reisekosten teilen, WG-Kosten, Rechnung
+    splitten, Evnly

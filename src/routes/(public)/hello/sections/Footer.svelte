@@ -1,3 +1,8 @@
+<script lang="ts">
+  import { dict as common } from '$lib/intl'
+  import { dict } from '../intl'
+</script>
+
 <section
   class="max-w-7xl mx-auto bg-primary text-primary-foreground rounded-3xl px-8 py-16 md:py-20 text-center">
   <img
@@ -16,7 +21,7 @@
     style="aspect-ratio: 130 / 50; mask-image: url('/evnly.svg'); mask-repeat: no-repeat; mask-size: contain; mask-position: center; -webkit-mask-image: url('/evnly.svg'); -webkit-mask-repeat: no-repeat; -webkit-mask-size: contain; -webkit-mask-position: center;">
   </div>
 
-  <p class="mt-4 text-lg md:text-xl font-medium">Split wiser</p>
+  <p class="mt-4 text-lg md:text-xl font-medium">{$dict.footer.tagline}</p>
 
   <!-- <nav class="mt-10 flex flex-wrap justify-center gap-8">
     <a href="#how-it-works">How It Works</a>
@@ -25,7 +30,7 @@
   </nav> -->
 
   <div class="mt-8 flex items-center justify-center gap-2 text-sm opacity-70">
-    <span>Made by</span>
+    <span>{$common.madeBy}</span>
     <a href="https://seed.me" target="_blank" rel="noopener" aria-label="seed.me">
       <span
         role="img"
@@ -37,8 +42,8 @@
   </div>
 
   <div class="mt-3 text-sm opacity-70">
-    <a href="/terms">Terms &amp; Conditions</a>
+    <a href="/terms">{$common.terms}</a>
     <span class="mx-2">•</span>
-    <a href="/privacy">Privacy Policy</a>
+    <a href="/privacy">{$common.privacy}</a>
   </div>
 </section>

@@ -1,0 +1,140 @@
+header:
+  nav:
+    howItWorks: Comment ça marche
+    features: Fonctionnalités
+    reviews: Avis
+  installApp: Installer l’appli
+hero:
+  tagline1: Partager les reçus
+  tagline2: en quelques tapotements
+  startSplitting: Commencer le partage
+  previewAlt: Aperçu de l’application Evnly
+howItWorks:
+  eyebrow: Étapes faciles
+  title: Comment ça marche
+  body: >-
+    Prends juste une photo, indique qui a pris quoi d’un simple tap, et laisse
+    Evnly gérer le reste. Pas de calculs, pas de prise de tête — juste un
+    partage clair et équitable en quelques secondes.
+  steps:
+    scan: Scanne le reçu
+    assign: Attribuer des articles
+    payer: Sélectionne le payeur
+    done: C'est fait !
+stats:
+  eyebrow: Dépenses partagées sans prise de tête
+  scan:
+    title: Scanner les reçus
+    description: Sépare les articles directement sur la photo
+  groups:
+    title: Groupes et voyages
+    description: Garde toutes tes dépenses au même endroit
+  balances:
+    title: Régler les soldes
+    description: Sache toujours qui doit à qui
+split:
+  eyebrow: Ultra facile
+  title: La façon la plus simple de partager les notes
+  body: >-
+    Transforme n’importe quelle addition en un partage clair, instantané. Avec
+    Evnly, tout le monde voit sa part tout de suite — pas de calculs, pas de
+    prise de tête, juste un partage de note rapide et facile.
+  previewAlt: Aperçu du partage de note Evnly
+features:
+  eyebrow: Partager, c’est facile
+  title1: Tout ce qu’il te faut
+  title2: Partage facile
+  body: >-
+    Tout ce qu’il te faut pour partager les dépenses sans stress. Du scan rapide
+    des tickets à la gestion flexible des groupes, Evnly rend chaque étape
+    simple, rapide et claire — pour que tu puisses profiter du moment, sans te
+    prendre la tête avec les calculs.
+  cards:
+    groups:
+      title: Crée des groupes pour toutes les occasions
+      body: >-
+        Que ce soit un dîner entre amis, un week-end à plusieurs ou des dépenses
+        partagées à la maison, Evnly te permet de créer des groupes en quelques
+        secondes. Garde tout le monde organisé, suis qui a payé quoi, et rends
+        le partage des dépenses simple pour chaque occasion.
+    invite:
+      title: Ajoute des amis même s’ils ne sont pas sur Evnly
+      body: >-
+        Pas d’appli ? Pas de souci. Invite qui tu veux par lien et ils verront
+        leur part tout de suite. Partager l’addition n’a jamais été aussi
+        simple, même pour les amis qui n’ont pas encore rejoint Evnly.
+    adventures:
+      title: Aventures
+      body: >-
+        Les aventures, c’est pour ceux qui veulent tout partager à parts égales
+        — que ce soit un voyage ensemble, une soirée au bar ou simplement des
+        dépenses à la maison. Avec Evnly, suivre, partager et régler les
+        dépenses devient super simple, pour que chacun paie sa juste part.
+  tryItNow: Essaye maintenant
+reviews:
+  eyebrow: Avis des utilisateurs
+  title: Avis
+  attribution: |-
+    !js
+    (name, location) => `— ${name}, ${location}`
+  one:
+    title: J'adore la fonction scan du reçu
+    body: >-
+      Super simple et vraiment fun à utiliser. J'adore la fonction de scan de
+      ticket — ça fait gagner tellement de temps et ça évite les erreurs.
+    name: Sofía
+    location: Madrid
+  two:
+    title: Parfait pour les voyages
+    body: >-
+      On l’a utilisé tous les jours, et ça a tout rendu tellement plus simple —
+      plus besoin de noter les dépenses ni de se prendre la tête pour l’argent.
+    name: Jake
+    location: Berlin
+  three:
+    title: Scanne simplement !
+    body: >-
+      Fini les messages "qui me doit quoi ?" après le dîner. On scanne juste
+      l'addition et tout est réglé en quelques secondes.
+    name: Emma
+    location: London
+builtForLife:
+  eyebrow: Pour chaque moment que tu partages
+  title: Conçu pour la vraie vie
+  body: >-
+    Des dîners et soirées aux voyages et dépenses du quotidien — Evnly s’adapte
+    à toutes les situations et te permet de partager les frais facilement avec
+    tes amis, colocataires ou n’importe qui d’autre.
+  tags:
+    dinners: Dîners entre amis
+    travel: Voyages et sorties en groupe
+    apartments: Colocations
+    nights: Sorties entre amis
+    other: Autres dépenses
+  shareAlt: Expérience de partage sur l’appli Evnly
+download:
+  mobile:
+    title1: Télécharger
+    title2: l’appli mobile
+    body: >-
+      Partage tes dépenses en toute simplicité. Télécharge Evnly et profite de
+      chaque instant sans te soucier des calculs.
+    appStoreAria: Télécharger sur l’App Store
+    appStoreAlt: Télécharger sur l’App Store
+    googlePlayAria: Télécharge-la sur Google Play
+    googlePlayAlt: Télécharge-la sur Google Play
+  browser:
+    title1: Ou utilise
+    title2: dans le navigateur
+footer:
+  tagline: Partage plus malin
+meta:
+  title: "Evnly\_: partage les dépenses entre amis"
+  description: >-
+    Partage les reçus et les dépenses communes en quelques secondes. Scanne les
+    notes, attribue les articles et règle les comptes avec tes amis lors de
+    voyages, de dîners ou pour la maison.
+  keywords: >-
+    partage des dépenses, division des factures, dépenses partagées, scanner de
+    reçus, appli pour partager les dépenses, dépenses de groupe, partage des
+    frais de voyage, dépenses entre colocataires, partager l’addition, Evnly
