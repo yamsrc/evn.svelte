@@ -31,10 +31,6 @@ export type Dictionary = {
         disclaimers: {
           apple: string
         }
-        processing: {
-          title: string
-          note: string
-        }
       }
       products: {
         yearly: {

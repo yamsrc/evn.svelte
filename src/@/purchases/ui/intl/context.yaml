@@ -43,13 +43,6 @@ inputs:
     disclaimers:
       apple:
         input: Free trial available only to eligible first time subscribers. Cancel 24 hours before trial ends to avoid charge. You can manage or cancel your subscription in your Apple ID account settings.
-    processing:
-      title:
-        input: Completing your purchase
-        context: shown while a pending Google Play payment is being verified
-      note:
-        input: Your payment is being processed. Premium will activate as soon as it's confirmed.
-        context: pending purchase status note
   products:
     yearly:
       title:

@@ -23,9 +23,6 @@ paywall:
     cta: 享受高级版
   disclaimers:
     apple: 免费试用仅对符合条件的首次订阅用户开放。为避免扣费，请在试用结束前24小时取消。你可以在 Apple ID 账户设置中管理或取消订阅。
-  processing:
-    title: 正在完成你的购买
-    note: 你的付款正在处理中。确认后，会员会立即激活。
 products:
   yearly:
     title: 每年

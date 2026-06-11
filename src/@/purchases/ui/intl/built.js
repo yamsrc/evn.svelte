@@ -28,10 +28,6 @@ export const dictionaries = {
       },
       "disclaimers": {
         "apple": "التجربة المجانية متاحة فقط للمشتركين الجدد المؤهلين. يمكنك الإلغاء قبل ٢٤ ساعة من انتهاء التجربة لتجنب أي رسوم. يمكنك إدارة أو إلغاء اشتراكك من إعدادات حساب Apple ID الخاص بك."
-      },
-      "processing": {
-        "title": "جارٍ إكمال عملية الشراء الخاصة بك",
-        "note": "جارٍ معالجة دفعتك. سيتم تفعيل بريميوم فور تأكيدها."
       }
     },
     "products": {
@@ -95,10 +91,6 @@ export const dictionaries = {
       },
       "disclaimers": {
         "apple": "Das kostenlose Probeabo gibt’s nur für berechtigte Erstabonnenten. Um eine Abbuchung zu vermeiden, kündige mindestens 24 Stunden vor Ablauf des Probezeitraums. Du kannst dein Abo in den Einstellungen deiner Apple-ID verwalten oder kündigen."
-      },
-      "processing": {
-        "title": "Dein Kauf wird abgeschlossen",
-        "note": "Deine Zahlung wird gerade bearbeitet. Premium wird aktiviert, sobald sie bestätigt ist."
       }
     },
     "products": {
@@ -162,10 +154,6 @@ export const dictionaries = {
       },
       "disclaimers": {
         "apple": "Free trial is only available to eligible first-time subscribers. Cancel at least 24 hours before the trial ends to avoid being charged. You can manage or cancel your subscription in your Apple ID account settings."
-      },
-      "processing": {
-        "title": "Completing your purchase",
-        "note": "Your payment is being processed. Premium will activate as soon as it’s confirmed."
       }
     },
     "products": {
@@ -229,10 +217,6 @@ export const dictionaries = {
       },
       "disclaimers": {
         "apple": "La prueba gratuita solo está disponible para los nuevos suscriptores elegibles. Cancela al menos 24 horas antes de que acabe la prueba para evitar cargos. Puedes gestionar o cancelar tu suscripción en la configuración de tu cuenta Apple ID."
-      },
-      "processing": {
-        "title": "Completando tu compra",
-        "note": "Tu pago está en proceso. Premium se activará en cuanto se confirme."
       }
     },
     "products": {
@@ -296,10 +280,6 @@ export const dictionaries = {
       },
       "disclaimers": {
         "apple": "L’essai gratuit est réservé aux nouveaux abonnés éligibles. Pense à annuler au moins 24 h avant la fin de l’essai pour éviter le débit. Tu peux gérer ou annuler ton abonnement dans les réglages de ton identifiant Apple."
-      },
-      "processing": {
-        "title": "Finalisation de ton achat",
-        "note": "Ton paiement est en cours de traitement. Premium s’activera dès qu’il sera confirmé."
       }
     },
     "products": {
@@ -363,10 +343,6 @@ export const dictionaries = {
       },
       "disclaimers": {
         "apple": "फ्री ट्रायल सिर्फ योग्य पहले बार के सब्सक्राइबर्स के लिए उपलब्ध है। चार्ज से बचने के लिए ट्रायल खत्म होने से 24 घंटे पहले कैंसल करें। अपनी सदस्यता को Apple ID अकाउंट सेटिंग्स में मैनेज या कैंसल कर सकते हो।"
-      },
-      "processing": {
-        "title": "तुम्हारी खरीद पूरी की जा रही है",
-        "note": "तुम्हारी पेमेंट प्रोसेस हो रही है। कन्फर्म होते ही प्रीमियम एक्टिव हो जाएगा।"
       }
     },
     "products": {
@@ -430,10 +406,6 @@ export const dictionaries = {
       },
       "disclaimers": {
         "apple": "La prova gratuita è disponibile solo per i nuovi iscritti idonei. Cancella almeno 24 ore prima della fine della prova per evitare addebiti. Puoi gestire o annullare il tuo abbonamento dalle impostazioni dell’account Apple ID."
-      },
-      "processing": {
-        "title": "Completamento del tuo acquisto",
-        "note": "Il tuo pagamento è in fase di elaborazione. Premium si attiverà appena sarà confermato."
       }
     },
     "products": {
@@ -497,10 +469,6 @@ export const dictionaries = {
       },
       "disclaimers": {
         "apple": "無料トライアルは、初めて利用する対象者のみが利用できます。請求を避けるために、トライアル終了の24時間前までにキャンセルしてください。Apple IDのアカウント設定で、サブスクリプションの管理や解約ができます。"
-      },
-      "processing": {
-        "title": "購入を完了しています",
-        "note": "支払いを処理中です。確認され次第、プレミアムが有効になります。"
       }
     },
     "products": {
@@ -564,10 +532,6 @@ export const dictionaries = {
       },
       "disclaimers": {
         "apple": "무료 체험은 자격이 되는 최초 가입자만 이용할 수 있어요. 요금이 청구되기 전에 체험 종료 24시간 전에 꼭 구독을 취소하세요. Apple ID 계정 설정에서 구독을 관리하거나 취소할 수 있습니다."
-      },
-      "processing": {
-        "title": "구매를 완료하는 중이에요",
-        "note": "결제가 처리되고 있어. 확인되는 즉시 프리미엄이 활성화돼."
       }
     },
     "products": {
@@ -631,10 +595,6 @@ export const dictionaries = {
       },
       "disclaimers": {
         "apple": "De gratis proefperiode is alleen beschikbaar voor in aanmerking komende, nieuwe abonnees. Annuleer minstens 24 uur voor het einde van de proef om kosten te voorkomen. Je kunt je abonnement beheren of opzeggen via je Apple ID-accountinstellingen."
-      },
-      "processing": {
-        "title": "Je aankoop wordt afgerond",
-        "note": "Je betaling wordt verwerkt. Premium wordt geactiveerd zodra die is bevestigd."
       }
     },
     "products": {
@@ -698,10 +658,6 @@ export const dictionaries = {
       },
       "disclaimers": {
         "apple": "Бесплатная пробная версия только для новых подходящих подписчиков. Чтобы не списали деньги, отмени подписку за 24 часа до конца пробного периода. Управлять подпиской можно в настройках аккаунта Apple ID."
-      },
-      "processing": {
-        "title": "Завершаем твою покупку",
-        "note": "Твой платёж обрабатывается. Премиум активируется, как только он будет подтверждён."
       }
     },
     "products": {
@@ -765,10 +721,6 @@ export const dictionaries = {
       },
       "disclaimers": {
         "apple": "Jaribio la bure linapatikana tu kwa waliojiandikisha kwa mara ya kwanza na wanastahili. Ghairi siku 1 (saa 24) kabla jaribio kuisha ili kuepuka malipo. Unaweza kudhibiti au kughairi usajili wako kwenye mipangilio ya akaunti yako ya Apple ID."
-      },
-      "processing": {
-        "title": "Tunamalizia ununuzi wako",
-        "note": "Malipo yako yanashughulikiwa. Premium itawashwa mara tu ikithibitishwa."
       }
     },
     "products": {
@@ -832,10 +784,6 @@ export const dictionaries = {
       },
       "disclaimers": {
         "apple": "Ücretsiz deneme sadece uygun olan ilk kez abone olacaklar için geçerlidir. Ücret alınmaması için deneme bitmeden 24 saat önce iptal etmelisin. Aboneliğini Apple ID hesap ayarlarından yönetebilir veya iptal edebilirsin."
-      },
-      "processing": {
-        "title": "Satın alma işlemin tamamlanıyor",
-        "note": "Ödemen işleniyor. Onaylanır onaylanmaz Premium etkinleşecek."
       }
     },
     "products": {
@@ -899,10 +847,6 @@ export const dictionaries = {
       },
       "disclaimers": {
         "apple": "Безкоштовна пробна версія доступна лише новим, відповідним підписникам. Щоб уникнути списання коштів, скасуй підписку за 24 години до завершення пробного періоду. Керувати підпискою можна в налаштуваннях облікового запису Apple ID."
-      },
-      "processing": {
-        "title": "Завершуємо твою покупку",
-        "note": "Твій платіж обробляється. Premium активується, щойно його підтвердять."
       }
     },
     "products": {
@@ -966,10 +910,6 @@ export const dictionaries = {
       },
       "disclaimers": {
         "apple": "免费试用仅对符合条件的首次订阅用户开放。为避免扣费，请在试用结束前24小时取消。你可以在 Apple ID 账户设置中管理或取消订阅。"
-      },
-      "processing": {
-        "title": "正在完成你的购买",
-        "note": "你的付款正在处理中。确认后，会员会立即激活。"
       }
     },
     "products": {

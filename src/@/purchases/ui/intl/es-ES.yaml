@@ -4,15 +4,8 @@ paywall:
     headline: ¡Mucho más Evn con suscripción!
     promo: Por tiempo limitado, Premium es totalmente gratis.
     cta: Comienza tu prueba gratis
-    disclaimer: >-
-      Prueba gratuita disponible solo para suscriptores elegibles por primera
-      vez. Cancela 24 horas antes de que termine la prueba para evitar cargos.
-      La suscripción se renovará automáticamente después del periodo de prueba
-      gratuita; puedes cancelar en cualquier momento.
-    footnote: >-
-      * Un usuario Premium permite el marcado de elementos para todos los
-      participantes. En las aventuras, solo se guarda el texto del recibo (sin
-      división visual).
+    disclaimer: Prueba gratuita disponible solo para suscriptores elegibles por primera vez. Cancela 24 horas antes de que termine la prueba para evitar cargos. La suscripción se renovará automáticamente después del periodo de prueba gratuita; puedes cancelar en cualquier momento.
+    footnote: "* Un usuario Premium permite el marcado de elementos para todos los participantes. En las aventuras, solo se guarda el texto del recibo (sin división visual)."
     buy: Consigue Evnly Premium
     trial:
       comment: |-
@@ -25,20 +18,11 @@ paywall:
   complete:
     thanks: Gracias por suscribirte a Envly Premium
     avatarNote: A partir de ahora, otros usuarios de Evnly verán tu avatar así.
-    featuresNote: >-
-      Además, a partir de ahora puedes personalizar aún más la interfaz en tu
-      perfil, escanear y reconocer recibos y mucho más.
+    featuresNote: Además, a partir de ahora puedes personalizar aún más la interfaz en tu perfil, escanear y reconocer recibos y mucho más.
   free:
     cta: Disfrutar Premium
   disclaimers:
-    apple: >-
-      La prueba gratuita solo está disponible para los nuevos suscriptores
-      elegibles. Cancela al menos 24 horas antes de que acabe la prueba para
-      evitar cargos. Puedes gestionar o cancelar tu suscripción en la
-      configuración de tu cuenta Apple ID.
-  processing:
-    title: Completando tu compra
-    note: Tu pago está en proceso. Premium se activará en cuanto se confirme.
+    apple: La prueba gratuita solo está disponible para los nuevos suscriptores elegibles. Cancela al menos 24 horas antes de que acabe la prueba para evitar cargos. Puedes gestionar o cancelar tu suscripción en la configuración de tu cuenta Apple ID.
 products:
   yearly:
     title: Anual
@@ -55,59 +39,35 @@ trial: |-
   !js
   (period) => `${period} gratis`
 disclaimers:
-  trial: >-
-    La prueba gratuita está disponible para quienes se suscriben por primera vez
-    y cumplen los requisitos.
+  trial: La prueba gratuita está disponible para quienes se suscriben por primera vez y cumplen los requisitos.
   apple_account: El pago se cargará a tu cuenta de Apple ID al confirmar la compra.
-  apple_yearly: >-
+  apple_yearly: |-
     !js
-
-    (price) => `La suscripción se renueva automáticamente por ${price}/año a
-    menos que la canceles al menos 24 horas antes de que termine el periodo
-    actual.`
-  apple_manage: >-
-    Puedes gestionar o cancelar tu suscripción en la configuración de tu cuenta
-    de Apple ID.
-  apple_monthly: >-
+    (price) => `La suscripción se renueva automáticamente por ${price}/año a menos que la canceles al menos 24 horas antes de que termine el periodo actual.`
+  apple_manage: Puedes gestionar o cancelar tu suscripción en la configuración de tu cuenta de Apple ID.
+  apple_monthly: |-
     !js
-
-    (price) => `La suscripción se renueva automáticamente por ${price}/mes a
-    menos que la canceles al menos 24 horas antes de que termine el periodo
-    actual.`
+    (price) => `La suscripción se renueva automáticamente por ${price}/mes a menos que la canceles al menos 24 horas antes de que termine el periodo actual.`
   stripe_account: Puedes cancelar en cualquier momento desde la configuración de tu cuenta.
-  stripe_monthly: >-
+  stripe_monthly: |-
     !js
-
-    (price) => `La suscripción se renueva automáticamente por ${price} al mes, a
-    menos que la canceles.`
-  stripe_yearly: >-
+    (price) => `La suscripción se renueva automáticamente por ${price} al mes, a menos que la canceles.`
+  stripe_yearly: |-
     !js
-
-    (price) => `La suscripción se renueva automáticamente por ${price} al año, a
-    menos que la canceles.`
+    (price) => `La suscripción se renueva automáticamente por ${price} al año, a menos que la canceles.`
   google_account: El pago se cobrará en tu cuenta de Google Play al confirmar la compra.
-  google_manage: >-
-    Puedes gestionar o cancelar tu suscripción desde la configuración de tu
-    cuenta de Google Play.
-  google_yearly: >-
+  google_manage: Puedes gestionar o cancelar tu suscripción desde la configuración de tu cuenta de Google Play.
+  google_yearly: |-
     !js
-
-    (price) => `La suscripción se renueva automáticamente por ${price}/año, a
-    menos que la canceles al menos 24 horas antes de que termine el periodo
-    actual.`
-  google_monthly: >-
+    (price) => `La suscripción se renueva automáticamente por ${price}/año, a menos que la canceles al menos 24 horas antes de que termine el periodo actual.`
+  google_monthly: |-
     !js
-
-    (price) => `La suscripción se renueva automáticamente por ${price}/mes a
-    menos que la canceles al menos 24 horas antes de que termine el periodo
-    actual.`
+    (price) => `La suscripción se renueva automáticamente por ${price}/mes a menos que la canceles al menos 24 horas antes de que termine el periodo actual.`
 restore:
   label: Restaurar compras
 subscription:
   active: Premium está activo
-  expires: >-
+  expires: |-
     !js
-
-    (date, gender) => { if (gender === "he") return `Expira el ${date}`; if
-    (gender === "she") return `Expira el ${date}`; return `Expira el ${date}`; }
+    (date, gender) => { if (gender === "he") return `Expira el ${date}`; if (gender === "she") return `Expira el ${date}`; return `Expira el ${date}`; }
   manage: Gestionar

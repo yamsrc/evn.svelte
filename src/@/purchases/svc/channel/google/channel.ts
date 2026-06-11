@@ -8,7 +8,6 @@ import type { Google, Product } from '../Channel'
 
 const METHOD = 'https://play.google.com/billing'
 const IDS = ['premium_monthly', 'premium_yearly']
-const PENDING = 422
 
 async function service(): Promise<DigitalGoodsService | null> {
   if (typeof window === 'undefined' || window.getDigitalGoodsService === undefined) return null
@@ -47,7 +46,7 @@ export const google: Google = {
     }
   },
 
-  async purchase(productId: string): Promise<void | 'pending' | Error> {
+  async purchase(productId: string): Promise<void | Error> {
     let response: PaymentResponse
 
     try {
@@ -76,12 +75,6 @@ export const google: Google = {
     console.debug('google: report', result)
 
     if (result instanceof Error) {
-      if (result.code === PENDING) {
-        await response.complete('success')
-
-        return 'pending'
-      }
-
       await response.complete('fail')
 
       return result
@@ -112,7 +105,7 @@ export const google: Google = {
 
       console.debug('google: restore report', p.itemId, result)
 
-      if (result instanceof Error && result.code !== PENDING) return result
+      if (result instanceof Error) return result
     }
   },
 

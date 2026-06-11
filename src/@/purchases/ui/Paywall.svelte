@@ -6,7 +6,6 @@
   import { cta } from './store'
   import { step } from './store'
   import { dict } from './intl'
-  import Processing from './Processing.svelte'
   import Offer from './Offer.svelte'
   import Complete from './Complete.svelte'
 
@@ -32,8 +31,6 @@
         </div>
         {#if $step === 'offer'}
           <Offer {next} />
-        {:else if $step === 'processing'}
-          <Processing />
         {:else if $step === 'complete'}
           <Complete cta={$cta} {next} />
         {/if}

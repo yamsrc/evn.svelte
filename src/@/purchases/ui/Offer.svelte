@@ -11,7 +11,6 @@
   import { dict as common } from '$lib/intl'
   import { features } from '$config'
   import { Scrollable } from '$com/scrollable'
-  import { step } from './store'
   import { dict } from './intl'
   import { Products } from './Products'
   import { benefits } from './Offer'
@@ -44,7 +43,6 @@
     busy = false
 
     if (result instanceof Error) console.error(result)
-    else if (result === 'pending') step.set('processing')
     else next?.()
   }
 

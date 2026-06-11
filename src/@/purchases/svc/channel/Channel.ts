@@ -13,8 +13,7 @@ export interface Product {
 interface Base {
   available(): Promise<boolean>
   products(): Promise<Product[] | Error>
-  /** `'pending'` = purchase valid but not yet active (e.g. slow payment); show processing, no grant. */
-  purchase(productId: string, accountId: string): Promise<void | 'pending' | Error>
+  purchase(productId: string, accountId: string): Promise<void | Error>
   manage(): Promise<void | Error>
 }
 

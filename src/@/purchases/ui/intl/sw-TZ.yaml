@@ -4,14 +4,8 @@ paywall:
     headline: Evn inakuwa bora zaidi ukiwa na usajili!
     promo: Kwa muda mchache, Premium ni bure kabisa.
     cta: Anza jaribio lako bure
-    disclaimer: >-
-      Jaribio la bure linapatikana tu kwa wateja wapya wanaostahiki. Ghairi saa
-      24 kabla jaribio haliijaisha ili kuepuka malipo. Baada ya kipindi cha
-      jaribio la bure, ada itakatwa kila mara, unaweza kughairi wakati wowote.
-    footnote: >-
-      * Mtumiaji mmoja wa Premium huwasha uandikaji wa bidhaa kwa washiriki
-      wote. Katika safari, maandishi ya risiti pekee ndiyo yanayahifadhiwa
-      (hakuna mgawanyo wa kiona).
+    disclaimer: Jaribio la bure linapatikana tu kwa wateja wapya wanaostahiki. Ghairi saa 24 kabla jaribio haliijaisha ili kuepuka malipo. Baada ya kipindi cha jaribio la bure, ada itakatwa kila mara, unaweza kughairi wakati wowote.
+    footnote: "* Mtumiaji mmoja wa Premium huwasha uandikaji wa bidhaa kwa washiriki wote. Katika safari, maandishi ya risiti pekee ndiyo yanayahifadhiwa (hakuna mgawanyo wa kiona)."
     buy: Nunua Evnly Premium
     trial:
       comment: |-
@@ -24,20 +18,11 @@ paywall:
   complete:
     thanks: Asante kwa kujisajili kwenye Envly Premium
     avatarNote: Kuanzia sasa, watumiaji wengine wa Evnly wataona avatar yako hivi.
-    featuresNote: >-
-      Zaidi ya hayo, kuanzia sasa unaweza kubinafsisha zaidi muonekano kwenye
-      wasifu wako, kutambaza na kutambua risiti na mengi zaidi.
+    featuresNote: Zaidi ya hayo, kuanzia sasa unaweza kubinafsisha zaidi muonekano kwenye wasifu wako, kutambaza na kutambua risiti na mengi zaidi.
   free:
     cta: Furahia Premium
   disclaimers:
-    apple: >-
-      Jaribio la bure linapatikana tu kwa waliojiandikisha kwa mara ya kwanza na
-      wanastahili. Ghairi siku 1 (saa 24) kabla jaribio kuisha ili kuepuka
-      malipo. Unaweza kudhibiti au kughairi usajili wako kwenye mipangilio ya
-      akaunti yako ya Apple ID.
-  processing:
-    title: Tunamalizia ununuzi wako
-    note: Malipo yako yanashughulikiwa. Premium itawashwa mara tu ikithibitishwa.
+    apple: Jaribio la bure linapatikana tu kwa waliojiandikisha kwa mara ya kwanza na wanastahili. Ghairi siku 1 (saa 24) kabla jaribio kuisha ili kuepuka malipo. Unaweza kudhibiti au kughairi usajili wako kwenye mipangilio ya akaunti yako ya Apple ID.
 products:
   yearly:
     title: Kila mwaka
@@ -56,44 +41,28 @@ trial: |-
 disclaimers:
   trial: Jaribio la bure linapatikana kwa watumiaji wa kwanza wanaokidhi vigezo.
   apple_account: Malipo yatakatwa kwenye akaunti yako ya Apple ID utakapoidhinisha ununuzi.
-  apple_yearly: >-
+  apple_yearly: |-
     !js
-
-    (price) => `Usajili utajirudia moja kwa moja kwa ${price}/mwaka isipokuwa
-    ukighairi angalau saa 24 kabla ya mwisho wa kipindi kilichopo.`
-  apple_manage: >-
-    Unaweza kudhibiti au kughairi usajili wako kwenye mipangilio ya akaunti yako
-    ya Apple ID.
-  apple_monthly: >-
+    (price) => `Usajili utajirudia moja kwa moja kwa ${price}/mwaka isipokuwa ukighairi angalau saa 24 kabla ya mwisho wa kipindi kilichopo.`
+  apple_manage: Unaweza kudhibiti au kughairi usajili wako kwenye mipangilio ya akaunti yako ya Apple ID.
+  apple_monthly: |-
     !js
-
-    (price) => `Usajili utafu renewed kwa ${price}/mwezi kiotomatiki, isipokuwa
-    ukighairi angalau saa 24 kabla ya mwisho wa kipindi kilichopo.`
+    (price) => `Usajili utafu renewed kwa ${price}/mwezi kiotomatiki, isipokuwa ukighairi angalau saa 24 kabla ya mwisho wa kipindi kilichopo.`
   stripe_account: Unaweza kughairi muda wowote kupitia mipangilio ya akaunti.
   stripe_monthly: |-
     !js
     (price) => `Usajili utakua upya kila mwezi kwa ${price}, isipofutwa.`
-  stripe_yearly: >-
+  stripe_yearly: |-
     !js
-
-    (price) => `Usajili upya huwa unafanyika moja kwa moja kwa ${price} kwa
-    mwaka isipobatilishwa.`
-  google_account: >-
-    Malipo yatakatwa kutoka kwenye akaunti yako ya Google Play ukithibitisha
-    ununuzi.
-  google_manage: >-
-    Unaweza kudhibiti au kughairi usajili wako kwenye mipangilio ya akaunti yako
-    ya Google Play.
-  google_yearly: >-
+    (price) => `Usajili upya huwa unafanyika moja kwa moja kwa ${price} kwa mwaka isipobatilishwa.`
+  google_account: Malipo yatakatwa kutoka kwenye akaunti yako ya Google Play ukithibitisha ununuzi.
+  google_manage: Unaweza kudhibiti au kughairi usajili wako kwenye mipangilio ya akaunti yako ya Google Play.
+  google_yearly: |-
     !js
-
-    (price) => `Usajili hujiwesha upya kwa ${price}/mwaka isipokuwa ukighairi
-    angalau masaa 24 kabla ya mwisho wa kipindi cha sasa.`
-  google_monthly: >-
+    (price) => `Usajili hujiwesha upya kwa ${price}/mwaka isipokuwa ukighairi angalau masaa 24 kabla ya mwisho wa kipindi cha sasa.`
+  google_monthly: |-
     !js
-
-    (price) => `Usajili utafanywa upya moja kwa moja kwa ${price}/mwezi
-    isipokuwa ukighairi angalau saa 24 kabla ya mwisho wa kipindi cha sasa.`
+    (price) => `Usajili utafanywa upya moja kwa moja kwa ${price}/mwezi isipokuwa ukighairi angalau saa 24 kabla ya mwisho wa kipindi cha sasa.`
 restore:
   label: Rejesha manunuzi
 subscription:
