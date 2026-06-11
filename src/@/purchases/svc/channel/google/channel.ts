@@ -14,7 +14,9 @@ async function service(): Promise<DigitalGoodsService | null> {
 
   try {
     return await window.getDigitalGoodsService(METHOD)
-  } catch {
+  } catch (e: unknown) {
+    console.error(e)
+
     return null
   }
 }
