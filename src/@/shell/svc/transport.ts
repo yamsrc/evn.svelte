@@ -17,7 +17,13 @@ function listen(): void {
     const key = d.kind === 'reply' ? d.id : d.label
     const cb = subs.get(key)
 
-    if (cb === undefined) return
+    console.debug('shell ←', d)
+
+    if (cb === undefined) {
+      console.debug('shell ← unmatched', key)
+
+      return
+    }
 
     if (d.kind === 'reply') subs.delete(key)
 
@@ -31,6 +37,7 @@ export function on(key: string, cb: (d: Detail) => void): void {
 }
 
 function publish(msg: { id: string, label: string, arguments?: unknown }): void {
+  console.debug('shell →', msg)
   window.webkit?.messageHandlers?.shell?.postMessage(msg)
 }
 
@@ -40,7 +47,10 @@ export function call(label: string, args: unknown, cb: (d: Detail) => void): voi
   const id = crypto.randomUUID()
 
   const timer = setTimeout(() => {
-    if (subs.delete(id)) cb({ kind: 'reply', id, error: { kind: label, message: 'timeout' } })
+    if (subs.delete(id)) {
+      console.debug('shell ✕ timeout', label, id)
+      cb({ kind: 'reply', id, error: { kind: label, message: 'timeout' } })
+    }
   }, TIMEOUT)
 
   on(id, (d) => {
