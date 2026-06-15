@@ -17,6 +17,9 @@ paywall:
     subscribe_monthly: |-
       !js
       (price) => `한 달에 ${price}로 구독하기`
+    subscribe_yearly: |-
+      !js
+      (price) => `${price}/년에 가입하기`
   complete:
     thanks: Envly Premium을 구독해 주셔서 감사합니다
     avatarNote: 이제부터 다른 Evnly 사용자들은 당신의 아바타를 이렇게 보게 됩니다.

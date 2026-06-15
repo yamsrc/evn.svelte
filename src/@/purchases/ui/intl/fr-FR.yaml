@@ -16,6 +16,9 @@ paywall:
     subscribe_monthly: |-
       !js
       (price) => `Abonne-toi pour ${price}/mois`
+    subscribe_yearly: |-
+      !js
+      (price) => `S’abonner pour ${price}/an`
   complete:
     thanks: Merci de vous être abonné à Envly Premium
     avatarNote: >-

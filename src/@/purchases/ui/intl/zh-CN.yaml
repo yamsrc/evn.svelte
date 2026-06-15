@@ -15,6 +15,9 @@ paywall:
     subscribe_monthly: |-
       !js
       (price) => `每月${price}元订阅`
+    subscribe_yearly: |-
+      !js
+      (price) => `以${price}/年订阅`
   complete:
     thanks: 感谢您订阅 Envly Premium
     avatarNote: 从现在开始，其他 Evnly 用户会这样看到你的头像。
