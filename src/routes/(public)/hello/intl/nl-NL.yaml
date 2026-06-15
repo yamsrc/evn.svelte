@@ -1,0 +1,141 @@
+header:
+  nav:
+    howItWorks: Hoe het werkt
+    features: Functies
+    reviews: Beoordelingen
+  installApp: App installeren
+hero:
+  tagline1: Bonnetjes splitsen
+  tagline2: met een paar tikken
+  startSplitting: Start met splitsen
+  previewAlt: Voorbeeld van de Evnly-app
+howItWorks:
+  eyebrow: Makkelijk stappen
+  title: Hoe het werkt
+  body: >-
+    Maak gewoon een foto, tik aan wie wat had, en laat Evnly de rest doen. Geen
+    rekenwerk, geen verwarring — gewoon een duidelijke en eerlijke verdeling in
+    een paar seconden.
+  steps:
+    scan: Scan de bon
+    assign: Items toewijzen
+    payer: Kies wie er heeft betaald
+    done: Klaar!
+stats:
+  eyebrow: Samen uitgaven delen zonder gedoe
+  scan:
+    title: Bonnetjes scannen
+    description: Splits items direct op de foto
+  groups:
+    title: Groepen en reizen
+    description: Houd al je uitgaven op één plek bij
+  balances:
+    title: Saldi vereffenen
+    description: Weet altijd wie wie moet betalen
+split:
+  eyebrow: Supersimpel
+  title: Rekeningen splitsen? Zo makkelijk kan het
+  body: >-
+    Maak van elke rekening een simpele, directe verdeling. Met Evnly ziet
+    iedereen meteen zijn deel — geen rekenwerk, geen gedoe, gewoon snel en
+    makkelijk de rekening splitsen.
+  previewAlt: Evnly rekening splitsen voorbeeld
+features:
+  eyebrow: Samen delen? Supersimpel!
+  title1: Alles wat je nodig hebt
+  title2: Gemakkelijk splitsen
+  body: >-
+    Alles wat je nodig hebt om rekeningen zonder stress te splitten. Van snel
+    bonnetjes scannen tot flexibele groepsbeheer: met Evnly is elke stap simpel,
+    snel en duidelijk – zodat jij je op het moment kunt focussen, niet op het
+    rekenen.
+  cards:
+    groups:
+      title: Maak groepen voor elke gelegenheid
+      body: >-
+        Of het nu gaat om samen eten met vrienden, een weekendje weg of gedeelde
+        huishoudkosten – met Evnly maak je in een paar seconden een groep aan.
+        Houd iedereen georganiseerd, zie wie wat heeft betaald, en maak het
+        verdelen van kosten makkelijk voor elke gelegenheid.
+    invite:
+      title: Voeg vrienden toe, zelfs als ze niet op Evnly zitten
+      body: >-
+        Geen app? Geen probleem. Nodig iedereen uit via een link en ze zien
+        direct hun aandeel. Rekeningen splitsen was nog nooit zo makkelijk,
+        zelfs voor vrienden die nog geen lid zijn van Evnly.
+    adventures:
+      title: Avonturen
+      body: >-
+        Avonturen zijn voor iedereen die alles eerlijk wil delen — of je nu
+        samen op reis gaat, een avondje uit bent in de kroeg of gewoon
+        huishoudelijke kosten deelt. Met Evnly is het super makkelijk om kosten
+        bij te houden, te splitsen en af te rekenen zodat iedereen zijn eerlijke
+        deel betaalt.
+  tryItNow: Probeer het nu
+reviews:
+  eyebrow: Wat anderen zeggen
+  title: Beoordelingen
+  attribution: |-
+    !js
+    (name, location) => `— ${name}, ${location}`
+  one:
+    title: Ik ben dol op de bon scannen
+    body: >-
+      Super simpel en eigenlijk best leuk om te gebruiken. Die bon scannen is
+      top — het bespaart echt veel tijd en voorkomt fouten.
+    name: Sofía
+    location: Madrid
+  two:
+    title: Perfect voor op reis
+    body: >-
+      We gebruikten het elke dag, en het maakte alles zoveel makkelijker — geen
+      uitgaven meer bijhouden in notities of discussies over geld.
+    name: Jake
+    location: Berlin
+  three:
+    title: Gewoon scannen!
+    body: >-
+      Eindelijk geen 'wie moet mij nog betalen?'-berichten meer na het eten. We
+      scannen gewoon de bon en alles is zo geregeld.
+    name: Emma
+    location: London
+builtForLife:
+  eyebrow: Voor elk moment dat je deelt
+  title: Gemaakt voor het echte leven
+  body: >-
+    Van etentjes en avonden uit tot tripjes en alledaagse uitgaven — Evnly past
+    zich aan elke situatie aan en maakt het supermakkelijk om kosten te delen
+    met vrienden, huisgenoten of wie dan ook.
+  tags:
+    dinners: Dineren met vrienden
+    travel: Reizen & Groepsuitjes
+    apartments: Gedeelde appartementen
+    nights: Avondjes uit
+    other: Overige uitgaven
+  shareAlt: Evnly app samen gebruiken
+download:
+  mobile:
+    title1: Downloaden
+    title2: de mobiele app
+    body: >-
+      Maak het delen van uitgaven moeiteloos. Download Evnly en geniet van elk
+      moment zonder het rekenwerk.
+    appStoreAria: Downloaden in de App Store
+    appStoreAlt: Downloaden in de App Store
+    googlePlayAria: Haal hem op bij Google Play
+    googlePlayAlt: Download op Google Play
+  browser:
+    title1: Of gebruik
+    title2: in de browser
+footer:
+  tagline: Slimmer splitsen
+meta:
+  title: "Evnly: deel gezamenlijke uitgaven"
+  description: >-
+    Deel bonnetjes en gezamenlijke uitgaven in een mum van tijd. Scan
+    rekeningen, wijs items toe en reken snel af met vrienden na trips, etentjes
+    en huishouduitgaven.
+  keywords: >-
+    kosten delen, rekening splitsen, gedeelde uitgaven, bonnenscanner, app om
+    rekeningen te splitsen, groepsuitgaven, trip splitsen, huisgenootkosten,
+    rekening delen, Evnly

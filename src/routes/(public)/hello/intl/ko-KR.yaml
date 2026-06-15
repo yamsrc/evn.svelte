@@ -1,0 +1,119 @@
+header:
+  nav:
+    howItWorks: 사용 방법
+    features: 기능
+    reviews: 리뷰
+  installApp: 앱 설치하기
+hero:
+  tagline1: 영수증 나누기
+  tagline2: 몇 번만 탭하면
+  startSplitting: 분배 시작하기
+  previewAlt: Evnly 앱 미리보기
+howItWorks:
+  eyebrow: 쉬운 단계
+  title: 사용 방법
+  body: >-
+    사진만 찍고, 누가 뭘 먹었는지 탭해서 지정하면 나머지는 Evnly가 알아서 해줘요. 계산도 헷갈림도 없이 단 몇 초 만에 깔끔하고
+    공평하게 정산됩니다.
+  steps:
+    scan: 영수증을 스캔해
+    assign: 항목 할당하기
+    payer: 누가 결제했는지 선택해
+    done: 완료!
+stats:
+  eyebrow: 복잡함 없이 쉽게 나누는 공동 지출
+  scan:
+    title: 영수증 스캔하기
+    description: 사진에서 바로 아이템 나누기
+  groups:
+    title: 그룹 & 여행
+    description: 모든 지출을 한 곳에서 관리하세요
+  balances:
+    title: 잔액 정산하기
+    description: 누가 누구에게 얼마를 빚졌는지 항상 알 수 있어
+split:
+  eyebrow: 엄청 쉬워
+  title: 가장 쉽게 더치페이하는 방법
+  body: >-
+    어떤 영수증이든 간단하고 즉시 나눔 완성! Evnly와 함께라면 모두가 바로 자기 몫을 확인할 수 있어요 — 계산 필요 없이, 헷갈림
+    없이, 빠르고 쉽게 더치페이하세요.
+  previewAlt: Evnly 더치페이 미리보기
+features:
+  eyebrow: 간편하게 더치페이
+  title1: 네가 필요한 모든 것
+  title2: 쉽게 나누기
+  body: >-
+    스트레스 없이 더치페이하는 데 필요한 모든 것. 영수증 빠른 스캔부터 유연한 그룹 관리까지, Evnly가 모든 과정을 쉽고 빠르고
+    깔끔하게 만들어줘 — 이제 계산은 잊고, 순간을 즐기자.
+  cards:
+    groups:
+      title: 어떤 경우에도 그룹 만들기
+      body: >-
+        친구들과의 저녁, 주말 여행, 또는 집안 공용 지출 등 어떤 상황이든 Evnly로 몇 초 만에 그룹을 만들 수 있어요. 모두를
+        쉽게 정리하고, 누가 무엇을 냈는지 추적해서, 어떤 경우에도 간단하게 정산하세요.
+    invite:
+      title: Evnly에 없더라도 친구를 추가해 보세요
+      body: >-
+        앱이 없어도 문제없어! 링크로 누구나 초대하고 바로 자신의 몫을 확인할 수 있어. Evnly에 아직 가입하지 않은 친구들도
+        이제까지 이렇게 쉽게 더치페이 할 수 없었어.
+    adventures:
+      title: 모험
+      body: >-
+        모험은 모두가 공평하게 나누고 싶은 사람들을 위한 거예요 — 함께 여행을 가거나, 바에서 밤을 보내거나, 그냥 집안 지출을
+        공유하는 것까지. Evnly와 함께라면, 비용을 추적하고, 나누고, 정산하는 게 정말 쉬워서 모두가 자기 몫을 정확하게 낼 수
+        있어요.
+  tryItNow: 지금 바로 체험하기
+reviews:
+  eyebrow: 사람들의 이야기
+  title: 리뷰
+  attribution: |-
+    !js
+    (name, location) => `— ${name}, ${location}`
+  one:
+    title: 영수증 스캔 너무 좋아
+    body: 엄청 간단하고 실제로 쓰는 것도 재밌어! 영수증 스캔 기능 진짜 좋아 — 시간 정말 많이 절약되고 실수도 줄어들어.
+    name: Sofía
+    location: Madrid
+  two:
+    title: 여행에 딱 좋아
+    body: 우리 진짜 하루도 빠짐없이 썼고, 모든 게 훨씬 쉬워졌어 — 이제 지출을 메모에 적거나 돈 가지고 다툴 필요 없어.
+    name: Jake
+    location: Berlin
+  three:
+    title: 그냥 스캔해!
+    body: 이제 저녁 먹고 '누가 내 돈 줘야 해?'라는 메시지는 끝! 영수증만 스캔하면 몇 초 만에 다 정산 끝이야.
+    name: Emma
+    location: London
+builtForLife:
+  eyebrow: 네가 함께하는 모든 순간을 위해
+  title: 진짜 일상을 위해 만들어졌어요
+  body: >-
+    저녁 모임이나 밤 외출부터 여행, 일상적인 지출까지 — Evnly는 어떤 상황에도 딱 맞게 적응해서 친구, 룸메이트, 누구와도 쉽게
+    비용을 나눌 수 있어.
+  tags:
+    dinners: 친구들과의 저녁식사
+    travel: 여행 & 그룹 여행
+    apartments: 공유 아파트
+    nights: 밤 외출
+    other: 기타 지출
+  shareAlt: Evnly 앱 공유 경험
+download:
+  mobile:
+    title1: 다운로드
+    title2: 모바일 앱
+    body: 더 쉽게 비용을 나눠보자. Evnly를 다운로드하고 계산 걱정 없이 순간을 즐겨봐.
+    appStoreAria: App Store에서 다운로드
+    appStoreAlt: App Store에서 다운로드
+    googlePlayAria: Google Play에서 받기
+    googlePlayAlt: Google Play에서 받기
+  browser:
+    title1: 또는 사용하기
+    title2: 브라우저에서
+footer:
+  tagline: 똑똑하게 나눠요
+meta:
+  title: "Evnly: 함께 쓴 비용을 나눠요"
+  description: >-
+    영수증과 공동 지출을 순식간에 정산해요. 영수증을 스캔하고, 항목을 지정한 다음, 여행이나 저녁 식사, 집안 비용도 친구들과 바로 정산할
+    수 있어요.
+  keywords: 비용 나누기, 더치페이, 공동 지출, 영수증 스캐너, 더치페이 앱, 그룹 경비, 여행비 나누기, 룸메이트 경비, 체크 나누기, Evnly

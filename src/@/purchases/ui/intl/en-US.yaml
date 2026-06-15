@@ -4,13 +4,8 @@ paywall:
     headline: Evn better with a subscription!
     promo: For a limited time, Premium is completely free.
     cta: Start your free trial
-    disclaimer: >-
-      Free trial available only to eligible first time subscribers. Cancel 24
-      hours before trial ends to avoid charge. Recurring billing after free
-      trial, cancel anytime.
-    footnote: >-
-      * One Premium user enables item marking for all participants. In
-      adventures, only receipt text is saved (no visual split).
+    disclaimer: Free trial available only to eligible first time subscribers. Cancel 24 hours before trial ends to avoid charge. Recurring billing after free trial, cancel anytime.
+    footnote: "* One Premium user enables item marking for all participants. In adventures, only receipt text is saved (no visual split)."
     buy: Buy Evnly Premium
     trial:
       comment: |-
@@ -20,19 +15,17 @@ paywall:
     subscribe_monthly: |-
       !js
       (price) => `Subscribe for ${price}/month`
+    subscribe_yearly: |-
+      !js
+      (price) => `Subscribe for ${price}/year`
   complete:
     thanks: Thank you for subscribing to Envly Premium
     avatarNote: From now on, other Evnly users will see your avatar like this.
-    featuresNote: >-
-      Plus, from now on you can further customize the interface in your profile,
-      scan and recognize receipts, and more.
+    featuresNote: Plus, from now on you can further customize the interface in your profile, scan and recognize receipts, and more.
   free:
     cta: Enjoy Premium
   disclaimers:
-    apple: >-
-      Free trial is only available to eligible first-time subscribers. Cancel at
-      least 24 hours before the trial ends to avoid being charged. You can
-      manage or cancel your subscription in your Apple ID account settings.
+    apple: Free trial is only available to eligible first-time subscribers. Cancel at least 24 hours before the trial ends to avoid being charged. You can manage or cancel your subscription in your Apple ID account settings.
 products:
   yearly:
     title: Yearly
@@ -50,33 +43,29 @@ trial: |-
   (period) => `${period} free`
 disclaimers:
   trial: Free trial is available to eligible first-time subscribers.
-  apple_account: >-
-    Payment will be charged to your Apple ID account when you confirm your
-    purchase.
-  apple_yearly: >-
+  apple_account: Payment will be charged to your Apple ID account when you confirm your purchase.
+  apple_yearly: |-
     !js
-
-    (price) => `Subscription automatically renews for ${price}/year unless
-    canceled at least 24 hours before the end of the current period.`
-  apple_manage: >-
-    You can manage or cancel your subscription in your Apple ID account
-    settings.
-  apple_monthly: >-
+    (price) => `Subscription automatically renews for ${price}/year unless canceled at least 24 hours before the end of the current period.`
+  apple_manage: You can manage or cancel your subscription in your Apple ID account settings.
+  apple_monthly: |-
     !js
-
-    (price) => `Subscription automatically renews for ${price}/month unless
-    canceled at least 24 hours before the end of the current period.`
+    (price) => `Subscription automatically renews for ${price}/month unless canceled at least 24 hours before the end of the current period.`
   stripe_account: Cancel anytime from account settings.
-  stripe_monthly: >-
+  stripe_monthly: |-
     !js
-
-    (price) => `Subscription automatically renews for ${price}/month unless
-    canceled.`
-  stripe_yearly: >-
+    (price) => `Subscription automatically renews for ${price}/month unless canceled.`
+  stripe_yearly: |-
     !js
-
-    (price) => `Subscription automatically renews for ${price}/year unless
-    canceled.`
+    (price) => `Subscription automatically renews for ${price}/year unless canceled.`
+  google_account: Payment will be charged to your Google Play account at confirmation of purchase.
+  google_manage: You can manage or cancel your subscription in your Google Play account settings.
+  google_yearly: |-
+    !js
+    (price) => `Subscription automatically renews for ${price}/year unless canceled at least 24 hours before the end of the current period.`
+  google_monthly: |-
+    !js
+    (price) => `Subscription automatically renews for ${price}/month unless canceled at least 24 hours before the end of the current period.`
 restore:
   label: Restore purchases
 subscription:

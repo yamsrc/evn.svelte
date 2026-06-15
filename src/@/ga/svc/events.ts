@@ -1,7 +1,7 @@
 import type { BenefitType } from '@/purchases/ui/Benefit'
 import type { Method } from '@/iam'
 
-export type PurchaseMethod = 'free' | 'ios' | 'stripe'
+export type PurchaseMethod = 'free' | 'ios' | 'stripe' | 'google'
 
 export type HelloCta =
   | 'start-splitting'
@@ -41,7 +41,7 @@ export type EventMap = {
   /** Premium paywall was shown. `source` is the benefit that triggered it. */
   'purchases.paywall': { source: BenefitType }
 
-  /** Premium purchase completed. `free` = timezone grant; `ios` = App Store purchase. */
+  /** Premium purchase completed. `free` = timezone grant; `ios` = App Store; `google` = Play Billing. */
   'purchases.completed': { method: PurchaseMethod }
 
   /** Landing page CTA click. */

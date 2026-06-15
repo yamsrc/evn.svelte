@@ -1,29 +1,17 @@
 <script lang="ts">
   import { imageSet } from '$lib/tools/image'
+  import { grammar } from '$lib/intl'
+  import { dict } from '../intl'
 
-  const reviews = [
-    {
-      avatar: 'review-1_zj3gih',
-      name: 'Sofía',
-      location: 'Madrid',
-      title: 'Love the Receipt Scan',
-      body: 'Super simple and actually fun to use. Love the receipt scan — it saves so much time and avoids mistakes.',
-    },
-    {
-      avatar: 'review-2_ijxdol',
-      name: 'Jake',
-      location: 'Berlin',
-      title: 'Perfect for Trips',
-      body: 'We used it every single day, and it made everything so much easier — no tracking expenses in notes or arguing about money.',
-    },
-    {
-      avatar: 'review-3_ucldoy',
-      name: 'Emma',
-      location: 'London',
-      title: 'Just Scan!',
-      body: 'Finally, no more "who owes me?" messages after dinner. We just scan the receipt and it’s all settled in seconds.',
-    },
-  ]
+  const avatars = ['review-1_zj3gih', 'review-2_ijxdol', 'review-3_ucldoy']
+  const reviewKeys = ['one', 'two', 'three'] as const
+
+  const reviews = $derived.by(() =>
+    reviewKeys.map((key, i) => ({
+      avatar: avatars[i],
+      ...$dict.reviews[key],
+    })),
+  )
 
   const quotes = imageSet({
     '1x': '/assets/w_1200/reviews-quotes_zcdxaq.webp',
@@ -36,9 +24,9 @@
     class="py-12 md:py-20 space-y-10 md:space-y-12 bg-no-repeat bg-center bg-contain"
     style="background-image: {quotes}">
     <div class="text-center">
-      <p class="text-xs font-medium tracking-widest uppercase text-primary">What People Say</p>
+      <p class="text-xs font-medium tracking-widest uppercase text-primary">{$dict.reviews.eyebrow}</p>
       <div role="heading" aria-level="2" class="mt-3 text-4xl md:text-6xl font-bold leading-tight text-white">
-        Reviews
+        {$dict.reviews.title}
       </div>
     </div>
 
@@ -60,7 +48,7 @@
               height="64"
               class="block size-[61px] rounded-full object-cover" />
           </div>
-          <div class="text-sm">— {name}, {location}</div>
+          <div class="text-sm">{$dict.reviews.attribution(name, location, $grammar)}</div>
         </div>
       </li>
     {/each}

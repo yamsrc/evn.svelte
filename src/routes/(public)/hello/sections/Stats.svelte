@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { dict } from '../intl'
 </script>
 
 {#snippet stat(title: string, description: string)}
@@ -10,11 +11,11 @@
 
 <div class="max-w-7xl mx-auto bg-primary text-primary-foreground rounded-3xl px-8 py-8 md:py-10">
   <p class="text-center text-xs font-medium tracking-widest uppercase opacity-80 mb-6">
-    Shared expenses without the mess
+    {$dict.stats.eyebrow}
   </p>
   <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center hello-stats">
-    {@render stat('Scan receipts', 'Split items right on the photo')}
-    {@render stat('Groups & trips', 'Keep every expense in one place')}
-    {@render stat('Clear balances', 'Always know who owes whom')}
+    {@render stat($dict.stats.scan.title, $dict.stats.scan.description)}
+    {@render stat($dict.stats.groups.title, $dict.stats.groups.description)}
+    {@render stat($dict.stats.balances.title, $dict.stats.balances.description)}
   </div>
 </div>

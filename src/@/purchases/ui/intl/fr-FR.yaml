@@ -5,10 +5,7 @@ paywall:
     promo: Pendant une durée limitée, Premium est entièrement gratuit.
     cta: Commencer votre essai gratuit
     disclaimer: "Essai gratuit réservé uniquement aux nouveaux abonnés éligibles. Annulez 24\_heures avant la fin de l’essai pour éviter tout prélèvement. Facturation récurrente après la période d’essai, annulation à tout moment."
-    footnote: >-
-      * Un utilisateur Premium permet le marquage des articles pour tous les
-      participants. Dans les aventures, seul le texte du reçu est enregistré
-      (aucune répartition visuelle).
+    footnote: "* Un utilisateur Premium permet le marquage des articles pour tous les participants. Dans les aventures, seul le texte du reçu est enregistré (aucune répartition visuelle)."
     buy: Prends Evnly Premium
     trial:
       comment: "!js\n(price) => `7\_jours gratuits, puis ${price}/an`"
@@ -16,15 +13,13 @@ paywall:
     subscribe_monthly: |-
       !js
       (price) => `Abonne-toi pour ${price}/mois`
+    subscribe_yearly: |-
+      !js
+      (price) => `S’abonner pour ${price}/an`
   complete:
     thanks: Merci de vous être abonné à Envly Premium
-    avatarNote: >-
-      Désormais, les autres utilisateurs d’Evnly verront votre avatar de cette
-      façon.
-    featuresNote: >-
-      De plus, à partir de maintenant, vous pouvez personnaliser encore
-      davantage l’interface dans votre profil, scanner et reconnaître des reçus,
-      et bien plus encore.
+    avatarNote: Désormais, les autres utilisateurs d’Evnly verront votre avatar de cette façon.
+    featuresNote: De plus, à partir de maintenant, vous pouvez personnaliser encore davantage l’interface dans votre profil, scanner et reconnaître des reçus, et bien plus encore.
   free:
     cta: Profiter de Premium
   disclaimers:
@@ -46,41 +41,34 @@ trial: |-
   (period) => `${period} gratuit`
 disclaimers:
   trial: L’essai gratuit est dispo pour les nouveaux abonnés éligibles.
-  apple_account: >-
-    Le paiement sera prélevé sur ton compte Apple ID lors de la confirmation de
-    l’achat.
-  apple_yearly: >-
+  apple_account: Le paiement sera prélevé sur ton compte Apple ID lors de la confirmation de l’achat.
+  apple_yearly: |-
     !js
-
-    (price) => `L'abonnement se renouvelle automatiquement pour ${price}/an sauf
-    si tu l'annules au moins 24 heures avant la fin de la période en cours.`
-  apple_manage: >-
-    Tu peux gérer ou annuler ton abonnement dans les réglages de ton compte
-    Apple ID.
-  apple_monthly: >-
+    (price) => `L'abonnement se renouvelle automatiquement pour ${price}/an sauf si tu l'annules au moins 24 heures avant la fin de la période en cours.`
+  apple_manage: Tu peux gérer ou annuler ton abonnement dans les réglages de ton compte Apple ID.
+  apple_monthly: |-
     !js
-
-    (price) => `L’abonnement se renouvelle automatiquement pour ${price}/mois,
-    sauf si tu l’annules au moins 24 heures avant la fin de la période en
-    cours.`
+    (price) => `L’abonnement se renouvelle automatiquement pour ${price}/mois, sauf si tu l’annules au moins 24 heures avant la fin de la période en cours.`
   stripe_account: Tu peux annuler à tout moment depuis les paramètres de ton compte.
-  stripe_monthly: >-
+  stripe_monthly: |-
     !js
-
-    (price) => `L’abonnement se renouvelle automatiquement à ${price} par mois,
-    sauf si tu l’annules.`
-  stripe_yearly: >-
+    (price) => `L’abonnement se renouvelle automatiquement à ${price} par mois, sauf si tu l’annules.`
+  stripe_yearly: |-
     !js
-
-    (price) => `L’abonnement se renouvelle automatiquement à ${price}/an, sauf
-    si tu l’annules.`
+    (price) => `L’abonnement se renouvelle automatiquement à ${price}/an, sauf si tu l’annules.`
+  google_account: Le paiement sera débité de ton compte Google Play lors de la confirmation de l'achat.
+  google_manage: Tu peux gérer ou annuler ton abonnement dans les paramètres de ton compte Google Play.
+  google_yearly: |-
+    !js
+    (price) => `L’abonnement se renouvelle automatiquement pour ${price}/an, sauf si tu l’annules au moins 24 heures avant la fin de la période en cours.`
+  google_monthly: |-
+    !js
+    (price) => `L’abonnement se renouvelle automatiquement pour ${price}/mois, sauf si tu l’annules au moins 24 heures avant la fin de la période en cours.`
 restore:
   label: Restaurer les achats
 subscription:
   active: Premium est actif
-  expires: >-
+  expires: |-
     !js
-
-    (date, gender) => { if (gender === "he") return `Expire le ${date}`; if
-    (gender === "she") return `Expire le ${date}`; return `Expire le ${date}`; }
+    (date, gender) => { if (gender === "he") return `Expire le ${date}`; if (gender === "she") return `Expire le ${date}`; return `Expire le ${date}`; }
   manage: Gérer
