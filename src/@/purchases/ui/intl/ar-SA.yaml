@@ -20,6 +20,9 @@ paywall:
     subscribe_monthly: |-
       !js
       (price) => `اشترك مقابل ${price} شهريًا`
+    subscribe_yearly: |-
+      !js
+      (price) => `اشترك مقابل ${price} سنويًا`
   complete:
     thanks: شكرًا لاشتراكك في Envly Premium
     avatarNote: >-

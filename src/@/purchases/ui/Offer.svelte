@@ -119,6 +119,8 @@
             {$dict.paywall.free.cta}
           {:else if selected?.trial}
             {$dict.paywall.offer.trial.cta}
+          {:else if selected?.period === 'P1Y'}
+            {$dict.paywall.offer.subscribe_yearly(selected.displayPrice)}
           {:else}
             {$dict.paywall.offer.subscribe_monthly(selected?.displayPrice)}
           {/if}
