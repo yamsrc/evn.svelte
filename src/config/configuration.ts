@@ -24,6 +24,7 @@ export const navigation = {
 export const stores = {
   appStore: 'https://apps.apple.com/app/evnly/id6757803066',
   googlePlay: 'https://play.google.com/store/apps/details?id=com.evnapp',
+  googlePlaySubscriptions: 'https://play.google.com/store/account/subscriptions?package=com.evnapp',
 } as const
 
 export const origin = (() => {

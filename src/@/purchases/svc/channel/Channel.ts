@@ -27,4 +27,9 @@ export interface Stripe extends Base {
   kind: 'stripe'
 }
 
-export type Channel = Apple | Stripe
+export interface Google extends Base {
+  kind: 'google'
+  restore(): Promise<void | Error>
+}
+
+export type Channel = Apple | Stripe | Google

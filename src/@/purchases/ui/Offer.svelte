@@ -67,7 +67,7 @@
 
     const ch = channel()
 
-    if (ch?.kind === 'apple') await ch.restore()
+    if (ch?.kind === 'apple' || ch?.kind === 'google') await ch.restore()
 
     button.disabled = false
   }
@@ -155,6 +155,14 @@
               {$dict.disclaimers.stripe_monthly(selected?.displayPrice)}
             {/if}
             {$dict.disclaimers.stripe_account}
+          {:else if kind === 'google'}
+            {#if selected?.period === 'P1Y'}
+              {$dict.disclaimers.google_yearly(selected?.displayPrice)}
+            {:else if selected?.period === 'P1M'}
+              {$dict.disclaimers.google_monthly(selected?.displayPrice)}
+            {/if}
+            {$dict.disclaimers.google_account}
+            {$dict.disclaimers.google_manage}
           {/if}
         </p>
         <p>
@@ -162,7 +170,7 @@
           <span aria-hidden="true">·</span>
           <a href="/privacy/">{$common.privacy}</a>
         </p>
-        {#if kind === 'apple'}
+        {#if kind === 'apple' || kind === 'google'}
           <div>
             <Button
               onclick={restorePurchases}

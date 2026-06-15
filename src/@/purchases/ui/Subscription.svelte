@@ -12,8 +12,9 @@
 
   const apple = $derived(channel()?.kind === 'apple' && account.processor === 'appstore')
   const stripe = $derived(channel()?.kind === 'stripe' && account.processor === 'stripe')
+  const google = $derived(channel()?.kind === 'google' && account.processor === 'googleplay')
 
-  const manageable = $derived(apple || stripe)
+  const manageable = $derived(apple || stripe || google)
 
   let busy = $state(false)
 
