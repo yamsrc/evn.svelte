@@ -1,0 +1,190 @@
+context: Mount 'hello' context
+inputs:
+  header:
+    nav:
+      howItWorks:
+        input: How It Works
+        context: navigation link
+      features:
+        input: Features
+        context: navigation link
+      reviews:
+        input: Reviews
+        context: navigation link
+    installApp:
+      input: Install App
+      context: header CTA button
+  hero:
+    tagline1:
+      input: Split receipts
+    tagline2:
+      input: in few taps
+    startSplitting:
+      input: Start Splitting
+      context: hero CTA button
+    previewAlt:
+      input: Evnly app preview
+      context: image alt text
+  howItWorks:
+    eyebrow:
+      input: Easy Steps
+    title:
+      input: How It Works
+    body:
+      input: Just snap a photo, tap to assign who had what, and let Evnly do the rest. No calculations, no confusion — just a clear and fair split in seconds.
+    steps:
+      scan:
+        input: Scan the Receipt
+      assign:
+        input: Assign Items
+      payer:
+        input: Select a Payer
+      done:
+        input: Done!
+  stats:
+    eyebrow:
+      input: Shared expenses without the mess
+    scan:
+      title:
+        input: Scan receipts
+      description:
+        input: Split items right on the photo
+    groups:
+      title:
+        input: Groups & trips
+      description:
+        input: Keep every expense in one place
+    balances:
+      title:
+        input: Clear balances
+      description:
+        input: Always know who owes whom
+  split:
+    eyebrow:
+      input: Very Easy
+    title:
+      input: Split Bills the Easiest Way
+    body:
+      input: Turn any check into a simple, instant breakdown. With Evnly, everyone sees their share right away — no calculations, no confusion, just quick and easy bill splitting.
+    previewAlt:
+      input: Evnly bill split preview
+      context: image alt text
+  features:
+    eyebrow:
+      input: Splitting Made Simple
+    title1:
+      input: Everything You Need
+    title2:
+      input: to Split With Ease
+    body:
+      input: Everything you need to split bills without stress. From quick receipt scanning to flexible group management, Evnly makes every step simple, fast, and clear — so you can focus on the moment, not the math.
+    cards:
+      groups:
+        title:
+          input: Create Groups\nfor Any Occasions
+        body:
+          input: Whether it's dinner with friends, a weekend trip, or shared household expenses, Evnly lets you create groups in seconds. Keep everyone organized, track who paid what, and make splitting simple for any occasion.
+      invite:
+        title:
+          input: Add Friends Even\nif They're Not on Evnly
+        body:
+          input: No app? No problem. Invite anyone by link, and they can see their share instantly. Splitting bills has never been easier, even for friends who haven't joined Evnly yet.
+      adventures:
+        title:
+          input: Adventures
+        body:
+          input: Adventures are for those who want to spend equally — be it a voyage together, a night out at the bar, or just shared household expenses. Evnly makes it effortless to track, split, and settle bills so everyone pays their fair share.
+    tryItNow:
+      input: Try It Now
+      context: CTA link button
+  reviews:
+    eyebrow:
+      input: What People Say
+    title:
+      input: Reviews
+    attribution:
+      input: — {name}, {location}
+      context: review author line
+    one:
+      title:
+        input: Love the Receipt Scan
+      body:
+        input: Super simple and actually fun to use. Love the receipt scan — it saves so much time and avoids mistakes.
+      name:
+        input: Sofía
+      location:
+        input: Madrid
+    two:
+      title:
+        input: Perfect for Trips
+      body:
+        input: We used it every single day, and it made everything so much easier — no tracking expenses in notes or arguing about money.
+      name:
+        input: Jake
+      location:
+        input: Berlin
+    three:
+      title:
+        input: Just Scan!
+      body:
+        input: Finally, no more "who owes me?" messages after dinner. We just scan the receipt and it's all settled in seconds.
+      name:
+        input: Emma
+      location:
+        input: London
+  builtForLife:
+    eyebrow:
+      input: For Every Moment You Share
+    title:
+      input: Built for Real Life
+    body:
+      input: From dinners and nights out to trips and everyday expenses — Evnly adapts to any situation, making it easy to split costs with friends, roommates, or anyone in between.
+    tags:
+      dinners:
+        input: Dinners With Friends
+      travel:
+        input: Travel & Group Trips
+      apartments:
+        input: Shared Apartments
+      nights:
+        input: Nights Out
+      other:
+        input: Other Expenses
+    shareAlt:
+      input: Evnly app sharing experience
+      context: image alt text
+  download:
+    mobile:
+      title1:
+        input: Download
+      title2:
+        input: the Mobile App
+      body:
+        input: Make sharing expenses feel effortless. Download Evnly and enjoy every moment without the math.
+      appStoreAria:
+        input: Download on the App Store
+        context: link aria-label
+      appStoreAlt:
+        input: Download on the App Store
+        context: image alt text
+      googlePlayAria:
+        input: Get it on Google Play
+        context: link aria-label
+      googlePlayAlt:
+        input: Get it on Google Play
+        context: image alt text
+    browser:
+      title1:
+        input: Or use
+      title2:
+        input: in the browser
+  footer:
+    tagline:
+      input: Split wiser
+  meta:
+    title:
+      input: "Evnly: split shared expenses"
+    description:
+      input: Split receipts and shared expenses in seconds. Scan bills, assign items, and settle up with friends on trips, dinners, and household costs.
+    keywords:
+      input: expense splitting, split bills, shared expenses, receipt scanner, bill splitting app, group expenses, trip splitting, roommate expenses, split check, Evnly

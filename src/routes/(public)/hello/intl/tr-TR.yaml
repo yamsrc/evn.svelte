@@ -1,0 +1,140 @@
+header:
+  nav:
+    howItWorks: Nasıl çalışır
+    features: Özellikler
+    reviews: Yorumlar
+  installApp: Uygulamayı yükle
+hero:
+  tagline1: Fişleri böl
+  tagline2: birkaç dokunuşla
+  startSplitting: Paylaşmaya başla
+  previewAlt: Evnly uygulama önizlemesi
+howItWorks:
+  eyebrow: Kolay Adımlar
+  title: Nasıl çalışır
+  body: >-
+    Sadece bir fotoğraf çek, kimin ne yediğini seçmek için dokun, gerisini
+    Evnly'ye bırak. Hesap yok, karmaşa yok — sadece saniyeler içinde net ve adil
+    bir paylaşım.
+  steps:
+    scan: Fişi tara
+    assign: Öğeleri ata
+    payer: Kim ödedi, seç
+    done: Bitti!
+stats:
+  eyebrow: Karışıklık olmadan paylaşılan giderler
+  scan:
+    title: Fişleri tara
+    description: Ürünleri doğrudan fotoğrafın üstünde böl
+  groups:
+    title: Gruplar ve geziler
+    description: Tüm harcamalarını tek bir yerde tut
+  balances:
+    title: Bakiyeleri temizle
+    description: Her zaman kimin kime borçlu olduğunu bil
+split:
+  eyebrow: Çok kolay
+  title: Faturaları bölmenin en kolay yolu
+  body: >-
+    Her faturayı anında ve kolayca paylaşılacak bir hale getir. Evnly ile herkes
+    payını hemen görür — hesaplama yok, kafa karışıklığı yok, sadece hızlı ve
+    kolay hesap bölüşme.
+  previewAlt: Evnly fatura bölüşüm önizlemesi
+features:
+  eyebrow: Bölüşmek Çok Kolay
+  title1: İhtiyacın olan her şey
+  title2: Kolayca bölüş
+  body: >-
+    Stres olmadan hesap bölüşmek için ihtiyacın olan her şey burada. Hızlı fiş
+    taramadan esnek grup yönetimine kadar, Evnly her adımı basit, hızlı ve
+    anlaşılır yapar — böylece hesap yerine ana odaklanabilirsin.
+  cards:
+    groups:
+      title: Her durum için gruplar oluştur
+      body: >-
+        İster arkadaşlarla akşam yemeği, ister hafta sonu gezisi, ister
+        paylaşılan ev masrafları olsun, Evnly ile saniyeler içinde bir grup
+        oluşturabilirsin. Herkesi düzenli tut, kimin ne ödediğini takip et ve
+        masrafları her durumda kolayca bölüş.
+    invite:
+      title: Arkadaşlarını, Evnly’de olmasalar bile ekle
+      body: >-
+        Uygulama yok mu? Sorun değil! Herkesi linkle davet et, anında payını
+        görebilirler. Fatura bölüşmek hiç bu kadar kolay olmamıştı, Evnly’ye
+        henüz katılmamış arkadaşların için bile.
+    adventures:
+      title: Macera
+      body: >-
+        Macera; harcamaları eşit paylaşmak isteyenler için — ister birlikte bir
+        yolculuk, ister bardaki bir gece ya da sadece paylaşılan ev masrafları
+        olsun. Evnly ile faturaları takip etmek, bölüşmek ve hesabı kapatmak çok
+        kolay; herkes adilce payını öder.
+  tryItNow: Hemen dene
+reviews:
+  eyebrow: Kullanıcı Yorumları
+  title: Yorumlar
+  attribution: |-
+    !js
+    (name, location) => `— ${name}, ${location}`
+  one:
+    title: Fiş taramayı çok seviyorum
+    body: >-
+      Çok basit ve gerçekten kullanması eğlenceli. Fiş tarama özelliğine
+      bayılıyorum — hem çok zaman kazandırıyor, hem de hataları önlüyor.
+    name: Sofía
+    location: Madrid
+  two:
+    title: Seyahatler için çok uygun
+    body: >-
+      Her gün kullandık ve her şeyi çok daha kolay yaptı — artık notlarda
+      harcama takip etmek ya da parayla ilgili tartışmak yok.
+    name: Jake
+    location: Berlin
+  three:
+    title: Sadece tara!
+    body: >-
+      Artık akşam yemeğinden sonra 'kim bana ne borçlu?' mesajları yok. Sadece
+      fişi taratıyoruz ve her şey saniyeler içinde halloluyor.
+    name: Emma
+    location: London
+builtForLife:
+  eyebrow: Paylaştığın her an için
+  title: Gerçek hayat için tasarlandı
+  body: >-
+    Akşam yemeklerinden dışarıda geçirilen gecelere, gezilerden günlük
+    harcamalara kadar — Evnly her duruma uyum sağlar ve masrafları
+    arkadaşlarınla, ev arkadaşlarınla ya da başka biriyle kolayca bölüşmeni
+    sağlar.
+  tags:
+    dinners: Arkadaşlarla akşam yemekleri
+    travel: Seyahat & Grup Gezileri
+    apartments: Paylaşımlı daireler
+    nights: Dışarıda geçirilen geceler
+    other: Diğer Giderler
+  shareAlt: Evnly uygulaması paylaşma deneyimi
+download:
+  mobile:
+    title1: İndir
+    title2: mobil uygulama
+    body: >-
+      Masrafları paylaşmak çocuk oyuncağı olsun. Evnly’i indir, hesap kitap
+      derdi olmadan her anın tadını çıkar.
+    appStoreAria: App Store’dan indir
+    appStoreAlt: App Store’dan indir
+    googlePlayAria: Google Play'den indir
+    googlePlayAlt: Google Play’da edinin
+  browser:
+    title1: Veya kullan
+    title2: tarayıcıda
+footer:
+  tagline: Daha akıllıca bölüş
+meta:
+  title: "Evnly: ortak harcamaları kolayca bölüştür"
+  description: >-
+    Fişleri ve paylaşılan masrafları saniyeler içinde bölüş. Faturaları tara,
+    öğeleri ata ve seyahatlerde, yemeklerde veya evdeki harcamalarda
+    arkadaşlarınla kolayca hesaplaş.
+  keywords: >-
+    masraf bölüşme, faturaları bölme, ortak giderler, fiş tarayıcı, fatura bölme
+    uygulaması, grup harcamaları, gezi masrafı bölüşme, ev arkadaşı giderleri,
+    hesabı bölüşme, Evnly

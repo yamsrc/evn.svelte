@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "svintl": {
+      "source": "temich/svintl",
+      "sourceType": "github",
+      "skillPath": "skills/svintl/SKILL.md",
+      "computedHash": "699f9dfeba6e481add7370773a6aaec25dc5f99bbb6e16746706e3b57f66f974"
+    }
+  }
+}

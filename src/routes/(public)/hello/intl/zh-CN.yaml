@@ -1,0 +1,104 @@
+header:
+  nav:
+    howItWorks: 如何使用
+    features: 功能
+    reviews: 评价
+  installApp: 安装应用
+hero:
+  tagline1: 拆分小票
+  tagline2: 只需几下点击
+  startSplitting: 开始分账
+  previewAlt: Evnly 应用预览
+howItWorks:
+  eyebrow: 简单步骤
+  title: 如何运作
+  body: 只需拍张照片，点一下分配谁吃了什么，剩下的交给 Evnly 搞定。无需自己算账，无需纠结——几秒钟内就能清晰、公平地分好账。
+  steps:
+    scan: 扫一扫小票
+    assign: 分配项目
+    payer: 选出付款的人
+    done: 搞定！
+stats:
+  eyebrow: 轻松分账，无乱麻
+  scan:
+    title: 扫描小票
+    description: 直接在照片上分配项目
+  groups:
+    title: 群组与行程
+    description: 把所有花销放在一个地方管理
+  balances:
+    title: 清除余额
+    description: 随时知道谁欠谁钱
+split:
+  eyebrow: 非常容易
+  title: 分账最简单的方式
+  body: 让任何账单瞬间变得简单明了。有了 Evnly，大家立刻就能看到自己的份额——无需计算，无需纠结，分账就是这么快又简单。
+  previewAlt: Evnly账单分摊预览
+features:
+  eyebrow: 分账更简单
+  title1: 你需要的一切
+  title2: 轻松分账
+  body: 让你轻松分账，无压力。Evnly 从快速扫描小票到灵活管理小组，每一步都简单、迅速又清晰——让你专注于当下，而不是算账。
+  cards:
+    groups:
+      title: 为各种场合创建群组
+      body: 无论是好友聚餐、周末出游，还是日常家务分账，Evnly 都能让你秒建群组。让大家井井有条，轻松记录谁付了什么，让每一种场合的分账变得简单。
+    invite:
+      title: 即使朋友不在Evnly，也可以添加好友
+      body: 没有应用程序？没问题！通过链接邀请任何人，他们立刻就能看到自己的份额。即使是还没加入Evnly的朋友，AA分账也从未如此轻松。
+    adventures:
+      title: 冒险
+      body: >-
+        冒险属于那些想要平分支出的人——无论是一起旅行、酒吧夜晚，还是简单的家庭共享开销。Evnly
+        让账单记录、分摊和结算变得轻而易举，让每个人都能公平支付自己那一份。
+  tryItNow: 立即试用
+reviews:
+  eyebrow: 用户怎么说
+  title: 评价
+  attribution: |-
+    !js
+    (name, location) => `— ${name}，${location}`
+  one:
+    title: 超喜欢小票扫描功能
+    body: 超级简单，用起来真的很有趣。我超喜欢扫小票这个功能——省了好多时间，还能避免错误。
+    name: Sofía
+    location: Madrid
+  two:
+    title: 非常适合出行
+    body: 我们真的每天都在用，让一切变得轻松多了——不用再在备忘录里记账或者为钱争吵了。
+    name: Jake
+    location: Berlin
+  three:
+    title: 扫一扫就行！
+    body: 终于吃完饭后不用再发“谁还欠我钱？”的消息了。我们只要扫一扫小票，几秒钟就算清楚了。
+    name: Emma
+    location: London
+builtForLife:
+  eyebrow: 为你分享的每一个瞬间
+  title: 为真实生活而打造
+  body: 从聚餐、夜晚外出到旅行和日常开销 — Evnly 无论什么情况都能轻松应对，让你和朋友、室友或任何人都能方便地分摊费用。
+  tags:
+    dinners: 和朋友吃晚餐
+    travel: 旅行和团体出行
+    apartments: 合租公寓
+    nights: 夜晚聚会
+    other: 其他开销
+  shareAlt: Evnly应用共享体验
+download:
+  mobile:
+    title1: 下载
+    title2: 手机应用
+    body: 让分账变得轻松无忧。下载 Evnly，享受每一刻，无需再为算账操心。
+    appStoreAria: 在 App Store 下载
+    appStoreAlt: 在 App Store 下载
+    googlePlayAria: 在 Google Play 获取
+    googlePlayAlt: 在 Google Play 获取
+  browser:
+    title1: 或者使用
+    title2: 在浏览器中
+footer:
+  tagline: 更聪明地分账
+meta:
+  title: Evnly：轻松分摊共同花费
+  description: 几秒钟就能拆分小票和共享花销。扫一扫账单，分配物品，和朋友们轻松结算旅行、聚餐或家里的账目。
+  keywords: 分摊费用、账单分割、共享支出、发票扫描、账单分摊App、群组费用、旅行AA、室友分账、分账结账、Evnly

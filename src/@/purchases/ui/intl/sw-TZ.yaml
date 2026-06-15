@@ -21,6 +21,9 @@ paywall:
     subscribe_monthly: |-
       !js
       (price) => `Jisajili kwa ${price} kwa mwezi`
+    subscribe_yearly: |-
+      !js
+      (price) => `Jisajili kwa ${price}/mwaka`
   complete:
     thanks: Asante kwa kujisajili kwenye Envly Premium
     avatarNote: Kuanzia sasa, watumiaji wengine wa Evnly wataona avatar yako hivi.

@@ -23,6 +23,7 @@ export type Dictionary = {
             cta: string
           }
           subscribe_monthly: (value: any) => string
+          subscribe_yearly: (value: any) => string
         }
         complete: {
           thanks: string

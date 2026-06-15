@@ -1,0 +1,137 @@
+header:
+  nav:
+    howItWorks: How It Works
+    features: Features
+    reviews: Reviews
+  installApp: Install App
+hero:
+  tagline1: Split receipts
+  tagline2: in just a few taps
+  startSplitting: Start splitting
+  previewAlt: Evnly app preview
+howItWorks:
+  eyebrow: Easy Steps
+  title: How It Works
+  body: >-
+    Just snap a photo, tap to assign who had what, and let Evnly do the rest. No
+    calculations, no confusion — just a clear and fair split in seconds.
+  steps:
+    scan: Scan the receipt
+    assign: Assign items
+    payer: Select a payer
+    done: Done!
+stats:
+  eyebrow: Shared expenses made simple
+  scan:
+    title: Scan receipts
+    description: Split items right on the photo
+  groups:
+    title: Groups & trips
+    description: Keep all your expenses in one place
+  balances:
+    title: Clear balances
+    description: Always know who owes whom
+split:
+  eyebrow: Super easy
+  title: The Easiest Way to Split Bills
+  body: >-
+    Turn any check into a simple, instant breakdown. With Evnly, everyone sees
+    their share right away — no calculations, no confusion, just quick and easy
+    bill splitting.
+  previewAlt: Evnly bill split preview
+features:
+  eyebrow: Splitting Made Simple
+  title1: Everything You Need
+  title2: Split with ease
+  body: >-
+    Everything you need to split bills without stress. From quick receipt
+    scanning to flexible group management, Evnly makes every step simple, fast,
+    and clear — so you can focus on the moment, not the math.
+  cards:
+    groups:
+      title: Create Groups for Any Occasion
+      body: >-
+        Whether it’s dinner with friends, a weekend trip, or shared household
+        expenses, Evnly lets you create groups in seconds. Keep everyone
+        organized, track who paid what, and make splitting simple for any
+        occasion.
+    invite:
+      title: Add friends even if they’re not on Evnly
+      body: >-
+        No app? No problem. Just invite anyone with a link and they can
+        instantly see their share. Splitting bills has never been easier, even
+        for friends who haven’t joined Evnly yet.
+    adventures:
+      title: Adventures
+      body: >-
+        Adventures are for those who want to split things evenly—whether it’s
+        traveling together, a night out at the bar, or just sharing household
+        bills. Evnly makes it super easy to track, split, and settle up so
+        everyone pays their fair share.
+  tryItNow: Try it now
+reviews:
+  eyebrow: What People Say
+  title: Reviews
+  attribution: |-
+    !js
+    (name, location) => `— ${name}, ${location}`
+  one:
+    title: Love the receipt scan
+    body: >-
+      Super simple and actually fun to use. Love the receipt scan — it saves so
+      much time and avoids mistakes.
+    name: Sofía
+    location: Madrid
+  two:
+    title: Perfect for trips
+    body: >-
+      We used it every single day, and it made everything so much easier — no
+      more tracking expenses in notes or arguing about money.
+    name: Jake
+    location: Berlin
+  three:
+    title: Just scan!
+    body: >-
+      Finally, no more 'who owes me?' messages after dinner. We just scan the
+      receipt and it's all settled in seconds.
+    name: Emma
+    location: London
+builtForLife:
+  eyebrow: For every moment you share
+  title: Built for real life
+  body: >-
+    From dinners and nights out to trips and everyday expenses — Evnly adapts to
+    any situation, making it easy to split costs with friends, roommates, or
+    anyone in between.
+  tags:
+    dinners: Dinners With Friends
+    travel: Travel & Group Trips
+    apartments: Shared Apartments
+    nights: Nights Out
+    other: Other Expenses
+  shareAlt: Evnly app sharing experience
+download:
+  mobile:
+    title1: Download
+    title2: the Mobile App
+    body: >-
+      Make sharing expenses feel effortless. Download Evnly and enjoy every
+      moment without the math.
+    appStoreAria: Download on the App Store
+    appStoreAlt: Download on the App Store
+    googlePlayAria: Get it on Google Play
+    googlePlayAlt: Get it on Google Play
+  browser:
+    title1: Or use
+    title2: in the browser
+footer:
+  tagline: Split wiser
+meta:
+  title: "Evnly: split shared expenses"
+  description: >-
+    Split receipts and shared expenses in seconds. Scan bills, assign items, and
+    settle up with friends on trips, dinners, and household costs.
+  keywords: >-
+    expense splitting, split bills, shared expenses, receipt scanner, bill
+    splitting app, group expenses, trip splitting, roommate expenses, split
+    check, Evnly

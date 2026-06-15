@@ -16,7 +16,8 @@ export const dictionaries = {
           "comment": (price) => `مجاني لمدة 7 أيام، ثم ${price} سنويًا`,
           "cta": "ابدأ تجربتك المجانية"
         },
-        "subscribe_monthly": (price) => `اشترك مقابل ${price} شهريًا`
+        "subscribe_monthly": (price) => `اشترك مقابل ${price} شهريًا`,
+        "subscribe_yearly": (price) => `اشترك مقابل ${price} سنويًا`
       },
       "complete": {
         "thanks": "شكرًا لاشتراكك في Envly Premium",
@@ -75,7 +76,8 @@ export const dictionaries = {
           "comment": (price) => `7 Tage kostenlos, danach ${price}/Jahr`,
           "cta": "Teste kostenlos starten"
         },
-        "subscribe_monthly": (price) => `Abonniere für ${price} pro Monat`
+        "subscribe_monthly": (price) => `Abonniere für ${price} pro Monat`,
+        "subscribe_yearly": (price) => `Für ${price} pro Jahr abonnieren`
       },
       "complete": {
         "thanks": "Vielen Dank für dein Abonnement von Envly Premium",
@@ -134,7 +136,8 @@ export const dictionaries = {
           "comment": (price) => `7-day free, then ${price}/year`,
           "cta": "Start your free trial"
         },
-        "subscribe_monthly": (price) => `Subscribe for ${price}/month`
+        "subscribe_monthly": (price) => `Subscribe for ${price}/month`,
+        "subscribe_yearly": (price) => `Subscribe for ${price}/year`
       },
       "complete": {
         "thanks": "Thank you for subscribing to Envly Premium",
@@ -193,7 +196,8 @@ export const dictionaries = {
           "comment": (price) => `7 días gratis, luego ${price}/año`,
           "cta": "Empieza tu prueba gratis"
         },
-        "subscribe_monthly": (price) => `Suscríbete por ${price} al mes`
+        "subscribe_monthly": (price) => `Suscríbete por ${price} al mes`,
+        "subscribe_yearly": (price) => `Suscríbete por ${price} al año`
       },
       "complete": {
         "thanks": "Gracias por suscribirte a Envly Premium",
@@ -252,7 +256,8 @@ export const dictionaries = {
           "comment": (price) => `7 jours gratuits, puis ${price}/an`,
           "cta": "Commence ton essai gratuit"
         },
-        "subscribe_monthly": (price) => `Abonne-toi pour ${price}/mois`
+        "subscribe_monthly": (price) => `Abonne-toi pour ${price}/mois`,
+        "subscribe_yearly": (price) => `S’abonner pour ${price}/an`
       },
       "complete": {
         "thanks": "Merci de vous être abonné à Envly Premium",
@@ -311,7 +316,8 @@ export const dictionaries = {
           "comment": (price) => `7 दिन मुफ्त, फिर ${price}/वर्ष`,
           "cta": "अपनी फ्री ट्रायल शुरू करो"
         },
-        "subscribe_monthly": (price) => `${price} प्रति माह पर सब्सक्राइब करो`
+        "subscribe_monthly": (price) => `${price} प्रति माह पर सब्सक्राइब करो`,
+        "subscribe_yearly": (price) => `${price}/साल में सब्सक्राइब करो`
       },
       "complete": {
         "thanks": "Envly Premium की सदस्यता लेने के लिए धन्यवाद",
@@ -370,7 +376,8 @@ export const dictionaries = {
           "comment": (price) => `7 giorni gratis, poi ${price}/anno`,
           "cta": "Inizia la tua prova gratuita"
         },
-        "subscribe_monthly": (price) => `Abbonati a ${price} al mese`
+        "subscribe_monthly": (price) => `Abbonati a ${price} al mese`,
+        "subscribe_yearly": (price) => `Abbonati per ${price}/anno`
       },
       "complete": {
         "thanks": "Grazie per esserti abbonato a Envly Premium",
@@ -429,7 +436,8 @@ export const dictionaries = {
           "comment": (price) => `7日間無料、その後は${price}/年`,
           "cta": "無料トライアルを始める"
         },
-        "subscribe_monthly": (price) => `${price}で毎月サブスクしよう`
+        "subscribe_monthly": (price) => `${price}で毎月サブスクしよう`,
+        "subscribe_yearly": (price) => `${price}/年で登録する`
       },
       "complete": {
         "thanks": "Envly Premiumへのご登録ありがとうございます",
@@ -488,7 +496,8 @@ export const dictionaries = {
           "comment": (price) => `7일 무료, 이후 ${price}/연`,
           "cta": "무료 체험 시작하기"
         },
-        "subscribe_monthly": (price) => `한 달에 ${price}로 구독하기`
+        "subscribe_monthly": (price) => `한 달에 ${price}로 구독하기`,
+        "subscribe_yearly": (price) => `${price}/년에 가입하기`
       },
       "complete": {
         "thanks": "Envly Premium을 구독해 주셔서 감사합니다",
@@ -547,7 +556,8 @@ export const dictionaries = {
           "comment": (price) => `7 dagen gratis, daarna ${price}/jaar`,
           "cta": "Start je gratis proefperiode"
         },
-        "subscribe_monthly": (price) => `Abonneer je voor ${price} per maand`
+        "subscribe_monthly": (price) => `Abonneer je voor ${price} per maand`,
+        "subscribe_yearly": (price) => `Abonneer voor ${price}/jaar`
       },
       "complete": {
         "thanks": "Bedankt voor je abonnement op Envly Premium",
@@ -606,7 +616,8 @@ export const dictionaries = {
           "comment": (price) => `7 дней бесплатно, затем ${price} в год`,
           "cta": "Начни бесплатную пробу"
         },
-        "subscribe_monthly": (price) => `Подпишись за ${price} в месяц`
+        "subscribe_monthly": (price) => `Подпишись за ${price} в месяц`,
+        "subscribe_yearly": (price) => `Подписаться за ${price} в год`
       },
       "complete": {
         "thanks": "Спасибо за подписку на Envly Premium",
@@ -665,7 +676,8 @@ export const dictionaries = {
           "comment": (price) => `Bure kwa siku 7, halafu ${price}/mwaka`,
           "cta": "Anza jaribio lako bure"
         },
-        "subscribe_monthly": (price) => `Jisajili kwa ${price} kwa mwezi`
+        "subscribe_monthly": (price) => `Jisajili kwa ${price} kwa mwezi`,
+        "subscribe_yearly": (price) => `Jisajili kwa ${price}/mwaka`
       },
       "complete": {
         "thanks": "Asante kwa kujisajili kwenye Envly Premium",
@@ -724,7 +736,8 @@ export const dictionaries = {
           "comment": (price) => `7 gün ücretsiz, ardından ${price}/yıl`,
           "cta": "Ücretsiz denemeni başlat"
         },
-        "subscribe_monthly": (price) => `Aylık ${price}’a abone ol`
+        "subscribe_monthly": (price) => `Aylık ${price}’a abone ol`,
+        "subscribe_yearly": (price) => `Yıllık ${price}’a abone ol`
       },
       "complete": {
         "thanks": "Envly Premium’a abone olduğunuz için teşekkürler",
@@ -783,7 +796,8 @@ export const dictionaries = {
           "comment": (price) => `7 днів безкоштовно, потім ${price} на рік`,
           "cta": "Почни безкоштовну пробну версію"
         },
-        "subscribe_monthly": (price) => `Підпишись за ${price} на місяць`
+        "subscribe_monthly": (price) => `Підпишись за ${price} на місяць`,
+        "subscribe_yearly": (price) => `Підписатися за ${price} на рік`
       },
       "complete": {
         "thanks": "Дякуємо за підписку на Envly Premium",
@@ -842,7 +856,8 @@ export const dictionaries = {
           "comment": (price) => `7天免费，之后${price}/年`,
           "cta": "开始你的免费试用"
         },
-        "subscribe_monthly": (price) => `每月${price}元订阅`
+        "subscribe_monthly": (price) => `每月${price}元订阅`,
+        "subscribe_yearly": (price) => `以${price}/年订阅`
       },
       "complete": {
         "thanks": "感谢您订阅 Envly Premium",

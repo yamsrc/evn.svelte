@@ -2,6 +2,7 @@
   import { ArrowRight } from '@lucide/svelte'
   import { track } from '@/ga'
   import { Button } from '$ui/button'
+  import { dict } from '../intl'
 </script>
 
 <div class="relative max-w-7xl mx-auto bg-[#ECE0D4] rounded-3xl overflow-hidden">
@@ -23,9 +24,9 @@
     </div>
 
     <p class="mt-6 text-3xl md:text-[40px] font-medium text-[#56483C] leading-tight">
-      Split receipts
+      {$dict.hero.tagline1}
       <br />
-      in few taps
+      {$dict.hero.tagline2}
     </p>
 
     <Button
@@ -33,14 +34,14 @@
       size="lg"
       onclick={() => track('hello.cta', { name: 'start-splitting' })}
       class="mt-8 rounded-full bg-primary text-primary-foreground hover:bg-primary/90">
-      Start Splitting
+      {$dict.hero.startSplitting}
       <ArrowRight class="size-4" />
     </Button>
 
     <img
       src="/assets/w_1024/hero-preview_kbf2qa.webp"
       srcset="/assets/w_1024/hero-preview_kbf2qa.webp 1x, /assets/w_2048/hero-preview_kbf2qa.webp 2x"
-      alt="Evnly app preview"
+      alt={$dict.hero.previewAlt}
       width="1024"
       height="553"
       class="mt-10 w-[140%] max-w-none md:w-full md:max-w-5xl h-auto block" />

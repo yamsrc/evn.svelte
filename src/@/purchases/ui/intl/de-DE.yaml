@@ -22,6 +22,9 @@ paywall:
     subscribe_monthly: |-
       !js
       (price) => `Abonniere für ${price} pro Monat`
+    subscribe_yearly: |-
+      !js
+      (price) => `Für ${price} pro Jahr abonnieren`
   complete:
     thanks: Vielen Dank für dein Abonnement von Envly Premium
     avatarNote: Ab jetzt werden andere Evnly-Nutzer dein Avatar so sehen.

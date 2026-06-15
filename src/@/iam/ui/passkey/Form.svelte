@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { onMount } from 'svelte'
   import { ArrowRight } from '@lucide/svelte'
   import { dict } from '@/iam/ui/intl'
   import { passkeys } from '@/iam'
@@ -6,9 +7,9 @@
   import { Button } from '$ui/button'
   import { autofocus, onsubmit } from '$lib/tools'
   import { Loader } from '$com/loader'
-  import type { Props } from './Create'
+  import type { Props } from './Form'
 
-  const { account, disabled, oncreate }: Props = $props()
+  const { account, disabled, oncreate, onauthenticate }: Props = $props()
 
   let value = $derived(account?.name ?? '')
   let busy = $state(false)
@@ -28,6 +29,8 @@
 
     oncreate?.(echo)
   }
+
+  onMount(() => passkeys.mount(() => onauthenticate?.('passkey')))
 </script>
 
 <form onsubmit={onsubmit(submit)}>
@@ -38,7 +41,7 @@
         id="name"
         type="text"
         placeholder={$dict.auth.yourName}
-        autocomplete="given-name"
+        autocomplete="username webauthn"
         required
         {autofocus} />
       <Button id="iam-passkey-create-button" size="icon" type="submit" class="size-12">

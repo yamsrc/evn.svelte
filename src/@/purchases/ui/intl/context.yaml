@@ -29,6 +29,9 @@ inputs:
       subscribe_monthly:
         input: Subscribe for {price}/month
         context: function accepting price
+      subscribe_yearly:
+        input: Subscribe for {price}/year
+        context: button label, function accepting price; yearly subscription full annual price
     complete:
       thanks:
         input: Thank you for subscribing to Envly Premium

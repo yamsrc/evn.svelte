@@ -20,6 +20,9 @@ paywall:
     subscribe_monthly: |-
       !js
       (price) => `${price} प्रति माह पर सब्सक्राइब करो`
+    subscribe_yearly: |-
+      !js
+      (price) => `${price}/साल में सब्सक्राइब करो`
   complete:
     thanks: Envly Premium की सदस्यता लेने के लिए धन्यवाद
     avatarNote: अब से, अन्य Evnly उपयोगकर्ता आपका अवतार इस तरह देखेंगे।

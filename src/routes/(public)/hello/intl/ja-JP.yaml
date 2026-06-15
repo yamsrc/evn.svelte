@@ -1,0 +1,106 @@
+header:
+  nav:
+    howItWorks: 使い方
+    features: 機能
+    reviews: レビュー
+  installApp: アプリをインストール
+hero:
+  tagline1: レシートを分ける
+  tagline2: ほんの数回タップするだけで
+  startSplitting: 割り勘を始める
+  previewAlt: Evnlyアプリのプレビュー
+howItWorks:
+  eyebrow: 簡単ステップ
+  title: 使い方
+  body: 写真をパッと撮って、誰が何を頼んだかタップで割り当てれば、あとはEvnlyにお任せ。計算も混乱もなし―数秒で明確かつフェアに分けられます。
+  steps:
+    scan: レシートをスキャンして
+    assign: アイテムを割り当てる
+    payer: 支払った人を選んでね
+    done: 完了！
+stats:
+  eyebrow: 面倒なしの割り勘管理
+  scan:
+    title: レシートをスキャン
+    description: 写真上でアイテムを分けよう
+  groups:
+    title: グループ＆旅行
+    description: すべての支出をひとつの場所で管理しよう
+  balances:
+    title: 残高をクリア
+    description: 誰が誰にいくら借りているかがいつでもわかる
+split:
+  eyebrow: とっても簡単
+  title: 一番かんたんに割り勘しよう
+  body: どんな請求書も、簡単ですぐに分けられるように。Evnlyなら、みんなが自分の分をすぐに確認できる — 計算いらずで、混乱なし。手早く簡単に割り勘しよう。
+  previewAlt: Evnly 請求書割り勘プレビュー
+features:
+  eyebrow: 割り勘、カンタン
+  title1: 必要なものすべて
+  title2: かんたん割り勘
+  body: >-
+    ストレスなしで割り勘するために必要なものが全部そろっています。レシートの素早いスキャンから柔軟なグループ管理まで、Evnlyならどのステップも簡単・スピーディー・分かりやすいから、計算じゃなくて今を楽しめるよ。
+  cards:
+    groups:
+      title: どんな場面でもグループを作ろう
+      body: >-
+        友だちとのディナーや週末旅行、家の共同出費など、Evnlyなら数秒でグループが作れるよ。みんなを整理しやすくして、誰が何を払ったかを記録し、どんなシーンでも割り勘を簡単にしよう。
+    invite:
+      title: Evnlyを使っていない友達も追加できるよ
+      body: >-
+        アプリがなくても大丈夫！リンクで誰でも招待できて、自分の分担額がすぐに見られます。Evnlyにまだ参加していない友だちでも、割り勘がこんなに簡単になりました。
+    adventures:
+      title: アドベンチャー
+      body: >-
+        冒険は、みんなで平等に出し合いたい人のためのものです。それが一緒の旅行でも、バーでの夜遊びでも、ただ家計をシェアするだけでも。Evnlyなら、みんながきっちり割り勘できるよう、支払いの管理も分割も精算もすごく簡単です。
+  tryItNow: 今すぐ試そう
+reviews:
+  eyebrow: みんなの声
+  title: レビュー
+  attribution: |-
+    !js
+    (name, location) => `— ${name}（${location}）`
+  one:
+    title: レシートスキャンが大好き
+    body: とてもシンプルで、実際使ってて楽しいです。レシートスキャンが大好き — 時間もすごく節約できて、ミスも防げます。
+    name: Sofía
+    location: Madrid
+  two:
+    title: 旅行にぴったり
+    body: 毎日使ってたし、めちゃくちゃ楽になったよ — メモに出費を記録したりお金で揉めたりしなくて済むからね。
+    name: Jake
+    location: Berlin
+  three:
+    title: スキャンするだけ！
+    body: やっと「誰が私にいくら払うの？」みたいなメッセージは夕食後にもう無し。レシートをスキャンするだけで、数秒で全部精算できるよ。
+    name: Emma
+    location: London
+builtForLife:
+  eyebrow: シェアするすべての瞬間のために
+  title: リアルな毎日のために作られた
+  body: ディナーや飲み会から旅行、日々の支出まで — Evnlyはどんなシーンにもフィットして、友達やルームメイト、誰とでも簡単に割り勘ができるよ。
+  tags:
+    dinners: 友達とのディナー
+    travel: 旅行 & グループ旅行
+    apartments: シェアアパート
+    nights: 夜のお出かけ
+    other: その他の支出
+  shareAlt: Evnlyアプリの共有体験
+download:
+  mobile:
+    title1: ダウンロード
+    title2: モバイルアプリ
+    body: 割り勘をもっとカンタンに。Evnlyをダウンロードして、計算いらずで毎瞬を楽しもう。
+    appStoreAria: App Storeでダウンロード
+    appStoreAlt: App Storeでダウンロード
+    googlePlayAria: Google Play で入手
+    googlePlayAlt: Google Play で手に入れよう
+  browser:
+    title1: または使う
+    title2: ブラウザで
+footer:
+  tagline: もっと賢く割り勘
+meta:
+  title: Evnly：みんなで簡単に割り勘
+  description: レシートや共有の支出を一瞬で分けよう。領収書をスキャンして、アイテムを割り当てて、旅行や食事、家の支払いも友達と簡単に精算！
+  keywords: 割り勘、請求書の分割、共有の費用、レシートスキャナー、割り勘アプリ、グループ支出、旅行費のシェア、ルームメイトの支出、チェックの割り勘、Evnly

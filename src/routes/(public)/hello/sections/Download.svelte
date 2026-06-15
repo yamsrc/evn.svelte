@@ -4,6 +4,7 @@
   import { track } from '@/ga'
   import { Button } from '$ui/button'
   import { stores } from '$config/configuration'
+  import { dict } from '../intl'
 </script>
 
 <section class="max-w-7xl mx-auto relative">
@@ -19,25 +20,24 @@
         role="heading"
         aria-level="2"
         class="text-4xl md:text-6xl font-bold leading-tight text-white">
-        Download
+        {$dict.download.mobile.title1}
         <br />
-        the Mobile App
+        {$dict.download.mobile.title2}
       </div>
       <p class="text-balance">
-        Make sharing expenses feel effortless. Download Evnly and enjoy every moment without the
-        math.
+        {$dict.download.mobile.body}
       </p>
       <div class="flex flex-wrap gap-3 pt-2">
         <a
           href={stores.appStore}
           target="_blank"
           rel="noopener"
-          aria-label="Download on the App Store"
+          aria-label={$dict.download.mobile.appStoreAria}
           onclick={() => track('hello.cta', { name: 'app-store' })}>
           <img
             src="/assets/w_200/download-appstore_ie2u5h.webp"
             srcset="/assets/w_200/download-appstore_ie2u5h.webp 1x, /assets/w_400/download-appstore_ie2u5h.webp 2x"
-            alt="Download on the App Store"
+            alt={$dict.download.mobile.appStoreAlt}
             width="45"
             height="13"
             class="block h-12 lg:h-14 w-auto" />
@@ -46,12 +46,12 @@
           href={stores.googlePlay}
           target="_blank"
           rel="noopener"
-          aria-label="Get it on Google Play"
+          aria-label={$dict.download.mobile.googlePlayAria}
           onclick={() => track('hello.cta', { name: 'google-play' })}>
           <img
             src="/assets/w_200/download-googleplay_wubfdm.webp"
             srcset="/assets/w_200/download-googleplay_wubfdm.webp 1x, /assets/w_400/download-googleplay_wubfdm.webp 2x"
-            alt="Get it on Google Play"
+            alt={$dict.download.mobile.googlePlayAlt}
             width="45"
             height="13"
             class="block h-12 lg:h-14 w-auto" />
@@ -68,9 +68,9 @@
         role="heading"
         aria-level="2"
         class="text-4xl md:text-6xl font-bold leading-tight text-white">
-        Or use
+        {$dict.download.browser.title1}
         <br />
-        in the browser
+        {$dict.download.browser.title2}
       </div>
 
       <Button
