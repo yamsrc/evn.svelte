@@ -6,7 +6,7 @@ import { apple } from './channel/apple'
 import type { Channel } from './channel/Channel'
 
 export function channel(): Channel | null {
-  if (shell.available()) return bridge
+  if (features.apple && shell.available()) return bridge
 
   if (features.apple) return apple
 
