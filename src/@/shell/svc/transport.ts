@@ -59,12 +59,13 @@ export function available(): boolean {
   return typeof window !== 'undefined' && window.webkit?.messageHandlers?.shell != null
 }
 
-export function request(label: string, args?: unknown): Promise<unknown | Error> {
+export function request<T>(label: string, args?: unknown): Promise<T | Error> {
   return new Promise((resolve) => {
     call(label, args, (d) => {
       if (d.kind !== 'reply') return
 
-      resolve('error' in d ? new Error(`${d.error.kind}: ${d.error.message}`) : d.result)
+      // single IO boundary: the wire reply is `unknown`; facade labels its contract via T.
+      resolve('error' in d ? new Error(`${d.error.kind}: ${d.error.message}`) : (d.result as T))
     })
   })
 }
