@@ -1,7 +1,5 @@
 import { request, send } from './transport'
 
-// Raw StoreKit `Product.jsonRepresentation` shape — the bridge wire contract.
-// Mapped to the domain `Product` by the consuming channel (issue 03).
 export interface Product {
   id: string
   href: string
@@ -46,7 +44,9 @@ export interface Restore {
   transactions: string[]
 }
 
+/** StoreKit purchase operations exposed through the native shell bridge. */
 export const purchases = {
+  /** Whether in-app purchases are available on this device/account. */
   async available(): Promise<boolean | Error> {
     const r = await request<boolean>('purchases.available')
 
@@ -55,24 +55,39 @@ export const purchases = {
     return r === true
   },
 
+  /**
+   * Fetch product metadata for the given identifiers.
+   * @param ids App Store product identifiers
+   */
   products(ids: string[]): Promise<Product[] | Error> {
     return request<Product[]>('purchases.products', ids)
   },
 
+  /**
+   * Start a purchase flow for a product.
+   * @param productID App Store product identifier
+   * @param appAccountToken opaque token linking the transaction to the app account
+   */
   purchase(productID: string, appAccountToken: string): Promise<Purchase | Error> {
     return request<Purchase>('purchases.purchase', { productID, appAccountToken })
   },
 
+  /** Restore previously completed transactions for the current account. */
   restore(): Promise<Restore | Error> {
     return request<Restore>('purchases.restore')
   },
 
+  /** Open the native subscription management UI. */
   async manage(): Promise<void | Error> {
     const r = await request('purchases.manage')
 
     if (r instanceof Error) return r
   },
 
+  /**
+   * Mark a transaction as finished so StoreKit stops re-delivering it.
+   * @param transactionID StoreKit transaction identifier
+   */
   finish(transactionID: string): void {
     send('purchases.finish', { transactionID })
   },

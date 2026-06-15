@@ -1,6 +1,6 @@
 import { shell } from '@/shell'
 import { track } from '@/ga'
-import { report, restore as restoreReceipts } from '@/appstore'
+import { report, restore } from '@/appstore'
 import { convert, toUuid } from '$lib/tools'
 import { toProducts } from '../apple/map'
 import type { Apple, Product } from '../Channel'
@@ -67,7 +67,7 @@ export const bridge: Apple = {
 
     if (r instanceof Error) return r
 
-    const result = await restoreReceipts(r.transactions)
+    const result = await restore(r.transactions)
 
     if (result instanceof Error) return result
   },

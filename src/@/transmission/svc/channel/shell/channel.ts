@@ -3,30 +3,16 @@ import { mapPermission } from '../permission'
 import type { Channel } from '../Channel'
 import type { SubscribeInput } from '../../net'
 
-let initialized = false
-
-function init(): void {
-  if (initialized) return
-
-  initialized = true
-
-  shell.transmission.onNotificationClick((n) => {
-    if (n.action !== undefined && n.action !== '')
-      window.location.href = n.action
-  })
-
-  shell.transmission.onNotification((n) => {
-    console.debug('notification', n)
-  })
-}
-
 export const bridge: Channel = {
   name: 'fcm',
 
   async available(): Promise<boolean> {
     if (!shell.available()) return false
 
-    init()
+    shell.transmission.onNotificationClick((n) => {
+      if (n.action !== undefined && n.action !== '')
+        window.location.href = n.action
+    })
 
     return true
   },
