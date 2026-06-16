@@ -89,6 +89,16 @@ inputs:
     stripe_yearly:
       input: Subscription automatically renews for {price}/year unless canceled.
       context: auto-renewal disclosure (Stripe), function accepting price
+    google_account:
+      input: Payment will be charged to your Google Play account at confirmation of purchase.
+      context: subscription legal disclaimer
+    google_manage:
+      input: You can manage or cancel your subscription in your Google Play account settings.
+      context: subscription legal disclaimer
+    google_yearly:
+      input: "!js (price) => `Subscription automatically renews for ${price}/year unless canceled at least 24 hours before the end of the current period.`"
+    google_monthly:
+      input: "!js (price) => `Subscription automatically renews for ${price}/month unless canceled at least 24 hours before the end of the current period.`"
   restore:
     label:
       input: Restore purchases

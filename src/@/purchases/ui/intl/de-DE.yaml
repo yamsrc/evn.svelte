@@ -4,15 +4,8 @@ paywall:
     headline: Mit Abo wird’s erst richtig Evn!
     promo: Premium ist für kurze Zeit komplett kostenlos.
     cta: Kostenlose Testversion starten
-    disclaimer: >-
-      Kostenlose Testphase nur für berechtigte Erstabonnenten verfügbar. Um eine
-      Berechnung zu vermeiden, kündigen Sie mindestens 24 Stunden vor Ablauf der
-      Testphase. Nach der kostenlosen Testphase wird das Abonnement automatisch
-      verlängert, Kündigung jederzeit möglich.
-    footnote: >-
-      * Ein Premium-Nutzer aktiviert das Markieren von Gegenständen für alle
-      Teilnehmenden. In Abenteuern wird nur der Belegtext gespeichert (keine
-      visuelle Aufteilung).
+    disclaimer: Kostenlose Testphase nur für berechtigte Erstabonnenten verfügbar. Um eine Berechnung zu vermeiden, kündigen Sie mindestens 24 Stunden vor Ablauf der Testphase. Nach der kostenlosen Testphase wird das Abonnement automatisch verlängert, Kündigung jederzeit möglich.
+    footnote: "* Ein Premium-Nutzer aktiviert das Markieren von Gegenständen für alle Teilnehmenden. In Abenteuern wird nur der Belegtext gespeichert (keine visuelle Aufteilung)."
     buy: Evnly Premium kaufen
     trial:
       comment: |-
@@ -28,17 +21,11 @@ paywall:
   complete:
     thanks: Vielen Dank für dein Abonnement von Envly Premium
     avatarNote: Ab jetzt werden andere Evnly-Nutzer dein Avatar so sehen.
-    featuresNote: >-
-      Außerdem kannst du ab sofort die Oberfläche in deinem Profil noch weiter
-      anpassen, Belege scannen und erkennen sowie vieles mehr.
+    featuresNote: Außerdem kannst du ab sofort die Oberfläche in deinem Profil noch weiter anpassen, Belege scannen und erkennen sowie vieles mehr.
   free:
     cta: Premium genießen
   disclaimers:
-    apple: >-
-      Das kostenlose Probeabo gibt’s nur für berechtigte Erstabonnenten. Um eine
-      Abbuchung zu vermeiden, kündige mindestens 24 Stunden vor Ablauf des
-      Probezeitraums. Du kannst dein Abo in den Einstellungen deiner Apple-ID
-      verwalten oder kündigen.
+    apple: Das kostenlose Probeabo gibt’s nur für berechtigte Erstabonnenten. Um eine Abbuchung zu vermeiden, kündige mindestens 24 Stunden vor Ablauf des Probezeitraums. Du kannst dein Abo in den Einstellungen deiner Apple-ID verwalten oder kündigen.
 products:
   yearly:
     title: Jährlich
@@ -57,30 +44,28 @@ trial: |-
 disclaimers:
   trial: Das kostenlose Probeabo ist für berechtigte Erstabonnenten verfügbar.
   apple_account: Die Zahlung wird bei Kaufbestätigung deinem Apple-ID-Konto belastet.
-  apple_yearly: >-
+  apple_yearly: |-
     !js
-
-    (price) => `Dein Abo wird automatisch für ${price}/Jahr verlängert, wenn du
-    nicht spätestens 24 Stunden vor Ende der aktuellen Periode kündigst.`
-  apple_manage: >-
-    Du kannst dein Abo in den Einstellungen deiner Apple-ID verwalten oder
-    kündigen.
-  apple_monthly: >-
+    (price) => `Dein Abo wird automatisch für ${price}/Jahr verlängert, wenn du nicht spätestens 24 Stunden vor Ende der aktuellen Periode kündigst.`
+  apple_manage: Du kannst dein Abo in den Einstellungen deiner Apple-ID verwalten oder kündigen.
+  apple_monthly: |-
     !js
-
-    (price) => `Dein Abo wird automatisch für ${price}/Monat verlängert, sofern
-    du nicht mindestens 24 Stunden vor Ablauf des aktuellen Zeitraums kündigst.`
+    (price) => `Dein Abo wird automatisch für ${price}/Monat verlängert, sofern du nicht mindestens 24 Stunden vor Ablauf des aktuellen Zeitraums kündigst.`
   stripe_account: Du kannst jederzeit über die Kontoeinstellungen kündigen.
-  stripe_monthly: >-
+  stripe_monthly: |-
     !js
-
-    (price) => `Dein Abo verlängert sich automatisch für ${price}/Monat, außer
-    du kündigst.`
-  stripe_yearly: >-
+    (price) => `Dein Abo verlängert sich automatisch für ${price}/Monat, außer du kündigst.`
+  stripe_yearly: |-
     !js
-
-    (price) => `Das Abo verlängert sich automatisch für ${price} pro Jahr,
-    solange du nicht kündigst.`
+    (price) => `Das Abo verlängert sich automatisch für ${price} pro Jahr, solange du nicht kündigst.`
+  google_account: Die Zahlung wird bei Bestätigung des Kaufs von deinem Google Play-Konto abgebucht.
+  google_manage: Du kannst dein Abo in den Einstellungen deines Google Play-Kontos verwalten oder kündigen.
+  google_yearly: |-
+    !js
+    (price) => `Dein Abo verlängert sich automatisch für ${price}/Jahr, es sei denn, du kündigst mindestens 24 Stunden vor Ablauf des aktuellen Zeitraums.`
+  google_monthly: |-
+    !js
+    (price) => `Dein Abo verlängert sich automatisch für ${price}/Monat, sofern du nicht mindestens 24 Stunden vor Ablauf der aktuellen Periode kündigst.`
 restore:
   label: Käufe wiederherstellen
 subscription:

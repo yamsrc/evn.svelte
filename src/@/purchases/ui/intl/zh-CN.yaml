@@ -58,6 +58,14 @@ disclaimers:
   stripe_yearly: |-
     !js
     (price) => `订阅会自动续费，每年${price}，除非你取消。`
+  google_account: 确认购买后，付款将从你的 Google Play 账户扣除。
+  google_manage: 你可以在 Google Play 账户设置中管理或取消订阅。
+  google_yearly: |-
+    !js
+    (price) => `订阅会自动以${price}/年续订，除非你在当前周期结束前至少24小时取消。`
+  google_monthly: |-
+    !js
+    (price) => `订阅会自动以${price}/月续费，除非你在当前周期结束前至少24小时取消。`
 restore:
   label: 恢复购买
 subscription:
