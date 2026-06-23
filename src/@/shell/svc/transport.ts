@@ -17,13 +17,12 @@ function listen(): void {
     const key = d.kind === 'reply' ? d.id : d.label
     const cb = subs.get(key)
 
-    console.debug('shell ←', d)
-
     if (cb === undefined) {
-      console.debug('shell ← unmatched', key)
+      if (d.kind === 'reply')
+        console.debug('shell ← unmatched', d)
 
       return
-    }
+    } else console.debug('shell ←', d)
 
     if (d.kind === 'reply') subs.delete(key)
 
@@ -47,30 +46,16 @@ function publish(msg: { id: string, label: string, arguments?: unknown }): void 
   window.webkit?.messageHandlers?.shell?.postMessage(msg)
 }
 
-const TIMEOUT = 10_000
-
 /**
  * Send a request to the shell and await its reply via callback.
- * Resolves with a synthetic timeout error after {@link TIMEOUT}ms if no reply arrives.
  * @param label native method to invoke
  * @param args payload forwarded to the native side
- * @param cb invoked once with the reply (or timeout error)
+ * @param cb invoked once with the reply
  */
 export function call(label: string, args: unknown, cb: (d: Detail) => void): void {
   const id = crypto.randomUUID()
 
-  const timer = setTimeout(() => {
-    if (subs.delete(id)) {
-      console.debug('shell ✕ timeout', label, id)
-      cb({ kind: 'reply', id, error: { kind: label, message: 'timeout' } })
-    }
-  }, TIMEOUT)
-
-  on(id, (d) => {
-    clearTimeout(timer)
-    cb(d)
-  })
-
+  on(id, (d) => cb(d))
   publish({ id, label, arguments: args })
 }
 
@@ -96,7 +81,7 @@ export function available(): boolean {
  * @typeParam T expected result shape on success
  * @param label native method to invoke
  * @param args optional payload forwarded to the native side
- * @returns the typed result, or an `Error` on shell-side failure or timeout
+ * @returns the typed result, or an `Error` on shell-side failure
  */
 export function request<T>(label: string, args?: unknown): Promise<T | Error> {
   return new Promise((resolve) => {
