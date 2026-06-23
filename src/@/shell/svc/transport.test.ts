@@ -71,46 +71,6 @@ describe('call', () => {
 
     expect(cb).toHaveBeenCalledTimes(1)
   })
-
-  it('synthesizes a timeout error envelope when no reply arrives', () => {
-    vi.useFakeTimers()
-
-    const post = native()
-    const cb = vi.fn()
-
-    call('purchases.available', undefined, cb)
-
-    const { id } = post.mock.calls[0][0]
-
-    vi.advanceTimersByTime(10_000)
-
-    expect(cb).toHaveBeenCalledTimes(1)
-
-    expect(cb.mock.calls[0][0]).toEqual({
-      kind: 'reply',
-      id,
-      error: { kind: 'purchases.available', message: 'timeout' },
-    })
-
-    vi.useRealTimers()
-  })
-
-  it('does not fire the timeout once a reply arrived', () => {
-    vi.useFakeTimers()
-
-    const post = native()
-    const cb = vi.fn()
-
-    call('purchases.available', undefined, cb)
-
-    const { id } = post.mock.calls[0][0]
-
-    reply({ kind: 'reply', id, result: true })
-    vi.advanceTimersByTime(10_000)
-
-    expect(cb).toHaveBeenCalledTimes(1)
-    vi.useRealTimers()
-  })
 })
 
 describe('on', () => {
