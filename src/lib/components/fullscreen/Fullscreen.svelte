@@ -34,6 +34,13 @@
     hide()
   }
 
+  function onkeyactivate(e: KeyboardEvent) {
+    if (e.key !== 'Enter' && e.key !== ' ') return
+
+    e.preventDefault()
+    hide()
+  }
+
   function portal(node: HTMLElement) {
     document.body.appendChild(node)
 
@@ -49,14 +56,15 @@
   tabindex="0"
   data-overlay
   data-slot="fullscreen-container"
-  onpointerdown={fragile && !controlled ? hide : undefined}
+  onclick={fragile && !controlled ? hide : undefined}
+  onkeydown={fragile && !controlled ? onkeyactivate : undefined}
   class={[
     'fixed inset-0 z-1001 flex items-center justify-center bg-background/90',
     open || 'hidden',
   ]}
   style="view-transition-name: fullscreen;">
   {#if content}
-    {@render content()}
+    {@render content(open)}
   {:else}
     {@render children()}
   {/if}

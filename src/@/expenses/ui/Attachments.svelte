@@ -1,6 +1,7 @@
 <script lang="ts">
   import { Trash2 } from '@lucide/svelte'
   import { Picture } from '@/media/ui'
+  import { Zoom } from '$com/zoom'
   import { Fullscreen } from '$com/fullscreen'
   import { Hold } from '$com/buttons'
   import { dict } from './intl'
@@ -33,15 +34,14 @@
     {#each attachments as attachment (attachment)}
       <div class={['shrink-0 border h-full no-scrollbar']}>
         <Fullscreen class="h-[300px]" fragile onshow={() => onshow(attachment)} x={false}>
-          <Picture
-            id={attachment}
-            {path}
-            variant="300x600?"
-            class={['h-full object-contain rounded-md', editable && 'snap-center']}
-            style={`${zoomed === attachment ? `view-transition-name: attachment-${attachment};` : ''} view-transition-class: transition-spring transition-morph fullscreen-content;`} />
+          {@render picture(attachment)}
+          {#snippet content(open)}
+            <Zoom {open}>{@render picture(attachment)}</Zoom>
+          {/snippet}
           {#snippet overlay()}
             {#if editable}
-              <div class="px-5 pt-2 tim:pt-[env(safe-area-inset-top)] flex justify-end">
+              <div
+                class="px-5 pt-2 tim:pt-[env(safe-area-inset-top)] flex justify-end">
                 <Hold
                   label={$dict.actions.delete}
                   variant="outline"
@@ -59,3 +59,11 @@
     <div class="w-2 shrink-0"></div>
   </div>
 </div>
+
+{#snippet picture(attachment: string)}
+  <Picture
+    id={attachment}
+    {path}
+    class={['h-full object-contain rounded-md', editable && 'snap-center']}
+    style={`${zoomed === attachment ? `view-transition-name: attachment-${attachment};` : ''} view-transition-class: transition-spring transition-morph fullscreen-content;`} />
+{/snippet}
