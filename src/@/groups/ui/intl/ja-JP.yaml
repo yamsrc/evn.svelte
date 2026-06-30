@@ -10,7 +10,9 @@ balance: あなたの残高
 cover: カバー写真
 details:
   total: 合計支出
-  paid: あなたが支払いました
+  paid: |-
+    !js
+    (gender) => "支払い済み"
 editor:
   settings: 設定
 selector:

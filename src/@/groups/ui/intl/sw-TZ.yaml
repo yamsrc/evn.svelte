@@ -12,7 +12,9 @@ balance: Salio lako
 cover: Picha ya jalada
 details:
   total: Jumla iliyotumika
-  paid: Umelipa
+  paid: |-
+    !js
+    (gender) => "Umelipa"
 editor:
   settings: Mipangilio
 selector:

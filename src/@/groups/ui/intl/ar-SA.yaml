@@ -11,7 +11,11 @@ balance: رصيدك
 cover: صورة الغلاف
 details:
   total: إجمالي المصروف
-  paid: لقد دفعت
+  paid: >-
+    !js
+
+    (gender) => gender === "he" ? "لقد دفعت" : gender === "she" ? "لقد دفعتي" :
+    "تم الدفع"
 editor:
   settings: الإعدادات
 selector:

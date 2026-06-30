@@ -9,7 +9,9 @@ balance: 你的余额
 cover: 封面照片
 details:
   total: 总支出
-  paid: 你已付款
+  paid: |-
+    !js
+    (gender) => "你已支付"
 editor:
   settings: 设置
 selector:

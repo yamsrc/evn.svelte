@@ -12,7 +12,11 @@ balance: Ваш баланс
 cover: Обкладинка
 details:
   total: Всього витрачено
-  paid: Ти заплатив(ла)
+  paid: >-
+    !js
+
+    (gender) => gender === "he" ? "Ти заплатив" : gender === "she" ? "Ти
+    заплатила" : "Ти заплатив(ла)"
 editor:
   settings: Налаштування
 selector:

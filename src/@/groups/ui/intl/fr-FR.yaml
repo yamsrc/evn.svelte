@@ -12,7 +12,11 @@ balance: Votre solde
 cover: Photo de couverture
 details:
   total: Total dépensé
-  paid: Tu as payé
+  paid: >-
+    !js
+
+    (gender) => gender === "he" ? "Tu as payé" : gender === "she" ? "Tu as payé"
+    : "Tu as payé"
 editor:
   settings: Paramètres
 selector:

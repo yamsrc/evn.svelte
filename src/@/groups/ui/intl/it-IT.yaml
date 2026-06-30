@@ -12,7 +12,11 @@ balance: Il tuo saldo
 cover: Foto di copertina
 details:
   total: Totale speso
-  paid: Hai pagato
+  paid: >-
+    !js
+
+    (gender) => gender === "he" ? "Hai pagato" : gender === "she" ? "Hai pagato"
+    : "Hai pagato"
 editor:
   settings: Impostazioni
 selector:

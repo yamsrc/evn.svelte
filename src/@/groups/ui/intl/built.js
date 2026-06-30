@@ -17,7 +17,7 @@ export const dictionaries = {
     "cover": "صورة الغلاف",
     "details": {
       "total": "إجمالي المصروف",
-      "paid": "لقد دفعت"
+      "paid": (gender) => gender === "he" ? "لقد دفعت" : gender === "she" ? "لقد دفعتي" : "تم الدفع"
     },
     "editor": {
       "settings": "الإعدادات"
@@ -45,7 +45,7 @@ export const dictionaries = {
     "cover": "Titelbild",
     "details": {
       "total": "Insgesamt ausgegeben",
-      "paid": "Du hast bezahlt"
+      "paid": (gender) => gender === "he" ? "Du hast bezahlt" : gender === "she" ? "Du hast bezahlt" : "Du hast bezahlt"
     },
     "editor": {
       "settings": "Einstellungen"
@@ -73,7 +73,7 @@ export const dictionaries = {
     "cover": "Cover Photo",
     "details": {
       "total": "Total spent",
-      "paid": "You’ve paid"
+      "paid": (gender) => gender === "he" ? "You’ve paid" : gender === "she" ? "You’ve paid" : "You’ve paid"
     },
     "editor": {
       "settings": "Settings"
@@ -101,7 +101,7 @@ export const dictionaries = {
     "cover": "Foto de portada",
     "details": {
       "total": "Total gastado",
-      "paid": "Has pagado"
+      "paid": (gender) => gender === "he" ? "Has pagado" : gender === "she" ? "Has pagado" : "Has pagado"
     },
     "editor": {
       "settings": "Configuración"
@@ -129,7 +129,7 @@ export const dictionaries = {
     "cover": "Photo de couverture",
     "details": {
       "total": "Total dépensé",
-      "paid": "Tu as payé"
+      "paid": (gender) => gender === "he" ? "Tu as payé" : gender === "she" ? "Tu as payé" : "Tu as payé"
     },
     "editor": {
       "settings": "Paramètres"
@@ -157,7 +157,7 @@ export const dictionaries = {
     "cover": "कवर फोटो",
     "details": {
       "total": "कुल खर्च",
-      "paid": "तुमने भुगतान किया है"
+      "paid": (gender) => gender === "he" ? "तुमने भुगतान किया" : gender === "she" ? "तुमने भुगतान की" : "भुगतान किया"
     },
     "editor": {
       "settings": "सेटिंग्स"
@@ -185,7 +185,7 @@ export const dictionaries = {
     "cover": "Foto di copertina",
     "details": {
       "total": "Totale speso",
-      "paid": "Hai pagato"
+      "paid": (gender) => gender === "he" ? "Hai pagato" : gender === "she" ? "Hai pagato" : "Hai pagato"
     },
     "editor": {
       "settings": "Impostazioni"
@@ -213,7 +213,7 @@ export const dictionaries = {
     "cover": "カバー写真",
     "details": {
       "total": "合計支出",
-      "paid": "あなたが支払いました"
+      "paid": (gender) => "支払い済み"
     },
     "editor": {
       "settings": "設定"
@@ -241,7 +241,7 @@ export const dictionaries = {
     "cover": "커버 사진",
     "details": {
       "total": "총 지출",
-      "paid": "네가 결제함"
+      "paid": (gender) => "결제함"
     },
     "editor": {
       "settings": "설정"
@@ -269,7 +269,7 @@ export const dictionaries = {
     "cover": "Omslagfoto",
     "details": {
       "total": "Totaal uitgegeven",
-      "paid": "Je hebt betaald"
+      "paid": (gender) => "Je hebt betaald"
     },
     "editor": {
       "settings": "Instellingen"
@@ -297,7 +297,7 @@ export const dictionaries = {
     "cover": "Обложка",
     "details": {
       "total": "Всего потрачено",
-      "paid": "Ты заплатил(а)"
+      "paid": (gender) => gender === "he" ? "Ты заплатил" : gender === "she" ? "Ты заплатила" : "Ты заплатил(а)"
     },
     "editor": {
       "settings": "Настройки"
@@ -325,7 +325,7 @@ export const dictionaries = {
     "cover": "Picha ya jalada",
     "details": {
       "total": "Jumla iliyotumika",
-      "paid": "Umelipa"
+      "paid": (gender) => "Umelipa"
     },
     "editor": {
       "settings": "Mipangilio"
@@ -353,7 +353,7 @@ export const dictionaries = {
     "cover": "Kapak fotoğrafı",
     "details": {
       "total": "Toplam harcanan",
-      "paid": "Sen ödedin"
+      "paid": (gender) => "Ödedin"
     },
     "editor": {
       "settings": "Ayarlar"
@@ -381,7 +381,7 @@ export const dictionaries = {
     "cover": "Обкладинка",
     "details": {
       "total": "Всього витрачено",
-      "paid": "Ти заплатив(ла)"
+      "paid": (gender) => gender === "he" ? "Ти заплатив" : gender === "she" ? "Ти заплатила" : "Ти заплатив(ла)"
     },
     "editor": {
       "settings": "Налаштування"
@@ -409,7 +409,7 @@ export const dictionaries = {
     "cover": "封面照片",
     "details": {
       "total": "总支出",
-      "paid": "你已付款"
+      "paid": (gender) => "你已支付"
     },
     "editor": {
       "settings": "设置"
