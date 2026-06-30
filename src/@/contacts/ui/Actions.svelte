@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { writable } from 'svelte/store'
   import { ensure } from 'svas'
   import { Component, UserPlus } from '@lucide/svelte'
   import { account } from '@/iam'
@@ -12,6 +13,7 @@
 
   const variant = [Dropdown.itemVariants({ direction: 'row' }), 'whitespace-nowrap']
 
+  const active = writable(false)
   let dropdown = $state<Dropdown.Root | undefined>()
 
   function data(close = true) {
@@ -28,11 +30,11 @@
   }
 </script>
 
-<Actions>
+<Actions {active}>
   <Action id="nav-action-group" href="./groups/editor/" variant="secondary">
     <Component />
   </Action>
-  <Dropdown.Root bind:this={dropdown}>
+  <Dropdown.Root bind:this={dropdown} onopen={(o) => active.set(o)}>
     <Dropdown.Trigger id="contacts-actions-contact" class={[actionVariants(), 'rounded-s-none']}>
       <UserPlus />
     </Dropdown.Trigger>
