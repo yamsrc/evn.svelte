@@ -1,6 +1,6 @@
 <script lang="ts">
   import { UserPlus } from '@lucide/svelte'
-  import { add } from '@/receipts/svc/add'
+  import { add } from '@/receipts'
   import { Participants, actionVariants } from '@/app/ui'
   import { transit } from '$lib/tools'
   import { Actions } from '$com/shell'
@@ -15,8 +15,7 @@
   }
 
   function ondone() {
-    if (actor !== account.id)
-      transit(() => (actor = account.id))
+    if (actor !== account.id) transit(() => (actor = account.id))
   }
 </script>
 
