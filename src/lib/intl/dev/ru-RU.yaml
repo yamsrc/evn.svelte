@@ -42,6 +42,8 @@ components:
     title: Приглашения
   purchase:
     title: Покупка
+  codes:
+    title: Codes
 transmission:
   title: Transmission
   permission:

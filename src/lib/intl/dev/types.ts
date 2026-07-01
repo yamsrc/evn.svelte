@@ -60,6 +60,9 @@ export type Dictionary = {
         purchase: {
           title: string
         }
+        codes: {
+          title: string
+        }
       }
       transmission: {
         title: string

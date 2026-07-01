@@ -17,7 +17,7 @@ export function createContext(value?: Partial<Value>): Context {
 
   return {
     value: created,
-    mode: 'sums',
+    mode: value?.mode === 'shares' ? 'shares' : 'sums',
     snapshot: JSON.stringify(created),
   }
 }
@@ -94,6 +94,7 @@ export interface Value {
   links?: Link[]
   template?: boolean
   copied?: string
+  mode?: 'sums' | 'shares'
 }
 
 export interface Participant {

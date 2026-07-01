@@ -3,7 +3,8 @@ import type { Snippet } from 'svelte'
 
 export interface Props {
   children: Snippet
-  content?: Snippet
+  /** Fullscreen-only content (not rendered in the trigger). Receives `open`. */
+  content?: Snippet<[open: boolean]>
   overlay?: Snippet
   open?: boolean
   onshow?: () => void

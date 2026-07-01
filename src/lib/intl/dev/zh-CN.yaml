@@ -42,6 +42,8 @@ components:
     title: 邀请
   purchase:
     title: 购买
+  codes:
+    title: Codes
 transmission:
   title: Transmission
   permission:

@@ -1,0 +1,1 @@
+export { bridge } from './channel'

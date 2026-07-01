@@ -4,6 +4,7 @@ export interface Template {
   title: string
   location?: string
   participants: Participants
+  mode?: 'sums' | 'shares'
   links?: Link[]
   _version: number
   _deleted?: number | null

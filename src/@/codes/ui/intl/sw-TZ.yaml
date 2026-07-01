@@ -1,0 +1,12 @@
+promo:
+  label: Nambari ya promo
+apply:
+  submit: Tumia
+create:
+  interval: Kipindi
+  submit: Tengeneza
+  intervals:
+    P1M: Mwezi 1
+    P3M: miezi 3
+    P6M: Miezi 6
+    P1Y: mwaka 1

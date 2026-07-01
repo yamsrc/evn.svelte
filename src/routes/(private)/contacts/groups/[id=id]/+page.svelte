@@ -1,15 +1,18 @@
 <script lang="ts">
   import { Async, ok } from 'svas'
   import { Settings } from '@lucide/svelte'
+  import { Scan } from '@/receipts/ui'
+  import { add } from '@/receipts'
   import { Looking } from '@/notifications/ui'
   import { account } from '@/iam'
   import { Details } from '@/groups/ui'
   import { groups } from '@/groups'
   import { CreateAction } from '@/expenses/ui'
   import { expenses, numbers, type Expense } from '@/expenses'
-  import { Header, Section } from '@/app/ui'
+  import { Header, Section, actionVariants } from '@/app/ui'
   import { Actions } from '$com/shell'
   import { page } from '$app/state'
+  import { goto } from '$app/navigation'
 
   const id = $derived(page.params.id) as string
 
@@ -27,6 +30,17 @@
       (sum, expense) => sum + (expense.participants[$account?.id ?? '']?.paid ?? 0),
       0,
     )
+  }
+
+  let splitting = false
+
+  async function split(receipt: string, identities: string[]) {
+    if (splitting) return
+
+    splitting = true
+
+    await add(receipt, identities, id)
+    goto(`/receipts/${receipt}/`)
   }
 </script>
 
@@ -78,7 +92,10 @@
             </Section>
 
             <Actions>
-              <CreateAction value={{ links: [{ type: 'group', id }] }} />
+              <CreateAction value={{ links: [{ type: 'group', id }] }} variant="secondary" />
+              <Scan
+                class={[actionVariants(), 'rounded-s-none']}
+                oncomplete={(receipt) => split(receipt, group.identities)} />
             </Actions>
           {/snippet}
         </Async>

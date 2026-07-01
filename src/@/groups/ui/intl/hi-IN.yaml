@@ -12,7 +12,11 @@ balance: आपकी शेष राशि
 cover: कवर फोटो
 details:
   total: कुल खर्च
-  paid: तुमने भुगतान किया है
+  paid: >-
+    !js
+
+    (gender) => gender === "he" ? "तुमने भुगतान किया" : gender === "she" ?
+    "तुमने भुगतान की" : "भुगतान किया"
 editor:
   settings: सेटिंग्स
 selector:

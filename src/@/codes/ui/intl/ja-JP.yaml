@@ -1,0 +1,12 @@
+promo:
+  label: プロモコード
+apply:
+  submit: 利用する
+create:
+  interval: 間隔
+  submit: 作成
+  intervals:
+    P1M: 1か月
+    P3M: 3か月
+    P6M: 6か月
+    P1Y: 1年

@@ -57,6 +57,9 @@ export const dictionaries = {
       },
       "purchase": {
         "title": "عملية شراء"
+      },
+      "codes": {
+        "title": "Codes"
       }
     },
     "transmission": {
@@ -145,6 +148,9 @@ export const dictionaries = {
       },
       "purchase": {
         "title": "Ausgabe"
+      },
+      "codes": {
+        "title": "Codes"
       }
     },
     "transmission": {
@@ -233,6 +239,9 @@ export const dictionaries = {
       },
       "purchase": {
         "title": "Purchase"
+      },
+      "codes": {
+        "title": "Codes"
       }
     },
     "transmission": {
@@ -321,6 +330,9 @@ export const dictionaries = {
       },
       "purchase": {
         "title": "Compra"
+      },
+      "codes": {
+        "title": "Codes"
       }
     },
     "transmission": {
@@ -409,6 +421,9 @@ export const dictionaries = {
       },
       "purchase": {
         "title": "Achat"
+      },
+      "codes": {
+        "title": "Codes"
       }
     },
     "transmission": {
@@ -497,6 +512,9 @@ export const dictionaries = {
       },
       "purchase": {
         "title": "खरीदारी"
+      },
+      "codes": {
+        "title": "Codes"
       }
     },
     "transmission": {
@@ -585,6 +603,9 @@ export const dictionaries = {
       },
       "purchase": {
         "title": "Acquisto"
+      },
+      "codes": {
+        "title": "Codes"
       }
     },
     "transmission": {
@@ -673,6 +694,9 @@ export const dictionaries = {
       },
       "purchase": {
         "title": "購入"
+      },
+      "codes": {
+        "title": "Codes"
       }
     },
     "transmission": {
@@ -761,6 +785,9 @@ export const dictionaries = {
       },
       "purchase": {
         "title": "구매"
+      },
+      "codes": {
+        "title": "Codes"
       }
     },
     "transmission": {
@@ -849,6 +876,9 @@ export const dictionaries = {
       },
       "purchase": {
         "title": "Aankoop"
+      },
+      "codes": {
+        "title": "Codes"
       }
     },
     "transmission": {
@@ -937,6 +967,9 @@ export const dictionaries = {
       },
       "purchase": {
         "title": "Покупка"
+      },
+      "codes": {
+        "title": "Codes"
       }
     },
     "transmission": {
@@ -1025,6 +1058,9 @@ export const dictionaries = {
       },
       "purchase": {
         "title": "Ununuzi"
+      },
+      "codes": {
+        "title": "Codes"
       }
     },
     "transmission": {
@@ -1113,6 +1149,9 @@ export const dictionaries = {
       },
       "purchase": {
         "title": "Alışveriş"
+      },
+      "codes": {
+        "title": "Codes"
       }
     },
     "transmission": {
@@ -1201,6 +1240,9 @@ export const dictionaries = {
       },
       "purchase": {
         "title": "Покупка"
+      },
+      "codes": {
+        "title": "Codes"
       }
     },
     "transmission": {
@@ -1289,6 +1331,9 @@ export const dictionaries = {
       },
       "purchase": {
         "title": "购买"
+      },
+      "codes": {
+        "title": "Codes"
       }
     },
     "transmission": {

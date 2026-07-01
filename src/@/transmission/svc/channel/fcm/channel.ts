@@ -1,5 +1,6 @@
 import { having, once, value } from 'svas'
 import { cap } from '$lib/tools'
+import { mapPermission } from '../permission'
 import type { Notification } from '@/transmission'
 import type { Channel } from '../Channel'
 import type { SubscribeInput } from '../../net'
@@ -9,9 +10,6 @@ const TIMEOUT = 5000
 type Handler = 'push-subscribe' | 'push-permission-state' | 'push-permission-request' | 'push-token' | 'push-token-delete'
 type Handlers = Pick<WebkitMessageHandlers, Handler>
 type Message<H extends Handler> = Parameters<NonNullable<Handlers[H]>['postMessage']>[0]
-
-const mapPermission = (s: string): NotificationPermission =>
-  s === 'authorized' ? 'granted' : s === 'notDetermined' ? 'default' : 'denied'
 
 const permission = value<NotificationPermission>()
 const token = value<string | null>()

@@ -42,6 +42,8 @@ components:
     title: الدعوات
   purchase:
     title: عملية شراء
+  codes:
+    title: Codes
 transmission:
   title: Transmission
   permission:

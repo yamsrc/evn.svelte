@@ -13,6 +13,7 @@ export interface Post extends Editable {
   participants: Expense['participants']
   links?: Expense['links']
   template?: boolean
+  mode?: 'sums' | 'shares'
 }
 
 export async function post(identity: string, body: Post): Promise<Expense | Error> {

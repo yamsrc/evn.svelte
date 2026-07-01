@@ -38,5 +38,8 @@
     <li>
       <a href="purchase/">{$dict.components.purchase.title}</a>
     </li>
+    <li>
+      <a href="codes/">{$dict.components.codes.title}</a>
+    </li>
   </ul>
 </Section>

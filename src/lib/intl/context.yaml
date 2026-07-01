@@ -349,3 +349,4 @@ mounts:
   purchases: ../../@/purchases/ui/intl
   templates: ../../@/expenses.templates/ui/intl
   hello: ../../routes/(public)/hello/intl
+  codes: ../../@/codes/ui/intl

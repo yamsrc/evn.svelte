@@ -40,7 +40,7 @@ export function currency(amount: number, locale: Locale, currency?: string): str
  * @returns Number value (e.g., 100 for $1.00, 10000 for ¥100)
  */
 export function unit(amount: number, locale: Locale, currency?: string): number {
-  if (currency === undefined) return amount * 100
+  if (currency === undefined) return Math.round(amount * 100)
 
   const tempFormatter = new Intl.NumberFormat(locale, {
     style: 'currency',
@@ -51,5 +51,5 @@ export function unit(amount: number, locale: Locale, currency?: string): number 
   const decimalPlaces = options.minimumFractionDigits ?? 2
   const divisor = Math.pow(10, decimalPlaces)
 
-  return amount * divisor
+  return Math.round(amount * divisor)
 }

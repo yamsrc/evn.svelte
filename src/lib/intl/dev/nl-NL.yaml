@@ -42,6 +42,8 @@ components:
     title: Uitnodigingen
   purchase:
     title: Aankoop
+  codes:
+    title: Codes
 transmission:
   title: Transmission
   permission:

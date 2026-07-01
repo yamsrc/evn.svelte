@@ -19,7 +19,7 @@ export type Dictionary = {
       cover: string
       details: {
         total: string
-        paid: string
+        paid: (value: any) => string
       }
       editor: {
         settings: string

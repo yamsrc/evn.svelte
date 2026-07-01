@@ -1,0 +1,12 @@
+promo:
+  label: Promosyon kodu
+apply:
+  submit: Kullan
+create:
+  interval: Aralık
+  submit: Oluştur
+  intervals:
+    P1M: 1 ay
+    P3M: 3 ay
+    P6M: 6 ay
+    P1Y: 1 yıl

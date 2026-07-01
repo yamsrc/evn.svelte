@@ -1,0 +1,12 @@
+promo:
+  label: رمز ترويجي
+apply:
+  submit: استبدال
+create:
+  interval: الفترة
+  submit: إنشاء
+  intervals:
+    P1M: شهر واحد
+    P3M: ٣ أشهر
+    P6M: 6 أشهر
+    P1Y: سنة واحدة

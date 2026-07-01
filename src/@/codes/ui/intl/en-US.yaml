@@ -1,0 +1,12 @@
+promo:
+  label: Promo code
+apply:
+  submit: Redeem
+create:
+  interval: Interval
+  submit: Create
+  intervals:
+    P1M: 1 month
+    P3M: 3 months
+    P6M: 6 months
+    P1Y: 1 year

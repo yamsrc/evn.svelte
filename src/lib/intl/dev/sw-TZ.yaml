@@ -42,6 +42,8 @@ components:
     title: Mialiko
   purchase:
     title: Ununuzi
+  codes:
+    title: Codes
 transmission:
   title: Transmission
   permission:

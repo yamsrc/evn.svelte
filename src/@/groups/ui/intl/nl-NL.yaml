@@ -12,7 +12,9 @@ balance: Jouw saldo
 cover: Omslagfoto
 details:
   total: Totaal uitgegeven
-  paid: Je hebt betaald
+  paid: |-
+    !js
+    (gender) => "Je hebt betaald"
 editor:
   settings: Instellingen
 selector:

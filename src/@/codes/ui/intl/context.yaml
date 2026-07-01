@@ -1,0 +1,30 @@
+context: Mount 'codes' context
+inputs:
+  promo:
+    label:
+      input: Promo code
+      context: button label opening the promo code input on profile
+  apply:
+    submit:
+      input: Claim
+      context: button label to redeem a promo code
+  create:
+    interval:
+      input: Interval
+      context: form field label for subscription duration
+    submit:
+      input: Create
+      context: button label to generate a promo code
+    intervals:
+      P1M:
+        input: 1 month
+        context: subscription duration option
+      P3M:
+        input: 3 months
+        context: subscription duration option
+      P6M:
+        input: 6 months
+        context: subscription duration option
+      P1Y:
+        input: 1 year
+        context: subscription duration option

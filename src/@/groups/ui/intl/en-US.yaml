@@ -12,7 +12,11 @@ balance: Your balance
 cover: Cover Photo
 details:
   total: Total spent
-  paid: You’ve paid
+  paid: >-
+    !js
+
+    (gender) => gender === "he" ? "You’ve paid" : gender === "she" ? "You’ve
+    paid" : "You’ve paid"
 editor:
   settings: Settings
 selector:

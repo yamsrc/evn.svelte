@@ -42,6 +42,8 @@ components:
     title: 초대장
   purchase:
     title: 구매
+  codes:
+    title: Codes
 transmission:
   title: Transmission
   permission:
