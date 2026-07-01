@@ -52,7 +52,11 @@
 
     if (creating || modified) {
       const { total: _, ...rest } = value // :(
-      const expense = id === undefined ? await add(rest) : await update(id, rest)
+
+      const expense =
+        id === undefined
+          ? await add(mode === 'shares' ? { ...rest, mode } : rest)
+          : await update(id, rest)
 
       if (expense instanceof Error) return expense
     }
