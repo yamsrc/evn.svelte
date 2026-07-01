@@ -1,0 +1,12 @@
+promo:
+  label: Промокод
+apply:
+  submit: Активировать
+create:
+  interval: Интервал
+  submit: Создать
+  intervals:
+    P1M: 1 месяц
+    P3M: 3 месяца
+    P6M: 6 месяцев
+    P1Y: 1 год

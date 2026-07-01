@@ -1,0 +1,12 @@
+promo:
+  label: 프로모션 코드
+apply:
+  submit: 사용하기
+create:
+  interval: 간격
+  submit: 생성
+  intervals:
+    P1M: 1개월
+    P3M: 3개월
+    P6M: 6개월
+    P1Y: 1년

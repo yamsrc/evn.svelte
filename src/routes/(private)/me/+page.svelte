@@ -5,6 +5,7 @@
   import { Subscription } from '@/purchases/ui'
   import { account, logout } from '@/iam'
   import { Feedback } from '@/feedback/ui'
+  import { Promo } from '@/codes/ui'
   import { Section, Update, Header, Wallpaper, Action } from '@/app/ui'
   import { updateAvailable } from '@/app'
   import { Cosmetics, Delete, Grammar, Language } from '@/accounts/ui'
@@ -95,6 +96,10 @@
 
   <Section class="flex justify-center">
     <Feedback />
+  </Section>
+
+  <Section class="flex justify-center">
+    <Promo />
   </Section>
 
   <Section class="space-y-2 mt-4">

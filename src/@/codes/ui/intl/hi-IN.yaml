@@ -1,0 +1,12 @@
+promo:
+  label: प्रोमो कोड
+apply:
+  submit: रिडीम करो
+create:
+  interval: अवधि
+  submit: बनाओ
+  intervals:
+    P1M: 1 महीना
+    P3M: 3 महीने
+    P6M: 6 महीने
+    P1Y: 1 साल

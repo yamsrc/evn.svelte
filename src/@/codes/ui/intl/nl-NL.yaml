@@ -1,0 +1,12 @@
+promo:
+  label: Promocode
+apply:
+  submit: Inwisselen
+create:
+  interval: Interval
+  submit: Aanmaken
+  intervals:
+    P1M: 1 maand
+    P3M: 3 maanden
+    P6M: 6 maanden
+    P1Y: 1 jaar

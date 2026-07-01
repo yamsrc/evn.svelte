@@ -1,0 +1,12 @@
+promo:
+  label: Código promocional
+apply:
+  submit: Canjear
+create:
+  interval: Intervalo
+  submit: Crear
+  intervals:
+    P1M: 1 mes
+    P3M: 3 meses
+    P6M: 6 meses
+    P1Y: 1 año

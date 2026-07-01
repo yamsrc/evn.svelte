@@ -42,6 +42,8 @@ components:
     title: Einladungen
   purchase:
     title: Ausgabe
+  codes:
+    title: Codes
 transmission:
   title: Transmission
   permission:

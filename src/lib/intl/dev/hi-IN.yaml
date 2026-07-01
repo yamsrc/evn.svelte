@@ -42,6 +42,8 @@ components:
     title: निमंत्रण
   purchase:
     title: खरीदारी
+  codes:
+    title: Codes
 transmission:
   title: Transmission
   permission:

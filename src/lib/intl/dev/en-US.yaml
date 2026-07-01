@@ -42,6 +42,8 @@ components:
     title: Invitations
   purchase:
     title: Purchase
+  codes:
+    title: Codes
 transmission:
   title: Transmission
   permission:

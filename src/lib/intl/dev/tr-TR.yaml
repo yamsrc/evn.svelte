@@ -42,6 +42,8 @@ components:
     title: Davetiyeler
   purchase:
     title: Alışveriş
+  codes:
+    title: Codes
 transmission:
   title: Transmission
   permission:

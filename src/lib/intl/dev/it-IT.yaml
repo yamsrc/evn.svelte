@@ -42,6 +42,8 @@ components:
     title: Inviti
   purchase:
     title: Acquisto
+  codes:
+    title: Codes
 transmission:
   title: Transmission
   permission:

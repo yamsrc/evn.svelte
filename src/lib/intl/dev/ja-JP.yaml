@@ -42,6 +42,8 @@ components:
     title: 招待
   purchase:
     title: 購入
+  codes:
+    title: Codes
 transmission:
   title: Transmission
   permission:
