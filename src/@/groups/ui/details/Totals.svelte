@@ -1,6 +1,7 @@
 <script lang="ts">
   import { Coins } from '@/app/ui'
   import * as Card from '$ui/card'
+  import { grammar } from '$lib/intl'
   import { dict } from '../intl'
 
   interface Props {
@@ -26,7 +27,7 @@
   <Card.Root class="px-4 py-3 gap-0 justify-between">
     <Card.Header class="p-0">
       <Card.Title class="text-sm text-muted-foreground">
-        {$dict.details.paid}
+        {$dict.details.paid($grammar)}
       </Card.Title>
     </Card.Header>
     <Card.Content class="p-0">

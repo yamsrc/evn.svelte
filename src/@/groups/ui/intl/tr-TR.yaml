@@ -12,7 +12,9 @@ balance: Bakiyeniz
 cover: Kapak fotoğrafı
 details:
   total: Toplam harcanan
-  paid: Sen ödedin
+  paid: |-
+    !js
+    (gender) => "Ödedin"
 editor:
   settings: Ayarlar
 selector:

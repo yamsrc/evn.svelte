@@ -12,7 +12,11 @@ balance: Dein Kontostand
 cover: Titelbild
 details:
   total: Insgesamt ausgegeben
-  paid: Du hast bezahlt
+  paid: >-
+    !js
+
+    (gender) => gender === "he" ? "Du hast bezahlt" : gender === "she" ? "Du
+    hast bezahlt" : "Du hast bezahlt"
 editor:
   settings: Einstellungen
 selector:
