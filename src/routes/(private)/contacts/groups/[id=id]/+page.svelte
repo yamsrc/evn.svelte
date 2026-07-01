@@ -92,7 +92,7 @@
             </Section>
 
             <Actions>
-              <CreateAction value={{ links: [{ type: 'group', id }] }} />
+              <CreateAction value={{ links: [{ type: 'group', id }] }} variant="secondary" />
               <Scan
                 class={[actionVariants(), 'rounded-s-none']}
                 oncomplete={(receipt) => split(receipt, group.identities)} />
