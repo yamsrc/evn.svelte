@@ -1,4 +1,5 @@
 export * from './store'
+export { add } from './add'
 export { upload, type Progress, type Created } from './upload'
 export { claim } from './claim'
 export { assign } from './assign'
