@@ -53,7 +53,7 @@
   const style = styles('receipt', 'transition-spring transition-morph fullscreen-content')
 </script>
 
-<div>
+<div class="contents">
   <input bind:this={input} type="file" class="sr-only" {oninput} accept="image/*" />
 
   <Fullscreen bind:this={fullscreen} bind:open controlled>
