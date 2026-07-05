@@ -1,6 +1,5 @@
-const base = 'https://res.cloudinary.com/dl5z4zgth/image/upload'
-const version = 'v1775485895'
+const base = 'https://pic.evnly.com'
 
 export function cloudinary(transformations: string, file: string): string {
-  return `${base}/${transformations}/${version}/${file}`
+  return `${base}/${transformations}/${file}`
 }
