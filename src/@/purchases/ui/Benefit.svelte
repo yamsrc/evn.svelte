@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { cloudinary } from '@/media/ui'
   import * as Card from '$ui/card'
   import type { Props } from './Benefit'
 
@@ -10,8 +11,8 @@
     <img
       class="size-full object-cover aspect-[1.4]"
       alt={benefit.title}
-      src={`/assets/w_630,h_450/${benefit.picture}.webp`}
-      srcset={`/assets/w_630,h_450/${benefit.picture}.webp 1x, /assets/w_1260,h_900/${benefit.picture}.webp 2x`} />
+      src={cloudinary('w_630,h_450', `${benefit.picture}.webp`)}
+      srcset={`${cloudinary('w_630,h_450', `${benefit.picture}.webp`)} 1x, ${cloudinary('w_1260,h_900', `${benefit.picture}.webp`)} 2x`} />
   </Card.Header>
   <Card.Content>
     <Card.Title class="text-2xl">{benefit.title}</Card.Title>

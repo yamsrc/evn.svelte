@@ -2,6 +2,7 @@
   import Users from '@lucide/svelte/icons/users'
   import UserPlus from '@lucide/svelte/icons/user-plus'
   import Briefcase from '@lucide/svelte/icons/briefcase'
+  import { cloudinary } from '@/media/ui'
   import { track, type HelloCta } from '@/ga'
   import { dict } from '../intl'
 
@@ -62,8 +63,8 @@
       <li class="grid grid-cols-1 md:grid-cols-2 gap-4 *:min-h-0">
         <div class={['rounded-3xl aspect-square p-6 lg:p-8', bg]}>
           <img
-            src={`/assets/w_600/${id}.webp`}
-            srcset={`/assets/w_600/${id}.webp 1x, /assets/w_1200/${id}.webp 2x`}
+            src={cloudinary('w_600', `${id}.webp`)}
+            srcset={`${cloudinary('w_600', `${id}.webp`)} 1x, ${cloudinary('w_1200', `${id}.webp`)} 2x`}
             alt=""
             aria-hidden="true"
             width="600"

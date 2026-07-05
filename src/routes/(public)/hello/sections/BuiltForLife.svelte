@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { cloudinary } from '@/media/ui'
   import { dict } from '../intl'
 
   const tagKeys = ['dinners', 'travel', 'apartments', 'nights', 'other'] as const
@@ -27,15 +28,15 @@
 
   <div class="relative mx-auto w-[140%] max-w-none md:w-full md:max-w-4xl">
     <img
-      src="/assets/w_1100/share-background_fpilp3.webp"
-      srcset="/assets/w_1100/share-background_fpilp3.webp 1x, /assets/w_2200/share-background_fpilp3.webp 2x"
+      src={cloudinary('w_1100', 'share-background_fpilp3.webp')}
+      srcset={`${cloudinary('w_1100', 'share-background_fpilp3.webp')} 1x, ${cloudinary('w_2200', 'share-background_fpilp3.webp')} 2x`}
       alt=""
       aria-hidden="true"
       class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] max-w-none h-auto pointer-events-none select-none"
     />
     <img
-      src="/assets/w_896/share-content_eag5jl.webp"
-      srcset="/assets/w_896/share-content_eag5jl.webp 1x, /assets/w_1792/share-content_eag5jl.webp 2x"
+      src={cloudinary('w_896', 'share-content_eag5jl.webp')}
+      srcset={`${cloudinary('w_896', 'share-content_eag5jl.webp')} 1x, ${cloudinary('w_1792', 'share-content_eag5jl.webp')} 2x`}
       alt={$dict.builtForLife.shareAlt}
       width="896"
       height="548"

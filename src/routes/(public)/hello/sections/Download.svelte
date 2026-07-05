@@ -1,6 +1,7 @@
 <script lang="ts">
   import Download from '@lucide/svelte/icons/download'
   import { ArrowRight, Globe } from '@lucide/svelte'
+  import { cloudinary } from '@/media/ui'
   import { track } from '@/ga'
   import { Button } from '$ui/button'
   import { stores } from '$config/configuration'
@@ -35,8 +36,8 @@
           aria-label={$dict.download.mobile.appStoreAria}
           onclick={() => track('hello.cta', { name: 'app-store' })}>
           <img
-            src="/assets/w_200/download-appstore_ie2u5h.webp"
-            srcset="/assets/w_200/download-appstore_ie2u5h.webp 1x, /assets/w_400/download-appstore_ie2u5h.webp 2x"
+            src={cloudinary('w_200', 'download-appstore_ie2u5h.webp')}
+            srcset={`${cloudinary('w_200', 'download-appstore_ie2u5h.webp')} 1x, ${cloudinary('w_400', 'download-appstore_ie2u5h.webp')} 2x`}
             alt={$dict.download.mobile.appStoreAlt}
             width="45"
             height="13"
@@ -49,8 +50,8 @@
           aria-label={$dict.download.mobile.googlePlayAria}
           onclick={() => track('hello.cta', { name: 'google-play' })}>
           <img
-            src="/assets/w_200/download-googleplay_wubfdm.webp"
-            srcset="/assets/w_200/download-googleplay_wubfdm.webp 1x, /assets/w_400/download-googleplay_wubfdm.webp 2x"
+            src={cloudinary('w_200', 'download-googleplay_wubfdm.webp')}
+            srcset={`${cloudinary('w_200', 'download-googleplay_wubfdm.webp')} 1x, ${cloudinary('w_400', 'download-googleplay_wubfdm.webp')} 2x`}
             alt={$dict.download.mobile.googlePlayAlt}
             width="45"
             height="13"
