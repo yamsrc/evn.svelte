@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { cloudinary } from '@/media/ui'
   import { imageSet } from '$lib/tools/image'
   import { grammar } from '$lib/intl'
   import { dict } from '../intl'
@@ -14,8 +15,8 @@
   )
 
   const quotes = imageSet({
-    '1x': '/assets/w_1200/reviews-quotes_zcdxaq.webp',
-    '2x': '/assets/w_2400/reviews-quotes_zcdxaq.webp',
+    '1x': cloudinary('w_1200', 'reviews-quotes_zcdxaq.webp'),
+    '2x': cloudinary('w_2400', 'reviews-quotes_zcdxaq.webp'),
   })
 </script>
 
@@ -40,8 +41,8 @@
         <div class="mt-auto flex items-center gap-4 pt-4">
           <div class="rounded-full border-2 border-primary p-1.5">
             <img
-              src={`/assets/w_64/${avatar}.webp`}
-              srcset={`/assets/w_64/${avatar}.webp 1x, /assets/w_128/${avatar}.webp 2x`}
+              src={cloudinary('w_64', `${avatar}.webp`)}
+              srcset={`${cloudinary('w_64', `${avatar}.webp`)} 1x, ${cloudinary('w_128', `${avatar}.webp`)} 2x`}
               alt=""
               aria-hidden="true"
               width="64"

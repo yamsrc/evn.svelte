@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { cloudinary } from '@/media/ui'
   import { dict } from '../intl'
 </script>
 
@@ -15,8 +16,8 @@
 
   <div class="relative mt-10 md:mt-12 mx-auto w-full max-w-3xl">
     <img
-      src="/assets/w_960/split-background_ffnpdz.webp"
-      srcset="/assets/w_960/split-background_ffnpdz.webp 1x, /assets/w_1920/split-background_ffnpdz.webp 2x"
+      src={cloudinary('w_960', 'split-background_ffnpdz.webp')}
+      srcset={`${cloudinary('w_960', 'split-background_ffnpdz.webp')} 1x, ${cloudinary('w_1920', 'split-background_ffnpdz.webp')} 2x`}
       alt=""
       aria-hidden="true"
       width="960"
@@ -24,8 +25,8 @@
       class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] max-w-none h-auto pointer-events-none select-none"
     />
     <img
-      src="/assets/w_768/split-preview_m6mdae.webp"
-      srcset="/assets/w_768/split-preview_m6mdae.webp 1x, /assets/w_1536/split-preview_m6mdae.webp 2x"
+      src={cloudinary('w_768', 'split-preview_m6mdae.webp')}
+      srcset={`${cloudinary('w_768', 'split-preview_m6mdae.webp')} 1x, ${cloudinary('w_1536', 'split-preview_m6mdae.webp')} 2x`}
       alt={$dict.split.previewAlt}
       width="768"
       height="597"

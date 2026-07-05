@@ -1,5 +1,6 @@
 <script lang="ts">
   import { ArrowRight } from '@lucide/svelte'
+  import { cloudinary } from '@/media/ui'
   import { track } from '@/ga'
   import { Button } from '$ui/button'
   import { dict } from '../intl'
@@ -39,8 +40,8 @@
     </Button>
 
     <img
-      src="/assets/w_1024/hero-preview_kbf2qa.webp"
-      srcset="/assets/w_1024/hero-preview_kbf2qa.webp 1x, /assets/w_2048/hero-preview_kbf2qa.webp 2x"
+      src={cloudinary('w_1024', 'hero-preview_kbf2qa.webp')}
+      srcset={`${cloudinary('w_1024', 'hero-preview_kbf2qa.webp')} 1x, ${cloudinary('w_2048', 'hero-preview_kbf2qa.webp')} 2x`}
       alt={$dict.hero.previewAlt}
       width="1024"
       height="553"

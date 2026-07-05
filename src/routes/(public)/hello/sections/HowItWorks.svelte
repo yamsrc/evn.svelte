@@ -3,6 +3,7 @@
   import ScanLine from '@lucide/svelte/icons/scan-line'
   import ListChecks from '@lucide/svelte/icons/list-checks'
   import BadgeCheck from '@lucide/svelte/icons/badge-check'
+  import { cloudinary } from '@/media/ui'
   import { imageSet } from '$lib/tools/image'
   import { dict } from '../intl'
 
@@ -21,8 +22,8 @@
   ])
 
   const bg = imageSet({
-    '1x': '/assets/w_280/how-phone-bg_x2yejc.webp',
-    '2x': '/assets/w_560/how-phone-bg_x2yejc.webp',
+    '1x': cloudinary('w_280', 'how-phone-bg_x2yejc.webp'),
+    '2x': cloudinary('w_560', 'how-phone-bg_x2yejc.webp'),
   })
 </script>
 
@@ -46,8 +47,8 @@
             style="background-image: {bg}"
           >
             <img
-              src={`/assets/w_220/${id}.webp`}
-              srcset={`/assets/w_220/${id}.webp 1x, /assets/w_440/${id}.webp 2x`}
+              src={cloudinary('w_220', `${id}.webp`)}
+              srcset={`${cloudinary('w_220', `${id}.webp`)} 1x, ${cloudinary('w_440', `${id}.webp`)} 2x`}
               alt={label}
               class="absolute left-[10%] bottom-[6.92%] w-[80%] aspect-891/1840"
             />
