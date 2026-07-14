@@ -15,6 +15,7 @@ Before suggesting missing guards or defensive checks:
 - **No redundant guards** - Before adding checks, verify callers don't already guarantee the condition
 - **Trust call contracts** - If callers are responsible for validation, don't duplicate it downstream
 - **Single point of validation** - Place guards at entry points, not throughout the call chain
+- **End of task** - Always run `npm run format` then `npm run check` before finishing
 
 ## Architecture
 
