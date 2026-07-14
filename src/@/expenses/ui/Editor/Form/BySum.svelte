@@ -1,6 +1,7 @@
 <script lang="ts">
   import { Async } from 'svas'
   import { account as me } from '@/iam'
+  import { numbers } from '@/expenses'
   import { CoinsInput } from '@/app/ui'
   import { Avatar, Title } from '@/accounts/ui'
   import { accounts } from '@/accounts'
@@ -8,6 +9,7 @@
   import { dict, locale } from '$lib/intl'
   import { Ellipsis } from '$com/text'
   import { Separator } from '$com/separator'
+  import { redistribute } from './Total'
   import { getContext } from './Context'
   import type { Props } from './BySum'
 
@@ -23,6 +25,12 @@
   function oninput(amount: number, id: string) {
     value.participants[id].amount = amount
     value.participants[id].touched = true
+    redistribute(value)
+
+    const shares = numbers.shares(value)
+
+    for (const [pid, share] of Object.entries(shares))
+      value.participants[pid].shares = share
 
     // ping svelte
     value = { ...value }
