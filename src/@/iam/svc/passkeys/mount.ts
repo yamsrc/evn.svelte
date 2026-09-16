@@ -1,3 +1,4 @@
+import { conditional } from '@/passkeys'
 import { login } from './login'
 
 interface Expectation {
@@ -19,7 +20,7 @@ export function mount(callback?: () => void): () => void {
   const ac = new AbortController()
 
   const current: Expectation = {
-    promise: login(undefined, { mediation: 'conditional', signal: ac.signal }),
+    promise: start(ac.signal),
     abort: () => ac.abort(),
   }
 
@@ -32,4 +33,17 @@ export function mount(callback?: () => void): () => void {
   })
 
   return current.abort
+}
+
+/**
+ * Browsers without conditional mediation support execute
+ * such a request modally, scaring users with a system dialog
+ * on page load, so the request must not be started at all.
+ */
+async function start(signal: AbortSignal): Promise<void | Error> {
+  const available = await conditional()
+
+  if (!available || signal.aborted) return new Error('Conditional mediation is not available')
+
+  return login(undefined, { mediation: 'conditional', signal })
 }

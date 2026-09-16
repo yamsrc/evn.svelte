@@ -2,7 +2,9 @@
   import { ShieldCheck, ShieldOff } from '@lucide/svelte'
   import { supported } from '@/passkeys'
   import { dict } from '@/iam/ui/intl'
+  import { passkeys } from '@/iam'
   import * as Card from '$ui/card'
+  import { Button } from '$ui/button'
   import * as Alert from '$ui/alert'
   import { cn } from '$lib/utils'
   import { apple } from '$lib/tools/mq'
@@ -14,6 +16,12 @@
   const href = apple
     ? 'https://support.apple.com/en-us/102195'
     : 'https://support.google.com/accounts/answer/13548313'
+
+  async function login() {
+    const result = await passkeys.login()
+
+    if (!(result instanceof Error)) onauthenticate?.('passkey')
+  }
 </script>
 
 {#snippet description()}
@@ -56,4 +64,15 @@
       {/if}
     </Card.Footer>
   </Card.Root>
+  {#if supported}
+    <div class="flex justify-center">
+      <Button
+        size="sm"
+        variant="ghost"
+        class="text-muted-foreground"
+        onclick={login}>
+        {$dict.auth.login}
+      </Button>
+    </div>
+  {/if}
 </div>
